@@ -1,0 +1,424 @@
+<!doctype html>
+<!--
+  Dashboard de Impacto Edu-Trace · Zoom Operaciones · Fase 2 · Inteligencia Operativa (CAP-059)
+  Vista CLIENTE (entregable). Datos: clientes/dashboards/zoom-operaciones/resultados.json
+  N=23 (se descartó 1 fila duplicada de Angelmiro Rodríguez, misma cédula en
+  dos envíos; se conservó el más reciente). Actualizado 2026-08-28: la fuente
+  corrigió las autoevaluaciones (Bloque B/D) de 7 participantes; Bloque C
+  (retención) y Bloque E (recomendaciones/adopción) quedaron idénticos, no se
+  tocaron esas slides. Índice subió de 74 a 77. 11 slides: 10 estándar + 08
+  Adopción de IA (Gemini converge casi al 96%, pero horas/orientación/
+  prioridad sí muestran variación real). "Por departamento" consolida el
+  clúster de Flota y agrega los 2 departamentos de n=1 restantes en "Otras
+  áreas individuales", dejando los 4 grupos finales en n≥2 (§4.16). Sin
+  slide de precio (acuerdo marco vigente). Bloque E reformulado como
+  "recomendaciones de expansión". Lenguaje honesto (§4.17): B/D/adopción =
+  percibido · C = medido. Sin cédula/correo (§4.16).
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard de Impacto · Zoom Operaciones · Intezia Educación</title>
+  <link rel="stylesheet" href="../../propuestas/_base/styles.css">
+  <link rel="stylesheet" href="overrides.css">
+</head>
+<body>
+  <main class="deck">
+
+    <!-- 01 · Portada -->
+    <section class="slide s-cover">
+      <span class="counter">01 / 11</span>
+      <div class="logo-big">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia Educación">
+      </div>
+      <div class="body">
+        <p class="eyebrow">Dashboard de Impacto · Edu-Trace</p>
+        <h1>
+          Inteligencia<br>
+          <span class="hl">Operativa</span>
+        </h1>
+        <p class="lead">
+          Resultados medidos con la <strong>Encuesta Edu-Trace</strong> de cierre. 23 participantes del equipo de Operaciones de Zoom, evaluados en criterio de uso de Gemini, <strong>retención de conocimiento</strong> y experiencia formativa.
+        </p>
+      </div>
+      <div class="id-line">
+        <span class="codigo">CAP-059 · Zoom Operaciones</span>
+        <span class="cliente">Zoom Operaciones</span>
+      </div>
+    </section>
+
+    <!-- 02 · Hero del Índice -->
+    <section class="slide s-impact">
+      <span class="counter">02 / 11</span>
+      <div class="impact-head">
+        <p class="eyebrow">01 · Resultado global</p>
+        <h2>Índice de Impacto<br><span class="hl">Edu-Trace</span>.</h2>
+      </div>
+      <div class="impact-body">
+        <div class="chart-panel">
+          <p class="panel-title">Los cuatro ejes que componen el índice (0-100)</p>
+          <div class="bars">
+            <div class="bar-row">
+              <span class="bar-label">Competencia percibida</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:75%"><span class="bar-val">75</span></div></div>
+            </div>
+            <div class="bar-row">
+              <span class="bar-label">Retención objetiva · medido</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:76.8%"><span class="bar-val">77</span></div></div>
+            </div>
+            <div class="bar-row">
+              <span class="bar-label">Aplicabilidad e impacto</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:76.5%"><span class="bar-val">77</span></div></div>
+            </div>
+            <div class="bar-row">
+              <span class="bar-label">Calidad de la experiencia</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:82%"><span class="bar-val">82</span></div></div>
+            </div>
+          </div>
+          <div class="bar-axis"><span class="scale"><span>0</span><span>25</span><span>50</span><span>75</span><span>100</span></span></div>
+          <p class="panel-source">Ponderación: Retención objetiva 35% · Competencia 30% · Aplicabilidad 20% · Calidad 15%. La retención es el único eje medido; el resto es autopercibido.</p>
+        </div>
+        <div class="gauge-panel">
+          <div class="gauge" style="--pct:77">
+            <div class="gauge-core">
+              <span class="gauge-num">77</span>
+              <span class="gauge-cap idx">Índice · de 100</span>
+            </div>
+          </div>
+          <div class="rating">
+            <div class="stars">
+              <span class="star full">&#9733;</span>
+              <span class="star full">&#9733;</span>
+              <span class="star full">&#9733;</span>
+              <span class="star full">&#9733;</span>
+              <span class="star">&#9733;</span>
+            </div>
+            <span class="rating-cap">Satisfacción general · <b>4.0 / 5</b></span>
+          </div>
+          <p class="hero-meta">23 participantes · salto percibido +0.9 (1-5)</p>
+        </div>
+      </div>
+      <div class="impact-hook">
+        <span class="hook-mark">&#9656;</span>
+        <p class="hook-text">
+          El equipo respondió bien el <strong>77%</strong> de la evaluación sobre Prompt Ejecutivo, Semáforo de decisión IA y manejo responsable de datos de clientes. El punto a reforzar es justo ese último: <strong>el Semáforo de decisión</strong> (qué datos son sensibles) es la pregunta con más margen.
+        </p>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Zoom Operaciones · Dashboard de Impacto</span>
+      </div>
+    </section>
+
+    <!-- 03 · Desglose por eje -->
+    <section class="slide s-data s-ejes">
+      <span class="counter">03 / 11</span>
+      <p class="eyebrow">02 · Desglose</p>
+      <h2>Qué mide cada eje.</h2>
+      <p class="sub">Cada eje aporta al índice según su peso. Solo uno es una medición objetiva; los otros tres son autopercepción del participante al cierre.</p>
+      <div class="grid">
+        <div class="eje">
+          <div class="top"><span class="num">75</span><span class="peso">peso 30%</span></div>
+          <h3>Competencia percibida</h3>
+          <p>Cuánto se siente el participante capaz de operar Gemini sin supervisión. <span class="tag-percibido">percibido</span></p>
+        </div>
+        <div class="eje measured">
+          <div class="top"><span class="num">77</span><span class="peso">peso 35%</span></div>
+          <h3>Retención objetiva</h3>
+          <p>Aciertos en preguntas técnicas con respuesta correcta. El dato más duro del informe. <span class="tag-medido">medido</span></p>
+        </div>
+        <div class="eje">
+          <div class="top"><span class="num">77</span><span class="peso">peso 20%</span></div>
+          <h3>Aplicabilidad e impacto</h3>
+          <p>Qué tanto resuelve problemas del rol y promete recuperar tiempo de ejecución. <span class="tag-percibido">percibido</span></p>
+        </div>
+        <div class="eje">
+          <div class="top"><span class="num">82</span><span class="peso">peso 15%</span></div>
+          <h3>Calidad de la experiencia</h3>
+          <p>Claridad, acompañamiento, ritmo y dominio técnico del facilitador. <span class="tag-percibido">percibido</span></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 · Salto de aprendizaje percibido -->
+    <section class="slide s-salto">
+      <span class="counter">04 / 11</span>
+      <p class="eyebrow">03 · Salto de aprendizaje</p>
+      <h2>De dónde partieron, a dónde llegaron.</h2>
+      <div class="journey">
+        <div class="milestone">
+          <span class="ms-cap">Antes · percibido</span>
+          <span class="ms-num">3.1</span>
+          <span class="ms-of">dominio previo<br>(escala 1-5)</span>
+        </div>
+        <div class="track">
+          <div class="track-fill"></div>
+          <div class="delta">
+            <span class="d-num">+0.9</span>
+            <span class="d-lbl">salto percibido</span>
+          </div>
+        </div>
+        <div class="milestone end">
+          <span class="ms-cap">Al cierre</span>
+          <span class="ms-num">4.0</span>
+          <span class="ms-of">capaz sin supervisión<br>(escala 1-5)</span>
+        </div>
+      </div>
+      <p class="salto-note">Es un salto <strong>percibido y retrospectivo</strong>: ambas cifras se preguntaron al cierre, no antes de empezar. Con solo 4 horas en 2 sesiones y un grupo grande (23 personas), el salto es sólido para el tiempo disponible.</p>
+    </section>
+
+    <!-- 05 · Retención objetiva (Bloque C - medido) -->
+    <section class="slide s-data s-reten">
+      <span class="counter">05 / 11</span>
+      <p class="eyebrow">04 · Retención objetiva <span class="tag-medido">medido</span></p>
+      <h2>Lo que de verdad quedó.</h2>
+      <div class="global">
+        <span class="pct">77%</span>
+        <span class="txt">de aciertos en la evaluación de conocimiento técnico al cierre.</span>
+      </div>
+      <div class="qrow">
+        <div class="q">Semáforo de decisión IA<small>Un listado de clientes con teléfonos es dato identificable: color rojo del Semáforo, no se sube a Gemini sin anonimizar.</small></div>
+        <div class="score">70%<small> · 16 de 23</small></div>
+      </div>
+      <div class="qrow">
+        <div class="q">Prompt Ejecutivo (5 partes)<small>Rol, contexto, tarea, formato y restricciones: las cinco partes del método enseñado.</small></div>
+        <div class="score">87%<small> · 20 de 23</small></div>
+      </div>
+      <div class="qrow">
+        <div class="q">Anonimización antes de pegar datos<small>Antes de pegar un reporte en Gemini, los nombres de clientes se reemplazan por Cliente A, B, C.</small></div>
+        <div class="score">74%<small> · 17 de 23</small></div>
+      </div>
+      <p class="note-honest">El Semáforo de decisión IA es la pregunta con más margen: justo el criterio para distinguir qué datos de clientes son sensibles. Vale la pena reforzarlo, en línea con el módulo de uso responsable del programa.</p>
+    </section>
+
+    <!-- 06 · Resultados por departamento -->
+    <section class="slide s-data s-depto">
+      <span class="counter">06 / 11</span>
+      <p class="eyebrow">05 · Por área</p>
+      <h2>Índice por departamento.</h2>
+      <p class="sub">Se consolidó el clúster de Flota ("Flota", "Operaciones Flota", "Dpto de flota") en un solo grupo, y las 2 áreas de un solo participante (Operaciones CDO SVZ, Ops internacional) se agregaron en un bloque referencial.</p>
+      <div class="hbars">
+        <div class="hbar-row">
+          <span class="hbar-label">VP Operaciones <small>2 participantes</small></span>
+          <div class="hbar-track"><div class="hbar-fill" style="--w:80%"></div></div>
+          <span class="hbar-val">80</span>
+        </div>
+        <div class="hbar-row">
+          <span class="hbar-label">Operaciones <small>15 participantes</small></span>
+          <div class="hbar-track"><div class="hbar-fill" style="--w:77%"></div></div>
+          <span class="hbar-val">77</span>
+        </div>
+        <div class="hbar-row">
+          <span class="hbar-label">Flota <small>4 participantes</small></span>
+          <div class="hbar-track"><div class="hbar-fill" style="--w:77%"></div></div>
+          <span class="hbar-val">77</span>
+        </div>
+        <div class="hbar-row">
+          <span class="hbar-label">Otras áreas individuales <small>2 participantes · CDO SVZ y Ops internacional</small></span>
+          <div class="hbar-track"><div class="hbar-fill" style="--w:77%"></div></div>
+          <span class="hbar-val">77</span>
+        </div>
+      </div>
+      <p class="note-honest">Operaciones concentra a dos tercios del grupo (15 de 23): su índice es, por lejos, el más representativo. Los demás son grupos de 2 a 4 personas, con lectura más referencial.</p>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Zoom Operaciones · Dashboard de Impacto</span>
+      </div>
+    </section>
+
+    <!-- 07 · Calidad de la experiencia (Bloque D) -->
+    <section class="slide s-data s-calidad">
+      <span class="counter">07 / 11</span>
+      <p class="eyebrow">06 · Experiencia formativa <span class="tag-percibido">percibido</span></p>
+      <h2>Cómo vivieron la formación.</h2>
+      <p class="sub">Valoración del facilitador y la dinámica de las sesiones, en escala 1-5 normalizada a 0-100.</p>
+      <div class="hbars">
+        <div class="hbar-row">
+          <span class="hbar-label">Dominio técnico <small>profundidad de las soluciones</small></span>
+          <div class="hbar-track"><div class="hbar-fill" style="--w:87%"></div></div>
+          <span class="hbar-val">87</span>
+        </div>
+        <div class="hbar-row">
+          <span class="hbar-label">Acompañamiento <small>dudas resueltas con precisión</small></span>
+          <div class="hbar-track"><div class="hbar-fill" style="--w:85.75%"></div></div>
+          <span class="hbar-val">86</span>
+        </div>
+        <div class="hbar-row">
+          <span class="hbar-label">Gestión del tiempo <small>ritmo para asimilar</small></span>
+          <div class="hbar-track"><div class="hbar-fill" style="--w:78.25%"></div></div>
+          <span class="hbar-val">78</span>
+        </div>
+        <div class="hbar-row">
+          <span class="hbar-label">Claridad expositiva <small>casos reales de la empresa</small></span>
+          <div class="hbar-track"><div class="hbar-fill" style="--w:77.25%"></div></div>
+          <span class="hbar-val">77</span>
+        </div>
+      </div>
+      <p class="note-honest">Claridad expositiva es el punto más bajo: con un grupo de 23 personas y solo 4 horas, es difícil que cada caso práctico calce con la realidad de cada participante.</p>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Zoom Operaciones · Dashboard de Impacto</span>
+      </div>
+    </section>
+
+    <!-- 08 · Adopción de IA (a la medida — Gemini domina, pero horas/orientación/prioridad varían) -->
+    <section class="slide s-data s-adopcion">
+      <span class="counter">08 / 11</span>
+      <p class="eyebrow">07 · Adopción de IA <span class="tag-percibido">percibido</span></p>
+      <h2>Cómo se está usando la IA hoy.</h2>
+      <div class="stats-row">
+        <div class="stat-card">
+          <span class="big">96%</span>
+          <span class="lbl">ya usa Gemini como herramienta principal</span>
+          <span class="sub">22 de 23 · consistente con el estándar Gemini-único de la ruta Zoom</span>
+        </div>
+        <div class="stat-card">
+          <span class="big">48%</span>
+          <span class="lbl">ya percibe ahorro de tiempo semanal</span>
+          <span class="sub">11 de 23 · el resto aún no lo considera medible, normal a los pocos días del cierre</span>
+        </div>
+      </div>
+      <div class="cols2">
+        <div class="mini-lb">
+          <p class="mini-title">Dónde se aplica hoy la IA</p>
+          <div class="mini-row">
+            <div class="mini-top"><span class="mini-label">Automatización de procesos</span><span class="mini-val">48%</span></div>
+            <div class="mini-track"><div class="mini-fill" style="--w:48%"></div></div>
+          </div>
+          <div class="mini-row">
+            <div class="mini-top"><span class="mini-label">Análisis de datos y reportes</span><span class="mini-val">26%</span></div>
+            <div class="mini-track"><div class="mini-fill" style="--w:26%"></div></div>
+          </div>
+          <div class="mini-row">
+            <div class="mini-top"><span class="mini-label">Asistencia en tareas básicas</span><span class="mini-val">22%</span></div>
+            <div class="mini-track"><div class="mini-fill" style="--w:22%"></div></div>
+          </div>
+        </div>
+        <div class="mini-lb">
+          <p class="mini-title">Prioridad de inversión · próx. 6 meses</p>
+          <div class="mini-row">
+            <div class="mini-top"><span class="mini-label">Capacitación y adopción cultural</span><span class="mini-val">61%</span></div>
+            <div class="mini-track"><div class="mini-fill" style="--w:61%"></div></div>
+          </div>
+          <div class="mini-row">
+            <div class="mini-top"><span class="mini-label">Infraestructura o modelos propios</span><span class="mini-val">26%</span></div>
+            <div class="mini-track"><div class="mini-fill" style="--w:26%"></div></div>
+          </div>
+          <div class="mini-row">
+            <div class="mini-top"><span class="mini-label">Licencias corporativas (Software/SaaS)</span><span class="mini-val">13%</span></div>
+            <div class="mini-track"><div class="mini-fill" style="--w:13%"></div></div>
+          </div>
+        </div>
+      </div>
+      <p class="note-honest">Datos de auto-reporte de cada participante, no una medición de uso real ni de horas efectivamente ahorradas: reflejan percepción y estimación propia, no telemetría. La adopción de Gemini ya es prácticamente unánime, en línea con el estándar de una sola herramienta que definió el programa.</p>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Zoom Operaciones · Dashboard de Impacto</span>
+      </div>
+    </section>
+
+    <!-- 09 · Recomendaciones de expansión (Bloque E reformulado para el cliente) -->
+    <section class="slide s-reco">
+      <span class="counter">09 / 11</span>
+      <p class="eyebrow">08 · Recomendaciones de expansión</p>
+      <h2>Próximos pasos de formación.</h2>
+      <div class="cols">
+        <div class="card">
+          <span class="label">Áreas que piden formación</span>
+          <ul class="rank">
+            <li><span class="n">1</span> Gestión de la Calidad <span class="c">4 menciones</span></li>
+            <li><span class="n">2</span> Atención al cliente <span class="c">3 menciones</span></li>
+            <li><span class="n">3</span> Administración <span class="c">2 menciones</span></li>
+          </ul>
+        </div>
+        <div class="card">
+          <span class="label">Habilidades más deseadas</span>
+          <ul class="rank">
+            <li><span class="n">1</span> Automatización y flujos de trabajo <span class="c">5</span></li>
+            <li><span class="n">2</span> Dominio general de IA <span class="c">5</span></li>
+            <li><span class="n">3</span> Explorar Claude <span class="c">3</span></li>
+          </ul>
+        </div>
+        <div class="card">
+          <span class="label">Procesos a automatizar</span>
+          <ul class="rank">
+            <li><span class="n">1</span> Reportes <span class="c">18</span></li>
+            <li><span class="n">2</span> Datos <span class="c">2</span></li>
+            <li><span class="n">3</span> CRM <span class="c">2</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="hook">
+        Reportes es la señal abrumadora: 18 de 23 lo nombraron como el proceso que más se beneficiaría de automatizarse. Gestión de la Calidad y Atención al cliente aparecen como los siguientes candidatos naturales para extender el programa dentro de Zoom.
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Zoom Operaciones · Dashboard de Impacto</span>
+      </div>
+    </section>
+
+    <!-- 10 · Participación (nombres + área, sin puntajes ni cédula §4.16) -->
+    <section class="slide s-data s-part compact">
+      <span class="counter">10 / 11</span>
+      <p class="eyebrow">09 · Participación</p>
+      <h2>Quiénes completaron la evaluación.</h2>
+      <div class="roster">
+        <div class="p"><span class="nm">Jesus Lorca</span><span class="dp">Operaciones</span></div>
+        <div class="p"><span class="nm">Emilio Jose</span><span class="dp">Operaciones</span></div>
+        <div class="p"><span class="nm">Johann Salas</span><span class="dp">Operaciones</span></div>
+        <div class="p"><span class="nm">Nayi Mora</span><span class="dp">Operaciones</span></div>
+        <div class="p"><span class="nm">Angelmiro Rodríguez Moreno</span><span class="dp">Operaciones CDO SVZ</span></div>
+        <div class="p"><span class="nm">Jose Miranda</span><span class="dp">Operaciones</span></div>
+        <div class="p"><span class="nm">Lisbeth Vasquez</span><span class="dp">Operaciones</span></div>
+        <div class="p"><span class="nm">Milangela Lezama</span><span class="dp">Operaciones</span></div>
+        <div class="p"><span class="nm">Lisbeth Carolina Hernandez Toloza</span><span class="dp">Operaciones</span></div>
+        <div class="p"><span class="nm">Luis Chacin</span><span class="dp">Flota</span></div>
+        <div class="p"><span class="nm">Lennis Loraine Leon Lozada</span><span class="dp">Operaciones</span></div>
+        <div class="p"><span class="nm">Otilia Lao</span><span class="dp">VP Operaciones</span></div>
+        <div class="p"><span class="nm">Beronica Urbina</span><span class="dp">Ops Internacional</span></div>
+        <div class="p"><span class="nm">Anibal José Rodríguez Brito</span><span class="dp">Operaciones</span></div>
+        <div class="p"><span class="nm">Kelvin Parra</span><span class="dp">Operaciones</span></div>
+        <div class="p"><span class="nm">Brian Durán</span><span class="dp">Flota</span></div>
+        <div class="p"><span class="nm">Edwuard Yojan Monasterios</span><span class="dp">VP Operaciones</span></div>
+        <div class="p"><span class="nm">Edgar Gimenez</span><span class="dp">Flota</span></div>
+        <div class="p"><span class="nm">Handy Quintero</span><span class="dp">Flota</span></div>
+        <div class="p"><span class="nm">Ynorya Medina</span><span class="dp">Operaciones</span></div>
+        <div class="p"><span class="nm">María Briceño</span><span class="dp">Operaciones</span></div>
+        <div class="p"><span class="nm">Kenny José Correa Rivero</span><span class="dp">Operaciones</span></div>
+        <div class="p"><span class="nm">Ricardo Exposito</span><span class="dp">Operaciones</span></div>
+      </div>
+      <p class="privacy">23 de 23 participantes respondieron la encuesta. Por privacidad, no se publican puntajes individuales ni documentos de identidad: el informe es siempre agregado.</p>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Zoom Operaciones · Dashboard de Impacto</span>
+      </div>
+    </section>
+
+    <!-- 11 · Cierre -->
+    <section class="slide s-end">
+      <span class="counter">11 / 11</span>
+      <div class="end-logo">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia Educación">
+      </div>
+      <p class="end-message">
+        El equipo aprendió.<br>Llevémoslo al <span class="hl-orange">siguiente</span> <span class="hl-yellow">equipo</span>.
+      </p>
+      <div class="cta-wrap">
+        <a class="cta" href="https://calendly.com/intezia/30min" target="_blank" rel="noopener">Conversemos el próximo paso</a>
+      </div>
+      <div class="end-contact">
+        <p class="contact-line">
+          <span class="contact-label">Asesora:</span>
+          María Iribarren <span class="dot">·</span> +58 414 0570056 <span class="dot">·</span> miribarren@intezia.com
+        </p>
+        <p class="contact-line">
+          <span class="contact-label">Empresa:</span>
+          Intezia C.A J-505657950 <span class="dot">·</span> info@intezia.com
+        </p>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

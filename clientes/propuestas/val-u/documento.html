@@ -1,0 +1,576 @@
+<!doctype html>
+<!--
+  Documento Oficial de Diseño Curricular e Instruccional — CU-005 v3.0
+  Bootcamp Finanzas e Inteligencia Artificial · Alianza Val-U × Intezia
+  Caso particular: documento branded (no deck de slides). Ver brief.md.
+  Paleta: #000000 / #F4BA1A / #E58423 / #FFFFFF · Tipografía: Graphit/Inter (empresa/marca-visual.md)
+-->
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Documento Curricular · Bootcamp Val-U × Intezia</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap');
+
+:root {
+  --black: #000000;
+  --yellow: #F4BA1A;
+  --orange: #E58423;
+  --white: #FFFFFF;
+  --gray: #58585a;
+  --line: #e4e4e4;
+  --gradient-warm: linear-gradient(135deg, var(--yellow) 0%, var(--orange) 100%);
+  --font-display: "Graphit", "Inter", system-ui, sans-serif;
+  --font-body: "Graphit", "Inter", system-ui, sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+@page { size: A4; margin: 0; }
+
+html, body {
+  font-family: var(--font-body);
+  color: var(--black);
+  font-size: 10.1pt;
+  line-height: 1.42;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+.page {
+  width: 210mm;
+  min-height: 297mm;
+  padding: 17mm 18mm 14mm;
+  position: relative;
+  page-break-after: always;
+}
+.page:last-child { page-break-after: auto; }
+
+/* ---------- Portada ---------- */
+.cover {
+  background: var(--black);
+  color: var(--white);
+  padding: 24mm 18mm;
+}
+.cover .logo { height: 34px; margin-bottom: 34mm; }
+.cover .eyebrow {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 10.5px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--yellow);
+  margin-bottom: 10px;
+}
+.cover h1 {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 34px;
+  line-height: 1.08;
+  margin-bottom: 6px;
+}
+.cover h1 .hl { background: var(--yellow); color: var(--black); padding: 0 8px; }
+.cover .sub {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--orange);
+  margin-top: 8px;
+  margin-bottom: 30mm;
+}
+.cover .meta-table {
+  border-top: 1px solid rgba(255,255,255,0.25);
+  padding-top: 14px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 10px;
+  column-gap: 24px;
+  font-size: 10.5px;
+}
+.cover .meta-table .k {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--yellow);
+  font-size: 8.5px;
+  margin-bottom: 2px;
+}
+.cover .meta-table .v { color: var(--white); }
+.cover .alliance-line {
+  position: absolute;
+  bottom: 18mm; left: 18mm; right: 18mm;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 10px;
+  color: rgba(255,255,255,0.6);
+}
+.cover .alliance-line .bar { flex: 1; height: 3px; background: var(--gradient-warm); }
+
+/* ---------- Contenido ---------- */
+.content .page-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid var(--black);
+  padding-bottom: 8px;
+  margin-bottom: 18px;
+}
+.content .page-head img { height: 16px; }
+.content .page-head .tag {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 8.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gray);
+}
+
+.section { margin-bottom: 15px; }
+.section-title {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 9px;
+}
+.section-title .num {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 22px;
+  color: var(--yellow);
+  -webkit-text-stroke: 1px var(--black);
+}
+.section-title h2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+.subhead {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 11px;
+  color: var(--orange);
+  margin: 9px 0 4px;
+}
+p { margin-bottom: 6px; }
+strong { font-family: var(--font-display); font-weight: 700; }
+ul, ol { margin: 0 0 6px 18px; }
+li { margin-bottom: 3px; }
+
+.callout {
+  background: #faf6ea;
+  border-left: 3px solid var(--yellow);
+  padding: 8px 14px;
+  font-size: 9.6px;
+  color: var(--gray);
+  margin-bottom: 10px;
+}
+
+.kv-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px 24px;
+  background: var(--black);
+  color: var(--white);
+  padding: 11px 16px;
+  margin-bottom: 10px;
+}
+.kv-grid .item { font-size: 9.8px; }
+.kv-grid .k {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 8px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--yellow);
+  display: block;
+  margin-bottom: 2px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 12px;
+  font-size: 8.6px;
+}
+th {
+  background: var(--black);
+  color: var(--white);
+  text-align: left;
+  padding: 6px 7px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 7.6px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+td {
+  padding: 6px 7px;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+  line-height: 1.35;
+}
+tbody tr:nth-child(even) { background: #fafafa; }
+tr.total td { background: var(--yellow); font-family: var(--font-display); font-weight: 700; }
+table.modular td:first-child { font-family: var(--font-display); font-weight: 700; color: var(--orange); width: 15%; }
+table.modular td:nth-child(2) { width: 30%; }
+table.schedule th:nth-child(1), table.schedule td:nth-child(1) { width: 6%; text-align: center; }
+table.schedule th:nth-child(2), table.schedule td:nth-child(2) { width: 6%; text-align: center; font-weight: 700; }
+table.schedule td.week-num { font-family: var(--font-display); font-weight: 700; color: var(--white); background: var(--orange); text-align: center; }
+
+.pillars-mini { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin-bottom: 10px; }
+.pillars-mini .p { background: #f6f6f6; border-top: 3px solid var(--orange); padding: 10px 12px; font-size: 9px; }
+.pillars-mini .p b { display: block; font-family: var(--font-display); font-weight: 700; font-size: 9.6px; margin-bottom: 3px; }
+
+.min-grade {
+  background: var(--black);
+  color: var(--white);
+  padding: 8px 14px;
+  font-size: 9.5px;
+  margin-bottom: 6px;
+}
+.min-grade strong { color: var(--yellow); }
+
+.quote-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 4px;
+  font-size: 10.5pt;
+}
+.quote-table th {
+  background: var(--black);
+  color: var(--white);
+  text-align: left;
+  padding: 8px 12px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 8.5px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.quote-table th.amount-col, .quote-table td.amount-cell { text-align: right; width: 42%; }
+.quote-table td {
+  padding: 0;
+  border-bottom: 1px solid var(--line);
+  vertical-align: middle;
+}
+.quote-table td.concept { padding: 0 12px; font-weight: 500; }
+.quote-table tr.total td.concept {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 12px;
+}
+.quote-table tr.total { background: var(--yellow); }
+.quote-table tr.total td { border-bottom: none; }
+.amount-box {
+  height: 15mm;
+  background: #faf6ea;
+  border-left: 2px solid var(--orange);
+}
+.quote-table tr.total .amount-box { background: rgba(255,255,255,0.55); border-left: 2px solid var(--black); }
+.cot-validity { font-size: 9px; color: var(--gray); margin-top: 8px; }
+.quote-scope { margin-bottom: 18px; }
+.quote-scope li { font-size: 9.8px; }
+
+.footer-line {
+  position: absolute;
+  bottom: 12mm; left: 18mm; right: 18mm;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--line);
+  padding-top: 6px;
+  font-size: 7.6px;
+  color: var(--gray);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+</style>
+</head>
+<body>
+
+  <!-- Portada -->
+  <section class="page cover">
+    <img class="logo" src="../../../logos/educacion/BLANCO.png" alt="Intezia Educación">
+    <p class="eyebrow">Documento Oficial de Diseño Curricular e Instruccional</p>
+    <h1>Bootcamp<br><span class="hl">Finanzas e Inteligencia Artificial</span></h1>
+    <p class="sub">Alianza Val-U × Intezia</p>
+
+    <div class="meta-table">
+      <div><span class="k">Código</span><span class="v">CU-005</span></div>
+      <div><span class="k">Versión</span><span class="v">3.0 · Revisión sabatina a 2 meses</span></div>
+      <div><span class="k">Elaborado por</span><span class="v">Keiber Quintana · revisión Equipo INTEZIA Education</span></div>
+      <div><span class="k">Solicitante</span><span class="v">Val-U</span></div>
+      <div><span class="k">Fecha de elaboración</span><span class="v">Sin fecha asignada (a definir con Val-U)</span></div>
+      <div><span class="k">Acreditación</span><span class="v">Certificación conjunta INTEZIA + Val-U</span></div>
+    </div>
+
+    <div class="alliance-line">
+      <span>INTEZIA EDUCATION</span>
+      <span class="bar"></span>
+      <span>VAL-U</span>
+    </div>
+  </section>
+
+  <!-- Página 2: §1 Información general + §2 Fundamentación -->
+  <section class="page content">
+    <div class="page-head">
+      <img src="../../../logos/educacion/NEGRO.png" alt="Intezia Educación">
+      <span class="tag">CU-005 · Bootcamp Val-U × Intezia</span>
+    </div>
+
+    <div class="section">
+      <div class="section-title"><span class="num">01</span><h2>Información general del programa</h2></div>
+      <div class="kv-grid">
+        <div class="item"><span class="k">Nombre del programa</span>Bootcamp Val-U &amp; Intezia: Finanzas e Inteligencia Artificial</div>
+        <div class="item"><span class="k">Modalidad</span>Híbrido (presencial en el hub tecnológico Wave y alternativos / online síncrono)</div>
+        <div class="item"><span class="k">Duración</span>2 meses de clases sabatinas: una sesión de 4 horas cada sábado, repartida en 2 h Val-U + 2 h Intezia</div>
+        <div class="item"><span class="k">Audiencia</span>Jóvenes y profesionales, sin experiencia previa requerida en IA ni finanzas</div>
+        <div class="item"><span class="k">Ecosistema</span>Claude y Gemini</div>
+        <div class="item"><span class="k">Calificación mínima</span>70 / 100 para la certificación</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title"><span class="num">02</span><h2>Fundamentación y justificación pedagógica</h2></div>
+      <p class="subhead">2.1 Planteamiento de la necesidad</p>
+      <p>El mercado actual exige a los jóvenes y profesionales no solo entender el manejo del dinero, sino potenciar sus decisiones a través de la tecnología. Este bootcamp integra educación financiera e inteligencia artificial en un formato <strong>sabatino sostenido a lo largo de 2 meses</strong> (no vacacional), pensado para quien ya está en su rutina de trabajo o estudio y necesita un ritmo semanal, sin comprimir el aprendizaje, para cerrar la brecha entre la alfabetización financiera tradicional y las herramientas tecnológicas de vanguardia.</p>
+      <p class="subhead">2.2 Enfoque pedagógico (Modelo INTEZIA)</p>
+      <p>El programa se fundamenta en un modelo de <strong>Aprendizaje Basado en Retos (ABR)</strong> priorizando:</p>
+      <div class="pillars-mini">
+        <div class="p"><b>Tutoría activa</b>El facilitador acompaña el éxito del estudiante, no solo expone.</div>
+        <div class="p"><b>Transferibilidad inmediata</b>Los productos académicos aplican a proyectos reales del estudiante.</div>
+        <div class="p"><b>Curaduría de contenidos</b>Información actualizada, sin redundancia académica.</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title"><span class="num">03</span><h2>Perfiles académicos</h2></div>
+      <p class="subhead">Perfil de ingreso</p>
+      <p><strong>Competencias previas:</strong> conocimientos básicos de ofimática, navegación web y nociones matemáticas elementales. No se requiere experiencia previa en IA ni en finanzas.</p>
+      <p><strong>Requerimientos técnicos:</strong> laptop o tablet con conexión a internet, cuentas gratuitas en Claude y Gemini.</p>
+      <p class="subhead">Perfil de egreso</p>
+      <p><strong>Saber (Cognitivo):</strong> comprende los conceptos fundamentales de la educación financiera moderna y el funcionamiento básico de los modelos de Inteligencia Artificial Generativa.</p>
+      <p><strong>Saber hacer (Procedimental):</strong> aplica prompts estructurados e implementa herramientas de IA para elaborar presupuestos, analizar gastos y proyectar escenarios de ahorro e inversión, siempre verificando el resultado antes de actuar sobre él.</p>
+      <p><strong>Saber ser (Actitudinal):</strong> actúa con pensamiento crítico ante las decisiones económicas, mostrando responsabilidad financiera y ética en el uso de datos con Inteligencia Artificial.</p>
+    </div>
+
+    <div class="footer-line"><span>Bootcamp Finanzas e IA · Val-U × Intezia</span><span>CU-005 · v3.0</span></div>
+  </section>
+
+  <!-- Página 3: §4 Objetivos + §5.1 Estructura modular -->
+  <section class="page content">
+    <div class="page-head">
+      <img src="../../../logos/educacion/NEGRO.png" alt="Intezia Educación">
+      <span class="tag">CU-005 · Bootcamp Val-U × Intezia</span>
+    </div>
+
+    <div class="section">
+      <div class="section-title"><span class="num">04</span><h2>Objetivos estratégicos</h2></div>
+      <p class="subhead">4.1 Objetivo general</p>
+      <p>Diseñar estrategias financieras personales y modelos básicos de inversión mediante la aplicación práctica de herramientas de <strong>Inteligencia Artificial</strong>, con la finalidad de optimizar la toma de decisiones económicas del participante.</p>
+      <p class="subhead">4.2 Objetivos específicos</p>
+      <ol>
+        <li>Identificar los pilares de las finanzas personales, el ahorro y la inversión en el contexto económico actual.</li>
+        <li>Experimentar con Claude y Gemini para la automatización de análisis de datos e investigación.</li>
+        <li>Construir presupuestos y planes financieros automatizados combinando hojas de cálculo y asistentes de IA.</li>
+        <li>Diseñar una propuesta de portafolio o plan de optimización financiera personal defendible, integrando los conocimientos adquiridos (Proyecto Final).</li>
+      </ol>
+    </div>
+
+    <div class="section">
+      <div class="section-title"><span class="num">05</span><h2>Estructura curricular y diseño instruccional</h2></div>
+      <p class="subhead">5.1 Estructura modular (4 módulos · 5 temas cada uno)</p>
+      <div class="callout">El temario completo de los 4 módulos es el original del programa: ninguno se comprime. Cada módulo se dicta en 2 sábados consecutivos, repartidos en 2 h Val-U + 2 h Intezia por sábado.</div>
+      <table class="modular">
+        <thead><tr><th>Módulo</th><th>Objetivo instructivo</th><th>Temas</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>I: Fundamentos Financieros y Mindset</td>
+            <td>Comprender la relación con el dinero y los principios del ahorro/inversión para establecer bases económicas sólidas.</td>
+            <td>1.1 Psicología del dinero y metas financieras · 1.2 Presupuesto 101: Ingresos vs. Gastos · 1.3 El valor del dinero en el tiempo y el ahorro · 1.4 Introducción a la inversión y el riesgo · 1.5 Casos prácticos de finanzas personales</td>
+          </tr>
+          <tr>
+            <td>II: Inmersión en la Inteligencia Artificial</td>
+            <td>Utilizar modelos de lenguaje y herramientas de IA generativa para resolver problemas analíticos y creativos.</td>
+            <td>2.1 ¿Qué es la IA y cómo funciona? · 2.2 Prompt Engineering básico y avanzado · 2.3 IA para investigación y análisis de datos · 2.4 Ética, sesgos y seguridad de la información · 2.5 Herramientas vigentes: Claude y Gemini</td>
+          </tr>
+          <tr>
+            <td>III: Finanzas Potenciadas por IA</td>
+            <td>Integrar asistentes de Inteligencia Artificial en la planificación y evaluación financiera personal.</td>
+            <td>3.1 Creación de presupuestos automatizados con IA · 3.2 Análisis de gastos y proyecciones usando prompts · 3.3 IA como asesor: simulaciones de escenarios · 3.4 Detección de oportunidades de inversión asistida · 3.5 Creación de Dashboards básicos (IA + Excel/Sheets)</td>
+          </tr>
+          <tr>
+            <td>IV: Proyecto Final ABR (Bootcamp)</td>
+            <td>Diseñar y sustentar un plan financiero personal o de emprendimiento respaldado por análisis de IA.</td>
+            <td>4.1 Definición del Reto Financiero del participante · 4.2 Recolección de datos y procesamiento con IA · 4.3 Estructuración de la estrategia y plan de acción · 4.4 Storytelling de datos financieros · 4.5 Pitch Final y retrospectiva de aprendizajes</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="footer-line"><span>Bootcamp Finanzas e IA · Val-U × Intezia</span><span>CU-005 · v3.0</span></div>
+  </section>
+
+  <!-- Página 4: §5.2 Desglose instructivo (8 sábados) -->
+  <section class="page content">
+    <div class="page-head">
+      <img src="../../../logos/educacion/NEGRO.png" alt="Intezia Educación">
+      <span class="tag">CU-005 · Bootcamp Val-U × Intezia</span>
+    </div>
+
+    <div class="section">
+      <p class="subhead" style="margin-top:0">5.2 Desglose instructivo (cronograma y ruta de aprendizaje)</p>
+      <p style="margin-bottom:10px;">8 sábados consecutivos, a lo largo de 2 meses. Cada sábado: 4 horas, repartidas en 2 h Val-U + 2 h Intezia.</p>
+      <table class="schedule">
+        <thead><tr><th>Sem.</th><th>Sáb.</th><th>Temas</th><th>Reparto de la sesión</th><th>Recursos</th></tr></thead>
+        <tbody>
+          <tr>
+            <td class="week-num">1</td><td>1</td>
+            <td>Módulo I: 1.1–1.3</td>
+            <td><strong>Val-U (2h):</strong> psicología del dinero, presupuesto 101, valor del dinero en el tiempo · <strong>Intezia (2h):</strong> primer prompt guiado con Claude/Gemini sobre un caso propio</td>
+            <td>Zoom/hub Wave, plantillas de Excel, cuentas Claude y Gemini</td>
+          </tr>
+          <tr>
+            <td class="week-num">1</td><td>2</td>
+            <td>Módulo I: 1.4–1.5</td>
+            <td><strong>Val-U (2h):</strong> inversión y riesgo, casos prácticos · <strong>Intezia (2h):</strong> esos casos resueltos con un asistente de IA como copiloto</td>
+            <td>Plantillas de presupuesto, cuentas Claude y Gemini</td>
+          </tr>
+          <tr>
+            <td class="week-num">2</td><td>3</td>
+            <td>Módulo II: 2.1–2.3</td>
+            <td><strong>Intezia (2h):</strong> qué es la IA, prompt engineering, IA para investigar y analizar datos · <strong>Val-U (2h):</strong> esos conceptos aplicados a casos reales de banca y fintech</td>
+            <td>Laptop, Claude, Gemini, hoja de cálculo con datos financieros</td>
+          </tr>
+          <tr>
+            <td class="week-num">2</td><td>4</td>
+            <td>Módulo II: 2.4–2.5</td>
+            <td><strong>Intezia (2h):</strong> ética, sesgos y seguridad, herramientas vigentes (Claude y Gemini) · <strong>Val-U (2h):</strong> práctica sobre un dataset financiero real</td>
+            <td>Miro o Jamboard, hoja de cálculo con datos financieros</td>
+          </tr>
+          <tr>
+            <td class="week-num">3</td><td>5</td>
+            <td>Módulo III: 3.1–3.2</td>
+            <td><strong>Val-U (2h):</strong> presupuestos automatizados con IA, análisis de gastos y proyecciones · <strong>Intezia (2h):</strong> modelado de los prompts usados en ese análisis</td>
+            <td>Hojas de cálculo, datasets simulados, Claude y Gemini</td>
+          </tr>
+          <tr>
+            <td class="week-num">3</td><td>6</td>
+            <td>Módulo III: 3.3–3.5</td>
+            <td><strong>Val-U (2h):</strong> detección de oportunidades de inversión asistida · <strong>Intezia (2h):</strong> IA como asesor (simulación de escenarios) y Dashboards básicos (IA + Sheets)</td>
+            <td>Hojas de cálculo, plantilla de Dashboard básico</td>
+          </tr>
+          <tr>
+            <td class="week-num">4</td><td>7</td>
+            <td>Módulo IV: 4.1–4.3</td>
+            <td><strong>Intezia (2h):</strong> definición del Reto Financiero, recolección de datos y estructuración de la estrategia con IA · <strong>Val-U (2h):</strong> mentoría financiera sobre ese reto</td>
+            <td>Plantilla de Reto Financiero, Claude y Gemini</td>
+          </tr>
+          <tr>
+            <td class="week-num">4</td><td>8</td>
+            <td>Módulo IV: 4.4–4.5</td>
+            <td><strong>Intezia (2h):</strong> storytelling de datos financieros con IA · <strong>Val-U (2h):</strong> Pitch Final y retrospectiva de aprendizajes (moderación)</td>
+            <td>Rúbricas de evaluación, plantilla de Pitch Deck</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="footer-line"><span>Bootcamp Finanzas e IA · Val-U × Intezia</span><span>CU-005 · v3.0</span></div>
+  </section>
+
+  <!-- Página 5: §5.3 Evaluación + §6 Garantía de calidad + §7 Equipo -->
+  <section class="page content">
+    <div class="page-head">
+      <img src="../../../logos/educacion/NEGRO.png" alt="Intezia Educación">
+      <span class="tag">CU-005 · Bootcamp Val-U × Intezia</span>
+    </div>
+
+    <div class="section">
+      <p class="subhead" style="margin-top:0">5.3 Sistema de evaluación de los aprendizajes</p>
+      <table>
+        <thead><tr><th>Tipo</th><th>Instrumento / Herramienta</th><th>Ponderación</th><th>Entrega</th></tr></thead>
+        <tbody>
+          <tr><td>Formativa</td><td>Participación en dinámicas, "Prompt Battles" y quizzes rápidos al inicio de sesión.</td><td>30 %</td><td>Continua</td></tr>
+          <tr><td>Sumativa (Parcial)</td><td>Entregable Modular: creación de un presupuesto optimizado con IA y justificación de prompts.</td><td>50 %</td><td>Al cierre de módulos</td></tr>
+          <tr><td>Sumativa (Final)</td><td>Proyecto Final ABR (Pitch/Defensa del portafolio o plan financiero personal).</td><td>20 %</td><td>Sábado 8</td></tr>
+          <tr class="total"><td>Total</td><td></td><td>100 %</td><td></td></tr>
+        </tbody>
+      </table>
+      <div class="min-grade">Calificación mínima para la certificación: <strong>70 / 100</strong>.</div>
+    </div>
+
+    <div class="section">
+      <div class="section-title"><span class="num">06</span><h2>Garantía de calidad y mejora continua</h2></div>
+      <ul>
+        <li><strong>Actualización curricular:</strong> revisión y ajuste de los módulos de IA antes de cada grupo, debido a la rápida evolución de las herramientas tecnológicas.</li>
+        <li><strong>Encuesta de satisfacción:</strong> monitoreo semanal rápido (tipo termómetro) y encuesta profunda al finalizar el Bootcamp.</li>
+        <li><strong>Entregable:</strong> Workbook del Bootcamp, plantillas de presupuestos automatizados y Certificado avalado por Intezia y Val-U.</li>
+        <li><strong>Beneficio del programa formativo:</strong> los participantes desarrollarán competencias duales críticas: gestionar y proyectar su capital o emprendimientos tempranos, construyendo además asistentes financieros personalizados en IA.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <div class="section-title"><span class="num">07</span><h2>Perfil del equipo facilitador</h2></div>
+      <p>Para garantizar la calidad académica y técnica, los facilitadores asignados a este programa (Val-U e Intezia) cumplen con:</p>
+      <ul>
+        <li><strong>Formación académica:</strong> certificación experta demostrable en IA aplicada a las finanzas (Intezia) o en finanzas personales/inversión (Val-U).</li>
+        <li><strong>Experiencia profesional:</strong> 3 años trabajando activamente en el sector.</li>
+        <li><strong>Competencias pedagógicas:</strong> experiencia obligatoria en facilitación de grupos, manejo del modelo ABR y alta energía para el formato sabatino sostenido de 4 h por sesión.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <div class="section-title"><span class="num">08</span><h2>Acreditación y alianza</h2></div>
+      <ul>
+        <li>Programa registrado en INTEZIA Education como <strong>CU-005</strong>.</li>
+        <li>Certificación conjunta <strong>INTEZIA + Val-U</strong> al cumplir asistencia y la calificación mínima (70/100).</li>
+        <li>Cada sábado se ejecuta como una colaboración conjunta: 2 h a cargo de Val-U + 2 h a cargo de Intezia, a lo largo de las 8 sesiones sabatinas que componen los 2 meses del programa.</li>
+        <li>Cumple con el modelo pedagógico oficial de Intezia (ABR) · material curado y revisado por ambos equipos.</li>
+      </ul>
+    </div>
+
+    <div class="footer-line"><span>Bootcamp Finanzas e IA · Val-U × Intezia</span><span>CU-005 · v3.0</span></div>
+  </section>
+
+  <!-- Página 6: §9 Hoja de Cotización -->
+  <section class="page content">
+    <div class="page-head">
+      <img src="../../../logos/educacion/NEGRO.png" alt="Intezia Educación">
+      <span class="tag">CU-005 · Bootcamp Val-U × Intezia</span>
+    </div>
+
+    <div class="section">
+      <div class="section-title"><span class="num">09</span><h2>Hoja de Cotización</h2></div>
+      <p class="subhead" style="margin-top:0">Qué incluye</p>
+      <ul class="quote-scope">
+        <li>8 sesiones sabatinas a lo largo de 2 meses, 2 h Val-U + 2 h Intezia cada sábado.</li>
+        <li>Los 4 módulos completos: Fundamentos Financieros, Inmersión en la IA, Finanzas Potenciadas por IA y Proyecto Final ABR.</li>
+        <li>Workbook del bootcamp y plantillas de presupuesto automatizado.</li>
+        <li>Certificación conjunta INTEZIA + Val-U, sujeta a asistencia y calificación mínima de 70/100.</li>
+        <li>Acompañamiento de ambos equipos facilitadores durante todo el programa.</li>
+      </ul>
+
+      <p class="subhead" style="margin-top:0">Inversión</p>
+      <table class="quote-table">
+        <thead><tr><th>Concepto</th><th class="amount-col">Monto</th></tr></thead>
+        <tbody>
+          <tr><td class="concept">Inversión del programa</td><td class="amount-cell"><div class="amount-box" data-field="Inversion"></div></td></tr>
+          <tr><td class="concept">Descuento (si aplica)</td><td class="amount-cell"><div class="amount-box" data-field="Descuento"></div></td></tr>
+          <tr class="total"><td class="concept">Total</td><td class="amount-cell"><div class="amount-box" data-field="Total"></div></td></tr>
+        </tbody>
+      </table>
+      <p class="cot-validity">Cotización válida por 30 días.</p>
+    </div>
+
+    <div class="footer-line"><span>Bootcamp Finanzas e IA · Val-U × Intezia</span><span>CU-005 · v3.0</span></div>
+  </section>
+
+</body>
+</html>

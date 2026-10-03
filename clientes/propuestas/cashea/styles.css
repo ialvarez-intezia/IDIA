@@ -1,0 +1,1841 @@
+/* =============================================================================
+   Propuesta Cumbre Andina — v4 (FORMATO HORIZONTAL · OBLIGATORIO)
+   Marca oficial Intezia (empresa/marca-visual.md)
+   Paleta: #000000 / #F4BA1A / #E58423 / #FFFFFF
+   Tipografía: Graphit Bold + Graphit Regular (fallback Inter)
+   Formato: A4 LANDSCAPE (1123×794 px @ 96dpi → 842×595 pt PDF)
+
+   REGLA PERMANENTE (2026-04-30): las propuestas Intezia se generan SIEMPRE
+   en horizontal. No revertir a vertical sin instrucción explícita del usuario.
+   ============================================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+
+/*
+@font-face { font-family: 'Graphit'; src: url('../../../../fonts/Graphit-Regular.woff2') format('woff2'); font-weight: 400; }
+@font-face { font-family: 'Graphit'; src: url('../../../../fonts/Graphit-Bold.woff2') format('woff2'); font-weight: 700; }
+*/
+
+/* ---------- Tokens ---------- */
+:root {
+  --black: #000000;
+  --yellow: #F4BA1A;
+  --orange: #E58423;
+  --white: #FFFFFF;
+
+  --gradient-warm: linear-gradient(135deg, var(--yellow) 0%, var(--orange) 100%);
+  --gradient-warm-rev: linear-gradient(135deg, var(--orange) 0%, var(--yellow) 100%);
+
+  --font-display: "Graphit", "Inter", system-ui, sans-serif;
+  --font-body: "Graphit", "Inter", system-ui, sans-serif;
+
+  --slide-w: 1123px;
+  --slide-h: 794px;
+}
+
+/* ---------- Reset ---------- */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  font-family: var(--font-body);
+  background: var(--black);
+  color: var(--black);
+  line-height: 1.45;
+  padding: 24px 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---------- Deck ---------- */
+.deck {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+.slide {
+  width: var(--slide-w);
+  max-width: 96vw;
+  aspect-ratio: 1123 / 794;
+  position: relative;
+  overflow: hidden;
+  border-radius: 6px;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.55);
+  display: flex;
+  flex-direction: column;
+}
+
+/* counter "01 / 10" */
+.slide .counter {
+  position: absolute;
+  top: 28px;
+  right: 40px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.18em;
+  z-index: 10;
+}
+
+/* footer */
+.foot {
+  position: absolute;
+  left: 56px;
+  right: 56px;
+  bottom: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 5;
+  padding-right: 8px;
+}
+.foot img { height: 28px; width: auto; display: block; }
+.foot .meta {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  line-height: 28px;
+  height: 28px;
+}
+
+.eyebrow {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+}
+
+/* ===========================================================================
+   SLIDE 1 — Portada (logo grande izquierda, decoración derecha)
+   =========================================================================== */
+.s-cover {
+  background: var(--black);
+  color: var(--white);
+  padding: 56px 80px 80px;
+  overflow: hidden;
+}
+.s-cover::before {
+  content: "";
+  position: absolute;
+  top: -160px; right: -160px;
+  width: 460px; height: 460px;
+  background: var(--gradient-warm);
+  transform: rotate(45deg);
+  z-index: 0;
+}
+.s-cover .counter { color: var(--yellow); z-index: 5; }
+.s-cover .logo-big {
+  position: relative;
+  z-index: 2;
+  margin-left: -28px;     /* compensa padding interno del PNG → alinea "Education" */
+}
+.s-cover .logo-big img {
+  height: 180px;
+  width: auto;
+  display: block;
+}
+.s-cover .body {
+  position: relative;
+  z-index: 2;
+  margin-top: 36px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.s-cover .eyebrow { color: var(--yellow); margin-bottom: 18px; }
+.s-cover h1 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 76px;
+  line-height: 0.95;
+  letter-spacing: -0.025em;
+  margin-bottom: 24px;
+  max-width: 820px;
+}
+.s-cover .lead {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.45;
+  max-width: 640px;
+  opacity: 0.9;
+}
+.s-cover h1 .hl {
+  display: inline-block;
+  background: var(--yellow);
+  color: var(--black);
+  padding: 0 12px;
+  margin: 4px 0;
+}
+.s-cover .id-line {
+  position: absolute;
+  bottom: 56px;
+  left: 80px;
+  right: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  z-index: 3;
+}
+.s-cover .id-line .codigo { color: var(--yellow); }
+.s-cover .id-line .cliente { color: var(--white); text-align: right; }
+.s-cover .foot { color: var(--white); }
+.s-cover .foot .meta { color: var(--yellow); }
+.s-cover .foot img { display: none; }
+
+/* ===========================================================================
+   SLIDE 2 — Pain (comilla izquierda + body con lista de diagnóstico 2 col)
+   =========================================================================== */
+.s-pain {
+  background: var(--yellow);
+  color: var(--black);
+  padding: 70px 80px 90px;
+}
+.s-pain::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 8px;
+  background: var(--black);
+}
+.s-pain .counter { color: var(--black); }
+.s-pain .quote-mark {
+  font-family: var(--font-display);
+  font-size: 280px;
+  font-weight: 900;
+  line-height: 0.7;
+  color: var(--orange);
+  position: absolute;
+  top: 70px; left: 60px;
+  z-index: 1;
+  user-select: none;
+}
+.s-pain .body {
+  position: relative;
+  z-index: 2;
+  padding-left: 240px;
+  padding-top: 40px;
+}
+.s-pain h2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+  max-width: 760px;
+}
+.s-pain .context {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 1.45;
+  margin-bottom: 26px;
+  max-width: 760px;
+}
+.s-pain .diag-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  color: var(--black);
+}
+.s-pain ol {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 36px;
+  counter-reset: item;
+}
+.s-pain ol li {
+  counter-increment: item;
+  position: relative;
+  padding-left: 58px;
+  font-size: 14.5px;
+  line-height: 1.4;
+  min-height: 42px;
+  display: flex;
+  align-items: center;
+}
+.s-pain ol li::before {
+  content: counter(item, decimal-leading-zero);
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1;
+  color: var(--black);
+  letter-spacing: -0.02em;
+  background: var(--white);
+  padding: 5px 9px;
+}
+
+/* ===========================================================================
+   SLIDE 3 — Goals (header arriba + 2 columnas: general | specifics)
+   Wrapper .columns en HTML.
+   =========================================================================== */
+.s-goals {
+  background: var(--white);
+  color: var(--black);
+  padding: 70px 56px 90px 80px;
+}
+.s-goals::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 12px; height: 100%;
+  background: var(--black);
+}
+.s-goals::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 12px;
+  width: 12px; height: 100%;
+  background: var(--yellow);
+}
+.s-goals .eyebrow {
+  color: var(--orange);
+  margin-bottom: 14px;
+}
+.s-goals h2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 46px;
+  line-height: 1.05;
+  margin-bottom: 18px;
+}
+.s-goals .columns {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.s-goals .general {
+  background: var(--black);
+  color: var(--white);
+  padding: 18px 24px;
+  border-left: 10px solid var(--yellow);
+}
+.s-goals .general .label {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--yellow);
+  margin-bottom: 10px;
+}
+.s-goals .general p {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.42;
+  max-width: 1000px;
+}
+.s-goals .specifics .label {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--orange);
+  margin-bottom: 14px;
+}
+.s-goals .specifics ol {
+  list-style: none;
+  padding: 0;
+  counter-reset: spec;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.s-goals .specifics ol li {
+  counter-increment: spec;
+  position: relative;
+  padding-left: 56px;
+  font-size: 16px;
+  line-height: 1.4;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  max-width: 920px;
+}
+.s-goals .specifics ol li::before {
+  content: counter(spec);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  background: var(--yellow);
+  color: var(--black);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 19px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===========================================================================
+   SLIDE 4 — Programa (header negro arriba + 3 módulos en grid horizontal)
+   =========================================================================== */
+.s-program {
+  background: var(--white);
+  color: var(--black);
+  padding: 56px 56px 96px;
+}
+.s-program::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 160px;
+  background: var(--black);
+  z-index: 0;
+}
+.s-program .counter { color: var(--yellow); z-index: 5; }
+.s-program > .eyebrow,
+.s-program > h2,
+.s-program > .meta,
+.s-program > .modules {
+  position: relative;
+  z-index: 1;
+}
+.s-program .eyebrow {
+  color: var(--yellow);
+  margin-bottom: 6px;
+}
+.s-program h2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1.05;
+  color: var(--white);
+  margin-bottom: 4px;
+}
+.s-program .meta {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--yellow);
+  margin-bottom: 28px;
+}
+.s-program .modules {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  align-items: stretch;
+  flex: 1;
+  min-height: 0;
+}
+/* ---------------------------------------------------------------------------
+   Grid adaptable según cantidad de módulos (CSS :has(), Chrome ≥105):
+   - 1-3 módulos → 3 cols × 1 row, cards grandes (min-height 320 px)
+   - 4 módulos    → 2 cols × 2 rows
+   - 5-6 módulos  → 3 cols × 2 rows (default)
+   - 7-9 módulos  → 3 cols × 3 rows, cards más compactas
+   - 10+ módulos  → 4 cols, cards aún más compactas
+   --------------------------------------------------------------------------- */
+/* 1-3 módulos: 1 fila — cards se estiran vía align-items:stretch en el grid */
+/* 4 módulos: 2×2, modo compacto — padding y fuentes reducidos para que quepan 5 temas */
+.s-program .modules:has(> .module:nth-child(4)):not(:has(> .module:nth-child(5))) {
+  grid-template-columns: repeat(2, 1fr);
+}
+.s-program .modules:has(> .module:nth-child(4)):not(:has(> .module:nth-child(5))) .module {
+  min-height: 235px;
+  padding: 56px 14px 14px;
+}
+.s-program .modules:has(> .module:nth-child(4)):not(:has(> .module:nth-child(5))) .module .roman {
+  font-size: 50px;
+  top: 4px;
+}
+.s-program .modules:has(> .module:nth-child(4)):not(:has(> .module:nth-child(5))) .module h3 {
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+.s-program .modules:has(> .module:nth-child(4)):not(:has(> .module:nth-child(5))) .module .obj {
+  display: none;
+}
+.s-program .modules:has(> .module:nth-child(4)):not(:has(> .module:nth-child(5))) .module .topics {
+  gap: 4px;
+}
+.s-program .modules:has(> .module:nth-child(4)):not(:has(> .module:nth-child(5))) .module .topics li {
+  font-size: 13px;
+  padding: 3px 8px;
+}
+/* 5-6 módulos: 3×2 (default columnas = 3) */
+.s-program .modules:has(> .module:nth-child(5)):not(:has(> .module:nth-child(7))) .module {
+  min-height: 235px;
+}
+/* 7-9 módulos: 3×3, cards compactas */
+.s-program .modules:has(> .module:nth-child(7)):not(:has(> .module:nth-child(10))) {
+  grid-template-columns: repeat(3, 1fr);
+}
+.s-program .modules:has(> .module:nth-child(7)):not(:has(> .module:nth-child(10))) .module {
+  padding: 62px 14px 14px;
+  min-height: 152px;
+}
+.s-program .modules:has(> .module:nth-child(7)):not(:has(> .module:nth-child(10))) .module .roman {
+  font-size: 52px;
+  top: 4px;
+}
+.s-program .modules:has(> .module:nth-child(7)):not(:has(> .module:nth-child(10))) .module h3 {
+  font-size: 22px;
+}
+.s-program .modules:has(> .module:nth-child(7)):not(:has(> .module:nth-child(10))) .module .obj {
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+.s-program .modules:has(> .module:nth-child(7)):not(:has(> .module:nth-child(10))) .module .topics li {
+  font-size: 15px;
+  padding: 4px 9px;
+}
+/* 10+ módulos: 4 cols, cards mínimas */
+.s-program .modules:has(> .module:nth-child(10)) {
+  grid-template-columns: repeat(4, 1fr);
+}
+.s-program .modules:has(> .module:nth-child(10)) .module {
+  padding: 56px 12px 12px;
+  min-height: 132px;
+}
+.s-program .modules:has(> .module:nth-child(10)) .module .roman { font-size: 44px; top: 3px; }
+.s-program .modules:has(> .module:nth-child(10)) .module h3 { font-size: 20px; }
+.s-program .modules:has(> .module:nth-child(10)) .module .obj { font-size: 12px; margin-bottom: 6px; }
+.s-program .modules:has(> .module:nth-child(10)) .module .topics li { font-size: 14px; padding: 3px 8px; }
+
+.s-program .module {
+  position: relative;
+  background: var(--white);
+  border: 3px solid var(--black);
+  padding: 80px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.s-program .module .roman {
+  position: absolute;
+  left: 16px; top: 6px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 72px;
+  color: var(--orange);
+  letter-spacing: 0;
+  line-height: 1;
+}
+.s-program .module h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 25px;
+  margin-bottom: 6px;
+  line-height: 1.2;
+}
+.s-program .module .obj {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+  color: var(--black);
+  font-style: italic;
+}
+.s-program .module .topics {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.s-program .module .topics li {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 17px;
+  background: var(--yellow);
+  color: var(--black);
+  padding: 5px 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Footer en slides de Programa: las tarjetas llegan casi al borde inferior;
+   se baja el footer para que quede en la banda blanca, fuera del rectángulo. */
+.s-program .foot { bottom: 8px; }
+
+/* ===========================================================================
+   SLIDE 5-7 — Desglose instructivo (una sesión por slide, layout flexible)
+   El cuerpo usa flexbox sin alturas fijas: absorbe contenido de cualquier
+   volumen sin recortar ni deformar. Una sesión = un slide.
+   =========================================================================== */
+.s-schedule {
+  background: var(--white);
+  color: var(--black);
+  padding: 46px 56px 72px;
+  display: flex;
+  flex-direction: column;
+}
+.s-schedule::before {
+  content: "";
+  position: absolute;
+  top: 0; right: 0;
+  width: 300px; height: 6px;
+  background: var(--gradient-warm);
+}
+.s-schedule .eyebrow {
+  color: var(--orange);
+  margin-bottom: 10px;
+}
+
+/* Ruta de aprendizaje — nodo numerado + cinta de progreso */
+.s-schedule .ruta {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+.s-schedule .ruta-node {
+  width: 38px; height: 38px;
+  flex: 0 0 38px;
+  border-radius: 50%;
+  background: var(--black);
+  color: var(--yellow);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.s-schedule .ruta-track {
+  flex: 1;
+  height: 5px;
+  border-radius: 3px;
+  background: rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+.s-schedule .ruta-fill {
+  height: 100%;
+  background: var(--gradient-warm);
+}
+.s-schedule .ruta-step {
+  flex: 0 0 auto;
+  color: var(--orange);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+/* Identidad de la sesión */
+.s-schedule .ses-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-bottom: 2px solid var(--black);
+  padding-bottom: 12px;
+  margin-bottom: 16px;
+}
+.s-schedule .ses-mod {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--orange);
+}
+.s-schedule .ses-head h2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 1.05;
+  margin-top: 4px;
+}
+.s-schedule .ses-dur {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 24px;
+  color: var(--orange);
+}
+
+/* Cuerpo flexible — absorbe contenido variable, sin alturas fijas.
+   space-between reparte el aire sobrante entre Temas, Tiempo y las columnas. */
+.s-schedule .ses-body {
+  flex: 1 1 auto;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 16px;
+}
+.s-schedule .label {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--orange);
+  margin-bottom: 10px;
+}
+
+/* Temas — chips que se acomodan solos en varias filas */
+.s-schedule .chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.s-schedule .chip {
+  border: 1.5px solid var(--black);
+  border-radius: 8px;
+  padding: 7px 12px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* Tiempo — barra proporcional, cualquier nº de segmentos */
+.s-schedule .timebar {
+  display: flex;
+  border: 1.5px solid var(--black);
+  min-height: 34px;
+}
+.s-schedule .seg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 6px;
+}
+.s-schedule .seg:nth-child(3n+1) { background: var(--yellow); }
+.s-schedule .seg:nth-child(3n+2) { background: var(--orange); }
+.s-schedule .seg:nth-child(3n+3) { background: var(--black); color: var(--white); }
+
+/* 3 columnas — se ajustan a su contenido (no se estiran al fondo del slide);
+   se igualan entre sí a la más alta vía align-items: stretch (por defecto). */
+.s-schedule .ses-cols {
+  flex: 0 1 auto;
+  display: flex;
+  gap: 13px;
+}
+.s-schedule .ses-cols .ses-block {
+  flex: 1 1 0;
+  border: 2px solid var(--black);
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+}
+.s-schedule .block-rec {
+  background: var(--black);
+  color: var(--white);
+}
+.s-schedule .block-rec .label { color: var(--yellow); }
+/* La lista llena la caja igualada: cada ítem es una fila que crece para
+   ocupar su parte, separada por un divisor sutil. La caja nunca se ve vacía. */
+.s-schedule .ses-block ul {
+  list-style: none;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+}
+.s-schedule .ses-block li {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  font-size: 15.5px;
+  line-height: 1.35;
+  font-weight: 500;
+  padding: 10px 0 10px 17px;
+  position: relative;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+.s-schedule .ses-block li:last-child { border-bottom: none; }
+.s-schedule .ses-block li::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 50%;
+  transform: translateY(-50%);
+  width: 7px; height: 7px;
+  background: var(--orange);
+}
+/* Caja Recursos (fondo negro): divisor y marcador en claro */
+.s-schedule .block-rec li { border-bottom-color: rgba(255, 255, 255, 0.18); }
+.s-schedule .block-rec li::before { background: var(--yellow); }
+
+/* ===========================================================================
+   SLIDE 6 (CONDICIONAL) — Sistema de evaluación 30/50/20
+   =========================================================================== */
+.s-eval {
+  background: var(--white);
+  color: var(--black);
+  padding: 56px 80px 80px;
+}
+.s-eval::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 56%;
+  background: var(--yellow);
+  z-index: 0;
+}
+.s-eval .eyebrow,
+.s-eval h2,
+.s-eval table,
+.s-eval .min-grade {
+  position: relative;
+  z-index: 2;
+}
+.s-eval .eyebrow { margin-bottom: 12px; }
+.s-eval h2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.05;
+  margin-bottom: 22px;
+}
+.s-eval table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--white);
+  border: 3px solid var(--black);
+}
+.s-eval th {
+  background: var(--black);
+  color: var(--white);
+  text-align: left;
+  padding: 10px 14px;
+  font-family: var(--font-display);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+.s-eval td {
+  padding: 14px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 14px;
+  vertical-align: top;
+}
+.s-eval td.weight {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 28px;
+  color: var(--orange);
+  white-space: nowrap;
+}
+.s-eval tr:last-child td { border-bottom: 0; background: var(--yellow); font-weight: 700; }
+.s-eval .min-grade {
+  margin-top: 22px;
+  background: var(--black);
+  color: var(--white);
+  padding: 14px 20px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.s-eval .min-grade strong { color: var(--yellow); }
+
+/* ===========================================================================
+   SLIDE 7 — Metodología ABR (orange, 3 pilares en fila horizontal)
+   =========================================================================== */
+.s-orange {
+  background: var(--orange);
+  color: var(--black);
+  padding: 56px 56px 80px;
+}
+.s-orange::before {
+  content: "";
+  position: absolute;
+  top: 0; right: 0;
+  width: 220px; height: 220px;
+  background: var(--black);
+  clip-path: polygon(100% 0, 0 0, 100% 100%);
+}
+.s-orange .counter { color: var(--white); }
+.s-orange .eyebrow { margin-bottom: 12px; }
+.s-orange h2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 0.98;
+  margin-bottom: 12px;
+  letter-spacing: -0.02em;
+  max-width: 700px;
+}
+.s-orange .sub {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+.s-orange .pillars {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.s-orange .pillar {
+  position: relative;
+  background: var(--black);
+  color: var(--white);
+  padding: 80px 22px 22px;
+  min-height: 260px;
+}
+.s-orange .pillar .num {
+  position: absolute;
+  left: 18px; top: 4px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 84px;
+  line-height: 1;
+  color: var(--yellow);
+  letter-spacing: -0.05em;
+}
+.s-orange .pillar h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--yellow);
+  margin-bottom: 6px;
+}
+.s-orange .pillar p {
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+/* ===========================================================================
+   SLIDE 8 — Beneficios (4 bloques en fila + equipo abajo)
+   =========================================================================== */
+.s-benefits {
+  background: var(--white);
+  color: var(--black);
+  padding: 56px 56px 80px;
+}
+.s-benefits::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 8px; height: 100%;
+  background: var(--orange);
+}
+.s-benefits .eyebrow {
+  color: var(--orange);
+  margin-bottom: 8px;
+}
+.s-benefits h2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1.05;
+  margin-bottom: 22px;
+}
+.s-benefits .grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-bottom: 18px;
+  height: 280px;
+}
+.s-benefits .block {
+  background: var(--white);
+  border: 2px solid var(--black);
+  padding: 14px 16px;
+  position: relative;
+}
+.s-benefits .block .label {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--orange);
+  margin-bottom: 8px;
+}
+.s-benefits .block ul {
+  list-style: none;
+  padding: 0;
+}
+.s-benefits .block ul li {
+  font-size: 11.5px;
+  line-height: 1.45;
+  margin-bottom: 6px;
+}
+.s-benefits .block p { font-size: 11.5px; line-height: 1.4; }
+.s-benefits .block strong {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--black);
+}
+
+.s-benefits .team {
+  background: var(--black);
+  color: var(--white);
+  padding: 16px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.s-benefits .team .label {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--yellow);
+}
+.s-benefits .team .members {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+.s-benefits .team .person {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.s-benefits .team .avatar {
+  width: 56px; height: 56px;
+  border-radius: 50%;
+  background: var(--yellow);
+  color: var(--black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 0.04em;
+  flex-shrink: 0;
+  background-size: cover;
+  background-position: center;
+}
+.s-benefits .team .person:nth-child(2) .avatar {
+  background: var(--orange);
+  color: var(--black);
+}
+.s-benefits .team .avatar[data-photo]:not([data-photo=""]) {
+  background-image: var(--photo);
+  color: transparent;
+}
+.s-benefits .team .person h4 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--white);
+  margin-bottom: 2px;
+}
+.s-benefits .team .person .role {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--yellow);
+  margin-bottom: 2px;
+}
+.s-benefits .team .person p {
+  font-size: 11px;
+  line-height: 1.35;
+  opacity: 0.9;
+}
+
+/* ===========================================================================
+   SLIDE — Impacto / estudios (CANÓNICA · alto contraste)
+   Slide en NEGRO: rompe el ritmo del deck. Gráfica de barras + gauge radial
+   (conic-gradient) + hook de ventas a todo el ancho. Gráficas en CSS puro —
+   sin Chart.js, sin JS — para que la conversión a PDF (Chrome headless) sea fiel.
+   FLEXIBLE: admite 3–5 barras, 1–3 chips y copy de longitud variable.
+   conic-gradient/mask/box-shadow imprimen bien (print-color-adjust: exact global).
+   =========================================================================== */
+.s-impact {
+  background: var(--black);
+  color: var(--white);
+  padding: 50px 52px 62px;
+}
+.s-impact::before {                          /* franja de marca */
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 8px; height: 100%;
+  background: var(--gradient-warm);
+  z-index: 2;
+}
+.s-impact::after {                           /* resplandor cálido detrás del gauge */
+  content: "";
+  position: absolute;
+  right: -120px; top: 40px;
+  width: 560px; height: 560px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(229, 132, 35, 0.30) 0%, transparent 66%);
+  z-index: 0;
+  pointer-events: none;
+}
+.s-impact .counter { color: var(--white); }
+.s-impact .foot { z-index: 3; }
+.s-impact .foot .meta { color: var(--white); }
+.s-impact .impact-head,
+.s-impact .impact-body,
+.s-impact .impact-hook { position: relative; z-index: 1; }
+
+/* Cabecera */
+.s-impact .impact-head { margin-bottom: 22px; }
+.s-impact .eyebrow { color: var(--orange); margin-bottom: 10px; }
+.s-impact h2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 1.04;
+  letter-spacing: -0.015em;
+}
+.s-impact h2 .hl {
+  background: var(--gradient-warm);
+  color: var(--black);
+  padding: 0 10px;
+}
+
+/* Cuerpo: gráfica (izq) + gauge (der) */
+.s-impact .impact-body {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 36px;
+  flex: 1;
+  min-height: 0;
+  align-items: center;
+}
+
+/* Panel de la gráfica de barras */
+.s-impact .chart-panel {
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.035);
+  padding: 24px 26px 22px;
+}
+.s-impact .panel-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 10.5px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--orange);
+  margin-bottom: 20px;
+}
+.s-impact .bars { display: flex; flex-direction: column; gap: 16px; }
+.s-impact .bar-row {
+  display: grid;
+  grid-template-columns: 196px 1fr;
+  align-items: center;
+  gap: 16px;
+}
+.s-impact .bar-label {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 12.5px;
+  line-height: 1.2;
+}
+.s-impact .bar-track {
+  height: 30px;
+  background:
+    repeating-linear-gradient(90deg, rgba(255,255,255,0.07) 0 1px, transparent 1px 25%),
+    rgba(255, 255, 255, 0.05);
+}
+.s-impact .bar-fill {                         /* ancho = var(--w) inline (0–100%) */
+  position: relative;
+  height: 100%;
+  width: var(--w);
+  background: var(--gradient-warm);
+  box-shadow: 0 0 22px rgba(229, 132, 35, 0.45);
+}
+.s-impact .bar-val {
+  position: absolute;
+  right: 10px; top: 50%;
+  transform: translateY(-50%);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--black);
+}
+.s-impact .bar-axis {
+  display: grid;
+  grid-template-columns: 196px 1fr;
+  gap: 16px;
+  margin-top: 12px;
+}
+.s-impact .bar-axis .scale {
+  grid-column: 2;
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  color: rgba(255, 255, 255, 0.4);
+}
+.s-impact .panel-source {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 10px;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.45);
+  margin-top: 14px;
+}
+
+/* Panel del gauge radial + chips */
+.s-impact .gauge-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+}
+.s-impact .gauge {                            /* --pct lo fija el style inline (0–100) */
+  --pct: 0;
+  position: relative;
+  width: 236px; height: 236px;
+  border-radius: 50%;
+  background: conic-gradient(from -90deg,
+    var(--yellow),
+    var(--orange) calc(var(--pct) * 3.6deg),
+    rgba(255, 255, 255, 0.09) calc(var(--pct) * 3.6deg));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(0 0 26px rgba(229, 132, 35, 0.38));
+}
+.s-impact .gauge::before {                    /* anillo de ticks */
+  content: "";
+  position: absolute;
+  inset: -16px;
+  border-radius: 50%;
+  background: repeating-conic-gradient(
+    rgba(255, 255, 255, 0.30) 0 1.1deg, transparent 1.1deg 9deg);
+  -webkit-mask: radial-gradient(circle, transparent 64%, #000 65%, #000 69%, transparent 70%);
+          mask: radial-gradient(circle, transparent 64%, #000 65%, #000 69%, transparent 70%);
+}
+.s-impact .gauge-core {
+  position: relative;
+  width: 158px; height: 158px;
+  border-radius: 50%;
+  background: var(--black);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.10);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+}
+.s-impact .gauge-num {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: var(--yellow);
+}
+.s-impact .gauge-num .pct { font-size: 30px; }
+.s-impact .gauge-cap {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 9px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.65);
+  text-align: center;
+  max-width: 140px;
+}
+.s-impact .chips {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.s-impact .chip {
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.04);
+  padding: 12px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  min-width: 124px;
+}
+.s-impact .chip-num {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: var(--orange);
+}
+.s-impact .chip-lbl {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+}
+
+/* Hook de ventas — banda a todo el ancho (full-bleed), abajo */
+.s-impact .impact-hook {
+  margin: 22px -52px 0;
+  padding: 20px 52px;
+  background: var(--gradient-warm);
+  color: var(--black);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.s-impact .hook-mark {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 1;
+  flex: 0 0 auto;
+}
+.s-impact .hook-text {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 1.28;
+  letter-spacing: -0.01em;
+}
+.s-impact .hook-text strong {
+  font-weight: 700;
+  box-shadow: inset 0 -0.32em 0 rgba(0, 0, 0, 0.18);
+}
+
+/* ===========================================================================
+   SLIDE 9 — Propuesta Económica (LANDSCAPE: izquierda info, derecha cotización)
+   ---------------------------------------------------------------------------
+   Las filas de cotización siguen siendo position:absolute relativas al slide
+   para que las coordenadas pt PDF coincidan exactamente con el frame visual.
+
+   Slide A4 landscape pt:  842 × 595
+   Conversión CSS px → pt PDF: factor 0.75
+   y_pt = 595 - (y_top_css × 0.75 + h_css × 0.75)
+
+   Frame              CSS px (top, left, w, h)        pt PDF (RECT x1,y1,x2,y2)
+   ---------------    ------------------------------  --------------------------
+   base-frame         top=240, left=720, w=320, h=48  (540, 379, 780, 415)
+   discount-frame     top=320, left=820, w=220, h=38  (615, 327, 780, 355)
+   total-frame        top=420, left=720, w=320, h=80  (540, 220, 780, 280)
+
+   right=56 → x_right_css = 1123-56 = 1067 → x_right_pt = 800.25
+   Aquí los frames terminan en x=1040 css → 780 pt para dejar margen.
+   --------------------------------------------------------------------------- */
+.s-price {
+  background: var(--white);
+  color: var(--black);
+  padding: 50px 56px 80px;
+}
+.s-price .title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 1;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+  padding-bottom: 12px;
+  border-bottom: 4px solid var(--yellow);
+}
+.s-price .block {
+  width: 480px;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+.s-price .block-eyebrow {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 10px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--orange);
+  display: block;
+  margin-bottom: 6px;
+}
+.s-price .block-value {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 1.3;
+}
+/* Cotización: bloque-eyebrow absolute en columna derecha (top de la sección) */
+.s-price .block-cotizacion {
+  position: absolute;
+  top: 158px;
+  left: 580px;
+  width: 487px;
+  padding: 0;
+  border-bottom: 0;
+  height: auto;
+}
+
+/* Programa y Notas: ambos bloques posicionados absolute con coords
+   conocidas para que matcheen los AcroForm rect del PDF. El cuadrito
+   de acento (amarillo en Programa, naranja en Notas) se pinta como
+   ::before del label — un solo cuadradito decorativo por bloque, no
+   por línea, ya que el contenido es multiline libre. */
+.s-price .block-programa {
+  position: absolute;
+  top: 195px;
+  left: 56px;
+  width: 480px;
+  padding: 0;
+  border-bottom: 0;
+}
+.s-price .block-programa .block-eyebrow::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: var(--yellow);
+  margin-right: 10px;
+  position: relative;
+  top: -1px;
+}
+
+.s-price .block-notes-container {
+  position: absolute;
+  top: 365px;
+  left: 56px;
+  width: 480px;
+  padding: 0;
+  border-top: 0;
+  border-bottom: 0;
+}
+.s-price .block-notes-container .block-eyebrow::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: var(--orange);
+  margin-right: 10px;
+  position: relative;
+  top: -1px;
+}
+
+/* AcroForm multiline overlays para Programa y Notas (matchean rect PDF) */
+.s-price .programa-box { top: 222px; left: 56px; width: 480px; height: 105px; }
+.s-price .notas-box    { top: 392px; left: 56px; width: 480px; height: 110px; }
+
+/* ----------------------------------------------------------------------------
+   Cotización — labels como eyebrows pequeños sobre cada frame, los 3 frames
+   alineados a ancho completo de la columna derecha (left=580, w=487).
+   Esto evita que los labels largos ("Propuesta + Inversión") se monten
+   sobre el rectángulo y mantiene los anchos consistentes.
+
+   Slide A4 landscape pt:  842 × 595      Conversión px → pt: factor 0.75
+   y_pt = 595 - (y_top_css × 0.75 + h_css × 0.75)
+
+   Frame              CSS px (top, left, w, h)        pt PDF (RECT x1,y1,x2,y2)
+   ---------------    ------------------------------  --------------------------
+   base-frame         top=220, left=580, w=487, h=52  (435, 391, 800, 430)
+   discount-frame     top=318, left=580, w=487, h=44  (435, 323, 800, 357)
+   total-frame        top=414, left=580, w=487, h=76  (435, 227, 800, 285)
+   ---------------------------------------------------------------------------- */
+
+.s-price .cot-label {
+  position: absolute;
+  left: 580px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 10px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--orange);
+  z-index: 2;
+}
+.s-price .cot-label-base       { top: 200px; }
+.s-price .cot-label-discount   { top: 298px; }
+.s-price .cot-label-total      {
+  top: 390px;
+  color: var(--black);
+}
+
+.s-price .cot-frame {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  z-index: 2;
+}
+.s-price .cot-frame .placeholder {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: rgba(0, 0, 0, 0.3);
+  user-select: none;
+}
+
+.s-price .base-frame {
+  top: 220px;
+  left: 580px;
+  width: 487px;
+  height: 52px;
+  background: rgba(244, 186, 26, 0.22);
+  padding: 0 18px;
+}
+.s-price .base-frame .placeholder { font-size: 22px; }
+
+.s-price .discount-frame {
+  top: 318px;
+  left: 580px;
+  width: 487px;
+  height: 44px;
+  background: rgba(244, 186, 26, 0.22);
+  padding: 0 18px;
+}
+.s-price .discount-frame .placeholder { font-size: 18px; }
+
+.s-price .total-frame {
+  top: 414px;
+  left: 580px;
+  width: 487px;
+  height: 76px;
+  background: var(--yellow);
+  justify-content: center;
+  padding: 0 20px;
+}
+.s-price .total-frame .placeholder {
+  font-size: 30px;
+  color: rgba(0, 0, 0, 0.4);
+  letter-spacing: -0.02em;
+}
+
+.s-price .cot-validity {
+  position: absolute;
+  top: 504px;
+  left: 580px;
+  right: 56px;
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-style: italic;
+  font-size: 11px;
+  color: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+}
+
+/* ===========================================================================
+   SLIDE 10 — Próximos pasos (3 cards en fila + contacto al pie)
+   =========================================================================== */
+.s-steps {
+  background: var(--white);
+  color: var(--black);
+  padding: 56px 56px 80px;
+}
+.s-steps::before {
+  content: "";
+  position: absolute;
+  top: 0; right: 0;
+  width: 8px; height: 100%;
+  background: var(--orange);
+}
+.s-steps .eyebrow {
+  color: var(--orange);
+  margin-bottom: 12px;
+}
+.s-steps h2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 1.05;
+  margin-bottom: 30px;
+}
+.s-steps .step-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 0;
+}
+.s-steps .step-card {
+  position: relative;
+  background: var(--white);
+  border: 3px solid var(--black);
+  padding: 110px 28px 32px;
+  overflow: hidden;
+  min-height: 400px;
+}
+.s-steps .step-card .ghost {
+  position: absolute;
+  left: 16px; top: -20px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 160px;
+  line-height: 1;
+  color: var(--yellow);
+  letter-spacing: -0.05em;
+  z-index: 0;
+}
+
+/* ===========================================================================
+   SLIDE 11 — Cierre (logo grande centrado + mensaje + CTA + contacto al pie)
+   =========================================================================== */
+.s-end {
+  background: var(--black);
+  color: var(--white);
+  padding: 48px 56px 56px;
+  text-align: center;
+}
+.s-end::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 14px;
+  background: var(--gradient-warm);
+}
+.s-end::after {
+  content: "";
+  position: absolute;
+  bottom: 0; right: 0;
+  width: 60%; height: 14px;
+  background: var(--gradient-warm-rev);
+}
+.s-end .counter { color: var(--yellow); }
+
+.s-end .end-logo {
+  margin-top: 16px;
+  display: flex;
+  justify-content: center;
+}
+.s-end .end-logo img {
+  height: 180px;
+  width: auto;
+  display: block;
+}
+
+.s-end .end-message {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+  margin-top: 28px;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.s-end .end-message .hl-orange { color: var(--orange); }
+.s-end .end-message .hl-yellow {
+  display: inline-block;
+  background: var(--yellow);
+  color: var(--black);
+  padding: 0 10px;
+}
+
+.s-end .cta-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 36px;
+  position: relative;
+}
+.s-end .cta {
+  position: relative;
+  display: inline-block;
+  background: var(--yellow);
+  color: var(--white);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 22px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 22px 56px;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 10px 10px 0 var(--orange),
+              10px 10px 0 1px var(--black);
+}
+
+.s-end .end-contact {
+  position: absolute;
+  bottom: 56px;
+  left: 56px;
+  right: 56px;
+  text-align: center;
+}
+.s-end .contact-line {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: var(--white);
+  opacity: 0.92;
+  margin-bottom: 4px;
+}
+.s-end .contact-line:last-child { margin-bottom: 0; opacity: 0.7; }
+.s-end .contact-line .contact-label {
+  font-weight: 700;
+  color: var(--yellow);
+  margin-right: 6px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-size: 11px;
+}
+.s-end .contact-line .dot {
+  color: var(--orange);
+  margin: 0 6px;
+  font-weight: 700;
+}
+
+/* ===========================================================================
+   .acro-area — placeholders para campos AcroForm editables (slides 7 y 9)
+   ---------------------------------------------------------------------------
+   El AcroForm se sobrepone sobre estas áreas en el post-proceso del PDF
+   (scripts/agregar-campo-precio.py). El texto demo se muestra en preview HTML
+   pero se oculta en print/PDF — el valor visible en el PDF viene del /V del
+   AcroForm, que arranca con el contenido de Cumbre Andina y se edita encima.
+
+   Coordenadas pt PDF (A4 landscape 842×595):
+   Slide 7 — Beneficios
+     Entregables   CSS top=187 left=584 w=210 h=235 → rect (438, 279, 596, 455)
+     Acreditacion  CSS top=187 left=840 w=210 h=235 → rect (630, 279, 788, 455)
+
+   Slide 9 — Próximos pasos
+     Paso01Titulo  CSS top=266 left=84  w=270 h=40  → rect (63, 366, 266, 396)
+     Paso01Body    CSS top=314 left=84  w=270 h=210 → rect (63, 202, 266, 360)
+     Paso02Titulo  CSS top=266 left=426 w=270 h=40  → rect (320, 366, 522, 396)
+     Paso02Body    CSS top=314 left=426 w=270 h=210 → rect (320, 202, 522, 360)
+     Paso03Titulo  CSS top=266 left=768 w=270 h=40  → rect (576, 366, 779, 396)
+     Paso03Body    CSS top=314 left=768 w=270 h=210 → rect (576, 202, 779, 360)
+   =========================================================================== */
+.acro-area {
+  position: absolute;
+  z-index: 3;
+  background: rgba(244, 186, 26, 0.05);
+  border: 1px dashed rgba(0, 0, 0, 0.12);
+}
+.acro-area .acro-default-text {
+  font-family: var(--font-display);
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 10px 12px;
+  color: var(--black);
+}
+
+/* slide 7 + slide 8: cajas multiline editables (1 AcroForm por bloque, sin
+   viñetas fijas). El texto demo de fondo se tapa con /MK /BG blanco en el
+   PDF; aquí solo declaramos la posición y la tipografía. */
+.multi-box {
+  position: absolute;
+  z-index: 3;
+}
+.multi-box .acro-default-text {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 11.5px;
+  line-height: 1.45;
+  color: var(--black);
+  display: block;
+  white-space: pre-line; /* respeta &#13; (\r) como salto de línea */
+}
+
+/* slide 7 — Entregables (col izq) y Acreditación (col der). Cada caja
+   cubre el área visible del bloque correspondiente (top 187 → 343). */
+.s-benefits .entregables-box    { top: 187px; left: 584px; width: 210px; height: 156px; }
+.s-benefits .acreditaciones-box { top: 187px; left: 840px; width: 210px; height: 156px; }
+
+/* slide 9: 3 pasos × (título + body) */
+.s-steps .acro-title {
+  height: 40px;
+  background: transparent;
+  border: 1px dashed rgba(0, 0, 0, 0.12);
+}
+.s-steps .acro-body {
+  background: rgba(244, 186, 26, 0.05);
+}
+.s-steps .acro-paso-01-titulo { top: 266px; left: 84px;  width: 270px; }
+.s-steps .acro-paso-01-body   { top: 314px; left: 84px;  width: 270px; height: 210px; }
+.s-steps .acro-paso-02-titulo { top: 266px; left: 426px; width: 270px; }
+.s-steps .acro-paso-02-body   { top: 314px; left: 426px; width: 270px; height: 210px; }
+.s-steps .acro-paso-03-titulo { top: 266px; left: 768px; width: 270px; }
+.s-steps .acro-paso-03-body   { top: 314px; left: 768px; width: 270px; height: 210px; }
+
+.s-steps .acro-title .acro-default-text {
+  font-weight: 700;
+  font-size: 24px;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.s-steps .acro-body .acro-default-text {
+  font-size: 20px;
+  line-height: 1.45;
+  padding: 10px 12px;
+}
+
+@media print {
+  /* En el PDF NO se renderiza el texto demo del HTML — lo único visible
+     en cada campo es el valor del AcroForm (/V), de modo que todo lo
+     que aparezca en pantalla es editable haciendo clic. Sin texto
+     fantasma debajo. Adobe Reader y Preview macOS calculan la apariencia
+     a partir de /V cuando /NeedAppearances=True. */
+  .acro-area {
+    background: transparent !important;
+    border: none !important;
+  }
+  .acro-area .acro-default-text,
+  .acro-bullet .acro-default-text { display: none !important; }
+  /* Los .acro-bullet conservan el cuadradito amarillo (::before) en el PDF
+     como marker; la AcroForm aporta el texto a la derecha. */
+}
+
+/* ---------- DEMO banner (solo on-screen) ---------- */
+.demo-banner {
+  position: fixed;
+  top: 12px; right: 12px;
+  background: var(--yellow);
+  color: var(--black);
+  padding: 6px 12px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  border-radius: 4px;
+  z-index: 999;
+}
+
+/* ---------- Print / PDF ---------- */
+@page {
+  size: A4 landscape;
+  margin: 0;
+}
+
+@media print {
+  body { background: var(--white); padding: 0; }
+  .deck { gap: 0; }
+  .demo-banner { display: none; }
+  .slide {
+    width: var(--slide-w);
+    height: var(--slide-h);
+    max-width: none;
+    aspect-ratio: auto;
+    border-radius: 0;
+    box-shadow: none;
+    page-break-after: always;
+    break-after: page;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .slide:last-child {
+    page-break-after: auto;
+    break-after: auto;
+  }
+}

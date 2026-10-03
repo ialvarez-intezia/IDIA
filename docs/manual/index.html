@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Manual de uso · Sistema de Propuestas Intezia</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="deck">
+
+    <!-- 1 · Portada -->
+    <section class="page p-cover">
+      <span class="counter">01 / 09</span>
+      <div class="logo-big">
+        <img src="../../logos/educacion/BLANCO.png" alt="Intezia Educación">
+      </div>
+      <div class="body">
+        <p class="eyebrow">Manual de uso</p>
+        <h1>
+          Sistema de<br>
+          <span class="hl">Propuestas</span><br>
+          Intezia
+        </h1>
+        <p class="lead">
+          Guía paso a paso para que el equipo de Intezia produzca propuestas comerciales profesionales con la marca corporativa, sin tocar código.
+        </p>
+      </div>
+      <div class="id-line">
+        <span class="codigo">Versión 1.0</span>
+        <span class="cliente">Intezia Education</span>
+      </div>
+    </section>
+
+    <!-- 2 · Qué es esto -->
+    <section class="page p-content">
+      <span class="counter">02 / 09</span>
+      <p class="page-eyebrow">01 · Visión general</p>
+      <h2 class="page-title">¿Qué es este sistema?</h2>
+      <p class="intro">
+        Intezia Propuestas es una plataforma local que combina <strong>Claude (IA)</strong> con plantillas oficiales de marca para generar propuestas comerciales en PDF de manera consistente y rápida. Cada propuesta sigue la estructura aprobada por el CAO de Educación: portada, dolor del cliente, objetivos, programa, cronograma, evaluación (si aplica), metodología ABR, beneficios, cotización con campos editables, próximos pasos y cierre.
+      </p>
+
+      <div class="cards-row">
+        <div class="mode-card">
+          <span class="badge">Diseña</span>
+          <h3>Estructura curricular</h3>
+          <p>Sigue los formatos oficiales de Intezia para Charla, Taller, Capacitación, Curso o Diplomado. Códigos, módulos, evaluaciones según corresponda.</p>
+        </div>
+        <div class="mode-card alt">
+          <span class="badge">Genera</span>
+          <h3>PDF profesional</h3>
+          <p>Slides A4 verticales con la marca oficial: paleta Intezia (negro, amarillo, naranja) y tipografía Graphit. Tres campos editables para que ventas escriba el monto.</p>
+        </div>
+      </div>
+
+      <div class="cards-row" style="margin-top: 18px;">
+        <div class="mode-card">
+          <span class="badge">Adapta</span>
+          <h3>Por cliente</h3>
+          <p>Cada propuesta vive en su propia carpeta dentro de <code style="font-family:ui-monospace,monospace;background:rgba(244,186,26,0.2);padding:1px 6px">clientes/propuestas/</code>. Puedes archivar, editar o regenerar sin afectar otras.</p>
+        </div>
+        <div class="mode-card alt">
+          <span class="badge">Vende</span>
+          <h3>Listo para enviar</h3>
+          <p>El equipo comercial abre el PDF en Adobe Reader, escribe precio base y descuento, el TOTAL se calcula automáticamente. Listo para el cliente.</p>
+        </div>
+      </div>
+
+      <div class="foot-content">
+        <span>Manual · Sistema de Propuestas Intezia</span>
+        <span>v1.0</span>
+      </div>
+    </section>
+
+    <!-- 3 · Antes de empezar -->
+    <section class="page p-content">
+      <span class="counter">03 / 09</span>
+      <p class="page-eyebrow">02 · Pre-requisitos</p>
+      <h2 class="page-title">Antes de empezar</h2>
+      <p class="intro">
+        Necesitas tener instalado lo siguiente en tu Mac. Si ya lo tienes, salta al siguiente paso.
+      </p>
+
+      <div class="steps">
+        <div class="step">
+          <span class="num">01</span>
+          <h3>macOS reciente (10.15 o superior)</h3>
+          <p>El sistema está optimizado para macOS. Funciona en Mac con Apple Silicon (M1/M2/M3) o Intel.</p>
+        </div>
+
+        <div class="step">
+          <span class="num">02</span>
+          <h3>Editor de código (IDE)</h3>
+          <p>Recomendado: <strong>Visual Studio Code</strong>. Descarga gratuita en <code>code.visualstudio.com</code>. También funciona Cursor, Sublime Text o cualquier editor que abra carpetas.</p>
+        </div>
+
+        <div class="step">
+          <span class="num">03</span>
+          <h3>Claude (dos opciones — elige una)</h3>
+          <p>La herramienta que conecta tu IDE con Claude. Hay dos formas de instalarla:</p>
+          <ul>
+            <li><strong>Extensión de VS Code (recomendado):</strong> abre VS Code → Extensions (Cmd+Shift+X) → busca <em>"Claude Code"</em> → Install. Sigue el botón de autenticación. <strong>No necesitas terminal</strong>.</li>
+            <li><strong>CLI por terminal (alternativa):</strong> <code>npm install -g @anthropic-ai/claude-code</code> y luego ejecuta <code>claude</code> para autenticarte.</li>
+          </ul>
+        </div>
+
+        <div class="step">
+          <span class="num">04</span>
+          <h3>Obtener el proyecto Intezia Propuestas</h3>
+          <p>Hay dos vías:</p>
+          <ul>
+            <li><strong>Vía 1 (recomendada para ventas):</strong> pídele el archivo <code>.zip</code> con todo el proyecto al administrador por correo. Lo descomprimes en tu Mac y listo, sin necesidad de GitHub.</li>
+            <li><strong>Vía 2 (para perfiles técnicos):</strong> solicita acceso al repositorio privado en <code>github.com/Isaac150305/intezia-propuestas</code> y clónalo con git.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="foot-content">
+        <span>Manual · Pre-requisitos</span>
+        <span>03 / 09</span>
+      </div>
+    </section>
+
+    <!-- 4 · Setup primera vez -->
+    <section class="page p-content">
+      <span class="counter">04 / 09</span>
+      <p class="page-eyebrow">03 · Instalación</p>
+      <h2 class="page-title">Setup la primera vez</h2>
+      <p class="intro">
+        Sigue estos pasos solo la primera vez que uses el sistema. Después no hace falta repetirlos.
+      </p>
+
+      <div class="steps">
+        <div class="step">
+          <span class="num">01</span>
+          <h3>Coloca el proyecto en tu Mac</h3>
+          <p>Según la vía que elegiste antes:</p>
+          <ul>
+            <li><strong>Si recibiste el <code>.zip</code> por correo:</strong> descárgalo, descomprímelo (doble clic) y mueve la carpeta <code>Intezia Propuestas</code> a tu Home (<code>/Users/&lt;tu-usuario&gt;/</code>).</li>
+            <li><strong>Si tienes acceso al repo en GitHub:</strong> en terminal, <code>cd ~</code> y luego <code>git clone https://github.com/Isaac150305/intezia-propuestas.git "Intezia Propuestas"</code>.</li>
+          </ul>
+        </div>
+
+        <div class="step">
+          <span class="num">02</span>
+          <h3>Abrir en tu IDE</h3>
+          <p>En VS Code: <strong>File → Open Folder</strong> y selecciona <code>Intezia Propuestas</code>. Verás todos los archivos del proyecto en el sidebar.</p>
+        </div>
+
+        <div class="step">
+          <span class="num">03</span>
+          <h3>Verificar dependencias técnicas</h3>
+          <p>El sistema necesita Python con <code>pypdf</code> (para campos editables) y Google Chrome (para generar el PDF). Si la instalación es nueva:</p>
+          <ul>
+            <li><code>python3 --version</code> debe responder Python 3.x (viene con macOS).</li>
+            <li><code>pip3 install --user --break-system-packages pypdf</code> instala la librería si falta.</li>
+            <li>Google Chrome debe estar en <code>/Applications/</code> (descarga gratuita).</li>
+          </ul>
+        </div>
+
+        <div class="step">
+          <span class="num">04</span>
+          <h3>Activar Claude</h3>
+          <p>Dos formas según cómo lo instalaste:</p>
+          <ul>
+            <li><strong>Extensión VS Code:</strong> abre el panel de Claude (icono en la barra lateral o Cmd+Shift+P → "Claude: Open"). Empieza a conversar directamente.</li>
+            <li><strong>CLI:</strong> en terminal, dentro de la carpeta del proyecto, ejecuta <code>claude</code>.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="foot-content">
+        <span>Manual · Setup</span>
+        <span>04 / 09</span>
+      </div>
+    </section>
+
+    <!-- 5 · Cómo usar — Dos modos -->
+    <section class="page p-content">
+      <span class="counter">05 / 09</span>
+      <p class="page-eyebrow">04 · Uso día a día</p>
+      <h2 class="page-title">Dos formas de iniciar una propuesta</h2>
+      <p class="intro">
+        Cuando llega un cliente nuevo, eliges entre subir un documento con la información o conversar directamente con Claude. Ambos funcionan; uno puede convenir más según el caso.
+      </p>
+
+      <div class="cards-row">
+        <div class="mode-card">
+          <span class="badge">Modo A</span>
+          <h3>Subir un documento</h3>
+          <p class="ideal">Ideal cuando…</p>
+          <p>Ya tienes un brief escrito, una minuta de la reunión con el cliente, un correo con todos los detalles, o un PDF/Word con el contexto completo.</p>
+          <p style="margin-top: 8px;"><strong>Cómo:</strong> arrastra el archivo a la conversación con Claude o pégale el texto. Después escribe: <em>"Genera la propuesta a partir de este documento"</em>.</p>
+        </div>
+
+        <div class="mode-card alt">
+          <span class="badge">Modo B</span>
+          <h3>Conversación guiada</h3>
+          <p class="ideal">Ideal cuando…</p>
+          <p>El brief llegó por mensajes sueltos, recuerdas la reunión pero no anotaste todo, o vas a co-construir la propuesta sobre la marcha.</p>
+          <p style="margin-top: 8px;"><strong>Cómo:</strong> escribe a Claude algo como <em>"Quiero armar una propuesta para Empresa X"</em>. Claude te preguntará campo por campo lo que falta hasta tener todo.</p>
+        </div>
+      </div>
+
+      <div class="tip">
+        <span class="tip-label">Tip</span>
+        En ambos modos, Claude SIEMPRE pregunta primero: <strong>¿Fundación o Educación?</strong> No se genera nada hasta que confirmes la división. Esto garantiza que el logo correcto vaya en el PDF.
+      </div>
+
+      <div class="foot-content">
+        <span>Manual · Modos de uso</span>
+        <span>05 / 09</span>
+      </div>
+    </section>
+
+    <!-- 6 · Información obligatoria -->
+    <section class="page p-content">
+      <span class="counter">06 / 09</span>
+      <p class="page-eyebrow">05 · Información obligatoria</p>
+      <h2 class="page-title">Lo que Claude necesita SÍ o SÍ</h2>
+
+      <div class="warning-box">
+        <p class="warning-title">Regla bloqueante</p>
+        <p>BAJO NINGÚN CONCEPTO se genera la propuesta sin tener TODA esta información. Si falta algo, Claude se detiene y pregunta. No improvisa.</p>
+      </div>
+
+      <div class="checklist">
+        <div class="check-item">
+          <span class="label">División Intezia</span>
+          <span class="desc">Fundación o Educación. Define el logo y el tono.</span>
+        </div>
+        <div class="check-item">
+          <span class="label">Tipo de programa</span>
+          <span class="desc">Charla, Taller, Capacitación, Curso o Diplomado.</span>
+        </div>
+        <div class="check-item">
+          <span class="label">Empresa cliente</span>
+          <span class="desc">Razón social y persona de contacto (con cargo).</span>
+        </div>
+        <div class="check-item">
+          <span class="label">Necesidad / contexto</span>
+          <span class="desc">Qué problema busca resolver el cliente.</span>
+        </div>
+        <div class="check-item">
+          <span class="label">Audiencia</span>
+          <span class="desc">Cuántas personas, cargos, sector.</span>
+        </div>
+        <div class="check-item">
+          <span class="label">Eje temático</span>
+          <span class="desc">Tema del programa (comunicación, IA, liderazgo, ventas…).</span>
+        </div>
+        <div class="check-item">
+          <span class="label">Duración</span>
+          <span class="desc">Sesiones / horas académicas totales.</span>
+        </div>
+        <div class="check-item">
+          <span class="label">Modalidad</span>
+          <span class="desc">Presencial / Online síncrono / Asíncrono / Híbrido.</span>
+        </div>
+        <div class="check-item">
+          <span class="label">Fechas tentativas</span>
+          <span class="desc">Aproximadas; pueden afinarse luego.</span>
+        </div>
+        <div class="check-item">
+          <span class="label">Asesora comercial</span>
+          <span class="desc">Nombre, teléfono y correo de quien firma la propuesta.</span>
+        </div>
+      </div>
+
+      <div class="tip">
+        <span class="tip-label">Importante</span>
+        El <strong>monto de la propuesta NO</strong> es información obligatoria al inicio. La cotización (PrecioBase, Descuento, Total) se rellena directamente en el PDF por el equipo comercial cuando esté listo, abriendo el archivo en Adobe Reader.
+      </div>
+
+      <div class="foot-content">
+        <span>Manual · Checklist obligatorio</span>
+        <span>06 / 09</span>
+      </div>
+    </section>
+
+    <!-- 7 · Flujo de generación -->
+    <section class="page p-content">
+      <span class="counter">07 / 09</span>
+      <p class="page-eyebrow">06 · Flujo de generación</p>
+      <h2 class="page-title">Cómo se construye la propuesta</h2>
+      <p class="intro">
+        Una vez que Claude tiene toda la información, el flujo es así (te lleva entre 1 y 3 minutos según el tamaño del programa):
+      </p>
+
+      <div class="flow">
+        <div class="flow-row user">
+          <div class="flow-icon">1</div>
+          <div class="flow-body">
+            <div class="who">Tú</div>
+            <div class="what">Le pasas a Claude el brief o respondes sus preguntas hasta completar el checklist.</div>
+          </div>
+        </div>
+
+        <div class="flow-row">
+          <div class="flow-icon">2</div>
+          <div class="flow-body">
+            <div class="who">Claude</div>
+            <div class="what">Verifica que la información esté completa. Si falta algo, te pregunta y se detiene.</div>
+          </div>
+        </div>
+
+        <div class="flow-row">
+          <div class="flow-icon">3</div>
+          <div class="flow-body">
+            <div class="who">Claude</div>
+            <div class="what">Crea la carpeta <code style="font-family:ui-monospace,monospace;background:rgba(244,186,26,0.2);padding:1px 6px">clientes/propuestas/&lt;slug-cliente&gt;/</code> clonando la referencia de Cumbre Andina.</div>
+          </div>
+        </div>
+
+        <div class="flow-row">
+          <div class="flow-icon">4</div>
+          <div class="flow-body">
+            <div class="who">Claude</div>
+            <div class="what">Adapta el contenido (programa, módulos, cronograma, datos del cliente, asesora) al tipo de documento elegido. No toca colores ni layout.</div>
+          </div>
+        </div>
+
+        <div class="flow-row">
+          <div class="flow-icon">5</div>
+          <div class="flow-body">
+            <div class="who">Claude</div>
+            <div class="what">Ejecuta <code style="font-family:ui-monospace,monospace;background:rgba(244,186,26,0.2);padding:1px 6px">./scripts/generar-pdf.sh &lt;slug&gt;</code>: Chrome convierte el HTML a PDF y Python añade los 3 campos editables.</div>
+          </div>
+        </div>
+
+        <div class="flow-row user">
+          <div class="flow-icon">6</div>
+          <div class="flow-body">
+            <div class="who">Tú</div>
+            <div class="what">Recibes el PDF en <code style="font-family:ui-monospace,monospace;background:rgba(244,186,26,0.2);padding:1px 6px">clientes/propuestas/&lt;slug&gt;/propuesta.pdf</code>, listo para revisar y enviar.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot-content">
+        <span>Manual · Flujo de generación</span>
+        <span>07 / 09</span>
+      </div>
+    </section>
+
+    <!-- 8 · Entrega al cliente -->
+    <section class="page p-content">
+      <span class="counter">08 / 09</span>
+      <p class="page-eyebrow">07 · Entrega al cliente</p>
+      <h2 class="page-title">Cómo enviar la propuesta</h2>
+      <p class="intro">
+        El PDF que genera Claude tiene 3 campos editables en la slide de "Propuesta Económica" (página 8). Antes de enviar al cliente, ventas escribe el precio.
+      </p>
+
+      <div class="steps">
+        <div class="step">
+          <span class="num">01</span>
+          <h3>Abrir el PDF en Adobe Acrobat Reader</h3>
+          <p>Es <strong>importante</strong>: usa Adobe Reader (gratuito, descarga en <code>get.adobe.com/reader</code>), no Preview de macOS. Adobe ejecuta el cálculo automático del TOTAL; Preview no.</p>
+        </div>
+
+        <div class="step">
+          <span class="num">02</span>
+          <h3>Escribir Precio Base y Descuento</h3>
+          <p>En la página "Propuesta Económica" verás dos rectángulos amarillos translúcidos. Haz clic en cada uno y escribe el monto. Formato libre: <code>2.250 REF</code>, <code>USD 4.200</code>, etc.</p>
+        </div>
+
+        <div class="step">
+          <span class="num">03</span>
+          <h3>El TOTAL se calcula automáticamente</h3>
+          <p>El campo TOTAL (rectángulo amarillo sólido grande) se rellena solo: <strong>PrecioBase − |Descuento|</strong>. No tocarlo, es de solo lectura.</p>
+        </div>
+
+        <div class="step">
+          <span class="num">04</span>
+          <h3>Guardar y enviar</h3>
+          <p><strong>Save As</strong> con el nombre del cliente (ej. <code>Cumbre-Andina-Propuesta-Mayo2026.pdf</code>) y envíalo por correo. El cliente verá los montos ya escritos.</p>
+        </div>
+      </div>
+
+      <div class="tip">
+        <span class="tip-label">Tip</span>
+        Si abres el PDF en Preview, los campos se ven y puedes escribir, pero el TOTAL queda vacío. Por eso siempre <strong>finaliza en Adobe Reader</strong>.
+      </div>
+
+      <div class="foot-content">
+        <span>Manual · Entrega</span>
+        <span>08 / 09</span>
+      </div>
+    </section>
+
+    <!-- 9 · Cierre -->
+    <section class="page p-end">
+      <span class="counter">09 / 09</span>
+      <div class="end-logo">
+        <img src="../../logos/educacion/BLANCO.png" alt="Intezia Educación">
+      </div>
+      <p class="end-message">
+        Ahora estás listo para<br>generar tu <span class="hl-orange">primera propuesta</span><br>con <span class="hl-yellow">Intezia</span>.
+      </p>
+
+      <div class="cta-wrap">
+        <span class="cta">Empieza ahora</span>
+      </div>
+
+      <div class="end-contact">
+        <p class="contact-line">
+          <span class="contact-label">Repositorio:</span>
+          github.com/Isaac150305/intezia-propuestas <span class="dot">·</span> branch main
+        </p>
+        <p class="contact-line">
+          <span class="contact-label">Soporte:</span>
+          info@intezia.com <span class="dot">·</span> Intezia C.A. J-505657950
+        </p>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

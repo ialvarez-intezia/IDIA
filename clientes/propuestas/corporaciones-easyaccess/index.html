@@ -1,0 +1,663 @@
+<!doctype html>
+<!--
+  Propuesta — Corporaciones EasyAccess
+  Programa: Detección + Habilidades — Corporaciones EasyAccess (CAP-107)
+  División: Educación · Servicio: `deteccion` (combo Detección + Habilidades cotizadas
+  juntas, mismo criterio que DET-002 — sigue siendo "deteccion" por CLAUDE.md §4.1a punto 1,
+  no un servicio nuevo). Eje temático: auditoría del proceso comercial completo (desde que
+  el bot entrega el lead hasta el cierre) + construcción colaborativa del motor de
+  cotización, para un modelo de negocio sin productos de stock (multi-proveedor, valores
+  por modalidad de pago).
+
+  Actualizado 2026-09-01 (reunión de seguimiento, instrucción explícita del usuario): se
+  agrega una Fase 2 de Habilidades para CONSTRUIR junto al equipo de tecnología de
+  EasyAccess el motor de cotización — alcance acotado solo a la cotización (NO al CRM, que
+  sigue siendo evaluación en Fase 1, sin desarrollarse). Esto no contradice la corrección de
+  2026-08-28 ("Intezia no desarrolla software"): la Fase 2 es un servicio de Habilidades —
+  Intezia capacita y co-construye con el equipo real del cliente, usando el entorno Google
+  que ya tienen (Gemini, NotebookLM), no un desarrollo de software entregado como producto
+  cerrado. El "intermedio" entre que el bot genera el lead y llega la cotización (mencionado
+  en la reunión) se deja abierto como algo que se puede resolver junto con el motor de
+  cotización — no se compromete una solución específica todavía (instrucción explícita del
+  usuario, 2026-09-01).
+
+  Estructura: 14 slides (antes 12 — se agregan 1 Programa y 1 Cronograma para Fase 2).
+  Fase 1 (Detección, 4 etapas: Iniciación → Auditoría → Diagnóstico → Diseño) sin cambios de
+  contenido. Roadmap restructurado a nivel de FASE (Fase 1 · Detección → Fase 2 ·
+  Habilidades → Resultado), en vez de las 3 etapas internas de Detección — mismo criterio
+  que DET-002 (el roadmap muestra el panorama del combo, el detalle por etapa ya vive en
+  Programa/Cronograma). Propuesta Económica pasa de la hoja estándar (Duración+Programa+
+  Notas+Cotización, marker "Propuesta Económica") a "Inversión por fases" (marker propio,
+  FASE_PRICE_FIELDS de agregar-campo-precio.py) con 2 fases cotizadas — patrón go-pharma/
+  simple-tv-det002 (ambas fases cotizadas ya, no diferidas), decisión explícita del usuario
+  porque esta corrección ya reemplaza la propuesta "Enviada" del 2026-08-16.
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Propuesta · Corporaciones EasyAccess · Intezia Educación</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <main class="deck">
+
+    <!-- 1 · Portada -->
+    <section class="slide s-cover">
+      <span class="counter">01 / 14</span>
+      <div class="logo-big">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia Educación">
+      </div>
+      <div class="body">
+        <p class="eyebrow">Propuesta de negocio · Servicio de Detección y Habilidades</p>
+        <h1>
+          De cotizar a mano<br>
+          <span class="hl">a que su equipo cotice con IA</span>
+        </h1>
+        <p class="lead">
+          Auditamos, junto a <strong>ventas y tecnología</strong> de EasyAccess, el proceso completo de cotización y leads, y construimos junto a su equipo un <strong>motor de cotización</strong>, para dejar de perder clientes por retrasos.
+        </p>
+      </div>
+      <div class="id-line">
+        <span class="codigo">Código: CAP-107</span>
+        <span class="cliente">Corporaciones EasyAccess</span>
+      </div>
+    </section>
+
+    <!-- 2 · Punto de dolor + Diagnóstico -->
+    <section class="slide s-pain">
+      <span class="counter">02 / 14</span>
+      <span class="quote-mark">&ldquo;</span>
+      <div class="body">
+        <h2>Cada cotización tarda tanto que el cliente ya se fue.</h2>
+        <p class="context">
+          EasyAccess vende seguridad tecnológica a la medida, no productos de stock: cada proyecto se cotiza con proveedores nacionales e importados, disponibilidad y fechas de entrega propias. Un bot responde por redes sociales y redirige el lead a un agente humano; de ahí en adelante todo vive en <strong>Google Sheets</strong> manual, sin <strong>CRM</strong> que ordene los leads ni el seguimiento comercial.
+        </p>
+        <p class="diag-title">Diagnóstico</p>
+        <ol>
+          <li>EasyAccess vende seguridad personalizada, no productos de stock: cotizar exige cruzar proveedores nacionales e importados, disponibilidad y fechas de entrega.</li>
+          <li>El bot redirige el lead a un agente humano y ahí termina la automatización: lo demás depende de personas, sin alertas ni métricas consistentes.</li>
+          <li>La cotización se arma 100% a mano en Google Sheets: se satura con varias solicitudes a la vez y ya pierden clientes por el retraso.</li>
+          <li>Sin CRM, los leads se asignan a mano por WhatsApp: no pueden medir el desempeño de ventas ni dónde se pierden los negocios.</li>
+          <li>Los valores cambian según la modalidad de pago del cliente: otra capa manual de recálculo sobre un proceso ya lento.</li>
+        </ol>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Corporaciones EasyAccess · CAP-107</span>
+      </div>
+    </section>
+
+    <!-- 3 · Objetivos estratégicos -->
+    <section class="slide s-goals">
+      <span class="counter">03 / 14</span>
+      <p class="eyebrow">02 · Objetivos</p>
+      <h2>De cotizar a mano<br>a que su equipo cotice con IA.</h2>
+      <div class="columns">
+        <div class="general">
+          <p class="label">Objetivo general</p>
+          <p>
+            Diagnosticar el proceso comercial de EasyAccess, desde que el bot entrega el lead hasta el cierre del proyecto, y construir junto a su equipo de tecnología un motor de cotización multi-proveedor, para dejar de perder clientes por retrasos.
+          </p>
+        </div>
+        <div class="specifics">
+          <p class="label">Objetivos específicos</p>
+          <ol>
+            <li>Auditar junto a ventas, tecnología y Reynaldo el proceso completo, desde que el bot entrega el lead hasta el cierre, con un guion estructurado.</li>
+            <li>Priorizar los cuellos de botella identificados (cotización multi-proveedor, asignación de leads, alertas y métricas) según impacto y esfuerzo.</li>
+            <li>Evaluar alternativas de CRM para su modelo de negocio, sin desarrollarlo.</li>
+            <li>Construir junto a tecnología un motor de cotización con las reglas de cada modalidad de pago, listo para que su equipo lo mantenga y escale.</li>
+          </ol>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Corporaciones EasyAccess · CAP-107</span>
+      </div>
+    </section>
+
+    <!-- 4 · El camino — Fase 1: Detección -->
+    <section class="slide s-program">
+      <span class="counter">04 / 14</span>
+      <p class="eyebrow">03 · El camino · Fase 1 de 2</p>
+      <h2>Un proceso auditado,<br>una prioridad clara.</h2>
+      <p class="meta">De cotizar a mano, proveedor por proveedor, a saber exactamente qué automatizar primero.</p>
+      <div class="modules">
+        <div class="module">
+          <span class="roman">I</span>
+          <h3>Iniciación</h3>
+          <p class="obj">Alcance confirmado y calendario de sesiones con ventas, tecnología y Reynaldo.</p>
+          <ul class="topics">
+            <li>Etapa 1 · Iniciación</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">II</span>
+          <h3>Auditoría</h3>
+          <p class="obj">Mapeamos el proceso completo, desde que el bot entrega el lead hasta el cierre: cotización multi-proveedor, asignación de leads, alertas y métricas.</p>
+          <ul class="topics">
+            <li>Etapa 2 · Auditoría</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">III</span>
+          <h3>Diagnóstico</h3>
+          <p class="obj">Priorizamos los cuellos de botella por impacto y esfuerzo, y evaluamos alternativas de CRM y cotización, sin desarrollarlas.</p>
+          <ul class="topics">
+            <li>Etapa 3 · Diagnóstico</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">IV</span>
+          <h3>Diseño</h3>
+          <p class="obj">Entregamos un Reporte Final con la hoja de ruta priorizada y recomendaciones concretas de por dónde empezar.</p>
+          <ul class="topics">
+            <li>Etapa 4 · Diseño</li>
+          </ul>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Corporaciones EasyAccess · CAP-107</span>
+      </div>
+    </section>
+
+    <!-- 5 · El camino — Fase 2: Habilidades -->
+    <section class="slide s-program">
+      <span class="counter">05 / 14</span>
+      <p class="eyebrow">03 · El camino · Fase 2 de 2</p>
+      <h2>Un motor de cotización,<br>construido junto a ustedes.</h2>
+      <p class="meta">Con las reglas reales de EasyAccess: multi-proveedor, disponibilidad y modalidad de pago.</p>
+      <div class="modules">
+        <div class="module">
+          <span class="roman">I</span>
+          <h3>Motor de Cotización</h3>
+          <p class="obj">Construimos junto a tecnología las reglas de cálculo multi-proveedor y por modalidad de pago, usando el entorno Google que ya tienen.</p>
+          <ul class="topics">
+            <li>Reglas por modalidad de pago</li>
+            <li>Multi-proveedor nacional e importado</li>
+            <li>Construido con Gemini</li>
+            <li>Mantenido por su propio equipo</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">II</span>
+          <h3>Del Lead a la Cotización</h3>
+          <p class="obj">Exploramos junto a su equipo cómo cerrar el tiempo entre que el bot capta el lead y llega la cotización, sin comprometernos aún a una solución específica.</p>
+          <ul class="topics">
+            <li>Punto de partida: el bot actual</li>
+            <li>Alternativas a explorar juntos</li>
+          </ul>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Corporaciones EasyAccess · CAP-107</span>
+      </div>
+    </section>
+
+    <!-- 6 · Ruta del proyecto — Fase 1: Detección -->
+    <section class="slide s-schedule">
+      <span class="counter">06 / 14</span>
+      <p class="eyebrow">04 · Ruta del proyecto · Fase 1 de 2</p>
+
+      <div class="ruta">
+        <div class="ruta-node">1</div>
+        <div class="ruta-track"><div class="ruta-fill" style="width:50%"></div></div>
+        <span class="ruta-step">Iniciación · Auditoría · Diagnóstico · Diseño</span>
+      </div>
+
+      <div class="ses-head">
+        <div>
+          <span class="ses-mod">Fase 1 · Detección · sin horas impuestas · duración a definir según el alcance · Modalidad a definir</span>
+          <h2>Un proceso auditado, una prioridad clara</h2>
+        </div>
+      </div>
+
+      <div class="ses-body">
+        <div class="ses-block">
+          <span class="label">Temas</span>
+          <div class="chips">
+            <span class="chip">Auditoría del proceso completo</span>
+            <span class="chip">Cotización multi-proveedor</span>
+            <span class="chip">Alertas y métricas</span>
+            <span class="chip">Evaluación de CRM</span>
+            <span class="chip">Hoja de ruta priorizada</span>
+          </div>
+        </div>
+        <div class="ses-cols">
+          <div class="ses-block">
+            <span class="label">Qué se hace</span>
+            <ul>
+              <li>Auditamos con ventas, tecnología y Reynaldo el proceso completo, desde que el bot entrega el lead hasta el cierre</li>
+              <li>Mapeamos la cotización multi-proveedor (nacional e importado) con el detalle que una reunión no cubre</li>
+              <li>Priorizamos los cuellos de botella identificados por impacto y esfuerzo</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Qué se logra</span>
+            <ul>
+              <li>Un diagnóstico claro de las alertas y métricas que hoy faltan</li>
+              <li>Una evaluación de alternativas de CRM y cotización para su modelo de negocio, sin desarrollarlas</li>
+              <li>Un Reporte Final con la hoja de ruta priorizada</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Recursos y entornos</span>
+            <ul>
+              <li>Equipo de ventas (4-5), tecnología (2) y Reynaldo</li>
+              <li>Guion de auditoría Intezia</li>
+              <li>Modalidad a definir</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Corporaciones EasyAccess · CAP-107</span>
+      </div>
+    </section>
+
+    <!-- 7 · Ruta del proyecto — Fase 2: Habilidades -->
+    <section class="slide s-schedule">
+      <span class="counter">07 / 14</span>
+      <p class="eyebrow">04 · Ruta del proyecto · Fase 2 de 2</p>
+
+      <div class="ruta">
+        <div class="ruta-node">2</div>
+        <div class="ruta-track"><div class="ruta-fill" style="width:100%"></div></div>
+        <span class="ruta-step">Motor de Cotización · Del Lead a la Cotización</span>
+      </div>
+
+      <div class="ses-head">
+        <div>
+          <span class="ses-mod">Fase 2 · Habilidades · sin horas impuestas · duración a definir según el alcance · Modalidad a definir</span>
+          <h2>Un motor de cotización, construido junto a ustedes</h2>
+        </div>
+      </div>
+
+      <div class="ses-body">
+        <div class="ses-block">
+          <span class="label">Temas</span>
+          <div class="chips">
+            <span class="chip">Reglas por modalidad de pago</span>
+            <span class="chip">Multi-proveedor</span>
+            <span class="chip">Construcción con Gemini</span>
+            <span class="chip">Puente lead-cotización</span>
+            <span class="chip">Adopción por el equipo</span>
+          </div>
+        </div>
+        <div class="ses-cols">
+          <div class="ses-block">
+            <span class="label">Qué se hace</span>
+            <ul>
+              <li>Construimos junto a tecnología las reglas de cálculo multi-proveedor y por modalidad de pago</li>
+              <li>Usamos el entorno Google que ya tienen (Gemini, NotebookLM) como base del motor</li>
+              <li>Exploramos junto a su equipo cómo cerrar el tiempo entre el lead del bot y la cotización</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Qué se logra</span>
+            <ul>
+              <li>Un motor de cotización que su equipo de tecnología mantiene y escala</li>
+              <li>Reglas de precio por modalidad de pago, documentadas y reutilizables</li>
+              <li>Un primer paso evaluado para cerrar la brecha entre el lead y la cotización</li>
+            </ul>
+          </div>
+          <div class="ses-block block-rec">
+            <span class="label">Recursos y entornos</span>
+            <ul>
+              <li>Equipo de tecnología (2), con apoyo de ventas para validar</li>
+              <li>Entorno Google ya en uso: Gemini y NotebookLM</li>
+              <li>Contenido curado con los hallazgos de la Fase 1</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Corporaciones EasyAccess · CAP-107</span>
+      </div>
+    </section>
+
+    <!-- 8 · Roadmap (2 fases + resultado) -->
+    <section class="slide s-roadmap">
+      <span class="counter">08 / 14</span>
+      <p class="eyebrow">04 · Roadmap</p>
+      <h2>Del diagnóstico <span class="hl">al motor que cotiza</span>.</h2>
+
+      <div class="rmx-field">
+        <div class="rmx-linear">
+
+          <div class="rmx-lrow-nodes">
+            <div class="rmx-lcol"><div class="rmx-node rmx-node-f2">1</div></div>
+            <div class="rmx-arrow"></div>
+            <div class="rmx-lcol"><div class="rmx-node rmx-node-f4">2</div></div>
+            <div class="rmx-arrow"></div>
+            <div class="rmx-lcol"><div class="rmx-node rmx-node-r">★</div></div>
+          </div>
+
+          <div class="rmx-lrow-cards">
+            <div class="rmx-lcol">
+              <div class="rmx-card rmx-card-f2">
+                <span class="rmx-card-tag">Fase 1 · Detección</span>
+                <div class="rmx-card-name">Auditoría, diagnóstico y diseño</div>
+                <ul class="rmx-facets">
+                  <li><span>Qué pasa</span><p>Auditamos el proceso completo, priorizamos cuellos de botella y evaluamos alternativas de CRM.</p></li>
+                  <li><span>Con quién</span><p>Ventas, tecnología y Reynaldo.</p></li>
+                  <li><span>Entrega</span><p>Reporte Final con hoja de ruta priorizada.</p></li>
+                </ul>
+              </div>
+            </div>
+            <div class="rmx-lspacer"></div>
+            <div class="rmx-lcol">
+              <div class="rmx-card rmx-card-f4">
+                <span class="rmx-card-tag">Fase 2 · Habilidades</span>
+                <div class="rmx-card-name">Motor de cotización, construido junto a ustedes</div>
+                <ul class="rmx-facets">
+                  <li><span>Qué pasa</span><p>Construimos junto a tecnología el motor de cotización multi-proveedor, con las reglas de cada modalidad de pago.</p></li>
+                  <li><span>Con quién</span><p>Tecnología de EasyAccess, con Intezia.</p></li>
+                  <li><span>Entrega</span><p>Motor de cotización que su equipo mantiene y escala.</p></li>
+                </ul>
+              </div>
+            </div>
+            <div class="rmx-lspacer"></div>
+            <div class="rmx-lcol">
+              <div class="rmx-result-card">
+                <span class="rmx-result-label">Entregable insignia · Reporte Final + Motor de Cotización</span>
+                <div class="rmx-result-title">Un proceso auditado y una <b>herramienta lista</b> para escalar</div>
+                <ul>
+                  <li>Cuellos de botella identificados y priorizados por impacto y esfuerzo</li>
+                  <li>Motor de cotización construido junto a su equipo de tecnología</li>
+                  <li>Hoja de ruta clara de lo que sigue (CRM y más)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /.rmx-linear -->
+
+        <div class="rmx-ethics">
+          <span class="rmx-ethics-tag">Metodología de retos · Diagnóstico antes de construir</span>
+          <p>Intezia no construye nada sin antes ver el proceso real de cotización y leads de EasyAccess. El motor de cotización se construye <strong>a la medida del diagnóstico</strong>, junto al equipo de tecnología, nunca al revés.</p>
+        </div>
+
+      </div><!-- /.rmx-field -->
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Corporaciones EasyAccess · CAP-107</span>
+      </div>
+    </section>
+
+    <!-- 7 · Metodología ABR (FIJA) -->
+    <section class="slide s-orange">
+      <span class="counter">09 / 14</span>
+      <p class="eyebrow">05 · Metodología</p>
+      <h2>Aprendizaje<br>Basado en Retos</h2>
+      <p class="sub">Modelo Intezia · diagnóstico antes de construir</p>
+      <div class="pillars">
+        <div class="pillar">
+          <span class="num">01</span>
+          <h3>Diagnóstico antes de construir</h3>
+          <p>Nada se construye antes de ver el proceso real. Cada regla de cotización se valida con el diagnóstico de ventas y tecnología, no con entusiasmo.</p>
+        </div>
+        <div class="pillar">
+          <span class="num">02</span>
+          <h3>Trabajo con el equipo real</h3>
+          <p>El motor de cotización se construye junto a ventas, tecnología y Reynaldo, sobre sus proveedores y modalidades de pago reales.</p>
+        </div>
+        <div class="pillar">
+          <span class="num">03</span>
+          <h3>Decisión informada, en equipo</h3>
+          <p>El diagnóstico convierte "queremos automatizar" en un motor de cotización que su propio equipo construye, mantiene y escala.</p>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Intezia · Modelo ABR</span>
+      </div>
+    </section>
+
+    <!-- 8 · Beneficios (v2/v3: Resultados / Por qué Detección / Entregables / Valor inmediato) -->
+    <section class="slide s-benefits s-benefits-v2">
+      <span class="counter">10 / 14</span>
+      <p class="eyebrow">06 · Beneficios</p>
+      <h2>Lo que <span class="hl">se llevan</span>.</h2>
+      <div class="grid">
+        <div class="block">
+          <p class="label">Resultados</p>
+          <ul>
+            <li>Un <strong>motor de cotización</strong> multi-proveedor, construido junto a su equipo.</li>
+            <li>Un <strong>Reporte Final</strong> con la hoja de ruta priorizada de qué sigue.</li>
+            <li>Una matriz de priorización de cuellos de botella, por impacto y esfuerzo.</li>
+          </ul>
+        </div>
+        <div class="block">
+          <p class="label">Por qué Detección y Habilidades</p>
+          <p>
+            EasyAccess quiere dejar de perder clientes por retrasos en la cotización: el diagnóstico prioriza qué resolver primero, y Habilidades deja el motor de cotización construido con su propio equipo, no dependiendo de Intezia para mantenerlo.
+          </p>
+        </div>
+        <div class="block">
+          <p class="label">Entregables</p>
+        </div>
+        <div class="block">
+          <p class="label">Valor inmediato</p>
+        </div>
+      </div>
+
+      <!-- Cajas multiline editables (vacías en HTML — el contenido vive dentro del AcroForm /V). -->
+      <div class="multi-box entregables-box" data-field="Entregables"></div>
+      <div class="multi-box acreditaciones-box" data-field="Acreditacion"></div>
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Corporaciones EasyAccess · CAP-107</span>
+      </div>
+    </section>
+
+    <!-- 9 · Impacto / estudios — datos de estudios reales, fuente citada (CLAUDE.md §4.9) -->
+    <section class="slide s-impact">
+      <span class="counter">11 / 14</span>
+
+      <div class="impact-head">
+        <p class="eyebrow">07 · Impacto</p>
+        <h2>La evidencia no deja<br><span class="hl">lugar a dudas</span>.</h2>
+      </div>
+
+      <div class="impact-body">
+        <div class="chart-panel">
+          <p class="panel-title">Qué pasa con un lead cuando no hay CRM que lo gestione</p>
+          <div class="bars">
+            <div class="bar-row">
+              <span class="bar-label">Empresas que responden a un lead web dentro de la primera hora</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:74%"><span class="bar-val">37%</span></div></div>
+            </div>
+            <div class="bar-row">
+              <span class="bar-label">Empresas que nunca responden a un lead web</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:46%"><span class="bar-val">23%</span></div></div>
+            </div>
+          </div>
+          <div class="bar-axis"><span class="scale"><span>0</span><span>10</span><span>20</span><span>30</span><span>40</span><span>50%</span></span></div>
+          <p class="panel-source">Fuente: Harvard Business Review — The Short Life of Online Sales Leads (Oldroyd, McElheran y Elkington, 2011).</p>
+        </div>
+
+        <div class="gauge-panel">
+          <div class="gauge" style="--pct:30">
+            <div class="gauge-core">
+              <span class="gauge-num">30<span class="pct">%</span></span>
+              <span class="gauge-cap">del tiempo de un equipo de ventas se dedica a vender; el resto es trabajo administrativo y manual</span>
+            </div>
+          </div>
+          <div class="chips">
+            <div class="chip">
+              <span class="chip-num">$8.71</span>
+              <span class="chip-lbl">de retorno promedio por cada dólar invertido en CRM</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="impact-hook">
+        <span class="hook-mark">&#9656;</span>
+        <p class="hook-text">
+          La <strong>gestión manual de leads</strong> le cuesta calificación a cualquier equipo comercial: contactar un lead dentro de la primera hora hace a una empresa casi 7 veces más probable de calificarlo, pero solo 37% de las empresas responde a tiempo y 23% nunca responde (Harvard Business Review, 2011). Ese mismo vacío hoy lo cubre en EasyAccess un grupo de WhatsApp: sin CRM, un equipo de ventas dedica menos del 30% de su tiempo a vender, el resto se va en trabajo administrativo y manual (Salesforce, State of Sales, 2023). Cada dólar invertido en CRM retorna, en promedio, $8.71 (Nucleus Research, 2014).
+        </p>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Corporaciones EasyAccess · CAP-107</span>
+      </div>
+    </section>
+
+    <!-- 12 · Inversión por fases — Fase 1 (Detección) y Fase 2 (Habilidades), ambas cotizadas -->
+    <section class="slide s-price">
+      <span class="counter">12 / 14</span>
+      <h2 class="title">Inversión por fases</h2>
+      <p class="price-intro">Auditoría del proceso comercial completo y construcción colaborativa del motor de cotización, en 2 fases dentro de un mismo proyecto. Cada fase se cotiza por separado.</p>
+
+      <div class="fase-price-list">
+        <div class="fase-price-row">
+          <div class="fase-price-copy">
+            <span class="fase-price-label">Fase 1 · Detección</span>
+            <p class="fase-price-desc">Auditoría, diagnóstico y diseño · equipo de ventas (4-5), tecnología (2) y Reynaldo.</p>
+          </div>
+          <div class="fase-price-frame" data-field="PrecioFase1"></div>
+        </div>
+        <div class="fase-price-row">
+          <div class="fase-price-copy">
+            <span class="fase-price-label">Fase 2 · Habilidades</span>
+            <p class="fase-price-desc">Motor de cotización multi-proveedor, construido junto al equipo de tecnología.</p>
+          </div>
+          <div class="fase-price-frame" data-field="PrecioFase2"></div>
+        </div>
+      </div>
+
+      <div class="block block-notes-container">
+        <span class="block-eyebrow">Notas</span>
+      </div>
+      <div class="multi-box notas-box" data-field="Notas"></div>
+
+      <span class="cot-label cot-label-base">Inversión total del proyecto</span>
+      <div class="cot-frame base-frame"></div>
+
+      <span class="cot-label cot-label-discount">Descuento</span>
+      <div class="cot-frame discount-frame"></div>
+
+      <span class="cot-label cot-label-total">TOTAL</span>
+      <div class="cot-frame total-frame"></div>
+
+      <p class="cot-validity">Cotización válida por 30 días.</p>
+      <div class="cot-terms-box">
+        <span class="cot-terms-label">Importante</span>
+        <p class="cot-terms-text">Este servicio se presta bajo nuestros <a href="https://drive.google.com/file/d/1PA-ZSt4KnyY5dpxXzgkIk6-yfGlV2eF8/view?usp=drive_link" target="_blank" rel="noopener">términos y condiciones</a>. Al avanzar con esta propuesta, ambas partes los aceptan.</p>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Corporaciones EasyAccess · CAP-107</span>
+      </div>
+    </section>
+
+    <!-- 11 · Próximos pasos -->
+    <section class="slide s-steps">
+      <span class="counter">13 / 14</span>
+      <p class="eyebrow">08 · Próximos pasos</p>
+      <h2>Cómo arrancamos.</h2>
+      <div class="step-cards">
+        <div class="step-card">
+          <span class="ghost">01</span>
+        </div>
+        <div class="step-card">
+          <span class="ghost">02</span>
+        </div>
+        <div class="step-card">
+          <span class="ghost">03</span>
+        </div>
+      </div>
+
+      <!-- Editable AcroForm placeholders (3 pasos × título + body) -->
+      <div class="acro-area acro-title acro-paso-01-titulo" data-field="Paso01Titulo">
+        <span class="acro-default-text">Confirmamos fechas</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-01-body" data-field="Paso01Body">
+        <span class="acro-default-text">Definimos modalidad, calendario y zona horaria para las 2 fases: auditoría y construcción de la herramienta que arma los precios.</span>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-02-titulo" data-field="Paso02Titulo">
+        <span class="acro-default-text">Acceso y logística</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-02-body" data-field="Paso02Body">
+        <span class="acro-default-text">Coordinamos acceso al proceso comercial actual y al entorno Google del equipo de tecnología.</span>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-03-titulo" data-field="Paso03Titulo">
+        <span class="acro-default-text">Kick-off del proyecto</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-03-body" data-field="Paso03Body">
+        <span class="acro-default-text">Reunión de arranque (~30 min) para alinear el mapeo del proceso y el alcance de la herramienta que arma los precios.</span>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Corporaciones EasyAccess · CAP-107</span>
+      </div>
+    </section>
+
+    <!-- 12 · Cierre -->
+    <section class="slide s-end">
+      <span class="counter">14 / 14</span>
+
+      <div class="end-logo">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia Educación">
+      </div>
+
+      <!-- Resultado (cinta superior) — caja editable, ventas la redacta por cliente -->
+      <div class="end-summit" data-field="CierreResultado">
+        <span class="acro-default-text">EasyAccess, con un motor de cotización propio y una hoja de ruta priorizada.</span>
+      </div>
+
+      <!-- Escalera de 3 pasos — cada uno con su caja editable -->
+      <div class="end-stairs">
+        <div class="stair-step stair-1">
+          <span class="stair-label">Paso 1</span>
+          <div class="stair-field" data-field="CierrePaso1">
+            <span class="acro-default-text">Proceso auditado</span>
+          </div>
+        </div>
+        <div class="stair-step stair-2">
+          <span class="stair-label">Paso 2</span>
+          <div class="stair-field" data-field="CierrePaso2">
+            <span class="acro-default-text">Cuellos de botella priorizados</span>
+          </div>
+        </div>
+        <div class="stair-step stair-3">
+          <span class="stair-label">Paso 3</span>
+          <div class="stair-field" data-field="CierrePaso3">
+            <span class="acro-default-text">Motor de cotización construido junto a ustedes</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cta-wrap">
+        <span class="cta">Esperamos tu respuesta</span>
+      </div>
+
+      <div class="end-contact">
+        <p class="contact-line">
+          <span class="contact-label">Asesora de ventas:</span>
+          Verónica Rubio <span class="dot">·</span> +58 422 3355505 <span class="dot">·</span> vrubio01@intezia.com
+        </p>
+        <p class="contact-line">
+          <span class="contact-label">Empresa:</span>
+          Intezia C.A J-505657950 <span class="dot">·</span> servicio@intezia.com
+        </p>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

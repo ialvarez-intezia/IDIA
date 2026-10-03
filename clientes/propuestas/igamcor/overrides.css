@@ -1,0 +1,435 @@
+/* ===========================================================================
+   overrides.css — Igamcor (DET-012). Clon del shell reciente (Beneficios v3 +
+   Cierre escalera, roadmap .rmx-linear con Fundamentals integrado desde el
+   inicio), portado de farmaceutica-24/overrides.css. Paleta de marca únicamente
+   (§4.1). Sin slide de Mapa de Calor (tabla ilustrativa) — mismo ajuste que
+   farmaceutica-24/ y hoteles-cumberland/.
+   =========================================================================== */
+
+/* ===========================================================================
+   Cierre — escalera editable
+   =========================================================================== */
+.s-end .end-logo img { height: 140px; }
+
+.s-end .end-summit {
+  position: absolute;
+  top: 224px; left: 242px; width: 640px; height: 60px;
+  background: var(--yellow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.s-end .end-summit .acro-default-text {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.25;
+  color: var(--black);
+  padding: 0 16px;
+}
+
+.s-end .end-stairs {
+  position: absolute;
+  top: 308px; left: 242px; width: 640px; height: 190px;
+}
+.s-end .stair-step {
+  position: absolute;
+  bottom: 0;
+  width: 200px;
+}
+.s-end .stair-1 { left: 0px;   height: 90px;  background: var(--yellow); }
+.s-end .stair-2 { left: 220px; height: 140px; background: var(--orange); }
+.s-end .stair-3 { left: 440px; height: 190px; background: var(--white); border: 2px solid var(--yellow); }
+
+.s-end .stair-label {
+  position: absolute;
+  top: 10px; left: 12px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.s-end .stair-1 .stair-label,
+.s-end .stair-3 .stair-label { color: var(--black); opacity: 0.55; }
+.s-end .stair-2 .stair-label { color: var(--white); opacity: 0.7; }
+
+.s-end .stair-field { position: absolute; top: 30px; left: 12px; width: 176px; }
+.s-end .stair-1 .stair-field { height: 50px; }
+.s-end .stair-2 .stair-field { height: 100px; }
+.s-end .stair-3 .stair-field { height: 150px; }
+.s-end .stair-field .acro-default-text {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 1.3;
+  display: block;
+}
+.s-end .stair-1 .stair-field .acro-default-text,
+.s-end .stair-3 .stair-field .acro-default-text { color: var(--black); }
+.s-end .stair-2 .stair-field .acro-default-text { color: var(--white); }
+
+.s-end .cta-wrap {
+  position: absolute;
+  top: 522px; left: 0; right: 0;
+  margin-top: 0;
+  display: flex;
+  justify-content: center;
+}
+
+@media print {
+  .s-end .end-summit .acro-default-text,
+  .s-end .stair-field .acro-default-text { display: none !important; }
+}
+
+/* ===========================================================================
+   Beneficios v3 (layout ampliado)
+   =========================================================================== */
+.s-benefits-v2 { background: var(--black); color: var(--white); }
+.s-benefits-v2::before { background: var(--yellow); }
+.s-benefits-v2 .counter { color: var(--yellow); }
+.s-benefits-v2 .eyebrow { color: var(--yellow); }
+.s-benefits-v2 h2 { color: var(--white); }
+.s-benefits-v2 h2 .hl {
+  display: inline-block;
+  background: var(--yellow);
+  color: var(--black);
+  padding: 0 10px;
+}
+.s-benefits-v2 .grid { height: 570px; gap: 16px; }
+.s-benefits-v2 .block {
+  background: rgba(255, 255, 255, 0.045);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-top: 4px solid var(--yellow);
+  border-radius: 13px;
+  padding: 26px 24px 24px;
+  color: var(--white);
+}
+.s-benefits-v2 .block:nth-child(2) { border-top-color: var(--orange); }
+.s-benefits-v2 .block:nth-child(3),
+.s-benefits-v2 .block:nth-child(4) {
+  background: rgba(244, 186, 26, 0.06);
+  border-color: rgba(244, 186, 26, 0.28);
+  border-top-color: var(--yellow);
+}
+.s-benefits-v2 .label {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 999px;
+  margin-bottom: 18px;
+  color: var(--yellow);
+  background: rgba(244, 186, 26, 0.13);
+}
+.s-benefits-v2 .block:nth-child(3) .label,
+.s-benefits-v2 .block:nth-child(4) .label { position: absolute; top: 26px; left: 24px; }
+.s-benefits-v2 .block:nth-child(2) .label { color: var(--orange); background: rgba(229, 132, 35, 0.14); }
+.s-benefits-v2 .block ul { list-style: none; }
+.s-benefits-v2 .block ul li {
+  font-size: 16px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85);
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+.s-benefits-v2 .block ul li:last-child { border-bottom: 0; }
+.s-benefits-v2 .block p { font-size: 16px; line-height: 1.6; color: rgba(255, 255, 255, 0.85); }
+.s-benefits-v2 .block strong { color: var(--yellow); font-weight: 700; }
+.s-benefits-v2 .block:nth-child(2) strong { color: var(--orange); }
+.s-benefits-v2 .foot .meta { color: rgba(255, 255, 255, 0.65); }
+
+.s-benefits-v2 .entregables-box,
+.s-benefits-v2 .acreditaciones-box {
+  background: transparent;
+  position: absolute;
+  top: 212px;
+  width: 193px;
+  height: 474px;
+}
+.s-benefits-v2 .entregables-box { left: 594px; }
+.s-benefits-v2 .acreditaciones-box { left: 850px; }
+.s-benefits-v2 .entregables-box .acro-default-text,
+.s-benefits-v2 .acreditaciones-box .acro-default-text {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+/* ===========================================================================
+   Roadmap Detección (slide 05) — .rmx-linear, portado de bidzi/overrides.css
+   (componente reciente, no vive en ../_base/styles.css todavía).
+   =========================================================================== */
+.s-roadmap {
+  background: var(--black);
+  color: var(--white);
+  padding: 38px 56px 0;
+  overflow: hidden;
+}
+.s-roadmap::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 8px; height: 100%;
+  background: var(--gradient-warm);
+  z-index: 4;
+}
+.s-roadmap::after {
+  content: "";
+  position: absolute;
+  right: -140px; top: 52%;
+  width: 460px; height: 460px;
+  transform: translateY(-50%);
+  background: radial-gradient(circle, rgba(244,186,26,0.15) 0%, transparent 70%);
+  z-index: 0;
+}
+.s-roadmap .counter { color: var(--yellow); }
+.s-roadmap .eyebrow {
+  color: var(--orange);
+  margin-bottom: 8px;
+  position: relative; z-index: 2;
+}
+.s-roadmap h2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 27px;
+  line-height: 1.08;
+  margin-bottom: 14px;
+  position: relative; z-index: 2;
+}
+.s-roadmap h2 .hl {
+  background: var(--gradient-warm);
+  color: var(--black);
+  padding: 0 9px;
+}
+
+.rmx-field {
+  position: relative;
+  z-index: 2;
+  border: 1px solid rgba(229,132,35,0.22);
+  border-radius: 14px;
+  background: linear-gradient(180deg, rgba(229,132,35,0.07) 0%, rgba(229,132,35,0.025) 100%);
+  padding: 22px 26px 0;
+}
+.rmx-linear {
+  display: flex;
+  flex-direction: column;
+}
+.rmx-lrow-nodes {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  margin-bottom: 16px;
+}
+.rmx-lrow-nodes .rmx-lcol {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  justify-content: center;
+}
+.rmx-arrow {
+  width: 60px;
+  flex-shrink: 0;
+  height: 6px;
+  background: var(--gradient-warm);
+  border-radius: 4px;
+  position: relative;
+}
+.rmx-arrow::after {
+  content: "";
+  position: absolute;
+  right: -2px; top: 50%;
+  width: 0; height: 0;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-left: 11px solid var(--orange);
+  transform: translateY(-50%);
+}
+.rmx-lrow-cards {
+  display: flex;
+  align-items: flex-start;
+}
+.rmx-lrow-cards .rmx-lcol {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+}
+.rmx-lspacer { width: 60px; flex-shrink: 0; }
+.rmx-node {
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-family: var(--font-display);
+  font-weight: 700;
+}
+.rmx-node-f2,
+.rmx-node-f3,
+.rmx-node-f4 {
+  width: 72px; height: 72px;
+  font-size: 22px;
+}
+.rmx-node-f2 {
+  background: var(--yellow);
+  color: var(--black);
+  box-shadow: 0 0 0 7px rgba(244,186,26,0.14);
+}
+.rmx-node-f3 {
+  background: var(--orange);
+  color: var(--black);
+  box-shadow: 0 0 0 7px rgba(229,132,35,0.16);
+}
+.rmx-node-f4 {
+  background: var(--white);
+  color: var(--black);
+  box-shadow: 0 0 0 7px rgba(255,255,255,0.14);
+}
+.rmx-node-r {
+  width: 96px; height: 96px;
+  background: var(--gradient-warm);
+  color: var(--black);
+  font-size: 36px;
+  box-shadow: 0 0 0 8px rgba(244,186,26,0.18), 0 0 42px rgba(244,186,26,0.36);
+}
+.rmx-card {
+  flex: 1;
+  min-width: 0;
+  background: rgba(255,255,255,0.045);
+  border: 1px solid rgba(255,255,255,0.10);
+  border-radius: 13px;
+  padding: 16px 18px;
+}
+.rmx-card-f2 { border-top: 4px solid var(--yellow); }
+.rmx-card-f3 { border-top: 4px solid var(--orange); }
+.rmx-card-f4 { border-top: 4px solid var(--white); }
+.rmx-card-tag {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 9.5px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 999px;
+  margin-bottom: 8px;
+}
+.rmx-card-f2 .rmx-card-tag { color: var(--yellow); background: rgba(244,186,26,0.13); }
+.rmx-card-f3 .rmx-card-tag { color: var(--orange); background: rgba(229,132,35,0.14); }
+.rmx-card-f4 .rmx-card-tag { color: var(--black); background: rgba(255,255,255,0.85); }
+.rmx-card-name {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.15;
+  color: var(--white);
+  margin-bottom: 10px;
+}
+.rmx-facets { list-style: none; display: flex; flex-direction: column; }
+.rmx-facets li {
+  display: flex;
+  gap: 12px;
+  padding: 7px 0;
+}
+.rmx-facets li + li { border-top: 1px solid rgba(255,255,255,0.08); }
+.rmx-facets li > span {
+  width: 58px;
+  flex-shrink: 0;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 8.5px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding-top: 2px;
+}
+.rmx-card-f2 .rmx-facets li > span { color: var(--yellow); }
+.rmx-card-f3 .rmx-facets li > span { color: var(--orange); }
+.rmx-card-f4 .rmx-facets li > span { color: var(--white); }
+.rmx-facets li > p {
+  flex: 1;
+  min-width: 0;
+  font-family: var(--font-body);
+  font-size: 12px;
+  line-height: 1.4;
+  color: rgba(255,255,255,0.82);
+}
+.rmx-facets li > p strong { color: var(--white); font-weight: 700; }
+.rmx-result-card {
+  flex: 1;
+  min-width: 0;
+  background: rgba(244,186,26,0.06);
+  border: 1px solid rgba(244,186,26,0.28);
+  border-radius: 13px;
+  padding: 16px 18px;
+}
+.rmx-result-label {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 9.5px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--yellow);
+  margin-bottom: 8px;
+}
+.rmx-result-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.18;
+  color: var(--white);
+  margin-bottom: 10px;
+}
+.rmx-result-title b { color: var(--yellow); }
+.rmx-result-card ul { list-style: none; }
+.rmx-result-card ul li {
+  font-family: var(--font-body);
+  font-size: 12px;
+  line-height: 1.32;
+  color: rgba(255,255,255,0.85);
+  padding: 5px 0 5px 20px;
+  position: relative;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.rmx-result-card ul li:last-child { border-bottom: 0; }
+.rmx-result-card ul li::before {
+  content: "\2713";
+  position: absolute;
+  left: 0; top: 5px;
+  color: var(--yellow);
+  font-weight: 700;
+  font-size: 12px;
+}
+.rmx-ethics {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 16px -32px 0;
+  padding: 12px 32px;
+  border-top: 1px solid rgba(229,132,35,0.28);
+  background: rgba(229,132,35,0.11);
+}
+.rmx-ethics-tag {
+  flex-shrink: 0;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--orange);
+  background: rgba(229,132,35,0.18);
+  padding: 6px 12px;
+  border-radius: 999px;
+}
+.rmx-ethics p {
+  font-family: var(--font-body);
+  font-size: 12.5px;
+  line-height: 1.4;
+  color: rgba(255,255,255,0.82);
+  padding-right: 230px;
+}
+.rmx-ethics p strong { color: var(--white); font-weight: 700; }

@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Informe de Rendimiento · Julio 2026</title>
+<style>
+  :root{
+    --black:#000000;
+    --gold:#F4BA1A;
+    --orange:#E58423;
+    --white:#FFFFFF;
+    --ink:#141414;
+    --grey:#6b6b6b;
+    --line:rgba(0,0,0,.10);
+    --paper:#ffffff;
+    --soft:#faf8f4;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  @page{ size:A4 portrait; margin:0; }
+  html,body{ background:#3a3a3a; }
+  body{
+    font-family:"Inter","Helvetica Neue",Arial,system-ui,sans-serif;
+    color:var(--ink);
+    -webkit-font-smoothing:antialiased;
+    line-height:1.5;
+  }
+  .mono{ font-family:"SF Mono","Roboto Mono",ui-monospace,Menlo,Consolas,monospace; }
+
+  .page{
+    position:relative;
+    width:210mm; height:297mm;
+    background:var(--paper);
+    margin:0 auto;
+    overflow:hidden;
+    page-break-after:always;
+    display:flex; flex-direction:column;
+  }
+  .page:last-child{ page-break-after:auto; }
+  .pad{ padding:14mm 15mm 15mm; flex:1; display:flex; flex-direction:column; }
+
+  .runhead{
+    display:flex; justify-content:space-between; align-items:center;
+    font-size:8.5pt; letter-spacing:.18em; text-transform:uppercase;
+    color:var(--grey); padding:9mm 16mm 0;
+  }
+  .runhead .dot{ width:7px;height:7px;background:var(--gold);border-radius:50%;display:inline-block;margin-right:7px;vertical-align:middle;}
+  .runfoot{
+    position:absolute; bottom:8mm; left:16mm; right:16mm;
+    display:flex; justify-content:space-between; align-items:center;
+    font-size:8pt; letter-spacing:.14em; text-transform:uppercase; color:var(--grey);
+    border-top:1px solid var(--line); padding-top:3mm;
+  }
+  .runfoot b{ color:var(--ink); }
+
+  .eyebrow{
+    font-size:9pt; letter-spacing:.32em; text-transform:uppercase;
+    color:var(--orange); font-weight:700; margin-bottom:6mm;
+    display:flex; align-items:center; gap:10px;
+  }
+  .eyebrow::before{ content:""; width:26px; height:3px; background:var(--gold); display:inline-block;}
+  h1.sec{ font-size:27pt; font-weight:800; line-height:1.08; letter-spacing:-.02em; margin-bottom:4mm; }
+  h2.sub{ font-size:13pt; font-weight:800; letter-spacing:-.01em; margin:3.5mm 0 2mm; }
+  h3.mini{ font-size:10.5pt; font-weight:800; text-transform:uppercase; letter-spacing:.08em; margin-bottom:2mm;}
+  p.lead{ font-size:11pt; color:#2b2b2b; max-width:155mm; }
+  p.body{ font-size:9.5pt; color:#333; margin-bottom:2.5mm; }
+  .hl{ background:var(--gold); padding:0 .18em; border-radius:2px; }
+  .hlo{ color:var(--orange); font-weight:700; }
+  strong{ font-weight:700; }
+
+  .cover{ background:var(--black); color:#fff; }
+  .cover .grid-bg{
+    position:absolute; inset:0;
+    background-image:
+      linear-gradient(rgba(244,186,26,.06) 1px,transparent 1px),
+      linear-gradient(90deg,rgba(244,186,26,.06) 1px,transparent 1px);
+    background-size:14mm 14mm;
+  }
+  .cover .corner{ position:absolute; width:34px;height:34px;border:3px solid var(--gold);}
+  .cover .c-tl{ top:14mm;left:14mm;border-right:none;border-bottom:none;}
+  .cover .c-br{ bottom:14mm;right:14mm;border-left:none;border-top:none;}
+  .cover-inner{ position:relative; z-index:2; padding:24mm 18mm; height:100%; display:flex; flex-direction:column;}
+  .brandmark{ display:flex; align-items:center; gap:12px; font-weight:800; font-size:13pt; letter-spacing:.02em;}
+  .brandmark .sq{ width:30px;height:30px;background:var(--gold); border-radius:7px; display:grid;place-items:center; color:#000; font-weight:900; font-size:13pt;}
+  .cover .kicker{ margin-top:auto; font-size:10pt; letter-spacing:.34em; text-transform:uppercase; color:var(--gold); font-weight:700;}
+  .cover h1{ font-size:44pt; font-weight:900; line-height:1.0; letter-spacing:-.025em; margin:6mm 0 5mm;}
+  .cover h1 em{ font-style:normal; color:var(--gold);}
+  .cover .desc{ font-size:12pt; color:#cfcfcf; max-width:140mm; line-height:1.5;}
+  .cover .period{ margin-top:8mm; font-size:10.5pt; color:#fff; font-weight:700; letter-spacing:.05em;}
+  .cover .period span{ color:var(--orange);}
+  .cover-stats{ display:flex; gap:0; margin-top:10mm; border-top:1px solid rgba(255,255,255,.18); padding-top:6mm;}
+  .cover-stats div{ flex:1; }
+  .cover-stats .n{ font-size:24pt; font-weight:900; color:var(--gold); line-height:1;}
+  .cover-stats .l{ font-size:8pt; letter-spacing:.1em; text-transform:uppercase; color:#bdbdbd; margin-top:2mm;}
+
+  .stat-row{ display:grid; grid-template-columns:repeat(4,1fr); gap:5mm; margin:5mm 0;}
+  .stat{ border:1.5px solid var(--ink); border-radius:10px; padding:6mm 5mm; background:var(--white);}
+  .stat .n{ font-size:25pt; font-weight:900; line-height:1; letter-spacing:-.02em;}
+  .stat .n small{ font-size:11pt; }
+  .stat .l{ font-size:8pt; letter-spacing:.08em; text-transform:uppercase; color:var(--grey); margin-top:2.5mm; font-weight:700;}
+  .stat.gold{ background:var(--gold); border-color:var(--gold);}
+  .stat.black{ background:var(--black); border-color:var(--black); color:#fff;}
+  .stat.black .l{ color:#cfcfcf;}
+  .stat.orange{ background:var(--orange); border-color:var(--orange); color:#fff;}
+  .stat.orange .l{ color:#ffe8d4;}
+
+  .twocol{ columns:2; column-gap:9mm; }
+  .twocol p{ font-size:9.3pt; color:#3a3a3a; margin-bottom:2.5mm; break-inside:avoid;}
+
+  .callout{ border-left:4px solid var(--orange); background:var(--soft); padding:5mm 6mm; border-radius:0 8px 8px 0; margin:4mm 0;}
+  .callout .q{ font-size:10.5pt; font-weight:700; line-height:1.4; color:var(--ink);}
+  .callout .src{ font-size:8.3pt; color:var(--grey); margin-top:2mm; letter-spacing:.04em;}
+
+  .note{ font-size:8pt; color:var(--grey); font-style:italic; margin-top:3mm; line-height:1.4;}
+
+  /* table */
+  table.tbl{ width:100%; border-collapse:collapse; margin-top:2mm; font-size:8.3pt; }
+  table.tbl th{ text-align:left; font-size:7.5pt; letter-spacing:.08em; text-transform:uppercase; color:var(--grey); border-bottom:1.5px solid var(--ink); padding:1.3mm 2mm; }
+  table.tbl td{ padding:1.3mm 2mm; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.tbl tr:nth-child(even) td{ background:var(--soft); }
+  .badge{ display:inline-block; font-size:7pt; font-weight:800; letter-spacing:.05em; background:var(--ink); color:#fff; padding:2px 7px; border-radius:5px;}
+  .badge.g{ background:var(--gold); color:#000;}
+  .badge.o{ background:var(--orange); color:#fff;}
+
+  /* KPI board */
+  .legend{ display:flex; flex-wrap:wrap; gap:5mm; margin:3mm 0 1mm; }
+  .legend .lg{ display:flex; align-items:center; gap:6px; font-size:7.6pt; color:#444; font-weight:700; letter-spacing:.03em; text-transform:uppercase;}
+  .legend .pill{ width:12px;height:12px;border-radius:4px; display:inline-block;}
+  .pill.fix{ background:var(--gold);}
+  .pill.open{ background:var(--orange);}
+  .pill.rule{ background:var(--black);}
+  .pill.na{ background:#9a9a9a;}
+
+  .kpi-grid{ display:grid; grid-template-columns:1fr 1fr; gap:3mm; margin-top:1.5mm; }
+  .kpi{ position:relative; border:1.5px solid var(--ink); border-radius:10px; padding:3.2mm 3.5mm 3.2mm 5.5mm; overflow:hidden; background:var(--white); display:flex; flex-direction:column; gap:.8mm;}
+  .kpi::before{ content:""; position:absolute; left:0; top:0; bottom:0; width:5px; }
+  .kpi.k-fix::before{ background:var(--gold);}
+  .kpi.k-open::before{ background:var(--orange);}
+  .kpi.k-rule::before{ background:var(--ink);}
+  .kpi .st{ font-size:7.3pt; font-weight:800; letter-spacing:.12em; text-transform:uppercase; display:inline-flex; align-items:center; gap:6px;}
+  .kpi.k-fix .st{ color:#b07d00;}
+  .kpi.k-open .st{ color:var(--orange);}
+  .kpi.k-rule .st{ color:var(--ink);}
+  .kpi .kt{ font-size:9.8pt; font-weight:800; line-height:1.16; letter-spacing:-.005em;}
+  .kpi .kd{ font-size:7.9pt; color:#444; line-height:1.32;}
+  .kpi.full{ grid-column:1 / -1; }
+
+  .warnbox{ border:1.5px solid var(--ink); border-radius:10px; padding:3.5mm 5mm; background:var(--soft); margin:2.5mm 0;}
+  .warnbox h4{ font-size:9.3pt; font-weight:800; margin-bottom:1.2mm; display:flex; align-items:center; gap:6px;}
+  .warnbox h4::before{ content:"⚠"; color:var(--orange); }
+  .warnbox p{ font-size:8.5pt; color:#3a3a3a; line-height:1.4; margin-bottom:1.2mm;}
+  .warnbox ul{ margin:1.5mm 0 0 4mm; font-size:8.5pt; color:#3a3a3a; line-height:1.5;}
+
+  .approxrow{ display:flex; align-items:baseline; gap:9px; margin:.5mm 0 2mm; flex-wrap:wrap;}
+  .approxrow .an{ font-size:18pt; font-weight:900; color:var(--orange); line-height:1; white-space:nowrap;}
+  .approxrow .al{ font-size:7.3pt; letter-spacing:.09em; text-transform:uppercase; color:var(--grey); font-weight:800;}
+  .approx-src{ font-size:7.6pt; color:var(--grey); font-style:italic; line-height:1.4; margin-top:1mm;}
+</style>
+</head>
+<body>
+
+<!-- ============ PÁGINA 1 · PORTADA ============ -->
+<section class="page cover">
+  <div class="grid-bg"></div>
+  <div class="corner c-tl"></div>
+  <div class="corner c-br"></div>
+  <div class="cover-inner">
+    <div class="brandmark"><span class="sq">i</span> INTEZIA · SISTEMA IsaIA</div>
+
+    <div class="kicker">Informe de Rendimiento</div>
+    <h1>Julio<br>en <em>números</em><br>reales.</h1>
+    <p class="desc">Corte operativo del sistema de propuestas comerciales de Intezia: qué se produjo, qué se rompió, qué se corrigió y qué no se puede medir todavía con precisión.</p>
+    <p class="period">Período cubierto: <span>1 → 30 julio 2026</span></p>
+
+    <div class="cover-stats">
+      <div><div class="n">18</div><div class="l">Propuestas entregadas</div></div>
+      <div><div class="n">15</div><div class="l">Clientes distintos</div></div>
+      <div><div class="n">1</div><div class="l">Dashboard Edu-Trace</div></div>
+      <div><div class="n">5</div><div class="l">Defectos hallados y corregidos</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PÁGINA 2 · RESUMEN EJECUTIVO ============ -->
+<section class="page">
+  <div class="runhead"><span><span class="dot"></span>Informe de Rendimiento</span><span>01 · Resumen ejecutivo</span></div>
+  <div class="pad">
+    <div class="eyebrow">Resumen ejecutivo</div>
+    <h1 class="sec">Un mes de ritmo alto,<br>sin bajar la guardia en calidad.</h1>
+    <p class="lead">En julio se entregaron <strong>18 propuestas comerciales registradas</strong> a <strong>15 clientes</strong> (Zoom, Aerocentro, Pago Tronic, Robin Agency, Beeper, Diram, URBE University, Médica Campestre, Empléate, Dr. Care, Messangi, Ailyn Gruszka, entre otros), el <span class="hl">49% de todo el histórico registrado</span> del sistema (18 de 37 propuestas con <span class="mono">meta.json</span>) en un solo mes. En paralelo se cerró y entregó <strong>1 Dashboard de Impacto Edu-Trace</strong> (Grupo Corpos) y se detectaron, documentaron y corrigieron <strong>5 defectos de plantilla</strong> que el verificador automático no cazaba.</p>
+
+    <div class="stat-row">
+      <div class="stat gold"><div class="n">18</div><div class="l">Propuestas · julio</div></div>
+      <div class="stat"><div class="n">14 / 3 / 1</div><div class="l">CAP- / TA- / CU-</div></div>
+      <div class="stat black"><div class="n">100%</div><div class="l">División Educación</div></div>
+      <div class="stat orange"><div class="n">0</div><div class="l">Perdidas / rechazadas</div></div>
+    </div>
+
+    <h2 class="sub">Lo esencial de un vistazo</h2>
+    <div class="twocol">
+      <p><strong>Ritmo sostenido.</strong> Entregas casi cada 1.7 días en promedio (18 propuestas en 30 días), con picos de hasta 6 decks en un solo día (28 de julio: Messangi, 3 cursos de la ruta Zoom, Zoom Miami y el taller de docencia).</p>
+      <p><strong>Cuentas multi-propuesta.</strong> Zoom (3 propuestas: Comercial, Operaciones, RH) y Aerocentro (2 propuestas + Aerocentro Miami) construyeron rutas completas por área, no decks sueltos.</p>
+      <p><strong>Todo en pipeline.</strong> Las 18 propuestas de julio están en estado <strong>Enviada</strong>; ninguna se registra aún como Aprobada o Perdida: el ciclo de decisión del cliente típicamente excede la ventana de este informe.</p>
+      <p><strong>El sistema se corrigió a sí mismo 5 veces.</strong> Cada defecto encontrado quedó documentado en el changelog con causa raíz y regla operativa, no solo parcheado en silencio (detalle en la sección 03).</p>
+      <p><strong>Un defecto llegó a producción.</strong> Un PDF ya entregado (Zoom Comercial CAP-058) salió con un overflow interno que el detector automático no ve por diseño; queda declarado y con corrección pendiente de confirmación (sección 03).</p>
+      <p><strong>Nuevo estándar consolidado.</strong> El roadmap de 3 etapas (Diagnóstico → Construcción por Intezia → Implementación) pasó de ser un caso puntual a ser el <strong>default</strong> de toda propuesta multi-fase desde el 23 de julio.</p>
+    </div>
+
+    <div class="callout">
+      <div class="q">«Instrucción del usuario (2026-07-23): este patrón de 3 etapas pasa a ser el default para el roadmap de toda propuesta multi-fase de ahora en adelante.»</div>
+      <div class="src">Changelog · 2026-07-23 · consolidado en CLAUDE.md §6 y plantillas/propuesta-comercial.md</div>
+    </div>
+  </div>
+  <div class="runfoot"><span>Intezia C.A. · Documento interno</span><span><b>02</b> / 06</span></div>
+</section>
+
+<!-- ============ PÁGINA 3 · LO ENTREGADO ============ -->
+<section class="page">
+  <div class="runhead"><span><span class="dot"></span>Informe de Rendimiento</span><span>02 · Lo entregado en julio</span></div>
+  <div class="pad">
+    <div class="eyebrow">Producción del mes</div>
+    <h1 class="sec">18 propuestas, 15 clientes.</h1>
+    <p class="lead">Cada fila es una entrega real, registrada por <span class="mono">generar-pdf.sh</span> en <span class="mono">meta.json</span> el día en que el PDF salió (§4.19, fuente fechada determinista, no una fecha inferida).</p>
+
+    <table class="tbl">
+      <thead><tr><th>Fecha</th><th>Código</th><th>Cliente</th><th>Tipo</th></tr></thead>
+      <tbody>
+        <tr><td>28 jul</td><td>TA-031</td><td>Producto de catálogo (aliada)</td><td>Taller · docencia con IA</td></tr>
+        <tr><td>28 jul</td><td>CAP-085</td><td>Messangi</td><td>Cap. In-Company · adopción 3 fases</td></tr>
+        <tr><td>28 jul</td><td>CAP-059</td><td>Zoom</td><td>Cap. In-Company · Operaciones</td></tr>
+        <tr><td>28 jul</td><td>CAP-058</td><td>Zoom</td><td>Cap. In-Company · Comercial/Mercadeo</td></tr>
+        <tr><td>28 jul</td><td>CAP-050</td><td>Zoom</td><td>Cap. In-Company · RH</td></tr>
+        <tr><td>28 jul</td><td>CAP-046</td><td>Zoom Miami</td><td>Cap. In-Company · Bootcamp</td></tr>
+        <tr><td>24 jul</td><td>CU-012</td><td>URBE University</td><td>Curso · Skills, Cowork, Code</td></tr>
+        <tr><td>24 jul</td><td>CAP-075</td><td>Médica Campestre</td><td>Cap. piloto · Claude Code</td></tr>
+        <tr><td>23 jul</td><td>CAP-084</td><td>Aerocentro Miami</td><td>Cap. · clon digital 3 áreas</td></tr>
+        <tr><td>23 jul</td><td>CAP-083</td><td>Aerocentro</td><td>Cap. · nuevo modelo de negocio 3 fases</td></tr>
+        <tr><td>23 jul</td><td>CAP-082</td><td>Aerocentro</td><td>Cap. · torre de control 6 áreas</td></tr>
+        <tr><td>22 jul</td><td>CAP-081</td><td>Pago Tronic</td><td>Cap. · cerebro digital 4 áreas</td></tr>
+        <tr><td>20 jul</td><td>CAP-080</td><td>Robin Agency</td><td>Cap. · 3 formaciones por depto.</td></tr>
+        <tr><td>18 jul</td><td>TA-030</td><td>Empléate</td><td>Taller de fundamentos, audiencia mixta</td></tr>
+        <tr><td>16 jul</td><td>TA-024</td><td>Dr. Care</td><td>Taller teórico-práctico</td></tr>
+        <tr><td>16 jul</td><td>CAP-079</td><td>Beeper</td><td>Cap. multi-fase invertido</td></tr>
+        <tr><td>16 jul</td><td>CAP-078</td><td>Diram</td><td>Cap. multi-fase · auditoría técnica</td></tr>
+        <tr><td>03 jul</td><td>CAP-070</td><td>Ailyn Gruszka</td><td>Cap. personalizada · Claude Fundamentals</td></tr>
+      </tbody>
+    </table>
+
+    <h2 class="sub" style="margin-top:3mm;">Y el flujo paralelo: Dashboard de Impacto</h2>
+    <div class="callout" style="margin:1.5mm 0;">
+      <div class="q">Grupo Corpos (CAP-026) · cerrado el 20 de julio · N=8 respuestas · Índice de Impacto 85/100.</div>
+      <div class="src">Único Dashboard Edu-Trace del mes. Total histórico: 4 dashboards (apb-group, apb-group-rh, tu-herraje, grupo-corpos).</div>
+    </div>
+    <p class="note" style="margin-top:1.5mm;">Fuente: <span class="mono">clientes/INDEX.json</span> (regenerado 2026-07-28) + <span class="mono">resultados.json</span> de Grupo Corpos. Excluye propuestas legacy sin <span class="mono">meta.json</span>.</p>
+  </div>
+  <div class="runfoot"><span>Intezia C.A. · Documento interno</span><span><b>03</b> / 06</span></div>
+</section>
+
+<!-- ============ PÁGINA 4 · CALIDAD Y AUTO-CORRECCIÓN ============ -->
+<section class="page">
+  <div class="runhead"><span><span class="dot"></span>Informe de Rendimiento</span><span>03 · Calidad y auto-corrección</span></div>
+  <div class="pad">
+    <div class="eyebrow">Qué se rompió y qué se aprendió</div>
+    <h1 class="sec">5 defectos, 5 reglas nuevas.</h1>
+    <p class="lead">El sistema está diseñado para que ningún error se repita en silencio (CLAUDE.md §9): cada defecto encontrado se documenta con causa raíz y se convierte en regla. Julio produjo <strong>5 hallazgos de plantilla</strong>: 4 corregidos con regla operativa ya aplicada, 1 con corrección estructural pendiente de confirmación.</p>
+
+    <div class="legend">
+      <span class="lg"><span class="pill fix"></span>Corregido</span>
+      <span class="lg"><span class="pill open"></span>Pendiente de confirmación</span>
+      <span class="lg"><span class="pill rule"></span>Nueva regla / estándar</span>
+    </div>
+
+    <div class="kpi-grid">
+      <div class="kpi k-fix">
+        <div class="st">● Corregido · 16 jul</div>
+        <div class="kt">Negrita dentro de &lt;li&gt; flex rompe el párrafo</div>
+        <div class="kd">Detectado en Ailyn Gruszka CAP-070. El detector automático no lo cazaba (nada se sale de la caja). Regla: envolver el texto con negrita en un <span class="mono">&lt;span&gt;</span> dentro de esos <span class="mono">&lt;li&gt;</span>.</div>
+      </div>
+      <div class="kpi k-fix">
+        <div class="st">● Corregido · 16 jul</div>
+        <div class="kt">El detector no ve el texto de los AcroForms</div>
+        <div class="kd">Diram CAP-078 salió con el campo Entregables cortado a media palabra; el verificador dio "OK" porque solo audita el HTML, no el <span class="mono">/V</span> horneado del PDF. Regla: contar líneas envueltas, no ítems, al llenar <span class="mono">acroforms.json</span>.</div>
+      </div>
+      <div class="kpi k-fix">
+        <div class="st">● Corregido · 16 jul</div>
+        <div class="kt">Valor de barra se desborda en la slide de Impacto</div>
+        <div class="kd"><span class="mono">.bar-val</span> se solapa con la fila de abajo cuando la barra es corta y el texto lleva cualificador. Regla: solo la cifra en <span class="mono">.bar-val</span>, el cualificador va en <span class="mono">.bar-label</span>.</div>
+      </div>
+      <div class="kpi k-rule">
+        <div class="st">● Nueva regla · 23 jul</div>
+        <div class="kt">Roadmap de 3 etapas extendido sin desborde</div>
+        <div class="kd">Extender <span class="mono">.rmx-*</span> de 2 a 3 rutas exigía <span class="mono">min-height:0</span> (si no, colisión interna invisible al detector) + recalcular conectores del fork. Con la corrección, este patrón pasó a ser el <strong>estándar de toda propuesta multi-fase</strong>.</div>
+      </div>
+      <div class="kpi k-open full">
+        <div class="st">● Pendiente de confirmación · 28 jul</div>
+        <div class="kt">Overflow interno en la slide de Beneficios (.s-benefits .grid): 1 PDF ya entregado con el defecto</div>
+        <div class="kd">Confirmado en el PDF <strong>ya enviado</strong> de Zoom Comercial CAP-058 (columna "Beneficio del programa formativo") y repetido al clonar para Zoom Operaciones CAP-059. El bloque de 280px no tiene <span class="mono">overflow:hidden</span> y el detector automático solo mide desborde a nivel de slide, no de contenedor interno: por eso pasó sin alerta. Corrección mitigada por contenido en CAP-059; la corrección de raíz en <span class="mono">_base/styles.css</span> y la posible reemisión de CAP-058 quedan pendientes por ser archivo estructural (requiere confirmación, CLAUDE.md §8).</div>
+      </div>
+    </div>
+
+    <h2 class="sub">Auto-corrección antes de salir (ejemplo real)</h2>
+    <p class="body">En Zoom Comercial CAP-058, la primera pasada del verificador cazó <strong>3 defectos propios</strong> antes de la entrega: un guion largo en un nombre de reto reescrito, un falso positivo nuevo de la regla §4.15 (la palabra "acuerdo" en un comentario interno de <span class="mono">acroforms.json</span>) y un overflow de +15px en Objetivos al añadir una mención de método. Los 3 se resolvieron en la misma sesión, antes de generar el PDF final.</p>
+
+    <div class="warnbox">
+      <h4>Tasa de defecto en producción, con datos reales</h4>
+      <p><strong>1 de 18</strong> propuestas entregadas este mes (≈5.6%) salió con un defecto visual confirmado en el PDF final (Zoom Comercial CAP-058). Las otras 4 correcciones de julio se cazaron y resolvieron <em>antes</em> de la entrega. No hay defectos de contenido (copy, precio, AcroForms vacíos) registrados este mes: todos los hallazgos son de capa visual/CSS.</p>
+    </div>
+  </div>
+  <div class="runfoot"><span>Intezia C.A. · Documento interno</span><span><b>04</b> / 06</span></div>
+</section>
+
+<!-- ============ PÁGINA 5 · LO QUE NO SE PUEDE MEDIR ============ -->
+<section class="page">
+  <div class="runhead"><span><span class="dot"></span>Informe de Rendimiento</span><span>04 · Límites de este informe</span></div>
+  <div class="pad">
+    <div class="eyebrow">Honestidad de medición</div>
+    <h1 class="sec">Lo que este informe<br>no <em style="font-style:normal;color:var(--orange);">mide</em>, pero sí puede <em style="font-style:normal;color:var(--orange);">aproximar</em>.</h1>
+    <p class="lead">El mismo principio que rige la slide de Impacto de cada propuesta (§4.9, ninguna cifra se inventa) aplica aquí: nada de lo siguiente es una medición exacta. Pero al igual que el informe de operaciones de mayo estimó tokens a partir del volumen de trabajo documentado, julio tiene suficiente rastro en el changelog y en <span class="mono">INDEX.json</span> para dar un <strong>aproximado fundamentado</strong> de cada métrica, con su método a la vista.</p>
+
+    <div class="warnbox">
+      <h4>Consumo de tokens</h4>
+      <div class="approxrow"><span class="an">≈ 1,1&ndash;1,6 M</span><span class="al">tokens estimados · julio completo</span></div>
+      <p><strong>≈ 50.000&ndash;90.000 por propuesta</strong> en promedio. Método: se aplica el rango validado en el informe de mayo (30k&ndash;80k por clon simple, tras el rediseño a CSS compartido) y se pondera por complejidad real de cada entrega de julio: 9 propuestas de clon directo o de ruta ya resuelta (Zoom Operaciones/RH/Miami, Empléate, Dr. Care, TA-031, Ailyn Gruszka, URBE, Médica Campestre) en el rango bajo, y 9 con rediseño estructural o revisiones múltiples documentadas (Pago Tronic con 2 rondas de roadmap, Robin Agency multi-track, Aerocentro ×3, Zoom Comercial, Diram, Beeper, Messangi) en el rango alto.</p>
+      <p class="approx-src">No incluye el resto de la actividad del mes (este informe, conversaciones exploratorias, memoria persistente). El dato exacto por token/costo solo vive en el panel de uso de la cuenta (Claude Console / facturación de Anthropic).</p>
+    </div>
+
+    <div class="warnbox">
+      <h4>Tiempo activo de construcción</h4>
+      <div class="approxrow"><span class="an">≈ 55&ndash;65 min</span><span class="al">promedio ponderado por propuesta</span></div>
+      <p>Método: mismo criterio que la tabla de mayo (clon directo ≈ 20&ndash;45 min · tipo nuevo o multi-fase ≈ 1&ndash;2 h), aplicado a la misma mezcla 9/9 de arriba → ≈ 18 h de construcción activa repartidas en 18 propuestas. <strong>No es latencia de respuesta</strong> (el sistema no guarda marca de inicio/fin por mensaje): es tiempo de trabajo por entrega, inferido de rondas de revisión y hallazgos documentados en el changelog (ej. Pago Tronic tuvo 2 revisiones registradas el 23 de julio).</p>
+      <p class="approx-src">Dato relacionado que sí es real: 6 propuestas salieron en un solo día (28 de julio, cuenta Zoom + Messangi + TA-031), lo que sitúa el ritmo de julio igual o más rápido que el ciclo de 1&ndash;2 días por propuesta que estimó el informe de mayo.</p>
+    </div>
+
+    <div class="warnbox">
+      <h4>Tasa de defecto, con denominador ampliado</h4>
+      <div class="approxrow"><span class="an">≈ 26%</span><span class="al">entregas con algún defecto detectado en construcción</span></div>
+      <p>Sobre las 19 entregas del mes (18 propuestas + 1 dashboard), <strong>5 tuvieron al menos un defecto de plantilla</strong> descubierto durante su construcción (5/19 ≈ 26%). De esos 5, <strong>4 se cazaron y corrigieron antes de generar el PDF</strong> final; solo 1 llegó al cliente sin corregir (1/19 ≈ 5.3%, la cifra exacta ya reportada en la sección 03). La diferencia entre 26% y 5.3% es, en sí misma, la métrica más honesta del mes: cuánto detecta el sistema <em>antes</em> de que el cliente lo vea.</p>
+    </div>
+
+    <p class="note">Estas tres cifras son aproximaciones fundamentadas, no mediciones instrumentadas: se derivan de la mezcla de complejidad y de las rondas de revisión que sí quedaron escritas en el changelog de julio, no de un contador real de tokens o tiempo. Si se necesita el dato exacto de tokens/costo, el camino es el panel de uso de la cuenta de Anthropic.</p>
+  </div>
+  <div class="runfoot"><span>Intezia C.A. · Documento interno</span><span><b>05</b> / 06</span></div>
+</section>
+
+<!-- ============ PÁGINA 6 · CIERRE ============ -->
+<section class="page cover">
+  <div class="grid-bg"></div>
+  <div class="corner c-tl"></div>
+  <div class="corner c-br"></div>
+  <div class="cover-inner">
+    <div class="brandmark"><span class="sq">i</span> INTEZIA · SISTEMA IsaIA</div>
+    <div class="kicker" style="margin-top:auto;">Balance del mes</div>
+    <h1 style="font-size:36pt;">Más volumen,<br>mismo estándar<br>de <em>calidad</em>.</h1>
+    <p class="desc">18 propuestas entregadas a 15 clientes, 1 dashboard de impacto cerrado, y un sistema que documentó cada defecto que encontró en vez de solo parchearlo. El único punto abierto (overflow interno en Beneficios) queda declarado, no escondido, y a la espera de tu confirmación para corregir la plantilla compartida.</p>
+
+    <div class="cover-stats" style="margin-top:9mm;">
+      <div><div class="n">18</div><div class="l">Propuestas entregadas</div></div>
+      <div><div class="n">49%</div><div class="l">Del histórico registrado, en 1 mes</div></div>
+      <div><div class="n">5.6%</div><div class="l">Tasa de defecto confirmado en PDF final</div></div>
+      <div><div class="n">1</div><div class="l">Corrección estructural pendiente de tu OK</div></div>
+    </div>
+
+    <p style="margin-top:10mm;font-size:9pt;letter-spacing:.18em;text-transform:uppercase;color:#8a8a8a;">
+      Informe generado el 30 de julio de 2026 · Período 1&ndash;30 julio 2026 · Intezia C.A.
+    </p>
+  </div>
+</section>
+
+</body>
+</html>

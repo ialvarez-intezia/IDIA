@@ -1,0 +1,611 @@
+<!doctype html>
+<!--
+  Propuesta — HJB Química · Detección + Habilidades (CAI-031)
+  REESTRUCTURACIÓN 2026-10-02 — de 21 a 12 slides, formato consultivo pensado
+  para servir de plantilla a futuras propuestas del combo Detección+Habilidades.
+  AJUSTE 2026-10-02 (b) — de 12 a 11 slides: se eliminó la slide dedicada de
+  "Habilidades" (5 módulos como construcción); su contenido (Construir/Probar/
+  Adoptar mapeado a los módulos) se condensó dentro de "Vista por fase · Fase
+  2" para no perderlo, aprovechando el espacio que esa slide tenía vacío.
+  Pase de balance visual: Priorización, Entregables y las slides de
+  tarjetas (Garantía/Casos/Por qué Intezia) se agrandaron para llenar mejor
+  el alto de cada slide, y el Cierre se rediseñó (blobs a juego con la
+  Apertura + tarjetas con más presencia) para una despedida más atractiva.
+  Ver brief.md "Reestructuración 2026-10-02" para el detalle completo.
+
+  SERVICIO: deteccion (combo Detección+Habilidades, CLAUDE.md §4.1a). Código
+  CAI-031 (decisión independiente del servicio).
+
+  ESTRUCTURA (11 slides): 1 Apertura (fusiona portada+situación+objetivo) ·
+  2-3 Vista por fase (Fase 1: participantes+horas+resultado · Fase 2:
+  horas+resultado+momentos Construir/Probar/Adoptar) · 4 Priorización (Matriz
+  Impacto/Esfuerzo + Índice de Madurez esquemático) · 5 Entregables (por
+  fase, antes de la inversión) · 6 Garantía 30-60-90 · 7 Casos (2
+  referencias + 1 línea para HJB) · 8 Inversión por fases (desglose por
+  componente y horas) · 9 Por qué Intezia (condensado) · 10 Calendario
+  (kick-off martes 13 oct, tentativo/a confirmar) · 11 Cierre.
+
+  Caja de descuento urgente: recoloreada a naranja de marca en overrides.css
+  (pedido explícito del usuario para esta propuesta — la excepción roja/rosada
+  de _base/styles.css es permanente mientras no se pida lo contrario en otros
+  decks, ver empresa/marca-visual.md). Formas orgánicas (blobs) en Apertura y
+  Cierre: adaptación puntual al manual de marca oficial, acotada a este deck
+  (ver brief.md "Formas orgánicas vs. geométricas").
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Propuesta · Detección y Habilidades · HJB Química · Intezia</title>
+  <link rel="stylesheet" href="../_base/styles.css">
+  <link rel="stylesheet" href="overrides.css">
+</head>
+<body>
+
+  <main class="deck">
+
+    <!-- 1 · Apertura (fusiona portada + situación actual + objetivo general) -->
+    <section class="slide s-cover s-open">
+      <span class="counter">01 / 11</span>
+      <div class="logo-big">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia">
+      </div>
+      <div class="body">
+        <p class="eyebrow">Propuesta de Detección y Habilidades</p>
+        <h1>Una hoja de ruta hacia la adopción de IA en HJB Química.</h1>
+        <p class="lead">
+          HJB Química cuenta hoy con licencias activas de <strong>ChatGPT</strong>, <strong>Claude</strong> y <strong>Microsoft Copilot</strong> para su equipo directivo, adoptadas sin un criterio compartido entre las 15 áreas de la organización. La operación no tiene plantillas, criterios de privacidad ni de uso comunes, y áreas con carga financiera importante, como compras, precios, tesorería y comercio exterior, trabajan con datos dispersos y sin visión cruzada.
+        </p>
+        <div class="open-objetivo">
+          <span class="label">Objetivo</span>
+          <p>Auditar la operación real de las 15 áreas con datos, decidir con criterio qué licencias conservar y, con los 15 responsables de área, instalar ese criterio de forma sostenible: primero con la Detección, después con la Fase de Habilidades.</p>
+        </div>
+      </div>
+      <div class="id-line">
+        <span class="codigo">Código: CAI-031</span>
+        <span class="cliente">HJB Química</span>
+      </div>
+    </section>
+
+    <!-- 2 · Vista por fase — Fase 1 · Detección -->
+    <section class="slide s-roadmap s-phaseview">
+      <span class="counter">02 / 11</span>
+      <p class="eyebrow">Fase 1 · Detección</p>
+      <h2>Diagnóstico con datos, <span class="hl">antes de recomendar</span>.</h2>
+      <p class="phase-intro">El Informe Final se entrega como una hoja de ruta por área: cada prioridad queda lista para construirse, probarse y adoptarse en la Fase de Habilidades.</p>
+
+      <div class="phase-cols">
+        <div class="phase-participants">
+          <span class="phase-participants-label">Participantes · 7 frentes</span>
+          <div class="org-grid">
+            <div class="org-cluster">
+              <span class="org-cluster-tag">A &middot; Dirección</span>
+              <span class="org-person-cargo">Director General</span>
+            </div>
+            <div class="org-cluster">
+              <span class="org-cluster-tag">B &middot; Control y Cumplimiento</span>
+              <span class="org-person-cargo">Gerente Auditoría</span>
+              <span class="org-person-cargo">Gerente de Control de Gestión</span>
+            </div>
+            <div class="org-cluster">
+              <span class="org-cluster-tag">C &middot; Comercial</span>
+              <span class="org-person-cargo">Gerente Ventas</span>
+              <span class="org-person-cargo">Gerente Desarrollo de Nuevos Negocios</span>
+            </div>
+            <div class="org-cluster">
+              <span class="org-cluster-tag">D &middot; Cadena de Suministro</span>
+              <span class="org-person-cargo">Gerente Compras</span>
+              <span class="org-person-cargo">Gerente Almacén</span>
+              <span class="org-person-cargo">Gerente Transportes</span>
+            </div>
+            <div class="org-cluster">
+              <span class="org-cluster-tag">E &middot; Finanzas y Comercio Exterior</span>
+              <span class="org-person-cargo">Gerente Precios</span>
+              <span class="org-person-cargo">Gerente de Tesorería</span>
+              <span class="org-person-cargo">Gerente Comercio Exterior</span>
+            </div>
+            <div class="org-cluster">
+              <span class="org-cluster-tag">F &middot; Capital Humano y Desarrollo Organizacional</span>
+              <span class="org-person-cargo">Gerente Capital Humano</span>
+              <span class="org-person-cargo">Coordinador Desarrollo Organizacional</span>
+            </div>
+            <div class="org-cluster">
+              <span class="org-cluster-tag">G &middot; Proyectos y Planeación</span>
+              <span class="org-person-cargo">Gerente de Proyectos</span>
+              <span class="org-person-cargo">Gerente Planeación</span>
+            </div>
+          </div>
+        </div>
+        <div class="phase-hours">
+          <span class="hours-table-label">Horas, con kick-off</span>
+          <table class="hours-table">
+            <thead>
+              <tr><th>Componente</th><th>Sesiones</th><th class="num">Horas</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Kick-off</td><td>1 sesión</td><td class="num">1h</td></tr>
+              <tr><td>Fundamentals grupal</td><td>1 sesión</td><td class="num">2h</td></tr>
+              <tr><td>Sesiones de levantamiento</td><td>15 sesiones (1 por área, 4h c/u)</td><td class="num">60h</td></tr>
+              <tr><td>Presentación del Informe Final</td><td>1 sesión</td><td class="num">2h</td></tr>
+              <tr class="total"><td>Total Fase 1</td><td>18 sesiones</td><td class="num">65h</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <p class="phase-outcome"><strong>Entrega:</strong> Informe Final con hoja de ruta por área y recomendación de licencias.</p>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">HJB QUÍMICA · CAI-031</span>
+      </div>
+    </section>
+
+    <!-- 3 · Vista por fase — Fase 2 · Habilidades (incluye momentos Construir/Probar/Adoptar) -->
+    <section class="slide s-roadmap s-phaseview">
+      <span class="counter">03 / 11</span>
+      <p class="eyebrow">Fase 2 · Habilidades</p>
+      <h2>Instalar el criterio, <span class="hl">con cada responsable</span>.</h2>
+      <p class="phase-intro">Arranca una vez validado el Informe Final de la Fase 1, con los mismos 15 responsables de área.</p>
+
+      <div class="phase-cols">
+        <div class="phase-hours">
+          <span class="hours-table-label">Horas, con kick-off</span>
+          <table class="hours-table">
+            <thead>
+              <tr><th>Componente</th><th>Sesiones</th><th class="num">Horas</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Kick-off (post-validación)</td><td>1 sesión</td><td class="num">1h</td></tr>
+              <tr><td>Módulo I &middot; Fundamentos y criterio</td><td>1 sesión</td><td class="num">2h</td></tr>
+              <tr><td>Módulo II &middot; Prompting y decisión</td><td>2 sesiones</td><td class="num">4h</td></tr>
+              <tr><td>Módulo III &middot; Reportes y tableros</td><td>2 sesiones</td><td class="num">4h</td></tr>
+              <tr><td>Módulo IV &middot; Privacidad y gobierno</td><td>1 sesión</td><td class="num">2h</td></tr>
+              <tr><td>Módulo V &middot; Cerebro Digital</td><td>3 sesiones</td><td class="num">6h</td></tr>
+              <tr><td>Garantía 30-60-90</td><td>3 sesiones</td><td class="num">3h</td></tr>
+              <tr class="total"><td>Total Fase 2</td><td>13 sesiones</td><td class="num">22h</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="phase-momentos">
+          <span class="phase-momentos-label">Lo que construye cada responsable</span>
+          <ul class="momentos-list">
+            <li>
+              <span class="momento-tag stage-construir">Construir</span>
+              <p>Criterio de licencias propio, prompts con verificación y decisiones con riesgo acotado (Módulos I-II).</p>
+            </li>
+            <li>
+              <span class="momento-tag stage-probar">Probar</span>
+              <p>Su reporte o tablero, con casos reales de su propia área (Módulo III).</p>
+            </li>
+            <li>
+              <span class="momento-tag stage-adoptar">Adoptar</span>
+              <p>Manual de gobierno de datos y su Cerebro Digital propio, empezando por el Director General (Módulos IV-V).</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="phase-outcome"><strong>Entrega:</strong> criterio instalado, reportes propios y Cerebro Digital funcionando por responsable de área.</p>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">HJB QUÍMICA · CAI-031</span>
+      </div>
+    </section>
+
+    <!-- 4 · Priorización (Matriz Impacto/Esfuerzo + Índice de Madurez) -->
+    <section class="slide s-program s-matrix">
+      <span class="counter">04 / 11</span>
+      <p class="eyebrow">Priorización</p>
+      <h2>Cada hallazgo, a su respuesta.</h2>
+      <p class="meta">Detección &middot; cómo se clasifica cada hallazgo</p>
+
+      <p class="matrix-intro">Cada hallazgo de la Detección cae en uno de estos 4 cuadrantes, y cada cuadrante tiene una respuesta distinta.</p>
+
+      <div class="matrix-grid">
+        <div class="matrix-cell matrix-cell-quick">
+          <span class="matrix-tag">Alto impacto &middot; bajo esfuerzo</span>
+          <div class="matrix-name">Logro inmediato</div>
+          <p>Se resuelve durante la misma sesión de auditoría del área, dentro de la Fase 1.</p>
+        </div>
+        <div class="matrix-cell matrix-cell-big">
+          <span class="matrix-tag">Alto impacto &middot; alto esfuerzo</span>
+          <div class="matrix-name">Proyecto de Habilidades</div>
+          <p>Pasa a la Fase 2: se instala el criterio y se construye junto con el responsable de área.</p>
+        </div>
+        <div class="matrix-cell matrix-cell-secondary">
+          <span class="matrix-tag">Bajo impacto &middot; bajo esfuerzo</span>
+          <div class="matrix-name">Gestión propia</div>
+          <p>El propio equipo lo resuelve con el criterio ya instalado en la Fase 2.</p>
+        </div>
+        <div class="matrix-cell matrix-cell-decide">
+          <span class="matrix-tag">Bajo impacto &middot; alto esfuerzo</span>
+          <div class="matrix-name">A decisión de HJB</div>
+          <p>Esfuerzo alto para un impacto menor: HJB decide si lo prioriza más adelante.</p>
+        </div>
+      </div>
+
+      <div class="madurez-strip">
+        <span class="madurez-label">Índice de Madurez &middot; por área y consolidado</span>
+        <div class="madurez-tags">
+          <span class="madurez-tag">Cultura</span>
+          <span class="madurez-tag">Talento</span>
+          <span class="madurez-tag">Gobernanza</span>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">HJB QUÍMICA · CAI-031</span>
+      </div>
+    </section>
+
+    <!-- 5 · Entregables (por fase, fusiona p. 8/12/14 del deck anterior) -->
+    <section class="slide s-benefits s-benefits-v2 s-deliv-fase">
+      <span class="counter">05 / 11</span>
+      <p class="eyebrow">Entregables</p>
+      <h2>Lo que <span class="hl">se llevan</span>.</h2>
+
+      <div class="deliv-fase-card deliv-fase-1">
+        <p class="deliv-fase-label">Fase 1 · Detección · Entregables</p>
+      </div>
+      <div class="deliv-fase-card deliv-fase-2">
+        <p class="deliv-fase-label">Fase 2 · Habilidades · Entregables</p>
+      </div>
+
+      <div class="multi-box entregables-box" data-field="Entregables"></div>
+      <div class="multi-box acreditaciones-box" data-field="Acreditacion"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">HJB QUÍMICA · CAI-031</span>
+      </div>
+    </section>
+
+    <!-- 6 · Garantía 30-60-90 -->
+    <section class="slide s-roadmap s-followup">
+      <span class="counter">06 / 11</span>
+      <p class="eyebrow">Garantía de seguimiento</p>
+      <h2>No los dejamos solos <span class="hl">después del servicio</span>.</h2>
+      <p class="followup-intro">Verificamos que cada responsable de área use lo instalado en la Fase 2, y que eso se traduzca en tiempo recuperado.</p>
+
+      <div class="followup-cards">
+        <div class="rmx-card rmx-card-f2">
+          <span class="rmx-card-tag">30 días</span>
+          <div class="rmx-card-name">¿Se usa lo enseñado?</div>
+          <ul class="rmx-facets">
+            <li><span>Medimos</span><p>Si cada responsable aplica el criterio y las herramientas de la Fase 2.</p></li>
+            <li><span>Aportamos</span><p>Nivelación y resolución de dudas sobre casos reales.</p></li>
+          </ul>
+        </div>
+        <div class="rmx-card rmx-card-f3">
+          <span class="rmx-card-tag">60 días</span>
+          <div class="rmx-card-name">¿Construyó más?</div>
+          <ul class="rmx-facets">
+            <li><span>Medimos</span><p>Si cada responsable replicó lo aprendido y construyó nuevos reportes o ajustes.</p></li>
+            <li><span>Aportamos</span><p>Mapeo de esas construcciones y revisión de buenas prácticas.</p></li>
+          </ul>
+        </div>
+        <div class="rmx-card rmx-card-f4">
+          <span class="rmx-card-tag">90 días</span>
+          <div class="rmx-card-name">¿Cuál es el retorno?</div>
+          <ul class="rmx-facets">
+            <li><span>Medimos</span><p>El tiempo recuperado frente a la inversión realizada, con un análisis de impacto.</p></li>
+            <li><span>Aportamos</span><p>Ese análisis y una lectura de los resultados por área.</p></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">HJB QUÍMICA · CAI-031</span>
+      </div>
+    </section>
+
+    <!-- 7 · Casos (2 referencias + 1 línea para HJB) -->
+    <section class="slide s-roadmap s-followup">
+      <span class="counter">07 / 11</span>
+      <p class="eyebrow">Casos</p>
+      <h2>Esto ya funcionó <span class="hl">en otros proyectos</span>.</h2>
+      <p class="followup-intro">Dos referencias de la misma familia de servicio.</p>
+
+      <div class="followup-cards">
+        <div class="rmx-card rmx-card-f2">
+          <span class="rmx-card-tag">Detección</span>
+          <div class="rmx-card-name">Otro cliente de distribución</div>
+          <ul class="rmx-facets">
+            <li><span>Medido</span><p>5 áreas auditadas, 33 procesos clasificados y 3 agentes ya construidos antes del informe final.</p></li>
+            <li><span>Resultado</span><p>Hoja de ruta por área y recomendación de licencias, no solo un diagnóstico en papel.</p></li>
+          </ul>
+        </div>
+        <div class="rmx-card rmx-card-f3">
+          <span class="rmx-card-tag">Habilidades directivas</span>
+          <div class="rmx-card-name">Venemergencia</div>
+          <ul class="rmx-facets">
+            <li><span>Medido</span><p>91% percibió ahorro de tiempo semanal (20 de 22), Índice de Impacto Edu-Trace de 90/100.</p></li>
+            <li><span>Fuente</span><p>Encuesta Edu-Trace de cierre, medición interna INTEZIA.</p></li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="followup-note">Mismo patrón para HJB: diagnóstico con datos y criterio instalado por responsable de área.</p>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">HJB QUÍMICA · CAI-031</span>
+      </div>
+    </section>
+
+    <!-- 8 · Inversión por fases (hoja única, FASE_PRICE_FIELDS) -->
+    <section class="slide s-price">
+      <span class="counter">08 / 11</span>
+      <h2 class="title">Inversión por fases</h2>
+      <p class="price-intro">Detección completa de las 15 áreas y Fase de Habilidades directivas, en un mismo proyecto. Cada fase se cotiza por separado, con una inversión total combinada.</p>
+
+      <div class="fase-price-list">
+        <div class="fase-price-row">
+          <div class="fase-price-copy">
+            <span class="fase-price-label">Fase 1 &middot; Detección</span>
+            <ul class="fase-price-breakdown">
+              <li><span>Kick-off</span><span class="num">1h</span></li>
+              <li><span>Fundamentals</span><span class="num">2h</span></li>
+              <li><span>Ejecución (15 sesiones)</span><span class="num">60h</span></li>
+              <li><span>Informe Final</span><span class="num">2h</span></li>
+            </ul>
+            <p class="fase-price-total">Total: 65h</p>
+          </div>
+          <div class="fase-price-frame" data-field="PrecioFase1"></div>
+        </div>
+        <div class="fase-price-row">
+          <div class="fase-price-copy">
+            <span class="fase-price-label">Fase 2 &middot; Habilidades</span>
+            <ul class="fase-price-breakdown">
+              <li><span>Kick-off</span><span class="num">1h</span></li>
+              <li><span>Ejecución (5 módulos)</span><span class="num">18h</span></li>
+              <li><span>Seguimiento 30-60-90</span><span class="num">3h</span></li>
+            </ul>
+            <p class="fase-price-total">Total: 22h</p>
+          </div>
+          <div class="fase-price-frame" data-field="PrecioFase2"></div>
+        </div>
+      </div>
+
+      <div class="block block-notes-container">
+        <span class="block-eyebrow">Notas</span>
+      </div>
+      <div class="multi-box notas-box" data-field="Notas"></div>
+
+      <div class="cot-roi-box">
+        <span class="cot-roi-label">ROI estimado</span>
+        <p class="cot-roi-text">Con la recomendación de licencias desde el primer informe, HJB deja de pagar por herramientas que se solapan sin saber por qué, y cada responsable de área sale de la Fase 2 con reportes propios y su Cerebro Digital funcionando.</p>
+      </div>
+
+      <div class="cot-garantia-badge">
+        <span class="cot-garantia-tag">Garantía 30-60-90</span>
+        <p class="cot-garantia-text">Estamos contigo hasta que la habilidad quede instalada.</p>
+      </div>
+
+      <span class="cot-label cot-label-base">Inversión total del proyecto</span>
+      <div class="cot-frame base-frame"></div>
+
+      <span class="cot-label cot-label-discount">Descuento</span>
+      <span class="cot-sign-minus">&minus;$</span>
+      <div class="cot-frame discount-frame"></div>
+      <span class="cot-urgent-note">Descuento válido por 15 días</span>
+
+      <span class="cot-label cot-label-total">TOTAL</span>
+      <div class="cot-frame total-frame"></div>
+
+      <p class="cot-validity">Cotización válida por 30 días. 2 fases &middot; mismo proyecto.</p>
+      <div class="cot-terms-box">
+        <span class="cot-terms-label">Importante</span>
+        <p class="cot-terms-text">Este servicio se presta bajo nuestros <a href="https://drive.google.com/file/d/1PA-ZSt4KnyY5dpxXzgkIk6-yfGlV2eF8/view?usp=drive_link" target="_blank" rel="noopener">términos y condiciones</a>. Al avanzar con esta propuesta, ambas partes los aceptan.</p>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">HJB QUÍMICA · CAI-031</span>
+      </div>
+    </section>
+
+    <!-- 9 · Por qué Intezia (condensado, sin aludir a otros proveedores) -->
+    <section class="slide s-roadmap s-followup">
+      <span class="counter">09 / 11</span>
+      <p class="eyebrow">Por qué Intezia</p>
+      <h2>Respaldo real, <span class="hl">no solo una sesión</span>.</h2>
+
+      <p class="followup-intro">Tres razones concretas para avanzar con Intezia en ambas fases.</p>
+
+      <div class="followup-cards">
+        <div class="rmx-card rmx-card-f2">
+          <span class="rmx-card-tag">Equipo</span>
+          <div class="rmx-card-name">Detección y Habilidades</div>
+          <ul class="rmx-facets">
+            <li><span>Enfoque</span><p>Diagnóstico con datos antes de recomendar, el mismo criterio en las 15 áreas de HJB.</p></li>
+            <li><span>Continuidad</span><p>El mismo equipo acompaña la Fase 1 y la Fase 2, sin relevos a mitad de camino.</p></li>
+          </ul>
+        </div>
+        <div class="rmx-card rmx-card-f3">
+          <span class="rmx-card-tag">Confidencialidad</span>
+          <div class="rmx-card-name">Información bajo resguardo</div>
+          <ul class="rmx-facets">
+            <li><span>Datos</span><p>Cada hallazgo de HJB se maneja bajo estricta confidencialidad, sin compartirse fuera del programa.</p></li>
+            <li><span>Alcance</span><p>Aplica a las 15 áreas, de principio a fin del proyecto.</p></li>
+          </ul>
+        </div>
+        <div class="rmx-card rmx-card-f4">
+          <span class="rmx-card-tag">Sin sorpresas</span>
+          <div class="rmx-card-name">Sin horas extra facturadas</div>
+          <ul class="rmx-facets">
+            <li><span>Promesa</span><p>Si hacen falta horas adicionales para cumplir el objetivo de cada fase, no se cobran aparte.</p></li>
+            <li><span>Vigencia</span><p>El mismo criterio de inversión se mantiene durante toda la Fase 1 y la Fase 2.</p></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">HJB QUÍMICA · CAI-031</span>
+      </div>
+    </section>
+
+    <!-- 10 · Próximos pasos + Calendario (kick-off movido a martes 13 oct) -->
+    <section class="slide s-steps">
+      <span class="counter">10 / 11</span>
+      <p class="eyebrow">Próximos pasos</p>
+      <h2>Cómo arrancamos.</h2>
+      <div class="step-cards">
+        <div class="step-card">
+          <span class="ghost">01</span>
+        </div>
+        <div class="step-card">
+          <span class="ghost">02</span>
+        </div>
+        <div class="step-card">
+          <span class="ghost">03</span>
+        </div>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-01-titulo" data-field="Paso01Titulo">
+        <span class="acro-default-text">Confirmamos alcance</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-01-body" data-field="Paso01Body">
+        <span class="acro-default-text">Confirmamos con HJB las 15 áreas, responsables y fechas de la Fase 1.</span>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-02-titulo" data-field="Paso02Titulo">
+        <span class="acro-default-text">Acceso y logística</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-02-body" data-field="Paso02Body">
+        <span class="acro-default-text">Coordinamos el acceso por Teams, las grabaciones y la agenda de las 15 sesiones.</span>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-03-titulo" data-field="Paso03Titulo">
+        <span class="acro-default-text">Sesión de arranque</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-03-body" data-field="Paso03Body">
+        <span class="acro-default-text">Kick-off para alinear alcance, responsables y el orden de los 7 frentes.</span>
+      </div>
+
+      <div class="steps-calendar">
+        <span class="steps-calendar-tag">Calendario tentativo &middot; kick-off 13 oct &middot; Fundamentals 15 oct</span>
+        <p class="steps-calendar-result">Para el 10 de diciembre, las 15 áreas quedan auditadas y el Informe Final, presentado.</p>
+        <div class="steps-calendar-grid">
+          <div class="cal-col">
+            <div class="cal-row">
+              <span class="cal-date">Mar 20 oct</span><span class="cal-time">10-14</span><span class="cal-title">Dirección General</span>
+            </div>
+            <div class="cal-row">
+              <span class="cal-date">Jue 22 oct</span><span class="cal-time">10-14</span><span class="cal-title">Auditoría</span>
+            </div>
+            <div class="cal-row">
+              <span class="cal-date">Mar 27 oct</span><span class="cal-time">10-14</span><span class="cal-title">Control de Gestión</span>
+            </div>
+            <div class="cal-row">
+              <span class="cal-date">Jue 29 oct</span><span class="cal-time">10-14</span><span class="cal-title">Ventas</span>
+            </div>
+            <div class="cal-row">
+              <span class="cal-date">Mar 3 nov</span><span class="cal-time">10-14</span><span class="cal-title">Desarrollo de Nuevos Negocios</span>
+            </div>
+          </div>
+          <div class="cal-col">
+            <div class="cal-row">
+              <span class="cal-date">Jue 5 nov</span><span class="cal-time">10-14</span><span class="cal-title">Compras</span>
+            </div>
+            <div class="cal-row">
+              <span class="cal-date">Mar 10 nov</span><span class="cal-time">10-14</span><span class="cal-title">Almacén</span>
+            </div>
+            <div class="cal-row">
+              <span class="cal-date">Jue 12 nov</span><span class="cal-time">10-14</span><span class="cal-title">Transportes</span>
+            </div>
+            <div class="cal-row">
+              <span class="cal-date">Mar 17 nov</span><span class="cal-time">10-14</span><span class="cal-title">Precios</span>
+            </div>
+            <div class="cal-row">
+              <span class="cal-date">Jue 19 nov</span><span class="cal-time">10-14</span><span class="cal-title">Tesorería</span>
+            </div>
+          </div>
+          <div class="cal-col">
+            <div class="cal-row">
+              <span class="cal-date">Mar 24 nov</span><span class="cal-time">10-14</span><span class="cal-title">Comercio Exterior</span>
+            </div>
+            <div class="cal-row">
+              <span class="cal-date">Jue 26 nov</span><span class="cal-time">10-14</span><span class="cal-title">Capital Humano</span>
+            </div>
+            <div class="cal-row">
+              <span class="cal-date">Mar 1 dic</span><span class="cal-time">10-14</span><span class="cal-title">Proyectos</span>
+            </div>
+            <div class="cal-row">
+              <span class="cal-date">Jue 3 dic</span><span class="cal-time">10-14</span><span class="cal-title">Planeación</span>
+            </div>
+            <div class="cal-row">
+              <span class="cal-date">Mar 8 dic</span><span class="cal-time">10-14</span><span class="cal-title">Desarrollo Organizacional</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">HJB QUÍMICA · CAI-031</span>
+      </div>
+    </section>
+
+    <!-- 11 · Cierre (rediseño 2026-10-02: blobs a juego con la Apertura + tarjetas con más presencia) -->
+    <section class="slide s-end">
+      <span class="counter">11 / 11</span>
+
+      <div class="end-blob-top"></div>
+      <div class="end-blob-bottom"></div>
+
+      <p class="end-eyebrow">Gracias por la confianza</p>
+
+      <div class="end-logo">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia">
+      </div>
+
+      <div class="end-summit" data-field="CierreResultado">
+        <span class="acro-default-text">Las 15 áreas de HJB Química auditadas, con los 15 responsables operando con su propio Cerebro Digital.</span>
+      </div>
+
+      <div class="end-stairs">
+        <div class="stair-step stair-1">
+          <span class="stair-label">Paso 1</span>
+          <div class="stair-field" data-field="CierrePaso1">
+            <span class="acro-default-text">Detección de las 15 áreas</span>
+          </div>
+        </div>
+        <div class="stair-step stair-2">
+          <span class="stair-label">Paso 2</span>
+          <div class="stair-field" data-field="CierrePaso2">
+            <span class="acro-default-text">Recomendación de licencias</span>
+          </div>
+        </div>
+        <div class="stair-step stair-3">
+          <span class="stair-label">Paso 3</span>
+          <div class="stair-field" data-field="CierrePaso3">
+            <span class="acro-default-text">Habilidades con Cerebro Digital</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cta-wrap">
+        <span class="cta">Esperamos tu respuesta</span>
+      </div>
+
+      <div class="end-contact">
+        <p class="contact-line">
+          <span class="contact-label">Asesora de ventas:</span>
+          María Iribarren <span class="dot">&middot;</span> +58 414-0570056 <span class="dot">&middot;</span> miribarren@intezia.com
+        </p>
+        <p class="contact-line">
+          <span class="contact-label">Empresa:</span>
+          Intezia C.A J-505657950 <span class="dot">&middot;</span> servicio@intezia.com
+        </p>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

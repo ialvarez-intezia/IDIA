@@ -1,0 +1,671 @@
+/* ===========================================================================
+   overrides.css — Zoom Innovación, Opción B (INN-002)
+   Clon de zoom-innovacion/ (INN-001) escalado a 10h/mes. Mismo esquema — este
+   archivo resuelve 4 piezas que _base todavía no trae:
+   1. CIERRE tipo escalera (idéntico al patrón cavedatos/simple-tv-cai002).
+   2. BENEFICIOS v3 (idéntico al patrón simple-tv-cai002, layout ampliado 570px).
+   3. ROADMAP .rmx-linear (portado de grupo-osorio/styles.css — _base no trae
+      componentes de roadmap, solo existen en decks multi-fase con styles.css
+      local) adaptado a CICLO RECURRENTE: 3 etapas (Kick-off/Ejecución/Medición)
+      + un 4º nodo de "se repite" (↻) en vez de un resultado final único.
+   4. PRECIO — variante nueva "Inversión por Permanencia": 3 columnas de
+      duración de ciclo (3/6/12 meses), cada una con Cuota mensual + Beneficio
+      por permanencia editables. Ver scripts/agregar-campo-precio.py
+      (CICLO_PRICE_FIELDS) para las coordenadas PDF exactas — deben mantenerse
+      sincronizadas con las posiciones CSS de abajo (factor px→pt = 0.75).
+   =========================================================================== */
+
+/* ===========================================================================
+   Programa — 5 módulos (Opción B, 10h/mes). Con 5-6 módulos _base solo baja
+   min-height a 235px sin reducir fuentes (bug conocido: capacidad real real
+   verificada por el detector es h3 ≤14 chars, sin <p class="obj">, máx 2
+   topics — ver memoria "bug-program-modules-5-6-no-compact"). El HTML ya
+   quitó los <p class="obj"> y recortó a 2 chips; esta nota reemplaza la
+   explicación de flexibilidad que vivía en el obj, fuera de las cards.
+   =========================================================================== */
+.s-program .program-note {
+  position: absolute;
+  bottom: 60px;
+  left: 56px;
+  right: 56px;
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-style: italic;
+  font-size: 12px;
+  line-height: 1.4;
+  color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.s-end .end-logo img { height: 140px; }
+
+/* Resultado (cinta superior) — caja editable */
+.s-end .end-summit {
+  position: absolute;
+  top: 224px; left: 242px; width: 640px; height: 60px;
+  background: var(--yellow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.s-end .end-summit .acro-default-text {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.25;
+  color: var(--black);
+  padding: 0 16px;
+}
+
+/* Escalera de 3 escalones ascendentes */
+.s-end .end-stairs {
+  position: absolute;
+  top: 308px; left: 242px; width: 640px; height: 190px;
+}
+.s-end .stair-step {
+  position: absolute;
+  bottom: 0;
+  width: 200px;
+}
+.s-end .stair-1 { left: 0px;   height: 90px;  background: var(--yellow); }
+.s-end .stair-2 { left: 220px; height: 140px; background: var(--orange); }
+.s-end .stair-3 { left: 440px; height: 190px; background: var(--white); border: 2px solid var(--yellow); }
+
+.s-end .stair-label {
+  position: absolute;
+  top: 10px; left: 12px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.s-end .stair-1 .stair-label,
+.s-end .stair-3 .stair-label { color: var(--black); opacity: 0.55; }
+.s-end .stair-2 .stair-label { color: var(--white); opacity: 0.7; }
+
+.s-end .stair-field { position: absolute; top: 30px; left: 12px; width: 176px; }
+.s-end .stair-1 .stair-field { height: 50px; }
+.s-end .stair-2 .stair-field { height: 100px; }
+.s-end .stair-3 .stair-field { height: 150px; }
+.s-end .stair-field .acro-default-text {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 1.3;
+  display: block;
+}
+.s-end .stair-1 .stair-field .acro-default-text,
+.s-end .stair-3 .stair-field .acro-default-text { color: var(--black); }
+.s-end .stair-2 .stair-field .acro-default-text { color: var(--white); }
+
+/* CTA reposicionado (el .cta base sigue aplicando su estilo de botón) */
+.s-end .cta-wrap {
+  position: absolute;
+  top: 522px; left: 0; right: 0;
+  margin-top: 0;
+  display: flex;
+  justify-content: center;
+}
+
+/* En el PDF no se renderiza el texto demo del HTML de las cajas del cierre;
+   el valor visible viene del /V del AcroForm (igual que .acro-area en _base). */
+@media print {
+  .s-end .end-summit .acro-default-text,
+  .s-end .stair-field .acro-default-text { display: none !important; }
+}
+
+/* ===========================================================================
+   Beneficios v3 (layout ampliado, 2026-08-28) — reusa la DNA visual del
+   roadmap (.rmx-card / .rmx-result-card). Ver plantillas/propuesta-comercial.md
+   → Beneficios — formato v3. Bloques: Resultados · Por qué Innovación ·
+   Entregables · Valor inmediato. Cajas AcroForm horneadas con fondo oscuro en
+   scripts/customize-zoom-innovacion.py (rebake_dark).
+   =========================================================================== */
+.s-benefits-v2 { background: var(--black); color: var(--white); }
+.s-benefits-v2::before { background: var(--yellow); }
+.s-benefits-v2 .counter { color: var(--yellow); }
+.s-benefits-v2 .eyebrow { color: var(--yellow); }
+.s-benefits-v2 h2 { color: var(--white); }
+.s-benefits-v2 h2 .hl {
+  display: inline-block;
+  background: var(--yellow);
+  color: var(--black);
+  padding: 0 10px;
+}
+.s-benefits-v2 .grid { height: 570px; gap: 16px; }
+.s-benefits-v2 .block {
+  background: rgba(255, 255, 255, 0.045);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-top: 4px solid var(--yellow);
+  border-radius: 13px;
+  padding: 26px 24px 24px;
+  color: var(--white);
+}
+.s-benefits-v2 .block:nth-child(2) { border-top-color: var(--orange); }
+.s-benefits-v2 .block:nth-child(3),
+.s-benefits-v2 .block:nth-child(4) {
+  background: rgba(244, 186, 26, 0.06);
+  border-color: rgba(244, 186, 26, 0.28);
+  border-top-color: var(--yellow);
+}
+.s-benefits-v2 .label {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 999px;
+  margin-bottom: 18px;
+  color: var(--yellow);
+  background: rgba(244, 186, 26, 0.13);
+}
+.s-benefits-v2 .block:nth-child(3) .label,
+.s-benefits-v2 .block:nth-child(4) .label { position: absolute; top: 26px; left: 24px; }
+.s-benefits-v2 .block:nth-child(2) .label { color: var(--orange); background: rgba(229, 132, 35, 0.14); }
+.s-benefits-v2 .block ul { list-style: none; }
+.s-benefits-v2 .block ul li {
+  font-size: 16px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85);
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+.s-benefits-v2 .block ul li:last-child { border-bottom: 0; }
+.s-benefits-v2 .block p { font-size: 16px; line-height: 1.6; color: rgba(255, 255, 255, 0.85); }
+.s-benefits-v2 .block strong { color: var(--yellow); font-weight: 700; }
+.s-benefits-v2 .block:nth-child(2) strong { color: var(--orange); }
+.s-benefits-v2 .foot .meta { color: rgba(255, 255, 255, 0.65); }
+
+.s-benefits-v2 .entregables-box,
+.s-benefits-v2 .acreditaciones-box {
+  background: transparent;
+  position: absolute;
+  top: 212px;
+  width: 193px;
+  height: 474px;
+}
+.s-benefits-v2 .entregables-box { left: 594px; }
+.s-benefits-v2 .acreditaciones-box { left: 850px; }
+.s-benefits-v2 .entregables-box .acro-default-text,
+.s-benefits-v2 .acreditaciones-box .acro-default-text {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+/* ===========================================================================
+   Roadmap — .rmx-linear (portado de grupo-osorio/styles.css, single-track,
+   sin fork). Adaptado a CICLO RECURRENTE: el 4º nodo (antes "★" de resultado
+   final único) pasa a ser "↻" (se repite) — el .rmx-result-card ya no anuncia
+   un entregable insignia de cierre, sino la lógica de por qué el ciclo se
+   repite mes a mes. Genérico, sin cambios de valores respecto al origen.
+   =========================================================================== */
+.s-roadmap {
+  background: var(--black);
+  color: var(--white);
+  padding: 38px 56px 0;
+  overflow: hidden;
+}
+.s-roadmap::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 8px; height: 100%;
+  background: var(--gradient-warm);
+  z-index: 4;
+}
+.s-roadmap::after {
+  content: "";
+  position: absolute;
+  right: -140px; top: 52%;
+  width: 460px; height: 460px;
+  transform: translateY(-50%);
+  background: radial-gradient(circle, rgba(244,186,26,0.15) 0%, transparent 70%);
+  z-index: 0;
+}
+.s-roadmap .counter { color: var(--yellow); }
+.s-roadmap .eyebrow {
+  color: var(--orange);
+  margin-bottom: 8px;
+  position: relative; z-index: 2;
+}
+.s-roadmap h2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 27px;
+  line-height: 1.08;
+  margin-bottom: 14px;
+  position: relative; z-index: 2;
+}
+.s-roadmap h2 .hl {
+  background: var(--gradient-warm);
+  color: var(--black);
+  padding: 0 9px;
+}
+
+.rmx-field {
+  position: relative;
+  z-index: 2;
+  border: 1px solid rgba(229,132,35,0.22);
+  border-radius: 14px;
+  background: linear-gradient(180deg, rgba(229,132,35,0.07) 0%, rgba(229,132,35,0.025) 100%);
+  padding: 24px 32px 0;
+}
+
+.rmx-linear {
+  display: flex;
+  flex-direction: column;
+}
+
+.rmx-lrow-nodes {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  margin-bottom: 16px;
+}
+.rmx-lrow-nodes .rmx-lcol {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  justify-content: center;
+}
+.rmx-arrow {
+  width: 60px;
+  flex-shrink: 0;
+  height: 6px;
+  background: var(--gradient-warm);
+  border-radius: 4px;
+  position: relative;
+}
+.rmx-arrow::after {
+  content: "";
+  position: absolute;
+  right: -2px; top: 50%;
+  width: 0; height: 0;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-left: 11px solid var(--orange);
+  transform: translateY(-50%);
+}
+
+.rmx-lrow-cards {
+  display: flex;
+  align-items: flex-start;
+}
+.rmx-lrow-cards .rmx-lcol {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+}
+.rmx-lspacer { width: 60px; flex-shrink: 0; }
+
+.rmx-node {
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-family: var(--font-display);
+  font-weight: 700;
+}
+.rmx-node-f2,
+.rmx-node-f3,
+.rmx-node-f4 {
+  width: 72px; height: 72px;
+  font-size: 22px;
+}
+.rmx-node-f2 {
+  background: var(--yellow);
+  color: var(--black);
+  box-shadow: 0 0 0 7px rgba(244,186,26,0.14);
+}
+.rmx-node-f3 {
+  background: var(--orange);
+  color: var(--black);
+  box-shadow: 0 0 0 7px rgba(229,132,35,0.16);
+}
+.rmx-node-f4 {
+  background: var(--white);
+  color: var(--black);
+  box-shadow: 0 0 0 7px rgba(255,255,255,0.14);
+}
+.rmx-node-r {
+  width: 96px; height: 96px;
+  background: var(--gradient-warm);
+  color: var(--black);
+  font-size: 36px;
+  box-shadow: 0 0 0 8px rgba(244,186,26,0.18), 0 0 42px rgba(244,186,26,0.36);
+}
+
+.rmx-card {
+  flex: 1;
+  min-width: 0;
+  background: rgba(255,255,255,0.045);
+  border: 1px solid rgba(255,255,255,0.10);
+  border-radius: 13px;
+  padding: 16px 18px;
+}
+.rmx-card-f2 { border-top: 4px solid var(--yellow); }
+.rmx-card-f3 { border-top: 4px solid var(--orange); }
+.rmx-card-f4 { border-top: 4px solid var(--white); }
+.rmx-card-tag {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 9.5px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 999px;
+  margin-bottom: 8px;
+}
+.rmx-card-f2 .rmx-card-tag { color: var(--yellow); background: rgba(244,186,26,0.13); }
+.rmx-card-f3 .rmx-card-tag { color: var(--orange); background: rgba(229,132,35,0.14); }
+.rmx-card-f4 .rmx-card-tag { color: var(--black); background: rgba(255,255,255,0.85); }
+.rmx-card-name {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.15;
+  color: var(--white);
+  margin-bottom: 10px;
+}
+.rmx-facets { list-style: none; display: flex; flex-direction: column; }
+.rmx-facets li {
+  display: flex;
+  gap: 12px;
+  padding: 7px 0;
+}
+.rmx-facets li + li { border-top: 1px solid rgba(255,255,255,0.08); }
+.rmx-facets li > span {
+  width: 58px;
+  flex-shrink: 0;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 8.5px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding-top: 2px;
+}
+.rmx-card-f2 .rmx-facets li > span { color: var(--yellow); }
+.rmx-card-f3 .rmx-facets li > span { color: var(--orange); }
+.rmx-card-f4 .rmx-facets li > span { color: var(--white); }
+.rmx-facets li > p {
+  flex: 1;
+  min-width: 0;
+  font-family: var(--font-body);
+  font-size: 12px;
+  line-height: 1.4;
+  color: rgba(255,255,255,0.82);
+}
+.rmx-facets li > p strong { color: var(--white); font-weight: 700; }
+
+.rmx-result-card {
+  flex: 1;
+  min-width: 0;
+  background: rgba(244,186,26,0.06);
+  border: 1px solid rgba(244,186,26,0.28);
+  border-radius: 13px;
+  padding: 16px 18px;
+}
+.rmx-result-label {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 9.5px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--yellow);
+  margin-bottom: 8px;
+}
+.rmx-result-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.18;
+  color: var(--white);
+  margin-bottom: 10px;
+}
+.rmx-result-title b { color: var(--yellow); }
+.rmx-result-card ul { list-style: none; }
+.rmx-result-card ul li {
+  font-family: var(--font-body);
+  font-size: 12px;
+  line-height: 1.32;
+  color: rgba(255,255,255,0.85);
+  padding: 5px 0 5px 20px;
+  position: relative;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.rmx-result-card ul li:last-child { border-bottom: 0; }
+.rmx-result-card ul li::before {
+  content: "\2713";
+  position: absolute;
+  left: 0; top: 5px;
+  color: var(--yellow);
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.rmx-ethics {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 16px -32px 0;
+  padding: 12px 32px;
+  border-top: 1px solid rgba(229,132,35,0.28);
+  background: rgba(229,132,35,0.11);
+  border-radius: 0 0 13px 13px;
+}
+.rmx-ethics-tag {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 9px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--black);
+  background: var(--gradient-warm);
+  border-radius: 6px;
+  padding: 6px 11px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.rmx-ethics p {
+  font-family: var(--font-body);
+  font-size: 10px;
+  line-height: 1.38;
+  color: rgba(255,255,255,0.74);
+}
+.rmx-ethics p strong { color: var(--orange); font-weight: 700; }
+
+.s-roadmap .foot { bottom: 20px; }
+.s-roadmap .foot .meta { color: rgba(255,255,255,0.60); }
+
+/* ===========================================================================
+   Precio — "Inversión por Permanencia" (variante nueva, servicio Innovación).
+   Columna izquierda: intro + "Cómo se arma cada mes" (estático) + Notas
+   (AcroForm, posición estándar). Columna derecha: 3 columnas de duración de
+   ciclo (3/6/12 meses), cada una con Cuota mensual + Beneficio por
+   permanencia (AcroForm, vacíos). El 12m se resalta como "mayor beneficio".
+
+   TODO absolute (page-relative), sin depender de flujo de documento — para
+   que la caja visible en CSS coincida pixel a pixel con el /Rect real del
+   AcroForm en el PDF (ver scripts/agregar-campo-precio.py → CICLO_PRICE_FIELDS,
+   debe mantenerse sincronizado si se mueve cualquiera de estos valores).
+
+   Fórmulas: y2_pt = 595 - top_css·0.75   y1_pt = 595 - (top_css+h_css)·0.75
+             x1_pt = left_css·0.75        x2_pt = (left_css+w_css)·0.75
+
+   Columna (left absoluto de .tier-col)   →   x1_pt   x2_pt
+   3 meses   580   width 149                  435.00  546.75
+   6 meses   749   width 149                  561.75  673.50
+   12 meses  918   width 149                  688.50  800.25
+
+   Fila (top ABSOLUTO = top de .tier-col [222] + offset relativo abajo):
+                          offset  top abs  h    →   y1_pt    y2_pt
+   tier-frame-cuota        42      264     44       364.00   397.00
+   tier-frame-descuento   112      334     38       316.00   344.50
+   =========================================================================== */
+.s-price .price-intro {
+  position: absolute;
+  top: 112px;
+  left: 56px;
+  width: 1011px;
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 1.4;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.s-price .block-modelo {
+  position: absolute;
+  top: 210px;
+  left: 56px;
+  width: 480px;
+  padding: 0;
+  border-bottom: 0;
+}
+.s-price .block-modelo .block-eyebrow::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: var(--yellow);
+  margin-right: 10px;
+  position: relative;
+  top: -1px;
+}
+.s-price .block-modelo ul {
+  list-style: none;
+  margin-top: 6px;
+}
+.s-price .block-modelo ul li {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--black);
+  padding: 3px 0;
+}
+
+.s-price .tier-note {
+  position: absolute;
+  top: 180px;
+  left: 580px;
+  width: 487px;
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-style: italic;
+  font-size: 11px;
+  line-height: 1.35;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+/* Columna: contenedor de posicionamiento puro (top=222 = donde arranca
+   tier-head). Todo hijo es position:absolute con top RELATIVO a este origen
+   (left:0/width:149 heredado del ancho de columna, sin left propio). */
+.s-price .tier-col {
+  position: absolute;
+  top: 222px;
+  width: 149px;
+  height: 150px;
+}
+.s-price .tier-3m  { left: 580px; }
+.s-price .tier-6m  { left: 749px; }
+.s-price .tier-12m { left: 918px; }
+
+.s-price .tier-12m-bg {
+  position: absolute;
+  top: -28px;
+  left: -12px;
+  width: 161px;
+  height: 192px;
+  background: var(--black);
+  border-radius: 12px;
+  border-top: 4px solid var(--yellow);
+  z-index: 0;
+}
+
+.s-price .tier-badge {
+  position: absolute;
+  top: -22px;
+  left: 0;
+  width: 149px;
+  text-align: center;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 8.5px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--black);
+  background: var(--yellow);
+  border-radius: 999px;
+  padding: 4px 6px;
+  z-index: 1;
+}
+
+.s-price .tier-head {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 149px;
+  height: 20px;
+  z-index: 1;
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  color: var(--black);
+  text-align: center;
+}
+.s-price .tier-12m .tier-head { color: var(--white); }
+
+.s-price .tier-label {
+  position: absolute;
+  left: 0;
+  width: 149px;
+  height: 12px;
+  z-index: 1;
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--orange);
+  text-align: center;
+}
+.s-price .tier-label-cuota { top: 26px; }
+.s-price .tier-label-desc  { top: 96px; }
+.s-price .tier-12m .tier-label { color: var(--yellow); }
+
+.s-price .tier-frame {
+  position: absolute;
+  left: 0;
+  z-index: 1;
+  width: 149px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.s-price .tier-frame-cuota {
+  top: 42px;
+  height: 44px;
+  background: rgba(244, 186, 26, 0.22);
+  border-radius: 6px;
+}
+.s-price .tier-frame-descuento {
+  top: 112px;
+  height: 38px;
+  background: rgba(229, 132, 35, 0.16);
+  border-radius: 6px;
+}
+.s-price .tier-12m .tier-frame-cuota { background: var(--yellow); }
+.s-price .tier-12m .tier-frame-descuento { background: var(--orange); }

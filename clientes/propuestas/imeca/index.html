@@ -1,0 +1,665 @@
+<!doctype html>
+<!--
+  Propuesta — IMECA (CAI-016)
+  Servicio: HABILIDADES (Modelo Intezia · empresa/tipos-de-documento.md §0). División: Educación.
+  Primer contacto de IMECA con Intezia — sin Detección previa; la Ficha de Levantamiento
+  (Levantamiento_IMECA_2026-09-07.pdf, asesora Verónica Rubio) ya cumplió ese rol de
+  diagnóstico y es la fuente primaria de esta propuesta (ver brief.md).
+  4 tracks en un solo programa, 7 sesiones de 2h (14h totales), cotización única:
+  I. Apertura (2h, las 3 áreas juntas ~40 personas) — manejo del cambio, decisión confirmada
+     con el usuario porque la ficha es explícita: "la capacitación debe trabajar primero esa
+     resistencia [miedo a ser reemplazados], antes que la parte técnica."
+  II. Administración y Contabilidad (4h) — conciliación bancaria (+3.000 documentos/día, el
+      cuello de botella más grave) y carga/revisión de documentos.
+  III. Atención al Cliente (4h) — automatización de respuestas, sin repetir el costo/volumen
+       del intento anterior con otra herramienta (cerrado por el cliente).
+  IV. Tecnología (4h, track avanzado, decisión confirmada con el usuario) — de uso ad-hoc
+      (diseño, investigación, análisis de datos) a automatización real + soporte interno
+      del rollout en las otras 2 áreas.
+  Herramienta: 100% Claude (elegida explícitamente por el cliente). Modalidad: Presencial,
+  sede Valencia. §4.11: Google Workspace y el sistema de gestión interno son contexto, no se
+  afirma migración de stack.
+  Base: shell de simple-tv-cai014/ (Beneficios v3, Cierre escalera, precio estándar, sin
+  s-orange ni Equipo facilitador — §4.10a) + mecánica de tracks diferenciados por área de
+  go-pharma/ y bit-honor/ (grid de módulos + cronograma por track).
+  Impacto (§4.9): PwC — Global AI Jobs Barometer 2025 (prima salarial, crecimiento de empleo
+  en ocupaciones expuestas a la IA) + MIT — Noy y Zhang, Science 2023 (reducción de tiempo).
+  Por instrucción del usuario: no se menciona en el deck la fecha de la reunión de
+  seguimiento del cliente.
+  13 slides.
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Propuesta · IMECA · Intezia</title>
+  <link rel="stylesheet" href="../_base/styles.css">
+  <link rel="stylesheet" href="overrides.css">
+</head>
+<body>
+
+  <main class="deck">
+
+    <!-- 1 · Portada -->
+    <section class="slide s-cover">
+      <span class="counter">01 / 13</span>
+      <div class="logo-big">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia">
+      </div>
+      <div class="body">
+        <p class="eyebrow">Propuesta formativa · Servicio de Habilidades</p>
+        <h1>
+          La IA libera tiempo.<br>
+          <span class="hl">No reemplaza personas.</span>
+        </h1>
+        <p class="lead">
+          Automatizamos con <strong>Claude</strong> la conciliación bancaria y la atención al cliente de IMECA, empezando por acompañar a tu equipo en el cambio.
+        </p>
+      </div>
+      <div class="id-line">
+        <span class="codigo">Código: CAI-016</span>
+        <span class="cliente">IMECA</span>
+      </div>
+    </section>
+
+    <!-- 2 · Punto de dolor + Diagnóstico -->
+    <section class="slide s-pain">
+      <span class="counter">02 / 13</span>
+      <span class="quote-mark">&ldquo;</span>
+      <div class="body">
+        <h2>El cuello de botella no es el equipo. Es lo manual.</h2>
+        <p class="context">
+          IMECA quiere <strong>automatizar todos los procesos manuales</strong> de su operación diaria. El uso de IA hoy es disperso: cada quien recurre a Gemini a su propio criterio, sin licencias corporativas ni un método común, salvo en Tecnología, que ya la usa de forma más avanzada para diseño, investigación y análisis de datos. El resto del equipo parte de niveles muy distintos, y sin ninguna formación previa.
+        </p>
+        <p class="diag-title">Diagnóstico</p>
+        <ol>
+          <li>Conciliación bancaria: más de 3.000 documentos revisados uno a uno cada día, ocupa una jornada completa (8 horas) en Administración y Contabilidad.</li>
+          <li>Carga y revisión de documentos: gran parte se rechequea a mano, sin un flujo que valide antes de tiempo.</li>
+          <li>Atención al Cliente ya intentó automatizar respuestas con otra herramienta: el alto volumen y el costo de mensajes cerraron ese intento.</li>
+          <li>El nivel de uso de IA es disparejo entre áreas: algunos colaboradores la usan bien, otros no la usan en absoluto.</li>
+          <li>El equipo teme ser sustituido por la IA: antes de cualquier herramienta, hay que trabajar esa resistencia.</li>
+        </ol>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">IMECA · CAI-016</span>
+      </div>
+    </section>
+
+    <!-- 3 · Objetivos estratégicos -->
+    <section class="slide s-goals">
+      <span class="counter">03 / 13</span>
+      <p class="eyebrow">02 · Objetivos</p>
+      <h2>A dónde llevamos<br>a las 3 áreas.</h2>
+      <div class="columns">
+        <div class="general">
+          <p class="label">Objetivo general</p>
+          <p>
+            Automatizar con Claude los procesos 100% manuales de Administración y Contabilidad y de Atención al Cliente en IMECA, empezando por una sesión que trabaje la resistencia al cambio del equipo, mientras Tecnología avanza a un uso más estratégico.
+          </p>
+        </div>
+        <div class="specifics">
+          <p class="label">Objetivos específicos</p>
+          <ol>
+            <li>Trabajar la resistencia al cambio antes del contenido técnico, mostrando la IA como una herramienta que libera tiempo, no que reemplaza personas.</li>
+            <li>Automatizar con Claude la conciliación bancaria y la carga y revisión de documentos, el cuello de botella más grave de IMECA.</li>
+            <li>Automatizar con Claude las respuestas de Atención al Cliente, sin repetir el costo ni el volumen del intento anterior.</li>
+            <li>Llevar a Tecnología de un uso puntual de IA a la automatización real de procesos y al soporte del resto del equipo.</li>
+          </ol>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">IMECA · CAI-016</span>
+      </div>
+    </section>
+
+    <!-- 4 · Programa (4 tracks: Apertura + 3 áreas) -->
+    <section class="slide s-program">
+      <span class="counter">04 / 13</span>
+      <p class="eyebrow">03 · Programa</p>
+      <h2>4 grupos, un mismo punto de partida.</h2>
+      <p class="meta">Apertura para las 3 áreas juntas, después cada una avanza según su propio cuello de botella.</p>
+      <div class="modules">
+        <div class="module">
+          <span class="roman">I</span>
+          <h3>Apertura</h3>
+          <p class="obj">Encuadramos la IA como una herramienta que libera tiempo, no que reemplaza personas, antes de cualquier contenido técnico.</p>
+          <ul class="topics">
+            <li>Manejo del cambio</li>
+            <li>Ruta del programa</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">II</span>
+          <h3>Administración y Contabilidad</h3>
+          <p class="obj">Automatiza la conciliación bancaria y la revisión de documentos, hoy 100% manuales.</p>
+          <ul class="topics">
+            <li>Conciliación bancaria</li>
+            <li>Validación de documentos</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">III</span>
+          <h3>Atención al Cliente</h3>
+          <p class="obj">Automatiza respuestas con Claude, sin el costo ni el volumen que cerró el intento anterior.</p>
+          <ul class="topics">
+            <li>Clasificación de casos</li>
+            <li>Respuestas personalizadas</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">IV</span>
+          <h3>Tecnología</h3>
+          <p class="obj">Pasa de un uso puntual de IA a la automatización de procesos y al soporte interno del resto del equipo.</p>
+          <ul class="topics">
+            <li>Automatización de procesos</li>
+            <li>Soporte al rollout</li>
+          </ul>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">IMECA · CAI-016</span>
+      </div>
+    </section>
+
+    <!-- 5 · Cronograma · Track I Apertura -->
+    <section class="slide s-schedule">
+      <span class="counter">05 / 13</span>
+      <p class="eyebrow">04 · Cronograma · Apertura</p>
+
+      <div class="ses-head">
+        <div>
+          <span class="ses-mod">Track I · Las 3 áreas juntas (~40 personas) · Modalidad Presencial</span>
+          <h2>Apertura</h2>
+        </div>
+        <div class="ses-meta"><span class="ses-dur">2h</span></div>
+      </div>
+
+      <div class="ses-body">
+        <div class="ses-block">
+          <span class="label">Temas</span>
+          <div class="chips">
+            <span class="chip">La IA como herramienta, no amenaza</span>
+            <span class="chip">Qué SÍ cambia y qué NO</span>
+            <span class="chip">Casos reales sin filtro</span>
+            <span class="chip">Ruta del programa por área</span>
+          </div>
+        </div>
+        <div class="ses-block">
+          <span class="label">Tiempo · Estructura de referencia</span>
+          <div class="timebar">
+            <div class="seg" style="flex:25">Encuadre honesto</div>
+            <div class="seg" style="flex:33">Casos reales y preguntas abiertas</div>
+            <div class="seg" style="flex:33">Ruta del programa por área</div>
+            <div class="seg" style="flex:9">Cierre</div>
+          </div>
+        </div>
+        <div class="ses-cols">
+          <div class="ses-block">
+            <span class="label">Qué se hace</span>
+            <ul>
+              <li>Encuadramos con honestidad qué SÍ cambia y qué NO en el trabajo diario con IA</li>
+              <li>Abrimos espacio a preguntas y casos reales del equipo, sin filtro</li>
+              <li>Presentamos la ruta de las 3 áreas que siguen al programa</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Qué se logra</span>
+            <ul>
+              <li>El equipo llega a las sesiones técnicas desde la apertura, no desde el temor</li>
+              <li>Expectativas alineadas sobre lo que trae el programa completo</li>
+              <li>Primera identificación de tareas propias delegables a la IA</li>
+            </ul>
+          </div>
+          <div class="ses-block block-rec">
+            <span class="label">Recursos y entornos</span>
+            <ul>
+              <li>Sesión presencial en Valencia</li>
+              <li>Sin herramientas técnicas todavía: la conversación es el contenido</li>
+              <li>Casos reales de las 3 áreas, aportados por el propio equipo</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">IMECA · CAI-016</span>
+      </div>
+    </section>
+
+    <!-- 6 · Cronograma · Track II Administración y Contabilidad -->
+    <section class="slide s-schedule">
+      <span class="counter">06 / 13</span>
+      <p class="eyebrow">04 · Cronograma · Administración y Contabilidad</p>
+
+      <div class="ses-head">
+        <div>
+          <span class="ses-mod">Track II · 2 sesiones · Administración y Contabilidad · Modalidad Presencial</span>
+          <h2>Administración y Contabilidad</h2>
+        </div>
+        <div class="ses-meta"><span class="ses-dur">4h</span></div>
+      </div>
+
+      <div class="ses-body">
+        <div class="ses-block">
+          <span class="label">Temas</span>
+          <div class="chips">
+            <span class="chip">Conciliación bancaria asistida</span>
+            <span class="chip">Validación de documentos</span>
+            <span class="chip">Rechequeo con criterio</span>
+            <span class="chip">Información bancaria: revisión humana</span>
+          </div>
+        </div>
+        <div class="ses-block">
+          <span class="label">Tiempo · Estructura de referencia</span>
+          <div class="timebar">
+            <div class="seg" style="flex:30">Conciliación bancaria asistida</div>
+            <div class="seg" style="flex:30">Validación de documentos</div>
+            <div class="seg" style="flex:25">Rechequeo con criterio</div>
+            <div class="seg" style="flex:15">Revisión humana (información bancaria)</div>
+          </div>
+        </div>
+        <div class="ses-cols">
+          <div class="ses-block">
+            <span class="label">Qué se hace</span>
+            <ul>
+              <li>Trabajamos sobre los documentos reales de conciliación bancaria del equipo</li>
+              <li>Construimos un flujo de conciliación asistido por Claude</li>
+              <li>Reducimos el rechequeo manual en la carga de documentos</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Qué se logra</span>
+            <ul>
+              <li>El cuello de botella más grave de IMECA (8 horas diarias) empieza a resolverse</li>
+              <li>Un flujo asistido, con revisión humana donde la información es bancaria</li>
+              <li>Menos tiempo de rechequeo, más tiempo de análisis real</li>
+            </ul>
+          </div>
+          <div class="ses-block block-rec">
+            <span class="label">Recursos y entornos</span>
+            <ul>
+              <li>Google Workspace y Claude</li>
+              <li>Documentos reales de conciliación bancaria y carga</li>
+              <li>Sistema de gestión interno de IMECA, sin modificarlo</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">IMECA · CAI-016</span>
+      </div>
+    </section>
+
+    <!-- 7 · Cronograma · Track III Atención al Cliente -->
+    <section class="slide s-schedule">
+      <span class="counter">07 / 13</span>
+      <p class="eyebrow">04 · Cronograma · Atención al Cliente</p>
+
+      <div class="ses-head">
+        <div>
+          <span class="ses-mod">Track III · 2 sesiones · Atención al Cliente · Modalidad Presencial</span>
+          <h2>Atención al Cliente</h2>
+        </div>
+        <div class="ses-meta"><span class="ses-dur">4h</span></div>
+      </div>
+
+      <div class="ses-body">
+        <div class="ses-block">
+          <span class="label">Temas</span>
+          <div class="chips">
+            <span class="chip">Clasificación de solicitudes</span>
+            <span class="chip">Respuestas personalizadas</span>
+            <span class="chip">Un flujo sin el costo de antes</span>
+            <span class="chip">La persona decide y envía</span>
+          </div>
+        </div>
+        <div class="ses-block">
+          <span class="label">Tiempo · Estructura de referencia</span>
+          <div class="timebar">
+            <div class="seg" style="flex:30">Clasificación de solicitudes</div>
+            <div class="seg" style="flex:35">Respuestas personalizadas</div>
+            <div class="seg" style="flex:25">Flujo sostenible, sin el costo de antes</div>
+            <div class="seg" style="flex:10">La persona decide y envía</div>
+          </div>
+        </div>
+        <div class="ses-cols">
+          <div class="ses-block">
+            <span class="label">Qué se hace</span>
+            <ul>
+              <li>Analizamos los canales reales de atención: WhatsApp y correo</li>
+              <li>Preparamos respuestas personalizadas con Claude</li>
+              <li>Dejamos un flujo de trabajo reutilizable para el equipo</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Qué se logra</span>
+            <ul>
+              <li>Atención más rápida, sin el volumen ni el costo del intento anterior</li>
+              <li>Solicitudes clasificadas antes de responder</li>
+              <li>La persona conserva la decisión final de cada respuesta</li>
+            </ul>
+          </div>
+          <div class="ses-block block-rec">
+            <span class="label">Recursos y entornos</span>
+            <ul>
+              <li>Claude</li>
+              <li>Canales reales de atención (WhatsApp y correo) del equipo</li>
+              <li>Sin repetir la automatización que ya se cerró antes</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">IMECA · CAI-016</span>
+      </div>
+    </section>
+
+    <!-- 8 · Cronograma · Track IV Tecnología (avanzado) -->
+    <section class="slide s-schedule">
+      <span class="counter">08 / 13</span>
+      <p class="eyebrow">04 · Cronograma · Tecnología</p>
+
+      <div class="ses-head">
+        <div>
+          <span class="ses-mod">Track IV · 2 sesiones · Tecnología · Nivel avanzado · Modalidad Presencial</span>
+          <h2>Tecnología</h2>
+        </div>
+        <div class="ses-meta"><span class="ses-dur">4h</span></div>
+      </div>
+
+      <div class="ses-body">
+        <div class="ses-block">
+          <span class="label">Temas</span>
+          <div class="chips">
+            <span class="chip">De uso puntual a proceso automatizado</span>
+            <span class="chip">Automatización aplicada a IMECA</span>
+            <span class="chip">Soporte interno del rollout</span>
+            <span class="chip">Mantenimiento y buenas prácticas</span>
+          </div>
+        </div>
+        <div class="ses-block">
+          <span class="label">Tiempo · Estructura de referencia</span>
+          <div class="timebar">
+            <div class="seg" style="flex:30">De uso puntual a proceso automatizado</div>
+            <div class="seg" style="flex:35">Automatización aplicada a IMECA</div>
+            <div class="seg" style="flex:25">Soporte interno del rollout</div>
+            <div class="seg" style="flex:10">Mantenimiento y buenas prácticas</div>
+          </div>
+        </div>
+        <div class="ses-cols">
+          <div class="ses-block">
+            <span class="label">Qué se hace</span>
+            <ul>
+              <li>Partimos del uso que Tecnología ya le da a la IA: diseño, investigación, datos</li>
+              <li>Construimos una automatización real sobre un proceso interno</li>
+              <li>Preparamos su rol de soporte para las otras 2 áreas</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Qué se logra</span>
+            <ul>
+              <li>Tecnología pasa de usuario avanzado a facilitador interno</li>
+              <li>Una automatización de proceso construida y funcionando</li>
+              <li>El resto del equipo cuenta con soporte propio, sin depender de Intezia</li>
+            </ul>
+          </div>
+          <div class="ses-block block-rec">
+            <span class="label">Recursos y entornos</span>
+            <ul>
+              <li>Claude</li>
+              <li>Un proceso interno real de Tecnología</li>
+              <li>Panel de seguimiento para el resto del rollout</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">IMECA · CAI-016</span>
+      </div>
+    </section>
+
+    <!-- 9 · Beneficios (formato v3: Resultados · Por qué Habilidades · Entregables · Valor inmediato) -->
+    <section class="slide s-benefits s-benefits-v2">
+      <span class="counter">09 / 13</span>
+      <p class="eyebrow">05 · Beneficios</p>
+      <h2>Lo que <span class="hl">se llevan</span>.</h2>
+      <div class="grid">
+        <div class="block">
+          <p class="label">Resultados</p>
+          <ul>
+            <li><strong>Conciliación bancaria</strong> y carga de documentos automatizadas, con revisión humana donde corresponde.</li>
+            <li>Atención al Cliente con respuestas más rápidas, sin el costo del intento anterior.</li>
+            <li>Tecnología, capaz de sostener la adopción en las otras 2 áreas.</li>
+          </ul>
+        </div>
+        <div class="block">
+          <p class="label">Por qué Habilidades</p>
+          <p>
+            El equipo empieza a delegar lo repetitivo desde la primera semana, después de trabajar la resistencia al cambio en la <strong>Apertura</strong>, sin depender de una auditoría previa.
+          </p>
+        </div>
+        <div class="block">
+          <p class="label">Entregables</p>
+        </div>
+        <div class="block">
+          <p class="label">Valor inmediato</p>
+        </div>
+      </div>
+
+      <!-- Cajas multiline editables (vacías en HTML — el contenido vive dentro del AcroForm /V). -->
+      <div class="multi-box entregables-box" data-field="Entregables"></div>
+      <div class="multi-box acreditaciones-box" data-field="Acreditacion"></div>
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">IMECA · CAI-016</span>
+      </div>
+    </section>
+
+    <!-- 10 · Impacto / estudios — datos de estudios reales, fuente citada (CLAUDE.md §4.9) -->
+    <section class="slide s-impact">
+      <span class="counter">10 / 13</span>
+
+      <div class="impact-head">
+        <p class="eyebrow">06 · Impacto</p>
+        <h2>El miedo no coincide<br><span class="hl">con la evidencia</span>.</h2>
+      </div>
+
+      <div class="impact-body">
+        <div class="chart-panel">
+          <p class="panel-title">La IA sube el valor de quien la usa, no lo reemplaza</p>
+          <div class="bars">
+            <div class="bar-row">
+              <span class="bar-label">Prima salarial en roles con habilidades de IA</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:56%"><span class="bar-val">+56%</span></div></div>
+            </div>
+            <div class="bar-row">
+              <span class="bar-label">Redacción y análisis de texto · reducción de tiempo con un asistente de IA</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:40%"><span class="bar-val">&minus;40%</span></div></div>
+            </div>
+          </div>
+          <div class="bar-axis"><span class="scale"><span>0</span><span>25</span><span>50</span><span>75</span><span>100%</span></span></div>
+          <p class="panel-source">Fuentes: PwC &mdash; Global AI Jobs Barometer 2025 &middot; MIT &mdash; Noy y Zhang, Science 2023.</p>
+        </div>
+
+        <div class="gauge-panel">
+          <div class="gauge" style="--pct:38">
+            <div class="gauge-core">
+              <span class="gauge-num">38<span class="pct">%</span></span>
+              <span class="gauge-cap">creció el empleo incluso en las ocupaciones más fáciles de automatizar (2019&ndash;2024)</span>
+            </div>
+          </div>
+          <div class="chips">
+            <div class="chip">
+              <span class="chip-num">4&times;</span>
+              <span class="chip-lbl">más crecimiento de productividad en los sectores más expuestos a la IA</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="impact-hook">
+        <span class="hook-mark">&#9656;</span>
+        <p class="hook-text">
+          El temor a ser reemplazado por la IA no coincide con la evidencia: incluso en las ocupaciones más fáciles de automatizar, el empleo <strong>siguió creciendo</strong> (38% entre 2019 y 2024) y quienes usan IA en su trabajo ganan en promedio 56% más (PwC, 2025). Lo que sí se reduce es el tiempo en lo repetitivo, cerca del 40% en tareas de redacción y análisis (MIT, 2023). Para IMECA, esa diferencia son horas libres de la conciliación bancaria y respuestas más rápidas a sus clientes, con el mismo equipo.
+        </p>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">IMECA · CAI-016</span>
+      </div>
+    </section>
+
+    <!-- 11 · Propuesta Económica (estándar: Duración + Programa + Notas + Cotización) -->
+    <section class="slide s-price">
+      <span class="counter">11 / 13</span>
+      <h2 class="title">Propuesta Económica</h2>
+
+      <div class="block">
+        <span class="block-eyebrow">Duración</span>
+        <p class="block-value">4 tracks · Apertura (2h) + 3 áreas (4h c/u) · 7 sesiones, 14h totales · Presencial (Valencia).</p>
+      </div>
+
+      <div class="block block-programa">
+        <span class="block-eyebrow">Programa</span>
+      </div>
+      <div class="multi-box programa-box" data-field="Programa"></div>
+
+      <div class="block block-cotizacion">
+        <span class="block-eyebrow">Cotización</span>
+      </div>
+
+      <span class="cot-label cot-label-base">Propuesta + Inversión</span>
+      <div class="cot-frame base-frame"></div>
+
+      <span class="cot-label cot-label-discount">Descuento</span>
+      <div class="cot-frame discount-frame"></div>
+
+      <span class="cot-label cot-label-total">TOTAL</span>
+      <div class="cot-frame total-frame"></div>
+
+      <p class="cot-validity">Cotización válida por 30 días.</p>
+      <div class="cot-terms-box">
+        <span class="cot-terms-label">Importante</span>
+        <p class="cot-terms-text">Este servicio se presta bajo nuestros <a href="https://drive.google.com/file/d/1PA-ZSt4KnyY5dpxXzgkIk6-yfGlV2eF8/view?usp=drive_link" target="_blank" rel="noopener">términos y condiciones</a>. Al avanzar con esta propuesta, ambas partes los aceptan.</p>
+      </div>
+
+      <div class="block block-notes-container">
+        <span class="block-eyebrow">Notas</span>
+      </div>
+      <div class="multi-box notas-box" data-field="Notas"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">IMECA · CAI-016</span>
+      </div>
+    </section>
+
+    <!-- 12 · Próximos pasos -->
+    <section class="slide s-steps">
+      <span class="counter">12 / 13</span>
+      <p class="eyebrow">07 · Próximos pasos</p>
+      <h2>Cómo arrancamos.</h2>
+      <div class="step-cards">
+        <div class="step-card">
+          <span class="ghost">01</span>
+        </div>
+        <div class="step-card">
+          <span class="ghost">02</span>
+        </div>
+        <div class="step-card">
+          <span class="ghost">03</span>
+        </div>
+      </div>
+
+      <!-- Editable AcroForm placeholders (3 pasos × título + body) -->
+      <div class="acro-area acro-title acro-paso-01-titulo" data-field="Paso01Titulo">
+        <span class="acro-default-text">Confirmamos fechas</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-01-body" data-field="Paso01Body">
+        <span class="acro-default-text">Definimos con IMECA el calendario de las 7 sesiones y la sede en Valencia.</span>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-02-titulo" data-field="Paso02Titulo">
+        <span class="acro-default-text">Acceso y logística</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-02-body" data-field="Paso02Body">
+        <span class="acro-default-text">Coordinamos participantes de las 3 áreas, agenda y accesos a Claude.</span>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-03-titulo" data-field="Paso03Titulo">
+        <span class="acro-default-text">Kick-off</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-03-body" data-field="Paso03Body">
+        <span class="acro-default-text">Reunión de arranque (~30 min) para alinear el alcance de las 3 áreas y agendar la Apertura.</span>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">IMECA · CAI-016</span>
+      </div>
+    </section>
+
+    <!-- 13 · Cierre (ruta/escalera editable) -->
+    <section class="slide s-end">
+      <span class="counter">13 / 13</span>
+
+      <div class="end-logo">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia">
+      </div>
+
+      <!-- Resultado (cinta superior) — caja editable, ventas la redacta por cliente -->
+      <div class="end-summit" data-field="CierreResultado">
+        <span class="acro-default-text">Las 3 áreas de IMECA, automatizando con Claude lo que hoy es 100% manual, sin que nadie pierda su lugar.</span>
+      </div>
+
+      <!-- Escalera de 3 pasos — cada uno con su caja editable -->
+      <div class="end-stairs">
+        <div class="stair-step stair-1">
+          <span class="stair-label">Paso 1</span>
+          <div class="stair-field" data-field="CierrePaso1">
+            <span class="acro-default-text">Apertura y manejo del cambio</span>
+          </div>
+        </div>
+        <div class="stair-step stair-2">
+          <span class="stair-label">Paso 2</span>
+          <div class="stair-field" data-field="CierrePaso2">
+            <span class="acro-default-text">Conciliación bancaria y atención automatizadas</span>
+          </div>
+        </div>
+        <div class="stair-step stair-3">
+          <span class="stair-label">Paso 3</span>
+          <div class="stair-field" data-field="CierrePaso3">
+            <span class="acro-default-text">Tecnología sostiene la adopción</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cta-wrap">
+        <span class="cta">Esperamos tu respuesta</span>
+      </div>
+
+      <div class="end-contact">
+        <p class="contact-line">
+          <span class="contact-label">Asesora de ventas:</span>
+          Verónica Rubio <span class="dot">·</span> +58 422 3355505 <span class="dot">·</span> vrubio01@intezia.com
+        </p>
+        <p class="contact-line">
+          <span class="contact-label">Empresa:</span>
+          Intezia C.A J-505657950 <span class="dot">·</span> servicio@intezia.com
+        </p>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

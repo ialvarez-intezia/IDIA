@@ -1,0 +1,607 @@
+<!doctype html>
+<!--
+  Propuesta — Good Latam
+  Programa: Fundamentals + Auditoría y Desarrollo de IA — Administración (CAP-109)
+  División: Educación · Servicio: Habilidades. Eje temático: fundamentos de IA para
+  Administración + auditoría y desarrollo de la automatización priorizada de esa área.
+
+  Actualizado 2026-09-01 (instrucción explícita del usuario): se acota el programa de 4
+  departamentos (Creación, Compras, Administración, Digital · 14 sesiones/28h) a **solo
+  Administración** (5 sesiones/10h) — Fundamentals de IA + Auditoría y Desarrollo, ya sin
+  mención de los otros 3 departamentos en ningún lugar del deck (decisión explícita del
+  usuario: "quitarlos por completo"). Nota interna, no en el deck: Creación/Compras/Digital
+  podrían retomarse después como una propuesta separada — ver brief.md.
+
+  Cambios estructurales de este mismo cambio:
+  - Programa: de 5 módulos (Fundamentals + 4 áreas) a 2 (Fundamentals + Auditoría/Desarrollo).
+  - Cronograma: de 5 slides (una por Fundamentals + cada área) a 2 (Fundamentals +
+    Auditoría/Desarrollo, ambas de Administración, ya existían — se quitan las 3 de Creación/
+    Compras/Digital).
+  - Roadmap: de bifurcación (.rmx-journey/.rmx-fork/.rmx-routes, 2 bloques de departamentos)
+    a lineal (.rmx-linear, 2 etapas + resultado) — ya no hay bifurcación con 1 solo
+    departamento. CSS portado de corporaciones-easyaccess/styles.css (mismo componente
+    usado en DET-002/Zoom Innovación), reemplazando el bloque .rmx-* de fork por completo
+    (nombres de clase compartidos, no podían convivir ambos patrones en el mismo archivo).
+  - Metodología ABR + Equipo facilitador: RETIRADOS del deck (CLAUDE.md §4.10a, bloqueante
+    para toda propuesta regenerada desde 2026-08-26 — este deck no había pasado por ese
+    retrofit todavía). El enfoque ABR sigue mencionado en Acreditación y en programa.md.
+  - Correo de cierre: info@intezia.com → servicio@intezia.com (estándar 2026-08-27,
+    tampoco se había aplicado a este deck todavía).
+  - Impacto: se quitó la barra "Marketing y creación de contenido" (territorio de Creación,
+    ya fuera de alcance); quedan 2 barras (Administración/finanzas + operaciones con IA
+    agéntica, ambas ya válidas para el alcance acotado).
+
+  12 slides (antes 16 — se quitan 3 de Cronograma por departamento y 1 de Metodología ABR).
+
+  Actualización 2026-09-01 (2da pasada, "llevalo al formato nuevo"): Beneficios y Cierre
+  suben al formato v3/escalera ya usado hoy en corporaciones-easyaccess/DET-002/CAI-002.
+  - Beneficios: Perfil de egreso/Beneficio del programa/Entregables/Acreditación (tarjetas
+    blancas) → Resultados/Por qué Habilidades/Entregables/Valor inmediato (tarjetas oscuras,
+    clase .s-benefits-v2). CSS portado de corporaciones-easyaccess/styles.css. Cajas
+    Entregables/Acreditacion agrandadas (193×474px) y re-horneadas con fondo oscuro vía
+    scripts/customize-good-latam.py (rebake_dark) — no toca el default global de las demás
+    ~80 propuestas que usan esos mismos nombres de campo.
+  - Cierre: end-message fijo + CTA a Calendly → escalera (.end-summit + 3 .stair-step), 4
+    cajas AcroForm editables (CierreResultado + CierrePaso1-3). El texto real horneado en el
+    PDF vive en CIERRE_FIELDS de scripts/customize-good-latam.py (nuevo, este deck no tenía
+    script propio todavía), no en el HTML — el <span class="acro-default-text"> es solo
+    preview de navegador, oculto en print.
+  - .s-benefits .grid sube de 460px a 570px (vía .s-benefits-v2 .grid, mismo valor que el
+    resto del linaje v3).
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Propuesta · Good Latam · Intezia Educación</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <main class="deck">
+
+    <!-- 1 · Portada -->
+    <section class="slide s-cover">
+      <span class="counter">01 / 12</span>
+      <div class="logo-big">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia Educación">
+      </div>
+      <div class="body">
+        <p class="eyebrow">Propuesta de capacitación · Servicio de Habilidades</p>
+        <h1>
+          Escalar Administración<br>
+          <span class="hl">con Inteligencia Artificial</span>
+        </h1>
+        <p class="lead">
+          Formamos a <strong>Administración</strong> en los fundamentos de la IA y construimos junto al equipo la auditoría y automatización de sus procesos, para que Good Latam escale su operación con <strong>IA</strong>.
+        </p>
+      </div>
+      <div class="id-line">
+        <span class="codigo">Código: CAP-109</span>
+        <span class="cliente">Good Latam</span>
+      </div>
+    </section>
+
+    <!-- 2 · Punto de dolor + Diagnóstico -->
+    <section class="slide s-pain">
+      <span class="counter">02 / 12</span>
+      <span class="quote-mark">&ldquo;</span>
+      <div class="body">
+        <h2>Administración parte de cero con la IA. Antes de automatizar, necesita entenderla.</h2>
+        <p class="context">
+          Good Latam quiere <strong>escalar la operación con IA en lugar de contratar más personal</strong>. El área de Administración (hoy sobre <strong>Excel</strong> y sistemas desactualizados como <strong>Profit</strong>) es la que menos contacto directo tiene con la IA: antes de auditar y automatizar sus procesos, necesita perder el temor y entender cómo funciona.
+        </p>
+        <p class="diag-title">Diagnóstico</p>
+        <ol>
+          <li>Administración opera sobre Excel y sistemas desactualizados como Profit, con procesos mayormente manuales.</li>
+          <li>El área no tiene contacto directo con la IA más allá de automatizaciones puntuales aisladas, sin un criterio propio construido.</li>
+          <li>Antes de auditar sus procesos y construir una automatización, Administración necesita fundamentos claros: qué es la IA, cómo funciona y cómo mejora su trabajo diario.</li>
+          <li>Sin ese paso previo, cualquier auditoría o desarrollo corre el riesgo de no ser adoptado por el equipo.</li>
+          <li>Good Latam quiere escalar con IA en lugar de contratar más personal: Administración es el primer paso concreto hacia eso.</li>
+        </ol>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Good Latam · CAP-109</span>
+      </div>
+    </section>
+
+    <!-- 3 · Objetivos estratégicos -->
+    <section class="slide s-goals">
+      <span class="counter">03 / 12</span>
+      <p class="eyebrow">02 · Objetivos</p>
+      <h2>A dónde llevamos<br>a Administración.</h2>
+      <div class="columns">
+        <div class="general">
+          <p class="label">Objetivo general</p>
+          <p>
+            Formar al equipo de Administración en los fundamentos de la IA, auditar sus procesos y construir la automatización priorizada, para que Good Latam escale su operación con IA.
+          </p>
+        </div>
+        <div class="specifics">
+          <p class="label">Objetivos específicos</p>
+          <ol>
+            <li>Formar a Administración en los fundamentos de la IA: qué es, cómo funciona y cómo mejora su trabajo diario.</li>
+            <li>Auditar los procesos, tareas manuales y nivel de adopción de IA del área.</li>
+            <li>Construir la automatización priorizada a la medida de sus procesos reales.</li>
+          </ol>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Good Latam · CAP-109</span>
+      </div>
+    </section>
+
+    <!-- 4 · El proyecto (5 módulos, uno por departamento + Fundamentals) -->
+    <section class="slide s-program">
+      <span class="counter">04 / 12</span>
+      <p class="eyebrow">03 · El proyecto</p>
+      <h2>Un programa a la medida<br>de Administración.</h2>
+      <p class="meta">5 sesiones · 10 horas académicas</p>
+      <div class="modules">
+        <div class="module">
+          <span class="roman">I</span>
+          <h3>Fundamentals</h3>
+          <ul class="topics">
+            <li>Qué es la IA y cómo funciona</li>
+            <li>2 sesiones · 4h</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">II</span>
+          <h3>Auditoría + Desarrollo</h3>
+          <ul class="topics">
+            <li>Automatización priorizada</li>
+            <li>3 sesiones · 6h</li>
+          </ul>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Good Latam · CAP-109</span>
+      </div>
+    </section>
+
+    <!-- 5 · Fundamentals · Administración -->
+    <section class="slide s-schedule">
+      <span class="counter">05 / 12</span>
+      <p class="eyebrow">04 · Programa · Ruta del proyecto</p>
+
+      <div class="ruta">
+        <div class="ruta-node">1</div>
+        <div class="ruta-track"><div class="ruta-fill" style="width:50%"></div></div>
+        <span class="ruta-step">Fundamentals · Auditoría + Desarrollo</span>
+      </div>
+
+      <div class="ses-head">
+        <div>
+          <span class="ses-mod">2 sesiones · Híbrida</span>
+          <h2>Fundamentals de IA: Administración</h2>
+        </div>
+      </div>
+
+      <div class="ses-body">
+        <div class="ses-block">
+          <span class="label">Temas</span>
+          <div class="chips">
+            <span class="chip">Qué es la IA y cómo funciona</span>
+            <span class="chip">IA aplicada a tareas administrativas</span>
+            <span class="chip">Automatización sin perder el control</span>
+            <span class="chip">Casos propios del área</span>
+          </div>
+        </div>
+        <div class="ses-cols">
+          <div class="ses-block">
+            <span class="label">Estrategias de enseñanza</span>
+            <ul>
+              <li>Explicación guiada, sin jerga técnica</li>
+              <li>Demostración en vivo sobre tareas de Excel y Profit</li>
+              <li>Espacio abierto de preguntas</li>
+              <li>Casos aplicados al día a día del área</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Estrategias de aprendizaje</span>
+            <ul>
+              <li>El equipo identifica tareas donde la IA puede ayudar</li>
+              <li>Practica con ejemplos guiados</li>
+              <li>Resuelve dudas antes de entrar a la auditoría</li>
+            </ul>
+          </div>
+          <div class="ses-block block-rec">
+            <span class="label">Recursos y entornos</span>
+            <ul>
+              <li>Guía Fundamentals de IA Intezia</li>
+              <li>Ejemplos con datos reales de Administración</li>
+              <li>Google Meet</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Good Latam · CAP-109</span>
+      </div>
+    </section>
+
+    <!-- 6 · Auditoría + Desarrollo · Administración -->
+    <section class="slide s-schedule">
+      <span class="counter">06 / 12</span>
+      <p class="eyebrow">04 · Programa · Ruta del proyecto</p>
+
+      <div class="ruta">
+        <div class="ruta-node">2</div>
+        <div class="ruta-track"><div class="ruta-fill" style="width:100%"></div></div>
+        <span class="ruta-step">Fundamentals · Auditoría + Desarrollo</span>
+      </div>
+
+      <div class="ses-head">
+        <div>
+          <span class="ses-mod">3 sesiones · Híbrida</span>
+          <h2>Auditoría + Desarrollo: Administración</h2>
+        </div>
+      </div>
+
+      <div class="ses-body">
+        <div class="ses-block">
+          <span class="label">Temas</span>
+          <div class="chips">
+            <span class="chip">Procesos contables en Excel y Profit</span>
+            <span class="chip">Automatizaciones ya recibidas de Digital</span>
+            <span class="chip">Automatización del flujo priorizado</span>
+            <span class="chip">Entrega funcional para el equipo</span>
+          </div>
+        </div>
+        <div class="ses-cols">
+          <div class="ses-block">
+            <span class="label">Estrategias de enseñanza</span>
+            <ul>
+              <li>Entrevista y revisión de cuadros reales (Sesión 1)</li>
+              <li>Construcción guiada de la automatización (Sesión 2-3)</li>
+              <li>Validación de automatizaciones existentes</li>
+              <li>Registro de evidencia y entrega</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Estrategias de aprendizaje</span>
+            <ul>
+              <li>El equipo describe sus procesos y valida qué ya usa</li>
+              <li>Prueba y ajusta la automatización sobre sus cuadros</li>
+              <li>Se queda con una herramienta lista para usar</li>
+            </ul>
+          </div>
+          <div class="ses-block block-rec">
+            <span class="label">Recursos y entornos</span>
+            <ul>
+              <li>Guion de auditoría de procesos Intezia</li>
+              <li>Cuadros y documentos reales</li>
+              <li>Google Meet</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Good Latam · CAP-109</span>
+      </div>
+    </section>
+
+    <!-- 7 · Roadmap del programa -->
+    <section class="slide s-roadmap">
+      <span class="counter">07 / 12</span>
+      <p class="eyebrow">04 · Roadmap</p>
+      <h2>De los fundamentos<br><span class="hl">a la automatización propia</span>.</h2>
+
+      <div class="rmx-field">
+        <div class="rmx-linear">
+
+          <div class="rmx-lrow-nodes">
+            <div class="rmx-lcol"><div class="rmx-node rmx-node-f2">1</div></div>
+            <div class="rmx-arrow"></div>
+            <div class="rmx-lcol"><div class="rmx-node rmx-node-f3">2</div></div>
+            <div class="rmx-arrow"></div>
+            <div class="rmx-lcol"><div class="rmx-node rmx-node-r">&#9733;</div></div>
+          </div>
+
+          <div class="rmx-lrow-cards">
+            <div class="rmx-lcol">
+              <div class="rmx-card rmx-card-f2">
+                <span class="rmx-card-tag">Etapa 1 · Fundamentals</span>
+                <div class="rmx-card-name">Fundamentals de IA</div>
+                <ul class="rmx-facets">
+                  <li><span>Qué pasa</span><p>Perdemos el temor a la IA: qué es, cómo funciona y cómo mejora el trabajo diario de Administración.</p></li>
+                  <li><span>Con quién</span><p>Equipo de Administración.</p></li>
+                  <li><span>Entrega</span><p>Equipo listo para auditar y automatizar con criterio propio.</p></li>
+                </ul>
+              </div>
+            </div>
+            <div class="rmx-lspacer"></div>
+            <div class="rmx-lcol">
+              <div class="rmx-card rmx-card-f3">
+                <span class="rmx-card-tag">Etapa 2 · Auditoría + Desarrollo</span>
+                <div class="rmx-card-name">Automatización a la medida</div>
+                <ul class="rmx-facets">
+                  <li><span>Qué pasa</span><p>Auditamos los procesos reales de Administración y construimos la automatización priorizada.</p></li>
+                  <li><span>Con quién</span><p>Equipo de Administración, con Intezia.</p></li>
+                  <li><span>Entrega</span><p>Automatización funcional lista para usar.</p></li>
+                </ul>
+              </div>
+            </div>
+            <div class="rmx-lspacer"></div>
+            <div class="rmx-lcol">
+              <div class="rmx-result-card">
+                <span class="rmx-result-label">Entregable insignia · Automatización + Informe de auditoría</span>
+                <div class="rmx-result-title">Administración operando con <b>IA a la medida</b> de sus procesos</div>
+                <ul>
+                  <li>Automatización construida sobre procesos reales</li>
+                  <li>Informe de auditoría del área</li>
+                  <li>Equipo formado en Fundamentals de IA</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /.rmx-linear -->
+
+        <div class="rmx-ethics">
+          <span class="rmx-ethics-tag">Metodología ABR · Auditoría antes de construir</span>
+          <p>Intezia no construye antes de auditar. Administración primero entiende la IA, y solo después audita y automatiza sus procesos con criterio propio.</p>
+        </div>
+
+      </div><!-- /.rmx-field -->
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Good Latam · CAP-109</span>
+      </div>
+    </section>
+
+    <!-- 8 · Beneficios — formato v3 (retrofit 2026-09-01) -->
+    <section class="slide s-benefits s-benefits-v2">
+      <span class="counter">08 / 12</span>
+      <p class="eyebrow">05 · Beneficios</p>
+      <h2>Lo que <span class="hl">se llevan</span>.</h2>
+      <div class="grid">
+        <div class="block">
+          <p class="label">Resultados</p>
+          <ul>
+            <li>Una <strong>automatización construida a la medida</strong> de sus procesos reales de Administración.</li>
+            <li>Un <strong>informe de auditoría</strong> del área, con el nivel de adopción y las tareas manuales priorizadas.</li>
+            <li>Administración con fundamentos de IA propios, sin depender de Intezia para seguir escalando.</li>
+          </ul>
+        </div>
+        <div class="block">
+          <p class="label">Por qué Habilidades</p>
+          <p>
+            Good Latam quiere escalar con IA en lugar de contratar más personal: Administración pasa de depender de <strong>Excel y Profit</strong> a una automatización propia, construida junto a su equipo, con los fundamentos que le faltaban para dar ese salto con criterio.
+          </p>
+        </div>
+        <div class="block">
+          <p class="label">Entregables</p>
+        </div>
+        <div class="block">
+          <p class="label">Valor inmediato</p>
+        </div>
+      </div>
+
+      <!-- Cajas multiline editables (vacías en HTML — el contenido demo
+           vive dentro del AcroForm /V, no aquí, para evitar superposición). -->
+      <div class="multi-box entregables-box" data-field="Entregables"></div>
+      <div class="multi-box acreditaciones-box" data-field="Acreditacion"></div>
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Good Latam · CAP-109</span>
+      </div>
+    </section>
+
+    <!-- 13 · Impacto / estudios — datos de estudios reales, fuente citada (CLAUDE.md §4.9) -->
+    <section class="slide s-impact">
+      <span class="counter">09 / 12</span>
+
+      <div class="impact-head">
+        <p class="eyebrow">06 · Impacto</p>
+        <h2>La evidencia no deja<br><span class="hl">lugar a dudas</span>.</h2>
+      </div>
+
+      <div class="impact-body">
+        <div class="chart-panel">
+          <p class="panel-title">Margen de mejora con IA en procesos administrativos</p>
+          <div class="bars">
+            <div class="bar-row">
+              <span class="bar-label">Administración y finanzas · tiempo en procesamiento de datos</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:30%"><span class="bar-val">−20–30%</span></div></div>
+            </div>
+            <div class="bar-row">
+              <span class="bar-label">Operaciones con IA agéntica · ahorro en costos operativos</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:15%"><span class="bar-val">+5–15%</span></div></div>
+            </div>
+          </div>
+          <div class="bar-axis"><span class="scale"><span>0</span><span>25</span><span>50</span><span>75</span><span>100%</span></span></div>
+          <p class="panel-source">Fuentes: McKinsey — The economic potential of generative AI: The next productivity frontier (2023) · McKinsey — AI in finance: Driving automation and business value (2025) · McKinsey — Reimagining tech infrastructure for agentic AI (2026) · McKinsey — AI: Work partnerships between people, agents, and robots (2025).</p>
+        </div>
+
+        <div class="gauge-panel">
+          <div class="gauge" style="--pct:57">
+            <div class="gauge-core">
+              <span class="gauge-num">57<span class="pct">%</span></span>
+              <span class="gauge-cap">del trabajo es automatizable</span>
+            </div>
+          </div>
+          <div class="chips">
+            <div class="chip">
+              <span class="chip-num">44%</span>
+              <span class="chip-lbl">lo pueden ejecutar agentes de IA</span>
+            </div>
+            <div class="chip">
+              <span class="chip-num">25%</span>
+              <span class="chip-lbl">del tiempo es trabajo de lenguaje natural</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="impact-hook">
+        <span class="hook-mark">&#9656;</span>
+        <p class="hook-text">
+          <strong>Más de la mitad</strong> del trabajo operativo de una agencia ya es automatizable con
+          la tecnología actual. La diferencia entre intentarlo y lograrlo es
+          <strong>formar, auditar y construir en el orden correcto</strong>.
+        </p>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Good Latam · CAP-109</span>
+      </div>
+    </section>
+
+    <!-- 10 · Propuesta Económica -->
+    <section class="slide s-price">
+      <span class="counter">10 / 12</span>
+      <h2 class="title">Propuesta Económica</h2>
+
+      <!-- Bloque 1 · Duración -->
+      <div class="block">
+        <span class="block-eyebrow">Duración</span>
+        <p class="block-value">5 sesiones de 2h · 10 horas académicas (Administración).</p>
+      </div>
+
+      <!-- Bloque 2 · Programa (multiline editable + acento amarillo en el label) -->
+      <div class="block block-programa">
+        <span class="block-eyebrow">Programa</span>
+      </div>
+      <div class="multi-box programa-box" data-field="Programa"></div>
+
+      <!-- Bloque 3 · Cotización (filas absolutas, alineadas) -->
+      <div class="block block-cotizacion">
+        <span class="block-eyebrow">Cotización</span>
+      </div>
+
+      <span class="cot-label cot-label-base">Propuesta + Inversión</span>
+      <div class="cot-frame base-frame"></div>
+
+      <span class="cot-label cot-label-discount">Descuento</span>
+      <div class="cot-frame discount-frame"></div>
+
+      <span class="cot-label cot-label-total">TOTAL</span>
+      <div class="cot-frame total-frame"></div>
+
+      <p class="cot-validity">Cotización válida por 30 días.</p>
+      <div class="cot-terms-box">
+        <span class="cot-terms-label">Importante</span>
+        <p class="cot-terms-text">Este servicio se presta bajo nuestros <a href="https://drive.google.com/file/d/1PA-ZSt4KnyY5dpxXzgkIk6-yfGlV2eF8/view?usp=drive_link" target="_blank" rel="noopener">términos y condiciones</a>. Al avanzar con esta propuesta, ambas partes los aceptan.</p>
+      </div>
+
+      <!-- Bloque 4 · Notas (multiline editable + acento naranja en el label) -->
+      <div class="block block-notes-container">
+        <span class="block-eyebrow">Notas</span>
+      </div>
+      <div class="multi-box notas-box" data-field="Notas"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Good Latam · CAP-109</span>
+      </div>
+    </section>
+
+    <!-- 11 · Próximos pasos -->
+    <section class="slide s-steps">
+      <span class="counter">11 / 12</span>
+      <p class="eyebrow">07 · Próximos pasos</p>
+      <h2>Cómo arrancamos.</h2>
+      <div class="step-cards">
+        <div class="step-card">
+          <span class="ghost">01</span>
+        </div>
+        <div class="step-card">
+          <span class="ghost">02</span>
+        </div>
+        <div class="step-card">
+          <span class="ghost">03</span>
+        </div>
+      </div>
+
+      <!-- Editable AcroForm placeholders (3 pasos × título + body) -->
+      <div class="acro-area acro-title acro-paso-01-titulo" data-field="Paso01Titulo">
+        <span class="acro-default-text">Aprueban el programa</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-01-body" data-field="Paso01Body">
+        <span class="acro-default-text">Confirman el inicio. Verónica Rubio coordina las sesiones con el equipo de Administración de Good Latam.</span>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-02-titulo" data-field="Paso02Titulo">
+        <span class="acro-default-text">Acceso y logística</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-02-body" data-field="Paso02Body">
+        <span class="acro-default-text">Coordinamos acceso a los procesos y sistemas de Administración, y la agenda de las 5 sesiones.</span>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-03-titulo" data-field="Paso03Titulo">
+        <span class="acro-default-text">Arranque del programa</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-03-body" data-field="Paso03Body">
+        <span class="acro-default-text">Administración inicia con Fundamentals de IA, antes de pasar a su Auditoría + Desarrollo.</span>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Good Latam · CAP-109</span>
+      </div>
+    </section>
+
+    <!-- 12 · Cierre — escalera (retrofit 2026-09-01) -->
+    <section class="slide s-end">
+      <span class="counter">12 / 12</span>
+
+      <div class="end-logo">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia Educación">
+      </div>
+
+      <!-- Resultado (cinta superior) — caja editable, ventas la redacta por cliente -->
+      <div class="end-summit" data-field="CierreResultado">
+        <span class="acro-default-text">Administración de Good Latam, con fundamentos de IA propios y una automatización construida a la medida.</span>
+      </div>
+
+      <!-- Escalera de 3 pasos — cada uno con su caja editable -->
+      <div class="end-stairs">
+        <div class="stair-step stair-1">
+          <span class="stair-label">Paso 1</span>
+          <div class="stair-field" data-field="CierrePaso1">
+            <span class="acro-default-text">Fundamentos de IA aprendidos</span>
+          </div>
+        </div>
+        <div class="stair-step stair-2">
+          <span class="stair-label">Paso 2</span>
+          <div class="stair-field" data-field="CierrePaso2">
+            <span class="acro-default-text">Proceso de Administración auditado</span>
+          </div>
+        </div>
+        <div class="stair-step stair-3">
+          <span class="stair-label">Paso 3</span>
+          <div class="stair-field" data-field="CierrePaso3">
+            <span class="acro-default-text">Automatización construida junto al equipo</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cta-wrap">
+        <span class="cta">Esperamos tu respuesta</span>
+      </div>
+
+      <div class="end-contact">
+        <p class="contact-line">
+          <span class="contact-label">Asesora de ventas:</span>
+          Verónica Rubio <span class="dot">·</span> +58 422-3355505 <span class="dot">·</span> vrubio01@intezia.com
+        </p>
+        <p class="contact-line">
+          <span class="contact-label">Empresa:</span>
+          Intezia C.A J-505657950 <span class="dot">·</span> servicio@intezia.com
+        </p>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

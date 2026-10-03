@@ -1,0 +1,631 @@
+<!doctype html>
+<!--
+  Propuesta — Toyocentro (DET-014)
+  Servicio: DETECCIÓN (Modelo Intezia). División: Educación. Primer contacto, sin servicio
+  previo. Fuente primaria: Ficha de Levantamiento (Levantamiento_Toyocentro_2026-09-14.pdf,
+  asesora Flavia Martínez).
+
+  2 ÁREAS (dato directo de la ficha, sin ambigüedad): Ventas (~6 personas, con la visión
+  estratégica de José A. Sol, CEO) y Tecnología (2 personas, liderada por Christopher Rodríguez,
+  Director de Tecnología, contacto operativo). Universo total ~8 personas, cifra exacta de la
+  ficha (sin ambigüedad, a diferencia de otras Detecciones de esta sesión).
+  4 HORAS de Detección por área (8h) + FUNDAMENTALS (2h grupal, para las 8 personas de ambas
+  áreas juntas, dentro del máximo de 25) = 10h totales. Sin instrucción del usuario de acortar
+  horas (a diferencia de hoteles-cumberland/DET-011) — se usa el lineamiento por defecto
+  (4h/área, ver empresa/politicas-comerciales.md → Dimensionamiento por servicio). MODALIDAD
+  PRESENCIAL en las oficinas de Toyocentro (Quinta Crespo, Caracas — dato explícito único de
+  la ficha).
+  HERRAMIENTA: SIN mención de ninguna herramienta específica — el cliente declara explícitamente
+  "Aún no lo saben, esperan la recomendación" (Bloque B), a diferencia de otras Detecciones de
+  esta sesión que sí tenían un uso informal de Gemini/Claude como contexto. El Reporte Final SÍ
+  promete una "recomendación de ecosistema de IA" (deliverable pedido explícitamente por el
+  cliente en Bloque específico Detección), pero sin nombrar marca — 100% ABR, diagnóstico antes
+  de recomendar.
+  NOMBRE DE HERRAMIENTA DE BASE DE DATOS: la ficha es inconsistente ("Airtable" en Bloque C
+  Proceso 1, vs. "Azure Table" en Bloque G y en el logro inmediato de Bloque específico
+  Detección) — confirmado con el usuario (2026-09-15): NO se menciona el nombre específico en
+  el deck, se habla solo de "sus bases de datos" / "sus sistemas comerciales".
+  2 PROCESOS ESPECÍFICOS (Bloque C): (1) Cruce de bases de datos comerciales contra el
+  inventario mensual de Toyota para detectar oportunidades de venta — el "quick win" que el
+  propio cliente ya trae definido (cita textual de José A. Sol, CEO, en Diagnóstico); (2)
+  Atención de leads por WhatsApp fuera de horario — leads en "horas muertas" se pierden o se
+  atienden tarde. Ambos alimentan las sesiones de Ventas y Tecnología.
+  FUTURA FASE DE HABILIDADES: mencionada solo como nota interna/pendiente (Bloque F: "entender
+  bien el plan de acción para una siguiente fase de habilidades") — no cotizada en este
+  documento, mismo criterio que el resto de las Detecciones de esta sesión.
+  Sin slide de Mapa de Calor ni Metodología ABR ni Equipo facilitador expuestos (§4.10a). Sin
+  certificado (Detección pura). Beneficios v3, Cierre escalera, servicio@intezia.com.
+  .rmx-ethics con padding-right:230px aplicado por defecto (memoria
+  bug-rmx-ethics-choca-nombre-cliente-largo.md).
+  Sin <strong> dentro de ningún <li> de .s-pain/.s-goals/.s-schedule (bug-strong-flex-specifics.md).
+  Impacto (§4.9): Fullpath — The 2025 State of AI Adoption in Car Dealerships, encuesta con
+  Kerrigan Advisors (43% ya implementa IA, 95% la cree crítica para su éxito futuro, 55% de
+  quienes ya usan IA tuvo aumento de ingresos de 10-30% en H1 2025) + Strolid — Lead Response
+  Time: Speed Matters in Automotive Lead Management (2026, contactar en los primeros 5 minutos
+  da 10x más probabilidad que esperar 30 — dato que responde directo al dolor de los leads de
+  WhatsApp fuera de horario).
+  12 slides · precio estándar (Propuesta Económica, un solo servicio).
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Propuesta · Toyocentro · Intezia</title>
+  <link rel="stylesheet" href="../_base/styles.css">
+  <link rel="stylesheet" href="overrides.css">
+</head>
+<body>
+
+  <main class="deck">
+
+    <!-- 1 · Portada -->
+    <section class="slide s-cover">
+      <span class="counter">01 / 12</span>
+      <div class="logo-big">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia">
+      </div>
+      <div class="body">
+        <p class="eyebrow">Propuesta formativa · Servicio de Detección</p>
+        <h1>
+          Del uso disperso<br>
+          <span class="hl">a un criterio común.</span>
+        </h1>
+        <p class="lead">
+          Nivelamos a Ventas y Tecnología con <strong>Fundamentals</strong> y auditamos sus 2 áreas, con 4 horas dedicadas a cada una y un logro inmediato en cada sesión, empezando por el cruce de sus bases de datos y la atención de leads fuera de horario.
+        </p>
+      </div>
+      <div class="id-line">
+        <span class="codigo">Código: DET-014</span>
+        <span class="cliente">Toyocentro</span>
+      </div>
+    </section>
+
+    <!-- 2 · Punto de dolor + Diagnóstico -->
+    <section class="slide s-pain">
+      <span class="counter">02 / 12</span>
+      <span class="quote-mark">&ldquo;</span>
+      <div class="body">
+        <h2>"Quiero que la herramienta cruce mis bases de datos y me diga dónde hay una oportunidad."</h2>
+        <p class="context">
+          Toyocentro nunca ha recibido una propuesta de IA: es el primer contacto con Intezia. El uso hoy es disparejo, solo el personal más medular de Ventas y Tecnología lo usa por su cuenta, sin criterio común entre las dos áreas.
+        </p>
+        <p class="diag-title">Diagnóstico</p>
+        <ol>
+          <li>Cruce de bases de datos: sin forma automatizada de detectar oportunidades cuando llega inventario nuevo de Toyota.</li>
+          <li>Atención de leads por WhatsApp fuera de horario: los leads en horas muertas se pierden o se atienden tarde.</li>
+          <li>Uso de IA disperso: solo el personal más medular de Ventas y Tecnología lo usa hoy.</li>
+          <li>La empresa nunca ha recibido formación en IA: es su primer contacto con Intezia.</li>
+          <li>El negocio de concesionarios se mueve rápido: cada remesa de inventario abre una ventana corta de oportunidad.</li>
+        </ol>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">TOYOCENTRO · DET-014</span>
+      </div>
+    </section>
+
+    <!-- 3 · Objetivos estratégicos -->
+    <section class="slide s-goals">
+      <span class="counter">03 / 12</span>
+      <p class="eyebrow">02 · Objetivos</p>
+      <h2>A dónde llevamos<br>a Ventas y Tecnología.</h2>
+      <div class="columns">
+        <div class="general">
+          <p class="label">Objetivo general</p>
+          <p>
+            Auditar las 2 áreas de Toyocentro (Ventas y Tecnología) con Fundamentals y 4 horas por área, dejando un logro inmediato en cada una, para llevar el uso disperso de IA de hoy a un criterio común, empezando por el cruce de bases de datos y la atención de leads fuera de horario.
+          </p>
+        </div>
+        <div class="specifics">
+          <p class="label">Objetivos específicos</p>
+          <ol>
+            <li>Nivelar a Ventas y Tecnología con una sesión de Fundamentals antes de auditar.</li>
+            <li>Auditar las 2 áreas con 4 horas dedicadas a cada una, en sesiones grupales presenciales.</li>
+            <li>Dejar un logro inmediato en cada área, empezando por el cruce de bases de datos y la atención de leads fuera de horario.</li>
+            <li>Entregar un Reporte Final con el mapa de oportunidades priorizado y la recomendación de ecosistema de IA.</li>
+          </ol>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">TOYOCENTRO · DET-014</span>
+      </div>
+    </section>
+
+    <!-- 4 · Programa -->
+    <section class="slide s-program">
+      <span class="counter">04 / 12</span>
+      <p class="eyebrow">03 · El proyecto</p>
+      <h2>2 áreas, un mismo criterio.</h2>
+      <p class="meta">Fundamentals + Detección con logro inmediato por área, modalidad presencial.</p>
+      <div class="modules">
+        <div class="module">
+          <span class="roman">I</span>
+          <h3>Fundamentals</h3>
+          <p class="obj">Nivela a Ventas y Tecnología en fundamentos de IA antes de auditar.</p>
+          <ul class="topics">
+            <li>Fundamentos de IA</li>
+            <li>Kick-off grupal</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">II</span>
+          <h3>Trabajo por Área</h3>
+          <p class="obj">Una sesión de 4 horas por cada una de las 2 áreas, con un logro inmediato en cada una.</p>
+          <ul class="topics">
+            <li>2 áreas · 4h c/u</li>
+            <li>Logro inmediato por área</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">III</span>
+          <h3>Priorización</h3>
+          <p class="obj">Se prioriza cada hallazgo por impacto, esfuerzo y riesgo, y se unifica el Índice de Madurez.</p>
+          <ul class="topics">
+            <li>Mapa de Calor</li>
+            <li>Índice de Madurez</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">IV</span>
+          <h3>Reporte Final</h3>
+          <p class="obj">Diagnóstico completo + mapa de oportunidades, con recomendación de ecosistema de IA.</p>
+          <ul class="topics">
+            <li>Mapa de oportunidades</li>
+            <li>Recomendación de IA</li>
+          </ul>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">TOYOCENTRO · DET-014</span>
+      </div>
+    </section>
+
+    <!-- 5 · Roadmap · Detección (3 etapas) -->
+    <section class="slide s-roadmap">
+      <span class="counter">05 / 12</span>
+      <p class="eyebrow">04 · Roadmap · Detección</p>
+      <h2>Auditar antes<br><span class="hl">de asumir dónde está la oportunidad</span>.</h2>
+
+      <div class="rmx-field">
+        <div class="rmx-linear">
+
+          <div class="rmx-lrow-nodes">
+            <div class="rmx-lcol"><div class="rmx-node rmx-node-f2">1</div></div>
+            <div class="rmx-arrow"></div>
+            <div class="rmx-lcol"><div class="rmx-node rmx-node-f3">2</div></div>
+            <div class="rmx-arrow"></div>
+            <div class="rmx-lcol"><div class="rmx-node rmx-node-f4">3</div></div>
+            <div class="rmx-arrow"></div>
+            <div class="rmx-lcol"><div class="rmx-node rmx-node-r">&#9733;</div></div>
+          </div>
+
+          <div class="rmx-lrow-cards">
+            <div class="rmx-lcol">
+              <div class="rmx-card rmx-card-f2">
+                <span class="rmx-card-tag">Etapa 1 · Fundamentals y Trabajo por Área</span>
+                <div class="rmx-card-name">Fundamentals + 4h por área</div>
+                <ul class="rmx-facets">
+                  <li><span>Qué pasa</span><p>Nivelamos con Fundamentals y auditamos Ventas y Tecnología, 4h por área.</p></li>
+                  <li><span>Con quién</span><p>El equipo comercial y de tecnología, por área.</p></li>
+                  <li><span>Entrega</span><p>Equipo nivelado + logro inmediato por área.</p></li>
+                </ul>
+              </div>
+            </div>
+            <div class="rmx-lspacer"></div>
+            <div class="rmx-lcol">
+              <div class="rmx-card rmx-card-f3">
+                <span class="rmx-card-tag">Etapa 2 · Priorización</span>
+                <div class="rmx-card-name">Mapa de Calor de oportunidades</div>
+                <ul class="rmx-facets">
+                  <li><span>Qué pasa</span><p>Se prioriza cada hallazgo por impacto, esfuerzo y riesgo, y se unifica el indicador.</p></li>
+                  <li><span>Con quién</span><p>Equipo consultor Intezia.</p></li>
+                  <li><span>Entrega</span><p>Mapa de Calor de las 2 áreas + Índice de Madurez.</p></li>
+                </ul>
+              </div>
+            </div>
+            <div class="rmx-lspacer"></div>
+            <div class="rmx-lcol">
+              <div class="rmx-card rmx-card-f4">
+                <span class="rmx-card-tag">Etapa 3 · Reporte Final</span>
+                <div class="rmx-card-name">Mapa de oportunidades priorizado</div>
+                <ul class="rmx-facets">
+                  <li><span>Qué pasa</span><p>Se entrega el diagnóstico completo, con la recomendación de ecosistema de IA.</p></li>
+                  <li><span>Con quién</span><p>José A. Sol y Christopher Rodríguez.</p></li>
+                  <li><span>Entrega</span><p>Reporte Final + recomendación de IA.</p></li>
+                </ul>
+              </div>
+            </div>
+            <div class="rmx-lspacer"></div>
+            <div class="rmx-lcol">
+              <div class="rmx-result-card">
+                <span class="rmx-result-label">Entregable insignia · Mapa de oportunidades</span>
+                <div class="rmx-result-title">De uso disperso a <b>un criterio común</b></div>
+                <ul>
+                  <li>Equipo nivelado con Fundamentals</li>
+                  <li>Logro inmediato por área</li>
+                  <li>Mapa de oportunidades + Reporte Final</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /.rmx-linear -->
+
+        <div class="rmx-ethics">
+          <span class="rmx-ethics-tag">Metodología ABR · Diagnóstico antes de recomendar</span>
+          <p>El Reporte Final confirma la recomendación con los hallazgos reales, no antes.</p>
+        </div>
+
+      </div><!-- /.rmx-field -->
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">TOYOCENTRO · DET-014</span>
+      </div>
+    </section>
+
+    <!-- 6 · Cronograma · Fundamentals -->
+    <section class="slide s-schedule">
+      <span class="counter">06 / 12</span>
+      <p class="eyebrow">04 · Cronograma · Fundamentals</p>
+
+      <div class="ses-head">
+        <div>
+          <span class="ses-mod">Sesión grupal · Ventas y Tecnología (8 personas) · Modalidad presencial</span>
+          <h2>Fundamentals</h2>
+        </div>
+        <div class="ses-meta"><span class="ses-dur">2h</span></div>
+      </div>
+
+      <div class="ses-body">
+        <div class="ses-block">
+          <span class="label">Temas</span>
+          <div class="chips">
+            <span class="chip">Qué es y qué no es la IA</span>
+            <span class="chip">Casos reales del sector automotriz</span>
+            <span class="chip">Ruta de las 2 sesiones</span>
+            <span class="chip">Preguntas y expectativas</span>
+          </div>
+        </div>
+        <div class="ses-block">
+          <span class="label">Tiempo · Total 2 h</span>
+          <div class="timebar">
+            <div class="seg" style="flex:30">30' Encuadre y fundamentos</div>
+            <div class="seg" style="flex:45">45' Casos reales del sector</div>
+            <div class="seg" style="flex:30">30' Ruta de las 2 sesiones</div>
+            <div class="seg" style="flex:15">15' Cierre y preguntas</div>
+          </div>
+        </div>
+        <div class="ses-cols">
+          <div class="ses-block">
+            <span class="label">Qué se hace</span>
+            <ul>
+              <li>Presentamos qué es y qué no es la IA, con casos reales del sector automotriz</li>
+              <li>Explicamos la ruta de las 2 sesiones de auditoría que siguen</li>
+              <li>Abrimos espacio a preguntas y expectativas del equipo</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Qué se logra</span>
+            <ul>
+              <li>El equipo llega a sus sesiones de área con un lenguaje común</li>
+              <li>Expectativas alineadas sobre la auditoría</li>
+              <li>Primera identificación de dónde cada área ve oportunidad</li>
+            </ul>
+          </div>
+          <div class="ses-block block-rec">
+            <span class="label">Recursos y entornos</span>
+            <ul>
+              <li>Sesión presencial, Ventas y Tecnología</li>
+              <li>Sin herramientas técnicas todavía</li>
+              <li>Casos reales del sector automotriz</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">TOYOCENTRO · DET-014</span>
+      </div>
+    </section>
+
+    <!-- 7 · Cronograma · Estructura de las 4 horas por área -->
+    <section class="slide s-schedule">
+      <span class="counter">07 / 12</span>
+      <p class="eyebrow">04 · Cronograma · Estructura por área</p>
+
+      <div class="ses-head">
+        <div>
+          <span class="ses-mod">Se repite en cada una de las 2 áreas · Modalidad presencial</span>
+          <h2>Estructura de las 4 horas</h2>
+        </div>
+        <div class="ses-meta"><span class="ses-dur">4h</span></div>
+      </div>
+
+      <div class="ses-body">
+        <div class="ses-block">
+          <span class="label">Temas</span>
+          <div class="chips">
+            <span class="chip">Procesos reales del área</span>
+            <span class="chip">Cuellos de botella</span>
+            <span class="chip">Logro inmediato aplicable</span>
+            <span class="chip">Datos comerciales y de clientes</span>
+          </div>
+        </div>
+        <div class="ses-block">
+          <span class="label">Tiempo · Total 4 h</span>
+          <div class="timebar">
+            <div class="seg" style="flex:45">45' Contexto y objetivos</div>
+            <div class="seg" style="flex:90">90' Levantamiento de procesos</div>
+            <div class="seg" style="flex:75">75' Construcción del logro inmediato</div>
+            <div class="seg" style="flex:30">30' Cierre y siguientes pasos</div>
+          </div>
+        </div>
+        <div class="ses-cols">
+          <div class="ses-block">
+            <span class="label">Qué se hace</span>
+            <ul>
+              <li>Entrevistamos al equipo del área sobre sus procesos reales</li>
+              <li>Identificamos el cuello de botella más relevante</li>
+              <li>Construimos en la misma sesión un logro inmediato aplicable</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Qué se logra</span>
+            <ul>
+              <li>Inventario real de procesos del área</li>
+              <li>Un logro inmediato que el área ya puede usar</li>
+              <li>Información lista para el Mapa de Calor conjunto</li>
+            </ul>
+          </div>
+          <div class="ses-block block-rec">
+            <span class="label">Recursos y entornos</span>
+            <ul>
+              <li>Sesión presencial en las oficinas de Toyocentro</li>
+              <li>Guion de levantamiento Intezia</li>
+              <li>Sin tocar los sistemas internos de Toyocentro</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">TOYOCENTRO · DET-014</span>
+      </div>
+    </section>
+
+    <!-- 8 · Beneficios (formato v3) -->
+    <section class="slide s-benefits s-benefits-v2">
+      <span class="counter">08 / 12</span>
+      <p class="eyebrow">05 · Beneficios</p>
+      <h2>Lo que <span class="hl">se llevan</span>.</h2>
+      <div class="grid">
+        <div class="block">
+          <p class="label">Resultados</p>
+          <ul>
+            <li>Las <strong>2 áreas</strong> (Ventas y Tecnología) auditadas, cada una con un logro inmediato, empezando por el cruce de bases de datos.</li>
+            <li>Equipo nivelado con Fundamentals antes de la auditoría.</li>
+            <li>Un mapa de oportunidades priorizado y una recomendación de ecosistema de IA.</li>
+          </ul>
+        </div>
+        <div class="block">
+          <p class="label">Por qué Detección</p>
+          <p>
+            Antes de recomendar una herramienta, Toyocentro conoce sus 2 áreas a fondo, con un <strong>logro tangible</strong> ya funcionando en cada una.
+          </p>
+        </div>
+        <div class="block">
+          <p class="label">Entregables</p>
+        </div>
+        <div class="block">
+          <p class="label">Valor inmediato</p>
+        </div>
+      </div>
+
+      <div class="multi-box entregables-box" data-field="Entregables"></div>
+      <div class="multi-box acreditaciones-box" data-field="Acreditacion"></div>
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">TOYOCENTRO · DET-014</span>
+      </div>
+    </section>
+
+    <!-- 9 · Impacto / estudios — datos reales, fuente citada (CLAUDE.md §4.9) -->
+    <section class="slide s-impact">
+      <span class="counter">09 / 12</span>
+
+      <div class="impact-head">
+        <p class="eyebrow">06 · Impacto</p>
+        <h2>Cada minuto sin responder<br><span class="hl">es una oportunidad que se va</span>.</h2>
+      </div>
+
+      <div class="impact-body">
+        <div class="chart-panel">
+          <p class="panel-title">Cómo adopta IA hoy el sector de concesionarios</p>
+          <div class="bars">
+            <div class="bar-row">
+              <span class="bar-label">Concesionarios que ya implementan IA en sus operaciones</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:43%"><span class="bar-val">43%</span></div></div>
+            </div>
+            <div class="bar-row">
+              <span class="bar-label">Concesionarios que creen que la IA será crítica para su éxito futuro</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:95%"><span class="bar-val">95%</span></div></div>
+            </div>
+          </div>
+          <div class="bar-axis"><span class="scale"><span>0</span><span>25</span><span>50</span><span>75</span><span>100%</span></span></div>
+          <p class="panel-source">Fuente: Fullpath &mdash; The 2025 State of AI Adoption in Car Dealerships (Kerrigan Advisors).</p>
+        </div>
+
+        <div class="gauge-panel">
+          <div class="gauge" style="--pct:55">
+            <div class="gauge-core">
+              <span class="gauge-num">55<span class="pct">%</span></span>
+              <span class="gauge-cap">de los concesionarios que ya usan IA reportó un aumento de ingresos del 10 al 30% en la primera mitad de 2025</span>
+            </div>
+          </div>
+          <div class="chips">
+            <div class="chip">
+              <span class="chip-num">10&times;</span>
+              <span class="chip-lbl">más contacto si se responde en 5 minutos</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="impact-hook">
+        <span class="hook-mark">&#9656;</span>
+        <p class="hook-text">
+          El 43% de los concesionarios ya implementa IA en sus operaciones, y el 95% cree que será crítica para su éxito futuro (Fullpath, 2025): el mismo punto de partida disperso de Toyocentro, donde hoy solo el personal más medular usa IA por su cuenta. El 55% de los concesionarios que ya usan IA reportó un aumento de ingresos del 10 al 30% en la primera mitad de 2025 (Fullpath, 2025). Y en la atención de leads la ventana es corta: contactar al cliente en los primeros 5 minutos da 10 veces más probabilidades que esperar 30 (Strolid, 2026), justo el problema de los leads de WhatsApp que hoy se pierden fuera de horario.
+        </p>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">TOYOCENTRO · DET-014</span>
+      </div>
+    </section>
+
+    <!-- 10 · Propuesta Económica (estándar: Duración + Programa + Notas + Cotización) -->
+    <section class="slide s-price">
+      <span class="counter">10 / 12</span>
+      <h2 class="title">Propuesta Económica</h2>
+
+      <div class="block">
+        <span class="block-eyebrow">Duración</span>
+        <p class="block-value">Fundamentals (2h) + 2 áreas · 4 horas por área (8h) · 10h totales · modalidad presencial.</p>
+      </div>
+
+      <div class="block block-programa">
+        <span class="block-eyebrow">Programa</span>
+      </div>
+      <div class="multi-box programa-box" data-field="Programa"></div>
+
+      <div class="block block-cotizacion">
+        <span class="block-eyebrow">Cotización</span>
+      </div>
+
+      <span class="cot-label cot-label-base">Propuesta + Inversión</span>
+      <div class="cot-frame base-frame"></div>
+
+      <span class="cot-label cot-label-discount">Descuento</span>
+      <div class="cot-frame discount-frame"></div>
+
+      <span class="cot-label cot-label-total">TOTAL</span>
+      <div class="cot-frame total-frame"></div>
+
+      <p class="cot-validity">Cotización válida por 30 días.</p>
+      <div class="cot-terms-box">
+        <span class="cot-terms-label">Importante</span>
+        <p class="cot-terms-text">Este servicio se presta bajo nuestros <a href="https://drive.google.com/file/d/1PA-ZSt4KnyY5dpxXzgkIk6-yfGlV2eF8/view?usp=drive_link" target="_blank" rel="noopener">términos y condiciones</a>. Al avanzar con esta propuesta, ambas partes los aceptan.</p>
+      </div>
+
+      <div class="block block-notes-container">
+        <span class="block-eyebrow">Notas</span>
+      </div>
+      <div class="multi-box notas-box" data-field="Notas"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">TOYOCENTRO · DET-014</span>
+      </div>
+    </section>
+
+    <!-- 11 · Próximos pasos -->
+    <section class="slide s-steps">
+      <span class="counter">11 / 12</span>
+      <p class="eyebrow">07 · Próximos pasos</p>
+      <h2>Cómo arrancamos.</h2>
+      <div class="step-cards">
+        <div class="step-card">
+          <span class="ghost">01</span>
+        </div>
+        <div class="step-card">
+          <span class="ghost">02</span>
+        </div>
+        <div class="step-card">
+          <span class="ghost">03</span>
+        </div>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-01-titulo" data-field="Paso01Titulo">
+        <span class="acro-default-text">Confirmamos fechas</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-01-body" data-field="Paso01Body">
+        <span class="acro-default-text">Definimos el calendario de las 2 sesiones de área y la sesión de Fundamentals con Christopher Rodríguez.</span>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-02-titulo" data-field="Paso02Titulo">
+        <span class="acro-default-text">Acceso y logística</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-02-body" data-field="Paso02Body">
+        <span class="acro-default-text">Coordinamos el acceso presencial en sus oficinas y la participación de Ventas y Tecnología.</span>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-03-titulo" data-field="Paso03Titulo">
+        <span class="acro-default-text">Reunión de arranque</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-03-body" data-field="Paso03Body">
+        <span class="acro-default-text">Sesión de unos 30 minutos con Christopher Rodríguez para alinear el alcance y el orden de las 2 áreas.</span>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">TOYOCENTRO · DET-014</span>
+      </div>
+    </section>
+
+    <!-- 12 · Cierre (ruta/escalera editable) -->
+    <section class="slide s-end">
+      <span class="counter">12 / 12</span>
+
+      <div class="end-logo">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia">
+      </div>
+
+      <div class="end-summit" data-field="CierreResultado">
+        <span class="acro-default-text">Toyocentro, con Ventas y Tecnología auditadas y un mapa de oportunidades priorizado para decidir qué automatizar primero.</span>
+      </div>
+
+      <div class="end-stairs">
+        <div class="stair-step stair-1">
+          <span class="stair-label">Paso 1</span>
+          <div class="stair-field" data-field="CierrePaso1">
+            <span class="acro-default-text">Fundamentals y trabajo por área</span>
+          </div>
+        </div>
+        <div class="stair-step stair-2">
+          <span class="stair-label">Paso 2</span>
+          <div class="stair-field" data-field="CierrePaso2">
+            <span class="acro-default-text">Mapa de oportunidades priorizado</span>
+          </div>
+        </div>
+        <div class="stair-step stair-3">
+          <span class="stair-label">Paso 3</span>
+          <div class="stair-field" data-field="CierrePaso3">
+            <span class="acro-default-text">Reporte Final + recomendación de IA</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cta-wrap">
+        <span class="cta">Esperamos tu respuesta</span>
+      </div>
+
+      <div class="end-contact">
+        <p class="contact-line">
+          <span class="contact-label">Asesora de ventas:</span>
+          Flavia Martínez <span class="dot">·</span> +58 414-5756615 <span class="dot">·</span> fmartinez@intezia.com
+        </p>
+        <p class="contact-line">
+          <span class="contact-label">Empresa:</span>
+          Intezia C.A J-505657950 <span class="dot">·</span> servicio@intezia.com
+        </p>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

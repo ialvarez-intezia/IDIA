@@ -1,0 +1,492 @@
+<!doctype html>
+<!--
+  Propuesta — Simple TV · Solo Habilidades, sin Detección (CAI-014)
+  Servicio: HABILIDADES (Modelo Intezia · empresa/tipos-de-documento.md §0). División:
+  Educación. Quinta variante de rollout organizacional de la cuenta Simple TV (junto a
+  DET-002/CAI-002 del piloto IA Champions, CAI-003, ALL-001 y CAI-013) — responde al "bando
+  pragmático": mismo alcance de CAI-003/CAI-013 (14 áreas, ~260 personas) pero SIN ningún
+  componente de Detección, ni integrada (CAI-003) ni como fase separada (CAI-013).
+  Sí lleva un Kick-off de Habilidades: sesión única, organizacional, más liviana que una
+  auditoría — presenta la ruta y alinea expectativas por área, sin diagnosticar procesos.
+  El contenido se adapta por área desde el día uno con ejemplos reales de la función de cada
+  departamento (dados por el usuario: Marketing → contenidos/grillas/redacción; Talento
+  Humano → perfiles/asistentes/evaluaciones; los 12 restantes los completó el sistema por
+  analogía — ver brief.md, sujetos a validación con el cliente) — instrucción explícita:
+  "no es genérico solo por no tener auditoría".
+  Sin argumento comparativo contra CAI-003/CAI-013 expuesto en el deck (mismo criterio que el
+  resto de la cuenta) — se presenta en términos propios y positivos.
+  Base: clon de simple-tv-cai003/ (mono-servicio, enlaza ../_base/styles.css + overrides.css
+  local con Beneficios v3, Cierre escalera, .s-coverage). El chip de área en .s-coverage se
+  extendió a 2 líneas (nombre + ejemplo) — ver overrides.css.
+  §4.11: Microsoft 365/Copilot y Claude ya están en uso real; no se afirma migración.
+  11 slides · precio estándar (Propuesta Económica, un solo servicio).
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Propuesta · Simple TV · Intezia</title>
+  <link rel="stylesheet" href="../_base/styles.css">
+  <link rel="stylesheet" href="overrides.css">
+</head>
+<body>
+
+  <main class="deck">
+
+    <!-- 1 · Portada -->
+    <section class="slide s-cover">
+      <span class="counter">01 / 11</span>
+      <div class="logo-big">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia">
+      </div>
+      <div class="body">
+        <p class="eyebrow">Propuesta formativa · Servicio de Habilidades</p>
+        <h1>
+          Habilidades ya.<br>
+          <span class="hl">Las 14 áreas, sin esperar.</span>
+        </h1>
+        <p class="lead">
+          Nivelamos a las 14 áreas de Simple TV en fundamentos de IA (ética, cultura, efectividad, productividad y gobernanza), con <strong>ejemplos reales de cada departamento</strong> desde la primera sesión.
+        </p>
+      </div>
+      <div class="id-line">
+        <span class="codigo">Código: CAI-014</span>
+        <span class="cliente">Simple TV</span>
+      </div>
+    </section>
+
+    <!-- 2 · Punto de dolor + Diagnóstico -->
+    <section class="slide s-pain">
+      <span class="counter">02 / 11</span>
+      <span class="quote-mark">&ldquo;</span>
+      <div class="body">
+        <h2>Cada área ya sabe en qué trabaja. Falta aplicar la IA a eso, ya.</h2>
+        <p class="context">
+          Simple TV construye su estrategia de IA desde cero, con un Comité de IA propio y un área técnica interna que ya levanta casos de uso. Hay una base común de <strong>ética, cultura y gobernanza</strong> que aplica a las 14 áreas sin excepción, y cada departamento ya tiene ejemplos claros de su propia función donde la IA puede empezar a aplicarse.
+        </p>
+        <p class="diag-title">Diagnóstico</p>
+        <ol>
+          <li>Simple TV tiene cerca de 260 personas en 14 áreas, cada una con procesos y madurez de IA distintos.</li>
+          <li>El piloto "IA Champions" (4 personas) ya validó el enfoque y abre la puerta al proyecto grande.</li>
+          <li>Siguen en proceso de segmentación de licenciamiento (Copilot premium vs. básico) por área.</li>
+          <li>Los fundamentos de ética, cultura, efectividad, productividad y gobernanza aplican a las 14 áreas sin excepción.</li>
+          <li>Cada área ya tiene ejemplos claros de dónde aplicar la IA en su función: falta llevarlos a una sesión de Habilidades.</li>
+        </ol>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">SIMPLE TV · CAI-014</span>
+      </div>
+    </section>
+
+    <!-- 3 · Objetivos estratégicos -->
+    <section class="slide s-goals">
+      <span class="counter">03 / 11</span>
+      <p class="eyebrow">02 · Objetivos</p>
+      <h2>A dónde llevamos<br>a las 14 áreas.</h2>
+      <div class="columns">
+        <div class="general">
+          <p class="label">Objetivo general</p>
+          <p>
+            Nivelar a las 14 áreas de Simple TV en fundamentos comunes de IA (ética, cultura, efectividad, productividad, gobernanza), con ejemplos reales de cada departamento desde la primera sesión.
+          </p>
+        </div>
+        <div class="specifics">
+          <p class="label">Objetivos específicos</p>
+          <ol>
+            <li>Presentar la ruta y alinear expectativas por área en un Kick-off de Habilidades, sin diagnóstico previo.</li>
+            <li>Nivelar a cada área en los 5 ejes comunes de fundamentos de IA.</li>
+            <li>Aplicar cada eje con ejemplos reales de la función de cada departamento.</li>
+            <li>Entregar una hoja de ruta de cómo escalar el rollout entre las 14 áreas.</li>
+          </ol>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">SIMPLE TV · CAI-014</span>
+      </div>
+    </section>
+
+    <!-- 4 · El camino (3 tarjetas: Kick-off, Fundamentos, Aplicación por área) -->
+    <section class="slide s-program">
+      <span class="counter">04 / 11</span>
+      <p class="eyebrow">03 · El camino</p>
+      <h2>De la orientación a la aplicación.</h2>
+      <p class="meta">Kick-off + bloque de Habilidades por área. Servicio único, sin Detección.</p>
+      <div class="modules">
+        <div class="module">
+          <span class="roman">I</span>
+          <h3>Kick-off de Habilidades</h3>
+          <p class="obj">Sesión organizacional que presenta la ruta y alinea expectativas por área, sin diagnosticar procesos.</p>
+          <ul class="topics">
+            <li>Ruta y expectativas</li>
+            <li>Vista previa por área</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">II</span>
+          <h3>Fundamentos Comunes</h3>
+          <p class="obj">Ética, cultura, efectividad, productividad y gobernanza de IA: base compartida entre las 14 áreas.</p>
+          <ul class="topics">
+            <li>Ética y gobernanza</li>
+            <li>Efectividad y productividad</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">III</span>
+          <h3>Aplicación por Área</h3>
+          <p class="obj">Cada eje aplicado con el ejemplo real de la función de ese departamento.</p>
+          <ul class="topics">
+            <li>Ejemplos reales del área</li>
+            <li>Documentación por equipo</li>
+          </ul>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">SIMPLE TV · CAI-014</span>
+      </div>
+    </section>
+
+    <!-- 5 · Cobertura organizacional (14 áreas + ejemplo de aplicación) -->
+    <section class="slide s-program s-coverage">
+      <span class="counter">05 / 11</span>
+      <p class="eyebrow">03 · El camino</p>
+      <h2>14 áreas, 14 aplicaciones reales.</h2>
+      <p class="meta">Cada área trabaja los mismos 5 ejes, con un ejemplo de su propia función.</p>
+      <div class="coverage-body">
+        <div class="coverage-stats">
+          <div class="stat-block">
+            <div class="stat-num">~260</div>
+            <p class="stat-cap">Personas en total</p>
+          </div>
+          <div class="stat-block">
+            <div class="stat-num">14</div>
+            <p class="stat-cap">Áreas de la organización</p>
+          </div>
+          <p class="stat-note">El piloto de 4 IA Champions ya validó el enfoque.</p>
+        </div>
+        <div class="coverage-grid">
+          <span class="coverage-chip"><span class="chip-area">Ingeniería</span><span class="chip-example">Documentación técnica y diagnóstico de fallas</span></span>
+          <span class="coverage-chip"><span class="chip-area">Nuevos Negocios y Planificación Financiera</span><span class="chip-example">Modelos financieros y proyecciones</span></span>
+          <span class="coverage-chip"><span class="chip-area">Legal</span><span class="chip-example">Revisión de contratos y cláusulas</span></span>
+          <span class="coverage-chip"><span class="chip-area">IT</span><span class="chip-example">Automatización de tickets y soporte</span></span>
+          <span class="coverage-chip"><span class="chip-area">Finanzas</span><span class="chip-example">Conciliaciones y reportes financieros</span></span>
+          <span class="coverage-chip"><span class="chip-area">Gerencia General</span><span class="chip-example">Síntesis ejecutiva y reportes</span></span>
+          <span class="coverage-chip"><span class="chip-area">Riesgo, Auditoría Interna, Cumplimiento y Seguridad</span><span class="chip-example">Matrices de riesgo y checklists de cumplimiento</span></span>
+          <span class="coverage-chip"><span class="chip-area">Marketing, Comunicaciones y Digital</span><span class="chip-example">Contenidos, grillas y redacción</span></span>
+          <span class="coverage-chip"><span class="chip-area">Comercial</span><span class="chip-example">Propuestas comerciales y seguimiento</span></span>
+          <span class="coverage-chip"><span class="chip-area">Media (Producción Deportiva)</span><span class="chip-example">Guiones de transmisión y coordinación</span></span>
+          <span class="coverage-chip"><span class="chip-area">CX</span><span class="chip-example">Respuestas y análisis de satisfacción</span></span>
+          <span class="coverage-chip"><span class="chip-area">Media (Programación, Contenido y Monetización)</span><span class="chip-example">Parrillas y análisis de audiencia</span></span>
+          <span class="coverage-chip"><span class="chip-area">Talento Humano</span><span class="chip-example">Perfiles, asistentes y evaluaciones</span></span>
+          <span class="coverage-chip"><span class="chip-area">PMO</span><span class="chip-example">Reportes de estado y seguimiento de proyectos</span></span>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">SIMPLE TV · CAI-014</span>
+      </div>
+    </section>
+
+    <!-- 6 · Cronograma tipo — Estructura de un bloque (se repite ×14) -->
+    <section class="slide s-schedule">
+      <span class="counter">06 / 11</span>
+      <p class="eyebrow">04 · Cronograma · Estructura del bloque</p>
+
+      <div class="ses-head">
+        <div>
+          <span class="ses-mod">Se repite en cada una de las 14 áreas</span>
+          <h2>Estructura de un bloque</h2>
+        </div>
+        <div class="ses-meta"><span class="ses-dur">8-12h</span></div>
+      </div>
+
+      <div class="ses-body">
+        <div class="ses-block">
+          <span class="label">Temas</span>
+          <div class="chips">
+            <span class="chip">Ética y cultura de IA</span>
+            <span class="chip">Efectividad y productividad</span>
+            <span class="chip">Gobernanza de IA</span>
+            <span class="chip">Ejemplos reales del área</span>
+          </div>
+        </div>
+        <div class="ses-block">
+          <span class="label">Tiempo · Estructura de referencia</span>
+          <div class="timebar">
+            <div class="seg" style="flex:25">Ética y cultura de IA</div>
+            <div class="seg" style="flex:25">Efectividad y productividad</div>
+            <div class="seg" style="flex:35">Aplicación al área (ejemplos reales)</div>
+            <div class="seg" style="flex:15">Cierre y gobernanza</div>
+          </div>
+        </div>
+        <div class="ses-cols">
+          <div class="ses-block">
+            <span class="label">Qué se hace</span>
+            <ul>
+              <li>Nivelamos a cada área en los 5 ejes comunes: ética, cultura, efectividad, productividad y gobernanza de IA</li>
+              <li>Aplicamos cada eje con el ejemplo real de esa área (Marketing trabaja contenidos y grillas, Talento Humano trabaja perfiles y evaluaciones)</li>
+              <li>Documentamos el contenido curado por equipo, área por área</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Qué se logra</span>
+            <ul>
+              <li>Las 14 áreas niveladas en los mismos 5 ejes, con un mismo punto de partida</li>
+              <li>Ejemplos aplicados a la función real de cada departamento, desde la primera sesión</li>
+              <li>Una capacidad instalada, área por área, lista para escalar</li>
+            </ul>
+          </div>
+          <div class="ses-block block-rec">
+            <span class="label">Recursos y entornos</span>
+            <ul>
+              <li>Kick-off de Habilidades como punto de partida común</li>
+              <li>Entorno Microsoft 365 y Claude que Simple TV ya opera</li>
+              <li>Contenido curado por área, con cada líder</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">SIMPLE TV · CAI-014</span>
+      </div>
+    </section>
+
+    <!-- 7 · Beneficios (formato v3: Resultados · Por qué Habilidades · Entregables · Valor inmediato) -->
+    <section class="slide s-benefits s-benefits-v2">
+      <span class="counter">07 / 11</span>
+      <p class="eyebrow">05 · Beneficios</p>
+      <h2>Lo que <span class="hl">se llevan</span>.</h2>
+      <div class="grid">
+        <div class="block">
+          <p class="label">Resultados</p>
+          <ul>
+            <li><strong>14 áreas</strong> niveladas en los mismos 5 ejes de fundamentos de IA.</li>
+            <li>Ejemplos reales aplicados a la función de cada departamento, desde la primera sesión.</li>
+            <li>Una hoja de ruta para escalar el rollout a toda la organización.</li>
+          </ul>
+        </div>
+        <div class="block">
+          <p class="label">Por qué Habilidades</p>
+          <p>
+            El equipo empieza a aplicar los fundamentos de IA <strong>de inmediato</strong>: cada área ve ejemplos de su propio trabajo desde la primera sesión, sin esperar los resultados de una auditoría previa.
+          </p>
+        </div>
+        <div class="block">
+          <p class="label">Entregables</p>
+        </div>
+        <div class="block">
+          <p class="label">Valor inmediato</p>
+        </div>
+      </div>
+
+      <!-- Cajas multiline editables (vacías en HTML — el contenido vive dentro del AcroForm /V). -->
+      <div class="multi-box entregables-box" data-field="Entregables"></div>
+      <div class="multi-box acreditaciones-box" data-field="Acreditacion"></div>
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">SIMPLE TV · CAI-014</span>
+      </div>
+    </section>
+
+    <!-- 8 · Impacto / estudios — datos de estudios reales, fuente citada (CLAUDE.md §4.9) -->
+    <section class="slide s-impact">
+      <span class="counter">08 / 11</span>
+
+      <div class="impact-head">
+        <p class="eyebrow">06 · Impacto</p>
+        <h2>Multiplicado por 14 áreas,<br><span class="hl">la evidencia pesa más</span>.</h2>
+      </div>
+
+      <div class="impact-body">
+        <div class="chart-panel">
+          <p class="panel-title">Más velocidad y menos tiempo con un asistente de IA</p>
+          <div class="bars">
+            <div class="bar-row">
+              <span class="bar-label">Búsqueda, redacción y resumen · más velocidad con Copilot</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:29%"><span class="bar-val">+29%</span></div></div>
+            </div>
+            <div class="bar-row">
+              <span class="bar-label">Redacción y textos · reducción de tiempo con un asistente de IA</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:40%"><span class="bar-val">&minus;40%</span></div></div>
+            </div>
+          </div>
+          <div class="bar-axis"><span class="scale"><span>0</span><span>25</span><span>50</span><span>75</span><span>100%</span></span></div>
+          <p class="panel-source">Fuentes: Microsoft &mdash; Work Trend Index 2024, &ldquo;What Can Copilot's Earliest Users Teach Us About Generative AI at Work&rdquo; &middot; MIT &mdash; Noy y Zhang, Science 2023 &middot; Anthropic &mdash; investigación sobre uso de Claude Code (oct. 2025&ndash;abr. 2026).</p>
+        </div>
+
+        <div class="gauge-panel">
+          <div class="gauge" style="--pct:77">
+            <div class="gauge-core">
+              <span class="gauge-num">77<span class="pct">%</span></span>
+              <span class="gauge-cap">de los usuarios de Copilot reportó un aumento medible de productividad</span>
+            </div>
+          </div>
+          <div class="chips">
+            <div class="chip">
+              <span class="chip-num">16&ndash;23%</span>
+              <span class="chip-lbl">de los repositorios públicos ya muestra actividad de codificación agéntica</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="impact-hook">
+        <span class="hook-mark">&#9656;</span>
+        <p class="hook-text">
+          Los primeros usuarios de Copilot reportaron un <strong>aumento medible de productividad</strong> (77%) y fueron 29% más rápidos en búsqueda, redacción y resumen (Microsoft, 2024). Un asistente de IA reduce además cerca del 40% el tiempo de redacción profesional (MIT, 2023). Multiplicado por 14 áreas, la diferencia no es la herramienta: es un método común, aplicado con ejemplos reales desde el primer bloque.
+        </p>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">SIMPLE TV · CAI-014</span>
+      </div>
+    </section>
+
+    <!-- 9 · Propuesta Económica (estándar: Duración + Programa + Notas + Cotización) -->
+    <section class="slide s-price">
+      <span class="counter">09 / 11</span>
+      <h2 class="title">Propuesta Económica</h2>
+
+      <div class="block">
+        <span class="block-eyebrow">Duración</span>
+        <p class="block-value">14 áreas · Kick-off de Habilidades + bloque de 8 a 12h por área.</p>
+      </div>
+
+      <div class="block block-programa">
+        <span class="block-eyebrow">Programa</span>
+      </div>
+      <div class="multi-box programa-box" data-field="Programa"></div>
+
+      <div class="block block-cotizacion">
+        <span class="block-eyebrow">Cotización</span>
+      </div>
+
+      <span class="cot-label cot-label-base">Propuesta + Inversión</span>
+      <div class="cot-frame base-frame"></div>
+
+      <span class="cot-label cot-label-discount">Descuento</span>
+      <div class="cot-frame discount-frame"></div>
+
+      <span class="cot-label cot-label-total">TOTAL</span>
+      <div class="cot-frame total-frame"></div>
+
+      <p class="cot-validity">Cotización válida por 30 días.</p>
+      <div class="cot-terms-box">
+        <span class="cot-terms-label">Importante</span>
+        <p class="cot-terms-text">Este servicio se presta bajo nuestros <a href="https://drive.google.com/file/d/1PA-ZSt4KnyY5dpxXzgkIk6-yfGlV2eF8/view?usp=drive_link" target="_blank" rel="noopener">términos y condiciones</a>. Al avanzar con esta propuesta, ambas partes los aceptan.</p>
+      </div>
+
+      <div class="block block-notes-container">
+        <span class="block-eyebrow">Notas</span>
+      </div>
+      <div class="multi-box notas-box" data-field="Notas"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">SIMPLE TV · CAI-014</span>
+      </div>
+    </section>
+
+    <!-- 10 · Próximos pasos -->
+    <section class="slide s-steps">
+      <span class="counter">10 / 11</span>
+      <p class="eyebrow">07 · Próximos pasos</p>
+      <h2>Cómo arrancamos.</h2>
+      <div class="step-cards">
+        <div class="step-card">
+          <span class="ghost">01</span>
+        </div>
+        <div class="step-card">
+          <span class="ghost">02</span>
+        </div>
+        <div class="step-card">
+          <span class="ghost">03</span>
+        </div>
+      </div>
+
+      <!-- Editable AcroForm placeholders (3 pasos × título + body) -->
+      <div class="acro-area acro-title acro-paso-01-titulo" data-field="Paso01Titulo">
+        <span class="acro-default-text">Confirmamos alcance</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-01-body" data-field="Paso01Body">
+        <span class="acro-default-text">Definimos con Simple TV qué áreas arrancan primero y el orden del rollout.</span>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-02-titulo" data-field="Paso02Titulo">
+        <span class="acro-default-text">Acceso y logística</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-02-body" data-field="Paso02Body">
+        <span class="acro-default-text">Coordinamos accesos a Microsoft 365 y Claude, calendario y líderes de cada área.</span>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-03-titulo" data-field="Paso03Titulo">
+        <span class="acro-default-text">Kick-off</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-03-body" data-field="Paso03Body">
+        <span class="acro-default-text">Sesión de arranque orientada a Habilidades: presentamos la ruta y alineamos expectativas por área.</span>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">SIMPLE TV · CAI-014</span>
+      </div>
+    </section>
+
+    <!-- 11 · Cierre (ruta/escalera editable) -->
+    <section class="slide s-end">
+      <span class="counter">11 / 11</span>
+
+      <div class="end-logo">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia">
+      </div>
+
+      <!-- Resultado (cinta superior) — caja editable, ventas la redacta por cliente -->
+      <div class="end-summit" data-field="CierreResultado">
+        <span class="acro-default-text">Las 14 áreas de Simple TV, aplicando IA a su función real desde la primera sesión.</span>
+      </div>
+
+      <!-- Escalera de 3 pasos — cada uno con su caja editable -->
+      <div class="end-stairs">
+        <div class="stair-step stair-1">
+          <span class="stair-label">Paso 1</span>
+          <div class="stair-field" data-field="CierrePaso1">
+            <span class="acro-default-text">Kick-off sin diagnóstico</span>
+          </div>
+        </div>
+        <div class="stair-step stair-2">
+          <span class="stair-label">Paso 2</span>
+          <div class="stair-field" data-field="CierrePaso2">
+            <span class="acro-default-text">Fundamentos y ejemplos por área</span>
+          </div>
+        </div>
+        <div class="stair-step stair-3">
+          <span class="stair-label">Paso 3</span>
+          <div class="stair-field" data-field="CierrePaso3">
+            <span class="acro-default-text">Rollout completo a las 14 áreas</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cta-wrap">
+        <span class="cta">Esperamos tu respuesta</span>
+      </div>
+
+      <div class="end-contact">
+        <p class="contact-line">
+          <span class="contact-label">Asesora de ventas:</span>
+          María Iribarren <span class="dot">·</span> +58 414 0570056 <span class="dot">·</span> miribarren@intezia.com
+        </p>
+        <p class="contact-line">
+          <span class="contact-label">Empresa:</span>
+          Intezia C.A J-505657950 <span class="dot">·</span> servicio@intezia.com
+        </p>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

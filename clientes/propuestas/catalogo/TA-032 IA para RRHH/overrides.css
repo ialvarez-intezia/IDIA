@@ -1,0 +1,131 @@
+/* ===========================================================================
+   TA-032 · IA para RRHH · overrides locales
+   Base compartido: ../../_base/styles.css (no se copia, solo se referencia)
+   =========================================================================== */
+
+/* ---------------------------------------------------------------------------
+   Co-marca GerenSer Venezuela (aliado tutor) — empresa/marca-visual.md regla 6:
+   "si la propuesta lleva logo de cliente o universidad aliada, va junto al de
+   Intezia separado por línea diagonal o vertical, mismo peso visual."
+   --------------------------------------------------------------------------- */
+
+/* Portada — logo grande + divisor + logo aliado */
+.s-cover .logo-big-dual {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+.s-cover .logo-big-dual .logo-divider {
+  width: 2px;
+  height: 84px;
+  background: rgba(255, 255, 255, 0.35);
+}
+.s-cover .logo-big-dual .ally-logo {
+  height: 128px;
+  width: auto;
+  display: block;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+/* Cierre — mismo patrón, centrado */
+.s-end .end-logo-dual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+}
+.s-end .end-logo-dual .logo-divider {
+  width: 2px;
+  height: 90px;
+  background: rgba(255, 255, 255, 0.35);
+}
+.s-end .end-logo-dual .ally-logo {
+  height: 128px;
+  width: auto;
+  display: block;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+/* Pies de slide — logo Intezia + divisor + logo GerenSer, mismo peso visual
+   (28px, igual altura que el logo Intezia ya fijado en el base por `.foot img`) */
+.foot-logos {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.foot-logos .foot-divider,
+.foot-logos .foot-divider-light {
+  width: 1px;
+  height: 20px;
+  background: currentColor;
+  opacity: 0.35;
+}
+.foot-logos .ally-logo-foot {
+  border-radius: 3px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+/* ---------------------------------------------------------------------------
+   Programa · 5 módulos exactos (2026-08-18, ruta ampliada a 5 semanas/10h):
+   _base/styles.css solo define min-height para el rango 5-6 módulos, sin
+   reducir tipografía — con h3/obj/topics a tamaño grande, las 5 cards
+   desbordan (verificar-overflow.js: +92 a +171px). Mismo fix ya probado en
+   catalogo/TA-014 (5 módulos): grid de 6 columnas, cada card ocupa 2 cols,
+   fila 2 con las cards 4 y 5 centradas (sin celda vacía visible) + tipografía
+   proporcional para que quepan sin recortes.
+   --------------------------------------------------------------------------- */
+.s-program .modules:has(> .module:nth-child(5)):not(:has(> .module:nth-child(6))) {
+  grid-template-columns: repeat(6, 1fr);
+  gap: 14px;
+}
+.s-program .modules:has(> .module:nth-child(5)):not(:has(> .module:nth-child(6))) > .module {
+  grid-column: span 2;
+  min-height: 240px;
+  padding: 50px 14px 14px;
+}
+.s-program .modules:has(> .module:nth-child(5)):not(:has(> .module:nth-child(6))) > .module .roman {
+  font-size: 32px;
+  top: 6px;
+}
+.s-program .modules:has(> .module:nth-child(5)):not(:has(> .module:nth-child(6))) > .module h3 {
+  font-size: 14px;
+  line-height: 1.18;
+  margin-bottom: 6px;
+}
+.s-program .modules:has(> .module:nth-child(5)):not(:has(> .module:nth-child(6))) > .module .obj {
+  font-size: 11px;
+  line-height: 1.36;
+  margin-bottom: 9px;
+}
+.s-program .modules:has(> .module:nth-child(5)):not(:has(> .module:nth-child(6))) > .module .topics {
+  gap: 4px;
+}
+.s-program .modules:has(> .module:nth-child(5)):not(:has(> .module:nth-child(6))) > .module .topics li {
+  font-size: 9.5px;
+  padding: 2px 6px;
+  letter-spacing: 0.02em;
+}
+.s-program .modules:has(> .module:nth-child(5)):not(:has(> .module:nth-child(6))) > .module:nth-child(4) {
+  grid-column: 2 / span 2;
+}
+.s-program .modules:has(> .module:nth-child(5)):not(:has(> .module:nth-child(6))) > .module:nth-child(5) {
+  grid-column: 4 / span 2;
+}
+
+/* ---------------------------------------------------------------------------
+   Equipo facilitador genérico (sin foto), producto de catálogo sin nombre
+   propio. Mismo patrón que catalogo/TA-001. Activar con .team-single.
+   --------------------------------------------------------------------------- */
+.s-benefits .team-single .members {
+  grid-template-columns: 1fr;
+  gap: 0;
+}
+.s-benefits .team-single .person {
+  display: block;
+  align-items: stretch;
+  gap: 0;
+}
+.s-benefits .team-single .person h4 { font-size: 15px; }
+.s-benefits .team-single .person p { max-width: 720px; }

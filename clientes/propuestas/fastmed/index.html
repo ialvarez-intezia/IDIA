@@ -1,0 +1,1070 @@
+<!doctype html>
+<!--
+  Propuesta — FastMed · Agente conversacional para atención al paciente (CAI-030)
+  Servicio: HABILIDADES. División: Educación. Con Ficha Comercial (Levantamiento
+  2026-09-25, asesora Verónica Rubio).
+
+  QUÉ ES: capacitación in-company mono-área para el equipo de Tecnología/Sistemas de FastMed
+  (8 personas), que construye EN CONJUNTO con Intezia (transferencia de capacidad, no
+  dependencia) un agente conversacional omnicanal vía WhatsApp para atención al paciente, con
+  2 flujos: (1) gestión de citas/orientación de casos, (2) entrega segura de resultados de
+  laboratorio e informes dentro del plazo legal de 24-48h. Punto crítico: doble autenticación
+  y controles de seguridad sobre data médica (FastMed sufrió 2 hackeos este año).
+
+  CLASIFICACIÓN DE SERVICIO: la Ficha confirma "Servicios de interés: Habilidades" y llena el
+  "Bloque específico · Habilidades" completo (qué debe poder hacer el equipo al terminar,
+  tareas reales de sesión) — a diferencia de Luis Sosa CAI-029 o venemergencia-agente-
+  personal/ CAI-028, este SÍ es un currículo real de Habilidades con certificado y adopción
+  medible a 30-60-90, no un proyecto de "Desarrollo"/software puro. NO es un Cerebro Digital
+  individual: es UN agente de producción compartido, construido por un equipo de 8 personas.
+
+  HORAS: 12h (6 sesiones de 2h) para el área de Tecnología/Sistemas, dentro del rango de 8-12h
+  documentado en empresa/politicas-comerciales.md → Dimensionamiento por servicio → Habilidades
+  (8-12h/área, hasta 5 procesos; FastMed tiene 2: gestión de citas + entrega de resultados, muy
+  por debajo del tope de 5 que activaría horas extra). Se usó el techo del rango (12h) por la
+  profundidad técnica exigida (doble autenticación + conexión a sistemas reales + cumplimiento
+  legal), no por número de procesos.
+
+  BASE ESTRUCTURAL: clonado de luis-sosa-cerebro-digital/ (CAI-029) por ser el precedente más
+  reciente y ya verificado visualmente de un deck Habilidades mono-fase de 6 sesiones (patrón
+  sin roadmap, .ruta de progreso lineal, estándares vigentes desde 2026-09-23 completos:
+  descuento urgente, ROI, garantía 30-60-90 + .s-followup, Beneficios v3, Cierre escalera).
+  Todo el contenido de cada slide se reescribió desde cero para FastMed — la slide bespoke
+  "Su Cerebro Digital" (antes memoria de Claude Code) se relabeleó a "Cómo funciona el
+  agente" (arquitectura: WhatsApp + doble autenticación + 2 flujos + sistemas conectados),
+  reusando el mismo componente SVG de grafo sin cambios de CSS.
+
+  PERSONALIZACIÓN: la cita de la slide 2 SÍ es una cita real (Bloque D de la Ficha, "cita
+  textual"), parafraseada levemente para evitar comillas anidadas — no es una cita inventada
+  (§ regla titulo-portada-valor-no-mecanica.md). Slide de Impacto con 2 fuentes reales nuevas,
+  verificadas por WebSearch 2026-09-27: MGMA Stat (encuesta abril 2025, percepción médica
+  sobre chatbots) e IBM Cost of a Data Breach Report 2025 (costo de filtración en salud,
+  $7.42M, 15º año consecutivo como sector más caro) — eje temático exacto de este cliente
+  (chatbot de atención + seguridad de data médica), no las cifras genéricas de adopción de IA
+  reusadas en otros decks.
+
+  SIN calendario de inicio: la Ficha da una fecha de REUNIÓN DE SEGUIMIENTO para revisar esta
+  propuesta (28 o 30 de septiembre), no una fecha de arranque del servicio — se omite
+  cualquier calendario en el deck para no confundir ambas cosas (regla "Omitir, no inventar").
+
+  Sin slide de Mapa de Calor ni Metodología ABR ni Equipo facilitador expuestos (§4.10a). Con
+  certificado (Habilidades con capacitación real). Beneficios v3, Cierre escalera,
+  servicio@intezia.com. Sin afirmar migración de Google Workspace (§4.11).
+
+  ACTUALIZACIÓN 2026-09-30 — Fase 2 · Innovación (3 meses) agregada. Combo Habilidades +
+  Innovación cotizado en UNA sola hoja "Inversión por fases" (2 fases + total auto-sumado,
+  FASE_PRICE_FIELDS de agregar-campo-precio.py — requiere customize-fastmed.py para eliminar
+  el slot huérfano PrecioFase3 y recalcular el subtotal a 2 fases, ver scripts/customize-
+  fastmed.py). `servicio` en meta.json se mantiene "habilidades" (servicio de entrada,
+  CLAUDE.md §4.1a — combo parcial de 2 servicios no usa "integral", ese valor es solo para
+  los 4 servicios como una sola hoja de ruta). ALCANCE DE INNOVACIÓN, confirmado por el
+  usuario: exclusivamente mantenimiento/evolución del MISMO agente ya construido (ajustar o
+  actualizar un nodo existente) — no incluye la oportunidad de conciliación bancaria del
+  Bloque F de la Ficha (sigue fuera de alcance). Deck reestructurado de mono-fase a 2 fases:
+  se insertó un roadmap nuevo (slide 6, `.rmx-linear` ciclo mensual Kick-off→Ejecución→
+  Medición→se repite, componente ya presente sin uso en overrides.css desde el clon de
+  banco-plaza-mercadeo/) y se sumó un bullet de Innovación en Objetivos y en Beneficios
+  (Resultados + "Por qué Habilidades"). 18 slides (antes 17).
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Propuesta · Agente para Atención al Paciente · FastMed · Intezia</title>
+  <link rel="stylesheet" href="../_base/styles.css">
+  <link rel="stylesheet" href="overrides.css">
+</head>
+<body>
+
+  <main class="deck">
+
+    <!-- 1 · Portada -->
+    <section class="slide s-cover">
+      <span class="counter">01 / 18</span>
+      <div class="logo-big">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia">
+      </div>
+      <div class="body">
+        <p class="eyebrow">Propuesta formativa · Servicio de Habilidades e Innovación</p>
+        <h1>
+          De tickets vía Meta,<br>
+          <span class="hl">a un agente propio y seguro.</span>
+        </h1>
+        <p class="lead">
+          Su equipo de Tecnología construye, en conjunto con Intezia, un agente conversacional propio para atención al paciente sobre <strong>WhatsApp</strong>: gestiona citas y entrega resultados de laboratorio dentro del plazo legal de 24 a 48 horas, con <strong>doble autenticación</strong> para proteger la data médica. Con Innovación, ese mismo agente se mantiene al día durante 3 meses más.
+        </p>
+      </div>
+      <div class="id-line">
+        <span class="codigo">Código: CAI-030</span>
+        <span class="cliente">FastMed</span>
+      </div>
+    </section>
+
+    <!-- 2 · Punto de dolor + Diagnóstico -->
+    <section class="slide s-pain">
+      <span class="counter">02 / 18</span>
+      <span class="quote-mark">&ldquo;</span>
+      <div class="body">
+        <h2>&ldquo;Necesito un agente que busque en el repositorio y entregue la información de forma segura.&rdquo;</h2>
+        <p class="context">
+          FastMed ya lleva dos años usando IA en sus procesos internos y capacitó a toda su gerencia en 2025. Este programa da el siguiente paso: que su equipo de Tecnología construya y sostenga, con acompañamiento de Intezia, un <strong>agente conversacional</strong> propio para atención al paciente.
+        </p>
+        <p class="diag-title">Diagnóstico</p>
+        <ol>
+          <li>La entrega de resultados se gestiona hoy vía tickets integrados a WhatsApp, con un costo alto por iteración.</li>
+          <li>El plazo legal de 24 a 48 horas exige un proceso confiable, no dependiente de mensajería manual.</li>
+          <li>No existe control de identidad más allá de la cédula: falta doble autenticación antes de entregar información médica.</li>
+          <li>Dos hackeos este año ya afectaron la base de datos, con pérdidas económicas asociadas.</li>
+          <li>El equipo puede construirlo, pero aún no se ha profundizado en agentes conectados a sus sistemas.</li>
+        </ol>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">FASTMED · CAI-030</span>
+      </div>
+    </section>
+
+    <!-- 3 · Objetivos estratégicos -->
+    <section class="slide s-goals">
+      <span class="counter">03 / 18</span>
+      <p class="eyebrow">02 · Objetivos</p>
+      <h2>A dónde llevamos<br>a su equipo de Tecnología.</h2>
+      <div class="columns">
+        <div class="general">
+          <p class="label">Objetivo general</p>
+          <p>
+            Desarrollar en el equipo de Tecnología de FastMed la competencia de construir y sostener, sin depender de Intezia, un agente conversacional propio para atención al paciente sobre WhatsApp, que gestione citas y entregue resultados de laboratorio dentro del plazo legal de 24 a 48 horas, con doble autenticación y seguridad sobre la data médica.
+          </p>
+        </div>
+        <div class="specifics">
+          <p class="label">Objetivos específicos</p>
+          <ol>
+            <li>Diseñar la arquitectura del agente conversacional y su conexión a los sistemas existentes.</li>
+            <li>Construir el flujo de gestión de citas y el flujo de entrega segura de resultados.</li>
+            <li>Implementar doble autenticación y controles de seguridad sobre la data médica.</li>
+            <li>Poner el agente en producción y sostenerlo 3 meses con Innovación, sin abrir nuevos frentes.</li>
+          </ol>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">FASTMED · CAI-030</span>
+      </div>
+    </section>
+
+    <!-- 4 · Programa -->
+    <section class="slide s-program">
+      <span class="counter">04 / 18</span>
+      <p class="eyebrow">03 · Programa</p>
+      <h2>3 módulos · 12 horas · Un agente propio.</h2>
+      <p class="meta">El equipo de Tecnología construye, en conjunto con Intezia, un agente conversacional para atención al paciente.</p>
+      <div class="modules">
+        <div class="module">
+          <span class="roman">I</span>
+          <h3>Diseño del agente</h3>
+          <p class="obj">Comprenda la <strong>arquitectura</strong> de un agente conversacional y diseñe sus dos flujos críticos.</p>
+          <ul class="topics">
+            <li>1.1 Agente por WhatsApp</li>
+            <li>1.2 Arquitectura del agente</li>
+            <li>1.3 Conexión a sus sistemas</li>
+            <li>1.4 Diseña flujo de citas</li>
+            <li>1.5 Diseña flujo resultados</li>
+            <li>1.6 Seguridad desde diseño</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">II</span>
+          <h3>Construcción del agente</h3>
+          <p class="obj">Construya ambos flujos y la <strong>doble autenticación</strong> que protege la data médica.</p>
+          <ul class="topics">
+            <li>2.1 Construye flujo de citas</li>
+            <li>2.2 Flujo de resultados</li>
+            <li>2.3 Doble autenticación</li>
+            <li>2.4 Datos médicos seguros</li>
+            <li>2.5 Conecta sus repositorios</li>
+            <li>2.6 Primera prueba integrada</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">III</span>
+          <h3>Producción y sostenibilidad</h3>
+          <p class="obj">Ponga el agente en <strong>producción</strong> y deje su propio criterio para sostenerlo y escalarlo.</p>
+          <ul class="topics">
+            <li>3.1 Cumple el plazo legal</li>
+            <li>3.2 Pruebas de seguridad</li>
+            <li>3.3 Puesta en producción</li>
+            <li>3.4 Monitoreo del agente</li>
+            <li>3.5 Criterio de escalamiento</li>
+            <li>3.6 Sostener el agente</li>
+          </ul>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">FASTMED · CAI-030</span>
+      </div>
+    </section>
+
+    <!-- 5 · Cómo funciona el agente (slide a la medida · overrides.css, mismo componente de grafo relabeleado) -->
+    <section class="slide s-graph">
+      <span class="counter">05 / 18</span>
+      <div class="graph-text">
+        <p class="eyebrow">04 · Cómo funciona</p>
+        <h2>Un agente,<br><span class="hl">dos flujos seguros</span>.</h2>
+        <p class="graph-lead">
+          El agente conversa por <strong>WhatsApp</strong>, pero nunca entrega información médica sin verificar identidad primero. Cada flujo pasa por <strong>doble autenticación</strong> antes de tocar datos sensibles del paciente.
+        </p>
+        <ul class="graph-points">
+          <li>La doble autenticación verifica al paciente antes de cualquier gestión de cita o entrega de resultado.</li>
+          <li>El flujo de citas orienta y gestiona el caso; el flujo de resultados entrega informes dentro del plazo legal de 24 a 48 horas.</li>
+          <li>Todo corre conectado a los repositorios y al sistema de citas que FastMed ya usa, sin sumar una app nueva.</li>
+        </ul>
+      </div>
+
+      <div class="graph-stage">
+        <svg class="graph-edges" viewBox="0 0 520 540" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+          <line x1="260" y1="270" x2="260" y2="60" class="edge-main"></line>
+          <line x1="260" y1="270" x2="452" y2="162" class="edge-main"></line>
+          <line x1="260" y1="270" x2="452" y2="378" class="edge-main"></line>
+          <line x1="260" y1="270" x2="260" y2="480" class="edge-main"></line>
+          <line x1="260" y1="270" x2="68" y2="378" class="edge-main"></line>
+          <line x1="260" y1="270" x2="68" y2="162" class="edge-main"></line>
+          <line x1="260" y1="60" x2="190" y2="26" class="edge-leaf"></line>
+          <line x1="260" y1="60" x2="336" y2="24" class="edge-leaf"></line>
+          <line x1="452" y1="162" x2="506" y2="108" class="edge-leaf"></line>
+          <line x1="452" y1="162" x2="508" y2="214" class="edge-leaf"></line>
+          <line x1="452" y1="378" x2="508" y2="328" class="edge-leaf"></line>
+          <line x1="452" y1="378" x2="504" y2="434" class="edge-leaf"></line>
+          <line x1="260" y1="480" x2="190" y2="514" class="edge-leaf"></line>
+          <line x1="260" y1="480" x2="334" y2="512" class="edge-leaf"></line>
+          <line x1="68" y1="378" x2="14" y2="430" class="edge-leaf"></line>
+          <line x1="68" y1="162" x2="14" y2="110" class="edge-leaf"></line>
+        </svg>
+
+        <span class="gnode gnode-core" style="left:260px;top:270px">Agente<br>WhatsApp</span>
+        <span class="gnode gnode-cat" style="left:260px;top:60px">Doble autenticación</span>
+        <span class="gnode gnode-cat" style="left:452px;top:162px">Gestión de citas</span>
+        <span class="gnode gnode-cat" style="left:452px;top:378px">Entrega de resultados</span>
+        <span class="gnode gnode-cat" style="left:260px;top:480px">Repositorios</span>
+        <span class="gnode gnode-cat" style="left:68px;top:378px">Sistema de citas</span>
+        <span class="gnode gnode-cat" style="left:68px;top:162px">Seguridad y datos</span>
+
+        <span class="gleaf" style="left:190px;top:26px"></span>
+        <span class="gleaf" style="left:336px;top:24px"></span>
+        <span class="gleaf" style="left:506px;top:108px"></span>
+        <span class="gleaf" style="left:508px;top:214px"></span>
+        <span class="gleaf" style="left:508px;top:328px"></span>
+        <span class="gleaf" style="left:504px;top:434px"></span>
+        <span class="gleaf" style="left:190px;top:514px"></span>
+        <span class="gleaf" style="left:334px;top:512px"></span>
+        <span class="gleaf" style="left:14px;top:430px"></span>
+        <span class="gleaf" style="left:14px;top:110px"></span>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">FASTMED · CAI-030</span>
+      </div>
+    </section>
+
+    <!-- 6 · Roadmap: Fase 1 (Habilidades, agente en producción) + Fase 2 (Innovación, ciclo mensual de 3 meses) -->
+    <section class="slide s-roadmap">
+      <span class="counter">06 / 18</span>
+      <p class="eyebrow">05 · Roadmap</p>
+      <h2>De construir el agente,<br><span class="hl">a mantenerlo siempre al día</span>.</h2>
+
+      <div class="rmx-field">
+        <div class="rmx-linear">
+
+          <div class="rmx-lrow-nodes">
+            <div class="rmx-lcol"><div class="rmx-node rmx-node-f2">1</div></div>
+            <div class="rmx-arrow"></div>
+            <div class="rmx-lcol"><div class="rmx-node rmx-node-f4">2</div></div>
+            <div class="rmx-arrow"></div>
+            <div class="rmx-lcol"><div class="rmx-node rmx-node-f3">3</div></div>
+            <div class="rmx-arrow"></div>
+            <div class="rmx-lcol"><div class="rmx-node rmx-node-r">&#8635;</div></div>
+          </div>
+
+          <div class="rmx-lrow-cards">
+            <div class="rmx-lcol">
+              <div class="rmx-card rmx-card-f2">
+                <span class="rmx-card-tag">Etapa 1 · Kick-off mensual</span>
+                <div class="rmx-card-name">Qué nodo se ajusta</div>
+                <ul class="rmx-facets">
+                  <li><span>Qué pasa</span><p>Se revisa qué parte del agente necesita un ajuste ese mes.</p></li>
+                  <li><span>Con quién</span><p>Equipo de Tecnología y consultor Intezia.</p></li>
+                  <li><span>Entrega</span><p>Alcance del mes confirmado, con el nodo priorizado.</p></li>
+                </ul>
+              </div>
+            </div>
+            <div class="rmx-lspacer"></div>
+            <div class="rmx-lcol">
+              <div class="rmx-card rmx-card-f4">
+                <span class="rmx-card-tag">Etapa 2 · Ejecución</span>
+                <div class="rmx-card-name">Se actualiza el agente</div>
+                <ul class="rmx-facets">
+                  <li><span>Qué pasa</span><p>Se implementa el ajuste sobre el agente ya en producción.</p></li>
+                  <li><span>Con quién</span><p>Equipo de Tecnología, acompañado por Intezia.</p></li>
+                  <li><span>Entrega</span><p>Ajuste probado sobre el agente real.</p></li>
+                </ul>
+              </div>
+            </div>
+            <div class="rmx-lspacer"></div>
+            <div class="rmx-lcol">
+              <div class="rmx-card rmx-card-f3">
+                <span class="rmx-card-tag">Etapa 3 · Medición</span>
+                <div class="rmx-card-name">Se valida sin romper nada</div>
+                <ul class="rmx-facets">
+                  <li><span>Qué pasa</span><p>Se verifica que el ajuste no rompa lo ya construido.</p></li>
+                  <li><span>Con quién</span><p>Equipo de Tecnología de FastMed.</p></li>
+                  <li><span>Entrega</span><p>Reporte del ajuste y agenda del próximo mes.</p></li>
+                </ul>
+              </div>
+            </div>
+            <div class="rmx-lspacer"></div>
+            <div class="rmx-lcol">
+              <div class="rmx-result-card">
+                <span class="rmx-result-label">Ciclo mensual · se repite 3 meses</span>
+                <div class="rmx-result-title">El mismo agente, <b>siempre al día</b></div>
+                <ul>
+                  <li>Sin abrir nuevos frentes: se ajusta lo ya construido</li>
+                  <li>Cada mes prioriza el nodo con mayor necesidad real</li>
+                  <li>El agente no queda desactualizado tras el cierre</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /.rmx-linear -->
+
+        <div class="rmx-ethics">
+          <span class="rmx-ethics-tag">Alcance · Ajustar, mejorar, innovar</span>
+          <p>Ajustamos nodos, mejoramos o innovamos el mismo agente ya construido, con <strong>2 sesiones al mes (4h en total)</strong>.</p>
+        </div>
+
+      </div><!-- /.rmx-field -->
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">FASTMED · CAI-030</span>
+      </div>
+    </section>
+
+    <!-- 7 · Desglose instructivo — Sesión 1 -->
+    <section class="slide s-schedule">
+      <span class="counter">07 / 18</span>
+      <p class="eyebrow">06 · Cronograma · Ruta de aprendizaje</p>
+
+      <div class="ruta">
+        <div class="ruta-node">1</div>
+        <div class="ruta-track"><div class="ruta-fill" style="width:16.66%"></div></div>
+        <span class="ruta-step">Sesión 1 de 6</span>
+      </div>
+
+      <div class="ses-head">
+        <div>
+          <span class="ses-mod">Módulo I · Sesión en vivo</span>
+          <h2>Módulo I: El agente y su arquitectura</h2>
+        </div>
+        <div class="ses-meta"><span class="ses-dur">2 h</span></div>
+      </div>
+
+      <div class="ses-body">
+        <div class="ses-block">
+          <span class="label">Temas</span>
+          <div class="chips">
+            <span class="chip">1.1 Agente conversacional por WhatsApp</span>
+            <span class="chip">1.2 Arquitectura del agente</span>
+            <span class="chip">1.3 Conexión a sus sistemas</span>
+          </div>
+        </div>
+        <div class="ses-block">
+          <span class="label">Tiempo · Total 2 h</span>
+          <div class="timebar">
+            <div class="seg" style="flex:30">30' Conceptos clave</div>
+            <div class="seg" style="flex:30">30' Demostración guiada</div>
+            <div class="seg" style="flex:45">45' Práctica guiada</div>
+            <div class="seg" style="flex:15">15' Cierre y dudas</div>
+          </div>
+        </div>
+        <div class="ses-cols">
+          <div class="ses-block">
+            <span class="label">Estrategias de enseñanza</span>
+            <ul>
+              <li>Demostración guiada en vivo</li>
+              <li>Análisis de la arquitectura del agente</li>
+              <li>Preguntas socráticas</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Estrategias de aprendizaje</span>
+            <ul>
+              <li>Primeros conceptos de agentes conversacionales</li>
+              <li>Bitácora de aprendizaje</li>
+              <li>Mapea sus sistemas actuales</li>
+            </ul>
+          </div>
+          <div class="ses-block block-rec">
+            <span class="label">Recursos y entornos</span>
+            <ul>
+              <li>Cuenta de desarrollo del agente</li>
+              <li>Workbook digital</li>
+              <li>Mapa de repositorios y citas online</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">FASTMED · CAI-030</span>
+      </div>
+    </section>
+
+    <!-- 7 · Desglose instructivo — Sesión 2 -->
+    <section class="slide s-schedule">
+      <span class="counter">08 / 18</span>
+      <p class="eyebrow">06 · Cronograma · Ruta de aprendizaje</p>
+
+      <div class="ruta">
+        <div class="ruta-node">2</div>
+        <div class="ruta-track"><div class="ruta-fill" style="width:33.33%"></div></div>
+        <span class="ruta-step">Sesión 2 de 6</span>
+      </div>
+
+      <div class="ses-head">
+        <div>
+          <span class="ses-mod">Módulo I · Sesión en vivo</span>
+          <h2>Módulo I: Diseño de los flujos</h2>
+        </div>
+        <div class="ses-meta"><span class="ses-dur">2 h</span></div>
+      </div>
+
+      <div class="ses-body">
+        <div class="ses-block">
+          <span class="label">Temas</span>
+          <div class="chips">
+            <span class="chip">1.4 Diseño del flujo de citas</span>
+            <span class="chip">1.5 Diseño del flujo de resultados</span>
+            <span class="chip">1.6 Seguridad desde el diseño</span>
+          </div>
+        </div>
+        <div class="ses-block">
+          <span class="label">Tiempo · Total 2 h</span>
+          <div class="timebar">
+            <div class="seg" style="flex:30">30' Demostración de diseño</div>
+            <div class="seg" style="flex:60">60' Diseño guiado</div>
+            <div class="seg" style="flex:30">30' Revisión y ajuste</div>
+          </div>
+        </div>
+        <div class="ses-cols">
+          <div class="ses-block">
+            <span class="label">Estrategias de enseñanza</span>
+            <ul>
+              <li>Demostración de diseño de flujos conversacionales</li>
+              <li>Revisión guiada</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Estrategias de aprendizaje</span>
+            <ul>
+              <li>Diseña el flujo de citas</li>
+              <li>Diseña el flujo de resultados</li>
+              <li>Define principios de seguridad desde el diseño</li>
+            </ul>
+          </div>
+          <div class="ses-block block-rec">
+            <span class="label">Recursos y entornos</span>
+            <ul>
+              <li>Plantilla de diseño de flujos</li>
+              <li>Casos reales de tickets actuales</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">FASTMED · CAI-030</span>
+      </div>
+    </section>
+
+    <!-- 8 · Desglose instructivo — Sesión 3 -->
+    <section class="slide s-schedule">
+      <span class="counter">09 / 18</span>
+      <p class="eyebrow">06 · Cronograma · Ruta de aprendizaje</p>
+
+      <div class="ruta">
+        <div class="ruta-node">3</div>
+        <div class="ruta-track"><div class="ruta-fill" style="width:50%"></div></div>
+        <span class="ruta-step">Sesión 3 de 6</span>
+      </div>
+
+      <div class="ses-head">
+        <div>
+          <span class="ses-mod">Módulo II · Sesión en vivo</span>
+          <h2>Módulo II: Construcción de los flujos</h2>
+        </div>
+        <div class="ses-meta"><span class="ses-dur">2 h</span></div>
+      </div>
+
+      <div class="ses-body">
+        <div class="ses-block">
+          <span class="label">Temas</span>
+          <div class="chips">
+            <span class="chip">2.1 Construye el flujo de citas</span>
+            <span class="chip">2.2 Construye entrega de resultados</span>
+          </div>
+        </div>
+        <div class="ses-block">
+          <span class="label">Tiempo · Total 2 h</span>
+          <div class="timebar">
+            <div class="seg" style="flex:30">30' Demostración de construcción</div>
+            <div class="seg" style="flex:60">60' Construcción guiada</div>
+            <div class="seg" style="flex:30">30' Prueba con un caso real</div>
+          </div>
+        </div>
+        <div class="ses-cols">
+          <div class="ses-block">
+            <span class="label">Estrategias de enseñanza</span>
+            <ul>
+              <li>Demostración de construcción de flujos</li>
+              <li>Construcción guiada paso a paso</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Estrategias de aprendizaje</span>
+            <ul>
+              <li>Construye el flujo de citas</li>
+              <li>Construye el flujo de resultados</li>
+            </ul>
+          </div>
+          <div class="ses-block block-rec">
+            <span class="label">Recursos y entornos</span>
+            <ul>
+              <li>Entorno de desarrollo del agente</li>
+              <li>Casos reales de citas y resultados</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">FASTMED · CAI-030</span>
+      </div>
+    </section>
+
+    <!-- 9 · Desglose instructivo — Sesión 4 -->
+    <section class="slide s-schedule">
+      <span class="counter">10 / 18</span>
+      <p class="eyebrow">06 · Cronograma · Ruta de aprendizaje</p>
+
+      <div class="ruta">
+        <div class="ruta-node">4</div>
+        <div class="ruta-track"><div class="ruta-fill" style="width:66.66%"></div></div>
+        <span class="ruta-step">Sesión 4 de 6</span>
+      </div>
+
+      <div class="ses-head">
+        <div>
+          <span class="ses-mod">Módulo II · Sesión en vivo</span>
+          <h2>Módulo II: Seguridad y conexión</h2>
+        </div>
+        <div class="ses-meta"><span class="ses-dur">2 h</span></div>
+      </div>
+
+      <div class="ses-body">
+        <div class="ses-block">
+          <span class="label">Temas</span>
+          <div class="chips">
+            <span class="chip">2.3 Doble autenticación</span>
+            <span class="chip">2.4 Datos médicos seguros</span>
+            <span class="chip">2.5 Conecta sus repositorios</span>
+            <span class="chip">2.6 Primera prueba integrada</span>
+          </div>
+        </div>
+        <div class="ses-block">
+          <span class="label">Tiempo · Total 2 h</span>
+          <div class="timebar">
+            <div class="seg" style="flex:40">40' Doble autenticación y controles</div>
+            <div class="seg" style="flex:50">50' Conexión guiada a sistemas</div>
+            <div class="seg" style="flex:30">30' Primera prueba integrada</div>
+          </div>
+        </div>
+        <div class="ses-cols">
+          <div class="ses-block">
+            <span class="label">Estrategias de enseñanza</span>
+            <ul>
+              <li>Demostración de doble autenticación</li>
+              <li>Conexión guiada a repositorios y citas</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Estrategias de aprendizaje</span>
+            <ul>
+              <li>Implementa controles de seguridad</li>
+              <li>Conecta el agente a sus sistemas reales</li>
+              <li>Corre la primera prueba integrada</li>
+            </ul>
+          </div>
+          <div class="ses-block block-rec">
+            <span class="label">Recursos y entornos</span>
+            <ul>
+              <li>Repositorio de resultados</li>
+              <li>Sistema de citas online</li>
+              <li>Checklist de seguridad</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">FASTMED · CAI-030</span>
+      </div>
+    </section>
+
+    <!-- 10 · Desglose instructivo — Sesión 5 -->
+    <section class="slide s-schedule">
+      <span class="counter">11 / 18</span>
+      <p class="eyebrow">06 · Cronograma · Ruta de aprendizaje</p>
+
+      <div class="ruta">
+        <div class="ruta-node">5</div>
+        <div class="ruta-track"><div class="ruta-fill" style="width:83.33%"></div></div>
+        <span class="ruta-step">Sesión 5 de 6</span>
+      </div>
+
+      <div class="ses-head">
+        <div>
+          <span class="ses-mod">Módulo III · Sesión en vivo</span>
+          <h2>Módulo III: Cumplimiento y producción</h2>
+        </div>
+        <div class="ses-meta"><span class="ses-dur">2 h</span></div>
+      </div>
+
+      <div class="ses-body">
+        <div class="ses-block">
+          <span class="label">Temas</span>
+          <div class="chips">
+            <span class="chip">3.1 Cumple el plazo legal</span>
+            <span class="chip">3.2 Pruebas de seguridad</span>
+            <span class="chip">3.3 Puesta en producción</span>
+          </div>
+        </div>
+        <div class="ses-block">
+          <span class="label">Tiempo · Total 2 h</span>
+          <div class="timebar">
+            <div class="seg" style="flex:30">30' Demostración de pruebas</div>
+            <div class="seg" style="flex:50">50' Pruebas guiadas</div>
+            <div class="seg" style="flex:40">40' Preparación para producción</div>
+          </div>
+        </div>
+        <div class="ses-cols">
+          <div class="ses-block">
+            <span class="label">Estrategias de enseñanza</span>
+            <ul>
+              <li>Demostración de pruebas de seguridad</li>
+              <li>Análisis de casos de cumplimiento</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Estrategias de aprendizaje</span>
+            <ul>
+              <li>Verifica el cumplimiento del plazo legal</li>
+              <li>Prueba la seguridad del agente</li>
+              <li>Prepara el paso a producción</li>
+            </ul>
+          </div>
+          <div class="ses-block block-rec">
+            <span class="label">Recursos y entornos</span>
+            <ul>
+              <li>Casos reales de solicitudes</li>
+              <li>Checklist de cumplimiento</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">FASTMED · CAI-030</span>
+      </div>
+    </section>
+
+    <!-- 11 · Desglose instructivo — Sesión 6 -->
+    <section class="slide s-schedule">
+      <span class="counter">12 / 18</span>
+      <p class="eyebrow">06 · Cronograma · Ruta de aprendizaje</p>
+
+      <div class="ruta">
+        <div class="ruta-node">6</div>
+        <div class="ruta-track"><div class="ruta-fill" style="width:100%"></div></div>
+        <span class="ruta-step">Sesión 6 de 6</span>
+      </div>
+
+      <div class="ses-head">
+        <div>
+          <span class="ses-mod">Módulo III · Sesión en vivo</span>
+          <h2>Módulo III: Monitoreo y continuidad</h2>
+        </div>
+        <div class="ses-meta"><span class="ses-dur">2 h</span></div>
+      </div>
+
+      <div class="ses-body">
+        <div class="ses-block">
+          <span class="label">Temas</span>
+          <div class="chips">
+            <span class="chip">3.4 Monitoreo del agente</span>
+            <span class="chip">3.5 Criterio de escalamiento</span>
+            <span class="chip">3.6 Sostener el agente</span>
+          </div>
+        </div>
+        <div class="ses-block">
+          <span class="label">Tiempo · Total 2 h</span>
+          <div class="timebar">
+            <div class="seg" style="flex:45">45' Monitoreo del agente</div>
+            <div class="seg" style="flex:45">45' Plan de escalamiento</div>
+            <div class="seg" style="flex:30">30' Cómo sostenerlo</div>
+          </div>
+        </div>
+        <div class="ses-cols">
+          <div class="ses-block">
+            <span class="label">Estrategias de enseñanza</span>
+            <ul>
+              <li>Demostración de monitoreo del agente</li>
+              <li>Análisis de criterios de escalamiento</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Estrategias de aprendizaje</span>
+            <ul>
+              <li>Define su plan de monitoreo</li>
+              <li>Define su criterio de escalamiento</li>
+              <li>Deja su plan para sostener el agente</li>
+            </ul>
+          </div>
+          <div class="ses-block block-rec">
+            <span class="label">Recursos y entornos</span>
+            <ul>
+              <li>Su agente ya construido</li>
+              <li>Checklist de monitoreo</li>
+              <li>Plan de mantenimiento</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">FASTMED · CAI-030</span>
+      </div>
+    </section>
+
+    <!-- 12 · Beneficios (formato v3: Resultados · Por qué Habilidades · Entregables · Valor inmediato) -->
+    <section class="slide s-benefits s-benefits-v2">
+      <span class="counter">13 / 18</span>
+      <p class="eyebrow">07 · Beneficios</p>
+      <h2>Lo que <span class="hl">se llevan</span>.</h2>
+      <div class="grid">
+        <div class="block">
+          <p class="label">Resultados</p>
+          <ul>
+            <li>Un <strong>agente conversacional</strong> propio, construido por su equipo y sostenido 3 meses con Innovación.</li>
+            <li>Gestión de citas y entrega de resultados dentro del plazo legal de 24 a 48 horas, sin depender de Meta.</li>
+            <li>Doble autenticación y controles de seguridad sobre la data médica de cada paciente.</li>
+          </ul>
+        </div>
+        <div class="block">
+          <p class="label">Por qué Habilidades</p>
+          <p>
+            Su equipo de Tecnología instala la capacidad <strong>en casa</strong>: construye y sostiene el agente, lo escala sin depender de Intezia, y con Innovación lo ajusta hasta 2 veces al mes durante 3 meses.
+          </p>
+        </div>
+        <div class="block">
+          <p class="label">Entregables</p>
+        </div>
+        <div class="block">
+          <p class="label">Valor inmediato</p>
+        </div>
+      </div>
+
+      <!-- Cajas multiline editables (vacías en HTML — el contenido vive dentro del AcroForm /V). -->
+      <div class="multi-box entregables-box" data-field="Entregables"></div>
+      <div class="multi-box acreditaciones-box" data-field="Acreditacion"></div>
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">FASTMED · CAI-030</span>
+      </div>
+    </section>
+
+    <!-- 13 · Impacto / estudios — datos de estudios reales, fuente citada (§4.9) -->
+    <section class="slide s-impact">
+      <span class="counter">14 / 18</span>
+
+      <div class="impact-head">
+        <p class="eyebrow">08 · Impacto</p>
+        <h2>La evidencia no deja<br><span class="hl">lugar a dudas</span>.</h2>
+      </div>
+
+      <div class="impact-body">
+        <div class="chart-panel">
+          <p class="panel-title">Dónde los médicos ven valor en un chatbot de IA</p>
+          <div class="bars">
+            <div class="bar-row">
+              <span class="bar-label">Programar citas</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:78%"><span class="bar-val">78%</span></div></div>
+            </div>
+            <div class="bar-row">
+              <span class="bar-label">Encontrar instalaciones</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:76%"><span class="bar-val">76%</span></div></div>
+            </div>
+            <div class="bar-row">
+              <span class="bar-label">Información de medicamentos</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:71%"><span class="bar-val">71%</span></div></div>
+            </div>
+          </div>
+          <div class="bar-axis"><span class="scale"><span>0</span><span>25</span><span>50</span><span>75</span><span>100%</span></span></div>
+          <p class="panel-source">Fuente: MGMA Stat &mdash; encuesta a consultorios médicos (abril 2025) &middot; IBM &mdash; Cost of a Data Breach Report (2025).</p>
+        </div>
+
+        <div class="gauge-panel">
+          <div class="gauge" style="--pct:19">
+            <div class="gauge-core">
+              <span class="gauge-num">19<span class="pct">%</span></span>
+              <span class="gauge-cap">ya usa un chatbot</span>
+            </div>
+          </div>
+          <div class="chips">
+            <div class="chip">
+              <span class="chip-num">$7.42M</span>
+              <span class="chip-lbl">costo de una filtración en salud</span>
+            </div>
+            <div class="chip">
+              <span class="chip-num">15&ordm;</span>
+              <span class="chip-lbl">año consecutivo más caro</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="impact-hook">
+        <span class="hook-mark">&#9656;</span>
+        <p class="hook-text">
+          Solo <strong>19% de los consultorios</strong> ya usa un chatbot de IA. En salud, una filtración de datos cuesta en promedio <strong>7.42 millones de dólares</strong>, el sector más caro por 15 años consecutivos. Un agente propio, con doble autenticación, es lo que separa ganar velocidad de asumir ese riesgo.
+        </p>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">FASTMED · CAI-030</span>
+      </div>
+    </section>
+
+    <!-- 14 · Propuesta Económica (estándar: Duración + Programa + Notas + Cotización) -->
+    <section class="slide s-price">
+      <span class="counter">15 / 18</span>
+      <h2 class="title">Inversión por fases</h2>
+      <p class="price-intro">El agente conversacional para atención al paciente, en 2 fases dentro de un mismo proyecto: Intezia lo construye con su equipo y luego lo mantiene al día. Cada fase se cotiza por separado.</p>
+
+      <div class="fase-price-list">
+        <div class="fase-price-row">
+          <div class="fase-price-copy">
+            <span class="fase-price-label">Fase 1 · Habilidades (12h)</span>
+            <p class="fase-price-desc">6 sesiones de 2h &middot; construcción del agente, doble autenticación y puesta en producción.</p>
+          </div>
+          <div class="fase-price-frame" data-field="PrecioFase1"></div>
+        </div>
+        <div class="fase-price-row">
+          <div class="fase-price-copy">
+            <span class="fase-price-label">Fase 2 · Innovación (3 meses)</span>
+            <p class="fase-price-desc">2 sesiones al mes (4h en total) para ajustar, mejorar o innovar el agente ya construido.</p>
+          </div>
+          <div class="fase-price-frame" data-field="PrecioFase2"></div>
+        </div>
+      </div>
+
+      <span class="cot-label cot-label-base">Inversión total del proyecto</span>
+      <div class="cot-frame base-frame"></div>
+
+      <span class="cot-label cot-label-discount">Descuento</span>
+      <span class="cot-sign-minus">&minus;$</span>
+      <div class="cot-frame discount-frame"></div>
+      <span class="cot-urgent-note">Descuento válido por 15 días</span>
+
+      <span class="cot-label cot-label-total">TOTAL</span>
+      <div class="cot-frame total-frame"></div>
+
+      <p class="cot-validity">Cotización válida por 30 días.</p>
+
+      <div class="cot-roi-box">
+        <span class="cot-roi-label">ROI estimado</span>
+        <p class="cot-roi-text">Automatizar la entrega de resultados reduce la dependencia de iterar por Meta, examen por examen, y refuerza el cumplimiento del plazo legal de 24 a 48 horas. Los 3 meses de Innovación sostienen ese ahorro en el tiempo, ajustando el agente antes de que un cambio real lo deje desactualizado.</p>
+      </div>
+
+      <div class="cot-garantia-badge">
+        <span class="cot-garantia-tag">Garantía 30-60-90</span>
+        <p class="cot-garantia-text">Estamos contigo hasta que la habilidad quede instalada.</p>
+      </div>
+
+      <div class="cot-terms-box">
+        <span class="cot-terms-label">Importante</span>
+        <p class="cot-terms-text">Este servicio se presta bajo nuestros <a href="https://drive.google.com/file/d/1PA-ZSt4KnyY5dpxXzgkIk6-yfGlV2eF8/view?usp=drive_link" target="_blank" rel="noopener">términos y condiciones</a>. Al avanzar con esta propuesta, ambas partes los aceptan.</p>
+      </div>
+
+      <div class="block block-notes-container">
+        <span class="block-eyebrow">Notas</span>
+      </div>
+      <div class="multi-box notas-box" data-field="Notas"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">FASTMED · CAI-030</span>
+      </div>
+    </section>
+
+    <!-- 15 · Seguimiento 30-60-90 (garantía explicada + ROI) -->
+    <section class="slide s-roadmap s-followup">
+      <span class="counter">16 / 18</span>
+      <p class="eyebrow">09 · Garantía de seguimiento</p>
+      <h2>No los dejamos solos <span class="hl">después del servicio</span>.</h2>
+      <p class="followup-intro">Verificamos que el agente se use, se escale y genere impacto real en la operación: no solo que la sesión haya terminado bien.</p>
+
+      <div class="followup-cards">
+        <div class="rmx-card rmx-card-f2">
+          <span class="rmx-card-tag">30 días</span>
+          <div class="rmx-card-name">¿Está en producción?</div>
+          <ul class="rmx-facets">
+            <li><span>Medimos</span><p>Si el agente ya atiende pacientes reales vía WhatsApp, con doble autenticación activa.</p></li>
+            <li><span>Aportamos</span><p>Nivelación y ajustes sobre los primeros casos reales.</p></li>
+          </ul>
+        </div>
+        <div class="rmx-card rmx-card-f3">
+          <span class="rmx-card-tag">60 días</span>
+          <div class="rmx-card-name">¿Qué escaló el equipo?</div>
+          <ul class="rmx-facets">
+            <li><span>Medimos</span><p>Qué nuevas funciones o mejoras construyó el equipo de Tecnología por su cuenta.</p></li>
+            <li><span>Aportamos</span><p>Mapeo de esas construcciones y revisión de seguridad.</p></li>
+          </ul>
+        </div>
+        <div class="rmx-card rmx-card-f4">
+          <span class="rmx-card-tag">90 días</span>
+          <div class="rmx-card-name">¿Cuánto cumplimiento ganaron?</div>
+          <ul class="rmx-facets">
+            <li><span>Medimos</span><p>El cumplimiento real del plazo legal de 24 a 48 horas, caso por caso.</p></li>
+            <li><span>Aportamos</span><p>Análisis de impacto en cumplimiento y en la carga del equipo de tickets.</p></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="followup-roi">
+        <span class="followup-roi-label">ROI en el tiempo</span>
+        <p class="followup-roi-text">El retorno de este proyecto no se mide en el agente del primer mes, sino en la curva de los 90 días: a 30 días ya atiende pacientes reales; a 60, el equipo lo escala por su cuenta; a 90, el cumplimiento del plazo legal deja de depender de iterar caso por caso vía Meta.</p>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">FASTMED · CAI-030</span>
+      </div>
+    </section>
+
+    <!-- 16 · Próximos pasos (logística, sin acuerdos económicos · §4.15) -->
+    <section class="slide s-steps">
+      <span class="counter">17 / 18</span>
+      <p class="eyebrow">10 · Próximos pasos</p>
+      <h2>Cómo arrancamos.</h2>
+      <div class="step-cards">
+        <div class="step-card">
+          <span class="ghost">01</span>
+        </div>
+        <div class="step-card">
+          <span class="ghost">02</span>
+        </div>
+        <div class="step-card">
+          <span class="ghost">03</span>
+        </div>
+      </div>
+
+      <!-- Editable AcroForm placeholders (3 pasos × título + body) -->
+      <div class="acro-area acro-title acro-paso-01-titulo" data-field="Paso01Titulo">
+        <span class="acro-default-text">Confirmamos alcance técnico</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-01-body" data-field="Paso01Body">
+        <span class="acro-default-text">Confirmamos con Anabella y el equipo de Tecnología el acceso a repositorios y al sistema de citas.</span>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-02-titulo" data-field="Paso02Titulo">
+        <span class="acro-default-text">Acceso y logística</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-02-body" data-field="Paso02Body">
+        <span class="acro-default-text">Coordinamos el acceso a las herramientas y la agenda de las sesiones, mixta con alguna sesión presencial.</span>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-03-titulo" data-field="Paso03Titulo">
+        <span class="acro-default-text">Reunión de arranque</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-03-body" data-field="Paso03Body">
+        <span class="acro-default-text">Sesión breve para alinear con el equipo los casos reales que llevará al agente.</span>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">FASTMED · CAI-030</span>
+      </div>
+    </section>
+
+    <!-- 17 · Cierre (ruta/escalera editable) -->
+    <section class="slide s-end">
+      <span class="counter">18 / 18</span>
+
+      <div class="end-logo">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia">
+      </div>
+
+      <!-- Resultado (cinta superior) — caja editable, ventas la redacta por cliente -->
+      <div class="end-summit" data-field="CierreResultado">
+        <span class="acro-default-text">Un agente conversacional propio, en producción, que su equipo sostiene con doble autenticación y seguridad.</span>
+      </div>
+
+      <!-- Escalera de 3 pasos — cada uno con su caja editable -->
+      <div class="end-stairs">
+        <div class="stair-step stair-1">
+          <span class="stair-label">Paso 1</span>
+          <div class="stair-field" data-field="CierrePaso1">
+            <span class="acro-default-text">Diseño del agente</span>
+          </div>
+        </div>
+        <div class="stair-step stair-2">
+          <span class="stair-label">Paso 2</span>
+          <div class="stair-field" data-field="CierrePaso2">
+            <span class="acro-default-text">Construcción del agente</span>
+          </div>
+        </div>
+        <div class="stair-step stair-3">
+          <span class="stair-label">Paso 3</span>
+          <div class="stair-field" data-field="CierrePaso3">
+            <span class="acro-default-text">Producción y continuidad</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cta-wrap">
+        <span class="cta">Esperamos tu respuesta</span>
+      </div>
+
+      <div class="end-contact">
+        <p class="contact-line">
+          <span class="contact-label">Asesora de ventas:</span>
+          Verónica Rubio <span class="dot">&middot;</span> +58 422 3355505 <span class="dot">&middot;</span> vrubio01@intezia.com
+        </p>
+        <p class="contact-line">
+          <span class="contact-label">Empresa:</span>
+          Intezia C.A J-505657950 <span class="dot">&middot;</span> servicio@intezia.com
+        </p>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

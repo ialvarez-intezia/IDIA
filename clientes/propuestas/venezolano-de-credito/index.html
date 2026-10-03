@@ -1,0 +1,599 @@
+<!doctype html>
+<!--
+  Propuesta — Venezolano de Crédito (CAI-018)
+  Servicio: HABILIDADES (Modelo Intezia). División: Educación. Capacitación In-Company.
+  Fuente primaria: Ficha de Levantamiento (Levantamiento_Venezolano_de_Credito_2026-09-10.pdf,
+  asesora Flavia Martínez) + precisiones del usuario en el mismo mensaje (puntos del correo del
+  cliente + imagen de restricciones del banco) 2026-09-10.
+
+  1 ÁREA (Mercadeo), 7 PROCESOS confirmados (ficha Bloque C — son las tareas que el cliente
+  quiere optimizar con IA, no departamentos): redacción de contenidos, ideación de campañas,
+  diseño de piezas gráficas, adaptación multicanal, lineamientos de marca, escucha de marca,
+  UX/UI de plataformas del banco.
+  16 HORAS TOTALES (8 sesiones de 2h) — AJUSTE 2026-09-16 (instrucción directa del usuario):
+  se retiró la sesión de Fundamentals (nivelación desde cero) porque el equipo YA CUENTA CON
+  UNA BASE: la Gerencia les facilitó una metodología de uso de Claude alineada a su Manual de
+  Política de Uso Interno de IA (versión resumida ya compartida con Intezia), con una primera
+  experiencia aplicándola. Las 2 sesiones que antes eran Fundamentals + Redacción ahora son
+  "Detección Estratégica + Contenido y Campañas": Intezia parte de esa base, guía con mejores
+  prácticas y contribuye a FORTALECER la metodología existente (no a construirla desde cero).
+  La guía de buenas prácticas entregable es una versión fortalecida de la del cliente, no una
+  genérica. Total: de 9 sesiones/18h a 8 sesiones/16h — ajuste económico evaluado en
+  consecuencia (menos horas de nivelación, mismo alcance de los 7 procesos).
+  MODALIDAD PRESENCIAL (dato explícito de la ficha, no inferencia).
+  HERRAMIENTA: Claude, YA DECIDIDA por el cliente (no es recomendación preliminar nuestra como
+  en Detección) — se nombra con confianza en todo el deck.
+  Universo: 5 personas del equipo de Mercadeo — 2 autodidactas, 3 primera vez con IA oficial
+  ANTES de la metodología de la Gerencia (distinción de partida individual que sigue siendo
+  cierta, aunque ya exista una base común de equipo).
+  Complementa una capacitación interna que ya lidera Andrés Pereira (Gerente de Inteligencia
+  Artificial y Analítica de Datos, actualizado 2026-09-16 — antes "VP. Soluciones Digitales",
+  "Gerente de IA" de la iniciativa) — Intezia aporta mejores prácticas y fortalece lo que ya
+  existe, no arranca de cero.
+  Pregunta directa del cliente ("¿hasta qué punto Claude los puede apoyar como CRM?")
+  respondida por escrito en el Diagnóstico (bullet 5): Claude no reemplaza al CRM del banco,
+  dado que su propia política prohíbe pegar información de clientes o pedirle cifras al
+  asistente (confirmado con el usuario, opción "responder por escrito").
+  2 casos de uso adicionales (Desempeño de campañas, Contenidos por segmento de clientes)
+  quedan PENDIENTES de validación de seguridad del banco — mencionados en Notas/Precio, no
+  parte del alcance ni del cálculo de horas de este documento (confirmado con el usuario).
+  CON certificado (Entregables) — Habilidades con tronco real de capacitación, no Detección
+  pura.
+  Sin roadmap (capacitación de un solo servicio continuo, sin fases). Beneficios v3, Cierre
+  escalera, servicio@intezia.com.
+  Cronograma: 8 sesiones agrupadas en 3 slides (una por módulo), no 8 slides individuales —
+  mismo criterio de capacidad ya usado en otros decks con muchas sesiones.
+  Impacto (§4.9): EY-Parthenon — Encuesta de IA Generativa en Banca (2025): 77% de bancos ya
+  lanzó IA generativa (vs. 61% en 2023), 58% anticipa incremento de ingresos de 6-20%. Caso
+  JPMorgan Chase + Persado (marketing con IA, 2018): hasta 4.5x más clics en anuncios con IA
+  frente a copy 100% manual.
+  12 slides · precio estándar (Propuesta Económica, un solo servicio).
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Propuesta · Venezolano de Crédito · Intezia</title>
+  <link rel="stylesheet" href="../_base/styles.css">
+  <link rel="stylesheet" href="overrides.css">
+</head>
+<body>
+
+  <main class="deck">
+
+    <!-- 1 · Portada -->
+    <section class="slide s-cover">
+      <span class="counter">01 / 12</span>
+      <div class="logo-big">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia">
+      </div>
+      <div class="body">
+        <p class="eyebrow">Capacitación In-Company · Servicio de Habilidades · 8 sesiones · 16 horas</p>
+        <h1>
+          Los 7 procesos reales,<br>
+          <span class="hl">resueltos con Claude.</span>
+        </h1>
+        <p class="lead">
+          Capacitación in-company presencial de 8 sesiones (16 horas) para el equipo de Mercadeo de Venezolano de Crédito: partir de la metodología de <strong>Claude</strong> que ya tienen y fortalecerla sobre sus 7 procesos reales de contenido, campañas, diseño y marca, complementando la formación que ya lidera Andrés Pereira, dentro de las políticas de datos del banco.
+        </p>
+      </div>
+      <div class="id-line">
+        <span class="codigo">Código: CAI-018</span>
+        <span class="cliente">Venezolano de Crédito</span>
+      </div>
+    </section>
+
+    <!-- 2 · Punto de dolor + Diagnóstico -->
+    <section class="slide s-pain">
+      <span class="counter">02 / 12</span>
+      <span class="quote-mark">&ldquo;</span>
+      <div class="body">
+        <h2>Ya tienen el punto de partida. Falta llevarlo más lejos.</h2>
+        <p class="context">
+          El equipo de Mercadeo de Venezolano de Crédito ya cuenta con una metodología de uso de Claude entregada por Andrés Pereira, Gerente de Inteligencia Artificial y Analítica de Datos, alineada a su Manual de Política de Uso Interno de IA. Esta capacitación parte de esa base para guiar al equipo con mejores prácticas y fortalecer esa metodología.
+        </p>
+        <p class="diag-title">Diagnóstico</p>
+        <ol>
+          <li>El equipo ya cuenta con una metodología de uso de Claude y una primera experiencia aplicándola, aunque el punto de partida individual varía.</li>
+          <li>Redactar contenido, idear campañas y adaptar piezas a cada canal hoy compite con la operación diaria del banco.</li>
+          <li>El diseño de piezas gráficas y la experiencia UX/UI de las plataformas del banco todavía dependen de procesos manuales.</li>
+          <li>Con esa base ya definida, el reto es llevarla más allá: guiarla con mejores prácticas y fortalecer esa metodología, no construirla desde cero.</li>
+          <li>Claude no reemplaza al CRM del banco: asiste la redacción y creación de contenido, pero no almacena ni gestiona registros de clientes, y coexiste con el CRM dentro de las políticas de datos.</li>
+        </ol>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">VENEZOLANO DE CRÉDITO · CAI-018</span>
+      </div>
+    </section>
+
+    <!-- 3 · Objetivos estratégicos -->
+    <section class="slide s-goals">
+      <span class="counter">03 / 12</span>
+      <p class="eyebrow">02 · Objetivos</p>
+      <h2>A dónde llevamos<br>al equipo de Mercadeo.</h2>
+      <div class="columns">
+        <div class="general">
+          <p class="label">Objetivo general</p>
+          <p>
+            Capacitar al equipo de Mercadeo de Venezolano de Crédito (5 personas) en el uso de Claude para sus 7 procesos reales, partiendo de la metodología que ya lidera Andrés Pereira, Gerente de Inteligencia Artificial y Analítica de Datos, dentro de las políticas de datos del banco.
+          </p>
+        </div>
+        <div class="specifics">
+          <p class="label">Objetivos específicos</p>
+          <ol>
+            <li>Partir de la metodología de uso de Claude que ya tiene el equipo y guiarlo con mejores prácticas, en vez de nivelar desde cero.</li>
+            <li>Aplicar Claude a los 7 procesos reales: redacción, campañas, diseño, adaptación multicanal, marca, escucha de marca y UX/UI.</li>
+            <li>Fortalecer la metodología de uso de Claude que ya tiene el equipo, alineada a la política de datos del banco.</li>
+            <li>Dejar al equipo trabajando de forma autónoma con Claude, según el horizonte de corto plazo (0-3 meses) del banco.</li>
+          </ol>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">VENEZOLANO DE CRÉDITO · CAI-018</span>
+      </div>
+    </section>
+
+    <!-- 4 · Programa -->
+    <section class="slide s-program">
+      <span class="counter">04 / 12</span>
+      <p class="eyebrow">03 · El proyecto</p>
+      <h2>7 procesos, un mismo criterio.</h2>
+      <p class="meta">8 sesiones de 2h · presencial · grupo de 5 personas de Mercadeo.</p>
+      <div class="modules">
+        <div class="module">
+          <span class="roman">I</span>
+          <h3>Detección Estratégica + Contenido y Campañas</h3>
+          <p class="obj">Parte de la metodología que ya tiene el equipo y aplica Claude a redacción de contenidos e ideación de campañas.</p>
+          <ul class="topics">
+            <li>2 sesiones · 4h</li>
+            <li>Contenido y campañas reales</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">II</span>
+          <h3>Diseño y Adaptación Visual</h3>
+          <p class="obj">Aplica Claude al diseño de piezas, la adaptación multicanal y la UX/UI de las plataformas del banco.</p>
+          <ul class="topics">
+            <li>4 sesiones · 8h</li>
+            <li>Diseño y UX/UI reales</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">III</span>
+          <h3>Marca y Tendencias</h3>
+          <p class="obj">Aplica Claude a los lineamientos de marca y a la escucha de marca y tendencias.</p>
+          <ul class="topics">
+            <li>2 sesiones · 4h</li>
+            <li>Asistente de marca propio</li>
+          </ul>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">VENEZOLANO DE CRÉDITO · CAI-018</span>
+      </div>
+    </section>
+
+    <!-- 5 · Cronograma · Módulo I -->
+    <section class="slide s-schedule">
+      <span class="counter">05 / 12</span>
+      <p class="eyebrow">04 · Cronograma · Módulo I</p>
+
+      <div class="ses-head">
+        <div>
+          <span class="ses-mod">2 sesiones de 2h · Presencial · Grupo de 5 personas</span>
+          <h2>Detección Estratégica + Contenido y Campañas</h2>
+        </div>
+        <div class="ses-meta"><span class="ses-dur">4h</span></div>
+      </div>
+
+      <div class="ses-body">
+        <div class="ses-block">
+          <span class="label">Temas</span>
+          <div class="chips">
+            <span class="chip">Base y metodología existentes</span>
+            <span class="chip">Redacción de textos</span>
+            <span class="chip">Ideación de campañas</span>
+          </div>
+        </div>
+        <div class="ses-block">
+          <span class="label">Tiempo · Total 4 h (2 sesiones)</span>
+          <div class="timebar">
+            <div class="seg" style="flex:1">Sesión 1 · Redacción con base existente</div>
+            <div class="seg" style="flex:1">Sesión 2 · Ideación con base existente</div>
+          </div>
+        </div>
+        <div class="ses-cols">
+          <div class="ses-block">
+            <span class="label">Qué se hace</span>
+            <ul>
+              <li>Partimos de la metodología y la política de uso interno de IA que el equipo ya tiene, y su primera experiencia aplicándola</li>
+              <li>Aplicamos Claude a la redacción real de textos y contenidos de la operación diaria</li>
+              <li>Generamos un concepto de campaña real con Claude</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Qué se logra</span>
+            <ul>
+              <li>Los 5 integrantes fortalecen el criterio de buenas prácticas que ya tenían</li>
+              <li>Contenido real de la operación diaria redactado con Claude</li>
+              <li>Un concepto de campaña real, listo para revisar</li>
+            </ul>
+          </div>
+          <div class="ses-block block-rec">
+            <span class="label">Recursos y entornos</span>
+            <ul>
+              <li>Sesión presencial · grupo de 5 personas</li>
+              <li>Casos reales del equipo de Mercadeo</li>
+              <li>Manual de Política de Uso Interno de IA del banco</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">VENEZOLANO DE CRÉDITO · CAI-018</span>
+      </div>
+    </section>
+
+    <!-- 6 · Cronograma · Módulo II -->
+    <section class="slide s-schedule">
+      <span class="counter">06 / 12</span>
+      <p class="eyebrow">04 · Cronograma · Módulo II</p>
+
+      <div class="ses-head">
+        <div>
+          <span class="ses-mod">4 sesiones de 2h · Presencial · Grupo de 5 personas</span>
+          <h2>Diseño y Adaptación Visual</h2>
+        </div>
+        <div class="ses-meta"><span class="ses-dur">8h</span></div>
+      </div>
+
+      <div class="ses-body">
+        <div class="ses-block">
+          <span class="label">Temas</span>
+          <div class="chips">
+            <span class="chip">Diseño de piezas gráficas</span>
+            <span class="chip">Adaptación multicanal</span>
+            <span class="chip">UX/UI de plataformas</span>
+            <span class="chip">Sistema de diseño del banco</span>
+          </div>
+        </div>
+        <div class="ses-block">
+          <span class="label">Tiempo · Total 8 h (4 sesiones)</span>
+          <div class="timebar">
+            <div class="seg" style="flex:1">Sesión 3 · Diseño de piezas gráficas</div>
+            <div class="seg" style="flex:1">Sesión 4 · Adaptación a canales</div>
+            <div class="seg" style="flex:1">Sesión 5 · UX/UI, parte 1</div>
+            <div class="seg" style="flex:1">Sesión 6 · UX/UI, parte 2</div>
+          </div>
+        </div>
+        <div class="ses-cols">
+          <div class="ses-block">
+            <span class="label">Qué se hace</span>
+            <ul>
+              <li>Diseñamos una pieza gráfica real con Claude</li>
+              <li>Adaptamos esa misma pieza a distintos canales del banco</li>
+              <li>Trabajamos un caso real de UX/UI de una plataforma, en dos sesiones</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Qué se logra</span>
+            <ul>
+              <li>Una pieza gráfica real diseñada con Claude</li>
+              <li>La misma pieza adaptada a varios canales</li>
+              <li>Un caso de UX/UI cerrado, listo para el sistema de diseño del banco</li>
+            </ul>
+          </div>
+          <div class="ses-block block-rec">
+            <span class="label">Recursos y entornos</span>
+            <ul>
+              <li>Sistema de diseño del banco (sin modificarlo sin ser su responsable)</li>
+              <li>Piezas y plataformas reales del equipo</li>
+              <li>Guion de trabajo Intezia</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">VENEZOLANO DE CRÉDITO · CAI-018</span>
+      </div>
+    </section>
+
+    <!-- 7 · Cronograma · Módulo III -->
+    <section class="slide s-schedule">
+      <span class="counter">07 / 12</span>
+      <p class="eyebrow">04 · Cronograma · Módulo III</p>
+
+      <div class="ses-head">
+        <div>
+          <span class="ses-mod">2 sesiones de 2h · Presencial · Grupo de 5 personas</span>
+          <h2>Marca y Tendencias</h2>
+        </div>
+        <div class="ses-meta"><span class="ses-dur">4h</span></div>
+      </div>
+
+      <div class="ses-body">
+        <div class="ses-block">
+          <span class="label">Temas</span>
+          <div class="chips">
+            <span class="chip">Lineamientos de marca</span>
+            <span class="chip">Escucha de marca</span>
+            <span class="chip">Detección de tendencias</span>
+          </div>
+        </div>
+        <div class="ses-block">
+          <span class="label">Tiempo · Total 4 h (2 sesiones)</span>
+          <div class="timebar">
+            <div class="seg" style="flex:1">Sesión 7 · Asistente de lineamientos de marca</div>
+            <div class="seg" style="flex:1">Sesión 8 · Escucha de marca y tendencias</div>
+          </div>
+        </div>
+        <div class="ses-cols">
+          <div class="ses-block">
+            <span class="label">Qué se hace</span>
+            <ul>
+              <li>Construimos un asistente de consulta de lineamientos de marca con Claude</li>
+              <li>Hacemos un ejercicio real de escucha de marca y detección de tendencias</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Qué se logra</span>
+            <ul>
+              <li>Un asistente de consulta de marca, listo para usar</li>
+              <li>Un ejercicio real de tendencias detectadas para el sector bancario</li>
+            </ul>
+          </div>
+          <div class="ses-block block-rec">
+            <span class="label">Recursos y entornos</span>
+            <ul>
+              <li>Lineamientos de marca del banco</li>
+              <li>Casos reales del sector bancario</li>
+              <li>Guion de trabajo Intezia</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">VENEZOLANO DE CRÉDITO · CAI-018</span>
+      </div>
+    </section>
+
+    <!-- 8 · Beneficios (formato v3) -->
+    <section class="slide s-benefits s-benefits-v2">
+      <span class="counter">08 / 12</span>
+      <p class="eyebrow">05 · Beneficios</p>
+      <h2>Lo que <span class="hl">se llevan</span>.</h2>
+      <div class="grid">
+        <div class="block">
+          <p class="label">Resultados</p>
+          <ul>
+            <li>Las <strong>5 personas</strong> del equipo de Mercadeo aplicando Claude a sus 7 procesos reales, con un criterio común.</li>
+            <li>Buenas prácticas fortalecidas sobre la metodología que ya tenían.</li>
+            <li>Un equipo autónomo, listo para seguir aplicando Claude a su día a día.</li>
+          </ul>
+        </div>
+        <div class="block">
+          <p class="label">Por qué Habilidades</p>
+          <p>
+            Habilidades <strong>complementa</strong> la capacitación que Andrés Pereira ya lidera internamente, partiendo de la metodología que el equipo ya tiene, con la experiencia de Intezia en mejores prácticas aplicadas a los 7 procesos reales.
+          </p>
+        </div>
+        <div class="block">
+          <p class="label">Entregables</p>
+        </div>
+        <div class="block">
+          <p class="label">Valor inmediato</p>
+        </div>
+      </div>
+
+      <div class="multi-box entregables-box" data-field="Entregables"></div>
+      <div class="multi-box acreditaciones-box" data-field="Acreditacion"></div>
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">VENEZOLANO DE CRÉDITO · CAI-018</span>
+      </div>
+    </section>
+
+    <!-- 9 · Impacto / estudios — datos reales, fuente citada (CLAUDE.md §4.9) -->
+    <section class="slide s-impact">
+      <span class="counter">09 / 12</span>
+
+      <div class="impact-head">
+        <p class="eyebrow">06 · Impacto</p>
+        <h2>Otros bancos ya aplican IA<br><span class="hl">en marketing, con resultados medibles</span>.</h2>
+      </div>
+
+      <div class="impact-body">
+        <div class="chart-panel">
+          <p class="panel-title">Adopción de IA generativa en la banca</p>
+          <div class="bars">
+            <div class="bar-row">
+              <span class="bar-label">Bancos que ya lanzaron aplicaciones de IA generativa, 2023</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:61%"><span class="bar-val">61%</span></div></div>
+            </div>
+            <div class="bar-row">
+              <span class="bar-label">Bancos que ya lanzaron aplicaciones de IA generativa, 2025</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:77%"><span class="bar-val">77%</span></div></div>
+            </div>
+          </div>
+          <div class="bar-axis"><span class="scale"><span>0</span><span>25</span><span>50</span><span>75</span><span>100%</span></span></div>
+          <p class="panel-source">Fuente: EY-Parthenon &mdash; Encuesta de IA Generativa en Banca (2025).</p>
+        </div>
+
+        <div class="gauge-panel">
+          <div class="gauge" style="--pct:58">
+            <div class="gauge-core">
+              <span class="gauge-num">58<span class="pct">%</span></span>
+              <span class="gauge-cap">de los bancos anticipa un incremento de ingresos de 6% a 20% por aplicaciones de IA generativa</span>
+            </div>
+          </div>
+          <div class="chips">
+            <div class="chip">
+              <span class="chip-num">4.5&times;</span>
+              <span class="chip-lbl">más clics en anuncios de IA de JPMorgan Chase, frente a copy escrito 100% a mano</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="impact-hook">
+        <span class="hook-mark">&#9656;</span>
+        <p class="hook-text">
+          El 77% de los bancos ya lanzó aplicaciones de IA generativa, frente al 61% en 2023, y el 58% anticipa un incremento de ingresos de 6% a 20% por su aplicación (EY-Parthenon, 2025). JPMorgan Chase ya lo comprobó en marketing: sus anuncios generados con IA multiplicaron hasta 4.5 veces el click-through rate frente al copy escrito 100% a mano (Persado, 2018). Para Venezolano de Crédito, la oportunidad es la misma: aplicar Claude a los 7 procesos reales de Mercadeo, con el mismo criterio y las mismas políticas de datos del banco.
+        </p>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">VENEZOLANO DE CRÉDITO · CAI-018</span>
+      </div>
+    </section>
+
+    <!-- 10 · Propuesta Económica (estándar: Duración + Programa + Notas + Cotización) -->
+    <section class="slide s-price">
+      <span class="counter">10 / 12</span>
+      <h2 class="title">Propuesta Económica</h2>
+
+      <div class="block">
+        <span class="block-eyebrow">Duración</span>
+        <p class="block-value">8 sesiones de 2 horas · 16 horas académicas totales · modalidad presencial.</p>
+      </div>
+
+      <div class="block block-programa">
+        <span class="block-eyebrow">Programa</span>
+      </div>
+      <div class="multi-box programa-box" data-field="Programa"></div>
+
+      <div class="block block-cotizacion">
+        <span class="block-eyebrow">Cotización</span>
+      </div>
+
+      <span class="cot-label cot-label-base">Propuesta + Inversión</span>
+      <div class="cot-frame base-frame"></div>
+
+      <span class="cot-label cot-label-discount">Descuento · 10% AJE</span>
+      <div class="cot-frame discount-frame"></div>
+
+      <span class="cot-label cot-label-total">TOTAL</span>
+      <div class="cot-frame total-frame"></div>
+
+      <p class="cot-validity">Cotización válida por 30 días.</p>
+      <div class="cot-terms-box">
+        <span class="cot-terms-label">Importante</span>
+        <p class="cot-terms-text">Este servicio se presta bajo nuestros <a href="https://drive.google.com/file/d/1PA-ZSt4KnyY5dpxXzgkIk6-yfGlV2eF8/view?usp=drive_link" target="_blank" rel="noopener">términos y condiciones</a>. Al avanzar con esta propuesta, ambas partes los aceptan.</p>
+      </div>
+
+      <div class="block block-notes-container">
+        <span class="block-eyebrow">Notas</span>
+      </div>
+      <div class="multi-box notas-box" data-field="Notas"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">VENEZOLANO DE CRÉDITO · CAI-018</span>
+      </div>
+    </section>
+
+    <!-- 11 · Próximos pasos -->
+    <section class="slide s-steps">
+      <span class="counter">11 / 12</span>
+      <p class="eyebrow">07 · Próximos pasos</p>
+      <h2>Cómo arrancamos.</h2>
+      <div class="step-cards">
+        <div class="step-card">
+          <span class="ghost">01</span>
+        </div>
+        <div class="step-card">
+          <span class="ghost">02</span>
+        </div>
+        <div class="step-card">
+          <span class="ghost">03</span>
+        </div>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-01-titulo" data-field="Paso01Titulo">
+        <span class="acro-default-text">Confirmamos fechas</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-01-body" data-field="Paso01Body">
+        <span class="acro-default-text">Definimos el calendario de las 8 sesiones de 2h con Andrés Pereira, responsable de logística.</span>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-02-titulo" data-field="Paso02Titulo">
+        <span class="acro-default-text">Acceso y logística</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-02-body" data-field="Paso02Body">
+        <span class="acro-default-text">Coordinamos el espacio presencial y el acceso a Claude para las 5 personas del equipo de Mercadeo.</span>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-03-titulo" data-field="Paso03Titulo">
+        <span class="acro-default-text">Reunión de arranque</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-03-body" data-field="Paso03Body">
+        <span class="acro-default-text">Sesión de unos 30 minutos con Andrés Pereira para alinear el alcance y los 7 procesos priorizados.</span>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">VENEZOLANO DE CRÉDITO · CAI-018</span>
+      </div>
+    </section>
+
+    <!-- 12 · Cierre (ruta/escalera editable) -->
+    <section class="slide s-end">
+      <span class="counter">12 / 12</span>
+
+      <div class="end-logo">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia">
+      </div>
+
+      <div class="end-summit" data-field="CierreResultado">
+        <span class="acro-default-text">El equipo de Mercadeo de Venezolano de Crédito aplicando Claude a sus 7 procesos reales, con un criterio común.</span>
+      </div>
+
+      <div class="end-stairs">
+        <div class="stair-step stair-1">
+          <span class="stair-label">Paso 1</span>
+          <div class="stair-field" data-field="CierrePaso1">
+            <span class="acro-default-text">Metodología fortalecida</span>
+          </div>
+        </div>
+        <div class="stair-step stair-2">
+          <span class="stair-label">Paso 2</span>
+          <div class="stair-field" data-field="CierrePaso2">
+            <span class="acro-default-text">7 procesos con Claude aplicados</span>
+          </div>
+        </div>
+        <div class="stair-step stair-3">
+          <span class="stair-label">Paso 3</span>
+          <div class="stair-field" data-field="CierrePaso3">
+            <span class="acro-default-text">Certificado de participación INTEZIA</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cta-wrap">
+        <span class="cta">Esperamos tu respuesta</span>
+      </div>
+
+      <div class="end-contact">
+        <p class="contact-line">
+          <span class="contact-label">Asesora de ventas:</span>
+          Flavia Martínez <span class="dot">·</span> +58 414-5756615 <span class="dot">·</span> fmartinez@intezia.com
+        </p>
+        <p class="contact-line">
+          <span class="contact-label">Empresa:</span>
+          Intezia C.A J-505657950 <span class="dot">·</span> servicio@intezia.com
+        </p>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

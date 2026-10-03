@@ -1,0 +1,778 @@
+/* ===========================================================================
+   overrides.css — HJB Química (CAI-031). Reestructuración 2026-10-02:
+   plantilla consultiva de Detección + Habilidades (combo), pensada para
+   servir de referencia a futuras propuestas del mismo combo. 11 slides:
+   Apertura · Vista por fase (Fase 1 / Fase 2, con momentos Construir/Probar/
+   Adoptar) · Priorización · Entregables (por fase) · Garantía 30-60-90 ·
+   Casos · Inversión por fases · Por qué Intezia · Calendario · Cierre.
+   Sin nombres de personas, sin cascada, sin datos de terceros (§ver brief.md
+   "Reestructuración 2026-10-02"). Pase de balance visual 2026-10-02 (b):
+   slide dedicada de Habilidades eliminada (contenido condensado en Vista
+   por fase · Fase 2); Priorización, Entregables y tarjetas (Garantía/Casos/
+   Por qué Intezia) agrandadas para llenar mejor cada slide; Cierre
+   rediseñado con blobs a juego con la Apertura.
+   =========================================================================== */
+
+/* ===========================================================================
+   Apertura (.s-cover .s-open) — fusiona portada + situación actual + objetivo
+   general en una sola slide consultiva (sin titular llamativo, sin cita).
+
+   Formas orgánicas (manual-de-marca.pdf, pedido 2026-10-02, solo CAI-031):
+   el manual usa blobs redondeados en sus láminas divisoras (naranja asomando
+   arriba a la derecha, amarillo abajo a la izquierda), no el diamante/rombo
+   geométrico de _base/styles.css (.s-cover::before, rotate(45deg) — único
+   uso de esa rotación en todo el sistema compartido). Se convierte a círculo
+   (blob) y se agrega el acento amarillo de esquina, ambos acotados a este
+   deck vía selector .s-open — no se toca _base/styles.css ni
+   empresa/marca-visual.md (alcance confirmado con el usuario: solo CAI-031).
+   =========================================================================== */
+.s-open::before {
+  border-radius: 50%;
+  transform: none;
+}
+.s-open::after {
+  /* Altura < 56px (donde empieza .id-line) para no taparla; sin offsets
+     negativos (bottom/left en 0) para no activar el detector de desborde
+     por página, que sí vigila el borde inferior aunque overflow:hidden lo
+     recorte visualmente. */
+  content: "";
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 130px; height: 46px;
+  border-radius: 0 46px 0 0;
+  background: var(--yellow);
+  z-index: 0;
+}
+.s-open h1 {
+  font-size: 40px;
+  line-height: 1.12;
+  max-width: 760px;
+  margin-bottom: 20px;
+}
+.s-open .lead { max-width: 760px; margin-bottom: 22px; }
+.s-open .open-objetivo {
+  max-width: 760px;
+  border-left: 3px solid var(--yellow);
+  padding-left: 18px;
+}
+.s-open .open-objetivo .label {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--yellow);
+  margin-bottom: 6px;
+}
+.s-open .open-objetivo p {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 14.5px;
+  line-height: 1.5;
+  opacity: 0.92;
+  max-width: 720px;
+}
+
+/* ===========================================================================
+   Vista por fase (.s-roadmap .s-phaseview) — participantes, horas con
+   kick-off y resultado, por fase. Reusa fondo/eyebrow/h2 de .s-roadmap.
+   =========================================================================== */
+.s-phaseview .phase-intro {
+  position: relative;
+  z-index: 2;
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: rgba(255,255,255,0.82);
+  max-width: 980px;
+  margin: 0 0 18px;
+}
+.s-phaseview .phase-cols {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  gap: 24px;
+  align-items: start;
+}
+.s-phaseview .phase-participants-label {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--orange);
+  margin-bottom: 10px;
+}
+.s-phaseview .org-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+.s-phaseview .org-cluster { padding: 9px 11px; }
+.s-phaseview .org-cluster-tag { margin-bottom: 5px; }
+.s-phaseview .org-person-cargo {
+  display: block;
+  padding: 3px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  font-family: var(--font-body);
+  font-size: 10.5px;
+  line-height: 1.3;
+  color: rgba(255,255,255,0.78);
+}
+.s-phaseview .org-person-cargo:last-child { border-bottom: 0; }
+.s-phaseview .hours-table-label {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--orange);
+  margin-bottom: 10px;
+}
+.s-phaseview .phase-outcome {
+  position: relative;
+  z-index: 2;
+  margin-top: 18px;
+  padding: 12px 18px;
+  background: rgba(244,186,26,0.08);
+  border: 1px solid rgba(244,186,26,0.30);
+  border-left: 5px solid var(--yellow);
+  border-radius: 8px;
+  font-family: var(--font-body);
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--white);
+}
+.s-phaseview .phase-outcome strong { color: var(--yellow); }
+
+/* ===========================================================================
+   Priorización (.s-program .s-matrix) — matriz de Impacto vs. Esfuerzo +
+   franja de Índice de Madurez (esquema, sin cifras).
+   =========================================================================== */
+.s-matrix .matrix-intro {
+  position: relative;
+  z-index: 1;
+  font-size: 14px;
+  line-height: 1.5;
+  color: rgba(0, 0, 0, 0.68);
+  max-width: 960px;
+  margin: 0 0 20px;
+}
+.s-matrix .matrix-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 16px;
+  height: 430px;
+}
+.s-matrix .matrix-cell {
+  border-radius: 14px;
+  padding: 26px 30px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.s-matrix .matrix-cell-quick { background: rgba(244, 186, 26, 0.15); border-color: rgba(244, 186, 26, 0.45); }
+.s-matrix .matrix-cell-big { background: rgba(229, 132, 35, 0.10); border-color: rgba(229, 132, 35, 0.35); }
+.s-matrix .matrix-cell-secondary { background: rgba(0, 0, 0, 0.035); }
+.s-matrix .matrix-cell-decide { background: rgba(0, 0, 0, 0.035); border-style: dashed; }
+.s-matrix .matrix-tag {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 9.5px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 999px;
+  margin-bottom: 8px;
+  background: rgba(0, 0, 0, 0.07);
+  color: var(--black);
+  align-self: flex-start;
+}
+.s-matrix .matrix-name {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 21px;
+  margin-bottom: 9px;
+  color: var(--black);
+}
+.s-matrix .matrix-cell p {
+  font-size: 13px;
+  line-height: 1.48;
+  color: rgba(0, 0, 0, 0.72);
+}
+.s-matrix .madurez-strip {
+  position: relative;
+  z-index: 1;
+  margin-top: 26px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.s-matrix .madurez-label {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  color: var(--black);
+}
+.s-matrix .madurez-tags { display: flex; gap: 10px; flex-wrap: wrap; }
+.s-matrix .madurez-tag {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 11.5px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 7px 16px;
+  border-radius: 999px;
+  background: rgba(0,0,0,0.055);
+  color: var(--black);
+}
+
+/* ===========================================================================
+   Momentos (.s-phaseview .phase-momentos) — dentro de Vista por fase · Fase
+   2: qué construye cada responsable, por momento (Construir/Probar/Adoptar).
+   Condensado aquí 2026-10-02 (antes slide propia "Habilidades", eliminada).
+   =========================================================================== */
+.s-phaseview .phase-momentos-label {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--orange);
+  margin-bottom: 14px;
+}
+.momentos-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.momentos-list li {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+.momento-tag {
+  flex-shrink: 0;
+  width: 84px;
+  text-align: center;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 10.5px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 7px 0;
+  border-radius: 999px;
+}
+.momento-tag.stage-construir { background: var(--yellow); color: var(--black); }
+.momento-tag.stage-probar { background: var(--orange); color: var(--white); }
+.momento-tag.stage-adoptar { background: rgba(255,255,255,0.92); color: var(--black); }
+.momentos-list p {
+  flex: 1;
+  min-width: 0;
+  font-family: var(--font-body);
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: rgba(255,255,255,0.85);
+  padding-top: 4px;
+}
+
+/* ===========================================================================
+   Entregables por fase (.s-benefits .s-benefits-v2 .s-deliv-fase) — 2
+   tarjetas oscuras (una por fase), cada una con su caja AcroForm.
+   =========================================================================== */
+.s-deliv-fase .deliv-fase-card {
+  position: absolute;
+  top: 262px;
+  width: 480px;
+  padding-top: 10px;
+  border-top: 3px solid var(--yellow);
+}
+.s-deliv-fase .deliv-fase-1 { left: 56px; }
+.s-deliv-fase .deliv-fase-2 { left: 580px; width: 487px; border-top-color: var(--orange); }
+.s-deliv-fase .deliv-fase-label {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--white);
+}
+.s-deliv-fase .entregables-box,
+.s-deliv-fase .acreditaciones-box {
+  position: absolute;
+  top: 296px;
+  height: 320px;
+  border-radius: 10px;
+}
+.s-deliv-fase .entregables-box {
+  left: 56px; width: 480px;
+  background: rgba(244,186,26,0.045);
+  border: 1px solid rgba(244,186,26,0.18);
+}
+.s-deliv-fase .acreditaciones-box {
+  left: 580px; width: 487px;
+  background: rgba(229,132,35,0.045);
+  border: 1px solid rgba(229,132,35,0.18);
+}
+.s-deliv-fase .entregables-box .acro-default-text,
+.s-deliv-fase .acreditaciones-box .acro-default-text {
+  display: block;
+  padding: 28px 30px;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 17px;
+  line-height: 1.85;
+}
+
+/* ===========================================================================
+   Seguimiento 30-60-90 / Casos (.s-followup) — reusa la familia visual
+   .rmx-card (tarjeta oscura + facetas), sin el diagrama de roadmap.
+   =========================================================================== */
+.s-followup .followup-intro {
+  position: relative;
+  z-index: 2;
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.5;
+  color: rgba(255,255,255,0.82);
+  max-width: 920px;
+  margin: 0 0 22px;
+}
+.s-followup .followup-cards {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: stretch;
+  gap: 24px;
+  flex: 1;
+  margin-bottom: 20px;
+}
+.s-followup .followup-note {
+  position: relative;
+  z-index: 2;
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.5;
+  color: rgba(255,255,255,0.7);
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 28px;
+}
+.rmx-card {
+  flex: 1;
+  min-width: 0;
+  background: rgba(255,255,255,0.045);
+  border: 1px solid rgba(255,255,255,0.10);
+  border-radius: 14px;
+  padding: 28px 28px 32px;
+  display: flex;
+  flex-direction: column;
+}
+.rmx-card-f2 { border-top: 4px solid var(--yellow); }
+.rmx-card-f3 { border-top: 4px solid var(--orange); }
+.rmx-card-f4 { border-top: 4px solid var(--white); }
+.rmx-card-tag {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 10.5px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 999px;
+  margin-bottom: 14px;
+  align-self: flex-start;
+}
+.rmx-card-f2 .rmx-card-tag { color: var(--yellow); background: rgba(244,186,26,0.13); }
+.rmx-card-f3 .rmx-card-tag { color: var(--orange); background: rgba(229,132,35,0.14); }
+.rmx-card-f4 .rmx-card-tag { color: var(--black); background: rgba(255,255,255,0.85); }
+.rmx-card-name {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.18;
+  color: var(--white);
+  margin-bottom: 22px;
+}
+.rmx-facets { list-style: none; display: flex; flex-direction: column; flex: 1; justify-content: space-evenly; }
+.rmx-facets li {
+  display: flex;
+  gap: 16px;
+  padding: 10px 0;
+}
+.rmx-facets li > span {
+  width: 84px;
+  flex-shrink: 0;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding-top: 2px;
+}
+.rmx-card-f2 .rmx-facets li > span { color: var(--yellow); }
+.rmx-card-f3 .rmx-facets li > span { color: var(--orange); }
+.rmx-card-f4 .rmx-facets li > span { color: var(--white); }
+.rmx-facets li > p {
+  flex: 1;
+  min-width: 0;
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.55;
+  color: rgba(255,255,255,0.82);
+}
+.rmx-facets li > p strong { color: var(--white); font-weight: 700; }
+
+/* ===========================================================================
+   .s-roadmap — fondo base para Vista por fase / Garantía / Casos.
+   =========================================================================== */
+.s-roadmap {
+  background: var(--black);
+  color: var(--white);
+  padding: 38px 56px 0;
+  overflow: hidden;
+}
+.s-roadmap::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 8px; height: 100%;
+  background: var(--gradient-warm);
+  z-index: 4;
+}
+.s-roadmap .counter { color: var(--yellow); }
+.s-roadmap .eyebrow {
+  color: var(--orange);
+  margin-bottom: 8px;
+  position: relative; z-index: 2;
+}
+.s-roadmap h2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 27px;
+  line-height: 1.08;
+  margin-bottom: 14px;
+  position: relative; z-index: 2;
+}
+.s-roadmap h2 .hl {
+  background: var(--gradient-warm);
+  color: var(--black);
+  padding: 0 9px;
+}
+
+/* ===========================================================================
+   NUEVO — "Vista por fase" (.s-org .org-grid): organigrama de 7 frentes,
+   SOLO cargos (sin nombres propios). Hereda fondo/eyebrow/h2 de .s-roadmap.
+   =========================================================================== */
+.org-grid {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+.org-cluster {
+  background: rgba(255,255,255,0.045);
+  border: 1px solid rgba(255,255,255,0.10);
+  border-top: 3px solid var(--yellow);
+  border-radius: 10px;
+  padding: 12px 14px;
+}
+.org-cluster-tag {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--yellow);
+  margin-bottom: 8px;
+}
+
+/* ===========================================================================
+   NUEVO — Tiempos por fase (.hours-table): tabla simple, dentro de
+   .s-roadmap (fondo oscuro). Reusada en Fase 1 y Fase 2.
+   =========================================================================== */
+.hours-table {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  border-collapse: collapse;
+}
+.hours-table th,
+.hours-table td {
+  text-align: left;
+  padding: 9px 12px;
+  font-family: var(--font-body);
+  font-size: 12.5px;
+  color: rgba(255,255,255,0.85);
+  border-bottom: 1px solid rgba(255,255,255,0.10);
+}
+.hours-table th {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 9.5px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--yellow);
+  border-bottom: 1px solid rgba(244,186,26,0.35);
+}
+.hours-table td.num,
+.hours-table th.num { text-align: right; font-variant-numeric: tabular-nums; }
+.hours-table tr.total td {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--white);
+  border-top: 2px solid var(--yellow);
+  border-bottom: 0;
+  padding-top: 12px;
+}
+
+/* ===========================================================================
+   Cierre — escalera editable + rediseño 2026-10-02 (b): blobs a juego con la
+   Apertura (bookend visual) y tarjetas con más presencia. Los 4 campos
+   AcroForm (CierreResultado + CierrePaso1-3) NO cambian de posición/tamaño
+   — solo se agregan elementos decorativos nuevos alrededor.
+   =========================================================================== */
+.s-end .end-blob-top {
+  content: "";
+  position: absolute;
+  top: -160px; right: -160px;
+  width: 460px; height: 460px;
+  border-radius: 50%;
+  background: var(--gradient-warm);
+  z-index: 0;
+}
+.s-end .end-blob-bottom {
+  content: "";
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 130px; height: 46px;
+  border-radius: 0 46px 0 0;
+  background: var(--yellow);
+  z-index: 0;
+}
+.s-end .end-eyebrow {
+  position: relative;
+  z-index: 2;
+  margin-top: 4px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: var(--yellow);
+  text-align: center;
+}
+
+.s-end .end-logo img { height: 140px; }
+
+.s-end .end-summit {
+  position: absolute;
+  z-index: 2;
+  top: 224px; left: 242px; width: 640px; height: 60px;
+  background: var(--yellow);
+  border-radius: 8px;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.s-end .end-summit .acro-default-text {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.25;
+  color: var(--black);
+  padding: 0 16px;
+}
+
+.s-end .end-stairs {
+  position: absolute;
+  z-index: 2;
+  top: 308px; left: 242px; width: 640px; height: 190px;
+}
+.s-end .stair-step {
+  position: absolute;
+  bottom: 0;
+  width: 200px;
+  border-radius: 10px 10px 0 0;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+.s-end .stair-1 { left: 0px;   height: 90px;  background: var(--yellow); }
+.s-end .stair-2 { left: 220px; height: 140px; background: var(--orange); }
+.s-end .stair-3 { left: 440px; height: 190px; background: var(--white); border: 2px solid var(--yellow); }
+
+.s-end .stair-label {
+  position: absolute;
+  top: 10px; left: 12px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.s-end .stair-1 .stair-label,
+.s-end .stair-3 .stair-label { color: var(--black); opacity: 0.55; }
+.s-end .stair-2 .stair-label { color: var(--white); opacity: 0.7; }
+
+.s-end .stair-field { position: absolute; top: 30px; left: 12px; width: 176px; }
+.s-end .stair-1 .stair-field { height: 50px; }
+.s-end .stair-2 .stair-field { height: 100px; }
+.s-end .stair-3 .stair-field { height: 150px; }
+.s-end .stair-field .acro-default-text {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 1.3;
+  display: block;
+}
+.s-end .stair-1 .stair-field .acro-default-text,
+.s-end .stair-3 .stair-field .acro-default-text { color: var(--black); }
+.s-end .stair-2 .stair-field .acro-default-text { color: var(--white); }
+
+.s-end .cta-wrap {
+  position: absolute;
+  z-index: 2;
+  top: 522px; left: 0; right: 0;
+  margin-top: 0;
+  display: flex;
+  justify-content: center;
+}
+.s-end .end-logo { position: relative; z-index: 2; }
+.s-end .end-contact { z-index: 2; }
+
+@media print {
+  .s-end .end-summit .acro-default-text,
+  .s-end .stair-field .acro-default-text { display: none !important; }
+}
+
+/* ===========================================================================
+   Beneficios v3 — fondo oscuro, usado solo como base visual de Entregables
+   por fase (.s-deliv-fase ya define su propio grid de 2 columnas arriba).
+   =========================================================================== */
+.s-benefits-v2 { background: var(--black); color: var(--white); }
+.s-benefits-v2::before { background: var(--yellow); }
+.s-benefits-v2 .counter { color: var(--yellow); }
+.s-benefits-v2 .eyebrow { color: var(--yellow); }
+.s-benefits-v2 h2 { color: var(--white); }
+.s-benefits-v2 h2 .hl {
+  display: inline-block;
+  background: var(--yellow);
+  color: var(--black);
+  padding: 0 10px;
+}
+.s-benefits-v2 .foot .meta { color: rgba(255, 255, 255, 0.65); }
+
+/* ===========================================================================
+   "Inversión por fases" — 2 recuadros (Detección, Habilidades), desglosados
+   por componente con horas. Marker propio "Inversión por fases"
+   (agregar-campo-precio.py, grupo FASE_PRICE_FIELDS).
+   =========================================================================== */
+.s-price .price-intro {
+  position: absolute;
+  top: 112px;
+  left: 56px;
+  width: 1011px;
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 1.4;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.s-price .fase-price-row {
+  position: absolute;
+  left: 56px;
+  width: 480px;
+}
+.s-price .fase-price-row:nth-of-type(1) { top: 168px; }
+.s-price .fase-price-row:nth-of-type(2) { top: 288px; }
+
+.s-price .fase-price-copy { width: 320px; }
+.s-price .fase-price-label {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--orange);
+  display: block;
+  margin-bottom: 6px;
+}
+.s-price .fase-price-breakdown {
+  list-style: none;
+  margin-bottom: 5px;
+}
+.s-price .fase-price-breakdown li {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 11.5px;
+  line-height: 1.5;
+  color: rgba(0, 0, 0, 0.72);
+}
+.s-price .fase-price-breakdown .num { font-variant-numeric: tabular-nums; color: var(--black); }
+.s-price .fase-price-total {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 12.5px;
+  color: var(--black);
+  padding-top: 3px;
+  border-top: 1px solid rgba(0,0,0,0.12);
+}
+.s-price .fase-price-frame {
+  position: absolute;
+  top: 12px;
+  right: 0;
+  width: 140px;
+  height: 40px;
+  background: rgba(244, 186, 26, 0.22);
+}
+
+.s-price .block-notes-container { top: 400px; }
+.s-price .notas-box { top: 428px; }
+
+.s-price .cot-roi-box { top: 552px; }
+.s-price .cot-garantia-badge { top: 632px; }
+
+.s-price .cot-label-base     { top: 150px; }
+.s-price .base-frame         { top: 170px; }
+.s-price .cot-label-discount { top: 248px; }
+.s-price .discount-frame     { top: 268px; }
+.s-price .cot-sign-minus     { top: 268px; }
+.s-price .cot-urgent-note    { top: 241px; }
+.s-price .cot-label-total    { top: 340px; }
+.s-price .total-frame        { top: 360px; }
+.s-price .cot-validity       { top: 452px; }
+.s-price .cot-terms-box      { top: 476px; }
+
+/* Excepción de color rechazada para este deck (pedido explícito 2026-10-02,
+   p. 17/Inversión): el badge de urgencia vuelve a paleta oficial
+   (naranja), en vez del rojo/rosado permanente de _base/styles.css. */
+.s-price .cot-urgent-note {
+  background: rgba(229, 132, 35, 0.14);
+  color: var(--orange);
+}
+.s-price .cot-sign-minus { color: var(--orange); }
+
+/* Calendario de inicio — "Desarrollo de Nuevos Negocios" (29 chars, nombre de
+   área real de p. 5) envuelve a 3 líneas en .cal-title, más que cualquier
+   título anterior del sistema. Recorte local de espaciado para compensar sin
+   tocar el componente compartido (_base/styles.css) ni acortar el nombre. */
+.s-steps .steps-calendar { margin-top: 10px; }
+.s-steps .cal-row { padding: 3px 0; }

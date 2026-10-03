@@ -1,0 +1,55 @@
+/* ============================================================
+   Overrides · Diram (CAP-078)
+   Se carga DESPUÉS de styles.css. Solo lo propio de este deck.
+   ============================================================ */
+
+/* ── Slide 10 · Mapa de viabilidad ───────────────────────────
+   Badge «Fuera de alcance» para el caso de uso #4 (no viable hoy).
+   Contorno en vez de relleno: se lee como descarte honesto, no como
+   prioridad. styles.css solo define -alta y -media. */
+.hm-badge-fuera {
+  background: transparent;
+  color: var(--black);
+  border: 1px solid var(--black);
+  white-space: normal;
+  line-height: 1.15;
+  text-align: center;
+}
+
+/* Los encabezados de área llevan la glosa de siglas (GB / ANSI / IEC),
+   así que necesitan envolver en vez de forzar una sola línea (§4.12). */
+.s-heatmap .area-row td {
+  white-space: normal;
+  line-height: 1.25;
+}
+
+/* ── Slide 11 · Impacto ──────────────────────────────────────
+   Barra de resultado negativo (METR: 19% más lentos). Naranja de marca
+   con trama diagonal: se distingue de las barras de ganancia sin salir
+   de la paleta oficial. */
+.s-impact .bar-fill.bar-neg {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    var(--orange) 0,
+    var(--orange) 5px,
+    rgba(0, 0, 0, .28) 5px,
+    rgba(0, 0, 0, .28) 10px
+  );
+}
+
+/* La cifra negativa no cabe legible dentro de su propia barra (es corta) y la
+   trama la vuelve ilegible. Se saca al track, que es oscuro, en naranja. */
+.s-impact .bar-fill.bar-neg .bar-val {
+  right: auto;
+  left: calc(100% + 10px);
+  color: var(--orange);
+  white-space: nowrap;
+}
+
+/* Fuente del gauge (FMI · Construction Disconnected · 2018).
+   El panel del gauge no traía cita propia en el canónico; esta slide sí
+   la necesita porque su cifra viene de otro estudio que el de las barras (§4.9). */
+.s-impact .gauge-panel .gauge-source {
+  margin-top: 10px;
+  text-align: center;
+}

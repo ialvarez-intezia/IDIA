@@ -1,0 +1,377 @@
+<!doctype html>
+<!--
+  Propuesta · HCA Venezuela · Sesión de prueba (CAI-022)
+  Servicio: HABILIDADES (Modelo Intezia) · sesión de prueba de 2h, online síncrono, SIN hoja
+  de cotización (instrucción explícita del usuario — §4.14: al eliminar s-price, los 5
+  campos de precio no aplican). Cliente ya conocido del sistema: ver
+  clientes/propuestas/hca-venezuela-cap015/ (CAP-015, Claude Cowork Dominio Corporativo).
+
+  ALCANCE (confirmado con el usuario 2026-09-18): la sesión construye EN VIVO solo la skill
+  de reportes operativos del área de consultoría (informes de consultorías entregadas,
+  nómina, deudas, sesiones restantes) conectada a Google Sheets. El hilo de Marketing/MCP
+  para redes sociales de Virginia NO se construye en esta sesión — solo se MENCIONA cómo
+  funciona la conexión, para que Marketing pueda iniciar por su cuenta después.
+
+  PARTICIPANTES — recomendación abierta, no lista cerrada (confirmado con el usuario): el
+  área de consultoría y el área de academia/performance como participantes clave (operan la
+  herramienta); se sugiere sumar al equipo de tesorería y a los directores como
+  observadores. La decisión final de a quién invitar queda en manos de HCA.
+
+  NOMBRES REALES OMITIDOS DEL DECK (Bellatrix, Virginia, Alberto, Melissa) — se sigue el
+  precedente ya documentado para este mismo cliente en hca-venezuela-cap015/brief.md ("Sin
+  nombre del cliente referente en el deck... a pedido del cliente"). Se usan roles genéricos:
+  "el área de consultoría", "el área de academia/performance", "el equipo de tesorería",
+  "los directores", "Marketing". Ver brief.md de este deck para el detalle completo.
+
+  FRAMING "GRATUITA" — mantenido IMPLÍCITO (confirmado con el usuario): el deck no dice
+  "gratis" ni "cortesía", ni menciona que después se evaluaría una propuesta más amplia.
+  Simplemente no hay hoja de cotización, sin explicar el porqué en el documento.
+
+  CIFRA "~99.9%" DE REDUCCIÓN DE ERROR (mencionada por el usuario) — NO incluida en el deck:
+  sin fuente externa verificable (§4.9 exige estudios reales para Impacto). En su lugar, el
+  Impacto usa datos reales y citables: Panko (errores en hojas de cálculo manuales) +
+  Microsoft Work Trend Index 2024 (productividad con asistentes de IA). Ver brief.md.
+
+  ESTRUCTURA (8 slides, sin Programa ni roadmap — sesión única, sin fases): Portada,
+  Diagnóstico, Objetivos, Cronograma (única sesión), Beneficios v3, Impacto, Próximos pasos,
+  Cierre escalera. Sin Metodología ABR ni Equipo facilitador expuestos (§4.10a). Sin
+  certificado (sesión de prueba, no curso). servicio@intezia.com.
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Propuesta · HCA Venezuela · Intezia</title>
+  <link rel="stylesheet" href="../_base/styles.css">
+  <link rel="stylesheet" href="overrides.css">
+</head>
+<body>
+
+  <main class="deck">
+
+    <!-- 1 · Portada -->
+    <section class="slide s-cover">
+      <span class="counter">01 / 08</span>
+      <div class="logo-big">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia Educación">
+      </div>
+      <div class="body">
+        <p class="eyebrow">Propuesta formativa · Servicio de Habilidades</p>
+        <h1>
+          De contar a mano,<br>
+          <span class="hl">a reportes automáticos.</span>
+        </h1>
+        <p class="lead">
+          Una sesión de 2 horas para construir, en vivo, una <strong>skill de Claude</strong> conectada a las bases de Google Sheets del área de consultoría: informes automáticos de consultorías entregadas, nómina, deudas y sesiones restantes.
+        </p>
+      </div>
+      <div class="id-line">
+        <span class="codigo">Código: CAI-022</span>
+        <span class="cliente">HCA Venezuela</span>
+      </div>
+    </section>
+
+    <!-- 2 · Punto de dolor + Diagnóstico -->
+    <section class="slide s-pain">
+      <span class="counter">02 / 08</span>
+      <span class="quote-mark">&ldquo;</span>
+      <div class="body">
+        <h2>Cada informe semanal de HCA se cuenta a mano.</h2>
+        <p class="context">
+          El área de consultoría de HCA hace seguimiento manual en Excel, por consultor, empresa y agenda semanal. Los informes que hoy se cuentan a mano dejan margen de error y consumen tiempo que el equipo podría dedicar a atender a sus clientes.
+        </p>
+        <p class="diag-title">Diagnóstico</p>
+        <ol>
+          <li>El área de consultoría cuenta a mano, cada semana, sus consultorías entregadas, nómina, sesiones acumuladas, deudas y recompras.</li>
+          <li>El cálculo de nómina a partir de ese conteo manual toma tiempo excesivo y deja un margen de error alto.</li>
+          <li>El área de academia/performance enfrenta el mismo patrón: seguimiento manual de estudiantes por sede, completaciones y pagos a supervisores.</li>
+          <li>El equipo de tesorería también hace conciliaciones y cálculo de comisiones de forma manual.</li>
+          <li>Los directores necesitan ver el estado de servicios, pagos y nómina en un solo lugar, sobre todo para el plan de ingresos que se revisa cada semana.</li>
+        </ol>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">HCA VENEZUELA · CAI-022</span>
+      </div>
+    </section>
+
+    <!-- 3 · Objetivos estratégicos -->
+    <section class="slide s-goals">
+      <span class="counter">03 / 08</span>
+      <p class="eyebrow">02 · Objetivos</p>
+      <h2>A dónde lleva<br>esta sesión.</h2>
+      <div class="columns">
+        <div class="general">
+          <p class="label">Objetivo general</p>
+          <p>
+            Mostrarle a HCA Venezuela, en una sesión de 2 horas, cómo Claude puede construir skills conectadas a sus bases de Google Sheets para automatizar los informes que hoy se cuentan a mano en el área de consultoría.
+          </p>
+        </div>
+        <div class="specifics">
+          <p class="label">Objetivos específicos</p>
+          <ol>
+            <li>Construir, en vivo, una skill que genere el informe semanal de consultorías entregadas, nómina, deudas y sesiones restantes.</li>
+            <li>Mostrar cómo esa misma conexión puede replicarse en otras áreas, como Marketing, para su propio análisis.</li>
+            <li>Entregar el workbook, el generador de skills y los prompts para que el equipo pueda replicar el proceso sin depender de Intezia.</li>
+            <li>Sumar como observadores al equipo de tesorería y a los directores, para que entiendan el funcionamiento además de quienes operan la herramienta.</li>
+          </ol>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">HCA VENEZUELA · CAI-022</span>
+      </div>
+    </section>
+
+    <!-- 4 · Cronograma · única sesión -->
+    <section class="slide s-schedule">
+      <span class="counter">04 / 08</span>
+      <p class="eyebrow">03 · Cronograma · La sesión</p>
+
+      <div class="ses-head">
+        <div>
+          <span class="ses-mod">Sesión única · Consultoría y Academia/Performance · Online síncrono</span>
+          <h2>Skill de reportes, conectada a Google Sheets</h2>
+        </div>
+        <div class="ses-meta"><span class="ses-dur">2h</span></div>
+      </div>
+
+      <div class="ses-body">
+        <div class="ses-block">
+          <span class="label">Temas</span>
+          <div class="chips">
+            <span class="chip">Conexión Claude + Google Sheets</span>
+            <span class="chip">Construcción de la skill</span>
+            <span class="chip">Prueba con datos reales</span>
+            <span class="chip">Cómo replicarlo en Marketing</span>
+          </div>
+        </div>
+        <div class="ses-block">
+          <span class="label">Tiempo · Total 2 h</span>
+          <div class="timebar">
+            <div class="seg" style="flex:20">20' Contexto y conexión</div>
+            <div class="seg" style="flex:70">70' Construcción guiada de la skill</div>
+            <div class="seg" style="flex:20">20' Prueba con datos reales</div>
+            <div class="seg" style="flex:10">10' Cómo aplicarlo en Marketing y cierre</div>
+          </div>
+        </div>
+        <div class="ses-cols">
+          <div class="ses-block">
+            <span class="label">Qué se hace</span>
+            <ul>
+              <li>Conectamos Claude a las bases de Google Sheets del área de consultoría</li>
+              <li>Construimos, en vivo, la skill que genera el informe semanal</li>
+              <li>Mostramos cómo el mismo patrón de conexión puede aplicarse en Marketing</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Qué se logra</span>
+            <ul>
+              <li>Un informe automático funcionando sobre datos reales del área</li>
+              <li>Margen de error mínimo, sin depender del conteo manual</li>
+              <li>Un camino claro para replicar la construcción en otra área</li>
+            </ul>
+          </div>
+          <div class="ses-block block-rec">
+            <span class="label">Recursos y entornos</span>
+            <ul>
+              <li>Sesión online síncrona (videollamada)</li>
+              <li>Cuenta de Claude con capacidad de Skills</li>
+              <li>Bases reales de Google Sheets de consultoría</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">HCA VENEZUELA · CAI-022</span>
+      </div>
+    </section>
+
+    <!-- 5 · Beneficios (formato v3) -->
+    <section class="slide s-benefits s-benefits-v2">
+      <span class="counter">05 / 08</span>
+      <p class="eyebrow">04 · Beneficios</p>
+      <h2>Lo que <span class="hl">se llevan</span>.</h2>
+      <div class="grid">
+        <div class="block">
+          <p class="label">Resultados</p>
+          <ul>
+            <li>Una <strong>skill funcionando</strong> sobre datos reales de consultoría, no una demo genérica.</li>
+            <li>Un margen de error mínimo en los informes, gracias a la capa avanzada de razonamiento de Claude.</li>
+            <li>Un patrón de conexión que el equipo puede replicar en otras áreas, como Marketing.</li>
+          </ul>
+        </div>
+        <div class="block">
+          <p class="label">Por qué Habilidades</p>
+          <p>
+            HCA prueba el servicio con un caso real de su propia operación, <strong>construyendo en vivo</strong> en vez de solo explicar en una lámina.
+          </p>
+        </div>
+        <div class="block">
+          <p class="label">Entregables</p>
+        </div>
+        <div class="block">
+          <p class="label">Valor inmediato</p>
+        </div>
+      </div>
+
+      <div class="multi-box entregables-box" data-field="Entregables"></div>
+      <div class="multi-box acreditaciones-box" data-field="Acreditacion"></div>
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">HCA VENEZUELA · CAI-022</span>
+      </div>
+    </section>
+
+    <!-- 6 · Impacto / estudios — datos reales, fuente citada (CLAUDE.md §4.9) -->
+    <section class="slide s-impact">
+      <span class="counter">06 / 08</span>
+
+      <div class="impact-head">
+        <p class="eyebrow">05 · Impacto</p>
+        <h2>Contar a mano<br><span class="hl">tiene un costo real</span>.</h2>
+      </div>
+
+      <div class="impact-body">
+        <div class="chart-panel">
+          <p class="panel-title">El riesgo real de contar reportes a mano</p>
+          <div class="bars">
+            <div class="bar-row">
+              <span class="bar-label">Hojas de cálculo operativas con al menos un error</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:94%"><span class="bar-val">94%</span></div></div>
+            </div>
+            <div class="bar-row">
+              <span class="bar-label">Usuarios de un asistente de IA que reportan más productividad</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:77%"><span class="bar-val">77%</span></div></div>
+            </div>
+          </div>
+          <div class="bar-axis"><span class="scale"><span>0</span><span>25</span><span>50</span><span>75</span><span>100%</span></span></div>
+          <p class="panel-source">Fuentes: Panko &mdash; "What We Know About Spreadsheet Errors" (revisión de estudios 1995&ndash;2004) &middot; Microsoft &mdash; Work Trend Index 2024.</p>
+        </div>
+
+        <div class="gauge-panel">
+          <div class="gauge" style="--pct:29">
+            <div class="gauge-core">
+              <span class="gauge-num">29<span class="pct">%</span></span>
+              <span class="gauge-cap">más rápidos en búsqueda, redacción y resumen con un asistente de IA</span>
+            </div>
+          </div>
+          <div class="chips">
+            <div class="chip">
+              <span class="chip-num">5.2%</span>
+              <span class="chip-lbl">error promedio por celda en hojas de cálculo</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="impact-hook">
+        <span class="hook-mark">&#9656;</span>
+        <p class="hook-text">
+          El 94% de las hojas de cálculo operativas estudiadas tiene al menos un error, con una tasa promedio de 5.2% de error por celda (Panko). Los usuarios de un asistente de IA reportan un 77% de aumento de productividad, y son 29% más rápidos en búsqueda, redacción y resumen (Microsoft, 2024). Construir una skill que genere el informe directamente desde la base de datos, en vez de contarlo a mano, es justo el cambio que esta sesión pone a prueba.
+        </p>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">HCA VENEZUELA · CAI-022</span>
+      </div>
+    </section>
+
+    <!-- 7 · Próximos pasos -->
+    <section class="slide s-steps">
+      <span class="counter">07 / 08</span>
+      <p class="eyebrow">06 · Próximos pasos</p>
+      <h2>Cómo arrancamos.</h2>
+      <div class="step-cards">
+        <div class="step-card">
+          <span class="ghost">01</span>
+        </div>
+        <div class="step-card">
+          <span class="ghost">02</span>
+        </div>
+        <div class="step-card">
+          <span class="ghost">03</span>
+        </div>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-01-titulo" data-field="Paso01Titulo">
+        <span class="acro-default-text">Confirmamos fecha</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-01-body" data-field="Paso01Body">
+        <span class="acro-default-text">Definimos con HCA la fecha y hora de la sesión online, y quiénes participan.</span>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-02-titulo" data-field="Paso02Titulo">
+        <span class="acro-default-text">Acceso y logística</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-02-body" data-field="Paso02Body">
+        <span class="acro-default-text">Coordinamos el acceso a la videollamada y a las bases de Google Sheets de consultoría.</span>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-03-titulo" data-field="Paso03Titulo">
+        <span class="acro-default-text">Reunión de arranque</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-03-body" data-field="Paso03Body">
+        <span class="acro-default-text">Sesión breve para confirmar qué informe se construye primero y con qué datos.</span>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">HCA VENEZUELA · CAI-022</span>
+      </div>
+    </section>
+
+    <!-- 8 · Cierre (ruta/escalera editable) -->
+    <section class="slide s-end">
+      <span class="counter">08 / 08</span>
+
+      <div class="end-logo">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia">
+      </div>
+
+      <div class="end-summit" data-field="CierreResultado">
+        <span class="acro-default-text">HCA, con una skill de reportes de consultoría construida y lista para usar.</span>
+      </div>
+
+      <div class="end-stairs">
+        <div class="stair-step stair-1">
+          <span class="stair-label">Paso 1</span>
+          <div class="stair-field" data-field="CierrePaso1">
+            <span class="acro-default-text">Conexión a Google Sheets</span>
+          </div>
+        </div>
+        <div class="stair-step stair-2">
+          <span class="stair-label">Paso 2</span>
+          <div class="stair-field" data-field="CierrePaso2">
+            <span class="acro-default-text">Skill de reportes construida</span>
+          </div>
+        </div>
+        <div class="stair-step stair-3">
+          <span class="stair-label">Paso 3</span>
+          <div class="stair-field" data-field="CierrePaso3">
+            <span class="acro-default-text">Prompts listos para replicar</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cta-wrap">
+        <span class="cta">Esperamos tu respuesta</span>
+      </div>
+
+      <div class="end-contact">
+        <p class="contact-line">
+          <span class="contact-label">Asesora de ventas:</span>
+          María Iribarren <span class="dot">·</span> +58 414 0570056 <span class="dot">·</span> miribarren@intezia.com
+        </p>
+        <p class="contact-line">
+          <span class="contact-label">Empresa:</span>
+          Intezia C.A J-505657950 <span class="dot">·</span> servicio@intezia.com
+        </p>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

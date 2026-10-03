@@ -1,0 +1,681 @@
+<!doctype html>
+<!--
+  Propuesta — Simple TV · IA Champions (DET-002)
+  Servicio: DETECCIÓN + HABILIDADES (Modelo Intezia · empresa/tipos-de-documento.md §0).
+  División: Educación · Eje: auditoría cross-ecosistema (Microsoft + Claude) y nivelación
+  avanzada de Copilot + prompting extendido, para el grupo piloto "IA Champions" (4 personas:
+  Neliana + 1 sin confirmar + 2 de Calidad y Procesos).
+  Fuente: minuta de llamada con Neliana + instrucción directa del usuario. Sin Ficha
+  Comercial. Existe CAP-035 (mayo 2026, "Fundamentos para toda la empresa") en la carpeta
+  simple-tv/ — es solo referencia de historial, NO guía de contenido; por eso este deck vive
+  en carpeta propia simple-tv-det002/.
+  §4.11: Claude y Copilot ya están en uso real (directiva / pilotos individuales) — no se
+  afirma migración. El "Cerebro Digital" es ejemplo ilustrativo de nivel avanzado, no un
+  compromiso de herramienta.
+  Base clonada de amcor/ (esquema DET original: Fase 1 cotizada + Fase 2 progresiva, cierre
+  escalera). Beneficios v3 (reusa DNA visual de .rmx-card/.rmx-result-card del roadmap —
+  pill-tag, borde de acento, glow — reemplaza el v2 de tarjetas blancas), con el layout
+  ampliado de 2026-08-28 (letra más grande, grid de 570px, ya estándar en todo el sistema —
+  ver plantillas/propuesta-comercial.md).
+  Horas confirmadas 2026-08-28: Fase 1 Detección = 4 sesiones individuales de 2h (una por IA
+  Champion) = 8h. Fase 2 Habilidades = 2 módulos (Copilot Avanzado + Prompting Ampliado) × 4
+  sesiones de 2h = 16h. Total del plan: 24h. Por eso la Fase 2 pasó de 1 slide a 2 (una por
+  módulo, igual densidad visual que CAI-002).
+  Actualizado 2026-08-31: Fase 2 deja de ser "se cotiza tras el diagnóstico" — ambas fases
+  vienen desarrolladas y cotizadas en esta misma propuesta (esquema go-pharma/, no amcor/,
+  para la hoja de precio) porque el cliente compara este documento directo contra la
+  variante de solo Habilidades (CAI-002) para decidir presupuesto; con la mitad abierta no
+  hay nada que comparar. `customize-simple-tv-det002.py` ya no elimina PrecioFase2 — solo
+  el campo huérfano PrecioFase3, y el subtotal suma Fase1+Fase2.
+  13 slides.
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Propuesta · Simple TV · Intezia</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <main class="deck">
+
+    <!-- 1 · Portada -->
+    <section class="slide s-cover">
+      <span class="counter">01 / 13</span>
+      <div class="logo-big">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia">
+      </div>
+      <div class="body">
+        <p class="eyebrow">Propuesta de negocio · Servicio de Detección</p>
+        <h1>
+          IA Champions<br>
+          <span class="hl">el piloto que abre el macroproyecto</span>
+        </h1>
+        <p class="lead">
+          Auditamos con panorama <strong>cross-ecosistema</strong> (Microsoft y Claude) a los 4 IA Champions de Simple TV y los nivelamos en Copilot avanzado y prompting extendido.
+        </p>
+      </div>
+      <div class="id-line">
+        <span class="codigo">Código: DET-002</span>
+        <span class="cliente">Simple TV</span>
+      </div>
+    </section>
+
+    <!-- 2 · Punto de dolor + Diagnóstico -->
+    <section class="slide s-pain">
+      <span class="counter">02 / 13</span>
+      <span class="quote-mark">&ldquo;</span>
+      <div class="body">
+        <h2>4 personas, equipos chicos, el mayor impacto por hora ganada.</h2>
+        <p class="context">
+          Simple TV construye su estrategia de IA desde cero, con un <strong>Comité de IA</strong> propio y casos de uso ya en marcha. Seleccionó 4 <strong>IA Champions</strong> en áreas chicas para probar dónde la productividad por persona rinde más, antes de escalar al resto de la empresa.
+        </p>
+        <p class="diag-title">Diagnóstico</p>
+        <ol>
+          <li>Simple TV ya tiene un Comité de IA y un área técnica interna levantando casos de uso: no parte de cero en criterio, sí en ejecución.</li>
+          <li>Siguen en proceso de segmentar el licenciamiento: qué áreas necesitan Copilot premium y cuáles básico.</li>
+          <li>Los 4 Champions (RR.HH., Calidad y Procesos) se eligieron por equipo chico y alto impacto por persona, no por jerarquía.</li>
+          <li>La directiva de Simple TV ya usa Claude: "solo Copilot" no alcanza para un grupo que va a liderar la estrategia del macroproyecto.</li>
+          <li>El área de IA corre en paralelo su propio diagnóstico de nivel por persona: nuestra Detección responde una pregunta distinta, cómo segmentar y escalar al resto de la empresa.</li>
+        </ol>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">SIMPLE TV · DET-002</span>
+      </div>
+    </section>
+
+    <!-- 3 · Objetivos estratégicos -->
+    <section class="slide s-goals">
+      <span class="counter">03 / 13</span>
+      <p class="eyebrow">02 · Objetivos</p>
+      <h2>A dónde llevamos<br>a los IA Champions.</h2>
+      <div class="columns">
+        <div class="general">
+          <p class="label">Objetivo general</p>
+          <p>
+            Auditar al grupo piloto de IA Champions de Simple TV con panorama cross-ecosistema (Microsoft y Claude) y nivelarlos en Copilot avanzado y prompting extendido, para que lideren la estrategia del macroproyecto de IA en sus áreas.
+          </p>
+        </div>
+        <div class="specifics">
+          <p class="label">Objetivos específicos</p>
+          <ol>
+            <li>Auditar los procesos y el uso actual de IA de los 4 Champions, con panorama cross-ecosistema, no solo Copilot.</li>
+            <li>Entregar una hoja de ruta de cómo segmentar la adopción de IA al resto de la empresa.</li>
+            <li>Nivelar a los Champions en Copilot avanzado, documentado por persona.</li>
+            <li>Extender su prompting con ingeniería de contexto, iteración agéntica y creación de skills.</li>
+          </ol>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">SIMPLE TV · DET-002</span>
+      </div>
+    </section>
+
+    <!-- 4 · El camino (3 tarjetas) -->
+    <section class="slide s-program">
+      <span class="counter">04 / 13</span>
+      <p class="eyebrow">03 · El camino</p>
+      <h2>De la auditoría al nivel avanzado.</h2>
+      <p class="meta">Fase 1 (auditoría, 8h) y Fase 2 (Habilidades, 16h), las dos desarrolladas y cotizadas en esta propuesta.</p>
+      <div class="modules">
+        <div class="module">
+          <span class="roman">I</span>
+          <h3>Auditoría cross-ecosistema</h3>
+          <p class="obj">Panorama de Microsoft y Claude para los 4 Champions, más una hoja de ruta de segmentación.</p>
+          <ul class="topics">
+            <li>4 sesiones individuales de 2h (8h)</li>
+            <li>Hoja de ruta</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">II</span>
+          <h3>Copilot avanzado</h3>
+          <p class="obj">Productividad avanzada de Copilot, documentada por persona.</p>
+          <ul class="topics">
+            <li>4 sesiones de 2h (8h)</li>
+            <li>Documentado</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">III</span>
+          <h3>Prompting ampliado</h3>
+          <p class="obj">Ingeniería de contexto, iteración agéntica y creación de skills: el siguiente nivel.</p>
+          <ul class="topics">
+            <li>4 sesiones de 2h (8h)</li>
+            <li>Skills</li>
+          </ul>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">SIMPLE TV · DET-002</span>
+      </div>
+    </section>
+
+    <!-- 5 · Fase 1: Detección -->
+    <section class="slide s-schedule">
+      <span class="counter">05 / 13</span>
+      <p class="eyebrow">04 · Fase 1 de 2 · Ruta por fase</p>
+
+      <div class="ruta">
+        <div class="ruta-node">1</div>
+        <div class="ruta-track"><div class="ruta-fill" style="width:50%"></div></div>
+        <span class="ruta-step">Detección</span>
+      </div>
+
+      <div class="ses-head">
+        <div>
+          <span class="ses-mod">Fase 1 · 4 sesiones individuales de 2h · Modalidad a confirmar</span>
+          <h2>Detección</h2>
+        </div>
+        <div class="ses-meta"><span class="ses-dur">8h</span></div>
+      </div>
+
+      <div class="ses-body">
+        <div class="ses-block">
+          <span class="label">Temas</span>
+          <div class="chips">
+            <span class="chip">Auditoría cross-ecosistema</span>
+            <span class="chip">Microsoft + Claude</span>
+            <span class="chip">Hoja de ruta de segmentación</span>
+            <span class="chip">Panorama por persona</span>
+          </div>
+        </div>
+        <div class="ses-block">
+          <span class="label">Tiempo · 4 sesiones individuales de 2h (8h)</span>
+          <div class="timebar">
+            <div class="seg" style="flex:1">Sesión 1 · Neliana (2h)</div>
+            <div class="seg" style="flex:1">Sesión 2 · Champion RR.HH. (2h)</div>
+            <div class="seg" style="flex:1">Sesión 3 · Calidad y Procesos (2h)</div>
+            <div class="seg" style="flex:1">Sesión 4 · Calidad y Procesos (2h)</div>
+          </div>
+        </div>
+        <div class="ses-cols">
+          <div class="ses-block">
+            <span class="label">Qué se hace</span>
+            <ul>
+              <li>Una sesión individual de 2h con cada uno de los 4 IA Champions, panorama cross-ecosistema (Microsoft y Claude), no solo Copilot</li>
+              <li>Mapeamos los procesos reales de sus áreas (RR.HH., Calidad y Procesos)</li>
+              <li>Consolidamos hallazgos en una hoja de ruta de cómo segmentar la adopción al resto de la empresa</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Qué se logra</span>
+            <ul>
+              <li>Diagnóstico validado por persona, más allá del nivel que ya mide su diagnóstico interno</li>
+              <li>Insumo directo para la estrategia del macroproyecto que los Champions van a liderar</li>
+              <li>Prioridades claras de qué escalar primero</li>
+            </ul>
+          </div>
+          <div class="ses-block block-rec">
+            <span class="label">Recursos y entornos</span>
+            <ul>
+              <li>Guion de auditoría Intezia, cross-ecosistema</li>
+              <li>Entorno Microsoft 365 y Claude ya en uso en la empresa</li>
+              <li>Complementa, no reemplaza, el diagnóstico interno de nivel por persona</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">SIMPLE TV · DET-002</span>
+      </div>
+    </section>
+
+    <!-- 6 · Fase 2, Módulo 1: Copilot Avanzado -->
+    <section class="slide s-schedule">
+      <span class="counter">06 / 13</span>
+      <p class="eyebrow">04 · Fase 2 de 2 · Ruta por fase</p>
+
+      <div class="ruta">
+        <div class="ruta-node">2</div>
+        <div class="ruta-track"><div class="ruta-fill" style="width:100%"></div></div>
+        <span class="ruta-step">Habilidades</span>
+      </div>
+
+      <div class="ses-head">
+        <div>
+          <span class="ses-mod">Fase 2 · Módulo 1 de 2 · 4 sesiones de 2h</span>
+          <h2>Copilot Avanzado</h2>
+        </div>
+        <div class="ses-meta"><span class="ses-dur">8h</span></div>
+      </div>
+
+      <div class="ses-body">
+        <div class="ses-block">
+          <span class="label">Temas</span>
+          <div class="chips">
+            <span class="chip">Productividad avanzada</span>
+            <span class="chip">Casos reales por área</span>
+            <span class="chip">Documentación por persona</span>
+            <span class="chip">Buenas prácticas</span>
+          </div>
+        </div>
+        <div class="ses-block">
+          <span class="label">Tiempo · 4 sesiones de 2h (8h)</span>
+          <div class="timebar">
+            <div class="seg" style="flex:1">Sesión 1 · Nivelación (2h)</div>
+            <div class="seg" style="flex:1">Sesión 2 · Casos reales (2h)</div>
+            <div class="seg" style="flex:1">Sesión 3 · Documentación (2h)</div>
+            <div class="seg" style="flex:1">Sesión 4 · Consolidación (2h)</div>
+          </div>
+        </div>
+        <div class="ses-cols">
+          <div class="ses-block">
+            <span class="label">Qué se hace</span>
+            <ul>
+              <li>Nivelamos a los Champions en Copilot avanzado, documentado por persona</li>
+              <li>Aplicamos casos reales de sus áreas (RR.HH., Calidad y Procesos)</li>
+              <li>Documentamos el nivel alcanzado por cada Champion</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Qué se logra</span>
+            <ul>
+              <li>Champions con nivel avanzado de Copilot documentado por persona</li>
+              <li>Productividad medible sobre sus propias tareas reales</li>
+              <li>Base lista para extender el prompting en el siguiente módulo</li>
+            </ul>
+          </div>
+          <div class="ses-block block-rec">
+            <span class="label">Recursos y entornos</span>
+            <ul>
+              <li>Contenido diseñado con los hallazgos de la Fase 1</li>
+              <li>Workbook a la medida por Champion</li>
+              <li>Microsoft 365 Copilot ya en uso en la empresa</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">SIMPLE TV · DET-002</span>
+      </div>
+    </section>
+
+    <!-- 7 · Fase 2, Módulo 2: Prompting Ampliado -->
+    <section class="slide s-schedule">
+      <span class="counter">07 / 13</span>
+      <p class="eyebrow">04 · Fase 2 de 2 · Ruta por fase</p>
+
+      <div class="ruta">
+        <div class="ruta-node">2</div>
+        <div class="ruta-track"><div class="ruta-fill" style="width:100%"></div></div>
+        <span class="ruta-step">Habilidades</span>
+      </div>
+
+      <div class="ses-head">
+        <div>
+          <span class="ses-mod">Fase 2 · Módulo 2 de 2 · 4 sesiones de 2h</span>
+          <h2>Prompting Ampliado</h2>
+        </div>
+        <div class="ses-meta"><span class="ses-dur">8h</span></div>
+      </div>
+
+      <div class="ses-body">
+        <div class="ses-block">
+          <span class="label">Temas</span>
+          <div class="chips">
+            <span class="chip">Ingeniería de contexto</span>
+            <span class="chip">Iteración agéntica (loop)</span>
+            <span class="chip">Creación de skills</span>
+            <span class="chip">Cerebro Digital (referencia)</span>
+          </div>
+        </div>
+        <div class="ses-block">
+          <span class="label">Tiempo · 4 sesiones de 2h (8h)</span>
+          <div class="timebar">
+            <div class="seg" style="flex:1">Sesión 1 · Ingeniería de contexto (2h)</div>
+            <div class="seg" style="flex:1">Sesión 2 · Iteración agéntica (2h)</div>
+            <div class="seg" style="flex:1">Sesión 3 · Creación de skills (2h)</div>
+            <div class="seg" style="flex:1">Sesión 4 · Consolidación (2h)</div>
+          </div>
+        </div>
+        <div class="ses-cols">
+          <div class="ses-block">
+            <span class="label">Qué se hace</span>
+            <ul>
+              <li>Extendemos su prompting con ingeniería de contexto e iteración agéntica ("loop")</li>
+              <li>Guiamos la creación de un skill propio sobre un caso real</li>
+              <li>Referencia de nivel avanzado: un "Cerebro Digital" (un asistente agéntico con el contexto de negocio de la empresa)</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Qué se logra</span>
+            <ul>
+              <li>Champions con panorama cross-ecosistema y nivel avanzado documentado</li>
+              <li>Capacidad de liderar la conversación de adopción en su área, no solo usarla</li>
+              <li>Base propia para segmentar al resto de la empresa</li>
+            </ul>
+          </div>
+          <div class="ses-block block-rec">
+            <span class="label">Recursos y entornos</span>
+            <ul>
+              <li>Claude y entorno cross-ecosistema</li>
+              <li>Skill o flujo agéntico propio por Champion</li>
+              <li>Sesiones puntuales se definen con el cliente tras aprobar</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">SIMPLE TV · DET-002</span>
+      </div>
+    </section>
+
+    <!-- 8 · Roadmap -->
+    <section class="slide s-roadmap">
+      <span class="counter">08 / 13</span>
+      <p class="eyebrow">04 · Roadmap</p>
+      <h2>De la auditoría al <span class="hl">nivel avanzado</span>.</h2>
+
+      <div class="rmx-field">
+        <div class="rmx-linear">
+
+          <div class="rmx-lrow-nodes">
+            <div class="rmx-lcol"><div class="rmx-node rmx-node-f2">1</div></div>
+            <div class="rmx-arrow"></div>
+            <div class="rmx-lcol"><div class="rmx-node rmx-node-f3">2</div></div>
+            <div class="rmx-arrow"></div>
+            <div class="rmx-lcol"><div class="rmx-node rmx-node-r">&#9733;</div></div>
+          </div>
+
+          <div class="rmx-lrow-cards">
+            <div class="rmx-lcol">
+              <div class="rmx-card rmx-card-f2">
+                <span class="rmx-card-tag">Fase 1 · Detección (8h)</span>
+                <div class="rmx-card-name">Auditoría cross-ecosistema</div>
+                <ul class="rmx-facets">
+                  <li><span>Qué pasa</span><p>4 sesiones individuales de 2h, una con cada Champion, panorama Microsoft + Claude.</p></li>
+                  <li><span>Con quién</span><p>Neliana y los Champions de RR.HH. y Calidad y Procesos.</p></li>
+                  <li><span>Entrega</span><p>Hoja de ruta de segmentación para el macroproyecto.</p></li>
+                </ul>
+              </div>
+            </div>
+            <div class="rmx-lspacer"></div>
+            <div class="rmx-lcol">
+              <div class="rmx-card rmx-card-f3">
+                <span class="rmx-card-tag">Fase 2 · Habilidades (16h)</span>
+                <div class="rmx-card-name">Copilot avanzado + prompting ampliado</div>
+                <ul class="rmx-facets">
+                  <li><span>Qué pasa</span><p>2 módulos de 4 sesiones de 2h: Copilot avanzado y prompting extendido con contexto y skills.</p></li>
+                  <li><span>Con quién</span><p>Los 4 Champions, en los 2 módulos ya definidos: Copilot avanzado y prompting ampliado.</p></li>
+                  <li><span>Entrega</span><p>Champions con nivel avanzado documentado.</p></li>
+                </ul>
+              </div>
+            </div>
+            <div class="rmx-lspacer"></div>
+            <div class="rmx-lcol">
+              <div class="rmx-result-card">
+                <span class="rmx-result-label">Cierre del proyecto</span>
+                <div class="rmx-result-title">IA Champions listos para liderar el macroproyecto</div>
+                <ul>
+                  <li>Panorama cross-ecosistema, no solo Copilot</li>
+                  <li>Hoja de ruta de segmentación entregada</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /.rmx-linear -->
+
+        <div class="rmx-ethics">
+          <span class="rmx-ethics-tag">Plan completo, listo para decidir</span>
+          <p>Detección y Habilidades vienen <strong>desarrolladas y cotizadas en esta misma propuesta</strong>: el equipo de Simple TV define presupuesto con el plan completo sobre la mesa, no con una mitad abierta.</p>
+        </div>
+
+      </div><!-- /.rmx-field -->
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">SIMPLE TV · DET-002</span>
+      </div>
+    </section>
+
+    <!-- 8 · Beneficios (v3) -->
+    <section class="slide s-benefits s-benefits-v2">
+      <span class="counter">09 / 13</span>
+      <p class="eyebrow">05 · Beneficios</p>
+      <h2>Lo que <span class="hl">se llevan</span>.</h2>
+      <div class="grid">
+        <div class="block">
+          <p class="label">Resultados</p>
+          <ul>
+            <li><strong>Panorama cross-ecosistema</strong> (Microsoft + Claude) para los 4 Champions.</li>
+            <li>Hoja de ruta de segmentación para el resto de la empresa.</li>
+            <li>Copilot avanzado y prompting extendido, documentado por persona.</li>
+          </ul>
+        </div>
+        <div class="block">
+          <p class="label">Por qué Detección</p>
+          <p>
+            El diagnóstico interno de Simple TV mide <strong>nivel por persona</strong>; nuestra Detección entrega el panorama cross-ecosistema y la hoja de ruta de segmentación que ese diagnóstico no cubre: el insumo que el macroproyecto necesita.
+          </p>
+        </div>
+        <div class="block">
+          <p class="label">Entregables</p>
+        </div>
+        <div class="block">
+          <p class="label">Valor inmediato</p>
+        </div>
+      </div>
+
+      <!-- Cajas multiline editables (vacías en HTML — el contenido vive dentro del AcroForm /V). -->
+      <div class="multi-box entregables-box" data-field="Entregables"></div>
+      <div class="multi-box acreditaciones-box" data-field="Acreditacion"></div>
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">SIMPLE TV · DET-002</span>
+      </div>
+    </section>
+
+    <!-- 9 · Impacto / estudios — datos de estudios reales, fuente citada (CLAUDE.md §4.9) -->
+    <section class="slide s-impact">
+      <span class="counter">10 / 13</span>
+
+      <div class="impact-head">
+        <p class="eyebrow">06 · Impacto</p>
+        <h2>La evidencia no deja<br><span class="hl">lugar a dudas</span>.</h2>
+      </div>
+
+      <div class="impact-body">
+        <div class="chart-panel">
+          <p class="panel-title">Menos tiempo, más productividad con un asistente de IA</p>
+          <div class="bars">
+            <div class="bar-row">
+              <span class="bar-label">Redacción y documentación · reducción de tiempo con un asistente de IA</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:40%"><span class="bar-val">&minus;40%</span></div></div>
+            </div>
+            <div class="bar-row">
+              <span class="bar-label">Copilot · usuarios más rápidos en búsqueda, redacción y resumen</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:29%"><span class="bar-val">+29%</span></div></div>
+            </div>
+          </div>
+          <div class="bar-axis"><span class="scale"><span>0</span><span>15</span><span>30</span><span>45</span><span>60%</span></span></div>
+          <p class="panel-source">Fuentes: MIT &mdash; Noy y Zhang, Science 2023 · Microsoft &mdash; Work Trend Index 2024.</p>
+        </div>
+
+        <div class="gauge-panel">
+          <div class="gauge" style="--pct:77">
+            <div class="gauge-core">
+              <span class="gauge-num">77<span class="pct">%</span></span>
+              <span class="gauge-cap">de los usuarios de Copilot reportó más productividad</span>
+            </div>
+          </div>
+          <div class="chips">
+            <div class="chip">
+              <span class="chip-num">16&ndash;23%</span>
+              <span class="chip-lbl">de los proyectos ya muestran actividad de IA agéntica</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="impact-hook">
+        <span class="hook-mark">&#9656;</span>
+        <p class="hook-text">
+          En equipos chicos como los de los <strong>IA Champions</strong>, cada hora ganada pesa más: el 77% de los usuarios de Copilot reporta un aumento medible de productividad, y son 29% más rápidos en tareas de búsqueda, redacción y resumen (Microsoft, 2024). Un asistente de IA reduce cerca del 40% el tiempo de redacción profesional (MIT, 2023). La frontera ya avanza hacia la IA agéntica: Anthropic reporta actividad de agentes de codificación en 16&ndash;23% de los proyectos públicos analizados, evidencia de hacia dónde escala el nivel avanzado que este piloto empieza a construir.
+        </p>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">SIMPLE TV · DET-002</span>
+      </div>
+    </section>
+
+    <!-- 10 · Inversión por fases · solo Fase 1 se cotiza ahora; Fase 2 tras el diagnóstico -->
+    <section class="slide s-price">
+      <span class="counter">11 / 13</span>
+      <h2 class="title">Inversión por fases</h2>
+      <p class="price-intro">Auditoría cross-ecosistema y nivelación avanzada para los 4 IA Champions de Simple TV: 24h en total (8h + 16h), en 2 fases dentro de un mismo proyecto. Cada fase se cotiza por separado.</p>
+
+      <div class="fase-price-list">
+        <div class="fase-price-row">
+          <div class="fase-price-copy">
+            <span class="fase-price-label">Fase 1 · Detección (8h)</span>
+            <p class="fase-price-desc">4 sesiones individuales de 2h (una por Champion) + hoja de ruta de segmentación.</p>
+          </div>
+          <div class="fase-price-frame" data-field="PrecioFase1"></div>
+        </div>
+        <div class="fase-price-row">
+          <div class="fase-price-copy">
+            <span class="fase-price-label">Fase 2 · Habilidades (16h)</span>
+            <p class="fase-price-desc">Copilot avanzado y prompting ampliado, 2 módulos de 4 sesiones de 2h.</p>
+          </div>
+          <div class="fase-price-frame" data-field="PrecioFase2"></div>
+        </div>
+      </div>
+
+      <div class="block block-notes-container">
+        <span class="block-eyebrow">Notas</span>
+      </div>
+      <div class="multi-box notas-box" data-field="Notas"></div>
+
+      <span class="cot-label cot-label-base">Inversión total del proyecto</span>
+      <div class="cot-frame base-frame"></div>
+
+      <span class="cot-label cot-label-discount">Descuento</span>
+      <div class="cot-frame discount-frame"></div>
+
+      <span class="cot-label cot-label-total">TOTAL</span>
+      <div class="cot-frame total-frame"></div>
+
+      <p class="cot-validity">Cotización válida por 30 días.</p>
+      <div class="cot-terms-box">
+        <span class="cot-terms-label">Importante</span>
+        <p class="cot-terms-text">Este servicio se presta bajo nuestros <a href="https://drive.google.com/file/d/1PA-ZSt4KnyY5dpxXzgkIk6-yfGlV2eF8/view?usp=drive_link" target="_blank" rel="noopener">términos y condiciones</a>. Al avanzar con esta propuesta, ambas partes los aceptan.</p>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">SIMPLE TV · DET-002</span>
+      </div>
+    </section>
+
+    <!-- 11 · Próximos pasos -->
+    <section class="slide s-steps">
+      <span class="counter">12 / 13</span>
+      <p class="eyebrow">07 · Próximos pasos</p>
+      <h2>Cómo arrancamos.</h2>
+      <div class="step-cards">
+        <div class="step-card">
+          <span class="ghost">01</span>
+        </div>
+        <div class="step-card">
+          <span class="ghost">02</span>
+        </div>
+        <div class="step-card">
+          <span class="ghost">03</span>
+        </div>
+      </div>
+
+      <!-- Editable AcroForm placeholders (3 pasos × título + body) -->
+      <div class="acro-area acro-title acro-paso-01-titulo" data-field="Paso01Titulo">
+        <span class="acro-default-text">Confirmamos fechas</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-01-body" data-field="Paso01Body">
+        <span class="acro-default-text">Definimos calendario y modalidad de las sesiones de auditoría con los 4 Champions.</span>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-02-titulo" data-field="Paso02Titulo">
+        <span class="acro-default-text">Acceso y logística</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-02-body" data-field="Paso02Body">
+        <span class="acro-default-text">Coordinamos accesos a Microsoft 365 y Claude, agenda con Neliana y el equipo.</span>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-03-titulo" data-field="Paso03Titulo">
+        <span class="acro-default-text">Kick-off</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-03-body" data-field="Paso03Body">
+        <span class="acro-default-text">Reunión de arranque (~30 min) para alinear el alcance con el área de IA de Simple TV.</span>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">SIMPLE TV · DET-002</span>
+      </div>
+    </section>
+
+    <!-- 12 · Cierre -->
+    <section class="slide s-end">
+      <span class="counter">13 / 13</span>
+
+      <div class="end-logo">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia">
+      </div>
+
+      <!-- Resultado (cinta superior) — caja editable, ventas la redacta por cliente -->
+      <div class="end-summit" data-field="CierreResultado">
+        <span class="acro-default-text">Los IA Champions de Simple TV, liderando el macroproyecto de IA.</span>
+      </div>
+
+      <!-- Escalera de 3 pasos — cada uno con su caja editable -->
+      <div class="end-stairs">
+        <div class="stair-step stair-1">
+          <span class="stair-label">Paso 1</span>
+          <div class="stair-field" data-field="CierrePaso1">
+            <span class="acro-default-text">Panorama cross-ecosistema</span>
+          </div>
+        </div>
+        <div class="stair-step stair-2">
+          <span class="stair-label">Paso 2</span>
+          <div class="stair-field" data-field="CierrePaso2">
+            <span class="acro-default-text">Copilot avanzado y prompting ampliado</span>
+          </div>
+        </div>
+        <div class="stair-step stair-3">
+          <span class="stair-label">Paso 3</span>
+          <div class="stair-field" data-field="CierrePaso3">
+            <span class="acro-default-text">Listos para liderar el macroproyecto</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cta-wrap">
+        <span class="cta">Esperamos tu respuesta</span>
+      </div>
+
+      <div class="end-contact">
+        <p class="contact-line">
+          <span class="contact-label">Asesora de ventas:</span>
+          María Iribarren <span class="dot">·</span> +58 414 0570056 <span class="dot">·</span> miribarren@intezia.com
+        </p>
+        <p class="contact-line">
+          <span class="contact-label">Empresa:</span>
+          Intezia C.A J-505657950 <span class="dot">·</span> servicio@intezia.com
+        </p>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

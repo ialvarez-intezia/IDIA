@@ -1,0 +1,599 @@
+<!doctype html>
+<!--
+  Propuesta · DAMASCO (CAP-037)
+  Programa: IA aplicada a la operación retail · Fase 1
+  División: Educación · Eje temático: IA aplicada a retail (desarrollo, soporte)
+  Estructura: 12 slides · Capacitación in-company multi-ruta (2 rutas departamentales · 12 h) · sin slide de precio.
+
+  Ajuste 2026-09-15 (instrucción directa del usuario):
+  - Desarrollo ya no usa Gemini como herramienta principal. Stack actualizado: Claude Code +
+    Claude Cowork (eje, sin cambios) + ChatGPT/Codex (OpenAI, extensión de IDE tipo
+    Antigravity).
+  - Desarrollo suma 3 temas avanzados explícitos: balance de carga de agentes, prompting
+    estructurado, cómo programar agentes de forma eficiente. Integrados en el Fundamento común
+    (prompting estructurado) y en Mesa A (balance de carga + agentes eficientes). Sin cambio
+    de horas (sigue 8h).
+  - Soporte sube de básico a intermedio: foco en infraestructura, incidencias y aplicación
+    práctica al área, más un tema administrativo nuevo (resumen de reuniones, correo con IA,
+    sugerencias). Se mantienen las 4h de la ruta.
+
+  Ajuste 2026-09-15 (segunda pasada, instrucción directa del usuario):
+  - Se retiró la mención a Kimi del stack de Desarrollo — queda Claude Code + Claude Cowork +
+    ChatGPT/Codex.
+  - Se retiró la ruta de Marketing por completo (nunca estuvo en el pedido de ajuste original;
+    el usuario confirmó que no tenía nada que ver). Deck pasa de 3 a 2 rutas departamentales
+    (Desarrollo, Soporte) y de 18h a 12h totales (Desarrollo 8h + Soporte 4h). Se eliminaron:
+    el módulo III de la slide de Programa, la slide completa de Cronograma · Ruta 3 ·
+    Marketing, la mención a Marketing en Diagnóstico/Objetivos/Roadmap, y la barra de
+    "Marketing y contenidos" en Impacto.
+  - Se retiró la slide de Propuesta Económica (cotización) por completo — instrucción directa
+    del usuario. Sin hoja de cotización, sin campos de precio (agregar-campo-precio.py los
+    omite automáticamente al no encontrar el marcador "Propuesta Económica" en el deck).
+  - Deck pasó de 14 a 12 slides, todos los contadores renumerados.
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Propuesta · DAMASCO · Intezia Educación</title>
+  <link rel="stylesheet" href="../_base/styles.css">
+  <link rel="stylesheet" href="overrides.css">
+</head>
+<body>
+
+  <main class="deck">
+
+    <!-- 1 · Portada -->
+    <section class="slide s-cover">
+      <span class="counter">01 / 12</span>
+      <div class="logo-big">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia Educación">
+      </div>
+      <div class="body">
+        <p class="eyebrow">Capacitación in-company · Fase 1</p>
+        <h1>
+          Inteligencia Artificial<br>
+          <span class="hl">aplicada a la operación retail</span>
+        </h1>
+        <p class="lead">
+          Una capacitación presencial de 12 horas para que <strong>Desarrollo y Soporte</strong> de DAMASCO pasen de la curiosidad a la <strong>automatización</strong>: cada equipo, a su nivel, resolviendo un proceso real de su día a día.
+        </p>
+      </div>
+      <div class="id-line">
+        <span class="codigo">Código: CAP-037</span>
+        <span class="cliente">DAMASCO</span>
+      </div>
+    </section>
+
+    <!-- 2 · Punto de dolor + Diagnóstico -->
+    <section class="slide s-pain">
+      <span class="counter">02 / 12</span>
+      <span class="quote-mark">“</span>
+      <div class="body">
+        <h2>El volumen no espera, y la IA todavía se usa a medias en cada departamento.</h2>
+        <p class="context">
+          DAMASCO mueve un catálogo enorme: entre 60 y 100 referencias nuevas cada viernes, precios que cambian a diario y del orden de 100.000 facturas al día entre 54 sucursales. Los equipos ya usan IA, pero cada uno a un nivel distinto y sin un método común que la vuelva <strong>automatización</strong>.
+        </p>
+        <p class="diag-title">Diagnóstico</p>
+        <ol>
+          <li>En Desarrollo el equipo es avanzado y parejo: 9 personas entre programadores, consultores SAP y BI, listas para industrializar sus flujos.</li>
+          <li>En Soporte ya usan IA de forma básica, pero sin enfocarla en infraestructura ni en su propia gestión administrativa.</li>
+          <li>Pasar de la curiosidad a la implementación pide tratar a cada equipo por su nivel, no una charla pareja para todos.</li>
+          <li>Cada hora en tareas repetitivas es velocidad que el negocio cede ante la competencia.</li>
+        </ol>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">DAMASCO · Propuesta</span>
+      </div>
+    </section>
+
+    <!-- 3 · Objetivos estratégicos -->
+    <section class="slide s-goals">
+      <span class="counter">03 / 12</span>
+      <p class="eyebrow">02 · Objetivos</p>
+      <h2>A dónde llevamos<br>a cada equipo.</h2>
+      <div class="columns">
+        <div class="general">
+          <p class="label">Objetivo general</p>
+          <p>
+            Llevar a los equipos de Desarrollo y Soporte de DAMASCO a aplicar IA sobre los cuellos de botella reales de su operación, con práctica segmentada por nivel de madurez, para pasar de un uso disperso a una automatización con método.
+          </p>
+        </div>
+        <div class="specifics">
+          <p class="label">Objetivos específicos</p>
+          <ol>
+            <li>En Desarrollo, profundizar con todo el equipo en Claude Code, Cowork y ChatGPT/Codex, y abrir dos mesas: agentes eficientes con balance de carga y control de tokens, y bases de datos con IA que alimentan Power BI.</li>
+            <li>Profundizar a Soporte en IA aplicada a infraestructura y a la resolución de incidencias técnicas cotidianas, sumando un bloque administrativo de resumen de reuniones y correo con IA.</li>
+          </ol>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">DAMASCO · Propuesta</span>
+      </div>
+    </section>
+
+    <!-- 4 · Programa · 2 rutas departamentales -->
+    <section class="slide s-program">
+      <span class="counter">04 / 12</span>
+      <p class="eyebrow">03 · Programa</p>
+      <h2>2 rutas departamentales · 12 horas.</h2>
+      <p class="meta">Una ruta por departamento, al nivel real de cada equipo</p>
+      <div class="modules">
+        <div class="module">
+          <span class="roman">I</span>
+          <h3>Desarrollo · Ingeniería de IA</h3>
+          <p class="obj">Los 9 juntos las 8 horas. Arrancan con dominio común de las herramientas y en la práctica se abren <strong>dos mesas</strong>.</p>
+          <ul class="topics">
+            <li>Claude Code y Cowork</li>
+            <li>ChatGPT/Codex</li>
+            <li>Prompting estructurado</li>
+            <li>Agentes eficientes</li>
+            <li>Bases de datos con IA</li>
+            <li>Alimenta Power BI</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">II</span>
+          <h3>Soporte · Infraestructura e IA</h3>
+          <p class="obj">Profundiza al equipo en infraestructura e incidencias, y suma gestión administrativa con IA.</p>
+          <ul class="topics">
+            <li>Infraestructura y diagnóstico</li>
+            <li>Incidencias reales</li>
+            <li>Asistente de consulta</li>
+            <li>Resumen de reuniones</li>
+            <li>Correo con IA</li>
+          </ul>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">DAMASCO · Propuesta</span>
+      </div>
+    </section>
+
+    <!-- 5 · Cronograma Ruta 1 · Desarrollo -->
+    <section class="slide s-schedule">
+      <span class="counter">05 / 12</span>
+      <p class="eyebrow">04 · Cronograma · Ruta de aprendizaje</p>
+
+      <div class="ruta">
+        <div class="ruta-node">1</div>
+        <div class="ruta-track"><div class="ruta-fill" style="width:50%"></div></div>
+        <span class="ruta-step">Ruta 1 de 2</span>
+      </div>
+
+      <div class="ses-head">
+        <div>
+          <span class="ses-mod">Ruta 1 · Desarrollo · 9 personas</span>
+          <h2>Ingeniería de IA y automatización</h2>
+        </div>
+        <div class="ses-meta"><span class="ses-dur">8 h</span></div>
+      </div>
+
+      <div class="ses-body">
+        <div class="ses-block">
+          <span class="label">Temas</span>
+          <div class="chips">
+            <span class="chip">Claude Code, Cowork y Codex</span>
+            <span class="chip">Prompting estructurado</span>
+            <span class="chip">Agentes eficientes y balance de carga</span>
+            <span class="chip">Control de costos de tokens</span>
+            <span class="chip">Bases de datos con IA</span>
+            <span class="chip">Resultados a Power BI</span>
+          </div>
+        </div>
+        <div class="ses-block">
+          <span class="label">Tiempo · Total 8 h · los 9 juntos en el bloque teórico y en el cierre; en el apartado práctico se separan en dos mesas paralelas</span>
+          <div class="timebar">
+            <div class="seg" style="flex:90">90' Dominio de herramientas · todos</div>
+            <div class="seg" style="flex:75">75' Prompting estructurado · todos</div>
+            <div class="seg" style="flex:105">105' Mesa A · agentes eficientes (programadores)</div>
+            <div class="seg" style="flex:90">90' Mesa B · datos (SAP + BI)</div>
+            <div class="seg" style="flex:120">120' Reto integrador y cierre · todos</div>
+          </div>
+        </div>
+        <div class="ses-cols">
+          <div class="ses-block">
+            <span class="label">Estrategias de enseñanza</span>
+            <ul>
+              <li>Demostración de flujos en vivo</li>
+              <li>Vibe coding guiado con Claude Code</li>
+              <li>Al pasar a la práctica, los 9 se separan: Mesa A (4 programadores) y Mesa B (2 SAP + 2 BI) trabajan en paralelo</li>
+              <li>Feedback con rúbrica técnica</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Estrategias de aprendizaje</span>
+            <ul>
+              <li>Construye un agente eficiente, con balance de carga, en dupla (Mesa A)</li>
+              <li>Consulta bases de datos con IA (Mesa B)</li>
+              <li>Prepara datos para sus tableros Power BI</li>
+              <li>Reto integrador con datos de prueba</li>
+            </ul>
+          </div>
+          <div class="ses-block block-rec">
+            <span class="label">Recursos y entornos</span>
+            <ul>
+              <li>Claude Code, Cowork y ChatGPT/Codex</li>
+              <li>OpenCode</li>
+              <li>Datos de prueba de DAMASCO</li>
+              <li>Power BI del cliente</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">DAMASCO · Propuesta</span>
+      </div>
+    </section>
+
+    <!-- 6 · Cronograma Ruta 2 · Soporte -->
+    <section class="slide s-schedule">
+      <span class="counter">06 / 12</span>
+      <p class="eyebrow">04 · Cronograma · Ruta de aprendizaje</p>
+
+      <div class="ruta">
+        <div class="ruta-node">2</div>
+        <div class="ruta-track"><div class="ruta-fill" style="width:100%"></div></div>
+        <span class="ruta-step">Ruta 2 de 2</span>
+      </div>
+
+      <div class="ses-head">
+        <div>
+          <span class="ses-mod">Ruta 2 · Soporte · 6 personas · nivel intermedio</span>
+          <h2>IA aplicada a infraestructura</h2>
+        </div>
+        <div class="ses-meta"><span class="ses-dur">4 h</span></div>
+      </div>
+
+      <div class="ses-body">
+        <div class="ses-block">
+          <span class="label">Temas</span>
+          <div class="chips">
+            <span class="chip">Infraestructura y diagnóstico</span>
+            <span class="chip">Incidencias reales</span>
+            <span class="chip">Asistente de conocimiento</span>
+            <span class="chip">Resumen de reuniones con IA</span>
+            <span class="chip">Correo con IA y sugerencias</span>
+          </div>
+        </div>
+        <div class="ses-block">
+          <span class="label">Tiempo · Total 4 h</span>
+          <div class="timebar">
+            <div class="seg" style="flex:30">30' Encuadre e infraestructura</div>
+            <div class="seg" style="flex:90">90' Asistente e incidencias reales</div>
+            <div class="seg" style="flex:60">60' Tema administrativo con IA</div>
+            <div class="seg" style="flex:60">60' Aplicación práctica y cierre</div>
+          </div>
+        </div>
+        <div class="ses-cols">
+          <div class="ses-block">
+            <span class="label">Estrategias de enseñanza</span>
+            <ul>
+              <li>Clase interactiva con casos reales de infraestructura</li>
+              <li>Demostración guiada</li>
+              <li>Acompañamiento práctico paso a paso</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Estrategias de aprendizaje</span>
+            <ul>
+              <li>Práctica guiada paso a paso</li>
+              <li>Arma un asistente de consulta e incidencias</li>
+              <li>Arma su flujo de resumen de reuniones y correo con IA</li>
+            </ul>
+          </div>
+          <div class="ses-block block-rec">
+            <span class="label">Recursos y entornos</span>
+            <ul>
+              <li>Cuentas de IA generativa</li>
+              <li>Procedimientos de soporte de DAMASCO</li>
+              <li>Correo y calendario del equipo</li>
+              <li>Set de incidencias reales</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">DAMASCO · Propuesta</span>
+      </div>
+    </section>
+
+    <!-- 7 · Metodología ABR (FIJA) -->
+    <section class="slide s-orange">
+      <span class="counter">07 / 12</span>
+      <p class="eyebrow">05 · Metodología</p>
+      <h2>Aprendizaje<br>Basado en Retos</h2>
+      <p class="sub">Modelo Intezia · Tres pilares</p>
+      <div class="pillars">
+        <div class="pillar">
+          <span class="num">01</span>
+          <h3>Tutoría activa</h3>
+          <p>El facilitador acompaña la práctica con feedback en tiempo real. En Desarrollo trabaja con dos mesas a la vez; en Soporte, paso a paso. No expone de forma pasiva: trabaja codo a codo con cada equipo.</p>
+        </div>
+        <div class="pillar">
+          <span class="num">02</span>
+          <h3>Transferibilidad inmediata</h3>
+          <p>Cada ejercicio sale de un proceso real de DAMASCO: automatización de flujos, atención de incidencias, auditoría de datos. <strong>Lo que se practica se aplica al día siguiente</strong>.</p>
+        </div>
+        <div class="pillar">
+          <span class="num">03</span>
+          <h3>Curaduría de contenidos</h3>
+          <p>Solo lo que sirve a cada departamento, según su nivel. Sin teoría desconectada de la operación retail.</p>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Intezia · Modelo ABR</span>
+      </div>
+    </section>
+
+    <!-- 8 · Beneficios -->
+    <section class="slide s-benefits">
+      <span class="counter">08 / 12</span>
+      <p class="eyebrow">06 · Beneficios del programa</p>
+      <h2>Lo que se llevan.</h2>
+      <div class="grid">
+        <div class="block">
+          <p class="label">Perfil de egreso</p>
+          <ul>
+            <li><strong>Saber:</strong> identifica qué procesos de su área se pueden automatizar con IA.</li>
+            <li><strong>Saber hacer:</strong> aplica IA a un cuello de botella real con flujos y prompts replicables.</li>
+            <li><strong>Saber ser:</strong> usa la IA con criterio, verifica resultados y cuida la información sensible.</li>
+          </ul>
+        </div>
+        <div class="block">
+          <p class="label">Beneficio del programa formativo</p>
+          <p>
+            Cada departamento sale con al menos <strong>un proceso real automatizado</strong> y con flujos replicables de IA aplicada a la operación retail, listos para escalar al resto del equipo y para abrir la <strong>Fase 2</strong>.
+          </p>
+        </div>
+        <div class="block">
+          <p class="label">Entregables</p>
+        </div>
+        <div class="block">
+          <p class="label">Acreditación</p>
+        </div>
+      </div>
+
+      <!-- Cajas multiline editables (vacías en HTML — el contenido vive en el AcroForm /V). -->
+      <div class="multi-box entregables-box" data-field="Entregables"></div>
+      <div class="multi-box acreditaciones-box" data-field="Acreditacion"></div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">DAMASCO · Propuesta</span>
+      </div>
+    </section>
+
+    <!-- 9 · Impacto / estudios — datos de estudios reales, fuente citada (CLAUDE.md §4.9) -->
+    <section class="slide s-impact">
+      <span class="counter">09 / 12</span>
+
+      <div class="impact-head">
+        <p class="eyebrow">07 · Impacto</p>
+        <h2>Donde se aplica con método,<br><span class="hl">el trabajo se acelera</span>.</h2>
+      </div>
+
+      <div class="impact-body">
+        <div class="chart-panel">
+          <p class="panel-title">Mejora de productividad por área de trabajo</p>
+          <div class="bars">
+            <div class="bar-row">
+              <span class="bar-label">Desarrollo de software</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:56%"><span class="bar-val">+56%</span></div></div>
+            </div>
+            <div class="bar-row">
+              <span class="bar-label">Atención y soporte</span>
+              <div class="bar-track"><div class="bar-fill bar-fill--out" style="--w:14%"><span class="bar-val">+14%</span></div></div>
+            </div>
+          </div>
+          <div class="bar-axis"><span class="scale"><span>0</span><span>25</span><span>50</span><span>75</span><span>100%</span></span></div>
+          <p class="panel-source">Fuentes: Peng et al. (GitHub · MIT) 2023 · Dell'Acqua et al. (Harvard · BCG) 2023.</p>
+        </div>
+
+        <div class="gauge-panel">
+          <div class="gauge" style="--pct:65">
+            <div class="gauge-core">
+              <span class="gauge-num">65<span class="pct">%</span></span>
+              <span class="gauge-cap">del trabajo es automatizable</span>
+            </div>
+          </div>
+          <div class="chips">
+            <div class="chip">
+              <span class="chip-num">US$ 660 mil M</span>
+              <span class="chip-lbl">potencial anual en retail y consumo · McKinsey 2023</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="impact-hook">
+        <span class="hook-mark">&#9656;</span>
+        <p class="hook-text">
+          La IA ya no es promesa: donde se aplica con método, el trabajo se acelera. La diferencia entre los equipos de DAMASCO no será la herramienta, sino <strong>saber usarla</strong>.
+        </p>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">DAMASCO · Propuesta</span>
+      </div>
+    </section>
+
+    <!-- 10 · Roadmap · Plan por fases -->
+    <section class="slide s-roadmap">
+      <span class="counter">10 / 12</span>
+      <p class="eyebrow">08 · Roadmap · Plan por fases</p>
+      <h2>Esto es solo la <span class="hl">Fase 1.</span></h2>
+
+      <div class="rmx-field">
+        <div class="rmx-journey">
+
+          <!-- ORIGEN · F1 -->
+          <div class="rmx-origin">
+            <div class="rmx-origin-top">
+              <span class="rmx-badge">Cotizado ahora · 12 h</span>
+            </div>
+            <div class="rmx-node rmx-node-f1">F1</div>
+            <div class="rmx-origin-bot">
+              <div class="rmx-origin-name">Capacitación in-company</div>
+              <div class="rmx-origin-meta">Desarrollo · Soporte</div>
+              <div class="rmx-origin-out">Los 2 equipos con <strong>dominio real de IA</strong> aplicado a su función</div>
+            </div>
+          </div>
+
+          <!-- BIFURCACIÓN -->
+          <div class="rmx-fork">
+            <div class="rmx-branch rmx-up"></div>
+            <div class="rmx-branch rmx-dn"></div>
+          </div>
+
+          <!-- RUTAS · Fase 2a / Fase 2b -->
+          <div class="rmx-routes">
+
+            <div class="rmx-route rmx-route-f2">
+              <div class="rmx-node rmx-node-f2">2A</div>
+              <div class="rmx-card rmx-card-f2">
+                <span class="rmx-card-tag">Fase 2 · Plus diferenciador</span>
+                <div class="rmx-card-name">Agentes departamentales</div>
+                <ul class="rmx-facets">
+                  <li><span>Para</span><p>Los 2 departamentos: <strong>uno por área</strong>, a medida de su función.</p></li>
+                  <li><span>Hace</span><p>Automatiza el trabajo <strong>repetitivo</strong> del área sin intervención manual.</p></li>
+                  <li><span>Cuando</span><p>Sobre lo aprendido en Fase 1, en semanas.</p></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="rmx-route rmx-route-f3">
+              <div class="rmx-node rmx-node-f3">2B</div>
+              <div class="rmx-card rmx-card-f3">
+                <span class="rmx-card-tag">Fase 2 · Integración profunda</span>
+                <div class="rmx-card-name">Agentes integrados a la medida</div>
+                <ul class="rmx-facets">
+                  <li><span>Sobre</span><p><strong>SAP Business One</strong>, Power BI y CRM del cliente.</p></li>
+                  <li><span>Con</span><p>Auditoría de uso de Inteligencia Artificial (IA) y gobernanza.</p></li>
+                  <li><span>Plus</span><p>Acompañamiento para estandarizar los agentes en producción.</p></li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- CONVERGENCIA -->
+          <div class="rmx-merge">
+            <div class="rmx-branch rmx-up"></div>
+            <div class="rmx-branch rmx-dn"></div>
+          </div>
+
+          <!-- DESTINO -->
+          <div class="rmx-result">
+            <div class="rmx-node rmx-node-r">★</div>
+            <div class="rmx-result-card">
+              <span class="rmx-result-label">Horizonte · IA con método</span>
+              <div class="rmx-result-title">Operación retail con <b>IA de punta a punta</b></div>
+              <ul>
+                <li>Un proceso automatizado por área (Fase 1)</li>
+                <li>Agentes en producción por departamento</li>
+                <li>Conectados a SAP, Power BI y CRM</li>
+                <li>Auditoría y estandarización del uso de IA</li>
+                <li>Fase 2: alcance y cotización aparte</li>
+              </ul>
+            </div>
+          </div>
+
+        </div><!-- /.rmx-journey -->
+
+        <div class="rmx-ethics">
+          <span class="rmx-ethics-tag">Alcance · Fase 2 a medida</span>
+          <p>Fase 2 se cotiza aparte, sobre los avances y hallazgos de la Fase 1. Intezia <strong>no define el alcance de integración</strong> antes de conocer los flujos reales del equipo.</p>
+        </div>
+
+      </div><!-- /.rmx-field -->
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">DAMASCO · Propuesta</span>
+      </div>
+    </section>
+
+    <!-- 11 · Próximos pasos -->
+    <section class="slide s-steps">
+      <span class="counter">11 / 12</span>
+      <p class="eyebrow">09 · Próximos pasos</p>
+      <h2>Cómo arrancamos.</h2>
+      <div class="step-cards">
+        <div class="step-card">
+          <span class="ghost">01</span>
+        </div>
+        <div class="step-card">
+          <span class="ghost">02</span>
+        </div>
+        <div class="step-card">
+          <span class="ghost">03</span>
+        </div>
+      </div>
+
+      <!-- Editable AcroForm placeholders (3 pasos × título + body) -->
+      <div class="acro-area acro-title acro-paso-01-titulo" data-field="Paso01Titulo">
+        <span class="acro-default-text">Confirmamos fechas</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-01-body" data-field="Paso01Body">
+        <span class="acro-default-text">Acordamos las fechas de las 2 rutas y la disponibilidad de cada equipo.</span>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-02-titulo" data-field="Paso02Titulo">
+        <span class="acro-default-text">Acceso y logística</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-02-body" data-field="Paso02Body">
+        <span class="acro-default-text">Coordinamos sala, participantes por departamento y accesos de prueba para las prácticas.</span>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-03-titulo" data-field="Paso03Titulo">
+        <span class="acro-default-text">Reunión de arranque</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-03-body" data-field="Paso03Body">
+        <span class="acro-default-text">Sesión de 30 minutos con los líderes de área para elegir los procesos reales que entran a cada ruta.</span>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">DAMASCO · Propuesta</span>
+      </div>
+    </section>
+
+    <!-- 12 · Cierre -->
+    <section class="slide s-end">
+      <span class="counter">12 / 12</span>
+
+      <div class="end-logo">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia Educación">
+      </div>
+
+      <p class="end-message">
+        Llevemos a DAMASCO de la <span class="hl-orange">curiosidad</span><br>a la <span class="hl-yellow">automatización</span>.
+      </p>
+
+      <div class="cta-wrap">
+        <a class="cta" href="https://calendly.com/intezia/30min?month=2026-06" target="_blank" rel="noopener">Esperamos tu respuesta</a>
+      </div>
+
+      <div class="end-contact">
+        <p class="contact-line">
+          <span class="contact-label">Asesora de proyecto:</span>
+          Isabella Palazzone <span class="dot">·</span> +58 424-2159445 <span class="dot">·</span> ipalazzone@intezia.com
+        </p>
+        <p class="contact-line">
+          <span class="contact-label">Empresa:</span>
+          Intezia C.A J-505657950 <span class="dot">·</span> info@intezia.com
+        </p>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

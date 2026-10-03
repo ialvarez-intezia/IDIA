@@ -1,0 +1,62 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Editores
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Claude Code (configuración local del usuario)
+.claude/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+env/
+.python-version
+
+# Node (por si se añade pdf-lib u otras herramientas)
+node_modules/
+.npm/
+package-lock.json.bak
+
+# Logs y temporales
+*.log
+*.tmp
+*.cache
+
+# Superpowers — mockups del proceso de brainstorming visual
+.superpowers/
+
+# Secretos y credenciales (defensivo — nunca deberían vivir aquí)
+.env
+.env.*
+*.pem
+*.key
+secrets/
+
+# Credenciales OAuth de la auditoría de correo (irodriguez@intezia.com) — NUNCA versionar.
+# Las regenera scripts/google-auth-intezia.py contra Google Cloud Console.
+scripts/credentials.json
+scripts/token-intezia.json*
+
+# Outputs generados de propuestas
+# Los PDFs y carpetas de propuesta se regeneran con ./scripts/generar-pdf.sh
+# Comentar la línea siguiente si quieres versionar los PDFs entregados
+clientes/propuestas/**/propuesta.pdf
+
+# Dashboards Edu-Trace: el CSV crudo trae datos personales (cédula, correo) — §4.16.
+# Nunca se versiona. El resultados.json (ya sin PII) sí puede commitearse.
+clientes/dashboards/*/encuesta.csv
+
+# Mantener los PDFs oficiales como referencia inmutable
+!fuentes/formatos-oficiales/*.pdf

@@ -1,0 +1,246 @@
+/* ============================================================================
+   Overrides · Agente Personal para Andrés Simón / Venemergencia (CAI-028)
+   Clonado de banco-activo-cerebros-digitales/overrides.css (CAI-027), del cual se
+   conservan Cierre escalera y Beneficios v3 (layout ampliado) sin cambios de CSS.
+   Se retiraron .s-graph, .s-roadmap/.rmx-*/.s-followup (este deck no tiene slide
+   de grafo relacional ni de Seguimiento 30-60-90 — no es un currículo de
+   Habilidades tradicional, ver index.html). El núcleo visual vive en
+   ../_base/styles.css. Paleta de marca únicamente: #000000 / #F4BA1A / #E58423 /
+   #FFFFFF (§4.1).
+
+   AGREGADO: slide nueva "Mantenimiento y Soporte" (.s-maintenance, 2026-09-24) —
+   usa <section class="slide s-steps s-maintenance"> para heredar el fondo blanco/
+   barra naranja/eyebrow/h2 de .s-steps, y agrega aquí solo las clases propias del
+   contenido (descripción + 2 columnas Incluye/No incluye + nota de precio aparte).
+   ============================================================================ */
+
+/* ===========================================================================
+   Cierre — escalera editable (esquema 2026-08-26)
+   =========================================================================== */
+.s-end .end-logo img { height: 140px; }
+
+.s-end .end-summit {
+  position: absolute;
+  top: 224px; left: 242px; width: 640px; height: 60px;
+  background: var(--yellow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.s-end .end-summit .acro-default-text {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.25;
+  color: var(--black);
+  padding: 0 16px;
+}
+
+.s-end .end-stairs {
+  position: absolute;
+  top: 308px; left: 242px; width: 640px; height: 190px;
+}
+.s-end .stair-step {
+  position: absolute;
+  bottom: 0;
+  width: 200px;
+}
+.s-end .stair-1 { left: 0px;   height: 90px;  background: var(--yellow); }
+.s-end .stair-2 { left: 220px; height: 140px; background: var(--orange); }
+.s-end .stair-3 { left: 440px; height: 190px; background: var(--white); border: 2px solid var(--yellow); }
+
+.s-end .stair-label {
+  position: absolute;
+  top: 10px; left: 12px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.s-end .stair-1 .stair-label,
+.s-end .stair-3 .stair-label { color: var(--black); opacity: 0.55; }
+.s-end .stair-2 .stair-label { color: var(--white); opacity: 0.7; }
+
+.s-end .stair-field { position: absolute; top: 30px; left: 12px; width: 176px; }
+.s-end .stair-1 .stair-field { height: 50px; }
+.s-end .stair-2 .stair-field { height: 100px; }
+.s-end .stair-3 .stair-field { height: 150px; }
+.s-end .stair-field .acro-default-text {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 1.3;
+  display: block;
+}
+.s-end .stair-1 .stair-field .acro-default-text,
+.s-end .stair-3 .stair-field .acro-default-text { color: var(--black); }
+.s-end .stair-2 .stair-field .acro-default-text { color: var(--white); }
+
+.s-end .cta-wrap {
+  position: absolute;
+  top: 522px; left: 0; right: 0;
+  margin-top: 0;
+  display: flex;
+  justify-content: center;
+}
+
+@media print {
+  .s-end .end-summit .acro-default-text,
+  .s-end .stair-field .acro-default-text { display: none !important; }
+}
+
+/* ===========================================================================
+   Beneficios v3 (layout ampliado)
+   =========================================================================== */
+.s-benefits-v2 { background: var(--black); color: var(--white); }
+.s-benefits-v2::before { background: var(--yellow); }
+.s-benefits-v2 .counter { color: var(--yellow); }
+.s-benefits-v2 .eyebrow { color: var(--yellow); }
+.s-benefits-v2 h2 { color: var(--white); }
+.s-benefits-v2 h2 .hl {
+  display: inline-block;
+  background: var(--yellow);
+  color: var(--black);
+  padding: 0 10px;
+}
+.s-benefits-v2 .grid { height: 570px; gap: 16px; }
+.s-benefits-v2 .block {
+  background: rgba(255, 255, 255, 0.045);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-top: 4px solid var(--yellow);
+  border-radius: 13px;
+  padding: 26px 24px 24px;
+  color: var(--white);
+}
+.s-benefits-v2 .block:nth-child(2) { border-top-color: var(--orange); }
+.s-benefits-v2 .block:nth-child(3),
+.s-benefits-v2 .block:nth-child(4) {
+  background: rgba(244, 186, 26, 0.06);
+  border-color: rgba(244, 186, 26, 0.28);
+  border-top-color: var(--yellow);
+}
+.s-benefits-v2 .label {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 999px;
+  margin-bottom: 18px;
+  color: var(--yellow);
+  background: rgba(244, 186, 26, 0.13);
+}
+.s-benefits-v2 .block:nth-child(3) .label,
+.s-benefits-v2 .block:nth-child(4) .label { position: absolute; top: 26px; left: 24px; }
+.s-benefits-v2 .block:nth-child(2) .label { color: var(--orange); background: rgba(229, 132, 35, 0.14); }
+.s-benefits-v2 .block ul { list-style: none; }
+.s-benefits-v2 .block ul li {
+  font-size: 16px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85);
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+.s-benefits-v2 .block ul li:last-child { border-bottom: 0; }
+.s-benefits-v2 .block p { font-size: 16px; line-height: 1.6; color: rgba(255, 255, 255, 0.85); }
+.s-benefits-v2 .block strong { color: var(--yellow); font-weight: 700; }
+.s-benefits-v2 .block:nth-child(2) strong { color: var(--orange); }
+.s-benefits-v2 .foot .meta { color: rgba(255, 255, 255, 0.65); }
+
+.s-benefits-v2 .entregables-box,
+.s-benefits-v2 .acreditaciones-box {
+  background: transparent;
+  position: absolute;
+  top: 212px;
+  width: 193px;
+  height: 474px;
+}
+.s-benefits-v2 .entregables-box { left: 594px; }
+.s-benefits-v2 .acreditaciones-box { left: 850px; }
+.s-benefits-v2 .entregables-box .acro-default-text,
+.s-benefits-v2 .acreditaciones-box .acro-default-text {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+/* ===========================================================================
+   Slide "Mantenimiento y Soporte" (.s-maintenance, 2026-09-24) — slide a la
+   medida, primera vez que se usa este patrón. Hereda fondo/barra/eyebrow/h2 de
+   .s-steps (mismo <section> con 2 clases). Sin campo de precio AcroForm: se
+   presenta como nota de texto, ver brief.md.
+   =========================================================================== */
+.s-maintenance .maint-desc {
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--black);
+  max-width: 900px;
+  margin: 0 0 26px;
+}
+.s-maintenance .maint-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-bottom: 22px;
+}
+.s-maintenance .maint-col {
+  border-radius: 10px;
+  padding: 20px 22px;
+  border: 1.5px solid rgba(0,0,0,0.10);
+}
+.s-maintenance .maint-yes {
+  border-top: 4px solid var(--yellow);
+  background: rgba(244,186,26,0.06);
+}
+.s-maintenance .maint-no {
+  border-top: 4px solid rgba(0,0,0,0.25);
+  background: rgba(0,0,0,0.02);
+}
+.s-maintenance .maint-label {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 12.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin: 0 0 12px;
+  color: var(--black);
+}
+.s-maintenance .maint-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+.s-maintenance .maint-list li {
+  position: relative;
+  padding-left: 22px;
+  font-size: 13.5px;
+  line-height: 1.42;
+  color: var(--black);
+}
+.s-maintenance .maint-yes .maint-list li::before {
+  content: "\2713";
+  position: absolute;
+  left: 0; top: 0;
+  color: var(--orange);
+  font-weight: 700;
+}
+.s-maintenance .maint-no .maint-list li::before {
+  content: "\2715";
+  position: absolute;
+  left: 0; top: 0;
+  color: rgba(0,0,0,0.4);
+  font-weight: 700;
+  font-size: 12px;
+}
+.s-maintenance .maint-note {
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: 12.5px;
+  color: rgba(0,0,0,0.6);
+}

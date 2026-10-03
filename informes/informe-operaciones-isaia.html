@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Informe de Operaciones · Sistema IsaIA</title>
+<style>
+  :root{
+    --black:#000000;
+    --gold:#F4BA1A;
+    --orange:#E58423;
+    --white:#FFFFFF;
+    --ink:#141414;
+    --grey:#6b6b6b;
+    --line:rgba(0,0,0,.10);
+    --paper:#ffffff;
+    --soft:#faf8f4;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  @page{ size:A4 portrait; margin:0; }
+  html,body{ background:#3a3a3a; }
+  body{
+    font-family:"Inter","Helvetica Neue",Arial,system-ui,sans-serif;
+    color:var(--ink);
+    -webkit-font-smoothing:antialiased;
+    line-height:1.5;
+  }
+  .mono{ font-family:"SF Mono","Roboto Mono",ui-monospace,Menlo,Consolas,monospace; }
+
+  /* ---------- PAGE SHELL ---------- */
+  .page{
+    position:relative;
+    width:210mm; height:297mm;
+    background:var(--paper);
+    margin:0 auto;
+    overflow:hidden;
+    page-break-after:always;
+    display:flex; flex-direction:column;
+  }
+  .page:last-child{ page-break-after:auto; }
+  .pad{ padding:14mm 15mm 15mm; flex:1; display:flex; flex-direction:column; }
+
+  /* running header / footer */
+  .runhead{
+    display:flex; justify-content:space-between; align-items:center;
+    font-size:8.5pt; letter-spacing:.18em; text-transform:uppercase;
+    color:var(--grey); padding:9mm 16mm 0;
+  }
+  .runhead .dot{ width:7px;height:7px;background:var(--gold);border-radius:50%;display:inline-block;margin-right:7px;vertical-align:middle;}
+  .runfoot{
+    position:absolute; bottom:8mm; left:16mm; right:16mm;
+    display:flex; justify-content:space-between; align-items:center;
+    font-size:8pt; letter-spacing:.14em; text-transform:uppercase; color:var(--grey);
+    border-top:1px solid var(--line); padding-top:3mm;
+  }
+  .runfoot b{ color:var(--ink); }
+
+  /* ---------- TYPE ---------- */
+  .eyebrow{
+    font-size:9pt; letter-spacing:.32em; text-transform:uppercase;
+    color:var(--orange); font-weight:700; margin-bottom:6mm;
+    display:flex; align-items:center; gap:10px;
+  }
+  .eyebrow::before{ content:""; width:26px; height:3px; background:var(--gold); display:inline-block;}
+  h1.sec{ font-size:29pt; font-weight:800; line-height:1.05; letter-spacing:-.02em; margin-bottom:4mm; }
+  h2.sub{ font-size:14.5pt; font-weight:800; letter-spacing:-.01em; margin:5mm 0 2.5mm; }
+  h3.mini{ font-size:10.5pt; font-weight:800; text-transform:uppercase; letter-spacing:.08em; margin-bottom:2mm;}
+  p.lead{ font-size:11.5pt; color:#2b2b2b; max-width:150mm; }
+  p.body{ font-size:10pt; color:#333; margin-bottom:2.5mm; }
+  .hl{ background:var(--gold); padding:0 .18em; border-radius:2px; }
+  .hlo{ color:var(--orange); font-weight:700; }
+  strong{ font-weight:700; }
+
+  /* ---------- COVER ---------- */
+  .cover{ background:var(--black); color:#fff; }
+  .cover .grid-bg{
+    position:absolute; inset:0;
+    background-image:
+      linear-gradient(rgba(244,186,26,.06) 1px,transparent 1px),
+      linear-gradient(90deg,rgba(244,186,26,.06) 1px,transparent 1px);
+    background-size:14mm 14mm;
+  }
+  .cover .corner{ position:absolute; width:34px;height:34px;border:3px solid var(--gold);}
+  .cover .c-tl{ top:14mm;left:14mm;border-right:none;border-bottom:none;}
+  .cover .c-br{ bottom:14mm;right:14mm;border-left:none;border-top:none;}
+  .cover-inner{ position:relative; z-index:2; padding:24mm 18mm; height:100%; display:flex; flex-direction:column;}
+  .brandmark{ display:flex; align-items:center; gap:12px; font-weight:800; font-size:13pt; letter-spacing:.02em;}
+  .brandmark .sq{ width:30px;height:30px;background:var(--gold); border-radius:7px; display:grid;place-items:center; color:#000; font-weight:900; font-size:13pt;}
+  .cover .kicker{ margin-top:auto; font-size:10pt; letter-spacing:.34em; text-transform:uppercase; color:var(--gold); font-weight:700;}
+  .cover h1{ font-size:48pt; font-weight:900; line-height:1.0; letter-spacing:-.025em; margin:6mm 0 5mm;}
+  .cover h1 em{ font-style:normal; color:var(--gold);}
+  .cover .desc{ font-size:12pt; color:#cfcfcf; max-width:140mm; line-height:1.5;}
+  .cover .period{ margin-top:8mm; font-size:10.5pt; color:#fff; font-weight:700; letter-spacing:.05em;}
+  .cover .period span{ color:var(--orange);}
+  .cover-stats{ display:flex; gap:0; margin-top:10mm; border-top:1px solid rgba(255,255,255,.18); padding-top:6mm;}
+  .cover-stats div{ flex:1; }
+  .cover-stats .n{ font-size:26pt; font-weight:900; color:var(--gold); line-height:1;}
+  .cover-stats .l{ font-size:8.5pt; letter-spacing:.14em; text-transform:uppercase; color:#bdbdbd; margin-top:2mm;}
+
+  /* ---------- STAT CARDS ---------- */
+  .stat-row{ display:grid; grid-template-columns:repeat(4,1fr); gap:5mm; margin:5mm 0;}
+  .stat{ border:1.5px solid var(--ink); border-radius:10px; padding:6mm 5mm; background:var(--white);}
+  .stat .n{ font-size:27pt; font-weight:900; line-height:1; letter-spacing:-.02em;}
+  .stat .n small{ font-size:13pt; }
+  .stat .l{ font-size:8.5pt; letter-spacing:.1em; text-transform:uppercase; color:var(--grey); margin-top:2.5mm; font-weight:700;}
+  .stat.gold{ background:var(--gold); border-color:var(--gold);}
+  .stat.black{ background:var(--black); border-color:var(--black); color:#fff;}
+  .stat.black .l{ color:#cfcfcf;}
+  .stat.orange{ background:var(--orange); border-color:var(--orange); color:#fff;}
+  .stat.orange .l{ color:#ffe8d4;}
+
+  /* ---------- TIMELINE ---------- */
+  .phase{ display:grid; grid-template-columns:34mm 1fr; gap:0; border-left:3px solid var(--gold); margin-bottom:7mm; padding-left:0;}
+  .phase .when{ padding:0 5mm 0 6mm; }
+  .phase .when .ph{ font-size:8pt; letter-spacing:.2em; text-transform:uppercase; color:var(--orange); font-weight:800;}
+  .phase .when .dts{ font-size:11pt; font-weight:800; margin-top:1mm; line-height:1.2;}
+  .phase .when .days{ font-size:8.5pt; color:var(--grey); margin-top:1mm;}
+  .phase .what{ padding:0 0 0 5mm; border-left:1px solid var(--line);}
+  .phase .what h4{ font-size:12.5pt; font-weight:800; margin-bottom:2mm;}
+  .phase .what p{ font-size:9.5pt; color:#444; margin-bottom:2mm;}
+  .tags{ display:flex; flex-wrap:wrap; gap:5px; margin-top:2mm;}
+  .tag{ font-size:7.5pt; background:var(--soft); border:1px solid var(--line); border-radius:20px; padding:2px 9px; color:#333; font-weight:600;}
+  .tag.k{ background:var(--black); color:#fff; border-color:#000;}
+
+  /* ---------- CATALOG GRID ---------- */
+  .cat-block{ margin-bottom:3mm; }
+  .cat-h{ display:flex; align-items:center; gap:8px; margin-bottom:2mm; }
+  .cat-h .badge{ font-size:8pt; font-weight:800; letter-spacing:.08em; background:var(--ink); color:#fff; padding:3px 9px; border-radius:5px;}
+  .cat-h .badge.g{ background:var(--gold); color:#000;}
+  .cat-h .badge.o{ background:var(--orange); color:#fff;}
+  .cat-h .cnt{ font-size:8.5pt; color:var(--grey); font-weight:700; letter-spacing:.05em;}
+  .cat-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:2.2mm; }
+  .cat-grid.four{ grid-template-columns:repeat(4,1fr); }
+  .item{ border:1px solid var(--line); border-radius:7px; padding:2.2mm 3mm; background:var(--white); display:flex; flex-direction:column; gap:.6mm;}
+  .item .code{ font-size:7.2pt; font-weight:800; letter-spacing:.06em; color:var(--orange);}
+  .item .name{ font-size:8.6pt; font-weight:700; line-height:1.18; color:var(--ink);}
+  .item.notable{ border-color:var(--ink); border-width:1.5px; background:var(--soft);}
+  .item.notable .name::after{ content:"★"; color:var(--gold); margin-left:4px; font-size:8pt;}
+
+  /* ---------- BAR COMPARE ---------- */
+  .compare{ display:grid; grid-template-columns:1fr 1fr; gap:5mm; margin:3mm 0;}
+  .ccol{ border:1.5px solid var(--ink); border-radius:10px; padding:5mm 4.5mm; }
+  .ccol.before{ background:var(--soft); }
+  .ccol.after{ background:var(--black); color:#fff; border-color:#000;}
+  .ccol .tt{ font-size:9pt; letter-spacing:.16em; text-transform:uppercase; font-weight:800; margin-bottom:1mm;}
+  .ccol.before .tt{ color:var(--grey);}
+  .ccol.after .tt{ color:var(--gold);}
+  .ccol .big{ font-size:24pt; font-weight:900; line-height:1; letter-spacing:-.02em; margin-bottom:1mm;}
+  .ccol.before .big{ color:var(--ink);}
+  .ccol.after .big{ color:#fff;}
+  .ccol .u{ font-size:8.5pt; color:var(--grey); margin-bottom:4mm;}
+  .ccol.after .u{ color:#bdbdbd;}
+  .ccol ul{ list-style:none; }
+  .ccol li{ font-size:9pt; padding:2mm 0; border-top:1px solid var(--line); display:flex; gap:7px; }
+  .ccol.after li{ border-color:rgba(255,255,255,.14);}
+  .ccol li::before{ content:""; width:6px;height:6px;border-radius:50%; background:var(--orange); margin-top:5px; flex:none;}
+  .ccol.after li::before{ background:var(--gold);}
+
+  .barchart{ margin:2.5mm 0; }
+  .bar-row{ display:grid; grid-template-columns:30mm 1fr 22mm; align-items:center; gap:4mm; margin-bottom:3mm;}
+  .bar-row .blab{ font-size:8.5pt; font-weight:700; text-transform:uppercase; letter-spacing:.06em; color:#333;}
+  .bar-track{ background:var(--soft); border:1px solid var(--line); border-radius:20px; height:11mm; overflow:hidden; position:relative;}
+  .bar-fill{ height:100%; border-radius:20px; display:flex; align-items:center; padding-left:4mm; color:#000; font-weight:800; font-size:9pt;}
+  .bf-before{ background:repeating-linear-gradient(45deg,#d9d2c4,#d9d2c4 6px,#cfc7b6 6px,#cfc7b6 12px); }
+  .bf-after{ background:linear-gradient(90deg,var(--gold),var(--orange)); }
+  .bar-row .bval{ font-size:9.5pt; font-weight:800; text-align:right;}
+
+  /* ---------- CALLOUT / QUOTE ---------- */
+  .callout{ border-left:4px solid var(--orange); background:var(--soft); padding:5mm 6mm; border-radius:0 8px 8px 0; margin:4mm 0;}
+  .callout .q{ font-size:11pt; font-weight:700; line-height:1.4; color:var(--ink);}
+  .callout .src{ font-size:8.5pt; color:var(--grey); margin-top:2mm; letter-spacing:.04em;}
+
+  /* ---------- TWO COL TEXT ---------- */
+  .twocol{ columns:2; column-gap:9mm; }
+  .twocol p{ font-size:9.5pt; color:#3a3a3a; margin-bottom:2.5mm; break-inside:avoid;}
+
+  /* ---------- RULES LIST ---------- */
+  .rules{ display:grid; grid-template-columns:1fr 1fr; gap:3mm 6mm; margin-top:3mm;}
+  .rule{ display:grid; grid-template-columns:13mm 1fr; gap:3mm; align-items:start; padding:3mm 0; border-top:1px solid var(--line);}
+  .rule .rn{ font-size:11pt; font-weight:900; color:var(--orange); }
+  .rule .rt{ font-size:9pt; font-weight:800; margin-bottom:.5mm;}
+  .rule .rd{ font-size:8.2pt; color:#555; line-height:1.35;}
+
+  .note{ font-size:8pt; color:var(--grey); font-style:italic; margin-top:3mm; line-height:1.4;}
+
+  /* arch diagram */
+  .arch{ display:grid; grid-template-columns:repeat(2,1fr); gap:3.5mm; margin:2.5mm 0;}
+  .acard{ border:1.5px solid var(--ink); border-radius:9px; padding:4mm 4.5mm; }
+  .acard .ic{ width:30px;height:30px;border-radius:8px; background:var(--gold); display:grid;place-items:center; font-weight:900; font-size:12pt; margin-bottom:2mm; color:#000;}
+  .acard.dk{ background:var(--black); color:#fff; border-color:#000;}
+  .acard.dk .ic{ background:var(--orange); color:#fff;}
+  .acard h4{ font-size:10.5pt; font-weight:800; margin-bottom:1.5mm;}
+  .acard p{ font-size:8.6pt; color:#444; line-height:1.4;}
+  .acard.dk p{ color:#c8c8c8;}
+  .acard .file{ font-size:7.5pt; margin-top:2mm; color:var(--orange); font-weight:700;}
+
+  /* ---------- KPI BOARD ---------- */
+  .legend{ display:flex; flex-wrap:wrap; gap:5mm; margin:3mm 0 1mm; }
+  .legend .lg{ display:flex; align-items:center; gap:6px; font-size:8pt; color:#444; font-weight:700; letter-spacing:.03em; text-transform:uppercase;}
+  .legend .pill{ width:13px;height:13px;border-radius:4px; display:inline-block;}
+  .pill.done{ background:var(--gold);}
+  .pill.base{ background:var(--orange);}
+  .pill.try{ background:#fff; border:2px solid var(--ink);}
+  .pill.pause{ background:#9a9a9a;}
+  .pill.metric{ background:var(--black);}
+
+  .kpi-grid{ display:grid; grid-template-columns:1fr 1fr; gap:4mm; margin-top:2mm; }
+  .kpi{ position:relative; border:1.5px solid var(--ink); border-radius:11px; padding:5mm 5mm 5mm 7mm; overflow:hidden; background:var(--white); display:flex; flex-direction:column; gap:1.5mm;}
+  .kpi::before{ content:""; position:absolute; left:0; top:0; bottom:0; width:5px; }
+  .kpi.k-done::before{ background:var(--gold);}
+  .kpi.k-base::before{ background:var(--orange);}
+  .kpi.k-try::before{ background:var(--ink);}
+  .kpi.k-pause::before{ background:#9a9a9a;}
+  .kpi.k-metric{ background:var(--black); color:#fff; border-color:#000;}
+  .kpi.k-metric::before{ background:var(--gold);}
+  .kpi .st{ font-size:7.5pt; font-weight:800; letter-spacing:.14em; text-transform:uppercase; display:inline-flex; align-items:center; gap:6px;}
+  .kpi.k-done .st{ color:#b07d00;}
+  .kpi.k-base .st{ color:var(--orange);}
+  .kpi.k-try .st{ color:var(--ink);}
+  .kpi.k-pause .st{ color:#777;}
+  .kpi.k-metric .st{ color:var(--gold);}
+  .kpi .kt{ font-size:12pt; font-weight:800; line-height:1.15; letter-spacing:-.01em;}
+  .kpi .kd{ font-size:8.8pt; color:#444; line-height:1.4;}
+  .kpi.k-metric .kd{ color:#c8c8c8;}
+  .kpi .kbig{ font-size:30pt; font-weight:900; line-height:1; letter-spacing:-.02em; color:var(--gold); margin:1mm 0;}
+  .kpi .kbig small{ font-size:12pt; color:#fff; font-weight:800;}
+  .kpi.full{ grid-column:1 / -1; }
+  .kpi-ic{ position:absolute; right:5mm; top:5mm; font-size:15pt; opacity:.18; font-weight:900;}
+</style>
+</head>
+<body>
+
+<!-- ============ PÁGINA 1 · PORTADA ============ -->
+<section class="page cover">
+  <div class="grid-bg"></div>
+  <div class="corner c-tl"></div>
+  <div class="corner c-br"></div>
+  <div class="cover-inner">
+    <div class="brandmark"><span class="sq">i</span> INTEZIA · SISTEMA IsaIA</div>
+
+    <div class="kicker">Informe de Operaciones</div>
+    <h1>Un mes<br>construyendo<br>una <em>fábrica</em><br>de propuestas.</h1>
+    <p class="desc">Bitácora completa del sistema de propuestas comerciales de Intezia: desde el primer commit hasta una línea de producción gobernada por reglas, scripts y verificación automática.</p>
+    <p class="period">Período cubierto: <span>27 abril → 29 mayo 2026</span> · 32 días de operación continua</p>
+
+    <div class="cover-stats">
+      <div><div class="n">42</div><div class="l">Propuestas / clientes</div></div>
+      <div><div class="n">93</div><div class="l">PDFs entregados</div></div>
+      <div><div class="n">59</div><div class="l">Commits</div></div>
+      <div><div class="n">15</div><div class="l">Reglas blindadas</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PÁGINA 2 · RESUMEN EJECUTIVO ============ -->
+<section class="page">
+  <div class="runhead"><span><span class="dot"></span>Informe IsaIA</span><span>01 · Resumen ejecutivo</span></div>
+  <div class="pad">
+    <div class="eyebrow">Resumen ejecutivo</div>
+    <h1 class="sec">De artesanía a<br>línea de producción.</h1>
+    <p class="lead">En 32 días el sistema pasó de <strong>no existir</strong> a producir más de <strong>40 propuestas comerciales</strong> para clientes reales (Banco de Venezuela, PDVSA, Empresas Polar, Grupo Sambil, SURA, Simple TV, BNC, Cashea, entre otros), todas bajo una misma marca, plantilla y conjunto de reglas. El cambio de fondo no fue hacer más propuestas: fue <span class="hl">convertir el diseño en código</span> para dejar de revisar a mano.</p>
+
+    <div class="stat-row">
+      <div class="stat gold"><div class="n">42</div><div class="l">Carpetas de propuesta</div></div>
+      <div class="stat"><div class="n">5</div><div class="l">Categorías curriculares</div></div>
+      <div class="stat black"><div class="n">~41</div><div class="l">Scripts del sistema</div></div>
+      <div class="stat orange"><div class="n">1.841</div><div class="l">Líneas CSS compartidas</div></div>
+    </div>
+
+    <h2 class="sub">Lo esencial de un vistazo</h2>
+    <div class="twocol">
+      <p><strong>Catálogo desplegado.</strong> Charlas, Talleres, Capacitaciones In-Company, Cursos y Diplomados, todos con códigos de catálogo (CH-, TA-, CAP-, CU-, DIP-) y bajo dos divisiones: Fundación y Educación.</p>
+      <p><strong>Marca blindada.</strong> Una sola paleta de cuatro colores, tipografía única, logos por división y por contraste. La marca es una regla bloqueante, no una sugerencia.</p>
+      <p><strong>Gobernanza por reglas.</strong> 15 reglas críticas (§4.1 a §4.15) nacidas de feedback real de ventas: sin guion largo, acrónimos glosados, sin afirmar migración de stack del cliente, sin acuerdos económicos en la logística de arranque.</p>
+      <p><strong>Verificación automática.</strong> Un detector de desbordes (Chrome headless + CDP) y un verificador de propuesta reemplazaron la revisión visual manual, slide por slide.</p>
+      <p><strong>Economía de tokens.</strong> El rediseño del 24 de mayo (CSS compartido + edición quirúrgica + composición por bloques) recortó de forma drástica el costo por propuesta. Detalle en la sección 04.</p>
+      <p><strong>Sistema vivo.</strong> Cada conversación deja aprendizaje codificado en el changelog, las plantillas o la memoria persistente. La plantilla sirve al caso, no al revés.</p>
+    </div>
+
+    <div class="callout">
+      <div class="q">«El usuario reportó que generar propuestas gastaba demasiados tokens y, sobre todo, que no quería revisar diseño nunca.»</div>
+      <div class="src">Changelog · 2026-05-24 · el detonante del rediseño arquitectónico hacia una solución de código</div>
+    </div>
+  </div>
+  <div class="runfoot"><span>Intezia C.A. · Documento interno</span><span><b>02</b> / 09</span></div>
+</section>
+
+<!-- ============ PÁGINA 3 · LÍNEA DE TIEMPO ============ -->
+<section class="page">
+  <div class="runhead"><span><span class="dot"></span>Informe IsaIA</span><span>02 · El mes en tres fases</span></div>
+  <div class="pad">
+    <div class="eyebrow">Cómo llegamos aquí</div>
+    <h1 class="sec">El mes en tres fases.</h1>
+    <p class="lead">La evolución no fue lineal de “hacer propuestas”. Fueron tres etapas claras: primero <strong>nacer</strong>, luego <strong>industrializar</strong> la plantilla, y por último <strong>escalar con gobernanza</strong>.</p>
+
+    <div style="margin-top:7mm;">
+      <div class="phase">
+        <div class="when">
+          <div class="ph">Fase 01 · Génesis</div>
+          <div class="dts">27 – 30 abr</div>
+          <div class="days">~4 días</div>
+        </div>
+        <div class="what">
+          <h4>Nace el sistema y la plantilla canónica</h4>
+          <p>Del repositorio vacío al primer deck. Se fija la arquitectura (router CLAUDE.md + carpetas empresa/plantillas/clientes), la marca oficial (3 colores + Graphit), las 3 categorías reales y las 2 divisiones. Se itera el deck v1→v4 con feedback del CAO y se <strong>congela la plantilla maestra</strong> (cumbre-andina). Se introduce el precio como campo AcroForm editable y el formato A4 horizontal obligatorio.</p>
+          <div class="tags"><span class="tag k">Repo + GitHub privado</span><span class="tag">Marca oficial</span><span class="tag">Plantilla congelada</span><span class="tag">AcroForms de precio</span><span class="tag">A4 landscape</span></div>
+        </div>
+      </div>
+
+      <div class="phase">
+        <div class="when">
+          <div class="ph">Fase 02 · Industrialización</div>
+          <div class="dts">1 – 16 may</div>
+          <div class="days">~16 días</div>
+        </div>
+        <div class="what">
+          <h4>La plantilla se vuelve producto</h4>
+          <p>Campos AcroForm multilínea (16→13 campos), pre-llenado automático de Entregables/Acreditación/Próximos pasos, rediseño del cronograma a <strong>una sesión por slide</strong> (“ruta de aprendizaje”), la slide canónica <strong>07 · Impacto</strong> con datos de estudios reales citados verbatim, resaltado de palabras clave y CTA con hipervínculo a Calendly. La plantilla deja de ser una maqueta y pasa a ser una máquina de clonar.</p>
+          <div class="tags"><span class="tag k">AcroForms multilínea</span><span class="tag">Pre-llenado automático</span><span class="tag">Slide Impacto</span><span class="tag">Cronograma por sesión</span><span class="tag">CTA Calendly</span></div>
+        </div>
+      </div>
+
+      <div class="phase">
+        <div class="when">
+          <div class="ph">Fase 03 · Escala + Gobernanza</div>
+          <div class="dts">17 – 29 may</div>
+          <div class="days">~13 días</div>
+        </div>
+        <div class="what">
+          <h4>40+ clientes y la migración a código</h4>
+          <p>El volumen explota: decenas de propuestas reales en paralelo. Para sostenerlo nacen las <strong>reglas bloqueantes §4.9–§4.15</strong> (todas de feedback de ventas) y, sobre todo, el <strong>rediseño arquitectónico del 24 de mayo</strong>: CSS compartido (_base), detector de desbordes automático, biblioteca de bloques y flujo de modificación unificado. Aquí ocurre la migración de un proceso artesanal a una solución de código.</p>
+          <div class="tags"><span class="tag k">_base CSS compartido</span><span class="tag k">verificar-overflow.js</span><span class="tag">Reglas §4.9–§4.15</span><span class="tag">Biblioteca de bloques</span><span class="tag">Flujo §6.A + §10</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout">
+      <div class="q">59 commits · 32 días · un changelog que documenta cada decisión con fecha y motivo.</div>
+      <div class="src">El sistema se diseñó para auto-actualizarse: si algo se hace dos veces sin estar escrito, se escribe.</div>
+    </div>
+  </div>
+  <div class="runfoot"><span>Intezia C.A. · Documento interno</span><span><b>03</b> / 09</span></div>
+</section>
+
+<!-- ============ PÁGINA 4 · CATÁLOGO DE PROPUESTAS ============ -->
+<section class="page">
+  <div class="runhead"><span><span class="dot"></span>Informe IsaIA</span><span>03 · El catálogo producido</span></div>
+  <div class="pad">
+    <div class="eyebrow">Lo que se produjo</div>
+    <h1 class="sec">42 propuestas, 5 categorías.</h1>
+    <p class="lead">Cada tarjeta es una carpeta real en <span class="mono">clientes/propuestas/</span>. Las marcadas con ★ son cuentas de alto perfil. El demo canónico y las referencias multi-fase también viven aquí como plantillas vivas.</p>
+
+    <div style="margin-top:3mm;">
+      <div class="cat-block">
+        <div class="cat-h"><span class="badge o">CAP-</span><h3 class="mini" style="margin:0;">Capacitaciones In-Company</h3><span class="cnt">· la columna vertebral del volumen</span></div>
+        <div class="cat-grid four">
+          <div class="item notable"><span class="code">CAP-024 · CH-004</span><span class="name">Banco de Venezuela (BDV)</span></div>
+          <div class="item notable"><span class="code">CAP-011</span><span class="name">Empresas Polar</span></div>
+          <div class="item notable"><span class="code">CAP-018</span><span class="name">Grupo Sambil</span></div>
+          <div class="item notable"><span class="code">CAP-031</span><span class="name">SURA Venezuela</span></div>
+          <div class="item notable"><span class="code">CAP-035</span><span class="name">Simple TV</span></div>
+          <div class="item notable"><span class="code">CAP-001 · 002</span><span class="name">BNC</span></div>
+          <div class="item"><span class="code">CAP-005</span><span class="name">Cashea</span></div>
+          <div class="item"><span class="code">CAP-038</span><span class="name">Tealca</span></div>
+          <div class="item"><span class="code">CAP-029</span><span class="name">Zoom</span></div>
+          <div class="item"><span class="code">CAP-004</span><span class="name">YS Pharma Group</span></div>
+          <div class="item"><span class="code">CAP-007</span><span class="name">MiCasino</span></div>
+          <div class="item"><span class="code">CAP-009</span><span class="name">Suiche 7B</span></div>
+          <div class="item"><span class="code">CAP-015 · TA-022</span><span class="name">HCA Venezuela</span></div>
+          <div class="item"><span class="code">CAP-021</span><span class="name">Pilotes Perforados</span></div>
+          <div class="item"><span class="code">CAP-027</span><span class="name">Alfonso Rivas</span></div>
+          <div class="item"><span class="code">CAP-030</span><span class="name">Go Pharma</span></div>
+          <div class="item"><span class="code">CAP-032</span><span class="name">Robin Agency</span></div>
+          <div class="item"><span class="code">CAP-033</span><span class="name">APB Group</span></div>
+          <div class="item"><span class="code">CAP-034</span><span class="name">Inversiones Romitec</span></div>
+          <div class="item"><span class="code">CAP-039</span><span class="name">Fivenca</span></div>
+        </div>
+      </div>
+
+      <div class="cat-block">
+        <div class="cat-h"><span class="badge g">TA-</span><h3 class="mini" style="margin:0;">Talleres</h3></div>
+        <div class="cat-grid">
+          <div class="item"><span class="code">TA-001</span><span class="name">Cumbre Andina (demo canónico)</span></div>
+          <div class="item"><span class="code">TA-004</span><span class="name">Catálogo Talleres 2026 (HUD)</span></div>
+          <div class="item"><span class="code">TA-005</span><span class="name">Marketing Estratégico y Generativo</span></div>
+          <div class="item notable"><span class="code">TA-021</span><span class="name">IA Sector Cafetero (BdV · Fundación)</span></div>
+        </div>
+      </div>
+
+      <div class="cat-block">
+        <div class="cat-h"><span class="badge">CU- / DIP-</span><h3 class="mini" style="margin:0;">Cursos y Diplomados</h3></div>
+        <div class="cat-grid">
+          <div class="item notable"><span class="code">CU-006</span><span class="name">PDVSA</span></div>
+          <div class="item"><span class="code">CU-008</span><span class="name">Intellivia</span></div>
+          <div class="item"><span class="code">CU-009</span><span class="name">Corpoez (IESA In-Company)</span></div>
+          <div class="item"><span class="code">DIP-003</span><span class="name">Universidad de Nueva Esparta</span></div>
+          <div class="item"><span class="code">DIP-006</span><span class="name">SFIC · Productividad del Negocio</span></div>
+          <div class="item"><span class="code">DIP-007</span><span class="name">SFIC · Comunicación, IA y Marketing</span></div>
+        </div>
+      </div>
+
+      <div class="cat-block">
+        <div class="cat-h"><span class="badge">CH-</span><h3 class="mini" style="margin:0;">Charlas + en desarrollo</h3></div>
+        <div class="cat-grid">
+          <div class="item"><span class="code">CH-001 · CH-002</span><span class="name">SmartKeep · IA en el Mundo Real</span></div>
+          <div class="item"><span class="code">en curso</span><span class="name">Grupo Corpos · Grupo Nena · Interjuris · Mane Producciones</span></div>
+          <div class="item"><span class="code">en curso · interno</span><span class="name">Piscinas H2O · Tu Herraje · Dr. César Mata · Intezia</span></div>
+        </div>
+      </div>
+    </div>
+    <p class="note">Conteo de carpetas en <span class="mono">clientes/propuestas/</span> al 29-05-2026 (excluye <span class="mono">_base</span>). Algunas cuentas concentran varias propuestas (BDV, HCA, BNC, SFIC). Nombres derivados del slug y el brief.</p>
+  </div>
+  <div class="runfoot"><span>Intezia C.A. · Documento interno</span><span><b>04</b> / 09</span></div>
+</section>
+
+<!-- ============ PÁGINA 5 · ECONOMÍA: TIEMPO Y TOKENS ============ -->
+<section class="page">
+  <div class="runhead"><span><span class="dot"></span>Informe IsaIA</span><span>04 · Economía de tiempo y tokens</span></div>
+  <div class="pad">
+    <div class="eyebrow">Cuánto cuesta una propuesta</div>
+    <h1 class="sec">Antes vs. después<br>del rediseño.</h1>
+    <p class="lead">El 24 de mayo se cambió la filosofía: de <strong>“absorber”</strong> (copiar todo y corregir a mano) a <strong>“prevenir y componer”</strong> (CSS compartido, edición quirúrgica, verificación automática). Estos son los efectos estimados.</p>
+
+    <h2 class="sub">Tokens por propuesta <span style="font-size:9pt;color:var(--grey);font-weight:600;">(estimación fundamentada)</span></h2>
+    <div class="compare">
+      <div class="ccol before">
+        <div class="tt">Antes · modelo “absorber”</div>
+        <div class="big">≈ 150–300k</div>
+        <div class="u">tokens por propuesta</div>
+        <ul>
+          <li>Se clonaba y reescribía el CSS completo (~2.400 líneas) en cada deck.</li>
+          <li>Re-generación amplia del HTML (650–920 líneas).</li>
+          <li>Revisión visual del PDF slide por slide, con varias rondas de relectura del render.</li>
+          <li>Carga repetida de archivos de instrucciones.</li>
+        </ul>
+      </div>
+      <div class="ccol after">
+        <div class="tt">Después · modelo “componer”</div>
+        <div class="big">≈ 30–80k</div>
+        <div class="u">tokens por propuesta clon</div>
+        <ul>
+          <li><span class="mono">cp -r</span> del clon: 0 tokens de modelo.</li>
+          <li>CSS en <span class="mono">_base</span> compartido: 1.841 líneas que ya no se releen ni reescriben.</li>
+          <li>Solo se editan las slides que cambian (diffs con <span class="mono">Edit</span>, no reescrituras).</li>
+          <li>El detector automático sustituye la relectura visual del PDF.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="barchart">
+      <div class="bar-row">
+        <div class="blab">Antes</div>
+        <div class="bar-track"><div class="bar-fill bf-before" style="width:100%;">costo alto · revisión manual</div></div>
+        <div class="bval">100%</div>
+      </div>
+      <div class="bar-row">
+        <div class="blab">Después</div>
+        <div class="bar-track"><div class="bar-fill bf-after" style="width:33%;">~⅓ del costo</div></div>
+        <div class="bval">~30–40%</div>
+      </div>
+    </div>
+    <p class="note">Reducción estimada del orden de <strong>60–70%</strong> en tokens por propuesta clon. El repositorio no registra el conteo exacto de tokens; las cifras son estimaciones a partir del volumen de archivos leídos/escritos y del número de rondas de revisión en cada modelo de trabajo.</p>
+
+    <h2 class="sub">Tiempo activo por propuesta</h2>
+    <div class="stat-row" style="grid-template-columns:repeat(3,1fr);">
+      <div class="stat"><div class="n">~20–45<small> min</small></div><div class="l">Propuesta clon (mismo tipo ya existe)</div></div>
+      <div class="stat gold"><div class="n">~1–2<small> h</small></div><div class="l">Tipo nuevo / multi-fase / reconversión</div></div>
+      <div class="stat black"><div class="n">~4<small> días</small></div><div class="l">Diseñar la plantilla base (una sola vez)</div></div>
+    </div>
+    <p class="note">Referencia real: la reconversión completa de Cashea CAP-006 (deck + brief + programa + PDF) tomó ~40 min de construcción central (24-05), más ajustes por feedback en el día. Antes del rediseño, las correcciones de desborde por revisión manual añadían 1–2 h por propuesta.</p>
+  </div>
+  <div class="runfoot"><span>Intezia C.A. · Documento interno</span><span><b>05</b> / 09</span></div>
+</section>
+
+<!-- ============ PÁGINA 6 · LA MIGRACIÓN A CÓDIGO ============ -->
+<section class="page">
+  <div class="runhead"><span><span class="dot"></span>Informe IsaIA</span><span>05 · La migración a una solución de código</span></div>
+  <div class="pad">
+    <div class="eyebrow">La decisión estratégica del mes</div>
+    <h1 class="sec">De revisar a mano<br>a confiar en el código.</h1>
+    <p class="lead">El problema no era el diseño: era que <strong>cada cliente trae distinto volumen de contenido</strong> y las cajas de tamaño fijo se desbordaban, obligando a revisar el PDF a ojo, slide por slide. El usuario fue explícito: <span class="hl">no quería revisar diseño nunca</span>. La respuesta fue migrar esa carga de la persona al código.</p>
+
+    <h2 class="sub">Filosofía: prevenir, no absorber · componer, no parchear</h2>
+    <div class="arch">
+      <div class="acard">
+        <div class="ic">⚑</div>
+        <h4>Detector de desbordes</h4>
+        <p>Node + Chrome headless por CDP, sin dependencias. Renderiza el deck y reporta qué slide y qué caja se sale o se recorta. Reemplaza la revisión visual humana.</p>
+        <div class="file mono">scripts/verificar-overflow.js</div>
+      </div>
+      <div class="acard dk">
+        <div class="ic">≡</div>
+        <h4>CSS canónico compartido</h4>
+        <p>1.841 líneas que antes se copiaban en cada deck ahora viven en un solo lugar; los clones lo enlazan por ruta relativa y solo llevan un <span class="mono">overrides.css</span> local pequeño.</p>
+        <div class="file mono">clientes/propuestas/_base/styles.css</div>
+      </div>
+      <div class="acard dk">
+        <div class="ic">▦</div>
+        <h4>Biblioteca de bloques</h4>
+        <p>Slides a la medida (roadmap, mapa de calor, evaluación…) como piezas reutilizables con su HTML y CSS, para componer decks especiales sin reinventar.</p>
+        <div class="file mono">plantillas/slides/</div>
+      </div>
+      <div class="acard">
+        <div class="ic">✓</div>
+        <h4>Verificador + flujo unificado</h4>
+        <p>Un único script de pre-entrega y el flujo §6.A/§10 garantizan el par <span class="mono">generar-pdf</span> + <span class="mono">customize</span> y atrapan reglas de copy antes de entregar.</p>
+        <div class="file mono">scripts/verificar-propuesta.sh</div>
+      </div>
+    </div>
+
+    <h2 class="sub">Qué se movió de la persona al código</h2>
+    <div class="twocol">
+      <p><strong>La revisión de desbordes</strong> dejó de ser un sanity check visual y pasó a ser un test automatizado calibrado contra el deck canónico.</p>
+      <p><strong>La consistencia de marca y estructura</strong> dejó de depender de recordar; vive en <span class="mono">_base</span> y en la plantilla congelada.</p>
+      <p><strong>El pre-llenado de campos</strong> (Entregables, Acreditación, Próximos pasos) se automatizó con scripts <span class="mono">customize-&lt;slug&gt;.py</span> (31 a la fecha).</p>
+      <p><strong>El conocimiento operativo</strong> dejó de vivir en la memoria de una conversación y pasó al changelog, las plantillas y la memoria persistente.</p>
+    </div>
+
+    <div class="callout">
+      <div class="q">«Filosofía elegida: prevenir, no absorber (acotar el contenido a la capacidad de cada caja) y componer, no parchear (bloques reutilizables).»</div>
+      <div class="src">Changelog · 2026-05-24 · entrada [arquitectura][scripts][preferencia]</div>
+    </div>
+    <p class="note">Esta es la “migración a una solución de código”: IsaIA dejó de ser ediciones a mano para volverse una línea de producción con scripts, CSS compartido y verificación automática. Resultado: menos tokens, menos tiempo y cero revisión visual obligatoria.</p>
+  </div>
+  <div class="runfoot"><span>Intezia C.A. · Documento interno</span><span><b>06</b> / 09</span></div>
+</section>
+
+<!-- ============ PÁGINA 7 · DECISIONES Y REGLAS ============ -->
+<section class="page">
+  <div class="runhead"><span><span class="dot"></span>Informe IsaIA</span><span>06 · Decisiones estratégicas y reglas</span></div>
+  <div class="pad">
+    <div class="eyebrow">El criterio que se acumuló</div>
+    <h1 class="sec">Reglas nacidas<br>de feedback real.</h1>
+    <p class="lead">Cada regla bloqueante salió de un caso concreto de un cliente real y de feedback de ventas. No son teoría: son cicatrices convertidas en código y en checklist.</p>
+
+    <div class="rules">
+      <div class="rule"><div class="rn">4.1</div><div><div class="rt">Marca visual bloqueante</div><div class="rd">Logo por división y contraste, paleta de 4 colores, tipografía única. Sin división, no se genera.</div></div></div>
+      <div class="rule"><div class="rn">4.9</div><div><div class="rt">Impacto solo con estudios reales</div><div class="rd">Ninguna cifra se inventa; fuente citada verbatim (estudio · institución · año).</div></div></div>
+      <div class="rule"><div class="rn">4.10</div><div><div class="rt">Sin overflow visual</div><div class="rd">Desborde = defecto bloqueante. Verificado por <span class="mono">verificar-overflow.js</span>.</div></div></div>
+      <div class="rule"><div class="rn">4.11</div><div><div class="rt">No afirmar migración de stack</div><div class="rd">Intezia se ajusta al cliente, no lo cambia. BDV: «el plan se apoya en el entorno Google».</div></div></div>
+      <div class="rule"><div class="rn">4.12</div><div><div class="rt">Acrónimos glosados</div><div class="rd">AUP, RCTF, GenAI… se expanden en el primer uso de cada slide.</div></div></div>
+      <div class="rule"><div class="rn">4.13</div><div><div class="rt">Sin guion largo</div><div class="rd">El em-dash es «marca de voz de IA» que ventas rechaza. Coma, paréntesis, dos puntos o middle dot.</div></div></div>
+      <div class="rule"><div class="rn">4.14</div><div><div class="rt">Leer antes de modificar</div><div class="rd">Brief + index + programa antes de tocar nada. Campos AcroForm vacíos = defecto.</div></div></div>
+      <div class="rule"><div class="rn">4.15</div><div><div class="rt">Sin acuerdos económicos en arranque</div><div class="rd">«Cómo arrancamos» es logística, nunca contrato/factura/anticipo.</div></div></div>
+    </div>
+
+    <h2 class="sub">Decisiones de producto que marcaron el rumbo</h2>
+    <div class="twocol">
+      <p><strong>Formato A4 horizontal</strong> obligatorio para todas las propuestas (30-abr): lectura tipo deck, layouts en columnas.</p>
+      <p><strong>Campos editables en el PDF</strong> (AcroForms): ventas define precio y copy en Adobe Reader sin tocar el código.</p>
+      <p><strong>Cronograma como “ruta de aprendizaje”</strong>: una sesión por slide, layout flexible que se adapta al contenido.</p>
+      <p><strong>Slide de Impacto</strong> con evidencia citada: refuerza el cierre comercial con datos, no con opiniones.</p>
+      <p><strong>PDF nombrado por código + título</strong>: el usuario recupera el control de los entregables.</p>
+      <p><strong>Apartado comercial vacío por defecto</strong>: precio y notas los llena ventas, para no confundir.</p>
+      <p><strong>CTA con hipervínculo a Calendly</strong> en cada cierre y en los 21 botones del catálogo.</p>
+      <p><strong>Multi-tier sin “recomendado”</strong>: opciones abiertas para no limitar el upsell.</p>
+    </div>
+  </div>
+  <div class="runfoot"><span>Intezia C.A. · Documento interno</span><span><b>07</b> / 09</span></div>
+</section>
+
+<!-- ============ PÁGINA 8 · TABLERO DE KPIs ============ -->
+<section class="page">
+  <div class="runhead"><span><span class="dot"></span>Informe IsaIA</span><span>07 · Tablero de KPIs</span></div>
+  <div class="pad">
+    <div class="eyebrow">Logros y horizonte</div>
+    <h1 class="sec">Tablero de KPIs<br>estratégicos.</h1>
+    <p class="lead">Más allá del volumen, estos son los indicadores que miden la <strong>madurez del sistema</strong> y lo que quedó sembrado para el siguiente salto. Algunos están logrados; otros son cimientos o iniciativas pausadas a conciencia.</p>
+
+    <div class="legend">
+      <span class="lg"><span class="pill done"></span>Logrado</span>
+      <span class="lg"><span class="pill base"></span>Cimientos</span>
+      <span class="lg"><span class="pill try"></span>En exploración</span>
+      <span class="lg"><span class="pill pause"></span>Pausado</span>
+      <span class="lg"><span class="pill metric"></span>Métrica</span>
+    </div>
+
+    <div class="kpi-grid">
+      <div class="kpi k-done">
+        <span class="kpi-ic">✓</span>
+        <div class="st"><span>● Logrado</span></div>
+        <div class="kt">Control completo de codificación en los documentos</div>
+        <div class="kd">Cada documento del sistema (HTML, CSS, PDF, AcroForms y scripts) está bajo control de código y versionado en git. Nada se edita a ciegas: se lee antes de modificar (§4.14) y todo cambio queda trazado.</div>
+      </div>
+
+      <div class="kpi k-metric">
+        <span class="kpi-ic" style="color:#fff;">⏱</span>
+        <div class="st"><span>● Métrica · ciclo comercial</span></div>
+        <div class="kt">Tiempo promedio de generación</div>
+        <div class="kbig">1–2 <small>días</small></div>
+        <div class="kd">Ciclo completo desde que la propuesta se crea hasta que ventas la aprueba (incluye rondas de feedback). La construcción activa del deck es de minutos; el resto es validación comercial.</div>
+      </div>
+
+      <div class="kpi k-base">
+        <span class="kpi-ic">▦</span>
+        <div class="st"><span>● Cimientos sentados</span></div>
+        <div class="kt">Cimientos para automatización de Dashboard</div>
+        <div class="kd">La estructura de datos del sistema (briefs, códigos de catálogo, changelog y scripts) ya provee la base para un <strong>dashboard</strong> que agregue estado, volumen y métricas de propuestas en un solo lugar.</div>
+      </div>
+
+      <div class="kpi k-try">
+        <span class="kpi-ic">⚙</span>
+        <div class="st"><span>● En exploración</span></div>
+        <div class="kt">Intento de automatización completa de la propuesta</div>
+        <div class="kd">Se exploró generar la propuesta de extremo a extremo de forma automática a partir del brief, encadenando programa, deck, PDF y pre-llenado de campos sin intervención manual.</div>
+      </div>
+
+      <div class="kpi k-pause full">
+        <span class="kpi-ic">⏸</span>
+        <div class="st"><span>● Pausado a conciencia</span></div>
+        <div class="kt">Producción y estandarización de propuestas a código</div>
+        <div class="kd">Iniciativa de llevar la producción de propuestas a un flujo <strong>100% codificado y estandarizado</strong>. <strong>Detenida por falta de tiempo</strong> y por aspectos importantes que aún hay que tomar en consideración antes de automatizar del todo: cada cliente trae matices de copy, eje temático y reglas de marca que hoy requieren criterio humano. Se pausa de forma deliberada, no por fallo: los cimientos quedan listos para retomarla.</div>
+      </div>
+    </div>
+
+    <p class="note">Estado al 29-05-2026. Los KPIs combinan logros consolidados (control de código, tiempo de ciclo) con iniciativas en distinto grado de madurez (dashboard, automatización end-to-end). La pausa de la automatización total es una decisión estratégica: estandarizar sin perder el criterio editorial que hoy diferencia cada propuesta.</p>
+  </div>
+  <div class="runfoot"><span>Intezia C.A. · Documento interno</span><span><b>08</b> / 09</span></div>
+</section>
+
+<!-- ============ PÁGINA 9 · CIERRE ============ -->
+<section class="page cover">
+  <div class="grid-bg"></div>
+  <div class="corner c-tl"></div>
+  <div class="corner c-br"></div>
+  <div class="cover-inner">
+    <div class="brandmark"><span class="sq">i</span> INTEZIA · SISTEMA IsaIA</div>
+    <div class="kicker" style="margin-top:auto;">Balance del período</div>
+    <h1 style="font-size:38pt;">Un sistema que<br>ya <em>se mejora</em><br>solo.</h1>
+    <p class="desc">En 32 días, IsaIA pasó de una idea a una línea de producción de propuestas comerciales: gobernada por reglas, sostenida por scripts, verificada automáticamente y documentada commit a commit. Lo que empezó como artesanía hoy es infraestructura.</p>
+
+    <div class="cover-stats" style="margin-top:9mm;">
+      <div><div class="n">~60–70%</div><div class="l">Menos tokens por propuesta</div></div>
+      <div><div class="n">0</div><div class="l">Revisión visual obligatoria</div></div>
+      <div><div class="n">15</div><div class="l">Reglas codificadas</div></div>
+      <div><div class="n">∞</div><div class="l">Auto-actualización</div></div>
+    </div>
+
+    <p style="margin-top:10mm;font-size:9pt;letter-spacing:.18em;text-transform:uppercase;color:#8a8a8a;">
+      Informe generado el 29 de mayo de 2026 · Período 27 abr – 29 may 2026 · Intezia C.A.
+    </p>
+  </div>
+</section>
+
+</body>
+</html>

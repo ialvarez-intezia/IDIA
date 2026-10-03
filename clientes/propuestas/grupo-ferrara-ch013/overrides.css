@@ -1,0 +1,254 @@
+/* ---------------------------------------------------------------------------
+   Grupo Ferrara · CH-013 · overrides locales sobre ../_base/styles.css
+   Cronograma de charla portado de venemergencia-ch009 (clon de dusa, CH-007).
+   Beneficios v3 + Cierre escalera portados de farmaceutica-24/overrides.css
+   (estándar vigente 2026-08-26/28, §4.10a CLAUDE.md).
+   --------------------------------------------------------------------------- */
+
+/* ---------------------------------------------------------------------------
+   Cronograma de charla (.sessions > .session > .header + .grid): componente
+   propio de las charlas (CH-001/CH-002), más liviano que el .ruta/.ses-cols
+   canónico de capacitaciones. No existe en ../_base/styles.css — vive aquí.
+   Tabla de 4 sesiones (35+25+25+35 min), 5 columnas por sesión (Temas, Tiempo,
+   Estrategia facilitador, Estrategia participante, Recursos).
+   --------------------------------------------------------------------------- */
+.s-schedule {
+  background: var(--white);
+  color: var(--black);
+  padding: 56px 56px 80px;
+  display: block;
+}
+.s-schedule::before {
+  content: "";
+  position: absolute;
+  top: 0; right: 0;
+  width: 280px; height: 6px;
+  background: var(--gradient-warm);
+}
+.s-schedule .eyebrow {
+  color: var(--orange);
+  margin-bottom: 10px;
+}
+.s-schedule h2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 1.05;
+  margin-bottom: 22px;
+}
+.s-schedule .sessions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.s-schedule .session {
+  border: 2px solid var(--black);
+  background: var(--white);
+}
+.s-schedule .session .header {
+  background: var(--black);
+  color: var(--white);
+  padding: 8px 16px;
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+.s-schedule .session .header .when { color: var(--yellow); }
+.s-schedule .session .grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1.4fr 1.4fr 1.2fr;
+  gap: 0;
+}
+.s-schedule .session .grid > div {
+  padding: 8px 12px;
+  font-size: 11px;
+  line-height: 1.35;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+.s-schedule .session .grid > div:last-child { border-right: 0; }
+.s-schedule .session .grid .label {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--orange);
+  margin-bottom: 4px;
+}
+
+/* ===========================================================================
+   Cierre — escalera editable
+   =========================================================================== */
+.s-end .end-logo img { height: 140px; }
+
+.s-end .end-summit {
+  position: absolute;
+  top: 224px; left: 242px; width: 640px; height: 60px;
+  background: var(--yellow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.s-end .end-summit .acro-default-text {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.25;
+  color: var(--black);
+  padding: 0 16px;
+}
+
+.s-end .end-stairs {
+  position: absolute;
+  top: 308px; left: 242px; width: 640px; height: 190px;
+}
+.s-end .stair-step {
+  position: absolute;
+  bottom: 0;
+  width: 200px;
+}
+.s-end .stair-1 { left: 0px;   height: 90px;  background: var(--yellow); }
+.s-end .stair-2 { left: 220px; height: 140px; background: var(--orange); }
+.s-end .stair-3 { left: 440px; height: 190px; background: var(--white); border: 2px solid var(--yellow); }
+
+.s-end .stair-label {
+  position: absolute;
+  top: 10px; left: 12px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.s-end .stair-1 .stair-label,
+.s-end .stair-3 .stair-label { color: var(--black); opacity: 0.55; }
+.s-end .stair-2 .stair-label { color: var(--white); opacity: 0.7; }
+
+.s-end .stair-field { position: absolute; top: 30px; left: 12px; width: 176px; }
+.s-end .stair-1 .stair-field { height: 50px; }
+.s-end .stair-2 .stair-field { height: 100px; }
+.s-end .stair-3 .stair-field { height: 150px; }
+.s-end .stair-field .acro-default-text {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 1.3;
+  display: block;
+}
+.s-end .stair-1 .stair-field .acro-default-text,
+.s-end .stair-3 .stair-field .acro-default-text { color: var(--black); }
+.s-end .stair-2 .stair-field .acro-default-text { color: var(--white); }
+
+.s-end .cta-wrap {
+  position: absolute;
+  top: 522px; left: 0; right: 0;
+  margin-top: 0;
+  display: flex;
+  justify-content: center;
+}
+
+@media print {
+  .s-end .end-summit .acro-default-text,
+  .s-end .stair-field .acro-default-text { display: none !important; }
+}
+
+/* ===========================================================================
+   Beneficios v3 (layout ampliado)
+   =========================================================================== */
+.s-benefits-v2 { background: var(--black); color: var(--white); }
+.s-benefits-v2::before { background: var(--yellow); }
+.s-benefits-v2 .counter { color: var(--yellow); }
+.s-benefits-v2 .eyebrow { color: var(--yellow); }
+.s-benefits-v2 h2 { color: var(--white); }
+.s-benefits-v2 h2 .hl {
+  display: inline-block;
+  background: var(--yellow);
+  color: var(--black);
+  padding: 0 10px;
+}
+.s-benefits-v2 .grid { height: 570px; gap: 16px; }
+.s-benefits-v2 .block {
+  background: rgba(255, 255, 255, 0.045);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-top: 4px solid var(--yellow);
+  border-radius: 13px;
+  padding: 26px 24px 24px;
+  color: var(--white);
+}
+.s-benefits-v2 .block:nth-child(2) { border-top-color: var(--orange); }
+.s-benefits-v2 .block:nth-child(3),
+.s-benefits-v2 .block:nth-child(4) {
+  background: rgba(244, 186, 26, 0.06);
+  border-color: rgba(244, 186, 26, 0.28);
+  border-top-color: var(--yellow);
+}
+.s-benefits-v2 .label {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 999px;
+  margin-bottom: 18px;
+  color: var(--yellow);
+  background: rgba(244, 186, 26, 0.13);
+}
+.s-benefits-v2 .block:nth-child(3) .label,
+.s-benefits-v2 .block:nth-child(4) .label { position: absolute; top: 26px; left: 24px; }
+.s-benefits-v2 .block:nth-child(2) .label { color: var(--orange); background: rgba(229, 132, 35, 0.14); }
+.s-benefits-v2 .block ul { list-style: none; }
+.s-benefits-v2 .block ul li {
+  font-size: 16px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85);
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+.s-benefits-v2 .block ul li:last-child { border-bottom: 0; }
+.s-benefits-v2 .block p { font-size: 16px; line-height: 1.6; color: rgba(255, 255, 255, 0.85); }
+.s-benefits-v2 .block strong { color: var(--yellow); font-weight: 700; }
+.s-benefits-v2 .block:nth-child(2) strong { color: var(--orange); }
+.s-benefits-v2 .foot .meta { color: rgba(255, 255, 255, 0.65); }
+
+.s-benefits-v2 .entregables-box,
+.s-benefits-v2 .acreditaciones-box {
+  background: transparent;
+  position: absolute;
+  top: 212px;
+  width: 193px;
+  height: 474px;
+}
+.s-benefits-v2 .entregables-box { left: 594px; }
+.s-benefits-v2 .acreditaciones-box { left: 850px; }
+.s-benefits-v2 .entregables-box .acro-default-text,
+.s-benefits-v2 .acreditaciones-box .acro-default-text {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+/* ---------------------------------------------------------------------------
+   Cotización sin recuadro de Descuento (ajuste 2026-09-14, a pedido del
+   usuario) — solo 2 cajas: Propuesta + Inversión / TOTAL. El label y el
+   frame de Descuento se eliminaron del HTML; aquí se reposiciona y agranda
+   TOTAL para ocupar el espacio liberado (antes top:390/414, ahora
+   centrado en el hueco que deja el base-frame hasta la línea de vigencia).
+   El campo AcroForm "Descuento" (inyectado por el script global
+   agregar-campo-precio.py) se elimina del PDF en
+   scripts/customize-grupo-ferrara-ch013.py, que también reposiciona
+   PrecioTotal para que coincida con esta caja agrandada.
+   --------------------------------------------------------------------------- */
+.s-price .cot-label-total { top: 320px; }
+.s-price .total-frame {
+  top: 344px;
+  height: 130px;
+}
+.s-price .total-frame .placeholder { font-size: 36px; }

@@ -1,0 +1,1430 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Banco de Casos de Éxito</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --black:#000000;
+    --yellow:#F4BA1A;
+    --orange:#E58423;
+    --white:#FFFFFF;
+    --bg:#F7F6F3;
+    --line:#E4E0D8;
+    --muted:#5A574F;
+  }
+  *{box-sizing:border-box;}
+  @page{ size:A4; margin:16mm 14mm 16mm 14mm; }
+  body{
+    margin:0; font-family:'Inter',-apple-system,'Helvetica Neue',Arial,sans-serif;
+    color:#141414; font-size:11px; line-height:1.45;
+  }
+  .page{ page-break-after:always; }
+  .page:last-child{ page-break-after:auto; }
+  .section-title-wrap{ page-break-before:always; }
+
+  /* ---------- Portada ---------- */
+  .cover{
+    background:var(--black); color:var(--white);
+    min-height:260mm; padding:22mm 18mm; position:relative;
+    display:flex; flex-direction:column; justify-content:space-between;
+  }
+  .cover .logo{ height:34px; }
+  .cover .eyebrow{
+    text-transform:uppercase; letter-spacing:2px; font-size:11px;
+    color:var(--yellow); font-weight:700; margin-bottom:10px;
+  }
+  .cover h1{
+    font-size:38px; font-weight:800; line-height:1.12; margin:0 0 14px;
+    max-width:480px;
+  }
+  .cover h1 span{ color:var(--yellow); }
+  .cover .sub{ font-size:13px; color:#D9D6CC; max-width:440px; }
+  .cover .stats{ display:flex; gap:28px; margin-top:26px; flex-wrap:wrap; }
+  .cover .stat b{ display:block; font-size:30px; color:var(--yellow); font-weight:800; }
+  .cover .stat span{ font-size:10px; color:#BEBAAE; text-transform:uppercase; letter-spacing:0.5px; }
+  .cover .foot{ font-size:9.5px; color:#8C8A80; border-top:1px solid #2B2B2B; padding-top:10px; }
+
+  /* ---------- Nota de alcance ---------- */
+  .scope{ padding:16mm 4mm 0; }
+  .scope h2{ font-size:16px; text-transform:uppercase; letter-spacing:0.5px; border-bottom:3px solid var(--yellow); padding-bottom:8px; margin-bottom:14px;}
+  .scope p{ font-size:11.3px; color:#2A2A2A; margin:0 0 9px; max-width:170mm;}
+  .scope ul{ margin:0 0 9px 18px; padding:0; }
+  .scope li{ margin-bottom:5px; font-size:11px; }
+  .callout{ background:var(--bg); border-left:4px solid var(--orange); padding:10px 14px; margin-top:10px; font-size:10.5px; color:#333;}
+  .exclusions{ background:#fff; border:1px solid var(--line); border-radius:6px; padding:11px 14px; margin-top:10px; }
+  .exclusions h3{ font-size:9.5px; text-transform:uppercase; letter-spacing:0.5px; color:var(--orange); margin:0 0 7px; }
+  .exclusions ul{ margin:0 0 0 16px; padding:0; }
+  .exclusions li{ font-size:9.5px; margin-bottom:4px; color:#444; }
+
+  /* ---------- Caso de cliente ---------- */
+  .case{ page-break-inside:avoid; break-inside:avoid; margin-bottom:12px; padding-top:10px; border-top:1px solid var(--line); }
+  .case:first-of-type{ border-top:none; padding-top:0; }
+  .case-header{ border-bottom:4px solid var(--yellow); padding-bottom:10px; margin-bottom:14px; }
+  .case-header .eyebrow2{ font-size:9.5px; text-transform:uppercase; letter-spacing:1.5px; color:var(--orange); font-weight:700; }
+  .case-header h2{ font-size:21px; margin:2px 0 6px; font-weight:800; }
+  .case-meta{ font-size:10px; color:var(--muted); }
+  .badge{ display:inline-block; background:var(--orange); color:var(--white); font-size:8.5px; text-transform:uppercase; letter-spacing:0.5px; font-weight:700; border-radius:20px; padding:3px 9px; margin-left:6px; vertical-align:middle;}
+
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:12px; }
+  .block{ background:var(--bg); border-radius:6px; padding:11px 13px; }
+  .block h3{ font-size:9.5px; text-transform:uppercase; letter-spacing:0.8px; color:var(--orange); margin:0 0 8px; font-weight:700;}
+  .row{ display:flex; justify-content:space-between; gap:8px; font-size:10.6px; padding:3px 0; border-bottom:1px solid var(--line); }
+  .row:last-child{ border-bottom:none; }
+  .row b{ font-weight:700; }
+  .row.total{ font-weight:800; border-top:1.5px solid #C9C4B6; margin-top:4px; padding-top:6px; }
+  .note{ font-size:9.3px; color:var(--muted); margin-top:6px; }
+
+  .automated{ background:var(--black); color:var(--white); border-radius:6px; padding:13px 16px; }
+  .automated h3{ color:var(--yellow); font-size:9.5px; text-transform:uppercase; letter-spacing:0.8px; margin:0 0 9px; font-weight:700;}
+  .track{ margin-bottom:10px; }
+  .track:last-child{ margin-bottom:0; }
+  .track .t-name{ color:var(--yellow); font-weight:700; font-size:10.3px; display:block; margin-bottom:3px;}
+  .track p{ margin:0; font-size:10.3px; color:#EDEBE4; line-height:1.42; }
+
+  /* Detección */
+  .automated.deteccion h3{ color:var(--orange); }
+  .procesos{ margin:8px 0 0; padding:0; list-style:none; }
+  .procesos li{ font-size:10px; padding:4px 0; border-bottom:1px dashed #333; display:flex; justify-content:space-between; gap:8px; color:#EDEBE4;}
+  .procesos li:last-child{ border-bottom:none; }
+  .procesos b{ color:var(--orange); }
+  .quote{ margin-top:8px; padding-left:10px; border-left:3px solid var(--orange); font-style:italic; color:#D9D6CC; font-size:10px; }
+
+  .footer-page{ font-size:8.5px; color:#B2AE9F; text-align:right; margin-top:6px; }
+</style>
+</head>
+<body>
+
+<section class="page cover">
+  <div><img class="logo" src="../../logos/intezia/BLANCO.png" alt="Intezia"></div>
+  <div>
+    <div class="eyebrow">Capacitaciones, Talleres y Auditorías Corporativas</div>
+    <h1>Banco de Casos de <span>Éxito</span></h1>
+    <div class="sub">Documento interno — Equipo Comercial y Consultoría. Consolidado de programas dictados, ordenado por cantidad de personas impactadas.</div>
+    <div class="stats">
+      <div class="stat"><b>61</b><span>Casos registrados</span></div>
+      <div class="stat"><b>2.281+</b><span>Personas capacitadas</span></div>
+      <div class="stat"><b>30+</b><span>Sectores atendidos</span></div>
+    </div>
+  </div>
+  <div class="foot">Intezia · Consultoría de IA #1 en LATAM · No distribuir a clientes</div>
+</section>
+
+<section class="page scope">
+  <h2>Nota de alcance y metodología</h2>
+  <p>Este banco consolida los casos de capacitaciones, talleres corporativos y auditorías dictados por Intezia, ordenados de mayor a menor por personas efectivamente capacitadas.</p>
+  <ul>
+    <li>Los casos con Encuesta Edu-Trace de cierre real llevan el desglose completo: personas impactadas por área, horas ahorradas autopercibidas, cuellos de botella señalados y el índice de Impacto medido — nunca estimado.</li>
+    <li>Los casos sin encuesta muestran solo personas impactadas y qué se construyó, sin rellenar con datos que no existen.</li>
+    <li>Cuando un caso reporta un rango (ej. "30-40"), se ordena por el límite superior.</li>
+    <li>Los programas sin cifra de personas confirmada van en su propia sección, alfabética, en vez de forzar un número.</li>
+    <li>Los casos de <b>Detección</b> (auditoría de IA corporativa) se miden en horas-hombre/mes identificadas, no en personas capacitadas — van en su propia sección al cierre.</li>
+  </ul>
+  <div class="exclusions">
+    <h3>Elementos revisados y no incluidos en este banco</h3>
+    <ul>
+      <li><b>Bancaribe (Charla Prompting), Lidotel y Superatech</b> — marcados como pendientes de redacción en el documento fuente; no se incluyen hasta tener el contenido.</li>
+      <li><b>Gerenser (TA-032 / TA-033)</b> — producto de catálogo para una alianza, en estado "Borrador" y sin cliente final asignado: sin evidencia de entrega real todavía.</li>
+      <li><b>Damasco · ruta de Marketing</b> — retirada por completo antes de dictarse, según el propio brief del cliente (2026-09-15): no llegó a ejecutarse.</li>
+      <li><b>IESA + Nestlé</b> — se confirmó que refiere al caso Nestlé ya incluido en este banco; las microcredenciales IESA son una alianza académica aparte.</li>
+    </ul>
+  </div>
+</section>
+<div class="section-title-wrap">
+  <h2 style="margin:0 0 14px; font-size:15px; text-transform:uppercase; letter-spacing:0.5px; font-weight:800; border-bottom:3px solid var(--yellow); padding-bottom:7px;">Casos con cifra de impacto — de mayor a menor</h2>
+  <div style="margin:-10px 0 14px; font-size:9.5px; color:var(--muted);">46 casos · ordenados por personas capacitadas</div>
+  <section class="case">
+  <div class="case-header">
+    <div class="eyebrow2">Resumen de impacto</div>
+    <h2>Zoom<span class="badge">Mayor volumen</span></h2>
+    <div class="case-meta">Intezia Fundamentals + Especialización por Áreas + Arquitectura de Automatización · Sector Envíos y Remesas</div>
+  </div>
+  <div class="grid2">
+    <div class="block">
+      <h3>Personas impactadas</h3>
+      <div class="row"><span>Intezia Fundamentals (toda la nómina)</span></div><div class="row"><span>Especialización por Áreas (IT, Legal, Miami, Operaciones, Comercial-Mercadeo, Comercial-Ventas)</span></div><div class="row"><span>Arquitectura de Automatización (equipo de tecnología)</span></div>
+      <div class="row total"><span>Total</span><b>500 personas</b></div>
+      <div class="note">Proyecto de 3 fases sobre toda la organización. La Encuesta Edu-Trace se aplicó en la fase de Especialización por Áreas (83 respuestas, detalle abajo).</div>
+    </div>
+    <div class="block">
+      <h3>Horas semanales ahorradas <span style="font-weight:400;">(autopercibido)</span></h3>
+      <div class="row"><span>Más de 8 horas/semana</span><b>8</b></div><div class="row"><span>Entre 4 y 7 horas/semana</span><b>16</b></div><div class="row"><span>Entre 1 y 3 horas/semana</span><b>28</b></div><div class="row"><span>Aún no medible / ninguna</span><b>31</b></div>
+      <div class="row total"><span>Perciben algún ahorro</span><b>52 de 83 personas (~63%) perciben algún ahorro semanal</b></div>
+    </div>
+  </div>
+  <div class="grid2"><div class="block">
+      <h3>Cuellos de botella a automatizar</h3>
+      <div class="row"><span>Reportes</span><b>~35</b></div><div class="row"><span>Contenido (redacción/creativo)</span><b>~15</b></div><div class="row"><span>Datos</span><b>~11</b></div><div class="row"><span>CRM</span><b>~8</b></div><div class="row"><span>QA</span><b>4</b></div><div class="row"><span>Infraestructura</span><b>2</b></div><div class="row"><span>Helpdesk / Seguridad</span><b>1 c/u</b></div>
+      <div class="note">Encuesta Edu-Trace, fase Especialización por Áreas (83 respuestas) · lo que quieren automatizar, no lo ya automatizado.</div>
+    </div><div class="block">
+      <h3>Otros datos de interés</h3>
+      <div class="row"><span>Herramienta de mayor adopción</span><b>Gemini (Google)</b></div><div class="row"><span>Uso principal</span><b>Automatización de procesos (IT/Legal/Operaciones) · Análisis de datos y reportes (Miami/Ventas)</b></div><div class="row"><span>Índices por área</span><b>77 a 93/100 (por área, ver detalle)</b></div>
+    </div></div>
+  <div class="automated">
+    <h3>Lo que ya se automatizó</h3>
+    <div class="track"><span class="t-name">Legal</span><p>3 Gems Legales (Auditor de Contratos 24/7, Asistente Jurídico, Gestor de Cumplimiento) + tablero de indicadores + kit de prompts.</p></div><div class="track"><span class="t-name">IT / Desarrollo</span><p>Reglas de proyecto en Cursor (Clean Code, seguridad) + reto final resuelto sobre repositorio real + guía de control de tokens.</p></div><div class="track"><span class="t-name">Miami</span><p>Gem de área propio + prompt ejecutivo de 5 partes + radar de automatización del área.</p></div><div class="track"><span class="t-name">Operaciones</span><p>Asistente Operativo (Gem) funcional + vault de prompts operativos + catálogo de asistentes complementarios.</p></div><div class="track"><span class="t-name">Comercial · Mercadeo</span><p>Marketing Gem operativo + parrilla de contenido multicanal + directriz de voz de marca.</p></div><div class="track"><span class="t-name">Comercial · Ventas</span><p>Sales Gem operativo + pipeline priorizado + reporte de tendencias.</p></div>
+  </div>
+</section>
+<section class="case">
+  <div class="case-header">
+    <div class="eyebrow2">Resumen de impacto</div>
+    <h2>Sector Hidrocarburos</h2>
+    <div class="case-meta">Sector Energía y Petróleo</div>
+  </div>
+  <div class="grid2">
+    <div class="block">
+      <h3>Personas impactadas</h3>
+      <div class="row total"><span>Total</span><b>200 personas</b></div>
+    </div>
+    <div class="block">
+      <h3>Sector</h3>
+      <div class="row"><span>Sector Energía y Petróleo</span></div>
+    </div>
+  </div>
+  <div class="automated">
+    <h3>Lo que ya se automatizó</h3>
+    <div class="track"><p>Jornada masiva de alto rigor técnico: la organización fue nivelada en conceptos críticos, desde Machine Learning y aprendizaje profundo hasta ciberseguridad en la automatización de la IA. El personal analizó la comparativa entre modelos comerciales y de código abierto, la mitigación de sesgos, y fue capacitado en NotebookLM, ChatGPT, Gemini y n8n, preparando al sector para operar IA en local bajo estrictos estándares de seguridad.</p></div>
+  </div>
+</section>
+<section class="case">
+  <div class="case-header">
+    <div class="eyebrow2">Resumen de impacto</div>
+    <h2>Banco Plaza</h2>
+    <div class="case-meta">Sector Financiero</div>
+  </div>
+  <div class="grid2">
+    <div class="block">
+      <h3>Personas impactadas</h3>
+      <div class="row total"><span>Total</span><b>+150 personas</b></div>
+    </div>
+    <div class="block">
+      <h3>Sector</h3>
+      <div class="row"><span>Sector Financiero</span></div>
+    </div>
+  </div>
+  <div class="automated">
+    <h3>Lo que ya se automatizó</h3>
+    <div class="track"><p>Jornada corporativa de innovación de 3 días: la organización recibió ponencias estratégicas para contextualizar el panorama de la IA de forma ágil y ejecutiva, con enfoque transversal a todas las áreas de la institución. El objetivo central fue desmitificar la tecnología y enseñar metodologías prácticas de adopción como herramienta cotidiana de productividad.</p></div>
+  </div>
+</section>
+<section class="case">
+  <div class="case-header">
+    <div class="eyebrow2">Resumen de impacto</div>
+    <h2>Venemergencia<span class="badge">Mayor % de ahorro</span></h2>
+    <div class="case-meta">Adopción de Claude en Cascada (CAP-047) + Vertical Médica + Vertical TI + Vertical Corporativa · Sector Salud / Asistencia</div>
+  </div>
+  <div class="grid2">
+    <div class="block">
+      <h3>Personas impactadas</h3>
+      <div class="row"><span>Fase 1 · Cascada gerencial (CAP-047)</span><b>22</b></div><div class="row"><span>Vertical Médica, TI y Corporativa (talleres masivos)</span></div>
+      <div class="row total"><span>Total</span><b>~120 personas</b></div>
+      <div class="note">La Encuesta Edu-Trace se aplicó en la Fase 1 · Cascada gerencial (22 respuestas, detalle abajo).</div>
+    </div>
+    <div class="block">
+      <h3>Horas semanales ahorradas <span style="font-weight:400;">(autopercibido)</span></h3>
+      <div class="row"><span>Más de 8 horas/semana</span><b>5</b></div><div class="row"><span>Entre 4 y 7 horas/semana</span><b>8</b></div><div class="row"><span>Entre 1 y 3 horas/semana</span><b>7</b></div><div class="row"><span>Aún no medible / ninguna</span><b>2</b></div>
+      <div class="row total"><span>Perciben algún ahorro</span><b>20 de 22 personas (~91%) perciben algún ahorro semanal — la proporción más alta de toda la muestra</b></div>
+    </div>
+  </div>
+  <div class="grid2"><div class="block">
+      <h3>Cuellos de botella a automatizar</h3>
+      <div class="row"><span>Reportes</span><b>14</b></div><div class="row"><span>Datos</span><b>3</b></div><div class="row"><span>CRM, QA, Contratos, Documentos</span><b>1 c/u</b></div>
+      <div class="note">Encuesta Edu-Trace, Fase 1 (22 respuestas).</div>
+    </div><div class="block">
+      <h3>Otros datos de interés</h3>
+      <div class="row"><span>Herramienta de mayor adopción</span><b>Claude (12) · Gemini (9)</b></div><div class="row"><span>Uso principal</span><b>Automatización de procesos (8) · Análisis de datos (7)</b></div><div class="row"><span>Índice de Impacto Edu-Trace</span><b>90/100 · Excelente</b></div>
+    </div></div>
+  <div class="automated">
+    <h3>Lo que ya se automatizó</h3>
+    <div class="track"><p>Intervención masiva sin límite de participantes por sesión, en tres talleres segmentados por reto de área. Vertical Médica: síntesis de historiales y actualización médica asistida para telemedicina. Vertical de Tecnología: arquitecturas de automatización y protocolos de seguridad. Vertical Corporativa: automatización de reportes, minutas y gestión de proyectos. En la Fase 1 (cascada gerencial), construyeron su primera Skill reutilizable en Cowork, un proceso automatizado con Conectores/MCP, un entregable visual real por área y su criterio de uso seguro de información sensible.</p></div>
+  </div>
+</section>
+<section class="case">
+  <div class="case-header">
+    <div class="eyebrow2">Resumen de impacto</div>
+    <h2>Laboratorios Farma</h2>
+    <div class="case-meta">Sector Farmacéutico</div>
+  </div>
+  <div class="grid2">
+    <div class="block">
+      <h3>Personas impactadas</h3>
+      <div class="row total"><span>Total</span><b>+120 personas</b></div>
+    </div>
+    <div class="block">
+      <h3>Sector</h3>
+      <div class="row"><span>Sector Farmacéutico</span></div>
+    </div>
+  </div>
+  <div class="automated">
+    <h3>Lo que ya se automatizó</h3>
+    <div class="track"><p>Dos verticales estratégicas. Transformación Digital y Productividad (+80 personas): fundamentos de IA y diseño de agentes personalizados, primeros pasos en automatización básica de procesos operativos. TI, Ética y Ciberseguridad (40 especialistas): uso ético de la IA y protocolos de ciberseguridad, con automatizaciones robustas bajo estándares de protección de datos.</p></div>
+  </div>
+</section>
+<section class="case">
+  <div class="case-header">
+    <div class="eyebrow2">Resumen de impacto</div>
+    <h2>Consorcio Credicard</h2>
+    <div class="case-meta">IA Generativa y Operativa con Gemini (CAP-041) · Sector Financiero · Cierre: 2026-07-31</div>
+  </div>
+  <div class="grid2">
+    <div class="block">
+      <h3>Personas impactadas</h3>
+      <div class="row"><span>Contactabilidad y Seguimiento</span><b>5</b></div><div class="row"><span>Credicard (área general)</span><b>4</b></div><div class="row"><span>Distribución</span><b>2</b></div><div class="row"><span>Resto (48 áreas, 1 persona c/u)</span><b>48</b></div>
+      <div class="row total"><span>Total</span><b>100 personas</b></div>
+      <div class="note">57 de las 100 respondieron la Encuesta Edu-Trace de cierre (detalle abajo).</div>
+    </div>
+    <div class="block">
+      <h3>Horas semanales ahorradas <span style="font-weight:400;">(autopercibido)</span></h3>
+      <div class="row"><span>Más de 8 horas/semana</span><b>2</b></div><div class="row"><span>Entre 4 y 7 horas/semana</span><b>5</b></div><div class="row"><span>Entre 1 y 3 horas/semana</span><b>24</b></div><div class="row"><span>Aún no medible / ninguna</span><b>26</b></div>
+      <div class="row total"><span>Perciben algún ahorro</span><b>31 de 57 respuestas (~54%) perciben algún ahorro semanal</b></div>
+    </div>
+  </div>
+  <div class="grid2"><div class="block">
+      <h3>Cuellos de botella a automatizar</h3>
+      <div class="row"><span>Reportes</span><b>31</b></div><div class="row"><span>Datos</span><b>13</b></div><div class="row"><span>Contenido</span><b>5</b></div><div class="row"><span>CRM</span><b>2</b></div><div class="row"><span>Otros (verificación, pagos…)</span><b>3</b></div>
+      <div class="note">Encuesta Edu-Trace (57 respuestas).</div>
+    </div><div class="block">
+      <h3>Otros datos de interés</h3>
+      <div class="row"><span>Herramienta de mayor adopción</span><b>Gemini (Google) — 46/57</b></div><div class="row"><span>Uso principal</span><b>Automatización de procesos y flujos operativos (29)</b></div><div class="row"><span>Índice de Impacto Edu-Trace</span><b>86/100 · Excelente</b></div>
+    </div></div>
+  <div class="automated">
+    <h3>Lo que ya se automatizó</h3>
+    <div class="track"><p>Mediante Intezia Fundamentals, el equipo dominó el uso seguro de IA para análisis de datos y reportes corporativos bajo protocolos de "Cero Filtraciones". La formación técnica permitió que cada departamento diseñara y desplegara internamente sus propios agentes personalizados (Gems/GPTs) para automatizar auditoría y cumplimiento, eliminando la dependencia externa.</p></div>
+  </div>
+</section>
+<section class="case">
+  <div class="case-header">
+    <div class="eyebrow2">Resumen de impacto</div>
+    <h2>Impact Hub Caracas</h2>
+    <div class="case-meta">Sector Emprendimiento e Innovación</div>
+  </div>
+  <div class="grid2">
+    <div class="block">
+      <h3>Personas impactadas</h3>
+      <div class="row total"><span>Total</span><b>100 personas</b></div>
+    </div>
+    <div class="block">
+      <h3>Sector</h3>
+      <div class="row"><span>Sector Emprendimiento e Innovación</span></div>
+    </div>
+  </div>
+  <div class="automated">
+    <h3>Lo que ya se automatizó</h3>
+    <div class="track"><p>Encuentro en modalidad híbrida que dotó a la comunidad de emprendedores de una visión sólida sobre los fundamentos de la IA Generativa, con énfasis en la aplicación estratégica y el uso ético. Empoderó a los asistentes mediante casos de uso reales para integrar soluciones de IA en sus propios modelos de negocio de forma responsable.</p></div>
+  </div>
+</section>
+<section class="case">
+  <div class="case-header">
+    <div class="eyebrow2">Resumen de impacto</div>
+    <h2>Universidad Metropolitana (UNIMET)</h2>
+    <div class="case-meta">Sector Educación Superior</div>
+  </div>
+  <div class="grid2">
+    <div class="block">
+      <h3>Personas impactadas</h3>
+      <div class="row total"><span>Total</span><b>80 personas</b></div>
+    </div>
+    <div class="block">
+      <h3>Sector</h3>
+      <div class="row"><span>Sector Educación Superior</span></div>
+    </div>
+  </div>
+  <div class="automated">
+    <h3>Lo que ya se automatizó</h3>
+    <div class="track"><p>80 profesores de la Facultad de Ciencias Económicas y Sociales (FACES). El programa integró estratégicamente la IA en el currículo universitario, permitiendo a los docentes rediseñar sus materias para la era digital: automatización de evaluaciones, curación de contenido especializado y experiencias de aprendizaje interactivas alineadas con las demandas laborales impulsadas por IA.</p></div>
+  </div>
+</section>
+<section class="case">
+  <div class="case-header">
+    <div class="eyebrow2">Resumen de impacto</div>
+    <h2>Banco Activo</h2>
+    <div class="case-meta">Sector Financiero</div>
+  </div>
+  <div class="grid2">
+    <div class="block">
+      <h3>Personas impactadas</h3>
+      <div class="row total"><span>Total</span><b>+65 personas</b></div>
+    </div>
+    <div class="block">
+      <h3>Sector</h3>
+      <div class="row"><span>Sector Financiero</span></div>
+    </div>
+  </div>
+  <div class="automated">
+    <h3>Lo que ya se automatizó</h3>
+    <div class="track"><p>Intezia desplegó guías operativas y entrenó al equipo para crear y conectar agentes inteligentes a sus sistemas internos, centrado en la automatización de tareas recurrentes. El banco optimizó procesos críticos y dotó a su personal de la capacidad de desplegar soluciones de IA de forma autónoma y segura.</p></div>
+  </div>
+</section>
+<section class="case">
+  <div class="case-header">
+    <div class="eyebrow2">Resumen de impacto</div>
+    <h2>Colegio Los Arcos</h2>
+    <div class="case-meta">Sector Educación</div>
+  </div>
+  <div class="grid2">
+    <div class="block">
+      <h3>Personas impactadas</h3>
+      <div class="row total"><span>Total</span><b>50 personas</b></div>
+    </div>
+    <div class="block">
+      <h3>Sector</h3>
+      <div class="row"><span>Sector Educación</span></div>
+    </div>
+  </div>
+  <div class="automated">
+    <h3>Lo que ya se automatizó</h3>
+    <div class="track"><p>50 profesores capacitados en la adopción de IA en el aula mediante NotebookLM y herramientas de innovación pedagógica. Los docentes fueron entrenados para automatizar evaluaciones y diseñar contenidos dinámicos, creando clases más interactivas que potencian el compromiso del estudiante.</p></div>
+  </div>
+</section>
+<section class="case">
+  <div class="case-header">
+    <div class="eyebrow2">Resumen de impacto</div>
+    <h2>Banco de Venezuela</h2>
+    <div class="case-meta">Sector Financiero</div>
+  </div>
+  <div class="grid2">
+    <div class="block">
+      <h3>Personas impactadas</h3>
+      <div class="row total"><span>Total</span><b>50 personas</b></div>
+    </div>
+    <div class="block">
+      <h3>Sector</h3>
+      <div class="row"><span>Sector Financiero</span></div>
+    </div>
+  </div>
+  <div class="automated">
+    <h3>Lo que ya se automatizó</h3>
+    <div class="track"><p>Encuentro presencial interdepartamental (Tecnología, Ventas y RR. HH.) que niveló a la organización en la comprensión de los diferentes tipos de modelos de IA. El equipo fue instruido en ChatGPT y Gemini, sentando las bases para el diseño y despliegue de agentes personalizados (GPTs) que agilicen la operatividad y mejoren la atención interna.</p></div>
+  </div>
+</section>
+<section class="case">
+  <div class="case-header">
+    <div class="eyebrow2">Resumen de impacto</div>
+    <h2>Messangi</h2>
+    <div class="case-meta">Sector Mensajería / Telco</div>
+  </div>
+  <div class="grid2">
+    <div class="block">
+      <h3>Personas impactadas</h3>
+      <div class="row total"><span>Total</span><b>40 personas</b></div>
+    </div>
+    <div class="block">
+      <h3>Sector</h3>
+      <div class="row"><span>Sector Mensajería / Telco</span></div>
+    </div>
+  </div>
+  <div class="automated">
+    <h3>Lo que ya se automatizó</h3>
+    <div class="track"><p>Ruta de tres fases que niveló a toda la organización en productividad exponencial y seguridad de datos. El equipo técnico fue entrenado como Arquitectos de Automatización, usando n8n y Vibe Coding para diseñar internamente sistemas autónomos y agentes de ejecución, desde desarrollo de producto hasta inteligencia financiera sin dependencia de terceros.</p></div>
+  </div>
+</section>
+<section class="case">
+  <div class="case-header">
+    <div class="eyebrow2">Resumen de impacto</div>
+    <h2>R4</h2>
+    <div class="case-meta">Sector Financiero</div>
+  </div>
+  <div class="grid2">
+    <div class="block">
+      <h3>Personas impactadas</h3>
+      <div class="row total"><span>Total</span><b>40 personas</b></div>
+    </div>
+    <div class="block">
+      <h3>Sector</h3>
+      <div class="row"><span>Sector Financiero</span></div>
+    </div>
+  </div>
+  <div class="automated">
+    <h3>Lo que ya se automatizó</h3>
+    <div class="track"><p>40 colaboradores del área de Mercadeo, en la vertical de Marketing Estratégico y Growth. El equipo fue entrenado en la creación de "Gemelos Digitales" de clientes ideales para validar mensajes antes de lanzarlos, y en una Fábrica de Contenidos 360° para grillas infinitas y activos multimedia, con captación optimizada mediante reciclaje inteligente de activos y avatares de IA.</p></div>
+  </div>
+</section>
+<section class="case">
+  <div class="case-header">
+    <div class="eyebrow2">Resumen de impacto</div>
+    <h2>Eurobuilding Hotels</h2>
+    <div class="case-meta">Sector Hostelería</div>
+  </div>
+  <div class="grid2">
+    <div class="block">
+      <h3>Personas impactadas</h3>
+      <div class="row total"><span>Total</span><b>40 personas</b></div>
+    </div>
+    <div class="block">
+      <h3>Sector</h3>
+      <div class="row"><span>Sector Hostelería</span></div>
+    </div>
+  </div>
+  <div class="automated">
+    <h3>Lo que ya se automatizó</h3>
+    <div class="track"><p>40 profesionales capacitados en un taller práctico de Ventas Potenciadas con IA (ChatGPT y Gemini) para mejorar la generación de leads y el cierre de oportunidades, con asistentes personalizados (Gems/GPTs) y flujos con n8n y Make. Se sumó un flujo automatizado de priorización de candidatos para RR. HH. que analiza currículos y calcula un score de afinidad de forma autónoma.</p></div>
+  </div>
+</section>
+<section class="case">
+  <div class="case-header">
+    <div class="eyebrow2">Resumen de impacto</div>
+    <h2>Cavedatos (charla gremial)</h2>
+    <div class="case-meta">Sector Tecnológico y Gremial</div>
+  </div>
+  <div class="grid2">
+    <div class="block">
+      <h3>Personas impactadas</h3>
+      <div class="row total"><span>Total</span><b>40 personas</b></div>
+    </div>
+    <div class="block">
+      <h3>Sector</h3>
+      <div class="row"><span>Sector Tecnológico y Gremial</span></div>
+    </div>
+  </div>
+  <div class="automated">
+    <h3>Lo que ya se automatizó</h3>
+    <div class="track"><p>Charla intensiva de 4 horas para el gremio y sus afiliados, con inmersión en los fundamentos esenciales de la IA. Se analizó el impacto transformador de la IA en el ecosistema empresarial y las capacidades de los distintos modelos de lenguaje, dejando una visión ejecutiva clara para identificar oportunidades de innovación en cada organización afiliada. Programa distinto al de equipos de prensa (CAI-001).</p></div>
+  </div>
+</section>
+<section class="case">
+  <div class="case-header">
+    <div class="eyebrow2">Resumen de impacto</div>
+    <h2>Grupo Nena (Droguería Nena)</h2>
+    <div class="case-meta">Sector Farmacéutico / Retail</div>
+  </div>
+  <div class="grid2">
+    <div class="block">
+      <h3>Personas impactadas</h3>
+      <div class="row total"><span>Total</span><b>40 personas</b></div>
+    </div>
+    <div class="block">
+      <h3>Sector</h3>
+      <div class="row"><span>Sector Farmacéutico / Retail</span></div>
+    </div>
+  </div>
+  <div class="automated">
+    <h3>Lo que ya se automatizó</h3>
+    <div class="track"><p>Salto de 40 colaboradores ya avanzados en Google Workspace y Gemini Pro hacia el rol de operadores de asistentes virtuales, prompts avanzados y desarrollo sin código. Cada módulo entregó un activo medible: 5 Gems sectoriales (una por área operativa) y automatizaciones por dos rutas (con código, Apps Script; sin código, Workspace Studio y Google AI Studio), con certificación al cierre.</p></div>
+  </div>
+</section>
+<section class="case">
+  <div class="case-header">
+    <div class="eyebrow2">Resumen de impacto</div>
+    <h2>Fivenca</h2>
+    <div class="case-meta">Sector Financiero</div>
+  </div>
+  <div class="grid2">
+    <div class="block">
+      <h3>Personas impactadas</h3>
+      <div class="row total"><span>Total</span><b>40 personas</b></div>
+    </div>
+    <div class="block">
+      <h3>Sector</h3>
+      <div class="row"><span>Sector Financiero</span></div>
+    </div>
+  </div>
+  <div class="automated">
+    <h3>Lo que ya se automatizó</h3>
+    <div class="track"><p>40 colaboradores en 2 grupos de 20, en Fundamentos de IA generativa multi-herramienta (Claude como protagonista, Gemini y Copilot), ecosistema-agnóstico. La Fase 1 activó a toda la empresa con prompting RCTF y una biblioteca de prompts propia; la Fase 2 llevó Especialización por Áreas (Operaciones, Compliance, Tesorería, Banca de Inversión y Comercial) con un taller por área.</p></div>
+  </div>
+</section>
+<section class="case">
+  <div class="case-header">
+    <div class="eyebrow2">Resumen de impacto</div>
+    <h2>Banplus</h2>
+    <div class="case-meta">Sector Financiero</div>
+  </div>
+  <div class="grid2">
+    <div class="block">
+      <h3>Personas impactadas</h3>
+      <div class="row total"><span>Total</span><b>30–40 personas</b></div>
+    </div>
+    <div class="block">
+      <h3>Sector</h3>
+      <div class="row"><span>Sector Financiero</span></div>
+    </div>
+  </div>
+  <div class="automated">
+    <h3>Lo que ya se automatizó</h3>
+    <div class="track"><p>Sesión presencial intensiva en la que el equipo exploró el panorama actual de las inteligencias artificiales y su aplicación táctica. La formación facultó a Recursos Humanos, Ventas y Marketing mediante casos de uso específicos, para identificar oportunidades de automatización estratégica y optimizar la toma de decisiones en sus flujos de trabajo diarios.</p></div>
+  </div>
+</section>
+<section class="case">
+  <div class="case-header">
+    <div class="eyebrow2">Resumen de impacto</div>
+    <h2>Ridery</h2>
+    <div class="case-meta">Sector Movilidad / Tecnología</div>
+  </div>
+  <div class="grid2">
+    <div class="block">
+      <h3>Personas impactadas</h3>
+      <div class="row total"><span>Total</span><b>35 personas</b></div>
+    </div>
+    <div class="block">
+      <h3>Sector</h3>
+      <div class="row"><span>Sector Movilidad / Tecnología</span></div>
+    </div>
+  </div>
+  <div class="automated">
+    <h3>Lo que ya se automatizó</h3>
+    <div class="track"><p>35 colaboradores del área de Recursos Humanos, en la transformación digital del ciclo de vida del colaborador. El equipo fue entrenado en la creación de asistentes de IA para el filtrado masivo de candidatos y la personalización del onboarding, pasando de la operatividad administrativa al análisis estratégico de cultura y desempeño, agilizando la captación de conductores y personal corporativo.</p></div>
+  </div>
+</section>
+<section class="case">
+  <div class="case-header">
+    <div class="eyebrow2">Resumen de impacto</div>
+    <h2>APB Group / Changan Venezuela</h2>
+    <div class="case-meta">Tecnología y Automatización con IA (n8n) + IA para la Eficiencia en RRHH (CAP-033) · Sector Automotriz</div>
+  </div>
+  <div class="grid2">
+    <div class="block">
+      <h3>Personas impactadas</h3>
+      <div class="row"><span>Tecnología y Automatización</span><b>11</b></div><div class="row"><span>Recursos Humanos</span><b>8</b></div><div class="row"><span>Resto de la nómina (12h n8n / 6h RH combinadas)</span><b>11</b></div>
+      <div class="row total"><span>Total</span><b>30 personas</b></div>
+      <div class="note">19 de las 30 respondieron la Encuesta Edu-Trace (2 grupos, detalle abajo).</div>
+    </div>
+    <div class="block">
+      <h3>Cuellos de botella a automatizar</h3>
+      <div class="row"><span>Reportes</span><b>~10</b></div><div class="row"><span>CRM</span><b>~5</b></div><div class="row"><span>Contenido</span><b>1</b></div><div class="row"><span>Datos</span><b>1</b></div><div class="row"><span>Reclutamiento</span><b>1</b></div>
+      <div class="note">Combinado de ambos grupos (19 respuestas) · lo que quieren automatizar, no lo ya automatizado.</div>
+    </div>
+  </div>
+  <div class="grid2"><div class="block" style="grid-column: span 2;">
+      <h3>Otros datos de interés</h3>
+      <div class="row"><span>Índice de Impacto Edu-Trace</span><b>86/100 (Tecnología) · 95/100 (RRHH) · Excelente</b></div>
+    </div></div>
+  <div class="automated">
+    <h3>Lo que ya se automatizó</h3>
+    <div class="track"><span class="t-name">Tecnología y Automatización</span><p>Reducción proyectada del 40% en carga operativa vía screening semántico de CVs. El equipo técnico se formó como Arquitectos de Automatización, diseñando y desplegando internamente sus propios agentes con n8n y OCR, digitalizando órdenes de taller y conectando sistemas ERP de forma autónoma.</p></div><div class="track"><span class="t-name">Recursos Humanos</span><p>3 Gemas de reclutamiento (descripción de cargo + creativo de vacante, screening semántico de CVs con ranking por % de ajuste, guiones de entrevista + roleplay) + Gema de pruebas psicotécnicas con clave de corrección + kit de bienvenida automatizado + hub de conocimiento en NotebookLM.</p></div>
+  </div>
+</section>
+<section class="case">
+  <div class="case-header">
+    <div class="eyebrow2">Resumen de impacto</div>
+    <h2>Nestlé</h2>
+    <div class="case-meta">Sector Alimentos y Bebidas</div>
+  </div>
+  <div class="grid2">
+    <div class="block">
+      <h3>Personas impactadas</h3>
+      <div class="row total"><span>Total</span><b>30 personas</b></div>
+    </div>
+    <div class="block">
+      <h3>Sector</h3>
+      <div class="row"><span>Sector Alimentos y Bebidas</span></div>
+    </div>
+  </div>
+  <div class="automated">
+    <h3>Lo que ya se automatizó</h3>
+    <div class="track"><p>30 colaboradores de las áreas de Marketing y Ventas, en la aplicación de IA Generativa para optimizar el ciclo comercial y crear estrategias de mercadeo de alta precisión. El equipo aprendió a desplegar agentes que automatizan la investigación de mercado y el diseño de campañas, con personalización a escala y reducción drástica en los tiempos de respuesta operativa.</p></div>
+  </div>
+</section>
+<section class="case">
+  <div class="case-header">
+    <div class="eyebrow2">Resumen de impacto</div>
+    <h2>STP Consultores</h2>
+    <div class="case-meta">Sector Consultoría / Servicios Profesionales</div>
+  </div>
+  <div class="grid2">
+    <div class="block">
+      <h3>Personas impactadas</h3>
+      <div class="row total"><span>Total</span><b>+30 personas</b></div>
+    </div>
+    <div class="block">
+      <h3>Sector</h3>
+      <div class="row"><span>Sector Consultoría / Servicios Profesionales</span></div>
+    </div>
+  </div>
+  <div class="automated">
+    <h3>Lo que ya se automatizó</h3>
+    <div class="track"><p>El programa elevó la efectividad y productividad organizacional integrando IA Generativa en los flujos de trabajo de consultoría. El equipo usó la IA como motor de razonamiento para el análisis de casos y la generación de propuestas técnicas de alto impacto, automatizando tareas operativas y de investigación para centrarse en la entrega de valor estratégico.</p></div>
+  </div>
+</section>
+<section class="case">
+  <div class="case-header">
+    <div class="eyebrow2">Resumen de impacto</div>
+    <h2>Datanalisis</h2>
+    <div class="case-meta">Sector Consultoría / Investigación de Mercado</div>
+  </div>
+  <div class="grid2">
+    <div class="block">
+      <h3>Personas impactadas</h3>
+      <div class="row total"><span>Total</span><b>30 personas</b></div>
+    </div>
+    <div class="block">
+      <h3>Sector</h3>
+      <div class="row"><span>Sector Consultoría / Investigación de Mercado</span></div>
+    </div>
+  </div>
+  <div class="automated">
+    <h3>Lo que ya se automatizó</h3>
+    <div class="track"><p>30 colaboradores en un programa intensivo de IA para la Productividad y Efectividad, enfocado en transformar la gestión operativa del equipo de consultoría e investigación. Se entrenó el uso estratégico de herramientas generativas para agilizar el procesamiento de grandes volúmenes de información, la síntesis de hallazgos clave y la automatización de reportes ejecutivos.</p></div>
+  </div>
+</section>
+<section class="case">
+  <div class="case-header">
+    <div class="eyebrow2">Resumen de impacto</div>
+    <h2>GoPharma</h2>
+    <div class="case-meta">Sector Farmacéutico</div>
+  </div>
+  <div class="grid2">
+    <div class="block">
+      <h3>Personas impactadas</h3>
+      <div class="row total"><span>Total</span><b>30 personas</b></div>
+    </div>
+    <div class="block">
+      <h3>Sector</h3>
+      <div class="row"><span>Sector Farmacéutico</span></div>
+    </div>
+  </div>
+  <div class="automated">
+    <h3>Lo que ya se automatizó</h3>
+    <div class="track"><p>30 colaboradores capacitados mediante asesorías departamentales. El personal dominó la ingeniería de prompts y el uso de Claude para generación de código y transcripción de reuniones. Hito operativo en Recursos Humanos: asistentes GPT para el análisis rápido de pruebas psicotécnicas y la consulta de normativas laborales (LOTTT), reduciendo drásticamente los tiempos de evaluación y cumplimiento legal.</p></div>
+  </div>
+</section>
+<section class="case">
+  <div class="case-header">
+    <div class="eyebrow2">Resumen de impacto</div>
+    <h2>Empresas Polar (Charla ejecutiva CH-003)</h2>
+    <div class="case-meta">Sector Alimentos y Bebidas</div>
+  </div>
+  <div class="grid2">
+    <div class="block">
+      <h3>Personas impactadas</h3>
+      <div class="row total"><span>Total</span><b>30 personas</b></div>
+    </div>
+    <div class="block">
+      <h3>Sector</h3>
+      <div class="row"><span>Sector Alimentos y Bebidas</span></div>
+    </div>
+  </div>
+  <div class="automated">
+    <h3>Lo que ya se automatizó</h3>
+    <div class="track"><p>Charla ejecutiva de estrategia "enamorar" (cortesía comercial, sin cotizar) para 30 personas de gerencia y equipo de tecnología, con foco explícito solicitado por el cliente en ética y gobernanza de IA sobre su stack 100% Google + Gemini: respaldo de datos, uso correcto y confianza del equipo de TI tras una habilitación reciente y cautelosa.</p></div>
+  </div>
+</section>
+<section class="case">
+  <div class="case-header">
+    <div class="eyebrow2">Resumen de impacto</div>
+    <h2>Grupo Sambil</h2>
+    <div class="case-meta">Sector Inmobiliario / Centros Comerciales</div>
+  </div>
+  <div class="grid2">
+    <div class="block">
+      <h3>Personas impactadas</h3>
+      <div class="row total"><span>Total</span><b>25 personas</b></div>
+    </div>
+    <div class="block">
+      <h3>Sector</h3>
+      <div class="row"><span>Sector Inmobiliario / Centros Comerciales</span></div>
+    </div>
+  </div>
+  <div class="automated">
+    <h3>Lo que ya se automatizó</h3>
+    <div class="track"><p>25 colaboradores del área de mercadeo, transformados en una "Agencia In-House de Alta Velocidad" que optimiza las 6 fases del marketing moderno. Estrategia e IA Generativa: "Gemelos Digitales" de clientes y análisis de competencia automatizado. Claude para Marketing (Fase 2): análisis profundo de datos y copywriting de marca con tono humano para reportes de tráfico y campañas de fidelización.</p></div>
+  </div>
+</section>
+<section class="case">
+  <div class="case-header">
+    <div class="eyebrow2">Resumen de impacto</div>
+    <h2>Grupo Ocan</h2>
+    <div class="case-meta">Sector Automotriz</div>
+  </div>
+  <div class="grid2">
+    <div class="block">
+      <h3>Personas impactadas</h3>
+      <div class="row total"><span>Total</span><b>20–25 personas</b></div>
+    </div>
+    <div class="block">
+      <h3>Sector</h3>
+      <div class="row"><span>Sector Automotriz</span></div>
+    </div>
+  </div>
+  <div class="automated">
+    <h3>Lo que ya se automatizó</h3>
+    <div class="track"><p>Programa integral de capacitación técnica y operativa para Recursos Humanos, Administración, Finanzas y Operaciones, en 3 sesiones híbridas. El entrenamiento abarcó los fundamentos de IA y la implementación del ecosistema de Google AI: NotebookLM para gestión documental, Gems personalizados y Gamma con prompting avanzado para el diseño ágil de presentaciones y recursos corporativos.</p></div>
+  </div>
+</section>
+<section class="case">
+  <div class="case-header">
+    <div class="eyebrow2">Resumen de impacto</div>
+    <h2>Grupo Corpos</h2>
+    <div class="case-meta">Construcción de Agentes de IA (CAP-026) + Intezia Fundamentals Fase 1 (CAP-045) · Sector Automotriz</div>
+  </div>
+  <div class="grid2">
+    <div class="block">
+      <h3>Personas impactadas</h3>
+      <div class="row"><span>Atención al Cliente · Agentes de IA (CAP-026)</span><b>8</b></div><div class="row"><span>Liderazgo · Fundamentals Fase 1 (CAP-045)</span><b>16</b></div>
+      <div class="row total"><span>Total</span><b>24 personas</b></div>
+      <div class="note">2 programas en fechas distintas (2026-07-20 y 2026-09-02), no necesariamente personas únicas.</div>
+    </div>
+    <div class="block">
+      <h3>Horas semanales ahorradas <span style="font-weight:400;">(autopercibido)</span></h3>
+      <div class="row"><span>Entre 4 y 7 horas/semana</span><b>3</b></div><div class="row"><span>Entre 1 y 3 horas/semana</span><b>7</b></div><div class="row"><span>Aún no medible / ninguna</span><b>6</b></div>
+      <div class="row total"><span>Perciben algún ahorro</span><b>10 de 16 personas (~63%) perciben algún ahorro semanal (solo Liderazgo)</b></div>
+    </div>
+  </div>
+  <div class="grid2"><div class="block">
+      <h3>Cuellos de botella a automatizar</h3>
+      <div class="row"><span>Reportes</span><b>~9</b></div><div class="row"><span>CRM</span><b>~7</b></div><div class="row"><span>Datos</span><b>~4</b></div><div class="row"><span>Servicios</span><b>2</b></div>
+      <div class="note">Combinado de ambos programas · +1 respuesta libre menciona varios frentes a la vez (Reportes, Datos, CRM y Contenido).</div>
+    </div><div class="block">
+      <h3>Otros datos de interés</h3>
+      <div class="row"><span>Herramienta (Liderazgo)</span><b>Gemini 9 · Claude 7</b></div><div class="row"><span>Índice de Impacto Edu-Trace</span><b>85/100 (Atención al Cliente) · 90/100 (Liderazgo)</b></div>
+    </div></div>
+  <div class="automated">
+    <h3>Lo que ya se automatizó</h3>
+    <div class="track"><span class="t-name">Atención al Cliente · Agentes de IA</span><p>Con guía y criterio de Intezia (sin desarrollo directo del proveedor), construyeron la arquitectura de 2 agentes de IA (Generador de Leads + Atención al Cliente) integrados a su stack real (Odoo 17 + Claude + WhatsApp BSP), con un módulo dedicado a seguridad LLM ↔ ERP.</p></div><div class="track"><span class="t-name">Liderazgo · Fundamentals Fase 1 (16 líderes en 3 grupos)</span><p>Construyeron su primera Skill funcional, un proceso automatizado propio con Conectores, un entregable visual real de su área y su criterio de uso seguro de la información.</p></div>
+  </div>
+</section>
+<section class="case">
+  <div class="case-header">
+    <div class="eyebrow2">Resumen de impacto</div>
+    <h2>Empresas Polar (8h, CAP-011)</h2>
+    <div class="case-meta">Sector Alimentos y Bebidas</div>
+  </div>
+  <div class="grid2">
+    <div class="block">
+      <h3>Personas impactadas</h3>
+      <div class="row total"><span>Total</span><b>20 personas</b></div>
+    </div>
+    <div class="block">
+      <h3>Sector</h3>
+      <div class="row"><span>Sector Alimentos y Bebidas</span></div>
+    </div>
+  </div>
+  <div class="automated">
+    <h3>Lo que ya se automatizó</h3>
+    <div class="track"><p>20 profesionales capacitados en 8 horas, bajo un enfoque de innovación y estrategia empresarial: uso de IA generativa y agentes personalizados para transformar procesos operativos y análisis de mercado, con diseño de prompts efectivos e integración de herramientas de generación de imágenes conceptuales para identificar oportunidades de negocio (Blue Ocean).</p></div>
+  </div>
+</section>
+<section class="case">
+  <div class="case-header">
+    <div class="eyebrow2">Resumen de impacto</div>
+    <h2>Ninja Park y Cinepic</h2>
+    <div class="case-meta">Sector Entretenimiento</div>
+  </div>
+  <div class="grid2">
+    <div class="block">
+      <h3>Personas impactadas</h3>
+      <div class="row total"><span>Total</span><b>20 personas</b></div>
+    </div>
+    <div class="block">
+      <h3>Sector</h3>
+      <div class="row"><span>Sector Entretenimiento</span></div>
+    </div>
+  </div>
+  <div class="automated">
+    <h3>Lo que ya se automatizó</h3>
+    <div class="track"><p>20 colaboradores del departamento de Administración y Finanzas, evolucionando de la gestión operativa manual al análisis estratégico. Mediante ingeniería de prompts financieros y visión artificial, el personal digitalizó automáticamente facturas y documentos físicos, y se entrenó en la orquestación de flujos con n8n para cuentas por pagar y agentes personalizados (Gems) bajo protocolos de seguridad de datos.</p></div>
+  </div>
+</section>
+<section class="case">
+  <div class="case-header">
+    <div class="eyebrow2">Resumen de impacto</div>
+    <h2>Seguros Qualitas</h2>
+    <div class="case-meta">Sector Asegurador</div>
+  </div>
+  <div class="grid2">
+    <div class="block">
+      <h3>Personas impactadas</h3>
+      <div class="row total"><span>Total</span><b>20 personas</b></div>
+    </div>
+    <div class="block">
+      <h3>Sector</h3>
+      <div class="row"><span>Sector Asegurador</span></div>
+    </div>
+  </div>
+  <div class="automated">
+    <h3>Lo que ya se automatizó</h3>
+    <div class="track"><p>Capacitación presencial enfocada en el ecosistema de Google Gemini y sus Gems. Ventas y Marketing: ofertas personalizadas, scripts de ventas automatizados y contenido segmentado para campañas. Recursos Humanos: descripciones de cargo, anuncios de vacantes y preguntas de entrevista personalizadas. Eficiencia Operativa: Gems para tareas recurrentes, comunicación interna y CRM.</p></div>
+  </div>
+</section>
+<section class="case">
+  <div class="case-header">
+    <div class="eyebrow2">Resumen de impacto</div>
+    <h2>BitConsulting</h2>
+    <div class="case-meta">Sector Consultoría Tecnológica</div>
+  </div>
+  <div class="grid2">
+    <div class="block">
+      <h3>Personas impactadas</h3>
+      <div class="row total"><span>Total</span><b>20 personas</b></div>
+    </div>
+    <div class="block">
+      <h3>Sector</h3>
+      <div class="row"><span>Sector Consultoría Tecnológica</span></div>
+    </div>
+  </div>
+  <div class="automated">
+    <h3>Lo que ya se automatizó</h3>
+    <div class="track"><p>20 consultores actualizados en las capacidades del ecosistema Microsoft Copilot y la generación de datos estructurados impulsada por IA. A través del entrenamiento en automatización de procesos con n8n y el despliegue de agentes inteligentes, adquirieron la autonomía necesaria para optimizar sus propias operaciones y elevar el valor tecnológico de los servicios que ofrecen a sus clientes.</p></div>
+  </div>
+</section>
+<section class="case">
+  <div class="case-header">
+    <div class="eyebrow2">Resumen de impacto</div>
+    <h2>MAGNABYTE</h2>
+    <div class="case-meta">Sector Tecnológico</div>
+  </div>
+  <div class="grid2">
+    <div class="block">
+      <h3>Personas impactadas</h3>
+      <div class="row total"><span>Total</span><b>20 personas</b></div>
+    </div>
+    <div class="block">
+      <h3>Sector</h3>
+      <div class="row"><span>Sector Tecnológico</span></div>
+    </div>
+  </div>
+  <div class="automated">
+    <h3>Lo que ya se automatizó</h3>
+    <div class="track"><p>20 consultores capacitados en un curso intensivo de 4 horas, centrado en los fundamentos de la IA y el dominio de la ingeniería de prompts. Los participantes destacaron en la generación avanzada de recursos visuales mediante Gemini 3 Flash Image, agilizando la creación de contenidos e integrando soluciones generativas en sus proyectos.</p></div>
+  </div>
+</section>
+<section class="case">
+  <div class="case-header">
+    <div class="eyebrow2">Resumen de impacto</div>
+    <h2>Cavedatos</h2>
+    <div class="case-meta">IA Generativa Avanzada para Equipos de Prensa (CAI-001) · Sector Portuario y Comunicaciones · Cierre: 2026-09-12</div>
+  </div>
+  <div class="grid2">
+    <div class="block">
+      <h3>Personas impactadas</h3>
+      <div class="row"><span>Gestión Comunicacional (varias sedes, incl. Puerto de Maracaibo y Puerto de Guanta)</span><b>10</b></div>
+      <div class="row total"><span>Total</span><b>10 personas</b></div>
+      
+    </div>
+    <div class="block">
+      <h3>Cuellos de botella a automatizar</h3>
+      <div class="row"><span>Contenido</span><b>4</b></div><div class="row"><span>Datos</span><b>3</b></div><div class="row"><span>Reportes</span><b>2</b></div><div class="row"><span>CRM</span><b>1</b></div>
+      
+    </div>
+  </div>
+  <div class="grid2"><div class="block" style="grid-column: span 2;">
+      <h3>Otros datos de interés</h3>
+      <div class="row"><span>Índice de Impacto Edu-Trace</span><b>87/100 · Excelente</b></div>
+    </div></div>
+  <div class="automated">
+    <h3>Lo que ya se automatizó</h3>
+    <div class="track"><p>Construyeron un flujo completo de producción multimedia con IA: prompting técnico avanzado en Gemini para texto alineado a la línea editorial, diseño visual con Freepik/Envato/Canva, video generativo con Luma Labs y voz generativa, edición con CapCut. Cerraron con un Hackathon donde produjeron un Media Kit integrado y un Avatar interno sobre necesidades reales de Cavedatos.</p></div>
+  </div>
+</section>
+<section class="case">
+  <div class="case-header">
+    <div class="eyebrow2">Resumen de impacto</div>
+    <h2>Ontier</h2>
+    <div class="case-meta">Sector Legal / Consultoría</div>
+  </div>
+  <div class="grid2">
+    <div class="block">
+      <h3>Personas impactadas</h3>
+      <div class="row total"><span>Total</span><b>10 personas</b></div>
+    </div>
+    <div class="block">
+      <h3>Sector</h3>
+      <div class="row"><span>Sector Legal / Consultoría</span></div>
+    </div>
+  </div>
+  <div class="automated">
+    <h3>Lo que ya se automatizó</h3>
+    <div class="track"><p>10 profesionales capacitados durante 8 horas. El programa desarrolló competencias prácticas para la optimización de tareas legales y la toma de decisiones informadas mediante IA: gestión del conocimiento y herramientas generativas para agilizar la redacción y análisis de documentos, visualizando el impacto de los agentes de IA en el futuro del ejercicio jurídico.</p></div>
+  </div>
+</section>
+<section class="case">
+  <div class="case-header">
+    <div class="eyebrow2">Resumen de impacto</div>
+    <h2>Caja Venezolana de Valores</h2>
+    <div class="case-meta">Sector Bursátil / Financiero</div>
+  </div>
+  <div class="grid2">
+    <div class="block">
+      <h3>Personas impactadas</h3>
+      <div class="row total"><span>Total</span><b>10 personas</b></div>
+    </div>
+    <div class="block">
+      <h3>Sector</h3>
+      <div class="row"><span>Sector Bursátil / Financiero</span></div>
+    </div>
+  </div>
+  <div class="automated">
+    <h3>Lo que ya se automatizó</h3>
+    <div class="track"><p>10 colaboradores de niveles directivos y operativos. Mediante una inmersión estratégica, el equipo adoptó la IA como un "copiloto digital" para optimizar la precisión y confidencialidad en el análisis de riesgo y cumplimiento legal, diseñando flujos de trabajo eficientes para la gestión de datos críticos con la seguridad y velocidad que exige el entorno bursátil.</p></div>
+  </div>
+</section>
+<section class="case">
+  <div class="case-header">
+    <div class="eyebrow2">Resumen de impacto</div>
+    <h2>Mi Inmueble Caracas</h2>
+    <div class="case-meta">Sector Inmobiliario</div>
+  </div>
+  <div class="grid2">
+    <div class="block">
+      <h3>Personas impactadas</h3>
+      <div class="row total"><span>Total</span><b>10 personas</b></div>
+    </div>
+    <div class="block">
+      <h3>Sector</h3>
+      <div class="row"><span>Sector Inmobiliario</span></div>
+    </div>
+  </div>
+  <div class="automated">
+    <h3>Lo que ya se automatizó</h3>
+    <div class="track"><p>10 especialistas capacitados en un taller de 4 sesiones que transformó su ciclo de ventas y atención al cliente: diseño de sistemas de prompts para GPTs personalizados, análisis de sentimientos en redes sociales y contenido de marketing de alta conversión, con adopción de IA para el rediseño virtual de inmuebles y exhibición hiperpersonalizada.</p></div>
+  </div>
+</section>
+<section class="case">
+  <div class="case-header">
+    <div class="eyebrow2">Resumen de impacto</div>
+    <h2>Inter</h2>
+    <div class="case-meta">Sector Telecomunicaciones</div>
+  </div>
+  <div class="grid2">
+    <div class="block">
+      <h3>Personas impactadas</h3>
+      <div class="row total"><span>Total</span><b>10 personas</b></div>
+    </div>
+    <div class="block">
+      <h3>Sector</h3>
+      <div class="row"><span>Sector Telecomunicaciones</span></div>
+    </div>
+  </div>
+  <div class="automated">
+    <h3>Lo que ya se automatizó</h3>
+    <div class="track"><p>10 profesionales capacitados en los fundamentos esenciales de la inteligencia artificial. A través de la revisión de casos de éxito y el entrenamiento en ingeniería de prompts, los participantes adquirieron las competencias para comunicarse de manera efectiva con los modelos generativos, elevando la eficiencia en sus procesos analíticos y de redacción.</p></div>
+  </div>
+</section>
+<section class="case">
+  <div class="case-header">
+    <div class="eyebrow2">Resumen de impacto</div>
+    <h2>Empléate</h2>
+    <div class="case-meta">IA con Criterio: Fundamentos y Buenas Prácticas (TA-030) · Sector Educación / Empleabilidad · Cierre: 2026-08-19</div>
+  </div>
+  <div class="grid2">
+    <div class="block">
+      <h3>Personas impactadas</h3>
+      <div class="row"><span>Tecnología</span><b>4</b></div><div class="row"><span>Comunicaciones y Contenido</span><b>2</b></div><div class="row"><span>Gerencia General</span><b>1</b></div><div class="row"><span>Estrategia</span><b>1</b></div><div class="row"><span>Tecnología / Infraestructura</span><b>1</b></div>
+      <div class="row total"><span>Total</span><b>9 personas</b></div>
+      
+    </div>
+    <div class="block">
+      <h3>Horas semanales ahorradas <span style="font-weight:400;">(autopercibido)</span></h3>
+      <div class="row"><span>Entre 4 y 7 horas/semana</span><b>2</b></div><div class="row"><span>Entre 1 y 3 horas/semana</span><b>5</b></div><div class="row"><span>Aún no medible / ninguna</span><b>2</b></div>
+      <div class="row total"><span>Perciben algún ahorro</span><b>7 de 9 personas (~78%) perciben algún ahorro semanal</b></div>
+    </div>
+  </div>
+  <div class="grid2"><div class="block">
+      <h3>Cuellos de botella a automatizar</h3>
+      <div class="row"><span>Reportes</span><b>6</b></div><div class="row"><span>Contenido</span><b>2</b></div><div class="row"><span>Administración y servicios</span><b>1</b></div>
+      
+    </div><div class="block">
+      <h3>Otros datos de interés</h3>
+      <div class="row"><span>Herramienta de mayor adopción</span><b>Gemini (Google) — 9/9</b></div><div class="row"><span>Uso principal</span><b>Asistencia en tareas básicas (5)</b></div><div class="row"><span>Índice de Impacto Edu-Trace</span><b>86/100 · Excelente</b></div>
+    </div></div>
+  <div class="automated">
+    <h3>Lo que ya se automatizó</h3>
+    <div class="track"><p>Construyeron un cuadro comparativo de herramientas (Gemini, Copilot, Qwen, DeepSeek) por tipo de tarea, una biblioteca inicial de prompts por rol, un checklist de verificación y datos sensibles, y un plan de adopción de 30 días por equipo, con un caso propio de cada uno de los 5 equipos resuelto de punta a punta.</p></div>
+  </div>
+</section>
+<section class="case">
+  <div class="case-header">
+    <div class="eyebrow2">Resumen de impacto</div>
+    <h2>Tu Herraje<span class="badge">Referencial</span></h2>
+    <div class="case-meta">Automatización con IA · Ventas y Marketing (CAP-017) + Marketing Visual con IA · Fase 2 (CAP-019) · Sector Ferretería / Retail</div>
+  </div>
+  <div class="grid2">
+    <div class="block">
+      <h3>Personas impactadas</h3>
+      <div class="row"><span>Ventas</span><b>5</b></div><div class="row"><span>Marketing</span><b>2</b></div>
+      <div class="row total"><span>Total</span><b>7 personas</b></div>
+      <div class="note">2 de las 7 respondieron la Encuesta Edu-Trace de cierre.</div>
+    </div>
+    <div class="block">
+      <h3>Cuellos de botella a automatizar</h3>
+      <div class="row"><span>Imágenes</span><b>1</b></div><div class="row"><span>Contenido</span><b>1</b></div>
+      
+    </div>
+  </div>
+  <div class="grid2"><div class="block" style="grid-column: span 2;">
+      <h3>Otros datos de interés</h3>
+      <div class="row"><span>Índice de Impacto Edu-Trace</span><b>85/100 · Excelente</b></div>
+    </div></div>
+  <div class="automated">
+    <h3>Lo que ya se automatizó</h3>
+    <div class="track"><span class="t-name">Fase 1 · CAP-017</span><p>Atención B2B con ManyChat Pro potenciado con IA nativa e integración con Google Sheets (Gemini para análisis y dashboard).</p></div><div class="track"><span class="t-name">Fase 2 · CAP-019</span><p>Flujo de producción visual para redes con Claude como cerebro estratégico + Nano Banana (Gemini 2.5 Flash Image) para imágenes de producto.</p></div>
+  </div>
+</section>
+<section class="case">
+  <div class="case-header">
+    <div class="eyebrow2">Resumen de impacto</div>
+    <h2>Miami Emprendedores<span class="badge">Referencial</span></h2>
+    <div class="case-meta">Marketing que convierte, impulsado por Claude (CAP-086) · Sector Marketing / Emprendimiento · Cierre: 2026-08-26</div>
+  </div>
+  <div class="grid2">
+    <div class="block">
+      <h3>Personas impactadas</h3>
+      <div class="row"><span>Estrategia y Negocio</span><b>1</b></div><div class="row"><span>Marketing</span><b>1</b></div><div class="row"><span>Tecnología</span><b>1</b></div>
+      <div class="row total"><span>Total</span><b>6 personas (equipo de la sociedad)</b></div>
+      <div class="note">3 de las 6 respondieron la Encuesta Edu-Trace.</div>
+    </div>
+    <div class="block">
+      <h3>Horas semanales ahorradas <span style="font-weight:400;">(autopercibido)</span></h3>
+      <div class="row"><span>Entre 4 y 7 horas/semana</span><b>2</b></div><div class="row"><span>Entre 1 y 3 horas/semana</span><b>1</b></div>
+      <div class="row total"><span>Perciben algún ahorro</span><b>3 de 3 respuestas (100%) perciben algún ahorro semanal</b></div>
+    </div>
+  </div>
+  <div class="grid2"><div class="block">
+      <h3>Cuellos de botella a automatizar</h3>
+      <div class="row"><span>CRM</span><b>1</b></div><div class="row"><span>Reportes</span><b>1</b></div><div class="row"><span>Contenido</span><b>1</b></div>
+      
+    </div><div class="block">
+      <h3>Otros datos de interés</h3>
+      <div class="row"><span>Herramienta de mayor adopción</span><b>ChatGPT (3/3)</b></div><div class="row"><span>Índice de Impacto Edu-Trace</span><b>90/100 · Excelente</b></div>
+    </div></div>
+  <div class="automated">
+    <h3>Lo que ya se automatizó</h3>
+    <div class="track"><p>Construyeron una campaña real de la sociedad de principio a fin con Artifacts como entregable, su protocolo de uso comercial y su plan de adopción a 30 días, presentado y firmado como compromiso público por cada participante.</p></div>
+  </div>
+</section>
+<section class="case">
+  <div class="case-header">
+    <div class="eyebrow2">Resumen de impacto</div>
+    <h2>PSB Bank</h2>
+    <div class="case-meta">Sector Financiero (Curazao)</div>
+  </div>
+  <div class="grid2">
+    <div class="block">
+      <h3>Personas impactadas</h3>
+      <div class="row total"><span>Total</span><b>5 personas</b></div>
+    </div>
+    <div class="block">
+      <h3>Sector</h3>
+      <div class="row"><span>Sector Financiero (Curazao)</span></div>
+    </div>
+  </div>
+  <div class="automated">
+    <h3>Lo que ya se automatizó</h3>
+    <div class="track"><p>5 gerentes capacitados en el dominio de IA Generativa y Prompt Engineering aplicado al análisis de datos y generación de reportes. Los líderes fueron entrenados para usar la IA como copiloto analítico, optimizando la interpretación de métricas financieras y la creación de informes ejecutivos con alta precisión, reduciendo tiempos operativos en tareas de oficina.</p></div>
+  </div>
+</section>
+<section class="case">
+  <div class="case-header">
+    <div class="eyebrow2">Resumen de impacto</div>
+    <h2>Hidrocaven<span class="badge">Referencial</span></h2>
+    <div class="case-meta">Fundamentos de IA para Compras y Logística · Sector Compras y Logística · Cierre: 2026-08-29 · n=4</div>
+  </div>
+  <div class="grid2">
+    <div class="block">
+      <h3>Personas impactadas</h3>
+      <div class="row"><span>Compras</span><b>2</b></div><div class="row"><span>Compras Internacionales</span><b>1</b></div><div class="row"><span>Contabilidad</span><b>1</b></div>
+      <div class="row total"><span>Total</span><b>4 personas</b></div>
+      
+    </div>
+    <div class="block">
+      <h3>Horas semanales ahorradas <span style="font-weight:400;">(autopercibido)</span></h3>
+      <div class="row"><span>Entre 4 y 7 horas/semana</span><b>1</b></div><div class="row"><span>Entre 1 y 3 horas/semana</span><b>1</b></div><div class="row"><span>Aún no medible / ninguna</span><b>2</b></div>
+      <div class="row total"><span>Perciben algún ahorro</span><b>2 de 4 personas (50%) perciben algún ahorro semanal</b></div>
+    </div>
+  </div>
+  <div class="grid2"><div class="block">
+      <h3>Cuellos de botella a automatizar</h3>
+      <div class="row"><span>Reportes</span><b>2</b></div><div class="row"><span>Datos y reportes / entregables</span><b>2</b></div>
+      
+    </div><div class="block">
+      <h3>Otros datos de interés</h3>
+      <div class="row"><span>Herramienta de mayor adopción</span><b>Claude (3) · Gemini (1)</b></div><div class="row"><span>Índice de Impacto Edu-Trace</span><b>93/100 · Excelente</b></div>
+    </div></div>
+  <div class="automated">
+    <h3>Lo que ya se automatizó</h3>
+    <div class="track"><p>Construyeron un tablero de compras y logística con quick wins por rol, con asistentes (Proyectos y Gems) aplicados a la comparativa de proveedores, el seguimiento de despachos y su propio plan de adopción por rol.</p></div>
+  </div>
+</section>
+<section class="case">
+  <div class="case-header">
+    <div class="eyebrow2">Resumen de impacto</div>
+    <h2>Pago Tronic<span class="badge">Referencial</span></h2>
+    <div class="case-meta">Cerebro Digital de IA por Áreas (CAP-081) · Sector Financiero / Pagos · Cierre: 2026-08-27 · n=3</div>
+  </div>
+  <div class="grid2">
+    <div class="block">
+      <h3>Personas impactadas</h3>
+      <div class="row"><span>Marketing / IT</span><b>1</b></div><div class="row"><span>Compliance</span><b>1</b></div><div class="row"><span>Dirección</span><b>1</b></div>
+      <div class="row total"><span>Total</span><b>3 personas</b></div>
+      
+    </div>
+    <div class="block">
+      <h3>Horas semanales ahorradas <span style="font-weight:400;">(autopercibido)</span></h3>
+      <div class="row"><span>Más de 8 horas/semana</span><b>1</b></div><div class="row"><span>Entre 4 y 7 horas/semana</span><b>1</b></div><div class="row"><span>Aún no medible / ninguna</span><b>1</b></div>
+      <div class="row total"><span>Perciben algún ahorro</span><b>2 de 3 personas (~67%) perciben algún ahorro semanal</b></div>
+    </div>
+  </div>
+  <div class="grid2"><div class="block">
+      <h3>Cuellos de botella a automatizar</h3>
+      <div class="row"><span>Contenido</span><b>2</b></div><div class="row"><span>Datos</span><b>1</b></div>
+      
+    </div><div class="block">
+      <h3>Otros datos de interés</h3>
+      <div class="row"><span>Herramienta de mayor adopción</span><b>Claude (3/3)</b></div><div class="row"><span>Uso principal</span><b>Automatización de procesos (3/3)</b></div><div class="row"><span>Índice de Impacto Edu-Trace</span><b>85/100 · Excelente</b></div>
+    </div></div>
+  <div class="automated">
+    <h3>Lo que ya se automatizó</h3>
+    <div class="track"><p>Activaron su Cerebro Digital de IA (sistema central de conocimiento) en sus 4 áreas de prioridad (Marketing, Ventas, Compliance, Documentación) tras un diagnóstico por área: alertas y priorización activa en Compliance, y un repositorio único siempre actualizado en Documentación.</p></div>
+  </div>
+</section>
+<section class="case">
+  <div class="case-header">
+    <div class="eyebrow2">Resumen de impacto</div>
+    <h2>Ailyn Gruszka<span class="badge">Coaching individual</span></h2>
+    <div class="case-meta">Claude Fundamentals (CAP-070) · Cierre: 2026-08-11</div>
+  </div>
+  <div class="grid2">
+    <div class="block">
+      <h3>Personas impactadas</h3>
+      <div class="row"><span>RRHH</span><b>2</b></div><div class="row"><span>Sambil</span><b>1</b></div>
+      <div class="row total"><span>Total</span><b>2 personas (Ailyn Gruszka y su hermana)</b></div>
+      
+    </div>
+    <div class="block">
+      <h3>Cuellos de botella a automatizar</h3>
+      <div class="row"><span>Reportes, Contenido, Datos</span><b>1 c/u</b></div>
+      
+    </div>
+  </div>
+  <div class="grid2"><div class="block" style="grid-column: span 2;">
+      <h3>Otros datos de interés</h3>
+      <div class="row"><span>Índice de Impacto Edu-Trace</span><b>77/100 · Muy buena</b></div>
+    </div></div>
+  <div class="automated">
+    <h3>Lo que ya se automatizó</h3>
+    <div class="track"><p>Construyó su proyecto final aplicado (unificación y análisis de sus Excel de nóminas de varias organizaciones, con gráficas), su carpeta documental organizada en un Project, y su plan para seguir de forma autónoma.</p></div>
+  </div>
+</section>
+<section class="case">
+  <div class="case-header">
+    <div class="eyebrow2">Resumen de impacto</div>
+    <h2>Alejandro Soteldo<span class="badge">Coaching individual</span></h2>
+    <div class="case-meta">Crea tu Clon Digital con Claude (CAP-060) · Cierre: 2026-08-18</div>
+  </div>
+  <div class="grid2">
+    <div class="block">
+      <h3>Personas impactadas</h3>
+      <div class="row"><span>Marketing</span><b>1</b></div>
+      <div class="row total"><span>Total</span><b>1 persona</b></div>
+      
+    </div>
+    <div class="block">
+      <h3>Cuellos de botella a automatizar</h3>
+      <div class="row"><span>Contenido</span><b>1</b></div>
+      
+    </div>
+  </div>
+  <div class="grid2"><div class="block" style="grid-column: span 2;">
+      <h3>Otros datos de interés</h3>
+      <div class="row"><span>Índice de Impacto Edu-Trace</span><b>69/100 · Muy buena — la nota más baja de la muestra</b></div>
+    </div></div>
+  <div class="automated">
+    <h3>Lo que ya se automatizó</h3>
+    <div class="track"><p>Construyó su clon digital (segundo cerebro) con Claude, organizando su conocimiento como grafo en Obsidian con Projects, Skills, Conectores/MCP y Cowork.</p></div>
+  </div>
+</section>
+
+</div>
+<div class="section-title-wrap">
+  <h2 style="margin:0 0 14px; font-size:15px; text-transform:uppercase; letter-spacing:0.5px; font-weight:800; border-bottom:3px solid var(--yellow); padding-bottom:7px;">Casos sin cifra de personas registrada</h2>
+  <div style="margin:-10px 0 14px; font-size:9.5px; color:var(--muted);">14 casos · orden alfabético · cifra no confirmada en la fuente, no se estima</div>
+  <section class="case">
+  <div class="case-header">
+    <div class="eyebrow2">Resumen de impacto</div>
+    <h2>ARS Publicidad</h2>
+    <div class="case-meta">Sector Publicidad / Marketing · cifra de personas no confirmada en la fuente</div>
+  </div>
+  <div class="automated">
+    <h3>Lo que ya se automatizó</h3>
+    <div class="track"><p>Capacitación estratégica para el equipo corporativo de la agencia, en IA Generativa y automatización creativa: MidJourney, HeyGen y ElevenLabs para producción multimedia, Prompt Engineering avanzado y GPTs personalizados por cuenta, optimizando la redacción de contenidos, segmentación de audiencias y análisis de tendencias.</p></div>
+  </div>
+</section>
+<section class="case">
+  <div class="case-header">
+    <div class="eyebrow2">Resumen de impacto</div>
+    <h2>Conexus</h2>
+    <div class="case-meta">Sector Bancario / Fintech · cifra de personas no confirmada en la fuente</div>
+  </div>
+  <div class="automated">
+    <h3>Lo que ya se automatizó</h3>
+    <div class="track"><p>Capacitación técnica avanzada para el equipo de IT y operaciones. Mediante una ruta de dos fases, se entrenó al personal en automatización con n8n y fundamentos de Machine Learning (ML): agentes de IA autónomos para búsqueda semántica de políticas y análisis de transacciones rechazadas, además de modelos de detección de fraude y scoring crediticio.</p></div>
+  </div>
+</section>
+<section class="case">
+  <div class="case-header">
+    <div class="eyebrow2">Resumen de impacto</div>
+    <h2>FM Center</h2>
+    <div class="case-meta">Sector Medios y Radiodifusión · cifra de personas no confirmada en la fuente</div>
+  </div>
+  <div class="automated">
+    <h3>Lo que ya se automatizó</h3>
+    <div class="track"><p>Asesoría personalizada para la optimización de procesos, enfocada en IA operativa para modernizar la difusión y la gestión interna: automatizaciones con n8n y despliegue de agentes y chatbots inteligentes para redes sociales, con interacción más ágil con la audiencia y mejor rendimiento departamental.</p></div>
+  </div>
+</section>
+<section class="case">
+  <div class="case-header">
+    <div class="eyebrow2">Resumen de impacto</div>
+    <h2>Fitelven</h2>
+    <div class="case-meta">Sector Eventos y Telecomunicaciones · cifra de personas no confirmada en la fuente</div>
+  </div>
+  <div class="automated">
+    <h3>Lo que ya se automatizó</h3>
+    <div class="track"><p>Capacitación especializada en ecosistemas de IA que desmitificó el funcionamiento de los Modelos de Lenguaje Grande (LLM) y entrenó a los participantes en diseño de prompts y generación de imágenes para branding corporativo, explorando Vibe Coding y estableciendo una hoja de ruta para agentes de IA en entornos locales con mayor privacidad.</p></div>
+  </div>
+</section>
+<section class="case">
+  <div class="case-header">
+    <div class="eyebrow2">Resumen de impacto</div>
+    <h2>KEC Medical</h2>
+    <div class="case-meta">Sector Salud / Equipos Médicos · cifra de personas no confirmada en la fuente</div>
+  </div>
+  <div class="automated">
+    <h3>Lo que ya se automatizó</h3>
+    <div class="track"><p>Capacitación estratégica para la modernización de la identidad corporativa mediante IA: Midjourney y DALL-E para creación y animación de logos, HeyGen para avatares publicitarios, manual de marca asistido por IA y prototipos web rápidos con Lovable, reduciendo significativamente los costos de diseño gráfico.</p></div>
+  </div>
+</section>
+<section class="case">
+  <div class="case-header">
+    <div class="eyebrow2">Resumen de impacto</div>
+    <h2>La Mundial de Seguros</h2>
+    <div class="case-meta">Sector Seguros · cifra de personas no confirmada en la fuente</div>
+  </div>
+  <div class="automated">
+    <h3>Lo que ya se automatizó</h3>
+    <div class="track"><p>Capacitación estratégica para el equipo de Exilixi / La Mundial de Seguros. A través de una metodología de cuatro fases, el equipo dominó la automatización sencilla y avanzada con n8n: flujos de trabajo complejos, integración de bases de datos y sistemas externos, y gestión de grandes volúmenes de información sin necesidad de programación avanzada.</p></div>
+  </div>
+</section>
+<section class="case">
+  <div class="case-header">
+    <div class="eyebrow2">Resumen de impacto</div>
+    <h2>Luis Vicente León</h2>
+    <div class="case-meta">Economista / Analista de Entorno · cifra de personas no confirmada en la fuente</div>
+  </div>
+  <div class="automated">
+    <h3>Lo que ya se automatizó</h3>
+    <div class="track"><p>Programa de inmersión estratégica para elevar el análisis de datos y la productividad profesional. Análisis de Entorno: Claude y Perplexity para tendencias y proyecciones económicas. Bases de Conocimiento: NotebookLM para centralizar años de informes. Validación Estratégica: IA como "Abogado del Diablo". Asistentes de Autoría: GPTs con su tono de voz para columnas de opinión.</p></div>
+  </div>
+</section>
+<section class="case">
+  <div class="case-header">
+    <div class="eyebrow2">Resumen de impacto</div>
+    <h2>Miembros AJE</h2>
+    <div class="case-meta">Sector Emprendimiento · cifra de personas no confirmada en la fuente</div>
+  </div>
+  <div class="automated">
+    <h3>Lo que ya se automatizó</h3>
+    <div class="track"><p>Formación estratégica presencial para líderes de área, en orquestación de flujos de trabajo mediante agentes de IA con n8n, ManyChat y Claude, e integración de modelos avanzados para generación de imágenes con Gemini 3 Flash Image. Cerró con una auditoría técnica que identificó qué departamentos y herramientas son prioritarios para iniciar la transformación con IA.</p></div>
+  </div>
+</section>
+<section class="case">
+  <div class="case-header">
+    <div class="eyebrow2">Resumen de impacto</div>
+    <h2>Netuno</h2>
+    <div class="case-meta">Sector Telecomunicaciones · cifra de personas no confirmada en la fuente</div>
+  </div>
+  <div class="automated">
+    <h3>Lo que ya se automatizó</h3>
+    <div class="track"><p>Capacitación técnica avanzada para el equipo de ingeniería y desarrollo. En una inmersión de 12 horas, los participantes evolucionaron hacia Arquitectos Full-Stack Low-Code, orquestando agentes autónomos mediante el protocolo MCP e interfaces con Lovable conectadas a backends en n8n, para resolver incidencias de red y optimizar la atención al cliente.</p></div>
+  </div>
+</section>
+<section class="case">
+  <div class="case-header">
+    <div class="eyebrow2">Resumen de impacto</div>
+    <h2>ONU</h2>
+    <div class="case-meta">Organizaciones Multilaterales · cifra de personas no confirmada en la fuente</div>
+  </div>
+  <div class="automated">
+    <h3>Lo que ya se automatizó</h3>
+    <div class="track"><p>Formación en IA generativa y operativa que habilitó al personal en la aplicación táctica de Gemini, ChatGPT y NotebookLM para investigación, redacción y gestión de conocimiento, junto a los fundamentos de automatización con n8n para optimizar recursos y agilizar procesos internos críticos.</p></div>
+  </div>
+</section>
+<section class="case">
+  <div class="case-header">
+    <div class="eyebrow2">Resumen de impacto</div>
+    <h2>Obeltech</h2>
+    <div class="case-meta">Sector Consultoría / Tecnología · cifra de personas no confirmada en la fuente</div>
+  </div>
+  <div class="automated">
+    <h3>Lo que ya se automatizó</h3>
+    <div class="track"><p>Capacitación técnica intensiva para el equipo de ingeniería y proyectos, en Arquitectura Avanzada con n8n como capa de orquestación del negocio: integración con sistemas SQL, consumo avanzado de APIs y procesamiento de datos no estructurados mediante OCR, con gestión de memoria, modularización de flujos y gobernanza.</p></div>
+  </div>
+</section>
+<section class="case">
+  <div class="case-header">
+    <div class="eyebrow2">Resumen de impacto</div>
+    <h2>Purolomo</h2>
+    <div class="case-meta">Sector Alimentos / Agroindustrial · cifra de personas no confirmada en la fuente</div>
+  </div>
+  <div class="automated">
+    <h3>Lo que ya se automatizó</h3>
+    <div class="track"><p>Capacitación estratégica para el equipo de Finanzas en IA Generativa e Ingeniería de Prompts: curación de datos no estructurados (facturas en PDF, documentos de importación) para su conversión automática a formatos editables, y asistentes personalizados (Gems/GPTs) para el análisis de variaciones presupuestarias y generación de reportes.</p></div>
+  </div>
+</section>
+<section class="case">
+  <div class="case-header">
+    <div class="eyebrow2">Resumen de impacto</div>
+    <h2>Universidad Yacambú</h2>
+    <div class="case-meta">Sector Educación Superior · cifra de personas no confirmada en la fuente</div>
+  </div>
+  <div class="automated">
+    <h3>Lo que ya se automatizó</h3>
+    <div class="track"><p>Capacitación estratégica para el equipo institucional enfocada en productividad y eficiencia académica: metodología de Prompt Engineering desde fundamentos hasta instrucción por formato (JSON, YAML, CSV Prompting), razonamiento paso a paso (Chain-of-Thought) y ejemplos (Few-Shot), con marco de ética y ciberseguridad para la integridad académica.</p></div>
+  </div>
+</section>
+<section class="case">
+  <div class="case-header">
+    <div class="eyebrow2">Resumen de impacto</div>
+    <h2>Urbe University</h2>
+    <div class="case-meta">Sector Educación Superior · cifra de personas no confirmada en la fuente</div>
+  </div>
+  <div class="automated">
+    <h3>Lo que ya se automatizó</h3>
+    <div class="track"><p>Curso gratuito "Claude para Profesores · Del Prompt al Clon Docente" (6h), continuación de la charla introductoria CH-006, abierto a los profesores de Urbe University y a una convocatoria pública paralela. Cubre Skills, Cowork, Code y los pasos para construir un Clon Digital Docente propio con Claude.</p></div>
+  </div>
+</section>
+
+</div>
+<div class="section-title-wrap">
+  <h2 style="margin:0 0 14px; font-size:15px; text-transform:uppercase; letter-spacing:0.5px; font-weight:800; border-bottom:3px solid var(--yellow); padding-bottom:7px;">Casos de Detección — auditoría de IA corporativa</h2>
+  <div style="margin:-10px 0 14px; font-size:9.5px; color:var(--muted);">1 caso · medido en horas-hombre/mes identificadas, no en personas capacitadas</div>
+  <section class="case">
+  <div class="case-header">
+    <div class="eyebrow2">Resumen de impacto · Servicio de Detección</div>
+    <h2>Pilotes Perforados C.A. (PILPERCA)</h2>
+    <div class="case-meta">Auditoría de IA Corporativa (Fase II · Ficha de Levantamiento) · Sector Construcción · Consultores: Rafael Carreño, Douglas Vásquez · Inicio: 02/06/2026</div>
+  </div>
+  <div class="grid2">
+    <div class="block">
+      <h3>Área auditada</h3>
+      <div class="row"><span>Procura / Cuentas por Pagar / Tesorería</span><b>1 persona</b></div>
+      <div class="row"><span>Líder del área</span><b>María Isabel Lecuna, Gerente de Procura</b></div>
+    </div>
+    <div class="block">
+      <h3>Stack encontrado</h3>
+      <div class="row"><span>ERP</span><b>Dynamics GP (deprecado)</b></div>
+      <div class="row"><span>Base de datos centralizada</span><b>No tiene</b></div>
+      <div class="row"><span>IA en uso actualmente</span><b>Ninguna</b></div>
+    </div>
+  </div>
+  <div class="grid2">
+    <div class="block" style="grid-column: span 2;">
+      <h3>Procesos mapeados (horas-hombre/mes)</h3>
+      <div class="row"><span>Estimación semanal de flujo de caja</span><b>2 h/mes</b></div>
+      <div class="row"><span>Programación de flujo de caja real (CxP / aprobaciones)</span><b>16 h/mes</b></div>
+      <div class="row"><span>Comité de gastos · carga y verificación de facturas</span><b>32 h/mes</b></div>
+      <div class="row"><span>Registro de órdenes de compra en el ERP</span><b>24 h/mes</b></div>
+      <div class="row"><span>Conciliación y cierre · reporte final</span><b>64 h/mes</b></div>
+      <div class="row total"><span>Total identificado</span><b>138 horas-hombre/mes</b></div>
+    </div>
+  </div>
+  <div class="automated deteccion">
+    <h3>Hallazgo del diagnóstico</h3>
+    <div class="track"><p>El hallazgo más pesado es la conciliación y el reporte final de cierre (64 h/mes), con la conciliación manual factura-vs-pago como cuello de botella principal.</p></div>
+    <div class="quote">"Un solo archivo me puede consumir la mitad de la semana solo para que la información sea correcta y precisa." — María Isabel Lecuna</div>
+  </div>
+</section>
+
+</div>
+</body>
+</html>

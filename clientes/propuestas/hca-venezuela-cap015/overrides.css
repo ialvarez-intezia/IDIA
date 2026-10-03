@@ -1,0 +1,13 @@
+/* ===========================================================================
+   Overrides locales — HCA Venezuela · CAP-015 · Claude Cowork Dominio Corporativo
+   Enlaza después de ../_base/styles.css. Solo lo propio de esta propuesta.
+   =========================================================================== */
+
+/* Cajas editables Programa y Notas de la slide económica agrandadas y más
+   separadas, a petición de ventas: más espacio para escribir sin scrollear
+   dentro del campo (misma fuente). El /Rect del widget AcroForm se reposiciona
+   en scripts/customize-hca-venezuela-cap015.py para matchear estas coordenadas.
+   El rótulo "NOTAS" baja con su caja. Conversión px→pt: factor 0.75. */
+.s-price .block-notes-container { top: 440px; }
+.s-price .programa-box { top: 222px; left: 56px; width: 480px; height: 185px; }
+.s-price .notas-box    { top: 467px; left: 56px; width: 480px; height: 185px; }

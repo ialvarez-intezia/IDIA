@@ -1,0 +1,110 @@
+/* ===========================================================================
+   OVERRIDES — Propuesta SFIC × Intezia (DIP-006)
+   Slide a la medida: Cuadro de Responsabilidades de la alianza (.s-resp).
+   Modelado sobre el estilo de tabla de .s-eval para mantener coherencia visual.
+   =========================================================================== */
+
+.s-resp {
+  background: var(--white);
+  color: var(--black);
+  padding: 56px 80px 80px;
+}
+.s-resp::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 40%;
+  background: var(--yellow);
+  z-index: 0;
+}
+.s-resp .eyebrow,
+.s-resp h2,
+.s-resp .resp-table {
+  position: relative;
+  z-index: 2;
+}
+.s-resp .eyebrow { margin-bottom: 12px; }
+.s-resp h2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.05;
+  margin-bottom: 22px;
+}
+
+.s-resp .resp-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--white);
+  border: 3px solid var(--black);
+  table-layout: fixed;
+}
+.s-resp .resp-table th {
+  background: var(--black);
+  color: var(--white);
+  text-align: left;
+  padding: 11px 16px;
+  font-family: var(--font-display);
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+.s-resp .resp-table th.area-col,
+.s-resp .resp-table td.area-col { width: 22%; }
+.s-resp .resp-table td {
+  padding: 13px 16px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 13.5px;
+  line-height: 1.4;
+  vertical-align: top;
+}
+.s-resp .resp-table td.area-col {
+  border-left: 0;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--black);
+}
+.s-resp .resp-table tr:last-child td { border-bottom: 0; }
+.s-resp .resp-table tbody tr:nth-child(even) { background: rgba(0, 0, 0, 0.03); }
+
+/* ===========================================================================
+   s-program · 6 fases-card (3×2). _base solo fija min-height para 5-6 módulos
+   y no compacta tipografía/padding → las cards desbordan. Completa el modo
+   compacto 5-6 (patrón reutilizado de corpoez-cu009).
+   =========================================================================== */
+.s-program .modules:has(> .module:nth-child(5)):not(:has(> .module:nth-child(7))) .module {
+  min-height: 0;
+  padding: 48px 14px 14px;
+}
+.s-program .modules:has(> .module:nth-child(5)):not(:has(> .module:nth-child(7))) .module .roman {
+  font-size: 42px;
+  top: 3px;
+}
+.s-program .modules:has(> .module:nth-child(5)):not(:has(> .module:nth-child(7))) .module h3 {
+  font-size: 17px;
+  line-height: 1.1;
+  margin-bottom: 4px;
+}
+.s-program .modules:has(> .module:nth-child(5)):not(:has(> .module:nth-child(7))) .module .obj {
+  font-size: 11.5px;
+  line-height: 1.25;
+  margin-bottom: 5px;
+}
+.s-program .modules:has(> .module:nth-child(5)):not(:has(> .module:nth-child(7))) .module .topics {
+  gap: 3px;
+}
+.s-program .modules:has(> .module:nth-child(5)):not(:has(> .module:nth-child(7))) .module .topics li {
+  font-size: 12.5px;
+  padding: 2px 8px;
+}
+
+/* ===========================================================================
+   s-goals · 6 objetivos específicos: el copy del diplomado desborda el _base
+   ~44px. Compacta encabezado, caja del objetivo general y gap de columnas.
+   =========================================================================== */
+.s-goals h2 { margin-bottom: 20px; }
+.s-goals .columns { gap: 20px; }
+.s-goals .general { padding: 22px 30px; }
+.s-goals .general p { font-size: 20px; line-height: 1.28; }

@@ -1,0 +1,493 @@
+/* =============================================================================
+   IESA · Especialización Técnica en IA — overrides propios
+   Hereda paleta/tipografía/tamaño de slide de ../_base/styles.css.
+   Bloques bespoke (no existen en el base): vías evaluadas, modelo de MC,
+   desglose de MC, mapeo académico, esquema legal, modelo económico,
+   responsabilidades de las partes. "Cómo arrancamos" reusa .s-steps del base
+   con contenido estático (sin AcroForms: esta propuesta no lleva campos
+   editables de precio/entregables — es una propuesta de alianza, no una
+   cotización de participantes).
+   ============================================================================= */
+
+/* Portada: sin código de catálogo (§4.19, propuesta bespoke sin CAP) — un solo
+   span en el id-line, alineado al borde derecho como el resto de los decks. */
+.s-cover .id-line { justify-content: flex-end; }
+
+/* ---------- Header genérico reusado por los bloques nuevos ---------- */
+.s-vias, .s-mc-model, .s-mc-desglose, .s-mapeo, .s-legal, .s-economico, .s-resp {
+  background: var(--white);
+  color: var(--black);
+  padding: 60px 64px 78px;
+}
+.s-vias::before, .s-mc-desglose::before, .s-mapeo::before, .s-economico::before, .s-resp::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 12px; height: 100%;
+  background: var(--black);
+}
+.s-vias::after, .s-mc-desglose::after, .s-mapeo::after, .s-economico::after, .s-resp::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 12px;
+  width: 12px; height: 100%;
+  background: var(--yellow);
+}
+.s-mc-model::before, .s-legal::before {
+  content: "";
+  position: absolute;
+  top: 0; right: 0;
+  width: 8px; height: 100%;
+  background: var(--orange);
+}
+.s-vias .eyebrow, .s-mc-model .eyebrow, .s-mc-desglose .eyebrow,
+.s-mapeo .eyebrow, .s-legal .eyebrow, .s-economico .eyebrow, .s-resp .eyebrow {
+  color: var(--orange);
+  margin-bottom: 12px;
+  position: relative;
+  z-index: 2;
+}
+.s-vias h2, .s-mc-model h2, .s-mc-desglose h2,
+.s-mapeo h2, .s-legal h2, .s-economico h2, .s-resp h2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.08;
+  letter-spacing: -0.015em;
+  margin-bottom: 22px;
+  max-width: 980px;
+  position: relative;
+  z-index: 2;
+}
+
+/* ===========================================================================
+   04 · Tres vías evaluadas
+   =========================================================================== */
+.vias-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 18px;
+  position: relative;
+  z-index: 2;
+}
+.via-card {
+  border: 3px solid var(--black);
+  padding: 22px 20px;
+  display: flex;
+  flex-direction: column;
+  min-height: 400px;
+}
+.via-card.is-yes {
+  background: var(--black);
+  color: var(--white);
+  border-color: var(--yellow);
+  margin-top: -10px;
+  padding-top: 32px;
+  min-height: 420px;
+}
+.via-tag {
+  display: inline-block;
+  align-self: flex-start;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  margin-bottom: 18px;
+  background: #b9b9b9;
+  color: var(--black);
+}
+.via-card.is-yes .via-tag { background: var(--yellow); color: var(--black); }
+.via-card.is-mid .via-tag { background: var(--white); color: var(--black); border: 2px solid var(--black); }
+.via-num {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 52px;
+  line-height: 1;
+  color: #b9b9b9;
+  margin-bottom: 8px;
+}
+.via-card.is-yes .via-num { color: var(--yellow); }
+.via-card.is-mid .via-num { color: var(--orange); }
+.via-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 1.15;
+  margin-bottom: 12px;
+}
+.via-desc {
+  font-size: 13.5px;
+  line-height: 1.42;
+  margin-bottom: 16px;
+  opacity: 0.92;
+}
+.via-list { list-style: none; margin-top: auto; }
+.via-list li {
+  font-size: 12.5px;
+  line-height: 1.4;
+  padding-left: 18px;
+  position: relative;
+  margin-bottom: 7px;
+}
+.via-list li::before { content: "→"; position: absolute; left: 0; font-weight: 700; }
+
+/* ===========================================================================
+   05 · Modelo recomendado (4 MC)
+   =========================================================================== */
+.mc-how {
+  background: var(--black);
+  color: var(--white);
+  padding: 26px 32px;
+  border-left: 10px solid var(--yellow);
+  margin-bottom: 26px;
+  position: relative;
+  z-index: 2;
+}
+.mc-how .label {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--yellow);
+  margin-bottom: 10px;
+}
+.mc-how p {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 1.35;
+  max-width: 980px;
+}
+.mc-how p.sub {
+  font-weight: 400;
+  font-size: 14px;
+  margin-top: 10px;
+  max-width: 900px;
+  opacity: 0.9;
+}
+.mc-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  position: relative;
+  z-index: 2;
+  margin-bottom: 18px;
+}
+.mc-chip {
+  background: var(--yellow);
+  color: var(--black);
+  padding: 20px 14px;
+  text-align: center;
+}
+.mc-chip .mc-tag {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 22px;
+  display: block;
+  margin-bottom: 8px;
+}
+.mc-chip .mc-name {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 1.25;
+}
+.mc-total-band {
+  background: var(--black);
+  color: var(--white);
+  text-align: center;
+  padding: 18px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 17px;
+  letter-spacing: 0.02em;
+  position: relative;
+  z-index: 2;
+}
+.mc-total-band .em { color: var(--yellow); }
+
+/* ===========================================================================
+   06 · Desglose de las 4 MC
+   =========================================================================== */
+.mc-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  position: relative;
+  z-index: 2;
+  margin-bottom: 12px;
+}
+.mc-card {
+  border: 3px solid var(--black);
+  padding: 14px 20px 10px;
+}
+.mc-card .mc-card-num {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 1;
+  color: var(--yellow);
+  -webkit-text-stroke: 1.5px var(--black);
+  margin-bottom: 2px;
+}
+.mc-card h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 16.5px;
+  line-height: 1.2;
+  margin-bottom: 4px;
+}
+.mc-card .mc-meta {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--orange);
+  margin-bottom: 10px;
+}
+.mc-card ul {
+  list-style: none;
+  columns: 1;
+}
+.mc-card ul li {
+  font-size: 12px;
+  line-height: 1.55;
+  padding-left: 14px;
+  position: relative;
+}
+.mc-card ul li::before { content: "·"; position: absolute; left: 0; font-weight: 700; color: var(--orange); }
+
+.mc-total-card {
+  background: var(--black);
+  color: var(--white);
+  padding: 12px 26px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  position: relative;
+  z-index: 2;
+}
+.mc-total-card .sigma { font-family: var(--font-display); font-weight: 700; font-size: 34px; color: var(--yellow); }
+.mc-total-card .tt-title { font-family: var(--font-display); font-weight: 700; font-size: 15px; line-height: 1.3; }
+.mc-total-card .tt-num { font-family: var(--font-display); font-weight: 700; font-size: 18px; color: var(--yellow); white-space: nowrap; }
+.mc-total-card .tt-list { font-size: 11px; line-height: 1.5; opacity: 0.85; max-width: 380px; }
+
+/* ===========================================================================
+   07 · Mapeo académico
+   =========================================================================== */
+.mapeo-table {
+  width: 100%;
+  border-collapse: collapse;
+  position: relative;
+  z-index: 2;
+  margin-bottom: 18px;
+  font-size: 13px;
+}
+.mapeo-table thead th {
+  background: var(--black);
+  color: var(--white);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 10.5px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-align: left;
+  padding: 11px 14px;
+}
+.mapeo-table tbody td {
+  padding: 11px 14px;
+  border-bottom: 1px solid #ddd;
+  vertical-align: top;
+}
+.mapeo-table tbody tr:nth-child(odd) { background: #fafafa; }
+.mapeo-table td.mc-badge {
+  background: var(--yellow);
+  font-weight: 700;
+  text-align: center;
+  width: 42px;
+}
+.mapeo-table tr.total-row td {
+  background: var(--black);
+  color: var(--yellow);
+  font-weight: 700;
+  border-bottom: none;
+}
+.mapeo-note {
+  border-left: 6px solid var(--orange);
+  padding: 12px 20px;
+  font-size: 12px;
+  line-height: 1.5;
+  position: relative;
+  z-index: 2;
+  max-width: 980px;
+}
+.mapeo-note strong { color: var(--orange); }
+
+/* ===========================================================================
+   08 · Esquema legal
+   =========================================================================== */
+.legal-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  position: relative;
+  z-index: 2;
+}
+.legal-card {
+  padding: 20px 24px;
+  border-top: 8px solid var(--orange);
+}
+.legal-card.is-dark { background: var(--black); color: var(--white); border-top-color: var(--yellow); }
+.legal-card .legal-label {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--orange);
+  margin-bottom: 8px;
+}
+.legal-card.is-dark .legal-label { color: var(--yellow); }
+.legal-card h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+.legal-card p.legal-body { font-size: 12px; line-height: 1.45; margin-bottom: 8px; }
+.legal-card ul { list-style: none; }
+.legal-card li {
+  font-size: 12px;
+  line-height: 1.5;
+  padding-left: 14px;
+  position: relative;
+}
+.legal-card li::before { content: "■"; position: absolute; left: 0; font-size: 8px; top: 4px; color: var(--orange); }
+.legal-card.is-dark li::before { color: var(--yellow); }
+
+/* ===========================================================================
+   09 · Modelo económico
+   =========================================================================== */
+.econ-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 20px;
+  position: relative;
+  z-index: 2;
+}
+.econ-card { padding: 22px 26px; }
+.econ-card.is-dark { background: var(--black); color: var(--white); }
+.econ-card.is-light { border: 3px solid var(--black); }
+.econ-tag {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  margin-bottom: 14px;
+  background: var(--yellow);
+  color: var(--black);
+}
+.econ-card.is-light .econ-tag { background: var(--black); color: var(--white); }
+.econ-card h3 { font-family: var(--font-display); font-weight: 700; font-size: 18px; line-height: 1.2; margin-bottom: 12px; }
+.econ-intro {
+  padding: 12px 16px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 12.5px;
+  line-height: 1.4;
+  margin-bottom: 12px;
+}
+.econ-card.is-dark .econ-intro { background: var(--yellow); color: var(--black); }
+.econ-card.is-light .econ-intro { background: var(--black); color: var(--white); }
+.econ-card p.econ-body { font-size: 12px; line-height: 1.45; margin-bottom: 12px; }
+.econ-formula {
+  border: 1px solid rgba(255,255,255,0.35);
+  padding: 12px 16px;
+  font-size: 12px;
+  line-height: 1.6;
+}
+.econ-card.is-light .econ-formula { border-color: #ccc; }
+.econ-note {
+  font-size: 10.5px;
+  line-height: 1.4;
+  margin-top: 10px;
+  opacity: 0.8;
+}
+.econ-anchors { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; margin-bottom: 12px; }
+.econ-anchor { border: 2px solid var(--black); padding: 10px 6px; text-align: center; }
+.econ-anchor.is-mid { border-color: var(--orange); }
+.econ-anchor.is-strong { background: var(--black); color: var(--white); border-color: var(--black); }
+.econ-anchor .a-tag { font-size: 9px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; display: block; margin-bottom: 4px; }
+.econ-anchor .a-val { font-family: var(--font-display); font-weight: 700; font-size: 19px; display: block; }
+.econ-anchor .a-cap { font-size: 9.5px; display: block; margin-top: 2px; }
+.econ-formula-2 { font-size: 11.5px; line-height: 1.5; border-top: 2px solid var(--black); padding-top: 10px; }
+
+/* ===========================================================================
+   10 · Responsabilidades de las partes
+   =========================================================================== */
+.resp-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  position: relative;
+  z-index: 2;
+}
+.resp-card { background: var(--black); color: var(--white); padding: 20px 26px; }
+.resp-card .resp-tag {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 0.02em;
+  margin-bottom: 4px;
+}
+.resp-card .resp-sub {
+  font-size: 11px;
+  color: var(--yellow);
+  margin-bottom: 14px;
+  line-height: 1.4;
+}
+.resp-card dl { display: flex; flex-direction: column; gap: 9px; }
+.resp-card dt {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 12.5px;
+  color: var(--yellow);
+  margin-bottom: 2px;
+}
+.resp-card dd { font-size: 11.5px; line-height: 1.4; opacity: 0.92; }
+
+/* ===========================================================================
+   11 · Cómo arrancamos — contenido estático dentro de .s-steps (base)
+   =========================================================================== */
+.s-arranque .step-card { display: flex; flex-direction: column; position: relative; z-index: 1; }
+/* El .ghost del base es position:absolute z-index:0 — en el sistema canónico el
+   texto real nunca se pinta en el HTML (solo el AcroForm /V, capa de anotación
+   siempre por encima). Aquí el texto SÍ es contenido estático real, así que el
+   ghost debe quedar detrás explícitamente o el orden de pintado CSS lo tapa. */
+.s-arranque .step-card .ghost { z-index: -1; }
+.s-arranque .step-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+.s-arranque .step-body { font-size: 12.5px; line-height: 1.45; margin-bottom: 14px; }
+.s-arranque .step-plazo {
+  margin-top: auto;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 10.5px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--orange);
+}

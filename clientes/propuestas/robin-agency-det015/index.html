@@ -1,0 +1,821 @@
+<!doctype html>
+<!--
+  Propuesta — Robin Agency (DET-015)
+  Servicio: DETECCIÓN (Modelo Intezia). División: Educación. Primer contacto con este tipo de
+  servicio (hubo una propuesta previa de Habilidades para 3 departamentos, rechazada por
+  presupuesto/cambio de enfoque — no se menciona en este deck, ver brief.md). Fuente primaria:
+  Ficha de Levantamiento (Levantamiento_Robin_Agency_2026-09-16.pdf, asesora Flavia Martínez).
+
+  AJUSTE 2026-09-18 (instrucción directa del usuario): se reemplaza el esquema anterior
+  (Fundamentals 2h + "Trabajo por Área" 4h con logro inmediato incluido, 6h totales) por 4
+  SESIONES DE 2H CADA UNA — Fundamentos, Detección, Construcción, Adopción — 8h totales:
+  1. Fundamentos (2h): qué es la IA, prompting (con Claude), y el vocabulario de Artefacto,
+     Skill y Proyecto.
+  2. Detección (2h): auditoría y diagnóstico de procesos. SIN logro inmediato — ya no se
+     construye nada en esta sesión.
+  3. Construcción (2h): se construye a partir de lo detectado. Logros tangibles — aquí vive
+     ahora el logro que antes estaba en Detección (ejemplo: skill que lee currículums,
+     ligada a Reclutamiento y Selección).
+  4. Adopción (2h): se capacita al equipo en el uso y gestión de lo construido. Cierra con el
+     Reporte Final (Índice de Madurez + recomendación de ecosistema de IA + retorno de
+     inversión estimado).
+  Cadencia recomendada (instrucción del usuario): 2 sesiones por semana, o al menos 2 días
+  entre las sesiones 2 (Detección) y 3 (Construcción) — ese margen reemplaza la antigua fase
+  interna de "Priorización" (Mapa de Calor): Intezia lo usa para decidir qué construir.
+  Roadmap dividido en 2 slides de 2 etapas + resultado cada una (patrón de
+  simple-tv-all002/maurel-prom) en vez de 1 sola slide de 3 etapas — evita necesitar un 4º
+  color de nodo (paleta de marca ya usa amarillo/naranja/blanco en las 3 etapas previas) y
+  evita angostar las cards por debajo del ancho ya usado con texto de longitud similar.
+  Ver brief.md → "Ajuste 2026-09-18" para el detalle completo.
+
+  1 ÁREA (dato directo de la ficha, sin ambigüedad): Talento Humano, 4 a 6 personas,
+  responsable María Silva (Directora del área, decisora única). MODALIDAD PRESENCIAL en las
+  oficinas de Robin Agency (dato explícito de la ficha).
+  HERRAMIENTA: Claude mencionado con confianza pero SIN cerrar la decisión. El cliente pidió
+  explícitamente ayuda para confirmar si Claude es la herramienta indicada y que Fundamentos
+  se dé "en base a esa herramienta" — la directora de Talento ya la usa con licencia personal.
+  Se nombra en Fundamentos (práctica de prompting) y en Beneficios/Notas; el Reporte Final
+  (cierre de Adopción) sigue enmarcado como CONFIRMACIÓN con los hallazgos, no como
+  recomendación ya decidida (ABR respetada).
+  RETORNO DE INVERSIÓN (ROI): pedido explícito del cliente para el Reporte Final, junto al
+  Índice de Madurez y la recomendación de ecosistema — reflejado en Objetivos, Programa,
+  Roadmap y Beneficios.
+  3 PROCESOS ESPECÍFICOS (Bloque C), todos ya mapeados y regulados por ISO pero manuales:
+  reclutamiento y selección (mensual), análisis de compensación (semanal), métricas de
+  desempeño (semanal). Logro tangible candidato (no cerrado, reubicado a Construcción): skill
+  que lea currículums y arroje los mejores candidatos, ligada a reclutamiento.
+  SIN mención de la propuesta anterior rechazada (contexto interno, no de cara al cliente).
+  SIN mención del interés del cliente en "clon digital" (nota interna para fase 2/3, no
+  cotizada en este documento).
+  Sin slide de Mapa de Calor ni Metodología ABR ni Equipo facilitador expuestos (§4.10a). Sin
+  certificado (Detección pura). Beneficios v3, Cierre escalera, servicio@intezia.com.
+  .rmx-ethics con padding-right:230px aplicado por defecto.
+  Sin <strong> dentro de ningún <li> de .s-pain/.s-goals/.s-schedule (bug-strong-flex-specifics.md).
+  Impacto (§4.9): SHRM — 2025 Talent Trends (43% de profesionales de RR.HH. ya usa IA, arriba
+  de 26% en 2024; 51% de organizaciones usa IA para reclutamiento; 82% de quienes usan IA en
+  contratación la aplican a revisión de currículos, conecta con el logro tangible) + ITIF (mayo
+  2025, usuarios frecuentes de IA generativa ahorran 4+ horas semanales, conecta con el
+  objetivo del cliente de reducir carga operativa).
+  15 slides · precio estándar (Propuesta Económica, un solo servicio).
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Propuesta · Robin Agency · Intezia</title>
+  <link rel="stylesheet" href="../_base/styles.css">
+  <link rel="stylesheet" href="overrides.css">
+</head>
+<body>
+
+  <main class="deck">
+
+    <!-- 1 · Portada -->
+    <section class="slide s-cover">
+      <span class="counter">01 / 15</span>
+      <div class="logo-big">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia">
+      </div>
+      <div class="body">
+        <p class="eyebrow">Propuesta formativa · Servicio de Detección</p>
+        <h1>
+          Del uso suelto<br>
+          <span class="hl">a un método claro.</span>
+        </h1>
+        <p class="lead">
+          Nivelamos a Talento Humano con <strong>Fundamentos</strong>, auditamos sus procesos sin comprometer nada antes de tiempo, construimos un logro tangible a partir de lo detectado y capacitamos al equipo en su uso, en 4 sesiones de 2 horas, para pasar del uso suelto de hoy a una adopción con método.
+        </p>
+      </div>
+      <div class="id-line">
+        <span class="codigo">Código: DET-015</span>
+        <span class="cliente">Robin Agency</span>
+      </div>
+    </section>
+
+    <!-- 2 · Punto de dolor + Diagnóstico -->
+    <section class="slide s-pain">
+      <span class="counter">02 / 15</span>
+      <span class="quote-mark">&ldquo;</span>
+      <div class="body">
+        <h2>"Queremos pasar de 0 a 100 en la adopción de IA."</h2>
+        <p class="context">
+          Robin Agency nunca ha recibido una Detección de IA. Talento Humano usa la IA hoy de forma suelta y sin criterio común, mientras la propia directora del área ya explora Claude con su licencia personal, de forma básica.
+        </p>
+        <p class="diag-title">Diagnóstico</p>
+        <ol>
+          <li>El equipo usa la IA de forma suelta y sin criterio común, sin haber recibido formación antes.</li>
+          <li>Reclutamiento y selección, análisis de compensación y métricas de desempeño ya están mapeados y regulados por ISO, pero se ejecutan de forma manual.</li>
+          <li>La directora del área ya explora Claude con su propia licencia personal, sin que la empresa tenga licencias corporativas todavía.</li>
+          <li>Sin un diagnóstico previo, cada proceso seguiría abordándose por separado, sin una ruta de prioridades ni un criterio común.</li>
+          <li>Cada hora dedicada a tareas manuales es tiempo que el equipo no dedica a decisiones estratégicas de talento.</li>
+        </ol>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">ROBIN AGENCY · DET-015</span>
+      </div>
+    </section>
+
+    <!-- 3 · Objetivos estratégicos -->
+    <section class="slide s-goals">
+      <span class="counter">03 / 15</span>
+      <p class="eyebrow">02 · Objetivos</p>
+      <h2>A dónde llevamos<br>a Talento Humano.</h2>
+      <div class="columns">
+        <div class="general">
+          <p class="label">Objetivo general</p>
+          <p>
+            Llevar a Talento Humano de Robin Agency, en 4 sesiones de 2 horas, del uso suelto de IA de hoy a una adopción con método: nivelar al equipo, auditar sus procesos, construir un logro tangible a partir de lo detectado y capacitarlo en su uso, confirmando si Claude es la herramienta indicada para sus procesos.
+          </p>
+        </div>
+        <div class="specifics">
+          <p class="label">Objetivos específicos</p>
+          <ol>
+            <li>Nivelar al equipo con una sesión de Fundamentos: qué es la IA, prompting con Claude, y el vocabulario de Artefacto, Skill y Proyecto.</li>
+            <li>Auditar y diagnosticar los procesos reales del área, sin comprometer un logro inmediato antes de tiempo.</li>
+            <li>Construir un logro tangible a partir de lo detectado, empezando por reclutamiento y selección.</li>
+            <li>Capacitar al equipo en el uso y gestión de lo construido, y entregar un Reporte Final con el Índice de Madurez, la recomendación de ecosistema de IA y una estimación de retorno de inversión.</li>
+          </ol>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">ROBIN AGENCY · DET-015</span>
+      </div>
+    </section>
+
+    <!-- 4 · Programa -->
+    <section class="slide s-program">
+      <span class="counter">04 / 15</span>
+      <p class="eyebrow">03 · El proyecto</p>
+      <h2>Un área, un mismo criterio.</h2>
+      <p class="meta">Fundamentos, Detección, Construcción y Adopción, modalidad presencial.</p>
+      <div class="modules">
+        <div class="module">
+          <span class="roman">I</span>
+          <h3>Fundamentos</h3>
+          <p class="obj">Nivela al equipo en fundamentos de IA, prompting y el vocabulario de construcción.</p>
+          <ul class="topics">
+            <li>Qué es la IA y prompting</li>
+            <li>Artefacto, Skill y Proyecto</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">II</span>
+          <h3>Detección</h3>
+          <p class="obj">Audita y diagnostica los procesos reales del área, sin comprometer un logro inmediato.</p>
+          <ul class="topics">
+            <li>Auditoría de procesos</li>
+            <li>Diagnóstico, sin logro inmediato</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">III</span>
+          <h3>Construcción</h3>
+          <p class="obj">Construye un logro tangible a partir de lo detectado en la sesión anterior.</p>
+          <ul class="topics">
+            <li>Del hallazgo al logro</li>
+            <li>Logro tangible construido</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">IV</span>
+          <h3>Adopción</h3>
+          <p class="obj">Capacita al equipo en el uso y gestión de lo construido, y cierra con el Reporte Final.</p>
+          <ul class="topics">
+            <li>Uso y gestión</li>
+            <li>Reporte Final</li>
+          </ul>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">ROBIN AGENCY · DET-015</span>
+      </div>
+    </section>
+
+    <!-- 5 · Roadmap 1/2 · Fundamentos y Detección -->
+    <section class="slide s-roadmap">
+      <span class="counter">05 / 15</span>
+      <p class="eyebrow">04 · Roadmap · Fundamentos y Detección</p>
+      <h2>Nivelar antes<br>de <span class="hl">auditar</span>.</h2>
+
+      <div class="rmx-field">
+        <div class="rmx-linear">
+
+          <div class="rmx-lrow-nodes">
+            <div class="rmx-lcol"><div class="rmx-node rmx-node-f2">1</div></div>
+            <div class="rmx-arrow"></div>
+            <div class="rmx-lcol"><div class="rmx-node rmx-node-f3">2</div></div>
+            <div class="rmx-arrow"></div>
+            <div class="rmx-lcol"><div class="rmx-node rmx-node-r">&#9733;</div></div>
+          </div>
+
+          <div class="rmx-lrow-cards">
+            <div class="rmx-lcol">
+              <div class="rmx-card rmx-card-f2">
+                <span class="rmx-card-tag">Etapa 1 · Fundamentos</span>
+                <div class="rmx-card-name">2h · vocabulario y prompting</div>
+                <ul class="rmx-facets">
+                  <li><span>Qué pasa</span><p>Nivelamos al equipo en qué es la IA, prompting con Claude, y el vocabulario de Artefacto, Skill y Proyecto.</p></li>
+                  <li><span>Con quién</span><p>El equipo de Talento Humano, en sesión grupal.</p></li>
+                  <li><span>Entrega</span><p>Equipo nivelado, con primer contacto guiado en Claude.</p></li>
+                </ul>
+              </div>
+            </div>
+            <div class="rmx-lspacer"></div>
+            <div class="rmx-lcol">
+              <div class="rmx-card rmx-card-f3">
+                <span class="rmx-card-tag">Etapa 2 · Detección</span>
+                <div class="rmx-card-name">2h · auditoría, sin logro inmediato</div>
+                <ul class="rmx-facets">
+                  <li><span>Qué pasa</span><p>Auditamos y diagnosticamos los procesos reales del área, sin construir nada todavía.</p></li>
+                  <li><span>Con quién</span><p>El equipo de Talento Humano, en sesión grupal.</p></li>
+                  <li><span>Entrega</span><p>Inventario real de procesos del área.</p></li>
+                </ul>
+              </div>
+            </div>
+            <div class="rmx-lspacer"></div>
+            <div class="rmx-lcol">
+              <div class="rmx-result-card">
+                <span class="rmx-result-label">Cierre de esta etapa</span>
+                <div class="rmx-result-title">Equipo nivelado, área diagnosticada</div>
+                <ul>
+                  <li>Lenguaje común de IA instalado</li>
+                  <li>Procesos reales mapeados, listos para decidir qué construir</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /.rmx-linear -->
+      </div><!-- /.rmx-field -->
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">ROBIN AGENCY · DET-015</span>
+      </div>
+    </section>
+
+    <!-- 6 · Roadmap 2/2 · Construcción y Adopción -->
+    <section class="slide s-roadmap">
+      <span class="counter">06 / 15</span>
+      <p class="eyebrow">04 · Roadmap · Construcción y Adopción</p>
+      <h2>De lo detectado,<br>un <span class="hl">logro tangible</span>.</h2>
+
+      <div class="rmx-field">
+        <div class="rmx-linear">
+
+          <div class="rmx-lrow-nodes">
+            <div class="rmx-lcol"><div class="rmx-node rmx-node-f2">3</div></div>
+            <div class="rmx-arrow"></div>
+            <div class="rmx-lcol"><div class="rmx-node rmx-node-f3">4</div></div>
+            <div class="rmx-arrow"></div>
+            <div class="rmx-lcol"><div class="rmx-node rmx-node-r">&#9733;</div></div>
+          </div>
+
+          <div class="rmx-lrow-cards">
+            <div class="rmx-lcol">
+              <div class="rmx-card rmx-card-f2">
+                <span class="rmx-card-tag">Etapa 3 · Construcción</span>
+                <div class="rmx-card-name">2h · logro tangible</div>
+                <ul class="rmx-facets">
+                  <li><span>Qué pasa</span><p>Construimos un logro tangible a partir de lo detectado, empezando por reclutamiento y selección.</p></li>
+                  <li><span>Con quién</span><p>El equipo de Talento Humano, en sesión grupal.</p></li>
+                  <li><span>Entrega</span><p>Un logro tangible aplicable, ya funcionando.</p></li>
+                </ul>
+              </div>
+            </div>
+            <div class="rmx-lspacer"></div>
+            <div class="rmx-lcol">
+              <div class="rmx-card rmx-card-f3">
+                <span class="rmx-card-tag">Etapa 4 · Adopción</span>
+                <div class="rmx-card-name">2h · uso y gestión</div>
+                <ul class="rmx-facets">
+                  <li><span>Qué pasa</span><p>Capacitamos al equipo en el uso y gestión de lo construido en la sesión anterior.</p></li>
+                  <li><span>Con quién</span><p>El equipo de Talento Humano, en sesión grupal.</p></li>
+                  <li><span>Entrega</span><p>Equipo capacitado + Reporte Final.</p></li>
+                </ul>
+              </div>
+            </div>
+            <div class="rmx-lspacer"></div>
+            <div class="rmx-lcol">
+              <div class="rmx-result-card">
+                <span class="rmx-result-label">Entregable insignia · Reporte Final</span>
+                <div class="rmx-result-title">De uso suelto a <b>una adopción con método</b></div>
+                <ul>
+                  <li>Logro tangible construido y adoptado</li>
+                  <li>Índice de Madurez + recomendación de IA</li>
+                  <li>Retorno de inversión estimado</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /.rmx-linear -->
+
+        <div class="rmx-ethics">
+          <span class="rmx-ethics-tag">Metodología ABR · Diagnóstico antes de recomendar</span>
+          <p>El Reporte Final confirma la recomendación de IA con los hallazgos reales, no antes.</p>
+        </div>
+
+      </div><!-- /.rmx-field -->
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">ROBIN AGENCY · DET-015</span>
+      </div>
+    </section>
+
+    <!-- 7 · Cronograma · Sesión 1 · Fundamentos -->
+    <section class="slide s-schedule">
+      <span class="counter">07 / 15</span>
+      <p class="eyebrow">04 · Cronograma · Fundamentos</p>
+
+      <div class="ses-head">
+        <div>
+          <span class="ses-mod">Sesión 1 de 4 · Talento Humano (4 a 6 personas) · Modalidad presencial</span>
+          <h2>Fundamentos</h2>
+        </div>
+        <div class="ses-meta"><span class="ses-dur">2h</span></div>
+      </div>
+
+      <div class="ses-body">
+        <div class="ses-block">
+          <span class="label">Temas</span>
+          <div class="chips">
+            <span class="chip">Qué es y qué no es la IA</span>
+            <span class="chip">Prompting con Claude</span>
+            <span class="chip">Artefacto, Skill y Proyecto</span>
+            <span class="chip">Preguntas y expectativas</span>
+          </div>
+        </div>
+        <div class="ses-block">
+          <span class="label">Tiempo · Total 2 h</span>
+          <div class="timebar">
+            <div class="seg" style="flex:30">30' Encuadre y fundamentos</div>
+            <div class="seg" style="flex:45">45' Prompting con Claude</div>
+            <div class="seg" style="flex:30">30' Artefacto, Skill y Proyecto</div>
+            <div class="seg" style="flex:15">15' Cierre y preguntas</div>
+          </div>
+        </div>
+        <div class="ses-cols">
+          <div class="ses-block">
+            <span class="label">Qué se hace</span>
+            <ul>
+              <li>Presentamos qué es y qué no es la IA, con casos reales de RR.HH.</li>
+              <li>Practicamos prompting con Claude, la herramienta que el equipo ya empieza a explorar</li>
+              <li>Presentamos el vocabulario de Artefacto, Skill y Proyecto, la base de lo que se construye después</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Qué se logra</span>
+            <ul>
+              <li>El equipo llega a la auditoría con un lenguaje común</li>
+              <li>Primer contacto guiado con Claude, más allá del uso personal de hoy</li>
+              <li>Entiende qué tipo de logro puede construirse a partir de un diagnóstico</li>
+            </ul>
+          </div>
+          <div class="ses-block block-rec">
+            <span class="label">Recursos y entornos</span>
+            <ul>
+              <li>Sesión presencial, equipo de Talento Humano</li>
+              <li>Cuenta de Claude para la práctica guiada</li>
+              <li>Glosario de Artefacto, Skill y Proyecto</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">ROBIN AGENCY · DET-015</span>
+      </div>
+    </section>
+
+    <!-- 8 · Cronograma · Sesión 2 · Detección -->
+    <section class="slide s-schedule">
+      <span class="counter">08 / 15</span>
+      <p class="eyebrow">04 · Cronograma · Detección</p>
+
+      <div class="ses-head">
+        <div>
+          <span class="ses-mod">Sesión 2 de 4 · Talento Humano · Modalidad presencial</span>
+          <h2>Detección</h2>
+        </div>
+        <div class="ses-meta"><span class="ses-dur">2h</span></div>
+      </div>
+
+      <div class="ses-body">
+        <div class="ses-block">
+          <span class="label">Temas</span>
+          <div class="chips">
+            <span class="chip">Procesos reales del área</span>
+            <span class="chip">Cuellos de botella</span>
+            <span class="chip">Datos de compensación y desempeño</span>
+            <span class="chip">Sin logro inmediato</span>
+          </div>
+        </div>
+        <div class="ses-block">
+          <span class="label">Tiempo · Total 2 h</span>
+          <div class="timebar">
+            <div class="seg" style="flex:45">45' Contexto y objetivos</div>
+            <div class="seg" style="flex:60">60' Levantamiento de procesos</div>
+            <div class="seg" style="flex:15">15' Cierre y siguientes pasos</div>
+          </div>
+        </div>
+        <div class="ses-cols">
+          <div class="ses-block">
+            <span class="label">Qué se hace</span>
+            <ul>
+              <li>Entrevistamos al equipo sobre sus procesos reales de reclutamiento, compensación y desempeño</li>
+              <li>Identificamos los cuellos de botella más relevantes</li>
+              <li>Consolidamos el inventario, sin construir nada todavía</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Qué se logra</span>
+            <ul>
+              <li>Inventario real de procesos del área</li>
+              <li>Claridad sobre qué proceso conviene abordar primero</li>
+              <li>Información lista para decidir qué construir en la siguiente sesión</li>
+            </ul>
+          </div>
+          <div class="ses-block block-rec">
+            <span class="label">Recursos y entornos</span>
+            <ul>
+              <li>Sesión presencial en las oficinas de Robin Agency</li>
+              <li>Guion de levantamiento Intezia</li>
+              <li>Sin tocar los sistemas internos de Robin Agency</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">ROBIN AGENCY · DET-015</span>
+      </div>
+    </section>
+
+    <!-- 9 · Cronograma · Sesión 3 · Construcción -->
+    <section class="slide s-schedule">
+      <span class="counter">09 / 15</span>
+      <p class="eyebrow">04 · Cronograma · Construcción</p>
+
+      <div class="ses-head">
+        <div>
+          <span class="ses-mod">Sesión 3 de 4 · Talento Humano · Modalidad presencial</span>
+          <h2>Construcción</h2>
+        </div>
+        <div class="ses-meta"><span class="ses-dur">2h</span></div>
+      </div>
+
+      <div class="ses-body">
+        <div class="ses-block">
+          <span class="label">Temas</span>
+          <div class="chips">
+            <span class="chip">Del hallazgo al Artefacto o Skill</span>
+            <span class="chip">Reclutamiento y selección</span>
+            <span class="chip">Construcción guiada</span>
+            <span class="chip">Logro tangible</span>
+          </div>
+        </div>
+        <div class="ses-block">
+          <span class="label">Tiempo · Total 2 h</span>
+          <div class="timebar">
+            <div class="seg" style="flex:30">30' Del hallazgo al logro</div>
+            <div class="seg" style="flex:75">75' Construcción guiada</div>
+            <div class="seg" style="flex:15">15' Cierre</div>
+          </div>
+        </div>
+        <div class="ses-cols">
+          <div class="ses-block">
+            <span class="label">Qué se hace</span>
+            <ul>
+              <li>Priorizamos, junto al equipo, cuál hallazgo de la Detección conviene construir primero</li>
+              <li>Construimos en la misma sesión un logro tangible, empezando por reclutamiento y selección</li>
+              <li>Dejamos el logro funcionando, listo para adoptarse</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Qué se logra</span>
+            <ul>
+              <li>Un logro tangible aplicable, ya construido</li>
+              <li>Ejemplo: una skill que lee currículums y sugiere los mejores candidatos</li>
+              <li>Base lista para la sesión de Adopción</li>
+            </ul>
+          </div>
+          <div class="ses-block block-rec">
+            <span class="label">Recursos y entornos</span>
+            <ul>
+              <li>Sesión presencial, equipo de Talento Humano</li>
+              <li>Cuenta de Claude</li>
+              <li>Caso real priorizado desde la Detección</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">ROBIN AGENCY · DET-015</span>
+      </div>
+    </section>
+
+    <!-- 10 · Cronograma · Sesión 4 · Adopción -->
+    <section class="slide s-schedule">
+      <span class="counter">10 / 15</span>
+      <p class="eyebrow">04 · Cronograma · Adopción</p>
+
+      <div class="ses-head">
+        <div>
+          <span class="ses-mod">Sesión 4 de 4 · Talento Humano · Modalidad presencial</span>
+          <h2>Adopción</h2>
+        </div>
+        <div class="ses-meta"><span class="ses-dur">2h</span></div>
+      </div>
+
+      <div class="ses-body">
+        <div class="ses-block">
+          <span class="label">Temas</span>
+          <div class="chips">
+            <span class="chip">Uso de lo construido</span>
+            <span class="chip">Gestión y mantenimiento</span>
+            <span class="chip">Índice de Madurez</span>
+            <span class="chip">Reporte Final</span>
+          </div>
+        </div>
+        <div class="ses-block">
+          <span class="label">Tiempo · Total 2 h</span>
+          <div class="timebar">
+            <div class="seg" style="flex:60">60' Uso y gestión de lo construido</div>
+            <div class="seg" style="flex:45">45' Reporte Final</div>
+            <div class="seg" style="flex:15">15' Cierre y compromiso</div>
+          </div>
+        </div>
+        <div class="ses-cols">
+          <div class="ses-block">
+            <span class="label">Qué se hace</span>
+            <ul>
+              <li>Capacitamos al equipo en el uso diario de lo construido en la sesión anterior</li>
+              <li>Revisamos cómo gestionarlo y mantenerlo en el tiempo</li>
+              <li>Presentamos el Reporte Final: Índice de Madurez, recomendación de ecosistema de IA y retorno de inversión</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Qué se logra</span>
+            <ul>
+              <li>Equipo capacitado en el uso y gestión de su propio logro</li>
+              <li>Claridad sobre si Claude es la herramienta indicada</li>
+              <li>Reporte Final con retorno de inversión estimado</li>
+            </ul>
+          </div>
+          <div class="ses-block block-rec">
+            <span class="label">Recursos y entornos</span>
+            <ul>
+              <li>Sesión presencial, equipo de Talento Humano</li>
+              <li>Lo construido en la sesión anterior</li>
+              <li>Reporte Final consolidado</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">ROBIN AGENCY · DET-015</span>
+      </div>
+    </section>
+
+    <!-- 11 · Beneficios (formato v3) -->
+    <section class="slide s-benefits s-benefits-v2">
+      <span class="counter">11 / 15</span>
+      <p class="eyebrow">05 · Beneficios</p>
+      <h2>Lo que <span class="hl">se llevan</span>.</h2>
+      <div class="grid">
+        <div class="block">
+          <p class="label">Resultados</p>
+          <ul>
+            <li>El área de <strong>Talento Humano</strong> auditada, con un logro tangible ya construido, empezando por reclutamiento y selección.</li>
+            <li>Equipo nivelado con Fundamentos antes de la auditoría.</li>
+            <li>Un Índice de Madurez y una estimación de retorno de inversión.</li>
+          </ul>
+        </div>
+        <div class="block">
+          <p class="label">Por qué Detección</p>
+          <p>
+            Antes de confirmar <strong>Claude</strong> como la herramienta indicada, Robin Agency conoce sus procesos de Talento Humano a fondo, construye un logro tangible a partir de ese diagnóstico y lo adopta con método.
+          </p>
+        </div>
+        <div class="block">
+          <p class="label">Entregables</p>
+        </div>
+        <div class="block">
+          <p class="label">Valor inmediato</p>
+        </div>
+      </div>
+
+      <div class="multi-box entregables-box" data-field="Entregables"></div>
+      <div class="multi-box acreditaciones-box" data-field="Acreditacion"></div>
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">ROBIN AGENCY · DET-015</span>
+      </div>
+    </section>
+
+    <!-- 12 · Impacto / estudios — datos reales, fuente citada (CLAUDE.md §4.9) -->
+    <section class="slide s-impact">
+      <span class="counter">12 / 15</span>
+
+      <div class="impact-head">
+        <p class="eyebrow">06 · Impacto</p>
+        <h2>El uso suelto no libera tiempo.<br><span class="hl">El criterio sí</span>.</h2>
+      </div>
+
+      <div class="impact-body">
+        <div class="chart-panel">
+          <p class="panel-title">Cómo adopta IA hoy el área de RR.HH.</p>
+          <div class="bars">
+            <div class="bar-row">
+              <span class="bar-label">Profesionales de RR.HH. que ya usan IA en sus tareas</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:43%"><span class="bar-val">43%</span></div></div>
+            </div>
+            <div class="bar-row">
+              <span class="bar-label">Organizaciones que ya usan IA para reclutamiento</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:51%"><span class="bar-val">51%</span></div></div>
+            </div>
+          </div>
+          <div class="bar-axis"><span class="scale"><span>0</span><span>25</span><span>50</span><span>75</span><span>100%</span></span></div>
+          <p class="panel-source">Fuente: SHRM &mdash; 2025 Talent Trends.</p>
+        </div>
+
+        <div class="gauge-panel">
+          <div class="gauge" style="--pct:82">
+            <div class="gauge-core">
+              <span class="gauge-num">82<span class="pct">%</span></span>
+              <span class="gauge-cap">de las empresas que usan IA en contratación la aplican a revisión de currículos</span>
+            </div>
+          </div>
+          <div class="chips">
+            <div class="chip">
+              <span class="chip-num">4+</span>
+              <span class="chip-lbl">horas semanales ahorran los usuarios frecuentes</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="impact-hook">
+        <span class="hook-mark">&#9656;</span>
+        <p class="hook-text">
+          El 43% de los profesionales de RR.HH. ya usa IA en sus tareas, frente a solo 26% en 2024 (SHRM, 2025): el mismo punto de partida de Talento Humano en Robin Agency. El 51% de las organizaciones ya usa IA para reclutamiento, y el 82% de quienes la aplican en contratación la usan para revisar currículos (SHRM, 2025), justo el logro tangible que el equipo ya tiene en la mira para su sesión de Construcción. Los usuarios frecuentes de IA generativa ahorran 4 horas o más a la semana (ITIF, 2025): el tiempo que Robin Agency quiere recuperar de su carga operativa.
+        </p>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">ROBIN AGENCY · DET-015</span>
+      </div>
+    </section>
+
+    <!-- 13 · Propuesta Económica (estándar: Duración + Programa + Notas + Cotización) -->
+    <section class="slide s-price">
+      <span class="counter">13 / 15</span>
+      <h2 class="title">Propuesta Económica</h2>
+
+      <div class="block">
+        <span class="block-eyebrow">Duración</span>
+        <p class="block-value">4 sesiones de 2h · 8 horas totales · modalidad presencial.</p>
+      </div>
+
+      <div class="block block-programa">
+        <span class="block-eyebrow">Programa</span>
+      </div>
+      <div class="multi-box programa-box" data-field="Programa"></div>
+
+      <div class="block block-cotizacion">
+        <span class="block-eyebrow">Cotización</span>
+      </div>
+
+      <span class="cot-label cot-label-base">Propuesta + Inversión</span>
+      <div class="cot-frame base-frame"></div>
+
+      <span class="cot-label cot-label-discount">Descuento</span>
+      <div class="cot-frame discount-frame"></div>
+
+      <span class="cot-label cot-label-total">TOTAL</span>
+      <div class="cot-frame total-frame"></div>
+
+      <p class="cot-validity">Cotización válida por 30 días.</p>
+      <div class="cot-terms-box">
+        <span class="cot-terms-label">Importante</span>
+        <p class="cot-terms-text">Este servicio se presta bajo nuestros <a href="https://drive.google.com/file/d/1PA-ZSt4KnyY5dpxXzgkIk6-yfGlV2eF8/view?usp=drive_link" target="_blank" rel="noopener">términos y condiciones</a>. Al avanzar con esta propuesta, ambas partes los aceptan.</p>
+      </div>
+
+      <div class="block block-notes-container">
+        <span class="block-eyebrow">Notas</span>
+      </div>
+      <div class="multi-box notas-box" data-field="Notas"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">ROBIN AGENCY · DET-015</span>
+      </div>
+    </section>
+
+    <!-- 14 · Próximos pasos -->
+    <section class="slide s-steps">
+      <span class="counter">14 / 15</span>
+      <p class="eyebrow">07 · Próximos pasos</p>
+      <h2>Cómo arrancamos.</h2>
+      <div class="step-cards">
+        <div class="step-card">
+          <span class="ghost">01</span>
+        </div>
+        <div class="step-card">
+          <span class="ghost">02</span>
+        </div>
+        <div class="step-card">
+          <span class="ghost">03</span>
+        </div>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-01-titulo" data-field="Paso01Titulo">
+        <span class="acro-default-text">Confirmamos fechas</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-01-body" data-field="Paso01Body">
+        <span class="acro-default-text">Definimos con María Silva el calendario de las 4 sesiones, dejando 2 días entre Detección y Construcción.</span>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-02-titulo" data-field="Paso02Titulo">
+        <span class="acro-default-text">Acceso y logística</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-02-body" data-field="Paso02Body">
+        <span class="acro-default-text">Coordinamos el acceso presencial en sus oficinas y la participación del equipo de Talento Humano.</span>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-03-titulo" data-field="Paso03Titulo">
+        <span class="acro-default-text">Reunión de arranque</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-03-body" data-field="Paso03Body">
+        <span class="acro-default-text">Sesión de unos 30 minutos con María Silva para alinear el alcance y los procesos a auditar.</span>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">ROBIN AGENCY · DET-015</span>
+      </div>
+    </section>
+
+    <!-- 15 · Cierre (ruta/escalera editable) -->
+    <section class="slide s-end">
+      <span class="counter">15 / 15</span>
+
+      <div class="end-logo">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia">
+      </div>
+
+      <div class="end-summit" data-field="CierreResultado">
+        <span class="acro-default-text">Robin Agency, con Talento Humano auditado, un logro tangible construido y adoptado, y un Índice de Madurez claro.</span>
+      </div>
+
+      <div class="end-stairs">
+        <div class="stair-step stair-1">
+          <span class="stair-label">Paso 1</span>
+          <div class="stair-field" data-field="CierrePaso1">
+            <span class="acro-default-text">Fundamentos y Detección</span>
+          </div>
+        </div>
+        <div class="stair-step stair-2">
+          <span class="stair-label">Paso 2</span>
+          <div class="stair-field" data-field="CierrePaso2">
+            <span class="acro-default-text">Construcción del logro tangible</span>
+          </div>
+        </div>
+        <div class="stair-step stair-3">
+          <span class="stair-label">Paso 3</span>
+          <div class="stair-field" data-field="CierrePaso3">
+            <span class="acro-default-text">Adopción + Reporte Final</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cta-wrap">
+        <span class="cta">Esperamos tu respuesta</span>
+      </div>
+
+      <div class="end-contact">
+        <p class="contact-line">
+          <span class="contact-label">Asesora de ventas:</span>
+          Flavia Martínez <span class="dot">·</span> +58 414-5756615 <span class="dot">·</span> fmartinez@intezia.com
+        </p>
+        <p class="contact-line">
+          <span class="contact-label">Empresa:</span>
+          Intezia C.A J-505657950 <span class="dot">·</span> servicio@intezia.com
+        </p>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

@@ -1,0 +1,969 @@
+<!doctype html>
+<!--
+  Propuesta — Luis Sosa, Consultor independiente · Cerebro Digital individual (CAI-029)
+  Servicio: HABILIDADES. División: Educación. Con Ficha Comercial (Levantamiento
+  2026-09-25, asesora Verónica Rubio) + documento propio del cliente (fydeh Programa
+  Mentoring 27-02-26.pdf, su deck de mercadeo del programa de mentoring).
+
+  QUÉ ES: construcción de 1 Cerebro Digital personal para Luis Sosa (consultor mentor
+  independiente, cartera activa con Farmatodo, IESA, Río, Canguro entre otros), conectado
+  a Claude Code (no Claude.ai + Obsidian). La Ficha confirma explícitamente que el caso no
+  encaja en los 4 servicios estándar y que lo que se cotiza es el producto Cerebro Digital
+  individual, con expectativa explícita del cliente de "un cerebro digital conectado a
+  Claude Code".
+
+  RESTRICCIÓN EXPLÍCITA DEL USUARIO (2026-09-25) — bloqueante para todo el enfoque: este
+  caso es un consultor individual, no una empresa con equipo. La propuesta automatiza SUS
+  PROPIOS procesos de consultoría (cotización de propuestas, diferenciación de tarifas por
+  tipo de hora, diseño instruccional de sus programas), no un despliegue corporativo. Por
+  eso NO se usa el patrón ligero (Projects+Skills+Obsidian, sin Claude Code) de
+  dhl-cerebro-digital/ o banco-plaza-cerebros-digitales/ — el cliente pidió explícitamente
+  Claude Code, que corresponde al patrón PROFUNDO (12h/persona, 6 sesiones de 2h,
+  construcción de agente con memoria persistente + subagentes + conectores MCP +
+  automatización), visto hasta ahora solo en la Fase 2 de venemergencia/ (deck corporativo
+  multi-fase). Aquí se extrae y adapta ese patrón profundo como propuesta mono-persona,
+  reescribiendo todo el contenido de ejemplo para los 2 dolores reales de Luis: cotización
+  de propuestas sin tarifas diferenciadas por tipo de hora, y diseño instruccional no
+  sistematizado de sus programas de mentoring/talleres. Sin fase grupal ni lenguaje de
+  "equipo"/"líderes": todo en singular ("usted"/"Luis").
+
+  PERSONALIZACIÓN: el slide de Punto de dolor nombra su cartera real (Farmatodo, IESA, Río,
+  Canguro) como contexto de credibilidad, información que el propio Luis compartió como
+  pública/propia. La slide "Su Cerebro Digital" (antes grafo en Obsidian) se relabeló para
+  reflejar memoria persistente de Claude Code en vez de un grafo de Obsidian, con nodos que
+  nombran sus 2 dolores reales (Cotización, Diseño instruccional) en vez de categorías
+  genéricas. El temario ecoa su propia metodología de 3 pasos (Diagnóstico de Precisión /
+  Acompañamiento en la Acción / Control de Impacto, ver fydeh Programa Mentoring) sin
+  copiarla literalmente — es un eco de reconocimiento, no una cita textual de su material.
+
+  HORAS: 6 sesiones de 2h (12h) para 1 persona, sin tarifa documentada para el patrón
+  profundo (a diferencia de la Excepción — Cerebros Digitales de 6h, que aplica solo al
+  patrón ligero) — dimensionado ad hoc igual que Venemergencia Fase 2. Ver brief.md
+  "Decisiones de diseño" para el detalle completo.
+
+  Nota de discrepancia (ver brief.md): el usuario mencionó 4 documentos propios de Luis
+  (resumen profesional, resumen de firma, programa de mentoring, esquema de talleres); solo
+  se recibió 1 (el PDF de FYDEH Programa Mentoring). Se avisó al usuario, no bloquea la
+  construcción de esta propuesta.
+
+  Estándares Habilidades vigentes desde 2026-09-23: descuento urgente (15 días), ROI
+  explícito, garantía 30-60-90 + slide de Seguimiento dedicada (.s-followup). Sin slide de
+  Mapa de Calor ni Metodología ABR ni Equipo facilitador expuestos (§4.10a). Con
+  certificado (Habilidades con capacitación real). Beneficios v3, Cierre escalera,
+  servicio@intezia.com. Sin afirmar migración de stack (§4.11). 17 slides (14 del patrón
+  base + 3 sesiones extra: 6 sesiones en vez de 3, una por cada una de las 6 sesiones de
+  2h del patrón profundo).
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Propuesta · Cerebro Digital · Luis Sosa · Intezia</title>
+  <link rel="stylesheet" href="../_base/styles.css">
+  <link rel="stylesheet" href="overrides.css">
+</head>
+<body>
+
+  <main class="deck">
+
+    <!-- 1 · Portada -->
+    <section class="slide s-cover">
+      <span class="counter">01 / 17</span>
+      <div class="logo-big">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia">
+      </div>
+      <div class="body">
+        <p class="eyebrow">Propuesta formativa · Servicio de Habilidades</p>
+        <h1>
+          Un Cerebro Digital,<br>
+          <span class="hl">hecho a su criterio.</span>
+        </h1>
+        <p class="lead">
+          Construimos un Cerebro Digital personal para usted sobre <strong>Claude Code</strong>: centraliza su metodología, automatiza la cotización de sus propuestas con tarifas diferenciadas por tipo de hora, y sistematiza el diseño instruccional de sus programas.
+        </p>
+      </div>
+      <div class="id-line">
+        <span class="codigo">Código: CAI-029</span>
+        <span class="cliente">Luis Sosa</span>
+      </div>
+    </section>
+
+    <!-- 2 · Punto de dolor + Diagnóstico -->
+    <section class="slide s-pain">
+      <span class="counter">02 / 17</span>
+      <span class="quote-mark">&ldquo;</span>
+      <div class="body">
+        <h2>&ldquo;Que cada propuesta refleje el valor real de cada tipo de hora.&rdquo;</h2>
+        <p class="context">
+          Usted ya acompaña a directivos de empresas como Farmatodo, IESA, Río y Canguro con una metodología propia y validada. Un <strong>Cerebro Digital</strong> conectado a <strong>Claude Code</strong> convierte ese criterio en un agente que cotiza sus propuestas y diseña sus programas con su propio método.
+        </p>
+        <p class="diag-title">Diagnóstico</p>
+        <ol>
+          <li>Cada propuesta se cotiza desde cero, sin un criterio que diferencie tarifas por tipo de hora: mentoría, taller, diseño instruccional.</li>
+          <li>El diseño instruccional de cada programa se arma caso por caso, sin un método reutilizable.</li>
+          <li>Su metodología propia vive en su cabeza y en documentos sueltos, no en una herramienta que la aplique.</li>
+          <li>Tareas repetitivas de la consultoría consumen horas que podrían dedicarse a las sesiones mismas.</li>
+          <li>Falta un sistema propio que convierta años de práctica en un Cerebro Digital con su criterio.</li>
+        </ol>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">LUIS SOSA · CAI-029</span>
+      </div>
+    </section>
+
+    <!-- 3 · Objetivos estratégicos -->
+    <section class="slide s-goals">
+      <span class="counter">03 / 17</span>
+      <p class="eyebrow">02 · Objetivos</p>
+      <h2>A dónde lo llevamos<br>con su propio criterio.</h2>
+      <div class="columns">
+        <div class="general">
+          <p class="label">Objetivo general</p>
+          <p>
+            Desarrollar en Luis Sosa la competencia de construir y operar su propio Cerebro Digital conectado a Claude Code, que conozca su metodología, sus tarifas por tipo de hora y su forma de diseñar contenido, para automatizar la cotización de propuestas y el diseño de sus programas con un uso responsable de la información de sus clientes.
+          </p>
+        </div>
+        <div class="specifics">
+          <p class="label">Objetivos específicos</p>
+          <ol>
+            <li>Dominar Claude Code y los fundamentos de un agente con memoria persistente.</li>
+            <li>Diseñar y construir su Cerebro Digital con su metodología y sus tarifas por tipo de hora.</li>
+            <li>Conectar el Cerebro Digital a sus herramientas y automatizar cotización y diseño instruccional.</li>
+            <li>Operar el Cerebro Digital con criterio de seguridad y confidencialidad, listo para el uso diario.</li>
+          </ol>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">LUIS SOSA · CAI-029</span>
+      </div>
+    </section>
+
+    <!-- 4 · Programa -->
+    <section class="slide s-program">
+      <span class="counter">04 / 17</span>
+      <p class="eyebrow">03 · Programa</p>
+      <h2>3 módulos · 12 horas · Claude Code.</h2>
+      <p class="meta">Un Cerebro Digital individual, construido sobre su propia práctica de consultoría.</p>
+      <div class="modules">
+        <div class="module">
+          <span class="roman">I</span>
+          <h3>Fundamentos y diseño del clon</h3>
+          <p class="obj">Comprenda qué es un <strong>Cerebro Digital</strong> en Claude Code y diseñe el clon de su propia metodología.</p>
+          <ul class="topics">
+            <li>1.1 Qué es un Cerebro Digital</li>
+            <li>1.2 Claude Code a fondo</li>
+            <li>1.3 Memoria persistente</li>
+            <li>1.4 Diseño de su clon</li>
+            <li>1.5 Tarifas por hora</li>
+            <li>1.6 Propósito del Cerebro</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">II</span>
+          <h3>Construcción del Cerebro Digital</h3>
+          <p class="obj">Construya su Cerebro Digital con <strong>subagentes</strong> especializados en cotización y diseño instruccional.</p>
+          <ul class="topics">
+            <li>2.1 Construye su agente</li>
+            <li>2.2 Qué es un subagente</li>
+            <li>2.3 Subagente cotizador</li>
+            <li>2.4 Diseño instruccional</li>
+            <li>2.5 Conectores y MCP</li>
+            <li>2.6 Primera propuesta</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">III</span>
+          <h3>Automatización y producción</h3>
+          <p class="obj">Automatice sus decisiones repetitivas y ponga su Cerebro Digital en <strong>producción</strong> con uso seguro.</p>
+          <ul class="topics">
+            <li>3.1 De brief a propuesta</li>
+            <li>3.2 Automatiza un programa</li>
+            <li>3.3 Privacidad de datos</li>
+            <li>3.4 Criterio de revisión</li>
+            <li>3.5 Puesta en producción</li>
+            <li>3.6 Sostener su Cerebro</li>
+          </ul>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">LUIS SOSA · CAI-029</span>
+      </div>
+    </section>
+
+    <!-- 5 · Su Cerebro Digital · Memoria persistente en Claude Code (slide a la medida · overrides.css) -->
+    <section class="slide s-graph">
+      <span class="counter">05 / 17</span>
+      <div class="graph-text">
+        <p class="eyebrow">04 · Su Cerebro Digital</p>
+        <h2>Su criterio,<br><span class="hl">hecho memoria</span>.</h2>
+        <p class="graph-lead">
+          Su <strong>Cerebro Digital</strong> no improvisa: piensa sobre su propia metodología. En <strong>Claude Code</strong>, su conocimiento vive en archivos de memoria persistente que el agente consulta antes de cotizar una propuesta o diseñar un programa.
+        </p>
+        <ul class="graph-points">
+          <li>Cada archivo de memoria es una pieza de su criterio: su metodología, sus tarifas, su cartera de clientes.</li>
+          <li>Sus subagentes especializados (cotizador, diseño instruccional) usan esa memoria para trabajar como usted lo haría.</li>
+          <li>Mientras más conecta su práctica real, más preciso se vuelve su Cerebro Digital.</li>
+        </ul>
+      </div>
+
+      <div class="graph-stage">
+        <svg class="graph-edges" viewBox="0 0 520 540" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+          <line x1="260" y1="270" x2="260" y2="60" class="edge-main"></line>
+          <line x1="260" y1="270" x2="452" y2="162" class="edge-main"></line>
+          <line x1="260" y1="270" x2="452" y2="378" class="edge-main"></line>
+          <line x1="260" y1="270" x2="260" y2="480" class="edge-main"></line>
+          <line x1="260" y1="270" x2="68" y2="378" class="edge-main"></line>
+          <line x1="260" y1="270" x2="68" y2="162" class="edge-main"></line>
+          <line x1="260" y1="60" x2="190" y2="26" class="edge-leaf"></line>
+          <line x1="260" y1="60" x2="336" y2="24" class="edge-leaf"></line>
+          <line x1="452" y1="162" x2="506" y2="108" class="edge-leaf"></line>
+          <line x1="452" y1="162" x2="508" y2="214" class="edge-leaf"></line>
+          <line x1="452" y1="378" x2="508" y2="328" class="edge-leaf"></line>
+          <line x1="452" y1="378" x2="504" y2="434" class="edge-leaf"></line>
+          <line x1="260" y1="480" x2="190" y2="514" class="edge-leaf"></line>
+          <line x1="260" y1="480" x2="334" y2="512" class="edge-leaf"></line>
+          <line x1="68" y1="378" x2="14" y2="430" class="edge-leaf"></line>
+          <line x1="68" y1="162" x2="14" y2="110" class="edge-leaf"></line>
+        </svg>
+
+        <span class="gnode gnode-core" style="left:260px;top:270px">Cerebro<br>Digital</span>
+        <span class="gnode gnode-cat" style="left:260px;top:60px">Metodología</span>
+        <span class="gnode gnode-cat" style="left:452px;top:162px">Tarifas por hora</span>
+        <span class="gnode gnode-cat" style="left:452px;top:378px">Cotización</span>
+        <span class="gnode gnode-cat" style="left:260px;top:480px">Diseño instruccional</span>
+        <span class="gnode gnode-cat" style="left:68px;top:378px">Cartera de clientes</span>
+        <span class="gnode gnode-cat" style="left:68px;top:162px">Seguridad y datos</span>
+
+        <span class="gleaf" style="left:190px;top:26px"></span>
+        <span class="gleaf" style="left:336px;top:24px"></span>
+        <span class="gleaf" style="left:506px;top:108px"></span>
+        <span class="gleaf" style="left:508px;top:214px"></span>
+        <span class="gleaf" style="left:508px;top:328px"></span>
+        <span class="gleaf" style="left:504px;top:434px"></span>
+        <span class="gleaf" style="left:190px;top:514px"></span>
+        <span class="gleaf" style="left:334px;top:512px"></span>
+        <span class="gleaf" style="left:14px;top:430px"></span>
+        <span class="gleaf" style="left:14px;top:110px"></span>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">LUIS SOSA · CAI-029</span>
+      </div>
+    </section>
+
+    <!-- 6 · Desglose instructivo — Sesión 1 -->
+    <section class="slide s-schedule">
+      <span class="counter">06 / 17</span>
+      <p class="eyebrow">05 · Cronograma · Ruta de aprendizaje</p>
+
+      <div class="ruta">
+        <div class="ruta-node">1</div>
+        <div class="ruta-track"><div class="ruta-fill" style="width:16.66%"></div></div>
+        <span class="ruta-step">Sesión 1 de 6</span>
+      </div>
+
+      <div class="ses-head">
+        <div>
+          <span class="ses-mod">Módulo I · Sesión en vivo</span>
+          <h2>Módulo I: Claude Code a fondo</h2>
+        </div>
+        <div class="ses-meta"><span class="ses-dur">2 h</span></div>
+      </div>
+
+      <div class="ses-body">
+        <div class="ses-block">
+          <span class="label">Temas</span>
+          <div class="chips">
+            <span class="chip">1.1 Qué es un Cerebro Digital en Claude Code</span>
+            <span class="chip">1.2 Claude Code a fondo: terminal y contexto</span>
+            <span class="chip">1.3 Memoria persistente</span>
+          </div>
+        </div>
+        <div class="ses-block">
+          <span class="label">Tiempo · Total 2 h</span>
+          <div class="timebar">
+            <div class="seg" style="flex:30">30' Conceptos clave</div>
+            <div class="seg" style="flex:30">30' Demostración guiada</div>
+            <div class="seg" style="flex:45">45' Práctica con un caso real</div>
+            <div class="seg" style="flex:15">15' Cierre y dudas</div>
+          </div>
+        </div>
+        <div class="ses-cols">
+          <div class="ses-block">
+            <span class="label">Estrategias de enseñanza</span>
+            <ul>
+              <li>Demostración guiada en vivo</li>
+              <li>Instalación acompañada de Claude Code</li>
+              <li>Preguntas socráticas</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Estrategias de aprendizaje</span>
+            <ul>
+              <li>Primeros comandos en Claude Code</li>
+              <li>Bitácora de aprendizaje</li>
+              <li>Trae una propuesta real ya cotizada</li>
+            </ul>
+          </div>
+          <div class="ses-block block-rec">
+            <span class="label">Recursos y entornos</span>
+            <ul>
+              <li>Cuenta Claude Code</li>
+              <li>Terminal o IDE</li>
+              <li>Workbook digital</li>
+              <li>Una propuesta real entregada</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">LUIS SOSA · CAI-029</span>
+      </div>
+    </section>
+
+    <!-- 7 · Desglose instructivo — Sesión 2 -->
+    <section class="slide s-schedule">
+      <span class="counter">07 / 17</span>
+      <p class="eyebrow">05 · Cronograma · Ruta de aprendizaje</p>
+
+      <div class="ruta">
+        <div class="ruta-node">2</div>
+        <div class="ruta-track"><div class="ruta-fill" style="width:33.33%"></div></div>
+        <span class="ruta-step">Sesión 2 de 6</span>
+      </div>
+
+      <div class="ses-head">
+        <div>
+          <span class="ses-mod">Módulo I · Sesión en vivo</span>
+          <h2>Módulo I: Diseño del clon</h2>
+        </div>
+        <div class="ses-meta"><span class="ses-dur">2 h</span></div>
+      </div>
+
+      <div class="ses-body">
+        <div class="ses-block">
+          <span class="label">Temas</span>
+          <div class="chips">
+            <span class="chip">1.4 Diseño del clon: su metodología</span>
+            <span class="chip">1.5 Tarifas por tipo de hora</span>
+            <span class="chip">1.6 Propósito de su Cerebro Digital</span>
+          </div>
+        </div>
+        <div class="ses-block">
+          <span class="label">Tiempo · Total 2 h</span>
+          <div class="timebar">
+            <div class="seg" style="flex:30">30' Demostración de memoria</div>
+            <div class="seg" style="flex:60">60' Construcción guiada</div>
+            <div class="seg" style="flex:30">30' Prueba e iteración</div>
+          </div>
+        </div>
+        <div class="ses-cols">
+          <div class="ses-block">
+            <span class="label">Estrategias de enseñanza</span>
+            <ul>
+              <li>Demostración de arquitectura de memoria</li>
+              <li>Construcción guiada paso a paso</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Estrategias de aprendizaje</span>
+            <ul>
+              <li>Traduce su metodología de 3 pasos a memoria</li>
+              <li>Define sus tarifas por tipo de hora</li>
+            </ul>
+          </div>
+          <div class="ses-block block-rec">
+            <span class="label">Recursos y entornos</span>
+            <ul>
+              <li>Plantilla de memoria</li>
+              <li>Su metodología documentada</li>
+              <li>Sus tarifas actuales</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">LUIS SOSA · CAI-029</span>
+      </div>
+    </section>
+
+    <!-- 8 · Desglose instructivo — Sesión 3 -->
+    <section class="slide s-schedule">
+      <span class="counter">08 / 17</span>
+      <p class="eyebrow">05 · Cronograma · Ruta de aprendizaje</p>
+
+      <div class="ruta">
+        <div class="ruta-node">3</div>
+        <div class="ruta-track"><div class="ruta-fill" style="width:50%"></div></div>
+        <span class="ruta-step">Sesión 3 de 6</span>
+      </div>
+
+      <div class="ses-head">
+        <div>
+          <span class="ses-mod">Módulo II · Sesión en vivo</span>
+          <h2>Módulo II: Construcción del agente</h2>
+        </div>
+        <div class="ses-meta"><span class="ses-dur">2 h</span></div>
+      </div>
+
+      <div class="ses-body">
+        <div class="ses-block">
+          <span class="label">Temas</span>
+          <div class="chips">
+            <span class="chip">2.1 Construcción del agente</span>
+            <span class="chip">2.2 Subagentes especializados</span>
+            <span class="chip">2.3 Subagente cotizador</span>
+          </div>
+        </div>
+        <div class="ses-block">
+          <span class="label">Tiempo · Total 2 h</span>
+          <div class="timebar">
+            <div class="seg" style="flex:30">30' Demostración de subagentes</div>
+            <div class="seg" style="flex:60">60' Construcción guiada</div>
+            <div class="seg" style="flex:30">30' Prueba con un caso real</div>
+          </div>
+        </div>
+        <div class="ses-cols">
+          <div class="ses-block">
+            <span class="label">Estrategias de enseñanza</span>
+            <ul>
+              <li>Demostración de subagentes especializados</li>
+              <li>Construcción guiada paso a paso</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Estrategias de aprendizaje</span>
+            <ul>
+              <li>Construye su subagente cotizador</li>
+              <li>Construye su subagente de diseño instruccional</li>
+            </ul>
+          </div>
+          <div class="ses-block block-rec">
+            <span class="label">Recursos y entornos</span>
+            <ul>
+              <li>Claude Code (subagentes)</li>
+              <li>Casos reales de propuestas y programas</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">LUIS SOSA · CAI-029</span>
+      </div>
+    </section>
+
+    <!-- 9 · Desglose instructivo — Sesión 4 -->
+    <section class="slide s-schedule">
+      <span class="counter">09 / 17</span>
+      <p class="eyebrow">05 · Cronograma · Ruta de aprendizaje</p>
+
+      <div class="ruta">
+        <div class="ruta-node">4</div>
+        <div class="ruta-track"><div class="ruta-fill" style="width:66.66%"></div></div>
+        <span class="ruta-step">Sesión 4 de 6</span>
+      </div>
+
+      <div class="ses-head">
+        <div>
+          <span class="ses-mod">Módulo II · Sesión en vivo</span>
+          <h2>Módulo II: Conexión a herramientas</h2>
+        </div>
+        <div class="ses-meta"><span class="ses-dur">2 h</span></div>
+      </div>
+
+      <div class="ses-body">
+        <div class="ses-block">
+          <span class="label">Temas</span>
+          <div class="chips">
+            <span class="chip">2.4 Subagente de diseño instruccional</span>
+            <span class="chip">2.5 Conectores y MCP</span>
+            <span class="chip">2.6 Primera propuesta cotizada</span>
+          </div>
+        </div>
+        <div class="ses-block">
+          <span class="label">Tiempo · Total 2 h</span>
+          <div class="timebar">
+            <div class="seg" style="flex:40">40' Conectores y MCP</div>
+            <div class="seg" style="flex:50">50' Conexión guiada a sus herramientas</div>
+            <div class="seg" style="flex:30">30' Primera prueba real</div>
+          </div>
+        </div>
+        <div class="ses-cols">
+          <div class="ses-block">
+            <span class="label">Estrategias de enseñanza</span>
+            <ul>
+              <li>Demostración de Conectores y MCP (Model Context Protocol)</li>
+              <li>Conexión guiada</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Estrategias de aprendizaje</span>
+            <ul>
+              <li>Conecta su Drive y sus plantillas</li>
+              <li>Genera su primera propuesta cotizada</li>
+            </ul>
+          </div>
+          <div class="ses-block block-rec">
+            <span class="label">Recursos y entornos</span>
+            <ul>
+              <li>Claude Code (Conectores/MCP)</li>
+              <li>Su Drive y plantillas de propuesta</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">LUIS SOSA · CAI-029</span>
+      </div>
+    </section>
+
+    <!-- 10 · Desglose instructivo — Sesión 5 -->
+    <section class="slide s-schedule">
+      <span class="counter">10 / 17</span>
+      <p class="eyebrow">05 · Cronograma · Ruta de aprendizaje</p>
+
+      <div class="ruta">
+        <div class="ruta-node">5</div>
+        <div class="ruta-track"><div class="ruta-fill" style="width:83.33%"></div></div>
+        <span class="ruta-step">Sesión 5 de 6</span>
+      </div>
+
+      <div class="ses-head">
+        <div>
+          <span class="ses-mod">Módulo III · Sesión en vivo</span>
+          <h2>Módulo III: Automatización de decisiones</h2>
+        </div>
+        <div class="ses-meta"><span class="ses-dur">2 h</span></div>
+      </div>
+
+      <div class="ses-body">
+        <div class="ses-block">
+          <span class="label">Temas</span>
+          <div class="chips">
+            <span class="chip">3.1 De brief a propuesta, automatizado</span>
+            <span class="chip">3.2 Automatiza un programa completo</span>
+            <span class="chip">3.3 Privacidad y datos de clientes</span>
+          </div>
+        </div>
+        <div class="ses-block">
+          <span class="label">Tiempo · Total 2 h</span>
+          <div class="timebar">
+            <div class="seg" style="flex:30">30' Demostración del flujo</div>
+            <div class="seg" style="flex:60">60' Automatización guiada</div>
+            <div class="seg" style="flex:30">30' Prueba con un caso real</div>
+          </div>
+        </div>
+        <div class="ses-cols">
+          <div class="ses-block">
+            <span class="label">Estrategias de enseñanza</span>
+            <ul>
+              <li>Demostración del flujo de brief a propuesta</li>
+              <li>Análisis de casos de privacidad</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Estrategias de aprendizaje</span>
+            <ul>
+              <li>Automatiza la cotización de una propuesta real</li>
+              <li>Automatiza el diseño de un programa</li>
+            </ul>
+          </div>
+          <div class="ses-block block-rec">
+            <span class="label">Recursos y entornos</span>
+            <ul>
+              <li>Claude Code</li>
+              <li>Casos reales de clientes</li>
+              <li>Centro de Privacidad de Anthropic</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">LUIS SOSA · CAI-029</span>
+      </div>
+    </section>
+
+    <!-- 11 · Desglose instructivo — Sesión 6 -->
+    <section class="slide s-schedule">
+      <span class="counter">11 / 17</span>
+      <p class="eyebrow">05 · Cronograma · Ruta de aprendizaje</p>
+
+      <div class="ruta">
+        <div class="ruta-node">6</div>
+        <div class="ruta-track"><div class="ruta-fill" style="width:100%"></div></div>
+        <span class="ruta-step">Sesión 6 de 6</span>
+      </div>
+
+      <div class="ses-head">
+        <div>
+          <span class="ses-mod">Módulo III · Sesión en vivo</span>
+          <h2>Módulo III: Seguridad y producción</h2>
+        </div>
+        <div class="ses-meta"><span class="ses-dur">2 h</span></div>
+      </div>
+
+      <div class="ses-body">
+        <div class="ses-block">
+          <span class="label">Temas</span>
+          <div class="chips">
+            <span class="chip">3.4 Criterio de revisión</span>
+            <span class="chip">3.5 Puesta en producción</span>
+            <span class="chip">3.6 Sostener su Cerebro Digital</span>
+          </div>
+        </div>
+        <div class="ses-block">
+          <span class="label">Tiempo · Total 2 h</span>
+          <div class="timebar">
+            <div class="seg" style="flex:30">30' Seguridad y confidencialidad</div>
+            <div class="seg" style="flex:45">45' Puesta en producción</div>
+            <div class="seg" style="flex:30">30' Medición y ajuste</div>
+            <div class="seg" style="flex:15">15' Cierre y plan</div>
+          </div>
+        </div>
+        <div class="ses-cols">
+          <div class="ses-block">
+            <span class="label">Estrategias de enseñanza</span>
+            <ul>
+              <li>Análisis de casos de uso seguro</li>
+              <li>Checklist de revisión antes de enviar</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Estrategias de aprendizaje</span>
+            <ul>
+              <li>Define su criterio de revisión</li>
+              <li>Deja su Cerebro Digital listo para el uso diario</li>
+            </ul>
+          </div>
+          <div class="ses-block block-rec">
+            <span class="label">Recursos y entornos</span>
+            <ul>
+              <li>Checklist de uso seguro</li>
+              <li>Centro de Privacidad de Anthropic</li>
+              <li>Su Cerebro Digital ya construido</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">LUIS SOSA · CAI-029</span>
+      </div>
+    </section>
+
+    <!-- 12 · Beneficios (formato v3: Resultados · Por qué Habilidades · Entregables · Valor inmediato) -->
+    <section class="slide s-benefits s-benefits-v2">
+      <span class="counter">12 / 17</span>
+      <p class="eyebrow">06 · Beneficios</p>
+      <h2>Lo que <span class="hl">se llevan</span>.</h2>
+      <div class="grid">
+        <div class="block">
+          <p class="label">Resultados</p>
+          <ul>
+            <li>Un <strong>Cerebro Digital</strong> propio, construido sobre su metodología y su criterio real.</li>
+            <li>Cotización de propuestas con tarifas diferenciadas por tipo de hora, sin empezar de cero cada vez.</li>
+            <li>Diseño instruccional de sus programas sistematizado, listo para reutilizar con cada nuevo cliente.</li>
+          </ul>
+        </div>
+        <div class="block">
+          <p class="label">Por qué Habilidades</p>
+          <p>
+            Usted mismo instala la capacidad <strong>en su práctica</strong>: construye y opera su propio Cerebro Digital, y lo sostiene sin depender de un consultor externo.
+          </p>
+        </div>
+        <div class="block">
+          <p class="label">Entregables</p>
+        </div>
+        <div class="block">
+          <p class="label">Valor inmediato</p>
+        </div>
+      </div>
+
+      <!-- Cajas multiline editables (vacías en HTML — el contenido vive dentro del AcroForm /V). -->
+      <div class="multi-box entregables-box" data-field="Entregables"></div>
+      <div class="multi-box acreditaciones-box" data-field="Acreditacion"></div>
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">LUIS SOSA · CAI-029</span>
+      </div>
+    </section>
+
+    <!-- 13 · Impacto / estudios — datos de estudios reales, fuente citada (§4.9) -->
+    <section class="slide s-impact">
+      <span class="counter">13 / 17</span>
+
+      <div class="impact-head">
+        <p class="eyebrow">07 · Impacto</p>
+        <h2>La evidencia no deja<br><span class="hl">lugar a dudas</span>.</h2>
+      </div>
+
+      <div class="impact-body">
+        <div class="chart-panel">
+          <p class="panel-title">Mejora de productividad por área de trabajo</p>
+          <div class="bars">
+            <div class="bar-row">
+              <span class="bar-label">Marketing y contenidos</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:50%"><span class="bar-val">+50%</span></div></div>
+            </div>
+            <div class="bar-row">
+              <span class="bar-label">Desarrollo de software</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:26%"><span class="bar-val">+26%</span></div></div>
+            </div>
+            <div class="bar-row">
+              <span class="bar-label">Atención al cliente</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:15%"><span class="bar-val">+15%</span></div></div>
+            </div>
+          </div>
+          <div class="bar-axis"><span class="scale"><span>0</span><span>25</span><span>50</span><span>75</span><span>100%</span></span></div>
+          <p class="panel-source">Fuente: Stanford HAI &mdash; AI Index Report 2026 (cap. Economía) &middot; McKinsey &mdash; The State of AI 2025 &middot; Anthropic Economic Index 2025.</p>
+        </div>
+
+        <div class="gauge-panel">
+          <div class="gauge" style="--pct:78">
+            <div class="gauge-core">
+              <span class="gauge-num">78<span class="pct">%</span></span>
+              <span class="gauge-cap">ya usa IA</span>
+            </div>
+          </div>
+          <div class="chips">
+            <div class="chip">
+              <span class="chip-num">2.6&times;</span>
+              <span class="chip-lbl">adopción vs. 2023</span>
+            </div>
+            <div class="chip">
+              <span class="chip-num">1 de 3</span>
+              <span class="chip-lbl">escala su IA</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="impact-hook">
+        <span class="hook-mark">&#9656;</span>
+        <p class="hook-text">
+          <strong>8 de cada 10 empresas</strong> ya usan IA. Solo <strong>una de cada tres</strong> la convierte en resultados. Un Cerebro Digital es lo que separa usar IA de que la IA piense con su propio criterio, cotice sus propuestas y diseñe sus programas por usted.
+        </p>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">LUIS SOSA · CAI-029</span>
+      </div>
+    </section>
+
+    <!-- 14 · Propuesta Económica (estándar: Duración + Programa + Notas + Cotización) -->
+    <section class="slide s-price">
+      <span class="counter">14 / 17</span>
+      <h2 class="title">Propuesta Económica</h2>
+
+      <div class="block">
+        <span class="block-eyebrow">Duración</span>
+        <p class="block-value">12h (6 sesiones de 2h) &middot; Cerebro Digital individual conectado a Claude Code.</p>
+      </div>
+
+      <div class="block block-programa">
+        <span class="block-eyebrow">Programa</span>
+      </div>
+      <div class="multi-box programa-box" data-field="Programa"></div>
+
+      <div class="block block-cotizacion">
+        <span class="block-eyebrow">Cotización</span>
+      </div>
+
+      <span class="cot-label cot-label-base">Propuesta + Inversión</span>
+      <div class="cot-frame base-frame"></div>
+
+      <span class="cot-label cot-label-discount">Descuento</span>
+      <span class="cot-sign-minus">&minus;$</span>
+      <div class="cot-frame discount-frame"></div>
+      <span class="cot-urgent-note">Descuento válido por 15 días</span>
+
+      <span class="cot-label cot-label-total">TOTAL</span>
+      <div class="cot-frame total-frame"></div>
+
+      <p class="cot-validity">Cotización válida por 30 días.</p>
+
+      <div class="cot-roi-box">
+        <span class="cot-roi-label">ROI estimado</span>
+        <p class="cot-roi-text">Automatizar la cotización de propuestas y el diseño instruccional libera horas que hoy dependen enteramente de usted. Con su cartera de clientes activa, cada propuesta que su Cerebro Digital ayuda a cotizar es tiempo que se reinvierte directamente en sus sesiones.</p>
+      </div>
+
+      <div class="cot-garantia-badge">
+        <span class="cot-garantia-tag">Garantía 30-60-90</span>
+        <p class="cot-garantia-text">Estamos contigo hasta que la habilidad quede instalada.</p>
+      </div>
+
+      <div class="cot-terms-box">
+        <span class="cot-terms-label">Importante</span>
+        <p class="cot-terms-text">Este servicio se presta bajo nuestros <a href="https://drive.google.com/file/d/1PA-ZSt4KnyY5dpxXzgkIk6-yfGlV2eF8/view?usp=drive_link" target="_blank" rel="noopener">términos y condiciones</a>. Al avanzar con esta propuesta, ambas partes los aceptan.</p>
+      </div>
+
+      <div class="block block-notes-container">
+        <span class="block-eyebrow">Notas</span>
+      </div>
+      <div class="multi-box notas-box" data-field="Notas"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">LUIS SOSA · CAI-029</span>
+      </div>
+    </section>
+
+    <!-- 15 · Seguimiento 30-60-90 (garantía explicada + ROI) -->
+    <section class="slide s-roadmap s-followup">
+      <span class="counter">15 / 17</span>
+      <p class="eyebrow">08 · Garantía de seguimiento</p>
+      <h2>No lo dejamos solo <span class="hl">después del servicio</span>.</h2>
+      <p class="followup-intro">Verificamos que su Cerebro Digital se use, se multiplique y genere impacto real en su práctica: no solo que la sesión haya terminado bien.</p>
+
+      <div class="followup-cards">
+        <div class="rmx-card rmx-card-f2">
+          <span class="rmx-card-tag">30 días</span>
+          <div class="rmx-card-name">¿Se usa lo instalado?</div>
+          <ul class="rmx-facets">
+            <li><span>Medimos</span><p>Uso real de su Cerebro Digital en su día a día de consultoría.</p></li>
+            <li><span>Aportamos</span><p>Nivelación, estrategias y recomendaciones para el uso correcto.</p></li>
+          </ul>
+        </div>
+        <div class="rmx-card rmx-card-f3">
+          <span class="rmx-card-tag">60 días</span>
+          <div class="rmx-card-name">¿Qué construyó?</div>
+          <ul class="rmx-facets">
+            <li><span>Medimos</span><p>Ya no el Cerebro Digital entregado: qué automatizaciones construyó usted por su cuenta.</p></li>
+            <li><span>Aportamos</span><p>Mapeo de esas construcciones y arranque de la medición de ahorro de tiempo.</p></li>
+          </ul>
+        </div>
+        <div class="rmx-card rmx-card-f4">
+          <span class="rmx-card-tag">90 días</span>
+          <div class="rmx-card-name">¿Cuánto ahorró?</div>
+          <ul class="rmx-facets">
+            <li><span>Medimos</span><p>No contamos construcciones: contabilizamos el tiempo ahorrado en cotización y diseño instruccional.</p></li>
+            <li><span>Aportamos</span><p>Análisis de impacto en su práctica y en qué se reinvierte ese tiempo.</p></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="followup-roi">
+        <span class="followup-roi-label">ROI en el tiempo</span>
+        <p class="followup-roi-text">El retorno de este proyecto no se mide en el Cerebro Digital del primer mes, sino en la curva de los 90 días: a 30 días ya lo usa en su día a día; a 60, empieza a construir automatizaciones propias; a 90, el tiempo que hoy consumen sus propuestas y programas se puede reinvertir directamente en sus clientes.</p>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">LUIS SOSA · CAI-029</span>
+      </div>
+    </section>
+
+    <!-- 16 · Próximos pasos (logística, sin acuerdos económicos · §4.15) -->
+    <section class="slide s-steps">
+      <span class="counter">16 / 17</span>
+      <p class="eyebrow">09 · Próximos pasos</p>
+      <h2>Cómo arrancamos.</h2>
+      <div class="step-cards">
+        <div class="step-card">
+          <span class="ghost">01</span>
+        </div>
+        <div class="step-card">
+          <span class="ghost">02</span>
+        </div>
+        <div class="step-card">
+          <span class="ghost">03</span>
+        </div>
+      </div>
+
+      <!-- Editable AcroForm placeholders (3 pasos × título + body) -->
+      <div class="acro-area acro-title acro-paso-01-titulo" data-field="Paso01Titulo">
+        <span class="acro-default-text">Confirmamos su agenda</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-01-body" data-field="Paso01Body">
+        <span class="acro-default-text">Confirmamos fechas, horario y modalidad presencial en Caracas de las 6 sesiones.</span>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-02-titulo" data-field="Paso02Titulo">
+        <span class="acro-default-text">Acceso y logística</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-02-body" data-field="Paso02Body">
+        <span class="acro-default-text">Coordinamos su acceso a Claude Code y la agenda de las sesiones en vivo.</span>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-03-titulo" data-field="Paso03Titulo">
+        <span class="acro-default-text">Reunión de arranque</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-03-body" data-field="Paso03Body">
+        <span class="acro-default-text">Sesión breve para elegir los casos reales que llevará a su Cerebro Digital.</span>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">LUIS SOSA · CAI-029</span>
+      </div>
+    </section>
+
+    <!-- 17 · Cierre (ruta/escalera editable) -->
+    <section class="slide s-end">
+      <span class="counter">17 / 17</span>
+
+      <div class="end-logo">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia">
+      </div>
+
+      <!-- Resultado (cinta superior) — caja editable, ventas la redacta por cliente -->
+      <div class="end-summit" data-field="CierreResultado">
+        <span class="acro-default-text">Un Cerebro Digital propio, conectado a Claude Code, que cotiza sus propuestas y diseña sus programas con su criterio.</span>
+      </div>
+
+      <!-- Escalera de 3 pasos — cada uno con su caja editable -->
+      <div class="end-stairs">
+        <div class="stair-step stair-1">
+          <span class="stair-label">Paso 1</span>
+          <div class="stair-field" data-field="CierrePaso1">
+            <span class="acro-default-text">Fundamentos y diseño del clon</span>
+          </div>
+        </div>
+        <div class="stair-step stair-2">
+          <span class="stair-label">Paso 2</span>
+          <div class="stair-field" data-field="CierrePaso2">
+            <span class="acro-default-text">Construcción del agente</span>
+          </div>
+        </div>
+        <div class="stair-step stair-3">
+          <span class="stair-label">Paso 3</span>
+          <div class="stair-field" data-field="CierrePaso3">
+            <span class="acro-default-text">Automatización y producción</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cta-wrap">
+        <span class="cta">Esperamos tu respuesta</span>
+      </div>
+
+      <div class="end-contact">
+        <p class="contact-line">
+          <span class="contact-label">Asesora de ventas:</span>
+          Verónica Rubio <span class="dot">&middot;</span> +58 422 3355505 <span class="dot">&middot;</span> vrubio01@intezia.com
+        </p>
+        <p class="contact-line">
+          <span class="contact-label">Empresa:</span>
+          Intezia C.A J-505657950 <span class="dot">&middot;</span> servicio@intezia.com
+        </p>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

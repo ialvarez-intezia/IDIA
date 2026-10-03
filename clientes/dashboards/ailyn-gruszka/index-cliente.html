@@ -1,0 +1,290 @@
+<!doctype html>
+<!--
+  Dashboard de Impacto Edu-Trace · Ailyn Gruszka · Claude Fundamentals (CAP-070)
+  Vista CLIENTE (entregable). Datos: clientes/dashboards/ailyn-gruszka/resultados.json
+  Capacitación personal, 3 participantes (Ailyn Gruszka, Roberto Cohen y Danae
+  Gruszka — actualizado 2026-08-11, antes N=2). Deck de 8 slides: sin "Por
+  departamento" (RRHH ya agrega a Ailyn+Danae, pero Sambil sigue en n=1 —
+  mostrar ese bloque seguiría publicando el puntaje individual de Roberto,
+  §4.16) y sin "Participación" aparte (ya nombradas en portada/cierre).
+  Recomendaciones en tono narrativo, no de ranking (n=3 sigue sin rendir un
+  top 3 real). Lenguaje honesto (§4.17): B/D = percibido · C = medido.
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard de Impacto · Ailyn Gruszka · Intezia Educación</title>
+  <link rel="stylesheet" href="../../propuestas/_base/styles.css">
+  <link rel="stylesheet" href="overrides.css">
+</head>
+<body>
+  <main class="deck">
+
+    <!-- 01 · Portada -->
+    <section class="slide s-cover">
+      <span class="counter">01 / 08</span>
+      <div class="logo-big">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia Educación">
+      </div>
+      <div class="body">
+        <p class="eyebrow">Dashboard de Impacto · Edu-Trace</p>
+        <h1>
+          Claude<br>
+          <span class="hl">Fundamentals</span>
+        </h1>
+        <p class="lead">
+          Resultados medidos con la <strong>Encuesta Edu-Trace</strong> de cierre. Ailyn, Danae y Roberto, evaluados en dominio de Claude, <strong>retención de conocimiento</strong> y experiencia formativa.
+        </p>
+      </div>
+      <div class="id-line">
+        <span class="codigo">CAP-070 · Ailyn Gruszka</span>
+        <span class="cliente">Ailyn Gruszka</span>
+      </div>
+    </section>
+
+    <!-- 02 · Hero del Índice -->
+    <section class="slide s-impact">
+      <span class="counter">02 / 08</span>
+      <div class="impact-head">
+        <p class="eyebrow">01 · Resultado global</p>
+        <h2>Índice de Impacto<br><span class="hl">Edu-Trace</span>.</h2>
+      </div>
+      <div class="impact-body">
+        <div class="chart-panel">
+          <p class="panel-title">Los cuatro ejes que componen el índice (0-100)</p>
+          <div class="bars">
+            <div class="bar-row">
+              <span class="bar-label">Competencia percibida</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:66.8%"><span class="bar-val">67</span></div></div>
+            </div>
+            <div class="bar-row">
+              <span class="bar-label">Retención objetiva · medido</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:88.9%"><span class="bar-val">89</span></div></div>
+            </div>
+            <div class="bar-row">
+              <span class="bar-label">Aplicabilidad e impacto</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:66.8%"><span class="bar-val">67</span></div></div>
+            </div>
+            <div class="bar-row">
+              <span class="bar-label">Calidad de la experiencia</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:83.2%"><span class="bar-val">83</span></div></div>
+            </div>
+          </div>
+          <div class="bar-axis"><span class="scale"><span>0</span><span>25</span><span>50</span><span>75</span><span>100</span></span></div>
+          <p class="panel-source">Ponderación: Retención objetiva 35% · Competencia 30% · Aplicabilidad 20% · Calidad 15%. La retención es el único eje medido; el resto es autopercibido.</p>
+        </div>
+        <div class="gauge-panel">
+          <div class="gauge" style="--pct:77">
+            <div class="gauge-core">
+              <span class="gauge-num">77</span>
+              <span class="gauge-cap idx">Índice · de 100</span>
+            </div>
+          </div>
+          <div class="rating">
+            <div class="stars">
+              <span class="star full">&#9733;</span>
+              <span class="star full">&#9733;</span>
+              <span class="star full">&#9733;</span>
+              <span class="star full">&#9733;</span>
+              <span class="star">&#9733;</span>
+            </div>
+            <span class="rating-cap">Satisfacción general · <b>4.0 / 5</b></span>
+          </div>
+          <p class="hero-meta">3 participantes · salto percibido +1.7 (1-5)</p>
+        </div>
+      </div>
+      <div class="impact-hook">
+        <span class="hook-mark">&#9656;</span>
+        <p class="hook-text">
+          El dominio técnico volvió a quedar claro: <strong>acompañamiento y dominio del tutor en el máximo</strong>, con 2 de las 3 preguntas técnicas acertadas por las tres. La aplicación en el día a día sigue en camino, algo normal antes de encarar el <strong>proyecto final</strong>.
+        </p>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Ailyn Gruszka · Dashboard de Impacto</span>
+      </div>
+    </section>
+
+    <!-- 03 · Desglose por eje -->
+    <section class="slide s-data s-ejes">
+      <span class="counter">03 / 08</span>
+      <p class="eyebrow">02 · Desglose</p>
+      <h2>Qué mide cada eje.</h2>
+      <p class="sub">Cada eje aporta al índice según su peso. Solo uno es una medición objetiva; los otros tres son autopercepción de cada participante al cierre.</p>
+      <div class="grid">
+        <div class="eje">
+          <div class="top"><span class="num">67</span><span class="peso">peso 30%</span></div>
+          <h3>Competencia percibida</h3>
+          <p>Cuánto se sienten capaces de operar Claude sin supervisión. <span class="tag-percibido">percibido</span></p>
+        </div>
+        <div class="eje measured">
+          <div class="top"><span class="num">89</span><span class="peso">peso 35%</span></div>
+          <h3>Retención objetiva</h3>
+          <p>Aciertos en preguntas técnicas con respuesta correcta. El dato más duro del informe. <span class="tag-medido">medido</span></p>
+        </div>
+        <div class="eje">
+          <div class="top"><span class="num">67</span><span class="peso">peso 20%</span></div>
+          <h3>Aplicabilidad e impacto</h3>
+          <p>Qué tanto resuelve problemas del día a día y promete recuperar tiempo de ejecución. <span class="tag-percibido">percibido</span></p>
+        </div>
+        <div class="eje">
+          <div class="top"><span class="num">83</span><span class="peso">peso 15%</span></div>
+          <h3>Calidad de la experiencia</h3>
+          <p>Claridad, acompañamiento, ritmo y dominio técnico del facilitador. <span class="tag-percibido">percibido</span></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 · Salto de aprendizaje percibido -->
+    <section class="slide s-salto">
+      <span class="counter">04 / 08</span>
+      <p class="eyebrow">03 · Salto de aprendizaje</p>
+      <h2>De dónde partieron, a dónde llegaron.</h2>
+      <div class="journey">
+        <div class="milestone">
+          <span class="ms-cap">Antes · percibido</span>
+          <span class="ms-num">2.0</span>
+          <span class="ms-of">dominio previo<br>(escala 1-5)</span>
+        </div>
+        <div class="track">
+          <div class="track-fill"></div>
+          <div class="delta">
+            <span class="d-num">+1.7</span>
+            <span class="d-lbl">salto percibido</span>
+          </div>
+        </div>
+        <div class="milestone end">
+          <span class="ms-cap">Al cierre</span>
+          <span class="ms-num">3.7</span>
+          <span class="ms-of">capaz sin supervisión<br>(escala 1-5)</span>
+        </div>
+      </div>
+      <p class="salto-note">Es un salto <strong>percibido y retrospectivo</strong>: ambas cifras se preguntaron al cierre, no antes de empezar. Las tres partieron de un dominio bajo de Claude y, en una sola inmersión de 8 horas, llegaron a un punto notablemente más alto.</p>
+    </section>
+
+    <!-- 05 · Retención objetiva (Bloque C - medido) -->
+    <section class="slide s-data s-reten">
+      <span class="counter">05 / 08</span>
+      <p class="eyebrow">04 · Retención objetiva <span class="tag-medido">medido</span></p>
+      <h2>Lo que de verdad quedó.</h2>
+      <div class="global">
+        <span class="pct">89%</span>
+        <span class="txt">de aciertos en la evaluación de conocimiento técnico al cierre.</span>
+      </div>
+      <div class="qrow">
+        <div class="q">Anatomía de un prompt<small>Rol, contexto, tarea y formato: las cuatro piezas de un prompt bien estructurado.</small></div>
+        <div class="score">67%<small> · 2 de 3</small></div>
+      </div>
+      <div class="qrow">
+        <div class="q">Conectores de Claude<small>Le dan permiso a Claude para consultar apps como el calendario o el correo directamente desde el chat.</small></div>
+        <div class="score">100%<small> · 3 de 3</small></div>
+      </div>
+      <div class="qrow">
+        <div class="q">Projects vs. chat suelto<small>Un Project guarda archivos e instrucciones permanentes; Claude entra a cada chat ya conociéndolos.</small></div>
+        <div class="score">100%<small> · 3 de 3</small></div>
+      </div>
+      <p class="note-honest">Con pocas respuestas por pregunta, cada acierto o error pesa mucho: la anatomía del prompt (rol, contexto, tarea, formato) sigue siendo la de mayor margen, y vale la pena repasarla antes del proyecto final.</p>
+    </section>
+
+    <!-- 06 · Calidad de la experiencia (Bloque D) -->
+    <section class="slide s-data s-calidad">
+      <span class="counter">06 / 08</span>
+      <p class="eyebrow">05 · Experiencia formativa <span class="tag-percibido">percibido</span></p>
+      <h2>Cómo vivieron la formación.</h2>
+      <p class="sub">Valoración del facilitador y la dinámica de las sesiones, en escala 1-5 normalizada a 0-100.</p>
+      <div class="hbars">
+        <div class="hbar-row">
+          <span class="hbar-label">Acompañamiento <small>dudas resueltas con precisión</small></span>
+          <div class="hbar-track"><div class="hbar-fill" style="--w:100%"></div></div>
+          <span class="hbar-val">100</span>
+        </div>
+        <div class="hbar-row">
+          <span class="hbar-label">Dominio técnico <small>profundidad de las soluciones</small></span>
+          <div class="hbar-track"><div class="hbar-fill" style="--w:100%"></div></div>
+          <span class="hbar-val">100</span>
+        </div>
+        <div class="hbar-row">
+          <span class="hbar-label">Claridad expositiva <small>casos reales de su día a día</small></span>
+          <div class="hbar-track"><div class="hbar-fill" style="--w:83.2%"></div></div>
+          <span class="hbar-val">83</span>
+        </div>
+        <div class="hbar-row">
+          <span class="hbar-label">Gestión del tiempo <small>ritmo para asimilar</small></span>
+          <div class="hbar-track"><div class="hbar-fill" style="--w:50%"></div></div>
+          <span class="hbar-val">50</span>
+        </div>
+      </div>
+      <p class="note-honest">El ritmo de las sesiones sigue siendo el punto a mejorar, aunque avanzó frente al reporte anterior: con nivel principiante y contenido 100% práctico, conviene dar más tiempo por tema en el resto del programa.</p>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Ailyn Gruszka · Dashboard de Impacto</span>
+      </div>
+    </section>
+
+    <!-- 07 · Próximos pasos (Bloque E, tono narrativo — n=2 no rinde un ranking real) -->
+    <section class="slide s-reco">
+      <span class="counter">07 / 08</span>
+      <p class="eyebrow">06 · Próximos pasos</p>
+      <h2>Lo que sigue después del cierre.</h2>
+      <div class="cols">
+        <div class="card">
+          <span class="label">Qué quieren seguir automatizando</span>
+          <ul class="rank">
+            <li><span class="n">1</span> Reportes</li>
+            <li><span class="n">2</span> Contenido</li>
+            <li><span class="n">3</span> Datos</li>
+          </ul>
+        </div>
+        <div class="card">
+          <span class="label">Qué quieren dominar más</span>
+          <ul class="rank">
+            <li><span class="n">1</span> Manejar Claude con más fluidez</li>
+            <li><span class="n">2</span> Cowork</li>
+            <li><span class="n">3</span> Más Claude, en general</li>
+          </ul>
+        </div>
+        <div class="card">
+          <span class="label">A quién más le serviría</span>
+          <ul class="rank">
+            <li><span class="n">1</span> RRHH</li>
+            <li><span class="n">2</span> Administración</li>
+          </ul>
+        </div>
+      </div>
+      <div class="hook">
+        Entre las tres, la petición más repetida es profundizar en Claude: desde manejarlo con más fluidez hasta explorar Cowork. Sumado al proyecto final ya identificado (unificar y graficar las nóminas), la base queda lista para explorar más adelante su propio clon digital.
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Ailyn Gruszka · Dashboard de Impacto</span>
+      </div>
+    </section>
+
+    <!-- 08 · Cierre -->
+    <section class="slide s-end">
+      <span class="counter">08 / 08</span>
+      <div class="end-logo">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia Educación">
+      </div>
+      <p class="end-message">
+        Ailyn, Danae y Roberto ya tienen las bases.<br>Sigamos <span class="hl-orange">profundizando</span> en <span class="hl-yellow">Claude</span>.
+      </p>
+      <div class="cta-wrap">
+        <a class="cta" href="https://calendly.com/intezia/30min" target="_blank" rel="noopener">Conversemos el próximo paso</a>
+      </div>
+      <div class="end-contact">
+        <p class="contact-line">
+          <span class="contact-label">Asesora:</span>
+          Flavia Martínez <span class="dot">·</span> +58 414 5756615 <span class="dot">·</span> fmartinez@intezia.com
+        </p>
+        <p class="contact-line">
+          <span class="contact-label">Empresa:</span>
+          Intezia C.A J-505657950 <span class="dot">·</span> info@intezia.com
+        </p>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

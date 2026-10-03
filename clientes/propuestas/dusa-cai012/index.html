@@ -1,0 +1,819 @@
+<!doctype html>
+<!--
+  Propuesta — DUSA
+  Programa: Servicio de Habilidades — DUSA, 5 áreas (CAI-012)
+  División: Educación · Servicio: Habilidades (Modelo Intezia, empresa/tipos-de-documento.md §0)
+  Siguiente paso del servicio de Detección ya entregado (Informe Final de Auditoría IA — DUSA,
+  Fase IV, 2026-09-04). No repite diagnóstico: parte directo de la hoja de ruta priorizada de
+  la sección 07 de ese informe, construyendo y adoptando con el equipo operativo de las 5 áreas
+  auditadas (Contabilidad y Cuentas por Pagar, Tesorería, Cuentas por Cobrar, Finanzas,
+  Comercial). Nombra Microsoft 365/Copilot/Copilot Studio abiertamente porque el informe de
+  Detección los recomienda explícitamente (sección 06) — a diferencia de dusa-cap088/, que por
+  instrucción del cliente en su momento no nombraba herramientas. Ver brief.md.
+  Base estructural: clon adaptado de dusa-cap088/ (roadmap 3 etapas, multi-área), extendido de
+  2 a 5 áreas. Beneficios v3 y Cierre escalera portados de simple-tv-cai002/ (dusa-cap088/ es
+  anterior al 2026-08-26 y usa el formato viejo — no se toca, no retroactivo, CLAUDE.md §4.10a).
+  Estructura: 15 slides · Diagnóstico ya hecho (Detección) → Programa (5 módulos) → 5 slides de
+  Construcción+Adopción por área → Roadmap (Kick-off/Validación → Construcción → Adopción) →
+  Beneficios v3 → Impacto → Propuesta Económica consolidada (1 sola hoja, 5 áreas) → Próximos
+  pasos → Cierre escalera.
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Propuesta · DUSA · Intezia Educación</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <main class="deck">
+
+    <!-- 1 · Portada -->
+    <section class="slide s-cover">
+      <span class="counter">01 / 15</span>
+      <div class="logo-big">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia Educación">
+      </div>
+      <div class="body">
+        <p class="eyebrow">Propuesta formativa · Servicio de Habilidades</p>
+        <h1>
+          3 agentes construidos,<br>
+          un <span class="hl">sistema en 5 áreas</span>.
+        </h1>
+        <p class="lead">
+          Cada área ya tiene su hoja de ruta priorizada. Construimos y adoptamos sobre el <strong>Microsoft 365</strong> que DUSA ya opera, extendiendo los <strong>3 agentes</strong> ya construidos.
+        </p>
+      </div>
+      <div class="id-line">
+        <span class="codigo">Código: CAI-012</span>
+        <span class="cliente">DUSA</span>
+      </div>
+    </section>
+
+    <!-- 2 · Punto de dolor + Diagnóstico -->
+    <section class="slide s-pain">
+      <span class="counter">02 / 15</span>
+      <span class="quote-mark">&ldquo;</span>
+      <div class="body">
+        <h2>El diagnóstico ya está hecho. Toca construir y adoptar.</h2>
+        <p class="context">
+          El servicio de Detección ya auditó las 5 áreas de DUSA y entregó un <strong>Índice de Madurez</strong> de 2,6 sobre 5, con la cultura del equipo en el nivel más alto y el talento y la gobernanza como dimensiones a reforzar. 3 áreas ya construyeron su propio agente. Este programa extiende ese trabajo a las 5.
+        </p>
+        <p class="diag-title">Diagnóstico</p>
+        <ol>
+          <li>Contabilidad y Cuentas por Pagar registra más de 300 facturas al mes 100% a mano, digitando datos que ya existen en la factura y la orden de compra.</li>
+          <li>Tesorería atiende 130 cuentas bancarias de 15 empresas con 2 personas donde antes había 5; la mitad de la jornada se va en cargar extractos banco por banco.</li>
+          <li>Cuentas por Cobrar tiene cerca de 15.000 partidas por contrastar, con una cartera que creció de 105 a 500 clientes mientras el equipo se reducía a la mitad.</li>
+          <li>Finanzas concentra en una sola persona la lógica de más de 20 archivos de Excel encadenados, sin respaldo documentado si esa persona no está.</li>
+          <li>Comercial arrastra un falso estatus de mora que afecta a unos 18 clientes por semana, con la cobranza llevada en cuaderno, a mano.</li>
+        </ol>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">DUSA · CAI-012</span>
+      </div>
+    </section>
+
+    <!-- 3 · Objetivos estratégicos -->
+    <section class="slide s-goals">
+      <span class="counter">03 / 15</span>
+      <p class="eyebrow">02 · Objetivos</p>
+      <h2>A dónde llevamos<br>las 5 áreas.</h2>
+      <div class="columns">
+        <div class="general">
+          <p class="label">Objetivo general</p>
+          <p>
+            Construir y adoptar, en las 5 áreas auditadas por el servicio de Detección, los casos de automatización priorizados en la hoja de ruta ya entregada, extendiendo el trabajo que el propio equipo de DUSA ya empezó durante la auditoría.
+          </p>
+        </div>
+        <div class="specifics">
+          <p class="label">Objetivos específicos</p>
+          <ol>
+            <li>Construir, con el equipo operativo de cada área, los casos priorizados en la hoja de ruta del servicio de Detección, sobre el ecosistema Microsoft 365 que DUSA ya opera.</li>
+            <li>Adoptar cada caso construido en el día a día del equipo, transfiriendo el conocimiento para que cada líder lo mantenga sin depender de Intezia.</li>
+            <li>Extender los 3 agentes ya construidos durante las sesiones de fundamentos y auditoría al alcance completo de su hoja de ruta.</li>
+          </ol>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">DUSA · CAI-012</span>
+      </div>
+    </section>
+
+    <!-- 4 · Programa (5 áreas, modo compacto) -->
+    <section class="slide s-program">
+      <span class="counter">04 / 15</span>
+      <p class="eyebrow">03 · Programa</p>
+      <h2>5 módulos.</h2>
+      <p class="meta">5 áreas, mismo camino: construcción con el equipo y adopción.</p>
+      <div class="modules">
+        <div class="module">
+          <span class="roman">I</span>
+          <h3>Contabilidad y CxP</h3>
+          <p class="obj">De 300+ facturas a mano al mes a preregistro automático y aprobación.</p>
+          <ul class="topics">
+            <li>Preregistro de facturas</li>
+            <li>Validador fiscal</li>
+            <li>Aprobación de pagos</li>
+            <li>Estados financieros</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">II</span>
+          <h3>Tesorería</h3>
+          <p class="obj">De 2 personas cargando extractos a validación bancaria con alerta de descuadre.</p>
+          <ul class="topics">
+            <li>Validación bancaria</li>
+            <li>Disponibilidad neta</li>
+            <li>Flujo de caja</li>
+            <li>Bandeja segmentada</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">III</span>
+          <h3>Cuentas por Cobrar</h3>
+          <p class="obj">De 15.000 partidas sin revisar a cartera depurada y sincerada por cliente.</p>
+          <ul class="topics">
+            <li>Depuración de cartera</li>
+            <li>Imputación de pagos</li>
+            <li>Descuento financiero</li>
+            <li>Cuadro de descuentos</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">IV</span>
+          <h3>Finanzas</h3>
+          <p class="obj">De 20+ archivos en una persona a un plan financiero compartido.</p>
+          <ul class="topics">
+            <li>Plan de nómina</li>
+            <li>Plan de producción</li>
+            <li>Consolidador de factores</li>
+            <li>Contratos de datos</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">V</span>
+          <h3>Comercial</h3>
+          <p class="obj">De cobranza en cuaderno a recordatorios automáticos y sin falsa mora.</p>
+          <ul class="topics">
+            <li>Generador de creativos</li>
+            <li>Recordatorios de cobranza</li>
+            <li>Descuentos por cliente</li>
+            <li>Cabezal y exhibición</li>
+          </ul>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">DUSA · CAI-012</span>
+      </div>
+    </section>
+
+    <!-- 5 · Contabilidad y Cuentas por Pagar: construcción y adopción -->
+    <section class="slide s-schedule">
+      <span class="counter">05 / 15</span>
+      <p class="eyebrow">04 · Construcción y Adopción · Ruta por área</p>
+
+      <div class="ruta">
+        <div class="ruta-node">1</div>
+        <div class="ruta-track"><div class="ruta-fill" style="width:20%"></div></div>
+        <span class="ruta-step">Contabilidad y CxP</span>
+      </div>
+
+      <div class="ses-head">
+        <div>
+          <span class="ses-mod">Construcción y Adopción · Presencial</span>
+          <h2>Contabilidad y Cuentas por Pagar (CxP)</h2>
+        </div>
+      </div>
+
+      <div class="ses-body">
+        <div class="ses-block">
+          <span class="label">Temas</span>
+          <div class="chips">
+            <span class="chip">Preregistro de facturas</span>
+            <span class="chip">Validador fiscal (IVA, retenciones)</span>
+            <span class="chip">Aprobación de pagos</span>
+            <span class="chip">Extensión de estados financieros</span>
+          </div>
+          <p class="ses-resources">Recursos: ecosistema Microsoft 365 Copilot y Copilot Studio ya licenciado por DUSA · sesión presencial · datos y casos reales de Contabilidad y Cuentas por Pagar (CxP).</p>
+        </div>
+        <div class="ses-cols">
+          <div class="ses-block">
+            <span class="label">Punto de partida (ya auditado)</span>
+            <ul>
+              <li>+300 facturas al mes registradas a mano</li>
+              <li>Agente de estados financieros ya construido en Detección</li>
+              <li>Gerente de Contabilidad validó el alcance en la auditoría</li>
+            </ul>
+          </div>
+          <div class="ses-block block-rec">
+            <span class="label">Construcción (Intezia)</span>
+            <ul>
+              <li>Lectura automática de factura y validador fiscal</li>
+              <li>Asistente de aprobación de pagos por proveedor</li>
+              <li>Extensión del agente de estados financieros</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Adopción</span>
+            <ul>
+              <li>Transferencia al equipo de 6 analistas y el coordinador</li>
+              <li>El gerente de área valida cada entrega</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">DUSA · CAI-012</span>
+      </div>
+    </section>
+
+    <!-- 6 · Tesorería: construcción y adopción -->
+    <section class="slide s-schedule">
+      <span class="counter">06 / 15</span>
+      <p class="eyebrow">04 · Construcción y Adopción · Ruta por área</p>
+
+      <div class="ruta">
+        <div class="ruta-node">2</div>
+        <div class="ruta-track"><div class="ruta-fill" style="width:40%"></div></div>
+        <span class="ruta-step">Tesorería</span>
+      </div>
+
+      <div class="ses-head">
+        <div>
+          <span class="ses-mod">Construcción y Adopción · Presencial</span>
+          <h2>Tesorería</h2>
+        </div>
+      </div>
+
+      <div class="ses-body">
+        <div class="ses-block">
+          <span class="label">Temas</span>
+          <div class="chips">
+            <span class="chip">Validación de movimientos bancarios</span>
+            <span class="chip">Disponibilidad bancaria neta</span>
+            <span class="chip">Flujo de caja proyectado vs. real</span>
+            <span class="chip">Bandeja de correo segmentada</span>
+          </div>
+          <p class="ses-resources">Recursos: Microsoft SQL Server con conector de Power Platform · sesión presencial · Sistemas de DUSA habilitando accesos.</p>
+        </div>
+        <div class="ses-cols">
+          <div class="ses-block">
+            <span class="label">Punto de partida (ya auditado)</span>
+            <ul>
+              <li>130 cuentas de 15 empresas, 2 personas donde había 5</li>
+              <li>La mitad de la jornada en descargar y cargar extractos</li>
+            </ul>
+          </div>
+          <div class="ses-block block-rec">
+            <span class="label">Construcción (Intezia)</span>
+            <ul>
+              <li>Validación bancaria con alerta de descuadre</li>
+              <li>Disponibilidad neta y comparativa de flujo de caja</li>
+              <li>Bandeja de correo segmentada por proveedor</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Adopción</span>
+            <ul>
+              <li>Transferencia al coordinador y su analista</li>
+              <li>Sistemas de DUSA participa en la habilitación de accesos</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">DUSA · CAI-012</span>
+      </div>
+    </section>
+
+    <!-- 7 · Cuentas por Cobrar: construcción y adopción -->
+    <section class="slide s-schedule">
+      <span class="counter">07 / 15</span>
+      <p class="eyebrow">04 · Construcción y Adopción · Ruta por área</p>
+
+      <div class="ruta">
+        <div class="ruta-node">3</div>
+        <div class="ruta-track"><div class="ruta-fill" style="width:60%"></div></div>
+        <span class="ruta-step">Cuentas por Cobrar</span>
+      </div>
+
+      <div class="ses-head">
+        <div>
+          <span class="ses-mod">Construcción y Adopción · Presencial</span>
+          <h2>Cuentas por Cobrar</h2>
+        </div>
+      </div>
+
+      <div class="ses-body">
+        <div class="ses-block">
+          <span class="label">Temas</span>
+          <div class="chips">
+            <span class="chip">Depuración y sinceración de cartera</span>
+            <span class="chip">Imputación de pagos</span>
+            <span class="chip">Descuento financiero aplicable</span>
+            <span class="chip">Normalización de descuentos</span>
+          </div>
+          <p class="ses-resources">Recursos: base de datos corporativa en SQL Server · sesión presencial · partidas reales de Cuentas por Cobrar.</p>
+        </div>
+        <div class="ses-cols">
+          <div class="ses-block">
+            <span class="label">Punto de partida (ya auditado)</span>
+            <ul>
+              <li>~15.000 partidas de ingreso por contrastar</li>
+              <li>Validador de consolidado ya construido en Detección</li>
+              <li>Cartera creció de 105 a 500 clientes, equipo reducido a la mitad</li>
+            </ul>
+          </div>
+          <div class="ses-block block-rec">
+            <span class="label">Construcción (Intezia)</span>
+            <ul>
+              <li>Extensión del validador a depuración por cliente</li>
+              <li>Imputación de pagos y descuento financiero</li>
+              <li>Normalización del cuadro de descuentos</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Adopción</span>
+            <ul>
+              <li>Transferencia a las 2 analistas y el becario</li>
+              <li>La líder del área cura las excepciones</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">DUSA · CAI-012</span>
+      </div>
+    </section>
+
+    <!-- 8 · Finanzas: construcción y adopción -->
+    <section class="slide s-schedule">
+      <span class="counter">08 / 15</span>
+      <p class="eyebrow">04 · Construcción y Adopción · Ruta por área</p>
+
+      <div class="ruta">
+        <div class="ruta-node">4</div>
+        <div class="ruta-track"><div class="ruta-fill" style="width:80%"></div></div>
+        <span class="ruta-step">Finanzas</span>
+      </div>
+
+      <div class="ses-head">
+        <div>
+          <span class="ses-mod">Construcción y Adopción · Presencial</span>
+          <h2>Finanzas</h2>
+        </div>
+      </div>
+
+      <div class="ses-body">
+        <div class="ses-block">
+          <span class="label">Temas</span>
+          <div class="chips">
+            <span class="chip">Agente del plan de nómina</span>
+            <span class="chip">Agente del plan de producción</span>
+            <span class="chip">Consolidador de factores</span>
+            <span class="chip">Contratos de datos</span>
+          </div>
+          <p class="ses-resources">Recursos: Microsoft 365 Copilot · sesión presencial · archivos reales de planificación financiera.</p>
+        </div>
+        <div class="ses-cols">
+          <div class="ses-block">
+            <span class="label">Punto de partida (ya auditado)</span>
+            <ul>
+              <li>+20 archivos de Excel encadenados en una sola persona</li>
+              <li>Agente de premisas al comité ya construido en Detección</li>
+            </ul>
+          </div>
+          <div class="ses-block block-rec">
+            <span class="label">Construcción (Intezia)</span>
+            <ul>
+              <li>Agente del plan de nómina y de producción</li>
+              <li>Consolidador de factores de mano de obra</li>
+              <li>Contratos de datos con cada área proveedora</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Adopción</span>
+            <ul>
+              <li>Transferencia al especialista de planificación y su par</li>
+              <li>Responsables de áreas proveedoras validan el formato</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">DUSA · CAI-012</span>
+      </div>
+    </section>
+
+    <!-- 9 · Comercial: construcción y adopción -->
+    <section class="slide s-schedule">
+      <span class="counter">09 / 15</span>
+      <p class="eyebrow">04 · Construcción y Adopción · Ruta por área</p>
+
+      <div class="ruta">
+        <div class="ruta-node">5</div>
+        <div class="ruta-track"><div class="ruta-fill" style="width:100%"></div></div>
+        <span class="ruta-step">Comercial</span>
+      </div>
+
+      <div class="ses-head">
+        <div>
+          <span class="ses-mod">Construcción y Adopción · Presencial</span>
+          <h2>Comercial (Región Centro-Sur)</h2>
+        </div>
+      </div>
+
+      <div class="ses-body">
+        <div class="ses-block">
+          <span class="label">Temas</span>
+          <div class="chips">
+            <span class="chip">Extensión del generador de creativos</span>
+            <span class="chip">Recordatorios de cobranza</span>
+            <span class="chip">Descuentos por cliente</span>
+            <span class="chip">Cabezal y exhibición</span>
+          </div>
+          <p class="ses-resources">Recursos: Celuweb y Microsoft 365 Copilot · sesión presencial · casos reales de la región Centro-Sur.</p>
+        </div>
+        <div class="ses-cols">
+          <div class="ses-block">
+            <span class="label">Punto de partida (ya auditado)</span>
+            <ul>
+              <li>Falso estatus de mora afecta a ~18 clientes por semana</li>
+              <li>Generador de creativos ya construido en Detección</li>
+            </ul>
+          </div>
+          <div class="ses-block block-rec">
+            <span class="label">Construcción (Intezia)</span>
+            <ul>
+              <li>Extensión del generador de creativos</li>
+              <li>Recordatorios de cobranza y gestor de descuentos</li>
+              <li>Diseñador de cabezal y exhibición</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Adopción</span>
+            <ul>
+              <li>Transferencia a los asesores comerciales de la región</li>
+              <li>El gerente regional valida cada entrega</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">DUSA · CAI-012</span>
+      </div>
+    </section>
+
+    <!-- 10 · Roadmap del proyecto -->
+    <section class="slide s-roadmap">
+      <span class="counter">10 / 15</span>
+      <p class="eyebrow">04 · Roadmap · Construcción y Adopción</p>
+      <h2>El mismo camino, <span class="hl">área por área</span>.</h2>
+
+      <div class="rmx-field">
+        <div class="rmx-journey">
+
+          <!-- ORIGEN · Recorrido por área -->
+          <div class="rmx-origin">
+            <div class="rmx-origin-top">
+              <span class="rmx-badge">5 áreas · mismo recorrido</span>
+            </div>
+            <div class="rmx-node rmx-node-f1">F1</div>
+            <div class="rmx-origin-bot">
+              <div class="rmx-origin-name">Recorrido por área</div>
+              <div class="rmx-origin-meta">Contabilidad y CxP · Tesorería · Cuentas por Cobrar · Finanzas · Comercial</div>
+              <div class="rmx-origin-out">El diagnóstico ya está hecho (servicio de Detección). Cada área sigue el mismo camino desde aquí: <strong>primero construimos con el equipo, después adoptamos</strong>.</div>
+            </div>
+          </div>
+
+          <!-- BIFURCACIÓN (etapas) -->
+          <div class="rmx-fork">
+            <div class="rmx-branch rmx-up"></div>
+            <div class="rmx-branch rmx-mid"></div>
+            <div class="rmx-branch rmx-dn"></div>
+          </div>
+
+          <!-- RUTAS · Etapa 1 / Etapa 2 / Etapa 3 -->
+          <div class="rmx-routes">
+
+            <div class="rmx-route rmx-route-f2">
+              <div class="rmx-node rmx-node-f2">E1</div>
+              <div class="rmx-card rmx-card-f2">
+                <span class="rmx-card-tag">Kick-off y validación</span>
+                <div class="rmx-card-name">Hoja de ruta ya priorizada</div>
+                <ul class="rmx-facets">
+                  <li><span>Qué pasa</span><p>Presentamos la hoja de ruta del informe de Detección y agendamos el orden de construcción con cada líder.</p></li>
+                  <li><span>Con quién</span><p>Líder de cada una de las 5 áreas.</p></li>
+                  <li><span>Entrega</span><p>Calendario de construcción y adopción por área.</p></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="rmx-route rmx-route-f4">
+              <div class="rmx-node rmx-node-f4">E2</div>
+              <div class="rmx-card rmx-card-f4">
+                <span class="rmx-card-tag">Construcción (Intezia)</span>
+                <div class="rmx-card-name">Con participación del equipo</div>
+                <ul class="rmx-facets">
+                  <li><span>Qué pasa</span><p>Intezia construye cada caso priorizado, principalmente sobre <strong>Microsoft 365 Copilot</strong> y <strong>Copilot Studio</strong>.</p></li>
+                  <li><span>Con quién</span><p>Equipo consultor de Intezia, con el equipo operativo de cada área participando en la validación.</p></li>
+                  <li><span>Entrega</span><p>Casos construidos, extendiendo los 3 agentes ya activos.</p></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="rmx-route rmx-route-f3">
+              <div class="rmx-node rmx-node-f3">E3</div>
+              <div class="rmx-card rmx-card-f3">
+                <span class="rmx-card-tag">Adopción</span>
+                <div class="rmx-card-name">Transferencia por área</div>
+                <ul class="rmx-facets">
+                  <li><span>Qué pasa</span><p>Activamos los casos construidos y transferimos el conocimiento a cada equipo.</p></li>
+                  <li><span>Con quién</span><p>El mismo equipo, ya con los casos listos para usar.</p></li>
+                  <li><span>Entrega</span><p>Cada líder capacitado para mantener y evaluar nuevos casos.</p></li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- CONVERGENCIA -->
+          <div class="rmx-merge">
+            <div class="rmx-branch rmx-up"></div>
+            <div class="rmx-branch rmx-mid"></div>
+            <div class="rmx-branch rmx-dn"></div>
+          </div>
+
+          <!-- DESTINO -->
+          <div class="rmx-result">
+            <div class="rmx-node rmx-node-r">★</div>
+            <div class="rmx-result-card">
+              <span class="rmx-result-label">Entregable insignia · Las 5 áreas construidas</span>
+              <div class="rmx-result-title">Sistema de automatización operado por el propio equipo de DUSA</div>
+              <ul>
+                <li>Casos construidos y activados en las 5 áreas</li>
+                <li>Extensión de los 3 agentes ya construidos en Detección</li>
+                <li>Transferencia de conocimiento por líder de área</li>
+                <li>Constancia de participación INTEZIA</li>
+              </ul>
+            </div>
+          </div>
+
+        </div><!-- /.rmx-journey -->
+
+        <div class="rmx-ethics">
+          <span class="rmx-ethics-tag">Metodología ABR · Construcción con el equipo, no para el equipo</span>
+          <p>Intezia no construye ningún caso sin el equipo operativo de cada área validando el resultado. Cada caso se construye primero sobre el ecosistema que DUSA ya opera, y solo suma complejidad cuando la hoja de ruta ya priorizada lo justifica.</p>
+        </div>
+
+      </div><!-- /.rmx-field -->
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">DUSA · CAI-012</span>
+      </div>
+    </section>
+
+    <!-- 11 · Beneficios (formato v3: Resultados · Por qué Habilidades · Entregables · Valor inmediato) -->
+    <section class="slide s-benefits s-benefits-v2">
+      <span class="counter">11 / 15</span>
+      <p class="eyebrow">05 · Beneficios</p>
+      <h2>Lo que <span class="hl">se llevan</span>.</h2>
+      <div class="grid">
+        <div class="block">
+          <p class="label">Resultados</p>
+          <ul>
+            <li><strong>Sistema de automatización</strong> operando en las 5 áreas ya auditadas.</li>
+            <li>Extensión de los 3 agentes que el propio equipo ya construyó.</li>
+            <li>Cada líder de área capacitado para mantener sus propios casos.</li>
+          </ul>
+        </div>
+        <div class="block">
+          <p class="label">Por qué Habilidades</p>
+          <p>
+            El equipo instala la capacidad <strong>en casa</strong>: construimos sobre la hoja de ruta que DUSA ya tiene, con cada líder de área validando el resultado, y dejamos el sistema operando sin depender del consultor.
+          </p>
+        </div>
+        <div class="block">
+          <p class="label">Entregables</p>
+        </div>
+        <div class="block">
+          <p class="label">Valor inmediato</p>
+        </div>
+      </div>
+
+      <!-- Cajas multiline editables (vacías en HTML — el contenido vive dentro del AcroForm /V). -->
+      <div class="multi-box entregables-box" data-field="Entregables"></div>
+      <div class="multi-box acreditaciones-box" data-field="Acreditacion"></div>
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">DUSA · CAI-012</span>
+      </div>
+    </section>
+
+    <!-- 12 · Impacto / estudios — datos de estudios reales, fuente citada (CLAUDE.md §4.9) -->
+    <section class="slide s-impact">
+      <span class="counter">12 / 15</span>
+
+      <div class="impact-head">
+        <p class="eyebrow">06 · Impacto</p>
+        <h2>La evidencia no deja<br><span class="hl">lugar a dudas</span>.</h2>
+      </div>
+
+      <div class="impact-body">
+        <div class="chart-panel">
+          <p class="panel-title">Potencial de mejora con IA por área de negocio</p>
+          <div class="bars">
+            <div class="bar-row">
+              <span class="bar-label">Marketing y ventas · potencial de mejora en productividad</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:30%"><span class="bar-val">+5&ndash;15%</span></div></div>
+            </div>
+            <div class="bar-row">
+              <span class="bar-label">Ventas · potencial de mejora en productividad</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:25%"><span class="bar-val">+3&ndash;5%</span></div></div>
+            </div>
+          </div>
+          <div class="bar-axis"><span class="scale"><span>0</span><span>10</span><span>20</span><span>30</span><span>40</span><span>50%</span></span></div>
+          <p class="panel-source">Fuentes: McKinsey &mdash; The economic potential of generative AI: The next productivity frontier (2023) &middot; Ardent Partners &mdash; State of ePayables (2025).</p>
+        </div>
+
+        <div class="gauge-panel">
+          <div class="gauge" style="--pct:72">
+            <div class="gauge-core">
+              <span class="gauge-num">72<span class="pct">%</span></span>
+              <span class="gauge-cap">más rápido el cierre de una factura al automatizar la aprobación</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="impact-hook">
+        <span class="hook-mark">&#9656;</span>
+        <p class="hook-text">
+          Automatizar la aprobación de facturas puede acortar hasta un <strong>72%</strong> el tiempo de cierre (Ardent Partners, 2025), el mismo tipo de salto que necesita el ciclo compra-pago de Contabilidad y Cuentas por Pagar. Marketing y ventas, por su parte, puede ganar hasta 15% de productividad con <strong>IA generativa</strong> (McKinsey, 2023), un salto directamente aplicable a Comercial.
+        </p>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">DUSA · CAI-012</span>
+      </div>
+    </section>
+
+    <!-- 13 · Propuesta Económica · consolidada, 5 áreas -->
+    <section class="slide s-price">
+      <span class="counter">13 / 15</span>
+      <h2 class="title">Propuesta Económica</h2>
+
+      <div class="block">
+        <span class="block-eyebrow">Duración</span>
+        <p class="block-value">5 áreas · construcción y adopción sobre la hoja de ruta ya priorizada. A definir en kick-off.</p>
+      </div>
+
+      <div class="block block-programa">
+        <span class="block-eyebrow">Programa</span>
+      </div>
+      <div class="multi-box programa-box" data-field="Programa"></div>
+
+      <div class="block block-cotizacion">
+        <span class="block-eyebrow">Cotización</span>
+      </div>
+
+      <span class="cot-label cot-label-base">Propuesta + Inversión</span>
+      <div class="cot-frame base-frame"></div>
+
+      <span class="cot-label cot-label-discount">Descuento</span>
+      <div class="cot-frame discount-frame"></div>
+
+      <span class="cot-label cot-label-total">TOTAL</span>
+      <div class="cot-frame total-frame"></div>
+
+      <p class="cot-validity">Cotización válida por 30 días.</p>
+      <div class="cot-terms-box">
+        <span class="cot-terms-label">Importante</span>
+        <p class="cot-terms-text">Este servicio se presta bajo nuestros <a href="https://drive.google.com/file/d/1PA-ZSt4KnyY5dpxXzgkIk6-yfGlV2eF8/view?usp=drive_link" target="_blank" rel="noopener">términos y condiciones</a>. Al avanzar con esta propuesta, ambas partes los aceptan.</p>
+      </div>
+
+      <div class="block block-notes-container">
+        <span class="block-eyebrow">Notas</span>
+      </div>
+      <div class="multi-box notas-box" data-field="Notas"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">DUSA · CAI-012</span>
+      </div>
+    </section>
+
+    <!-- 14 · Próximos pasos -->
+    <section class="slide s-steps">
+      <span class="counter">14 / 15</span>
+      <p class="eyebrow">07 · Próximos pasos</p>
+      <h2>Cómo arrancamos.</h2>
+      <div class="step-cards">
+        <div class="step-card">
+          <span class="ghost">01</span>
+        </div>
+        <div class="step-card">
+          <span class="ghost">02</span>
+        </div>
+        <div class="step-card">
+          <span class="ghost">03</span>
+        </div>
+      </div>
+
+      <!-- Editable AcroForm placeholders (3 pasos × título + body) -->
+      <div class="acro-area acro-title acro-paso-01-titulo" data-field="Paso01Titulo">
+        <span class="acro-default-text">Confirmamos fechas</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-01-body" data-field="Paso01Body">
+        <span class="acro-default-text">Definimos calendario y logística presencial para las 5 áreas.</span>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-02-titulo" data-field="Paso02Titulo">
+        <span class="acro-default-text">Acceso y logística</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-02-body" data-field="Paso02Body">
+        <span class="acro-default-text">Coordinamos acceso a los sistemas y la agenda de sesiones presenciales con cada líder de área.</span>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-03-titulo" data-field="Paso03Titulo">
+        <span class="acro-default-text">Kick-off del proyecto</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-03-body" data-field="Paso03Body">
+        <span class="acro-default-text">Presentamos la hoja de ruta priorizada y validamos con cada líder el orden de construcción.</span>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">DUSA · CAI-012</span>
+      </div>
+    </section>
+
+    <!-- 15 · Cierre (ruta/escalera editable) -->
+    <section class="slide s-end">
+      <span class="counter">15 / 15</span>
+
+      <div class="end-logo">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia Educación">
+      </div>
+
+      <!-- Resultado (cinta superior) — caja editable, ventas la redacta por cliente -->
+      <div class="end-summit" data-field="CierreResultado">
+        <span class="acro-default-text">DUSA, con un sistema de automatización operando en sus 5 áreas ya auditadas.</span>
+      </div>
+
+      <!-- Escalera de 3 pasos — cada uno con su caja editable -->
+      <div class="end-stairs">
+        <div class="stair-step stair-1">
+          <span class="stair-label">Paso 1</span>
+          <div class="stair-field" data-field="CierrePaso1">
+            <span class="acro-default-text">Extensión de 3 agentes</span>
+          </div>
+        </div>
+        <div class="stair-step stair-2">
+          <span class="stair-label">Paso 2</span>
+          <div class="stair-field" data-field="CierrePaso2">
+            <span class="acro-default-text">Construcción con el equipo, área por área</span>
+          </div>
+        </div>
+        <div class="stair-step stair-3">
+          <span class="stair-label">Paso 3</span>
+          <div class="stair-field" data-field="CierrePaso3">
+            <span class="acro-default-text">Cada líder capacitado para mantenerlo</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cta-wrap">
+        <span class="cta">Esperamos tu respuesta</span>
+      </div>
+
+      <div class="end-contact">
+        <p class="contact-line">
+          <span class="contact-label">Asesora de ventas:</span>
+          María Iribarren <span class="dot">·</span> +58 414 0570056 <span class="dot">·</span> miribarren@intezia.com
+        </p>
+        <p class="contact-line">
+          <span class="contact-label">Empresa:</span>
+          Intezia C.A J-505657950 <span class="dot">·</span> servicio@intezia.com
+        </p>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

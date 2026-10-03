@@ -1,0 +1,154 @@
+/* Overrides locales · Fivenca CAP-062 · Acompañamiento Aplicado en IA
+   ---------------------------------------------------------------------------
+   Sin overrides de fábrica para Programa/Beneficios: la slide de Programa usa
+   3 fases (3 cards en fila), tamaño normal sin modo compacto; el equipo trae 2
+   personas (dupla Andrés Fornerino + Isaac) con el grid 1fr 1fr de _base.
+   La slide de Ritmo semanal reutiliza s-schedule (una semana tipo, 2 sesiones
+   de 2 h). Añadido local: las 3 slides `s-demo` («Mes a mes · Cómo se vive»).
+   --------------------------------------------------------------------------- */
+
+/* ===========================================================================
+   SLIDES s-demo — «Mes a mes · Cómo se vive» (3 slides, una por mes)
+   ---------------------------------------------------------------------------
+   Demo concreto de la dinámica de CADA mes para que el cliente la visualice:
+   Qué traes → Qué hacemos juntos → Con qué sales, + franja de resultado del
+   mes. Estáticas (sin AcroForms, sin coordenadas pt). Sobre tokens de _base.
+   El stepper de arriba marca en qué mes estamos (is-active / is-done).
+   =========================================================================== */
+.s-demo {
+  background: var(--white);
+  color: var(--black);
+  padding: 50px 56px 80px;
+  display: flex;
+  flex-direction: column;
+}
+.s-demo::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 12px; height: 100%;
+  background: var(--gradient-warm);
+}
+.s-demo .eyebrow { color: var(--orange); margin-bottom: 14px; }
+
+/* Stepper de los 3 meses */
+.s-demo .demo-nav {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 22px;
+}
+.s-demo .demo-nav .dn {
+  flex: 1 1 0;
+  border: 2px solid rgba(0, 0, 0, 0.18);
+  padding: 9px 14px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 12.5px;
+  line-height: 1.15;
+  letter-spacing: 0.01em;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: rgba(0, 0, 0, 0.4);
+}
+.s-demo .demo-nav .dn .dn-num {
+  font-size: 18px;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.32);
+}
+.s-demo .demo-nav .dn.is-done {
+  color: var(--black);
+  border-color: var(--black);
+}
+.s-demo .demo-nav .dn.is-done .dn-num { color: var(--orange); }
+.s-demo .demo-nav .dn.is-active {
+  background: var(--black);
+  color: var(--white);
+  border-color: var(--black);
+}
+.s-demo .demo-nav .dn.is-active .dn-num { color: var(--yellow); }
+
+/* Título del mes */
+.s-demo .demo-head h2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  margin-bottom: 20px;
+  max-width: 980px;
+}
+
+/* Flujo: Qué traes → Qué hacemos juntos → Con qué sales */
+.s-demo .demo-flow {
+  flex: 1 1 auto;
+  min-height: 0;
+  display: flex;
+  align-items: stretch;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+.s-demo .demo-step {
+  flex: 1 1 0;
+  border: 2px solid var(--black);
+  padding: 20px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.s-demo .demo-step .ds-tag {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--orange);
+}
+.s-demo .demo-step p {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+}
+.s-demo .demo-step p strong { font-weight: 700; color: var(--black); }
+.s-demo .demo-step.ds-out {
+  background: var(--yellow);
+  border-color: var(--black);
+}
+.s-demo .demo-step.ds-out .ds-tag { color: var(--black); }
+
+.s-demo .demo-arrow {
+  flex: 0 0 auto;
+  align-self: center;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 1;
+  color: var(--orange);
+}
+
+/* Franja de resultado del mes */
+.s-demo .demo-result {
+  flex: 0 0 auto;
+  background: var(--black);
+  color: var(--white);
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.s-demo .demo-result .dr-label {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--yellow);
+  flex: 0 0 auto;
+}
+.s-demo .demo-result p {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.3;
+}

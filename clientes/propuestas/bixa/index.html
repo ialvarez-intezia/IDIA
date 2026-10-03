@@ -1,0 +1,573 @@
+<!doctype html>
+<!--
+  Propuesta — Productos Bixa
+  Servicio: DETECCIÓN + HABILIDADES, combo (Modelo Intezia · empresa/tipos-de-documento.md §0,
+  servicio sigue siendo "deteccion" por combo parcial de 2 servicios, §4.1a punto 1) · Código
+  DET-008. División: Educación (cliente corporativo).
+  Fuente: Ficha de Levantamiento Intezia — Productos Bixa (2026-09-04, Flavia Martínez).
+  Cliente recurrente: ya recibió un servicio de Habilidades (fundamentos de IA) antes; sin
+  propuesta previa sin aprobar.
+  Diferencia clave con el clon origen (Café Yocoima DET-007): aquí el contenido de Fase 2 SÍ
+  está orientado por la Ficha (4 procesos ya identificados: documentación de instructivos,
+  compilación/transcripción, normatización, descripciones de cargo) — pero el número de
+  sesiones y la carga horaria exacta siguen sin fijarse (sin .timebar), porque el Reporte Final
+  de Fase 1 es la base directa de esa fase. Modalidad presencial en ambas fases (sede única,
+  Valles del Tuy).
+  Herramienta de referencia: Gemini dentro de Google Workspace (Claude aún no aprobado por la
+  directiva del cliente) — el deck no nombra una herramienta de destino, se enfoca en los
+  procesos y en el entorno Google que el cliente ya usa (§4.11: no se afirma migración de
+  stack). No se nombra a las interlocutoras (Magleny, Wanda; dato interno del brief.md).
+  Base: clon de yocoima/ (esquema 2026-09-04, sin Metodología ABR, sin Equipo facilitador
+  §4.10a; cierre tipo escalera editable). Hoja de precio: Fase 1 + Fase 2, ambas con caja
+  editable (customize-bixa.py quita solo PrecioFase3 y recalcula PrecioBase = Fase1+Fase2).
+  12 slides (sin cambio de conteo).
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Propuesta · Productos Bixa · Intezia</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <main class="deck">
+
+    <!-- 1 · Portada -->
+    <section class="slide s-cover">
+      <span class="counter">01 / 12</span>
+      <div class="logo-big">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia">
+      </div>
+      <div class="body">
+        <p class="eyebrow">Propuesta de negocio · Servicio de Detección y Habilidades</p>
+        <h1>
+          Diagnóstico y capacitación<br>
+          <span class="hl">para Productos Bixa</span>
+        </h1>
+        <p class="lead">
+          Diagnosticamos los procesos documentales del área de <strong>Operaciones</strong> de Productos Bixa (instructivos, normatización, descripciones de cargo), priorizamos sus cuellos de botella y capacitamos al equipo para resolverlos, dentro del entorno <strong>Google Workspace</strong> que ya utilizan.
+        </p>
+      </div>
+      <div class="id-line">
+        <span class="codigo">Código: DET-008</span>
+        <span class="cliente">Productos Bixa</span>
+      </div>
+    </section>
+
+    <!-- 2 · Punto de dolor + Diagnóstico -->
+    <section class="slide s-pain">
+      <span class="counter">02 / 12</span>
+      <span class="quote-mark">&ldquo;</span>
+      <div class="body">
+        <h2>Todo a mano, todo repetido: así se documenta hoy en Productos Bixa.</h2>
+        <p class="context">
+          El equipo de Operaciones (Sistema de Gestión de Calidad) de Productos Bixa sostiene a mano toda la documentación de la planta: instructivos, su compilación y las descripciones de cargo por producto. Antes de capacitar a nadie, la Detección responde una pregunta que hoy nadie en la empresa tiene clara: <strong>qué automatizar primero</strong>.
+        </p>
+        <p class="diag-title">Diagnóstico</p>
+        <ol>
+          <li>Cada instructivo (almacén, mantenimiento y otros procesos) se documenta y compila manualmente, sin un formato único.</li>
+          <li>Todo el trabajo de transcribir y unificar esa información en el formato final recae en una sola persona, cada semana.</li>
+          <li>La gerente de Operaciones revisa a mano, de forma exhaustiva, la ortografía, redacción y normatización de cada documento.</li>
+          <li>Cada producto tiene partes comunes y partes que cambian en su descripción de cargo, sin forma de reutilizar lo ya documentado.</li>
+          <li>El equipo ya recibió fundamentos de IA, pero no tiene claro cómo aplicarlos a estos procesos documentales: ese es el punto de partida de la Detección.</li>
+        </ol>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Productos Bixa · DET-008</span>
+      </div>
+    </section>
+
+    <!-- 3 · Objetivos estratégicos -->
+    <section class="slide s-goals">
+      <span class="counter">03 / 12</span>
+      <p class="eyebrow">02 · Objetivos</p>
+      <h2>A dónde llevamos<br>al equipo de Operaciones.</h2>
+      <div class="columns">
+        <div class="general">
+          <p class="label">Objetivo general</p>
+          <p>
+            Diagnosticar los procesos documentales del área de Operaciones (Sistema de Gestión de Calidad) de Productos Bixa para identificar y priorizar sus cuellos de botella, y entregar una hoja de ruta clara de qué automatizar primero.
+          </p>
+        </div>
+        <div class="specifics">
+          <p class="label">Objetivos específicos</p>
+          <ol>
+            <li>Auditar los procesos de documentación de instructivos, compilación/transcripción, revisión de calidad y elaboración de descripciones de cargo, con un guion estructurado.</li>
+            <li>Medir el punto de partida con la Matriz de Madurez Digital y priorizar las oportunidades por impacto y esfuerzo.</li>
+            <li>Detectar, como logro inmediato, qué partes de las descripciones de cargo y la documentación por producto son comunes y cuáles varían.</li>
+            <li>Entregar un Reporte Final con la hoja de ruta priorizada y capacitar al equipo en Fase 2 para aplicar esas prioridades de inicio a fin.</li>
+          </ol>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Productos Bixa · DET-008</span>
+      </div>
+    </section>
+
+    <!-- 4 · El camino (3 tarjetas: Auditoría + Patrones = Fase 1, Habilidades = Fase 2) -->
+    <section class="slide s-program">
+      <span class="counter">04 / 12</span>
+      <p class="eyebrow">03 · El camino</p>
+      <h2>De la Detección a las Habilidades.</h2>
+      <p class="meta">Fase 1 (Auditoría + Patrones) y Fase 2 (Habilidades) se cotizan juntas en este documento.</p>
+      <div class="modules">
+        <div class="module">
+          <span class="roman">I</span>
+          <h3>Auditoría del Proceso</h3>
+          <p class="obj">Mapeamos los procesos documentales de Operaciones (instructivos, compilación, normatización, descripciones de cargo) y priorizamos sus cuellos de botella.</p>
+          <ul class="topics">
+            <li>Matriz de Madurez</li>
+            <li>Reporte Final</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">II</span>
+          <h3>Detección de Patrones</h3>
+          <p class="obj">Identificamos qué partes de las descripciones de cargo y los instructivos por producto son comunes y cuáles varían, para reducir el trabajo repetido.</p>
+          <ul class="topics">
+            <li>Partes comunes y variables</li>
+            <li>Logro inmediato</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">III</span>
+          <h3>Habilidades aplicadas</h3>
+          <p class="obj">Sesiones para automatizar documentación, compilación, normatización y descripciones de cargo, sobre las prioridades del diagnóstico.</p>
+          <ul class="topics">
+            <li>Documentación e instructivos</li>
+            <li>Normatización y descripciones</li>
+          </ul>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Productos Bixa · DET-008</span>
+      </div>
+    </section>
+
+    <!-- 5 · Fase 1: Detección de procesos documentales -->
+    <section class="slide s-schedule">
+      <span class="counter">05 / 12</span>
+      <p class="eyebrow">04 · Fase 1 de 2 · Ruta por fase</p>
+
+      <div class="ruta">
+        <div class="ruta-node">1</div>
+        <div class="ruta-track"><div class="ruta-fill" style="width:50%"></div></div>
+        <span class="ruta-step">Detección</span>
+      </div>
+
+      <div class="ses-head">
+        <div>
+          <span class="ses-mod">Fase 1 · Auditoría de procesos documentales · Presencial, oficinas del cliente (Valles del Tuy)</span>
+          <h2>Detección</h2>
+        </div>
+      </div>
+
+      <div class="ses-body">
+        <div class="ses-block">
+          <span class="label">Temas</span>
+          <div class="chips">
+            <span class="chip">Auditoría de Operaciones</span>
+            <span class="chip">Matriz de Madurez Digital</span>
+            <span class="chip">Impacto vs. esfuerzo</span>
+            <span class="chip">Patrones documentales</span>
+            <span class="chip">Reporte Final</span>
+          </div>
+        </div>
+        <div class="ses-cols">
+          <div class="ses-block">
+            <span class="label">Qué se hace</span>
+            <ul>
+              <li>Auditamos los procesos de documentación, compilación, normatización y descripciones de cargo del área de Operaciones, con un guion estructurado</li>
+              <li>Medimos el punto de partida con la Matriz de Madurez Digital y priorizamos por impacto y esfuerzo</li>
+              <li>Detectamos qué partes de las descripciones de cargo y los instructivos son comunes entre productos y cuáles varían</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Qué se logra</span>
+            <ul>
+              <li>Un diagnóstico claro de los cuellos de botella documentales de Operaciones, priorizados por peso</li>
+              <li>Un primer mapa de partes comunes y variables, reutilizable en las descripciones de cargo</li>
+              <li>Una hoja de ruta lista para arrancar la Fase 2 con foco, no a ciegas</li>
+            </ul>
+          </div>
+          <div class="ses-block block-rec">
+            <span class="label">Recursos y entornos</span>
+            <ul>
+              <li>Guion de auditoría Intezia y Matriz de Madurez Digital</li>
+              <li>Entorno Google Workspace (Gemini) que Productos Bixa ya utiliza</li>
+              <li>Sesiones presenciales en su sede de Valles del Tuy</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Productos Bixa · DET-008</span>
+      </div>
+    </section>
+
+    <!-- 6 · Fase 2: Habilidades (contenido orientado por la Ficha, sin horas fijas) -->
+    <section class="slide s-schedule">
+      <span class="counter">06 / 12</span>
+      <p class="eyebrow">04 · Fase 2 de 2 · Ruta por fase</p>
+
+      <div class="ruta">
+        <div class="ruta-node">2</div>
+        <div class="ruta-track"><div class="ruta-fill" style="width:100%"></div></div>
+        <span class="ruta-step">Habilidades</span>
+      </div>
+
+      <div class="ses-head">
+        <div>
+          <span class="ses-mod">Fase 2 · Habilidades · Presencial · alcance final a definir con el diagnóstico</span>
+          <h2>Habilidades</h2>
+        </div>
+      </div>
+
+      <div class="ses-body">
+        <div class="ses-block">
+          <span class="label">Temas</span>
+          <div class="chips">
+            <span class="chip">Instructivos</span>
+            <span class="chip">Compilación y transcripción</span>
+            <span class="chip">Normatización</span>
+            <span class="chip">Descripciones de cargo</span>
+          </div>
+        </div>
+        <div class="ses-cols">
+          <div class="ses-block">
+            <span class="label">Qué se hace</span>
+            <ul>
+              <li>Aplicamos las prioridades del diagnóstico de la Fase 1, empezando por los procesos de mayor peso para Operaciones</li>
+              <li>Definimos el número de sesiones y el contenido exacto de cada una con base en los cuellos de botella priorizados</li>
+              <li>Trabajamos sobre las tareas reales del equipo: instructivos, compilación, normatización y descripciones de cargo</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Qué se logra</span>
+            <ul>
+              <li>Instructivos y documentación generados y normatizados con apoyo de IA, sin depender de una sola persona</li>
+              <li>Descripciones de cargo por producto que reutilizan las partes comunes ya detectadas en la Fase 1</li>
+              <li>Un equipo de Operaciones capaz de aplicar estas herramientas en su día a día</li>
+            </ul>
+          </div>
+          <div class="ses-block block-rec">
+            <span class="label">Recursos y entornos</span>
+            <ul>
+              <li>El Reporte Final y el mapa de partes comunes/variables de la Fase 1</li>
+              <li>Entorno Google Workspace (Gemini) que el equipo ya utiliza</li>
+              <li>Sesiones presenciales con el equipo de Operaciones</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Productos Bixa · DET-008</span>
+      </div>
+    </section>
+
+    <!-- 7 · Roadmap · Detección → Habilidades -->
+    <section class="slide s-roadmap">
+      <span class="counter">07 / 12</span>
+      <p class="eyebrow">04 · Roadmap</p>
+      <h2>De la Detección a las <span class="hl">Habilidades</span>.</h2>
+
+      <div class="rmx-field">
+        <div class="rmx-linear">
+
+          <div class="rmx-lrow-nodes">
+            <div class="rmx-lcol"><div class="rmx-node rmx-node-f2">1</div></div>
+            <div class="rmx-arrow"></div>
+            <div class="rmx-lcol"><div class="rmx-node rmx-node-f3">2</div></div>
+            <div class="rmx-arrow"></div>
+            <div class="rmx-lcol"><div class="rmx-node rmx-node-r">&#9733;</div></div>
+          </div>
+
+          <div class="rmx-lrow-cards">
+            <div class="rmx-lcol">
+              <div class="rmx-card rmx-card-f2">
+                <span class="rmx-card-tag">Fase 1 · Detección</span>
+                <div class="rmx-card-name">Auditoría de procesos</div>
+                <ul class="rmx-facets">
+                  <li><span>Qué pasa</span><p>Auditamos los procesos documentales de Operaciones, medimos la madurez y detectamos patrones comunes en la documentación por producto.</p></li>
+                  <li><span>Con quién</span><p>Equipo de Operaciones de Productos Bixa (Sistema de Gestión de Calidad), presencial.</p></li>
+                  <li><span>Entrega</span><p>Reporte Final con la hoja de ruta priorizada.</p></li>
+                </ul>
+              </div>
+            </div>
+            <div class="rmx-lspacer"></div>
+            <div class="rmx-lcol">
+              <div class="rmx-card rmx-card-f3">
+                <span class="rmx-card-tag">Fase 2 · Habilidades</span>
+                <div class="rmx-card-name">Documentación automatizada</div>
+                <ul class="rmx-facets">
+                  <li><span>Qué pasa</span><p>Aplicamos las prioridades del diagnóstico: documentación de instructivos, compilación, normatización y descripciones de cargo.</p></li>
+                  <li><span>Con quién</span><p>El mismo equipo de Operaciones, sobre sus tareas reales, presencial.</p></li>
+                  <li><span>Entrega</span><p>Procesos documentales automatizados y las habilidades instaladas en el equipo.</p></li>
+                </ul>
+              </div>
+            </div>
+            <div class="rmx-lspacer"></div>
+            <div class="rmx-lcol">
+              <div class="rmx-result-card">
+                <span class="rmx-result-label">Cierre del proyecto</span>
+                <div class="rmx-result-title">Productos Bixa, de la documentación manual a la escalable</div>
+                <ul>
+                  <li>Cuellos de botella resueltos con criterio, no a ciegas</li>
+                  <li>Equipo autónomo, con las habilidades instaladas</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /.rmx-linear -->
+
+        <div class="rmx-ethics">
+          <span class="rmx-ethics-tag">Plan completo, listo para decidir</span>
+          <p>Detección y Habilidades vienen <strong>desarrolladas y cotizadas en esta misma propuesta</strong>: Productos Bixa define presupuesto con el plan completo sobre la mesa, no con una mitad abierta.</p>
+        </div>
+
+      </div><!-- /.rmx-field -->
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Productos Bixa · DET-008</span>
+      </div>
+    </section>
+
+    <!-- 8 · Beneficios (formato v3: Resultados · Por qué Detección · Entregables · Valor inmediato) -->
+    <section class="slide s-benefits s-benefits-v2">
+      <span class="counter">08 / 12</span>
+      <p class="eyebrow">05 · Beneficios</p>
+      <h2>Lo que <span class="hl">se llevan</span>.</h2>
+      <div class="grid">
+        <div class="block">
+          <p class="label">Resultados</p>
+          <ul>
+            <li><strong>Hoja de ruta clara</strong> de qué automatizar primero en Operaciones y con qué criterio.</li>
+            <li>Documentación de instructivos y descripciones de cargo, resueltas con apoyo de IA.</li>
+            <li>Un mapa de partes comunes y variables, reutilizable entre productos.</li>
+          </ul>
+        </div>
+        <div class="block">
+          <p class="label">Por qué Detección y Habilidades</p>
+          <p>
+            Diagnosticar antes de capacitar evita invertir en lo que no resuelve nada: la Fase 2 ataca los cuellos de botella que la Fase 1 <strong>priorizó sobre la operación real</strong> de Productos Bixa, no sobre un supuesto.
+          </p>
+        </div>
+        <div class="block">
+          <p class="label">Entregables</p>
+        </div>
+        <div class="block">
+          <p class="label">Valor inmediato</p>
+        </div>
+      </div>
+
+      <!-- Cajas multiline editables (vacías en HTML — el contenido vive dentro del AcroForm /V). -->
+      <div class="multi-box entregables-box" data-field="Entregables"></div>
+      <div class="multi-box acreditaciones-box" data-field="Acreditacion"></div>
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Productos Bixa · DET-008</span>
+      </div>
+    </section>
+
+    <!-- 9 · Impacto / estudios — datos de estudios reales, fuente citada (CLAUDE.md §4.9) -->
+    <section class="slide s-impact">
+      <span class="counter">09 / 12</span>
+
+      <div class="impact-head">
+        <p class="eyebrow">06 · Impacto</p>
+        <h2>La evidencia no deja<br><span class="hl">lugar a dudas</span>.</h2>
+      </div>
+
+      <div class="impact-body">
+        <div class="chart-panel">
+          <p class="panel-title">Impacto de la IA en tareas de redacción, análisis y documentación</p>
+          <div class="bars">
+            <div class="bar-row">
+              <span class="bar-label">Mejora en la calidad del trabajo entregado, con asistencia de IA, en tareas de redacción y documentación</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:40%"><span class="bar-val">+40%</span></div></div>
+            </div>
+          </div>
+          <div class="bar-axis"><span class="scale"><span>0</span><span>25</span><span>50</span><span>75</span><span>100%</span></span></div>
+          <p class="panel-source">Fuente: Dell'Acqua et al. (Harvard Business School + Boston Consulting Group) &mdash; Navigating the Jagged Technological Frontier: Field Experimental Evidence of the Effects of Artificial Intelligence on Knowledge Worker Productivity and Quality, 2023.</p>
+        </div>
+
+        <div class="gauge-panel">
+          <div class="gauge" style="--pct:25">
+            <div class="gauge-core">
+              <span class="gauge-num">25<span class="pct">%</span></span>
+              <span class="gauge-cap">más rápido completando tareas de redacción y documentación con asistencia de IA</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="impact-hook">
+        <span class="hook-mark">&#9656;</span>
+        <p class="hook-text">
+          En tareas de redacción, análisis y documentación dentro de las capacidades de la IA, un experimento de campo con 758 consultores (Harvard Business School + Boston Consulting Group, 2023) encontró que quienes trabajaron con <strong>asistencia de IA generativa</strong> completaron sus tareas un 25% más rápido y con más de <strong>40% de mejora en la calidad</strong> del resultado, frente a quienes trabajaron sin ella. Ese es el mismo tipo de salto que la documentación de Operaciones en Productos Bixa puede dar.
+        </p>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Productos Bixa · DET-008</span>
+      </div>
+    </section>
+
+    <!-- 10 · Inversión por fases -->
+    <section class="slide s-price">
+      <span class="counter">10 / 12</span>
+      <h2 class="title">Inversión por fases</h2>
+      <p class="price-intro">Servicio de Detección y Habilidades para el equipo de Operaciones de Productos Bixa, con foco en sus procesos documentales. Ambas fases se cotizan en este documento.</p>
+
+      <div class="fase-price-list">
+        <div class="fase-price-row">
+          <div class="fase-price-copy">
+            <span class="fase-price-label">Fase 1 · Detección</span>
+            <p class="fase-price-desc">Auditoría de procesos documentales + detección de patrones · presencial · Reporte Final.</p>
+          </div>
+          <div class="fase-price-frame" data-field="PrecioFase1"></div>
+        </div>
+        <div class="fase-price-row">
+          <div class="fase-price-copy">
+            <span class="fase-price-label">Fase 2 · Habilidades</span>
+            <p class="fase-price-desc">Automatización de documentación, normatización y descripciones de cargo · presencial.</p>
+          </div>
+          <div class="fase-price-frame" data-field="PrecioFase2"></div>
+        </div>
+      </div>
+
+      <div class="block block-notes-container">
+        <span class="block-eyebrow">Notas</span>
+      </div>
+      <div class="multi-box notas-box" data-field="Notas"></div>
+
+      <span class="cot-label cot-label-base">Inversión total del proyecto</span>
+      <div class="cot-frame base-frame"></div>
+
+      <span class="cot-label cot-label-discount">Descuento</span>
+      <div class="cot-frame discount-frame"></div>
+
+      <span class="cot-label cot-label-total">TOTAL</span>
+      <div class="cot-frame total-frame"></div>
+
+      <p class="cot-validity">Cotización válida por 30 días.</p>
+      <div class="cot-terms-box">
+        <span class="cot-terms-label">Importante</span>
+        <p class="cot-terms-text">Este servicio se presta bajo nuestros <a href="https://drive.google.com/file/d/1PA-ZSt4KnyY5dpxXzgkIk6-yfGlV2eF8/view?usp=drive_link" target="_blank" rel="noopener">términos y condiciones</a>. Al avanzar con esta propuesta, ambas partes los aceptan.</p>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Productos Bixa · DET-008</span>
+      </div>
+    </section>
+
+    <!-- 11 · Próximos pasos -->
+    <section class="slide s-steps">
+      <span class="counter">11 / 12</span>
+      <p class="eyebrow">07 · Próximos pasos</p>
+      <h2>Cómo arrancamos.</h2>
+      <div class="step-cards">
+        <div class="step-card">
+          <span class="ghost">01</span>
+        </div>
+        <div class="step-card">
+          <span class="ghost">02</span>
+        </div>
+        <div class="step-card">
+          <span class="ghost">03</span>
+        </div>
+      </div>
+
+      <!-- Editable AcroForm placeholders (3 pasos × título + body) -->
+      <div class="acro-area acro-title acro-paso-01-titulo" data-field="Paso01Titulo">
+        <span class="acro-default-text">Confirmamos fechas</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-01-body" data-field="Paso01Body">
+        <span class="acro-default-text">Definimos fechas y horarios de las sesiones presenciales de Fase 1 y Fase 2, en Valles del Tuy.</span>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-02-titulo" data-field="Paso02Titulo">
+        <span class="acro-default-text">Acceso y logística</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-02-body" data-field="Paso02Body">
+        <span class="acro-default-text">Coordinamos al equipo de Operaciones, agenda y accesos para la auditoría y las sesiones de Habilidades.</span>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-03-titulo" data-field="Paso03Titulo">
+        <span class="acro-default-text">Kick-off del proyecto</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-03-body" data-field="Paso03Body">
+        <span class="acro-default-text">Reunión de arranque (~30 min) para alinear el alcance de ambas fases y priorizar el diagnóstico.</span>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Productos Bixa · DET-008</span>
+      </div>
+    </section>
+
+    <!-- 12 · Cierre -->
+    <section class="slide s-end">
+      <span class="counter">12 / 12</span>
+
+      <div class="end-logo">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia">
+      </div>
+
+      <!-- Resultado (cinta superior) — caja editable, ventas la redacta por cliente -->
+      <div class="end-summit" data-field="CierreResultado">
+        <span class="acro-default-text">Los procesos documentales de Operaciones en Productos Bixa, automatizados con IA.</span>
+      </div>
+
+      <!-- Escalera de 3 pasos — cada uno con su caja editable -->
+      <div class="end-stairs">
+        <div class="stair-step stair-1">
+          <span class="stair-label">Paso 1</span>
+          <div class="stair-field" data-field="CierrePaso1">
+            <span class="acro-default-text">Diagnóstico priorizado</span>
+          </div>
+        </div>
+        <div class="stair-step stair-2">
+          <span class="stair-label">Paso 2</span>
+          <div class="stair-field" data-field="CierrePaso2">
+            <span class="acro-default-text">Habilidades aplicadas</span>
+          </div>
+        </div>
+        <div class="stair-step stair-3">
+          <span class="stair-label">Paso 3</span>
+          <div class="stair-field" data-field="CierrePaso3">
+            <span class="acro-default-text">Documentación ágil y escalable</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cta-wrap">
+        <span class="cta">Esperamos tu respuesta</span>
+      </div>
+
+      <div class="end-contact">
+        <p class="contact-line">
+          <span class="contact-label">Asesora de ventas:</span>
+          Flavia Martínez <span class="dot">·</span> +58 414 5756615 <span class="dot">·</span> fmartinez@intezia.com
+        </p>
+        <p class="contact-line">
+          <span class="contact-label">Empresa:</span>
+          Intezia C.A J-505657950 <span class="dot">·</span> servicio@intezia.com
+        </p>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

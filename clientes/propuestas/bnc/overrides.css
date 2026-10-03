@@ -1,0 +1,12 @@
+/* Overrides locales · BNC CAP-002
+   Equipo facilitador con 3 personas → grid de 3 columnas (el _base trae 2). */
+.s-benefits .team .members {
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 18px;
+}
+
+/* Tercera persona: avatar amarillo (el _base solo recolorea la 2.ª a naranja). */
+.s-benefits .team .person:nth-child(3) .avatar {
+  background: var(--yellow);
+  color: var(--black);
+}

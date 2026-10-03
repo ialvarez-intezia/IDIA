@@ -1,0 +1,638 @@
+<!doctype html>
+<!--
+  Propuesta — Maurel & Prom Venezuela · Plan Estratégico Integral (ALL-003)
+  Código: ALL-003 · Servicio: INTEGRAL (Modelo Intezia · empresa/tipos-de-documento.md §0,
+  §4.1b) · Ficha comercial + contexto adicional del usuario (reunión de levantamiento con
+  participación de Keiber, no incorporada directamente — ver brief.md). Clonado de
+  simple-tv-all002/ porque su patrón de cotización "Inversión por fases" (valor explícito por
+  fase, no combo cerrado) es lo que el cliente pidió: cotización modular y escalable, con
+  Detección + Habilidades (paquete completo) + Políticas cotizadas, e Innovación como
+  estimado aparte (retainer, no cotización firme).
+  Diferencial frente a ALL-002: énfasis regulatorio europeo explícito en la Fase 3 (RGPD,
+  AI Act) por la Casa Matriz de Maurel & Prom en Francia — la cuenta entró por Legal y
+  Cumplimiento (Carmen), no Tecnología. Gemini queda fuera del abanico de posibilidades del
+  cliente (§4.11) — nunca se menciona. Copilot ya licenciado (Microsoft 365) sin adopción
+  real; Claude/ChatGPT en evaluación corporativa, no decidido.
+  Estructura: 13 slides · mismas 4 fases / 6 etapas (Detección E1-E2, Habilidades E3-E4,
+  Políticas E5, Innovación E6). Dimensionamiento: 8 áreas, ~50 personas, Caracas y
+  Maracaibo (nombres de área sin confirmar — "omitir, no inventar").
+  Hoja de precio: "Inversión por fases" (FASE_PRICE_FIELDS, 3 slots) + callout aparte
+  "InnovacionEstimado" (campo custom en customize-maurel-prom.py, NO sumado al total).
+  Base: clon de simple-tv-all002/ (aerocentro-lineage, styles.css local + overrides.css con
+  Cierre escalera y Beneficios v3). Sin Metodología ABR expuesta (§4.10a).
+  Ver brief.md y programa.md.
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Propuesta · Maurel & Prom · Intezia</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="overrides.css">
+</head>
+<body>
+
+  <main class="deck">
+
+    <!-- 1 · Portada -->
+    <section class="slide s-cover">
+      <span class="counter">01 / 13</span>
+      <div class="logo-big">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia">
+      </div>
+      <div class="body">
+        <p class="eyebrow">Plan estratégico integral · Los 4 servicios en una hoja de ruta</p>
+        <h1>
+          El camino completo,<br>
+          <span class="hl">con gobierno desde el inicio</span>
+        </h1>
+        <p class="lead">
+          Detección, Habilidades, Políticas e Innovación en un solo plan: diagnosticamos las 8 áreas, capacitamos con un <strong>paquete completo</strong>, formalizamos el uso de la IA con respaldo del marco regulatorio europeo y estimamos el acompañamiento que sostiene la madurez en el tiempo.
+        </p>
+      </div>
+      <div class="id-line">
+        <span class="codigo">Código: ALL-003</span>
+        <span class="cliente">Maurel &amp; Prom Venezuela</span>
+      </div>
+    </section>
+
+    <!-- 2 · Punto de dolor + Diagnóstico -->
+    <section class="slide s-pain">
+      <span class="counter">02 / 13</span>
+      <span class="quote-mark">&ldquo;</span>
+      <div class="body">
+        <h2>Maurel &amp; Prom necesita un plan que gobierne el uso de la IA, no reglas sueltas.</h2>
+        <p class="context">
+          Maurel &amp; Prom Venezuela tiene licencia de <strong>Copilot</strong> activa dentro de su entorno Microsoft 365, pero sin adopción real todavía. Su equipo de Legal y Cumplimiento necesita que el uso de la IA quede gobernado con reglas claras, alineadas al marco regulatorio de su Casa Matriz en Francia, en <strong>un solo plan</strong> y no resuelto por separado.
+        </p>
+        <p class="diag-title">Diagnóstico</p>
+        <ol>
+          <li>Maurel &amp; Prom tiene cerca de 50 personas en 8 áreas, entre Caracas y Maracaibo, sin diagnóstico formal de uso de IA.</li>
+          <li>El equipo no tiene un criterio claro de qué información puede o no compartir con herramientas de IA.</li>
+          <li>Copilot ya está licenciado en el entorno Microsoft 365, pero sin adopción real ni capacitación asociada.</li>
+          <li>La Casa Matriz en Francia exige el Reglamento de Protección de Datos (RGPD) y la Ley de Inteligencia Artificial (AI Act) europeos, que Venezuela aún no tiene.</li>
+          <li>Falta un plan que conecte diagnóstico, capacitación, políticas e innovación, con valor explícito en cada fase.</li>
+        </ol>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">MAUREL &amp; PROM · ALL-003</span>
+      </div>
+    </section>
+
+    <!-- 3 · Objetivos estratégicos -->
+    <section class="slide s-goals">
+      <span class="counter">03 / 13</span>
+      <p class="eyebrow">02 · Objetivos</p>
+      <h2>A dónde lleva<br>este plan integral.</h2>
+      <div class="columns">
+        <div class="general">
+          <p class="label">Objetivo general</p>
+          <p>
+            Llevar a Maurel &amp; Prom Venezuela de un uso disperso de IA a una estrategia organizacional completa y sostenida: diagnosticar las 8 áreas, capacitarlas con un paquete completo derivado de ese diagnóstico, formalizar el uso correcto y consciente de la IA con respaldo regulatorio europeo, y estimar el acompañamiento que sostiene la madurez en el tiempo.
+          </p>
+        </div>
+        <div class="specifics">
+          <p class="label">Objetivos específicos</p>
+          <ol>
+            <li>Diagnosticar el uso actual de IA en las 8 áreas y entregar una estrategia de implementación por área.</li>
+            <li>Capacitar a cada área con un paquete completo derivado de ese diagnóstico, con adopción verificada.</li>
+            <li>Construir y cotizar las políticas de IA, alineadas al Reglamento de Datos (RGPD) y la Ley de IA (AI Act) europeos.</li>
+            <li>Estimar el acompañamiento periódico que sostiene la madurez de IA en el tiempo.</li>
+          </ol>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">MAUREL &amp; PROM · ALL-003</span>
+      </div>
+    </section>
+
+    <!-- 4 · El plan en 4 fases -->
+    <section class="slide s-program">
+      <span class="counter">04 / 13</span>
+      <p class="eyebrow">03 · El plan en 4 fases</p>
+      <h2>4 fases · valor explícito.</h2>
+      <p class="meta">Detección, Habilidades y Políticas se cotizan en este documento. Innovación se estima aparte.</p>
+      <div class="modules">
+        <div class="module">
+          <span class="roman">I</span>
+          <h3>Detección</h3>
+          <p class="obj">Auditoría de 4h por área en las 8 áreas, más 2 sesiones de Fundamentals grupal.</p>
+          <ul class="topics">
+            <li>Etapa 1 · Auditoría por área</li>
+            <li>Etapa 2 · Diagnóstico y Estrategia</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">II</span>
+          <h3>Habilidades</h3>
+          <p class="obj">Paquete completo de 8 a 12h por área, derivado del diagnóstico, con adopción verificada.</p>
+          <ul class="topics">
+            <li>Etapa 3 · Capacitación por área</li>
+            <li>Etapa 4 · Seguimiento 30-60-90</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">III</span>
+          <h3>Políticas</h3>
+          <p class="obj">Manual de políticas con marco europeo de datos e IA, Brújula IA y Matriz de riesgos, en 3 a 5 semanas.</p>
+          <ul class="topics">
+            <li>Etapa 5 · Construcción de políticas</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">IV</span>
+          <h3>Innovación</h3>
+          <p class="obj">Acompañamiento periódico y evaluación continua, con un estimado propio de inversión.</p>
+          <ul class="topics">
+            <li>Etapa 6 · Acompañamiento periódico</li>
+          </ul>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">MAUREL &amp; PROM · ALL-003</span>
+      </div>
+    </section>
+
+    <!-- 5 · Roadmap 1/4 · Fase 1 · Detección -->
+    <section class="slide s-roadmap">
+      <span class="counter">05 / 13</span>
+      <p class="eyebrow">04 · Roadmap · Fase 1 de 4</p>
+      <h2>Diagnóstico y <span class="hl">Estrategia</span>, por área.</h2>
+
+      <div class="rmx-field">
+        <div class="rmx-linear">
+
+          <div class="rmx-lrow-nodes">
+            <div class="rmx-lcol"><div class="rmx-node rmx-node-f2">E1</div></div>
+            <div class="rmx-arrow"></div>
+            <div class="rmx-lcol"><div class="rmx-node rmx-node-f3">E2</div></div>
+            <div class="rmx-arrow"></div>
+            <div class="rmx-lcol"><div class="rmx-node rmx-node-r">&#9733;</div></div>
+          </div>
+
+          <div class="rmx-lrow-cards">
+            <div class="rmx-lcol">
+              <div class="rmx-card rmx-card-f2">
+                <span class="rmx-card-tag">Etapa 1 · Auditoría por Área</span>
+                <div class="rmx-card-name">4h por área (8 áreas)</div>
+                <ul class="rmx-facets">
+                  <li><span>Qué pasa</span><p>Auditoría de 4 horas en cada una de las 8 áreas de Maurel &amp; Prom.</p></li>
+                  <li><span>Con quién</span><p>Un representante o líder de cada área: Legal y Cumplimiento, Finanzas, RRHH, Administración e IT, Trading y Logística, SCM, Técnica y HSSE.</p></li>
+                  <li><span>Entrega</span><p>Panorama de uso de IA por área.</p></li>
+                </ul>
+              </div>
+            </div>
+            <div class="rmx-lspacer"></div>
+            <div class="rmx-lcol">
+              <div class="rmx-card rmx-card-f3">
+                <span class="rmx-card-tag">Etapa 2 · Diagnóstico y Estrategia</span>
+                <div class="rmx-card-name">Fundamentals + consolidación</div>
+                <ul class="rmx-facets">
+                  <li><span>Qué pasa</span><p>Se suman 2 sesiones de Fundamentals grupal (Caracas y Maracaibo) y se consolidan los hallazgos.</p></li>
+                  <li><span>Con quién</span><p>Equipos de ambas sedes y Coordinación Intezia.</p></li>
+                  <li><span>Entrega</span><p>Informe de uso de IA + Estrategia por área.</p></li>
+                </ul>
+              </div>
+            </div>
+            <div class="rmx-lspacer"></div>
+            <div class="rmx-lcol">
+              <div class="rmx-result-card">
+                <span class="rmx-result-label">Cierre de Fase 1</span>
+                <div class="rmx-result-title">8 áreas diagnosticadas</div>
+                <ul>
+                  <li>Estrategia de IA propia para cada área</li>
+                  <li>Equipo nivelado con Fundamentals grupal</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /.rmx-linear -->
+      </div><!-- /.rmx-field -->
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">MAUREL &amp; PROM · ALL-003</span>
+      </div>
+    </section>
+
+    <!-- 6 · Roadmap 2/4 · Fase 2 · Habilidades (paquete completo, no introductorio) -->
+    <section class="slide s-roadmap">
+      <span class="counter">06 / 13</span>
+      <p class="eyebrow">04 · Roadmap · Fase 2 de 4</p>
+      <h2>Un paquete completo, <span class="hl">no introductorio</span>.</h2>
+
+      <div class="rmx-field">
+        <div class="rmx-linear">
+
+          <div class="rmx-lrow-nodes">
+            <div class="rmx-lcol"><div class="rmx-node rmx-node-f2">E3</div></div>
+            <div class="rmx-arrow"></div>
+            <div class="rmx-lcol"><div class="rmx-node rmx-node-f3">E4</div></div>
+            <div class="rmx-arrow"></div>
+            <div class="rmx-lcol"><div class="rmx-node rmx-node-r">&#9733;</div></div>
+          </div>
+
+          <div class="rmx-lrow-cards">
+            <div class="rmx-lcol">
+              <div class="rmx-card rmx-card-f2">
+                <span class="rmx-card-tag">Etapa 3 · Capacitación por Área</span>
+                <div class="rmx-card-name">8 a 12h por área (paquete completo)</div>
+                <ul class="rmx-facets">
+                  <li><span>Qué pasa</span><p>Fundamentos comunes de IA y quick wins propios de cada área, sobre el entorno Microsoft 365 ya licenciado: alcance cerrado, no introductorio.</p></li>
+                  <li><span>Con quién</span><p>Cada una de las 8 áreas, por separado.</p></li>
+                  <li><span>Entrega</span><p>Equipos capacitados en su contexto real, con contenido cerrado.</p></li>
+                </ul>
+              </div>
+            </div>
+            <div class="rmx-lspacer"></div>
+            <div class="rmx-lcol">
+              <div class="rmx-card rmx-card-f3">
+                <span class="rmx-card-tag">Etapa 4 · Seguimiento 30-60-90</span>
+                <div class="rmx-card-name">Adopción verificada</div>
+                <ul class="rmx-facets">
+                  <li><span>Qué pasa</span><p>Verificamos la adopción real a 30, 60 y 90 días tras la capacitación.</p></li>
+                  <li><span>Con quién</span><p>Líderes de área y Coordinación Intezia.</p></li>
+                  <li><span>Entrega</span><p>Reporte de adopción verificada.</p></li>
+                </ul>
+              </div>
+            </div>
+            <div class="rmx-lspacer"></div>
+            <div class="rmx-lcol">
+              <div class="rmx-result-card">
+                <span class="rmx-result-label">Cierre de Fase 2</span>
+                <div class="rmx-result-title">Uso correcto y consciente de la IA</div>
+                <ul>
+                  <li>Cada área capacitada sobre sus propias tareas reales</li>
+                  <li>Paquete completo y cotizado, no una promesa abierta</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /.rmx-linear -->
+      </div><!-- /.rmx-field -->
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">MAUREL &amp; PROM · ALL-003</span>
+      </div>
+    </section>
+
+    <!-- 7 · Roadmap 3/4 · Fase 3 · Políticas -->
+    <section class="slide s-roadmap">
+      <span class="counter">07 / 13</span>
+      <p class="eyebrow">04 · Roadmap · Fase 3 de 4</p>
+      <h2>Gobierno de IA, <span class="hl">alineado a Europa</span>.</h2>
+
+      <div class="rmx-field">
+        <div class="rmx-linear">
+
+          <div class="rmx-lrow-nodes">
+            <div class="rmx-lcol"><div class="rmx-node rmx-node-f2">E5</div></div>
+            <div class="rmx-arrow"></div>
+            <div class="rmx-lcol"><div class="rmx-node rmx-node-r">&#9733;</div></div>
+          </div>
+
+          <div class="rmx-lrow-cards">
+            <div class="rmx-lcol">
+              <div class="rmx-card rmx-card-f2">
+                <span class="rmx-card-tag">Etapa 5 · Construcción de Políticas</span>
+                <div class="rmx-card-name">3 a 5 semanas, con marco europeo</div>
+                <ul class="rmx-facets">
+                  <li><span>Qué pasa</span><p>Formalizamos el uso de IA con gobierno y roles claros, según el Reglamento de Protección de Datos (RGPD) y la Ley de IA (AI Act) europeos.</p></li>
+                  <li><span>Con quién</span><p>Legal y Cumplimiento, Comité de IA y Coordinación Intezia.</p></li>
+                  <li><span>Entrega</span><p>Manual de políticas, Brújula IA y Matriz de riesgos.</p></li>
+                </ul>
+              </div>
+            </div>
+            <div class="rmx-lspacer"></div>
+            <div class="rmx-lcol">
+              <div class="rmx-result-card">
+                <span class="rmx-result-label">Cierre de Fase 3</span>
+                <div class="rmx-result-title">Gobierno de IA formalizado, alineado a Europa</div>
+                <ul>
+                  <li>Manual de políticas alineado al marco europeo</li>
+                  <li>Brújula IA de herramientas recomendadas</li>
+                  <li>Matriz de riesgos documentada</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /.rmx-linear -->
+      </div><!-- /.rmx-field -->
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">MAUREL &amp; PROM · ALL-003</span>
+      </div>
+    </section>
+
+    <!-- 8 · Roadmap 4/4 · Fase 4 · Innovación (estimado) -->
+    <section class="slide s-roadmap">
+      <span class="counter">08 / 13</span>
+      <p class="eyebrow">04 · Roadmap · Fase 4 de 4</p>
+      <h2>Madurez de IA, <span class="hl">sostenida</span>.</h2>
+
+      <div class="rmx-field">
+        <div class="rmx-linear">
+
+          <div class="rmx-lrow-nodes">
+            <div class="rmx-lcol"><div class="rmx-node rmx-node-f2">E6</div></div>
+            <div class="rmx-arrow"></div>
+            <div class="rmx-lcol"><div class="rmx-node rmx-node-r">&#9733;</div></div>
+          </div>
+
+          <div class="rmx-lrow-cards">
+            <div class="rmx-lcol">
+              <div class="rmx-card rmx-card-f2">
+                <span class="rmx-card-tag">Etapa 6 · Acompañamiento Periódico</span>
+                <div class="rmx-card-name">Ciclo de 3, 6 o 12 meses (estimado)</div>
+                <ul class="rmx-facets">
+                  <li><span>Qué pasa</span><p>Cadencia mensual de charlas y masterclasses, más evaluación continua de adopción de IA.</p></li>
+                  <li><span>Con quién</span><p>Toda la empresa, contenido curado según madurez.</p></li>
+                  <li><span>Entrega</span><p>Programa de acompañamiento activo.</p></li>
+                </ul>
+              </div>
+            </div>
+            <div class="rmx-lspacer"></div>
+            <div class="rmx-lcol">
+              <div class="rmx-result-card">
+                <span class="rmx-result-label">Entregable insignia · El plan completo</span>
+                <div class="rmx-result-title">Maurel &amp; Prom con una cultura de <b>IA</b> sostenida</div>
+                <ul>
+                  <li>Diagnóstico, capacitación y políticas ya cotizados</li>
+                  <li>Acompañamiento periódico, no un proyecto que se apaga</li>
+                  <li>Evaluación continua de adopción de IA</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /.rmx-linear -->
+      </div><!-- /.rmx-field -->
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">MAUREL &amp; PROM · ALL-003</span>
+      </div>
+    </section>
+
+    <!-- 9 · Beneficios (formato v3: Resultados · Por qué un plan integral · Entregables · Valor inmediato) -->
+    <section class="slide s-benefits s-benefits-v2">
+      <span class="counter">09 / 13</span>
+      <p class="eyebrow">05 · Beneficios</p>
+      <h2>Lo que <span class="hl">se llevan</span>.</h2>
+      <div class="grid">
+        <div class="block">
+          <p class="label">Resultados</p>
+          <ul>
+            <li>Un <strong>diagnóstico completo</strong> de las 8 áreas, no una foto parcial.</li>
+            <li>Un paquete completo de Habilidades, no una promesa introductoria.</li>
+            <li>Políticas de uso de IA <strong>formalizadas y cotizadas</strong>, alineadas al marco europeo.</li>
+          </ul>
+        </div>
+        <div class="block">
+          <p class="label">Por qué un plan integral</p>
+          <p>
+            Detección, Habilidades y Políticas vienen <strong>desarrolladas y cotizadas en esta misma propuesta</strong>, con políticas alineadas al Reglamento de Protección de Datos (RGPD) y la Ley de Inteligencia Artificial (AI Act) europeos, y un estimado propio para Innovación.
+          </p>
+        </div>
+        <div class="block">
+          <p class="label">Entregables</p>
+        </div>
+        <div class="block">
+          <p class="label">Valor inmediato</p>
+        </div>
+      </div>
+
+      <!-- Cajas multiline editables (vacías en HTML — el contenido vive dentro del AcroForm /V). -->
+      <div class="multi-box entregables-box" data-field="Entregables"></div>
+      <div class="multi-box acreditaciones-box" data-field="Acreditacion"></div>
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">MAUREL &amp; PROM · ALL-003</span>
+      </div>
+    </section>
+
+    <!-- 10 · Impacto / estudios — datos de estudios reales, fuente citada (CLAUDE.md §4.9) -->
+    <section class="slide s-impact">
+      <span class="counter">10 / 13</span>
+
+      <div class="impact-head">
+        <p class="eyebrow">06 · Impacto</p>
+        <h2>La evidencia respalda<br><span class="hl">el gobierno de la IA</span>.</h2>
+      </div>
+
+      <div class="impact-body">
+        <div class="chart-panel">
+          <p class="panel-title">El riesgo real de usar IA sin gobierno de datos</p>
+          <div class="bars">
+            <div class="bar-row">
+              <span class="bar-label">Empleados que usan IA generativa y ya copian y pegan datos de la empresa</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:77%"><span class="bar-val">77%</span></div></div>
+            </div>
+            <div class="bar-row">
+              <span class="bar-label">De esos, pegados que incluyen información personal o de pago (PII/PCI)</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:22%"><span class="bar-val">22%</span></div></div>
+            </div>
+          </div>
+          <div class="bar-axis"><span class="scale"><span>0</span><span>25</span><span>50</span><span>75</span><span>100%</span></span></div>
+          <p class="panel-source">Fuentes: LayerX &mdash; Enterprise AI and SaaS Data Security Report (2025) &middot; appliedAI, citado por Cloud Security Alliance (2025) &middot; Unión Europea &mdash; AI Act, Reglamento (UE) 2024/1689.</p>
+        </div>
+
+        <div class="gauge-panel">
+          <div class="gauge" style="--pct:40">
+            <div class="gauge-core">
+              <span class="gauge-num">40<span class="pct">%</span></span>
+              <span class="gauge-cap">de los sistemas de IA empresariales tiene un riesgo poco claro frente al marco europeo</span>
+            </div>
+          </div>
+          <div class="chips">
+            <div class="chip">
+              <span class="chip-num">&euro;35M</span>
+              <span class="chip-lbl">multa máxima por incumplir la ley europea de IA</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="impact-hook">
+        <span class="hook-mark">&#9656;</span>
+        <p class="hook-text">
+          El 77% de los empleados que usan IA generativa ya copia y pega datos de la empresa, y 22% de esos pegados incluye información personal o de pago (LayerX, 2025). El 40% de los sistemas de IA empresariales todavía tiene un riesgo poco claro bajo la Ley de Inteligencia Artificial (AI Act) de la Unión Europea, que exige cumplimiento total desde agosto de 2026. Diagnosticar antes de escalar, capacitar con reglas claras y formalizar políticas alineadas a ese marco es lo que conecta este plan de 4 fases.
+        </p>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">MAUREL &amp; PROM · ALL-003</span>
+      </div>
+    </section>
+
+    <!-- 11 · Inversión por fases · Detección + Habilidades + Políticas cotizadas, Innovación estimada -->
+    <section class="slide s-price">
+      <span class="counter">11 / 13</span>
+      <h2 class="title">Inversión por fases</h2>
+      <p class="price-intro">Plan estratégico integral para las 8 áreas de Maurel &amp; Prom Venezuela. Detección, Habilidades y Políticas se cotizan en este documento; Innovación se presenta como estimado, por su naturaleza de retainer mensual.</p>
+
+      <div class="fase-price-list">
+        <div class="fase-price-row">
+          <div class="fase-price-copy">
+            <span class="fase-price-label">Fase 1 · Detección</span>
+            <p class="fase-price-desc">Auditoría de 4h por área + 2 sesiones de Fundamentals grupal, 8 áreas.</p>
+          </div>
+          <div class="fase-price-frame" data-field="PrecioFase1"></div>
+        </div>
+        <div class="fase-price-row">
+          <div class="fase-price-copy">
+            <span class="fase-price-label">Fase 2 · Habilidades</span>
+            <p class="fase-price-desc">Paquete completo de 8 a 12h por área, derivado del diagnóstico.</p>
+          </div>
+          <div class="fase-price-frame" data-field="PrecioFase2"></div>
+        </div>
+        <div class="fase-price-row">
+          <div class="fase-price-copy">
+            <span class="fase-price-label">Fase 3 · Políticas</span>
+            <p class="fase-price-desc">Manual de políticas con marco europeo de datos e IA, Brújula IA y Matriz de riesgos.</p>
+          </div>
+          <div class="fase-price-frame" data-field="PrecioFase3"></div>
+        </div>
+      </div>
+
+      <div class="block block-notes-container">
+        <span class="block-eyebrow">Notas</span>
+      </div>
+      <div class="multi-box notas-box" data-field="Notas"></div>
+
+      <span class="cot-label cot-label-base">Inversión total del proyecto</span>
+      <div class="cot-frame base-frame"></div>
+
+      <span class="cot-label cot-label-discount">Descuento</span>
+      <div class="cot-frame discount-frame"></div>
+
+      <span class="cot-label cot-label-total">TOTAL</span>
+      <div class="cot-frame total-frame"></div>
+
+      <p class="cot-validity">Cotización válida por 30 días (Fases 1 a 3).</p>
+      <div class="cot-terms-box">
+        <span class="cot-terms-label">Importante</span>
+        <p class="cot-terms-text">Este servicio se presta bajo nuestros <a href="https://drive.google.com/file/d/1PA-ZSt4KnyY5dpxXzgkIk6-yfGlV2eF8/view?usp=drive_link" target="_blank" rel="noopener">términos y condiciones</a>. Al avanzar con esta propuesta, ambas partes los aceptan.</p>
+      </div>
+
+      <div class="innovacion-row">
+        <div class="fase-price-copy">
+          <span class="fase-price-label">Fase 4 · Innovación (estimado)</span>
+          <p class="fase-price-desc">Retainer mensual, ciclo de 3, 6 o 12 meses. Cotización final tras confirmar la permanencia; no se suma al total de arriba.</p>
+        </div>
+        <div class="fase-price-frame" data-field="InnovacionEstimado"></div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">MAUREL &amp; PROM · ALL-003</span>
+      </div>
+    </section>
+
+    <!-- 12 · Próximos pasos -->
+    <section class="slide s-steps">
+      <span class="counter">12 / 13</span>
+      <p class="eyebrow">07 · Próximos pasos</p>
+      <h2>Cómo arrancamos.</h2>
+      <div class="step-cards">
+        <div class="step-card">
+          <span class="ghost">01</span>
+        </div>
+        <div class="step-card">
+          <span class="ghost">02</span>
+        </div>
+        <div class="step-card">
+          <span class="ghost">03</span>
+        </div>
+      </div>
+
+      <!-- Editable AcroForm placeholders (3 pasos × título + body) -->
+      <div class="acro-area acro-title acro-paso-01-titulo" data-field="Paso01Titulo">
+        <span class="acro-default-text">Confirmamos alcance</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-01-body" data-field="Paso01Body">
+        <span class="acro-default-text">Definimos con Maurel &amp; Prom el orden de prioridad de las 8 áreas para la Fase 1.</span>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-02-titulo" data-field="Paso02Titulo">
+        <span class="acro-default-text">Acceso y logística</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-02-body" data-field="Paso02Body">
+        <span class="acro-default-text">Coordinamos accesos a Microsoft 365, agenda y líderes de cada área, Caracas y Maracaibo.</span>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-03-titulo" data-field="Paso03Titulo">
+        <span class="acro-default-text">Kick-off del plan integral</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-03-body" data-field="Paso03Body">
+        <span class="acro-default-text">Reunión de arranque (~30 min) para alinear las 4 fases con Legal y Cumplimiento.</span>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">MAUREL &amp; PROM · ALL-003</span>
+      </div>
+    </section>
+
+    <!-- 13 · Cierre (ruta/escalera editable) -->
+    <section class="slide s-end">
+      <span class="counter">13 / 13</span>
+
+      <div class="end-logo">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia">
+      </div>
+
+      <!-- Resultado (cinta superior) — caja editable, ventas la redacta por cliente -->
+      <div class="end-summit" data-field="CierreResultado">
+        <span class="acro-default-text">Maurel &amp; Prom, con Detección, Habilidades y Políticas cotizadas, e Innovación estimada.</span>
+      </div>
+
+      <!-- Escalera de 3 pasos — cada uno con su caja editable -->
+      <div class="end-stairs">
+        <div class="stair-step stair-1">
+          <span class="stair-label">Paso 1</span>
+          <div class="stair-field" data-field="CierrePaso1">
+            <span class="acro-default-text">Diagnóstico de 8 áreas</span>
+          </div>
+        </div>
+        <div class="stair-step stair-2">
+          <span class="stair-label">Paso 2</span>
+          <div class="stair-field" data-field="CierrePaso2">
+            <span class="acro-default-text">Habilidades y Políticas cotizadas</span>
+          </div>
+        </div>
+        <div class="stair-step stair-3">
+          <span class="stair-label">Paso 3</span>
+          <div class="stair-field" data-field="CierrePaso3">
+            <span class="acro-default-text">Innovación estimada, camino completo</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cta-wrap">
+        <span class="cta">Esperamos tu respuesta</span>
+      </div>
+
+      <div class="end-contact">
+        <p class="contact-line">
+          <span class="contact-label">Asesora de ventas:</span>
+          María Iribarren <span class="dot">·</span> +58 414 0570056 <span class="dot">·</span> miribarren@intezia.com
+        </p>
+        <p class="contact-line">
+          <span class="contact-label">Empresa:</span>
+          Intezia C.A J-505657950 <span class="dot">·</span> servicio@intezia.com
+        </p>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

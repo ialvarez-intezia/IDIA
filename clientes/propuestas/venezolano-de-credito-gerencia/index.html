@@ -1,0 +1,601 @@
+<!doctype html>
+<!--
+  Propuesta — Venezolano de Crédito · Asesoría a la Gerencia (CAI-020)
+  Servicio: HABILIDADES (Modelo Intezia, por instrucción directa del usuario — el contenido
+  temáticamente calza con Políticas, pero ese servicio sigue bloqueado por decisión de formato
+  pendiente, ver empresa/tipos-de-documento.md §0). División: Educación.
+
+  FORMATO — ASESORÍA EJECUTIVA 1:1, NO CAPACITACIÓN DE EQUIPO (instrucción directa del
+  usuario 2026-09-16): "usarás el servicio de habilidades para dar estas asesorías en donde
+  no se construye sino que se trabaja sobre estos puntos". Por eso este deck NO tiene
+  artefacto-por-sesión como CAI-018 (Mercadeo) — cada sesión revisa/valida, no construye desde
+  cero. Sin Certificado de participación tradicional (encajaría mal en una asesoría ejecutiva
+  1:1 con un Gerente) — el entregable insignia es un memo ejecutivo de recomendaciones.
+
+  AUDIENCIA: 1 sola persona — Andrés Pereira, Gerente de Inteligencia Artificial y Analítica
+  de Datos (mismo contacto que CAI-018, cargo ya actualizado ahí el 2026-09-16). Esta
+  propuesta es EXPLÍCITAMENTE INDEPENDIENTE de CAI-018 (instrucción directa del cliente,
+  verbatim: "esta propuesta es totalmente independiente a la de Mercadeo") — deck
+  autocontenido, sin depender de esa otra propuesta para tener sentido.
+
+  4 SESIONES DE 2H (8H TOTALES) — decisión comercial confirmada con el usuario (no hay
+  lineamiento de horas para asesoría ejecutiva 1:1; el lineamiento de Habilidades está pensado
+  para entrenar equipos con artefacto por sesión, no aplica aquí igual). Modalidad presencial
+  (mismo patrón del contacto en CAI-018, sin instrucción en contra).
+
+  3 MÓDULOS / 4 SESIONES:
+  I. Ética, Riesgo, Seguridad y Gobernanza — 1 sesión (2h).
+  II. Estrategia Híbrida de Datos y Modelos — 2 sesiones (4h): datos en la nube (contexto:
+      DEMO en curso con Google para evaluar Gemini Enterprise como estándar empresarial, NUNCA
+      presentado como recomendación de Intezia ni como adopción ya decidida — §4.11) + acceso
+      centralizado a los modelos y control de uso/licencias.
+  III. Infraestructura y Cierre — 1 sesión (2h): infraestructura necesaria + recomendaciones
+      consolidadas.
+
+  HERRAMIENTA: este documento NO recomienda ni nombra una herramienta como elegida. Gemini
+  Enterprise se menciona solo como CONTEXTO de una evaluación que el propio banco ya tiene en
+  curso (DEMO con Google) — la asesoría valida el ENFOQUE (gobernanza, datos, acceso,
+  licencias, infraestructura), no la marca. Metodología ABR estricta: ni una sola mención
+  afirma adopción o migración.
+
+  Sin roadmap (asesoría de alcance único y continuo, mismo criterio que CAI-018). Beneficios
+  v3, Cierre escalera, servicio@intezia.com.
+  Impacto (§4.9): EY — Encuesta de IA Responsable en Banca (mayo 2025): 52% de bancos cita la
+  gobernanza como su principal reto en adopción de IA, 44% invierte en tecnología para una
+  adopción ética. Deloitte — encuesta global a 3.235 líderes de tecnología en 24 países
+  (2025): solo 21% tiene un modelo de gobernanza maduro para agentes de IA autónomos, 74%
+  espera usar agentes de IA al menos moderadamente para 2027.
+  12 slides · precio estándar (Propuesta Económica, un solo servicio).
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Propuesta · Venezolano de Crédito · Asesoría Gerencia · Intezia</title>
+  <link rel="stylesheet" href="../_base/styles.css">
+  <link rel="stylesheet" href="overrides.css">
+</head>
+<body>
+
+  <main class="deck">
+
+    <!-- 1 · Portada -->
+    <section class="slide s-cover">
+      <span class="counter">01 / 12</span>
+      <div class="logo-big">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia">
+      </div>
+      <div class="body">
+        <p class="eyebrow">Asesoría Ejecutiva · Servicio de Habilidades · 4 sesiones · 8 horas</p>
+        <h1>
+          Gobernanza de IA,<br>
+          <span class="hl">validada con criterio.</span>
+        </h1>
+        <p class="lead">
+          Asesoría ejecutiva presencial de 4 sesiones (8 horas) para <strong>Andrés Pereira</strong>, Gerente de Inteligencia Artificial y Analítica de Datos de Venezolano de Crédito: validar el enfoque híbrido de gestión de IA del banco, gobernanza, datos en la nube, acceso a modelos, licencias e infraestructura.
+        </p>
+      </div>
+      <div class="id-line">
+        <span class="codigo">Código: CAI-020</span>
+        <span class="cliente">Venezolano de Crédito</span>
+      </div>
+    </section>
+
+    <!-- 2 · Punto de dolor + Diagnóstico -->
+    <section class="slide s-pain">
+      <span class="counter">02 / 12</span>
+      <span class="quote-mark">&ldquo;</span>
+      <div class="body">
+        <h2>"Queremos validar el enfoque con el que estamos organizando la gestión de la IA en el banco."</h2>
+        <p class="context">
+          Andrés Pereira, Gerente de Inteligencia Artificial y Analítica de Datos, retoma el ofrecimiento de Intezia de acompañar al banco en ética, riesgo, seguridad y gobernanza de IA. Esta asesoría es independiente de la capacitación de Mercadeo.
+        </p>
+        <p class="diag-title">Diagnóstico</p>
+        <ol>
+          <li>El banco ya organiza su estrategia de IA con un enfoque híbrido, pero busca validar ese enfoque con una mirada externa especializada.</li>
+          <li>Está en curso una DEMO con Google para evaluar Gemini Enterprise como estándar empresarial, con prioridad en buenas prácticas de datos en la nube.</li>
+          <li>El acceso a los modelos, el control de uso y de licencias, y la infraestructura que los sostiene todavía se están definiendo.</li>
+          <li>Sin una validación externa, el banco escalaría su estrategia de IA sin un chequeo independiente de sus puntos ciegos.</li>
+          <li>Esta asesoría no construye una estrategia desde cero: valida y fortalece la que Andrés Pereira ya viene organizando.</li>
+        </ol>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">VENEZOLANO DE CRÉDITO · CAI-020</span>
+      </div>
+    </section>
+
+    <!-- 3 · Objetivos estratégicos -->
+    <section class="slide s-goals">
+      <span class="counter">03 / 12</span>
+      <p class="eyebrow">02 · Objetivos</p>
+      <h2>A dónde llevamos<br>la gobernanza de IA.</h2>
+      <div class="columns">
+        <div class="general">
+          <p class="label">Objetivo general</p>
+          <p>
+            Acompañar a Andrés Pereira, Gerente de Inteligencia Artificial y Analítica de Datos, en la validación del enfoque híbrido de gestión de IA de Venezolano de Crédito: gobernanza, datos en la nube, acceso a modelos, licencias e infraestructura.
+          </p>
+        </div>
+        <div class="specifics">
+          <p class="label">Objetivos específicos</p>
+          <ol>
+            <li>Revisar el marco de ética, riesgo, seguridad y gobernanza que el banco ya viene construyendo.</li>
+            <li>Validar la estrategia híbrida de datos en la nube, en el contexto de la evaluación de Gemini Enterprise como estándar empresarial.</li>
+            <li>Acompañar las decisiones de acceso centralizado a los modelos y control de uso y licencias.</li>
+            <li>Revisar la infraestructura necesaria para sostener la estrategia, y dejar recomendaciones consolidadas.</li>
+          </ol>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">VENEZOLANO DE CRÉDITO · CAI-020</span>
+      </div>
+    </section>
+
+    <!-- 4 · Programa -->
+    <section class="slide s-program">
+      <span class="counter">04 / 12</span>
+      <p class="eyebrow">03 · El proyecto</p>
+      <h2>4 sesiones, un enfoque validado.</h2>
+      <p class="meta">4 sesiones de 2h · presencial · asesoría 1:1 con Andrés Pereira.</p>
+      <div class="modules">
+        <div class="module">
+          <span class="roman">I</span>
+          <h3>Ética, Riesgo, Seguridad y Gobernanza</h3>
+          <p class="obj">Revisa el marco de ética, riesgo, seguridad y gobernanza que el banco ya viene construyendo.</p>
+          <ul class="topics">
+            <li>1 sesión · 2h</li>
+            <li>Gobernanza de IA</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">II</span>
+          <h3>Estrategia Híbrida de Datos y Modelos</h3>
+          <p class="obj">Valida la estrategia de datos en la nube y el acceso centralizado a los modelos.</p>
+          <ul class="topics">
+            <li>2 sesiones · 4h</li>
+            <li>Datos y acceso a modelos</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">III</span>
+          <h3>Infraestructura y Cierre</h3>
+          <p class="obj">Revisa la infraestructura necesaria y consolida recomendaciones para la Gerencia.</p>
+          <ul class="topics">
+            <li>1 sesión · 2h</li>
+            <li>Recomendaciones consolidadas</li>
+          </ul>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">VENEZOLANO DE CRÉDITO · CAI-020</span>
+      </div>
+    </section>
+
+    <!-- 5 · Cronograma · Módulo I -->
+    <section class="slide s-schedule">
+      <span class="counter">05 / 12</span>
+      <p class="eyebrow">04 · Cronograma · Módulo I</p>
+
+      <div class="ses-head">
+        <div>
+          <span class="ses-mod">1 sesión de 2h · Presencial · Asesoría 1:1</span>
+          <h2>Ética, Riesgo, Seguridad y Gobernanza</h2>
+        </div>
+        <div class="ses-meta"><span class="ses-dur">2h</span></div>
+      </div>
+
+      <div class="ses-body">
+        <div class="ses-block">
+          <span class="label">Temas</span>
+          <div class="chips">
+            <span class="chip">Ética de IA</span>
+            <span class="chip">Gestión de riesgo</span>
+            <span class="chip">Seguridad</span>
+            <span class="chip">Gobernanza</span>
+          </div>
+        </div>
+        <div class="ses-block">
+          <span class="label">Tiempo · Total 2 h</span>
+          <div class="timebar">
+            <div class="seg" style="flex:30">30' Ética y riesgo</div>
+            <div class="seg" style="flex:45">45' Seguridad</div>
+            <div class="seg" style="flex:30">30' Gobernanza</div>
+            <div class="seg" style="flex:15">15' Cierre y próximos pasos</div>
+          </div>
+        </div>
+        <div class="ses-cols">
+          <div class="ses-block">
+            <span class="label">Qué se hace</span>
+            <ul>
+              <li>Revisamos el marco ético y de riesgo que el banco ya viene construyendo</li>
+              <li>Evaluamos los controles de seguridad frente a los riesgos reales de IA</li>
+              <li>Validamos la estructura de gobernanza propuesta</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Qué se logra</span>
+            <ul>
+              <li>Un marco de ética y riesgo revisado con mirada externa</li>
+              <li>Controles de seguridad evaluados frente a riesgos reales</li>
+              <li>Gobernanza validada, con ajustes concretos si aplica</li>
+            </ul>
+          </div>
+          <div class="ses-block block-rec">
+            <span class="label">Recursos y entornos</span>
+            <ul>
+              <li>Sesión presencial 1:1 con Andrés Pereira</li>
+              <li>Documentación de gobernanza del banco</li>
+              <li>Marcos de referencia: NIST AI Risk Management Framework (gestión de riesgo de IA) e ISO/IEC 42001</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">VENEZOLANO DE CRÉDITO · CAI-020</span>
+      </div>
+    </section>
+
+    <!-- 6 · Cronograma · Módulo II -->
+    <section class="slide s-schedule">
+      <span class="counter">06 / 12</span>
+      <p class="eyebrow">04 · Cronograma · Módulo II</p>
+
+      <div class="ses-head">
+        <div>
+          <span class="ses-mod">2 sesiones de 2h · Presencial · Asesoría 1:1</span>
+          <h2>Estrategia Híbrida de Datos y Modelos</h2>
+        </div>
+        <div class="ses-meta"><span class="ses-dur">4h</span></div>
+      </div>
+
+      <div class="ses-body">
+        <div class="ses-block">
+          <span class="label">Temas</span>
+          <div class="chips">
+            <span class="chip">Datos en la nube</span>
+            <span class="chip">Gemini Enterprise (DEMO en curso)</span>
+            <span class="chip">Acceso centralizado a modelos</span>
+            <span class="chip">Control de uso y licencias</span>
+          </div>
+        </div>
+        <div class="ses-block">
+          <span class="label">Tiempo · Total 4 h (2 sesiones)</span>
+          <div class="timebar">
+            <div class="seg" style="flex:1">Sesión 2 · Datos en la nube y Gemini Enterprise</div>
+            <div class="seg" style="flex:1">Sesión 3 · Acceso centralizado y licencias</div>
+          </div>
+        </div>
+        <div class="ses-cols">
+          <div class="ses-block">
+            <span class="label">Qué se hace</span>
+            <ul>
+              <li>Revisamos las buenas prácticas de datos en la nube que el banco ya define</li>
+              <li>Contextualizamos la evaluación de Gemini Enterprise como estándar empresarial, sin recomendarlo ni descartarlo</li>
+              <li>Acompañamos las decisiones de acceso centralizado a los modelos y control de licencias</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Qué se logra</span>
+            <ul>
+              <li>Buenas prácticas de datos en la nube validadas con criterio externo</li>
+              <li>Una lectura independiente del enfoque híbrido, sin presionar hacia ninguna herramienta</li>
+              <li>Criterio claro para el acceso centralizado y el control de licencias</li>
+            </ul>
+          </div>
+          <div class="ses-block block-rec">
+            <span class="label">Recursos y entornos</span>
+            <ul>
+              <li>Sesión presencial 1:1 con Andrés Pereira</li>
+              <li>Documentación de la DEMO con Google (Gemini Enterprise)</li>
+              <li>Marcos de referencia de gobernanza de datos en la nube</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">VENEZOLANO DE CRÉDITO · CAI-020</span>
+      </div>
+    </section>
+
+    <!-- 7 · Cronograma · Módulo III -->
+    <section class="slide s-schedule">
+      <span class="counter">07 / 12</span>
+      <p class="eyebrow">04 · Cronograma · Módulo III</p>
+
+      <div class="ses-head">
+        <div>
+          <span class="ses-mod">1 sesión de 2h · Presencial · Asesoría 1:1</span>
+          <h2>Infraestructura y Cierre</h2>
+        </div>
+        <div class="ses-meta"><span class="ses-dur">2h</span></div>
+      </div>
+
+      <div class="ses-body">
+        <div class="ses-block">
+          <span class="label">Temas</span>
+          <div class="chips">
+            <span class="chip">Infraestructura necesaria</span>
+            <span class="chip">Continuidad y escalabilidad</span>
+            <span class="chip">Recomendaciones consolidadas</span>
+          </div>
+        </div>
+        <div class="ses-block">
+          <span class="label">Tiempo · Total 2 h</span>
+          <div class="timebar">
+            <div class="seg" style="flex:45">45' Infraestructura necesaria</div>
+            <div class="seg" style="flex:45">45' Continuidad y escalabilidad</div>
+            <div class="seg" style="flex:30">30' Recomendaciones consolidadas</div>
+          </div>
+        </div>
+        <div class="ses-cols">
+          <div class="ses-block">
+            <span class="label">Qué se hace</span>
+            <ul>
+              <li>Revisamos la infraestructura necesaria para sostener la estrategia híbrida</li>
+              <li>Evaluamos continuidad y escalabilidad frente al crecimiento esperado de uso</li>
+              <li>Consolidamos las recomendaciones de las 4 sesiones en un solo documento</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Qué se logra</span>
+            <ul>
+              <li>Infraestructura evaluada frente a la estrategia validada</li>
+              <li>Un criterio claro de escalabilidad</li>
+              <li>Recomendaciones consolidadas, listas para la Gerencia</li>
+            </ul>
+          </div>
+          <div class="ses-block block-rec">
+            <span class="label">Recursos y entornos</span>
+            <ul>
+              <li>Sesión presencial 1:1 con Andrés Pereira</li>
+              <li>Documentación de infraestructura del banco</li>
+              <li>Síntesis de las 3 sesiones previas</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">VENEZOLANO DE CRÉDITO · CAI-020</span>
+      </div>
+    </section>
+
+    <!-- 8 · Beneficios (formato v3) -->
+    <section class="slide s-benefits s-benefits-v2">
+      <span class="counter">08 / 12</span>
+      <p class="eyebrow">05 · Beneficios</p>
+      <h2>Lo que <span class="hl">se llevan</span>.</h2>
+      <div class="grid">
+        <div class="block">
+          <p class="label">Resultados</p>
+          <ul>
+            <li>El enfoque híbrido de gestión de IA del banco, validado por una <strong>mirada externa</strong> especializada.</li>
+            <li>Marco de ética, riesgo, seguridad y gobernanza revisado, con recomendaciones concretas.</li>
+            <li>Recomendaciones consolidadas sobre datos en la nube, acceso a modelos, licencias e infraestructura.</li>
+          </ul>
+        </div>
+        <div class="block">
+          <p class="label">Por qué Habilidades</p>
+          <p>
+            Esta asesoría <strong>no construye una estrategia desde cero</strong>: trabaja sobre el enfoque que Andrés Pereira ya viene organizando, con la experiencia de Intezia en ética, riesgo, seguridad y gobernanza de IA.
+          </p>
+        </div>
+        <div class="block">
+          <p class="label">Entregables</p>
+        </div>
+        <div class="block">
+          <p class="label">Valor inmediato</p>
+        </div>
+      </div>
+
+      <div class="multi-box entregables-box" data-field="Entregables"></div>
+      <div class="multi-box acreditaciones-box" data-field="Acreditacion"></div>
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">VENEZOLANO DE CRÉDITO · CAI-020</span>
+      </div>
+    </section>
+
+    <!-- 9 · Impacto / estudios — datos reales, fuente citada (CLAUDE.md §4.9) -->
+    <section class="slide s-impact">
+      <span class="counter">09 / 12</span>
+
+      <div class="impact-head">
+        <p class="eyebrow">06 · Impacto</p>
+        <h2>La adopción va más rápido<br><span class="hl">que la gobernanza</span>.</h2>
+      </div>
+
+      <div class="impact-body">
+        <div class="chart-panel">
+          <p class="panel-title">Cómo enfrenta la banca la gobernanza de IA</p>
+          <div class="bars">
+            <div class="bar-row">
+              <span class="bar-label">Bancos que citan la gobernanza como su principal reto en adopción de IA</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:52%"><span class="bar-val">52%</span></div></div>
+            </div>
+            <div class="bar-row">
+              <span class="bar-label">Bancos que invierten en tecnología para una adopción ética de IA</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:44%"><span class="bar-val">44%</span></div></div>
+            </div>
+          </div>
+          <div class="bar-axis"><span class="scale"><span>0</span><span>25</span><span>50</span><span>75</span><span>100%</span></span></div>
+          <p class="panel-source">Fuente: EY &mdash; Encuesta de IA Responsable en Banca (mayo 2025).</p>
+        </div>
+
+        <div class="gauge-panel">
+          <div class="gauge" style="--pct:21">
+            <div class="gauge-core">
+              <span class="gauge-num">21<span class="pct">%</span></span>
+              <span class="gauge-cap">de las organizaciones tiene un modelo de gobernanza maduro para agentes de IA autónomos</span>
+            </div>
+          </div>
+          <div class="chips">
+            <div class="chip">
+              <span class="chip-num">74%</span>
+              <span class="chip-lbl">espera usar agentes de IA para 2027</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="impact-hook">
+        <span class="hook-mark">&#9656;</span>
+        <p class="hook-text">
+          El 52% de los bancos ya identifica la gobernanza como su principal reto en la adopción de IA, y solo el 44% invierte en tecnología para una adopción ética (EY, 2025): la brecha que Venezolano de Crédito quiere cerrar antes de escalar. La brecha es aún mayor en IA agéntica: solo el 21% de las organizaciones tiene un modelo de gobernanza maduro, mientras el 74% espera usar agentes de IA al menos de forma moderada para 2027 (Deloitte, 2025). Validar el enfoque híbrido desde ahora es la diferencia entre escalar con criterio y escalar con riesgo.
+        </p>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">VENEZOLANO DE CRÉDITO · CAI-020</span>
+      </div>
+    </section>
+
+    <!-- 10 · Propuesta Económica (estándar: Duración + Programa + Notas + Cotización) -->
+    <section class="slide s-price">
+      <span class="counter">10 / 12</span>
+      <h2 class="title">Propuesta Económica</h2>
+
+      <div class="block">
+        <span class="block-eyebrow">Duración</span>
+        <p class="block-value">4 sesiones de 2 horas · 8 horas totales · modalidad presencial.</p>
+      </div>
+
+      <div class="block block-programa">
+        <span class="block-eyebrow">Programa</span>
+      </div>
+      <div class="multi-box programa-box" data-field="Programa"></div>
+
+      <div class="block block-cotizacion">
+        <span class="block-eyebrow">Cotización</span>
+      </div>
+
+      <span class="cot-label cot-label-base">Propuesta + Inversión</span>
+      <div class="cot-frame base-frame"></div>
+
+      <span class="cot-label cot-label-discount">Descuento</span>
+      <div class="cot-frame discount-frame"></div>
+
+      <span class="cot-label cot-label-total">TOTAL</span>
+      <div class="cot-frame total-frame"></div>
+
+      <p class="cot-validity">Cotización válida por 30 días.</p>
+      <div class="cot-terms-box">
+        <span class="cot-terms-label">Importante</span>
+        <p class="cot-terms-text">Este servicio se presta bajo nuestros <a href="https://drive.google.com/file/d/1PA-ZSt4KnyY5dpxXzgkIk6-yfGlV2eF8/view?usp=drive_link" target="_blank" rel="noopener">términos y condiciones</a>. Al avanzar con esta propuesta, ambas partes los aceptan.</p>
+      </div>
+
+      <div class="block block-notes-container">
+        <span class="block-eyebrow">Notas</span>
+      </div>
+      <div class="multi-box notas-box" data-field="Notas"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">VENEZOLANO DE CRÉDITO · CAI-020</span>
+      </div>
+    </section>
+
+    <!-- 11 · Próximos pasos -->
+    <section class="slide s-steps">
+      <span class="counter">11 / 12</span>
+      <p class="eyebrow">07 · Próximos pasos</p>
+      <h2>Cómo arrancamos.</h2>
+      <div class="step-cards">
+        <div class="step-card">
+          <span class="ghost">01</span>
+        </div>
+        <div class="step-card">
+          <span class="ghost">02</span>
+        </div>
+        <div class="step-card">
+          <span class="ghost">03</span>
+        </div>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-01-titulo" data-field="Paso01Titulo">
+        <span class="acro-default-text">Confirmamos fechas</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-01-body" data-field="Paso01Body">
+        <span class="acro-default-text">Definimos el calendario de las 4 sesiones con Andrés Pereira.</span>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-02-titulo" data-field="Paso02Titulo">
+        <span class="acro-default-text">Acceso y logística</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-02-body" data-field="Paso02Body">
+        <span class="acro-default-text">Coordinamos el espacio presencial y la documentación de gobernanza a revisar.</span>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-03-titulo" data-field="Paso03Titulo">
+        <span class="acro-default-text">Reunión de arranque</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-03-body" data-field="Paso03Body">
+        <span class="acro-default-text">Sesión de unos 30 minutos para alinear el alcance y los documentos de partida.</span>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">VENEZOLANO DE CRÉDITO · CAI-020</span>
+      </div>
+    </section>
+
+    <!-- 12 · Cierre (ruta/escalera editable) -->
+    <section class="slide s-end">
+      <span class="counter">12 / 12</span>
+
+      <div class="end-logo">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia">
+      </div>
+
+      <div class="end-summit" data-field="CierreResultado">
+        <span class="acro-default-text">Andrés Pereira, con el enfoque híbrido de gestión de IA de Venezolano de Crédito validado y un memo de recomendaciones consolidado.</span>
+      </div>
+
+      <div class="end-stairs">
+        <div class="stair-step stair-1">
+          <span class="stair-label">Paso 1</span>
+          <div class="stair-field" data-field="CierrePaso1">
+            <span class="acro-default-text">Gobernanza revisada</span>
+          </div>
+        </div>
+        <div class="stair-step stair-2">
+          <span class="stair-label">Paso 2</span>
+          <div class="stair-field" data-field="CierrePaso2">
+            <span class="acro-default-text">Estrategia híbrida validada</span>
+          </div>
+        </div>
+        <div class="stair-step stair-3">
+          <span class="stair-label">Paso 3</span>
+          <div class="stair-field" data-field="CierrePaso3">
+            <span class="acro-default-text">Memo de recomendaciones</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cta-wrap">
+        <span class="cta">Esperamos tu respuesta</span>
+      </div>
+
+      <div class="end-contact">
+        <p class="contact-line">
+          <span class="contact-label">Asesora de ventas:</span>
+          Flavia Martínez <span class="dot">·</span> +58 414-5756615 <span class="dot">·</span> fmartinez@intezia.com
+        </p>
+        <p class="contact-line">
+          <span class="contact-label">Empresa:</span>
+          Intezia C.A J-505657950 <span class="dot">·</span> servicio@intezia.com
+        </p>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

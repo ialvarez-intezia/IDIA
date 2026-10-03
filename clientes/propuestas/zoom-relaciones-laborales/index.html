@@ -1,0 +1,416 @@
+<!doctype html>
+<!--
+  Propuesta — Zoom · Relaciones Laborales (CAI-017)
+  Servicio: HABILIDADES (Modelo Intezia). División: Educación.
+  6to frente independiente del megaproyecto de Gestión Humana de Zoom (junto a las 5
+  formaciones de zoom-rh/ CAP-050: Compensación y Beneficios, Estadística Organizacional,
+  SSL, Selección, Capacitación). Mismo patrón uniforme: 2 módulos / 1 sesión / 4 horas.
+  Contenido curricular a partir de la tabla "Funciones Relaciones Laborales" (12 funciones,
+  foto adjunta por el usuario) — ver brief.md para el mapeo completo. Función 5 (cuentas por
+  cobrar de los trabajadores) resaltada por el usuario en la fuente: tratada como función
+  prioritaria del track.
+  "Forma" mirror de CAP-050 (zoom-rh/), por instrucción explícita del usuario: barra .ruta de
+  progreso en el cronograma, .timebar con minutos literales, columnas "Estrategias de
+  enseñanza / Estrategias de aprendizaje / Recursos y entornos" (vocabulario ya establecido
+  para Zoom, distinto de "Qué se hace / Qué se logra" usado en otras cuentas). Puntos
+  transversales de la ruta Zoom replicados: Reto IA ZOOM (cierre del último módulo),
+  expectativas realistas sobre los Gems (sin lenguaje de autonomía), medición de tiempo
+  ahorrado a 30 días, protección de datos por diseño (crítico aquí: cuentas por cobrar,
+  fideicomiso, casos judiciales).
+  Herramienta: Gemini (stack ya establecido para Zoom Gestión Humana: Google Workspace +
+  Gemini + Gems + NotebookLM), NO Claude. Sin código: sin AppSheet, n8n, Apps Script ni APIs.
+  Sin slide de Propuesta Económica: se cotiza dentro del acuerdo marco con Zoom (mismo
+  criterio que zoom-rh/, zoom-comercial/ y zoom-operaciones/) — los 8 campos AcroForm no
+  económicos siguen siendo obligatorios.
+  Actualizado a estándar vigente (a diferencia del zoom-rh/ original, de 2026-08-17): sin
+  s-orange ni Equipo facilitador (§4.10a), Beneficios v3, Cierre escalera, servicio@intezia.com.
+  Impacto (§4.9): McKinsey — HR Monitor 2025 + SHRM — State of AI in HR 2026 (43% reutilizado
+  como ancla consistente con zoom-rh/, mismo megaproyecto).
+  9 slides.
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Propuesta · Zoom · Relaciones Laborales · Intezia Educación</title>
+  <link rel="stylesheet" href="../_base/styles.css">
+  <link rel="stylesheet" href="overrides.css">
+</head>
+<body>
+
+  <main class="deck">
+
+    <!-- 1 · Portada -->
+    <section class="slide s-cover">
+      <span class="counter">01 / 9</span>
+      <div class="logo-big">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia Educación">
+      </div>
+      <div class="body">
+        <p class="eyebrow">Propuesta formativa · Servicio de Habilidades</p>
+        <h1>
+          De calcular a mano<br>
+          <span class="hl">a cumplir sin sobresaltos.</span>
+        </h1>
+        <p class="lead">
+          Una sesión de <strong>4 horas</strong> para que Relaciones Laborales de Zoom lleve sus cálculos, pagos y cumplimiento ante entes gubernamentales, cuentas por cobrar y fideicomiso a <strong>Gemini</strong>, Gems y NotebookLM.
+        </p>
+      </div>
+      <div class="id-line">
+        <span class="codigo">Código: CAI-017</span>
+        <span class="cliente">Zoom</span>
+      </div>
+    </section>
+
+    <!-- 2 · Punto de dolor + Diagnóstico -->
+    <section class="slide s-pain">
+      <span class="counter">02 / 9</span>
+      <span class="quote-mark">&ldquo;</span>
+      <div class="body">
+        <h2>12 funciones a pulso. Un vencimiento cuesta una multa.</h2>
+        <p class="context">
+          Relaciones Laborales sostiene el <strong>cumplimiento legal</strong> de Zoom frente a los trabajadores y a los entes gubernamentales: cálculos, pagos, cuentas por cobrar y casos excepcionales. Esta formación abre un 6to frente del megaproyecto de Gestión Humana, con protocolo de <strong>protección de datos</strong> y decisión humana explícita.
+        </p>
+        <p class="diag-title">Diagnóstico</p>
+        <ol>
+          <li>Los cálculos de finalización de la relación laboral y las solicitudes de solvencia ante entes gubernamentales se gestionan función por función, sin un flujo de seguimiento único.</li>
+          <li>El registro de egresos, viáticos, reposos y horarios laborales es manual, con el riesgo de vencimiento que eso implica frente a los entes gubernamentales.</li>
+          <li>El control de cuentas por cobrar de los trabajadores, uno de los procesos más sensibles del área, no tiene un protocolo de protección de datos definido.</li>
+          <li>Las nóminas especiales y el abono mensual del fideicomiso se supervisan por separado, sin un mismo criterio de control.</li>
+          <li>Los casos excepcionales judiciales y contables, y las solicitudes de beneficios, se atienden caso por caso, sin apoyo de IA que organice la información.</li>
+        </ol>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Zoom · Track Relaciones Laborales</span>
+      </div>
+    </section>
+
+    <!-- 3 · Objetivos estratégicos -->
+    <section class="slide s-goals">
+      <span class="counter">03 / 9</span>
+      <p class="eyebrow">02 · Objetivos · Relaciones Laborales</p>
+      <h2>A dónde llevamos<br>a Relaciones Laborales.</h2>
+      <div class="columns">
+        <div class="general">
+          <p class="label">Objetivo general</p>
+          <p>
+            Transformar a Relaciones Laborales de Zoom en un equipo que sostiene sus cálculos, pagos y cumplimiento legal con Gemini, con más control y menos riesgo de vencimiento, sin perder el criterio humano en el manejo de información sensible como las cuentas por cobrar.
+          </p>
+        </div>
+        <div class="specifics">
+          <p class="label">Objetivos específicos</p>
+          <ol>
+            <li>Organizar y dar seguimiento con Gemini a los cálculos de finalización de la relación laboral, los pagos a entes gubernamentales y las solicitudes de solvencia.</li>
+            <li>Controlar con apoyo de IA el registro de egresos, viáticos, reposos y horarios laborales, reduciendo el riesgo de vencimientos.</li>
+            <li>Sostener con criterio y protección de datos el control de cuentas por cobrar de los trabajadores, las nóminas especiales y el fideicomiso.</li>
+            <li>Organizar los casos excepcionales judiciales y contables, y las solicitudes de beneficios, y cerrar con el Reto IA ZOOM.</li>
+          </ol>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Zoom · Track Relaciones Laborales</span>
+      </div>
+    </section>
+
+    <!-- 4 · Programa -->
+    <section class="slide s-program">
+      <span class="counter">04 / 9</span>
+      <p class="eyebrow">03 · Programa · Relaciones Laborales</p>
+      <h2>2 módulos · 4 horas.</h2>
+      <p class="meta">1 sesión de 4 horas · Cálculos, pagos, cuentas por cobrar y cumplimiento con IA</p>
+      <div class="modules">
+        <div class="module">
+          <span class="roman">I</span>
+          <h3>Cálculos, Pagos y Cumplimiento Legal</h3>
+          <p class="obj">Organizar cálculos, pagos y cumplimiento ante entes gubernamentales con Gemini.</p>
+          <ul class="topics">
+            <li>1.1 Finalizaciones y validación de cálculos</li>
+            <li>1.2 Pagos, solvencias y registro gubernamental</li>
+            <li>1.3 Viáticos, reposos y horarios</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">II</span>
+          <h3>Cuentas, Beneficios y Casos Excepcionales</h3>
+          <p class="obj">Sostener con criterio humano las cuentas por cobrar, el fideicomiso y los casos excepcionales.</p>
+          <ul class="topics">
+            <li>2.1 Cuentas por cobrar y nóminas especiales</li>
+            <li>2.2 Fideicomiso y solicitudes de beneficios</li>
+            <li>2.3 Casos excepcionales + Reto IA ZOOM</li>
+          </ul>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Zoom · Track Relaciones Laborales</span>
+      </div>
+    </section>
+
+    <!-- 5 · Desglose instructivo · Sesión única (Módulos I y II) -->
+    <section class="slide s-schedule">
+      <span class="counter">05 / 9</span>
+      <p class="eyebrow">04 · Cronograma · Relaciones Laborales</p>
+
+      <div class="ruta">
+        <div class="ruta-node">1</div>
+        <div class="ruta-track"><div class="ruta-fill" style="width:100%"></div></div>
+        <span class="ruta-step">Relaciones Laborales · Sesión única</span>
+      </div>
+
+      <div class="ses-head">
+        <div>
+          <span class="ses-mod">Módulos I y II · In-Company</span>
+          <h2>De los cálculos al Reto IA ZOOM</h2>
+        </div>
+        <div class="ses-meta"><span class="ses-dur">4 h</span></div>
+      </div>
+
+      <div class="ses-body">
+        <div class="ses-block">
+          <span class="label">Temas</span>
+          <div class="chips">
+            <span class="chip">1.1 Validación de cálculos</span>
+            <span class="chip">1.2 Pagos y solvencias</span>
+            <span class="chip">2.1 Cuentas por cobrar</span>
+            <span class="chip">2.2 Fideicomiso y beneficios</span>
+          </div>
+        </div>
+        <div class="ses-block">
+          <span class="label">Tiempo · Total 4 h</span>
+          <div class="timebar">
+            <div class="seg" style="flex:15">15' Contexto</div>
+            <div class="seg" style="flex:100">100' Módulo I · Cálculos y Cumplimiento</div>
+            <div class="seg" style="flex:100">100' Módulo II · Cuentas y Beneficios</div>
+            <div class="seg" style="flex:25">25' Reto IA ZOOM + Cierre</div>
+          </div>
+        </div>
+        <div class="ses-cols">
+          <div class="ses-block">
+            <span class="label">Estrategias de enseñanza</span>
+            <ul>
+              <li>Demo guiada en Gemini: seguimiento de cálculos y vencimientos legales</li>
+              <li>Encuadre de protección de datos: qué no cargar sin anonimizar</li>
+              <li>Demo de control de cuentas por cobrar sobre un caso real</li>
+              <li>Reto IA ZOOM: presentación cruzada de 3 minutos</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Estrategias de aprendizaje</span>
+            <ul>
+              <li>Flujo de seguimiento de cálculos y vencimientos</li>
+              <li>Primer caso de finiquito organizado con IA</li>
+              <li>Protocolo de control de cuentas por cobrar</li>
+              <li>Participación en el Reto IA ZOOM</li>
+            </ul>
+          </div>
+          <div class="ses-block block-rec">
+            <span class="label">Recursos y entornos</span>
+            <ul>
+              <li>Google Workspace + Gemini</li>
+              <li>Gemini Gems</li>
+              <li>NotebookLM</li>
+              <li>Datos de cálculos y cuentas anonimizados</li>
+              <li>Workbook digital</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Zoom · Track Relaciones Laborales</span>
+      </div>
+    </section>
+
+    <!-- 6 · Beneficios (formato v3: Resultados · Por qué Habilidades · Entregables · Valor inmediato) -->
+    <section class="slide s-benefits s-benefits-v2">
+      <span class="counter">06 / 9</span>
+      <p class="eyebrow">05 · Beneficios</p>
+      <h2>Lo que <span class="hl">se llevan</span>.</h2>
+      <div class="grid">
+        <div class="block">
+          <p class="label">Resultados</p>
+          <ul>
+            <li>Cálculos, pagos y solvencias con <strong>seguimiento único</strong>, sin función por función suelta.</li>
+            <li>Cuentas por cobrar y fideicomiso con protocolo de protección de datos.</li>
+            <li>Casos excepcionales organizados, sin depender de la memoria del equipo.</li>
+          </ul>
+        </div>
+        <div class="block">
+          <p class="label">Por qué Habilidades</p>
+          <p>
+            El equipo aplica Gemini a sus 12 funciones reales desde la primera sesión, con la misma regla de las otras 5 formaciones de Gestión Humana: un <strong>Gem</strong> traduce o consolida, la decisión sobre una persona siempre la toma el equipo humano.
+          </p>
+        </div>
+        <div class="block">
+          <p class="label">Entregables</p>
+        </div>
+        <div class="block">
+          <p class="label">Valor inmediato</p>
+        </div>
+      </div>
+
+      <!-- Cajas multiline editables (vacías en HTML — el contenido vive dentro del AcroForm /V). -->
+      <div class="multi-box entregables-box" data-field="Entregables"></div>
+      <div class="multi-box acreditaciones-box" data-field="Acreditacion"></div>
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Zoom · Track Relaciones Laborales</span>
+      </div>
+    </section>
+
+    <!-- 7 · Impacto / estudios — datos de estudios reales, fuente citada (CLAUDE.md §4.9) -->
+    <section class="slide s-impact">
+      <span class="counter">07 / 9</span>
+
+      <div class="impact-head">
+        <p class="eyebrow">06 · Impacto</p>
+        <h2>La IA ya sostiene<br><span class="hl">el cumplimiento laboral</span>.</h2>
+      </div>
+
+      <div class="impact-body">
+        <div class="chart-panel">
+          <p class="panel-title">Adopción de IA en tareas administrativas de RRHH (líderes europeos)</p>
+          <div class="bars">
+            <div class="bar-row">
+              <span class="bar-label">Seguimiento de tiempo y gestión de ausencias con IA generativa</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:23%"><span class="bar-val">23%</span></div></div>
+            </div>
+            <div class="bar-row">
+              <span class="bar-label">Automatización de tareas administrativas repetitivas con IA generativa</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:21%"><span class="bar-val">21%</span></div></div>
+            </div>
+          </div>
+          <div class="bar-axis"><span class="scale"><span>0</span><span>25</span><span>50</span><span>75</span><span>100%</span></span></div>
+          <p class="panel-source">Fuentes: McKinsey &mdash; HR Monitor 2025 (encuesta a 1.925 empresas y 4.000 empleados en Europa y EE. UU.) &middot; SHRM &mdash; State of AI in HR 2026 Full Report.</p>
+        </div>
+
+        <div class="gauge-panel">
+          <div class="gauge" style="--pct:43">
+            <div class="gauge-core">
+              <span class="gauge-num">43<span class="pct">%</span></span>
+              <span class="gauge-cap">de organizaciones ya integran IA en sus procesos de RRHH</span>
+            </div>
+          </div>
+          <div class="chips">
+            <div class="chip">
+              <span class="chip-num">21%</span>
+              <span class="chip-lbl">de líderes de RRHH usan IA para administración de datos de empleados</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="impact-hook">
+        <span class="hook-mark">&#9656;</span>
+        <p class="hook-text">
+          El <strong>23% de los líderes de RRHH</strong> en Europa ya usa IA generativa para seguimiento de tiempo y gestión de ausencias, y el 21% la aplica a la administración de datos de empleados (McKinsey, 2025). Para Relaciones Laborales de Zoom, esa misma lógica aplicada a reposos, egresos y cuentas por cobrar es la diferencia entre perseguir un vencimiento y controlarlo con tiempo.
+        </p>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Zoom · Track Relaciones Laborales</span>
+      </div>
+    </section>
+
+    <!-- 8 · Próximos pasos -->
+    <section class="slide s-steps">
+      <span class="counter">08 / 9</span>
+      <p class="eyebrow">07 · Próximos pasos</p>
+      <h2>Cómo arrancamos.</h2>
+      <div class="step-cards">
+        <div class="step-card">
+          <span class="ghost">01</span>
+        </div>
+        <div class="step-card">
+          <span class="ghost">02</span>
+        </div>
+        <div class="step-card">
+          <span class="ghost">03</span>
+        </div>
+      </div>
+
+      <!-- Editable AcroForm placeholders (3 pasos × título + body) -->
+      <div class="acro-area acro-title acro-paso-01-titulo" data-field="Paso01Titulo">
+        <span class="acro-default-text">Confirmamos fecha</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-01-body" data-field="Paso01Body">
+        <span class="acro-default-text">Validamos fecha, zona horaria y el acceso al entorno de trabajo del equipo.</span>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-02-titulo" data-field="Paso02Titulo">
+        <span class="acro-default-text">Acceso y logística</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-02-body" data-field="Paso02Body">
+        <span class="acro-default-text">Confirmamos participantes, el acceso al entorno Google de Zoom y la agenda de la sesión.</span>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-03-titulo" data-field="Paso03Titulo">
+        <span class="acro-default-text">Kick-off y línea base</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-03-body" data-field="Paso03Body">
+        <span class="acro-default-text">Reunión de ~30 min para alinear casos reales y registrar el tiempo actual de la tarea más repetitiva.</span>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Zoom · Track Relaciones Laborales</span>
+      </div>
+    </section>
+
+    <!-- 9 · Cierre (ruta/escalera editable) -->
+    <section class="slide s-end">
+      <span class="counter">09 / 9</span>
+
+      <div class="end-logo">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia Educación">
+      </div>
+
+      <!-- Resultado (cinta superior) — caja editable, ventas la redacta por cliente -->
+      <div class="end-summit" data-field="CierreResultado">
+        <span class="acro-default-text">Relaciones Laborales de Zoom, con sus cálculos, pagos y cumplimiento bajo control con Gemini.</span>
+      </div>
+
+      <!-- Escalera de 3 pasos — cada uno con su caja editable -->
+      <div class="end-stairs">
+        <div class="stair-step stair-1">
+          <span class="stair-label">Paso 1</span>
+          <div class="stair-field" data-field="CierrePaso1">
+            <span class="acro-default-text">Cálculos y cumplimiento legal</span>
+          </div>
+        </div>
+        <div class="stair-step stair-2">
+          <span class="stair-label">Paso 2</span>
+          <div class="stair-field" data-field="CierrePaso2">
+            <span class="acro-default-text">Cuentas por cobrar y fideicomiso con control</span>
+          </div>
+        </div>
+        <div class="stair-step stair-3">
+          <span class="stair-label">Paso 3</span>
+          <div class="stair-field" data-field="CierrePaso3">
+            <span class="acro-default-text">Reto IA ZOOM y medición a 30 días</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cta-wrap">
+        <span class="cta">Esperamos tu respuesta</span>
+      </div>
+
+      <div class="end-contact">
+        <p class="contact-line">
+          <span class="contact-label">Asesora de ventas:</span>
+          María Iribarren <span class="dot">·</span> +58 414 0570056 <span class="dot">·</span> miribarren@intezia.com
+        </p>
+        <p class="contact-line">
+          <span class="contact-label">Empresa:</span>
+          Intezia C.A J-505657950 <span class="dot">·</span> servicio@intezia.com
+        </p>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

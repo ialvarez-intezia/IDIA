@@ -1,0 +1,579 @@
+<!doctype html>
+<!--
+  Propuesta — Everest
+  Código: DET-006 · Servicio: DETECCIÓN pura (Modelo Intezia · empresa/tipos-de-documento.md
+  §0). Fuente: Ficha de Levantamiento Intezia — Everest (2026-09-02, María Iribarren) +
+  ajustes directos del usuario (2026-09-03, 2 rondas). Base clonada de grupo-ferrara/
+  (DET-005, mono-fase, enlaza ../_base/styles.css) como esqueleto estructural. Marco IADD
+  (Iniciación · Auditoría · Diagnóstico · Diseño). Beneficios v3, Cierre escalera.
+  12 slides.
+
+  AJUSTE (2026-09-03, 2ª ronda) — 7 correcciones pedidas por el usuario:
+  1. Diagnóstico corregido: no "los 2 socios" (a la reunión fue uno solo + el gerente
+     comercial) — se ajustó a "un socio y el gerente comercial".
+  2. Alcance genérico: se retiró el nombre de los 3 departamentos (Dirección Ejecutiva/
+     Comercial/Talento Humano) en toda la prosa — ahora se habla de "áreas administrativas"
+     (se mantiene el conteo "3" y las 3 sesiones/6h ya presupuestadas, confirmado con el
+     usuario, solo se generaliza el nombre).
+  3. Diagnóstico de Claude afinado: "hoy solo algunas personas lo usan, con desnivel marcado
+     en el resto" (antes decía "otros casi no lo tocan", más suave).
+  4. Fundamentals agregado a la tarjeta de Habilidades de la Hoja de ruta (antes faltaba;
+     es parte de la oferta de Habilidades en todo el sistema, patrón "Fundamentals con
+     logros inmediatos").
+  5. Habilidades y Políticas SOLO se mencionan en la Hoja de ruta (roadmap resumen) — se
+     retiraron las 2 slides de cronograma detallado que existían para esas etapas (quedaban
+     6-7 en la versión anterior); menos detalle prematuro sobre etapas aún no diagnosticadas.
+  6. Cantidad de personas y de áreas agregada a AMBAS hojas de cotización (Duración /
+     price-intro), para que ventas tenga un estimado correcto de tamaño.
+  7. **2 hojas de cotización de nuevo** (confirmado con el usuario, revierte el ajuste
+     anterior que las había consolidado en 1): Hoja A "Cotización · Detección" (nueva,
+     standalone, SOLO Detección) + Hoja B "Inversión por fases" (la que ya existía, 3 fases
+     Detección/Habilidades/Políticas, ahora namespace .s-price-fases). Colisión de nombres de
+     campo evitada dándole a la Hoja A un título que NO coincide con ningún marker de
+     agregar-campo-precio.py ("Cotización · Detección", no "Propuesta Económica") — sus 4
+     campos (DetPrecioBase/DetDescuento/DetPrecioTotal/DetNotas) se agregan a mano en
+     customize-everest.py, con posiciones idénticas a los defaults de _base/styles.css
+     .s-price (página fija, no autodetectada por marker). Ver memoria
+     patron-dos-slides-precio-mismo-deck.
+
+  Petición explícita de Aramis (patrocinador), vía Bloque F/G de la ficha: el cliente quiere
+  ver la ruta completa de 3 servicios (Detección → Habilidades → Políticas) en una sola
+  slide de Hoja de ruta (.s-journey) — Detección (esta propuesta, destacada), Habilidades
+  (con Fundamentals como punto de partida), Políticas (tarjeta resumen, sin plantilla propia
+  todavía — empresa/tipos-de-documento.md §0).
+
+  Ver brief.md y programa.md.
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Propuesta · Everest · Intezia</title>
+  <link rel="stylesheet" href="../_base/styles.css">
+  <link rel="stylesheet" href="overrides.css">
+</head>
+<body>
+
+  <main class="deck">
+
+    <!-- 1 · Portada -->
+    <section class="slide s-cover">
+      <span class="counter">01 / 12</span>
+      <div class="logo-big">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia">
+      </div>
+      <div class="body">
+        <p class="eyebrow">Propuesta de negocio · Servicio de Detección</p>
+        <h1>
+          Detección de IA<br>
+          <span class="hl">para Everest</span>
+        </h1>
+        <p class="lead">
+          Diagnosticamos las áreas administrativas de Everest y entregamos un <strong>roadmap priorizado</strong>, con base de gobernanza para su certificación ISO 9001.
+        </p>
+      </div>
+      <div class="id-line">
+        <span class="codigo">Código: DET-006</span>
+        <span class="cliente">Everest</span>
+      </div>
+    </section>
+
+    <!-- 2 · Punto de dolor + Diagnóstico -->
+    <section class="slide s-pain">
+      <span class="counter">02 / 12</span>
+      <span class="quote-mark">&ldquo;</span>
+      <div class="body">
+        <h2>Everest necesita darle sentido a la IA que ya tiene, con un plan.</h2>
+        <p class="context">
+          Everest ya usa Claude en su día a día y desarrolla dos apps propias con apoyo de IA (Everest Ops y Everest Tracker), pero sin gobernanza ni procesos documentados, algo que su certificación <strong>ISO 9001</strong> ya exige. Antes de formalizar un plan, la Detección diagnostica los procesos reales de las áreas administrativas y prioriza qué resolver primero.
+        </p>
+        <p class="diag-title">Diagnóstico</p>
+        <ol>
+          <li>Hoy solo algunas personas usan Claude de forma activa; el resto del equipo tiene un desnivel marcado en su manejo de la herramienta.</li>
+          <li>Un socio y el gerente comercial impulsan internamente Everest Ops y Everest Tracker con apoyo de IA, sin formación técnica formal.</li>
+          <li>La información del negocio vive en varios sistemas separados por área, sobre un entorno Microsoft 365.</li>
+          <li>La certificación ISO 9001 exige gobernanza y procesos documentados que hoy no existen para el uso de IA.</li>
+          <li>Sin un diagnóstico formal, cualquier plan de capacitación o gobernanza corre el riesgo de no partir de la realidad de cada área.</li>
+        </ol>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">EVEREST · DET-006</span>
+      </div>
+    </section>
+
+    <!-- 3 · Objetivos estratégicos -->
+    <section class="slide s-goals">
+      <span class="counter">03 / 12</span>
+      <p class="eyebrow">02 · Objetivos</p>
+      <h2>A dónde lleva<br>este diagnóstico.</h2>
+      <div class="columns">
+        <div class="general">
+          <p class="label">Objetivo general</p>
+          <p>
+            Diagnosticar los procesos de las áreas administrativas de Everest, para priorizar dónde optimizar e incorporar tecnología primero, y sentar las bases de gobernanza que exige su certificación ISO 9001.
+          </p>
+        </div>
+        <div class="specifics">
+          <p class="label">Objetivos específicos</p>
+          <ol>
+            <li>Auditar los procesos de las áreas administrativas con un guion estructurado, identificando cuellos de botella reales.</li>
+            <li>Evaluar cómo se usa hoy Claude en cada área, y nivelar al equipo en sus Fundamentals en paralelo a la auditoría.</li>
+            <li>Priorizar oportunidades de optimización e inversión en IA, incluyendo el desarrollo de Everest Ops y Everest Tracker.</li>
+            <li>Entregar un roadmap priorizado con base para la gobernanza que exige ISO 9001.</li>
+          </ol>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">EVEREST · DET-006</span>
+      </div>
+    </section>
+
+    <!-- 4 · Programa (marco IADD: Iniciación · Auditoría · Diagnóstico · Diseño) -->
+    <section class="slide s-program">
+      <span class="counter">04 / 12</span>
+      <p class="eyebrow">03 · Programa</p>
+      <h2>4 etapas · un diagnóstico priorizado.</h2>
+      <p class="meta">Del alcance confirmado a una hoja de ruta priorizada. Modalidad presencial.</p>
+      <div class="modules">
+        <div class="module">
+          <span class="roman">I</span>
+          <h3>Iniciación</h3>
+          <p class="obj">Confirmamos el alcance de las áreas administrativas y agendamos el calendario de sesiones.</p>
+          <ul class="topics">
+            <li>Alcance confirmado</li>
+            <li>Calendario de sesiones</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">II</span>
+          <h3>Auditoría</h3>
+          <p class="obj">3 sesiones de 2h, una por área administrativa, presenciales en las oficinas de Everest, con nivelación en los Fundamentals de Claude en paralelo.</p>
+          <ul class="topics">
+            <li>3 sesiones de 2h (6h)</li>
+            <li>Uso actual + Fundamentals de Claude</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">III</span>
+          <h3>Diagnóstico</h3>
+          <p class="obj">Consolidamos los hallazgos y priorizamos qué optimizar primero por impacto y esfuerzo.</p>
+          <ul class="topics">
+            <li>Priorización por impacto</li>
+            <li>Matriz de madurez</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">IV</span>
+          <h3>Diseño</h3>
+          <p class="obj">Entregamos un roadmap priorizado con base para la gobernanza ISO 9001.</p>
+          <ul class="topics">
+            <li>Reporte Final</li>
+            <li>Base de gobernanza</li>
+          </ul>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">EVEREST · DET-006</span>
+      </div>
+    </section>
+
+    <!-- 5 · Cronograma — Detección (una sola fase, 6h en total) -->
+    <section class="slide s-schedule">
+      <span class="counter">05 / 12</span>
+      <p class="eyebrow">04 · Cronograma · Detección</p>
+
+      <div class="ses-head">
+        <div>
+          <span class="ses-mod">3 sesiones de 2h · Modalidad presencial</span>
+          <h2>Detección</h2>
+        </div>
+        <div class="ses-meta"><span class="ses-dur">6h</span></div>
+      </div>
+
+      <div class="ses-body">
+        <div class="ses-block">
+          <span class="label">Temas</span>
+          <div class="chips">
+            <span class="chip">Uso actual de Claude</span>
+            <span class="chip">Fundamentals de Claude</span>
+            <span class="chip">Gobernanza ISO 9001</span>
+            <span class="chip">Everest Ops y Tracker</span>
+            <span class="chip">Matriz de priorización</span>
+            <span class="chip">Reporte Final</span>
+          </div>
+        </div>
+        <div class="ses-block">
+          <span class="label">Tiempo · 3 sesiones de 2h (6h)</span>
+          <div class="timebar">
+            <div class="seg" style="flex:1">Área administrativa 1 (2h)</div>
+            <div class="seg" style="flex:1">Área administrativa 2 (2h)</div>
+            <div class="seg" style="flex:1">Área administrativa 3 (2h)</div>
+          </div>
+        </div>
+        <div class="ses-cols">
+          <div class="ses-block">
+            <span class="label">Qué se hace</span>
+            <ul>
+              <li>Auditamos los procesos de las áreas administrativas con un guion estructurado, en sesiones de 2h presenciales</li>
+              <li>Evaluamos cómo cada área usa hoy Claude, y qué explica el aprovechamiento tan desigual</li>
+              <li>En paralelo, nivelamos al equipo en los Fundamentals de Claude, para cerrar el desnivel detectado</li>
+              <li>Revisamos el desarrollo de Everest Ops y Everest Tracker junto al equipo técnico que las lidera</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Qué se logra</span>
+            <ul>
+              <li>Un diagnóstico claro de qué optimizar primero en cada área, priorizado por impacto y esfuerzo</li>
+              <li>Equipo nivelado en los Fundamentals de Claude, con una base común para seguir aplicándolo</li>
+              <li>Una base de gobernanza alineada con lo que exige la certificación ISO 9001</li>
+              <li>Un Reporte Final con el roadmap priorizado de adopción de IA</li>
+            </ul>
+          </div>
+          <div class="ses-block block-rec">
+            <span class="label">Recursos y entornos</span>
+            <ul>
+              <li>Guion de auditoría Intezia y Matriz de Madurez Digital</li>
+              <li>Modalidad presencial, en la sede administrativa de Everest en Caracas</li>
+              <li>Complementa el entorno Microsoft 365 y las licencias de Claude que ya usan</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">EVEREST · DET-006</span>
+      </div>
+    </section>
+
+    <!-- 6 · Beneficios (formato v3: Resultados · Por qué Detección · Entregables · Valor inmediato) -->
+    <section class="slide s-benefits s-benefits-v2">
+      <span class="counter">06 / 12</span>
+      <p class="eyebrow">05 · Beneficios</p>
+      <h2>Lo que <span class="hl">se llevan</span>.</h2>
+      <div class="grid">
+        <div class="block">
+          <p class="label">Resultados</p>
+          <ul>
+            <li>Un <strong>roadmap priorizado</strong> de qué optimizar primero, con base de gobernanza para ISO 9001.</li>
+            <li>Un diagnóstico de por qué el uso de Claude es tan desigual entre áreas.</li>
+            <li>Recomendaciones concretas para el desarrollo de Everest Ops y Everest Tracker.</li>
+          </ul>
+        </div>
+        <div class="block">
+          <p class="label">Por qué Detección</p>
+          <p>
+            Everest ya tiene entusiasmo y herramientas: Claude activo, dos apps propias en desarrollo. Diagnosticar antes de formalizar asegura que la gobernanza que exige ISO 9001 se construya sobre su <strong>realidad</strong>, no sobre un supuesto.
+          </p>
+        </div>
+        <div class="block">
+          <p class="label">Entregables</p>
+        </div>
+        <div class="block">
+          <p class="label">Valor inmediato</p>
+        </div>
+      </div>
+
+      <!-- Cajas multiline editables (vacías en HTML — el contenido vive dentro del AcroForm /V). -->
+      <div class="multi-box entregables-box" data-field="Entregables"></div>
+      <div class="multi-box acreditaciones-box" data-field="Acreditacion"></div>
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">EVEREST · DET-006</span>
+      </div>
+    </section>
+
+    <!-- 7 · Impacto / estudios — datos de estudios reales, fuente citada (CLAUDE.md §4.9) -->
+    <section class="slide s-impact">
+      <span class="counter">07 / 12</span>
+
+      <div class="impact-head">
+        <p class="eyebrow">06 · Impacto</p>
+        <h2>Los números confirman<br><span class="hl">por dónde empezar</span>.</h2>
+      </div>
+
+      <div class="impact-body">
+        <div class="chart-panel">
+          <p class="panel-title">El equipo ya usa IA, sin que la empresa lo coordine todavía</p>
+          <div class="bars">
+            <div class="bar-row">
+              <span class="bar-label">Trabajadores del conocimiento que ya usa IA en su trabajo</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:75%"><span class="bar-val">75%</span></div></div>
+            </div>
+            <div class="bar-row">
+              <span class="bar-label">De esos usuarios, quienes llevan sus propias herramientas de IA sin coordinación de la empresa</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:78%"><span class="bar-val">78%</span></div></div>
+            </div>
+          </div>
+          <div class="bar-axis"><span class="scale"><span>0</span><span>25</span><span>50</span><span>75</span><span>100%</span></span></div>
+          <p class="panel-source">Fuente: Microsoft y LinkedIn — 2024 Work Trend Index Annual Report (mayo 2024).</p>
+        </div>
+
+        <div class="gauge-panel">
+          <div class="gauge" style="--pct:80">
+            <div class="gauge-core">
+              <span class="gauge-num">80<span class="pct">%</span></span>
+              <span class="gauge-cap">de las empresas medianas ya usa herramientas de IA propias, sin coordinación formal</span>
+            </div>
+          </div>
+          <div class="chips">
+            <div class="chip">
+              <span class="chip-num">60%</span>
+              <span class="chip-lbl">de los líderes reconoce que su organización carece de un plan y visión de IA</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="impact-hook">
+        <span class="hook-mark">&#9656;</span>
+        <p class="hook-text">
+          El caso de Everest no es la excepción: 3 de cada 4 trabajadores del conocimiento ya usa IA en su trabajo, y el 78% de esos usuarios lleva sus propias herramientas sin que la empresa las coordine, una práctica que sube a 80% en <strong>empresas medianas</strong> (Microsoft y LinkedIn, 2024). El 60% de los líderes ya reconoce que su organización carece de un plan y visión de IA (Microsoft y LinkedIn, 2024): la certificación <strong>ISO 9001</strong> de Everest exige justo eso, gobernanza y procesos documentados, antes de escalar.
+        </p>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">EVEREST · DET-006</span>
+      </div>
+    </section>
+
+    <!-- 8 · Hoja de ruta completa — 3 servicios (Detección → Habilidades → Políticas), a petición de Aramis -->
+    <section class="slide s-journey">
+      <span class="counter">08 / 12</span>
+      <p class="eyebrow">07 · Hoja de ruta completa</p>
+      <h2>Un plan de <span class="hl">3 etapas</span>.</h2>
+      <p class="journey-intro">Esta propuesta cubre la Etapa 1 · Detección. Así se ve el camino completo hacia la gobernanza de IA que exige la certificación ISO 9001 de Everest.</p>
+
+      <div class="journey-track">
+        <div class="journey-card journey-active">
+          <span class="journey-step">Etapa 1</span>
+          <h3>Detección</h3>
+          <p>Diagnóstico de las áreas administrativas de Everest, con un roadmap priorizado y base de gobernanza para ISO 9001.</p>
+        </div>
+        <span class="journey-arrow">&#8594;</span>
+        <div class="journey-card">
+          <span class="journey-step">Etapa 2</span>
+          <h3>Habilidades</h3>
+          <p>Capacitación construida sobre los hallazgos del diagnóstico: nivela a los equipos con mayor brecha en el uso de Claude, y acompaña el desarrollo de Everest Ops y Everest Tracker.</p>
+        </div>
+        <span class="journey-arrow">&#8594;</span>
+        <div class="journey-card journey-future">
+          <span class="journey-step">Etapa 3</span>
+          <h3>Políticas</h3>
+          <p>Formaliza cómo Everest usa la IA: gobernanza, roles claros y una Brújula IA de herramientas recomendadas, la pieza que exige documentar la certificación ISO 9001.</p>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">EVEREST · DET-006</span>
+      </div>
+    </section>
+
+    <!-- 9 · Cotización de Detección (hoja standalone, SOLO Detección). Título NO coincide con
+         ningún marker de agregar-campo-precio.py a propósito — evita colisión de nombres de
+         campo con la hoja de "Inversión por fases" de abajo (ambas comparten PrecioBase/
+         Descuento/PrecioTotal/Notas si usaran el mismo marker). Campos DetPrecioBase/
+         DetDescuento/DetPrecioTotal/DetNotas se agregan a mano en customize-everest.py, con
+         las coordenadas DEFAULT de _base/styles.css .s-price (sin modificar) — ver memoria
+         patron-dos-slides-precio-mismo-deck. -->
+    <section class="slide s-price">
+      <span class="counter">09 / 12</span>
+      <h2 class="title">Cotización · Detección</h2>
+
+      <div class="block">
+        <span class="block-eyebrow">Duración</span>
+        <p class="block-value">6 horas en total · 3 sesiones de 2 h · áreas administrativas · ~20-25 personas del equipo administrativo.</p>
+      </div>
+
+      <div class="block-cotizacion">
+        <span class="block-eyebrow">Cotización</span>
+      </div>
+
+      <span class="cot-label cot-label-base">Propuesta + Inversión</span>
+      <div class="cot-frame base-frame" data-field="DetPrecioBase"></div>
+
+      <span class="cot-label cot-label-discount">Descuento</span>
+      <div class="cot-frame discount-frame" data-field="DetDescuento"></div>
+
+      <span class="cot-label cot-label-total">TOTAL</span>
+      <div class="cot-frame total-frame" data-field="DetPrecioTotal"></div>
+
+      <p class="cot-validity">Cotización válida por 30 días.</p>
+      <div class="cot-terms-box">
+        <span class="cot-terms-label">Importante</span>
+        <p class="cot-terms-text">Este servicio se presta bajo nuestros <a href="https://drive.google.com/file/d/1PA-ZSt4KnyY5dpxXzgkIk6-yfGlV2eF8/view?usp=drive_link" target="_blank" rel="noopener">términos y condiciones</a>. Al avanzar con esta propuesta, ambas partes los aceptan.</p>
+      </div>
+
+      <div class="block block-notes-container">
+        <span class="block-eyebrow">Notas</span>
+      </div>
+      <div class="multi-box notas-box" data-field="DetNotas"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">EVEREST · DET-006</span>
+      </div>
+    </section>
+
+    <!-- 10 · Presupuesto global del plan — referencial, 3 etapas (Detección/Habilidades/
+         Políticas). Marker real "Inversión por fases" de agregar-campo-precio.py (campos
+         estándar PrecioFase1-3/PrecioBase/Descuento/PrecioTotal/Notas). Namespace CSS propio
+         .s-price-fases (overrides.css) para no pisar los defaults que usa la hoja de arriba. -->
+    <section class="slide s-price s-price-fases">
+      <span class="counter">10 / 12</span>
+      <h2 class="title">Inversión por fases</h2>
+      <p class="price-intro">Estimado de referencia para las 3 etapas del plan completo (áreas administrativas · ~20-25 personas del equipo administrativo), para presupuestar desde ahora. Fase 1 (Detección) es la etapa lista para arrancar; Fases 2 y 3 son estimados sujetos al alcance real que defina el diagnóstico.</p>
+
+      <div class="fase-price-list">
+        <div class="fase-price-row">
+          <div class="fase-price-copy">
+            <span class="fase-price-label">Fase 1 · Detección</span>
+            <p class="fase-price-desc">Diagnóstico de áreas administrativas · 6 horas · Reporte Final.</p>
+          </div>
+          <div class="fase-price-frame" data-field="PrecioFase1"></div>
+        </div>
+        <div class="fase-price-row">
+          <div class="fase-price-copy">
+            <span class="fase-price-label">Fase 2 · Habilidades</span>
+            <p class="fase-price-desc">Capacitación a la medida, construida sobre los hallazgos del diagnóstico.</p>
+          </div>
+          <div class="fase-price-frame" data-field="PrecioFase2"></div>
+        </div>
+        <div class="fase-price-row">
+          <div class="fase-price-copy">
+            <span class="fase-price-label">Fase 3 · Políticas</span>
+            <p class="fase-price-desc">Gobernanza, roles y Brújula IA, formato en definición.</p>
+          </div>
+          <div class="fase-price-frame" data-field="PrecioFase3"></div>
+        </div>
+      </div>
+
+      <div class="block block-notes-container">
+        <span class="block-eyebrow">Notas</span>
+      </div>
+      <div class="multi-box notas-box" data-field="Notas"></div>
+
+      <span class="cot-label cot-label-base">Estimado del plan completo</span>
+      <div class="cot-frame base-frame"></div>
+
+      <span class="cot-label cot-label-discount">Descuento</span>
+      <div class="cot-frame discount-frame"></div>
+
+      <span class="cot-label cot-label-total">TOTAL</span>
+      <div class="cot-frame total-frame"></div>
+
+      <p class="cot-validity">Cotización válida por 30 días. Las 3 fases · plan progresivo.</p>
+      <div class="cot-terms-box">
+        <span class="cot-terms-label">Importante</span>
+        <p class="cot-terms-text">Este servicio se presta bajo nuestros <a href="https://drive.google.com/file/d/1PA-ZSt4KnyY5dpxXzgkIk6-yfGlV2eF8/view?usp=drive_link" target="_blank" rel="noopener">términos y condiciones</a>. Al avanzar con esta propuesta, ambas partes los aceptan.</p>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">EVEREST · DET-006</span>
+      </div>
+    </section>
+
+    <!-- 11 · Próximos pasos -->
+    <section class="slide s-steps">
+      <span class="counter">11 / 12</span>
+      <p class="eyebrow">08 · Próximos pasos</p>
+      <h2>Cómo arrancamos.</h2>
+      <div class="step-cards">
+        <div class="step-card">
+          <span class="ghost">01</span>
+        </div>
+        <div class="step-card">
+          <span class="ghost">02</span>
+        </div>
+        <div class="step-card">
+          <span class="ghost">03</span>
+        </div>
+      </div>
+
+      <!-- Editable AcroForm placeholders (3 pasos × título + body) -->
+      <div class="acro-area acro-title acro-paso-01-titulo" data-field="Paso01Titulo">
+        <span class="acro-default-text">Confirmamos fechas</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-01-body" data-field="Paso01Body">
+        <span class="acro-default-text">Definimos calendario de las 3 sesiones de auditoría con Everest.</span>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-02-titulo" data-field="Paso02Titulo">
+        <span class="acro-default-text">Acceso y logística</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-02-body" data-field="Paso02Body">
+        <span class="acro-default-text">Coordinamos accesos y agenda con las áreas administrativas de Everest.</span>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-03-titulo" data-field="Paso03Titulo">
+        <span class="acro-default-text">Kick-off</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-03-body" data-field="Paso03Body">
+        <span class="acro-default-text">Reunión de arranque (~30 min) para alinear el alcance y priorizar el diagnóstico.</span>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">EVEREST · DET-006</span>
+      </div>
+    </section>
+
+    <!-- 12 · Cierre (ruta/escalera editable) -->
+    <section class="slide s-end">
+      <span class="counter">12 / 12</span>
+
+      <div class="end-logo">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia">
+      </div>
+
+      <!-- Resultado (cinta superior) — caja editable, ventas la redacta por cliente -->
+      <div class="end-summit" data-field="CierreResultado">
+        <span class="acro-default-text">Everest, con un roadmap priorizado y base de gobernanza para su certificación ISO 9001.</span>
+      </div>
+
+      <!-- Escalera de 3 pasos — cada uno con su caja editable -->
+      <div class="end-stairs">
+        <div class="stair-step stair-1">
+          <span class="stair-label">Paso 1</span>
+          <div class="stair-field" data-field="CierrePaso1">
+            <span class="acro-default-text">Diagnóstico de 3 áreas</span>
+          </div>
+        </div>
+        <div class="stair-step stair-2">
+          <span class="stair-label">Paso 2</span>
+          <div class="stair-field" data-field="CierrePaso2">
+            <span class="acro-default-text">Gobernanza para ISO 9001</span>
+          </div>
+        </div>
+        <div class="stair-step stair-3">
+          <span class="stair-label">Paso 3</span>
+          <div class="stair-field" data-field="CierrePaso3">
+            <span class="acro-default-text">Roadmap de adopción de IA</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cta-wrap">
+        <span class="cta">Esperamos tu respuesta</span>
+      </div>
+
+      <div class="end-contact">
+        <p class="contact-line">
+          <span class="contact-label">Asesora de ventas:</span>
+          María Iribarren <span class="dot">·</span> +58 414 0570056 <span class="dot">·</span> miribarren@intezia.com
+        </p>
+        <p class="contact-line">
+          <span class="contact-label">Empresa:</span>
+          Intezia C.A J-505657950 <span class="dot">·</span> servicio@intezia.com
+        </p>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

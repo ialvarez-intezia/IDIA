@@ -1,0 +1,364 @@
+/* =============================================================================
+   Reporte de post-servicio · Zoom (consolidado, 6 áreas) · one-pager ejecutivo
+   Marca oficial Intezia (empresa/marca-visual.md): #000000 / #F4BA1A / #E58423 / #FFFFFF
+   Tipografía: Graphit Bold + Graphit Regular (fallback Inter)
+   Formato: documento continuo (no deck de slides) — fluye a 2 páginas al imprimir,
+   sin alturas fijas ni overflow:hidden (§4.10).
+   ============================================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+
+:root {
+  --black: #000000;
+  --yellow: #F4BA1A;
+  --orange: #E58423;
+  --white: #FFFFFF;
+  --gradient-warm: linear-gradient(135deg, var(--yellow) 0%, var(--orange) 100%);
+  --font-display: "Graphit", "Inter", system-ui, sans-serif;
+  --font-body: "Graphit", "Inter", system-ui, sans-serif;
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: var(--font-body);
+  background: #E9E6DF;
+  color: var(--black);
+  line-height: 1.45;
+  padding: 32px 0 56px;
+}
+
+.ps-page {
+  width: 960px;
+  max-width: 96vw;
+  margin: 0 auto;
+  background: var(--white);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.18);
+}
+
+/* ---------- Header ---------- */
+.ps-header {
+  background: var(--black);
+  color: var(--white);
+  padding: 44px 56px 40px;
+  position: relative;
+  overflow: hidden;
+}
+.ps-header::before {
+  content: "";
+  position: absolute;
+  top: -140px; right: -140px;
+  width: 340px; height: 340px;
+  background: var(--gradient-warm);
+  transform: rotate(45deg);
+  z-index: 0;
+}
+.ps-header-top {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 28px;
+}
+.ps-header-brand { display: flex; align-items: center; gap: 12px; }
+.ps-header-brand img { height: 30px; width: auto; display: block; }
+.ps-x { color: var(--yellow); font-size: 18px; font-weight: 700; }
+.ps-client {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 0.02em;
+}
+.ps-header-codes {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 11.5px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--yellow);
+}
+.ps-header h1 {
+  position: relative;
+  z-index: 2;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin-bottom: 14px;
+  max-width: 700px;
+}
+.ps-header h1 .hl {
+  display: inline-block;
+  background: var(--yellow);
+  color: var(--black);
+  padding: 0 10px;
+}
+.ps-sub {
+  position: relative;
+  z-index: 2;
+  font-family: var(--font-display);
+  font-size: 15px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.78);
+  max-width: 640px;
+}
+
+/* ---------- KPIs ---------- */
+.ps-kpis {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.ps-kpi {
+  padding: 30px 24px;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.ps-kpi:last-child { border-right: none; }
+.ps-kpi .num {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1;
+  color: var(--black);
+  letter-spacing: -0.02em;
+}
+.ps-kpi .num small {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--orange);
+}
+.ps-kpi .lbl {
+  font-family: var(--font-display);
+  font-size: 13px;
+  line-height: 1.4;
+  color: rgba(0, 0, 0, 0.62);
+}
+
+/* ---------- Section titles ---------- */
+.ps-section-title {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 24px;
+  letter-spacing: -0.01em;
+  margin-bottom: 6px;
+}
+.ps-section-title .line {
+  flex: 1;
+  height: 3px;
+  background: var(--gradient-warm);
+}
+.ps-section-note {
+  font-family: var(--font-display);
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: rgba(0, 0, 0, 0.6);
+  max-width: 760px;
+  margin-bottom: 22px;
+}
+
+.ps-map, .ps-reports, .ps-next {
+  padding: 40px 56px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* ---------- Mapa de activos ---------- */
+.ps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+.ps-card {
+  border: 1px solid rgba(0, 0, 0, 0.14);
+  border-left: 5px solid var(--black);
+  padding: 20px 20px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.ps-card.estado-uso { border-left-color: var(--yellow); }
+.ps-card.estado-inicial { border-left-color: var(--orange); }
+.ps-card.estado-consolidacion { border-left-color: rgba(0, 0, 0, 0.35); }
+
+.ps-card-top {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.ps-area {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.ps-area small {
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0;
+  color: rgba(0, 0, 0, 0.5);
+}
+.ps-badge {
+  align-self: flex-start;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 4px 9px;
+  background: rgba(0, 0, 0, 0.06);
+  color: rgba(0, 0, 0, 0.7);
+  white-space: nowrap;
+}
+.estado-uso .ps-badge { background: var(--yellow); color: var(--black); }
+.estado-inicial .ps-badge { background: var(--orange); color: var(--white); }
+
+.ps-card h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 1.2;
+}
+.ps-card p {
+  font-size: 13.5px;
+  line-height: 1.48;
+  color: rgba(0, 0, 0, 0.72);
+  flex: 1;
+}
+.ps-meta {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  color: rgba(0, 0, 0, 0.45);
+}
+
+/* ---------- Lo que reportan las áreas ---------- */
+.ps-report-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 18px;
+}
+.ps-report-card {
+  background: rgba(0, 0, 0, 0.03);
+  border-top: 3px solid var(--yellow);
+  padding: 20px 20px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.ps-report-card.alerta { border-top-color: var(--orange); }
+.ps-report-card h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+.ps-report-card p {
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: rgba(0, 0, 0, 0.75);
+}
+.ps-report-src {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 10.5px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.45);
+  margin-top: auto;
+}
+
+/* ---------- Lo que piden las áreas ---------- */
+.ps-next-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 18px;
+}
+.ps-next-card {
+  background: var(--black);
+  color: var(--white);
+  padding: 20px 20px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.ps-next-tag {
+  display: inline-block;
+  align-self: flex-start;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background: var(--yellow);
+  color: var(--black);
+  padding: 3px 9px;
+}
+.ps-next-card h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 15px;
+}
+.ps-next-card p {
+  font-size: 13.5px;
+  line-height: 1.48;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+/* ---------- Footer ---------- */
+.ps-footer {
+  padding: 28px 56px 36px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 40px;
+}
+.ps-footer p {
+  font-size: 11.5px;
+  line-height: 1.5;
+  color: rgba(0, 0, 0, 0.5);
+  max-width: 680px;
+}
+.ps-footer-brand {
+  flex: 0 0 auto;
+  text-align: right;
+}
+.ps-footer-name {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+}
+.ps-footer-legal {
+  display: block;
+  font-size: 10.5px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+/* ---------- Responsive (pantalla angosta, nunca en impresión) ---------- */
+@media screen and (max-width: 860px) {
+  .ps-kpis { grid-template-columns: repeat(2, 1fr); }
+  .ps-grid, .ps-report-cols, .ps-next-cols { grid-template-columns: 1fr; }
+  .ps-map, .ps-reports, .ps-next, .ps-header, .ps-footer { padding-left: 28px; padding-right: 28px; }
+  .ps-footer { flex-direction: column; align-items: flex-start; gap: 12px; }
+  .ps-footer-brand { text-align: left; }
+}
+
+/* ---------- Print / PDF ---------- */
+@page { size: A4; margin: 0; }
+@media print {
+  body { background: var(--white); padding: 0; }
+  .ps-page { width: 100%; max-width: none; box-shadow: none; }
+  .ps-card, .ps-report-card, .ps-next-card { break-inside: avoid; }
+  .ps-map, .ps-reports, .ps-next { break-inside: avoid; }
+}

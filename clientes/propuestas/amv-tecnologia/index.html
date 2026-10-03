@@ -1,0 +1,709 @@
+<!doctype html>
+<!--
+  Propuesta — AMV Tecnología (DET-019)
+  Servicio: DETECCIÓN pura (Modelo Intezia). División: Educación. Primer contacto, sin servicio
+  previo. Fuente primaria: Ficha de Levantamiento (Levantamiento_AMV_Tecnologia_2026-09-22.pdf,
+  asesora María Iribarren) + contexto adicional de la asesora sobre la reunión.
+
+  SOLO PROPUESTA 1 (Detección) de las 2 pedidas por el cliente en paralelo (Bloque F): "(1)
+  Detección para los 3 grupos definidos, y (2) un proyecto aparte de Cerebro Digital." Por
+  instrucción explícita del usuario, este documento es SOLO la Propuesta 1. Antes de construir
+  se confirmó con el usuario (AskUserQuestion, 2026-09-23): el Cerebro Digital NO se menciona en
+  ningún lugar de este deck (documento completamente aparte, mismo criterio que dumogas/DET-017
+  + dumogas-det018/DET-018); la recomendación de licencias Claude Teams se preparó en paralelo
+  como nota corta independiente (recomendacion-licencias-claude.md), no como parte de este deck.
+  Ver brief.md → "Decisión de alcance".
+
+  3 GRUPOS DE DETECCIÓN (dato directo de la ficha): Logística (compras internacionales,
+  importación, almacén, despacho), Comercialización y Venta (Customer Service, gerencia,
+  vendedores, ~7-8 personas), Administrativo (facturación, CxP/CxC, tesorería, contabilidad,
+  responsable Jorge). Servicio Técnico queda EXPLÍCITAMENTE FUERA de este alcance (4to grupo
+  pendiente para fase posterior) — su "Proceso 3" (transferencia de conocimiento técnico) no se
+  usa aquí, alimenta al Cerebro Digital.
+  4 HORAS de Detección por área (12h) + FUNDAMENTALS (2h grupal, lineamiento por defecto, sin
+  instrucción de acortar horas) = 14h totales. MODALIDAD MIXTA (dato explícito): Fundamentals
+  presencial en Valencia (sede principal, "primer contacto presencial" pedido por el cliente),
+  3 sesiones de área en remoto ("el resto remoto").
+  CON LOGRO INMEDIATO por sesión de área (patrón toyocentro/velas-3n, no pilotes-perforados/
+  andromeda) — a diferencia de Andrómeda, aquí el cliente YA VALIDÓ un logro inmediato real:
+  Juan (socio) probó Claude con una tarea real (consolidar 80 facturas con miles de items) y
+  pasó de 8 horas manuales a 10 minutos. Ese logro se ancla al grupo ADMINISTRATIVO (el proceso
+  es de "administración/facturación", Bloque C). Logística y Comercialización también prometen
+  logro inmediato (patrón general), pero sin caso pre-validado — se define en la propia sesión.
+  NOTA: el otro candidato de automatización de la ficha (sugerencia de orden de compra por
+  rotación de inventario, Bloque C Proceso 2, área Logística) NO se usa como logro inmediato de
+  Detección — el propio Bloque F indica que ese caso alimenta al Cerebro Digital (Propuesta 2,
+  no construida aquí). Se menciona solo como hallazgo de diagnóstico, sin prometerlo resuelto.
+  SIN pre-recomendar Claude como herramienta (Metodología ABR): se menciona como contexto real
+  (ya probado por Juan), la recomendación formal de ecosistema de IA llega en el Reporte Final.
+  SIN nombrar la sigla ERP ni la marca Johnson & Johnson (contexto interno de regulación
+  sectorial, ver brief.md) de cara al cliente. SIN nombrar a Jorge (candidato a IA Champion, no
+  asistió a la reunión) — mismo criterio "omitir, no inventar"/sin nombres de staff no presente
+  que HCA CAI-022 y otros decks de esta sesión.
+  Sin slide de Mapa de Calor ni Metodología ABR ni Equipo facilitador expuestos (§4.10a). Sin
+  certificado (Detección pura). Beneficios v3, Cierre escalera, servicio@intezia.com.
+  .rmx-ethics con padding-right:230px aplicado por defecto (memoria
+  bug-rmx-ethics-choca-nombre-cliente-largo.md).
+  Sin <strong> dentro de ningún <li> de .s-pain/.s-goals/.s-schedule (bug-strong-flex-specifics.md
+  — revisado con cuidado, confirmado de nuevo en Andrómeda DET-016 el 2026-09-20).
+  1 solo chip en el gauge-panel de Impacto (bug-impact-gauge-chips-collision.md).
+  Impacto (§4.9, verificado por WebSearch 2026-09-23): Ardent Partners — Accounts Payable
+  Metrics That Matter (2025): 32.6% de tasa promedio de procesamiento de facturas sin
+  intervención manual (touchless) en la industria, 49.2% en organizaciones de mejor clase; el
+  mejor de su clase procesa una factura en 3.1 días contra 17.4 días del promedio (~5.6× más
+  rápido); costo promedio $9.40/factura contra $2.78 del mejor de su clase (~70% menos costo);
+  22% de tasa de excepciones en el promedio contra 9% en el mejor de su clase. Elegido porque
+  conecta directo con el quick win ya validado del cliente (facturas). Se descartaron cifras
+  similares de blogs de proveedores sin poder confirmar el estudio original (mismo criterio que
+  Dumogas DET-017/018).
+  12 slides · precio estándar (Propuesta Económica, un solo servicio).
+
+  CORRECCIÓN 2026-09-23: se retiró la mención específica "de 8 horas a 10 minutos" /
+  "80 facturas" (título, lead, diagnóstico, beneficios, impacto, ROI, acroforms.json) por
+  instrucción directa del usuario — fue un ejemplo puntual que Juan dio en vivo, no debe
+  centrar la venta del proyecto (riesgo de disonancia si se sobre-enfoca en un solo caso).
+  Se conserva la mención GENÉRICA de que el equipo "ya probó por su cuenta que la IA
+  funciona/reduce tiempo real", sin nombrar el proceso ni las cifras. Nuevo título: "Del
+  criterio manual a la decisión con datos." (antes: "De 8 horas a 10 minutos."). Aplica
+  como estándar a toda propuesta nueva: dar fuerza con "ya lo probaron y funciona" sin
+  anclar el proyecto a un ejemplo anecdótico único.
+
+  ACTUALIZADO 2026-09-23 con el formato nuevo de hoja de cotización (ver
+  plantillas/propuesta-comercial.md → Propuesta Económica — descuento urgente, ROI y
+  garantía): descuento con urgencia (excepción de color roja/rosada, ver
+  empresa/marca-visual.md), ROI estimado. SIN garantía 30-60-90 (ese marco es de Habilidades,
+  no de Detección — servicio: deteccion). Calendario de inicio agregado en "Cómo arrancamos"
+  (.steps-projection) con fecha_arranque_deseada dada directo por el usuario (martes 6 y
+  jueves 8 de octubre, semana del 5 al 9) — ver brief.md.
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Propuesta · AMV Tecnología · Intezia</title>
+  <link rel="stylesheet" href="../_base/styles.css">
+  <link rel="stylesheet" href="overrides.css">
+</head>
+<body>
+
+  <main class="deck">
+
+    <!-- 1 · Portada -->
+    <section class="slide s-cover">
+      <span class="counter">01 / 12</span>
+      <div class="logo-big">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia">
+      </div>
+      <div class="body">
+        <p class="eyebrow">Propuesta formativa · Servicio de Detección</p>
+        <h1>
+          Del criterio manual<br>
+          <span class="hl">a la decisión con datos.</span>
+        </h1>
+        <p class="lead">
+          Auditamos Logística, Comercialización y Administrativo con 4 horas dedicadas a cada área, y construimos un <strong>logro inmediato</strong> en cada sesión, sobre una base que el propio equipo ya empezó a validar por su cuenta.
+        </p>
+      </div>
+      <div class="id-line">
+        <span class="codigo">Código: DET-019</span>
+        <span class="cliente">AMV Tecnología</span>
+      </div>
+    </section>
+
+    <!-- 2 · Punto de dolor + Diagnóstico -->
+    <section class="slide s-pain">
+      <span class="counter">02 / 12</span>
+      <span class="quote-mark">&ldquo;</span>
+      <div class="body">
+        <h2>&ldquo;Desde afuera vas a hacer una cosa mucho más objetiva.&rdquo;</h2>
+        <p class="context">
+          AMV Tecnología distribuye dispositivos e insumos médicos oftalmológicos, incluidos lentes intraoculares, con sede en Valencia, Caracas y San Cristóbal. Ya tienen licencias de Microsoft 365 con Copilot y Google Workspace con Gemini, pero el uso real es básico. Es el primer contacto de AMV con Intezia.
+        </p>
+        <p class="diag-title">Diagnóstico</p>
+        <ol>
+          <li>El uso de IA es muy desigual entre áreas: la mayoría solo hace redacción básica, sin criterio común.</li>
+          <li>Sin diagnóstico de IA formal: solo una charla informal de un proveedor externo, sin metodología ni seguimiento.</li>
+          <li>El equipo ya probó por su cuenta que la IA reduce tiempo real en tareas operativas, sin una metodología formal para escalarlo.</li>
+          <li>La gestión de compras depende hoy del criterio manual del comprador, sin datos de rotación ni proveedores.</li>
+          <li>AMV busca optimizar sus procesos antes de seguir creciendo en personal operativo.</li>
+        </ol>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">AMV TECNOLOGÍA · DET-019</span>
+      </div>
+    </section>
+
+    <!-- 3 · Objetivos estratégicos -->
+    <section class="slide s-goals">
+      <span class="counter">03 / 12</span>
+      <p class="eyebrow">02 · Objetivos</p>
+      <h2>A dónde llevamos<br>a AMV Tecnología.</h2>
+      <div class="columns">
+        <div class="general">
+          <p class="label">Objetivo general</p>
+          <p>
+            Auditar Logística, Comercialización y Administrativo con 4 horas dedicadas a cada área, dejando un logro inmediato en cada una, para llevar el uso disperso de IA de hoy a un criterio común, empezando por consolidar facturas en minutos, no en horas.
+          </p>
+        </div>
+        <div class="specifics">
+          <p class="label">Objetivos específicos</p>
+          <ol>
+            <li>Nivelar al equipo con una sesión de Fundamentals antes de auditar.</li>
+            <li>Auditar las 3 áreas con 4 horas dedicadas a cada una, modalidad mixta.</li>
+            <li>Dejar un logro inmediato en cada área, empezando por la consolidación de facturas en Administrativo.</li>
+            <li>Entregar un Reporte Final con el mapa de oportunidades priorizado y una recomendación de ecosistema de IA.</li>
+          </ol>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">AMV TECNOLOGÍA · DET-019</span>
+      </div>
+    </section>
+
+    <!-- 4 · Programa -->
+    <section class="slide s-program">
+      <span class="counter">04 / 12</span>
+      <p class="eyebrow">03 · El proyecto</p>
+      <h2>3 áreas, un mismo criterio.</h2>
+      <p class="meta">Fundamentals + Detección con logro inmediato por área, modalidad mixta.</p>
+      <div class="modules">
+        <div class="module">
+          <span class="roman">I</span>
+          <h3>Fundamentals</h3>
+          <p class="obj">Nivela a Logística, Comercialización y Administrativo en fundamentos de IA antes de auditar.</p>
+          <ul class="topics">
+            <li>Fundamentos de IA</li>
+            <li>Kick-off presencial</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">II</span>
+          <h3>Trabajo por Área</h3>
+          <p class="obj">Una sesión de 4 horas por cada una de las 3 áreas, con un logro inmediato en cada una.</p>
+          <ul class="topics">
+            <li>3 áreas · 4h c/u</li>
+            <li>Logro inmediato por área</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">III</span>
+          <h3>Priorización</h3>
+          <p class="obj">Se prioriza cada hallazgo por impacto, esfuerzo y riesgo, y se unifica el Índice de Madurez.</p>
+          <ul class="topics">
+            <li>Mapa de Calor</li>
+            <li>Índice de Madurez</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">IV</span>
+          <h3>Reporte Final</h3>
+          <p class="obj">Diagnóstico completo + mapa de oportunidades, con recomendación de ecosistema de IA.</p>
+          <ul class="topics">
+            <li>Mapa de oportunidades</li>
+            <li>Recomendación de IA</li>
+          </ul>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">AMV TECNOLOGÍA · DET-019</span>
+      </div>
+    </section>
+
+    <!-- 5 · Roadmap · Detección (3 etapas) -->
+    <section class="slide s-roadmap">
+      <span class="counter">05 / 12</span>
+      <p class="eyebrow">04 · Roadmap · Detección</p>
+      <h2>Auditar antes<br><span class="hl">de comprar a ciegas</span>.</h2>
+
+      <div class="rmx-field">
+        <div class="rmx-linear">
+
+          <div class="rmx-lrow-nodes">
+            <div class="rmx-lcol"><div class="rmx-node rmx-node-f2">1</div></div>
+            <div class="rmx-arrow"></div>
+            <div class="rmx-lcol"><div class="rmx-node rmx-node-f3">2</div></div>
+            <div class="rmx-arrow"></div>
+            <div class="rmx-lcol"><div class="rmx-node rmx-node-f4">3</div></div>
+            <div class="rmx-arrow"></div>
+            <div class="rmx-lcol"><div class="rmx-node rmx-node-r">&#9733;</div></div>
+          </div>
+
+          <div class="rmx-lrow-cards">
+            <div class="rmx-lcol">
+              <div class="rmx-card rmx-card-f2">
+                <span class="rmx-card-tag">Etapa 1 · Fundamentals y Trabajo por Área</span>
+                <div class="rmx-card-name">Fundamentals + 4h por área</div>
+                <ul class="rmx-facets">
+                  <li><span>Qué pasa</span><p>Nivelamos con Fundamentals y auditamos las 3 áreas, 4h cada una.</p></li>
+                  <li><span>Con quién</span><p>Logística, Comercialización y Administrativo.</p></li>
+                  <li><span>Entrega</span><p>Equipo nivelado + logro inmediato por área.</p></li>
+                </ul>
+              </div>
+            </div>
+            <div class="rmx-lspacer"></div>
+            <div class="rmx-lcol">
+              <div class="rmx-card rmx-card-f3">
+                <span class="rmx-card-tag">Etapa 2 · Priorización</span>
+                <div class="rmx-card-name">Mapa de Calor de oportunidades</div>
+                <ul class="rmx-facets">
+                  <li><span>Qué pasa</span><p>Se prioriza cada hallazgo por impacto, esfuerzo y riesgo, y se unifica el indicador.</p></li>
+                  <li><span>Con quién</span><p>Equipo consultor Intezia.</p></li>
+                  <li><span>Entrega</span><p>Mapa de Calor de las 3 áreas + Índice de Madurez.</p></li>
+                </ul>
+              </div>
+            </div>
+            <div class="rmx-lspacer"></div>
+            <div class="rmx-lcol">
+              <div class="rmx-card rmx-card-f4">
+                <span class="rmx-card-tag">Etapa 3 · Reporte Final</span>
+                <div class="rmx-card-name">Mapa de oportunidades priorizado</div>
+                <ul class="rmx-facets">
+                  <li><span>Qué pasa</span><p>Se entrega el diagnóstico completo, con la recomendación de ecosistema de IA.</p></li>
+                  <li><span>Con quién</span><p>Juan Vázquez y Yamil Yaguas.</p></li>
+                  <li><span>Entrega</span><p>Reporte Final + recomendación de IA.</p></li>
+                </ul>
+              </div>
+            </div>
+            <div class="rmx-lspacer"></div>
+            <div class="rmx-lcol">
+              <div class="rmx-result-card">
+                <span class="rmx-result-label">Entregable insignia · Mapa de oportunidades</span>
+                <div class="rmx-result-title">De un uso disperso a <b>decisiones con datos</b></div>
+                <ul>
+                  <li>Equipo nivelado con Fundamentals</li>
+                  <li>Logro inmediato por área</li>
+                  <li>Mapa de oportunidades + Reporte Final</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /.rmx-linear -->
+
+        <div class="rmx-ethics">
+          <span class="rmx-ethics-tag">Metodología ABR · Diagnóstico antes de recomendar</span>
+          <p>El Reporte Final confirma la recomendación con los hallazgos reales de las 3 áreas, no antes.</p>
+        </div>
+
+      </div><!-- /.rmx-field -->
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">AMV TECNOLOGÍA · DET-019</span>
+      </div>
+    </section>
+
+    <!-- 6 · Cronograma · Fundamentals -->
+    <section class="slide s-schedule">
+      <span class="counter">06 / 12</span>
+      <p class="eyebrow">04 · Cronograma · Fundamentals</p>
+
+      <div class="ses-head">
+        <div>
+          <span class="ses-mod">Sesión grupal · Logística, Comercialización y Administrativo · Presencial en Valencia</span>
+          <h2>Fundamentals</h2>
+        </div>
+        <div class="ses-meta"><span class="ses-dur">2h</span></div>
+      </div>
+
+      <div class="ses-body">
+        <div class="ses-block">
+          <span class="label">Temas</span>
+          <div class="chips">
+            <span class="chip">Qué es y qué no es la IA</span>
+            <span class="chip">Casos reales de AMV</span>
+            <span class="chip">Ruta de las 3 sesiones</span>
+            <span class="chip">Preguntas y expectativas</span>
+          </div>
+        </div>
+        <div class="ses-block">
+          <span class="label">Tiempo · Total 2 h</span>
+          <div class="timebar">
+            <div class="seg" style="flex:30">30' Encuadre y fundamentos</div>
+            <div class="seg" style="flex:45">45' Casos reales de AMV</div>
+            <div class="seg" style="flex:30">30' Ruta de las 3 sesiones</div>
+            <div class="seg" style="flex:15">15' Cierre y preguntas</div>
+          </div>
+        </div>
+        <div class="ses-cols">
+          <div class="ses-block">
+            <span class="label">Qué se hace</span>
+            <ul>
+              <li>Presentamos qué es y qué no es la IA, con foco en el sector de dispositivos médicos</li>
+              <li>Explicamos la ruta de las 3 sesiones de auditoría que siguen</li>
+              <li>Abrimos espacio a preguntas y expectativas del equipo</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Qué se logra</span>
+            <ul>
+              <li>El equipo llega a sus sesiones de área con un lenguaje común</li>
+              <li>Expectativas alineadas sobre la auditoría</li>
+              <li>Primera identificación de dónde cada área ve oportunidad</li>
+            </ul>
+          </div>
+          <div class="ses-block block-rec">
+            <span class="label">Recursos y entornos</span>
+            <ul>
+              <li>Sesión presencial, en Valencia</li>
+              <li>Sin herramientas técnicas todavía</li>
+              <li>Casos reales del sector de dispositivos médicos</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">AMV TECNOLOGÍA · DET-019</span>
+      </div>
+    </section>
+
+    <!-- 7 · Cronograma · Estructura de las 4 horas por área -->
+    <section class="slide s-schedule">
+      <span class="counter">07 / 12</span>
+      <p class="eyebrow">04 · Cronograma · Estructura por área</p>
+
+      <div class="ses-head">
+        <div>
+          <span class="ses-mod">Se repite en cada una de las 3 áreas · modalidad remota</span>
+          <h2>Estructura de las 4 horas</h2>
+        </div>
+        <div class="ses-meta"><span class="ses-dur">4h</span></div>
+      </div>
+
+      <div class="ses-body">
+        <div class="ses-block">
+          <span class="label">Temas</span>
+          <div class="chips">
+            <span class="chip">Procesos reales del área</span>
+            <span class="chip">Cuellos de botella</span>
+            <span class="chip">Logro inmediato aplicable</span>
+            <span class="chip">Datos y sistemas del área</span>
+          </div>
+        </div>
+        <div class="ses-block">
+          <span class="label">Tiempo · Total 4 h</span>
+          <div class="timebar">
+            <div class="seg" style="flex:45">45' Contexto y objetivos</div>
+            <div class="seg" style="flex:90">90' Levantamiento de procesos</div>
+            <div class="seg" style="flex:75">75' Construcción del logro inmediato</div>
+            <div class="seg" style="flex:30">30' Cierre y siguientes pasos</div>
+          </div>
+        </div>
+        <div class="ses-cols">
+          <div class="ses-block">
+            <span class="label">Qué se hace</span>
+            <ul>
+              <li>Entrevistamos al equipo del área sobre sus procesos reales</li>
+              <li>Identificamos el cuello de botella más relevante</li>
+              <li>Construimos en la misma sesión un logro inmediato aplicable</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Qué se logra</span>
+            <ul>
+              <li>Inventario real de procesos del área</li>
+              <li>Un logro inmediato que el área ya puede usar</li>
+              <li>Información lista para el Mapa de Calor conjunto</li>
+            </ul>
+          </div>
+          <div class="ses-block block-rec">
+            <span class="label">Recursos y entornos</span>
+            <ul>
+              <li>Sesión remota por área</li>
+              <li>Guion de levantamiento Intezia</li>
+              <li>Sin tocar el sistema de gestión de AMV</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">AMV TECNOLOGÍA · DET-019</span>
+      </div>
+    </section>
+
+    <!-- 8 · Beneficios (formato v3) -->
+    <section class="slide s-benefits s-benefits-v2">
+      <span class="counter">08 / 12</span>
+      <p class="eyebrow">05 · Beneficios</p>
+      <h2>Lo que <span class="hl">se llevan</span>.</h2>
+      <div class="grid">
+        <div class="block">
+          <p class="label">Resultados</p>
+          <ul>
+            <li>Las <strong>3 áreas</strong> auditadas, cada una con un logro inmediato aplicado a su propia operación.</li>
+            <li>Equipo nivelado con Fundamentals antes de la auditoría.</li>
+            <li>Un mapa de oportunidades priorizado y una recomendación de ecosistema de IA.</li>
+          </ul>
+        </div>
+        <div class="block">
+          <p class="label">Por qué Detección</p>
+          <p>
+            No nos quedamos en el diagnóstico en papel: <strong>construimos, probamos y dejamos instalado</strong> un logro tangible funcionando en cada área, antes de que AMV compre licencias a ciegas.
+          </p>
+        </div>
+        <div class="block">
+          <p class="label">Entregables</p>
+        </div>
+        <div class="block">
+          <p class="label">Valor inmediato</p>
+        </div>
+      </div>
+
+      <div class="multi-box entregables-box" data-field="Entregables"></div>
+      <div class="multi-box acreditaciones-box" data-field="Acreditacion"></div>
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">AMV TECNOLOGÍA · DET-019</span>
+      </div>
+    </section>
+
+    <!-- 9 · Impacto / estudios — datos reales, fuente citada (CLAUDE.md §4.9) -->
+    <section class="slide s-impact">
+      <span class="counter">09 / 12</span>
+
+      <div class="impact-head">
+        <p class="eyebrow">06 · Impacto</p>
+        <h2>Cada factura manual<br><span class="hl">cuesta más de lo que parece</span>.</h2>
+      </div>
+
+      <div class="impact-body">
+        <div class="chart-panel">
+          <p class="panel-title">Cómo procesa facturas la empresa promedio hoy</p>
+          <div class="bars">
+            <div class="bar-row">
+              <span class="bar-label">Facturas procesadas sin intervención manual (promedio)</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:33%"><span class="bar-val">33%</span></div></div>
+            </div>
+            <div class="bar-row">
+              <span class="bar-label">Facturas sin intervención manual (mejor de su clase)</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:49%"><span class="bar-val">49%</span></div></div>
+            </div>
+            <div class="bar-row">
+              <span class="bar-label">Excepciones que exigen revisión manual (promedio)</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:22%"><span class="bar-val">22%</span></div></div>
+            </div>
+          </div>
+          <div class="bar-axis"><span class="scale"><span>0</span><span>25</span><span>50</span><span>75</span><span>100%</span></span></div>
+          <p class="panel-source">Fuente: Ardent Partners &mdash; Accounts Payable Metrics That Matter (2025).</p>
+        </div>
+
+        <div class="gauge-panel">
+          <div class="gauge" style="--pct:70">
+            <div class="gauge-core">
+              <span class="gauge-num">70<span class="pct">%</span></span>
+              <span class="gauge-cap">menos costo por factura, del promedio al mejor de su clase</span>
+            </div>
+          </div>
+          <div class="chips">
+            <div class="chip">
+              <span class="chip-num">5.6&times;</span>
+              <span class="chip-lbl">más rápido procesa facturas el mejor de su clase</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="impact-hook">
+        <span class="hook-mark">&#9656;</span>
+        <p class="hook-text">
+          El procesamiento promedio de facturas en la industria toma 17.4 días, con solo 33% sin intervención manual y 22% de excepciones que exigen revisión (Ardent Partners, 2025): el mismo cuello de botella que enfrenta hoy Administrativo en AMV. El mejor de su clase procesa 5.6 veces más rápido y con 70% menos costo por factura.
+        </p>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">AMV TECNOLOGÍA · DET-019</span>
+      </div>
+    </section>
+
+    <!-- 10 · Propuesta Económica (estándar: Duración + Programa + Notas + Cotización) -->
+    <section class="slide s-price">
+      <span class="counter">10 / 12</span>
+      <h2 class="title">Propuesta Económica</h2>
+
+      <div class="block">
+        <span class="block-eyebrow">Duración</span>
+        <p class="block-value">Fundamentals (2h) + 3 áreas · 4h por área (12h) · 14h totales · modalidad mixta.</p>
+      </div>
+
+      <div class="block block-programa">
+        <span class="block-eyebrow">Programa</span>
+      </div>
+      <div class="multi-box programa-box" data-field="Programa"></div>
+
+      <div class="block block-cotizacion">
+        <span class="block-eyebrow">Cotización</span>
+      </div>
+
+      <span class="cot-label cot-label-base">Propuesta + Inversión</span>
+      <div class="cot-frame base-frame"></div>
+
+      <span class="cot-label cot-label-discount">Descuento</span>
+      <span class="cot-sign-minus">&minus;$</span>
+      <div class="cot-frame discount-frame"></div>
+      <span class="cot-urgent-note">Descuento válido por 15 días</span>
+
+      <span class="cot-label cot-label-total">TOTAL</span>
+      <div class="cot-frame total-frame"></div>
+
+      <p class="cot-validity">Cotización válida por 30 días.</p>
+
+      <div class="cot-roi-box">
+        <span class="cot-roi-label">ROI estimado</span>
+        <p class="cot-roi-text">Cada una de las 3 sesiones de área construye, además del diagnóstico, un logro inmediato aplicable desde el primer día: Logística, Comercialización y Administrativo se llevan algo funcionando, no solo un hallazgo en papel. Esa base real, más el mapa de oportunidades priorizado, es lo que decide en qué licencias invertir, en vez de comprar a ciegas.</p>
+      </div>
+
+      <div class="cot-terms-box">
+        <span class="cot-terms-label">Importante</span>
+        <p class="cot-terms-text">Este servicio se presta bajo nuestros <a href="https://drive.google.com/file/d/1PA-ZSt4KnyY5dpxXzgkIk6-yfGlV2eF8/view?usp=drive_link" target="_blank" rel="noopener">términos y condiciones</a>. Al avanzar con esta propuesta, ambas partes los aceptan.</p>
+      </div>
+
+      <div class="block block-notes-container">
+        <span class="block-eyebrow">Notas</span>
+      </div>
+      <div class="multi-box notas-box" data-field="Notas"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">AMV TECNOLOGÍA · DET-019</span>
+      </div>
+    </section>
+
+    <!-- 11 · Próximos pasos -->
+    <section class="slide s-steps">
+      <span class="counter">11 / 12</span>
+      <p class="eyebrow">07 · Próximos pasos</p>
+      <h2>Cómo arrancamos.</h2>
+      <div class="step-cards">
+        <div class="step-card">
+          <span class="ghost">01</span>
+        </div>
+        <div class="step-card">
+          <span class="ghost">02</span>
+        </div>
+        <div class="step-card">
+          <span class="ghost">03</span>
+        </div>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-01-titulo" data-field="Paso01Titulo">
+        <span class="acro-default-text">Confirmamos fechas</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-01-body" data-field="Paso01Body">
+        <span class="acro-default-text">Definimos con Juan y Yamil el calendario de Fundamentals y las 3 sesiones de área.</span>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-02-titulo" data-field="Paso02Titulo">
+        <span class="acro-default-text">Acceso y logística</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-02-body" data-field="Paso02Body">
+        <span class="acro-default-text">Coordinamos el encuentro presencial en Valencia y el acceso remoto de las 3 áreas.</span>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-03-titulo" data-field="Paso03Titulo">
+        <span class="acro-default-text">Reunión de arranque</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-03-body" data-field="Paso03Body">
+        <span class="acro-default-text">Sesión de unos 30 minutos con Juan y Yamil para alinear el alcance y el orden de las 3 áreas.</span>
+      </div>
+
+      <div class="steps-calendar">
+        <span class="steps-calendar-tag">Calendario de inicio &middot; próxima fecha: martes 29 de septiembre</span>
+        <p class="steps-calendar-result">En 4 semanas, las 3 áreas quedan auditadas con un logro inmediato en cada una.</p>
+        <div class="steps-calendar-grid">
+          <div class="cal-col">
+            <div class="cal-row">
+              <span class="cal-date">Mar 29 sep</span><span class="cal-time">10-11</span><span class="cal-title">Kick-off</span>
+            </div>
+            <div class="cal-row">
+              <span class="cal-date">Mar 6 oct</span><span class="cal-time">10-12</span><span class="cal-title">Fundamentals (presencial)</span>
+            </div>
+            <div class="cal-row">
+              <span class="cal-date">Jue 8 oct</span><span class="cal-time">10-12</span><span class="cal-title">Auditoría Logística (1/2)</span>
+            </div>
+            <div class="cal-row">
+              <span class="cal-date">Mar 13 oct</span><span class="cal-time">10-12</span><span class="cal-title">Auditoría Logística (2/2)</span>
+            </div>
+          </div>
+          <div class="cal-col">
+            <div class="cal-row">
+              <span class="cal-date">Jue 15 oct</span><span class="cal-time">10-12</span><span class="cal-title">Auditoría Comercialización (1/2)</span>
+            </div>
+            <div class="cal-row">
+              <span class="cal-date">Mar 20 oct</span><span class="cal-time">10-12</span><span class="cal-title">Auditoría Comercialización (2/2)</span>
+            </div>
+            <div class="cal-row">
+              <span class="cal-date">Jue 22 oct</span><span class="cal-time">10-12</span><span class="cal-title">Auditoría Administrativo (1/2)</span>
+            </div>
+            <div class="cal-row">
+              <span class="cal-date">Mar 27 oct</span><span class="cal-time">10-12</span><span class="cal-title">Auditoría Administrativo (2/2)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">AMV TECNOLOGÍA · DET-019</span>
+      </div>
+    </section>
+
+    <!-- 12 · Cierre (ruta/escalera editable) -->
+    <section class="slide s-end">
+      <span class="counter">12 / 12</span>
+
+      <div class="end-logo">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia">
+      </div>
+
+      <div class="end-summit" data-field="CierreResultado">
+        <span class="acro-default-text">AMV Tecnología, con sus 3 áreas auditadas y un mapa de oportunidades priorizado para decidir qué automatizar primero.</span>
+      </div>
+
+      <div class="end-stairs">
+        <div class="stair-step stair-1">
+          <span class="stair-label">Paso 1</span>
+          <div class="stair-field" data-field="CierrePaso1">
+            <span class="acro-default-text">Fundamentals y trabajo por área</span>
+          </div>
+        </div>
+        <div class="stair-step stair-2">
+          <span class="stair-label">Paso 2</span>
+          <div class="stair-field" data-field="CierrePaso2">
+            <span class="acro-default-text">Mapa de oportunidades priorizado</span>
+          </div>
+        </div>
+        <div class="stair-step stair-3">
+          <span class="stair-label">Paso 3</span>
+          <div class="stair-field" data-field="CierrePaso3">
+            <span class="acro-default-text">Reporte Final + recomendación de IA</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cta-wrap">
+        <span class="cta">Esperamos tu respuesta</span>
+      </div>
+
+      <div class="end-contact">
+        <p class="contact-line">
+          <span class="contact-label">Asesora de ventas:</span>
+          María Iribarren <span class="dot">·</span> +58 414-0570056 <span class="dot">·</span> miribarren@intezia.com
+        </p>
+        <p class="contact-line">
+          <span class="contact-label">Empresa:</span>
+          Intezia C.A J-505657950 <span class="dot">·</span> servicio@intezia.com
+        </p>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

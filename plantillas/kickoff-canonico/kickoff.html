@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<!--
+  Brief de Kick-off · CANÓNICO — DEMO, datos ficticios
+  Cliente demo: Gato · Servicio: Habilidades · Eje: Claude para diseñar Skills
+  División: Educación
+
+  QUÉ ES: herramienta de trabajo LOCAL (no un Artifact publicado, no un deck de propuesta)
+  que la líder de proyectos y el consultor navegan EN VIVO con el cliente durante el kickoff.
+  Acompaña al deck de propuesta, no lo reemplaza. Se abre directamente en el navegador
+  (doble clic / file://) desde la carpeta del cliente — sin backend, sin conexión a internet
+  salvo para cargar Google Fonts la primera vez.
+
+  Mecánica (igual que "Ficha Comercial", "Resumen modelo" y "Ruta del servicio" — familia de
+  artefactos comerciales de Intezia, ver empresa/marca-artefactos.md):
+    - Botón "Modo interno / Modo cliente": oculta (display:none vía .cliente .interno) las
+      explicaciones de llenado antes de compartir pantalla con el cliente.
+    - Casillas de fecha/hora por sesión (inputs reales) → botón "Agendar todo" arma un único
+      .ics con todas las sesiones para importar a mano al calendario de servicio@intezia.com.
+      Sin autenticación contra Google Calendar embebida en el archivo (eso es la integración
+      MCP de plantillas/calendario.md, un paso aparte, no algo que la página haga sola).
+    - Botón "Generar PDF": arma un #print-view oculto (visible solo en @media print) con todo
+      lo llenado en vivo y dispara window.print() → el usuario elige "Guardar como PDF".
+
+  CÓMO CLONAR (ver plantillas/brief-kickoff.md):
+    1. Confirma con el usuario que la propuesta del cliente está APROBADA (bloqueante).
+    2. cp plantillas/kickoff-canonico/kickoff.html clientes/propuestas/<slug>/kickoff.html
+    3. Ajusta la profundidad de los logos: aquí son "../../logos/..." (2 niveles, vive en
+       plantillas/kickoff-canonico/). En clientes/propuestas/<slug>/ son "../../../logos/..."
+       (3 niveles) — mismo find/replace que ya se usa en el resto del sistema.
+    4. Reemplaza cliente, servicio, eje temático y la ruta completa de etapas (todas las del
+       servicio contratado — Detección/Habilidades/Políticas/Innovación, ver la plantilla).
+       Deja las casillas de fecha/hora VACÍAS: se llenan en vivo durante la llamada.
+    5. Certifica sin desborde y sin overflow horizontal.
+    6. Al cerrar el kickoff real: usa "Agendar todo" y "Generar PDF" en la propia sesión.
+-->
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Intezia · Brief de Kick-off · Gato (Ejemplo)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --black:#0A0A0A;
+    --panel:#1c1a16;
+    --panel-2:#141310;
+    --line:#2c2922;
+    --gold:#F4BA1A;
+    --orange:#E58423;
+    --cream:#F5EFE0;
+    --dim:#9a948a;
+    --ok:#43d76a;
+    --bad:#E8634A;
+    --sans:'Poppins',Arial,'Helvetica Neue',Helvetica,sans-serif;
+    --mono:'Space Grotesk','Poppins',Arial,sans-serif;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{background:var(--black);color:var(--cream);font-family:var(--sans);-webkit-font-smoothing:antialiased;}
+  a{color:var(--gold);}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 26px 90px;}
+
+  .topbar{position:sticky;top:0;z-index:50;background:rgba(10,10,10,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
+  .topbar-in{max-width:1120px;margin:0 auto;padding:12px 26px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;justify-content:space-between;}
+  .brand{display:flex;align-items:center;gap:10px;}
+  .brand img{height:20px;width:auto;display:block;}
+  .brand-txt{font-size:10px;letter-spacing:1.6px;text-transform:uppercase;color:var(--dim);font-weight:600;}
+  .brand-txt b{color:var(--cream);}
+  .status{display:flex;gap:8px;flex-wrap:wrap;}
+  .pill{font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.6px;padding:6px 12px;border:1px solid var(--line);border-radius:20px;color:var(--cream);background:var(--panel);white-space:nowrap;}
+  .pill.on{border-color:var(--orange);color:var(--orange);}
+  #btnModo{font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.6px;padding:6px 12px;border-radius:20px;border:1px solid #3a352c;color:var(--dim);background:transparent;cursor:pointer;white-space:nowrap;}
+  #btnModo:hover{border-color:var(--orange);color:var(--orange);}
+  #btnModo.cli{border-color:var(--orange);color:var(--orange);}
+  body.cliente .interno{display:none!important;}
+
+  header.hero{padding:40px 0 8px;}
+  .kicker{font-size:11px;font-weight:700;letter-spacing:2.4px;color:var(--orange);text-transform:uppercase;margin:0 0 12px;}
+  h1{font-size:32px;line-height:1.18;margin:0 0 12px;max-width:820px;}
+  h1 .hl{background:var(--gold);color:var(--black);padding:0 6px;}
+  .sub{font-size:14.5px;color:var(--dim);max-width:760px;line-height:1.6;margin:0 0 22px;}
+
+  .callout{background:rgba(244,186,26,.06);border:1px solid #3a2f10;border-left:4px solid var(--gold);border-radius:10px;padding:16px 20px;margin-bottom:34px;}
+  .callout .ct{font-size:11px;font-weight:700;letter-spacing:1.2px;color:var(--gold);text-transform:uppercase;margin:0 0 8px;}
+  .callout p{margin:0;font-size:13px;color:var(--cream);line-height:1.6;}
+  .callout b{color:var(--gold);}
+
+  .sect-head{display:flex;align-items:baseline;gap:10px;margin:46px 0 6px;padding-bottom:10px;border-bottom:1px solid var(--line);}
+  .sect-head .tag{font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:1.4px;color:var(--orange);text-transform:uppercase;}
+  .sect-head h2{font-size:19px;margin:0;}
+  .sect-note{font-size:12.5px;color:var(--dim);margin:10px 0 20px;max-width:720px;line-height:1.6;}
+
+  .route{display:flex;flex-wrap:wrap;gap:0;align-items:stretch;margin-bottom:8px;}
+  .stage{flex:1 1 220px;background:var(--panel-2);border:1px solid var(--line);border-radius:12px;padding:16px 16px 18px;position:relative;margin:0 10px 12px 0;}
+  .stage.now{border-color:var(--gold);background:linear-gradient(180deg,rgba(244,186,26,.09),var(--panel-2) 60%);}
+  .stage .sn{font-family:var(--mono);font-size:11px;font-weight:700;color:var(--dim);letter-spacing:1px;text-transform:uppercase;}
+  .stage.now .sn{color:var(--gold);}
+  .stage h3{font-size:14.5px;margin:8px 0 6px;}
+  .stage p{font-size:11.5px;color:var(--dim);line-height:1.5;margin:0;}
+  .stage .badge{position:absolute;top:14px;right:14px;font-family:var(--mono);font-size:9.5px;font-weight:700;letter-spacing:.6px;padding:3px 8px;border-radius:10px;background:var(--gold);color:var(--black);}
+  .stage.auto .badge{background:var(--line);color:var(--dim);}
+
+  .sessions{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px;margin-bottom:10px;}
+  .scard{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 18px 18px;}
+  .scard .sc-no{font-family:var(--mono);font-size:30px;font-weight:800;color:var(--gold);letter-spacing:0;margin:0 0 8px;line-height:1;}
+  .scard .sc-desc{font-size:12px;color:var(--dim);line-height:1.55;margin:0 0 14px;min-height:52px;}
+  .sc-row{display:flex;gap:8px;margin-bottom:2px;}
+  .sc-row label{display:flex;flex-direction:column;gap:5px;font-size:10px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;color:var(--dim);flex:1;}
+  .sc-row input{background:#000;border:1px solid #333;color:var(--cream);border-radius:6px;padding:8px 10px;font-family:var(--mono);font-size:12.5px;width:100%;}
+  .sc-row input:focus{outline:none;border-color:var(--orange);}
+  .scard.done{border-color:#2a4a34;background:linear-gradient(180deg,rgba(67,215,106,.06),var(--panel) 60%);}
+  .scard.done .sc-no{color:var(--ok);}
+  .sc-done{display:flex;align-items:center;gap:8px;font-family:var(--mono);font-size:11.5px;font-weight:700;letter-spacing:.4px;color:var(--ok);padding:8px 0 2px;}
+  .sc-done::before{content:'\2713';display:inline-flex;align-items:center;justify-content:center;width:16px;height:16px;border-radius:50%;background:var(--ok);color:var(--black);font-size:10px;font-weight:900;}
+
+  .btn{font-family:var(--sans);font-size:13px;font-weight:700;letter-spacing:.3px;padding:12px 22px;border-radius:8px;border:1px solid var(--gold);background:var(--gold);color:var(--black);cursor:pointer;}
+  .btn:hover{background:var(--orange);border-color:var(--orange);}
+  .btn.ghost{background:transparent;color:var(--cream);border-color:var(--line);}
+  .btn.ghost:hover{border-color:var(--orange);color:var(--orange);}
+  .btn-row{display:flex;gap:12px;flex-wrap:wrap;}
+
+  .deliv{border-left:2px solid var(--line);margin:18px 0 0 8px;padding-left:24px;}
+  .drow{position:relative;padding-bottom:26px;}
+  .drow:last-child{padding-bottom:0;}
+  .drow::before{content:'';position:absolute;left:-29px;top:2px;width:12px;height:12px;border-radius:50%;background:var(--gold);border:2px solid var(--black);}
+  .drow .dm{font-family:var(--mono);font-size:10.5px;font-weight:700;color:var(--orange);letter-spacing:1px;text-transform:uppercase;margin:0 0 4px;}
+  .drow h4{font-size:14px;margin:0 0 4px;}
+  .drow p{font-size:12px;color:var(--dim);margin:0;line-height:1.5;max-width:600px;}
+
+  .final-box{margin-top:50px;padding-top:26px;border-top:1px solid var(--line);}
+  .final-box h3{font-size:17px;margin:0 0 8px;}
+  .hint{font-size:12.5px;color:var(--dim);line-height:1.6;margin:0 0 18px;max-width:640px;}
+
+  footer{margin-top:50px;padding-top:18px;border-top:1px solid var(--line);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font-size:10.5px;color:#5c574e;letter-spacing:.5px;}
+
+  .toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--cream);color:var(--black);padding:10px 18px;border-radius:8px;font-size:12.5px;font-weight:600;opacity:0;pointer-events:none;transition:.25s;z-index:100;box-shadow:0 8px 24px rgba(0,0,0,.4);}
+  .toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
+
+  #print-view{display:none;}
+  @media print{
+    body{background:#fff;color:#111;}
+    .no-print{display:none !important;}
+    #print-view{display:block;padding:0;}
+    #print-view .p-head{border-bottom:3px solid #F4BA1A;padding-bottom:12px;margin-bottom:18px;display:flex;align-items:center;gap:14px;}
+    #print-view .p-head img{height:26px;width:auto;display:block;}
+    #print-view .p-head .p-brand{font-size:10px;letter-spacing:1.4px;text-transform:uppercase;color:#666;font-weight:700;margin-bottom:6px;}
+    #print-view h2{font-size:19px;margin:0 0 4px;}
+    #print-view .p-sub{font-size:11px;color:#666;letter-spacing:.6px;text-transform:uppercase;}
+    #print-view .p-part-title{font-size:14px;font-weight:800;text-transform:uppercase;letter-spacing:.6px;color:#111;margin:26px 0 4px;padding:8px 10px;background:#F4BA1A;border-radius:4px;}
+    #print-view .p-part-title:first-of-type{margin-top:18px;}
+    #print-view .p-row{display:flex;gap:12px;padding:6px 0;border-bottom:1px solid #e6e2d8;font-size:12px;page-break-inside:avoid;}
+    #print-view .p-k{flex:0 0 210px;font-weight:700;text-transform:uppercase;font-size:9.5px;letter-spacing:.6px;color:#555;padding-top:2px;}
+    #print-view .p-v{flex:1;color:#111;white-space:pre-wrap;}
+    #print-view .p-v.empty{color:#999;font-style:italic;}
+    #print-view .p-note{font-size:11.5px;color:#333;line-height:1.6;margin:0 0 10px;background:#f7f2e0;border-left:3px solid #F4BA1A;padding:8px 12px;border-radius:4px;}
+    #print-view .p-foot{margin-top:22px;padding-top:10px;border-top:1px solid #ccc;font-size:9.5px;color:#777;}
+    @page{margin:16mm;}
+  }
+  @media (max-width:720px){ .sc-row{flex-direction:column;} }
+</style>
+</head>
+<body>
+
+<div class="topbar no-print">
+  <div class="topbar-in">
+    <div class="brand">
+      <img src="../../logos/intezia/BLANCO.png" alt="Intezia">
+      <div class="brand-txt">BRIEF DE KICK-OFF <b>·</b> EJEMPLO ILUSTRATIVO</div>
+    </div>
+    <div class="status">
+      <span class="pill on">Cliente: Gato</span>
+      <span class="pill">Servicio: Habilidades</span>
+      <span class="pill">Kick-off: 26 ago 2026</span>
+      <button id="btnModo" title="Oculta las explicaciones de llenado antes de compartir pantalla">Modo interno</button>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <header class="hero no-print">
+    <p class="kicker">Ejemplo · Brief de Kick-off Intezia</p>
+    <h1>La ruta de <span class="hl">Habilidades</span> para Gato</h1>
+    <p class="sub interno">Instrumento para narrar en vivo con el cliente durante la sesión de Kick-off: explica cada etapa del servicio, agenda en el momento las fechas y horas de cada sesión, y cierra mostrando cómo se van a ir entregando los resultados. Al cerrar la sesión, genera el PDF completo del brief.</p>
+  </header>
+
+  <div class="callout interno no-print">
+    <p class="ct">Insumo de entrada</p>
+    <p>Este brief parte del PDF de la <b>Ficha Comercial de Gato</b>, registrada por Flavia Martínez el 12 de agosto de 2026. Área priorizada: <b>Operaciones</b>. Eje temático acordado en la propuesta: <b>Claude para diseñar Skills</b>, sobre la tarea real de armar el reporte semanal de ventas.</p>
+  </div>
+
+  <div class="sect-head no-print"><span class="tag">La ruta</span><h2>Las 4 etapas del servicio de Habilidades</h2></div>
+  <p class="sect-note interno no-print">Todo servicio de Intezia abre con el Kick-off: aquí se agendan hoy mismo las fechas de toda la ruta, para que Gato salga de esta sesión con el calendario completo del servicio.</p>
+
+  <div class="route no-print">
+    <div class="stage now">
+      <span class="sn">Etapa 1</span><span class="badge">Hoy</span>
+      <h3>Kick-off</h3>
+      <p>Se presenta esta ruta y se agendan las fechas de todos los encuentros del servicio, en esta misma sesión.</p>
+    </div>
+    <div class="stage">
+      <span class="sn">Etapa 2</span>
+      <h3>Capacitación sobre tareas reales</h3>
+      <p>4 sesiones prácticas sobre el armado del reporte semanal de ventas, usando Claude para diseñar el Skill.</p>
+    </div>
+    <div class="stage auto">
+      <span class="sn">Etapa 3</span><span class="badge">Automático</span>
+      <h3>Cierre y medición</h3>
+      <p>72 horas después de la última sesión: EduTrace, certificados y dashboard. No requiere agenda propia.</p>
+    </div>
+    <div class="stage">
+      <span class="sn">Etapa 4</span>
+      <h3>Seguimiento 30-60-90</h3>
+      <p>3 check-ins cortos: a 30 días verificamos uso real, a 60 qué construyeron a partir de lo aprendido, y a 90 cuánto tiempo ahorraron.</p>
+    </div>
+  </div>
+
+  <p class="hint interno">Narra la ruta en el orden de las etapas. En la Etapa 3 aclara que es automática: no necesitas agendar nada ahí, pero vale la pena mencionarla para que Gato no se pregunte qué pasa esos días.</p>
+
+  <div class="sect-head no-print"><span class="tag">Etapa 2</span><h2>Capacitación · 4 sesiones</h2></div>
+  <p class="sect-note interno no-print">Acuerda cada fecha en vivo con Gato. Al terminar, usa "Agendar todo" para descargar el calendario completo e importarlo al calendario de <b>servicio@intezia.com</b>.</p>
+  <p class="hint interno">Confirma cada fecha con el responsable real del área antes de escribirla. Si Gato no tiene el calendario a la mano, deja la sesión sin fecha y ciérrala por correo dentro de las 24 horas siguientes: no la dejes pendiente sin dueño.</p>
+
+  <div class="sessions no-print" id="sessionsM">
+    <div class="scard" data-session data-title="Habilidades · Gato · S1 Fundamentos de Claude para Skills" data-desc="Qué es un Skill de Claude, cuándo conviene frente a un prompt suelto o un Project, y cómo se estructura una carpeta de Skill (SKILL.md + recursos de apoyo).">
+      <p class="sc-no">1</p>
+      <p class="sc-desc">Qué es un Skill, cuándo conviene usarlo y cómo se estructura una carpeta de Skill (SKILL.md + recursos de apoyo).</p>
+      <div class="sc-row">
+        <label>Fecha<input type="date" class="f-date"></label>
+        <label>Hora<input type="time" class="f-time"></label>
+      </div>
+    </div>
+    <div class="scard" data-session data-title="Habilidades · Gato · S2 Diseño del Skill desde la tarea real" data-desc="Se mapea, paso a paso, el armado actual del reporte semanal de ventas: qué información necesita el Skill y qué formato de salida espera el equipo.">
+      <p class="sc-no">2</p>
+      <p class="sc-desc">Se mapea el armado actual del reporte semanal de ventas: qué información necesita el Skill y qué formato de salida espera el equipo.</p>
+      <div class="sc-row">
+        <label>Fecha<input type="date" class="f-date"></label>
+        <label>Hora<input type="time" class="f-time"></label>
+      </div>
+    </div>
+    <div class="scard" data-session data-title="Habilidades · Gato · S3 Construcción del Skill" data-desc="Se escribe el SKILL.md junto con el equipo y se prueba contra reportes reales de semanas anteriores, ajustando instrucciones en vivo.">
+      <p class="sc-no">3</p>
+      <p class="sc-desc">Se escribe el SKILL.md junto con el equipo y se prueba contra reportes reales de semanas anteriores, ajustando instrucciones en vivo.</p>
+      <div class="sc-row">
+        <label>Fecha<input type="date" class="f-date"></label>
+        <label>Hora<input type="time" class="f-time"></label>
+      </div>
+    </div>
+    <div class="scard" data-session data-title="Habilidades · Gato · S4 Prueba, ajuste y entrega" data-desc="Validación del Skill con el equipo completo de Operaciones, ajustes finales según su feedback, y entrega documentada para uso sin el consultor.">
+      <p class="sc-no">4</p>
+      <p class="sc-desc">Validación del Skill con el equipo completo de Operaciones, ajustes finales según su feedback, y entrega documentada para uso sin el consultor.</p>
+      <div class="sc-row">
+        <label>Fecha<input type="date" class="f-date"></label>
+        <label>Hora<input type="time" class="f-time"></label>
+      </div>
+    </div>
+  </div>
+
+  <div class="sect-head no-print"><span class="tag">Etapa 4</span><h2>Seguimiento · 3 check-ins</h2></div>
+  <p class="sect-note interno no-print">Fechas sugeridas a 30, 60 y 90 días del cierre de la Etapa 2. Ajusta si Gato prefiere otro día.</p>
+  <p class="hint interno">Aclara que los check-ins son cortos (15-20 minutos, no una sesión completa). Cada uno mide algo distinto: 30 días es uso real, 60 días es multiplicación (qué construyeron por su cuenta), 90 días es impacto en tiempo y productividad. No es una nueva capacitación ni una auditoría de cumplimiento.</p>
+
+  <div class="sessions no-print" id="sessionsC">
+    <div class="scard" data-session data-title="Habilidades · Gato · Check-in 30 días: ¿Se usa lo instalado?" data-desc="Visita para observar si el equipo está usando el Skill instalado en sesión. Se aportan nivelación, estrategias y recomendaciones para su uso correcto.">
+      <p class="sc-no">Check-in</p>
+      <p class="sc-desc"><b>30 días · ¿Se usa lo instalado?</b> Verificamos el uso real del Skill entregado en sesión y damos nivelación y recomendaciones para su uso correcto.</p>
+      <div class="sc-row">
+        <label>Fecha<input type="date" class="f-date"></label>
+        <label>Hora<input type="time" class="f-time"></label>
+      </div>
+    </div>
+    <div class="scard" data-session data-title="Habilidades · Gato · Check-in 60 días: ¿Qué construyeron?" data-desc="Ya no se revisa el Skill entregado, sino cuántos skills o soluciones nuevas construyó el equipo a partir de lo aprendido. Se mapean esas construcciones y arranca la medición de ahorro de tiempo.">
+      <p class="sc-no">Check-in</p>
+      <p class="sc-desc"><b>60 días · ¿Qué construyeron?</b> Mapeamos los skills o soluciones nuevas que el equipo construyó por su cuenta a partir de lo aprendido, y arrancamos la medición de ahorro de tiempo.</p>
+      <div class="sc-row">
+        <label>Fecha<input type="date" class="f-date"></label>
+        <label>Hora<input type="time" class="f-time"></label>
+      </div>
+    </div>
+    <div class="scard" data-session data-title="Habilidades · Gato · Check-in 90 días: ¿Cuánto ahorraron?" data-desc="Medimos cuánto tiempo ahorró el equipo con todo lo aprendido, creado y automatizado, en qué lo está reinvirtiendo y qué tan productiva es hoy el área. Cierra el ciclo de seguimiento.">
+      <p class="sc-no">Check-in</p>
+      <p class="sc-desc"><b>90 días · ¿Cuánto ahorraron?</b> Medimos el tiempo ahorrado con todo lo aprendido y automatizado, en qué se reinvierte y qué tan productiva es hoy el área. Cierra el ciclo de seguimiento.</p>
+      <div class="sc-row">
+        <label>Fecha<input type="date" class="f-date"></label>
+        <label>Hora<input type="time" class="f-time"></label>
+      </div>
+    </div>
+  </div>
+
+  <div class="btn-row no-print" style="margin:6px 0 10px;">
+    <button class="btn ghost" id="btnIcsAll">Agendar todo (.ics para servicio@intezia.com)</button>
+  </div>
+
+  <div class="sect-head no-print"><span class="tag">Al cierre</span><h2>Cómo vas a ir recibiendo cada entregable</h2></div>
+  <p class="hint interno">Si Gato pregunta por qué no hay nada en la Etapa 3, recuérdales que es automática: no depende de que ellos hagan algo, solo de que el consultor procese lo trabajado en las 4 sesiones.</p>
+  <div class="deliv no-print">
+    <div class="drow"><p class="dm">Hoy · Kick-off</p><h4>Plan y cronograma de capacitación</h4><p>El calendario completo de las 4 sesiones, acordado en esta misma reunión.</p></div>
+    <div class="drow"><p class="dm">En cada sesión</p><h4>Workbook y material</h4><p>Conceptos clave, ejercicios resueltos y prompts, listos para consultar cuando el equipo trabaje solo con el Skill.</p></div>
+    <div class="drow"><p class="dm">72 horas después del cierre</p><h4>Certificados y dashboard de impacto</h4><p>Certificado de participación por asistente, más el dashboard con los resultados de EduTrace y EduPulse.</p></div>
+    <div class="drow"><p class="dm">Días 30, 60 y 90</p><h4>Reporte de adopción</h4><p>Uso real del Skill frente a lo esperado, con plan de reforzamiento si hace falta.</p></div>
+  </div>
+
+  <div class="final-box no-print">
+    <h3>Cerrar la sesión</h3>
+    <p class="hint interno">Al terminar de agendar con Gato, genera el PDF y envíalo por tu correo habitual a quien corresponda: no hay dependencias de internet en este paso. Si usaste "Agendar todo", ese .ics es el que se importa una sola vez al calendario de servicio@intezia.com. Se abrirá el diálogo de impresión del navegador: elige "Guardar como PDF" como destino.</p>
+    <div class="btn-row">
+      <button class="btn" id="btnPdf">Generar PDF</button>
+      <button class="btn ghost" id="btnIcsAll2">Agendar todo (.ics)</button>
+    </div>
+  </div>
+
+  <footer class="no-print">
+    <span>DIRECCIÓN DE PRODUCTOS Y SERVICIOS · INTEZIA C.A. · J-505657950</span>
+    <span>EJEMPLO ILUSTRATIVO · SERVICIO@INTEZIA.COM</span>
+  </footer>
+
+</div>
+
+<div id="print-view"></div>
+<div class="toast" id="toast"></div>
+
+<script>
+(function(){
+  const $  = (s,ctx) => (ctx||document).querySelector(s);
+  const $$ = (s,ctx) => Array.from((ctx||document).querySelectorAll(s));
+
+  function pad(n){ return String(n).padStart(2,'0'); }
+
+  function icsEscape(s){
+    return String(s).replace(/\\/g,'\\\\').replace(/,/g,'\\,').replace(/;/g,'\\;').replace(/\n/g,'\\n');
+  }
+  function icsDate(dateStr,timeStr){
+    if(!dateStr) return null;
+    const t = (timeStr||'09:00').split(':');
+    return dateStr.replace(/-/g,'') + 'T' + pad(t[0]) + pad(t[1]||'0') + '00';
+  }
+  function addHoursIcs(dateStr,timeStr,hrs){
+    const [y,m,dd] = dateStr.split('-').map(Number);
+    const [hh,mi] = (timeStr||'09:00').split(':').map(Number);
+    const d = new Date(y, m-1, dd, hh, mi, 0);
+    d.setHours(d.getHours()+hrs);
+    return d.getFullYear()+pad(d.getMonth()+1)+pad(d.getDate())+'T'+pad(d.getHours())+pad(d.getMinutes())+'00';
+  }
+  function icsStamp(){
+    const d = new Date();
+    return d.getUTCFullYear()+pad(d.getUTCMonth()+1)+pad(d.getUTCDate())+'T'+pad(d.getUTCHours())+pad(d.getUTCMinutes())+pad(d.getUTCSeconds())+'Z';
+  }
+
+  let uidSeq = 0;
+  function buildIcs(cards){
+    const lines = ['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//Intezia//Brief de Kick-off//ES','CALSCALE:GREGORIAN'];
+    cards.forEach(card=>{
+      const dateEl = card.querySelector('.f-date');
+      const timeEl = card.querySelector('.f-time');
+      if(!dateEl || !dateEl.value) return;
+      const start = icsDate(dateEl.value, timeEl ? timeEl.value : '09:00');
+      const end = addHoursIcs(dateEl.value, timeEl ? timeEl.value : '09:00', 2);
+      uidSeq++;
+      lines.push('BEGIN:VEVENT');
+      lines.push('UID:kickoff-gato-'+uidSeq+'-'+icsStamp()+'@intezia.com');
+      lines.push('DTSTAMP:'+icsStamp());
+      lines.push('DTSTART:'+start);
+      lines.push('DTEND:'+end);
+      lines.push('SUMMARY:'+icsEscape(card.dataset.title || 'Sesión Intezia'));
+      lines.push('DESCRIPTION:'+icsEscape(card.dataset.desc || ''));
+      lines.push('LOCATION:'+icsEscape('Según lo acordado con el cliente'));
+      lines.push('END:VEVENT');
+    });
+    lines.push('END:VCALENDAR');
+    return lines.join('\r\n');
+  }
+
+  function downloadIcs(content, filename){
+    const blob = new Blob([content], {type:'text/calendar;charset=utf-8'});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url; a.download = filename;
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    setTimeout(()=>URL.revokeObjectURL(url), 2000);
+  }
+
+  let toastTimer = null;
+  function toast(msg){
+    const t = $('#toast');
+    t.textContent = msg;
+    t.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(()=>t.classList.remove('show'), 2800);
+  }
+
+  $('#btnModo').addEventListener('click', ()=>{
+    const cli = document.body.classList.toggle('cliente');
+    const b = $('#btnModo');
+    b.classList.toggle('cli', cli);
+    b.textContent = cli ? 'Modo cliente' : 'Modo interno';
+    toast(cli ? 'Explicaciones ocultas · listo para compartir pantalla' : 'Explicaciones de llenado visibles');
+  });
+
+  function agendarTodo(){
+    const cards = $$('[data-session]');
+    const withDate = cards.filter(c => c.querySelector('.f-date') && c.querySelector('.f-date').value);
+    if(!withDate.length){ toast('Completa al menos una fecha antes de agendar.'); return; }
+    const ics = buildIcs(withDate);
+    downloadIcs(ics, 'Kickoff_Gato_Habilidades.ics');
+    toast(withDate.length + ' sesión(es) lista(s) para importar a servicio@intezia.com');
+  }
+  $('#btnIcsAll').addEventListener('click', agendarTodo);
+  $('#btnIcsAll2').addEventListener('click', agendarTodo);
+
+  function escapeHtml(s){
+    return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+  }
+
+  function filaSesiones(containerSel){
+    let html = '';
+    $$(containerSel + ' [data-session]').forEach(card=>{
+      const no = card.querySelector('.sc-no').textContent;
+      const label = /^\d+$/.test(no) ? ('Sesión ' + no) : no;
+      const dateEl = card.querySelector('.f-date');
+      const timeEl = card.querySelector('.f-time');
+      let val, cls;
+      if(card.dataset.done === 'true'){
+        val = 'Completada';
+        cls = '';
+      } else {
+        const d = dateEl ? dateEl.value : '';
+        const t = timeEl ? timeEl.value : '';
+        val = d ? (d + '  ·  ' + (t || 'sin hora')) : '';
+        cls = val ? '' : ' empty';
+      }
+      html += '<div class="p-row"><div class="p-k">'+escapeHtml(label)+'</div><div class="p-v'+cls+'">'+(val?escapeHtml(val):'Sin agendar todavía')+'</div></div>';
+    });
+    return html;
+  }
+
+  function construirPrintView(){
+    let html = '';
+    html += '<div class="p-head">';
+    html += '  <img src="../../logos/intezia/NEGRO.png" alt="Intezia">';
+    html += '  <div>';
+    html += '    <div class="p-brand">Intezia · Dirección de Productos y Servicios</div>';
+    html += '    <h2>Brief de Kick-off · Gato</h2>';
+    html += '    <div class="p-sub">Servicio: Habilidades · Eje temático: Claude para diseñar Skills · Ejemplo ilustrativo</div>';
+    html += '  </div>';
+    html += '</div>';
+
+    html += '<div class="p-part-title">La ruta del servicio</div>';
+    html += '<div class="p-note">Etapa 1 Kick-off (hoy) · Etapa 2 Capacitación sobre tareas reales (4 sesiones) · Etapa 3 Cierre y medición (automático, 72h) · Etapa 4 Seguimiento 30-60-90 días.</div>';
+
+    html += '<div class="p-part-title">Fechas confirmadas · Etapa 2 (Capacitación)</div>';
+    html += filaSesiones('#sessionsM');
+
+    html += '<div class="p-part-title">Fechas confirmadas · Etapa 4 (Seguimiento)</div>';
+    html += filaSesiones('#sessionsC');
+
+    html += '<div class="p-part-title">Entregables y cuándo llegan</div>';
+    html += '<div class="p-note">Plan y cronograma (hoy) · Workbook y material (en cada sesión) · Certificados y dashboard (72h post-cierre) · Reporte de adopción (días 30, 60 y 90).</div>';
+
+    html += '<div class="p-foot">Ejemplo ilustrativo · Dirección de Productos y Servicios · Intezia C.A. · J-505657950 · servicio@intezia.com</div>';
+
+    $('#print-view').innerHTML = html;
+  }
+
+  $('#btnPdf').addEventListener('click', ()=>{
+    construirPrintView();
+    setTimeout(()=>{
+      try{ window.print(); }catch(e){ toast('No se pudo abrir el diálogo de impresión.'); }
+    }, 30);
+  });
+})();
+</script>
+</body>
+</html>

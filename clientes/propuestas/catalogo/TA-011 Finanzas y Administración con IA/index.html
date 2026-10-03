@@ -1,0 +1,515 @@
+<!doctype html>
+<!--
+  Producto de Catálogo — Finanzas y Administración con IA (TA-011)
+  División: Educación · Audiencia: equipos financieros y administrativos
+  Tipo: Taller → 10 slides (sin slide de evaluación 30/50/20).
+  Versión: 2026-05 · Stack actualizado a frontier models y herramientas
+  financieras (Microsoft 365 Copilot · Gemini in Sheets · Claude con Files ·
+  ChatGPT Data Analysis · Power BI con Copilot).
+
+  Cambio de nombre: deck legacy "Inteligencia Financiera y Administrativa"
+  → "Finanzas y Administración con IA".
+
+  Decisiones de plantilla (idénticas al resto del catálogo):
+  - Sin facilitador nombrado.
+  - Sin asesora de ventas en el cierre.
+  - Footer: "Catálogo · Financiero".
+
+  Overrides CSS locales:
+  - .team-single (un solo bloque genérico, sin avatar)
+  - cierre con :only-child (sin opacity reducido)
+  - 6 módulos exactos → 3×2 con cards más altas y tipografía proporcional
+  - 4 sesiones exactas → tightening vertical
+  - 5 específicos → grid 2-col, item 5 span 2 cols (full-width row 3)
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Catálogo · Finanzas y Administración con IA · Intezia Educación</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <main class="deck">
+
+    <!-- 1 · Portada -->
+    <section class="slide s-cover">
+      <span class="counter">01 / 10</span>
+      <div class="logo-big">
+        <img src="../../../../logos/educacion/BLANCO.png" alt="Intezia Educación">
+      </div>
+      <div class="body">
+        <p class="eyebrow">Producto de catálogo · Especialización · Financiero</p>
+        <h1>
+          Finanzas y<br>
+          Administración<br>
+          con <span class="hl">IA</span>
+        </h1>
+        <p class="lead">
+          De la hoja de cálculo a la estrategia de datos con IA. Transforma a tus procesadores de datos en analistas estratégicos: equipos que "hablan" con sus Excels, auditan gastos automáticamente y entregan reportes ejecutivos en horas, no en días.
+        </p>
+      </div>
+      <div class="id-line">
+        <span class="codigo">Código: TA-011</span>
+        <span class="cliente">Catálogo · Financiero</span>
+      </div>
+    </section>
+
+    <!-- 2 · Punto de dolor + Diagnóstico -->
+    <section class="slide s-pain">
+      <span class="counter">02 / 10</span>
+      <span class="quote-mark">“</span>
+      <div class="body">
+        <h2>Tu equipo financiero gasta 70 % del tiempo procesando datos. La IA invierte esa proporción.</h2>
+        <p class="context">
+          Limpiar bases, consolidar reportes, extraer facturas, conciliar saldos: la operación administrativa consume tiempo que debería ir a análisis estratégico. El stack 2026 (Microsoft 365 Copilot, Gemini in Sheets, Claude con Files, ChatGPT Data Analysis) permite "hablar" con los datos en lenguaje natural y reducir drásticamente el cierre de mes — liberando a finanzas para lo que realmente mueve la aguja.
+        </p>
+        <p class="diag-title">Diagnóstico</p>
+        <ol>
+          <li>Analistas financieros gastan 70 % del tiempo procesando datos en lugar de analizándolos.</li>
+          <li>Cierre de mes consume días por extracción manual de facturas, conciliaciones y validaciones repetitivas.</li>
+          <li>Reportes ejecutivos sin storytelling — números planos sin narrativa que llegan tarde a la mesa de decisión.</li>
+          <li>Forecasting basado en heurísticas y plantillas estáticas, sin escenarios "what-if" sistematizados.</li>
+          <li>Tareas administrativas repetitivas (cobranza, fórmulas complejas, macros) consumen al equipo cuando podrían automatizarse.</li>
+        </ol>
+      </div>
+      <div class="foot">
+        <img src="../../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Catálogo · Financiero</span>
+      </div>
+    </section>
+
+    <!-- 3 · Objetivos estratégicos (5 específicos → grid 2-col + item 5 span 2 cols) -->
+    <section class="slide s-goals">
+      <span class="counter">03 / 10</span>
+      <p class="eyebrow">02 · Objetivos</p>
+      <h2>A dónde llevamos<br>al equipo financiero.</h2>
+      <div class="columns">
+        <div class="general">
+          <p class="label">Objetivo general</p>
+          <p>
+            Capacitar a equipos financieros y administrativos en la integración de la IA al ciclo completo —desde análisis conversacional de datos hasta forecasting "what-if" y asistentes administrativos—, transformando procesadores de datos en analistas estratégicos con stack 2026 (Microsoft 365 Copilot, Gemini in Sheets, Claude con Files, ChatGPT Data Analysis, Power BI con Copilot) y reduciendo el cierre de mes de días a horas.
+          </p>
+        </div>
+        <div class="specifics">
+          <p class="label">Objetivos específicos</p>
+          <ol>
+            <li>Interrogar bases de datos y Excels en lenguaje natural con Microsoft 365 Copilot, Gemini in Sheets, ChatGPT Data Analysis y Claude con Files.</li>
+            <li>Extraer y clasificar masivamente datos de facturas y documentos con OCR + IA (Vision API).</li>
+            <li>Operar control interno asistido: conciliación automática, validación matemática y revisión de cumplimiento de políticas.</li>
+            <li>Construir reportes ejecutivos con storytelling financiero y dashboards predictivos (Power BI con Copilot, Looker Studio + Gemini).</li>
+            <li>Simular escenarios "what-if", forecasting con IA y configurar asistentes administrativos para fórmulas, macros y cobranza.</li>
+          </ol>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Catálogo · Financiero</span>
+      </div>
+    </section>
+
+    <!-- 4 · Programa (6 módulos → grid 3×2 proporcional por override local) -->
+    <section class="slide s-program">
+      <span class="counter">04 / 10</span>
+      <p class="eyebrow">03 · Programa</p>
+      <h2>6 módulos.</h2>
+      <p class="meta">6 módulos · 4 sesiones · 8 horas · distribución por carga cognitiva</p>
+      <div class="modules">
+        <div class="module">
+          <span class="roman">I</span>
+          <h3>Data Analysis · "Habla con tu Excel"</h3>
+          <p class="obj">Interroga datos en lenguaje natural, limpia bases automáticamente y obtén insights sin escribir fórmulas.</p>
+          <ul class="topics">
+            <li>1.1 Excel + Microsoft 365 Copilot</li>
+            <li>1.2 Sheets + Gemini</li>
+            <li>1.3 Limpieza automática de datos</li>
+            <li>1.4 ChatGPT Data Analysis</li>
+            <li>1.5 Claude con Files</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">II</span>
+          <h3>Gestión Documental · OCR + IA</h3>
+          <p class="obj">Extrae masivamente datos de facturas PDF y clasifícalos inteligentemente con Vision API.</p>
+          <ul class="topics">
+            <li>2.1 Extracción de facturas PDF</li>
+            <li>2.2 Clasificación inteligente</li>
+            <li>2.3 Vision: Claude · GPT-4o · Gemini</li>
+            <li>2.4 Workflows Make / n8n</li>
+            <li>2.5 Validación de extracción</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">III</span>
+          <h3>Control Interno con IA</h3>
+          <p class="obj">Concilia, valida matemáticamente y revisa cumplimiento de políticas con detección automática de anomalías.</p>
+          <ul class="topics">
+            <li>3.1 Conciliación asistida</li>
+            <li>3.2 Validación matemática</li>
+            <li>3.3 Cumplimiento de políticas</li>
+            <li>3.4 Detección de anomalías</li>
+            <li>3.5 Trazabilidad y auditoría</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">IV</span>
+          <h3>Reportes Ejecutivos · Storytelling Financiero</h3>
+          <p class="obj">Redacta resúmenes financieros narrativos y construye dashboards estratégicos para la mesa ejecutiva.</p>
+          <ul class="topics">
+            <li>4.1 Resúmenes narrativos con IA</li>
+            <li>4.2 Visualización estratégica</li>
+            <li>4.3 Power BI + Copilot</li>
+            <li>4.4 Looker Studio + Gemini</li>
+            <li>4.5 Cierre de mes en horas</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">V</span>
+          <h3>Planificación "What-If" y Forecasting</h3>
+          <p class="obj">Simula escenarios económicos, proyecta gastos y opera stress-tests sobre el modelo financiero propio.</p>
+          <ul class="topics">
+            <li>5.1 Escenarios económicos</li>
+            <li>5.2 Proyecciones de gastos</li>
+            <li>5.3 Sensibilidad y stress-tests</li>
+            <li>5.4 Forecasting con IA</li>
+            <li>5.5 Plan estratégico</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">VI</span>
+          <h3>Asistentes Administrativos</h3>
+          <p class="obj">Crea fórmulas complejas, macros y correos de cobranza con IA — automatiza lo repetitivo del back office.</p>
+          <ul class="topics">
+            <li>6.1 Fórmulas complejas con IA</li>
+            <li>6.2 Macros y VBA generadas</li>
+            <li>6.3 Correos de cobranza</li>
+            <li>6.4 Plantillas administrativas</li>
+            <li>6.5 Asistente CFO / Controller</li>
+          </ul>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Catálogo · Financiero</span>
+      </div>
+    </section>
+
+    <!-- 5 · Cronograma (4 sesiones → tightening proporcional por override local) -->
+    <section class="slide s-schedule">
+      <span class="counter">05 / 10</span>
+      <p class="eyebrow">04 · Cronograma · Distribución por carga cognitiva</p>
+      <h2>Desglose instructivo<br>sesión por sesión.</h2>
+      <div class="sessions">
+        <div class="session">
+          <div class="header">
+            <span>Sesión 1 — Data Analysis y OCR · Semana 1</span>
+          </div>
+          <div class="grid">
+            <div>
+              <span class="label">Temas</span>
+              Módulos I + II<br>1.1-1.5 · 2.1-2.5
+            </div>
+            <div>
+              <span class="label">Tiempo</span>
+              120 min<br>(60' Módulo I · 60' Módulo II)
+            </div>
+            <div>
+              <span class="label">Estrategias enseñanza</span>
+              Demo en vivo de "habla con tu Excel" usando Microsoft 365 Copilot y Gemini in Sheets · extracción de facturas PDF anonimizadas con Claude / GPT Vision · clasificación automática
+            </div>
+            <div>
+              <span class="label">Estrategias aprendizaje</span>
+              Interrogatorio de un dataset propio en lenguaje natural · flujo de OCR sobre lote de facturas reales · validación cruzada de extracción
+            </div>
+            <div>
+              <span class="label">Recursos</span>
+              Microsoft 365 Copilot · Gemini in Sheets · ChatGPT Data Analysis · Claude con Files · Make / n8n · workbook
+            </div>
+          </div>
+        </div>
+
+        <div class="session">
+          <div class="header">
+            <span>Sesión 2 — Control Interno y Reportes Ejecutivos · Semana 2</span>
+          </div>
+          <div class="grid">
+            <div>
+              <span class="label">Temas</span>
+              Módulos III + IV<br>3.1-3.5 · 4.1-4.5
+            </div>
+            <div>
+              <span class="label">Tiempo</span>
+              120 min<br>(60' Módulo III · 60' Módulo IV)
+            </div>
+            <div>
+              <span class="label">Estrategias enseñanza</span>
+              Conciliación asistida en vivo · detección de anomalías sobre dataset · construcción de reporte narrativo con storytelling financiero · dashboard en Power BI con Copilot
+            </div>
+            <div>
+              <span class="label">Estrategias aprendizaje</span>
+              Plantilla de control interno propia · reporte ejecutivo narrativo de cierre · dashboard funcional para la mesa de decisión
+            </div>
+            <div>
+              <span class="label">Recursos</span>
+              Power BI con Copilot · Looker Studio + Gemini · Claude · ChatGPT · plantillas de reporte ejecutivo y conciliación
+            </div>
+          </div>
+        </div>
+
+        <div class="session">
+          <div class="header">
+            <span>Sesión 3 — Planificación "What-If" · Semana 3 · sesión completa para M5</span>
+          </div>
+          <div class="grid">
+            <div>
+              <span class="label">Temas</span>
+              Módulo V (full)<br>5.1-5.5
+            </div>
+            <div>
+              <span class="label">Tiempo</span>
+              120 min<br>(30' escenarios · 30' proyecciones · 30' stress-tests · 30' plan estratégico)
+            </div>
+            <div>
+              <span class="label">Estrategias enseñanza</span>
+              Modelado de escenarios económicos asistido por IA · construcción de proyecciones de gasto · stress-tests sobre el modelo propio · narrativa estratégica
+            </div>
+            <div>
+              <span class="label">Estrategias aprendizaje</span>
+              Modelo "what-if" con 3 escenarios (base / optimista / pesimista) sobre el negocio propio · proyección de gastos a 12 meses · plan estratégico financiero documentado
+            </div>
+            <div>
+              <span class="label">Recursos</span>
+              ChatGPT Data Analysis · Claude con Files · Excel + Copilot · plantilla de modelo financiero · Anaplan / Datarails (referencia)
+            </div>
+          </div>
+        </div>
+
+        <div class="session">
+          <div class="header">
+            <span>Sesión 4 — Asistentes Administrativos · Semana 4 · sesión completa para M6</span>
+          </div>
+          <div class="grid">
+            <div>
+              <span class="label">Temas</span>
+              Módulo VI (full)<br>6.1-6.5
+            </div>
+            <div>
+              <span class="label">Tiempo</span>
+              120 min<br>(30' fórmulas + macros · 30' correos de cobranza · 30' plantillas · 30' asistente CFO/Controller)
+            </div>
+            <div>
+              <span class="label">Estrategias enseñanza</span>
+              Generación de fórmulas y macros con IA · diseño de secuencia de cobranza automatizada · construcción del Custom GPT / Claude Project del Controller
+            </div>
+            <div>
+              <span class="label">Estrategias aprendizaje</span>
+              Banco propio de fórmulas + macros · agente de cobranza configurado · asistente CFO / Controller funcional con corpus interno
+            </div>
+            <div>
+              <span class="label">Recursos</span>
+              Excel · ChatGPT (Custom GPTs) · Claude Projects · Gemini Gems · Make / n8n · plantilla de cobranza · plantilla CFO
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Catálogo · Financiero</span>
+      </div>
+    </section>
+
+    <!-- 6 · Metodología ABR (FIJA) -->
+    <section class="slide s-orange">
+      <span class="counter">06 / 10</span>
+      <p class="eyebrow">05 · Metodología</p>
+      <h2>Aprendizaje<br>Basado en Retos</h2>
+      <p class="sub">Modelo Intezia · Tres pilares</p>
+      <div class="pillars">
+        <div class="pillar">
+          <span class="num">01</span>
+          <h3>Tutoría activa</h3>
+          <p>El facilitador acompaña la práctica con feedback inmediato sobre los entregables del analista: dataset interrogado, flujo OCR, conciliación, reporte narrativo, modelo "what-if", asistente CFO.</p>
+        </div>
+        <div class="pillar">
+          <span class="num">02</span>
+          <h3>Transferibilidad inmediata</h3>
+          <p>Cada módulo entrega un activo aplicable al cierre del mes siguiente sobre los datos reales del área. Al cierre el equipo opera con un kit financiero aumentado por IA.</p>
+        </div>
+        <div class="pillar">
+          <span class="num">03</span>
+          <h3>Curaduría de contenidos</h3>
+          <p>Stack curado al estado del arte 2026 — Microsoft 365 Copilot, Gemini in Sheets, Claude con Files, ChatGPT Data Analysis, Power BI con Copilot — con énfasis en confidencialidad de datos financieros y verificación humana firmada.</p>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Intezia · Modelo ABR</span>
+      </div>
+    </section>
+
+    <!-- 7 · Beneficios (perfil egreso + beneficio + entregables + acreditación + equipo genérico) -->
+    <section class="slide s-benefits">
+      <span class="counter">07 / 10</span>
+      <p class="eyebrow">06 · Beneficios del taller</p>
+      <h2>Lo que se llevan.</h2>
+      <div class="grid">
+        <div class="block">
+          <p class="label">Perfil de egreso</p>
+          <ul>
+            <li><strong>Saber:</strong> domina cómo aplicar IA al ciclo completo financiero-administrativo.</li>
+            <li><strong>Saber hacer:</strong> "habla con sus Excels", extrae facturas, controla, reporta, proyecta y automatiza con IA.</li>
+            <li><strong>Saber ser:</strong> resguarda confidencialidad de datos financieros y firma cada output con verificación humana.</li>
+          </ul>
+        </div>
+        <div class="block">
+          <p class="label">Beneficio del programa formativo</p>
+          <p>
+            El equipo financiero transita <strong>de la hoja de cálculo a la estrategia de datos</strong>. De procesador de datos a <strong>analista estratégico</strong>: cierre de mes en horas, reportes narrativos, escenarios "what-if" y un asistente CFO/Controller funcional. Cada participante entrega un kit financiero aumentado por IA.
+          </p>
+        </div>
+        <div class="block">
+          <p class="label">Entregables</p>
+        </div>
+        <div class="block">
+          <p class="label">Acreditación</p>
+        </div>
+      </div>
+
+      <!-- Cajas multiline editables (HTML detrás vacío — contenido en el AcroForm /V) -->
+      <div class="multi-box entregables-box" data-field="Entregables"></div>
+      <div class="multi-box acreditaciones-box" data-field="Acreditacion"></div>
+      <div class="team team-single">
+        <p class="label">Equipo facilitador</p>
+        <div class="members">
+          <div class="person">
+            <div>
+              <h4>Equipo INTEZIA Education</h4>
+              <p class="role">Facilitación · Coordinación</p>
+              <p>Facilitador con experiencia en finanzas (FP&amp;A, contraloría, tesorería) + IA aplicada al área, asignado por INTEZIA según disponibilidad y especialización; presentación detallada en kick-off de cada cliente.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Catálogo · Financiero</span>
+      </div>
+    </section>
+
+    <!-- 8 · Propuesta Económica (5 campos AcroForm) -->
+    <section class="slide s-price">
+      <span class="counter">08 / 10</span>
+      <h2 class="title">Propuesta Económica</h2>
+
+      <!-- Bloque 1 · Duración -->
+      <div class="block">
+        <span class="block-eyebrow">Duración</span>
+        <p class="block-value">8 horas en total · 4 sesiones de 2 horas · 1 sesión por semana. Modalidad a definir con el cliente.</p>
+      </div>
+
+      <!-- Bloque 2 · Programa (multiline editable + acento amarillo en el label) -->
+      <div class="block block-programa">
+        <span class="block-eyebrow">Programa</span>
+      </div>
+      <div class="multi-box programa-box" data-field="Programa"></div>
+
+      <!-- Bloque 3 · Cotización (filas absolutas, alineadas) -->
+      <div class="block block-cotizacion">
+        <span class="block-eyebrow">Cotización</span>
+      </div>
+
+      <span class="cot-label cot-label-base">Propuesta + Inversión</span>
+      <div class="cot-frame base-frame"></div>
+
+      <span class="cot-label cot-label-discount">Descuento</span>
+      <div class="cot-frame discount-frame"></div>
+
+      <span class="cot-label cot-label-total">TOTAL</span>
+      <div class="cot-frame total-frame"></div>
+
+      <p class="cot-validity">Válido únicamente por 7 días en divisas.</p>
+
+      <!-- Bloque 4 · Notas (multiline editable + acento naranja en el label) -->
+      <div class="block block-notes-container">
+        <span class="block-eyebrow">Notas</span>
+      </div>
+      <div class="multi-box notas-box" data-field="Notas"></div>
+
+      <div class="foot">
+        <img src="../../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Catálogo · Financiero</span>
+      </div>
+    </section>
+
+    <!-- 9 · Próximos pasos -->
+    <section class="slide s-steps">
+      <span class="counter">09 / 10</span>
+      <p class="eyebrow">07 · Próximos pasos</p>
+      <h2>Cómo arrancamos.</h2>
+      <div class="step-cards">
+        <div class="step-card">
+          <span class="ghost">01</span>
+        </div>
+        <div class="step-card">
+          <span class="ghost">02</span>
+        </div>
+        <div class="step-card">
+          <span class="ghost">03</span>
+        </div>
+      </div>
+
+      <!-- Editable AcroForm placeholders (3 pasos × título + body) -->
+      <div class="acro-area acro-title acro-paso-01-titulo" data-field="Paso01Titulo">
+        <span class="acro-default-text">Solicitas la propuesta personalizada</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-01-body" data-field="Paso01Body">
+        <span class="acro-default-text">Tu equipo INTEZIA prepara la cotización ajustada a tu área financiera, alcance (FP&A, contraloría, tesorería) y modalidad preferida.</span>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-02-titulo" data-field="Paso02Titulo">
+        <span class="acro-default-text">Confirmamos sede, fechas y grupo</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-02-body" data-field="Paso02Body">
+        <span class="acro-default-text">Definimos juntos la modalidad (presencial · online síncrono · híbrido), la sede o entorno virtual, las fechas y el grupo de participantes.</span>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-03-titulo" data-field="Paso03Titulo">
+        <span class="acro-default-text">Firmamos y arrancamos</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-03-body" data-field="Paso03Body">
+        <span class="acro-default-text">Contrato simple + factura del 50 % de anticipo. Vigencia de la cotización: 30 días desde la emisión.</span>
+      </div>
+      <div class="foot">
+        <img src="../../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Catálogo · Financiero</span>
+      </div>
+    </section>
+
+    <!-- 10 · Cierre (sin asesora — solo institucional) -->
+    <section class="slide s-end">
+      <span class="counter">10 / 10</span>
+
+      <div class="end-logo">
+        <img src="../../../../logos/educacion/BLANCO.png" alt="Intezia Educación">
+      </div>
+
+      <p class="end-message">
+        De la <span class="hl-orange">hoja de cálculo</span><br>a la <span class="hl-yellow">estrategia de datos</span>.
+      </p>
+
+      <div class="cta-wrap">
+        <span class="cta">Solicita tu Propuesta</span>
+      </div>
+
+      <div class="end-contact">
+        <p class="contact-line">
+          <span class="contact-label">Empresa:</span>
+          Intezia C.A J-505657950 <span class="dot">·</span> info@intezia.com
+        </p>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

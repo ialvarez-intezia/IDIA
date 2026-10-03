@@ -1,0 +1,399 @@
+/* ===========================================================================
+   overrides.css — Everest (DET-006)
+   Clon mono-fase de grupo-ferrara/ (enlaza ../_base/styles.css) solo como
+   esqueleto estructural — Detección pura. Trae el CIERRE tipo escalera y
+   Beneficios v3 con layout ampliado (estándar del sistema), más UN
+   componente nuevo propio de este deck: .s-journey (hoja de ruta de 3
+   servicios).
+
+   AJUSTE 2026-09-03 (2ª ronda): el deck vuelve a tener 2 hojas .s-price
+   (revierte la consolidación de la 1ª ronda) — ver memoria
+   patron-dos-slides-precio-mismo-deck. La hoja "Cotización · Detección"
+   (nueva) usa el .s-price PLANO, sin overrides — hereda los defaults de
+   _base/styles.css tal cual (patrón estándar de una sola línea). La hoja
+   "Inversión por fases" (3 fases, la que ya existía) necesita posiciones
+   distintas para hacerle sitio a las 3 filas de fase — esas reglas quedan
+   namespaced bajo `.s-price-fases` (no `.s-price` a secas) para que NO se
+   apliquen también a la hoja de Detección, que comparte la clase base
+   `.s-price` en el mismo deck.
+   =========================================================================== */
+
+/* ===========================================================================
+   Cierre — escalera editable
+   =========================================================================== */
+.s-end .end-logo img { height: 140px; }
+
+.s-end .end-summit {
+  position: absolute;
+  top: 224px; left: 242px; width: 640px; height: 60px;
+  background: var(--yellow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.s-end .end-summit .acro-default-text {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.25;
+  color: var(--black);
+  padding: 0 16px;
+}
+
+.s-end .end-stairs {
+  position: absolute;
+  top: 308px; left: 242px; width: 640px; height: 190px;
+}
+.s-end .stair-step {
+  position: absolute;
+  bottom: 0;
+  width: 200px;
+}
+.s-end .stair-1 { left: 0px;   height: 90px;  background: var(--yellow); }
+.s-end .stair-2 { left: 220px; height: 140px; background: var(--orange); }
+.s-end .stair-3 { left: 440px; height: 190px; background: var(--white); border: 2px solid var(--yellow); }
+
+.s-end .stair-label {
+  position: absolute;
+  top: 10px; left: 12px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.s-end .stair-1 .stair-label,
+.s-end .stair-3 .stair-label { color: var(--black); opacity: 0.55; }
+.s-end .stair-2 .stair-label { color: var(--white); opacity: 0.7; }
+
+.s-end .stair-field { position: absolute; top: 30px; left: 12px; width: 176px; }
+.s-end .stair-1 .stair-field { height: 50px; }
+.s-end .stair-2 .stair-field { height: 100px; }
+.s-end .stair-3 .stair-field { height: 150px; }
+.s-end .stair-field .acro-default-text {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 1.3;
+  display: block;
+}
+.s-end .stair-1 .stair-field .acro-default-text,
+.s-end .stair-3 .stair-field .acro-default-text { color: var(--black); }
+.s-end .stair-2 .stair-field .acro-default-text { color: var(--white); }
+
+.s-end .cta-wrap {
+  position: absolute;
+  top: 522px; left: 0; right: 0;
+  display: flex;
+  justify-content: center;
+}
+
+@media print {
+  .s-end .end-summit .acro-default-text,
+  .s-end .stair-field .acro-default-text { display: none !important; }
+}
+
+/* ===========================================================================
+   Beneficios v3 (layout ampliado)
+   =========================================================================== */
+.s-benefits-v2 { background: var(--black); color: var(--white); }
+.s-benefits-v2::before { background: var(--yellow); }
+.s-benefits-v2 .counter { color: var(--yellow); }
+.s-benefits-v2 .eyebrow { color: var(--yellow); }
+.s-benefits-v2 h2 { color: var(--white); }
+.s-benefits-v2 h2 .hl {
+  display: inline-block;
+  background: var(--yellow);
+  color: var(--black);
+  padding: 0 10px;
+}
+.s-benefits-v2 .grid { height: 570px; gap: 16px; }
+.s-benefits-v2 .block {
+  background: rgba(255, 255, 255, 0.045);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-top: 4px solid var(--yellow);
+  border-radius: 13px;
+  padding: 26px 24px 24px;
+  color: var(--white);
+}
+.s-benefits-v2 .block:nth-child(2) { border-top-color: var(--orange); }
+.s-benefits-v2 .block:nth-child(3),
+.s-benefits-v2 .block:nth-child(4) {
+  background: rgba(244, 186, 26, 0.06);
+  border-color: rgba(244, 186, 26, 0.28);
+  border-top-color: var(--yellow);
+}
+.s-benefits-v2 .label {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 999px;
+  margin-bottom: 18px;
+  color: var(--yellow);
+  background: rgba(244, 186, 26, 0.13);
+}
+.s-benefits-v2 .block:nth-child(3) .label,
+.s-benefits-v2 .block:nth-child(4) .label { position: absolute; top: 26px; left: 24px; }
+.s-benefits-v2 .block:nth-child(2) .label { color: var(--orange); background: rgba(229, 132, 35, 0.14); }
+.s-benefits-v2 .block ul { list-style: none; }
+.s-benefits-v2 .block ul li {
+  font-size: 16px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85);
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+.s-benefits-v2 .block ul li:last-child { border-bottom: 0; }
+.s-benefits-v2 .block p { font-size: 16px; line-height: 1.6; color: rgba(255, 255, 255, 0.85); }
+.s-benefits-v2 .block strong { color: var(--yellow); font-weight: 700; }
+.s-benefits-v2 .block:nth-child(2) strong { color: var(--orange); }
+.s-benefits-v2 .foot .meta { color: rgba(255, 255, 255, 0.65); }
+
+.s-benefits-v2 .entregables-box,
+.s-benefits-v2 .acreditaciones-box {
+  background: transparent;
+  position: absolute;
+  top: 212px;
+  width: 193px;
+  height: 474px;
+}
+.s-benefits-v2 .entregables-box { left: 594px; }
+.s-benefits-v2 .acreditaciones-box { left: 850px; }
+.s-benefits-v2 .entregables-box .acro-default-text,
+.s-benefits-v2 .acreditaciones-box .acro-default-text {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+/* ===========================================================================
+   SLIDE NUEVA — Hoja de ruta completa (.s-journey)
+   3 tarjetas horizontales: Detección (esta propuesta, destacada) →
+   Habilidades (más desarrollada) → Políticas (resumen, sin plantilla propia
+   todavía). Fondo oscuro para variar el ritmo del deck (como Impacto).
+   =========================================================================== */
+.s-journey {
+  background: var(--black);
+  color: var(--white);
+  padding: 56px 56px 80px;
+}
+.s-journey::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 8px;
+  background: var(--gradient-warm);
+}
+.s-journey .counter { color: var(--yellow); }
+.s-journey .eyebrow { color: var(--yellow); margin-bottom: 10px; }
+.s-journey h2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 1.05;
+  margin-bottom: 14px;
+  color: var(--white);
+}
+.s-journey h2 .hl {
+  display: inline-block;
+  background: var(--yellow);
+  color: var(--black);
+  padding: 0 10px;
+}
+.s-journey .journey-intro {
+  font-size: 14px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.78);
+  max-width: 900px;
+  margin-bottom: 34px;
+}
+
+.s-journey .journey-track {
+  display: flex;
+  align-items: stretch;
+  gap: 14px;
+}
+.s-journey .journey-card {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 14px;
+  padding: 22px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-height: 300px;
+}
+.s-journey .journey-card.journey-active {
+  background: var(--yellow);
+  border-color: var(--yellow);
+  color: var(--black);
+}
+.s-journey .journey-card.journey-future {
+  border-style: dashed;
+  border-color: rgba(255, 255, 255, 0.28);
+  opacity: 0.82;
+}
+.s-journey .journey-step {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--orange);
+}
+.s-journey .journey-card.journey-active .journey-step { color: rgba(0, 0, 0, 0.55); }
+.s-journey .journey-card h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.1;
+  margin: 2px 0 4px;
+}
+.s-journey .journey-card p {
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.85);
+}
+.s-journey .journey-card.journey-active p { color: rgba(0, 0, 0, 0.78); }
+
+.s-journey .journey-arrow {
+  align-self: center;
+  font-size: 26px;
+  color: var(--orange);
+  flex: none;
+}
+
+/* ===========================================================================
+   SLIDE — Inversión por fases (patrón estándar, marker real de
+   agregar-campo-precio.py: PrecioFase1-3, PrecioBase, Descuento, PrecioTotal,
+   Notas). Portado de ioed/styles.css (origen del patrón, CAP-098) — layout de
+   3 filas de fase a la izquierda + Notas debajo, cotización + términos a la
+   derecha. Namespace `.s-price-fases` (ajuste 2026-09-03, 2ª ronda): el deck
+   volvió a tener 2 hojas .s-price (ver "Cotización · Detección" arriba en el
+   HTML), así que estas posiciones de 3 filas ya NO pueden vivir bajo el
+   selector plano `.s-price` — pisarían también a la hoja de Detección, que
+   necesita los defaults de _base/styles.css sin modificar.
+   =========================================================================== */
+.s-price-fases .price-intro {
+  position: absolute;
+  top: 112px;
+  left: 56px;
+  width: 1011px;
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 1.4;
+  color: rgba(0, 0, 0, 0.65);
+}
+.s-price-fases .fase-price-row {
+  position: absolute;
+  left: 56px;
+  width: 480px;
+  height: 64px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+.s-price-fases .fase-price-row:nth-of-type(1) { top: 168px; }
+.s-price-fases .fase-price-row:nth-of-type(2) { top: 240px; }
+.s-price-fases .fase-price-row:nth-of-type(3) { top: 312px; }
+
+.s-price-fases .fase-price-copy { width: 320px; }
+.s-price-fases .fase-price-label {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--orange);
+  display: block;
+  margin-bottom: 5px;
+}
+.s-price-fases .fase-price-desc {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 1.35;
+  color: var(--black);
+}
+.s-price-fases .fase-price-frame {
+  position: absolute;
+  top: 12px;
+  right: 0;
+  width: 140px;
+  height: 40px;
+  background: rgba(244, 186, 26, 0.22);
+}
+
+/* Notas: reposicionada debajo de las 3 filas de fase (vs. debajo de
+   Programa en el patrón estándar de una sola línea). */
+.s-price-fases .block-notes-container {
+  position: absolute;
+  top: 400px;
+  left: 56px;
+  width: 480px;
+  padding: 0;
+  border-top: 0;
+  border-bottom: 0;
+}
+.s-price-fases .notas-box { top: 428px; left: 56px; width: 480px; height: 110px; }
+
+.s-price-fases .cot-label {
+  position: absolute;
+  left: 580px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 10px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--orange);
+  z-index: 2;
+}
+.s-price-fases .cot-label-base     { top: 150px; }
+.s-price-fases .cot-label-discount { top: 248px; }
+.s-price-fases .cot-label-total    { top: 340px; color: var(--black); }
+
+.s-price-fases .base-frame {
+  top: 170px; left: 580px; width: 487px; height: 52px;
+  background: rgba(244, 186, 26, 0.22);
+  padding: 0 18px;
+}
+.s-price-fases .discount-frame {
+  top: 268px; left: 580px; width: 487px; height: 44px;
+  background: rgba(244, 186, 26, 0.22);
+  padding: 0 18px;
+}
+.s-price-fases .total-frame {
+  top: 360px; left: 580px; width: 487px; height: 76px;
+  background: var(--yellow);
+  justify-content: center;
+  padding: 0 20px;
+}
+.s-price-fases .cot-validity {
+  position: absolute;
+  top: 454px;
+  left: 580px;
+  right: 56px;
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-style: italic;
+  font-size: 11px;
+  color: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+}
+.s-price-fases .cot-terms-box {
+  position: absolute;
+  top: 480px;
+  left: 580px;
+  right: 56px;
+  background: rgba(229, 132, 35, 0.10);
+  border: 1.5px solid rgba(229, 132, 35, 0.45);
+  border-left: 5px solid var(--orange);
+  border-radius: 8px;
+  padding: 14px 18px;
+  z-index: 2;
+}

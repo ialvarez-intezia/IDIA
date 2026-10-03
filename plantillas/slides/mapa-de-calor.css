@@ -1,0 +1,204 @@
+/* mapa-de-calor.css - slide Mapa de Calor (.s-heatmap / .hm-* / pills)
+   CSS del bloque add-on. Copialo a overrides.css de la propuesta (se carga
+   tras ../_base/styles.css). Selectores propios, sin conflicto con el base. */
+
+/* 4 módulos: 2×2 */
+}
+
+/* ===========================================================================
+   SLIDE 10 — Mapa de Calor (tabla enriquecida de oportunidades de automatización)
+   =========================================================================== */
+.s-heatmap {
+  background: var(--white);
+  color: var(--black);
+  padding: 50px 52px 76px 72px;
+  display: flex;
+  flex-direction: column;
+}
+.s-heatmap::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 12px; height: 100%;
+  background: var(--black);
+}
+.s-heatmap .counter { color: var(--black); }
+.s-heatmap .eyebrow { color: var(--black); margin-bottom: 4px; }
+.s-heatmap h2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 27px;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin-bottom: 12px;
+}
+.s-heatmap h2 .hl {
+  display: inline-block;
+  background: var(--yellow);
+  color: var(--black);
+  padding: 0 10px;
+}
+
+/* Wrapper */
+.hm-wrap {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Tabla principal */
+table.hm {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  font-family: var(--font-body);
+}
+table.hm thead th {
+  background: var(--black);
+  color: var(--yellow);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 9.5px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  padding: 8px;
+  text-align: center;
+  border: 1.5px solid #333;
+}
+table.hm thead th.th-proc { text-align: left; padding-left: 14px; }
+
+/* Filas separadoras de área */
+tr.area-row td {
+  background: var(--black);
+  color: var(--yellow);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border: 1.5px solid #222;
+}
+tr.area-row td::before {
+  content: "▸ ";
+  color: var(--orange);
+  font-size: 8.5px;
+}
+
+/* Filas de proceso */
+tr.proc-row td {
+  height: 49px;
+  border: 1.5px solid #ddd;
+  vertical-align: middle;
+  font-size: 11.5px;
+  color: var(--black);
+  padding: 0 8px;
+}
+tr.proc-row td.hm-proc {
+  padding-left: 14px;
+  font-size: 11.5px;
+  line-height: 1.32;
+}
+
+/* Columna Puntuación — 3 pills apiladas */
+tr.proc-row td.hm-scores { text-align: center; padding: 0 6px; }
+.score-pills { display: flex; flex-direction: column; align-items: center; gap: 3px; }
+.pill-row    { display: flex; align-items: center; gap: 3px; }
+.pill-letter {
+  font-size: 8px;
+  letter-spacing: 0.04em;
+  color: #777;
+  width: 44px;
+  text-align: right;
+  flex-shrink: 0;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.pill {
+  padding: 2px 7px;
+  border-radius: 3px;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+  min-width: 40px;
+  text-align: center;
+}
+.p-alto  { background: var(--yellow);  color: var(--black); }
+.p-medio { background: #F9C980;        color: var(--black); }
+.p-bajo  { background: #EBEBEB;        color: #666; }
+.p-ef-alto, .p-ri-alto { background: var(--orange); color: var(--white); }
+.p-ef-bajo, .p-ri-bajo { background: var(--yellow); color: var(--black); }
+.p-ef-med,  .p-ri-med  { background: #F9C980;       color: var(--black); }
+
+/* Columna Herramienta */
+td.hm-tool { font-size: 11px; line-height: 1.3; text-align: center; }
+.tool-tag {
+  display: inline-block;
+  background: #f0f0f0;
+  color: #333;
+  font-size: 9.5px;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 3px;
+  margin: 1px 2px;
+  letter-spacing: 0.04em;
+  border: 1px solid #ddd;
+  white-space: nowrap;
+/* Columna Plazo */
+td.hm-plazo { text-align: center; font-size: 11px; font-weight: 700; line-height: 1.3; }
+
+td.hm-plazo span { display: block; font-size: 9px; font-weight: 400; color: #888; }
+
+/* Columna Frecuencia */
+td.hm-frec { text-align: center; font-size: 10.5px; line-height: 1.3; }
+
+.frec-main { display: block; font-weight: 700; font-size: 11px; }
+
+.frec-sub  { display: block; font-size: 9.5px; color: #666; }
+
+/* Columna Prioridad */
+tr.proc-row td.hm-pri { text-align: center; padding: 0 6px; }
+
+.hm-badge {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 4px 9px;
+  border-radius: 3px;
+}
+
+.hm-badge-alta  { background: var(--black); color: var(--yellow); }
+
+.hm-badge-media { background: var(--orange); color: var(--white); }
+
+/* Leyenda */
+.hm-legend {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 8px;
+  padding-top: 7px;
+  border-top: 1px solid #e0e0e0;
+  flex-shrink: 0;
+}
+
+.hm-legend-label {
+  font-size: 8.5px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #999;
+}
+
+.hm-leg-item { display: flex; align-items: center; gap: 4px; font-size: 9.5px; color: #555; }
+
+.hm-leg-sw   { width: 12px; height: 12px; border-radius: 2px; flex-shrink: 0; }
+
+.hm-leg-item--right { margin-left: auto; }
+
+.hm-leg-strong      { font-weight: 700; }

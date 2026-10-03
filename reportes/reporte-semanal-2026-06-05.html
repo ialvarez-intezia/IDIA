@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Reporte Semanal · Intezia Educación · 5 jun 2026</title>
+<style>
+  :root{
+    --black:#000000; --yellow:#F4BA1A; --orange:#E58423; --white:#FFFFFF;
+    --ink:#1a1a1a; --muted:#6b6b6b; --line:#e7e7e7; --soft:#faf7ef;
+    --font-display:"Graphit Bold","Graphit",Inter,Poppins,system-ui,sans-serif;
+    --font-body:"Graphit Regular","Graphit",Inter,Poppins,system-ui,sans-serif;
+  }
+  @page{ size:A4 portrait; margin:0; }
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  body{ font-family:var(--font-body); color:var(--ink); line-height:1.5; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+  .page{
+    width:210mm; min-height:297mm; padding:18mm 17mm 16mm; position:relative;
+    page-break-after:always; display:flex; flex-direction:column;
+  }
+  .page:last-child{ page-break-after:auto; }
+
+  /* Header */
+  .head{ display:flex; justify-content:space-between; align-items:flex-start; border-bottom:3px solid var(--black); padding-bottom:14px; }
+  .head .logo{ height:34px; }
+  .head .meta{ text-align:right; font-size:10.5px; color:var(--muted); letter-spacing:.04em; line-height:1.6; }
+  .head .meta strong{ color:var(--black); font-family:var(--font-display); }
+
+  .kicker{ font-family:var(--font-display); font-size:11px; letter-spacing:.22em; text-transform:uppercase; color:var(--orange); margin-top:26px; }
+  h1{ font-family:var(--font-display); font-size:30px; line-height:1.12; margin-top:6px; color:var(--black); }
+  .lead{ font-size:13px; color:#333; margin-top:12px; max-width:62ch; }
+
+  /* Resumen ejecutivo - tira de cifras */
+  .stats{ display:flex; gap:10px; margin-top:22px; }
+  .stat{ flex:1; background:var(--black); color:var(--white); border-radius:10px; padding:14px 16px; }
+  .stat .n{ font-family:var(--font-display); font-size:26px; color:var(--yellow); line-height:1; }
+  .stat .l{ font-size:10px; color:#d8d8d8; margin-top:6px; letter-spacing:.03em; text-transform:uppercase; }
+
+  /* Secciones */
+  section{ margin-top:26px; }
+  .sec-title{ font-family:var(--font-display); font-size:15px; color:var(--black); display:flex; align-items:center; gap:10px; }
+  .sec-title::before{ content:""; width:14px; height:14px; background:var(--gradient,linear-gradient(135deg,var(--yellow),var(--orange))); border-radius:3px; }
+  .sec-sub{ font-size:11px; color:var(--muted); margin-top:3px; margin-left:24px; }
+
+  table{ width:100%; border-collapse:collapse; margin-top:12px; font-size:11.5px; }
+  thead th{ text-align:left; font-family:var(--font-display); font-size:9.5px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); border-bottom:1.5px solid var(--black); padding:0 8px 6px; }
+  tbody td{ padding:9px 8px; border-bottom:1px solid var(--line); vertical-align:top; }
+  tbody tr:nth-child(even){ background:var(--soft); }
+  .code{ font-family:var(--font-display); font-size:11px; color:var(--orange); white-space:nowrap; }
+  .cli{ font-family:var(--font-display); color:var(--black); }
+  td .st{ display:inline-block; font-size:9px; font-family:var(--font-display); letter-spacing:.04em; text-transform:uppercase; padding:2px 7px; border-radius:20px; }
+  .st-nueva{ background:#fff3d4; color:#8a6300; }
+  .st-cliente{ background:#e6f2e6; color:#2f6b2f; }
+  .st-recon{ background:#eee7fb; color:#5a3a9a; }
+
+  /* Tarjetas de sistema */
+  .cards{ display:flex; flex-direction:column; gap:10px; margin-top:12px; }
+  .card{ border:1px solid var(--line); border-left:4px solid var(--yellow); border-radius:8px; padding:12px 15px; }
+  .card.warn{ border-left-color:var(--orange); }
+  .card h3{ font-family:var(--font-display); font-size:12.5px; color:var(--black); }
+  .card p{ font-size:11.5px; color:#333; margin-top:4px; }
+  .card .tag{ font-size:9px; font-family:var(--font-display); letter-spacing:.05em; text-transform:uppercase; color:var(--muted); }
+
+  /* Bloque destacado proyectos/próximos */
+  .box{ background:var(--black); color:var(--white); border-radius:12px; padding:18px 20px; margin-top:14px; }
+  .box h3{ font-family:var(--font-display); font-size:13px; color:var(--yellow); }
+  .box p{ font-size:11.5px; color:#e3e3e3; margin-top:6px; }
+  .box p strong{ color:var(--white); font-family:var(--font-display); }
+  .box .divider{ height:1px; background:#2b2b2b; margin:14px 0; }
+
+  .foot{ margin-top:auto; padding-top:14px; border-top:1px solid var(--line); display:flex; justify-content:space-between; align-items:center; font-size:9.5px; color:var(--muted); }
+  .foot .dot{ color:var(--orange); }
+  strong.k{ font-family:var(--font-display); color:var(--black); }
+</style>
+</head>
+<body>
+
+<!-- ===================== PÁGINA 1 ===================== -->
+<div class="page">
+  <div class="head">
+    <img class="logo" src="../logos/educacion/NEGRO.png" alt="Intezia Educación">
+    <div class="meta">
+      <strong>REPORTE SEMANAL</strong><br>
+      Semana del 1 al 5 de junio, 2026<br>
+      Para: Dirección Educativa
+    </div>
+  </div>
+
+  <div class="kicker">División Educación · Sistema de Propuestas</div>
+  <h1>Lo que construimos esta semana</h1>
+  <p class="lead">Semana de alta producción comercial: <strong class="k">5 propuestas nuevas</strong> y <strong class="k">2 ajustes por feedback de cliente</strong>, además de un nuevo motor del sistema (Dashboard de Impacto) y una regla de calidad que nace directamente de una observación de la dirección.</p>
+
+  <div class="stats">
+    <div class="stat"><div class="n">7</div><div class="l">Propuestas trabajadas</div></div>
+    <div class="stat"><div class="n">5</div><div class="l">Programas nuevos</div></div>
+    <div class="stat"><div class="n">1</div><div class="l">Cliente aprobado</div></div>
+    <div class="stat"><div class="n">+1</div><div class="l">Motor nuevo del sistema</div></div>
+  </div>
+
+  <section>
+    <div class="sec-title">Propuestas comerciales</div>
+    <div class="sec-sub">Diseño curricular, deck visual y PDF editable para ventas</div>
+    <table>
+      <thead><tr><th>Código</th><th>Cliente</th><th>Qué se hizo</th><th>Estado</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="code">CAP-044</td>
+          <td class="cli">ESTEI</td>
+          <td>Fusión de dos productos de catálogo (Claude Fundamentals + Claude Cowork, 18 h) destilados a un intensivo de <strong class="k">10 h</strong> 100% práctico, del fundamento al co-working.</td>
+          <td><span class="st st-nueva">Nueva</span></td>
+        </tr>
+        <tr>
+          <td class="code">CAP-043</td>
+          <td class="cli">Colchones Regal</td>
+          <td>Bot de atención al cliente en Instagram con <strong class="k">ManyChat</strong> (no-code). Enfoque de autosuficiencia: los capacitamos para construirlo y mantenerlo solos. 6 h presencial.</td>
+          <td><span class="st st-nueva">Nueva</span></td>
+        </tr>
+        <tr>
+          <td class="code">CAP-042</td>
+          <td class="cli">Ubii Pagos</td>
+          <td>Esquema de adopción de IA en <strong class="k">2 fases</strong> (auditoría por departamento + guía modular a la medida) para la fintech de pagos. Ecosistema Google + Claude.</td>
+          <td><span class="st st-nueva">Nueva</span></td>
+        </tr>
+        <tr>
+          <td class="code">TA-024</td>
+          <td class="cli">Dr. Care</td>
+          <td>Taller de ciclo de contenido con IA para el equipo de marketing (estrategia, imagen, video, automatización de conversión).</td>
+          <td><span class="st st-nueva">Nueva</span></td>
+        </tr>
+        <tr>
+          <td class="code">CAP-030</td>
+          <td class="cli">Go Pharma</td>
+          <td>Reencuadre a <strong class="k">2 grupos secuenciales</strong> de 15 personas («misma capacitación, momentos distintos»), horas por grupo y sin comprometer fechas.</td>
+          <td><span class="st st-cliente">Ajuste cliente</span></td>
+        </tr>
+        <tr>
+          <td class="code">CAP-016</td>
+          <td class="cli">Grupo Nena<br><span style="font-size:9px;color:#999">(Droguería Nena)</span></td>
+          <td><strong class="k">Cliente aprobó la propuesta</strong> y pidió reenviarla sin el módulo de Ética y Gobernanza. Se eliminó el módulo y se recalculó todo (4 módulos, 11 h, 5 sesiones).</td>
+          <td><span class="st st-cliente">Aprobada</span></td>
+        </tr>
+        <tr>
+          <td class="code">CAP-037</td>
+          <td class="cli">Damasco</td>
+          <td>Reconstrucción tras feedback de ventas: split de Desarrollo <strong class="k">por función</strong> (no por nivel), nivelación corregida y láminas ilegibles fundidas en el cronograma. 18 h, 3 rutas.</td>
+          <td><span class="st st-recon">Reconstruida</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <div class="foot">
+    <span>Intezia · División Educación</span>
+    <span>Reporte semanal <span class="dot">·</span> 05 jun 2026 <span class="dot">·</span> Página 1 de 2</span>
+  </div>
+</div>
+
+<!-- ===================== PÁGINA 2 ===================== -->
+<div class="page">
+  <div class="head">
+    <img class="logo" src="../logos/educacion/NEGRO.png" alt="Intezia Educación">
+    <div class="meta">
+      <strong>REPORTE SEMANAL</strong><br>
+      Semana del 1 al 5 de junio, 2026<br>
+      Para: Dirección Educativa
+    </div>
+  </div>
+
+  <section style="margin-top:26px">
+    <div class="sec-title">Mejoras del sistema</div>
+    <div class="sec-sub">El sistema de propuestas evoluciona con cada entrega</div>
+    <div class="cards">
+      <div class="card">
+        <span class="tag">Nuevo motor</span>
+        <h3>Dashboard de Impacto Edu-Trace (post-cierre)</h3>
+        <p>Segundo flujo del sistema, paralelo al de propuestas. Cuando un cliente termina su capacitación y responde la Encuesta Edu-Trace, ahora generamos un <strong class="k">Índice de Impacto 0–100</strong> que se archiva interno y se entrega al cliente. Piloto: <strong class="k">APB Group — Índice 86/100</strong>, con 97% de retención objetiva. El bloque comercial de la encuesta ya señaló al área de RRHH como la siguiente a formar, respaldando una propuesta en curso. Mide impacto y abre la próxima venta a la vez.</p>
+      </div>
+      <div class="card warn">
+        <span class="tag">Calidad · a raíz de feedback de dirección</span>
+        <h3>Cero texto truncado con «…» en los decks</h3>
+        <p>A partir de la observación del directivo de Educación sobre chips de programa que llegaban cortados («2.1 Cómo comunicarse con I…»), se corrigió la causa de raíz: el sistema ya no esconde texto detrás de puntos suspensivos y un <strong class="k">detector automático</strong> bloquea cualquier «…» antes de entregar. La cura es siempre acortar el contenido, nunca ocultarlo.</p>
+      </div>
+      <div class="card">
+        <span class="tag">Directriz de redacción</span>
+        <h3>Voz humana y concreta, nunca genérica</h3>
+        <p>Toda redacción de cara al cliente usa sus datos reales y las herramientas que ya usa, en lugar de lenguaje de molde. Quedó fijado como directriz permanente del sistema.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-title">Proyecto aparte</div>
+    <div class="box">
+      <h3>Catálogo de Talleres → URL interactiva</h3>
+      <p>El catálogo de talleres se <strong>migró a una URL interactiva</strong>, navegable y enlazada. Es un avance importante en presentación, pero <strong>todavía no es una landing page</strong>: ese sigue siendo el siguiente paso natural del proyecto.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-title" style="--gradient:linear-gradient(135deg,var(--orange),var(--yellow))">Próximamente</div>
+    <div class="box">
+      <h3>Gestión de auditorías</h3>
+      <p>Se incorporará pronto al sistema la <strong>gestión de auditorías</strong>. El plan es <strong>madurarla primero en un proyecto independiente</strong> y, una vez validada, integrarla al sistema de propuestas como un flujo más.</p>
+      <div class="divider"></div>
+      <p style="color:#bdbdbd;font-size:10.5px">Es trabajo planificado, aún no iniciado dentro de este sistema.</p>
+    </div>
+  </section>
+
+  <div class="foot">
+    <span>Intezia · División Educación</span>
+    <span>Reporte semanal <span class="dot">·</span> 05 jun 2026 <span class="dot">·</span> Página 2 de 2</span>
+  </div>
+</div>
+
+</body>
+</html>

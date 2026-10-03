@@ -1,0 +1,402 @@
+<!doctype html>
+<!--
+  Dashboard de Impacto Edu-Trace · Zoom Miami · IA Bootcamp Zoom Miami (CAP-046)
+  Vista CLIENTE (entregable). Datos: clientes/dashboards/zoom-miami/resultados.json
+  11 slides: 10 estándar + 08 Adopción de IA (split real Gemini/ChatGPT, notable
+  porque el bootcamp está enfocado en Gemini). "Por departamento" consolida las
+  variantes de texto libre del mismo equipo de Atención al Cliente y agrega los
+  2 departamentos de n=1 restantes, dejando los 4 grupos finales en n≥2 (§4.16).
+  Bloque E reformulado como "recomendaciones de expansión". Lenguaje honesto
+  (§4.17): B/D/adopción = percibido · C = medido. Sin cédula/correo (§4.16).
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard de Impacto · Zoom Miami · Intezia Educación</title>
+  <link rel="stylesheet" href="../../propuestas/_base/styles.css">
+  <link rel="stylesheet" href="overrides.css">
+</head>
+<body>
+  <main class="deck">
+
+    <!-- 01 · Portada -->
+    <section class="slide s-cover">
+      <span class="counter">01 / 11</span>
+      <div class="logo-big">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia Educación">
+      </div>
+      <div class="body">
+        <p class="eyebrow">Dashboard de Impacto · Edu-Trace</p>
+        <h1>
+          IA Bootcamp<br>
+          <span class="hl">Zoom Miami</span>
+        </h1>
+        <p class="lead">
+          Resultados medidos con la <strong>Encuesta Edu-Trace</strong> de cierre. 11 participantes del equipo de Zoom Miami, evaluados en competencia con Gemini, <strong>retención de conocimiento</strong> y experiencia formativa.
+        </p>
+      </div>
+      <div class="id-line">
+        <span class="codigo">CAP-046 · Zoom Miami</span>
+        <span class="cliente">Zoom Miami</span>
+      </div>
+    </section>
+
+    <!-- 02 · Hero del Índice -->
+    <section class="slide s-impact">
+      <span class="counter">02 / 11</span>
+      <div class="impact-head">
+        <p class="eyebrow">01 · Resultado global</p>
+        <h2>Índice de Impacto<br><span class="hl">Edu-Trace</span>.</h2>
+      </div>
+      <div class="impact-body">
+        <div class="chart-panel">
+          <p class="panel-title">Los cuatro ejes que componen el índice (0-100)</p>
+          <div class="bars">
+            <div class="bar-row">
+              <span class="bar-label">Competencia percibida</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:70.5%"><span class="bar-val">71</span></div></div>
+            </div>
+            <div class="bar-row">
+              <span class="bar-label">Retención objetiva · medido</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:97%"><span class="bar-val">97</span></div></div>
+            </div>
+            <div class="bar-row">
+              <span class="bar-label">Aplicabilidad e impacto</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:72.8%"><span class="bar-val">73</span></div></div>
+            </div>
+            <div class="bar-row">
+              <span class="bar-label">Calidad de la experiencia</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:83.5%"><span class="bar-val">84</span></div></div>
+            </div>
+          </div>
+          <div class="bar-axis"><span class="scale"><span>0</span><span>25</span><span>50</span><span>75</span><span>100</span></span></div>
+          <p class="panel-source">Ponderación: Retención objetiva 35% · Competencia 30% · Aplicabilidad 20% · Calidad 15%. La retención es el único eje medido; el resto es autopercibido.</p>
+        </div>
+        <div class="gauge-panel">
+          <div class="gauge" style="--pct:82">
+            <div class="gauge-core">
+              <span class="gauge-num">82</span>
+              <span class="gauge-cap idx">Índice · de 100</span>
+            </div>
+          </div>
+          <div class="rating">
+            <div class="stars">
+              <span class="star full">&#9733;</span>
+              <span class="star full">&#9733;</span>
+              <span class="star full">&#9733;</span>
+              <span class="star full">&#9733;</span>
+              <span class="star">&#9733;</span>
+            </div>
+            <span class="rating-cap">Satisfacción general · <b>4.0 / 5</b></span>
+          </div>
+          <p class="hero-meta">11 participantes · salto percibido +1.8 (1-5)</p>
+        </div>
+      </div>
+      <div class="impact-hook">
+        <span class="hook-mark">&#9656;</span>
+        <p class="hook-text">
+          El equipo no solo quedó satisfecho: <strong>respondió bien el 97%</strong> de la evaluación sobre prompting inverso, Gems y formato visual en Workspace. El dominio previo era casi nulo (2.0 sobre 5); en <strong>6 horas</strong> el salto percibido fue el mayor registrado hasta ahora.
+        </p>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Zoom Miami · Dashboard de Impacto</span>
+      </div>
+    </section>
+
+    <!-- 03 · Desglose por eje -->
+    <section class="slide s-data s-ejes">
+      <span class="counter">03 / 11</span>
+      <p class="eyebrow">02 · Desglose</p>
+      <h2>Qué mide cada eje.</h2>
+      <p class="sub">Cada eje aporta al índice según su peso. Solo uno es una medición objetiva; los otros tres son autopercepción del participante al cierre.</p>
+      <div class="grid">
+        <div class="eje">
+          <div class="top"><span class="num">71</span><span class="peso">peso 30%</span></div>
+          <h3>Competencia percibida</h3>
+          <p>Cuánto se siente el participante capaz de operar Gemini sin supervisión. <span class="tag-percibido">percibido</span></p>
+        </div>
+        <div class="eje measured">
+          <div class="top"><span class="num">97</span><span class="peso">peso 35%</span></div>
+          <h3>Retención objetiva</h3>
+          <p>Aciertos en preguntas técnicas con respuesta correcta. El dato más duro del informe. <span class="tag-medido">medido</span></p>
+        </div>
+        <div class="eje">
+          <div class="top"><span class="num">73</span><span class="peso">peso 20%</span></div>
+          <h3>Aplicabilidad e impacto</h3>
+          <p>Qué tanto resuelve problemas del rol y promete recuperar tiempo de ejecución. <span class="tag-percibido">percibido</span></p>
+        </div>
+        <div class="eje">
+          <div class="top"><span class="num">84</span><span class="peso">peso 15%</span></div>
+          <h3>Calidad de la experiencia</h3>
+          <p>Claridad, acompañamiento, ritmo y dominio técnico del facilitador. <span class="tag-percibido">percibido</span></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 · Salto de aprendizaje percibido -->
+    <section class="slide s-salto">
+      <span class="counter">04 / 11</span>
+      <p class="eyebrow">03 · Salto de aprendizaje</p>
+      <h2>De dónde partieron, a dónde llegaron.</h2>
+      <div class="journey">
+        <div class="milestone">
+          <span class="ms-cap">Antes · percibido</span>
+          <span class="ms-num">2.0</span>
+          <span class="ms-of">dominio previo<br>(escala 1-5)</span>
+        </div>
+        <div class="track">
+          <div class="track-fill"></div>
+          <div class="delta">
+            <span class="d-num">+1.8</span>
+            <span class="d-lbl">salto percibido</span>
+          </div>
+        </div>
+        <div class="milestone end">
+          <span class="ms-cap">Al cierre</span>
+          <span class="ms-num">3.8</span>
+          <span class="ms-of">capaz sin supervisión<br>(escala 1-5)</span>
+        </div>
+      </div>
+      <p class="salto-note">Es un salto <strong>percibido y retrospectivo</strong>: ambas cifras se preguntaron al cierre, no antes de empezar. El equipo partía prácticamente desde cero (2.0 sobre 5); refleja cómo vive el equipo su propio avance, no una medición con punto de partida real.</p>
+    </section>
+
+    <!-- 05 · Retención objetiva (Bloque C - medido) -->
+    <section class="slide s-data s-reten">
+      <span class="counter">05 / 11</span>
+      <p class="eyebrow">04 · Retención objetiva <span class="tag-medido">medido</span></p>
+      <h2>Lo que de verdad quedó.</h2>
+      <div class="global">
+        <span class="pct">97%</span>
+        <span class="txt">de aciertos en la evaluación de conocimiento técnico al cierre.</span>
+      </div>
+      <div class="qrow">
+        <div class="q">Prompting inverso<small>Pedirle a Gemini que haga preguntas clave antes de proponer una solución, en vez de responder de una vez.</small></div>
+        <div class="score">91%<small> · 10 de 11</small></div>
+      </div>
+      <div class="qrow">
+        <div class="q">Conocimiento del Gem + NotebookLM<small>Un manual extenso y cambiante se sube como conocimiento del Gem y, si es crítico, se complementa con un cuaderno de NotebookLM.</small></div>
+        <div class="score">100%<small> · 11 de 11</small></div>
+      </div>
+      <div class="qrow">
+        <div class="q">Formato visual en Workspace<small>Especificar el formato visual (línea de tiempo, flujo) en el prompt, en vez de dejar que Gemini decida cómo mostrarlo.</small></div>
+        <div class="score">100%<small> · 11 de 11</small></div>
+      </div>
+      <p class="note-honest">Estas preguntas se diseñaron a la medida del contenido impartido y tienen respuesta correcta. Es el único bloque del informe que mide conocimiento real, no percepción.</p>
+    </section>
+
+    <!-- 06 · Resultados por departamento -->
+    <section class="slide s-data s-depto">
+      <span class="counter">06 / 11</span>
+      <p class="eyebrow">05 · Por área</p>
+      <h2>Índice por departamento.</h2>
+      <p class="sub">El campo de área es de texto libre: se consolidaron las variantes del mismo equipo ("Customer Service", "Customer Services Supervisor", "Atención al Cliente") en un solo grupo, y las 2 áreas de un solo participante se agregaron en un bloque referencial.</p>
+      <div class="hbars">
+        <div class="hbar-row">
+          <span class="hbar-label">Administración <small>2 participantes</small></span>
+          <div class="hbar-track"><div class="hbar-fill" style="--w:92%"></div></div>
+          <span class="hbar-val">92</span>
+        </div>
+        <div class="hbar-row">
+          <span class="hbar-label">Otras áreas individuales <small>2 participantes · Sucursal y Tráfico</small></span>
+          <div class="hbar-track"><div class="hbar-fill" style="--w:87%"></div></div>
+          <span class="hbar-val">87</span>
+        </div>
+        <div class="hbar-row">
+          <span class="hbar-label">Operaciones <small>2 participantes</small></span>
+          <div class="hbar-track"><div class="hbar-fill" style="--w:85%"></div></div>
+          <span class="hbar-val">85</span>
+        </div>
+        <div class="hbar-row">
+          <span class="hbar-label">Atención al Cliente <small>5 participantes</small></span>
+          <div class="hbar-track"><div class="hbar-fill" style="--w:75%"></div></div>
+          <span class="hbar-val">75</span>
+        </div>
+      </div>
+      <p class="note-honest">Atención al Cliente concentra casi la mitad del grupo (5 de 11): su índice, aunque el más bajo, es también el más representativo. El resto son grupos de 2, con lectura más referencial.</p>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Zoom Miami · Dashboard de Impacto</span>
+      </div>
+    </section>
+
+    <!-- 07 · Calidad de la experiencia (Bloque D) -->
+    <section class="slide s-data s-calidad">
+      <span class="counter">07 / 11</span>
+      <p class="eyebrow">06 · Experiencia formativa <span class="tag-percibido">percibido</span></p>
+      <h2>Cómo vivieron la formación.</h2>
+      <p class="sub">Valoración del facilitador y la dinámica de las sesiones, en escala 1-5 normalizada a 0-100.</p>
+      <div class="hbars">
+        <div class="hbar-row">
+          <span class="hbar-label">Dominio técnico <small>profundidad de las soluciones</small></span>
+          <div class="hbar-track"><div class="hbar-fill" style="--w:88.75%"></div></div>
+          <span class="hbar-val">89</span>
+        </div>
+        <div class="hbar-row">
+          <span class="hbar-label">Claridad expositiva <small>casos reales de la empresa</small></span>
+          <div class="hbar-track"><div class="hbar-fill" style="--w:84%"></div></div>
+          <span class="hbar-val">84</span>
+        </div>
+        <div class="hbar-row">
+          <span class="hbar-label">Acompañamiento <small>dudas resueltas con precisión</small></span>
+          <div class="hbar-track"><div class="hbar-fill" style="--w:81.75%"></div></div>
+          <span class="hbar-val">82</span>
+        </div>
+        <div class="hbar-row">
+          <span class="hbar-label">Gestión del tiempo <small>ritmo para asimilar</small></span>
+          <div class="hbar-track"><div class="hbar-fill" style="--w:79.5%"></div></div>
+          <span class="hbar-val">80</span>
+        </div>
+      </div>
+      <p class="note-honest">Los cuatro ítems se mantienen parejos entre 80 y 89: una experiencia consistente para un equipo que partía casi desde cero.</p>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Zoom Miami · Dashboard de Impacto</span>
+      </div>
+    </section>
+
+    <!-- 08 · Adopción de IA (a la medida — split real Gemini/ChatGPT) -->
+    <section class="slide s-data s-adopcion">
+      <span class="counter">08 / 11</span>
+      <p class="eyebrow">07 · Adopción de IA <span class="tag-percibido">percibido</span></p>
+      <h2>Cómo se está usando la IA hoy.</h2>
+      <div class="stats-row">
+        <div class="stat-card">
+          <span class="big">45%</span>
+          <span class="lbl">ya usa Gemini como herramienta principal</span>
+          <span class="sub">5 de 11 · el 36% ya usa ChatGPT, pese a ser un bootcamp enfocado en Gemini</span>
+        </div>
+        <div class="stat-card">
+          <span class="big">18%</span>
+          <span class="lbl">ya percibe ahorro de tiempo semanal</span>
+          <span class="sub">2 de 11 · el resto aún no lo considera medible, normal a los pocos días del cierre</span>
+        </div>
+      </div>
+      <div class="cols2">
+        <div class="mini-lb">
+          <p class="mini-title">Dónde se aplica hoy la IA</p>
+          <div class="mini-row">
+            <div class="mini-top"><span class="mini-label">Análisis de datos y reportes</span><span class="mini-val">73%</span></div>
+            <div class="mini-track"><div class="mini-fill" style="--w:73%"></div></div>
+          </div>
+          <div class="mini-row">
+            <div class="mini-top"><span class="mini-label">Automatización de procesos</span><span class="mini-val">27%</span></div>
+            <div class="mini-track"><div class="mini-fill" style="--w:27%"></div></div>
+          </div>
+        </div>
+        <div class="mini-lb">
+          <p class="mini-title">Prioridad de inversión · próx. 6 meses</p>
+          <div class="mini-row">
+            <div class="mini-top"><span class="mini-label">Capacitación y adopción cultural</span><span class="mini-val">55%</span></div>
+            <div class="mini-track"><div class="mini-fill" style="--w:55%"></div></div>
+          </div>
+          <div class="mini-row">
+            <div class="mini-top"><span class="mini-label">Licencias corporativas (Software/SaaS)</span><span class="mini-val">36%</span></div>
+            <div class="mini-track"><div class="mini-fill" style="--w:36%"></div></div>
+          </div>
+          <div class="mini-row">
+            <div class="mini-top"><span class="mini-label">Infraestructura o modelos propios</span><span class="mini-val">9%</span></div>
+            <div class="mini-track"><div class="mini-fill" style="--w:9%"></div></div>
+          </div>
+        </div>
+      </div>
+      <p class="note-honest">Datos de auto-reporte de cada participante, no una medición de uso real ni de horas efectivamente ahorradas: reflejan percepción y estimación propia, no telemetría. El bootcamp enseñó Gemini, pero ChatGPT ya tiene presencia real en el equipo.</p>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Zoom Miami · Dashboard de Impacto</span>
+      </div>
+    </section>
+
+    <!-- 09 · Recomendaciones de expansión (Bloque E reformulado para el cliente) -->
+    <section class="slide s-reco">
+      <span class="counter">09 / 11</span>
+      <p class="eyebrow">08 · Recomendaciones de expansión</p>
+      <h2>Próximos pasos de formación.</h2>
+      <div class="cols">
+        <div class="card">
+          <span class="label">Áreas que piden formación</span>
+          <ul class="rank">
+            <li><span class="n">1</span> Inventario <span class="c">6 menciones</span></li>
+            <li><span class="n">2</span> Toda la organización <span class="c">3 menciones</span></li>
+            <li><span class="n">3</span> Operaciones <span class="c">2 menciones</span></li>
+          </ul>
+        </div>
+        <div class="card">
+          <span class="label">Habilidades más deseadas</span>
+          <ul class="rank">
+            <li><span class="n">1</span> Excel y hojas de cálculo <span class="c">5</span></li>
+            <li><span class="n">2</span> Claude <span class="c">2</span></li>
+            <li><span class="n">3</span> ChatGPT <span class="c">2</span></li>
+          </ul>
+        </div>
+        <div class="card">
+          <span class="label">Procesos a automatizar</span>
+          <ul class="rank">
+            <li><span class="n">1</span> Contenido <span class="c">6</span></li>
+            <li><span class="n">2</span> Reportes <span class="c">4</span></li>
+            <li><span class="n">3</span> Escaneo de inventario con cámaras <span class="c">1</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="hook">
+        Inventario es, por lejos, la señal más clara: 6 de 11 la nombraron como el área que más se beneficiaría de esta formación. Es el siguiente paso natural para extender el bootcamp dentro de Zoom Miami.
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Zoom Miami · Dashboard de Impacto</span>
+      </div>
+    </section>
+
+    <!-- 10 · Participación (nombres + área, sin puntajes ni cédula §4.16) -->
+    <section class="slide s-data s-part compact">
+      <span class="counter">10 / 11</span>
+      <p class="eyebrow">09 · Participación</p>
+      <h2>Quiénes completaron la evaluación.</h2>
+      <div class="roster">
+        <div class="p"><span class="nm">Cesar Oliveira</span><span class="dp">Operaciones</span></div>
+        <div class="p"><span class="nm">Elaine Monsalve</span><span class="dp">Customer Services Supervisor</span></div>
+        <div class="p"><span class="nm">Meryjeen Guerrero</span><span class="dp">Customer Service</span></div>
+        <div class="p"><span class="nm">Sonia Avila</span><span class="dp">Atención al Cliente</span></div>
+        <div class="p"><span class="nm">Mildred Uribe</span><span class="dp">Customer Services</span></div>
+        <div class="p"><span class="nm">Doryen Lozano</span><span class="dp">Customer Service</span></div>
+        <div class="p"><span class="nm">Nestor Garcia</span><span class="dp">Operaciones</span></div>
+        <div class="p"><span class="nm">Anayanse</span><span class="dp">Tráfico</span></div>
+        <div class="p"><span class="nm">Diana Arredondo</span><span class="dp">Administración</span></div>
+        <div class="p"><span class="nm">Fatima De Oliveira</span><span class="dp">Administración</span></div>
+        <div class="p"><span class="nm">Jonathan Rodríguez</span><span class="dp">Sucursal</span></div>
+      </div>
+      <p class="privacy">11 de 11 participantes respondieron la encuesta. Por privacidad, no se publican puntajes individuales ni documentos de identidad: el informe es siempre agregado.</p>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Zoom Miami · Dashboard de Impacto</span>
+      </div>
+    </section>
+
+    <!-- 11 · Cierre -->
+    <section class="slide s-end">
+      <span class="counter">11 / 11</span>
+      <div class="end-logo">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia Educación">
+      </div>
+      <p class="end-message">
+        El equipo aprendió.<br>Llevémoslo al <span class="hl-orange">siguiente</span> <span class="hl-yellow">equipo</span>.
+      </p>
+      <div class="cta-wrap">
+        <a class="cta" href="https://calendly.com/intezia/30min" target="_blank" rel="noopener">Conversemos el próximo paso</a>
+      </div>
+      <div class="end-contact">
+        <p class="contact-line">
+          <span class="contact-label">Asesora:</span>
+          María Iribarren <span class="dot">·</span> +58 414 0570056 <span class="dot">·</span> miribarren@intezia.com
+        </p>
+        <p class="contact-line">
+          <span class="contact-label">Empresa:</span>
+          Intezia C.A J-505657950 <span class="dot">·</span> info@intezia.com
+        </p>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

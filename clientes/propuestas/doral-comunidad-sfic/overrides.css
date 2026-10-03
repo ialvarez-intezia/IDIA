@@ -1,0 +1,80 @@
+/* ---------------------------------------------------------------------------
+   IA Para Todos · Comunidad de Doral x SFIC · CH-008 · overrides locales sobre
+   ../_base/styles.css (heredado de la base canonica de charla, dusa/CH-007)
+   --------------------------------------------------------------------------- */
+
+/* ---------------------------------------------------------------------------
+   Cronograma de charla (.sessions > .session > .header + .grid): componente
+   propio de las charlas (CH-001/CH-002), más liviano que el .ruta/.ses-cols
+   canónico de capacitaciones. No existe en ../_base/styles.css — vive aquí.
+   Tabla de 4 sesiones x 15 min, 5 columnas por sesión (Temas, Tiempo,
+   Estrategia facilitador, Estrategia participante, Recursos).
+   --------------------------------------------------------------------------- */
+.s-schedule {
+  background: var(--white);
+  color: var(--black);
+  padding: 56px 56px 80px;
+  display: block;
+}
+.s-schedule::before {
+  content: "";
+  position: absolute;
+  top: 0; right: 0;
+  width: 280px; height: 6px;
+  background: var(--gradient-warm);
+}
+.s-schedule .eyebrow {
+  color: var(--orange);
+  margin-bottom: 10px;
+}
+.s-schedule h2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 1.05;
+  margin-bottom: 22px;
+}
+.s-schedule .sessions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.s-schedule .session {
+  border: 2px solid var(--black);
+  background: var(--white);
+}
+.s-schedule .session .header {
+  background: var(--black);
+  color: var(--white);
+  padding: 8px 16px;
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+.s-schedule .session .header .when { color: var(--yellow); }
+.s-schedule .session .grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1.4fr 1.4fr 1.2fr;
+  gap: 0;
+}
+.s-schedule .session .grid > div {
+  padding: 8px 12px;
+  font-size: 11px;
+  line-height: 1.35;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+.s-schedule .session .grid > div:last-child { border-right: 0; }
+.s-schedule .session .grid .label {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--orange);
+  margin-bottom: 4px;
+}

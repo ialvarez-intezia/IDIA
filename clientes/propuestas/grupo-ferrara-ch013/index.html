@@ -1,0 +1,531 @@
+<!doctype html>
+<!--
+  Propuesta — Tu vida real, tu mejor contenido (CH-013)
+  Cliente: Grupo Ferrara (organiza el evento; diseño de interiores/cocinas de lujo)
+  Audiencia real de la charla: creadores de contenido externos, aforo 100 a 120 personas,
+  énfasis en mamás/amas de casa (vida familiar, logística escolar, recetas).
+  División: Educación · Servicio: Habilidades (Charla) · Duración: 2 horas · Herramienta: Gemini gratis.
+
+  Decisiones de plantilla (2026-09-09):
+  - Estructura de charla sin roadmap ni precio, clon de venemergencia-ch009 (../_base/styles.css
+    + overrides.css local, componente .sessions/.session/.grid propio de charlas).
+  - Beneficios v3 + Cierre escalera (CSS y mecánica AcroForm portadas de farmaceutica-24/) —
+    estándar vigente para toda propuesta nueva (§4.10a), aunque el precedente de charla más
+    cercano (CH-009) sea anterior a ese estándar.
+  - Sin perfil de consultor (el cliente pidió validarlo, pero no hay facilitador asignado aún —
+    se agrega en una siguiente iteración, confirmado con el usuario).
+  - Sin fecha/hora/sede (IESA es solo tentativo, sin confirmar — se omite, no se inventa
+    placeholder).
+  - Ejercicios de cierre 100% creación de contenido (ideación, guion, caption, calendario);
+    el nicho de vida familiar/recetas se usa como ejemplo dentro de esos ejercicios.
+  - Impacto (§4.9): Capterra — Encuesta GenAI para Contenido Social (2025) + Sprout Social
+    Index — Pulse Survey Q3 2025.
+  - Ajuste 2026-09-11: se agregó slide .s-price (Propuesta Económica) a pedido del usuario —
+    reemplaza la decisión original de "no lleva hoja de cotización". Precio estándar
+    (Duración + Programa + Notas + Cotización), sin certificado (ya retirado de Entregables).
+    Deck pasó de 9 a 10 slides, renumerado.
+  - Ajuste 2026-09-14: se retiró el recuadro de Descuento de la hoja de cotización a pedido
+    del usuario. Quedan solo 2 cajas (Propuesta + Inversión / TOTAL) — label y frame HTML
+    eliminados aquí; TOTAL reposicionado y agrandado en overrides.css para llenar el espacio
+    liberado. El campo AcroForm "Descuento" lo sigue inyectando agregar-campo-precio.py (marker
+    "Propuesta Económica", compartido con todo el sistema, no se toca el script global) — se
+    elimina del PDF final en customize-grupo-ferrara-ch013.py, que también reposiciona el
+    campo PrecioTotal para que coincida con la caja agrandada. El cálculo de PrecioTotal no se
+    ve afectado (Descuento ausente = 0, Total = Base).
+  - Footer: "Grupo Ferrara · Charla · CH-013". 10 slides.
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Propuesta · Tu vida real, tu mejor contenido · CH-013 · Charla Intezia Educación</title>
+  <link rel="stylesheet" href="../_base/styles.css">
+  <link rel="stylesheet" href="overrides.css">
+</head>
+<body>
+
+  <main class="deck">
+
+    <!-- 1 · Portada -->
+    <section class="slide s-cover">
+      <span class="counter">01 / 10</span>
+      <div class="logo-big">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia Educación">
+      </div>
+      <div class="body">
+        <p class="eyebrow">Charla · Servicio de Habilidades · 100 a 120 creadores de contenido · 2 horas</p>
+        <h1>
+          Tu vida real,<br>
+          <span class="hl">tu mejor contenido</span>.
+        </h1>
+        <p class="lead">
+          Charla práctica para creadores de contenido: cómo usar <strong>Gemini</strong>, la IA gratuita de Google, para idear, planificar y redactar contenido de vida familiar, recetas y hogar sin perder tu propia voz. Todo, desde tu propio teléfono.
+        </p>
+      </div>
+      <div class="id-line">
+        <span class="codigo">Código: CH-013</span>
+        <span class="cliente">Grupo Ferrara</span>
+      </div>
+    </section>
+
+    <!-- 2 · Punto de dolor + Diagnóstico -->
+    <section class="slide s-pain">
+      <span class="counter">02 / 10</span>
+      <span class="quote-mark">&ldquo;</span>
+      <div class="body">
+        <h2>Crear todos los días, sin método ni tiempo de sobra.</h2>
+        <p class="context">
+          El público de esta charla combina dos roles a la vez: creador de contenido y responsable de la logística de una casa. Entre grabar, editar, publicar y sostener la rutina familiar y escolar, el tiempo para pensar cada pieza de contenido con calma casi no existe.
+        </p>
+        <p class="diag-title">Diagnóstico</p>
+        <ol>
+          <li>Gran parte del público crea contenido de vida familiar, recetas y rutina del hogar, un nicho con audiencia real pero exigente en frecuencia.</li>
+          <li>La presión de publicar seguido compite todos los días con la logística escolar, el hogar y la vida cotidiana.</li>
+          <li>La mayoría no ha probado la IA como herramienta creativa real, más allá de preguntas sueltas a un chatbot.</li>
+          <li>Sin una estructura simple para pedir ideas, guiones o captions, cada pieza de contenido nace de cero.</li>
+          <li>Con el teléfono que ya usan para grabar y publicar alcanza para resolver esto: no hace falta ningún equipo ni software adicional.</li>
+        </ol>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Grupo Ferrara · Charla · CH-013</span>
+      </div>
+    </section>
+
+    <!-- 3 · Objetivo (general + específicos) -->
+    <section class="slide s-goals">
+      <span class="counter">03 / 10</span>
+      <p class="eyebrow">02 · Objetivo</p>
+      <h2>A dónde llevamos<br>a cada creador en 2 horas.</h2>
+      <div class="columns">
+        <div class="general">
+          <p class="label">Objetivo general</p>
+          <p>
+            Brindar a los creadores de contenido asistentes un método simple y gratuito, con Gemini, para idear, planificar y redactar contenido de vida familiar, recetas y hogar sin perder su propia voz, aplicable desde el primer minuto con su propio teléfono.
+          </p>
+        </div>
+        <div class="specifics">
+          <p class="label">Objetivos específicos</p>
+          <ol>
+            <li>Comprender qué es la IA generativa y cómo Gemini puede asistir el proceso creativo sin sustituir la voz propia del creador.</li>
+            <li>Practicar, en vivo y desde el teléfono, la estructura de un buen prompt para pedir ideas, guiones y captions alineados a su nicho.</li>
+            <li>Salir con un mini calendario de contenido de una semana y 3 versiones de un caption o guion real, listos para publicar.</li>
+          </ol>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Grupo Ferrara · Charla · CH-013</span>
+      </div>
+    </section>
+
+    <!-- 4 · Programa -->
+    <section class="slide s-program">
+      <span class="counter">04 / 10</span>
+      <p class="eyebrow">03 · Programa de la Charla</p>
+      <h2>4 módulos · 2 horas.</h2>
+      <p class="meta">Aforo estimado: 100 a 120 personas · solo el teléfono propio y una cuenta gratuita de Gemini</p>
+      <div class="modules">
+        <div class="module">
+          <span class="roman">I</span>
+          <h3>Diagnóstico y Bases de Gemini</h3>
+          <p class="obj">Radiografía del creador saturado y qué es <strong>Gemini</strong>, cómo activar la cuenta gratis y explorar la interfaz desde el teléfono.</p>
+          <ul class="topics">
+            <li>1.1 Radiografía del creador saturado</li>
+            <li>1.2 Qué es la IA generativa</li>
+            <li>1.3 Activar tu cuenta gratis</li>
+            <li>1.4 Explorar la interfaz</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">II</span>
+          <h3>El Prompt como Herramienta Creativa</h3>
+          <p class="obj">Estructura simple para pedir ideas, guiones y captions, con ejemplos del propio nicho de la audiencia.</p>
+          <ul class="topics">
+            <li>2.1 Estructura de un buen prompt</li>
+            <li>2.2 Pedir ideas de contenido</li>
+            <li>2.3 Pedir guiones y captions</li>
+            <li>2.4 Ejemplos: recetas y rutina</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">III</span>
+          <h3>Ejercicio: Calendario de Contenido</h3>
+          <p class="obj">Construcción en vivo de un mini calendario de contenido de una semana, con un tema real de cada participante.</p>
+          <ul class="topics">
+            <li>3.1 Elegir un tema real</li>
+            <li>3.2 Generar ideas con Gemini</li>
+            <li>3.3 Armar el calendario de 7 días</li>
+            <li>3.4 Ajustar el tono a tu audiencia</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">IV</span>
+          <h3>Ejercicio: Caption y Guion + Cierre</h3>
+          <p class="obj">Redacción de 3 versiones de un caption o guion real, comparación de resultados y buenas prácticas de cierre.</p>
+          <ul class="topics">
+            <li>4.1 Redactar 3 versiones</li>
+            <li>4.2 Comparar tono y enfoque</li>
+            <li>4.3 Buenas prácticas de uso</li>
+            <li>4.4 Cierre y próximos pasos</li>
+          </ul>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Grupo Ferrara · Charla · CH-013</span>
+      </div>
+    </section>
+
+    <!-- 5 · Cronograma -->
+    <section class="slide s-schedule">
+      <span class="counter">05 / 10</span>
+      <p class="eyebrow">04 · Agenda · 2 horas</p>
+      <h2>Desglose instructivo<br>módulo por módulo.</h2>
+      <div class="sessions">
+        <div class="session">
+          <div class="header">
+            <span>Módulo 1 · Diagnóstico y Bases de Gemini · 35 min</span>
+          </div>
+          <div class="grid">
+            <div>
+              <span class="label">Temas</span>
+              Módulo I (full)<br>1.1-1.4
+            </div>
+            <div>
+              <span class="label">Tiempo</span>
+              35 min<br>(bienvenida · qué es Gemini · cuenta activa)
+            </div>
+            <div>
+              <span class="label">Estrategia del facilitador</span>
+              Apertura participativa + demo en vivo de Gemini desde el teléfono.
+            </div>
+            <div>
+              <span class="label">Estrategia del participante</span>
+              Comparte su mayor cuello de botella al crear contenido y sigue la demo desde su Gemini.
+            </div>
+            <div>
+              <span class="label">Recursos</span>
+              Teléfono propio · cuenta gratuita de Gemini
+            </div>
+          </div>
+        </div>
+
+        <div class="session">
+          <div class="header">
+            <span>Módulo 2 · El Prompt como Herramienta Creativa · 25 min</span>
+          </div>
+          <div class="grid">
+            <div>
+              <span class="label">Temas</span>
+              Módulo II (full)<br>2.1-2.4
+            </div>
+            <div>
+              <span class="label">Tiempo</span>
+              25 min<br>(estructura · ejemplos del nicho)
+            </div>
+            <div>
+              <span class="label">Estrategia del facilitador</span>
+              Método paso a paso con ejemplos del propio nicho: recetas, rutina escolar, tips de hogar.
+            </div>
+            <div>
+              <span class="label">Estrategia del participante</span>
+              Prueba la estructura con un prompt propio sobre un tema de su contenido habitual.
+            </div>
+            <div>
+              <span class="label">Recursos</span>
+              Teléfono propio · plantilla de estructura de prompt proyectada
+            </div>
+          </div>
+        </div>
+
+        <div class="session">
+          <div class="header">
+            <span>Módulo 3 · Ejercicio: Calendario de Contenido · 25 min</span>
+          </div>
+          <div class="grid">
+            <div>
+              <span class="label">Temas</span>
+              Módulo III (full)<br>3.1-3.4
+            </div>
+            <div>
+              <span class="label">Tiempo</span>
+              25 min<br>(tema real · ideas · calendario de 7 días)
+            </div>
+            <div>
+              <span class="label">Estrategia del facilitador</span>
+              Acompañamiento en sala, resolviendo dudas mientras cada participante arma su calendario.
+            </div>
+            <div>
+              <span class="label">Estrategia del participante</span>
+              Arma su calendario de la semana desde el teléfono con un tema real que ya quiera publicar.
+            </div>
+            <div>
+              <span class="label">Recursos</span>
+              Teléfono propio · Gemini gratis
+            </div>
+          </div>
+        </div>
+
+        <div class="session">
+          <div class="header">
+            <span>Módulo 4 · Ejercicio: Caption y Guion + Cierre · 35 min</span>
+          </div>
+          <div class="grid">
+            <div>
+              <span class="label">Temas</span>
+              Módulo IV (full)<br>4.1-4.4 · cierre
+            </div>
+            <div>
+              <span class="label">Tiempo</span>
+              35 min<br>(redacción · comparación · cierre)
+            </div>
+            <div>
+              <span class="label">Estrategia del facilitador</span>
+              Guía la comparación de tonos, invita a compartir resultados y cierra con buenas prácticas.
+            </div>
+            <div>
+              <span class="label">Estrategia del participante</span>
+              Redacta y compara 3 versiones de su caption o guion; algunos comparten el resultado.
+            </div>
+            <div>
+              <span class="label">Recursos</span>
+              Teléfono propio · Gemini gratis
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Grupo Ferrara · Charla · CH-013</span>
+      </div>
+    </section>
+
+    <!-- 6 · Beneficios (formato v3) -->
+    <section class="slide s-benefits s-benefits-v2">
+      <span class="counter">06 / 10</span>
+      <p class="eyebrow">05 · Beneficios</p>
+      <h2>Lo que <span class="hl">se llevan</span>.</h2>
+      <div class="grid">
+        <div class="block">
+          <p class="label">Resultados</p>
+          <ul>
+            <li>Un <strong>método simple y gratuito</strong>, con Gemini, para idear y redactar contenido sin perder tu propia voz.</li>
+            <li>Un calendario de contenido de una semana, construido en vivo con tu propio teléfono.</li>
+            <li>3 versiones de un caption o guion real, listas para publicar.</li>
+          </ul>
+        </div>
+        <div class="block">
+          <p class="label">Por qué Habilidades</p>
+          <p>
+            Habilidades convierte una charla teórica en una sesión práctica: cada participante sale con algo <strong>hecho</strong>, no solo con ideas, el mismo método que aplicamos a cualquier proceso real de un equipo, aquí aplicado al proceso creativo de cada creador de contenido.
+          </p>
+        </div>
+        <div class="block">
+          <p class="label">Entregables</p>
+        </div>
+        <div class="block">
+          <p class="label">Valor inmediato</p>
+        </div>
+      </div>
+
+      <div class="multi-box entregables-box" data-field="Entregables"></div>
+      <div class="multi-box acreditaciones-box" data-field="Acreditacion"></div>
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Grupo Ferrara · Charla · CH-013</span>
+      </div>
+    </section>
+
+    <!-- 7 · Impacto / estudios — datos reales, fuente citada (CLAUDE.md §4.9) -->
+    <section class="slide s-impact">
+      <span class="counter">07 / 10</span>
+
+      <div class="impact-head">
+        <p class="eyebrow">06 · Impacto</p>
+        <h2>La IA avanza,<br><span class="hl">pero tu voz sigue ganando</span>.</h2>
+      </div>
+
+      <div class="impact-body">
+        <div class="chart-panel">
+          <p class="panel-title">Negocios que planean usar IA generativa en su contenido de redes sociales</p>
+          <div class="bars">
+            <div class="bar-row">
+              <span class="bar-label">2024</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:39%"><span class="bar-val">39%</span></div></div>
+            </div>
+            <div class="bar-row">
+              <span class="bar-label">2026 (proyectado)</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:48%"><span class="bar-val">48%</span></div></div>
+            </div>
+          </div>
+          <div class="bar-axis"><span class="scale"><span>0</span><span>25</span><span>50</span><span>75</span><span>100%</span></span></div>
+          <p class="panel-source">Fuente: Capterra &middot; Encuesta GenAI para Contenido Social (2025).</p>
+        </div>
+
+        <div class="gauge-panel">
+          <div class="gauge" style="--pct:55">
+            <div class="gauge-core">
+              <span class="gauge-num">55<span class="pct">%</span></span>
+              <span class="gauge-cap">de usuarios de redes sociales confía más en marcas y creadores que publican contenido hecho por personas</span>
+            </div>
+          </div>
+          <div class="chips">
+            <div class="chip">
+              <span class="chip-num">2 de 3</span>
+              <span class="chip-lbl">en Gen Z y Millennials confían más en el contenido humano</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="impact-hook">
+        <span class="hook-mark">&#9656;</span>
+        <p class="hook-text">
+          Cada vez más negocios planean apoyarse en IA generativa para su contenido: de 39% en 2024 a 48% proyectado para 2026 (Capterra, 2025). Pero la audiencia sigue prefiriendo lo humano: el 55% confía más en marcas y creadores que publican contenido hecho por personas, y ese número sube a 2 de 3 en Gen Z y Millennials (Sprout Social &middot; Pulse Survey Q3 2025). La oportunidad no es reemplazar tu voz con IA: es usarla para <strong>crear más rápido, sin perderla</strong>.
+        </p>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Grupo Ferrara · Charla · CH-013</span>
+      </div>
+    </section>
+
+    <!-- 8 · Propuesta Económica (estándar: Duración + Programa + Notas + Cotización) -->
+    <section class="slide s-price">
+      <span class="counter">08 / 10</span>
+      <h2 class="title">Propuesta Económica</h2>
+
+      <div class="block">
+        <span class="block-eyebrow">Duración</span>
+        <p class="block-value">Charla de 2 horas · 4 módulos · aforo estimado 100 a 120 personas.</p>
+      </div>
+
+      <div class="block block-programa">
+        <span class="block-eyebrow">Programa</span>
+      </div>
+      <div class="multi-box programa-box" data-field="Programa"></div>
+
+      <div class="block block-cotizacion">
+        <span class="block-eyebrow">Cotización</span>
+      </div>
+
+      <span class="cot-label cot-label-base">Propuesta + Inversión</span>
+      <div class="cot-frame base-frame"></div>
+
+      <span class="cot-label cot-label-total">TOTAL</span>
+      <div class="cot-frame total-frame"></div>
+
+      <p class="cot-validity">Cotización válida por 30 días.</p>
+      <div class="cot-terms-box">
+        <span class="cot-terms-label">Importante</span>
+        <p class="cot-terms-text">Este servicio se presta bajo nuestros <a href="https://drive.google.com/file/d/1PA-ZSt4KnyY5dpxXzgkIk6-yfGlV2eF8/view?usp=drive_link" target="_blank" rel="noopener">términos y condiciones</a>. Al avanzar con esta propuesta, ambas partes los aceptan.</p>
+      </div>
+
+      <div class="block block-notes-container">
+        <span class="block-eyebrow">Notas</span>
+      </div>
+      <div class="multi-box notas-box" data-field="Notas"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Grupo Ferrara · Charla · CH-013</span>
+      </div>
+    </section>
+
+    <!-- 9 · Próximos pasos -->
+    <section class="slide s-steps">
+      <span class="counter">09 / 10</span>
+      <p class="eyebrow">07 · Próximos pasos</p>
+      <h2>Cómo arrancamos.</h2>
+      <div class="step-cards">
+        <div class="step-card">
+          <span class="ghost">01</span>
+        </div>
+        <div class="step-card">
+          <span class="ghost">02</span>
+        </div>
+        <div class="step-card">
+          <span class="ghost">03</span>
+        </div>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-01-titulo" data-field="Paso01Titulo">
+        <span class="acro-default-text">Validamos el contenido</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-01-body" data-field="Paso01Body">
+        <span class="acro-default-text">Grupo Ferrara revisa esta propuesta y confirma los 2 ejercicios prácticos y el enfoque del nicho.</span>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-02-titulo" data-field="Paso02Titulo">
+        <span class="acro-default-text">Asignamos al facilitador</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-02-body" data-field="Paso02Body">
+        <span class="acro-default-text">Con el contenido validado, asignamos y compartimos el perfil del facilitador que dicta la charla.</span>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-03-titulo" data-field="Paso03Titulo">
+        <span class="acro-default-text">Cerramos fecha y sede</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-03-body" data-field="Paso03Body">
+        <span class="acro-default-text">Con contenido y facilitador validados, coordinamos con Grupo Ferrara la fecha, hora y sede definitivas.</span>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Grupo Ferrara · Charla · CH-013</span>
+      </div>
+    </section>
+
+    <!-- 9 · Cierre (escalera editable) -->
+    <section class="slide s-end">
+      <span class="counter">10 / 10</span>
+
+      <div class="end-logo">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia Educación">
+      </div>
+
+      <div class="end-summit" data-field="CierreResultado">
+        <span class="acro-default-text">Creadores de contenido de Grupo Ferrara con un método propio para idear y crear con Gemini, sin perder su voz.</span>
+      </div>
+
+      <div class="end-stairs">
+        <div class="stair-step stair-1">
+          <span class="stair-label">Paso 1</span>
+          <div class="stair-field" data-field="CierrePaso1">
+            <span class="acro-default-text">Método de prompt aprendido</span>
+          </div>
+        </div>
+        <div class="stair-step stair-2">
+          <span class="stair-label">Paso 2</span>
+          <div class="stair-field" data-field="CierrePaso2">
+            <span class="acro-default-text">Calendario de contenido armado</span>
+          </div>
+        </div>
+        <div class="stair-step stair-3">
+          <span class="stair-label">Paso 3</span>
+          <div class="stair-field" data-field="CierrePaso3">
+            <span class="acro-default-text">Caption y guion listos para publicar</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cta-wrap">
+        <span class="cta">Esperamos tu respuesta</span>
+      </div>
+
+      <div class="end-contact">
+        <p class="contact-line">
+          <span class="contact-label">Asesora de ventas:</span>
+          Verónica Rubio <span class="dot">·</span> +58 422 3355505 <span class="dot">·</span> vrubio01@intezia.com
+        </p>
+        <p class="contact-line">
+          <span class="contact-label">Empresa:</span>
+          Intezia C.A J-505657950 <span class="dot">·</span> servicio@intezia.com
+        </p>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

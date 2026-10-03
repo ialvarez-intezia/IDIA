@@ -1,0 +1,379 @@
+<!doctype html>
+<!--
+  Dashboard de Impacto Edu-Trace · Tu Herraje · Marketing Estratégico y Generativo
+  Vista CLIENTE (entregable). Datos: clientes/dashboards/tu-herraje/resultados.json
+  Variante CHART-FORWARD (más gráficos, menos métricas): radar de ejes, donut rings,
+  donut de composición. Lenguaje honesto (§4.17): B/D = percibido · C = medido.
+  Muestra N=2 → referencial, sin ranking entre áreas. Sin cédula/correo (§4.16).
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard de Impacto · Tu Herraje · Intezia Educación</title>
+  <link rel="stylesheet" href="../../propuestas/_base/styles.css">
+  <link rel="stylesheet" href="overrides.css">
+</head>
+<body>
+  <main class="deck">
+
+    <!-- Gradiente compartido para los donuts -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+      <defs>
+        <linearGradient id="warm" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#F4BA1A"></stop>
+          <stop offset="1" stop-color="#E58423"></stop>
+        </linearGradient>
+      </defs>
+    </svg>
+
+    <!-- 01 · Portada -->
+    <section class="slide s-cover">
+      <span class="counter">01 / 10</span>
+      <div class="logo-big">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia Educación">
+      </div>
+      <div class="body">
+        <p class="eyebrow">Dashboard de Impacto · Edu-Trace</p>
+        <h1>
+          Marketing<br>
+          <span class="hl">Estratégico y Generativo</span>
+        </h1>
+        <p class="lead">
+          Resultados de la capacitación de <strong>Tu Herraje</strong>, medidos con la <strong>Encuesta Edu-Trace</strong> de cierre. El equipo de marketing evaluado en competencia, <strong>retención de conocimiento</strong> y experiencia formativa con <strong>Gemini</strong> y la creación de contenido con IA.
+        </p>
+      </div>
+      <div class="id-line">
+        <span class="codigo">Edu-Trace · Tu Herraje</span>
+        <span class="cliente">Tu Herraje</span>
+      </div>
+    </section>
+
+    <!-- 02 · Hero del Índice (gauge + barras de eje) -->
+    <section class="slide s-impact">
+      <span class="counter">02 / 10</span>
+      <div class="impact-head">
+        <p class="eyebrow">01 · Resultado global</p>
+        <h2>Índice de Impacto<br><span class="hl">Edu-Trace</span>.</h2>
+      </div>
+      <div class="impact-body">
+        <div class="chart-panel">
+          <p class="panel-title">Los cuatro ejes que componen el índice (0-100)</p>
+          <div class="bars">
+            <div class="bar-row">
+              <span class="bar-label">Competencia percibida</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:87.5%"><span class="bar-val">88</span></div></div>
+            </div>
+            <div class="bar-row">
+              <span class="bar-label">Retención objetiva · medido</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:66.7%"><span class="bar-val">67</span></div></div>
+            </div>
+            <div class="bar-row">
+              <span class="bar-label">Aplicabilidad e impacto</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:100%"><span class="bar-val">100</span></div></div>
+            </div>
+            <div class="bar-row">
+              <span class="bar-label">Calidad de la experiencia</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:100%"><span class="bar-val">100</span></div></div>
+            </div>
+          </div>
+          <div class="bar-axis"><span class="scale"><span>0</span><span>25</span><span>50</span><span>75</span><span>100</span></span></div>
+          <p class="panel-source">Ponderación: Retención objetiva 35% · Competencia 30% · Aplicabilidad 20% · Calidad 15%. La retención es el único eje medido; el resto es autopercibido. Muestra de 2 participantes.</p>
+        </div>
+        <div class="gauge-panel">
+          <div class="gauge" style="--pct:85">
+            <div class="gauge-core">
+              <span class="gauge-num">85</span>
+              <span class="gauge-cap idx">Índice · de 100</span>
+            </div>
+          </div>
+          <div class="rating">
+            <div class="stars">
+              <span class="star full">&#9733;</span>
+              <span class="star full">&#9733;</span>
+              <span class="star full">&#9733;</span>
+              <span class="star full">&#9733;</span>
+              <span class="star half">&#9733;</span>
+            </div>
+            <span class="rating-cap">Satisfacción general · <b>4.5 / 5</b></span>
+          </div>
+          <p class="hero-meta">2 participantes · salto percibido +1.5 (1-5)</p>
+        </div>
+      </div>
+      <div class="impact-hook">
+        <span class="hook-mark">&#9656;</span>
+        <p class="hook-text">
+          El equipo quedó muy satisfecho y ve la formación <strong>100% aplicable</strong> a su día a día. En la evaluación de conocimiento respondió bien el <strong>67%</strong>: la satisfacción se siente; la retención se mide.
+        </p>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Tu Herraje · Dashboard de Impacto</span>
+      </div>
+    </section>
+
+    <!-- 03 · Radar de los cuatro ejes -->
+    <section class="slide s-data s-radar">
+      <span class="counter">03 / 10</span>
+      <p class="eyebrow">02 · Perfil de impacto</p>
+      <h2>El perfil de los cuatro ejes.</h2>
+      <p class="sub">Cada vértice es un eje del índice (0-100). El equipo llega al tope en aplicabilidad y experiencia; el eje a reforzar es la retención objetiva, el único dato medido.</p>
+      <div class="radar-wrap">
+        <svg class="radar" viewBox="-50 -10 500 400" role="img" aria-label="Radar de los cuatro ejes">
+          <!-- grilla -->
+          <polygon class="radar-grid" points="200,45 340,185 200,325 60,185"></polygon>
+          <polygon class="radar-grid" points="200,80 305,185 200,290 95,185"></polygon>
+          <polygon class="radar-grid" points="200,115 270,185 200,255 130,185"></polygon>
+          <polygon class="radar-grid" points="200,150 235,185 200,220 165,185"></polygon>
+          <!-- ejes -->
+          <line class="radar-axis" x1="200" y1="185" x2="200" y2="45"></line>
+          <line class="radar-axis" x1="200" y1="185" x2="340" y2="185"></line>
+          <line class="radar-axis" x1="200" y1="185" x2="200" y2="325"></line>
+          <line class="radar-axis" x1="200" y1="185" x2="60" y2="185"></line>
+          <!-- forma de datos -->
+          <polygon class="radar-shape" points="200,62.5 293.4,185 200,325 60,185"></polygon>
+          <circle class="radar-dot" cx="200" cy="62.5" r="6"></circle>
+          <circle class="radar-dot measured" cx="293.4" cy="185" r="6"></circle>
+          <circle class="radar-dot" cx="200" cy="325" r="6"></circle>
+          <circle class="radar-dot" cx="60" cy="185" r="6"></circle>
+          <!-- rótulos -->
+          <text class="radar-cap" x="200" y="30" text-anchor="middle">Competencia</text>
+          <text class="radar-cap" x="408" y="189" text-anchor="middle">Retención</text>
+          <text class="radar-cap" x="200" y="360" text-anchor="middle">Aplicabilidad</text>
+          <text class="radar-cap" x="-12" y="189" text-anchor="middle">Calidad</text>
+        </svg>
+        <div class="legend">
+          <div class="leg">
+            <span class="swatch"></span>
+            <span class="name">Competencia percibida<small>capaz sin supervisión · percibido</small></span>
+            <span class="v">88</span>
+          </div>
+          <div class="leg measured">
+            <span class="swatch"></span>
+            <span class="name">Retención objetiva<small>aciertos en la evaluación · medido</small></span>
+            <span class="v">67</span>
+          </div>
+          <div class="leg">
+            <span class="swatch"></span>
+            <span class="name">Aplicabilidad e impacto<small>resuelve su rol · percibido</small></span>
+            <span class="v">100</span>
+          </div>
+          <div class="leg">
+            <span class="swatch"></span>
+            <span class="name">Calidad de la experiencia<small>facilitador y ritmo · percibido</small></span>
+            <span class="v">100</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 · Salto de aprendizaje percibido -->
+    <section class="slide s-salto">
+      <span class="counter">04 / 10</span>
+      <p class="eyebrow">03 · Salto de aprendizaje</p>
+      <h2>De dónde partieron, a dónde llegaron.</h2>
+      <div class="journey">
+        <div class="milestone">
+          <span class="ms-cap">Antes · percibido</span>
+          <span class="ms-num">3.0</span>
+          <span class="ms-of">dominio previo<br>(escala 1-5)</span>
+        </div>
+        <div class="track">
+          <div class="track-fill"></div>
+          <div class="delta">
+            <span class="d-num">+1.5</span>
+            <span class="d-lbl">salto percibido</span>
+          </div>
+        </div>
+        <div class="milestone end">
+          <span class="ms-cap">Al cierre</span>
+          <span class="ms-num">4.5</span>
+          <span class="ms-of">capaz sin supervisión<br>(escala 1-5)</span>
+        </div>
+      </div>
+      <p class="salto-note">Es un salto <strong>percibido y retrospectivo</strong>: ambas cifras se preguntaron al cierre, no antes de empezar. Refleja cómo vive el equipo su propio avance, no una medición con punto de partida real.</p>
+    </section>
+
+    <!-- 05 · Retención objetiva (Bloque C - medido) con donut rings -->
+    <section class="slide s-data s-reten-c">
+      <span class="counter">05 / 10</span>
+      <p class="eyebrow">04 · Retención objetiva <span class="tag-medido">medido</span></p>
+      <h2>Lo que de verdad quedó.</h2>
+      <div class="global">
+        <span class="pct">67%</span>
+        <span class="txt">de aciertos en la evaluación de conocimiento al cierre (4 de 6 respuestas correctas).</span>
+      </div>
+      <div class="rings">
+        <div class="ring-card">
+          <svg class="donut" viewBox="0 0 160 160">
+            <circle class="track" cx="80" cy="80" r="64" stroke-width="18"></circle>
+            <circle class="seg" cx="80" cy="80" r="64" stroke-width="18" stroke-dasharray="201.06 201.06"></circle>
+            <text class="ctr-num" x="80" y="92">50%</text>
+          </svg>
+          <span class="ring-q">Primer paso de una estrategia</span>
+          <span class="ring-d">El buyer persona (perfil de cliente ideal) antes de crear contenido. 1 de 2.</span>
+        </div>
+        <div class="ring-card">
+          <svg class="donut" viewBox="0 0 160 160">
+            <circle class="track" cx="80" cy="80" r="64" stroke-width="18"></circle>
+            <circle class="seg" cx="80" cy="80" r="64" stroke-width="18" stroke-dasharray="201.06 201.06"></circle>
+            <text class="ctr-num" x="80" y="92">50%</text>
+          </svg>
+          <span class="ring-q">Límite de la ventana de contexto</span>
+          <span class="ring-d">Por qué la IA pierde el tono tras muchos mensajes. 1 de 2.</span>
+        </div>
+        <div class="ring-card">
+          <svg class="donut" viewBox="0 0 160 160">
+            <circle class="track" cx="80" cy="80" r="64" stroke-width="18"></circle>
+            <circle class="seg full" cx="80" cy="80" r="64" stroke-width="18" stroke-dasharray="402.12 0"></circle>
+            <text class="ctr-num" x="80" y="92">100%</text>
+          </svg>
+          <span class="ring-q">Consistencia de tono entre piezas</span>
+          <span class="ring-d">Revisar todas las piezas juntas y unificar el tono. 2 de 2.</span>
+        </div>
+      </div>
+      <p class="note-honest">Es el único bloque que mide conocimiento real, no percepción. El tono entre piezas quedó dominado; el <strong>buyer persona</strong> y el <strong>manejo de la ventana de contexto</strong> son los puntos a reforzar en una próxima sesión.</p>
+    </section>
+
+    <!-- 06 · Composición del grupo -->
+    <section class="slide s-data s-comp">
+      <span class="counter">06 / 10</span>
+      <p class="eyebrow">05 · Composición del grupo</p>
+      <h2>Quiénes se formaron.</h2>
+      <p class="sub">Dos perfiles complementarios del área de marketing: estrategia de contenido y diseño gráfico. Con un participante por perfil, las cifras por área son referenciales, no un ranking.</p>
+      <div class="comp-wrap">
+        <div class="donut-comp">
+          <svg class="donut" viewBox="0 0 200 200">
+            <circle class="track" cx="100" cy="100" r="78" stroke-width="26"></circle>
+            <circle class="seg seg-mk" cx="100" cy="100" r="78" stroke-width="26" stroke-dasharray="245.04 245.04"></circle>
+            <circle class="seg seg-dg" cx="100" cy="100" r="78" stroke-width="26" stroke-dasharray="245.04 245.04" stroke-dashoffset="-245.04"></circle>
+            <text class="ctr-num" x="100" y="108">2</text>
+            <text class="ctr-sub" x="100" y="132">participantes</text>
+          </svg>
+        </div>
+        <div class="comp-legend">
+          <div class="cl">
+            <span class="dot mk"></span>
+            <span class="lbl">Marketing<small>estrategia de contenido · 1 participante</small></span>
+          </div>
+          <div class="cl">
+            <span class="dot dg"></span>
+            <span class="lbl">Diseño gráfico<small>producción visual · 1 participante</small></span>
+          </div>
+          <p class="note-honest">Ambos perfiles trabajan el mismo flujo: planificar el contenido y producir la pieza. La formación los puso a operar IA generativa sobre ese flujo completo.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 07 · Calidad de la experiencia (Bloque D) -->
+    <section class="slide s-data s-calidad">
+      <span class="counter">07 / 10</span>
+      <p class="eyebrow">06 · Experiencia formativa <span class="tag-percibido">percibido</span></p>
+      <h2>Cómo vivieron la formación.</h2>
+      <p class="sub">Valoración del facilitador y la dinámica de las sesiones, en escala 1-5 normalizada a 0-100. Ambas participantes calificaron los cuatro aspectos al máximo.</p>
+      <div class="hbars">
+        <div class="hbar-row">
+          <span class="hbar-label">Claridad expositiva <small>casos reales del negocio</small></span>
+          <div class="hbar-track"><div class="hbar-fill" style="--w:100%"></div></div>
+          <span class="hbar-val">100</span>
+        </div>
+        <div class="hbar-row">
+          <span class="hbar-label">Acompañamiento <small>dudas resueltas con precisión</small></span>
+          <div class="hbar-track"><div class="hbar-fill" style="--w:100%"></div></div>
+          <span class="hbar-val">100</span>
+        </div>
+        <div class="hbar-row">
+          <span class="hbar-label">Gestión del tiempo <small>ritmo para asimilar</small></span>
+          <div class="hbar-track"><div class="hbar-fill" style="--w:100%"></div></div>
+          <span class="hbar-val">100</span>
+        </div>
+        <div class="hbar-row">
+          <span class="hbar-label">Dominio técnico <small>profundidad de las soluciones</small></span>
+          <div class="hbar-track"><div class="hbar-fill" style="--w:100%"></div></div>
+          <span class="hbar-val">100</span>
+        </div>
+      </div>
+      <p class="note-honest">La experiencia con el facilitador obtuvo la nota máxima en los cuatro aspectos. Es una valoración percibida del equipo, no una medición de conocimiento.</p>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Tu Herraje · Dashboard de Impacto</span>
+      </div>
+    </section>
+
+    <!-- 08 · Recomendaciones de expansión (Bloque E para el cliente) -->
+    <section class="slide s-reco">
+      <span class="counter">08 / 10</span>
+      <p class="eyebrow">07 · Recomendaciones de expansión</p>
+      <h2>Próximos pasos de formación.</h2>
+      <div class="cols">
+        <div class="card">
+          <span class="label">Áreas que se sumarían</span>
+          <ul class="rank">
+            <li><span class="n">1</span> Equipo de ventas <span class="c">1</span></li>
+            <li><span class="n">2</span> Más roles de Marketing <span class="c">1</span></li>
+          </ul>
+        </div>
+        <div class="card">
+          <span class="label">Habilidades a profundizar</span>
+          <ul class="rank">
+            <li><span class="n">1</span> Imagen y video con IA <span class="c">2</span></li>
+            <li><span class="n">2</span> Apps generativas de imagen <span class="c">1</span></li>
+            <li><span class="n">3</span> Claude para contenido <span class="c">1</span></li>
+          </ul>
+        </div>
+        <div class="card">
+          <span class="label">Procesos a potenciar</span>
+          <ul class="rank">
+            <li><span class="n">1</span> Producción de imágenes <span class="c">1</span></li>
+            <li><span class="n">2</span> Creación de contenido <span class="c">1</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="hook">
+        El propio equipo pide profundizar en <strong>imagen y video con IA</strong> y sumar al <strong>equipo de ventas</strong>. Es el siguiente paso natural para llevar el contenido generativo a todo Tu Herraje.
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Tu Herraje · Dashboard de Impacto</span>
+      </div>
+    </section>
+
+    <!-- 09 · Participación (nombres + área, sin puntajes ni cédula §4.16) -->
+    <section class="slide s-data s-part">
+      <span class="counter">09 / 10</span>
+      <p class="eyebrow">08 · Participación</p>
+      <h2>Quiénes completaron la evaluación.</h2>
+      <div class="roster">
+        <div class="p"><span class="nm">Sandra Esquivel</span><span class="dp">Marketing</span></div>
+        <div class="p"><span class="nm">Emily Silva</span><span class="dp">Diseño gráfico</span></div>
+      </div>
+      <p class="privacy">2 de 2 participantes respondieron la encuesta. Por privacidad, no se publican puntajes individuales ni documentos de identidad: el informe es siempre agregado.</p>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Tu Herraje · Dashboard de Impacto</span>
+      </div>
+    </section>
+
+    <!-- 10 · Cierre -->
+    <section class="slide s-end">
+      <span class="counter">10 / 10</span>
+      <div class="end-logo">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia Educación">
+      </div>
+      <p class="end-message">
+        El equipo aprendió.<br>Llevémoslo al <span class="hl-orange">siguiente</span> <span class="hl-yellow">equipo</span>.
+      </p>
+      <div class="cta-wrap">
+        <a class="cta" href="https://calendly.com/intezia/30min" target="_blank" rel="noopener">Conversemos el próximo paso</a>
+      </div>
+      <div class="end-contact">
+        <p class="contact-line">
+          <span class="contact-label">Empresa:</span>
+          Intezia C.A J-505657950 <span class="dot">·</span> info@intezia.com
+        </p>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

@@ -1,0 +1,881 @@
+<!doctype html>
+<!--
+  Propuesta B — Banco Activo · Detección + Habilidades Fase 1, Vicepresidencia de Negocios
+  (DET-021)
+  Servicio: DETECCIÓN (combo Detección+Habilidades, código libre DET- por instrucción del
+  usuario — servicio sigue la taxonomía del combo, §4.1a). División: Educación. Fuente:
+  Ficha de Levantamiento Banco Activo (Verónica Rubio, 2026-09-22/23) + instrucción directa
+  del usuario (2026-09-24). Segunda de 2 propuestas en paralelo del mismo levantamiento — la
+  Propuesta A (CAI-027, Cerebros Digitales para la línea directiva) ya está construida en
+  banco-activo-cerebros-digitales/.
+
+  ALCANCE: Detección de las 13 gerencias/líderes de la Vicepresidencia de Negocios de Nahir
+  (incluye Adquirencia y Medios de Pago bajo su tutela temporal) + Habilidades Fase 1 enfocada
+  en el dolor más urgente y explícito: Adquirencia y Medios de Pago (visibilidad de
+  facturación, churn, instalaciones pendientes; activación de puntos de venta lenta y sin
+  trazabilidad). Base estructural: clonado de la-tienda-del-blumer/ (DET-020, el precedente
+  de Detección multi-área con roadmap .rmx-linear + slide ".s-vision"), extendido a un combo
+  real con Habilidades (DET-020 solo tenía Habilidades "a futuro, no cotizada").
+
+  HORAS — Detección: 2h Fundamentals grupal (13 personas, bajo el máximo de 25 de
+  empresa/politicas-comerciales.md) + 13 gerencias × 4h = 52h → 54h de Detección.
+  HORAS — Habilidades Fase 1: 1 área combinada "Adquirencia y Medios de Pago" (la ficha las
+  lista como 2 áreas separadas bajo la misma tutela temporal de Nahir, pero el usuario las
+  encuadra como un solo dolor continuo: "el foco fuerte de Habilidades... es puntos de venta y
+  medios de pago"). 3 procesos identificados (≤5 → banda 8-12h de
+  empresa/politicas-comerciales.md): activación end-to-end de puntos de venta, seguimiento de
+  facturación y churn, reportes directos de Nahir/consolidación de data dispersa. Se usó el
+  extremo superior, 12h (4h por proceso × 3), dada la complejidad real (2 sub-equipos, data
+  dispersa en varios sistemas) y la urgencia marcada por la ficha ("para ayer"). TOTAL COMBO:
+  54h + 12h = 66h.
+
+  ~3 GERENCIAS ADICIONALES (mencionadas por el usuario, sin comprometerse a cuáles) — NO se
+  cotizan en este documento. El propio usuario pidió dejarlo "anotado... como algo a
+  considerar en el alcance, no como decidido todavía" — se documenta como 3er paso de la
+  slide ".s-vision" (a futuro, a definir con los hallazgos de la Detección, no cotizado) y en
+  Notas de la hoja de cotización, nunca como horas ya incluidas.
+
+  NOMBRES DE LAS 13 GERENCIAS: la ficha no las nombra una por una — solo confirma el conteo
+  (13) y nombra explícitamente 2 de ellas (Adquirencia, Medios de Pago). El resto se
+  referencia como "gerencia regional N" (genérico, sin inventar nombres) tanto en el
+  calendario como en el resto del deck.
+
+  VISIÓN DE RUTA (slide 6, .s-vision): a diferencia de DET-020 (Detección ahora / Habilidades
+  a futuro / Autonomía visión final — ninguno de los últimos 2 cotizado), aquí los primeros 2
+  pasos SÍ están cotizados en este documento (Detección + Habilidades Fase 1) y el 3er paso
+  (expansión de Habilidades a más gerencias) es el único "a futuro, no cotizado" — usa
+  vision-step-now DOS veces (reutilizable, es una clase, no un ID) en vez de una vez.
+
+  CALENDARIO: comprimido en 15 filas (kick-off + Fundamentals + 13 gerencias), 3 columnas
+  (5+5+5) en vez de las 2 columnas de siempre, para no desbordar .steps-calendar-grid — ver
+  memoria calendario-inicio-comprimir-filas-muchas-sesiones. Kick-off mismo día que CAI-027
+  (jueves 8 de octubre, ambas propuestas del mismo levantamiento). Sesiones lunes y miércoles
+  desde el 12 de octubre (instrucción directa del usuario). Habilidades Fase 1 NO tiene fechas
+  todavía — se agenda con base en el Reporte Final de la Detección (dato explícito de la
+  ficha: "diseñar la Fase 1 de Habilidades a medida"), no se inventan fechas.
+
+  CON certificado de participación INTEZIA (Habilidades Fase 1 sí es capacitación real —
+  Detección sola no lleva, ver memoria deteccion-sin-certificado.md). CON garantía 30-60-90 +
+  slide de Seguimiento (.s-followup, copiado de banco-activo-cerebros-digitales/). Sin slide
+  de Mapa de Calor ni Metodología ABR ni Equipo facilitador expuestos (§4.10a). Sin afirmar
+  migración de stack (§4.11) — Banco Activo opera Google Workspace con licencias de Copilot y
+  Gemini. Beneficios v3, Cierre escalera, servicio@intezia.com. Asesora: Verónica Rubio.
+
+  IMPACTO (2026-10-01): se retiraron las gráficas con fuente EY-Parthenon de la slide de
+  Impacto (11/15) por instrucción directa del usuario. Reemplazadas por un bloque ".proof-panel"
+  — el hook-text se reescribió sin la cifra EY y sin <strong> (glitch de renderizado confirmado
+  en ese contenedor, ver memoria bug-strong-glitch-impact-hook-text).
+  CORRECCIÓN 2026-10-01 (2da vuelta): el primer reemplazo citaba "Banco Activo ya confió antes
+  en Intezia" (servicio previo, dato de la Ficha Bloque A) — ese dato era FALSO, Intezia nunca
+  ha trabajado con Banco Activo (confirmado por el usuario, corregido también en brief.md). Se
+  reemplazó por una referencia anónima real y verificada: un cliente del sector financiero
+  (procesamiento y adquirencia de medios de pago, caso Credicard CAP-041 — no se nombra en el
+  deck), Índice de Impacto 86/100. Sin cifras inventadas (§4.9). El h2 de la slide también
+  cambió ("Ya trabajamos juntos" → "La experiencia ya está probada") para no implicar una
+  relación previa con Banco Activo que no existe.
+
+  COTIZACIÓN (historial): el 2026-09-29 se probó primero con 2 hojas "Propuesta Económica"
+  independientes (mecanismo multi-página de agregar-campo-precio.py, PrecioBase_2/Descuento_2/
+  PrecioTotal_2/Programa_2/Notas_2). El mismo día, instrucción directa del usuario: volver a
+  UNA sola hoja, con los recuadros de Detección y Habilidades del lado izquierdo "como lo hemos
+  venido haciendo" — el patrón "Inversión por fases" ya usado en go-pharma/CAP-030,
+  maurel-prom/ALL-003, ioed/, simple-tv-det002/, etc. (marker propio "Inversión por fases",
+  grupo FASE_PRICE_FIELDS de agregar-campo-precio.py, origen CAP-098 IOED 2026-08-11).
+
+  IMPLEMENTACIÓN: FASE_PRICE_FIELDS está fijo a 3 fases (PrecioFase1-3); este deck usa solo 2
+  (Detección, Habilidades), así que customize-banco-activo-deteccion-negocios.py elimina el
+  campo huérfano PrecioFase3 y reescribe el JS de PrecioBase para sumar solo Fase 1 + Fase 2
+  (mismo ajuste ya hecho en customize-go-pharma-cap030.py). Las coordenadas CSS de
+  .fase-price-row/.fase-price-frame y de la columna de Cotización (base/discount/total-frame,
+  cot-label-*) están portadas EXACTAS de go-pharma/styles.css — son las que matchean los /Rect
+  fijos de FASE_PRICE_FIELDS en Python, distintas de las del layout estándar de "Propuesta
+  Económica" (_base/styles.css). El campo "Programa" NO existe en este patrón (FASE_PRICE_FIELDS
+  no lo incluye) — su contenido vive en `.fase-price-desc` (texto estático) de cada recuadro.
+  Los recuadros de ROI y Garantía 30-60-90 (ninguno vive en el patrón "Inversión por fases"
+  original, que es anterior al 2026-09-23) se reposicionaron a mano, debajo de Notas, para
+  dejar espacio a los 2 recuadros de fase sin desbordar — ver overrides.css. Deck: 16 → 15
+  slides (vuelta al conteo previo al split, con el layout "Inversión por fases" en vez del
+  "Propuesta Económica" original de un solo bloque Duración+Programa).
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Propuesta · Detección y Habilidades · Banco Activo · Intezia</title>
+  <link rel="stylesheet" href="../_base/styles.css">
+  <link rel="stylesheet" href="overrides.css">
+</head>
+<body>
+
+  <main class="deck">
+
+    <!-- 1 · Portada -->
+    <section class="slide s-cover">
+      <span class="counter">01 / 15</span>
+      <div class="logo-big">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia">
+      </div>
+      <div class="body">
+        <p class="eyebrow">Propuesta formativa · Servicio de Detección y Habilidades</p>
+        <h1>
+          De no tener visibilidad,<br>
+          <span class="hl">a decidir con datos en tiempo real.</span>
+        </h1>
+        <p class="lead">
+          Auditamos las 13 gerencias de la Vicepresidencia de Negocios con Fundamentals y un <strong>logro inmediato</strong> en cada una, y llevamos ese diagnóstico directo a una Fase 1 de Habilidades en Adquirencia y Medios de Pago: el foco más urgente de hoy.
+        </p>
+      </div>
+      <div class="id-line">
+        <span class="codigo">Código: DET-021</span>
+        <span class="cliente">Banco Activo</span>
+      </div>
+    </section>
+
+    <!-- 2 · Punto de dolor + Diagnóstico -->
+    <section class="slide s-pain">
+      <span class="counter">02 / 15</span>
+      <span class="quote-mark">&ldquo;</span>
+      <div class="body">
+        <h2>&ldquo;No tengo visibilidad en nada de eso.&rdquo;</h2>
+        <p class="context">
+          Banco Activo ya trabajó antes con Intezia en un programa de Habilidades. La Vicepresidencia de Negocios opera dentro de <strong>Google Workspace</strong>, con licencias corporativas de Copilot y Gemini, pero hoy no tiene cómo darle seguimiento a su propia operación: qué puntos de venta están facturando, cuáles dejaron de hacerlo y cuáles siguen pendientes de instalación.
+        </p>
+        <p class="diag-title">Diagnóstico</p>
+        <ol>
+          <li><strong>Adquirencia</strong> no tiene visibilidad de facturación ni churn: la activación de puntos de venta lleva más de 2 meses sin trazabilidad.</li>
+          <li>El uso de IA es muy desigual entre gerencias: desde un uso avanzado e individual hasta prácticamente nulo.</li>
+          <li>La información del negocio vive dispersa en carpetas y hojas de cálculo por gerencia, sin visión cruzada.</li>
+          <li>Sensibilidad regulatoria real del sector, sin política de IA formal ni protocolo para datos sensibles.</li>
+          <li>La estructura de reportes directos de la Vicepresidencia es demasiado grande para darle seguimiento manual.</li>
+        </ol>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">BANCO ACTIVO · DET-021</span>
+      </div>
+    </section>
+
+    <!-- 3 · Objetivos estratégicos -->
+    <section class="slide s-goals">
+      <span class="counter">03 / 15</span>
+      <p class="eyebrow">02 · Objetivos</p>
+      <h2>A dónde llevamos<br>a la Vicepresidencia de Negocios.</h2>
+      <div class="columns">
+        <div class="general">
+          <p class="label">Objetivo general</p>
+          <p>
+            Auditar las 13 gerencias de la Vicepresidencia de Negocios con Fundamentals y 4 horas dedicadas a cada una, dejando un logro inmediato en cada gerencia, y resolver de una vez el dolor más urgente de hoy con una Fase 1 de Habilidades en Adquirencia y Medios de Pago.
+          </p>
+        </div>
+        <div class="specifics">
+          <p class="label">Objetivos específicos</p>
+          <ol>
+            <li>Nivelar a las 13 gerencias con una sesión de Fundamentals antes de auditar.</li>
+            <li>Auditar cada gerencia con 4 horas dedicadas, dejando un logro inmediato.</li>
+            <li>Priorizar los hallazgos y entregar un Índice de Madurez por gerencia.</li>
+            <li>Automatizar el seguimiento de facturación, churn y activación de puntos de venta en Adquirencia y Medios de Pago, con Habilidades Fase 1.</li>
+          </ol>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">BANCO ACTIVO · DET-021</span>
+      </div>
+    </section>
+
+    <!-- 4 · Programa -->
+    <section class="slide s-program">
+      <span class="counter">04 / 15</span>
+      <p class="eyebrow">03 · El proyecto</p>
+      <h2>13 gerencias, una ruta clara.</h2>
+      <p class="meta">Fundamentals + Detección con logro inmediato por gerencia, y Habilidades Fase 1 en el dolor más urgente.</p>
+      <div class="modules">
+        <div class="module">
+          <span class="roman">I</span>
+          <h3>Fundamentals</h3>
+          <ul class="topics">
+            <li>Fundamentos de IA</li>
+            <li>Kick-off</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">II</span>
+          <h3>Por Gerencia</h3>
+          <ul class="topics">
+            <li>13 gerencias · 4h</li>
+            <li>Logro inmediato</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">III</span>
+          <h3>Priorización</h3>
+          <ul class="topics">
+            <li>Mapa de Calor</li>
+            <li>Índice de Madurez</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">IV</span>
+          <h3>Reporte Final</h3>
+          <ul class="topics">
+            <li>Mapa de oportunidades</li>
+            <li>Alcance Habilidades</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">V</span>
+          <h3>Habilidades F1</h3>
+          <ul class="topics">
+            <li>Facturación y churn</li>
+            <li>Activación de PDV</li>
+          </ul>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">BANCO ACTIVO · DET-021</span>
+      </div>
+    </section>
+
+    <!-- 5 · Roadmap · Detección (3 etapas) -->
+    <section class="slide s-roadmap">
+      <span class="counter">05 / 15</span>
+      <p class="eyebrow">04 · Roadmap · Detección</p>
+      <h2>Diagnosticar antes<br><span class="hl">de automatizar a ciegas</span>.</h2>
+
+      <div class="rmx-field">
+        <div class="rmx-linear">
+
+          <div class="rmx-lrow-nodes">
+            <div class="rmx-lcol"><div class="rmx-node rmx-node-f2">1</div></div>
+            <div class="rmx-arrow"></div>
+            <div class="rmx-lcol"><div class="rmx-node rmx-node-f3">2</div></div>
+            <div class="rmx-arrow"></div>
+            <div class="rmx-lcol"><div class="rmx-node rmx-node-f4">3</div></div>
+            <div class="rmx-arrow"></div>
+            <div class="rmx-lcol"><div class="rmx-node rmx-node-r">&#9733;</div></div>
+          </div>
+
+          <div class="rmx-lrow-cards">
+            <div class="rmx-lcol">
+              <div class="rmx-card rmx-card-f2">
+                <span class="rmx-card-tag">Etapa 1 · Fundamentals y Gerencias</span>
+                <div class="rmx-card-name">Fundamentals + 4h por gerencia</div>
+                <ul class="rmx-facets">
+                  <li><span>Qué pasa</span><p>Nivelamos con Fundamentals y auditamos las 13 gerencias, 4h cada una.</p></li>
+                  <li><span>Con quién</span><p>Las 13 gerencias de la Vicepresidencia.</p></li>
+                  <li><span>Entrega</span><p>Equipo nivelado + logro inmediato por gerencia.</p></li>
+                </ul>
+              </div>
+            </div>
+            <div class="rmx-lspacer"></div>
+            <div class="rmx-lcol">
+              <div class="rmx-card rmx-card-f3">
+                <span class="rmx-card-tag">Etapa 2 · Priorización</span>
+                <div class="rmx-card-name">Mapa de Calor de oportunidades</div>
+                <ul class="rmx-facets">
+                  <li><span>Qué pasa</span><p>Se prioriza cada hallazgo por impacto, esfuerzo y riesgo, y se unifica el indicador.</p></li>
+                  <li><span>Con quién</span><p>Equipo consultor Intezia.</p></li>
+                  <li><span>Entrega</span><p>Mapa de Calor de las 13 gerencias + Índice de Madurez.</p></li>
+                </ul>
+              </div>
+            </div>
+            <div class="rmx-lspacer"></div>
+            <div class="rmx-lcol">
+              <div class="rmx-card rmx-card-f4">
+                <span class="rmx-card-tag">Etapa 3 · Reporte Final</span>
+                <div class="rmx-card-name">Mapa de oportunidades priorizado</div>
+                <ul class="rmx-facets">
+                  <li><span>Qué pasa</span><p>Se entrega el diagnóstico completo, con el alcance de Habilidades Fase 1.</p></li>
+                  <li><span>Con quién</span><p>Nahir.</p></li>
+                  <li><span>Entrega</span><p>Reporte Final + alcance de Habilidades.</p></li>
+                </ul>
+              </div>
+            </div>
+            <div class="rmx-lspacer"></div>
+            <div class="rmx-lcol">
+              <div class="rmx-result-card">
+                <span class="rmx-result-label">Entregable insignia · Mapa de oportunidades</span>
+                <div class="rmx-result-title">De operar a ciegas a <b>decisiones con datos</b></div>
+                <ul>
+                  <li>Equipo nivelado con Fundamentals</li>
+                  <li>Logro inmediato por gerencia</li>
+                  <li>Mapa de oportunidades + alcance de Habilidades Fase 1</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /.rmx-linear -->
+
+        <div class="rmx-ethics">
+          <span class="rmx-ethics-tag">Metodología ABR · Diagnóstico antes de recomendar</span>
+          <p>El Reporte Final confirma el alcance de Habilidades con los hallazgos reales de las 13 gerencias.</p>
+        </div>
+
+      </div><!-- /.rmx-field -->
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">BANCO ACTIVO · DET-021</span>
+      </div>
+    </section>
+
+    <!-- 6 · La ruta completa (Detección + Habilidades Fase 1 cotizadas, expansión a futuro) -->
+    <section class="slide s-roadmap s-vision">
+      <span class="counter">06 / 15</span>
+      <p class="eyebrow">04 · La ruta completa</p>
+      <h2>La Detección no es el final,<br><span class="hl">es el punto de partida</span>.</h2>
+      <p class="vision-intro">Esta propuesta cotiza la Detección completa y la Fase 1 de Habilidades. El camino no termina ahí: así es la ruta que Nahir y Giancarlo ya visualizan para el resto de la Vicepresidencia.</p>
+
+      <div class="vision-track">
+        <div class="vision-step vision-step-now">
+          <span class="vision-tag">Ahora &middot; cotizado en este documento</span>
+          <div class="vision-name">Detección</div>
+          <p class="vision-desc">Auditamos las 13 gerencias, nivelamos con Fundamentals y dejamos un logro inmediato en cada una.</p>
+        </div>
+        <div class="vision-arrow"></div>
+        <div class="vision-step vision-step-now">
+          <span class="vision-tag">También &middot; cotizado en este documento</span>
+          <div class="vision-name">Habilidades Fase 1</div>
+          <p class="vision-desc">Adquirencia y Medios de Pago automatizan su seguimiento de facturación, churn y activación de puntos de venta.</p>
+        </div>
+        <div class="vision-arrow"></div>
+        <div class="vision-step vision-step-future">
+          <span class="vision-tag">Después &middot; a definir con los hallazgos, no cotizado</span>
+          <div class="vision-name">Expansión de Habilidades</div>
+          <p class="vision-desc">Hasta 3 gerencias adicionales podrían sumarse a Habilidades, según lo que confirme el Índice de Madurez de la Detección.</p>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">BANCO ACTIVO · DET-021</span>
+      </div>
+    </section>
+
+    <!-- 7 · Cronograma · Fundamentals -->
+    <section class="slide s-schedule">
+      <span class="counter">07 / 15</span>
+      <p class="eyebrow">04 · Cronograma · Fundamentals</p>
+
+      <div class="ses-head">
+        <div>
+          <span class="ses-mod">Sesión grupal · Las 13 gerencias &middot; Modalidad mixta</span>
+          <h2>Fundamentals</h2>
+        </div>
+        <div class="ses-meta"><span class="ses-dur">2h</span></div>
+      </div>
+
+      <div class="ses-body">
+        <div class="ses-block">
+          <span class="label">Temas</span>
+          <div class="chips">
+            <span class="chip">Qué es y qué no es la IA</span>
+            <span class="chip">Casos reales de banca</span>
+            <span class="chip">Ruta de las 13 sesiones</span>
+            <span class="chip">Preguntas y expectativas</span>
+          </div>
+        </div>
+        <div class="ses-block">
+          <span class="label">Tiempo &middot; Total 2 h</span>
+          <div class="timebar">
+            <div class="seg" style="flex:30">30' Encuadre y fundamentos</div>
+            <div class="seg" style="flex:45">45' Casos reales de Banco Activo</div>
+            <div class="seg" style="flex:30">30' Ruta de las 13 sesiones</div>
+            <div class="seg" style="flex:15">15' Cierre y preguntas</div>
+          </div>
+        </div>
+        <div class="ses-cols">
+          <div class="ses-block">
+            <span class="label">Qué se hace</span>
+            <ul>
+              <li>Presentamos qué es y qué no es la IA, con foco en banca</li>
+              <li>Explicamos la ruta de las 13 sesiones de auditoría que siguen</li>
+              <li>Abrimos espacio a preguntas y expectativas del equipo</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Qué se logra</span>
+            <ul>
+              <li>El equipo llega a sus sesiones de gerencia con un lenguaje común</li>
+              <li>Expectativas alineadas sobre la auditoría</li>
+              <li>Primera identificación de dónde cada gerencia ve oportunidad</li>
+            </ul>
+          </div>
+          <div class="ses-block block-rec">
+            <span class="label">Recursos y entornos</span>
+            <ul>
+              <li>Sesión modalidad mixta</li>
+              <li>Sin herramientas técnicas todavía</li>
+              <li>Casos reales del sector banca</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">BANCO ACTIVO · DET-021</span>
+      </div>
+    </section>
+
+    <!-- 8 · Cronograma · Estructura de las 4 horas por gerencia -->
+    <section class="slide s-schedule">
+      <span class="counter">08 / 15</span>
+      <p class="eyebrow">04 · Cronograma · Estructura por gerencia</p>
+
+      <div class="ses-head">
+        <div>
+          <span class="ses-mod">Se repite en cada una de las 13 gerencias &middot; modalidad mixta</span>
+          <h2>Estructura de las 4 horas</h2>
+        </div>
+        <div class="ses-meta"><span class="ses-dur">4h</span></div>
+      </div>
+
+      <div class="ses-body">
+        <div class="ses-block">
+          <span class="label">Temas</span>
+          <div class="chips">
+            <span class="chip">Procesos reales de la gerencia</span>
+            <span class="chip">Cuellos de botella</span>
+            <span class="chip">Logro inmediato aplicable</span>
+            <span class="chip">Datos y sistemas de la gerencia</span>
+          </div>
+        </div>
+        <div class="ses-block">
+          <span class="label">Tiempo &middot; Total 4 h</span>
+          <div class="timebar">
+            <div class="seg" style="flex:45">45' Contexto y objetivos</div>
+            <div class="seg" style="flex:90">90' Levantamiento de procesos</div>
+            <div class="seg" style="flex:75">75' Construcción del logro inmediato</div>
+            <div class="seg" style="flex:30">30' Cierre y siguientes pasos</div>
+          </div>
+        </div>
+        <div class="ses-cols">
+          <div class="ses-block">
+            <span class="label">Qué se hace</span>
+            <ul>
+              <li>Entrevistamos al equipo de la gerencia sobre sus procesos reales</li>
+              <li>Identificamos el cuello de botella más relevante</li>
+              <li>Construimos en la misma sesión un logro inmediato aplicable</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Qué se logra</span>
+            <ul>
+              <li>Inventario real de procesos de la gerencia</li>
+              <li>Un logro inmediato que la gerencia ya puede usar</li>
+              <li>Información lista para el Mapa de Calor conjunto</li>
+            </ul>
+          </div>
+          <div class="ses-block block-rec">
+            <span class="label">Recursos y entornos</span>
+            <ul>
+              <li>Sesión modalidad mixta</li>
+              <li>Guion de levantamiento Intezia</li>
+              <li>Sin tocar los sistemas actuales de la gerencia</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">BANCO ACTIVO · DET-021</span>
+      </div>
+    </section>
+
+    <!-- 9 · Cronograma · Habilidades Fase 1 -->
+    <section class="slide s-schedule">
+      <span class="counter">09 / 15</span>
+      <p class="eyebrow">04 · Cronograma · Habilidades Fase 1</p>
+
+      <div class="ses-head">
+        <div>
+          <span class="ses-mod">6 sesiones de 2h &middot; Adquirencia y Medios de Pago</span>
+          <h2>Habilidades Fase 1</h2>
+        </div>
+        <div class="ses-meta"><span class="ses-dur">12h</span></div>
+      </div>
+
+      <div class="ses-body">
+        <div class="ses-block">
+          <span class="label">Temas</span>
+          <div class="chips">
+            <span class="chip">Seguimiento de facturación y churn</span>
+            <span class="chip">Activación de puntos de venta</span>
+            <span class="chip">Reportes directos de Nahir</span>
+          </div>
+        </div>
+        <div class="ses-block">
+          <span class="label">Tiempo &middot; Total 12 h</span>
+          <div class="timebar">
+            <div class="seg" style="flex:4">4h Seguimiento de facturación y churn</div>
+            <div class="seg" style="flex:4">4h Activación de puntos de venta</div>
+            <div class="seg" style="flex:4">4h Reportes directos y consolidación de data</div>
+          </div>
+        </div>
+        <div class="ses-cols">
+          <div class="ses-block">
+            <span class="label">Qué se hace</span>
+            <ul>
+              <li>Automatizamos el seguimiento diario de cifras de Adquirencia y Medios de Pago</li>
+              <li>Optimizamos el proceso end-to-end de activación de puntos de venta</li>
+              <li>Consolidamos los reportes directos de Nahir con datos hoy dispersos</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Qué se logra</span>
+            <ul>
+              <li>Visibilidad en tiempo real de facturación, churn e instalaciones pendientes</li>
+              <li>Proceso de activación con trazabilidad completa</li>
+              <li>Reportes automatizados, sin depender de hojas de cálculo sueltas</li>
+            </ul>
+          </div>
+          <div class="ses-block block-rec">
+            <span class="label">Recursos y entornos</span>
+            <ul>
+              <li>Sesiones en vivo, modalidad mixta</li>
+              <li>Herramientas de IA sobre el entorno Google ya usado</li>
+              <li>Casos reales de Adquirencia y Medios de Pago</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">BANCO ACTIVO · DET-021</span>
+      </div>
+    </section>
+
+    <!-- 10 · Beneficios (formato v3) -->
+    <section class="slide s-benefits s-benefits-v2">
+      <span class="counter">10 / 15</span>
+      <p class="eyebrow">05 · Beneficios</p>
+      <h2>Lo que <span class="hl">se llevan</span>.</h2>
+      <div class="grid">
+        <div class="block">
+          <p class="label">Resultados</p>
+          <ul>
+            <li>Las <strong>13 gerencias</strong> auditadas, cada una con un logro inmediato aplicado a su propia operación.</li>
+            <li><strong>Adquirencia</strong> y <strong>Medios de Pago</strong> con visibilidad en tiempo real de facturación y churn.</li>
+            <li>Un mapa de oportunidades priorizado y el alcance de Habilidades a futuro.</li>
+          </ul>
+        </div>
+        <div class="block">
+          <p class="label">Por qué Detección y Habilidades</p>
+          <p>
+            No nos quedamos en el diagnóstico en papel: dejamos <strong>un logro tangible</strong> en cada gerencia, resolviendo el dolor más urgente en Adquirencia y Medios de Pago.
+          </p>
+        </div>
+        <div class="block">
+          <p class="label">Entregables</p>
+        </div>
+        <div class="block">
+          <p class="label">Valor inmediato</p>
+        </div>
+      </div>
+
+      <div class="multi-box entregables-box" data-field="Entregables"></div>
+      <div class="multi-box acreditaciones-box" data-field="Acreditacion"></div>
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">BANCO ACTIVO · DET-021</span>
+      </div>
+    </section>
+
+    <!-- 11 · Impacto / estudios — datos reales, fuente citada (§4.9) -->
+    <section class="slide s-impact">
+      <span class="counter">11 / 15</span>
+
+      <div class="impact-head">
+        <p class="eyebrow">06 · Impacto</p>
+        <h2>La experiencia ya está probada.<br><span class="hl">Ahora, visibilidad real</span>.</h2>
+      </div>
+
+      <div class="impact-body impact-body-proof">
+        <div class="proof-panel">
+          <p class="proof-eyebrow">Ya lo hicimos en el sector financiero</p>
+          <p class="proof-text">Ya trabajamos con una organización de procesamiento y adquirencia de medios de pago: más de 50 colaboradores capacitados en IA aplicada, con un Índice de Impacto de 86/100 al cierre. Aplicamos ese mismo estándar a las 13 gerencias de la Vicepresidencia de Negocios.</p>
+        </div>
+      </div>
+
+      <div class="impact-hook">
+        <span class="hook-mark">&#9656;</span>
+        <p class="hook-text">
+          La oportunidad no es solo adoptar IA: es ganar la visibilidad que hoy falta en facturación, churn e instalación de puntos de venta, con datos en tiempo real en vez de reportes dispersos.
+        </p>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">BANCO ACTIVO · DET-021</span>
+      </div>
+    </section>
+
+    <!-- 12 · Inversión por fases (hoja única — vuelta a 1 sola hoja 2026-09-29, a pedido
+         del usuario: "recuadros de Detección y Habilidades del lado izquierdo, como lo
+         hemos venido haciendo" — patrón FASE_PRICE_FIELDS de agregar-campo-precio.py,
+         marker propio "Inversión por fases", origen CAP-098 IOED. Solo 2 fases (no 3):
+         PrecioFase3 queda huérfano y se elimina en
+         customize-banco-activo-deteccion-negocios.py, igual que go-pharma/CAP-030.
+
+         CORRECCIÓN 2026-10-01: instrucción directa del usuario — quitar el Descuento y dejar
+         la cotización completa tal cual (Fase 1 + Fase 2 + el monto total sumando ambas, sin
+         descuento). Se quitaron también los campos "Descuento" y "TOTAL" (PrecioTotal) en
+         customize-banco-activo-deteccion-negocios.py — sin Descuento, PrecioTotal = PrecioBase
+         siempre, así que mantenerlo como caja aparte era redundante. "Inversión total del
+         proyecto" (PrecioBase, ya autocalculado como Fase1+Fase2) queda como el único total. -->
+    <section class="slide s-price">
+      <span class="counter">12 / 15</span>
+      <h2 class="title">Inversión por fases</h2>
+      <p class="price-intro">Detección completa y Fase 1 de Habilidades para la Vicepresidencia de Negocios, en un mismo proyecto. Cada servicio se cotiza por separado, con una inversión total combinada.</p>
+
+      <div class="fase-price-list">
+        <div class="fase-price-row">
+          <div class="fase-price-copy">
+            <span class="fase-price-label">Fase 1 &middot; Detección</span>
+            <p class="fase-price-desc">Fundamentals (2h) + 13 gerencias, 4h por gerencia &middot; 54h totales.</p>
+          </div>
+          <div class="fase-price-frame" data-field="PrecioFase1"></div>
+        </div>
+        <div class="fase-price-row">
+          <div class="fase-price-copy">
+            <span class="fase-price-label">Fase 2 &middot; Habilidades</span>
+            <p class="fase-price-desc">Adquirencia y Medios de Pago &middot; 3 procesos x 4h &middot; 12h totales.</p>
+          </div>
+          <div class="fase-price-frame" data-field="PrecioFase2"></div>
+        </div>
+      </div>
+
+      <div class="block block-notes-container">
+        <span class="block-eyebrow">Notas</span>
+      </div>
+      <div class="multi-box notas-box" data-field="Notas"></div>
+
+      <div class="cot-roi-box">
+        <span class="cot-roi-label">ROI estimado</span>
+        <p class="cot-roi-text">Cada gerencia deja un logro inmediato desde el primer día, y la Fase 1 de Habilidades resuelve ya el dolor más urgente: visibilidad de facturación, churn y activación de puntos de venta en Adquirencia y Medios de Pago.</p>
+      </div>
+
+      <div class="cot-garantia-badge">
+        <span class="cot-garantia-tag">Garantía 30-60-90</span>
+        <p class="cot-garantia-text">Estamos contigo hasta que la habilidad quede instalada.</p>
+      </div>
+
+      <span class="cot-label cot-label-base">Inversión total del proyecto</span>
+      <div class="cot-frame base-frame"></div>
+
+      <p class="cot-validity">Cotización válida por 30 días. 2 fases &middot; mismo proyecto.</p>
+      <div class="cot-terms-box">
+        <span class="cot-terms-label">Importante</span>
+        <p class="cot-terms-text">Este servicio se presta bajo nuestros <a href="https://drive.google.com/file/d/1PA-ZSt4KnyY5dpxXzgkIk6-yfGlV2eF8/view?usp=drive_link" target="_blank" rel="noopener">términos y condiciones</a>. Al avanzar con esta propuesta, ambas partes los aceptan.</p>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">BANCO ACTIVO · DET-021</span>
+      </div>
+    </section>
+
+    <!-- 13 · Seguimiento 30-60-90 (garantía explicada + ROI) -->
+    <section class="slide s-roadmap s-followup">
+      <span class="counter">13 / 15</span>
+      <p class="eyebrow">07 · Garantía de seguimiento</p>
+      <h2>No los dejamos solos <span class="hl">después del servicio</span>.</h2>
+      <p class="followup-intro">Verificamos que Adquirencia y Medios de Pago realmente usen lo automatizado en Habilidades Fase 1, y que ese uso se traduzca en tiempo recuperado: no solo que la sesión haya terminado bien.</p>
+
+      <div class="followup-cards">
+        <div class="rmx-card rmx-card-f2">
+          <span class="rmx-card-tag">30 días</span>
+          <div class="rmx-card-name">¿Se usa lo instalado?</div>
+          <ul class="rmx-facets">
+            <li><span>Medimos</span><p>Uso real del seguimiento de facturación, churn y activación de puntos de venta.</p></li>
+            <li><span>Aportamos</span><p>Nivelación, estrategias y recomendaciones para el uso correcto.</p></li>
+          </ul>
+        </div>
+        <div class="rmx-card rmx-card-f3">
+          <span class="rmx-card-tag">60 días</span>
+          <div class="rmx-card-name">¿Qué construyeron?</div>
+          <ul class="rmx-facets">
+            <li><span>Medimos</span><p>Ya no lo entregado en las sesiones: qué ajustes o automatizaciones adicionales construyó el equipo por su cuenta.</p></li>
+            <li><span>Aportamos</span><p>Mapeo de esas construcciones y arranque de la medición de ahorro de tiempo.</p></li>
+          </ul>
+        </div>
+        <div class="rmx-card rmx-card-f4">
+          <span class="rmx-card-tag">90 días</span>
+          <div class="rmx-card-name">¿Cuánto ahorraron?</div>
+          <ul class="rmx-facets">
+            <li><span>Medimos</span><p>No contamos construcciones: contabilizamos el tiempo ahorrado en el seguimiento diario de Adquirencia y Medios de Pago.</p></li>
+            <li><span>Aportamos</span><p>Análisis de impacto en productividad y en qué se reinvierte ese tiempo.</p></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="followup-roi">
+        <span class="followup-roi-label">ROI en el tiempo</span>
+        <p class="followup-roi-text">El retorno no se mide en la sesión del primer mes, sino en la curva de los 90 días: a 30 días, Adquirencia y Medios de Pago ya usan el seguimiento automatizado en el día a día; a 60, empiezan a ajustarlo y construir sobre él; a 90, el tiempo que hoy consume la falta de visibilidad se puede reinvertir en decisiones de mayor valor.</p>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">BANCO ACTIVO · DET-021</span>
+      </div>
+    </section>
+
+    <!-- 14 · Próximos pasos -->
+    <section class="slide s-steps">
+      <span class="counter">14 / 15</span>
+      <p class="eyebrow">08 · Próximos pasos</p>
+      <h2>Cómo arrancamos.</h2>
+      <div class="step-cards">
+        <div class="step-card">
+          <span class="ghost">01</span>
+        </div>
+        <div class="step-card">
+          <span class="ghost">02</span>
+        </div>
+        <div class="step-card">
+          <span class="ghost">03</span>
+        </div>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-01-titulo" data-field="Paso01Titulo">
+        <span class="acro-default-text">Confirmamos calendario</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-01-body" data-field="Paso01Body">
+        <span class="acro-default-text">Definimos con Nahir el calendario de Fundamentals y las 13 sesiones de gerencia.</span>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-02-titulo" data-field="Paso02Titulo">
+        <span class="acro-default-text">Acceso y logística</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-02-body" data-field="Paso02Body">
+        <span class="acro-default-text">Coordinamos la modalidad mixta y el acceso de cada una de las 13 gerencias.</span>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-03-titulo" data-field="Paso03Titulo">
+        <span class="acro-default-text">Reunión de arranque</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-03-body" data-field="Paso03Body">
+        <span class="acro-default-text">Sesión de unos 30 minutos con Nahir para alinear el alcance y el orden de las 13 gerencias.</span>
+      </div>
+
+      <div class="steps-calendar">
+        <span class="steps-calendar-tag">Calendario de inicio &middot; próxima fecha: jueves 8 de octubre</span>
+        <p class="steps-calendar-result">En 7 semanas, las 13 gerencias quedan auditadas con un logro inmediato en cada una.</p>
+        <div class="steps-calendar-grid">
+          <div class="cal-col">
+            <div class="cal-row">
+              <span class="cal-date">Jue 8 oct</span><span class="cal-time">10-11</span><span class="cal-title">Kick-off</span>
+            </div>
+            <div class="cal-row">
+              <span class="cal-date">Lun 12 oct</span><span class="cal-time">10-12</span><span class="cal-title">Fundamentals</span>
+            </div>
+            <div class="cal-row">
+              <span class="cal-date">Mié 14 oct</span><span class="cal-time">10-14</span><span class="cal-title">Adquirencia</span>
+            </div>
+            <div class="cal-row">
+              <span class="cal-date">Lun 19 oct</span><span class="cal-time">10-14</span><span class="cal-title">Medios de Pago</span>
+            </div>
+            <div class="cal-row">
+              <span class="cal-date">Mié 21 oct</span><span class="cal-time">10-14</span><span class="cal-title">Regional 1</span>
+            </div>
+          </div>
+          <div class="cal-col">
+            <div class="cal-row">
+              <span class="cal-date">Lun 26 oct</span><span class="cal-time">10-14</span><span class="cal-title">Regional 2</span>
+            </div>
+            <div class="cal-row">
+              <span class="cal-date">Mié 28 oct</span><span class="cal-time">10-14</span><span class="cal-title">Regional 3</span>
+            </div>
+            <div class="cal-row">
+              <span class="cal-date">Lun 2 nov</span><span class="cal-time">10-14</span><span class="cal-title">Regional 4</span>
+            </div>
+            <div class="cal-row">
+              <span class="cal-date">Mié 4 nov</span><span class="cal-time">10-14</span><span class="cal-title">Regional 5</span>
+            </div>
+            <div class="cal-row">
+              <span class="cal-date">Lun 9 nov</span><span class="cal-time">10-14</span><span class="cal-title">Regional 6</span>
+            </div>
+          </div>
+          <div class="cal-col">
+            <div class="cal-row">
+              <span class="cal-date">Mié 11 nov</span><span class="cal-time">10-14</span><span class="cal-title">Regional 7</span>
+            </div>
+            <div class="cal-row">
+              <span class="cal-date">Lun 16 nov</span><span class="cal-time">10-14</span><span class="cal-title">Regional 8</span>
+            </div>
+            <div class="cal-row">
+              <span class="cal-date">Mié 18 nov</span><span class="cal-time">10-14</span><span class="cal-title">Regional 9</span>
+            </div>
+            <div class="cal-row">
+              <span class="cal-date">Lun 23 nov</span><span class="cal-time">10-14</span><span class="cal-title">Regional 10</span>
+            </div>
+            <div class="cal-row">
+              <span class="cal-date">Mié 25 nov</span><span class="cal-time">10-14</span><span class="cal-title">Regional 11</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">BANCO ACTIVO · DET-021</span>
+      </div>
+    </section>
+
+    <!-- 15 · Cierre (ruta/escalera editable) -->
+    <section class="slide s-end">
+      <span class="counter">15 / 15</span>
+
+      <div class="end-logo">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia">
+      </div>
+
+      <div class="end-summit" data-field="CierreResultado">
+        <span class="acro-default-text">Las 13 gerencias auditadas, con Adquirencia y Medios de Pago ya trabajando con visibilidad en tiempo real.</span>
+      </div>
+
+      <div class="end-stairs">
+        <div class="stair-step stair-1">
+          <span class="stair-label">Paso 1</span>
+          <div class="stair-field" data-field="CierrePaso1">
+            <span class="acro-default-text">Fundamentals y trabajo por gerencia</span>
+          </div>
+        </div>
+        <div class="stair-step stair-2">
+          <span class="stair-label">Paso 2</span>
+          <div class="stair-field" data-field="CierrePaso2">
+            <span class="acro-default-text">Mapa de oportunidades priorizado</span>
+          </div>
+        </div>
+        <div class="stair-step stair-3">
+          <span class="stair-label">Paso 3</span>
+          <div class="stair-field" data-field="CierrePaso3">
+            <span class="acro-default-text">Habilidades Fase 1 en marcha</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cta-wrap">
+        <span class="cta">Esperamos tu respuesta</span>
+      </div>
+
+      <div class="end-contact">
+        <p class="contact-line">
+          <span class="contact-label">Asesora de ventas:</span>
+          Verónica Rubio <span class="dot">&middot;</span> +58 422 3355505 <span class="dot">&middot;</span> vrubio01@intezia.com
+        </p>
+        <p class="contact-line">
+          <span class="contact-label">Empresa:</span>
+          Intezia C.A J-505657950 <span class="dot">&middot;</span> servicio@intezia.com
+        </p>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

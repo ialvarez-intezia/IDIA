@@ -1,0 +1,701 @@
+<!doctype html>
+<!--
+  Producto de Catálogo — IA para Emprendedores · De la Idea al MVP (TA-023)
+  División: Fundación · Audiencia: emprendedores tempranos (idea → MVP)
+  Tipo: Taller → 12 slides (sin slide de evaluación 30/50/20 · sin Propuesta Económica = Fundación).
+  Versión: 2026-05 · Stack 2026 (Claude · ChatGPT · Gemini · Perplexity · Canva · v0 / Lovable · HeyGen · ElevenLabs · Custom GPTs / Gems).
+
+  Decisiones de plantilla:
+  - Sin facilitador nombrado (team-single).
+  - Sin asesora de ventas en el cierre.
+  - Footer: "Catálogo · Fundación".
+  - Slide s-price OMITIDA (regla Fundación).
+  - Logos: logos/fundacion/{BLANCO|NEGRO}.png.
+
+  Overrides aplicados:
+  - .team-single (un solo bloque genérico, sin avatar)
+  - cierre con :only-child (sin opacity reducido)
+  - 5 módulos → grid soportado por styles.css (:has nth-child 5)
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Catálogo · IA para Emprendedores · Intezia Fundación</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <main class="deck">
+
+    <!-- 1 · Portada -->
+    <section class="slide s-cover">
+      <span class="counter">01 / 13</span>
+      <div class="logo-big">
+        <img src="../../../../logos/fundacion/BLANCO.png" alt="Intezia Fundación">
+      </div>
+      <div class="body">
+        <p class="eyebrow">Propuesta formativa</p>
+        <h1>
+          IA para<br>
+          <span class="hl">Emprendedores</span>
+        </h1>
+        <p class="lead">
+          Un taller de 16 horas para llevar tu idea desde una hoja en blanco hasta un <strong>producto mínimo viable publicado</strong> — usando inteligencia artificial generativa, sin equipo técnico, sin presupuesto inicial.
+        </p>
+      </div>
+      <div class="id-line">
+        <span class="codigo">Código: TA-023</span>
+        <span class="cliente">De la idea al MVP</span>
+      </div>
+    </section>
+
+    <!-- 2 · Punto de dolor + Diagnóstico -->
+    <section class="slide s-pain">
+      <span class="counter">02 / 13</span>
+      <span class="quote-mark">“</span>
+      <div class="body">
+        <h2>Tu idea de negocio se queda en la cabeza — porque "construir" sigue sonando a equipo, presupuesto y tiempo que no tienes.</h2>
+        <p class="context">
+          La inteligencia artificial generativa cambió las reglas. Hoy una persona sola, con su computadora y herramientas en su mayoría gratuitas, puede validar una idea, crear una marca, publicar un producto y atender a sus primeros clientes — en semanas, no en años. El problema ya no es el acceso a las herramientas: es saber por dónde empezar y en qué orden hacerlo.
+        </p>
+        <p class="diag-title">Diagnóstico</p>
+        <ol>
+          <li>Ideas valiosas que nunca salen del cuaderno porque "todavía no están listas".</li>
+          <li>Lanzamientos al vacío — sin haber hablado con un solo cliente potencial real.</li>
+          <li>Bloqueo en el paso de la idea al producto: no sabes cómo materializar la oferta.</li>
+          <li>Inversión inicial perdida en logos, landings y campañas antes de validar.</li>
+          <li>Operación manual desde el día uno que agota al emprendedor antes del despegue.</li>
+        </ol>
+      </div>
+      <div class="foot">
+        <img src="../../../../logos/fundacion/NEGRO.png" alt="">
+        <span class="meta">Catálogo · Fundación</span>
+      </div>
+    </section>
+
+    <!-- 3 · Objetivos estratégicos -->
+    <section class="slide s-goals">
+      <span class="counter">03 / 13</span>
+      <p class="eyebrow">02 · Objetivos</p>
+      <h2>De la idea<br>al primer cliente.</h2>
+      <div class="columns">
+        <div class="general">
+          <p class="label">Objetivo general</p>
+          <p>
+            Desarrollar la competencia de <strong>llevar una idea de negocio desde cero hasta un producto mínimo viable publicado</strong>, mediante el uso de un stack curado de herramientas de <strong>IA generativa</strong>, para que el participante salga del taller con un negocio bocetado de extremo a extremo y listo para sus primeros clientes.
+          </p>
+        </div>
+        <div class="specifics">
+          <p class="label">Objetivos específicos</p>
+          <ol>
+            <li>Validar la idea con clientes potenciales reales usando IA.</li>
+            <li>Construir una identidad de marca completa generada con IA.</li>
+            <li>Publicar una landing page funcional que capte interesados.</li>
+            <li>Diseñar un plan de marketing de contenido para 30 días.</li>
+            <li>Configurar un asistente de IA que automatice una tarea operativa.</li>
+          </ol>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../../logos/fundacion/NEGRO.png" alt="">
+        <span class="meta">Catálogo · Fundación</span>
+      </div>
+    </section>
+
+    <!-- 4 · Programa (5 módulos · arco 0 → 1) -->
+    <section class="slide s-program">
+      <span class="counter">04 / 13</span>
+      <p class="eyebrow">03 · Programa</p>
+      <h2>5 módulos · 16 horas.</h2>
+      <p class="meta">El arco "0 → 1" del emprendedor: idea, marca, producto, marketing y operación con IA</p>
+      <div class="modules">
+        <div class="module">
+          <span class="roman">I</span>
+          <h3>Idea + Validación</h3>
+          <p class="obj">Refina la idea y valida la propuesta de valor con clientes reales.</p>
+          <ul class="topics">
+            <li>1.1 Mentalidad "0 → 1"</li>
+            <li>1.2 Refinamiento con IA</li>
+            <li>1.3 Entrevistas de descubrimiento</li>
+            <li>1.4 Análisis con Perplexity</li>
+            <li>1.5 Canvas de propuesta de valor</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">II</span>
+          <h3>Marca desde cero</h3>
+          <p class="obj">Construye una identidad de marca completa — naming, visual y voz — con IA.</p>
+          <ul class="topics">
+            <li>2.1 Naming asistido por IA</li>
+            <li>2.2 Logo con Nano Banana</li>
+            <li>2.3 Paleta y sistema visual</li>
+            <li>2.4 Voz de marca con Claude</li>
+            <li>2.5 Piezas con Canva IA</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">III</span>
+          <h3>Producto / MVP</h3>
+          <p class="obj">Materializa la oferta en una landing page funcional publicada que capta interesados.</p>
+          <ul class="topics">
+            <li>3.1 De idea a oferta</li>
+            <li>3.2 Landing con Claude Artifacts</li>
+            <li>3.3 Landing con v0 / Lovable</li>
+            <li>3.4 Publicación con dominio</li>
+            <li>3.5 Formulario y captura</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">IV</span>
+          <h3>Marketing</h3>
+          <p class="obj">Plan de contenido 30 días + piezas listas para publicar — texto, imagen y video.</p>
+          <ul class="topics">
+            <li>4.1 Plan de contenido 30 días</li>
+            <li>4.2 Copy con voz de marca</li>
+            <li>4.3 Imágenes con Canva IA</li>
+            <li>4.4 Micro-video con HeyGen</li>
+            <li>4.5 Calendario y programación</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">V</span>
+          <h3>Operación con IA</h3>
+          <p class="obj">Configura un asistente de IA que automatiza una tarea operativa recurrente.</p>
+          <ul class="topics">
+            <li>5.1 Tareas automatizables</li>
+            <li>5.2 Custom GPT / Gem / Project</li>
+            <li>5.3 Asistente de atención</li>
+            <li>5.4 Ritmo sostenible IA-first</li>
+          </ul>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../../logos/fundacion/NEGRO.png" alt="">
+        <span class="meta">Catálogo · Fundación</span>
+      </div>
+    </section>
+
+    <!-- 5 · Desglose instructivo — Sesión 1 · Módulo I -->
+    <section class="slide s-schedule">
+      <span class="counter">05 / 13</span>
+      <p class="eyebrow">04 · Cronograma · Ruta de aprendizaje</p>
+
+      <div class="ruta">
+        <div class="ruta-node">1</div>
+        <div class="ruta-track"><div class="ruta-fill" style="width:25%"></div></div>
+        <span class="ruta-step">Sesión 1 de 4</span>
+      </div>
+
+      <div class="ses-head">
+        <div>
+          <span class="ses-mod">Módulo I · Presencial</span>
+          <h2>Módulo I: Idea + Validación</h2>
+        </div>
+        <div class="ses-meta"><span class="ses-dur">4 h</span></div>
+      </div>
+
+      <div class="ses-body">
+        <div class="ses-block">
+          <span class="label">Temas</span>
+          <div class="chips">
+            <span class="chip">1.1 La mentalidad "0 → 1"</span>
+            <span class="chip">1.2 Refinamiento de la idea con IA</span>
+            <span class="chip">1.3 Entrevistas de descubrimiento</span>
+            <span class="chip">1.4 Análisis de hallazgos</span>
+            <span class="chip">1.5 Canvas de propuesta de valor</span>
+          </div>
+        </div>
+        <div class="ses-block">
+          <span class="label">Tiempo · Total 4 h</span>
+          <div class="timebar">
+            <div class="seg" style="flex:45">45' Marco "0 → 1"</div>
+            <div class="seg" style="flex:60">60' Demostración guiada</div>
+            <div class="seg" style="flex:90">90' Canvas + guion</div>
+            <div class="seg" style="flex:45">45' Cierre y compromiso</div>
+          </div>
+        </div>
+        <div class="ses-cols">
+          <div class="ses-block">
+            <span class="label">Estrategias de enseñanza</span>
+            <ul>
+              <li>Demostración guiada con IA</li>
+              <li>Preguntas socráticas</li>
+              <li>Modelado del facilitador</li>
+              <li>Feedback in-situ</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Estrategias de aprendizaje</span>
+            <ul>
+              <li>Discusión en plenaria</li>
+              <li>Construcción individual del canvas</li>
+              <li>Redacción del guion de entrevistas</li>
+              <li>Reflexión escrita</li>
+            </ul>
+          </div>
+          <div class="ses-block block-rec">
+            <span class="label">Recursos y entornos</span>
+            <ul>
+              <li>Claude · ChatGPT · Perplexity</li>
+              <li>Plantilla canvas propuesta de valor</li>
+              <li>Libreta del emprendedor</li>
+              <li>Sala presencial y proyector</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../../logos/fundacion/NEGRO.png" alt="">
+        <span class="meta">Catálogo · Fundación</span>
+      </div>
+    </section>
+
+    <!-- 6 · Desglose instructivo — Sesión 2 · Módulo II -->
+    <section class="slide s-schedule">
+      <span class="counter">06 / 13</span>
+      <p class="eyebrow">04 · Cronograma · Ruta de aprendizaje</p>
+
+      <div class="ruta">
+        <div class="ruta-node">2</div>
+        <div class="ruta-track"><div class="ruta-fill" style="width:50%"></div></div>
+        <span class="ruta-step">Sesión 2 de 4</span>
+      </div>
+
+      <div class="ses-head">
+        <div>
+          <span class="ses-mod">Módulo II · Presencial</span>
+          <h2>Módulo II: Marca desde cero</h2>
+        </div>
+        <div class="ses-meta"><span class="ses-dur">4 h</span></div>
+      </div>
+
+      <div class="ses-body">
+        <div class="ses-block">
+          <span class="label">Temas</span>
+          <div class="chips">
+            <span class="chip">2.1 Naming asistido por IA</span>
+            <span class="chip">2.2 Logo con Nano Banana</span>
+            <span class="chip">2.3 Paleta y sistema visual</span>
+            <span class="chip">2.4 Voz de marca con Claude</span>
+            <span class="chip">2.5 Piezas en Canva con IA</span>
+          </div>
+        </div>
+        <div class="ses-block">
+          <span class="label">Tiempo · Total 4 h</span>
+          <div class="timebar">
+            <div class="seg" style="flex:30">30' Devolución entrevistas</div>
+            <div class="seg" style="flex:90">90' Identidad con IA</div>
+            <div class="seg" style="flex:90">90' Kit visual y piezas</div>
+            <div class="seg" style="flex:30">30' Exportables</div>
+          </div>
+        </div>
+        <div class="ses-cols">
+          <div class="ses-block">
+            <span class="label">Estrategias de enseñanza</span>
+            <ul>
+              <li>Demostración paso a paso</li>
+              <li>Curaduría comparativa de variantes</li>
+              <li>Coaching estético</li>
+              <li>Validación de coherencia visual</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Estrategias de aprendizaje</span>
+            <ul>
+              <li>Generación iterativa de identidad</li>
+              <li>Selección con criterios definidos</li>
+              <li>Exportación de assets</li>
+              <li>Presentación rápida ante pares</li>
+            </ul>
+          </div>
+          <div class="ses-block block-rec">
+            <span class="label">Recursos y entornos</span>
+            <ul>
+              <li>Gemini Nano Banana · Ideogram</li>
+              <li>Canva con IA</li>
+              <li>Plantilla mini brand-book</li>
+              <li>Banco de paletas y tipografías</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../../logos/fundacion/NEGRO.png" alt="">
+        <span class="meta">Catálogo · Fundación</span>
+      </div>
+    </section>
+
+    <!-- 7 · Desglose instructivo — Sesión 3 · Módulo III -->
+    <section class="slide s-schedule">
+      <span class="counter">07 / 13</span>
+      <p class="eyebrow">04 · Cronograma · Ruta de aprendizaje</p>
+
+      <div class="ruta">
+        <div class="ruta-node">3</div>
+        <div class="ruta-track"><div class="ruta-fill" style="width:75%"></div></div>
+        <span class="ruta-step">Sesión 3 de 4</span>
+      </div>
+
+      <div class="ses-head">
+        <div>
+          <span class="ses-mod">Módulo III · Presencial</span>
+          <h2>Módulo III: Producto / MVP</h2>
+        </div>
+        <div class="ses-meta"><span class="ses-dur">4 h</span></div>
+      </div>
+
+      <div class="ses-body">
+        <div class="ses-block">
+          <span class="label">Temas</span>
+          <div class="chips">
+            <span class="chip">3.1 De idea a oferta</span>
+            <span class="chip">3.2 Landing con Claude Artifacts</span>
+            <span class="chip">3.3 Landing con v0 / Lovable</span>
+            <span class="chip">3.4 Publicación con dominio temporal</span>
+            <span class="chip">3.5 Formulario y captura</span>
+          </div>
+        </div>
+        <div class="ses-block">
+          <span class="label">Tiempo · Total 4 h</span>
+          <div class="timebar">
+            <div class="seg" style="flex:30">30' De idea a oferta</div>
+            <div class="seg" style="flex:60">60' Landing con Artifacts</div>
+            <div class="seg" style="flex:90">90' Landing con v0 + publicación</div>
+            <div class="seg" style="flex:60">60' Formulario y captura</div>
+          </div>
+        </div>
+        <div class="ses-cols">
+          <div class="ses-block">
+            <span class="label">Estrategias de enseñanza</span>
+            <ul>
+              <li>Demostración guiada de prompts</li>
+              <li>Troubleshooting en vivo</li>
+              <li>Revisión por pares con checklist</li>
+              <li>Coaching uno a uno</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Estrategias de aprendizaje</span>
+            <ul>
+              <li>Construcción guiada de landing</li>
+              <li>Iteración con prompts</li>
+              <li>Publicación real con dominio</li>
+              <li>Prueba del formulario</li>
+            </ul>
+          </div>
+          <div class="ses-block block-rec">
+            <span class="label">Recursos y entornos</span>
+            <ul>
+              <li>Claude Artifacts · v0 · Lovable</li>
+              <li>Framer AI · Carrd</li>
+              <li>Cuentas Vercel / dominio temporal</li>
+              <li>Plantilla de landing</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../../logos/fundacion/NEGRO.png" alt="">
+        <span class="meta">Catálogo · Fundación</span>
+      </div>
+    </section>
+
+    <!-- 8 · Desglose instructivo — Sesión 4 · Módulos IV + V -->
+    <section class="slide s-schedule">
+      <span class="counter">08 / 13</span>
+      <p class="eyebrow">04 · Cronograma · Ruta de aprendizaje</p>
+
+      <div class="ruta">
+        <div class="ruta-node">4</div>
+        <div class="ruta-track"><div class="ruta-fill" style="width:100%"></div></div>
+        <span class="ruta-step">Sesión 4 de 4</span>
+      </div>
+
+      <div class="ses-head">
+        <div>
+          <span class="ses-mod">Módulos IV + V · Presencial</span>
+          <h2>Marketing + Operación con IA</h2>
+        </div>
+        <div class="ses-meta"><span class="ses-dur">4 h</span></div>
+      </div>
+
+      <div class="ses-body">
+        <div class="ses-block">
+          <span class="label">Temas</span>
+          <div class="chips">
+            <span class="chip">4.1 Plan de contenido 30 días</span>
+            <span class="chip">4.2 Copy y piezas con IA</span>
+            <span class="chip">4.3 Micro-video con HeyGen + ElevenLabs</span>
+            <span class="chip">5.1 Asistente IA configurado</span>
+            <span class="chip">5.2 Ritmo sostenible IA-first</span>
+          </div>
+        </div>
+        <div class="ses-block">
+          <span class="label">Tiempo · Total 4 h</span>
+          <div class="timebar">
+            <div class="seg" style="flex:60">60' Plan + copy</div>
+            <div class="seg" style="flex:60">60' Imágenes + micro-video</div>
+            <div class="seg" style="flex:90">90' Asistente IA + prueba</div>
+            <div class="seg" style="flex:30">30' Cierre del taller</div>
+          </div>
+        </div>
+        <div class="ses-cols">
+          <div class="ses-block">
+            <span class="label">Estrategias de enseñanza</span>
+            <ul>
+              <li>Sprints cronometrados</li>
+              <li>Demostración del facilitador</li>
+              <li>Feedback rápido</li>
+              <li>Ceremonia de cierre con compromiso</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Estrategias de aprendizaje</span>
+            <ul>
+              <li>Producción acelerada de piezas</li>
+              <li>Configuración del asistente</li>
+              <li>Prueba en vivo con casos reales</li>
+              <li>Presentación del negocio al grupo</li>
+            </ul>
+          </div>
+          <div class="ses-block block-rec">
+            <span class="label">Recursos y entornos</span>
+            <ul>
+              <li>Claude · ChatGPT · Canva</li>
+              <li>HeyGen · ElevenLabs · CapCut</li>
+              <li>Metricool / Buffer</li>
+              <li>Custom GPTs · Gems · Projects</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../../logos/fundacion/NEGRO.png" alt="">
+        <span class="meta">Catálogo · Fundación</span>
+      </div>
+    </section>
+
+    <!-- 9 · Metodología ABR (FIJA) -->
+    <section class="slide s-orange">
+      <span class="counter">09 / 13</span>
+      <p class="eyebrow">05 · Metodología</p>
+      <h2>Aprendizaje<br>Basado en Retos</h2>
+      <p class="sub">Modelo Intezia · Tres pilares</p>
+      <div class="pillars">
+        <div class="pillar">
+          <span class="num">01</span>
+          <h3>Tutoría activa</h3>
+          <p>El facilitador no expone teoría — acompaña la construcción real del negocio del participante, con feedback en cada sesión.</p>
+        </div>
+        <div class="pillar">
+          <span class="num">02</span>
+          <h3>Transferibilidad inmediata</h3>
+          <p>Cada producto académico es un activo del negocio del participante. Lo que se hace en aula sale publicable y reutilizable.</p>
+        </div>
+        <div class="pillar">
+          <span class="num">03</span>
+          <h3>Curaduría de contenidos</h3>
+          <p>Stack 2026 vigente, herramientas freemium accesibles y cero jerga técnica innecesaria. Solo lo que sirve.</p>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../../logos/fundacion/NEGRO.png" alt="">
+        <span class="meta">Intezia · Modelo ABR</span>
+      </div>
+    </section>
+
+    <!-- 10 · Beneficios (perfil egreso + entregables + acreditación + equipo) -->
+    <section class="slide s-benefits">
+      <span class="counter">10 / 13</span>
+      <p class="eyebrow">06 · Beneficios del taller</p>
+      <h2>Lo que se llevan.</h2>
+      <div class="grid">
+        <div class="block">
+          <p class="label">Perfil de egreso</p>
+          <ul>
+            <li><strong>Saber:</strong> identifica el ciclo "0 → 1" y cómo la IA interviene en cada etapa.</li>
+            <li><strong>Saber hacer:</strong> aplica un stack curado para validar, construir marca, publicar un MVP y operar con IA.</li>
+            <li><strong>Saber ser:</strong> decide con datos reales y sostiene un ritmo de ejecución compatible con su realidad.</li>
+          </ul>
+        </div>
+        <div class="block">
+          <p class="label">Beneficio del programa formativo</p>
+          <p>
+            Los participantes desarrollan la competencia de <strong>llevar una idea a MVP publicado con IA generativa</strong>, y entregan un canvas validado, un mini brand-book, una landing funcional, un calendario de contenido de 30 días y un asistente IA configurado.
+          </p>
+        </div>
+        <div class="block">
+          <p class="label">Entregables</p>
+        </div>
+        <div class="block">
+          <p class="label">Acreditación</p>
+        </div>
+      </div>
+
+      <!-- Cajas multiline editables (vacías en HTML — el contenido demo
+           vive dentro del AcroForm /V, no aquí, para evitar superposición). -->
+      <div class="multi-box entregables-box" data-field="Entregables"></div>
+      <div class="multi-box acreditaciones-box" data-field="Acreditacion"></div>
+      <div class="team team-single">
+        <p class="label">Equipo facilitador</p>
+        <div class="members">
+          <div class="person">
+            <div>
+              <h4>Equipo Intezia Fundación</h4>
+              <p class="role">Facilitación + coordinación</p>
+              <p>Facilitador especialista en emprendimiento e IA generativa designado en kick-off. Punto único de contacto durante el taller y los 30 días posteriores.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../../logos/fundacion/NEGRO.png" alt="">
+        <span class="meta">Catálogo · Fundación</span>
+      </div>
+    </section>
+
+    <!-- 11 · Impacto / estudios — datos REALES (Gusto · OECD · McKinsey · Antler).
+         CLAUDE.md §4.9: cada cifra de estudio verificable, fuente citada verbatim. -->
+    <section class="slide s-impact">
+      <span class="counter">11 / 13</span>
+
+      <div class="impact-head">
+        <p class="eyebrow">07 · Impacto</p>
+        <h2>La IA cambia<br>la cancha del <span class="hl">emprendedor</span>.</h2>
+      </div>
+
+      <div class="impact-body">
+        <!-- Bars: porcentaje de adoptantes que reporta cada efecto -->
+        <div class="chart-panel">
+          <p class="panel-title">Qué reportan las pequeñas empresas que ya usan IA generativa</p>
+          <div class="bars">
+            <div class="bar-row">
+              <span class="bar-label">Aceleran ejecución con IA</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:93%"><span class="bar-val">93%</span></div></div>
+            </div>
+            <div class="bar-row">
+              <span class="bar-label">Ganan productividad +20 %</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:80%"><span class="bar-val">80%</span></div></div>
+            </div>
+            <div class="bar-row">
+              <span class="bar-label">Crecen ingresos +20 %</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:40%"><span class="bar-val">40%</span></div></div>
+            </div>
+          </div>
+          <div class="bar-axis"><span class="scale"><span>0</span><span>25</span><span>50</span><span>75</span><span>100%</span></span></div>
+          <p class="panel-source">Fuente: Gusto — Main Street Meets Machine Learning · SMBs Using AI (2025) · McKinsey — AI Venture Building (2025) · Antler — Survey on AI-era founders (2025).</p>
+        </div>
+
+        <!-- Gauge: % que cree que IA nivela cancha con grandes empresas (OECD) -->
+        <div class="gauge-panel">
+          <div class="gauge" style="--pct:60">
+            <div class="gauge-core">
+              <span class="gauge-num">60<span class="pct">%</span></span>
+              <span class="gauge-cap">cree que la IA nivela cancha</span>
+            </div>
+          </div>
+          <div class="chips">
+            <div class="chip">
+              <span class="chip-num">5&times;</span>
+              <span class="chip-lbl">aceleración máxima reportada</span>
+            </div>
+            <div class="chip">
+              <span class="chip-num">30%</span>
+              <span class="chip-lbl">baja la barrera de entrada</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hook -->
+      <div class="impact-hook">
+        <span class="hook-mark">&#9656;</span>
+        <p class="hook-text">
+          <strong>4 de cada 5 pequeñas empresas con IA</strong> ganan al menos 20 % de productividad. Solo <strong>1 de cada 5</strong> la usa todavía — la ventaja no es la herramienta, es <strong>saber usarla antes que la competencia</strong>.
+        </p>
+      </div>
+
+      <div class="foot">
+        <img src="../../../../logos/fundacion/BLANCO.png" alt="">
+        <span class="meta">Catálogo · Fundación</span>
+      </div>
+    </section>
+
+    <!-- Slide s-price OMITIDA — regla Fundación (sin propuesta económica en deck) -->
+
+    <!-- 12 · Próximos pasos (AcroForms editables) -->
+    <section class="slide s-steps">
+      <span class="counter">12 / 13</span>
+      <p class="eyebrow">08 · Próximos pasos</p>
+      <h2>Cómo arrancamos.</h2>
+      <div class="step-cards">
+        <div class="step-card">
+          <span class="ghost">01</span>
+        </div>
+        <div class="step-card">
+          <span class="ghost">02</span>
+        </div>
+        <div class="step-card">
+          <span class="ghost">03</span>
+        </div>
+      </div>
+
+      <!-- Editable AcroForm placeholders (3 pasos × título + body) -->
+      <div class="acro-area acro-title acro-paso-01-titulo" data-field="Paso01Titulo">
+        <span class="acro-default-text">Confirmamos fechas</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-01-body" data-field="Paso01Body">
+        <span class="acro-default-text">Validamos las fechas de las 4 sesiones del taller y la zona horaria del grupo de emprendedores.</span>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-02-titulo" data-field="Paso02Titulo">
+        <span class="acro-default-text">Firmamos acuerdo</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-02-body" data-field="Paso02Body">
+        <span class="acro-default-text">Acuerdo simple + factura del 50 % de anticipo para reservar al facilitador y la logística.</span>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-03-titulo" data-field="Paso03Titulo">
+        <span class="acro-default-text">Reunión de arranque</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-03-body" data-field="Paso03Body">
+        <span class="acro-default-text">Reunión de 30 minutos para alinear los perfiles de los emprendedores y las ideas que entrarán al taller.</span>
+      </div>
+      <div class="foot">
+        <img src="../../../../logos/fundacion/NEGRO.png" alt="">
+        <span class="meta">Catálogo · Fundación</span>
+      </div>
+    </section>
+
+    <!-- 13 · Cierre -->
+    <section class="slide s-end">
+      <span class="counter">13 / 13</span>
+
+      <div class="end-logo">
+        <img src="../../../../logos/fundacion/BLANCO.png" alt="Intezia Fundación">
+      </div>
+
+      <p class="end-message">
+        Llevamos tu idea<br>al <span class="hl-orange">siguiente nivel</span><br>con <span class="hl-yellow">IA</span>.
+      </p>
+
+      <div class="cta-wrap">
+        <a class="cta" href="https://calendly.com/intezia/30min?month=2026-05" target="_blank" rel="noopener">Solicita tu Propuesta</a>
+      </div>
+
+      <div class="end-contact">
+        <p class="contact-line">
+          <span class="contact-label">Empresa:</span>
+          Intezia C.A J-505657950 <span class="dot">·</span> info@intezia.com
+        </p>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

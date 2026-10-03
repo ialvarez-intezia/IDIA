@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Casos de Éxito · Servicio de Habilidades</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --black:#000000;
+    --yellow:#F4BA1A;
+    --orange:#E58423;
+    --white:#FFFFFF;
+    --bg:#F7F6F3;
+    --line:#E4E0D8;
+    --muted:#5A574F;
+  }
+  *{box-sizing:border-box;}
+  @page{ size:A4; margin:16mm 14mm 16mm 14mm; }
+  body{
+    margin:0; font-family:'Inter',-apple-system,'Helvetica Neue',Arial,sans-serif;
+    color:#141414; font-size:11px; line-height:1.45;
+  }
+  .page{ page-break-after:always; }
+  .page:last-child{ page-break-after:auto; }
+
+  /* ---------- Portada ---------- */
+  .cover{
+    background:var(--black); color:var(--white);
+    min-height:265mm; padding:26mm 18mm; position:relative;
+    display:flex; flex-direction:column; justify-content:space-between;
+  }
+  .cover .logo{ height:34px; }
+  .cover .eyebrow{
+    text-transform:uppercase; letter-spacing:2px; font-size:11px;
+    color:var(--yellow); font-weight:700; margin-bottom:10px;
+  }
+  .cover h1{
+    font-size:38px; font-weight:800; line-height:1.12; margin:0 0 14px;
+    max-width:480px;
+  }
+  .cover h1 span{ color:var(--yellow); }
+  .cover .sub{ font-size:13px; color:#D9D6CC; max-width:440px; }
+  .cover .stats{ display:flex; gap:28px; margin-top:26px; }
+  .cover .stat b{ display:block; font-size:30px; color:var(--yellow); font-weight:800; }
+  .cover .stat span{ font-size:10px; color:#BEBAAE; text-transform:uppercase; letter-spacing:0.5px; }
+  .cover .foot{ font-size:9.5px; color:#8C8A80; border-top:1px solid #2B2B2B; padding-top:10px; }
+
+  /* ---------- Nota de alcance ---------- */
+  .scope{ padding:20mm 4mm 0; }
+  .scope h2{ font-size:16px; text-transform:uppercase; letter-spacing:0.5px; border-bottom:3px solid var(--yellow); padding-bottom:8px; margin-bottom:14px;}
+  .scope p{ font-size:11.5px; color:#2A2A2A; margin:0 0 10px; max-width:150mm;}
+  .scope ul{ margin:0 0 10px 18px; padding:0; }
+  .scope li{ margin-bottom:6px; }
+  .callout{ background:var(--bg); border-left:4px solid var(--orange); padding:12px 16px; margin-top:14px; font-size:11px; color:#333;}
+
+  /* ---------- Caso de cliente ---------- */
+  .case{ padding-top:2mm; }
+  .case-header{ border-bottom:4px solid var(--yellow); padding-bottom:10px; margin-bottom:14px; }
+  .case-header .eyebrow2{ font-size:9.5px; text-transform:uppercase; letter-spacing:1.5px; color:var(--orange); font-weight:700; }
+  .case-header h2{ font-size:21px; margin:2px 0 6px; font-weight:800; }
+  .case-meta{ font-size:10px; color:var(--muted); }
+  .badge{ display:inline-block; background:var(--orange); color:var(--white); font-size:8.5px; text-transform:uppercase; letter-spacing:0.5px; font-weight:700; border-radius:20px; padding:3px 9px; margin-left:6px; vertical-align:middle;}
+
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:12px; }
+  .block{ background:var(--bg); border-radius:6px; padding:11px 13px; }
+  .block h3{ font-size:9.5px; text-transform:uppercase; letter-spacing:0.8px; color:var(--orange); margin:0 0 8px; font-weight:700;}
+  .row{ display:flex; justify-content:space-between; gap:8px; font-size:10.8px; padding:3px 0; border-bottom:1px solid var(--line); }
+  .row:last-child{ border-bottom:none; }
+  .row b{ font-weight:700; }
+  .row.total{ font-weight:800; border-top:1.5px solid #C9C4B6; margin-top:4px; padding-top:6px; }
+  .note{ font-size:9.5px; color:var(--muted); margin-top:6px; }
+  .empty{ font-size:10px; color:#9B978B; font-style:italic; }
+
+  .automated{ background:var(--black); color:var(--white); border-radius:6px; padding:13px 16px; }
+  .automated h3{ color:var(--yellow); font-size:9.5px; text-transform:uppercase; letter-spacing:0.8px; margin:0 0 9px; font-weight:700;}
+  .track{ margin-bottom:10px; }
+  .track:last-child{ margin-bottom:0; }
+  .track .t-name{ color:var(--yellow); font-weight:700; font-size:10.3px; display:block; margin-bottom:3px;}
+  .track p{ margin:0; font-size:10.5px; color:#EDEBE4; }
+
+  .footer-page{ font-size:8.5px; color:#B2AE9F; text-align:right; margin-top:6px; }
+</style>
+</head>
+<body>
+
+<!-- ================= PORTADA ================= -->
+<section class="page cover">
+  <div>
+    <img class="logo" src="../../logos/intezia/BLANCO.png" alt="Intezia">
+  </div>
+  <div>
+    <div class="eyebrow">Servicio de Habilidades · Modelo Intezia</div>
+    <h1>Casos de <span>éxito</span> con cierre documentado</h1>
+    <div class="sub">Resumen de impacto de 13 capacitaciones in-company cerradas entre mayo y septiembre de 2026, con datos de la Encuesta Edu-Trace de cierre.</div>
+    <div class="stats">
+      <div class="stat"><b>13</b><span>Cierres documentados</span></div>
+      <div class="stat"><b>240</b><span>Personas impactadas</span></div>
+      <div class="stat"><b>2026</b><span>Mayo – Septiembre</span></div>
+    </div>
+  </div>
+  <div class="foot">Intezia · Educación · Documento interno de referencia comercial · No distribuir a clientes</div>
+</section>
+
+<!-- ================= NOTA DE ALCANCE ================= -->
+<section class="page scope">
+  <h2>Alcance de este informe</h2>
+  <p>Estos son los únicos casos con <b>datos de impacto medidos</b> hasta la fecha: cifras que provienen de la Encuesta Edu-Trace de cierre, aplicada solo cuando una capacitación del servicio de <b>Habilidades</b> ya terminó. El sistema nunca inventa cifras de impacto: sin encuesta de cierre real detrás, no hay caso de éxito con números.</p>
+  <ul>
+    <li><b>Detección, Políticas e Innovación</b> todavía no tienen una encuesta de cierre equivalente, así que no aparecen en este informe con métricas propias.</li>
+    <li>Cuando la encuesta de un cliente no incluía una pregunta puntual (horas ahorradas, herramienta de mayor adopción), esa sección se omitió en su ficha en vez de estimarla.</li>
+    <li>Las "horas semanales ahorradas" son <b>autopercibidas</b>, no una medición objetiva de productividad.</li>
+    <li>Los casos con muestra muy pequeña (n≤4) están marcados como <b>referenciales</b>: dan una lectura cualitativa, no una proporción representativa.</li>
+  </ul>
+  <div class="callout">El caso de <b>Zoom</b> (83 personas en 6 áreas: IT, Legal, Miami, Operaciones, Comercial-Mercadeo y Comercial-Ventas) ya está documentado por separado y no se repite en este informe.</div>
+</section>
+
+<!-- ================= APB GROUP ================= -->
+<section class="page case">
+  <div class="case-header">
+    <div class="eyebrow2">Resumen de impacto</div>
+    <h2>APB Group</h2>
+    <div class="case-meta">Tecnología y Automatización con IA · IA para la Eficiencia en RRHH (CAP-033) &nbsp;|&nbsp; Cierres: 2026-05-25 y 2026-06-16</div>
+  </div>
+
+  <div class="grid2">
+    <div class="block">
+      <h3>Personas impactadas</h3>
+      <div class="row"><span>Tecnología y Automatización</span><b>11</b></div>
+      <div class="row"><span>Recursos Humanos</span><b>8</b></div>
+      <div class="row total"><span>Total</span><b>19 personas</b></div>
+    </div>
+    <div class="block">
+      <h3>Cuellos de botella a automatizar</h3>
+      <div class="row"><span>Reportes</span><b>~10</b></div>
+      <div class="row"><span>CRM</span><b>~5</b></div>
+      <div class="row"><span>Contenido</span><b>1</b></div>
+      <div class="row"><span>Datos</span><b>1</b></div>
+      <div class="row"><span>Reclutamiento</span><b>1</b></div>
+      <div class="note">Combinado de ambos grupos · lo que quieren automatizar, no lo ya automatizado.</div>
+    </div>
+  </div>
+
+  <div class="grid2">
+    <div class="block">
+      <h3>Índice de Impacto Edu-Trace</h3>
+      <div class="row"><span>Tecnología y Automatización</span><b>86/100 · Excelente</b></div>
+      <div class="row"><span>Recursos Humanos</span><b>95/100 · Excelente</b></div>
+    </div>
+    <div class="block">
+      <h3>Eje temático</h3>
+      <div class="row"><span>Tecnología: automatización de procesos con IA, prompting y n8n</span></div>
+      <div class="row"><span>RRHH: prompting estructurado, automatización administrativa y análisis de talento con Gemini</span></div>
+    </div>
+  </div>
+
+  <div class="automated">
+    <h3>Lo que ya se automatizó</h3>
+    <div class="track">
+      <span class="t-name">Tecnología y Automatización</span>
+      <p>Construyeron: automatización de procesos operativos con IA y prompting aplicado a n8n.</p>
+    </div>
+    <div class="track">
+      <span class="t-name">Recursos Humanos</span>
+      <p>Construyeron: 3 Gemas de reclutamiento (descripción de cargo + creativo de vacante, screening semántico de CVs con ranking por % de ajuste, guiones de entrevista + roleplay) + Gema de pruebas psicotécnicas con clave de corrección + kit de bienvenida automatizado + hub de conocimiento en NotebookLM.</p>
+    </div>
+  </div>
+  <div class="footer-page">Intezia · Casos de éxito · Habilidades</div>
+</section>
+
+<!-- ================= CAVEDATOS ================= -->
+<section class="page case">
+  <div class="case-header">
+    <div class="eyebrow2">Resumen de impacto</div>
+    <h2>Cavedatos</h2>
+    <div class="case-meta">IA Generativa Avanzada para Equipos de Prensa (CAI-001) &nbsp;|&nbsp; Cierre: 2026-09-12</div>
+  </div>
+
+  <div class="grid2">
+    <div class="block">
+      <h3>Personas impactadas</h3>
+      <div class="row"><span>Gestión Comunicacional (varias sedes)</span><b>10</b></div>
+      <div class="row total"><span>Total</span><b>10 personas</b></div>
+    </div>
+    <div class="block">
+      <h3>Cuellos de botella a automatizar</h3>
+      <div class="row"><span>Contenido</span><b>4</b></div>
+      <div class="row"><span>Datos</span><b>3</b></div>
+      <div class="row"><span>Reportes</span><b>2</b></div>
+      <div class="row"><span>CRM</span><b>1</b></div>
+    </div>
+  </div>
+
+  <div class="grid2">
+    <div class="block">
+      <h3>Otros datos de interés</h3>
+      <div class="row"><span>Índice de Impacto Edu-Trace</span><b>87/100</b></div>
+      <div class="row"><span>Satisfacción</span><b>Excelente</b></div>
+    </div>
+    <div class="block">
+      <h3>Eje temático</h3>
+      <div class="row"><span colspan="2">Producción multimedia (texto, visual, video, voz) con IA generativa</span></div>
+    </div>
+  </div>
+
+  <div class="automated">
+    <h3>Lo que ya se automatizó</h3>
+    <div class="track">
+      <p>Construyeron un flujo completo de producción multimedia con IA: prompting técnico avanzado en Gemini para texto alineado a la línea editorial, diseño visual con Freepik/Envato/Canva, video generativo con Luma Labs y voz generativa, edición con CapCut. Cerraron con un Hackathon donde produjeron un Media Kit integrado y un Avatar interno sobre necesidades reales de Cavedatos.</p>
+    </div>
+  </div>
+  <div class="footer-page">Intezia · Casos de éxito · Habilidades</div>
+</section>
+
+<!-- ================= CREDICARD ================= -->
+<section class="page case">
+  <div class="case-header">
+    <div class="eyebrow2">Resumen de impacto</div>
+    <h2>Credicard <span class="badge">Mayor volumen</span></h2>
+    <div class="case-meta">IA Generativa y Operativa con Gemini (CAP-041) &nbsp;|&nbsp; Cierre: 2026-07-31</div>
+  </div>
+
+  <div class="grid2">
+    <div class="block">
+      <h3>Personas impactadas</h3>
+      <div class="row"><span>Contactabilidad y Seguimiento</span><b>5</b></div>
+      <div class="row"><span>Credicard (área general)</span><b>4</b></div>
+      <div class="row"><span>Distribución</span><b>2</b></div>
+      <div class="row"><span>Resto (48 áreas, 1 persona c/u)</span><b>48</b></div>
+      <div class="row total"><span>Total</span><b>57 personas</b></div>
+    </div>
+    <div class="block">
+      <h3>Horas semanales ahorradas <span style="font-weight:400;">(autopercibido)</span></h3>
+      <div class="row"><span>Más de 8 horas</span><b>2</b></div>
+      <div class="row"><span>Entre 4 y 7 horas</span><b>5</b></div>
+      <div class="row"><span>Entre 1 y 3 horas</span><b>24</b></div>
+      <div class="row"><span>Aún no medible / ninguna</span><b>26</b></div>
+      <div class="row total"><span>Perciben algún ahorro</span><b>31/57 (~54%)</b></div>
+    </div>
+  </div>
+
+  <div class="grid2">
+    <div class="block">
+      <h3>Cuellos de botella a automatizar</h3>
+      <div class="row"><span>Reportes</span><b>31</b></div>
+      <div class="row"><span>Datos</span><b>13</b></div>
+      <div class="row"><span>Contenido</span><b>5</b></div>
+      <div class="row"><span>CRM</span><b>2</b></div>
+      <div class="row"><span>Otros (verificación, pagos…)</span><b>3</b></div>
+    </div>
+    <div class="block">
+      <h3>Otros datos de interés</h3>
+      <div class="row"><span>Herramienta de mayor adopción</span><b>Gemini (46/57)</b></div>
+      <div class="row"><span>Uso principal</span><b>Automatización (29)</b></div>
+      <div class="row"><span>Índice de Impacto Edu-Trace</span><b>86/100</b></div>
+      <div class="row"><span>Satisfacción</span><b>Excelente</b></div>
+    </div>
+  </div>
+
+  <div class="automated">
+    <h3>Lo que ya se automatizó</h3>
+    <div class="track">
+      <p>Construyeron criterio aplicado para diferenciar IA Generativa de IA Operativa, uso avanzado de Gemini (Gems, NotebookLM) y prompt engineering aplicado a procesos reales de Credicard.</p>
+    </div>
+  </div>
+  <div class="footer-page">Intezia · Casos de éxito · Habilidades</div>
+</section>
+
+<!-- ================= EMPLÉATE ================= -->
+<section class="page case">
+  <div class="case-header">
+    <div class="eyebrow2">Resumen de impacto</div>
+    <h2>Empléate</h2>
+    <div class="case-meta">IA con Criterio: Fundamentos y Buenas Prácticas (TA-030) &nbsp;|&nbsp; Cierre: 2026-08-19</div>
+  </div>
+
+  <div class="grid2">
+    <div class="block">
+      <h3>Personas impactadas</h3>
+      <div class="row"><span>Tecnología</span><b>4</b></div>
+      <div class="row"><span>Comunicaciones y Contenido</span><b>2</b></div>
+      <div class="row"><span>Gerencia General</span><b>1</b></div>
+      <div class="row"><span>Estrategia</span><b>1</b></div>
+      <div class="row"><span>Tecnología / Infraestructura</span><b>1</b></div>
+      <div class="row total"><span>Total</span><b>9 personas</b></div>
+    </div>
+    <div class="block">
+      <h3>Horas semanales ahorradas <span style="font-weight:400;">(autopercibido)</span></h3>
+      <div class="row"><span>Entre 4 y 7 horas</span><b>2</b></div>
+      <div class="row"><span>Entre 1 y 3 horas</span><b>5</b></div>
+      <div class="row"><span>Aún no medible / ninguna</span><b>2</b></div>
+      <div class="row total"><span>Perciben algún ahorro</span><b>7/9 (~78%)</b></div>
+    </div>
+  </div>
+
+  <div class="grid2">
+    <div class="block">
+      <h3>Cuellos de botella a automatizar</h3>
+      <div class="row"><span>Reportes</span><b>6</b></div>
+      <div class="row"><span>Contenido</span><b>2</b></div>
+      <div class="row"><span>Administración y servicios</span><b>1</b></div>
+    </div>
+    <div class="block">
+      <h3>Otros datos de interés</h3>
+      <div class="row"><span>Herramienta de mayor adopción</span><b>Gemini (9/9)</b></div>
+      <div class="row"><span>Uso principal</span><b>Asistencia básica (5)</b></div>
+      <div class="row"><span>Índice de Impacto Edu-Trace</span><b>86/100</b></div>
+    </div>
+  </div>
+
+  <div class="automated">
+    <h3>Lo que ya se automatizó</h3>
+    <div class="track">
+      <p>Construyeron un cuadro comparativo de herramientas (Gemini, Copilot, Qwen, DeepSeek) por tipo de tarea, una biblioteca inicial de prompts por rol, un checklist de verificación y datos sensibles, y un plan de adopción de 30 días por equipo, con un caso propio de cada uno de los 5 equipos resuelto de punta a punta.</p>
+    </div>
+  </div>
+  <div class="footer-page">Intezia · Casos de éxito · Habilidades</div>
+</section>
+
+<!-- ================= GRUPO CORPOS ================= -->
+<section class="page case">
+  <div class="case-header">
+    <div class="eyebrow2">Resumen de impacto</div>
+    <h2>Grupo Corpos</h2>
+    <div class="case-meta">Construcción de Agentes de IA (CAP-026) · Intezia Fundamentals Fase 1 (CAP-045) &nbsp;|&nbsp; Cierres: 2026-07-20 y 2026-09-02</div>
+  </div>
+
+  <div class="grid2">
+    <div class="block">
+      <h3>Personas impactadas</h3>
+      <div class="row"><span>Atención al Cliente (Agentes IA)</span><b>8</b></div>
+      <div class="row"><span>Liderazgo · Fundamentals Fase 1</span><b>16</b></div>
+      <div class="row total"><span>Total</span><b>24 personas</b></div>
+      <div class="note">2 programas en fechas distintas, no necesariamente personas únicas.</div>
+    </div>
+    <div class="block">
+      <h3>Horas semanales ahorradas <span style="font-weight:400;">(solo Liderazgo)</span></h3>
+      <div class="row"><span>Entre 4 y 7 horas</span><b>3</b></div>
+      <div class="row"><span>Entre 1 y 3 horas</span><b>7</b></div>
+      <div class="row"><span>Aún no medible / ninguna</span><b>6</b></div>
+      <div class="row total"><span>Perciben algún ahorro</span><b>10/16 (~63%)</b></div>
+    </div>
+  </div>
+
+  <div class="grid2">
+    <div class="block">
+      <h3>Cuellos de botella a automatizar <span style="font-weight:400;">(combinado)</span></h3>
+      <div class="row"><span>Reportes</span><b>~9</b></div>
+      <div class="row"><span>CRM</span><b>~7</b></div>
+      <div class="row"><span>Datos</span><b>~4</b></div>
+      <div class="row"><span>Servicios</span><b>2</b></div>
+      <div class="note">+1 respuesta libre menciona varios frentes a la vez (Reportes, Datos, CRM y Contenido).</div>
+    </div>
+    <div class="block">
+      <h3>Otros datos de interés</h3>
+      <div class="row"><span>Herramienta (Liderazgo)</span><b>Gemini 9 · Claude 7</b></div>
+      <div class="row"><span>Uso principal (Liderazgo)</span><b>Automatización (8)</b></div>
+      <div class="row"><span>Índice Edu-Trace</span><b>85/100 · 90/100</b></div>
+    </div>
+  </div>
+
+  <div class="automated">
+    <h3>Lo que ya se automatizó</h3>
+    <div class="track">
+      <span class="t-name">Atención al Cliente (Agentes de IA)</span>
+      <p>Construyeron, con guía y criterio de Intezia, la arquitectura de 2 agentes de IA (Generador de Leads + Atención al Cliente) integrados a su stack real (Odoo 17 + Claude + WhatsApp BSP), incluyendo un módulo dedicado a seguridad LLM ↔ ERP.</p>
+    </div>
+    <div class="track">
+      <span class="t-name">Liderazgo · Intezia Fundamentals Fase 1 (16 líderes en 3 grupos)</span>
+      <p>Construyeron su primera Skill funcional, un proceso automatizado propio con Conectores, un entregable visual real de su área y su criterio de uso seguro de la información.</p>
+    </div>
+  </div>
+  <div class="footer-page">Intezia · Casos de éxito · Habilidades</div>
+</section>
+
+<!-- ================= HIDROCAVEN ================= -->
+<section class="page case">
+  <div class="case-header">
+    <div class="eyebrow2">Resumen de impacto</div>
+    <h2>Hidrocaven <span class="badge">Referencial</span></h2>
+    <div class="case-meta">Fundamentos de IA para Compras y Logística &nbsp;|&nbsp; Cierre: 2026-08-29 &nbsp;|&nbsp; n=4</div>
+  </div>
+
+  <div class="grid2">
+    <div class="block">
+      <h3>Personas impactadas</h3>
+      <div class="row"><span>Compras</span><b>2</b></div>
+      <div class="row"><span>Compras Internacionales</span><b>1</b></div>
+      <div class="row"><span>Contabilidad</span><b>1</b></div>
+      <div class="row total"><span>Total</span><b>4 personas</b></div>
+    </div>
+    <div class="block">
+      <h3>Horas semanales ahorradas <span style="font-weight:400;">(autopercibido)</span></h3>
+      <div class="row"><span>Entre 4 y 7 horas</span><b>1</b></div>
+      <div class="row"><span>Entre 1 y 3 horas</span><b>1</b></div>
+      <div class="row"><span>Aún no medible / ninguna</span><b>2</b></div>
+      <div class="row total"><span>Perciben algún ahorro</span><b>2/4 (50%)</b></div>
+    </div>
+  </div>
+
+  <div class="grid2">
+    <div class="block">
+      <h3>Cuellos de botella a automatizar</h3>
+      <div class="row"><span>Reportes</span><b>2</b></div>
+      <div class="row"><span>Datos y reportes / entregables</span><b>2</b></div>
+    </div>
+    <div class="block">
+      <h3>Otros datos de interés</h3>
+      <div class="row"><span>Herramienta de mayor adopción</span><b>Claude (3) · Gemini (1)</b></div>
+      <div class="row"><span>Uso principal</span><b>Automatización (2)</b></div>
+      <div class="row"><span>Índice de Impacto Edu-Trace</span><b>93/100</b></div>
+    </div>
+  </div>
+
+  <div class="automated">
+    <h3>Lo que ya se automatizó</h3>
+    <div class="track">
+      <p>Construyeron un tablero de compras y logística con quick wins por rol, con asistentes (Proyectos y Gems) aplicados a la comparativa de proveedores, el seguimiento de despachos y su propio plan de adopción por rol.</p>
+    </div>
+  </div>
+  <div class="footer-page">Intezia · Casos de éxito · Habilidades</div>
+</section>
+
+<!-- ================= MIAMI EMPRENDEDORES ================= -->
+<section class="page case">
+  <div class="case-header">
+    <div class="eyebrow2">Resumen de impacto</div>
+    <h2>Miami Emprendedores <span class="badge">Referencial</span></h2>
+    <div class="case-meta">Marketing que convierte, impulsado por Claude (CAP-086) &nbsp;|&nbsp; Cierre: 2026-08-26 &nbsp;|&nbsp; n=3</div>
+  </div>
+
+  <div class="grid2">
+    <div class="block">
+      <h3>Personas impactadas</h3>
+      <div class="row"><span>Estrategia y Negocio</span><b>1</b></div>
+      <div class="row"><span>Marketing</span><b>1</b></div>
+      <div class="row"><span>Tecnología</span><b>1</b></div>
+      <div class="row total"><span>Total</span><b>3 personas</b></div>
+    </div>
+    <div class="block">
+      <h3>Horas semanales ahorradas <span style="font-weight:400;">(autopercibido)</span></h3>
+      <div class="row"><span>Entre 4 y 7 horas</span><b>2</b></div>
+      <div class="row"><span>Entre 1 y 3 horas</span><b>1</b></div>
+      <div class="row total"><span>Perciben algún ahorro</span><b>3/3 (100%)</b></div>
+    </div>
+  </div>
+
+  <div class="grid2">
+    <div class="block">
+      <h3>Cuellos de botella a automatizar</h3>
+      <div class="row"><span>CRM</span><b>1</b></div>
+      <div class="row"><span>Reportes</span><b>1</b></div>
+      <div class="row"><span>Contenido</span><b>1</b></div>
+    </div>
+    <div class="block">
+      <h3>Otros datos de interés</h3>
+      <div class="row"><span>Herramienta de mayor adopción</span><b>ChatGPT (3/3)</b></div>
+      <div class="row"><span>Uso principal</span><b>Asistencia básica (2)</b></div>
+      <div class="row"><span>Índice de Impacto Edu-Trace</span><b>90/100</b></div>
+    </div>
+  </div>
+
+  <div class="automated">
+    <h3>Lo que ya se automatizó</h3>
+    <div class="track">
+      <p>Construyeron una campaña real de la sociedad de principio a fin con Artifacts como entregable, su protocolo de uso comercial y su plan de adopción a 30 días, presentado y firmado como compromiso público por cada participante.</p>
+    </div>
+  </div>
+  <div class="footer-page">Intezia · Casos de éxito · Habilidades</div>
+</section>
+
+<!-- ================= PAGO TRONIC ================= -->
+<section class="page case">
+  <div class="case-header">
+    <div class="eyebrow2">Resumen de impacto</div>
+    <h2>Pago Tronic <span class="badge">Referencial</span></h2>
+    <div class="case-meta">Cerebro Digital de IA por Áreas (CAP-081) &nbsp;|&nbsp; Cierre: 2026-08-27 &nbsp;|&nbsp; n=3</div>
+  </div>
+
+  <div class="grid2">
+    <div class="block">
+      <h3>Personas impactadas</h3>
+      <div class="row"><span>Marketing / IT</span><b>1</b></div>
+      <div class="row"><span>Compliance</span><b>1</b></div>
+      <div class="row"><span>Dirección</span><b>1</b></div>
+      <div class="row total"><span>Total</span><b>3 personas</b></div>
+    </div>
+    <div class="block">
+      <h3>Horas semanales ahorradas <span style="font-weight:400;">(autopercibido)</span></h3>
+      <div class="row"><span>Más de 8 horas</span><b>1</b></div>
+      <div class="row"><span>Entre 4 y 7 horas</span><b>1</b></div>
+      <div class="row"><span>Aún no medible / ninguna</span><b>1</b></div>
+      <div class="row total"><span>Perciben algún ahorro</span><b>2/3 (~67%)</b></div>
+    </div>
+  </div>
+
+  <div class="grid2">
+    <div class="block">
+      <h3>Cuellos de botella a automatizar</h3>
+      <div class="row"><span>Contenido</span><b>2</b></div>
+      <div class="row"><span>Datos</span><b>1</b></div>
+    </div>
+    <div class="block">
+      <h3>Otros datos de interés</h3>
+      <div class="row"><span>Herramienta de mayor adopción</span><b>Claude (3/3)</b></div>
+      <div class="row"><span>Uso principal</span><b>Automatización (3/3)</b></div>
+      <div class="row"><span>Índice de Impacto Edu-Trace</span><b>85/100</b></div>
+    </div>
+  </div>
+
+  <div class="automated">
+    <h3>Lo que ya se automatizó</h3>
+    <div class="track">
+      <p>Activaron su Cerebro Digital de IA (sistema central de conocimiento) en sus 4 áreas de prioridad: Marketing, Ventas, Compliance y Documentación, tras un diagnóstico por área. Alertas y priorización activa en Compliance, y un repositorio único siempre actualizado en Documentación.</p>
+    </div>
+  </div>
+  <div class="footer-page">Intezia · Casos de éxito · Habilidades</div>
+</section>
+
+<!-- ================= TU HERRAJE ================= -->
+<section class="page case">
+  <div class="case-header">
+    <div class="eyebrow2">Resumen de impacto</div>
+    <h2>Tu Herraje <span class="badge">Referencial</span></h2>
+    <div class="case-meta">Automatización con IA – Ventas y Marketing (CAP-017) · Marketing Visual con IA – Fase 2 (CAP-019) &nbsp;|&nbsp; Cierre: 2026-06-09 &nbsp;|&nbsp; n=2</div>
+  </div>
+
+  <div class="grid2">
+    <div class="block">
+      <h3>Personas impactadas</h3>
+      <div class="row"><span>Marketing</span><b>1</b></div>
+      <div class="row"><span>Diseño gráfico</span><b>1</b></div>
+      <div class="row total"><span>Total</span><b>2 personas</b></div>
+    </div>
+    <div class="block">
+      <h3>Cuellos de botella a automatizar</h3>
+      <div class="row"><span>Imágenes</span><b>1</b></div>
+      <div class="row"><span>Contenido</span><b>1</b></div>
+    </div>
+  </div>
+
+  <div class="grid2">
+    <div class="block">
+      <h3>Otros datos de interés</h3>
+      <div class="row"><span>Índice de Impacto Edu-Trace</span><b>85/100</b></div>
+      <div class="row"><span>Satisfacción</span><b>Excelente</b></div>
+    </div>
+    <div class="block">
+      <h3>Eje temático</h3>
+      <div class="row"><span>Marketing de contenidos con IA generativa: Gemini, buyer persona, tono de voz, imagen y video</span></div>
+    </div>
+  </div>
+
+  <div class="automated">
+    <h3>Lo que ya se automatizó</h3>
+    <div class="track">
+      <span class="t-name">Fase 1 · CAP-017</span>
+      <p>Construyeron atención B2B con ManyChat Pro potenciado con IA nativa e integración con Google Sheets (Gemini para análisis y dashboard).</p>
+    </div>
+    <div class="track">
+      <span class="t-name">Fase 2 · CAP-019</span>
+      <p>Construyeron un flujo de producción visual para redes con Claude como cerebro estratégico + Nano Banana (Gemini 2.5 Flash Image) para imágenes.</p>
+    </div>
+  </div>
+  <div class="footer-page">Intezia · Casos de éxito · Habilidades</div>
+</section>
+
+<!-- ================= VENEMERGENCIA ================= -->
+<section class="page case">
+  <div class="case-header">
+    <div class="eyebrow2">Resumen de impacto</div>
+    <h2>Venemergencia <span class="badge">Mayor % de ahorro</span></h2>
+    <div class="case-meta">Adopción de Claude en Cascada · Fase 1 (CAP-047) &nbsp;|&nbsp; Cierre: 2026-08-07</div>
+  </div>
+
+  <div class="grid2">
+    <div class="block">
+      <h3>Personas impactadas</h3>
+      <div class="row"><span>Calidad</span><b>2</b></div>
+      <div class="row"><span>Tecnología</span><b>2</b></div>
+      <div class="row"><span>Legal</span><b>2</b></div>
+      <div class="row"><span>Medicamentos</span><b>2</b></div>
+      <div class="row"><span>Otras 14 áreas (1 persona c/u)</span><b>14</b></div>
+      <div class="row total"><span>Total</span><b>22 personas</b></div>
+    </div>
+    <div class="block">
+      <h3>Horas semanales ahorradas <span style="font-weight:400;">(autopercibido)</span></h3>
+      <div class="row"><span>Más de 8 horas</span><b>5</b></div>
+      <div class="row"><span>Entre 4 y 7 horas</span><b>8</b></div>
+      <div class="row"><span>Entre 1 y 3 horas</span><b>7</b></div>
+      <div class="row"><span>Aún no medible / ninguna</span><b>2</b></div>
+      <div class="row total"><span>Perciben algún ahorro</span><b>20/22 (~91%)</b></div>
+    </div>
+  </div>
+
+  <div class="grid2">
+    <div class="block">
+      <h3>Cuellos de botella a automatizar</h3>
+      <div class="row"><span>Reportes</span><b>14</b></div>
+      <div class="row"><span>Datos</span><b>3</b></div>
+      <div class="row"><span>CRM, QA, Contratos, Documentos</span><b>4</b></div>
+    </div>
+    <div class="block">
+      <h3>Otros datos de interés</h3>
+      <div class="row"><span>Herramienta de mayor adopción</span><b>Claude (12) · Gemini (9)</b></div>
+      <div class="row"><span>Uso principal</span><b>Automatización (8)</b></div>
+      <div class="row"><span>Índice de Impacto Edu-Trace</span><b>90/100</b></div>
+    </div>
+  </div>
+
+  <div class="automated">
+    <h3>Lo que ya se automatizó</h3>
+    <div class="track">
+      <p>Construyeron, en cascada desde la capa gerencial, su primera Skill reutilizable en Cowork, un proceso automatizado conectado a una herramienta que ya usaban (Conectores/MCP), un entregable visual real por área y su criterio de uso seguro de información sensible con plan de réplica hacia el resto de la organización.</p>
+    </div>
+  </div>
+  <div class="footer-page">Intezia · Casos de éxito · Habilidades</div>
+</section>
+
+<!-- ================= AILYN GRUSZKA + ALEJANDRO SOTELDO ================= -->
+<section class="page case">
+  <div class="case-header">
+    <div class="eyebrow2">Resumen de impacto</div>
+    <h2>Coaching individual <span class="badge">Referencial</span></h2>
+    <div class="case-meta">Ailyn Gruszka · Claude Fundamentals (CAP-070) &nbsp;|&nbsp; Alejandro Soteldo · Crea tu Clon Digital con Claude (CAP-060)</div>
+  </div>
+
+  <div class="grid2">
+    <div class="block">
+      <h3>Ailyn Gruszka — cierre 2026-08-11</h3>
+      <div class="row"><span>RRHH</span><b>2</b></div>
+      <div class="row"><span>Sambil</span><b>1</b></div>
+      <div class="row total"><span>Total</span><b>3 personas</b></div>
+      <div class="row"><span>Cuellos de botella</span><b>Reportes, Contenido, Datos (1 c/u)</b></div>
+      <div class="row"><span>Índice de Impacto Edu-Trace</span><b>77/100 · Muy buena</b></div>
+    </div>
+    <div class="block">
+      <h3>Alejandro Soteldo — cierre 2026-08-18</h3>
+      <div class="row"><span>Marketing</span><b>1</b></div>
+      <div class="row total"><span>Total</span><b>1 persona</b></div>
+      <div class="row"><span>Cuellos de botella</span><b>Contenido (1)</b></div>
+      <div class="row"><span>Índice de Impacto Edu-Trace</span><b>69/100 · Muy buena</b></div>
+    </div>
+  </div>
+
+  <div class="automated">
+    <h3>Lo que ya se automatizó</h3>
+    <div class="track">
+      <span class="t-name">Ailyn Gruszka</span>
+      <p>Construyó su proyecto final aplicado (unificación y análisis de sus Excel de nóminas de varias organizaciones, con gráficas), su carpeta documental organizada en un Project, y su plan para seguir de forma autónoma.</p>
+    </div>
+    <div class="track">
+      <span class="t-name">Alejandro Soteldo</span>
+      <p>Construyó su clon digital (segundo cerebro) con Claude, organizando su conocimiento como grafo en Obsidian con Projects, Skills, Conectores/MCP y Cowork.</p>
+    </div>
+  </div>
+  <div class="footer-page">Intezia · Casos de éxito · Habilidades</div>
+</section>
+
+</body>
+</html>

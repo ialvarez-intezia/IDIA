@@ -1,0 +1,694 @@
+<!doctype html>
+<!--
+  Propuesta — ESS Solutions (DET-022)
+  Servicio: DETECCIÓN pura (Modelo Intezia). División: Educación. Primer contacto (Noslena
+  Angulo ya conocía Intezia de un evento anterior y pidió cotización desde su empresa anterior,
+  Open Link, que no se aceptó; para ESS Solutions es la primera propuesta formal). Asesora:
+  Flavia Martínez. Fuente primaria: Ficha de Levantamiento ESS Solutions
+  (Levantamiento_ESS_Solutions_2026-09-24.pdf, elaborada por Flavia Martínez).
+
+  3 ÁREAS DE DETECCIÓN (dato directo de la ficha): Comercial (5 personas), Preventa/área de
+  ingeniería (5 personas), Dirección (2 personas) — 12 personas en total.
+  4 HORAS de Detección por área (12h) + FUNDAMENTALS (2h grupal, lineamiento por defecto) = 14h
+  totales. MODALIDAD 100% PRESENCIAL en las oficinas de ESS Solutions (dato explícito de la
+  ficha, a diferencia de AMV que era mixta).
+  CON LOGRO INMEDIATO por sesión de área (patrón toyocentro/AMV), pero SIN caso pre-validado en
+  ninguna de las 3 áreas (a diferencia de AMV/Administrativo con las facturas de Juan) — la
+  ficha indica que los procesos de ESS Solutions todavía se están documentando (Bloque F: "en
+  construcción, estiman lo que resta de año", "no hay un mapa de procesos que puedan enviar").
+  El logro inmediato de cada área se define en la propia sesión de 4h, sin prometer un caso
+  específico de antemano.
+  SIN pre-recomendar ninguna herramienta (Metodología ABR): la ficha registra una preocupación
+  real de la directiva ("Claude no, porque después termina siendo más costoso por el consumo de
+  tokens") explícitamente por desconocimiento — el deck NO corrige ni discute esa afirmación
+  directamente (no es un argumentario de objeciones, CLAUDE.md: argumentario-venta-no-es-
+  contenido-deck), y NO afirma en ningún lugar que ESS Solutions vaya a migrar o adoptar una
+  herramienta distinta a la que ya usa (§4.11) — la recomendación formal de herramientas y
+  licencias llega en el Reporte Final, después del diagnóstico.
+  SIN certificado de participación (Detección pura, sin tronco de Habilidades real cotizado —
+  memoria deteccion-sin-certificado.md; la capacitación Fundamentals de 2h es el lineamiento
+  estándar de dimensionamiento de Detección, no un curso aparte).
+  SIN mención de la "segunda formación más específica" que el cliente ya imagina (Bloque F) ni
+  de las dudas de licenciamiento (compartir cuentas GPT, planes Team, partners n8n/Microsoft) —
+  ambas quedan fuera del deck, documentadas solo en brief.md como contexto para Flavia (mismo
+  criterio que AMV con el Cerebro Digital: cada iniciativa futura queda aparte, sin mezclar).
+  SIN nombrar a Open Link (empresa anterior de Noslena) ni el detalle de la cotización previa no
+  aceptada — dato interno de contexto, no de cara al cliente.
+  Sin slide de Mapa de Calor ni Metodología ABR ni Equipo facilitador expuestos (§4.10a).
+  Beneficios v3, Cierre escalera, servicio@intezia.com.
+  .rmx-ethics con padding-right:230px aplicado por defecto (memoria
+  bug-rmx-ethics-choca-nombre-cliente-largo.md).
+  Sin <strong> dentro de ningún <li> de .s-pain/.s-goals/.s-schedule (bug-strong-flex-
+  specifics.md).
+  1 solo chip en el gauge-panel de Impacto (bug-impact-gauge-chips-collision.md).
+  Impacto (§4.9, verificado por WebSearch 2026-09-24): Microsoft & LinkedIn — 2024 Work Trend
+  Index Annual Report: 78% de los usuarios de IA llevan sus propias herramientas al trabajo
+  (BYOAI), sin gobernanza corporativa — 80% en empresas pequeñas y medianas, como ESS Solutions.
+  Solo 39% de los usuarios de IA recibió alguna capacitación formal de su empresa. 60% de los
+  líderes admite que su empresa no tiene una visión ni un plan de IA. 59% de los líderes no sabe
+  cómo cuantificar el retorno de la IA. Elegido porque conecta directo con el diagnóstico real
+  de ESS Solutions: uso disperso sin criterio común, cuentas personales, y preocupación de la
+  directiva por el costo/retorno de la IA.
+  Precio estándar (Propuesta Económica, un solo servicio), formato de hoja de cotización
+  vigente (descuento urgente + ROI, sin garantía 30-60-90 que es de Habilidades).
+
+  CALENDARIO DE INICIO (dato directo del usuario, 2026-09-24): kick-off viernes 9 de octubre,
+  sesiones a partir del 12 de octubre, martes y jueves. Como el 12 es lunes (no martes ni
+  jueves), la primera sesión real cae el martes 13 de octubre — mismo criterio ya aplicado en
+  Banco Activo/Venemergencia en esta misma sesión. Cada sesión de área (4h) se divide en 2
+  bloques de 2h en días distintos (martes/jueves), mismo patrón que AMV Tecnología DET-019:
+  Fundamentals (2h, 1 bloque) + 3 áreas × 2 bloques de 2h = 7 sesiones + kick-off = 8 filas en
+  el calendario, repartidas en 2 columnas de 4 (misma densidad ya probada en AMV, dentro del
+  rango seguro de 7-9 filas). Ver brief.md.
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Propuesta · ESS Solutions · Intezia</title>
+  <link rel="stylesheet" href="../_base/styles.css">
+  <link rel="stylesheet" href="overrides.css">
+</head>
+<body>
+
+  <main class="deck">
+
+    <!-- 1 · Portada -->
+    <section class="slide s-cover">
+      <span class="counter">01 / 12</span>
+      <div class="logo-big">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia">
+      </div>
+      <div class="body">
+        <p class="eyebrow">Propuesta formativa · Servicio de Detección</p>
+        <h1>
+          Del uso disperso<br>
+          <span class="hl">a un mismo criterio de IA.</span>
+        </h1>
+        <p class="lead">
+          Auditamos Comercial, Preventa y Dirección con 4 horas dedicadas a cada área, y construimos un <strong>logro inmediato</strong> en cada sesión, homologando lo que hoy cada quien usa por su cuenta.
+        </p>
+      </div>
+      <div class="id-line">
+        <span class="codigo">Código: DET-022</span>
+        <span class="cliente">ESS Solutions</span>
+      </div>
+    </section>
+
+    <!-- 2 · Punto de dolor + Diagnóstico -->
+    <section class="slide s-pain">
+      <span class="counter">02 / 12</span>
+      <span class="quote-mark">&ldquo;</span>
+      <div class="body">
+        <h2>&ldquo;Estoy cansado de preguntarle cosas a la IA y lo que hace es inventar cosas.&rdquo;</h2>
+        <p class="context">
+          ESS Solutions es una empresa de tecnología, micro/pyme con menos de 50 empleados. Ya tienen licencias de Google Workspace, que incluyen Gemini, pero el uso real es disperso. Es el primer contacto formal de ESS Solutions con Intezia.
+        </p>
+        <p class="diag-title">Diagnóstico</p>
+        <ol>
+          <li>El uso de IA es disperso y sin criterio común: cada persona elige la herramienta que tiene a mano, entre licencias corporativas y cuentas personales.</li>
+          <li>No existe un diagnóstico de IA previo ni un mapa de procesos: la documentación de procesos internos todavía está en construcción.</li>
+          <li>La dirección ve el consumo de IA como un posible gasto, no como una inversión, por desconocimiento de cómo funciona el costo real de las herramientas.</li>
+          <li>El equipo desconfía de la IA por experiencias previas de respuestas poco confiables, sin un método claro para prevenirlo.</li>
+          <li>Hay dudas concretas de licenciamiento que hoy nadie en ESS Solutions puede responder con certeza.</li>
+        </ol>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">ESS SOLUTIONS · DET-022</span>
+      </div>
+    </section>
+
+    <!-- 3 · Objetivos estratégicos -->
+    <section class="slide s-goals">
+      <span class="counter">03 / 12</span>
+      <p class="eyebrow">02 · Objetivos</p>
+      <h2>A dónde llevamos<br>a ESS Solutions.</h2>
+      <div class="columns">
+        <div class="general">
+          <p class="label">Objetivo general</p>
+          <p>
+            Auditar Comercial, Preventa y Dirección con 4 horas dedicadas a cada área, dejando un logro inmediato en cada una, para llevar el uso disperso de IA de hoy a un criterio común de toda la organización.
+          </p>
+        </div>
+        <div class="specifics">
+          <p class="label">Objetivos específicos</p>
+          <ol>
+            <li>Nivelar a las 12 personas con una sesión de Fundamentals antes de auditar.</li>
+            <li>Auditar las 3 áreas con 4 horas dedicadas a cada una, de forma presencial.</li>
+            <li>Dejar un logro inmediato en cada área, aplicable desde el primer día.</li>
+            <li>Entregar un Reporte Final con el mapa de oportunidades priorizado y una recomendación de herramientas y licencias.</li>
+          </ol>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">ESS SOLUTIONS · DET-022</span>
+      </div>
+    </section>
+
+    <!-- 4 · Programa -->
+    <section class="slide s-program">
+      <span class="counter">04 / 12</span>
+      <p class="eyebrow">03 · El proyecto</p>
+      <h2>3 áreas, un mismo criterio.</h2>
+      <p class="meta">Fundamentals + Detección con logro inmediato por área, modalidad presencial.</p>
+      <div class="modules">
+        <div class="module">
+          <span class="roman">I</span>
+          <h3>Fundamentals</h3>
+          <p class="obj">Nivela a Comercial, Preventa y Dirección en fundamentos de IA antes de auditar.</p>
+          <ul class="topics">
+            <li>Fundamentos de IA</li>
+            <li>Kick-off presencial</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">II</span>
+          <h3>Trabajo por Área</h3>
+          <p class="obj">Una sesión de 4 horas por cada una de las 3 áreas, con un logro inmediato en cada una.</p>
+          <ul class="topics">
+            <li>3 áreas · 4h c/u</li>
+            <li>Logro inmediato por área</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">III</span>
+          <h3>Priorización</h3>
+          <p class="obj">Se prioriza cada hallazgo por impacto, esfuerzo y riesgo, y se unifica el Índice de Madurez.</p>
+          <ul class="topics">
+            <li>Mapa de Calor</li>
+            <li>Índice de Madurez</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">IV</span>
+          <h3>Reporte Final</h3>
+          <p class="obj">Diagnóstico completo + mapa de oportunidades, con recomendación de herramientas.</p>
+          <ul class="topics">
+            <li>Mapa de oportunidades</li>
+            <li>Recomendación de herramientas</li>
+          </ul>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">ESS SOLUTIONS · DET-022</span>
+      </div>
+    </section>
+
+    <!-- 5 · Roadmap · Detección (3 etapas) -->
+    <section class="slide s-roadmap">
+      <span class="counter">05 / 12</span>
+      <p class="eyebrow">04 · Roadmap · Detección</p>
+      <h2>Auditar antes<br><span class="hl">de gastar sin criterio</span>.</h2>
+
+      <div class="rmx-field">
+        <div class="rmx-linear">
+
+          <div class="rmx-lrow-nodes">
+            <div class="rmx-lcol"><div class="rmx-node rmx-node-f2">1</div></div>
+            <div class="rmx-arrow"></div>
+            <div class="rmx-lcol"><div class="rmx-node rmx-node-f3">2</div></div>
+            <div class="rmx-arrow"></div>
+            <div class="rmx-lcol"><div class="rmx-node rmx-node-f4">3</div></div>
+            <div class="rmx-arrow"></div>
+            <div class="rmx-lcol"><div class="rmx-node rmx-node-r">&#9733;</div></div>
+          </div>
+
+          <div class="rmx-lrow-cards">
+            <div class="rmx-lcol">
+              <div class="rmx-card rmx-card-f2">
+                <span class="rmx-card-tag">Etapa 1 · Fundamentals y Trabajo por Área</span>
+                <div class="rmx-card-name">Fundamentals + 4h por área</div>
+                <ul class="rmx-facets">
+                  <li><span>Qué pasa</span><p>Nivelamos con Fundamentals y auditamos las 3 áreas, 4h cada una.</p></li>
+                  <li><span>Con quién</span><p>Comercial, Preventa y Dirección.</p></li>
+                  <li><span>Entrega</span><p>Equipo nivelado + logro inmediato por área.</p></li>
+                </ul>
+              </div>
+            </div>
+            <div class="rmx-lspacer"></div>
+            <div class="rmx-lcol">
+              <div class="rmx-card rmx-card-f3">
+                <span class="rmx-card-tag">Etapa 2 · Priorización</span>
+                <div class="rmx-card-name">Mapa de Calor de oportunidades</div>
+                <ul class="rmx-facets">
+                  <li><span>Qué pasa</span><p>Se prioriza cada hallazgo por impacto, esfuerzo y riesgo, y se unifica el indicador.</p></li>
+                  <li><span>Con quién</span><p>Equipo consultor Intezia.</p></li>
+                  <li><span>Entrega</span><p>Mapa de Calor de las 3 áreas + Índice de Madurez.</p></li>
+                </ul>
+              </div>
+            </div>
+            <div class="rmx-lspacer"></div>
+            <div class="rmx-lcol">
+              <div class="rmx-card rmx-card-f4">
+                <span class="rmx-card-tag">Etapa 3 · Reporte Final</span>
+                <div class="rmx-card-name">Mapa de oportunidades priorizado</div>
+                <ul class="rmx-facets">
+                  <li><span>Qué pasa</span><p>Se entrega el diagnóstico completo, con la recomendación de herramientas.</p></li>
+                  <li><span>Con quién</span><p>Noslena Angulo y el equipo directivo.</p></li>
+                  <li><span>Entrega</span><p>Reporte Final + recomendación de herramientas.</p></li>
+                </ul>
+              </div>
+            </div>
+            <div class="rmx-lspacer"></div>
+            <div class="rmx-lcol">
+              <div class="rmx-result-card">
+                <span class="rmx-result-label">Entregable insignia · Mapa de oportunidades</span>
+                <div class="rmx-result-title">De un uso disperso a <b>decisiones con datos</b></div>
+                <ul>
+                  <li>Equipo nivelado con Fundamentals</li>
+                  <li>Logro inmediato por área</li>
+                  <li>Mapa de oportunidades + Reporte Final</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /.rmx-linear -->
+
+        <div class="rmx-ethics">
+          <span class="rmx-ethics-tag">Metodología ABR · Diagnóstico antes de recomendar</span>
+          <p>El Reporte Final confirma la recomendación con los hallazgos reales de las 3 áreas, no antes.</p>
+        </div>
+
+      </div><!-- /.rmx-field -->
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">ESS SOLUTIONS · DET-022</span>
+      </div>
+    </section>
+
+    <!-- 6 · Cronograma · Fundamentals -->
+    <section class="slide s-schedule">
+      <span class="counter">06 / 12</span>
+      <p class="eyebrow">04 · Cronograma · Fundamentals</p>
+
+      <div class="ses-head">
+        <div>
+          <span class="ses-mod">Sesión grupal · Comercial, Preventa y Dirección · Presencial en sus oficinas</span>
+          <h2>Fundamentals</h2>
+        </div>
+        <div class="ses-meta"><span class="ses-dur">2h</span></div>
+      </div>
+
+      <div class="ses-body">
+        <div class="ses-block">
+          <span class="label">Temas</span>
+          <div class="chips">
+            <span class="chip">Qué es y qué no es la IA</span>
+            <span class="chip">Casos reales de ESS Solutions</span>
+            <span class="chip">Ruta de las 3 sesiones</span>
+            <span class="chip">Preguntas y expectativas</span>
+          </div>
+        </div>
+        <div class="ses-block">
+          <span class="label">Tiempo · Total 2 h</span>
+          <div class="timebar">
+            <div class="seg" style="flex:30">30' Encuadre y fundamentos</div>
+            <div class="seg" style="flex:45">45' Casos reales de ESS Solutions</div>
+            <div class="seg" style="flex:30">30' Ruta de las 3 sesiones</div>
+            <div class="seg" style="flex:15">15' Cierre y preguntas</div>
+          </div>
+        </div>
+        <div class="ses-cols">
+          <div class="ses-block">
+            <span class="label">Qué se hace</span>
+            <ul>
+              <li>Presentamos qué es y qué no es la IA, con foco en homologar su uso entre Comercial y Preventa</li>
+              <li>Explicamos la ruta de las 3 sesiones de auditoría que siguen</li>
+              <li>Abrimos espacio a preguntas y expectativas del equipo</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Qué se logra</span>
+            <ul>
+              <li>El equipo llega a sus sesiones de área con un lenguaje común</li>
+              <li>Expectativas alineadas sobre la auditoría</li>
+              <li>Primera identificación de dónde cada área ve oportunidad</li>
+            </ul>
+          </div>
+          <div class="ses-block block-rec">
+            <span class="label">Recursos y entornos</span>
+            <ul>
+              <li>Sesión presencial, en las oficinas de ESS Solutions</li>
+              <li>Sin herramientas técnicas todavía</li>
+              <li>Casos reales del día a día comercial y de preventa</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">ESS SOLUTIONS · DET-022</span>
+      </div>
+    </section>
+
+    <!-- 7 · Cronograma · Estructura de las 4 horas por área -->
+    <section class="slide s-schedule">
+      <span class="counter">07 / 12</span>
+      <p class="eyebrow">04 · Cronograma · Estructura por área</p>
+
+      <div class="ses-head">
+        <div>
+          <span class="ses-mod">Se repite en cada una de las 3 áreas · modalidad presencial</span>
+          <h2>Estructura de las 4 horas</h2>
+        </div>
+        <div class="ses-meta"><span class="ses-dur">4h</span></div>
+      </div>
+
+      <div class="ses-body">
+        <div class="ses-block">
+          <span class="label">Temas</span>
+          <div class="chips">
+            <span class="chip">Procesos reales del área</span>
+            <span class="chip">Cuellos de botella</span>
+            <span class="chip">Logro inmediato aplicable</span>
+            <span class="chip">Datos y sistemas del área</span>
+          </div>
+        </div>
+        <div class="ses-block">
+          <span class="label">Tiempo · Total 4 h</span>
+          <div class="timebar">
+            <div class="seg" style="flex:45">45' Contexto y objetivos</div>
+            <div class="seg" style="flex:90">90' Levantamiento de procesos</div>
+            <div class="seg" style="flex:75">75' Construcción del logro inmediato</div>
+            <div class="seg" style="flex:30">30' Cierre y siguientes pasos</div>
+          </div>
+        </div>
+        <div class="ses-cols">
+          <div class="ses-block">
+            <span class="label">Qué se hace</span>
+            <ul>
+              <li>Entrevistamos al equipo del área sobre sus procesos reales</li>
+              <li>Identificamos el cuello de botella más relevante</li>
+              <li>Construimos en la misma sesión un logro inmediato aplicable</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Qué se logra</span>
+            <ul>
+              <li>Inventario real de procesos del área</li>
+              <li>Un logro inmediato que el área ya puede usar</li>
+              <li>Información lista para el Mapa de Calor conjunto</li>
+            </ul>
+          </div>
+          <div class="ses-block block-rec">
+            <span class="label">Recursos y entornos</span>
+            <ul>
+              <li>Sesión presencial por área</li>
+              <li>Guion de levantamiento Intezia</li>
+              <li>Sin tocar los sistemas internos de ESS Solutions</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">ESS SOLUTIONS · DET-022</span>
+      </div>
+    </section>
+
+    <!-- 8 · Beneficios (formato v3) -->
+    <section class="slide s-benefits s-benefits-v2">
+      <span class="counter">08 / 12</span>
+      <p class="eyebrow">05 · Beneficios</p>
+      <h2>Lo que <span class="hl">se llevan</span>.</h2>
+      <div class="grid">
+        <div class="block">
+          <p class="label">Resultados</p>
+          <ul>
+            <li>Las <strong>3 áreas</strong> auditadas, cada una con un logro inmediato aplicado a su propia operación.</li>
+            <li>Equipo nivelado con Fundamentals antes de la auditoría.</li>
+            <li>Un mapa de oportunidades priorizado y una recomendación de herramientas y licencias.</li>
+          </ul>
+        </div>
+        <div class="block">
+          <p class="label">Por qué Detección</p>
+          <p>
+            No nos quedamos en el diagnóstico en papel: <strong>construimos, probamos y dejamos instalado</strong> un logro tangible funcionando en cada área, antes de que ESS Solutions siga sumando herramientas sin un criterio claro.
+          </p>
+        </div>
+        <div class="block">
+          <p class="label">Entregables</p>
+        </div>
+        <div class="block">
+          <p class="label">Valor inmediato</p>
+        </div>
+      </div>
+
+      <div class="multi-box entregables-box" data-field="Entregables"></div>
+      <div class="multi-box acreditaciones-box" data-field="Acreditacion"></div>
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">ESS SOLUTIONS · DET-022</span>
+      </div>
+    </section>
+
+    <!-- 9 · Impacto / estudios — datos reales, fuente citada (CLAUDE.md §4.9) -->
+    <section class="slide s-impact">
+      <span class="counter">09 / 12</span>
+
+      <div class="impact-head">
+        <p class="eyebrow">06 · Impacto</p>
+        <h2>Sin criterio común,<br><span class="hl">la IA cuesta más de lo que parece</span>.</h2>
+      </div>
+
+      <div class="impact-body">
+        <div class="chart-panel">
+          <p class="panel-title">Cómo adopta IA la empresa promedio, sin gobernanza</p>
+          <div class="bars">
+            <div class="bar-row">
+              <span class="bar-label">Usuarios de IA que recibieron capacitación formal de su empresa</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:39%"><span class="bar-val">39%</span></div></div>
+            </div>
+            <div class="bar-row">
+              <span class="bar-label">Líderes que no saben cómo cuantificar el retorno de la IA</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:59%"><span class="bar-val">59%</span></div></div>
+            </div>
+            <div class="bar-row">
+              <span class="bar-label">Líderes cuya empresa no tiene visión ni plan de IA</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:60%"><span class="bar-val">60%</span></div></div>
+            </div>
+          </div>
+          <div class="bar-axis"><span class="scale"><span>0</span><span>25</span><span>50</span><span>75</span><span>100%</span></span></div>
+          <p class="panel-source">Fuente: Microsoft &amp; LinkedIn &mdash; 2024 Work Trend Index Annual Report.</p>
+        </div>
+
+        <div class="gauge-panel">
+          <div class="gauge" style="--pct:78">
+            <div class="gauge-core">
+              <span class="gauge-num">78<span class="pct">%</span></span>
+              <span class="gauge-cap">de los usuarios de IA llevan sus propias herramientas al trabajo, sin gobernanza corporativa</span>
+            </div>
+          </div>
+          <div class="chips">
+            <div class="chip">
+              <span class="chip-num">80%</span>
+              <span class="chip-lbl">en empresas pequeñas y medianas, como ESS Solutions</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="impact-hook">
+        <span class="hook-mark">&#9656;</span>
+        <p class="hook-text">
+          El 78% de quienes usan IA en el trabajo llevan sus propias herramientas, sin que la empresa lo sepa ni lo gestione, y ese número sube a 80% en empresas pequeñas y medianas como ESS Solutions (Microsoft &amp; LinkedIn, 2024). Solo 39% recibió alguna capacitación formal, y 60% de los líderes admite no tener un plan ni una visión clara de IA: el mismo uso disperso que hoy vive ESS Solutions entre Comercial, Preventa y Dirección.
+        </p>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">ESS SOLUTIONS · DET-022</span>
+      </div>
+    </section>
+
+    <!-- 10 · Propuesta Económica (estándar: Duración + Programa + Notas + Cotización) -->
+    <section class="slide s-price">
+      <span class="counter">10 / 12</span>
+      <h2 class="title">Propuesta Económica</h2>
+
+      <div class="block">
+        <span class="block-eyebrow">Duración</span>
+        <p class="block-value">Fundamentals (2h) + 3 áreas · 4h por área (12h) · 14h totales · modalidad presencial.</p>
+      </div>
+
+      <div class="block block-programa">
+        <span class="block-eyebrow">Programa</span>
+      </div>
+      <div class="multi-box programa-box" data-field="Programa"></div>
+
+      <div class="block block-cotizacion">
+        <span class="block-eyebrow">Cotización</span>
+      </div>
+
+      <span class="cot-label cot-label-base">Propuesta + Inversión</span>
+      <div class="cot-frame base-frame"></div>
+
+      <span class="cot-label cot-label-discount">Descuento</span>
+      <span class="cot-sign-minus">&minus;$</span>
+      <div class="cot-frame discount-frame"></div>
+      <span class="cot-urgent-note">Descuento válido por 15 días</span>
+
+      <span class="cot-label cot-label-total">TOTAL</span>
+      <div class="cot-frame total-frame"></div>
+
+      <p class="cot-validity">Cotización válida por 30 días.</p>
+
+      <div class="cot-roi-box">
+        <span class="cot-roi-label">ROI estimado</span>
+        <p class="cot-roi-text">Cada una de las 3 sesiones de área construye, además del diagnóstico, un logro inmediato aplicable desde el primer día: Comercial, Preventa y Dirección se llevan algo funcionando, no solo un hallazgo en papel. Esa base real, más el mapa de oportunidades priorizado, es lo que decide en qué herramientas y licencias invertir, sin desperdiciar lo que ya pagan hoy.</p>
+      </div>
+
+      <div class="cot-terms-box">
+        <span class="cot-terms-label">Importante</span>
+        <p class="cot-terms-text">Este servicio se presta bajo nuestros <a href="https://drive.google.com/file/d/1PA-ZSt4KnyY5dpxXzgkIk6-yfGlV2eF8/view?usp=drive_link" target="_blank" rel="noopener">términos y condiciones</a>. Al avanzar con esta propuesta, ambas partes los aceptan.</p>
+      </div>
+
+      <div class="block block-notes-container">
+        <span class="block-eyebrow">Notas</span>
+      </div>
+      <div class="multi-box notas-box" data-field="Notas"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">ESS SOLUTIONS · DET-022</span>
+      </div>
+    </section>
+
+    <!-- 11 · Próximos pasos -->
+    <section class="slide s-steps">
+      <span class="counter">11 / 12</span>
+      <p class="eyebrow">07 · Próximos pasos</p>
+      <h2>Cómo arrancamos.</h2>
+      <div class="step-cards">
+        <div class="step-card">
+          <span class="ghost">01</span>
+        </div>
+        <div class="step-card">
+          <span class="ghost">02</span>
+        </div>
+        <div class="step-card">
+          <span class="ghost">03</span>
+        </div>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-01-titulo" data-field="Paso01Titulo">
+        <span class="acro-default-text">Confirmamos fechas</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-01-body" data-field="Paso01Body">
+        <span class="acro-default-text">Definimos con Noslena el calendario de Fundamentals y las 3 sesiones de área.</span>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-02-titulo" data-field="Paso02Titulo">
+        <span class="acro-default-text">Acceso y logística</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-02-body" data-field="Paso02Body">
+        <span class="acro-default-text">Coordinamos el espacio en las oficinas de ESS Solutions para las 4 sesiones presenciales.</span>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-03-titulo" data-field="Paso03Titulo">
+        <span class="acro-default-text">Reunión de arranque</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-03-body" data-field="Paso03Body">
+        <span class="acro-default-text">Sesión de unos 30 minutos con Noslena para alinear el alcance y el orden de las 3 áreas.</span>
+      </div>
+
+      <div class="steps-calendar">
+        <span class="steps-calendar-tag">Calendario de inicio &middot; próxima fecha: viernes 9 de octubre</span>
+        <p class="steps-calendar-result">En un mes, las 3 áreas quedan auditadas con un logro inmediato en cada una.</p>
+        <div class="steps-calendar-grid">
+          <div class="cal-col">
+            <div class="cal-row">
+              <span class="cal-date">Vie 9 oct</span><span class="cal-time">10-11</span><span class="cal-title">Kick-off</span>
+            </div>
+            <div class="cal-row">
+              <span class="cal-date">Mar 13 oct</span><span class="cal-time">10-12</span><span class="cal-title">Fundamentals</span>
+            </div>
+            <div class="cal-row">
+              <span class="cal-date">Jue 15 oct</span><span class="cal-time">10-12</span><span class="cal-title">Auditoría Comercial (1/2)</span>
+            </div>
+            <div class="cal-row">
+              <span class="cal-date">Mar 20 oct</span><span class="cal-time">10-12</span><span class="cal-title">Auditoría Comercial (2/2)</span>
+            </div>
+          </div>
+          <div class="cal-col">
+            <div class="cal-row">
+              <span class="cal-date">Jue 22 oct</span><span class="cal-time">10-12</span><span class="cal-title">Auditoría Preventa (1/2)</span>
+            </div>
+            <div class="cal-row">
+              <span class="cal-date">Mar 27 oct</span><span class="cal-time">10-12</span><span class="cal-title">Auditoría Preventa (2/2)</span>
+            </div>
+            <div class="cal-row">
+              <span class="cal-date">Jue 29 oct</span><span class="cal-time">10-12</span><span class="cal-title">Auditoría Dirección (1/2)</span>
+            </div>
+            <div class="cal-row">
+              <span class="cal-date">Mar 3 nov</span><span class="cal-time">10-12</span><span class="cal-title">Auditoría Dirección (2/2)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">ESS SOLUTIONS · DET-022</span>
+      </div>
+    </section>
+
+    <!-- 12 · Cierre (ruta/escalera editable) -->
+    <section class="slide s-end">
+      <span class="counter">12 / 12</span>
+
+      <div class="end-logo">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia">
+      </div>
+
+      <div class="end-summit" data-field="CierreResultado">
+        <span class="acro-default-text">ESS Solutions, con sus 3 áreas auditadas y un mapa de oportunidades priorizado para decidir qué automatizar primero.</span>
+      </div>
+
+      <div class="end-stairs">
+        <div class="stair-step stair-1">
+          <span class="stair-label">Paso 1</span>
+          <div class="stair-field" data-field="CierrePaso1">
+            <span class="acro-default-text">Fundamentals y trabajo por área</span>
+          </div>
+        </div>
+        <div class="stair-step stair-2">
+          <span class="stair-label">Paso 2</span>
+          <div class="stair-field" data-field="CierrePaso2">
+            <span class="acro-default-text">Mapa de oportunidades priorizado</span>
+          </div>
+        </div>
+        <div class="stair-step stair-3">
+          <span class="stair-label">Paso 3</span>
+          <div class="stair-field" data-field="CierrePaso3">
+            <span class="acro-default-text">Reporte Final + recomendación de herramientas</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cta-wrap">
+        <span class="cta">Esperamos tu respuesta</span>
+      </div>
+
+      <div class="end-contact">
+        <p class="contact-line">
+          <span class="contact-label">Asesora de ventas:</span>
+          Flavia Martínez <span class="dot">·</span> +58 414-5756615 <span class="dot">·</span> fmartinez@intezia.com
+        </p>
+        <p class="contact-line">
+          <span class="contact-label">Empresa:</span>
+          Intezia C.A J-505657950 <span class="dot">·</span> servicio@intezia.com
+        </p>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

@@ -1,0 +1,107 @@
+/* Overrides locales · Ailyn Gruszka CAP-070
+   ---------------------------------------------------------------------------
+   La slide de Programa usa 4 módulos y el modo compacto 2×2 ya vive en
+   _base/styles.css (:has() nth-child(4)) — no hace falta override.
+
+   Lo único propio de este deck: la slide 05 · Alcance (.s-scope), que delimita
+   qué cubre el programa, qué se evalúa en el arranque y qué queda fuera. No
+   existe en la canónica porque nace de una petición concreta del cliente
+   (video, agente de WhatsApp y recordatorios). Paleta y tipografía de marca.
+   --------------------------------------------------------------------------- */
+
+.s-scope {
+  background: var(--white);
+  color: var(--black);
+  padding: 56px 56px 80px;
+}
+.s-scope::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 12px;
+  background: var(--gradient-warm);
+}
+.s-scope .eyebrow {
+  color: var(--orange);
+  margin-bottom: 8px;
+}
+.s-scope h2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 1.02;
+  letter-spacing: -0.02em;
+  margin-bottom: 8px;
+}
+.s-scope .sub {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--orange);
+  margin-bottom: 26px;
+}
+
+/* flex:1 — las cards se estiran hasta el pie de la slide, igual que .modules
+   en la slide de Programa. Sin esto queda un hueco muerto abajo. */
+.s-scope .scope-grid {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr 1fr;
+  gap: 16px;
+  align-items: stretch;
+  flex: 1;
+  min-height: 0;
+}
+.s-scope .scope-card {
+  position: relative;
+  background: var(--black);
+  color: var(--white);
+  padding: 26px 22px 22px;
+  border-top: 8px solid var(--yellow);
+}
+.s-scope .card-eval { border-top-color: var(--orange); }
+.s-scope .card-out {
+  background: var(--white);
+  color: var(--black);
+  border: 2px solid var(--black);
+  border-top: 8px solid var(--black);
+}
+.s-scope .scope-tag {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--yellow);
+  margin-bottom: 14px;
+}
+.s-scope .card-eval .scope-tag { color: var(--orange); }
+.s-scope .card-out .scope-tag { color: var(--black); }
+
+.s-scope .scope-card ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.s-scope .scope-card li {
+  position: relative;
+  padding-left: 18px;
+  font-size: 15px;
+  line-height: 1.45;
+}
+.s-scope .scope-card li::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 7px;
+  width: 8px; height: 8px;
+  background: var(--yellow);
+}
+.s-scope .card-eval li::before { background: var(--orange); }
+.s-scope .card-out li::before {
+  background: transparent;
+  border: 2px solid var(--black);
+  top: 6px;
+}

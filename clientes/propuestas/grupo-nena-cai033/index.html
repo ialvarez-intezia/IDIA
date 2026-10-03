@@ -1,0 +1,836 @@
+<!doctype html>
+<!--
+  Propuesta — Grupo Nena · 2ª Cohorte Habilidades + Innovación (CAI-033)
+  Servicio: HABILIDADES (servicio de entrada del combo, §4.1a — Innovación es la
+  continuidad más urgente, pero el criterio de consistencia del sistema registra
+  "habilidades" en combos de 2 servicios, mismo precedente que fastmed/ CAI-030).
+  División: Educación. Con Ficha de Levantamiento (David Prato, 2026-09-30),
+  asesora Verónica Rubio.
+
+  QUÉ ES: segunda cohorte de Capacitación In-Company (Gems sectoriales + automatización
+  de Reportes) para nuevas áreas de Grupo Nena (Finanzas, Compras, Operaciones, Inventario,
+  Trade marketing, Talento Humano), más 3 meses de Innovación que sostienen y amplían los
+  8 activos ya construidos en CAP-016 (Cobranza, Pricing, RRHH, Infraestructura, Finanzas) y
+  cierran los 3 compromisos abiertos desde la revisión post-servicio del 25-ago-2026.
+
+  BASE ESTRUCTURAL: clonado de fastmed/ (CAI-030) por ser el precedente más reciente del
+  mismo tipo de combo (Habilidades + Innovación, "Inversión por fases", Beneficios v3,
+  Cierre escalera). Se omite la slide bespoke "Cómo funciona el agente" (.s-graph) — Grupo
+  Nena no construye un solo agente, sino un portafolio de activos por área; esa slide no
+  aplica aquí. Deck de 15 slides (no 18). Todo el contenido de cada slide fue reescrito para
+  Grupo Nena a partir de brief.md y programa.md ya elaborados en esta misma carpeta.
+
+  PROGRAMA: 4 módulos / 11h (4 sesiones semanales), de programa.md §5.1-5.2. El modo
+  compacto de 4 módulos de _base/styles.css (.s-program .modules:has(>.module:nth-child(4)))
+  oculta .obj y está calibrado para 2-3 topics por módulo — se usan 3 topics por módulo
+  (no los 4 de programa.md) para no forzar el límite documentado.
+
+  ROADMAP: ciclo mensual de Innovación (Kick-off→Ejecución→Medición→se repite), mismo
+  patrón .rmx-linear de zoom-innovacion/ ya activado en fastmed/. Prioridad mes 1: los 3
+  compromisos abiertos. Meses siguientes: mantenimiento de los 8 activos.
+
+  IMPACTO (§4.9): fuente verificada por WebSearch 2026-10-01 — Forrester Consulting
+  (comisionado por Google), "The Total Economic Impact™ Of Google Workspace With Gemini"
+  (febrero 2026): ROI 416% a 3 años, 3h/semana ahorradas por usuario promedio (150h/año),
+  80% de empleados usa Gemini con regularidad. Eje temático exacto del cliente (ya usa
+  Gemini a nivel personal en ~200 personas). Solo 1 fuente disponible con cifras limpias —
+  se simplificó el layout de la slide a gauge + 2 chips (sin panel de barras) para no forzar
+  un tercer dato sin respaldo real.
+
+  SIN calendario de inicio: la Ficha no da fecha_arranque_deseada ni resultados_esperados
+  explícitos (regla "Omitir, no inventar"). El ROI de la hoja de cotización sí se redacta,
+  a partir de resultados ya medidos de CAP-016 (17 de 32 ahorran 4h+/semana).
+
+  Sin slide de Metodología ABR ni Equipo facilitador expuestos (§4.10a). Con certificado
+  (Habilidades con capacitación real). Beneficios v3, Cierre escalera, servicio@intezia.com.
+  Sin afirmar migración de Google Workspace (§4.11): se habla del entorno Google que el
+  cliente ya usa, nunca de que lo adopte o migre a él.
+
+  Requiere scripts/customize-grupo-nena-cai033.py (clonado de customize-fastmed.py) para:
+  eliminar el slot huérfano PrecioFase3 y recalcular el subtotal a 2 fases, agregar las 4
+  cajas de Cierre escalera, y re-hornear Entregables/Acreditacion con fondo oscuro (Beneficios
+  v3). Correr siempre después de customize-acroforms.py.
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Propuesta · 2ª Cohorte Habilidades + Innovación · Grupo Nena · Intezia</title>
+  <link rel="stylesheet" href="../_base/styles.css">
+  <link rel="stylesheet" href="overrides.css">
+</head>
+<body>
+
+  <main class="deck">
+
+    <!-- 1 · Portada -->
+    <section class="slide s-cover">
+      <span class="counter">01 / 15</span>
+      <div class="logo-big">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia">
+      </div>
+      <div class="body">
+        <p class="eyebrow">Propuesta formativa · Servicio de Habilidades e Innovación</p>
+        <h1>
+          De activos sueltos,<br>
+          <span class="hl">a un equipo que los sostiene.</span>
+        </h1>
+        <p class="lead">
+          La segunda cohorte construye <strong>Gems sectoriales</strong> y automatiza <strong>Reportes</strong>. Innovación sostiene mes a mes los 8 activos ya construidos en Cobranza, Pricing, RRHH, Infraestructura y Finanzas.
+        </p>
+      </div>
+      <div class="id-line">
+        <span class="codigo">Código: CAI-033</span>
+        <span class="cliente">Grupo Nena</span>
+      </div>
+    </section>
+
+    <!-- 2 · Punto de dolor + Diagnóstico -->
+    <section class="slide s-pain">
+      <span class="counter">02 / 15</span>
+      <span class="quote-mark">&ldquo;</span>
+      <div class="body">
+        <h2>&ldquo;Una pregunta menos para mí, una menos para el especialista: se autogestionan.&rdquo;</h2>
+        <p class="context">
+          CAP-016 certificó a 40 colaboradores: 8 activos construidos, 6 en uso a seis semanas del cierre. Esta propuesta da el siguiente paso, con una <strong>segunda cohorte</strong> y continuidad mensual de <strong>Innovación</strong>.
+        </p>
+        <p class="diag-title">Diagnóstico</p>
+        <ol>
+          <li>8 activos construidos en CAP-016, 6 siguen en uso a seis semanas del cierre: la adopción ya es real.</li>
+          <li>&laquo;Reportes&raquo; es el cuello de botella para 18 de 32 participantes: el área con más demanda de automatización.</li>
+          <li>3 compromisos abiertos desde el 25 de agosto (tercer asistente de Cobranza, extensión a comerciales, reporte de mermas).</li>
+          <li>16 de 32 participantes piden escalar la capacitación: 40 no alcanza para los cerca de 200 que ya usan Gemini.</li>
+          <li>Automatizaciones con plataformas externas, como bancos y SAP, siguen pendientes en Finanzas y Mantenimiento.</li>
+        </ol>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">GRUPO NENA · CAI-033</span>
+      </div>
+    </section>
+
+    <!-- 3 · Objetivos estratégicos -->
+    <section class="slide s-goals">
+      <span class="counter">03 / 15</span>
+      <p class="eyebrow">02 · Objetivos</p>
+      <h2>A dónde llevamos<br>a su segunda cohorte.</h2>
+      <div class="columns">
+        <div class="general">
+          <p class="label">Objetivo general</p>
+          <p>
+            Dar continuidad al equipo avanzado de Grupo Nena con un ciclo mensual de Innovación que sostenga y amplíe los activos ya construidos, mientras se forma una segunda cohorte en la construcción de Gems sectoriales y la automatización de reportes con el ecosistema Google.
+          </p>
+        </div>
+        <div class="specifics">
+          <p class="label">Objetivos específicos</p>
+          <ol>
+            <li>Sostener y ajustar mes a mes los 8 activos ya construidos, priorizando los 3 compromisos abiertos de Cobranza y Finanzas.</li>
+            <li>Formar a la segunda cohorte en Gems sectoriales y automatización, con foco en Reportes, su cuello de botella principal.</li>
+            <li>Escalar la capacitación a las áreas sin activo propio: Finanzas, Compras, Operaciones, Inventario, Trade marketing y Talento Humano.</li>
+            <li>Certificar a la nueva cohorte y dejar un criterio medible de adopción a 30-60-90 días.</li>
+          </ol>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">GRUPO NENA · CAI-033</span>
+      </div>
+    </section>
+
+    <!-- 4 · Programa -->
+    <section class="slide s-program">
+      <span class="counter">04 / 15</span>
+      <p class="eyebrow">03 · Programa</p>
+      <h2>4 módulos · 11 horas · Segunda cohorte.</h2>
+      <p class="meta">La segunda cohorte construye Gems sectoriales y automatiza el reporte que más horas le consume.</p>
+      <div class="modules">
+        <div class="module">
+          <span class="roman">I</span>
+          <h3>Fundamentos con Gemini</h3>
+          <p class="obj">Nivele en <strong>prompting</strong> y Gems partiendo del uso personal ya instalado.</p>
+          <ul class="topics">
+            <li>1.1 Prompting con método</li>
+            <li>1.2 Gems: primeros pasos</li>
+            <li>1.3 NotebookLM aplicado</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">II</span>
+          <h3>Automatización de Reportes</h3>
+          <p class="obj">Automatice el <strong>reporte</strong> que más horas consume, el cuello de botella #1.</p>
+          <ul class="topics">
+            <li>2.1 Apps Script para reportes</li>
+            <li>2.2 Google AI Studio</li>
+            <li>2.3 Consolida hojas de cálculo</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">III</span>
+          <h3>Gems Sectoriales</h3>
+          <p class="obj">Construya un <strong>Gem</strong> propio para su área.</p>
+          <ul class="topics">
+            <li>3.1 Gem Finanzas y Compras</li>
+            <li>3.2 Gem Operaciones e Inventario</li>
+            <li>3.3 Gem Trade marketing y RRHH</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">IV</span>
+          <h3>Práctica y Certificación</h3>
+          <p class="obj">Deje el activo probado y un plan de uso medible.</p>
+          <ul class="topics">
+            <li>4.1 Prueba con caso real</li>
+            <li>4.2 Plan de uso 30-60-90</li>
+            <li>4.3 Certificación INTEZIA</li>
+          </ul>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">GRUPO NENA · CAI-033</span>
+      </div>
+    </section>
+
+    <!-- 5 · Roadmap: ciclo mensual de Innovación (3 meses) -->
+    <section class="slide s-roadmap">
+      <span class="counter">05 / 15</span>
+      <p class="eyebrow">04 · Roadmap</p>
+      <h2>De construir activos,<br><span class="hl">a mantenerlos siempre al día.</span></h2>
+
+      <div class="rmx-field">
+        <div class="rmx-linear">
+
+          <div class="rmx-lrow-nodes">
+            <div class="rmx-lcol"><div class="rmx-node rmx-node-f2">1</div></div>
+            <div class="rmx-arrow"></div>
+            <div class="rmx-lcol"><div class="rmx-node rmx-node-f4">2</div></div>
+            <div class="rmx-arrow"></div>
+            <div class="rmx-lcol"><div class="rmx-node rmx-node-f3">3</div></div>
+            <div class="rmx-arrow"></div>
+            <div class="rmx-lcol"><div class="rmx-node rmx-node-r">&#8635;</div></div>
+          </div>
+
+          <div class="rmx-lrow-cards">
+            <div class="rmx-lcol">
+              <div class="rmx-card rmx-card-f2">
+                <span class="rmx-card-tag">Etapa 1 · Kick-off mensual</span>
+                <div class="rmx-card-name">Qué compromiso se prioriza</div>
+                <ul class="rmx-facets">
+                  <li><span>Qué pasa</span><p>Se revisa qué compromiso o activo necesita atención ese mes.</p></li>
+                  <li><span>Con quién</span><p>Equipo del área y consultor Intezia.</p></li>
+                  <li><span>Entrega</span><p>Alcance del mes confirmado, con el compromiso priorizado.</p></li>
+                </ul>
+              </div>
+            </div>
+            <div class="rmx-lspacer"></div>
+            <div class="rmx-lcol">
+              <div class="rmx-card rmx-card-f4">
+                <span class="rmx-card-tag">Etapa 2 · Ejecución</span>
+                <div class="rmx-card-name">Se ejecuta la mejora</div>
+                <ul class="rmx-facets">
+                  <li><span>Qué pasa</span><p>Se implementa el ajuste sobre el activo ya en producción.</p></li>
+                  <li><span>Con quién</span><p>Equipo del área, acompañado por Intezia.</p></li>
+                  <li><span>Entrega</span><p>Ajuste probado sobre el activo real.</p></li>
+                </ul>
+              </div>
+            </div>
+            <div class="rmx-lspacer"></div>
+            <div class="rmx-lcol">
+              <div class="rmx-card rmx-card-f3">
+                <span class="rmx-card-tag">Etapa 3 · Medición</span>
+                <div class="rmx-card-name">Se valida sin romper nada</div>
+                <ul class="rmx-facets">
+                  <li><span>Qué pasa</span><p>Se verifica que el ajuste no rompa lo ya construido.</p></li>
+                  <li><span>Con quién</span><p>Equipo de Grupo Nena.</p></li>
+                  <li><span>Entrega</span><p>Reporte del ajuste y agenda del próximo mes.</p></li>
+                </ul>
+              </div>
+            </div>
+            <div class="rmx-lspacer"></div>
+            <div class="rmx-lcol">
+              <div class="rmx-result-card">
+                <span class="rmx-result-label">Ciclo mensual · se repite 3 meses</span>
+                <div class="rmx-result-title">Los 8 activos, <b>siempre al día</b></div>
+                <ul>
+                  <li>Mes 1 cierra los 3 compromisos abiertos de Cobranza y Finanzas</li>
+                  <li>Cada mes prioriza el activo con mayor necesidad real</li>
+                  <li>Ningún activo queda desactualizado tras el cierre</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /.rmx-linear -->
+
+        <div class="rmx-ethics">
+          <span class="rmx-ethics-tag">Alcance · Ajustar, mejorar, innovar</span>
+          <p>Ajustamos, mejoramos o innovamos los activos ya construidos, con <strong>hasta 2 sesiones de 2h al mes</strong>.</p>
+        </div>
+
+      </div><!-- /.rmx-field -->
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">GRUPO NENA · CAI-033</span>
+      </div>
+    </section>
+
+    <!-- 6 · Desglose instructivo — Sesión 1 -->
+    <section class="slide s-schedule">
+      <span class="counter">06 / 15</span>
+      <p class="eyebrow">05 · Cronograma · Ruta de aprendizaje</p>
+
+      <div class="ruta">
+        <div class="ruta-node">1</div>
+        <div class="ruta-track"><div class="ruta-fill" style="width:25%"></div></div>
+        <span class="ruta-step">Sesión 1 de 4</span>
+      </div>
+
+      <div class="ses-head">
+        <div>
+          <span class="ses-mod">Módulo I · Sesión en vivo</span>
+          <h2>Módulo I: Fundamentos con Gemini</h2>
+        </div>
+        <div class="ses-meta"><span class="ses-dur">3 h</span></div>
+      </div>
+
+      <div class="ses-body">
+        <div class="ses-block">
+          <span class="label">Temas</span>
+          <div class="chips">
+            <span class="chip">1.1 Prompting con método</span>
+            <span class="chip">1.2 Gems: primeros pasos</span>
+            <span class="chip">1.3 NotebookLM aplicado</span>
+          </div>
+        </div>
+        <div class="ses-block">
+          <span class="label">Tiempo · Total 3 h</span>
+          <div class="timebar">
+            <div class="seg" style="flex:40">40' Conceptos clave de prompting</div>
+            <div class="seg" style="flex:40">40' Demostración de Gems</div>
+            <div class="seg" style="flex:70">70' Práctica guiada en casos reales</div>
+            <div class="seg" style="flex:30">30' Cierre y dudas</div>
+          </div>
+        </div>
+        <div class="ses-cols">
+          <div class="ses-block">
+            <span class="label">Estrategias de enseñanza</span>
+            <ul>
+              <li>Demostración guiada en vivo</li>
+              <li>Casos reales del área</li>
+              <li>Preguntas socráticas</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Estrategias de aprendizaje</span>
+            <ul>
+              <li>Primeros conceptos de prompting con método</li>
+              <li>Bitácora de aprendizaje</li>
+              <li>Primer Gem de práctica</li>
+            </ul>
+          </div>
+          <div class="ses-block block-rec">
+            <span class="label">Recursos y entornos</span>
+            <ul>
+              <li>Cuenta Google Workspace</li>
+              <li>Gemini y NotebookLM</li>
+              <li>Workbook digital</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">GRUPO NENA · CAI-033</span>
+      </div>
+    </section>
+
+    <!-- 7 · Desglose instructivo — Sesión 2 -->
+    <section class="slide s-schedule">
+      <span class="counter">07 / 15</span>
+      <p class="eyebrow">05 · Cronograma · Ruta de aprendizaje</p>
+
+      <div class="ruta">
+        <div class="ruta-node">2</div>
+        <div class="ruta-track"><div class="ruta-fill" style="width:50%"></div></div>
+        <span class="ruta-step">Sesión 2 de 4</span>
+      </div>
+
+      <div class="ses-head">
+        <div>
+          <span class="ses-mod">Módulo II · Sesión en vivo</span>
+          <h2>Módulo II: Automatización de Reportes</h2>
+        </div>
+        <div class="ses-meta"><span class="ses-dur">3 h</span></div>
+      </div>
+
+      <div class="ses-body">
+        <div class="ses-block">
+          <span class="label">Temas</span>
+          <div class="chips">
+            <span class="chip">2.1 Apps Script para reportes</span>
+            <span class="chip">2.2 Google AI Studio</span>
+            <span class="chip">2.3 Consolida hojas de cálculo</span>
+          </div>
+        </div>
+        <div class="ses-block">
+          <span class="label">Tiempo · Total 3 h</span>
+          <div class="timebar">
+            <div class="seg" style="flex:30">30' Demostración de automatización</div>
+            <div class="seg" style="flex:90">90' Automatización guiada del reporte propio</div>
+            <div class="seg" style="flex:60">60' Prueba con el reporte real del área</div>
+          </div>
+        </div>
+        <div class="ses-cols">
+          <div class="ses-block">
+            <span class="label">Estrategias de enseñanza</span>
+            <ul>
+              <li>Demostración de Apps Script y Google AI Studio</li>
+              <li>Caso real de Reportes, el cuello de botella #1</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Estrategias de aprendizaje</span>
+            <ul>
+              <li>Automatiza su propio reporte</li>
+              <li>Consolida sus hojas de cálculo</li>
+            </ul>
+          </div>
+          <div class="ses-block block-rec">
+            <span class="label">Recursos y entornos</span>
+            <ul>
+              <li>Apps Script</li>
+              <li>Google AI Studio</li>
+              <li>Caso real de Reportes del área</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">GRUPO NENA · CAI-033</span>
+      </div>
+    </section>
+
+    <!-- 8 · Desglose instructivo — Sesión 3 -->
+    <section class="slide s-schedule">
+      <span class="counter">08 / 15</span>
+      <p class="eyebrow">05 · Cronograma · Ruta de aprendizaje</p>
+
+      <div class="ruta">
+        <div class="ruta-node">3</div>
+        <div class="ruta-track"><div class="ruta-fill" style="width:75%"></div></div>
+        <span class="ruta-step">Sesión 3 de 4</span>
+      </div>
+
+      <div class="ses-head">
+        <div>
+          <span class="ses-mod">Módulo III · Sesión en vivo</span>
+          <h2>Módulo III: Gems Sectoriales</h2>
+        </div>
+        <div class="ses-meta"><span class="ses-dur">3 h</span></div>
+      </div>
+
+      <div class="ses-body">
+        <div class="ses-block">
+          <span class="label">Temas</span>
+          <div class="chips">
+            <span class="chip">3.1 Gem Finanzas y Compras</span>
+            <span class="chip">3.2 Gem Operaciones e Inventario</span>
+            <span class="chip">3.3 Gem Trade marketing y RRHH</span>
+          </div>
+        </div>
+        <div class="ses-block">
+          <span class="label">Tiempo · Total 3 h</span>
+          <div class="timebar">
+            <div class="seg" style="flex:30">30' Anatomía de un Gem sectorial</div>
+            <div class="seg" style="flex:120">120' Construcción guiada del Gem propio</div>
+            <div class="seg" style="flex:30">30' Custom Instructions y ajuste final</div>
+          </div>
+        </div>
+        <div class="ses-cols">
+          <div class="ses-block">
+            <span class="label">Estrategias de enseñanza</span>
+            <ul>
+              <li>Ejemplo de Gem por área</li>
+              <li>Construcción guiada paso a paso</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Estrategias de aprendizaje</span>
+            <ul>
+              <li>Construye su Gem sectorial</li>
+              <li>Define sus Custom Instructions</li>
+            </ul>
+          </div>
+          <div class="ses-block block-rec">
+            <span class="label">Recursos y entornos</span>
+            <ul>
+              <li>Plantilla de Gem</li>
+              <li>Casos reales por área</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">GRUPO NENA · CAI-033</span>
+      </div>
+    </section>
+
+    <!-- 9 · Desglose instructivo — Sesión 4 -->
+    <section class="slide s-schedule">
+      <span class="counter">09 / 15</span>
+      <p class="eyebrow">05 · Cronograma · Ruta de aprendizaje</p>
+
+      <div class="ruta">
+        <div class="ruta-node">4</div>
+        <div class="ruta-track"><div class="ruta-fill" style="width:100%"></div></div>
+        <span class="ruta-step">Sesión 4 de 4</span>
+      </div>
+
+      <div class="ses-head">
+        <div>
+          <span class="ses-mod">Módulo IV · Sesión en vivo</span>
+          <h2>Módulo IV: Práctica y Certificación</h2>
+        </div>
+        <div class="ses-meta"><span class="ses-dur">2 h</span></div>
+      </div>
+
+      <div class="ses-body">
+        <div class="ses-block">
+          <span class="label">Temas</span>
+          <div class="chips">
+            <span class="chip">4.1 Prueba con caso real</span>
+            <span class="chip">4.2 Plan de uso 30-60-90</span>
+            <span class="chip">4.3 Certificación INTEZIA</span>
+          </div>
+        </div>
+        <div class="ses-block">
+          <span class="label">Tiempo · Total 2 h</span>
+          <div class="timebar">
+            <div class="seg" style="flex:50">50' Prueba integrada con caso real</div>
+            <div class="seg" style="flex:40">40' Plan de uso 30-60-90</div>
+            <div class="seg" style="flex:30">30' Cierre y certificación</div>
+          </div>
+        </div>
+        <div class="ses-cols">
+          <div class="ses-block">
+            <span class="label">Estrategias de enseñanza</span>
+            <ul>
+              <li>Revisión de activos construidos</li>
+              <li>Cierre y certificación</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Estrategias de aprendizaje</span>
+            <ul>
+              <li>Deja su activo probado</li>
+              <li>Define su plan de uso 30-60-90</li>
+            </ul>
+          </div>
+          <div class="ses-block block-rec">
+            <span class="label">Recursos y entornos</span>
+            <ul>
+              <li>Checklist de cierre</li>
+              <li>Certificado INTEZIA</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">GRUPO NENA · CAI-033</span>
+      </div>
+    </section>
+
+    <!-- 10 · Beneficios (formato v3: Resultados · Por qué Habilidades · Entregables · Valor inmediato) -->
+    <section class="slide s-benefits s-benefits-v2">
+      <span class="counter">10 / 15</span>
+      <p class="eyebrow">06 · Beneficios</p>
+      <h2>Lo que <span class="hl">se llevan.</span></h2>
+      <div class="grid">
+        <div class="block">
+          <p class="label">Resultados</p>
+          <ul>
+            <li>Los 3 compromisos abiertos de Cobranza y Finanzas, resueltos en el primer mes de Innovación.</li>
+            <li>Segunda cohorte certificada en <strong>Gems sectoriales</strong> y automatización de Reportes.</li>
+            <li>Cobertura ampliada a Finanzas, Compras, Operaciones, Inventario, Trade marketing y Talento Humano.</li>
+          </ul>
+        </div>
+        <div class="block">
+          <p class="label">Por qué Habilidades</p>
+          <p>
+            Cada área construye su propio Gem y automatiza el reporte que más horas le consume: la capacidad queda instalada en el equipo. Con Innovación, esos activos se sostienen y mejoran mes a mes.
+          </p>
+        </div>
+        <div class="block">
+          <p class="label">Entregables</p>
+        </div>
+        <div class="block">
+          <p class="label">Valor inmediato</p>
+        </div>
+      </div>
+
+      <!-- Cajas multiline editables (vacías en HTML — el contenido vive dentro del AcroForm /V). -->
+      <div class="multi-box entregables-box" data-field="Entregables"></div>
+      <div class="multi-box acreditaciones-box" data-field="Acreditacion"></div>
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">GRUPO NENA · CAI-033</span>
+      </div>
+    </section>
+
+    <!-- 11 · Impacto / estudios — datos de estudios reales, fuente citada (§4.9) -->
+    <section class="slide s-impact">
+      <span class="counter">11 / 15</span>
+
+      <div class="impact-head">
+        <p class="eyebrow">07 · Impacto</p>
+        <h2>La inversión ya tiene<br><span class="hl">respaldo medido.</span></h2>
+      </div>
+
+      <div class="impact-body">
+        <div class="gauge-panel">
+          <div class="gauge" style="--pct:80">
+            <div class="gauge-core">
+              <span class="gauge-num">80<span class="pct">%</span></span>
+              <span class="gauge-cap">usa Gemini con regularidad</span>
+            </div>
+          </div>
+          <div class="chips">
+            <div class="chip">
+              <span class="chip-num">416%</span>
+              <span class="chip-lbl">ROI a 3 años con Gemini</span>
+            </div>
+            <div class="chip">
+              <span class="chip-num">3h</span>
+              <span class="chip-lbl">ahorradas por semana, por persona</span>
+            </div>
+          </div>
+          <p class="panel-source">Fuente: Forrester Consulting (comisionado por Google) &mdash; &laquo;The Total Economic Impact&trade; Of Google Workspace With Gemini&raquo; (febrero 2026).</p>
+        </div>
+      </div>
+
+      <div class="impact-hook">
+        <span class="hook-mark">&#9656;</span>
+        <p class="hook-text">
+          El estudio de Forrester sobre Google Workspace con Gemini mide un ROI de 416% a tres años: el usuario promedio ahorra 3 horas por semana, y el 80% de los empleados ya lo usa con regularidad. Grupo Nena ya recorrió ese camino con los primeros 40 egresados: esta propuesta lo sostiene y lo escala.
+        </p>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">GRUPO NENA · CAI-033</span>
+      </div>
+    </section>
+
+    <!-- 12 · Propuesta Económica (estándar: Duración + Programa + Notas + Cotización) -->
+    <section class="slide s-price">
+      <span class="counter">12 / 15</span>
+      <h2 class="title">Inversión por fases</h2>
+      <p class="price-intro">La segunda cohorte de Grupo Nena, en 2 fases dentro de un mismo proyecto: Intezia forma a la nueva cohorte y luego sostiene lo construido. Cada fase se cotiza por separado.</p>
+
+      <div class="fase-price-list">
+        <div class="fase-price-row">
+          <div class="fase-price-copy">
+            <span class="fase-price-label">Fase 1 · Habilidades, 2ª cohorte (11h)</span>
+            <p class="fase-price-desc">4 sesiones semanales &middot; Gems sectoriales y automatización de Reportes.</p>
+          </div>
+          <div class="fase-price-frame" data-field="PrecioFase1"></div>
+        </div>
+        <div class="fase-price-row">
+          <div class="fase-price-copy">
+            <span class="fase-price-label">Fase 2 · Innovación (3 meses)</span>
+            <p class="fase-price-desc">Hasta 2 sesiones de 2h al mes para sostener los 8 activos y cerrar los compromisos abiertos.</p>
+          </div>
+          <div class="fase-price-frame" data-field="PrecioFase2"></div>
+        </div>
+      </div>
+
+      <span class="cot-label cot-label-base">Inversión total del proyecto</span>
+      <div class="cot-frame base-frame"></div>
+
+      <span class="cot-label cot-label-discount">Descuento</span>
+      <span class="cot-sign-minus">&minus;$</span>
+      <div class="cot-frame discount-frame"></div>
+      <span class="cot-urgent-note">Descuento válido por 15 días</span>
+
+      <span class="cot-label cot-label-total">TOTAL</span>
+      <div class="cot-frame total-frame"></div>
+
+      <p class="cot-validity">Cotización válida por 30 días.</p>
+
+      <div class="cot-roi-box">
+        <span class="cot-roi-label">ROI estimado</span>
+        <p class="cot-roi-text">17 de 32 egresados de CAP-016 ya ahorran 4 horas o más por semana con los activos construidos. La segunda cohorte multiplica ese ahorro a nuevas áreas, mientras Innovación sostiene los compromisos abiertos de Cobranza y Finanzas sin que vuelvan a acumularse.</p>
+      </div>
+
+      <div class="cot-garantia-badge">
+        <span class="cot-garantia-tag">Garantía 30-60-90</span>
+        <p class="cot-garantia-text">Estamos contigo hasta que la habilidad quede instalada.</p>
+      </div>
+
+      <div class="cot-terms-box">
+        <span class="cot-terms-label">Importante</span>
+        <p class="cot-terms-text">Este servicio se presta bajo nuestros <a href="https://drive.google.com/file/d/1PA-ZSt4KnyY5dpxXzgkIk6-yfGlV2eF8/view?usp=drive_link" target="_blank" rel="noopener">términos y condiciones</a>. Al avanzar con esta propuesta, ambas partes los aceptan.</p>
+      </div>
+
+      <div class="block block-notes-container">
+        <span class="block-eyebrow">Notas</span>
+      </div>
+      <div class="multi-box notas-box" data-field="Notas"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">GRUPO NENA · CAI-033</span>
+      </div>
+    </section>
+
+    <!-- 13 · Seguimiento 30-60-90 (garantía explicada + ROI) -->
+    <section class="slide s-roadmap s-followup">
+      <span class="counter">13 / 15</span>
+      <p class="eyebrow">08 · Garantía de seguimiento</p>
+      <h2>No los dejamos solos <span class="hl">después del servicio.</span></h2>
+      <p class="followup-intro">Verificamos que la segunda cohorte avance y los activos sigan en uso: no solo que la sesión haya terminado bien.</p>
+
+      <div class="followup-cards">
+        <div class="rmx-card rmx-card-f2">
+          <span class="rmx-card-tag">30 días</span>
+          <div class="rmx-card-name">¿Arrancó la segunda cohorte?</div>
+          <ul class="rmx-facets">
+            <li><span>Medimos</span><p>Si la cohorte tiene fecha confirmada y los 3 compromisos abiertos están resueltos.</p></li>
+            <li><span>Aportamos</span><p>Acompañamiento en el arranque y nivelación de los primeros casos reales.</p></li>
+          </ul>
+        </div>
+        <div class="rmx-card rmx-card-f3">
+          <span class="rmx-card-tag">60 días</span>
+          <div class="rmx-card-name">¿Qué construyó la nueva cohorte?</div>
+          <ul class="rmx-facets">
+            <li><span>Medimos</span><p>Qué Gems sectoriales y automatizaciones de Reportes construyó cada área nueva.</p></li>
+            <li><span>Aportamos</span><p>Mapeo de esas construcciones y revisión de calidad.</p></li>
+          </ul>
+        </div>
+        <div class="rmx-card rmx-card-f4">
+          <span class="rmx-card-tag">90 días</span>
+          <div class="rmx-card-name">¿Cuánto tiempo ahorran?</div>
+          <ul class="rmx-facets">
+            <li><span>Medimos</span><p>Las horas semanales que cada área nueva ahorra con su Gem y su reporte automatizado.</p></li>
+            <li><span>Aportamos</span><p>Análisis de impacto y agenda del siguiente mes de Innovación.</p></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="followup-roi">
+        <span class="followup-roi-label">ROI en el tiempo</span>
+        <p class="followup-roi-text">El retorno de este proyecto no se mide solo en la nueva cohorte certificada, sino en la curva de los 90 días: a 30 días los compromisos abiertos quedan resueltos; a 60, la nueva cohorte ya construye sus propios activos; a 90, el ahorro de tiempo se extiende a las áreas que antes no lo medían.</p>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">GRUPO NENA · CAI-033</span>
+      </div>
+    </section>
+
+    <!-- 14 · Próximos pasos (logística, sin acuerdos económicos · §4.15) -->
+    <section class="slide s-steps">
+      <span class="counter">14 / 15</span>
+      <p class="eyebrow">09 · Próximos pasos</p>
+      <h2>Cómo arrancamos.</h2>
+      <div class="step-cards">
+        <div class="step-card">
+          <span class="ghost">01</span>
+        </div>
+        <div class="step-card">
+          <span class="ghost">02</span>
+        </div>
+        <div class="step-card">
+          <span class="ghost">03</span>
+        </div>
+      </div>
+
+      <!-- Editable AcroForm placeholders (3 pasos × título + body) -->
+      <div class="acro-area acro-title acro-paso-01-titulo" data-field="Paso01Titulo">
+        <span class="acro-default-text">Confirmamos cohorte y fechas</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-01-body" data-field="Paso01Body">
+        <span class="acro-default-text">Confirmamos con Verónica el tamaño de la segunda cohorte, las áreas participantes y las fechas de inicio.</span>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-02-titulo" data-field="Paso02Titulo">
+        <span class="acro-default-text">Acceso y logística</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-02-body" data-field="Paso02Body">
+        <span class="acro-default-text">Coordinamos el acceso a las herramientas y la agenda de las 4 sesiones semanales.</span>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-03-titulo" data-field="Paso03Titulo">
+        <span class="acro-default-text">Reunión de arranque</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-03-body" data-field="Paso03Body">
+        <span class="acro-default-text">Sesión breve para alinear los casos reales de Reportes y Gems que se trabajarán.</span>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">GRUPO NENA · CAI-033</span>
+      </div>
+    </section>
+
+    <!-- 15 · Cierre (ruta/escalera editable) -->
+    <section class="slide s-end">
+      <span class="counter">15 / 15</span>
+
+      <div class="end-logo">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia">
+      </div>
+
+      <!-- Resultado (cinta superior) — caja editable, ventas la redacta por cliente -->
+      <div class="end-summit" data-field="CierreResultado">
+        <span class="acro-default-text">Una segunda cohorte certificada y los 8 activos de Grupo Nena sostenidos y ampliados mes a mes.</span>
+      </div>
+
+      <!-- Escalera de 3 pasos — cada uno con su caja editable -->
+      <div class="end-stairs">
+        <div class="stair-step stair-1">
+          <span class="stair-label">Paso 1</span>
+          <div class="stair-field" data-field="CierrePaso1">
+            <span class="acro-default-text">Gems y Reportes</span>
+          </div>
+        </div>
+        <div class="stair-step stair-2">
+          <span class="stair-label">Paso 2</span>
+          <div class="stair-field" data-field="CierrePaso2">
+            <span class="acro-default-text">Segunda cohorte certificada</span>
+          </div>
+        </div>
+        <div class="stair-step stair-3">
+          <span class="stair-label">Paso 3</span>
+          <div class="stair-field" data-field="CierrePaso3">
+            <span class="acro-default-text">Innovación mes a mes</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cta-wrap">
+        <span class="cta">Esperamos tu respuesta</span>
+      </div>
+
+      <div class="end-contact">
+        <p class="contact-line">
+          <span class="contact-label">Asesora de ventas:</span>
+          Verónica Rubio <span class="dot">&middot;</span> +58 422 3355505 <span class="dot">&middot;</span> vrubio01@intezia.com
+        </p>
+        <p class="contact-line">
+          <span class="contact-label">Empresa:</span>
+          Intezia C.A J-505657950 <span class="dot">&middot;</span> servicio@intezia.com
+        </p>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

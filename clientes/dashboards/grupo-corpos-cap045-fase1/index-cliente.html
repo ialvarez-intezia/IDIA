@@ -1,0 +1,526 @@
+<!doctype html>
+<!--
+  Dashboard de Impacto Edu-Trace · Grupo Corpos · Intezia Fundamentals IA con Claude (CAP-045 Fase 1)
+  Vista CLIENTE (entregable). Datos: clientes/dashboards/grupo-corpos-cap045-fase1/resultados.json
+  REEMPLAZO 2026-09-08 (v2): encuesta.csv corregido (mismas 16 personas, 3 respuestas de
+  Bloque B ajustadas: Ivan Ferrer, Mily Meléndez y Enma Medina) + pedido explícito del usuario
+  de partir "Por departamento" en 4 slides, una por cada eje del Índice (antes era 1 sola
+  slide con el índice compuesto). scripts/edutrace-procesar.py se extendió (aditivo, no rompe
+  otros dashboards) para exponer por_departamento[].ejes.{E1..E4} además del índice compuesto.
+  Sigue sin compactar ni curar nada (pedido de la ronda anterior):
+  - Las 4 slides "Por departamento · Eje N" listan las 15 áreas completas, sin top-N.
+  - Bloque E: 3 preguntas de texto libre completas y literales (solo cuenta texto IDÉNTICO,
+    nunca agrupación temática inventada); 4 preguntas de opción fija talladas por conteo exacto.
+  15 slides (subió de 12: "Por departamento" pasa de 1 a 4 slides).
+  Lenguaje honesto (§4.17): B/D = percibido · C = medido. Sin cédula/correo (§4.16).
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard de Impacto · Grupo Corpos · CAP-045 Fase 1 · Intezia Educación</title>
+  <link rel="stylesheet" href="../../propuestas/_base/styles.css">
+  <link rel="stylesheet" href="overrides.css">
+</head>
+<body>
+  <main class="deck">
+
+    <!-- 01 · Portada -->
+    <section class="slide s-cover">
+      <span class="counter">01 / 15</span>
+      <div class="logo-big">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia Educación">
+      </div>
+      <div class="body">
+        <p class="eyebrow">Dashboard de Impacto · Edu-Trace</p>
+        <h1>
+          Intezia Fundamentals<br>
+          <span class="hl">IA con Claude</span>
+        </h1>
+        <p class="lead">
+          Resultados de la Fase 1 medidos con la <strong>Encuesta Edu-Trace</strong> de cierre. Dieciséis líderes de Grupo Corpos, de los 3 grupos estratégicos del holding, evaluados en competencia, <strong>retención de conocimiento</strong> sobre Claude y experiencia formativa.
+        </p>
+      </div>
+      <div class="id-line">
+        <span class="codigo">Edu-Trace · Grupo Corpos · CAP-045 Fase 1</span>
+        <span class="cliente">Grupo Corpos</span>
+      </div>
+    </section>
+
+    <!-- 02 · Hero del Índice -->
+    <section class="slide s-impact">
+      <span class="counter">02 / 15</span>
+      <div class="impact-head">
+        <p class="eyebrow">01 · Resultado global</p>
+        <h2>Índice de Impacto<br><span class="hl">Edu-Trace</span>.</h2>
+      </div>
+      <div class="impact-body">
+        <div class="chart-panel">
+          <p class="panel-title">Los cuatro ejes que componen el índice (0-100)</p>
+          <div class="bars">
+            <div class="bar-row">
+              <span class="bar-label">Competencia percibida</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:81.2%"><span class="bar-val">81</span></div></div>
+            </div>
+            <div class="bar-row">
+              <span class="bar-label">Retención objetiva · medido</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:100%"><span class="bar-val">100</span></div></div>
+            </div>
+            <div class="bar-row">
+              <span class="bar-label">Aplicabilidad e impacto</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:86.8%"><span class="bar-val">87</span></div></div>
+            </div>
+            <div class="bar-row">
+              <span class="bar-label">Calidad de la experiencia</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:90.5%"><span class="bar-val">90</span></div></div>
+            </div>
+          </div>
+          <div class="bar-axis"><span class="scale"><span>0</span><span>25</span><span>50</span><span>75</span><span>100</span></span></div>
+          <p class="panel-source">Ponderación: Retención objetiva 35% · Competencia 30% · Aplicabilidad e impacto 20% · Calidad 15%. La retención es el único eje medido; el resto es autopercibido.</p>
+        </div>
+        <div class="gauge-panel">
+          <div class="gauge" style="--pct:90">
+            <div class="gauge-core">
+              <span class="gauge-num">90</span>
+              <span class="gauge-cap idx">Índice · de 100</span>
+            </div>
+          </div>
+          <div class="rating">
+            <div class="stars">
+              <span class="star full">&#9733;</span>
+              <span class="star full">&#9733;</span>
+              <span class="star full">&#9733;</span>
+              <span class="star full">&#9733;</span>
+              <span class="star half">&#9733;</span>
+            </div>
+            <span class="rating-cap">Satisfacción general · <b>4.5 / 5</b></span>
+          </div>
+          <p class="hero-meta">16 participantes · salto percibido +2.1 (1-5)</p>
+        </div>
+      </div>
+      <div class="impact-hook">
+        <span class="hook-mark">&#9656;</span>
+        <p class="hook-text">
+          El equipo respondió bien el <strong>100%</strong> de la evaluación técnica sobre Claude, con una experiencia de aprendizaje pareja: competencia percibida (81), aplicabilidad (87) y calidad de la experiencia (90) se mueven en un rango similar.
+        </p>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Grupo Corpos · Dashboard de Impacto</span>
+      </div>
+    </section>
+
+    <!-- 03 · Desglose por eje -->
+    <section class="slide s-data s-ejes">
+      <span class="counter">03 / 15</span>
+      <p class="eyebrow">02 · Desglose</p>
+      <h2>Qué mide cada eje.</h2>
+      <p class="sub">Cada eje aporta al índice según su peso. Solo uno es una medición objetiva; los otros tres son autopercepción del participante al cierre. Las 4 slides siguientes desglosan cada uno por departamento.</p>
+      <div class="grid">
+        <div class="eje">
+          <div class="top"><span class="num">81</span><span class="peso">peso 30%</span></div>
+          <h3>Competencia percibida</h3>
+          <p>Cuánto se siente el líder capaz de operar Claude sin supervisión. <span class="tag-percibido">percibido</span></p>
+        </div>
+        <div class="eje measured">
+          <div class="top"><span class="num">100</span><span class="peso">peso 35%</span></div>
+          <h3>Retención objetiva</h3>
+          <p>Los 16 participantes acertaron las tres preguntas técnicas sobre prompts, Projects y Skills. El dato más duro del informe. <span class="tag-medido">medido</span></p>
+        </div>
+        <div class="eje">
+          <div class="top"><span class="num">87</span><span class="peso">peso 20%</span></div>
+          <h3>Aplicabilidad e impacto</h3>
+          <p>Qué tanto resuelve Claude problemas del día a día de cada líder y promete recuperar tiempo de ejecución. <span class="tag-percibido">percibido</span></p>
+        </div>
+        <div class="eje">
+          <div class="top"><span class="num">90</span><span class="peso">peso 15%</span></div>
+          <h3>Calidad de la experiencia</h3>
+          <p>Claridad, acompañamiento, ritmo y dominio técnico del facilitador. <span class="tag-percibido">percibido</span></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 · Salto de aprendizaje percibido -->
+    <section class="slide s-salto">
+      <span class="counter">04 / 15</span>
+      <p class="eyebrow">03 · Salto de aprendizaje</p>
+      <h2>De dónde partieron, a dónde llegaron.</h2>
+      <div class="journey">
+        <div class="milestone">
+          <span class="ms-cap">Antes · percibido</span>
+          <span class="ms-num">2.1</span>
+          <span class="ms-of">dominio previo<br>(escala 1-5)</span>
+        </div>
+        <div class="track">
+          <div class="track-fill"></div>
+          <div class="delta">
+            <span class="d-num">+2.1</span>
+            <span class="d-lbl">salto percibido</span>
+          </div>
+        </div>
+        <div class="milestone end">
+          <span class="ms-cap">Al cierre</span>
+          <span class="ms-num">4.2</span>
+          <span class="ms-of">capaz sin supervisión<br>(escala 1-5)</span>
+        </div>
+      </div>
+      <p class="salto-note">Es un salto <strong>percibido y retrospectivo</strong>: ambas cifras se preguntaron al cierre, no antes de empezar. Refleja cómo vivió el equipo su propio avance, no una medición con punto de partida real.</p>
+    </section>
+
+    <!-- 05 · Retención objetiva (Bloque C - medido) -->
+    <section class="slide s-data s-reten">
+      <span class="counter">05 / 15</span>
+      <p class="eyebrow">04 · Retención objetiva <span class="tag-medido">medido</span></p>
+      <h2>Lo que de verdad quedó.</h2>
+      <div class="global">
+        <span class="pct">100%</span>
+        <span class="txt">de aciertos en la evaluación de conocimiento técnico sobre Claude al cierre.</span>
+      </div>
+      <div class="qrow">
+        <div class="q">Prompt estructurado para un resumen ejecutivo<small>Rol, contexto y formato claros: hallazgos con cifras, riesgos y una recomendación por riesgo.</small></div>
+        <div class="score">100%<small> · 16 de 16</small></div>
+      </div>
+      <div class="qrow">
+        <div class="q">Contexto persistente con Projects<small>Un Project guarda las instrucciones y la información de base para que cada conversación arranque con ese contexto.</small></div>
+        <div class="score">100%<small> · 16 de 16</small></div>
+      </div>
+      <div class="qrow">
+        <div class="q">Procedimiento estandarizado con Skills<small>Una Skill se escribe una vez y Claude la ejecuta igual, sin importar quién la pida.</small></div>
+        <div class="score">100%<small> · 16 de 16</small></div>
+      </div>
+      <p class="note-honest">Los 16 participantes respondieron correctamente las tres preguntas técnicas de cierre: 100% de retención objetiva. Es el único bloque del informe que mide conocimiento real, no percepción.</p>
+    </section>
+
+    <!-- 06 · Por departamento · Eje 1: Competencia percibida — TODAS las áreas -->
+    <section class="slide s-data s-depto">
+      <span class="counter">06 / 15</span>
+      <p class="eyebrow">05 · Por área · Eje 1 <span class="tag-percibido">percibido</span></p>
+      <h2>Competencia percibida, por área.</h2>
+      <p class="sub">Cuánto se siente cada líder capaz de operar Claude sin supervisión, por departamento. Las 15 áreas, sin excepción.</p>
+      <div class="dept-list">
+        <div class="dept-col">
+          <div class="dept-item"><span class="dept-name">Concesionario Automotriz Toyomax Barinas<small>1 participante</small></span><span class="dept-val">100</span></div>
+          <div class="dept-item"><span class="dept-name">Director Industrial<small>1 participante</small></span><span class="dept-val">100</span></div>
+          <div class="dept-item"><span class="dept-name">Post Venta Automotriz<small>1 participante</small></span><span class="dept-val">100</span></div>
+          <div class="dept-item"><span class="dept-name">Vicepresidencia<small>1 participante</small></span><span class="dept-val">100</span></div>
+          <div class="dept-item"><span class="dept-name">Servicios Corporativos: Control de Gestión<small>2 participantes</small></span><span class="dept-val">88</span></div>
+          <div class="dept-item"><span class="dept-name">Concesionario Automotriz Saldivia Motors del Este<small>1 participante</small></span><span class="dept-val">75</span></div>
+          <div class="dept-item"><span class="dept-name">Dirección Automotriz<small>1 participante</small></span><span class="dept-val">75</span></div>
+          <div class="dept-item"><span class="dept-name">Gerente Comercial Densa<small>1 participante</small></span><span class="dept-val">75</span></div>
+        </div>
+        <div class="dept-col">
+          <div class="dept-item"><span class="dept-name">Gerente Logística Densa<small>1 participante</small></span><span class="dept-val">75</span></div>
+          <div class="dept-item"><span class="dept-name">Gerente Operaciones Densa<small>1 participante</small></span><span class="dept-val">75</span></div>
+          <div class="dept-item"><span class="dept-name">Servicios Corporativos: Auditoría Interna<small>1 participante</small></span><span class="dept-val">75</span></div>
+          <div class="dept-item"><span class="dept-name">Servicios Corporativos: Contabilidad<small>1 participante</small></span><span class="dept-val">75</span></div>
+          <div class="dept-item"><span class="dept-name">Servicios Corporativos: Marketing<small>1 participante</small></span><span class="dept-val">75</span></div>
+          <div class="dept-item"><span class="dept-name">Servicios Corporativos: Tesorería<small>1 participante</small></span><span class="dept-val">75</span></div>
+          <div class="dept-item"><span class="dept-name">Concesionario Automotriz Toyomax<small>1 participante</small></span><span class="dept-val">50</span></div>
+        </div>
+      </div>
+      <p class="note-honest">9 de las 15 áreas quedaron exactamente en 75, el piso común del grupo. Concesionario Automotriz Toyomax (50) es el único caso por debajo de ese piso.</p>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Grupo Corpos · Dashboard de Impacto</span>
+      </div>
+    </section>
+
+    <!-- 07 · Por departamento · Eje 2: Retención objetiva — TODAS las áreas -->
+    <section class="slide s-data s-depto">
+      <span class="counter">07 / 15</span>
+      <p class="eyebrow">06 · Por área · Eje 2 <span class="tag-medido">medido</span></p>
+      <h2>Retención objetiva, por área.</h2>
+      <p class="sub">Aciertos en las tres preguntas técnicas de cierre, por departamento. Es el único eje medido del informe. Las 15 áreas, sin excepción.</p>
+      <div class="dept-list">
+        <div class="dept-col">
+          <div class="dept-item"><span class="dept-name">Concesionario Automotriz Saldivia Motors del Este<small>1 participante</small></span><span class="dept-val">100</span></div>
+          <div class="dept-item"><span class="dept-name">Concesionario Automotriz Toyomax<small>1 participante</small></span><span class="dept-val">100</span></div>
+          <div class="dept-item"><span class="dept-name">Concesionario Automotriz Toyomax Barinas<small>1 participante</small></span><span class="dept-val">100</span></div>
+          <div class="dept-item"><span class="dept-name">Dirección Automotriz<small>1 participante</small></span><span class="dept-val">100</span></div>
+          <div class="dept-item"><span class="dept-name">Director Industrial<small>1 participante</small></span><span class="dept-val">100</span></div>
+          <div class="dept-item"><span class="dept-name">Gerente Comercial Densa<small>1 participante</small></span><span class="dept-val">100</span></div>
+          <div class="dept-item"><span class="dept-name">Gerente Logística Densa<small>1 participante</small></span><span class="dept-val">100</span></div>
+          <div class="dept-item"><span class="dept-name">Gerente Operaciones Densa<small>1 participante</small></span><span class="dept-val">100</span></div>
+        </div>
+        <div class="dept-col">
+          <div class="dept-item"><span class="dept-name">Post Venta Automotriz<small>1 participante</small></span><span class="dept-val">100</span></div>
+          <div class="dept-item"><span class="dept-name">Servicios Corporativos: Auditoría Interna<small>1 participante</small></span><span class="dept-val">100</span></div>
+          <div class="dept-item"><span class="dept-name">Servicios Corporativos: Contabilidad<small>1 participante</small></span><span class="dept-val">100</span></div>
+          <div class="dept-item"><span class="dept-name">Servicios Corporativos: Control de Gestión<small>2 participantes</small></span><span class="dept-val">100</span></div>
+          <div class="dept-item"><span class="dept-name">Servicios Corporativos: Marketing<small>1 participante</small></span><span class="dept-val">100</span></div>
+          <div class="dept-item"><span class="dept-name">Servicios Corporativos: Tesorería<small>1 participante</small></span><span class="dept-val">100</span></div>
+          <div class="dept-item"><span class="dept-name">Vicepresidencia<small>1 participante</small></span><span class="dept-val">100</span></div>
+        </div>
+      </div>
+      <p class="note-honest">Las 15 áreas, sin excepción, acertaron el 100% de la evaluación técnica de cierre. Es el hallazgo más sólido del informe: la retención no varía según el área.</p>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Grupo Corpos · Dashboard de Impacto</span>
+      </div>
+    </section>
+
+    <!-- 08 · Por departamento · Eje 3: Aplicabilidad e impacto — TODAS las áreas -->
+    <section class="slide s-data s-depto">
+      <span class="counter">08 / 15</span>
+      <p class="eyebrow">07 · Por área · Eje 3 <span class="tag-percibido">percibido</span></p>
+      <h2>Aplicabilidad e impacto, por área.</h2>
+      <p class="sub">Qué tanto resuelve Claude problemas reales del rol y promete recuperar tiempo, por departamento. Las 15 áreas, sin excepción.</p>
+      <div class="dept-list">
+        <div class="dept-col">
+          <div class="dept-item"><span class="dept-name">Concesionario Automotriz Saldivia Motors del Este<small>1 participante</small></span><span class="dept-val">100</span></div>
+          <div class="dept-item"><span class="dept-name">Concesionario Automotriz Toyomax Barinas<small>1 participante</small></span><span class="dept-val">100</span></div>
+          <div class="dept-item"><span class="dept-name">Dirección Automotriz<small>1 participante</small></span><span class="dept-val">100</span></div>
+          <div class="dept-item"><span class="dept-name">Director Industrial<small>1 participante</small></span><span class="dept-val">100</span></div>
+          <div class="dept-item"><span class="dept-name">Gerente Logística Densa<small>1 participante</small></span><span class="dept-val">100</span></div>
+          <div class="dept-item"><span class="dept-name">Gerente Operaciones Densa<small>1 participante</small></span><span class="dept-val">100</span></div>
+          <div class="dept-item"><span class="dept-name">Post Venta Automotriz<small>1 participante</small></span><span class="dept-val">100</span></div>
+        </div>
+        <div class="dept-col">
+          <div class="dept-item"><span class="dept-name">Servicios Corporativos: Contabilidad<small>1 participante</small></span><span class="dept-val">100</span></div>
+          <div class="dept-item"><span class="dept-name">Servicios Corporativos: Control de Gestión<small>2 participantes</small></span><span class="dept-val">100</span></div>
+          <div class="dept-item"><span class="dept-name">Vicepresidencia<small>1 participante</small></span><span class="dept-val">100</span></div>
+          <div class="dept-item"><span class="dept-name">Concesionario Automotriz Toyomax<small>1 participante</small></span><span class="dept-val">75</span></div>
+          <div class="dept-item"><span class="dept-name">Servicios Corporativos: Marketing<small>1 participante</small></span><span class="dept-val">75</span></div>
+          <div class="dept-item"><span class="dept-name">Servicios Corporativos: Tesorería<small>1 participante</small></span><span class="dept-val">75</span></div>
+          <div class="dept-item"><span class="dept-name">Servicios Corporativos: Auditoría Interna<small>1 participante</small></span><span class="dept-val">62</span></div>
+          <div class="dept-item"><span class="dept-name">Gerente Comercial Densa<small>1 participante</small></span><span class="dept-val">0</span></div>
+        </div>
+      </div>
+      <p class="note-honest">Gerencia Comercial Densa marcó 0: la única área que no percibió aplicabilidad ni impacto en su rol. Amerita una conversación directa antes de la Fase 2.</p>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Grupo Corpos · Dashboard de Impacto</span>
+      </div>
+    </section>
+
+    <!-- 09 · Por departamento · Eje 4: Calidad de la experiencia — TODAS las áreas -->
+    <section class="slide s-data s-depto">
+      <span class="counter">09 / 15</span>
+      <p class="eyebrow">08 · Por área · Eje 4 <span class="tag-percibido">percibido</span></p>
+      <h2>Calidad de la experiencia, por área.</h2>
+      <p class="sub">Claridad, acompañamiento, ritmo y dominio técnico del facilitador, percibidos por cada área. Las 15 áreas, sin excepción.</p>
+      <div class="dept-list">
+        <div class="dept-col">
+          <div class="dept-item"><span class="dept-name">Concesionario Automotriz Saldivia Motors del Este<small>1 participante</small></span><span class="dept-val">100</span></div>
+          <div class="dept-item"><span class="dept-name">Concesionario Automotriz Toyomax<small>1 participante</small></span><span class="dept-val">100</span></div>
+          <div class="dept-item"><span class="dept-name">Concesionario Automotriz Toyomax Barinas<small>1 participante</small></span><span class="dept-val">100</span></div>
+          <div class="dept-item"><span class="dept-name">Dirección Automotriz<small>1 participante</small></span><span class="dept-val">100</span></div>
+          <div class="dept-item"><span class="dept-name">Post Venta Automotriz<small>1 participante</small></span><span class="dept-val">100</span></div>
+          <div class="dept-item"><span class="dept-name">Servicios Corporativos: Contabilidad<small>1 participante</small></span><span class="dept-val">100</span></div>
+          <div class="dept-item"><span class="dept-name">Vicepresidencia<small>1 participante</small></span><span class="dept-val">100</span></div>
+          <div class="dept-item"><span class="dept-name">Servicios Corporativos: Control de Gestión<small>2 participantes</small></span><span class="dept-val">97</span></div>
+        </div>
+        <div class="dept-col">
+          <div class="dept-item"><span class="dept-name">Director Industrial<small>1 participante</small></span><span class="dept-val">94</span></div>
+          <div class="dept-item"><span class="dept-name">Gerente Operaciones Densa<small>1 participante</small></span><span class="dept-val">94</span></div>
+          <div class="dept-item"><span class="dept-name">Servicios Corporativos: Auditoría Interna<small>1 participante</small></span><span class="dept-val">88</span></div>
+          <div class="dept-item"><span class="dept-name">Servicios Corporativos: Marketing<small>1 participante</small></span><span class="dept-val">88</span></div>
+          <div class="dept-item"><span class="dept-name">Gerente Logística Densa<small>1 participante</small></span><span class="dept-val">81</span></div>
+          <div class="dept-item"><span class="dept-name">Servicios Corporativos: Tesorería<small>1 participante</small></span><span class="dept-val">81</span></div>
+          <div class="dept-item"><span class="dept-name">Gerente Comercial Densa<small>1 participante</small></span><span class="dept-val">31</span></div>
+        </div>
+      </div>
+      <p class="note-honest">Gerencia Comercial Densa también marcó el piso más bajo en experiencia formativa (31): el mismo participante que en aplicabilidad e impacto.</p>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Grupo Corpos · Dashboard de Impacto</span>
+      </div>
+    </section>
+
+    <!-- 10 · Calidad de la experiencia (Bloque D, por ítem del facilitador) -->
+    <section class="slide s-data s-calidad">
+      <span class="counter">10 / 15</span>
+      <p class="eyebrow">09 · Experiencia formativa <span class="tag-percibido">percibido</span></p>
+      <h2>Cómo vivieron la formación.</h2>
+      <p class="sub">Valoración del facilitador y la dinámica de las sesiones, en escala 1-5 normalizada a 0-100.</p>
+      <div class="hbars">
+        <div class="hbar-row">
+          <span class="hbar-label">Acompañamiento <small>dudas resueltas con precisión</small></span>
+          <div class="hbar-track"><div class="hbar-fill" style="--w:93.75%"></div></div>
+          <span class="hbar-val">94</span>
+        </div>
+        <div class="hbar-row">
+          <span class="hbar-label">Dominio técnico <small>profundidad de las soluciones</small></span>
+          <div class="hbar-track"><div class="hbar-fill" style="--w:92.25%"></div></div>
+          <span class="hbar-val">92</span>
+        </div>
+        <div class="hbar-row">
+          <span class="hbar-label">Claridad expositiva <small>casos reales del holding</small></span>
+          <div class="hbar-track"><div class="hbar-fill" style="--w:89%"></div></div>
+          <span class="hbar-val">89</span>
+        </div>
+        <div class="hbar-row">
+          <span class="hbar-label">Gestión del tiempo <small>ritmo para asimilar</small></span>
+          <div class="hbar-track"><div class="hbar-fill" style="--w:87.5%"></div></div>
+          <span class="hbar-val">88</span>
+        </div>
+      </div>
+      <p class="note-honest">Los cuatro indicadores superan el 85%. Gestión del tiempo, aunque el más bajo relativo, sigue en un nivel sólido.</p>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Grupo Corpos · Dashboard de Impacto</span>
+      </div>
+    </section>
+
+    <!-- 11 · Bloque E completo — Departamentos que se beneficiarían -->
+    <section class="slide s-data s-e-full">
+      <span class="counter">11 / 15</span>
+      <p class="eyebrow">10 · Bloque E · Respuesta completa</p>
+      <h2>¿Qué otros departamentos se beneficiarían?</h2>
+      <p class="e-count">16 respuestas · texto literal, sin agrupar por tema</p>
+      <ul class="e-list">
+        <li>Todos <span class="e-x">&times;2</span></li>
+        <li>Gerencia media</li>
+        <li>Ventas directamente, proyectos, gestión, todas</li>
+        <li>Gerencias medias con requerimientos específicos</li>
+        <li>Logística y comercial</li>
+        <li>Ventas, servicios, repuestos</li>
+        <li>Ventas</li>
+        <li>Servicio y repuestos</li>
+        <li>Servicios, Repuestos</li>
+        <li>Gerentes medios</li>
+        <li>Finanzas</li>
+        <li>En el mismo equipo, el área de impuestos</li>
+        <li>Pienso que todos los departamentos, es una herramienta muy útil</li>
+        <li>Ninguno</li>
+        <li>Administración, RRHH</li>
+      </ul>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Grupo Corpos · Dashboard de Impacto</span>
+      </div>
+    </section>
+
+    <!-- 12 · Bloque E completo — Habilidad deseada -->
+    <section class="slide s-data s-e-full">
+      <span class="counter">12 / 15</span>
+      <p class="eyebrow">11 · Bloque E · Respuesta completa</p>
+      <h2>¿Qué habilidad tecnológica desearían dominar?</h2>
+      <p class="e-count">16 respuestas · texto literal, sin agrupar por tema</p>
+      <ul class="e-list">
+        <li>Seguir profundizando en las bondades de Claude</li>
+        <li>Poder programar con ayuda de IA</li>
+        <li>Automatización</li>
+        <li>Clon digital</li>
+        <li>Seguir profundizando manejo integrado de IA y sistema operativo ODOO</li>
+        <li>Ejecución de proyectos</li>
+        <li>Diseño con Claude</li>
+        <li>Mayor dominio de Claude a profundidad</li>
+        <li>Diseño de proyectos aplicables a distintas áreas operativas que permitan ejecutar proyecciones de resultados</li>
+        <li>Pasar de elaboración de reportes a análisis más de profundidad</li>
+        <li>Mano de Base de Datos</li>
+        <li>Análisis de data</li>
+        <li>Presentación de resultados de auditorías, elaborar un instrumento que me permita registrar información y automáticamente genere el informe con plan de acción</li>
+        <li>Skills</li>
+        <li>IA orientada al diseño gráfico</li>
+        <li>Basado en las actividades reiterativas en apoyo con Skill que debo desarrollar de manera individual, quisiera que identifique de manera autónoma qué habilidad necesito según el orden de mis tareas, cuando sea relevante</li>
+      </ul>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Grupo Corpos · Dashboard de Impacto</span>
+      </div>
+    </section>
+
+    <!-- 13 · Panorama complementario — 5 preguntas de opción fija, conteo exacto -->
+    <section class="slide s-reco s-panorama">
+      <span class="counter">13 / 15</span>
+      <p class="eyebrow">12 · Bloque E · Panorama complementario</p>
+      <h2>Herramientas, tiempo y prioridades.</h2>
+      <div class="panels">
+        <div class="panel p-cuellos">
+          <span class="p-title">Cuellos de botella a automatizar</span>
+          <div class="p-row"><span class="p-label">Reportes</span><span class="p-n">8</span><div class="p-bar-track"><div class="p-bar-fill" style="--w:50%"></div></div></div>
+          <div class="p-row"><span class="p-label">CRM</span><span class="p-n">4</span><div class="p-bar-track"><div class="p-bar-fill" style="--w:25%"></div></div></div>
+          <div class="p-row"><span class="p-label">Datos</span><span class="p-n">3</span><div class="p-bar-track"><div class="p-bar-fill" style="--w:18.75%"></div></div></div>
+          <div class="p-row"><span class="p-label">Contenido</span><span class="p-n">1</span><div class="p-bar-track"><div class="p-bar-fill" style="--w:6.25%"></div></div></div>
+        </div>
+        <div class="panel p-herramienta">
+          <span class="p-title">Herramienta de mayor uso</span>
+          <div class="p-row"><span class="p-label">Gemini (Google)</span><span class="p-n">9</span><div class="p-bar-track"><div class="p-bar-fill" style="--w:56.25%"></div></div></div>
+          <div class="p-row"><span class="p-label">Claude (Anthropic)</span><span class="p-n">7</span><div class="p-bar-track"><div class="p-bar-fill" style="--w:43.75%"></div></div></div>
+        </div>
+        <div class="panel p-horas">
+          <span class="p-title">Horas semanales ahorradas</span>
+          <div class="p-row"><span class="p-label">Entre 1 y 3 horas</span><span class="p-n">7</span><div class="p-bar-track"><div class="p-bar-fill" style="--w:43.75%"></div></div></div>
+          <div class="p-row"><span class="p-label">Aún no medible / Ninguna</span><span class="p-n">6</span><div class="p-bar-track"><div class="p-bar-fill" style="--w:37.5%"></div></div></div>
+          <div class="p-row"><span class="p-label">Entre 4 y 7 horas</span><span class="p-n">3</span><div class="p-bar-track"><div class="p-bar-fill" style="--w:18.75%"></div></div></div>
+        </div>
+        <div class="panel p-aplicacion">
+          <span class="p-title">Aplicación principal de la IA hoy</span>
+          <div class="p-row"><span class="p-label">Automatización de procesos y flujos de trabajo operativos</span><span class="p-n">8</span><div class="p-bar-track"><div class="p-bar-fill" style="--w:50%"></div></div></div>
+          <div class="p-row"><span class="p-label">Análisis de datos, finanzas y reportes complejos</span><span class="p-n">4</span><div class="p-bar-track"><div class="p-bar-fill" style="--w:25%"></div></div></div>
+          <div class="p-row"><span class="p-label">Desarrollo avanzado (clones digitales, agentes autónomos, integraciones API)</span><span class="p-n">3</span><div class="p-bar-track"><div class="p-bar-fill" style="--w:18.75%"></div></div></div>
+          <div class="p-row"><span class="p-label">Asistencia en tareas básicas (redacción de correos, resúmenes, minutas)</span><span class="p-n">1</span><div class="p-bar-track"><div class="p-bar-fill" style="--w:6.25%"></div></div></div>
+        </div>
+        <div class="panel p-prioridad">
+          <span class="p-title">Prioridad a 6 meses</span>
+          <div class="p-row"><span class="p-label">Capacitación y adopción cultural del talento humano</span><span class="p-n">9</span><div class="p-bar-track"><div class="p-bar-fill" style="--w:56.25%"></div></div></div>
+          <div class="p-row"><span class="p-label">Desarrollo de infraestructura propia o modelos a medida</span><span class="p-n">7</span><div class="p-bar-track"><div class="p-bar-fill" style="--w:43.75%"></div></div></div>
+        </div>
+      </div>
+      <div class="hook">
+        El equipo se reparte casi a la mitad entre <strong>Gemini</strong> (9 de 16) y <strong>Claude</strong> (7 de 16) como herramienta de mayor uso, y la prioridad a 6 meses también está dividida: 9 de 16 apuestan por seguir invirtiendo en capacitación y 7 de 16 por infraestructura propia. Dos señales claras para la Fase 2.
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Grupo Corpos · Dashboard de Impacto</span>
+      </div>
+    </section>
+
+    <!-- 14 · Participación (nombres + área, sin puntajes ni cédula §4.16) -->
+    <section class="slide s-data s-part">
+      <span class="counter">14 / 15</span>
+      <p class="eyebrow">13 · Participación</p>
+      <h2>Quiénes completaron la evaluación.</h2>
+      <div class="roster">
+        <div class="p"><span class="nm">Luis Alejandro Martínez Carrero</span><span class="dp">Director Industrial</span></div>
+        <div class="p"><span class="nm">Ivan Ferrer</span><span class="dp">Gerente Logística Densa</span></div>
+        <div class="p"><span class="nm">Ana Torrealba</span><span class="dp">Servicios Corp.: Control de Gestión</span></div>
+        <div class="p"><span class="nm">Alejandro Barreto</span><span class="dp">Gerente Operaciones Densa</span></div>
+        <div class="p"><span class="nm">Noel Alvarez</span><span class="dp">Vicepresidencia</span></div>
+        <div class="p"><span class="nm">Mily Meléndez Sánquiz</span><span class="dp">Concesionario Saldivia Motors del Este</span></div>
+        <div class="p"><span class="nm">Germary Gomes</span><span class="dp">Concesionario Toyomax Barinas</span></div>
+        <div class="p"><span class="nm">María Fabiola Hernandez</span><span class="dp">Concesionario Toyomax</span></div>
+        <div class="p"><span class="nm">Vanessa Duran</span><span class="dp">Post Venta Automotriz</span></div>
+        <div class="p"><span class="nm">Raul Sánchez</span><span class="dp">Dirección Automotriz</span></div>
+        <div class="p"><span class="nm">Jose Chirino</span><span class="dp">Servicios Corp.: Auditoría Interna</span></div>
+        <div class="p"><span class="nm">Wilcar Yesenia Alvarado Montilla</span><span class="dp">Servicios Corp.: Contabilidad</span></div>
+        <div class="p"><span class="nm">Exabeth Rangel</span><span class="dp">Servicios Corp.: Control de Gestión</span></div>
+        <div class="p"><span class="nm">José Soteldo</span><span class="dp">Servicios Corp.: Tesorería</span></div>
+        <div class="p"><span class="nm">Gustavo López</span><span class="dp">Servicios Corp.: Marketing</span></div>
+        <div class="p"><span class="nm">Enma Medina</span><span class="dp">Gerente Comercial Densa</span></div>
+      </div>
+      <p class="privacy">16 de 16 líderes convocados respondieron la encuesta. Por privacidad, no se publican puntajes individuales ni documentos de identidad: el informe es siempre agregado.</p>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Grupo Corpos · Dashboard de Impacto</span>
+      </div>
+    </section>
+
+    <!-- 15 · Cierre -->
+    <section class="slide s-end">
+      <span class="counter">15 / 15</span>
+      <div class="end-logo">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia Educación">
+      </div>
+      <p class="end-message">
+        El equipo aprendió.<br>Llevémoslo a la <span class="hl-orange">siguiente</span> <span class="hl-yellow">fase</span>.
+      </p>
+      <div class="cta-wrap">
+        <a class="cta" href="https://calendly.com/intezia/30min" target="_blank" rel="noopener">Conversemos el próximo paso</a>
+      </div>
+      <div class="end-contact">
+        <p class="contact-line">
+          <span class="contact-label">Asesora:</span>
+          Flavia Martínez <span class="dot">·</span> +58 414 5756615 <span class="dot">·</span> fmartinez@intezia.com
+        </p>
+        <p class="contact-line">
+          <span class="contact-label">Empresa:</span>
+          Intezia C.A J-505657950 <span class="dot">·</span> servicio@intezia.com
+        </p>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

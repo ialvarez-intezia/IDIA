@@ -1,0 +1,106 @@
+/* ============================================================
+   Overrides · Beeper (CAP-079)
+   Se carga DESPUÉS de styles.css. Solo lo propio de este deck.
+   ============================================================ */
+
+/* ── Slide 12 · Mapa de automatización ───────────────────────
+   Badge «Fuera de alcance» para la fila que declara que el canal 24/7 no
+   se sostiene sobre un plan personal. Contorno en vez de relleno: se lee
+   como descarte honesto, no como prioridad. styles.css solo define
+   -alta y -media. */
+.hm-badge-fuera {
+  background: transparent;
+  color: var(--black);
+  border: 1px solid var(--black);
+  white-space: normal;
+  line-height: 1.15;
+  text-align: center;
+}
+
+/* Los encabezados de área llevan una glosa larga (el arranque recomendado,
+   la conversación de costos), así que necesitan envolver en vez de forzar
+   una sola línea. */
+.s-heatmap .area-row td {
+  white-space: normal;
+  line-height: 1.25;
+}
+
+/* ── Slide 11 · Roadmap — 3ª ruta (Auditoría por área) ───────────────
+   El componente .s-roadmap nació para 2 rutas (Sesiones 1-2 / Sesiones 3-4).
+   Para insertar la 3ª ruta (Sesiones 5-6 · Auditoría) hace falta: min-height:0
+   en .rmx-route (si no, flex no encoge el contenido con 3 filas y se
+   superpone con el pie), recalcular fork/merge a tercios (16.667%/50%/83.333%
+   en vez de 25%/75%) con un conector recto para la fila del medio, y compactar
+   el contenido de cada card ~12% para que 3 filas quepan en el alto fijo. El
+   3er acento usa negro+blanco (paleta oficial) para no inventar color. Ver
+   memoria roadmap-3-etapas-flex-minheight. */
+
+.rmx-route { min-height: 0; }
+.rmx-route-f4 { border-top: 1px solid rgba(255,255,255,0.06); }
+
+/* Fork/merge a tercios: arriba = f2 (amarillo, sin cambio de color) ·
+   medio = f3 (naranja, conector recto) · abajo = f4 (blanco/negro) */
+.rmx-fork .rmx-up,
+.rmx-merge .rmx-up {
+  top: calc(16.667% - 3.5px);
+  bottom: 50%;
+}
+.rmx-fork .rmx-dn,
+.rmx-merge .rmx-dn {
+  top: 50%;
+  bottom: calc(16.667% - 3.5px);
+}
+.rmx-fork .rmx-dn { border-left-color: var(--white); border-bottom-color: var(--white); }
+.rmx-merge .rmx-dn { border-right-color: var(--white); border-bottom-color: var(--white); }
+
+.rmx-fork .rmx-mid,
+.rmx-merge .rmx-mid {
+  top: calc(50% - 3.5px);
+  height: 7px;
+  background: var(--orange);
+  border-radius: 4px;
+}
+.rmx-fork .rmx-mid { right: -12px; }
+.rmx-merge .rmx-mid { left: -12px; }
+
+/* Nodo y card de la 3ª ruta: negro+blanco, no un color nuevo */
+.rmx-node-f4 {
+  width: 62px; height: 62px;
+  font-size: 20px;
+  background: var(--black);
+  color: var(--white);
+  box-shadow: 0 0 0 6px rgba(255,255,255,0.16);
+}
+.rmx-card-f4 { border-left: 3px solid var(--white); }
+.rmx-card-f4 .rmx-card-tag { color: var(--white); background: rgba(255,255,255,0.12); }
+.rmx-card-f4 .rmx-facets li > span { color: var(--white); }
+
+/* Compactación ~12% de las 3 cards para que quepan en el alto fijo de
+   .rmx-journey (498px) sin pisar la franja de metodología/pie de abajo. */
+.rmx-card { padding: 10px 14px; }
+.rmx-card-name { margin-bottom: 7px; font-size: 14px; }
+.rmx-card-tag { margin-bottom: 5px; }
+.rmx-facets li { padding: 4px 0; }
+.rmx-facets li > p { font-size: 9px; line-height: 1.28; }
+
+/* ── Slide 13 · Impacto ──────────────────────────────────────
+   Barra del personal ya experto. El estudio (NBER 31161) reporta «impacto
+   mínimo» SIN dar una cifra, así que la barra no lleva número: su ancho es
+   una señal cualitativa, no una medición (§4.9, no se inventan datos).
+   Con un ancho de 4% el texto no cabe dentro de la barra, así que se saca
+   al track, que es oscuro, en naranja de marca. */
+.s-impact .bar-fill.bar-min .bar-val {
+  right: auto;
+  left: calc(100% + 10px);
+  color: var(--orange);
+  white-space: nowrap;
+  font-style: italic;
+}
+
+/* Fuente del gauge (Noy y Zhang · Science · 2023).
+   El panel del gauge no traía cita propia en el canónico; esta slide sí la
+   necesita porque su cifra viene de otro estudio que el de las barras (§4.9). */
+.s-impact .gauge-panel .gauge-source {
+  margin-top: 10px;
+  text-align: center;
+}

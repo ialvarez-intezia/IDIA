@@ -1,0 +1,576 @@
+<!doctype html>
+<!--
+  Propuesta — Amcor Rigid Packaging de Venezuela S.A
+  Servicio: DETECCIÓN (Modelo Intezia · empresa/tipos-de-documento.md §0) · Código DET-001
+  División: Educación (cliente corporativo) · Eje: diagnóstico de oportunidades de IA en el
+  área de Compras (+ Atención al Cliente), con nivelación básica de Copilot en paralelo,
+  dentro del entorno Microsoft 365 que Amcor ya usa.
+  Fuente: Ficha Comercial Intezia — Amcor (2026-08-26, Flavia Martínez) + resumen de reunión.
+  Estructura (12 slides), esquema nuevo 2026-08-26 (sin Metodología ABR, sin Equipo
+  facilitador §4.10a; beneficios por servicio §propuesta-comercial → sin perfil de egreso ni
+  acreditación, 2 cajas de entregables; cierre tipo escalera editable):
+  Fase 1 · Detección + nivelación de Copilot (ÚNICO que se cotiza ahora) → Fase 2 ·
+  Habilidades (contemplada como camino completo, cotizada tras el diagnóstico).
+  §4.11: no se afirma que Amcor migra/adopta stack; Copilot se enmarca dentro de su entorno
+  Microsoft actual. No se menciona Claude (el cliente debe validarlo internamente) ni ODOO.
+  Base clonada de go-pharma/ (esquema nuevo). Hoja de precio: solo Fase 1 con caja editable;
+  Fase 2 = "se cotiza tras el diagnóstico" (customize-amcor.py quita PrecioFase2/3).
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Propuesta · Amcor · Intezia</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <main class="deck">
+
+    <!-- 1 · Portada -->
+    <section class="slide s-cover">
+      <span class="counter">01 / 12</span>
+      <div class="logo-big">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia">
+      </div>
+      <div class="body">
+        <p class="eyebrow">Propuesta de negocio · Servicio de Detección</p>
+        <h1>
+          Detección de IA<br>
+          <span class="hl">para el área de Compras de Amcor</span>
+        </h1>
+        <p class="lead">
+          Diagnosticamos el área de <strong>Compras</strong> de Amcor y entregamos una hoja de ruta priorizada de qué resolver primero con IA y con qué herramienta, partiendo del entorno <strong>Microsoft 365</strong> que ya utilizan.
+        </p>
+      </div>
+      <div class="id-line">
+        <span class="codigo">Código: DET-001</span>
+        <span class="cliente">Amcor Rigid Packaging</span>
+      </div>
+    </section>
+
+    <!-- 2 · Punto de dolor + Diagnóstico -->
+    <section class="slide s-pain">
+      <span class="counter">02 / 12</span>
+      <span class="quote-mark">&ldquo;</span>
+      <div class="body">
+        <h2>Cerca de 9.000 solicitudes de compra, gestionadas a mano por 4 personas.</h2>
+        <p class="context">
+          El área de Compras sostiene la continuidad operativa de Amcor: repuestos, servicios, bienes e insumos. Hoy ese flujo se gestiona de forma <strong>manual</strong> y el equipo siente que no se da abasto. Antes de automatizar nada, la Detección define qué cuello de botella atacar primero y con qué herramienta.
+        </p>
+        <p class="diag-title">Diagnóstico</p>
+        <ol>
+          <li>Cerca de 9.000 solicitudes de compra se gestionan de forma manual; 4 personas deben dar respuesta inmediata a cada requerimiento de la operación.</li>
+          <li>El área no utiliza IA hoy: el tiempo se va en tareas repetitivas de gestión y seguimiento, no en decisiones de valor.</li>
+          <li>Amcor cuenta con licencias Microsoft 365, pero Copilot no se usa de forma centralizada ni hubo un adiestramiento formal; algunas personas lo probaron por su cuenta.</li>
+          <li>El equipo siente que está estancado y quiere avanzar rápido: reducir el tiempo de su operatividad es una prioridad de corto plazo.</li>
+          <li>Falta claridad sobre qué cuellos de botella pesan más y qué herramienta conviene para cada uno; esa es la pregunta que responde la Detección.</li>
+        </ol>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">AMCOR · DET-001</span>
+      </div>
+    </section>
+
+    <!-- 3 · Objetivos estratégicos -->
+    <section class="slide s-goals">
+      <span class="counter">03 / 12</span>
+      <p class="eyebrow">02 · Objetivos</p>
+      <h2>A dónde llevamos<br>al área de Compras.</h2>
+      <div class="columns">
+        <div class="general">
+          <p class="label">Objetivo general</p>
+          <p>
+            Diagnosticar el área de Compras de Amcor para identificar y priorizar sus cuellos de botella, y entregar una hoja de ruta clara de qué resolver con IA y con qué herramienta, partiendo del entorno Microsoft 365 que la empresa ya usa.
+          </p>
+        </div>
+        <div class="specifics">
+          <p class="label">Objetivos específicos</p>
+          <ol>
+            <li>Auditar los procesos reales de Compras y Atención al Cliente con un guion estructurado, e identificar logros inmediatos aplicables desde la primera sesión.</li>
+            <li>Medir el punto de partida del área con la Matriz de Madurez Digital y priorizar las oportunidades por impacto y esfuerzo.</li>
+            <li>Nivelar al equipo en el uso básico de Copilot, dentro de su entorno Microsoft 365, en paralelo al diagnóstico.</li>
+            <li>Entregar un Reporte Final con la hoja de ruta priorizada y el camino hacia la Fase 2 de Habilidades.</li>
+          </ol>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">AMCOR · DET-001</span>
+      </div>
+    </section>
+
+    <!-- 4 · El camino (3 tarjetas: Auditoría + Copilot = Fase 1, Habilidades = Fase 2) -->
+    <section class="slide s-program">
+      <span class="counter">04 / 12</span>
+      <p class="eyebrow">03 · El camino</p>
+      <h2>De la Detección a las Habilidades.</h2>
+      <p class="meta">Fase 1 (Auditoría + Copilot) se cotiza ahora; la Fase 2 de Habilidades se cotiza tras el diagnóstico.</p>
+      <div class="modules">
+        <div class="module">
+          <span class="roman">I</span>
+          <h3>Auditoría de Compras</h3>
+          <p class="obj">Mapeamos los procesos reales del área con un guion estructurado y priorizamos sus cuellos de botella.</p>
+          <ul class="topics">
+            <li>Matriz de Madurez</li>
+            <li>Reporte Final</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">II</span>
+          <h3>Nivelación de Copilot</h3>
+          <p class="obj">En paralelo, el equipo aprende a usar Copilot en su entorno Microsoft: prompts efectivos y resultados rápidos.</p>
+          <ul class="topics">
+            <li>Prompts efectivos</li>
+            <li>Uso en el día a día</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">III</span>
+          <h3>Habilidades a la medida</h3>
+          <p class="obj">Capacitación para resolver los cuellos de botella detectados. Su contenido y valor se definen tras el diagnóstico.</p>
+          <ul class="topics">
+            <li>Tras el diagnóstico</li>
+          </ul>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">AMCOR · DET-001</span>
+      </div>
+    </section>
+
+    <!-- 5 · Fase 1: Detección + nivelación de Copilot -->
+    <section class="slide s-schedule">
+      <span class="counter">05 / 12</span>
+      <p class="eyebrow">04 · Fase 1 de 2 · Ruta por fase</p>
+
+      <div class="ruta">
+        <div class="ruta-node">1</div>
+        <div class="ruta-track"><div class="ruta-fill" style="width:50%"></div></div>
+        <span class="ruta-step">Detección</span>
+      </div>
+
+      <div class="ses-head">
+        <div>
+          <span class="ses-mod">Fase 1 · Auditoría + nivelación de Copilot · Presencial en oficinas de Amcor</span>
+          <h2>Detección</h2>
+        </div>
+      </div>
+
+      <div class="ses-body">
+        <div class="ses-block">
+          <span class="label">Temas</span>
+          <div class="chips">
+            <span class="chip">Auditoría de Compras</span>
+            <span class="chip">Matriz de Madurez Digital</span>
+            <span class="chip">Impacto vs. esfuerzo</span>
+            <span class="chip">Nivelación de Copilot</span>
+            <span class="chip">Reporte Final</span>
+          </div>
+        </div>
+        <div class="ses-cols">
+          <div class="ses-block">
+            <span class="label">Qué se hace</span>
+            <ul>
+              <li>Auditamos los procesos reales de Compras y Atención al Cliente con un guion estructurado, en sesiones presenciales</li>
+              <li>Medimos el punto de partida con la Matriz de Madurez Digital y priorizamos por impacto y esfuerzo</li>
+              <li>En paralelo, nivelamos al equipo en el uso básico de Copilot dentro de su entorno Microsoft 365</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Qué se logra</span>
+            <ul>
+              <li>Un diagnóstico claro de los cuellos de botella del área, priorizados por peso</li>
+              <li>Logros inmediatos aplicables desde las primeras sesiones</li>
+              <li>El equipo con una base práctica para empezar a usar Copilot en su día a día</li>
+            </ul>
+          </div>
+          <div class="ses-block block-rec">
+            <span class="label">Recursos y entornos</span>
+            <ul>
+              <li>Guion de auditoría Intezia y Matriz de Madurez Digital</li>
+              <li>Entorno Microsoft 365 que Amcor ya utiliza</li>
+              <li>Sesiones presenciales en las oficinas de Amcor</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">AMCOR · DET-001</span>
+      </div>
+    </section>
+
+    <!-- 6 · Fase 2: Habilidades (a definir tras el diagnóstico) -->
+    <section class="slide s-schedule">
+      <span class="counter">06 / 12</span>
+      <p class="eyebrow">04 · Fase 2 de 2 · Ruta por fase</p>
+
+      <div class="ruta">
+        <div class="ruta-node">2</div>
+        <div class="ruta-track"><div class="ruta-fill" style="width:100%"></div></div>
+        <span class="ruta-step">Habilidades</span>
+      </div>
+
+      <div class="ses-head">
+        <div>
+          <span class="ses-mod">Fase 2 · Habilidades a la medida · Alcance y valor a definir según el diagnóstico</span>
+          <h2>Habilidades</h2>
+        </div>
+      </div>
+
+      <div class="ses-body">
+        <div class="ses-block">
+          <span class="label">Temas</span>
+          <div class="chips">
+            <span class="chip">Tras la Detección</span>
+            <span class="chip">Cuellos de botella priorizados</span>
+            <span class="chip">Entorno Microsoft</span>
+            <span class="chip">Práctica sobre tareas reales</span>
+          </div>
+        </div>
+        <div class="ses-cols">
+          <div class="ses-block">
+            <span class="label">Qué se hace</span>
+            <ul>
+              <li>Diseñamos la capacitación a partir de los cuellos de botella priorizados en la Fase 1, no de un temario genérico</li>
+              <li>Trabajamos sobre las tareas reales del equipo de Compras, con las herramientas de su entorno Microsoft</li>
+              <li>Definimos alcance, horas y valor con el cliente una vez cerrado el diagnóstico</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Qué se logra</span>
+            <ul>
+              <li>El equipo resolviendo sus cuellos de botella con IA, sobre sus propios procesos</li>
+              <li>Capacidad instalada que el equipo sostiene sin depender del consultor</li>
+              <li>Una ruta clara y medible de mejora en la operatividad del área</li>
+            </ul>
+          </div>
+          <div class="ses-block block-rec">
+            <span class="label">Recursos y entornos</span>
+            <ul>
+              <li>Contenido diseñado con los hallazgos de la Detección</li>
+              <li>Herramientas del entorno Microsoft 365 del cliente</li>
+              <li>Alcance, cronograma y valor definidos tras el diagnóstico</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">AMCOR · DET-001</span>
+      </div>
+    </section>
+
+    <!-- 7 · Roadmap · Detección → Habilidades -->
+    <section class="slide s-roadmap">
+      <span class="counter">07 / 12</span>
+      <p class="eyebrow">04 · Roadmap</p>
+      <h2>De la Detección a las <span class="hl">Habilidades</span>.</h2>
+
+      <div class="rmx-field">
+        <div class="rmx-linear">
+
+          <div class="rmx-lrow-nodes">
+            <div class="rmx-lcol"><div class="rmx-node rmx-node-f2">1</div></div>
+            <div class="rmx-arrow"></div>
+            <div class="rmx-lcol"><div class="rmx-node rmx-node-f3">2</div></div>
+            <div class="rmx-arrow"></div>
+            <div class="rmx-lcol"><div class="rmx-node rmx-node-r">&#9733;</div></div>
+          </div>
+
+          <div class="rmx-lrow-cards">
+            <div class="rmx-lcol">
+              <div class="rmx-card rmx-card-f2">
+                <span class="rmx-card-tag">Fase 1 · Detección</span>
+                <div class="rmx-card-name">Auditoría + Copilot</div>
+                <ul class="rmx-facets">
+                  <li><span>Qué pasa</span><p>Auditamos Compras, medimos la madurez y nivelamos al equipo en Copilot.</p></li>
+                  <li><span>Con quién</span><p>Equipo de Compras de Amcor, presencial en sus oficinas.</p></li>
+                  <li><span>Entrega</span><p>Reporte Final con la hoja de ruta priorizada.</p></li>
+                </ul>
+              </div>
+            </div>
+            <div class="rmx-lspacer"></div>
+            <div class="rmx-lcol">
+              <div class="rmx-card rmx-card-f3">
+                <span class="rmx-card-tag">Fase 2 · Habilidades</span>
+                <div class="rmx-card-name">A la medida del diagnóstico</div>
+                <ul class="rmx-facets">
+                  <li><span>Qué pasa</span><p>Capacitamos al equipo para resolver los cuellos de botella priorizados.</p></li>
+                  <li><span>Con quién</span><p>El área de Compras, sobre sus tareas reales.</p></li>
+                  <li><span>Entrega</span><p>Capacidad instalada y operatividad optimizada.</p></li>
+                </ul>
+              </div>
+            </div>
+            <div class="rmx-lspacer"></div>
+            <div class="rmx-lcol">
+              <div class="rmx-result-card">
+                <span class="rmx-result-label">Cierre del proyecto</span>
+                <div class="rmx-result-title">Compras de Amcor, optimizada con IA</div>
+                <ul>
+                  <li>Cuellos de botella resueltos con herramientas de su entorno Microsoft</li>
+                  <li>Equipo autónomo y hoja de ruta cumplida</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /.rmx-linear -->
+
+        <div class="rmx-ethics">
+          <span class="rmx-ethics-tag">Diagnóstico antes de construir</span>
+          <p>Intezia no diseña la Fase 2 sin antes ver la operación real de Compras. El contenido y el valor de las Habilidades se <strong>construyen a la medida del diagnóstico</strong>, nunca al revés.</p>
+        </div>
+
+      </div><!-- /.rmx-field -->
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">AMCOR · DET-001</span>
+      </div>
+    </section>
+
+    <!-- 8 · Beneficios (formato v2: Resultados · Por qué Detección · Entregables · Valor inmediato) -->
+    <section class="slide s-benefits s-benefits-v2">
+      <span class="counter">08 / 12</span>
+      <p class="eyebrow">05 · Beneficios</p>
+      <h2>Lo que <span class="hl">se llevan</span>.</h2>
+      <div class="grid">
+        <div class="block">
+          <p class="label">Resultados</p>
+          <ul>
+            <li><strong>Hoja de ruta clara</strong> de qué resolver primero en Compras y con qué herramienta.</li>
+            <li>Cerca de 9.000 solicitudes, hoy manuales, con un camino de priorización.</li>
+            <li>Equipo con base práctica en Copilot desde la primera fase.</li>
+          </ul>
+        </div>
+        <div class="block">
+          <p class="label">Por qué Detección</p>
+          <p>
+            Diagnosticar antes de construir evita invertir en la herramienta equivocada: cada prioridad sale de la <strong>operación real</strong> del área, no de un supuesto.
+          </p>
+        </div>
+        <div class="block">
+          <p class="label">Entregables</p>
+        </div>
+        <div class="block">
+          <p class="label">Valor inmediato</p>
+        </div>
+      </div>
+
+      <!-- Cajas multiline editables (vacías en HTML — el contenido vive dentro del AcroForm /V). -->
+      <div class="multi-box entregables-box" data-field="Entregables"></div>
+      <div class="multi-box acreditaciones-box" data-field="Acreditacion"></div>
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">AMCOR · DET-001</span>
+      </div>
+    </section>
+
+    <!-- 9 · Impacto / estudios — datos de estudios reales, fuente citada (CLAUDE.md §4.9) -->
+    <section class="slide s-impact">
+      <span class="counter">09 / 12</span>
+
+      <div class="impact-head">
+        <p class="eyebrow">06 · Impacto</p>
+        <h2>La evidencia no deja<br><span class="hl">lugar a dudas</span>.</h2>
+      </div>
+
+      <div class="impact-body">
+        <div class="chart-panel">
+          <p class="panel-title">Impacto de la IA en compras y en el trabajo con Copilot</p>
+          <div class="bars">
+            <div class="bar-row">
+              <span class="bar-label">Compras · mejora de productividad con copilots de IA</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:58%"><span class="bar-val">+25&ndash;40%</span></div></div>
+            </div>
+            <div class="bar-row">
+              <span class="bar-label">Selección de proveedores · más rápida con decisiones asistidas por IA</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:44%"><span class="bar-val">+30%</span></div></div>
+            </div>
+          </div>
+          <div class="bar-axis"><span class="scale"><span>0</span><span>15</span><span>30</span><span>45</span><span>60%</span></span></div>
+          <p class="panel-source">Fuentes: McKinsey — Transforming procurement for an AI-driven world · Microsoft — Work Trend Index 2024 (What Can Copilot&rsquo;s Earliest Users Teach Us About AI at Work?).</p>
+        </div>
+
+        <div class="gauge-panel">
+          <div class="gauge" style="--pct:77">
+            <div class="gauge-core">
+              <span class="gauge-num">77<span class="pct">%</span></span>
+              <span class="gauge-cap">de los usuarios de Copilot reportó más productividad</span>
+            </div>
+          </div>
+          <div class="chips">
+            <div class="chip">
+              <span class="chip-num">29%</span>
+              <span class="chip-lbl">más rápidos en sus tareas con Copilot</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="impact-hook">
+        <span class="hook-mark">&#9656;</span>
+        <p class="hook-text">
+          El área de <strong>Compras</strong> concentra el mayor tiempo manual de Amcor: los copilots de IA pueden mejorar la productividad de compras entre 25% y 40%, y acelerar la selección de proveedores hasta un 30% (McKinsey). El 77% de los usuarios de Copilot reporta un aumento medible de productividad (Microsoft, 2024). Diagnosticar primero permite dirigir ese impacto al cuello de botella que más pesa.
+        </p>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">AMCOR · DET-001</span>
+      </div>
+    </section>
+
+    <!-- 10 · Inversión por fases · solo Fase 1 se cotiza ahora; Fase 2 tras el diagnóstico -->
+    <section class="slide s-price">
+      <span class="counter">10 / 12</span>
+      <h2 class="title">Inversión por fases</h2>
+      <p class="price-intro">Servicio de Detección para el área de Compras de Amcor, con nivelación básica de Copilot en paralelo. Solo se cotiza la Fase 1; la Fase 2 de Habilidades se cotiza tras el diagnóstico.</p>
+
+      <div class="fase-price-list">
+        <div class="fase-price-row">
+          <div class="fase-price-copy">
+            <span class="fase-price-label">Fase 1 · Detección</span>
+            <p class="fase-price-desc">Auditoría del área + nivelación de Copilot · presencial · Reporte Final.</p>
+          </div>
+          <div class="fase-price-frame" data-field="PrecioFase1"></div>
+        </div>
+        <div class="fase-price-row">
+          <div class="fase-price-copy">
+            <span class="fase-price-label">Fase 2 · Habilidades</span>
+            <p class="fase-price-desc">Alcance, horas y valor a definir según los hallazgos de la Fase 1.</p>
+          </div>
+          <div class="fase-price-note">Se cotiza tras el diagnóstico</div>
+        </div>
+      </div>
+
+      <div class="block block-notes-container">
+        <span class="block-eyebrow">Notas</span>
+      </div>
+      <div class="multi-box notas-box" data-field="Notas"></div>
+
+      <span class="cot-label cot-label-base">Inversión de la Fase 1</span>
+      <div class="cot-frame base-frame"></div>
+
+      <span class="cot-label cot-label-discount">Descuento</span>
+      <div class="cot-frame discount-frame"></div>
+
+      <span class="cot-label cot-label-total">TOTAL</span>
+      <div class="cot-frame total-frame"></div>
+
+      <p class="cot-validity">Cotización válida por 30 días. La Fase 2 se cotiza tras el diagnóstico.</p>
+      <div class="cot-terms-box">
+        <span class="cot-terms-label">Importante</span>
+        <p class="cot-terms-text">Este servicio se presta bajo nuestros <a href="https://drive.google.com/file/d/1PA-ZSt4KnyY5dpxXzgkIk6-yfGlV2eF8/view?usp=drive_link" target="_blank" rel="noopener">términos y condiciones</a>. Al avanzar con esta propuesta, ambas partes los aceptan.</p>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">AMCOR · DET-001</span>
+      </div>
+    </section>
+
+    <!-- 11 · Próximos pasos -->
+    <section class="slide s-steps">
+      <span class="counter">11 / 12</span>
+      <p class="eyebrow">07 · Próximos pasos</p>
+      <h2>Cómo arrancamos.</h2>
+      <div class="step-cards">
+        <div class="step-card">
+          <span class="ghost">01</span>
+        </div>
+        <div class="step-card">
+          <span class="ghost">02</span>
+        </div>
+        <div class="step-card">
+          <span class="ghost">03</span>
+        </div>
+      </div>
+
+      <!-- Editable AcroForm placeholders (3 pasos × título + body) -->
+      <div class="acro-area acro-title acro-paso-01-titulo" data-field="Paso01Titulo">
+        <span class="acro-default-text">Confirmamos fechas</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-01-body" data-field="Paso01Body">
+        <span class="acro-default-text">Definimos calendario y horario de las sesiones de la Fase 1, en las oficinas de Amcor.</span>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-02-titulo" data-field="Paso02Titulo">
+        <span class="acro-default-text">Acceso y logística</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-02-body" data-field="Paso02Body">
+        <span class="acro-default-text">Coordinamos participantes del área de Compras, agenda y accesos para la auditoría.</span>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-03-titulo" data-field="Paso03Titulo">
+        <span class="acro-default-text">Kick-off de la Detección</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-03-body" data-field="Paso03Body">
+        <span class="acro-default-text">Reunión de arranque (~30 min) para alinear el alcance y priorizar el diagnóstico.</span>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">AMCOR · DET-001</span>
+      </div>
+    </section>
+
+    <!-- 12 · Cierre -->
+    <section class="slide s-end">
+      <span class="counter">12 / 12</span>
+
+      <div class="end-logo">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia">
+      </div>
+
+      <!-- Resultado (cinta superior) — caja editable, ventas la redacta por cliente -->
+      <div class="end-summit" data-field="CierreResultado">
+        <span class="acro-default-text">El área de Compras de Amcor, optimizada con IA.</span>
+      </div>
+
+      <!-- Escalera de 3 pasos — cada uno con su caja editable -->
+      <div class="end-stairs">
+        <div class="stair-step stair-1">
+          <span class="stair-label">Paso 1</span>
+          <div class="stair-field" data-field="CierrePaso1">
+            <span class="acro-default-text">Diagnóstico priorizado</span>
+          </div>
+        </div>
+        <div class="stair-step stair-2">
+          <span class="stair-label">Paso 2</span>
+          <div class="stair-field" data-field="CierrePaso2">
+            <span class="acro-default-text">Habilidades a la medida</span>
+          </div>
+        </div>
+        <div class="stair-step stair-3">
+          <span class="stair-label">Paso 3</span>
+          <div class="stair-field" data-field="CierrePaso3">
+            <span class="acro-default-text">Operación optimizada</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cta-wrap">
+        <span class="cta">Esperamos tu respuesta</span>
+      </div>
+
+      <div class="end-contact">
+        <p class="contact-line">
+          <span class="contact-label">Asesora de ventas:</span>
+          Flavia Martínez <span class="dot">·</span> +58 414 5756615 <span class="dot">·</span> fmartinez@intezia.com
+        </p>
+        <p class="contact-line">
+          <span class="contact-label">Empresa:</span>
+          Intezia C.A J-505657950 <span class="dot">·</span> servicio@intezia.com
+        </p>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

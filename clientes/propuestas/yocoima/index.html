@@ -1,0 +1,575 @@
+<!doctype html>
+<!--
+  Propuesta — Industria de Café Yocoima
+  Servicio: DETECCIÓN + HABILIDADES, combo (Modelo Intezia · empresa/tipos-de-documento.md §0,
+  servicio sigue siendo "deteccion" por combo parcial de 2 servicios, §4.1a punto 1) · Código
+  DET-007. División: Educación (cliente corporativo).
+  Fuente: Ficha de Levantamiento Intezia — Industria De Cafe Yocoima, C.A (2026-09-04, Flavia
+  Martínez). Primer contacto, sin servicio previo.
+  Diferencia clave con el clon origen (DHL DET-004): aquí el contenido curricular de Fase 2
+  todavía NO está definido (el cliente mismo no tiene claro qué procesos priorizar más allá de
+  la conciliación de pagos) — Fase 2 no fija número de sesiones ni carga horaria (sin
+  .timebar), solo describe el enfoque general (conciliación, presupuestos, análisis) sujeto al
+  diagnóstico de Fase 1. Modalidad mixta: Fase 1 presencial (oficinas, estado Bolívar), Fase 2
+  virtual en vivo.
+  Uso seguro de datos: pedido explícito del cliente (miedo a exponer información sensible) —
+  va como tema propio de la nivelación de Fase 1, no como slide aparte (§4.10a ya retiró la
+  slide de Metodología).
+  Eje: diagnóstico y automatización de procesos administrativos (conciliación, presupuestos,
+  análisis) con Claude, dentro del entorno Google Workspace que el cliente ya usa.
+  §4.11: no se afirma migración de stack; Claude se integra al entorno Google Workspace
+  existente. No se nombra al interlocutor (dato interno del brief.md).
+  Base: clon de dhl/ (esquema 2026-08-26, sin Metodología ABR, sin Equipo facilitador §4.10a;
+  cierre tipo escalera editable). Hoja de precio: Fase 1 + Fase 2, ambas con caja editable
+  (customize-yocoima.py quita solo PrecioFase3 y recalcula PrecioBase = Fase1+Fase2).
+  12 slides (sin cambio de conteo).
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Propuesta · Café Yocoima · Intezia</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <main class="deck">
+
+    <!-- 1 · Portada -->
+    <section class="slide s-cover">
+      <span class="counter">01 / 12</span>
+      <div class="logo-big">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia">
+      </div>
+      <div class="body">
+        <p class="eyebrow">Propuesta de negocio · Servicio de Detección y Habilidades</p>
+        <h1>
+          Diagnóstico y capacitación<br>
+          <span class="hl">para Café Yocoima</span>
+        </h1>
+        <p class="lead">
+          Diagnosticamos los procesos <strong>administrativos</strong> de Café Yocoima (comercial, finanzas, conciliación), priorizamos sus cuellos de botella y capacitamos al equipo para resolverlos con <strong>Claude</strong>, dentro del entorno <strong>Google Workspace</strong> que ya utilizan.
+        </p>
+      </div>
+      <div class="id-line">
+        <span class="codigo">Código: DET-007</span>
+        <span class="cliente">Café Yocoima</span>
+      </div>
+    </section>
+
+    <!-- 2 · Punto de dolor + Diagnóstico -->
+    <section class="slide s-pain">
+      <span class="counter">02 / 12</span>
+      <span class="quote-mark">&ldquo;</span>
+      <div class="body">
+        <h2>Todo a mano, todo separado: así se administra Café Yocoima hoy.</h2>
+        <p class="context">
+          El equipo administrativo (comercial, finanzas, conciliación) sostiene la operación diaria de Café Yocoima. Hoy la información vive repartida en varios sistemas según el área y la coordinación se hace por WhatsApp, sin un proceso estructurado. Antes de capacitar a nadie, la Detección responde una pregunta que hoy nadie en la empresa tiene clara: <strong>qué automatizar primero</strong>.
+        </p>
+        <p class="diag-title">Diagnóstico</p>
+        <ol>
+          <li>La información del negocio vive repartida en varios sistemas separados por área, sin una vista unificada.</li>
+          <li>El equipo coordina su día a día por WhatsApp, sin un proceso ni una trazabilidad estructurada.</li>
+          <li>Ya tienen licencias de Gemini, pero las usan solo como chat consultivo, sin criterio ni caso de uso definido.</li>
+          <li>Procesos clave, como la conciliación de pagos, se hacen todavía de forma completamente manual.</li>
+          <li>La propia empresa no tiene claridad sobre cuáles procesos pesan más ni por dónde empezar; ese es el punto de partida de la Detección.</li>
+        </ol>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Café Yocoima · DET-007</span>
+      </div>
+    </section>
+
+    <!-- 3 · Objetivos estratégicos -->
+    <section class="slide s-goals">
+      <span class="counter">03 / 12</span>
+      <p class="eyebrow">02 · Objetivos</p>
+      <h2>A dónde llevamos<br>al equipo administrativo.</h2>
+      <div class="columns">
+        <div class="general">
+          <p class="label">Objetivo general</p>
+          <p>
+            Diagnosticar los procesos administrativos de Café Yocoima (comercial, finanzas, conciliación) para identificar y priorizar sus cuellos de botella, y entregar una hoja de ruta clara de qué automatizar primero con Claude.
+          </p>
+        </div>
+        <div class="specifics">
+          <p class="label">Objetivos específicos</p>
+          <ol>
+            <li>Auditar los procesos administrativos del equipo con un guion estructurado, partiendo de un primer proceso ya identificado: la conciliación de pagos.</li>
+            <li>Medir el punto de partida con la Matriz de Madurez Digital y priorizar las oportunidades por impacto y esfuerzo.</li>
+            <li>Nivelar al equipo en los fundamentos de Claude, con un módulo propio de uso seguro y manejo responsable de datos, en paralelo al diagnóstico.</li>
+            <li>Entregar un Reporte Final con la hoja de ruta priorizada y capacitar al equipo en Fase 2 para que aplique esas prioridades con Claude, de inicio a fin.</li>
+          </ol>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Café Yocoima · DET-007</span>
+      </div>
+    </section>
+
+    <!-- 4 · El camino (3 tarjetas: Auditoría + Claude = Fase 1, Habilidades = Fase 2) -->
+    <section class="slide s-program">
+      <span class="counter">04 / 12</span>
+      <p class="eyebrow">03 · El camino</p>
+      <h2>De la Detección a las Habilidades.</h2>
+      <p class="meta">Fase 1 (Auditoría + Claude) y Fase 2 (Habilidades) se cotizan juntas en este documento.</p>
+      <div class="modules">
+        <div class="module">
+          <span class="roman">I</span>
+          <h3>Auditoría del Proceso</h3>
+          <p class="obj">Mapeamos los procesos administrativos reales, partiendo de la conciliación de pagos, y priorizamos sus cuellos de botella.</p>
+          <ul class="topics">
+            <li>Matriz de Madurez</li>
+            <li>Reporte Final</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">II</span>
+          <h3>Nivelación de Claude</h3>
+          <p class="obj">En paralelo, el equipo aprende los fundamentos de Claude: prompting efectivo y un criterio claro de uso seguro.</p>
+          <ul class="topics">
+            <li>Fundamentos y uso seguro</li>
+            <li>Prompting efectivo</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">III</span>
+          <h3>Habilidades aplicadas</h3>
+          <p class="obj">Sesiones para automatizar conciliación, presupuestos y análisis administrativo con Claude, sobre las prioridades del diagnóstico.</p>
+          <ul class="topics">
+            <li>Conciliación y presupuestos</li>
+            <li>Análisis administrativo</li>
+          </ul>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Café Yocoima · DET-007</span>
+      </div>
+    </section>
+
+    <!-- 5 · Fase 1: Detección + nivelación de Claude -->
+    <section class="slide s-schedule">
+      <span class="counter">05 / 12</span>
+      <p class="eyebrow">04 · Fase 1 de 2 · Ruta por fase</p>
+
+      <div class="ruta">
+        <div class="ruta-node">1</div>
+        <div class="ruta-track"><div class="ruta-fill" style="width:50%"></div></div>
+        <span class="ruta-step">Detección</span>
+      </div>
+
+      <div class="ses-head">
+        <div>
+          <span class="ses-mod">Fase 1 · Auditoría + nivelación de Claude · Presencial, oficinas del cliente (estado Bolívar)</span>
+          <h2>Detección</h2>
+        </div>
+      </div>
+
+      <div class="ses-body">
+        <div class="ses-block">
+          <span class="label">Temas</span>
+          <div class="chips">
+            <span class="chip">Auditoría Administrativa</span>
+            <span class="chip">Matriz de Madurez Digital</span>
+            <span class="chip">Impacto vs. esfuerzo</span>
+            <span class="chip">Fundamentos y uso seguro</span>
+            <span class="chip">Reporte Final</span>
+          </div>
+        </div>
+        <div class="ses-cols">
+          <div class="ses-block">
+            <span class="label">Qué se hace</span>
+            <ul>
+              <li>Auditamos los procesos administrativos (comercial, finanzas, conciliación) con un guion estructurado, empezando por la conciliación de pagos</li>
+              <li>Medimos el punto de partida con la Matriz de Madurez Digital y priorizamos por impacto y esfuerzo</li>
+              <li>En paralelo, nivelamos al equipo en los fundamentos de Claude, con un módulo de uso seguro y manejo responsable de datos</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Qué se logra</span>
+            <ul>
+              <li>Un diagnóstico claro de los cuellos de botella administrativos, priorizados por peso</li>
+              <li>Un equipo con los fundamentos de Claude y un criterio claro de uso seguro, antes de automatizar nada</li>
+              <li>Una hoja de ruta lista para arrancar la Fase 2 con foco, no a ciegas</li>
+            </ul>
+          </div>
+          <div class="ses-block block-rec">
+            <span class="label">Recursos y entornos</span>
+            <ul>
+              <li>Guion de auditoría Intezia y Matriz de Madurez Digital</li>
+              <li>Entorno Google Workspace que Café Yocoima ya utiliza</li>
+              <li>Sesiones presenciales en sus oficinas, estado Bolívar</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Café Yocoima · DET-007</span>
+      </div>
+    </section>
+
+    <!-- 6 · Fase 2: Habilidades (alcance a definir con el diagnóstico) -->
+    <section class="slide s-schedule">
+      <span class="counter">06 / 12</span>
+      <p class="eyebrow">04 · Fase 2 de 2 · Ruta por fase</p>
+
+      <div class="ruta">
+        <div class="ruta-node">2</div>
+        <div class="ruta-track"><div class="ruta-fill" style="width:100%"></div></div>
+        <span class="ruta-step">Habilidades</span>
+      </div>
+
+      <div class="ses-head">
+        <div>
+          <span class="ses-mod">Fase 2 · Habilidades · Virtual en vivo · alcance a definir con el diagnóstico</span>
+          <h2>Habilidades</h2>
+        </div>
+      </div>
+
+      <div class="ses-body">
+        <div class="ses-block">
+          <span class="label">Temas</span>
+          <div class="chips">
+            <span class="chip">Conciliación y pagos</span>
+            <span class="chip">Presupuestos</span>
+            <span class="chip">Análisis administrativo</span>
+            <span class="chip">Uso seguro de Claude</span>
+          </div>
+        </div>
+        <div class="ses-cols">
+          <div class="ses-block">
+            <span class="label">Qué se hace</span>
+            <ul>
+              <li>Aplicamos con Claude las prioridades del diagnóstico de la Fase 1, empezando por conciliación, presupuestos y análisis administrativo</li>
+              <li>Definimos el número de sesiones y el contenido exacto de cada una con base en los cuellos de botella priorizados</li>
+              <li>Trabajamos sobre las tareas reales del equipo, no sobre casos genéricos</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Qué se logra</span>
+            <ul>
+              <li>Procesos administrativos automatizados con Claude, empezando por los de mayor peso</li>
+              <li>Un equipo capaz de aplicar Claude en su día a día sin depender del consultor</li>
+              <li>Una operación más ágil y escalable, tal como lo busca la dirección</li>
+            </ul>
+          </div>
+          <div class="ses-block block-rec">
+            <span class="label">Recursos y entornos</span>
+            <ul>
+              <li>El Reporte Final y la hoja de ruta priorizada de la Fase 1</li>
+              <li>Claude, integrado al entorno Google Workspace que el equipo ya usa</li>
+              <li>Sesiones virtuales en vivo con el equipo administrativo completo</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Café Yocoima · DET-007</span>
+      </div>
+    </section>
+
+    <!-- 7 · Roadmap · Detección → Habilidades -->
+    <section class="slide s-roadmap">
+      <span class="counter">07 / 12</span>
+      <p class="eyebrow">04 · Roadmap</p>
+      <h2>De la Detección a las <span class="hl">Habilidades</span>.</h2>
+
+      <div class="rmx-field">
+        <div class="rmx-linear">
+
+          <div class="rmx-lrow-nodes">
+            <div class="rmx-lcol"><div class="rmx-node rmx-node-f2">1</div></div>
+            <div class="rmx-arrow"></div>
+            <div class="rmx-lcol"><div class="rmx-node rmx-node-f3">2</div></div>
+            <div class="rmx-arrow"></div>
+            <div class="rmx-lcol"><div class="rmx-node rmx-node-r">&#9733;</div></div>
+          </div>
+
+          <div class="rmx-lrow-cards">
+            <div class="rmx-lcol">
+              <div class="rmx-card rmx-card-f2">
+                <span class="rmx-card-tag">Fase 1 · Detección</span>
+                <div class="rmx-card-name">Auditoría + Claude</div>
+                <ul class="rmx-facets">
+                  <li><span>Qué pasa</span><p>Auditamos el área administrativa, medimos la madurez y nivelamos al equipo en Claude, con foco en uso seguro.</p></li>
+                  <li><span>Con quién</span><p>Equipo administrativo de Café Yocoima (comercial, finanzas, conciliación), presencial.</p></li>
+                  <li><span>Entrega</span><p>Reporte Final con la hoja de ruta priorizada.</p></li>
+                </ul>
+              </div>
+            </div>
+            <div class="rmx-lspacer"></div>
+            <div class="rmx-lcol">
+              <div class="rmx-card rmx-card-f3">
+                <span class="rmx-card-tag">Fase 2 · Habilidades</span>
+                <div class="rmx-card-name">Automatización con Claude</div>
+                <ul class="rmx-facets">
+                  <li><span>Qué pasa</span><p>Aplicamos con Claude las prioridades del diagnóstico: conciliación, presupuestos y análisis administrativo.</p></li>
+                  <li><span>Con quién</span><p>El mismo equipo administrativo, sobre sus tareas reales, en modalidad virtual.</p></li>
+                  <li><span>Entrega</span><p>Procesos automatizados y las habilidades de Claude instaladas en el equipo.</p></li>
+                </ul>
+              </div>
+            </div>
+            <div class="rmx-lspacer"></div>
+            <div class="rmx-lcol">
+              <div class="rmx-result-card">
+                <span class="rmx-result-label">Cierre del proyecto</span>
+                <div class="rmx-result-title">Café Yocoima, de lo manual a lo escalable con IA</div>
+                <ul>
+                  <li>Cuellos de botella resueltos con criterio, no a ciegas</li>
+                  <li>Equipo autónomo, con las habilidades de Claude instaladas</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /.rmx-linear -->
+
+        <div class="rmx-ethics">
+          <span class="rmx-ethics-tag">Plan completo, listo para decidir</span>
+          <p>Detección y Habilidades vienen <strong>desarrolladas y cotizadas en esta misma propuesta</strong>: Café Yocoima define presupuesto con el plan completo sobre la mesa, no con una mitad abierta.</p>
+        </div>
+
+      </div><!-- /.rmx-field -->
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Café Yocoima · DET-007</span>
+      </div>
+    </section>
+
+    <!-- 8 · Beneficios (formato v3: Resultados · Por qué Detección · Entregables · Valor inmediato) -->
+    <section class="slide s-benefits s-benefits-v2">
+      <span class="counter">08 / 12</span>
+      <p class="eyebrow">05 · Beneficios</p>
+      <h2>Lo que <span class="hl">se llevan</span>.</h2>
+      <div class="grid">
+        <div class="block">
+          <p class="label">Resultados</p>
+          <ul>
+            <li><strong>Hoja de ruta clara</strong> de qué automatizar primero en el área administrativa y con qué criterio.</li>
+            <li>La conciliación de pagos y otros procesos hoy manuales, resueltos con Claude.</li>
+            <li>Equipo con un criterio propio de uso seguro de la IA, sin miedo a exponer información sensible.</li>
+          </ul>
+        </div>
+        <div class="block">
+          <p class="label">Por qué Detección y Habilidades</p>
+          <p>
+            Diagnosticar antes de capacitar evita invertir en lo que no resuelve nada: la Fase 2 ataca los cuellos de botella que la Fase 1 <strong>priorizó sobre la operación real</strong> de Café Yocoima, no sobre un supuesto.
+          </p>
+        </div>
+        <div class="block">
+          <p class="label">Entregables</p>
+        </div>
+        <div class="block">
+          <p class="label">Valor inmediato</p>
+        </div>
+      </div>
+
+      <!-- Cajas multiline editables (vacías en HTML — el contenido vive dentro del AcroForm /V). -->
+      <div class="multi-box entregables-box" data-field="Entregables"></div>
+      <div class="multi-box acreditaciones-box" data-field="Acreditacion"></div>
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Café Yocoima · DET-007</span>
+      </div>
+    </section>
+
+    <!-- 9 · Impacto / estudios — datos de estudios reales, fuente citada (CLAUDE.md §4.9) -->
+    <section class="slide s-impact">
+      <span class="counter">09 / 12</span>
+
+      <div class="impact-head">
+        <p class="eyebrow">06 · Impacto</p>
+        <h2>La evidencia no deja<br><span class="hl">lugar a dudas</span>.</h2>
+      </div>
+
+      <div class="impact-body">
+        <div class="chart-panel">
+          <p class="panel-title">Potencial de la IA en procesos administrativos y de pagos</p>
+          <div class="bars">
+            <div class="bar-row">
+              <span class="bar-label">Finanzas y administración · función con mayor potencial de ahorro de tiempo con IA generativa</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:65%"><span class="bar-val">60&ndash;70%</span></div></div>
+            </div>
+          </div>
+          <div class="bar-axis"><span class="scale"><span>0</span><span>25</span><span>50</span><span>75</span><span>100%</span></span></div>
+          <p class="panel-source">Fuentes: McKinsey &amp; Company &mdash; The economic potential of generative AI: The next productivity frontier, 2023 &middot; Ardent Partners &mdash; State of ePayables, 2025.</p>
+        </div>
+
+        <div class="gauge-panel">
+          <div class="gauge" style="--pct:72">
+            <div class="gauge-core">
+              <span class="gauge-num">72<span class="pct">%</span></span>
+              <span class="gauge-cap">más rápido el cierre de una factura al automatizar la aprobación</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="impact-hook">
+        <span class="hook-mark">&#9656;</span>
+        <p class="hook-text">
+          Finanzas es la función con <strong>mayor potencial de ahorro de tiempo</strong> con IA generativa: hoy puede automatizar actividades que absorben entre 60% y 70% del tiempo de los empleados (McKinsey, 2023). En procesos de pago, automatizar la aprobación reduce el cierre de una factura de casi 11 días a 3, un <strong>72% más rápido</strong> (Ardent Partners, 2025). Ese es el mismo salto que la conciliación de pagos de Café Yocoima puede dar.
+        </p>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Café Yocoima · DET-007</span>
+      </div>
+    </section>
+
+    <!-- 10 · Inversión por fases -->
+    <section class="slide s-price">
+      <span class="counter">10 / 12</span>
+      <h2 class="title">Inversión por fases</h2>
+      <p class="price-intro">Servicio de Detección y Habilidades para el equipo administrativo de Café Yocoima, con foco en Claude. Ambas fases se cotizan en este documento.</p>
+
+      <div class="fase-price-list">
+        <div class="fase-price-row">
+          <div class="fase-price-copy">
+            <span class="fase-price-label">Fase 1 · Detección</span>
+            <p class="fase-price-desc">Auditoría administrativa + nivelación de Claude · presencial · Reporte Final.</p>
+          </div>
+          <div class="fase-price-frame" data-field="PrecioFase1"></div>
+        </div>
+        <div class="fase-price-row">
+          <div class="fase-price-copy">
+            <span class="fase-price-label">Fase 2 · Habilidades</span>
+            <p class="fase-price-desc">Automatización con Claude de conciliación, presupuestos y análisis · virtual.</p>
+          </div>
+          <div class="fase-price-frame" data-field="PrecioFase2"></div>
+        </div>
+      </div>
+
+      <div class="block block-notes-container">
+        <span class="block-eyebrow">Notas</span>
+      </div>
+      <div class="multi-box notas-box" data-field="Notas"></div>
+
+      <span class="cot-label cot-label-base">Inversión total del proyecto</span>
+      <div class="cot-frame base-frame"></div>
+
+      <span class="cot-label cot-label-discount">Descuento</span>
+      <div class="cot-frame discount-frame"></div>
+
+      <span class="cot-label cot-label-total">TOTAL</span>
+      <div class="cot-frame total-frame"></div>
+
+      <p class="cot-validity">Cotización válida por 30 días.</p>
+      <div class="cot-terms-box">
+        <span class="cot-terms-label">Importante</span>
+        <p class="cot-terms-text">Este servicio se presta bajo nuestros <a href="https://drive.google.com/file/d/1PA-ZSt4KnyY5dpxXzgkIk6-yfGlV2eF8/view?usp=drive_link" target="_blank" rel="noopener">términos y condiciones</a>. Al avanzar con esta propuesta, ambas partes los aceptan.</p>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Café Yocoima · DET-007</span>
+      </div>
+    </section>
+
+    <!-- 11 · Próximos pasos -->
+    <section class="slide s-steps">
+      <span class="counter">11 / 12</span>
+      <p class="eyebrow">07 · Próximos pasos</p>
+      <h2>Cómo arrancamos.</h2>
+      <div class="step-cards">
+        <div class="step-card">
+          <span class="ghost">01</span>
+        </div>
+        <div class="step-card">
+          <span class="ghost">02</span>
+        </div>
+        <div class="step-card">
+          <span class="ghost">03</span>
+        </div>
+      </div>
+
+      <!-- Editable AcroForm placeholders (3 pasos × título + body) -->
+      <div class="acro-area acro-title acro-paso-01-titulo" data-field="Paso01Titulo">
+        <span class="acro-default-text">Confirmamos fechas</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-01-body" data-field="Paso01Body">
+        <span class="acro-default-text">Definimos fechas y horarios de las sesiones presenciales (Fase 1) y virtuales (Fase 2).</span>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-02-titulo" data-field="Paso02Titulo">
+        <span class="acro-default-text">Acceso y logística</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-02-body" data-field="Paso02Body">
+        <span class="acro-default-text">Coordinamos al equipo administrativo, agenda y accesos para la auditoría y las sesiones de Habilidades.</span>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-03-titulo" data-field="Paso03Titulo">
+        <span class="acro-default-text">Kick-off del proyecto</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-03-body" data-field="Paso03Body">
+        <span class="acro-default-text">Reunión de arranque (~30 min) para alinear el alcance de ambas fases y priorizar el diagnóstico.</span>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Café Yocoima · DET-007</span>
+      </div>
+    </section>
+
+    <!-- 12 · Cierre -->
+    <section class="slide s-end">
+      <span class="counter">12 / 12</span>
+
+      <div class="end-logo">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia">
+      </div>
+
+      <!-- Resultado (cinta superior) — caja editable, ventas la redacta por cliente -->
+      <div class="end-summit" data-field="CierreResultado">
+        <span class="acro-default-text">Los procesos administrativos de Café Yocoima, optimizados con Claude.</span>
+      </div>
+
+      <!-- Escalera de 3 pasos — cada uno con su caja editable -->
+      <div class="end-stairs">
+        <div class="stair-step stair-1">
+          <span class="stair-label">Paso 1</span>
+          <div class="stair-field" data-field="CierrePaso1">
+            <span class="acro-default-text">Diagnóstico priorizado</span>
+          </div>
+        </div>
+        <div class="stair-step stair-2">
+          <span class="stair-label">Paso 2</span>
+          <div class="stair-field" data-field="CierrePaso2">
+            <span class="acro-default-text">Habilidades aplicadas</span>
+          </div>
+        </div>
+        <div class="stair-step stair-3">
+          <span class="stair-label">Paso 3</span>
+          <div class="stair-field" data-field="CierrePaso3">
+            <span class="acro-default-text">Operación más ágil y escalable</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cta-wrap">
+        <span class="cta">Esperamos tu respuesta</span>
+      </div>
+
+      <div class="end-contact">
+        <p class="contact-line">
+          <span class="contact-label">Asesora de ventas:</span>
+          Flavia Martínez <span class="dot">·</span> +58 414 5756615 <span class="dot">·</span> fmartinez@intezia.com
+        </p>
+        <p class="contact-line">
+          <span class="contact-label">Empresa:</span>
+          Intezia C.A J-505657950 <span class="dot">·</span> servicio@intezia.com
+        </p>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

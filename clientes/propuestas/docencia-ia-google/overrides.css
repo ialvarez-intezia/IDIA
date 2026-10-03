@@ -1,0 +1,34 @@
+/* ---------------------------------------------------------------------------
+   Overrides locales · Docencia con IA · Ecosistema Google (TA-031)
+   --------------------------------------------------------------------------- */
+
+/* Slide Programa con 6 módulos (3×2), 5 temas por módulo.
+   _base solo fija min-height para 5-6 módulos y no compacta tipografía ni
+   padding como sí hace para 4 y 7-9 módulos → las cards con 5 temas
+   desbordan. Mismo parche que corpoez-cu009 (idéntico patrón: 6 módulos,
+   5 temas). */
+.s-program .modules:has(> .module:nth-child(5)):not(:has(> .module:nth-child(7))) .module {
+  min-height: 0;
+  padding: 48px 14px 14px;
+}
+.s-program .modules:has(> .module:nth-child(5)):not(:has(> .module:nth-child(7))) .module .roman {
+  font-size: 42px;
+  top: 3px;
+}
+.s-program .modules:has(> .module:nth-child(5)):not(:has(> .module:nth-child(7))) .module h3 {
+  font-size: 15px;
+  line-height: 1.08;
+  margin-bottom: 3px;
+}
+.s-program .modules:has(> .module:nth-child(5)):not(:has(> .module:nth-child(7))) .module .obj {
+  font-size: 10.5px;
+  line-height: 1.2;
+  margin-bottom: 4px;
+}
+.s-program .modules:has(> .module:nth-child(5)):not(:has(> .module:nth-child(7))) .module .topics {
+  gap: 2px;
+}
+.s-program .modules:has(> .module:nth-child(5)):not(:has(> .module:nth-child(7))) .module .topics li {
+  font-size: 12.5px;
+  padding: 3px 8px;
+}

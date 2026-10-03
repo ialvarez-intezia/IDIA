@@ -1,0 +1,549 @@
+<!doctype html>
+<!--
+  Propuesta — La Próxima Destilación (CH-007) — Charla 1 · Finanzas y Sistemas
+  Cliente: DUSA (industria de bebidas/licores · ~500 colaboradores)
+  Programa: La Próxima Destilación · Cómo Copilot Optimiza los Procesos de DUSA
+  División: Educación · Tipo: Charla
+  Audiencia: equipos de Finanzas y Sistemas de DUSA (Charla 1 de 2 — la Charla 2 vive en una
+  carpeta separada, con su propia audiencia y contenido).
+  Duración: 2 horas (120 min) · Herramienta: Microsoft Copilot, Power Automate y Copilot
+  Studio, dentro del ecosistema Microsoft 365 que DUSA ya usa.
+
+  Actualizado 2026-08-31: contenido específico para Finanzas + Sistemas, a partir de la
+  agenda de 6 bloques dada por el usuario (Apertura, Diagnóstico rápido, Excel financiero,
+  Automatización de facturación, Gobierno y seguridad, Cierre). Se conserva el código CH-007,
+  el título de marca "La Próxima Destilación" y la estructura de 9 slides ya establecida.
+
+  Decisiones de plantilla (vigentes desde el origen del deck):
+  - Clon de ia-mundo-real (CH-002) migrado a CSS canónico (../_base/styles.css +
+    overrides.css local — el componente de cronograma vive ahí).
+  - Slide .s-orange (ABR) OMITIDA — regla vigente: charlas no llevan metodología ABR.
+  - Slide .s-impact conservada — barras y fuentes sin cambio (dato genérico de productividad
+    por función, sigue siendo válido); se reescribió el hook-text para Finanzas.
+  - Slide .s-price ELIMINADA (instrucción del usuario, vigente desde el origen y reconfirmada
+    2026-08-31: "no lleva hoja de cotización"). Sin cotización, sin campos de precio en el PDF.
+  - Programa: 6 módulos (modo compacto 5-6 de _base — h3 corto, sin <p class="obj">, máx 2
+    topics por módulo; capacidad real, no la de la tabla genérica de propuesta-comercial.md).
+  - Sin mención de modalidad (presencial/online) ni de "cortesía" en ningún texto.
+  - Sin facilitador ni asesor nombrado (sin dato del usuario) — pattern team-single,
+    contacto de cierre solo institucional (Intezia C.A / info@intezia.com).
+  - CTA cierre: enlace Calendly con mes de entrega (2026-08).
+  - Footer: "Intezia · Charla · CH-007"
+  - 10 slides (Cronograma partido en 2 slides — bloques 1-3 y 4-6 — porque 6 bloques de
+    sesión no caben en una sola slide de este componente sin desbordar).
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Propuesta · La Próxima Destilación · CH-007 · Charla Intezia Educación</title>
+  <link rel="stylesheet" href="../_base/styles.css">
+  <link rel="stylesheet" href="overrides.css">
+</head>
+<body>
+
+  <main class="deck">
+
+    <!-- 1 · Portada -->
+    <section class="slide s-cover">
+      <span class="counter">01 / 10</span>
+      <div class="logo-big">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia Educación">
+      </div>
+      <div class="body">
+        <p class="eyebrow">Charla práctica · Finanzas y Sistemas · 2 horas</p>
+        <h1>
+          La Próxima<br>
+          <span class="hl">Destilación</span>
+        </h1>
+        <p class="lead">
+          Charla práctica de 2 horas para los equipos de Finanzas y Sistemas de DUSA: cómo <strong>Copilot</strong> resuelve tareas del día a día dentro del ecosistema Microsoft, con la mirada de gobernanza y seguridad que Sistemas necesita para administrar su adopción.
+        </p>
+      </div>
+      <div class="id-line">
+        <span class="codigo">Código: CH-007</span>
+        <span class="cliente">DUSA</span>
+      </div>
+    </section>
+
+    <!-- 2 · Punto de dolor + Diagnóstico -->
+    <section class="slide s-pain">
+      <span class="counter">02 / 10</span>
+      <span class="quote-mark">&ldquo;</span>
+      <div class="body">
+        <h2>Finanzas repite tareas a mano. Sistemas necesita gobernarlas con criterio.</h2>
+        <p class="context">
+          DUSA avanza en una transformación digital para aumentar la eficiencia operativa. El equipo de Finanzas ya tiene fundamentos de <strong>Copilot</strong>, pero falta aplicarlo a sus tareas reales; Sistemas necesita los criterios para administrar esa adopción dentro de Microsoft 365.
+        </p>
+        <p class="diag-title">Diagnóstico</p>
+        <ol>
+          <li>Finanzas invierte tiempo en análisis y reportes que podrían resolverse con Copilot dentro de Excel, sin salir de su flujo habitual.</li>
+          <li>La facturación y el seguimiento de pagos siguen procesos manuales, con recordatorios y aprobaciones que se gestionan uno por uno.</li>
+          <li>El equipo ya tiene fundamentos de Copilot; falta pasar de usar la herramienta a aplicarla a tareas financieras concretas.</li>
+          <li>Sistemas necesita administrar la adopción de Copilot: permisos, manejo de datos y buenas prácticas al construir agentes.</li>
+          <li>DUSA busca que Finanzas gane velocidad sin perder control, y que Sistemas tenga la gobernanza para sostenerlo.</li>
+        </ol>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Intezia · Charla · CH-007</span>
+      </div>
+    </section>
+
+    <!-- 3 · Objetivo (general + 3 específicos para charla) -->
+    <section class="slide s-goals">
+      <span class="counter">03 / 10</span>
+      <p class="eyebrow">02 · Objetivo</p>
+      <h2>A dónde llevamos<br>a Finanzas y Sistemas en 2 horas.</h2>
+      <div class="columns">
+        <div class="general">
+          <p class="label">Objetivo general</p>
+          <p>
+            Mostrar a Finanzas cómo <strong>Copilot</strong> resuelve tareas del día a día dentro de su ecosistema Microsoft, y dar a Sistemas la mirada de gobernanza y seguridad para administrar su adopción.
+          </p>
+        </div>
+        <div class="specifics">
+          <p class="label">Objetivos específicos</p>
+          <ol>
+            <li>Aplicar Copilot en Excel a un caso real de análisis financiero, con fórmulas, gráficas y resúmenes automáticos.</li>
+            <li>Automatizar el flujo de aprobación de facturas y los recordatorios de pago con Power Automate y Copilot Studio.</li>
+            <li>Conocer los criterios de gobierno y seguridad que Sistemas necesita para administrar Copilot dentro de Microsoft 365.</li>
+          </ol>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Intezia · Charla · CH-007</span>
+      </div>
+    </section>
+
+    <!-- 4 · Programa (6 módulos · modo compacto 5-6 de _base) -->
+    <section class="slide s-program">
+      <span class="counter">04 / 10</span>
+      <p class="eyebrow">03 · Programa de la Charla</p>
+      <h2>6 bloques · 2 horas.</h2>
+      <p class="meta">De tareas financieras repetitivas a procesos automatizados, con gobierno</p>
+      <div class="modules">
+        <div class="module">
+          <span class="roman">I</span>
+          <h3>Apertura y Encuadre</h3>
+          <ul class="topics">
+            <li>Quiénes somos</li>
+            <li>No es venta</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">II</span>
+          <h3>Dónde Está DUSA Hoy</h3>
+          <ul class="topics">
+            <li>Diagnóstico de herramientas</li>
+            <li>Nivel actual del equipo</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">III</span>
+          <h3>Excel: Análisis Financiero</h3>
+          <ul class="topics">
+            <li>Fórmulas y análisis</li>
+            <li>Gráficas automáticas</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">IV</span>
+          <h3>Automatización de Facturas</h3>
+          <ul class="topics">
+            <li>Power Automate</li>
+            <li>Copilot Studio</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">V</span>
+          <h3>Gobierno y Seguridad</h3>
+          <ul class="topics">
+            <li>Permisos y datos en M365</li>
+            <li>Buenas prácticas con agentes</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">VI</span>
+          <h3>Cierre y Recursos</h3>
+          <ul class="topics">
+            <li>Preguntas abiertas</li>
+            <li>Materiales y certificado</li>
+          </ul>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Intezia · Charla · CH-007</span>
+      </div>
+    </section>
+
+    <!-- 5 · Cronograma (6 bloques · layout charla) -->
+    <section class="slide s-schedule">
+      <span class="counter">05 / 10</span>
+      <p class="eyebrow">04 · Agenda · 2 horas</p>
+      <h2>Desglose instructivo<br>bloque por bloque.</h2>
+      <div class="sessions">
+        <div class="session">
+          <div class="header">
+            <span>Bloque 1 · Apertura y Encuadre · 10 min</span>
+          </div>
+          <div class="grid">
+            <div>
+              <span class="label">Temas</span>
+              Quiénes somos · qué es la sesión (no es venta) · foco: Finanzas + mirada técnica de Sistemas
+            </div>
+            <div>
+              <span class="label">Tiempo</span>
+              10 min<br>(presentación y encuadre)
+            </div>
+            <div>
+              <span class="label">Estrategia del facilitador</span>
+              Presenta al equipo y encuadra la sesión: no es una venta, el foco es Finanzas con una mirada técnica de Sistemas.
+            </div>
+            <div>
+              <span class="label">Estrategia del participante</span>
+              Ubica el foco de la sesión y qué se espera lograr en las 2 horas.
+            </div>
+            <div>
+              <span class="label">Recursos</span>
+              Slides · Meet
+            </div>
+          </div>
+        </div>
+
+        <div class="session">
+          <div class="header">
+            <span>Bloque 2 · Dónde Está DUSA Hoy · 10 min</span>
+          </div>
+          <div class="grid">
+            <div>
+              <span class="label">Temas</span>
+              Diagnóstico rápido de herramientas y nivel actual · fundamentos ya cubiertos → directo a lo aplicado
+            </div>
+            <div>
+              <span class="label">Tiempo</span>
+              10 min<br>(diagnóstico rápido)
+            </div>
+            <div>
+              <span class="label">Estrategia del facilitador</span>
+              Presenta un diagnóstico rápido de herramientas y nivel actual del equipo, sin repetir fundamentos ya cubiertos.
+            </div>
+            <div>
+              <span class="label">Estrategia del participante</span>
+              Confirma su punto de partida y qué aplicaciones prácticas vienen a continuación.
+            </div>
+            <div>
+              <span class="label">Recursos</span>
+              Slides con diagnóstico
+            </div>
+          </div>
+        </div>
+
+        <div class="session">
+          <div class="header">
+            <span>Bloque 3 · Copilot en Excel para Análisis Financiero · 30 min</span>
+          </div>
+          <div class="grid">
+            <div>
+              <span class="label">Temas</span>
+              Fórmulas, análisis de datos, gráficas y resúmenes automáticos en vivo
+            </div>
+            <div>
+              <span class="label">Tiempo</span>
+              30 min<br>(bloque práctico)
+            </div>
+            <div>
+              <span class="label">Estrategia del facilitador</span>
+              Demo en vivo: fórmulas, análisis de datos, gráficas y resúmenes automáticos con Copilot en Excel.
+            </div>
+            <div>
+              <span class="label">Estrategia del participante</span>
+              Sigue la demo sobre un caso real de análisis financiero propio.
+            </div>
+            <div>
+              <span class="label">Recursos</span>
+              Demo en pantalla · Excel · Copilot
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Intezia · Charla · CH-007</span>
+      </div>
+    </section>
+
+    <!-- 6 · Cronograma (continuación: bloques 4-6) -->
+    <section class="slide s-schedule">
+      <span class="counter">06 / 10</span>
+      <p class="eyebrow">04 · Agenda · 2 horas</p>
+      <h2>Desglose instructivo<br>bloque por bloque (continuación).</h2>
+      <div class="sessions">
+        <div class="session">
+          <div class="header">
+            <span>Bloque 4 · Automatización de Facturación y Recordatorios · 30 min</span>
+          </div>
+          <div class="grid">
+            <div>
+              <span class="label">Temas</span>
+              Flujo de aprobación de facturas y recordatorios de pago con Power Automate + Copilot Studio
+            </div>
+            <div>
+              <span class="label">Tiempo</span>
+              30 min<br>(bloque práctico)
+            </div>
+            <div>
+              <span class="label">Estrategia del facilitador</span>
+              Demo en vivo del flujo de aprobación de facturas y recordatorios de pago con Power Automate y Copilot Studio.
+            </div>
+            <div>
+              <span class="label">Estrategia del participante</span>
+              Identifica dónde aplicar ese flujo a sus propias facturas y recordatorios.
+            </div>
+            <div>
+              <span class="label">Recursos</span>
+              Demo en pantalla · Power Automate · Copilot Studio
+            </div>
+          </div>
+        </div>
+
+        <div class="session">
+          <div class="header">
+            <span>Bloque 5 · Sistemas: Gobierno y Seguridad de Copilot · 20 min</span>
+          </div>
+          <div class="grid">
+            <div>
+              <span class="label">Temas</span>
+              Administración de asientos y permisos, manejo de datos en M365, buenas prácticas al construir agentes
+            </div>
+            <div>
+              <span class="label">Tiempo</span>
+              20 min<br>(bloque técnico)
+            </div>
+            <div>
+              <span class="label">Estrategia del facilitador</span>
+              Explica la administración de asientos y permisos, el manejo de datos dentro de M365, y buenas prácticas al construir y usar agentes.
+            </div>
+            <div>
+              <span class="label">Estrategia del participante</span>
+              El equipo de Sistemas revisa los criterios de gobierno que deberá administrar.
+            </div>
+            <div>
+              <span class="label">Recursos</span>
+              Slides técnicas · Centro de administración de Microsoft 365
+            </div>
+          </div>
+        </div>
+
+        <div class="session">
+          <div class="header">
+            <span>Bloque 6 · Cierre, Preguntas y Recursos · 20 min</span>
+          </div>
+          <div class="grid">
+            <div>
+              <span class="label">Temas</span>
+              Recapitulación de lo mostrado, espacio abierto de preguntas, materiales que se llevan
+            </div>
+            <div>
+              <span class="label">Tiempo</span>
+              20 min<br>(cierre)
+            </div>
+            <div>
+              <span class="label">Estrategia del facilitador</span>
+              Recapitula lo mostrado en la sesión y abre un espacio de preguntas.
+            </div>
+            <div>
+              <span class="label">Estrategia del participante</span>
+              Resuelve dudas puntuales y recibe los materiales que se lleva.
+            </div>
+            <div>
+              <span class="label">Recursos</span>
+              Materiales digitales · certificado de participación
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Intezia · Charla · CH-007</span>
+      </div>
+    </section>
+
+    <!-- 6 · Beneficios + Entregables + team-single -->
+    <section class="slide s-benefits">
+      <span class="counter">07 / 10</span>
+      <p class="eyebrow">05 · Beneficios</p>
+      <h2>Lo que se llevan.</h2>
+      <div class="grid">
+        <div class="block">
+          <p class="label">Perfil de egreso</p>
+          <ul>
+            <li><strong>Saber:</strong> distingue qué tareas financieras y de facturación puede resolver Copilot dentro de su ecosistema Microsoft.</li>
+            <li><strong>Saber hacer:</strong> usa Copilot en Excel para análisis financiero y automatiza facturación con Power Automate y Copilot Studio.</li>
+            <li><strong>Saber ser:</strong> Sistemas aplica criterios de gobierno y seguridad al administrar la adopción de Copilot.</li>
+          </ul>
+        </div>
+        <div class="block">
+          <p class="label">Beneficio del programa formativo</p>
+          <p>
+            El equipo de Finanzas pasa de tareas manuales a análisis y automatización con <strong>Copilot</strong>, mientras Sistemas se lleva los criterios de gobierno y seguridad para administrar esa adopción, en 2 horas.
+          </p>
+        </div>
+        <div class="block">
+          <p class="label">Entregables</p>
+        </div>
+        <div class="block">
+          <p class="label">Acreditación</p>
+        </div>
+      </div>
+
+      <div class="multi-box entregables-box" data-field="Entregables"></div>
+      <div class="multi-box acreditaciones-box" data-field="Acreditacion"></div>
+      <div class="team team-single">
+        <p class="label">Equipo</p>
+        <div class="members">
+          <div class="person">
+            <div class="avatar" data-photo="">IE</div>
+            <div>
+              <h4>Equipo INTEZIA Education</h4>
+              <p class="role">Diseño curricular · Facilitación · Coordinación</p>
+              <p>Charla para DUSA. INTEZIA designa al facilitador con perfil en procesos financieros + gobierno de IA al confirmar la fecha con el equipo de DUSA.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Intezia · Charla · CH-007</span>
+      </div>
+    </section>
+
+    <!-- 8 · Impacto / estudios (contenido estático, sin AcroForms) -->
+    <section class="slide s-impact">
+      <span class="counter">08 / 10</span>
+
+      <div class="impact-head">
+        <p class="eyebrow">06 · Impacto</p>
+        <h2>La evidencia no deja<br><span class="hl">lugar a dudas</span>.</h2>
+      </div>
+
+      <div class="impact-body">
+        <div class="chart-panel">
+          <p class="panel-title">Mejora de productividad por área de trabajo</p>
+          <div class="bars">
+            <div class="bar-row">
+              <span class="bar-label">Marketing y ventas</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:50%"><span class="bar-val">+50%</span></div></div>
+            </div>
+            <div class="bar-row">
+              <span class="bar-label">Desarrollo de software</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:26%"><span class="bar-val">+26%</span></div></div>
+            </div>
+            <div class="bar-row">
+              <span class="bar-label">Atención al cliente</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:15%"><span class="bar-val">+15%</span></div></div>
+            </div>
+          </div>
+          <div class="bar-axis"><span class="scale"><span>0</span><span>25</span><span>50</span><span>75</span><span>100%</span></span></div>
+          <p class="panel-source">Fuente: Stanford HAI · AI Index Report 2026 (cap. Economía) · McKinsey · The State of AI 2025 · Anthropic Economic Index 2025.</p>
+        </div>
+
+        <div class="gauge-panel">
+          <div class="gauge" style="--pct:78">
+            <div class="gauge-core">
+              <span class="gauge-num">78<span class="pct">%</span></span>
+              <span class="gauge-cap">ya usa IA</span>
+            </div>
+          </div>
+          <div class="chips">
+            <div class="chip">
+              <span class="chip-num">2.6&times;</span>
+              <span class="chip-lbl">adopción vs. 2023</span>
+            </div>
+            <div class="chip">
+              <span class="chip-num">1 de 3</span>
+              <span class="chip-lbl">escala su IA</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="impact-hook">
+        <span class="hook-mark">&#9656;</span>
+        <p class="hook-text">
+          Las mayores ganancias de productividad por IA generativa se concentran en
+          funciones que dependen de <strong>tareas repetitivas y análisis de información</strong>,
+          justo lo que vive Finanzas a diario. La diferencia no es la herramienta: es
+          <strong>saber usarla con el gobierno correcto</strong>.
+        </p>
+      </div>
+    </section>
+
+    <!-- 9 · Próximos pasos -->
+    <section class="slide s-steps">
+      <span class="counter">09 / 10</span>
+      <p class="eyebrow">07 · Próximos pasos</p>
+      <h2>Cómo arrancamos.</h2>
+      <div class="step-cards">
+        <div class="step-card">
+          <span class="ghost">01</span>
+        </div>
+        <div class="step-card">
+          <span class="ghost">02</span>
+        </div>
+        <div class="step-card">
+          <span class="ghost">03</span>
+        </div>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-01-titulo" data-field="Paso01Titulo">
+        <span class="acro-default-text">Confirmamos la fecha</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-01-body" data-field="Paso01Body">
+        <span class="acro-default-text">DUSA e Intezia acordamos la fecha y los equipos de Finanzas y Sistemas que participan.</span>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-02-titulo" data-field="Paso02Titulo">
+        <span class="acro-default-text">Acceso y logística</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-02-body" data-field="Paso02Body">
+        <span class="acro-default-text">Coordinamos el acceso a Copilot, Power Automate y Copilot Studio, y la agenda de la sesión de 2 horas.</span>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-03-titulo" data-field="Paso03Titulo">
+        <span class="acro-default-text">Reunión de arranque</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-03-body" data-field="Paso03Body">
+        <span class="acro-default-text">Reunión de ~30 minutos para curar ejemplos reales del área de Finanzas y del flujo de aprobación a automatizar.</span>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Intezia · Charla · CH-007</span>
+      </div>
+    </section>
+
+    <!-- 10 · Cierre -->
+    <section class="slide s-end">
+      <span class="counter">10 / 10</span>
+
+      <div class="end-logo">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia Educación">
+      </div>
+
+      <p class="end-message">
+        De <span class="hl-orange">proceso manual</span><br>a <span class="hl-yellow">proceso optimizado</span>.
+      </p>
+
+      <div class="end-contact">
+        <p class="contact-line">
+          <span class="contact-label">Empresa:</span>
+          Intezia C.A J-505657950 <span class="dot">·</span> servicio@intezia.com
+        </p>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

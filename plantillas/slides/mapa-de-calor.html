@@ -1,0 +1,78 @@
+<!-- BLOQUE ADD-ON · Mapa de Calor (s-heatmap)
+     Cómo usar:
+       1. Pega este <section> en index.html en la posición deseada.
+       2. Ajusta el number del .counter ("NN / TOTAL") y renumera las demás slides.
+       3. Copia plantillas/slides/mapa-de-calor.css al overrides.css de la propuesta
+          y enlázalo tras ../_base/styles.css.
+       4. Capacidad: ~7-8 filas (.proc-row). Más filas se recortan abajo. Corre
+          `node scripts/verificar-overflow.js <slug>` para certificar 0 desborde.
+     Edita: eyebrow, h2, filas (área + proceso + pills + herramientas + plazo +
+     frecuencia + prioridad) y la leyenda. La meta del .foot lleva cliente · código. -->
+<section class="slide s-heatmap">
+  <span class="counter">NN / TOTAL</span>
+  <p class="eyebrow">07 · Mapa de Calor</p>
+  <h2>Dónde automatizar <span class="hl">primero</span>.</h2>
+
+  <div class="hm-wrap">
+    <table class="hm">
+      <colgroup>
+        <col style="width:auto">
+        <col style="width:128px">
+        <col style="width:158px">
+        <col style="width:100px">
+        <col style="width:148px">
+        <col style="width:104px">
+      </colgroup>
+      <thead>
+        <tr>
+          <th class="th-proc">Proceso / Tarea</th>
+          <th>Puntuación</th>
+          <th>Herramienta</th>
+          <th>Plazo</th>
+          <th>Frecuencia / Manual</th>
+          <th>Prioridad</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="area-row"><td colspan="6">Nombre del área</td></tr>
+        <tr class="proc-row">
+          <td class="hm-proc">Descripción del <strong>proceso</strong></td>
+          <td class="hm-scores">
+            <div class="score-pills">
+              <div class="pill-row"><span class="pill-letter">Impacto</span><span class="pill p-alto">Alto</span></div>
+              <div class="pill-row"><span class="pill-letter">Esfuerzo</span><span class="pill p-ef-bajo">Bajo</span></div>
+              <div class="pill-row"><span class="pill-letter">Riesgo</span><span class="pill p-ri-bajo">Bajo</span></div>
+            </div>
+          </td>
+          <td class="hm-tool"><span class="tool-tag">Herramienta A</span><span class="tool-tag">Herramienta B</span></td>
+          <td class="hm-plazo">2 a 4 sem<span>implementación</span></td>
+          <td class="hm-frec"><span class="frec-main">Diario</span><span class="frec-sub">1 a 2 h manuales</span></td>
+          <td class="hm-pri"><span class="hm-badge hm-badge-alta">Alta</span></td>
+        </tr>
+        <!-- Repite <tr class="proc-row"> por proceso y <tr class="area-row"> por área.
+             Clases de pill: p-alto/p-medio · p-ef-bajo/p-ef-med/p-ef-alto ·
+             p-ri-bajo/p-ri-med · badge: hm-badge-alta/hm-badge-media. -->
+      </tbody>
+    </table>
+
+    <div class="hm-legend">
+      <span class="hm-legend-label">Puntuación</span>
+      <div class="hm-leg-item"><div class="hm-leg-sw" style="background:#F4BA1A"></div> Favorable (alto impacto / bajo esfuerzo / bajo riesgo)</div>
+      <div class="hm-leg-item"><div class="hm-leg-sw" style="background:#F9C980"></div> Nivel medio</div>
+      <div class="hm-leg-item"><div class="hm-leg-sw" style="background:#E58423"></div> Requiere atención</div>
+      <div class="hm-leg-item hm-leg-item--right">
+        <div class="hm-leg-sw" style="background:#000"></div>
+        <span class="hm-leg-strong">Prioridad Alta</span>
+      </div>
+      <div class="hm-leg-item">
+        <div class="hm-leg-sw" style="background:#E58423"></div>
+        Prioridad Media
+      </div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <img src="../../../logos/educacion/NEGRO.png" alt="">
+    <span class="meta">Cliente · CÓDIGO</span>
+  </div>
+</section>

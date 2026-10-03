@@ -1,0 +1,382 @@
+<!doctype html>
+<!--
+  Propuesta — Grupo Corpos (Toyomax/Densa) · Construcción de Agentes de IA (CAP-026)
+  Capacitación in-company integral · 12h · 6 sesiones × 2h · sector automotriz
+  División: Educación · Facilitador: Juan Figuera (asesoría/guía/enseñanza · NO desarrollo) · Asesora: Flavia Martínez
+  Stack: Claude + Odoo 17 (no se reemplaza) + WhatsApp BSP + IG/FB/LI · cicatriz MCP previa
+  Levantamiento técnico interno por: David Prato
+  Modalidad: a negociar con el cliente (no se declara en deck)
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Propuesta · Grupo Corpos · Construcción de Agentes de IA · Intezia Educación</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <main class="deck">
+
+    <!-- 1 · Portada -->
+    <section class="slide s-cover">
+      <span class="counter">01 / 12</span>
+      <div class="logo-big"><img src="../../../../logos/educacion/BLANCO.png" alt="Intezia Educación"></div>
+      <div class="body">
+        <p class="eyebrow">Capacitación In-Company · Asesoría · Guía · Enseñanza</p>
+        <h1>Construcción de<br><span class="hl">agentes de IA</span></h1>
+        <p class="lead">
+          12 horas que activan al equipo de Toyomax y Densa para diseñar y construir por sí mismo los 2 agentes de IA que necesitan: Generador de Leads y Atención al Cliente · arquitectura, stack, integración con Odoo y seguridad LLM ↔ ERP · Intezia enseña, el cliente construye.
+        </p>
+      </div>
+      <div class="id-line">
+        <span class="codigo">Código: CAP-026 · 12 horas</span>
+        <span class="cliente">Grupo Corpos · Toyomax / Densa</span>
+      </div>
+    </section>
+
+    <!-- 2 · Pain + Diagnóstico (abre con cicatriz MCP) -->
+    <section class="slide s-pain">
+      <span class="counter">02 / 12</span>
+      <span class="quote-mark">“</span>
+      <div class="body">
+        <h2>La cicatriz de MCP dejó claro que la seguridad es la condición previa. Sin esa base, ningún agente de IA se merece producción.</h2>
+        <p class="context">
+          Toyomax y Densa ya intentaron conectar Claude a Odoo y aprendieron lo que cuesta una integración insegura. Esta propuesta abre con seguridad, dimensiona el caso real (+900 mensajes por una promoción) y enseña al equipo a construir los 2 agentes con criterio · sin desarrollo a cargo de Intezia.
+        </p>
+        <p class="diag-title">Diagnóstico</p>
+        <ol>
+          <li>Cicatriz MCP previa · Claude ↔ Odoo generó incidentes hace 7 meses · seguridad es condición indispensable.</li>
+          <li>2 agentes acotados · Generador de Leads (Toyomax) + Atención al Cliente (postventa Densa/Toyomax).</li>
+          <li>Volumen real validado · +900 mensajes por una sola promoción IG · justifica el ROI.</li>
+          <li>Stack actual · Odoo 17 (no se reemplaza) + Claude activo + WhatsApp BSP prioritario.</li>
+          <li>Madurez técnica media · cliente NO parte de cero · formación práctica, no introductoria.</li>
+        </ol>
+      </div>
+      <div class="foot"><img src="../../../../logos/educacion/NEGRO.png" alt=""><span class="meta">Grupo Corpos · CAP-026</span></div>
+    </section>
+
+    <!-- 3 · Objetivos -->
+    <section class="slide s-goals">
+      <span class="counter">03 / 12</span>
+      <p class="eyebrow">02 · Objetivos del Programa</p>
+      <h2>A dónde llevamos<br>al equipo técnico.</h2>
+      <div class="columns">
+        <div class="general">
+          <p class="label">Objetivo general</p>
+          <p>
+            Activar al equipo técnico y comercial de Toyomax y Densa para diseñar, construir y operar por sí mismo 2 agentes de IA (Generador de Leads + Atención al Cliente) integrados al stack actual (Odoo 17 + Claude + WhatsApp BSP + redes sociales) · con seguridad informática LLM ↔ ERP como condición previa · Intezia asume rol de asesoría, guía y enseñanza · sin desarrollo a su cargo.
+          </p>
+        </div>
+        <div class="specifics">
+          <p class="label">Objetivos específicos</p>
+          <ol>
+            <li>Diseñar la arquitectura de los 2 agentes con criterio práctico aplicable al stack del cliente.</li>
+            <li>Documentar el AUP de seguridad LLM ↔ ERP que evita repetir la cicatriz de MCP.</li>
+            <li>Identificar las configuraciones de Odoo (Email + Social Marketing) que el cliente debe ejecutar.</li>
+            <li>Definir métricas y observabilidad para cada agente (leads, citas, encuestas, recuperación).</li>
+          </ol>
+        </div>
+      </div>
+      <div class="foot"><img src="../../../../logos/educacion/NEGRO.png" alt=""><span class="meta">Grupo Corpos · CAP-026</span></div>
+    </section>
+
+    <!-- 4 · Programa · Parte 1 · Módulos I-II-III -->
+    <section class="slide s-program">
+      <span class="counter">04 / 12</span>
+      <p class="eyebrow">03 · Programa Formativo · Parte 1</p>
+      <h2>Módulos I, II y III.</h2>
+      <p class="meta">Fundamentos · Stack y Herramientas · Diseño del Agente Generador de Leads · 3 sesiones × 2h · stack Claude + Odoo + redes</p>
+      <div class="modules">
+        <div class="module">
+          <span class="roman">I</span>
+          <h3>Fundamentos de Agentes</h3>
+          <p class="obj">Qué es un agente IA · tipologías · arquitectura conceptual de los 2 agentes del cliente · selección de modelo.</p>
+          <ul class="topics">
+            <li>1.1 Agente vs chatbot vs asistente</li>
+            <li>1.2 Tipologías y patrones</li>
+            <li>1.3 Arquitectura conceptual 2 agentes</li>
+            <li>1.4 Claude · Codex · criterio</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">II</span>
+          <h3>Stack y Herramientas</h3>
+          <p class="obj">Frameworks/SDKs para construir agentes · herramientas integrables al stack del cliente · orquestación · prompt engineering.</p>
+          <ul class="topics">
+            <li>2.1 Claude Agent SDK · function calling</li>
+            <li>2.2 BSP · IG/FB API · redes</li>
+            <li>2.3 Orquestación sync/async · escalado</li>
+            <li>2.4 Prompt engineering RCTF</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">III</span>
+          <h3>Agente Generador de Leads</h3>
+          <p class="obj">Diseño del agente que captura, valida y enruta clientes potenciales de Toyomax · lógica de verificación contra base de datos.</p>
+          <ul class="topics">
+            <li>3.1 Lógica funcional · verificación</li>
+            <li>3.2 Identificadores · normalización</li>
+            <li>3.3 Dimensionamiento +900 mensajes</li>
+            <li>3.4 Métricas · conversión, tiempo, error</li>
+          </ul>
+        </div>
+      </div>
+      <div class="foot"><img src="../../../../logos/educacion/NEGRO.png" alt=""><span class="meta">Grupo Corpos · CAP-026 · Programa</span></div>
+    </section>
+
+    <!-- 5 · Programa · Parte 2 · Módulos IV-V-VI -->
+    <section class="slide s-program">
+      <span class="counter">05 / 12</span>
+      <p class="eyebrow">03 · Programa Formativo · Parte 2</p>
+      <h2>Módulos IV, V y VI.</h2>
+      <p class="meta">Agente de Atención · Lectura Técnica de Odoo · Seguridad LLM ↔ ERP · 3 sesiones × 2h · módulo VI dedicado por antecedente</p>
+      <div class="modules">
+        <div class="module">
+          <span class="roman">IV</span>
+          <h3>Agente de Atención al Cliente</h3>
+          <p class="obj">Diseño del agente postventa · recordatorios, promociones, encuestas Toyota, recuperación de clientes inactivos.</p>
+          <ul class="topics">
+            <li>4.1 Identificación + escalado humano</li>
+            <li>4.2 Recordatorios + promos + recuperación</li>
+            <li>4.3 Encuestas estándares Toyota</li>
+            <li>4.4 Métricas · citas, encuestas, recupero</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">V</span>
+          <h3>Lectura Técnica de Odoo</h3>
+          <p class="obj">Mapa de módulos relevantes (Email + Social Marketing) · qué configura el cliente en su ERP · Intezia asesora, no ejecuta.</p>
+          <ul class="topics">
+            <li>5.1 Email + Social Marketing</li>
+            <li>5.2 Integración por API</li>
+            <li>5.3 Email subutilizado · segmentación</li>
+            <li>5.4 Checklist de configuraciones cliente</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">VI</span>
+          <h3>Seguridad LLM ↔ ERP</h3>
+          <p class="obj">Módulo dedicado por antecedente · lectura del incidente MCP · patrones seguros · AUP corporativo · auditoría y observabilidad.</p>
+          <ul class="topics">
+            <li>6.1 Lectura del incidente MCP</li>
+            <li>6.2 Secrets · vault · scopes mínimos</li>
+            <li>6.3 AUP Seguridad LLM ↔ ERP</li>
+            <li>6.4 Auditoría y observabilidad</li>
+          </ul>
+        </div>
+      </div>
+      <div class="foot"><img src="../../../../logos/educacion/NEGRO.png" alt=""><span class="meta">Grupo Corpos · CAP-026 · Programa</span></div>
+    </section>
+
+    <!-- 6 · Cronograma · Parte 1 · Sesiones 1-2-3 -->
+    <section class="slide s-schedule">
+      <span class="counter">06 / 12</span>
+      <p class="eyebrow">04 · Cronograma · Parte 1 · Sesiones 1-2-3 · calendario y modalidad a consideración del cliente</p>
+      <h2>Desglose instructivo<br>sesión por sesión.</h2>
+      <div class="sessions">
+        <div class="session">
+          <div class="header"><span>Sesión 1 — Fundamentos de Agentes de IA · 2 horas</span></div>
+          <div class="grid">
+            <div><span class="label">Temas</span>Módulo I (full)<br>1.1-1.4</div>
+            <div><span class="label">Tiempo</span>120 min<br>(agente vs chatbot · tipologías · arquitectura · modelo)</div>
+            <div><span class="label">Estrategias enseñanza</span>Demostración guiada de la arquitectura conceptual de los 2 agentes específicos del cliente · comparativa Claude vs Codex con criterio aplicable · ejemplos del sector automotriz</div>
+            <div><span class="label">Estrategias aprendizaje</span>Diagrama de arquitectura de los 2 agentes firmable · criterio de selección de modelo por caso · vocabulario técnico común entre TI y comercial</div>
+            <div><span class="label">Recursos</span>Claude (suscripción del cliente) · Workbook digital · plantilla de arquitectura INTEZIA · pizarra para diagrama colaborativo</div>
+          </div>
+        </div>
+        <div class="session">
+          <div class="header"><span>Sesión 2 — Stack y Herramientas para Construir Agentes · 2 horas</span></div>
+          <div class="grid">
+            <div><span class="label">Temas</span>Módulo II (full)<br>2.1-2.4</div>
+            <div><span class="label">Tiempo</span>120 min<br>(SDK · BSP/redes · orquestación · prompt engineering)</div>
+            <div><span class="label">Estrategias enseñanza</span>Recorrido por Claude Agent SDK · function calling y tool use · catálogo de BSPs de WhatsApp con criterio de selección · ejemplos de prompts para agentes del sector automotriz</div>
+            <div><span class="label">Estrategias aprendizaje</span>Matriz de stack y herramientas integrables · criterio de BSP a contratar · biblioteca inicial de prompts del rol comercial y postventa</div>
+            <div><span class="label">Recursos</span>Documentación Claude Agent SDK · catálogo BSP · plantillas INTEZIA · workbook digital</div>
+          </div>
+        </div>
+        <div class="session">
+          <div class="header"><span>Sesión 3 — Agente Generador de Leads · 2 horas</span></div>
+          <div class="grid">
+            <div><span class="label">Temas</span>Módulo III (full)<br>3.1-3.4</div>
+            <div><span class="label">Tiempo</span>120 min<br>(lógica · identificadores · dimensionamiento · métricas)</div>
+            <div><span class="label">Estrategias enseñanza</span>Diseño guiado del Agente Generador de Leads para Toyomax · lógica de verificación contra Odoo · dimensionamiento para +900 mensajes sin saturar comercial · definición de métricas con TI presente</div>
+            <div><span class="label">Estrategias aprendizaje</span>Documento de diseño del Agente Generador de Leads firmable · matriz de identificadores y normalización · tablero de métricas inicial</div>
+            <div><span class="label">Recursos</span>Plantilla de diseño de agente INTEZIA · ejemplos anonimizados de mensajes IG del cliente · workbook digital</div>
+          </div>
+        </div>
+      </div>
+      <div class="foot"><img src="../../../../logos/educacion/NEGRO.png" alt=""><span class="meta">Grupo Corpos · CAP-026 · Cronograma</span></div>
+    </section>
+
+    <!-- 7 · Cronograma · Parte 2 · Sesiones 4-5-6 -->
+    <section class="slide s-schedule">
+      <span class="counter">07 / 12</span>
+      <p class="eyebrow">04 · Cronograma · Parte 2 · Sesiones 4-5-6 · calendario y modalidad a consideración del cliente</p>
+      <h2>Desglose instructivo<br>sesión por sesión.</h2>
+      <div class="sessions">
+        <div class="session">
+          <div class="header"><span>Sesión 4 — Agente de Atención al Cliente · 2 horas</span></div>
+          <div class="grid">
+            <div><span class="label">Temas</span>Módulo IV (full)<br>4.1-4.4</div>
+            <div><span class="label">Tiempo</span>120 min<br>(identificación · recordatorios · encuestas · métricas)</div>
+            <div><span class="label">Estrategias enseñanza</span>Diseño del Agente de Atención al Cliente postventa · flujo de identificación + conversación + escalado · diseño conversacional para encuestas Toyota · contactos proactivos para recuperación</div>
+            <div><span class="label">Estrategias aprendizaje</span>Documento de diseño del Agente de Atención firmable · flujo de escalado a humano · plantilla de encuesta Toyota · matriz de criterios de recuperación</div>
+            <div><span class="label">Recursos</span>Plantilla de diseño de agente INTEZIA · estándares Toyota (documentación del cliente) · workbook digital</div>
+          </div>
+        </div>
+        <div class="session">
+          <div class="header"><span>Sesión 5 — Lectura Técnica de Odoo · 2 horas</span></div>
+          <div class="grid">
+            <div><span class="label">Temas</span>Módulo V (full)<br>5.1-5.4</div>
+            <div><span class="label">Tiempo</span>120 min<br>(Email + Social Marketing · integración · checklist cliente)</div>
+            <div><span class="label">Estrategias enseñanza</span>Recorrido conceptual de los módulos relevantes de Odoo (Email + Social Marketing) · qué expone la plataforma · qué necesita el agente · checklist de configuraciones que el cliente ejecuta en su ERP (Intezia asesora, NO ejecuta)</div>
+            <div><span class="label">Estrategias aprendizaje</span>Checklist de Configuraciones Odoo firmable · plan de re-segmentación del canal de email subutilizado · cliente asume responsabilidad explícita de la configuración</div>
+            <div><span class="label">Recursos</span>Documentación Odoo · plantillas INTEZIA · ejemplos del cliente · workbook digital</div>
+          </div>
+        </div>
+        <div class="session">
+          <div class="header"><span>Sesión 6 — Seguridad LLM ↔ ERP · 2 horas</span></div>
+          <div class="grid">
+            <div><span class="label">Temas</span>Módulo VI (full)<br>6.1-6.4</div>
+            <div><span class="label">Tiempo</span>120 min<br>(incidente MCP · secrets · AUP · observabilidad)</div>
+            <div><span class="label">Estrategias enseñanza</span>Lectura técnica del incidente MCP previo · patrones seguros de integración LLM ↔ ERP · construcción del AUP de Seguridad Grupo Corpos en sala · auditoría y observabilidad para detectar incidentes a tiempo · cierre del programa</div>
+            <div><span class="label">Estrategias aprendizaje</span>AUP de Seguridad LLM ↔ ERP firmable · matriz de secrets y vault · plan de auditoría · cohort completo certificado · cliente listo para construir</div>
+            <div><span class="label">Recursos</span>Plantilla AUP Seguridad INTEZIA · referencias de gestión de secrets · workbook digital</div>
+          </div>
+        </div>
+      </div>
+      <div class="foot"><img src="../../../../logos/educacion/NEGRO.png" alt=""><span class="meta">Grupo Corpos · CAP-026 · Cronograma</span></div>
+    </section>
+
+    <!-- 8 · Metodología ABR -->
+    <section class="slide s-orange">
+      <span class="counter">08 / 12</span>
+      <p class="eyebrow">05 · Metodología</p>
+      <h2>Aprendizaje<br>Basado en Retos</h2>
+      <p class="sub">Modelo Intezia · 3 pilares aplicados al caso real de Toyomax y Densa</p>
+      <div class="pillars">
+        <div class="pillar">
+          <span class="num">01</span>
+          <h3>Seguridad como condición previa</h3>
+          <p>La cicatriz MCP no se ignora ni se minimiza · se trabaja desde el día 1 como condición indispensable · el módulo VI cierra el programa con un AUP firmable que protege al cliente cuando construya · sin esa base, ningún agente merece producción.</p>
+        </div>
+        <div class="pillar">
+          <span class="num">02</span>
+          <h3>Diseño sobre el caso real del cliente</h3>
+          <p>Las sesiones III y IV diseñan los 2 agentes específicos del cliente (no agentes hipotéticos) · arquitectura, lógica, métricas y plantillas se construyen sobre Toyomax y Densa · al egresar, el cliente tiene los documentos de diseño firmables, listos para construir.</p>
+        </div>
+        <div class="pillar">
+          <span class="num">03</span>
+          <h3>Ustedes construyen, nosotros enseñamos</h3>
+          <p>El alcance del consultor es asesoría, guía y enseñanza · NO desarrollo · Intezia transfiere arquitectura, criterio, plantillas y experiencia · el cliente construye con autonomía · sin dependencia continua de un proveedor de desarrollo externo.</p>
+        </div>
+      </div>
+      <div class="foot"><img src="../../../../logos/educacion/NEGRO.png" alt=""><span class="meta">Intezia · Modelo ABR · Cohort Técnico</span></div>
+    </section>
+
+    <!-- 9 · Beneficios + Equipo (Juan named) -->
+    <section class="slide s-benefits">
+      <span class="counter">09 / 12</span>
+      <p class="eyebrow">06 · Beneficios del programa</p>
+      <h2>Lo que se llevan.</h2>
+      <div class="grid">
+        <div class="block">
+          <p class="label">Perfil de egreso · equipo Corpos</p>
+          <ul>
+            <li><strong>Saber:</strong> distinguen agentes de chatbots · conocen arquitectura, stack, modelos y patrones seguros de integración.</li>
+            <li><strong>Saber hacer:</strong> diseñan, dimensionan, miden y construyen los 2 agentes integrados a Odoo + Claude + canales reales.</li>
+            <li><strong>Saber ser:</strong> aplican AUP de seguridad LLM↔ERP · firman cada integración con criterio profesional indelegable.</li>
+          </ul>
+        </div>
+        <div class="block">
+          <p class="label">Beneficio del programa formativo</p>
+          <p>
+            Toyomax y Densa egresan con <strong>autonomía técnica</strong> para construir los 2 agentes · documentos de diseño firmables, AUP de seguridad, checklist Odoo y plantillas de métricas · listos para absorber los <strong>+900 mensajes por promoción</strong> sin saturar al equipo comercial.
+          </p>
+        </div>
+        <div class="block"><p class="label">Entregables</p></div>
+        <div class="block"><p class="label">Acreditación</p></div>
+      </div>
+
+      <div class="multi-box entregables-box" data-field="Entregables"></div>
+      <div class="multi-box acreditaciones-box" data-field="Acreditacion"></div>
+      <div class="team team-single">
+        <p class="label">Equipo facilitador</p>
+        <div class="members">
+          <div class="person">
+            <div>
+              <h4>Juan Figuera</h4>
+              <p class="role">Consultor Facilitador · Intezia Education · Asesoría · Guía · Enseñanza</p>
+              <p>Facilita las 6 sesiones del programa · perfil automation + customer experience con IA · rol exclusivo de asesoría, guía y enseñanza · NO realiza desarrollo de los agentes · enseña al equipo a construirlos por sí mismo. Sobre Odoo: se documenta para tener base sólida, pero las configuraciones del ERP las ejecuta el equipo del cliente según su flujo. Coordinación dedicada Intezia para los 30 días posteriores.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="foot"><img src="../../../../logos/educacion/NEGRO.png" alt=""><span class="meta">Grupo Corpos · CAP-026</span></div>
+    </section>
+
+    <!-- 10 · Propuesta Económica -->
+    <section class="slide s-price">
+      <span class="counter">10 / 12</span>
+      <h2 class="title">Propuesta Económica</h2>
+      <div class="block">
+        <span class="block-eyebrow">Duración</span>
+        <p class="block-value">12 horas formativas · 6 sesiones × 2h · cohort cerrado · calendario flexible.</p>
+      </div>
+      <div class="block block-programa"><span class="block-eyebrow">Programa</span></div>
+      <div class="multi-box programa-box" data-field="Programa"></div>
+      <div class="block block-cotizacion"><span class="block-eyebrow">Cotización</span></div>
+      <span class="cot-label cot-label-base">Propuesta + Inversión</span>
+      <div class="cot-frame base-frame"></div>
+      <span class="cot-label cot-label-discount">Descuento</span>
+      <div class="cot-frame discount-frame"></div>
+      <span class="cot-label cot-label-total">TOTAL</span>
+      <div class="cot-frame total-frame"></div>
+      <div class="block block-notes-container"><span class="block-eyebrow">Notas</span></div>
+      <div class="multi-box notas-box" data-field="Notas"></div>
+      <div class="foot"><img src="../../../../logos/educacion/NEGRO.png" alt=""><span class="meta">Grupo Corpos · CAP-026</span></div>
+    </section>
+
+    <!-- 11 · Próximos pasos -->
+    <section class="slide s-steps">
+      <span class="counter">11 / 12</span>
+      <p class="eyebrow">07 · Próximos pasos</p>
+      <h2>Cómo arrancamos.</h2>
+      <div class="step-cards">
+        <div class="step-card"><span class="ghost">01</span></div>
+        <div class="step-card"><span class="ghost">02</span></div>
+        <div class="step-card"><span class="ghost">03</span></div>
+      </div>
+      <div class="acro-area acro-title acro-paso-01-titulo" data-field="Paso01Titulo"><span class="acro-default-text">Aprueban CAP-026</span></div>
+      <div class="acro-area acro-body acro-paso-01-body" data-field="Paso01Body"><span class="acro-default-text">Validamos cotización y modalidad con el cliente · Flavia coordina con Grupo Corpos las 6 fechas del cohort · Juan se documenta sobre el Odoo del cliente y solicita material real anonimizado (mensajes IG, capturas Odoo, plantilla de cita) para personalizar las sesiones.</span></div>
+      <div class="acro-area acro-title acro-paso-02-titulo" data-field="Paso02Titulo"><span class="acro-default-text">Ejecución · 6 sesiones</span></div>
+      <div class="acro-area acro-body acro-paso-02-body" data-field="Paso02Body"><span class="acro-default-text">Juan opera las 6 sesiones · cada sesión deja un activo firmable: arquitectura de agentes, matriz de stack, diseños de los 2 agentes, checklist Odoo y AUP de seguridad LLM ↔ ERP.</span></div>
+      <div class="acro-area acro-title acro-paso-03-titulo" data-field="Paso03Titulo"><span class="acro-default-text">Cliente construye · Roadmap</span></div>
+      <div class="acro-area acro-body acro-paso-03-body" data-field="Paso03Body"><span class="acro-default-text">Cohort egresa con autonomía técnica · el cliente construye los agentes con criterio Intezia · conversación abierta post-cierre para acompañamiento opcional durante construcción (sprints de asesoría, code review de criterio, validación de seguridad · cotizable aparte).</span></div>
+      <div class="foot"><img src="../../../../logos/educacion/NEGRO.png" alt=""><span class="meta">Grupo Corpos · CAP-026 · Roadmap</span></div>
+    </section>
+
+    <!-- 12 · Cierre · Flavia Martínez -->
+    <section class="slide s-end">
+      <span class="counter">12 / 12</span>
+      <div class="end-logo"><img src="../../../../logos/educacion/BLANCO.png" alt="Intezia Educación"></div>
+      <p class="end-message">
+        Del <span class="hl-orange">intento aislado</span><br>al <span class="hl-yellow">equipo aumentado</span>.
+      </p>
+      <div class="cta-wrap"><span class="cta">Esperamos tu Respuesta</span></div>
+      <div class="end-contact">
+        <p class="contact-line">
+          <span class="contact-label">Asesora de ventas:</span>
+          Flavia Martínez <span class="dot">·</span> +58 414 5756615 <span class="dot">·</span> fmartinez@intezia.com
+        </p>
+        <p class="contact-line">
+          <span class="contact-label">Empresa:</span>
+          Intezia C.A J-505657950 <span class="dot">·</span> info@intezia.com
+        </p>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

@@ -1,0 +1,718 @@
+<!doctype html>
+<!--
+  Documento de trabajo — Soberanía de datos · N58 Banco Digital (Tecnología / Jonathan)
+  Complementario a CAI-034 (propuesta de Mercadeo). NO es una propuesta comercial: sin
+  AcroForms, sin precio, sin servicio ni código asociado en meta.json.
+
+  v2 (2026-10-01): reescrito a pedido del usuario — ya no deja la parte de "sí toca datos
+  de clientes" como preguntas abiertas sin responder. Investigado con WebSearch/WebFetch:
+  (1) la circular de Sudeban del 29-dic-2023 sobre Computación de Nube (repatriación de
+  bases de datos "principales", proveedor con presencia local, aprobación previa de
+  contratos, cifrado + auditoría) — fuente: cobertura de prensa especializada (Cointelegraph,
+  Contrapunto, Qué Pasa, enero 2024), NO el texto primario de Gaceta — se avisa al lector.
+  (2) Qué garantiza hoy una suscripción comercial de Claude (no entrena con datos del
+  cliente, retención 30 días o Zero Data Retention bajo acuerdo, SOC 2 Type II / ISO 27001 /
+  ISO 42001, Compliance API, residencia regional US/Canadá/UE/Australia/India — ninguna en
+  Venezuela todavía) — fuente: platform.claude.com, trust.anthropic.com.
+  (3) Insight central: ningún proveedor de IA de uso general aloja infraestructura en
+  Venezuela — no es un problema de Claude vs. otros, es la regulación frente a cualquier IA
+  externa. Lo que cambia el resultado es arquitectura (qué es "dato principal", que no
+  viaje, ZDR para lo que sí viaje).
+  (4) Evidencia bancaria real citada: Commonwealth Bank of Australia (fraude/atención,
+  Anthropic), FIS + Anthropic (IA agéntica en crimen financiero, dato siempre dentro de
+  infraestructura de FIS), AIG (suscripción 5x más rápida, precisión 75%→90%+), Norges Bank
+  Investment Management (+20% productividad), patrón LatAm de Compliance RAG sobre
+  regulación CNBV/CNSF (México) sin tocar datos de clientes.
+  (5) El interés de Jonathan en agentes sobre data transaccional ahora se resuelve como
+  caso de diseño concreto bajo el mismo patrón de gobernanza (FIS), no como idea suelta.
+
+  v3 (2026-10-01): a pedido del usuario, la sección de evidencia bancaria ahora lidera con
+  casos VENEZOLANOS reales (porque la regulación que importa es la de acá), separados de la
+  evidencia internacional con Claude específicamente — ahora son 2 páginas (05 y 06) en vez
+  de 1. Investigado: Bancaribe (BanIA: 1 orquestador + 13 agentes especializados, ambientes
+  Dev/QA/Producción en Power Platform y Azure, pruebas contra alucinaciones/prompt
+  injection/exfiltración de datos, 4.4M interacciones/año, WITSA Global AI Award 2026),
+  Mercantil (MIA: 1M+ interacciones, -57% costos operativos, NPS >50%), BanescoInnova 2026
+  (807 proyectos de IA, 96% desarrollados en el país). Ninguno usa Claude — se presentan
+  honestamente como prueba de que la regulación no frena la IA generativa con buen gobierno
+  de datos, no como "bancos que ya usan Claude". Corregido además un sobre-alcance: la caja
+  "Y en nuestra propia experiencia" ya NO afirma que Intezia diseñó la arquitectura de
+  soberanía de datos con un banco previo (no hay evidencia de eso en el sistema) — se
+  reescribió para decir solo lo verificable: adopción de Claude sin tocar datos de clientes
+  (ver banco-plaza-mercadeo/, CAI-024, que SÍ es real).
+
+  Sin citas textuales atribuidas al cliente. Sin guion largo (§4.13) en el contenido
+  visible. Sudeban/SOC 2/ISO/ZDR/FIS/CNBV/CNSF/NPS/WITSA expandidos en su primera aparición
+  (§4.12). Formato: A4 portrait, 10 páginas, HTML autocontenido (CSS inline). PDF con Chrome
+  headless directo (mismo binario que generar-pdf.sh, sin AcroForms/customize).
+-->
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Soberanía de datos · N58 Banco Digital · Intezia</title>
+<style>
+  :root{
+    --black:#000000;
+    --yellow:#F4BA1A;
+    --orange:#E58423;
+    --white:#FFFFFF;
+  }
+  @page{ size:A4; margin:0; }
+  *{ box-sizing:border-box; }
+  html,body{ margin:0; padding:0; background:var(--black); }
+  body{
+    font-family:'Poppins','Inter',Arial,sans-serif;
+    color:var(--white);
+    -webkit-print-color-adjust:exact;
+    print-color-adjust:exact;
+  }
+  .page{
+    width:210mm;
+    min-height:297mm;
+    background:var(--black);
+    position:relative;
+    padding:16mm 16mm 18mm;
+    page-break-after:always;
+    overflow:hidden;
+  }
+  .page:last-child{ page-break-after:auto; }
+
+  .topbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding-bottom:10px;
+    border-bottom:1px solid rgba(255,255,255,0.18);
+    margin-bottom:18px;
+  }
+  .topbar .brand{
+    font-weight:700;
+    font-size:10.5px;
+    letter-spacing:0.18em;
+    text-transform:uppercase;
+    color:rgba(255,255,255,0.75);
+  }
+  .topbar .pill{
+    font-weight:700;
+    font-size:9.5px;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    color:var(--yellow);
+    border:1px solid rgba(244,186,26,0.55);
+    border-radius:999px;
+    padding:5px 14px;
+  }
+
+  .eyebrow{
+    font-weight:700;
+    font-size:10.5px;
+    letter-spacing:0.2em;
+    text-transform:uppercase;
+    color:var(--orange);
+    margin:0 0 10px;
+  }
+  h1{
+    font-size:26px;
+    line-height:1.2;
+    font-weight:700;
+    margin:0 0 16px;
+    max-width:640px;
+  }
+  .lead{
+    font-size:13.5px;
+    line-height:1.55;
+    color:rgba(255,255,255,0.78);
+    max-width:580px;
+    margin:0 0 20px;
+  }
+  h2.sectitle{
+    font-size:20px;
+    font-weight:700;
+    line-height:1.25;
+    margin:0 0 4px;
+  }
+  .subtitle{
+    font-size:12px;
+    color:rgba(255,255,255,0.55);
+    margin:0 0 16px;
+  }
+
+  .secnum{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    width:30px; height:30px;
+    border-radius:7px;
+    background:var(--orange);
+    color:var(--black);
+    font-weight:700;
+    font-size:13px;
+    margin-right:10px;
+    flex-shrink:0;
+  }
+  .sechead{ display:flex; align-items:flex-start; margin-bottom:2px; }
+  .sechead .sectxt{ flex:1; }
+
+  .meta-row{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-bottom:20px;
+  }
+  .meta-chip{
+    border:1px solid rgba(255,255,255,0.22);
+    border-radius:8px;
+    padding:8px 14px;
+    font-size:11px;
+  }
+  .meta-chip b{
+    display:block;
+    font-size:9px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--yellow);
+    margin-bottom:3px;
+    font-weight:700;
+  }
+
+  .box{
+    border:1px solid rgba(244,186,26,0.35);
+    background:rgba(244,186,26,0.06);
+    border-radius:10px;
+    padding:14px 18px;
+    margin:12px 0;
+  }
+  .box .boxlabel{
+    font-weight:700;
+    font-size:9.5px;
+    letter-spacing:0.16em;
+    text-transform:uppercase;
+    color:var(--yellow);
+    margin:0 0 7px;
+  }
+  .box p{ margin:0; font-size:12px; line-height:1.52; color:rgba(255,255,255,0.88); }
+
+  .box.warn{
+    border-color:rgba(229,132,35,0.45);
+    background:rgba(229,132,35,0.08);
+  }
+  .box.warn .boxlabel{ color:var(--orange); }
+
+  .box.insight{
+    border:none;
+    background:linear-gradient(135deg, rgba(244,186,26,0.14), rgba(229,132,35,0.1));
+    border-left:6px solid var(--yellow);
+    border-radius:8px;
+    padding:20px 24px;
+  }
+  .box.insight p{ font-size:14.5px; line-height:1.55; color:var(--white); font-weight:600; }
+
+  ul.check{ list-style:none; margin:0 0 4px; padding:0; }
+  ul.check li{
+    position:relative;
+    padding:7px 0 7px 26px;
+    font-size:12.5px;
+    line-height:1.48;
+    color:rgba(255,255,255,0.88);
+    border-bottom:1px solid rgba(255,255,255,0.08);
+  }
+  ul.check li:last-child{ border-bottom:0; }
+  ul.check li::before{
+    content:"\2713";
+    position:absolute; left:0; top:7px;
+    color:var(--yellow);
+    font-weight:700;
+  }
+  ul.check.steps li::before{ content: attr(data-n); font-size:10.5px; }
+  ul.check.steps li{ padding-left:28px; }
+
+  p.body-p{ font-size:12.5px; line-height:1.58; color:rgba(255,255,255,0.85); max-width:660px; }
+
+  .cols2{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px;
+    margin-top:14px;
+  }
+  .colcard{
+    border-radius:10px;
+    padding:16px 18px;
+    border:1px solid rgba(255,255,255,0.14);
+    background:rgba(255,255,255,0.03);
+  }
+  .colcard.ok{ border-top:4px solid var(--yellow); }
+  .colcard.open{ border-top:4px solid var(--orange); }
+  .colcard .colhead{
+    font-weight:700;
+    font-size:14px;
+    margin-bottom:10px;
+  }
+  .colcard.ok .colhead{ color:var(--yellow); }
+  .colcard.open .colhead{ color:var(--orange); }
+  .colcard ul{ list-style:none; margin:0 0 10px; padding:0; }
+  .colcard li{
+    position:relative;
+    padding:5px 0 5px 16px;
+    font-size:12px;
+    line-height:1.42;
+    color:rgba(255,255,255,0.85);
+  }
+  .colcard li::before{
+    content:"\2022";
+    position:absolute; left:0;
+    color:rgba(255,255,255,0.4);
+  }
+  .colcard .caption{
+    font-size:11px;
+    font-style:italic;
+    color:rgba(255,255,255,0.55);
+    margin:0;
+    padding-top:8px;
+    border-top:1px solid rgba(255,255,255,0.1);
+  }
+
+  .evidence{ margin-top:10px; }
+  .evidence li{
+    position:relative;
+    padding:9px 0 9px 20px;
+    font-size:12px;
+    line-height:1.5;
+    color:rgba(255,255,255,0.85);
+    border-bottom:1px solid rgba(255,255,255,0.08);
+    list-style:none;
+  }
+  .evidence li:last-child{ border-bottom:0; }
+  .evidence li::before{
+    content:"\25B8";
+    position:absolute; left:0; top:9px;
+    color:var(--orange);
+  }
+  .evidence b{ color:var(--white); }
+
+  .cite{
+    font-size:10px;
+    font-style:italic;
+    line-height:1.4;
+    color:rgba(255,255,255,0.45);
+    margin:10px 0 0;
+    max-width:660px;
+  }
+
+  .footbar{
+    position:absolute;
+    left:16mm; right:16mm; bottom:12mm;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding-top:10px;
+    border-top:1px solid rgba(255,255,255,0.14);
+    font-size:9.5px;
+    color:rgba(255,255,255,0.5);
+  }
+
+  .divider{ height:1px; background:rgba(255,255,255,0.12); margin:16px 0; }
+</style>
+</head>
+<body>
+
+  <!-- Página 1 · Portada -->
+  <section class="page">
+    <div class="topbar">
+      <span class="brand">INTEZIA &middot; DIRECCI&Oacute;N COMERCIAL</span>
+      <span class="pill">PREPARADO PARA N58 &middot; TECNOLOG&Iacute;A</span>
+    </div>
+
+    <p class="eyebrow">Documento de trabajo &middot; Soberan&iacute;a de datos</p>
+    <h1>C&oacute;mo resolvemos la soberan&iacute;a de datos de N58, con evidencia y no con una respuesta gen&eacute;rica.</h1>
+    <p class="lead">
+      Qu&eacute; exige exactamente Sudeban, qu&eacute; garantiza una suscripci&oacute;n de Claude, c&oacute;mo lo han resuelto otros bancos regulados, y qu&eacute; seguimos dise&ntilde;ando junto a su equipo t&eacute;cnico.
+    </p>
+
+    <div class="meta-row">
+      <div class="meta-chip"><b>Para</b>N58 Banco Digital &middot; Tecnolog&iacute;a</div>
+      <div class="meta-chip"><b>Por</b>Intezia</div>
+      <div class="meta-chip"><b>Fecha</b>Octubre 2026</div>
+      <div class="meta-chip"><b>Estado</b>Documento de trabajo</div>
+    </div>
+
+    <div class="box">
+      <p class="boxlabel">Antes de empezar</p>
+      <p>
+        En la reuni&oacute;n respondimos de forma general, con la idea de un modelo de nivel empresarial. Este documento lo aterriza: qu&eacute; dice la circular de Sudeban, qu&eacute; cubre realmente una suscripci&oacute;n de Claude, y d&oacute;nde sigue habiendo una decisi&oacute;n de arquitectura que vale la pena resolver junto a su equipo t&eacute;cnico antes de comprometerla.
+      </p>
+    </div>
+
+    <div class="divider"></div>
+
+    <p class="boxlabel" style="color:rgba(255,255,255,0.6); margin-bottom:10px;">Lo que este documento responde</p>
+    <ul class="check">
+      <li>Qu&eacute; exige Sudeban sobre datos y computaci&oacute;n en la nube, con fuente.</li>
+      <li>Qu&eacute; garantiza, y qu&eacute; no garantiza por s&iacute; sola, una suscripci&oacute;n de Claude.</li>
+      <li>C&oacute;mo lo resolvieron otros bancos regulados, afuera y en nuestra propia experiencia.</li>
+      <li>Un ejemplo de hacia d&oacute;nde se puede crecer: agentes sobre data transaccional.</li>
+    </ul>
+
+    <div class="footbar">
+      <span>INTEZIA &middot; Consultor&iacute;a de IA #1 en LATAM</span>
+      <span>P&aacute;gina 1 de 10</span>
+    </div>
+  </section>
+
+  <!-- Página 2 · 01 Lo que ya puede arrancar -->
+  <section class="page">
+    <div class="topbar">
+      <span class="brand">INTEZIA &middot; DIRECCI&Oacute;N COMERCIAL</span>
+      <span class="pill">PREPARADO PARA N58 &middot; TECNOLOG&Iacute;A</span>
+    </div>
+
+    <div class="sechead">
+      <span class="secnum">01</span>
+      <div class="sectxt">
+        <h2 class="sectitle">Lo que ya puede arrancar</h2>
+        <p class="subtitle">La propuesta de Mercadeo (CAI-034), sin esperar nada de esto</p>
+      </div>
+    </div>
+
+    <p class="body-p">
+      Antes de entrar en la parte t&eacute;cnica: el trabajo que detalla la propuesta de Mercadeo que acompa&ntilde;a este documento no toca datos de clientes, y no necesita esperar ninguna de las respuestas de las pr&oacute;ximas secciones.
+    </p>
+
+    <ul class="check" style="margin-top:16px;">
+      <li>Los creativos y art&iacute;culos se construyen sobre la marca y el calendario de lanzamiento del banco, nunca sobre informaci&oacute;n de sus clientes.</li>
+      <li>La formaci&oacute;n del equipo trabaja sobre casos de marca y contenido, no sobre data transaccional.</li>
+      <li>Nada de este trabajo requiere acceso a su n&uacute;cleo bancario ni a bases de datos de clientes.</li>
+    </ul>
+
+    <div class="box" style="margin-top:22px;">
+      <p class="boxlabel">Ya en marcha</p>
+      <p>
+        Este track puede arrancar con el calendario de lanzamiento del banco, en paralelo a que resolvemos lo de las pr&oacute;ximas secciones.
+      </p>
+    </div>
+
+    <div class="footbar">
+      <span>INTEZIA &middot; Consultor&iacute;a de IA #1 en LATAM</span>
+      <span>P&aacute;gina 2 de 10</span>
+    </div>
+  </section>
+
+  <!-- Página 3 · 02 Lo que exige Sudeban -->
+  <section class="page">
+    <div class="topbar">
+      <span class="brand">INTEZIA &middot; DIRECCI&Oacute;N COMERCIAL</span>
+      <span class="pill">PREPARADO PARA N58 &middot; TECNOLOG&Iacute;A</span>
+    </div>
+
+    <div class="sechead">
+      <span class="secnum">02</span>
+      <div class="sectxt">
+        <h2 class="sectitle">Lo que exige Sudeban</h2>
+        <p class="subtitle">La circular del 29 de diciembre de 2023, en los t&eacute;rminos que importan ac&aacute;</p>
+      </div>
+    </div>
+
+    <p class="body-p">
+      N58 opera bajo la regulaci&oacute;n de Sudeban (Superintendencia de las Instituciones del Sector Bancario). Desde finales de 2023, Sudeban tiene una circular espec&iacute;fica sobre computaci&oacute;n en la nube que aplica directo a cualquier conversaci&oacute;n sobre inteligencia artificial de un banco venezolano.
+    </p>
+
+    <ul class="check steps" style="margin-top:14px;">
+      <li data-n="1">Las bases de datos &ldquo;determinadas como principales&rdquo; no pueden salir del territorio nacional, bajo ninguna circunstancia.</li>
+      <li data-n="2">Todo proveedor de computaci&oacute;n en la nube contratado por el banco debe tener presencia en el territorio nacional.</li>
+      <li data-n="3">Los contratos de nube, con todos sus t&eacute;rminos, requieren aprobaci&oacute;n previa de Sudeban antes de firmarse.</li>
+      <li data-n="4">La informaci&oacute;n sensible debe protegerse con cifrado robusto en su generaci&oacute;n, transmisi&oacute;n y almacenamiento, y el banco debe poder auditar al proveedor.</li>
+    </ul>
+
+    <p class="cite">
+      Fuente: circular de Sudeban del 29 de diciembre de 2023 sobre Computaci&oacute;n de Nube, reportada por Cointelegraph, Contrapunto y Qu&eacute; Pasa (enero de 2024). El texto no est&aacute; publicado en abierto: antes de cualquier decisi&oacute;n final, lo confirmamos con su &aacute;rea Legal o de Cumplimiento contra la Gaceta Oficial.
+    </p>
+
+    <div class="box warn" style="margin-top:18px;">
+      <p class="boxlabel">Lo que esto significa</p>
+      <p>
+        El punto 1 es el que de verdad condiciona todo lo dem&aacute;s: ning&uacute;n proveedor de inteligencia artificial de uso general, Claude incluido, tiene infraestructura dentro de Venezuela. Eso no se resuelve contratando un plan distinto: se resuelve con una decisi&oacute;n de arquitectura. Lo desarrollamos en la secci&oacute;n 4.
+      </p>
+    </div>
+
+    <div class="footbar">
+      <span>INTEZIA &middot; Consultor&iacute;a de IA #1 en LATAM</span>
+      <span>P&aacute;gina 3 de 10</span>
+    </div>
+  </section>
+
+  <!-- Página 4 · 03 Qué garantiza una suscripción de Claude -->
+  <section class="page">
+    <div class="topbar">
+      <span class="brand">INTEZIA &middot; DIRECCI&Oacute;N COMERCIAL</span>
+      <span class="pill">PREPARADO PARA N58 &middot; TECNOLOG&Iacute;A</span>
+    </div>
+
+    <div class="sechead">
+      <span class="secnum">03</span>
+      <div class="sectxt">
+        <h2 class="sectitle">Qu&eacute; garantiza una suscripci&oacute;n de Claude</h2>
+        <p class="subtitle">Lo que ya es verificable hoy, no una promesa</p>
+      </div>
+    </div>
+
+    <p class="body-p">
+      Esto es lo que una suscripci&oacute;n comercial de Claude (Claude for Work, Enterprise, o la API bajo t&eacute;rminos comerciales) garantiza hoy, de forma contractual y auditada:
+    </p>
+
+    <ul class="check" style="margin-top:14px;">
+      <li>Sus datos no se usan para entrenar los modelos de Claude: es parte de los t&eacute;rminos comerciales, no una configuraci&oacute;n opcional.</li>
+      <li>Retenci&oacute;n est&aacute;ndar de 30 d&iacute;as, o Zero Data Retention (ZDR, retenci&oacute;n cero de datos): bajo un acuerdo espec&iacute;fico con Anthropic, ninguna conversaci&oacute;n queda almacenada despu&eacute;s de responder.</li>
+      <li>Certificaciones auditadas por terceros: SOC 2 Type II (controles de seguridad), ISO 27001:2022 (gesti&oacute;n de seguridad de la informaci&oacute;n) e ISO/IEC 42001:2023 (gesti&oacute;n de sistemas de IA).</li>
+      <li>Compliance API (interfaz de cumplimiento): acceso program&aacute;tico a los registros de auditor&iacute;a, conversaciones y actividad, para conectarlo a las herramientas de gobernanza que el banco ya usa.</li>
+      <li>Opciones de residencia regional del procesamiento: hoy existen para Estados Unidos y Canad&aacute;, la Uni&oacute;n Europea, Australia e India.</li>
+    </ul>
+
+    <p class="cite">
+      Fuente: documentaci&oacute;n p&uacute;blica de Anthropic sobre retenci&oacute;n de datos y certificaciones (platform.claude.com, trust.anthropic.com), consultada en octubre de 2026.
+    </p>
+
+    <div class="box" style="margin-top:18px;">
+      <p class="boxlabel">Qu&eacute; cubre esto de la circular de Sudeban</p>
+      <p>
+        El cifrado, la auditor&iacute;a y la no reutilizaci&oacute;n de los datos quedan cubiertos. La residencia regional, todav&iacute;a no: ninguna de esas opciones corresponde a territorio venezolano.
+      </p>
+    </div>
+
+    <div class="footbar">
+      <span>INTEZIA &middot; Consultor&iacute;a de IA #1 en LATAM</span>
+      <span>P&aacute;gina 4 de 10</span>
+    </div>
+  </section>
+
+  <!-- Página 5 · 04 El punto que una suscripción no resuelve sola -->
+  <section class="page">
+    <div class="topbar">
+      <span class="brand">INTEZIA &middot; DIRECCI&Oacute;N COMERCIAL</span>
+      <span class="pill">PREPARADO PARA N58 &middot; TECNOLOG&Iacute;A</span>
+    </div>
+
+    <div class="sechead">
+      <span class="secnum">04</span>
+      <div class="sectxt">
+        <h2 class="sectitle">El punto que una suscripci&oacute;n no resuelve sola</h2>
+        <p class="subtitle">No es un problema de Claude: es un problema de cualquier IA de uso general</p>
+      </div>
+    </div>
+
+    <div class="box insight">
+      <p>
+        Ning&uacute;n proveedor de inteligencia artificial de uso general (Claude, o cualquier otro) aloja infraestructura dentro de Venezuela. Eso significa que ninguno puede, por s&iacute; solo, cumplir la regla de no sacar del territorio nacional una base de datos que el banco clasifique como principal. Esto no es una limitaci&oacute;n de Claude frente a otros: es una limitaci&oacute;n de la regulaci&oacute;n frente a cualquier IA que viva fuera del pa&iacute;s.
+      </p>
+    </div>
+
+    <p class="body-p" style="margin-top:18px;">
+      Lo que s&iacute; cambia el resultado es la arquitectura: decidir qu&eacute; cuenta como dato principal, dejar esa base donde vive hoy, y que lo &uacute;nico que viaje hacia Claude sea lo m&iacute;nimo necesario para razonar (nunca la base completa), bajo Zero Data Retention.
+    </p>
+    <p class="body-p" style="margin-top:10px;">
+      Este no es un principio te&oacute;rico: es exactamente el patr&oacute;n que ya usan otros bancos regulados en producci&oacute;n hoy. Lo mostramos en la pr&oacute;xima secci&oacute;n.
+    </p>
+
+    <div class="footbar">
+      <span>INTEZIA &middot; Consultor&iacute;a de IA #1 en LATAM</span>
+      <span>P&aacute;gina 5 de 10</span>
+    </div>
+  </section>
+
+  <!-- Página 6 · 05 Cómo lo han resuelto bancos en Venezuela -->
+  <section class="page">
+    <div class="topbar">
+      <span class="brand">INTEZIA &middot; DIRECCI&Oacute;N COMERCIAL</span>
+      <span class="pill">PREPARADO PARA N58 &middot; TECNOLOG&Iacute;A</span>
+    </div>
+
+    <div class="sechead">
+      <span class="secnum">05</span>
+      <div class="sectxt">
+        <h2 class="sectitle">C&oacute;mo lo han resuelto bancos en Venezuela</h2>
+        <p class="subtitle">La misma Sudeban, con IA generativa ya en producci&oacute;n</p>
+      </div>
+    </div>
+
+    <p class="body-p">
+      Antes de mirar afuera: esto ya pasa ac&aacute;, bajo la misma Sudeban que regula a N58. Ning&uacute;n caso de abajo usa Claude, pero los tres prueban algo m&aacute;s importante para esta conversaci&oacute;n: que la regulaci&oacute;n venezolana no frena la IA generativa cuando la arquitectura tiene el gobierno de datos correcto.
+    </p>
+
+    <ul class="evidence">
+      <li><b>Bancaribe</b> opera BanIA, su arquitectura de IA generativa: 1 agente orquestador y 13 agentes especializados, con ambientes separados de Desarrollo, Calidad y Producci&oacute;n, gobierno de roles, autenticaci&oacute;n, y pruebas espec&iacute;ficas contra alucinaciones, inyecci&oacute;n de instrucciones (prompt injection) e intentos de fuga de informaci&oacute;n. Resuelve 4,4 millones de interacciones al a&ntilde;o dentro de los tiempos que exige el regulador, con cerca de 95% de satisfacci&oacute;n, y gan&oacute; un WITSA Global AI Award 2026 (premio de la alianza mundial de asociaciones de tecnolog&iacute;a).</li>
+      <li><b>Mercantil</b> opera su asistente MIA desde hace a&ntilde;os: m&aacute;s de 1 mill&oacute;n de interacciones, 400 mil conversaciones, una reducci&oacute;n del 57% en costos operativos y un NPS (&iacute;ndice de satisfacci&oacute;n de clientes) superior a 50%.</li>
+      <li>En 2026, Banesco cerr&oacute; su convocatoria BanescoInnova con 807 proyectos de IA, el 96% desarrollados dentro del pa&iacute;s: la tendencia local ya es construir con gobierno de datos propio, no importar una respuesta gen&eacute;rica.</li>
+    </ul>
+
+    <p class="cite">
+      Fuentes: Consein, Consein + Bancaribe: el caso de &eacute;xito detr&aacute;s de ARIA IA Generativa &middot; Alta Densidad, Mercantil usa inteligencia artificial para aumentar opciones de atenci&oacute;n al cliente &middot; La Calle, BanescoInnova 2026 cierra con 807 proyectos de Inteligencia Artificial en Venezuela.
+    </p>
+
+    <div class="box" style="margin-top:14px;">
+      <p class="boxlabel">Y en nuestra propia experiencia</p>
+      <p>
+        Ya trabajamos con un banco comercial venezolano en la adopci&oacute;n de Claude para su propia operaci&oacute;n, sin tocar datos de clientes: el mismo patr&oacute;n que describimos en la Secci&oacute;n 1 de este documento. Es la base de confianza desde la que proponemos lo que sigue, no una arquitectura de datos ya cerrada.
+      </p>
+    </div>
+
+    <div class="footbar">
+      <span>INTEZIA &middot; Consultor&iacute;a de IA #1 en LATAM</span>
+      <span>P&aacute;gina 6 de 10</span>
+    </div>
+  </section>
+
+  <!-- Página 7 · 06 Y con Claude, en la región y fuera de ella -->
+  <section class="page">
+    <div class="topbar">
+      <span class="brand">INTEZIA &middot; DIRECCI&Oacute;N COMERCIAL</span>
+      <span class="pill">PREPARADO PARA N58 &middot; TECNOLOG&Iacute;A</span>
+    </div>
+
+    <div class="sechead">
+      <span class="secnum">06</span>
+      <div class="sectxt">
+        <h2 class="sectitle">Y con Claude, en la regi&oacute;n y fuera de ella</h2>
+        <p class="subtitle">El mismo patr&oacute;n de gobernanza, ya en producci&oacute;n</p>
+      </div>
+    </div>
+
+    <p class="body-p">
+      Fuera de Venezuela, el patr&oacute;n (el dato sensible se queda en la infraestructura del banco, Claude solo razona sobre lo que se le entrega, sin retenerlo) ya opera en producci&oacute;n con Claude espec&iacute;ficamente:
+    </p>
+
+    <ul class="evidence">
+      <li><b>Interbank</b> (Per&uacute;) firm&oacute; un acuerdo directo con Anthropic y ya despliega Claude Enterprise entre sus colaboradores: el primer banco del pa&iacute;s en hacerlo.</li>
+      <li><b>FIS</b> (una de las plataformas de n&uacute;cleo bancario, o core banking, m&aacute;s usadas en Estados Unidos) construy&oacute; junto a Anthropic un sistema de IA ag&eacute;ntica para crimen financiero donde los datos del cliente permanecen siempre dentro de la infraestructura controlada por FIS, y Claude solo razona sobre ellos a trav&eacute;s de conectores gobernados.</li>
+      <li><b>Commonwealth Bank of Australia</b> se asoci&oacute; con Anthropic para prevenci&oacute;n de fraude y atenci&oacute;n al cliente, y se&ntilde;ala el enfoque de seguridad de Claude como el eje de esa decisi&oacute;n.</li>
+      <li><b>AIG</b> redujo sus tiempos de revisi&oacute;n de suscripci&oacute;n 5 veces y subi&oacute; la precisi&oacute;n de datos de 75% a m&aacute;s de 90%. <b>Norges Bank Investment Management</b> (el fondo soberano de Noruega) report&oacute; una ganancia de productividad del 20%.</li>
+    </ul>
+
+    <p class="cite">
+      Fuentes: Forbes Per&uacute;, Interbank suscribi&oacute; acuerdo con Anthropic para fortalecer el uso de inteligencia artificial en el banco &middot; Anthropic, Claude for Financial Services &middot; FIS, comunicado de prensa sobre IA ag&eacute;ntica en crimen financiero (2026) &middot; SmartCompany, asociaci&oacute;n Commonwealth Bank-Anthropic.
+    </p>
+
+    <div class="footbar">
+      <span>INTEZIA &middot; Consultor&iacute;a de IA #1 en LATAM</span>
+      <span>P&aacute;gina 7 de 10</span>
+    </div>
+  </section>
+
+  <!-- Página 8 · 07 Lo que proponemos para N58 -->
+  <section class="page">
+    <div class="topbar">
+      <span class="brand">INTEZIA &middot; DIRECCI&Oacute;N COMERCIAL</span>
+      <span class="pill">PREPARADO PARA N58 &middot; TECNOLOG&Iacute;A</span>
+    </div>
+
+    <div class="sechead">
+      <span class="secnum">07</span>
+      <div class="sectxt">
+        <h2 class="sectitle">Lo que proponemos para N58</h2>
+        <p class="subtitle">La arquitectura, no solo el principio</p>
+      </div>
+    </div>
+
+    <ul class="check steps">
+      <li data-n="1">Clasificar, junto al &aacute;rea de Riesgo del banco, qu&eacute; cuenta como dato principal y qu&eacute; no.</li>
+      <li data-n="2">Mantener ese dato principal donde vive hoy, dentro de Venezuela, sin excepci&oacute;n.</li>
+      <li data-n="3">Que Claude reciba solo lo m&iacute;nimo necesario para razonar (agregado o de-identificado cuando sea posible), nunca la base completa.</li>
+      <li data-n="4">Activar Zero Data Retention en el contrato con Anthropic, para que nada de lo que s&iacute; viaje quede almacenado despu&eacute;s de responder.</li>
+      <li data-n="5">Conectar la Compliance API al marco de gesti&oacute;n de riesgos tecnol&oacute;gicos que la circular de Sudeban ya exige, para que la trazabilidad sea verificable.</li>
+      <li data-n="6">Someter el contrato y la arquitectura final a la aprobaci&oacute;n previa de Sudeban, como exige la misma circular.</li>
+    </ul>
+
+    <div class="box" style="margin-top:20px;">
+      <p class="boxlabel">Qu&eacute; falta por definir</p>
+      <p>
+        El conector exacto, el ambiente intermedio de de-identificaci&oacute;n y el nivel de acceso de cada caso de uso: eso se dise&ntilde;a en la mesa de trabajo con su equipo t&eacute;cnico y el nuestro. Pero ya no partimos de cero: partimos de un patr&oacute;n que otros bancos regulados ya usan en producci&oacute;n.
+      </p>
+    </div>
+
+    <div class="footbar">
+      <span>INTEZIA &middot; Consultor&iacute;a de IA #1 en LATAM</span>
+      <span>P&aacute;gina 8 de 10</span>
+    </div>
+  </section>
+
+  <!-- Página 9 · 08 El ejemplo de Jonathan -->
+  <section class="page">
+    <div class="topbar">
+      <span class="brand">INTEZIA &middot; DIRECCI&Oacute;N COMERCIAL</span>
+      <span class="pill">PREPARADO PARA N58 &middot; TECNOLOG&Iacute;A</span>
+    </div>
+
+    <div class="sechead">
+      <span class="secnum">08</span>
+      <div class="sectxt">
+        <h2 class="sectitle">Agentes sobre data transaccional</h2>
+        <p class="subtitle">Bajo esta misma arquitectura, no como idea suelta</p>
+      </div>
+    </div>
+
+    <p class="body-p">
+      Bajo el patr&oacute;n de la secci&oacute;n anterior, esto deja de ser una idea lejana y se vuelve un caso de dise&ntilde;o concreto:
+    </p>
+
+    <ul class="check" style="margin-top:14px;">
+      <li>Agentes que lean patrones de ubicaci&oacute;n y consumo para ofrecer valor por segmento, trabajando sobre vistas agregadas o de-identificadas, nunca sobre el registro individual con identidad.</li>
+      <li>Atenci&oacute;n escalable a personas naturales sin subir el costo de personal, con el mismo patr&oacute;n de FIS: el dato vive en su infraestructura, Claude solo razona.</li>
+      <li>Un mercadeo que pasa de reaccionar a anticiparse, apoyado en data real del banco, una vez resuelta la clasificaci&oacute;n de dato principal de la secci&oacute;n 7.</li>
+    </ul>
+
+    <div class="box warn" style="margin-top:20px;">
+      <p class="boxlabel">Importante</p>
+      <p>
+        Esto sigue siendo una direcci&oacute;n, no un alcance cerrado. El nivel exacto de acceso a datos se termina de dise&ntilde;ar en la mesa de trabajo, pero ya no partimos de una pregunta abierta: partimos de una arquitectura con precedente.
+      </p>
+    </div>
+
+    <div class="footbar">
+      <span>INTEZIA &middot; Consultor&iacute;a de IA #1 en LATAM</span>
+      <span>P&aacute;gina 9 de 10</span>
+    </div>
+  </section>
+
+  <!-- Página 10 · 09 Qué sigue -->
+  <section class="page">
+    <div class="topbar">
+      <span class="brand">INTEZIA &middot; DIRECCI&Oacute;N COMERCIAL</span>
+      <span class="pill">PREPARADO PARA N58 &middot; TECNOLOG&Iacute;A</span>
+    </div>
+
+    <div class="sechead">
+      <span class="secnum">09</span>
+      <div class="sectxt">
+        <h2 class="sectitle">Qu&eacute; sigue</h2>
+        <p class="subtitle">Una mesa de trabajo con su equipo t&eacute;cnico</p>
+      </div>
+    </div>
+
+    <p class="body-p">
+      Para cerrar el dise&ntilde;o y llevarlo a producci&oacute;n, necesitamos resolver junto a su equipo de Tecnolog&iacute;a:
+    </p>
+
+    <ul class="check" style="margin-top:14px;">
+      <li>Qu&eacute; calza, bajo el criterio de Riesgo del banco, como dato principal.</li>
+      <li>Qu&eacute; ambientes y proveedores ya tienen evaluados o descartados.</li>
+      <li>El tr&aacute;mite de aprobaci&oacute;n previa ante Sudeban del contrato y la arquitectura final.</li>
+    </ul>
+
+    <p class="body-p" style="margin-top:18px;">
+      Con esas respuestas, lo que sigue es un documento de arquitectura firmado por ambos equipos, no una recomendaci&oacute;n gen&eacute;rica.
+    </p>
+
+    <div class="box" style="margin-top:30px;">
+      <p class="boxlabel">Contacto</p>
+      <p>
+        Asesora de ventas: Flavia Mart&iacute;nez &middot; +58 414-5756615 &middot; fmartinez@intezia.com<br>
+        Empresa: Intezia C.A J-505657950 &middot; servicio@intezia.com
+      </p>
+    </div>
+
+    <div class="footbar">
+      <span>INTEZIA &middot; Consultor&iacute;a de IA #1 en LATAM</span>
+      <span>P&aacute;gina 10 de 10</span>
+    </div>
+  </section>
+
+</body>
+</html>

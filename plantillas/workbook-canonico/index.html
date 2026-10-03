@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Workbook · INTEZIA × {{CLIENTE}}</title>
+  <link rel="stylesheet" href="workbook.css">
+</head>
+<body>
+
+<!-- ============================================================
+     1 · PORTADA
+============================================================ -->
+<section class="page page-cover">
+  <header class="cover-hero">
+    <div class="logo-row">
+      <img src="../../../logos/educacion/BLANCO.png" alt="INTEZIA Educación" class="logo">
+    </div>
+    <div class="eyebrow">INTEZIA × {{CLIENTE}}</div>
+    <h1>WORKBOOK DE CAPACITACIÓN</h1>
+    <p class="subtitle">{{Nombre del programa}}</p>
+    <p class="caption">{{Sector / contexto del cliente}}</p>
+  </header>
+
+  <div class="cover-stats">
+    <div class="stat"><div class="num">{{H}}</div><div class="lbl">Horas</div></div>
+    <div class="stat"><div class="num">{{M}}</div><div class="lbl">Módulos</div></div>
+    <div class="stat"><div class="num">{{P}}</div><div class="lbl">{{Prueba / Proyecto Final}}</div></div>
+  </div>
+
+  <p class="intro-callout">
+    <strong>Este workbook es tu guía de referencia permanente.</strong>
+    Contiene el contexto, los ejercicios prácticos y los materiales de cada sesión del
+    programa de {{eje temático}}. Está diseñado para convertirte en {{rol objetivo del
+    perfil de egreso}}.
+  </p>
+
+  <table class="cover-meta">
+    <tr><th>NIVEL</th><td>{{Básico / Medio / Avanzado}} — {{requisitos previos breves}}</td></tr>
+    <tr><th>METODOLOGÍA</th><td>{{Metodología — ABR / Builder Mode / etc.}} con casos reales de {{Cliente}}</td></tr>
+    <tr><th>OBJETIVO</th><td>{{Objetivo general — verbo en infinitivo + objeto + finalidad}}</td></tr>
+    <tr><th>INSTRUCTOR</th><td>{{Nombre del instructor}} · {{email}} · {{tel}}</td></tr>
+    <tr><th>RESPALDADO POR</th><td>Intezia C.A. J-505657950{{ · aliados si aplica}}</td></tr>
+  </table>
+
+  <footer class="page-foot cover-foot">
+    Asesor: {{Nombre}} · <a href="mailto:{{email}}">{{email}}</a> · {{tel}}
+  </footer>
+</section>
+
+<!-- ============================================================
+     2 · CONTENIDO DEL WORKBOOK (índice)
+============================================================ -->
+<section class="page page-toc">
+  <header class="page-head black wide">
+    <div class="head-text">
+      <h2>CONTENIDO DEL WORKBOOK</h2>
+    </div>
+  </header>
+
+  <ol class="toc">
+    <li><span class="num">GL</span><span class="t">Glosario de términos clave</span></li>
+    <li><span class="num">01</span><span class="t">Sesión 1 — {{Título de la sesión 1}}</span></li>
+    <li><span class="num">02</span><span class="t">Módulo 1 — {{Título del módulo 1}}</span></li>
+    <li><span class="num">03</span><span class="t">Módulo 2 — {{Título del módulo 2}}</span></li>
+    <li><span class="num">04</span><span class="t">Módulo 3 — {{Título del módulo 3}}</span></li>
+    <li><span class="num">05</span><span class="t">Módulo 4 — {{Título del módulo 4}}</span></li>
+    <li><span class="num">06</span><span class="t">Módulo 5 — {{Título del módulo 5}}</span></li>
+    <li><span class="num">07</span><span class="t">Proyecto final — {{Dinámica de cierre}}</span></li>
+  </ol>
+
+  <footer class="page-foot">
+    INTEZIA × {{Cliente}} · {{Programa}} · {{Instructor}} · {{email}} · Pág. 2
+  </footer>
+</section>
+
+<!-- ============================================================
+     3 · GLOSARIO DE TÉRMINOS CLAVE
+============================================================ -->
+<section class="page page-glossary">
+  <header class="page-head black wide">
+    <div class="badge">GL</div>
+    <div class="head-text">
+      <h2>GLOSARIO DE TÉRMINOS CLAVE</h2>
+      <p class="subtitle">Domina el lenguaje de {{eje temático}}</p>
+    </div>
+  </header>
+
+  <div class="callout warn">
+    <strong>¿Por qué un glosario?</strong>
+    En {{eje temático}} los términos tienen significados precisos. Entender la
+    diferencia entre {{término A}} y {{término B}}, o entre {{término C}} y {{término
+    D}}, es la base para {{competencia clave del egreso}}. Ten este glosario a mano en
+    cada sesión.
+  </div>
+
+  <article class="term">
+    <div class="term-head">
+      <strong>{{Término 1}}</strong>
+      <span class="tag">{{CATEGORÍA}}</span>
+    </div>
+    <p>{{Definición precisa en 2–3 líneas.}}</p>
+    <p class="example"><strong>Ej. {{Cliente}}:</strong>
+      <em>{{Aplicación concreta del término al sector del cliente.}}</em></p>
+  </article>
+
+  <article class="term">
+    <div class="term-head">
+      <strong>{{Término 2}}</strong>
+      <span class="tag">{{CATEGORÍA}}</span>
+    </div>
+    <p>{{Definición precisa en 2–3 líneas.}}</p>
+    <p class="example"><strong>Ej. {{Cliente}}:</strong>
+      <em>{{Aplicación concreta del término al sector del cliente.}}</em></p>
+  </article>
+
+  <article class="term">
+    <div class="term-head">
+      <strong>{{Término 3}}</strong>
+      <span class="tag">{{CATEGORÍA}}</span>
+    </div>
+    <p>{{Definición precisa.}}</p>
+    <p class="example"><strong>Ej. {{Cliente}}:</strong>
+      <em>{{Aplicación concreta.}}</em></p>
+  </article>
+
+  <article class="term">
+    <div class="term-head">
+      <strong>{{Término 4}}</strong>
+      <span class="tag">{{CATEGORÍA}}</span>
+    </div>
+    <p>{{Definición precisa.}}</p>
+    <p class="example"><strong>Ej. {{Cliente}}:</strong>
+      <em>{{Aplicación concreta.}}</em></p>
+  </article>
+
+  <footer class="page-foot">
+    INTEZIA × {{Cliente}} · {{Programa}} · {{Instructor}} · {{email}} · Pág. 3
+  </footer>
+</section>
+
+<!-- Repetir <section class="page page-glossary"> hasta cubrir todos los términos. -->
+
+<!-- ============================================================
+     4 · SESIÓN N (con práctica editable — campo AcroForm)
+============================================================ -->
+<section class="page page-session">
+  <header class="page-head black wide">
+    <div class="badge">01</div>
+    <div class="head-text">
+      <h2>SESIÓN 1 — {{TÍTULO DE LA SESIÓN}}</h2>
+      <p class="subtitle">{{Primera sesión}} · {{Teórico-práctica}}</p>
+    </div>
+  </header>
+
+  <div class="session-upper">
+    <h3>¿De qué trata esta sesión?</h3>
+    <p>{{Bajada de la sesión: qué se cubre, por qué es la primera, qué resultado
+      concreto se lleva el participante. 2–3 frases máximo.}}</p>
+
+    <div class="callout warn small">
+      <strong>Concepto clave de esta sesión</strong>
+      <p>{{La idea pivotal de la sesión, en una frase memorable.}}</p>
+    </div>
+
+    <h3>Contexto — ¿Cómo lo trabajamos?</h3>
+    <div class="context-block">
+      <p>{{Párrafo 1 — el marco del trabajo en clase, narrado al participante.}}</p>
+      <p>{{Párrafo 2 — qué hacen juntos y por qué importa.}}</p>
+      <p>{{Párrafo 3 — qué se llevan al final de la sesión.}}</p>
+    </div>
+  </div>
+
+  <div class="practice">
+    <div class="practice-head">PRÁCTICA 1 — {{TÍTULO DE LA PRÁCTICA}}</div>
+    <p>{{Instrucciones breves de la práctica: 2–4 frases. Qué le pides al participante
+      que escriba en el recuadro de abajo.}}</p>
+    <div class="prompt-anchor">MI PROMPT:</div>
+    <div class="prompt-box" aria-label="Campo editable: el participante escribe aquí su respuesta."></div>
+  </div>
+
+  <div class="material">
+    <h4 class="material-head">Material de la sesión</h4>
+    <ul>
+      <li><span class="icon">▶</span><span class="label">Grabación de la sesión</span><a href="{{url-loom}}">{{Loom · Sesión 1}}</a></li>
+      <li><span class="icon">⊞</span><span class="label">Presentación (HTML)</span><a href="{{url-presentacion}}">{{Presentación}}</a></li>
+    </ul>
+  </div>
+
+  <footer class="page-foot">
+    INTEZIA × {{Cliente}} · {{Programa}} · {{Instructor}} · {{email}} · Pág. 4
+  </footer>
+</section>
+
+<!-- ============================================================
+     5 · MÓDULO N (sin práctica editable — solo contenido + links)
+============================================================ -->
+<section class="page page-module">
+  <header class="page-head black wide">
+    <div class="badge">02</div>
+    <div class="head-text">
+      <h2>MÓDULO 1 — {{TÍTULO DEL MÓDULO}}</h2>
+      <p class="subtitle">{{Subtítulo orientativo del módulo}}</p>
+    </div>
+  </header>
+
+  <h3>Objetivo del módulo</h3>
+  <p>{{Una frase: qué dominará el participante al cerrar este módulo.}}</p>
+
+  <table class="module-items">
+    <tr><td class="n">1</td><td class="t"><strong>{{Tema 1.1}}</strong><br>{{Descripción breve.}}</td></tr>
+    <tr><td class="n">2</td><td class="t"><strong>{{Tema 1.2}}</strong><br>{{Descripción breve.}}</td></tr>
+    <tr><td class="n">3</td><td class="t"><strong>{{Tema 1.3}}</strong><br>{{Descripción breve.}}</td></tr>
+  </table>
+
+  <h3>Guía de contexto — ¿Cómo lo hacemos?</h3>
+  <div class="context-block">
+    <p>{{Párrafo 1 — el marco del módulo en lenguaje de participante.}}</p>
+    <p>{{Párrafo 2 — qué se construye en clase y por qué.}}</p>
+  </div>
+
+  <h3>Contenido visto en el módulo</h3>
+  <div class="content-block">
+    <div class="content-head">CONTENIDO 1 — {{Título del bloque}}</div>
+    <p>{{Descripción de lo trabajado en clase — se añade DESPUÉS de la sesión.}}</p>
+  </div>
+
+  <div class="material">
+    <ul>
+      <li><span class="icon code">&#123;&#125;</span><span class="label">{{Workflow / artefacto}}</span><a href="{{url}}">{{Enlace}}</a></li>
+      <li><span class="icon">▶</span><span class="label">Grabación</span><a href="{{url-loom}}">{{Loom · Módulo 1}}</a></li>
+      <li><span class="icon">⊞</span><span class="label">Presentación (HTML)</span><a href="{{url-presentacion}}">{{Presentación}}</a></li>
+    </ul>
+  </div>
+
+  <footer class="page-foot">
+    INTEZIA × {{Cliente}} · {{Programa}} · {{Instructor}} · {{email}} · Pág. 5
+  </footer>
+</section>
+
+<!-- ============================================================
+     6 · PROYECTO FINAL / EVALUACIÓN DE CIERRE
+============================================================ -->
+<section class="page page-final">
+  <header class="page-head black wide">
+    <div class="badge">07</div>
+    <div class="head-text">
+      <h2>PROYECTO FINAL — {{TÍTULO DE LA DINÁMICA}}</h2>
+      <p class="subtitle">{{Dinámica interactiva de cierre}} · Conducida por {{Instructor}}</p>
+    </div>
+  </header>
+
+  <p class="lede">
+    {{Descripción del cierre del programa en 2–3 frases: qué se hace, con qué herramienta,
+    cómo participa el grupo y qué se evalúa.}}
+  </p>
+
+  <div class="callout warn">
+    <strong>¿Qué es {{Herramienta de cierre — Mentimeter, EduTrace, defensa, etc.}}?</strong>
+    {{Explicación corta de la herramienta y cómo accede el participante.}}
+  </div>
+
+  <div class="part">
+    <div class="part-head">PARTE 1 — Evaluación de conocimientos</div>
+    <p>{{Cómo se valida lo aprendido: temas que cubre, formato, duración. No es examen
+      de nota — es validación colectiva en tiempo real.}}</p>
+  </div>
+
+  <div class="part">
+    <div class="part-head">PARTE 2 — Feedback del programa</div>
+    <p>{{Cómo se recoge la voz del grupo: qué funcionó, qué mejorar, qué profundizar
+      en sesiones futuras. Este input alimenta el dashboard de cierre y la mejora
+      continua del programa.}}</p>
+  </div>
+
+  <div class="material">
+    <h4 class="material-head">Acceso al cierre</h4>
+    <ul>
+      <li><span class="icon">M</span><span class="label">{{Herramienta}} — Evaluación de cierre</span><a href="{{url}}">{{Enlace de acceso}}</a></li>
+      <li><span class="icon">▶</span><span class="label">Grabación sesión de cierre</span><a href="{{url-loom}}">{{Loom · Cierre}}</a></li>
+    </ul>
+  </div>
+
+  <footer class="page-foot">
+    INTEZIA × {{Cliente}} · {{Programa}} · {{Instructor}} · {{email}} · Pág. 7
+  </footer>
+</section>
+
+</body>
+</html>

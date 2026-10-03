@@ -1,0 +1,565 @@
+<!doctype html>
+<!--
+  Propuesta — PDVSA
+  Programa: SQL, Bases de Datos y Análisis de Datos con IA (CU-007)
+  División: Educación · Eje temático: Autonomía técnica SQL + IA copiloto
+  Tipo: Curso → 12 slides (incluye slide 7 evaluación + cronograma split 2+3).
+  Folder: pdvsa/CU-007 ... (1 nivel más profundo que canónico — paths con 4 ../)
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Propuesta · PDVSA · SQL + IA · Intezia Educación</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <main class="deck">
+
+    <!-- 1 · Portada -->
+    <section class="slide s-cover">
+      <span class="counter">01 / 12</span>
+      <div class="logo-big">
+        <img src="../../../../logos/educacion/BLANCO.png" alt="Intezia Educación">
+      </div>
+      <div class="body">
+        <p class="eyebrow">Propuesta formativa</p>
+        <h1>
+          SQL, Bases de Datos<br>
+          y Análisis de Datos<br>
+          con <span class="hl">IA</span>
+        </h1>
+        <p class="lead">
+          Curso presencial de 20 horas que entrega autonomía técnica para consultar, transformar y analizar bases de datos relacionales, integrando la IA como copiloto de análisis.
+        </p>
+      </div>
+      <div class="id-line">
+        <span class="codigo">Código: CU-007</span>
+        <span class="cliente">PDVSA</span>
+      </div>
+    </section>
+
+    <!-- 2 · Punto de dolor + Diagnóstico -->
+    <section class="slide s-pain">
+      <span class="counter">02 / 12</span>
+      <span class="quote-mark">“</span>
+      <div class="body">
+        <h2>Tienes los datos. Lo que falta es la autonomía para consultarlos y entenderlos.</h2>
+        <p class="context">
+          Cada área genera y consume datos en bases relacionales y hojas de cálculo: gestión, planificación, finanzas, operaciones. Pero la capacidad de consultarlos directamente —sin pasar por intermediarios técnicos— sigue siendo un cuello de botella. Este curso entrega dominio progresivo de SQL combinado con IA como copiloto, para que cada profesional analice sus propios datos.
+        </p>
+        <p class="diag-title">Diagnóstico</p>
+        <ol>
+          <li>Profesionales con responsabilidad sobre datos pero sin formación formal en SQL ni en bases de datos.</li>
+          <li>Dependencia técnica para consultas básicas que ralentiza la toma de decisiones cotidianas.</li>
+          <li>Análisis hechos en hojas de cálculo donde el rigor y la trazabilidad se pierden con facilidad.</li>
+          <li>IA mal usada como "caja negra" para análisis sin verificación crítica de los resultados.</li>
+          <li>Falta un entregable concreto que demuestre la autonomía adquirida (un dashboard sobre dataset propio).</li>
+        </ol>
+      </div>
+      <div class="foot">
+        <img src="../../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">PDVSA · Propuesta</span>
+      </div>
+    </section>
+
+    <!-- 3 · Objetivos estratégicos -->
+    <section class="slide s-goals">
+      <span class="counter">03 / 12</span>
+      <p class="eyebrow">02 · Objetivos</p>
+      <h2>A dónde llevamos<br>al equipo.</h2>
+      <div class="columns">
+        <div class="general">
+          <p class="label">Objetivo general</p>
+          <p>
+            Desarrollar la capacidad técnica para consultar, transformar y analizar bases de datos relacionales mediante SQL —desde fundamentos hasta técnicas avanzadas— integrando la IA como copiloto de análisis y verificación, para reducir la dependencia técnica y acelerar la toma de decisiones informadas.
+          </p>
+        </div>
+        <div class="specifics">
+          <p class="label">Objetivos específicos</p>
+          <ol>
+            <li>Comprender el modelo relacional, sus principios de diseño y normalización mediante el análisis de casos reales.</li>
+            <li>Aplicar SQL esencial y avanzado para consultar, transformar y manipular datos de bases relacionales.</li>
+            <li>Integrar la IA como copiloto de análisis (generación de SQL, EDA asistido, storytelling y dashboards) verificando críticamente sus resultados.</li>
+          </ol>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">PDVSA · Propuesta</span>
+      </div>
+    </section>
+
+    <!-- 4 · Programa (4 módulos → grid 2×2 automático por CSS :has()) -->
+    <section class="slide s-program">
+      <span class="counter">04 / 12</span>
+      <p class="eyebrow">03 · Programa</p>
+      <h2>4 módulos.</h2>
+      <p class="meta">4 módulos · 5 sesiones · 20 horas académicas</p>
+      <div class="modules">
+        <div class="module">
+          <span class="roman">I</span>
+          <h3>Fundamentos de bases de datos relacionales</h3>
+          <p class="obj">Comprende el modelo relacional, principios de diseño y configura el entorno técnico.</p>
+          <ul class="topics">
+            <li>1.1 ¿Qué es una BD?</li>
+            <li>1.2 Modelo relacional</li>
+            <li>1.3 ERD y cardinalidades</li>
+            <li>1.4 Normalización 1-3FN</li>
+            <li>1.5 Set-up del entorno</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">II</span>
+          <h3>SQL esencial — consultas</h3>
+          <p class="obj">Aplica SQL básico para extraer y agregar información de una base relacional.</p>
+          <ul class="topics">
+            <li>2.1 SELECT / WHERE</li>
+            <li>2.2 ORDER / LIMIT / DISTINCT</li>
+            <li>2.3 GROUP BY + HAVING</li>
+            <li>2.4 JOINs</li>
+            <li>2.5 Subconsultas y UNION</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">III</span>
+          <h3>SQL avanzado y manipulación</h3>
+          <p class="obj">Aplica técnicas avanzadas para consultas complejas, manipulación segura y rendimiento.</p>
+          <ul class="topics">
+            <li>3.1 CTEs</li>
+            <li>3.2 Window functions</li>
+            <li>3.3 CASE / COALESCE / cast</li>
+            <li>3.4 DML + transacciones</li>
+            <li>3.5 EXPLAIN, índices</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">IV</span>
+          <h3>Análisis de datos con IA</h3>
+          <p class="obj">Integra la IA como copiloto de análisis verificando críticamente sus resultados.</p>
+          <ul class="topics">
+            <li>4.1 Limpieza y nulos</li>
+            <li>4.2 IA generando SQL</li>
+            <li>4.3 EDA asistido</li>
+            <li>4.4 Storytelling con IA</li>
+            <li>4.5 Dashboards con copilotos</li>
+          </ul>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">PDVSA · Propuesta</span>
+      </div>
+    </section>
+
+    <!-- 5 · Cronograma parte 1 de 2 — Sesiones 1 y 2 (Módulos I y II) -->
+    <section class="slide s-schedule">
+      <span class="counter">05 / 12</span>
+      <p class="eyebrow">04 · Cronograma · Ruta de aprendizaje (parte 1 de 2)</p>
+      <h2>Desglose instructivo<br>sesión por sesión.</h2>
+      <div class="sessions">
+        <div class="session">
+          <div class="header">
+            <span>Módulo I · Sesión 1 — presencial</span>
+          </div>
+          <div class="grid">
+            <div>
+              <span class="label">Temas</span>
+              Tema 1: Fundamentos<br>1.1 / 1.2 / 1.3 / 1.4 / 1.5
+            </div>
+            <div>
+              <span class="label">Tiempo</span>
+              Total 4 h<br>(45' fundamentos / 60' modelo + ERD / 45' normalización / 90' set-up)
+            </div>
+            <div>
+              <span class="label">Estrategias enseñanza</span>
+              Clase interactiva con analogías · demo de ERD · set-up paso a paso · preguntas socráticas
+            </div>
+            <div>
+              <span class="label">Estrategias aprendizaje</span>
+              Diagrama ERD propio · configuración guiada del entorno · primeras consultas exploratorias
+            </div>
+            <div>
+              <span class="label">Recursos</span>
+              Sala · proyector · laptops · PostgreSQL · DBeaver · dataset
+            </div>
+          </div>
+        </div>
+
+        <div class="session">
+          <div class="header">
+            <span>Módulo II · Sesión 2 — presencial</span>
+          </div>
+          <div class="grid">
+            <div>
+              <span class="label">Temas</span>
+              Tema 2: SQL esencial<br>2.1 / 2.2 / 2.3 / 2.4 / 2.5
+            </div>
+            <div>
+              <span class="label">Tiempo</span>
+              Total 4 h<br>(45' SELECT/WHERE / 30' ORDER/LIMIT / 45' GROUP BY / 75' JOINs / 45' subconsultas)
+            </div>
+            <div>
+              <span class="label">Estrategias enseñanza</span>
+              Demostración guiada por capas · ejercicios en cascada · resolución en vivo
+            </div>
+            <div>
+              <span class="label">Estrategias aprendizaje</span>
+              Ejecución iterativa · mini-retos individuales · debate de patrones de JOIN
+            </div>
+            <div>
+              <span class="label">Recursos</span>
+              PostgreSQL · DBeaver · dataset · workbook
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">PDVSA · Propuesta</span>
+      </div>
+    </section>
+
+    <!-- 6 · Cronograma parte 2 de 2 — Sesiones 3, 4 y 5 (Módulos III y IV) -->
+    <section class="slide s-schedule">
+      <span class="counter">06 / 12</span>
+      <p class="eyebrow">04 · Cronograma · Ruta de aprendizaje (parte 2 de 2)</p>
+      <h2>Desglose instructivo<br>sesión por sesión.</h2>
+      <div class="sessions">
+        <div class="session">
+          <div class="header">
+            <span>Módulo III · Sesión 3 — presencial</span>
+          </div>
+          <div class="grid">
+            <div>
+              <span class="label">Temas</span>
+              Tema 3: SQL avanzado<br>3.1 / 3.2 / 3.3 / 3.4 / 3.5
+            </div>
+            <div>
+              <span class="label">Tiempo</span>
+              Total 4 h<br>(45' CTEs / 60' window functions / 45' transformación / 45' DML / 45' EXPLAIN)
+            </div>
+            <div>
+              <span class="label">Estrategias enseñanza</span>
+              Comparación subconsulta vs. CTE · planes de ejecución · manejo de errores
+            </div>
+            <div>
+              <span class="label">Estrategias aprendizaje</span>
+              Refactorización propia · operaciones con BEGIN/ROLLBACK · optimización de consulta
+            </div>
+            <div>
+              <span class="label">Recursos</span>
+              PostgreSQL · DBeaver · dataset · workbook
+            </div>
+          </div>
+        </div>
+
+        <div class="session">
+          <div class="header">
+            <span>Módulo IV · Sesión 4 — presencial</span>
+          </div>
+          <div class="grid">
+            <div>
+              <span class="label">Temas</span>
+              Tema 4: IA + datos (parte 1)<br>4.1 / 4.2 / 4.3
+            </div>
+            <div>
+              <span class="label">Tiempo</span>
+              Total 4 h<br>(60' limpieza / 80' IA generando SQL + verificación / 80' EDA asistido)
+            </div>
+            <div>
+              <span class="label">Estrategias enseñanza</span>
+              Pareja humano-IA · prompts efectivos para SQL · casos de "alucinación"
+            </div>
+            <div>
+              <span class="label">Estrategias aprendizaje</span>
+              Limpieza de dataset · SQL con IA + verificación · EDA con copiloto
+            </div>
+            <div>
+              <span class="label">Recursos</span>
+              ChatGPT (Data Analysis) · Claude · Copilot Excel/Sheets
+            </div>
+          </div>
+        </div>
+
+        <div class="session">
+          <div class="header">
+            <span>Módulo IV · Sesión 5 — presencial · Proyecto</span>
+          </div>
+          <div class="grid">
+            <div>
+              <span class="label">Temas</span>
+              Tema 4: IA + datos (parte 2)<br>4.4 / 4.5 + Mini-proyecto
+            </div>
+            <div>
+              <span class="label">Tiempo</span>
+              Total 4 h<br>(60' storytelling / 60' dashboards / 90' construcción / 30' demos)
+            </div>
+            <div>
+              <span class="label">Estrategias enseñanza</span>
+              Marcos de narrativa con datos · demo Looker / Power BI con copilotos · mentoría 1 a 1
+            </div>
+            <div>
+              <span class="label">Estrategias aprendizaje</span>
+              Dashboard sobre dataset propio · resumen ejecutivo con IA · demo de 3 minutos
+            </div>
+            <div>
+              <span class="label">Recursos</span>
+              Looker Studio · Power BI · IA copilotos · workbook · rúbrica
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">PDVSA · Propuesta</span>
+      </div>
+    </section>
+
+    <!-- 7 · Sistema de evaluación (CURSO) -->
+    <section class="slide s-eval">
+      <span class="counter">07 / 12</span>
+      <p class="eyebrow">05 · Sistema de evaluación</p>
+      <h2>Cómo medimos<br>el aprendizaje.</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Tipo</th>
+            <th>Instrumento</th>
+            <th>Ponderación</th>
+            <th>Entrega</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Formativa</td>
+            <td>Participación activa, retos en vivo y <em>Query Book</em> personal</td>
+            <td class="weight">30 %</td>
+            <td>Continua</td>
+          </tr>
+          <tr>
+            <td>Sumativa parcial</td>
+            <td>Entregables modulares: consultas SQL resueltas (esencial y avanzado), refactorizaciones, EDA asistido</td>
+            <td class="weight">50 %</td>
+            <td>Cierre Módulos II, III y IV (parte 1)</td>
+          </tr>
+          <tr>
+            <td>Sumativa final</td>
+            <td>Mini-proyecto integrador: dashboard + resumen ejecutivo sobre dataset propio + demo de 3 min</td>
+            <td class="weight">20 %</td>
+            <td>Sesión 5</td>
+          </tr>
+          <tr>
+            <td><strong>Total</strong></td>
+            <td></td>
+            <td class="weight">100 %</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="min-grade">Calificación mínima para certificación: <strong>70 / 100</strong>.</p>
+      <div class="foot">
+        <img src="../../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">PDVSA · Propuesta</span>
+      </div>
+    </section>
+
+    <!-- 8 · Metodología ABR (FIJA) -->
+    <section class="slide s-orange">
+      <span class="counter">08 / 12</span>
+      <p class="eyebrow">06 · Metodología</p>
+      <h2>Aprendizaje<br>Basado en Retos</h2>
+      <p class="sub">Modelo Intezia · Tres pilares</p>
+      <div class="pillars">
+        <div class="pillar">
+          <span class="num">01</span>
+          <h3>Tutoría activa</h3>
+          <p>El facilitador trabaja codo a codo con cada participante: revisa código real escrito en el momento y depura en vivo, sin limitarse a exponer.</p>
+        </div>
+        <div class="pillar">
+          <span class="num">02</span>
+          <h3>Transferibilidad inmediata</h3>
+          <p>Cada sesión cierra con un reto sobre dataset realista. El mini-proyecto final usa un dataset propio del participante: lo que se practica en sala se aplica al día siguiente.</p>
+        </div>
+        <div class="pillar">
+          <span class="num">03</span>
+          <h3>Curaduría de contenidos</h3>
+          <p>SQL estándar (PostgreSQL como referencia) + prácticas modernas con IA. Sin redundancia académica, currículo revisado trimestralmente.</p>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Intezia · Modelo ABR</span>
+      </div>
+    </section>
+
+    <!-- 9 · Beneficios (perfil egreso + beneficio + entregables + acreditación + equipo) -->
+    <section class="slide s-benefits">
+      <span class="counter">09 / 12</span>
+      <p class="eyebrow">07 · Beneficios del curso</p>
+      <h2>Lo que se llevan.</h2>
+      <div class="grid">
+        <div class="block">
+          <p class="label">Perfil de egreso</p>
+          <ul>
+            <li><strong>Saber:</strong> comprende el modelo relacional y el rol complementario de la IA.</li>
+            <li><strong>Saber hacer:</strong> escribe SQL básico y avanzado; usa IA como copiloto verificando resultados.</li>
+            <li><strong>Saber ser:</strong> actúa con criterio crítico y respeta la integridad de los datos consultados.</li>
+          </ul>
+        </div>
+        <div class="block">
+          <p class="label">Beneficio del programa formativo</p>
+          <p>
+            Los participantes culminan con <strong>autonomía técnica</strong> para consultar, transformar y analizar sus propias bases de datos. Entregan un mini-dashboard funcional + resumen ejecutivo asistido por IA + un <em>Query Book</em> con sus consultas reutilizables.
+          </p>
+        </div>
+        <div class="block">
+          <p class="label">Entregables</p>
+        </div>
+        <div class="block">
+          <p class="label">Acreditación</p>
+        </div>
+      </div>
+
+      <!-- Cajas multiline editables (HTML detrás vacío — contenido en el AcroForm /V) -->
+      <div class="multi-box entregables-box" data-field="Entregables"></div>
+      <div class="multi-box acreditaciones-box" data-field="Acreditacion"></div>
+      <div class="team team-single">
+        <p class="label">Equipo facilitador</p>
+        <div class="members">
+          <div class="person">
+            <div>
+              <h4>Equipo INTEZIA Education</h4>
+              <p class="role">Facilitación · Coordinación</p>
+              <p>Facilitador asignado por INTEZIA según disponibilidad y especialización; presentación detallada en la fase de kick-off, junto con el PM responsable.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">PDVSA · Propuesta</span>
+      </div>
+    </section>
+
+    <!-- 10 · Propuesta Económica (5 campos AcroForm) -->
+    <section class="slide s-price">
+      <span class="counter">10 / 12</span>
+      <h2 class="title">Propuesta Económica</h2>
+
+      <!-- Bloque 1 · Duración -->
+      <div class="block">
+        <span class="block-eyebrow">Duración</span>
+        <p class="block-value">20 horas en total · 5 sesiones de 4 horas · 5 semanas.</p>
+      </div>
+
+      <!-- Bloque 2 · Programa (multiline editable + acento amarillo en el label) -->
+      <div class="block block-programa">
+        <span class="block-eyebrow">Programa</span>
+      </div>
+      <div class="multi-box programa-box" data-field="Programa"></div>
+
+      <!-- Bloque 3 · Cotización (filas absolutas, alineadas) -->
+      <div class="block block-cotizacion">
+        <span class="block-eyebrow">Cotización</span>
+      </div>
+
+      <span class="cot-label cot-label-base">Propuesta + Inversión</span>
+      <div class="cot-frame base-frame"></div>
+
+      <span class="cot-label cot-label-discount">Descuento</span>
+      <div class="cot-frame discount-frame"></div>
+
+      <span class="cot-label cot-label-total">TOTAL</span>
+      <div class="cot-frame total-frame"></div>
+
+      <p class="cot-validity">Válido únicamente por 7 días en divisas.</p>
+
+      <!-- Bloque 4 · Notas (multiline editable + acento naranja en el label) -->
+      <div class="block block-notes-container">
+        <span class="block-eyebrow">Notas</span>
+      </div>
+      <div class="multi-box notas-box" data-field="Notas"></div>
+
+      <div class="foot">
+        <img src="../../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">PDVSA · Propuesta</span>
+      </div>
+    </section>
+
+    <!-- 11 · Próximos pasos -->
+    <section class="slide s-steps">
+      <span class="counter">11 / 12</span>
+      <p class="eyebrow">08 · Próximos pasos</p>
+      <h2>Cómo arrancamos.</h2>
+      <div class="step-cards">
+        <div class="step-card">
+          <span class="ghost">01</span>
+        </div>
+        <div class="step-card">
+          <span class="ghost">02</span>
+        </div>
+        <div class="step-card">
+          <span class="ghost">03</span>
+        </div>
+      </div>
+
+      <!-- Editable AcroForm placeholders (3 pasos × título + body) -->
+      <div class="acro-area acro-title acro-paso-01-titulo" data-field="Paso01Titulo">
+        <span class="acro-default-text">Confirmas fechas y sede</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-01-body" data-field="Paso01Body">
+        <span class="acro-default-text">Definimos juntos las fechas de las cinco sesiones, la sede presencial y el grupo de participantes.</span>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-02-titulo" data-field="Paso02Titulo">
+        <span class="acro-default-text">Firmamos acuerdo</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-02-body" data-field="Paso02Body">
+        <span class="acro-default-text">Contrato simple + factura del 50 % de anticipo. Vigencia de la cotización: 30 días.</span>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-03-titulo" data-field="Paso03Titulo">
+        <span class="acro-default-text">Kick-off</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-03-body" data-field="Paso03Body">
+        <span class="acro-default-text">Reunión breve de alineación con INTEZIA: presentación del facilitador asignado, definición del dataset de práctica y casos del aula.</span>
+      </div>
+      <div class="foot">
+        <img src="../../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">PDVSA · Propuesta</span>
+      </div>
+    </section>
+
+    <!-- 12 · Cierre -->
+    <section class="slide s-end">
+      <span class="counter">12 / 12</span>
+
+      <div class="end-logo">
+        <img src="../../../../logos/educacion/BLANCO.png" alt="Intezia Educación">
+      </div>
+
+      <p class="end-message">
+        Danos la oportunidad de<br>llevarte al <span class="hl-orange">siguiente nivel</span><br>con <span class="hl-yellow">IA</span>.
+      </p>
+
+      <div class="cta-wrap">
+        <span class="cta">Esperamos tu Respuesta</span>
+      </div>
+
+      <div class="end-contact">
+        <p class="contact-line">
+          <span class="contact-label">Asesora de ventas:</span>
+          María Iribarren <span class="dot">·</span> +58 414 0570056 <span class="dot">·</span> miribarren@intezia.com
+        </p>
+        <p class="contact-line">
+          <span class="contact-label">Empresa:</span>
+          Intezia C.A J-505657950 <span class="dot">·</span> info@intezia.com
+        </p>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

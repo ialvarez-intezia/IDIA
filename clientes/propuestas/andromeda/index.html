@@ -1,0 +1,679 @@
+<!doctype html>
+<!--
+  Propuesta — Andrómeda (DET-016)
+  Servicio: DETECCIÓN + POLÍTICAS (combo, código de entrada DET-, no `integral` — son 2 de los 4
+  servicios, no una hoja de ruta de los 4). División: Educación. Primer contacto, sin servicio
+  previo. Fuente primaria: Ficha de Levantamiento (Levantamiento_Andromeda_2026-09-18.pdf,
+  asesora Verónica Rubio) + notas de reunión adicionales de la asesora.
+
+  ALCANCE CONFIRMADO POR EL USUARIO: exclusivamente Detección (6 áreas transversales) +
+  Políticas (transversal). Habilidades queda fuera por completo — ni cotizada ni con roadmap
+  propio — aunque la ficha (Bloque F) y las notas de reunión la mencionen como fase 2 potencial
+  para Andrómeda Tech y Transformación Digital. Ver brief.md → "Decisión de alcance".
+
+  ACTUALIZACIÓN 2026-09-30 (instrucción directa del usuario, aclarada con preguntas antes de
+  aplicar): el alcance de Detección pasó de 3 áreas (Finanzas, Legal, Mercadeo) a 6 ÁREAS
+  TRANSVERSALES — Legal, Talento Humano, Finanzas, Tecnología, Publicidad Digital (Mercadeo) y
+  Transformación Digital — REEMPLAZANDO el alcance anterior (revierte la exclusión previa de
+  Tecnología/Transformación Digital: la ficha las excluía a nivel corporativo por ser "ya las
+  más avanzadas", pero esta actualización las incluye tal como operan dentro de las 2 líneas de
+  negocio de abajo, que sí necesitan diagnóstico). Para esta primera fase, el universo de cada
+  una de las 6 áreas se ACOTA a 2 LÍNEAS DE NEGOCIO — Conectium/Spinmovil y Ekiipago/Neoplata —
+  sin multiplicar sesiones (sigue siendo 1 sesión de 4h por área, no una por línea de negocio).
+  Políticas también amplía su alcance a estas 6 áreas / 2 líneas de negocio (antes: Andrómeda
+  Tech, Transformación Digital y Finanzas). Dimensionamiento: 6 áreas × 4h = 24h + 2h
+  Fundamentals = 26h de Detección (antes 14h).
+
+  4 HORAS de Detección por área (24h) + FUNDAMENTALS (2h grupal, lineamiento por defecto, sin
+  instrucción del cliente de omitirla) = 26h totales de Detección. Modalidad NO especificada en
+  la ficha — se omite del deck (§ "Omitir, no inventar"), a diferencia de Toyocentro.
+  SIN LOGRO INMEDIATO FORZADO por sesión (a diferencia de toyocentro/velas-3n): el cliente pidió
+  explícitamente evitar "automatizar procesos triviales que no valen la pena" (Bloque G) — las
+  sesiones de área se redactan como auditoría/diagnóstico real, sin promesa de construcción.
+  POLÍTICAS TRANSVERSAL: contenido real de empresa/tipos-de-documento.md §0.1 (Kick-off,
+  Diagnóstico de madurez, Cuestionario dirigido, Redacción y validación), representada a nivel
+  de resumen de roadmap (1 etapa + su entregable), no con plantilla dedicada — mismo criterio que
+  un deck `integral` (§4.1b), porque esto NO es una propuesta de Políticas sola (la decisión de
+  formato deck vs. informe para Políticas standalone sigue pendiente, no aplica a este combo).
+  Framing normativo: ISO/IEC 42001 (Sistema de Gestión de Inteligencia Artificial) + AI Act
+  (Reglamento Europeo de IA) + RGPD — marcos reales, en vez de la sigla ambigua que mencionó el
+  cliente en la reunión (§4.12, citabilidad).
+  Sin slide de Mapa de Calor ni Metodología ABR ni Equipo facilitador expuestos (§4.10a). Sin
+  certificado (Detección + Políticas, no un curso). Beneficios v3, Cierre escalera,
+  servicio@intezia.com.
+  .rmx-ethics con padding-right:230px aplicado por defecto (memoria
+  bug-rmx-ethics-choca-nombre-cliente-largo.md).
+  Sin <strong> dentro de ningún <li> de .s-goals .specifics / .s-schedule .ses-block
+  (bug-strong-flex-specifics.md).
+  Impacto (§4.9, verificado por WebSearch 2026-09-20): McKinsey — The State of AI 2025: Agents,
+  innovation, and transformation (noviembre 2025): 88% de empresas ya usa IA en más de una
+  función, solo un tercio ha escalado sus programas a nivel empresarial, 68% usa IA en más de
+  una función; McKinsey — The state of AI in early 2025 (abril 2025): 70% de los equipos de
+  Finanzas y Estrategia reportó aumento de ingresos por IA generativa en la segunda mitad de
+  2024, el impacto de ingresos más alto entre funciones de la encuesta. + Pacific AI — 2025 AI
+  Governance Survey: 75% de las organizaciones ya tiene políticas de uso de IA, pero solo 36%
+  cuenta con un marco de gobernanza formal, y solo 59% tiene roles de gobernanza dedicados.
+  12 slides · precio estándar (Propuesta Económica, un solo servicio combinado).
+
+  AJUSTE 2026-09-21 (a pedido del usuario, SUPERADO 2026-09-30 — ver abajo): se habían quitado
+  las 3 celdas de cotización (Propuesta + Inversión / Descuento / TOTAL) y la línea "Cotización
+  válida por 30 días" de la slide de Propuesta Económica — el cliente no veía un precio en este
+  documento. Programa y Notas se agrandaron para ocupar toda la altura disponible, en 2 columnas
+  simétricas. Se conserva esta nota por trazabilidad; el layout real vigente es el de la
+  actualización de abajo.
+
+  ACTUALIZACIÓN 2026-09-30 (continuación) — vuelta a mostrar cotización, "Inversión por fases":
+  instrucción directa del usuario de agregar de nuevo la hoja de cotización y separar por
+  servicio, mismo patrón que banco-activo-deteccion-negocios/DET-021 (marker propio "Inversión
+  por fases", grupo FASE_PRICE_FIELDS de agregar-campo-precio.py, origen CAP-098 IOED): 2
+  recuadros de precio del lado izquierdo, uno por servicio del combo — Fase 1 Detección, Fase 2
+  Políticas — con una Inversión total combinada a la derecha. Solo 2 fases (no 3): PrecioFase3
+  queda huérfano y se elimina en scripts/customize-andromeda.py, igual que en DET-021/go-pharma.
+  El campo Programa NO existe en este patrón (FASE_PRICE_FIELDS no lo incluye) — la cobertura de
+  las 6 áreas y las 2 líneas de negocio se resume en Notas en vez de repetirse aquí (ya está
+  completa en Programa de la slide 04 y en el Roadmap). Se suma Descuento urgente + ROI
+  (estándar 2026-09-23, `hoja-cotizacion-cierre-venta.md`) — sin Garantía 30-60-90: ese sello es
+  solo para servicio Habilidades, y este combo es Detección + Políticas.
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Propuesta · Andrómeda · Intezia</title>
+  <link rel="stylesheet" href="../_base/styles.css">
+  <link rel="stylesheet" href="overrides.css">
+</head>
+<body>
+
+  <main class="deck">
+
+    <!-- 1 · Portada -->
+    <section class="slide s-cover">
+      <span class="counter">01 / 12</span>
+      <div class="logo-big">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia">
+      </div>
+      <div class="body">
+        <p class="eyebrow">Propuesta formativa · Servicio de Detección y Políticas</p>
+        <h1>
+          De una gobernanza<br>
+          <span class="hl">escueta a un marco claro.</span>
+        </h1>
+        <p class="lead">
+          Auditamos las 6 áreas transversales de Conectium/Spinmovil y Ekiipago/Neoplata con 4 horas dedicadas a cada una, y construimos en paralelo el <strong>marco de gobernanza de IA</strong> que Andrómeda lleva más de un año y medio sin poder completar, sin quedarnos en automatizaciones triviales.
+        </p>
+      </div>
+      <div class="id-line">
+        <span class="codigo">Código: DET-016</span>
+        <span class="cliente">Andrómeda</span>
+      </div>
+    </section>
+
+    <!-- 2 · Punto de dolor + Diagnóstico -->
+    <section class="slide s-pain">
+      <span class="counter">02 / 12</span>
+      <span class="quote-mark">&ldquo;</span>
+      <div class="body">
+        <h2>&ldquo;Nuestra gobernanza está un poco escueta o deficiente.&rdquo;</h2>
+        <p class="context">
+          Andrómeda es un holding multisectorial con una cultura de IA que ya existe a nivel corporativo: Andrómeda Tech y Transformación Digital ya trabajan con agentes y cerebros digitales propios, con mandato explícito del CEO. Pero esa madurez corporativa no llegó pareja a las líneas de negocio, y es el primer contacto de Andrómeda con Intezia.
+        </p>
+        <p class="diag-title">Diagnóstico</p>
+        <ol>
+          <li>Legal, Talento Humano, Finanzas, Tecnología, Publicidad Digital y Transformación Digital nunca tuvieron un diagnóstico formal de IA dentro de Conectium/Spinmovil ni de Ekiipago/Neoplata.</li>
+          <li>El nivel de partida con IA es muy desigual entre áreas, sin formación previa: "hemos trabajado muy empíricamente, hemos sido muy experimentales."</li>
+          <li>La gobernanza de IA lleva más de un año y medio sin poder cerrarse por cuenta propia, por falta de tiempo, no de interés.</li>
+          <li>Cada línea de negocio opera con alta autonomía, sin reglas claras de cuándo escalar al equipo transversal de tecnología por seguridad.</li>
+          <li>El cliente pide un diagnóstico real, sin quedarse en automatizar procesos triviales que no valen la pena.</li>
+        </ol>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">ANDRÓMEDA · DET-016</span>
+      </div>
+    </section>
+
+    <!-- 3 · Objetivos estratégicos -->
+    <section class="slide s-goals">
+      <span class="counter">03 / 12</span>
+      <p class="eyebrow">02 · Objetivos</p>
+      <h2>A dónde llevamos<br>la gobernanza de Andrómeda.</h2>
+      <div class="columns">
+        <div class="general">
+          <p class="label">Objetivo general</p>
+          <p>
+            Auditar las 6 áreas transversales de Andrómeda, en Conectium/Spinmovil y Ekiipago/Neoplata, con 4 horas dedicadas a cada una, y construir en paralelo el marco de gobernanza de IA que la organización lleva año y medio sin completar, para que cada línea de negocio tenga reglas claras de uso y de escalamiento.
+          </p>
+        </div>
+        <div class="specifics">
+          <p class="label">Objetivos específicos</p>
+          <ol>
+            <li>Nivelar a las 6 áreas transversales, en Conectium/Spinmovil y Ekiipago/Neoplata, con una sesión de Fundamentals antes de auditar.</li>
+            <li>Auditar las 6 áreas con 4 horas dedicadas a cada una, con foco en procesos reales.</li>
+            <li>Diagnosticar la madurez de gobernanza y construir el Manual de políticas, la Matriz de riesgos y la Brújula IA.</li>
+            <li>Entregar un Reporte Final con el mapa de oportunidades de las 6 áreas, el marco de gobernanza y una recomendación de ecosistema de IA.</li>
+          </ol>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">ANDRÓMEDA · DET-016</span>
+      </div>
+    </section>
+
+    <!-- 4 · Programa -->
+    <section class="slide s-program">
+      <span class="counter">04 / 12</span>
+      <p class="eyebrow">03 · El proyecto</p>
+      <h2>6 áreas, un marco de gobernanza.</h2>
+      <p class="meta">Fundamentals + Detección con diagnóstico real por área + Políticas transversal, en Conectium/Spinmovil y Ekiipago/Neoplata.</p>
+      <div class="modules">
+        <div class="module">
+          <span class="roman">I</span>
+          <h3>Fundamentals</h3>
+          <p class="obj">Nivela a las 6 áreas transversales en fundamentos de IA antes de auditar.</p>
+          <ul class="topics">
+            <li>Fundamentos de IA</li>
+            <li>Kick-off grupal</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">II</span>
+          <h3>Detección por Área</h3>
+          <p class="obj">Una sesión de 4 horas por cada una de las 6 áreas, con diagnóstico real.</p>
+          <ul class="topics">
+            <li>6 áreas · 4h c/u</li>
+            <li>Índice de Madurez</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">III</span>
+          <h3>Políticas</h3>
+          <p class="obj">Construcción del marco de gobernanza de IA, transversal a las 2 líneas de negocio.</p>
+          <ul class="topics">
+            <li>Manual de políticas</li>
+            <li>Brújula IA</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">IV</span>
+          <h3>Reporte Final</h3>
+          <p class="obj">Diagnóstico completo + marco de gobernanza y recomendación de ecosistema de IA.</p>
+          <ul class="topics">
+            <li>Mapa de oportunidades</li>
+            <li>Manual + Brújula IA</li>
+          </ul>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">ANDRÓMEDA · DET-016</span>
+      </div>
+    </section>
+
+    <!-- 5 · Roadmap · Detección + Políticas (3 etapas) -->
+    <section class="slide s-roadmap">
+      <span class="counter">05 / 12</span>
+      <p class="eyebrow">04 · Roadmap · Detección y Políticas</p>
+      <h2>Auditar y gobernar,<br><span class="hl">antes de escalar la siguiente fase</span>.</h2>
+
+      <div class="rmx-field">
+        <div class="rmx-linear">
+
+          <div class="rmx-lrow-nodes">
+            <div class="rmx-lcol"><div class="rmx-node rmx-node-f2">1</div></div>
+            <div class="rmx-arrow"></div>
+            <div class="rmx-lcol"><div class="rmx-node rmx-node-f3">2</div></div>
+            <div class="rmx-arrow"></div>
+            <div class="rmx-lcol"><div class="rmx-node rmx-node-f4">3</div></div>
+            <div class="rmx-arrow"></div>
+            <div class="rmx-lcol"><div class="rmx-node rmx-node-r">&#9733;</div></div>
+          </div>
+
+          <div class="rmx-lrow-cards">
+            <div class="rmx-lcol">
+              <div class="rmx-card rmx-card-f2">
+                <span class="rmx-card-tag">Etapa 1 · Fundamentals y Detección</span>
+                <div class="rmx-card-name">Fundamentals + 4h por área</div>
+                <ul class="rmx-facets">
+                  <li><span>Qué pasa</span><p>Nivelamos con Fundamentals y auditamos las 6 áreas, 4h cada una.</p></li>
+                  <li><span>Con quién</span><p>Los equipos de las 6 áreas, en las 2 líneas de negocio.</p></li>
+                  <li><span>Entrega</span><p>Equipo nivelado + Índice de Madurez por área.</p></li>
+                </ul>
+              </div>
+            </div>
+            <div class="rmx-lspacer"></div>
+            <div class="rmx-lcol">
+              <div class="rmx-card rmx-card-f3">
+                <span class="rmx-card-tag">Etapa 2 · Políticas</span>
+                <div class="rmx-card-name">Marco de gobernanza de IA</div>
+                <ul class="rmx-facets">
+                  <li><span>Qué pasa</span><p>Diagnosticamos la madurez de gobernanza y redactamos el Manual de políticas.</p></li>
+                  <li><span>Con quién</span><p>Responsables de gobernanza y líderes de las 6 áreas.</p></li>
+                  <li><span>Entrega</span><p>Manual de políticas + Matriz de riesgos + Brújula IA.</p></li>
+                </ul>
+              </div>
+            </div>
+            <div class="rmx-lspacer"></div>
+            <div class="rmx-lcol">
+              <div class="rmx-card rmx-card-f4">
+                <span class="rmx-card-tag">Etapa 3 · Reporte Final</span>
+                <div class="rmx-card-name">Diagnóstico + gobernanza</div>
+                <ul class="rmx-facets">
+                  <li><span>Qué pasa</span><p>Se entrega el diagnóstico de las 3 áreas junto con el marco de gobernanza.</p></li>
+                  <li><span>Con quién</span><p>Carlos Alonso y liderazgo de Andrómeda.</p></li>
+                  <li><span>Entrega</span><p>Reporte Final + recomendación de ecosistema de IA.</p></li>
+                </ul>
+              </div>
+            </div>
+            <div class="rmx-lspacer"></div>
+            <div class="rmx-lcol">
+              <div class="rmx-result-card">
+                <span class="rmx-result-label">Entregable insignia · Mapa de oportunidades</span>
+                <div class="rmx-result-title">De una gobernanza escueta a un <b>marco gobernado</b></div>
+                <ul>
+                  <li>Equipo nivelado con Fundamentals</li>
+                  <li>Manual de políticas + Brújula IA listos</li>
+                  <li>Mapa de oportunidades priorizado</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /.rmx-linear -->
+
+        <div class="rmx-ethics">
+          <span class="rmx-ethics-tag">Metodología ABR · Diagnóstico antes de recomendar</span>
+          <p>El Reporte Final confirma la recomendación de ecosistema de IA con los hallazgos reales, no antes.</p>
+        </div>
+
+      </div><!-- /.rmx-field -->
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">ANDRÓMEDA · DET-016</span>
+      </div>
+    </section>
+
+    <!-- 6 · Cronograma · Fundamentals -->
+    <section class="slide s-schedule">
+      <span class="counter">06 / 12</span>
+      <p class="eyebrow">04 · Cronograma · Fundamentals</p>
+
+      <div class="ses-head">
+        <div>
+          <span class="ses-mod">Sesión grupal · las 6 áreas transversales · máximo 25 personas por sesión</span>
+          <h2>Fundamentals</h2>
+        </div>
+        <div class="ses-meta"><span class="ses-dur">2h</span></div>
+      </div>
+
+      <div class="ses-body">
+        <div class="ses-block">
+          <span class="label">Temas</span>
+          <div class="chips">
+            <span class="chip">Qué es y qué no es la IA</span>
+            <span class="chip">Uso responsable en un holding</span>
+            <span class="chip">Ruta de las 6 sesiones</span>
+            <span class="chip">Preguntas y expectativas</span>
+          </div>
+        </div>
+        <div class="ses-block">
+          <span class="label">Tiempo · Total 2 h</span>
+          <div class="timebar">
+            <div class="seg" style="flex:30">30' Encuadre y fundamentos</div>
+            <div class="seg" style="flex:45">45' Uso responsable en un holding</div>
+            <div class="seg" style="flex:30">30' Ruta de las 6 sesiones</div>
+            <div class="seg" style="flex:15">15' Cierre y preguntas</div>
+          </div>
+        </div>
+        <div class="ses-cols">
+          <div class="ses-block">
+            <span class="label">Qué se hace</span>
+            <ul>
+              <li>Presentamos qué es y qué no es la IA, con foco en un holding multisectorial</li>
+              <li>Explicamos la ruta de las 6 sesiones de auditoría que siguen</li>
+              <li>Abrimos espacio a preguntas y expectativas del equipo</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Qué se logra</span>
+            <ul>
+              <li>El equipo llega a sus sesiones de área con un lenguaje común</li>
+              <li>Expectativas alineadas sobre la auditoría</li>
+              <li>Primera identificación de dónde cada área ve oportunidad</li>
+            </ul>
+          </div>
+          <div class="ses-block block-rec">
+            <span class="label">Recursos y entornos</span>
+            <ul>
+              <li>Sesión grupal, las 6 áreas transversales</li>
+              <li>Sin herramientas técnicas todavía</li>
+              <li>Casos reales de un holding multisectorial</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">ANDRÓMEDA · DET-016</span>
+      </div>
+    </section>
+
+    <!-- 7 · Cronograma · Estructura de las 4 horas por área -->
+    <section class="slide s-schedule">
+      <span class="counter">07 / 12</span>
+      <p class="eyebrow">04 · Cronograma · Estructura por área</p>
+
+      <div class="ses-head">
+        <div>
+          <span class="ses-mod">Se repite en cada una de las 6 áreas · modalidad a coordinar</span>
+          <h2>Estructura de las 4 horas</h2>
+        </div>
+        <div class="ses-meta"><span class="ses-dur">4h</span></div>
+      </div>
+
+      <div class="ses-body">
+        <div class="ses-block">
+          <span class="label">Temas</span>
+          <div class="chips">
+            <span class="chip">Procesos reales del área</span>
+            <span class="chip">Uso actual de IA</span>
+            <span class="chip">Evidencia de madurez</span>
+            <span class="chip">Cuellos de botella reales</span>
+          </div>
+        </div>
+        <div class="ses-block">
+          <span class="label">Tiempo · Total 4 h</span>
+          <div class="timebar">
+            <div class="seg" style="flex:45">45' Contexto y objetivos</div>
+            <div class="seg" style="flex:105">105' Levantamiento de procesos reales</div>
+            <div class="seg" style="flex:60">60' Evidencia para el Índice de Madurez</div>
+            <div class="seg" style="flex:30">30' Cierre y siguientes pasos</div>
+          </div>
+        </div>
+        <div class="ses-cols">
+          <div class="ses-block">
+            <span class="label">Qué se hace</span>
+            <ul>
+              <li>Entrevistamos al equipo del área sobre sus procesos reales</li>
+              <li>Registramos evidencia real de uso de IA y cuellos de botella</li>
+              <li>Evaluamos la madurez del área frente a bandas de referencia</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Qué se logra</span>
+            <ul>
+              <li>Inventario real de procesos y uso actual de IA del área</li>
+              <li>Evidencia documentada para el Índice de Madurez</li>
+              <li>Información lista para el Mapa de Calor y el Reporte Final</li>
+            </ul>
+          </div>
+          <div class="ses-block block-rec">
+            <span class="label">Recursos y entornos</span>
+            <ul>
+              <li>Sesión de auditoría por área</li>
+              <li>Guion de levantamiento Intezia</li>
+              <li>Sin tocar los sistemas internos de Andrómeda</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">ANDRÓMEDA · DET-016</span>
+      </div>
+    </section>
+
+    <!-- 8 · Beneficios (formato v3) -->
+    <section class="slide s-benefits s-benefits-v2">
+      <span class="counter">08 / 12</span>
+      <p class="eyebrow">05 · Beneficios</p>
+      <h2>Lo que <span class="hl">se llevan</span>.</h2>
+      <div class="grid">
+        <div class="block">
+          <p class="label">Resultados</p>
+          <ul>
+            <li>Las <strong>6 áreas transversales</strong> auditadas, con un Índice de Madurez real, sin automatizaciones triviales.</li>
+            <li>Equipo nivelado con Fundamentals antes de la auditoría.</li>
+            <li>Un <strong>marco de gobernanza de IA</strong> que llevaban más de un año y medio sin poder completar.</li>
+          </ul>
+        </div>
+        <div class="block">
+          <p class="label">Por qué Detección y Políticas</p>
+          <p>
+            Antes de escalar la cultura de IA que ya existe a nivel corporativo, Andrómeda conoce a fondo sus 6 áreas transversales y cuenta con reglas claras de gobernanza para hacerlo con seguridad. El Manual de políticas se construye sobre el estándar <strong>ISO/IEC 42001</strong> y la normativa europea de IA.
+          </p>
+        </div>
+        <div class="block">
+          <p class="label">Entregables</p>
+        </div>
+        <div class="block">
+          <p class="label">Valor inmediato</p>
+        </div>
+      </div>
+
+      <div class="multi-box entregables-box" data-field="Entregables"></div>
+      <div class="multi-box acreditaciones-box" data-field="Acreditacion"></div>
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">ANDRÓMEDA · DET-016</span>
+      </div>
+    </section>
+
+    <!-- 9 · Impacto / estudios — datos reales, fuente citada (CLAUDE.md §4.9) -->
+    <section class="slide s-impact">
+      <span class="counter">09 / 12</span>
+
+      <div class="impact-head">
+        <p class="eyebrow">06 · Impacto</p>
+        <h2>Usar IA sin gobierno<br><span class="hl">es la mitad del camino</span>.</h2>
+      </div>
+
+      <div class="impact-body">
+        <div class="chart-panel">
+          <p class="panel-title">Cómo adopta y escala IA la empresa promedio hoy</p>
+          <div class="bars">
+            <div class="bar-row">
+              <span class="bar-label">Empresas que ya usan IA en más de una función</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:68%"><span class="bar-val">68%</span></div></div>
+            </div>
+            <div class="bar-row">
+              <span class="bar-label">Empresas que han escalado sus programas de IA a nivel empresarial</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:33%"><span class="bar-val">33%</span></div></div>
+            </div>
+            <div class="bar-row">
+              <span class="bar-label">Equipos de Finanzas y Estrategia con más ingresos por IA generativa</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:70%"><span class="bar-val">70%</span></div></div>
+            </div>
+          </div>
+          <div class="bar-axis"><span class="scale"><span>0</span><span>25</span><span>50</span><span>75</span><span>100%</span></span></div>
+          <p class="panel-source">Fuentes: McKinsey &mdash; The State of AI 2025: Agents, innovation, and transformation (noviembre 2025) &middot; McKinsey &mdash; The state of AI in early 2025 (abril 2025).</p>
+        </div>
+
+        <div class="gauge-panel">
+          <div class="gauge" style="--pct:36">
+            <div class="gauge-core">
+              <span class="gauge-num">36<span class="pct">%</span></span>
+              <span class="gauge-cap">de las organizaciones cuenta con un marco de gobernanza de IA formal</span>
+            </div>
+          </div>
+          <div class="chips">
+            <div class="chip">
+              <span class="chip-num">75%</span>
+              <span class="chip-lbl">ya tiene políticas de uso de IA</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="impact-hook">
+        <span class="hook-mark">&#9656;</span>
+        <p class="hook-text">
+          El 88% de las empresas ya usa IA en más de una función, pero solo un tercio ha escalado sus programas a nivel empresarial (McKinsey, 2025): la misma dispersión que vive Andrómeda entre sus 6 áreas transversales, en Conectium/Spinmovil y Ekiipago/Neoplata. Tener uso no es tener gobierno: el 75% ya cuenta con políticas de IA, pero solo el 36% tiene un marco de gobernanza formal (Pacific AI, Encuesta de Gobernanza de IA 2025). Detectar antes de escalar, y gobernar antes de exponerse, es adoptar IA bien.
+        </p>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">ANDRÓMEDA · DET-016</span>
+      </div>
+    </section>
+
+    <!-- 10 · Inversión por fases (Detección + Políticas cotizadas por separado, 2026-09-30 —
+         mismo patrón que banco-activo-deteccion-negocios/DET-021: marker "Inversión por fases",
+         FASE_PRICE_FIELDS. Solo 2 fases: PrecioFase3 queda huérfano y se elimina en
+         scripts/customize-andromeda.py. Sin Garantía 30-60-90 (no hay Habilidades en este
+         combo) — solo Descuento urgente + ROI. -->
+    <section class="slide s-price">
+      <span class="counter">10 / 12</span>
+      <h2 class="title">Inversión por fases</h2>
+      <p class="price-intro">Detección completa y el marco de gobernanza de Políticas para Andrómeda, en un mismo proyecto. Cada servicio se cotiza por separado, con una inversión total combinada.</p>
+
+      <div class="fase-price-list">
+        <div class="fase-price-row">
+          <div class="fase-price-copy">
+            <span class="fase-price-label">Fase 1 &middot; Detección</span>
+            <p class="fase-price-desc">Fundamentals (2h) + 6 áreas x 4h &middot; 26h totales.</p>
+          </div>
+          <div class="fase-price-frame" data-field="PrecioFase1"></div>
+        </div>
+        <div class="fase-price-row">
+          <div class="fase-price-copy">
+            <span class="fase-price-label">Fase 2 &middot; Políticas</span>
+            <p class="fase-price-desc">Manual de políticas, Matriz de riesgos y Brújula IA, transversal a las 6 áreas.</p>
+          </div>
+          <div class="fase-price-frame" data-field="PrecioFase2"></div>
+        </div>
+      </div>
+
+      <div class="block block-notes-container">
+        <span class="block-eyebrow">Notas</span>
+      </div>
+      <div class="multi-box notas-box" data-field="Notas"></div>
+
+      <div class="cot-roi-box">
+        <span class="cot-roi-label">ROI estimado</span>
+        <p class="cot-roi-text">El diagnóstico evita gastar presupuesto en automatizaciones triviales y prioriza con criterio real dónde escalar primero. El Manual de políticas resuelve la gobernanza que Andrómeda lleva año y medio sin poder cerrar por cuenta propia.</p>
+      </div>
+
+      <span class="cot-label cot-label-base">Inversión total del proyecto</span>
+      <div class="cot-frame base-frame"></div>
+
+      <span class="cot-label cot-label-discount">Descuento</span>
+      <span class="cot-sign-minus">&minus;$</span>
+      <div class="cot-frame discount-frame"></div>
+      <span class="cot-urgent-note">Descuento válido por 15 días</span>
+
+      <span class="cot-label cot-label-total">TOTAL</span>
+      <div class="cot-frame total-frame"></div>
+
+      <p class="cot-validity">Cotización válida por 30 días. 2 fases &middot; mismo proyecto.</p>
+      <div class="cot-terms-box">
+        <span class="cot-terms-label">Importante</span>
+        <p class="cot-terms-text">Este servicio se presta bajo nuestros <a href="https://drive.google.com/file/d/1PA-ZSt4KnyY5dpxXzgkIk6-yfGlV2eF8/view?usp=drive_link" target="_blank" rel="noopener">términos y condiciones</a>. Al avanzar con esta propuesta, ambas partes los aceptan.</p>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">ANDRÓMEDA · DET-016</span>
+      </div>
+    </section>
+
+    <!-- 11 · Próximos pasos -->
+    <section class="slide s-steps">
+      <span class="counter">11 / 12</span>
+      <p class="eyebrow">07 · Próximos pasos</p>
+      <h2>Cómo arrancamos.</h2>
+      <div class="step-cards">
+        <div class="step-card">
+          <span class="ghost">01</span>
+        </div>
+        <div class="step-card">
+          <span class="ghost">02</span>
+        </div>
+        <div class="step-card">
+          <span class="ghost">03</span>
+        </div>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-01-titulo" data-field="Paso01Titulo">
+        <span class="acro-default-text">Confirmamos fechas</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-01-body" data-field="Paso01Body">
+        <span class="acro-default-text">Definimos con Carlos Alonso el calendario de Fundamentals, las 6 sesiones de área y el Kick-off de Políticas.</span>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-02-titulo" data-field="Paso02Titulo">
+        <span class="acro-default-text">Acceso y logística</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-02-body" data-field="Paso02Body">
+        <span class="acro-default-text">Coordinamos la modalidad, el acceso y la participación de las 6 áreas transversales y los responsables de gobernanza.</span>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-03-titulo" data-field="Paso03Titulo">
+        <span class="acro-default-text">Reunión de arranque</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-03-body" data-field="Paso03Body">
+        <span class="acro-default-text">Sesión de unos 30 minutos con Carlos Alonso para alinear el alcance y el orden de las 6 áreas.</span>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">ANDRÓMEDA · DET-016</span>
+      </div>
+    </section>
+
+    <!-- 12 · Cierre (ruta/escalera editable) -->
+    <section class="slide s-end">
+      <span class="counter">12 / 12</span>
+
+      <div class="end-logo">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia">
+      </div>
+
+      <div class="end-summit" data-field="CierreResultado">
+        <span class="acro-default-text">Andrómeda, con sus 6 áreas transversales auditadas y un marco de gobernanza de IA listo para difundir.</span>
+      </div>
+
+      <div class="end-stairs">
+        <div class="stair-step stair-1">
+          <span class="stair-label">Paso 1</span>
+          <div class="stair-field" data-field="CierrePaso1">
+            <span class="acro-default-text">Fundamentals y detección por área</span>
+          </div>
+        </div>
+        <div class="stair-step stair-2">
+          <span class="stair-label">Paso 2</span>
+          <div class="stair-field" data-field="CierrePaso2">
+            <span class="acro-default-text">Manual de políticas + Brújula IA</span>
+          </div>
+        </div>
+        <div class="stair-step stair-3">
+          <span class="stair-label">Paso 3</span>
+          <div class="stair-field" data-field="CierrePaso3">
+            <span class="acro-default-text">Reporte Final + recomendación de IA</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cta-wrap">
+        <span class="cta">Esperamos tu respuesta</span>
+      </div>
+
+      <div class="end-contact">
+        <p class="contact-line">
+          <span class="contact-label">Asesora de ventas:</span>
+          Verónica Rubio <span class="dot">·</span> +58 422 3355505 <span class="dot">·</span> vrubio01@intezia.com
+        </p>
+        <p class="contact-line">
+          <span class="contact-label">Empresa:</span>
+          Intezia C.A J-505657950 <span class="dot">·</span> servicio@intezia.com
+        </p>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

@@ -1,0 +1,583 @@
+/* =============================================================================
+   Manual de uso — Sistema de Propuestas Intezia
+   Marca oficial: paleta + Graphit (fallback Inter) · Formato A4 vertical
+   ============================================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+
+:root {
+  --black: #000000;
+  --yellow: #F4BA1A;
+  --orange: #E58423;
+  --white: #FFFFFF;
+  --gradient-warm: linear-gradient(135deg, var(--yellow) 0%, var(--orange) 100%);
+  --gradient-warm-rev: linear-gradient(135deg, var(--orange) 0%, var(--yellow) 100%);
+  --font-display: "Graphit", "Inter", system-ui, sans-serif;
+  --font-body: "Graphit", "Inter", system-ui, sans-serif;
+  --page-w: 794px;
+  --page-h: 1123px;
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  font-family: var(--font-body);
+  background: var(--black);
+  color: var(--black);
+  line-height: 1.5;
+  padding: 32px 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+.deck {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+}
+
+.page {
+  width: var(--page-w);
+  max-width: 95vw;
+  aspect-ratio: 794 / 1123;
+  position: relative;
+  overflow: hidden;
+  border-radius: 6px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Counter */
+.page .counter {
+  position: absolute;
+  top: 32px;
+  right: 40px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.18em;
+  z-index: 10;
+}
+
+/* Footer común */
+.page .foot {
+  position: absolute;
+  left: 40px;
+  right: 40px;
+  bottom: 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 5;
+}
+.page .foot img { height: 32px; width: auto; display: block; }
+.page .foot .meta {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.eyebrow {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+
+/* ===========================================================================
+   PORTADA
+   =========================================================================== */
+.p-cover {
+  background: var(--black);
+  color: var(--white);
+  padding: 56px 56px 64px;
+  overflow: hidden;
+}
+.p-cover::before {
+  content: "";
+  position: absolute;
+  top: -120px; right: -120px;
+  width: 360px; height: 360px;
+  background: var(--gradient-warm);
+  transform: rotate(45deg);
+  z-index: 0;
+}
+.p-cover .counter { color: var(--yellow); }
+
+.p-cover .logo-big {
+  position: relative;
+  z-index: 2;
+  margin-left: -28px;
+}
+.p-cover .logo-big img {
+  height: 220px;
+  width: auto;
+  display: block;
+}
+
+.p-cover .body {
+  position: relative;
+  z-index: 2;
+  margin-top: 48px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.p-cover .eyebrow {
+  color: var(--yellow);
+  margin-bottom: 22px;
+}
+.p-cover h1 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 76px;
+  line-height: 0.95;
+  letter-spacing: -0.025em;
+  margin-bottom: 24px;
+  max-width: 640px;
+}
+.p-cover h1 .hl {
+  display: inline-block;
+  background: var(--yellow);
+  color: var(--black);
+  padding: 0 12px;
+}
+.p-cover .lead {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 1.5;
+  max-width: 540px;
+  opacity: 0.9;
+}
+.p-cover .id-line {
+  position: absolute;
+  bottom: 56px;
+  left: 56px;
+  right: 56px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  z-index: 3;
+}
+.p-cover .id-line .codigo { color: var(--yellow); }
+
+/* ===========================================================================
+   PÁGINAS DE CONTENIDO (white background)
+   =========================================================================== */
+.p-content {
+  background: var(--white);
+  color: var(--black);
+  padding: 56px 56px 80px;
+}
+.p-content::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 12px; height: 100%;
+  background: var(--yellow);
+}
+
+.p-content .page-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  margin-bottom: 20px;
+  padding-bottom: 14px;
+  border-bottom: 3px solid var(--yellow);
+  text-transform: uppercase;
+}
+
+.p-content .page-eyebrow {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--orange);
+  margin-bottom: 12px;
+}
+
+.p-content .intro {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.55;
+  margin-bottom: 24px;
+  max-width: 620px;
+}
+
+/* Bloques numerados (paso 01, 02, ...) */
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-top: 16px;
+}
+.step {
+  position: relative;
+  background: var(--white);
+  border: 2px solid var(--black);
+  padding: 18px 22px 18px 84px;
+  overflow: hidden;
+}
+.step .num {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 1;
+  color: var(--orange);
+  letter-spacing: -0.04em;
+}
+.step h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 15px;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.step p {
+  font-size: 13px;
+  line-height: 1.45;
+  margin-bottom: 6px;
+}
+.step code {
+  font-family: ui-monospace, "SF Mono", monospace;
+  background: rgba(244, 186, 26, 0.2);
+  padding: 1px 6px;
+  font-size: 12px;
+}
+.step ul { list-style: none; padding: 0; margin-top: 4px; }
+.step ul li {
+  font-size: 12.5px;
+  line-height: 1.45;
+  padding-left: 14px;
+  position: relative;
+  margin-bottom: 2px;
+}
+.step ul li::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 7px;
+  width: 6px; height: 6px;
+  background: var(--yellow);
+}
+
+/* Cards horizontales */
+.cards-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-top: 16px;
+}
+.mode-card {
+  background: var(--white);
+  border: 2px solid var(--black);
+  padding: 20px;
+}
+.mode-card .badge {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  background: var(--black);
+  color: var(--yellow);
+  padding: 4px 10px;
+  margin-bottom: 12px;
+}
+.mode-card.alt .badge { background: var(--orange); color: var(--white); }
+.mode-card h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 17px;
+  margin-bottom: 8px;
+}
+.mode-card p {
+  font-size: 13px;
+  line-height: 1.45;
+  margin-bottom: 10px;
+}
+.mode-card .ideal {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--orange);
+  margin-bottom: 4px;
+}
+
+/* Checklist obligatorio */
+.warning-box {
+  background: var(--yellow);
+  color: var(--black);
+  padding: 14px 18px;
+  margin: 16px 0 20px;
+  border-left: 6px solid var(--orange);
+}
+.warning-box .warning-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+.warning-box p {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.checklist {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 24px;
+  margin-top: 12px;
+}
+.check-item {
+  position: relative;
+  padding-left: 26px;
+  font-size: 12.5px;
+  line-height: 1.4;
+}
+.check-item::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 3px;
+  width: 16px; height: 16px;
+  background: var(--white);
+  border: 2px solid var(--black);
+}
+.check-item .label {
+  font-family: var(--font-display);
+  font-weight: 700;
+  display: block;
+  font-size: 13px;
+  margin-bottom: 1px;
+}
+.check-item .desc { color: rgba(0, 0, 0, 0.7); font-size: 11px; }
+
+/* Flow steps (diagrama) */
+.flow {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 16px;
+}
+.flow-row {
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  gap: 14px;
+  align-items: stretch;
+}
+.flow-icon {
+  background: var(--black);
+  color: var(--yellow);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flow-row.user .flow-icon { background: var(--yellow); color: var(--black); }
+.flow-body {
+  background: var(--white);
+  border: 2px solid var(--black);
+  padding: 12px 16px;
+}
+.flow-body .who {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 9.5px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--orange);
+  margin-bottom: 2px;
+}
+.flow-body .what {
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+/* CTA box (estilo cierre) */
+.cta-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+}
+.cta {
+  position: relative;
+  display: inline-block;
+  background: var(--yellow);
+  color: var(--white);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: 18px 44px;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 8px 8px 0 var(--orange),
+              8px 8px 0 1px var(--black);
+}
+
+/* Notas/tips */
+.tip {
+  background: rgba(244, 186, 26, 0.18);
+  padding: 12px 16px;
+  margin-top: 14px;
+  font-size: 12.5px;
+  line-height: 1.45;
+}
+.tip .tip-label {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--orange);
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 10px;
+  margin-right: 6px;
+}
+.tip code {
+  font-family: ui-monospace, "SF Mono", monospace;
+  background: var(--white);
+  padding: 1px 6px;
+  font-size: 12px;
+}
+
+.foot-content {
+  position: absolute;
+  left: 56px;
+  right: 56px;
+  bottom: 28px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: space-between;
+}
+
+/* ===========================================================================
+   PÁGINA FINAL (cierre)
+   =========================================================================== */
+.p-end {
+  background: var(--black);
+  color: var(--white);
+  padding: 56px;
+  text-align: center;
+}
+.p-end::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 14px;
+  background: var(--gradient-warm);
+}
+.p-end::after {
+  content: "";
+  position: absolute;
+  bottom: 0; right: 0;
+  width: 60%; height: 14px;
+  background: var(--gradient-warm-rev);
+}
+.p-end .counter { color: var(--yellow); }
+.p-end .end-logo {
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+}
+.p-end .end-logo img {
+  height: 200px;
+  width: auto;
+  display: block;
+}
+.p-end .end-message {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.15;
+  margin-top: 32px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.p-end .end-message .hl-orange { color: var(--orange); }
+.p-end .end-message .hl-yellow {
+  display: inline-block;
+  background: var(--yellow);
+  color: var(--black);
+  padding: 0 10px;
+}
+.p-end .end-contact {
+  position: absolute;
+  bottom: 56px;
+  left: 56px;
+  right: 56px;
+  text-align: center;
+}
+.p-end .contact-line {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: var(--white);
+  opacity: 0.92;
+  margin-bottom: 4px;
+}
+.p-end .contact-line:last-child { margin-bottom: 0; opacity: 0.7; }
+.p-end .contact-line .contact-label {
+  font-weight: 700;
+  color: var(--yellow);
+  margin-right: 6px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-size: 11px;
+}
+.p-end .contact-line .dot { color: var(--orange); margin: 0 6px; font-weight: 700; }
+
+/* ---------- Print / PDF ---------- */
+@page { size: A4 portrait; margin: 0; }
+
+@media print {
+  body { background: var(--white); padding: 0; }
+  .deck { gap: 0; }
+  .page {
+    width: var(--page-w);
+    height: var(--page-h);
+    max-width: none;
+    aspect-ratio: auto;
+    border-radius: 0;
+    box-shadow: none;
+    page-break-after: always;
+    break-after: page;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .page:last-child { page-break-after: auto; break-after: auto; }
+}

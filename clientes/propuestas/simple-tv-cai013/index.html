@@ -1,0 +1,644 @@
+<!doctype html>
+<!--
+  Propuesta — Simple TV · Rollout organizacional en 2 fases separadas (CAI-013)
+  Servicio: DETECCIÓN + HABILIDADES (Modelo Intezia · empresa/tipos-de-documento.md §0),
+  cada fase cotizada por separado (§4.1a punto 1: combo en 2 fases separadas = "deteccion").
+  Código CAI-013 por instrucción explícita del usuario (numeración global de Capacitación,
+  no se infiere del campo servicio — mismo criterio que ya aplicó CAI-003).
+  División: Educación. Cuarta variante de rollout organizacional de la cuenta Simple TV
+  (junto a DET-002/CAI-002 del piloto IA Champions, CAI-003 y ALL-001) — responde al "bando
+  pro-diagnóstico": mismo alcance de CAI-003 (14 áreas, ~260 personas) pero con Detección y
+  Habilidades separadas en 2 fases, cada una con su propio alcance y cotización, en vez del
+  bloque integrado por área de CAI-003.
+  Sin argumento comparativo Detección-externa-vs-equipo-interno expuesto en el deck
+  (instrucción explícita del usuario) — la estructura se presenta en términos propios y
+  positivos, sin mencionar a CAI-003 ni comparar velocidad contra el equipo interno del
+  cliente. Fuente: minuta de llamada con Neliana + instrucción directa del usuario.
+  Fase 1: 2h de Detección por área (14 × 2h = 28h), mismo alcance horario que CAI-003, ahora
+  separada como fase propia. Fase 2: 8-12h de Habilidades por área (mismo rango que CAI-003),
+  curada ya con el diagnóstico cerrado de la Fase 1. Mismo universo (14 áreas, ~260 personas)
+  en ambas fases.
+  Base mecánica: clon de simple-tv-det002/ (styles.css local completo con .rmx-linear del
+  roadmap, .fase-price-list de "Inversión por fases", Beneficios v3 layout ampliado, Cierre
+  escalera). La slide "Cobertura organizacional" (.s-coverage) se portó desde
+  simple-tv-cai003/overrides.css, ya que el lineage de det002 no la traía.
+  §4.11: Microsoft 365/Copilot y Claude ya están en uso real; no se afirma migración.
+  13 slides.
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Propuesta · Simple TV · Intezia</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <main class="deck">
+
+    <!-- 1 · Portada -->
+    <section class="slide s-cover">
+      <span class="counter">01 / 13</span>
+      <div class="logo-big">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia">
+      </div>
+      <div class="body">
+        <p class="eyebrow">Propuesta formativa · Servicio de Detección y Habilidades</p>
+        <h1>
+          Diagnóstico primero.<br>
+          <span class="hl">Las 14 áreas, en 2 fases.</span>
+        </h1>
+        <p class="lead">
+          Diagnosticamos por completo las <strong>14 áreas</strong> de Simple TV en una Fase 1 de Detección, y capacitamos después a cada una en una Fase 2 de Habilidades curada con esos hallazgos: cada fase con su propio alcance y cotización.
+        </p>
+      </div>
+      <div class="id-line">
+        <span class="codigo">Código: CAI-013</span>
+        <span class="cliente">Simple TV</span>
+      </div>
+    </section>
+
+    <!-- 2 · Punto de dolor + Diagnóstico -->
+    <section class="slide s-pain">
+      <span class="counter">02 / 13</span>
+      <span class="quote-mark">&ldquo;</span>
+      <div class="body">
+        <h2>El piloto ya valida el enfoque. Falta un diagnóstico completo antes de escalarlo.</h2>
+        <p class="context">
+          Simple TV construye su estrategia de IA desde cero, con un Comité de IA propio y un área técnica interna que ya levanta casos de uso. El siguiente paso es llevar ese enfoque a las 14 áreas de la organización, con un <strong>diagnóstico propio y completo</strong> antes de curar el contenido de formación de cada una.
+        </p>
+        <p class="diag-title">Diagnóstico</p>
+        <ol>
+          <li>Simple TV tiene cerca de 260 personas en 14 áreas, cada una con procesos y madurez de IA distintos.</li>
+          <li>El piloto "IA Champions" (4 personas) ya validó el enfoque y abre la puerta al proyecto grande.</li>
+          <li>Siguen en proceso de segmentación de licenciamiento (Copilot premium vs. básico) por área.</li>
+          <li>Sin un diagnóstico propio por área, la formación corre el riesgo de aplicar el mismo contenido a 14 realidades distintas.</li>
+          <li>Falta un diagnóstico completo de las 14 áreas, con su propio entregable, antes de curar el contenido de la Fase 2.</li>
+        </ol>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">SIMPLE TV · CAI-013</span>
+      </div>
+    </section>
+
+    <!-- 3 · Objetivos estratégicos -->
+    <section class="slide s-goals">
+      <span class="counter">03 / 13</span>
+      <p class="eyebrow">02 · Objetivos</p>
+      <h2>A dónde llevamos<br>a las 14 áreas.</h2>
+      <div class="columns">
+        <div class="general">
+          <p class="label">Objetivo general</p>
+          <p>
+            Diagnosticar por completo las 14 áreas de Simple TV con una fase de Detección propia, y capacitar después a cada una en una fase de Habilidades curada con esos hallazgos, cada fase con su propio alcance y cotización.
+          </p>
+        </div>
+        <div class="specifics">
+          <p class="label">Objetivos específicos</p>
+          <ol>
+            <li>Diagnosticar procesos, cuellos de botella y casos de uso reales de las 14 áreas, con un guion estructurado por área.</li>
+            <li>Entregar una Matriz de Madurez y una hoja de ruta priorizada de las 14 áreas, completa antes de curar la Fase 2.</li>
+            <li>Nivelar a cada área en fundamentos comunes de IA, con una base compartida entre las 14.</li>
+            <li>Aplicar la IA a los procesos y quick wins propios de cada área, ya con el diagnóstico de la Fase 1 como insumo.</li>
+          </ol>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">SIMPLE TV · CAI-013</span>
+      </div>
+    </section>
+
+    <!-- 4 · El camino (3 tarjetas) -->
+    <section class="slide s-program">
+      <span class="counter">04 / 13</span>
+      <p class="eyebrow">03 · El camino</p>
+      <h2>De la Detección a las Habilidades.</h2>
+      <p class="meta">Fase 1 (Detección, 14 áreas) y Fase 2 (Habilidades, 14 áreas) se cotizan por separado en este documento.</p>
+      <div class="modules">
+        <div class="module">
+          <span class="roman">I</span>
+          <h3>Detección por Área</h3>
+          <p class="obj">Diagnostica procesos, cuellos de botella y casos de uso reales de las 14 áreas, un guion estructurado por área.</p>
+          <ul class="topics">
+            <li>Matriz de Madurez</li>
+            <li>Hoja de ruta priorizada</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">II</span>
+          <h3>Fundamentos Comunes</h3>
+          <p class="obj">Nivela a cada área en fundamentos de IA aplicados, base compartida entre las 14 áreas.</p>
+          <ul class="topics">
+            <li>Fundamentos de IA generativa</li>
+            <li>Ecosistema Microsoft y Claude</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">III</span>
+          <h3>Procesos y Quick Wins Propios</h3>
+          <p class="obj">Aplica la IA a los procesos reales de cada área, ya con el diagnóstico de la Fase 1 como base.</p>
+          <ul class="topics">
+            <li>Casos reales del área</li>
+            <li>Quick wins aplicados</li>
+          </ul>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">SIMPLE TV · CAI-013</span>
+      </div>
+    </section>
+
+    <!-- 5 · Cobertura organizacional (14 áreas) -->
+    <section class="slide s-program s-coverage">
+      <span class="counter">05 / 13</span>
+      <p class="eyebrow">03 · El camino</p>
+      <h2>14 áreas, un mismo diagnóstico.</h2>
+      <p class="meta">Ambas fases cubren las mismas 14 áreas de la organización.</p>
+      <div class="coverage-body">
+        <div class="coverage-stats">
+          <div class="stat-block">
+            <div class="stat-num">~260</div>
+            <p class="stat-cap">Personas en total</p>
+          </div>
+          <div class="stat-block">
+            <div class="stat-num">14</div>
+            <p class="stat-cap">Áreas de la organización</p>
+          </div>
+          <p class="stat-note">El piloto de 4 IA Champions ya validó el enfoque.</p>
+        </div>
+        <div class="coverage-grid">
+          <span class="coverage-chip">Ingeniería</span>
+          <span class="coverage-chip">Nuevos Negocios y Planificación Financiera</span>
+          <span class="coverage-chip">Legal</span>
+          <span class="coverage-chip">IT</span>
+          <span class="coverage-chip">Finanzas</span>
+          <span class="coverage-chip">Gerencia General</span>
+          <span class="coverage-chip">Riesgo, Auditoría Interna, Cumplimiento y Seguridad</span>
+          <span class="coverage-chip">Marketing, Comunicaciones y Digital</span>
+          <span class="coverage-chip">Comercial</span>
+          <span class="coverage-chip">Media (Producción Deportiva)</span>
+          <span class="coverage-chip">CX</span>
+          <span class="coverage-chip">Media (Programación, Contenido y Monetización)</span>
+          <span class="coverage-chip">Talento Humano</span>
+          <span class="coverage-chip">PMO</span>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">SIMPLE TV · CAI-013</span>
+      </div>
+    </section>
+
+    <!-- 6 · Fase 1: Detección -->
+    <section class="slide s-schedule">
+      <span class="counter">06 / 13</span>
+      <p class="eyebrow">04 · Fase 1 de 2 · Ruta por fase</p>
+
+      <div class="ruta">
+        <div class="ruta-node">1</div>
+        <div class="ruta-track"><div class="ruta-fill" style="width:50%"></div></div>
+        <span class="ruta-step">Detección</span>
+      </div>
+
+      <div class="ses-head">
+        <div>
+          <span class="ses-mod">Fase 1 · Sesión de 2h por área · Se repite en las 14 áreas · Modalidad a confirmar</span>
+          <h2>Detección</h2>
+        </div>
+        <div class="ses-meta"><span class="ses-dur">28h</span></div>
+      </div>
+
+      <div class="ses-body">
+        <div class="ses-block">
+          <span class="label">Temas</span>
+          <div class="chips">
+            <span class="chip">Auditoría por área</span>
+            <span class="chip">Matriz de Madurez Digital</span>
+            <span class="chip">Casos de uso reales</span>
+            <span class="chip">Hoja de ruta priorizada</span>
+          </div>
+        </div>
+        <div class="ses-block">
+          <span class="label">Tiempo · 14 áreas × 2h (28h)</span>
+          <div class="timebar">
+            <div class="seg" style="flex:1">Diagnóstico de procesos (2h)</div>
+            <div class="seg" style="flex:1">Casos de uso y cuellos de botella</div>
+            <div class="seg" style="flex:1">Consolidación de hallazgos</div>
+          </div>
+        </div>
+        <div class="ses-cols">
+          <div class="ses-block">
+            <span class="label">Qué se hace</span>
+            <ul>
+              <li>Una sesión de 2h por área, con un guion de auditoría estructurado, en las 14 áreas de Simple TV</li>
+              <li>Medimos el punto de partida de cada área con la Matriz de Madurez Digital</li>
+              <li>Consolidamos los hallazgos en una hoja de ruta priorizada para curar la Fase 2</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Qué se logra</span>
+            <ul>
+              <li>Un diagnóstico validado de procesos y casos de uso reales en las 14 áreas</li>
+              <li>Una hoja de ruta clara de qué priorizar en la Fase 2, área por área</li>
+              <li>Un panorama consolidado, listo para curar el contenido de Habilidades sin adivinar</li>
+            </ul>
+          </div>
+          <div class="ses-block block-rec">
+            <span class="label">Recursos y entornos</span>
+            <ul>
+              <li>Guion de auditoría Intezia y Matriz de Madurez Digital</li>
+              <li>Entorno Microsoft 365 y Claude que Simple TV ya opera</li>
+              <li>Sesiones de 2h coordinadas con cada líder de área</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">SIMPLE TV · CAI-013</span>
+      </div>
+    </section>
+
+    <!-- 7 · Fase 2: Habilidades -->
+    <section class="slide s-schedule">
+      <span class="counter">07 / 13</span>
+      <p class="eyebrow">04 · Fase 2 de 2 · Ruta por fase</p>
+
+      <div class="ruta">
+        <div class="ruta-node">2</div>
+        <div class="ruta-track"><div class="ruta-fill" style="width:100%"></div></div>
+        <span class="ruta-step">Habilidades</span>
+      </div>
+
+      <div class="ses-head">
+        <div>
+          <span class="ses-mod">Fase 2 · Bloque de 8 a 12h por área · Se repite en las 14 áreas · Modalidad a confirmar</span>
+          <h2>Habilidades</h2>
+        </div>
+        <div class="ses-meta"><span class="ses-dur">8-12h / área</span></div>
+      </div>
+
+      <div class="ses-body">
+        <div class="ses-block">
+          <span class="label">Temas</span>
+          <div class="chips">
+            <span class="chip">Fundamentos comunes de IA</span>
+            <span class="chip">Ecosistema Microsoft y Claude</span>
+            <span class="chip">Procesos y quick wins propios</span>
+            <span class="chip">Documentación por equipo</span>
+          </div>
+        </div>
+        <div class="ses-block">
+          <span class="label">Tiempo · Estructura de referencia</span>
+          <div class="timebar">
+            <div class="seg" style="flex:1">Fundamentos comunes de IA</div>
+            <div class="seg" style="flex:1">Procesos y quick wins del área</div>
+            <div class="seg" style="flex:1">Documentación y cierre</div>
+          </div>
+        </div>
+        <div class="ses-cols">
+          <div class="ses-block">
+            <span class="label">Qué se hace</span>
+            <ul>
+              <li>Nivelamos a cada área en fundamentos comunes de IA, con una base compartida entre las 14</li>
+              <li>Aplicamos la IA a los procesos y quick wins propios de cada área, con base en el diagnóstico ya entregado en la Fase 1</li>
+              <li>Documentamos el contenido curado por equipo, área por área</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Qué se logra</span>
+            <ul>
+              <li>Las 14 áreas niveladas en fundamentos comunes, con un mismo punto de partida</li>
+              <li>Quick wins aplicados a los procesos reales de cada área, ya priorizados por la Fase 1</li>
+              <li>Una capacidad instalada, área por área, lista para escalar</li>
+            </ul>
+          </div>
+          <div class="ses-block block-rec">
+            <span class="label">Recursos y entornos</span>
+            <ul>
+              <li>El diagnóstico y la hoja de ruta priorizada de la Fase 1</li>
+              <li>Entorno Microsoft 365 y Claude que Simple TV ya opera</li>
+              <li>Contenido curado por área, con cada líder</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">SIMPLE TV · CAI-013</span>
+      </div>
+    </section>
+
+    <!-- 8 · Roadmap -->
+    <section class="slide s-roadmap">
+      <span class="counter">08 / 13</span>
+      <p class="eyebrow">04 · Roadmap</p>
+      <h2>De la Detección a las <span class="hl">Habilidades</span>, en las 14 áreas.</h2>
+
+      <div class="rmx-field">
+        <div class="rmx-linear">
+
+          <div class="rmx-lrow-nodes">
+            <div class="rmx-lcol"><div class="rmx-node rmx-node-f2">1</div></div>
+            <div class="rmx-arrow"></div>
+            <div class="rmx-lcol"><div class="rmx-node rmx-node-f3">2</div></div>
+            <div class="rmx-arrow"></div>
+            <div class="rmx-lcol"><div class="rmx-node rmx-node-r">&#9733;</div></div>
+          </div>
+
+          <div class="rmx-lrow-cards">
+            <div class="rmx-lcol">
+              <div class="rmx-card rmx-card-f2">
+                <span class="rmx-card-tag">Fase 1 · Detección (28h)</span>
+                <div class="rmx-card-name">Diagnóstico de las 14 áreas</div>
+                <ul class="rmx-facets">
+                  <li><span>Qué pasa</span><p>Una sesión de 2h por área, con guion de auditoría estructurado, en las 14 áreas de Simple TV.</p></li>
+                  <li><span>Con quién</span><p>Cada una de las 14 áreas, con su líder participando en el diagnóstico.</p></li>
+                  <li><span>Entrega</span><p>Matriz de Madurez y hoja de ruta priorizada de las 14 áreas.</p></li>
+                </ul>
+              </div>
+            </div>
+            <div class="rmx-lspacer"></div>
+            <div class="rmx-lcol">
+              <div class="rmx-card rmx-card-f3">
+                <span class="rmx-card-tag">Fase 2 · Habilidades (8-12h/área)</span>
+                <div class="rmx-card-name">Fundamentos y quick wins por área</div>
+                <ul class="rmx-facets">
+                  <li><span>Qué pasa</span><p>Fundamentos comunes de IA más los procesos y quick wins propios de cada área, curados con el diagnóstico de la Fase 1.</p></li>
+                  <li><span>Con quién</span><p>Las 14 áreas, ~260 personas en total.</p></li>
+                  <li><span>Entrega</span><p>Cada área nivelada, con quick wins aplicados a sus procesos reales.</p></li>
+                </ul>
+              </div>
+            </div>
+            <div class="rmx-lspacer"></div>
+            <div class="rmx-lcol">
+              <div class="rmx-result-card">
+                <span class="rmx-result-label">Cierre del proyecto</span>
+                <div class="rmx-result-title">Simple TV, con las 14 áreas diagnosticadas y capacitadas</div>
+                <ul>
+                  <li>Diagnóstico completo antes de curar cada currícula</li>
+                  <li>Las 14 áreas con fundamentos comunes y quick wins propios</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /.rmx-linear -->
+
+        <div class="rmx-ethics">
+          <span class="rmx-ethics-tag">Plan completo, listo para decidir</span>
+          <p>Detección y Habilidades vienen <strong>desarrolladas y cotizadas por separado en esta misma propuesta</strong>: Simple TV decide cada fase con su propio alcance y cotización sobre la mesa.</p>
+        </div>
+
+      </div><!-- /.rmx-field -->
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">SIMPLE TV · CAI-013</span>
+      </div>
+    </section>
+
+    <!-- 9 · Beneficios (v3) -->
+    <section class="slide s-benefits s-benefits-v2">
+      <span class="counter">09 / 13</span>
+      <p class="eyebrow">05 · Beneficios</p>
+      <h2>Lo que <span class="hl">se llevan</span>.</h2>
+      <div class="grid">
+        <div class="block">
+          <p class="label">Resultados</p>
+          <ul>
+            <li><strong>14 áreas</strong> con diagnóstico completo antes de construir su capacitación.</li>
+            <li>Matriz de Madurez y hoja de ruta priorizada, propias de cada área.</li>
+            <li>Fundamentos comunes y quick wins aplicados a los procesos reales de cada área.</li>
+          </ul>
+        </div>
+        <div class="block">
+          <p class="label">Por qué Detección y Habilidades</p>
+          <p>
+            Diagnosticar antes de capacitar evita construir contenido a ciegas: la Fase 2 aplica lo que la Fase 1 ya <strong>priorizó sobre la operación real</strong> de cada área, no sobre un supuesto.
+          </p>
+        </div>
+        <div class="block">
+          <p class="label">Entregables</p>
+        </div>
+        <div class="block">
+          <p class="label">Valor inmediato</p>
+        </div>
+      </div>
+
+      <!-- Cajas multiline editables (vacías en HTML — el contenido vive dentro del AcroForm /V). -->
+      <div class="multi-box entregables-box" data-field="Entregables"></div>
+      <div class="multi-box acreditaciones-box" data-field="Acreditacion"></div>
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">SIMPLE TV · CAI-013</span>
+      </div>
+    </section>
+
+    <!-- 10 · Impacto / estudios — datos de estudios reales, fuente citada (CLAUDE.md §4.9) -->
+    <section class="slide s-impact">
+      <span class="counter">10 / 13</span>
+
+      <div class="impact-head">
+        <p class="eyebrow">06 · Impacto</p>
+        <h2>Multiplicado por 14 áreas,<br><span class="hl">la evidencia pesa más</span>.</h2>
+      </div>
+
+      <div class="impact-body">
+        <div class="chart-panel">
+          <p class="panel-title">Más velocidad y menos tiempo con un asistente de IA</p>
+          <div class="bars">
+            <div class="bar-row">
+              <span class="bar-label">Búsqueda, redacción y resumen · más velocidad con Copilot</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:29%"><span class="bar-val">+29%</span></div></div>
+            </div>
+            <div class="bar-row">
+              <span class="bar-label">Redacción y textos · reducción de tiempo con un asistente de IA</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:40%"><span class="bar-val">&minus;40%</span></div></div>
+            </div>
+          </div>
+          <div class="bar-axis"><span class="scale"><span>0</span><span>25</span><span>50</span><span>75</span><span>100%</span></span></div>
+          <p class="panel-source">Fuentes: Microsoft &mdash; Work Trend Index 2024, &ldquo;What Can Copilot's Earliest Users Teach Us About Generative AI at Work&rdquo; &middot; MIT &mdash; Noy y Zhang, Science 2023 &middot; Anthropic &mdash; investigación sobre uso de Claude Code (oct. 2025&ndash;abr. 2026).</p>
+        </div>
+
+        <div class="gauge-panel">
+          <div class="gauge" style="--pct:77">
+            <div class="gauge-core">
+              <span class="gauge-num">77<span class="pct">%</span></span>
+              <span class="gauge-cap">de los usuarios de Copilot reportó un aumento medible de productividad</span>
+            </div>
+          </div>
+          <div class="chips">
+            <div class="chip">
+              <span class="chip-num">16&ndash;23%</span>
+              <span class="chip-lbl">de los repositorios públicos ya muestra actividad de codificación agéntica</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="impact-hook">
+        <span class="hook-mark">&#9656;</span>
+        <p class="hook-text">
+          Los primeros usuarios de Copilot reportaron un <strong>aumento medible de productividad</strong> (77%) y fueron 29% más rápidos en búsqueda, redacción y resumen (Microsoft, 2024). Un asistente de IA reduce además cerca del 40% el tiempo de redacción profesional (MIT, 2023). Multiplicado por 14 áreas, un diagnóstico completo antes de capacitar es lo que convierte esa evidencia en prioridades concretas, área por área.
+        </p>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">SIMPLE TV · CAI-013</span>
+      </div>
+    </section>
+
+    <!-- 11 · Inversión por fases -->
+    <section class="slide s-price">
+      <span class="counter">11 / 13</span>
+      <h2 class="title">Inversión por fases</h2>
+      <p class="price-intro">Detección y Habilidades para las 14 áreas de Simple TV (~260 personas), en 2 fases. Cada fase se cotiza por separado.</p>
+
+      <div class="fase-price-list">
+        <div class="fase-price-row">
+          <div class="fase-price-copy">
+            <span class="fase-price-label">Fase 1 · Detección (28h)</span>
+            <p class="fase-price-desc">Sesión de 2h por área, en las 14 áreas · Matriz de Madurez y hoja de ruta priorizada.</p>
+          </div>
+          <div class="fase-price-frame" data-field="PrecioFase1"></div>
+        </div>
+        <div class="fase-price-row">
+          <div class="fase-price-copy">
+            <span class="fase-price-label">Fase 2 · Habilidades (8-12h/área)</span>
+            <p class="fase-price-desc">Fundamentos comunes y quick wins propios, por área, en las 14 áreas.</p>
+          </div>
+          <div class="fase-price-frame" data-field="PrecioFase2"></div>
+        </div>
+      </div>
+
+      <div class="block block-notes-container">
+        <span class="block-eyebrow">Notas</span>
+      </div>
+      <div class="multi-box notas-box" data-field="Notas"></div>
+
+      <span class="cot-label cot-label-base">Inversión total del proyecto</span>
+      <div class="cot-frame base-frame"></div>
+
+      <span class="cot-label cot-label-discount">Descuento</span>
+      <div class="cot-frame discount-frame"></div>
+
+      <span class="cot-label cot-label-total">TOTAL</span>
+      <div class="cot-frame total-frame"></div>
+
+      <p class="cot-validity">Cotización válida por 30 días.</p>
+      <div class="cot-terms-box">
+        <span class="cot-terms-label">Importante</span>
+        <p class="cot-terms-text">Este servicio se presta bajo nuestros <a href="https://drive.google.com/file/d/1PA-ZSt4KnyY5dpxXzgkIk6-yfGlV2eF8/view?usp=drive_link" target="_blank" rel="noopener">términos y condiciones</a>. Al avanzar con esta propuesta, ambas partes los aceptan.</p>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">SIMPLE TV · CAI-013</span>
+      </div>
+    </section>
+
+    <!-- 12 · Próximos pasos -->
+    <section class="slide s-steps">
+      <span class="counter">12 / 13</span>
+      <p class="eyebrow">07 · Próximos pasos</p>
+      <h2>Cómo arrancamos.</h2>
+      <div class="step-cards">
+        <div class="step-card">
+          <span class="ghost">01</span>
+        </div>
+        <div class="step-card">
+          <span class="ghost">02</span>
+        </div>
+        <div class="step-card">
+          <span class="ghost">03</span>
+        </div>
+      </div>
+
+      <!-- Editable AcroForm placeholders (3 pasos × título + body) -->
+      <div class="acro-area acro-title acro-paso-01-titulo" data-field="Paso01Titulo">
+        <span class="acro-default-text">Confirmamos alcance</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-01-body" data-field="Paso01Body">
+        <span class="acro-default-text">Definimos con Simple TV qué áreas arrancan primero en la Fase 1 y el orden del rollout.</span>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-02-titulo" data-field="Paso02Titulo">
+        <span class="acro-default-text">Acceso y logística</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-02-body" data-field="Paso02Body">
+        <span class="acro-default-text">Coordinamos accesos a Microsoft 365 y Claude, calendario y líderes de cada área.</span>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-03-titulo" data-field="Paso03Titulo">
+        <span class="acro-default-text">Kick-off</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-03-body" data-field="Paso03Body">
+        <span class="acro-default-text">Reunión de arranque (~30 min) para alinear el alcance de ambas fases con el área de IA y el Comité de IA.</span>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">SIMPLE TV · CAI-013</span>
+      </div>
+    </section>
+
+    <!-- 13 · Cierre -->
+    <section class="slide s-end">
+      <span class="counter">13 / 13</span>
+
+      <div class="end-logo">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia">
+      </div>
+
+      <!-- Resultado (cinta superior) — caja editable, ventas la redacta por cliente -->
+      <div class="end-summit" data-field="CierreResultado">
+        <span class="acro-default-text">Las 14 áreas de Simple TV, diagnosticadas y capacitadas en 2 fases.</span>
+      </div>
+
+      <!-- Escalera de 3 pasos — cada uno con su caja editable -->
+      <div class="end-stairs">
+        <div class="stair-step stair-1">
+          <span class="stair-label">Paso 1</span>
+          <div class="stair-field" data-field="CierrePaso1">
+            <span class="acro-default-text">Diagnóstico completo por área</span>
+          </div>
+        </div>
+        <div class="stair-step stair-2">
+          <span class="stair-label">Paso 2</span>
+          <div class="stair-field" data-field="CierrePaso2">
+            <span class="acro-default-text">Habilidades aplicadas</span>
+          </div>
+        </div>
+        <div class="stair-step stair-3">
+          <span class="stair-label">Paso 3</span>
+          <div class="stair-field" data-field="CierrePaso3">
+            <span class="acro-default-text">Rollout completo a las 14 áreas</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cta-wrap">
+        <span class="cta">Esperamos tu respuesta</span>
+      </div>
+
+      <div class="end-contact">
+        <p class="contact-line">
+          <span class="contact-label">Asesora de ventas:</span>
+          María Iribarren <span class="dot">·</span> +58 414 0570056 <span class="dot">·</span> miribarren@intezia.com
+        </p>
+        <p class="contact-line">
+          <span class="contact-label">Empresa:</span>
+          Intezia C.A J-505657950 <span class="dot">·</span> servicio@intezia.com
+        </p>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

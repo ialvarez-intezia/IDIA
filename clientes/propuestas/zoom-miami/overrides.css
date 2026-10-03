@@ -1,0 +1,9 @@
+/* Overrides locales · Zoom Miami CAP-046
+   Más separación entre las cards y la franja de Equipo facilitador en Beneficios:
+   el _base trae solo 18px (.s-benefits .grid margin-bottom), que en este deck se
+   ve pegado por lo corto del contenido de Entregables/Acreditación. Hay ~170px de
+   espacio libre debajo del bloque de equipo, así que ampliar el margen no arriesga
+   overflow (verificado con verificar-overflow.js). */
+.s-benefits .grid {
+  margin-bottom: 40px;
+}

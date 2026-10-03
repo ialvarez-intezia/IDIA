@@ -1,0 +1,334 @@
+<!doctype html>
+<!--
+  Dashboard de Impacto Edu-Trace · Equipos y Sistemas Hidrocaven · Fundamentos de IA para Compras y Logística
+  Vista CLIENTE (entregable). Datos: clientes/dashboards/hidrocaven/resultados.json
+  Bloque E reformulado como "recomendaciones de expansión" (lenguaje de valor).
+  Lenguaje honesto (§4.17): B/D = percibido · C = medido. Sin cédula/correo (§4.16).
+  Muestra pequeña (N=4): disclaimers explícitos en hero, departamento y participación.
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard de Impacto · Hidrocaven · Intezia Educación</title>
+  <link rel="stylesheet" href="../../propuestas/_base/styles.css">
+  <link rel="stylesheet" href="overrides.css">
+</head>
+<body>
+  <main class="deck">
+
+    <!-- 01 · Portada -->
+    <section class="slide s-cover">
+      <span class="counter">01 / 10</span>
+      <div class="logo-big">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia Educación">
+      </div>
+      <div class="body">
+        <p class="eyebrow">Dashboard de Impacto · Edu-Trace</p>
+        <h1>
+          Fundamentos de IA para<br>
+          <span class="hl">Compras y Logística</span>
+        </h1>
+        <p class="lead">
+          Resultados de la capacitación medidos con la <strong>Encuesta Edu-Trace</strong> de cierre. Cuatro participantes del equipo de Compras y Logística de Hidrocaven, evaluados en competencia, <strong>retención de conocimiento</strong> sobre Claude y experiencia formativa.
+        </p>
+      </div>
+      <div class="id-line">
+        <span class="codigo">Edu-Trace · Hidrocaven</span>
+        <span class="cliente">Equipos y Sistemas Hidrocaven</span>
+      </div>
+    </section>
+
+    <!-- 02 · Hero del Índice (reusa .s-impact: barras de eje + gauge) -->
+    <section class="slide s-impact">
+      <span class="counter">02 / 10</span>
+      <div class="impact-head">
+        <p class="eyebrow">01 · Resultado global</p>
+        <h2>Índice de Impacto<br><span class="hl">Edu-Trace</span>.</h2>
+      </div>
+      <div class="impact-body">
+        <div class="chart-panel">
+          <p class="panel-title">Los cuatro ejes que componen el índice (0-100)</p>
+          <div class="bars">
+            <div class="bar-row">
+              <span class="bar-label">Competencia percibida</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:81.2%"><span class="bar-val">81</span></div></div>
+            </div>
+            <div class="bar-row">
+              <span class="bar-label">Retención objetiva · medido</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:100%"><span class="bar-val">100</span></div></div>
+            </div>
+            <div class="bar-row">
+              <span class="bar-label">Aplicabilidad e impacto</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:100%"><span class="bar-val">100</span></div></div>
+            </div>
+            <div class="bar-row">
+              <span class="bar-label">Calidad de la experiencia</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:92.3%"><span class="bar-val">92</span></div></div>
+            </div>
+          </div>
+          <div class="bar-axis"><span class="scale"><span>0</span><span>25</span><span>50</span><span>75</span><span>100</span></span></div>
+          <p class="panel-source">Ponderación: Retención objetiva 35% · Competencia 30% · Aplicabilidad e impacto 20% · Calidad 15%. La retención es el único eje medido; el resto es autopercibido.</p>
+        </div>
+        <div class="gauge-panel">
+          <div class="gauge" style="--pct:93">
+            <div class="gauge-core">
+              <span class="gauge-num">93</span>
+              <span class="gauge-cap idx">Índice · de 100</span>
+            </div>
+          </div>
+          <div class="rating">
+            <div class="stars">
+              <span class="star full">&#9733;</span>
+              <span class="star full">&#9733;</span>
+              <span class="star full">&#9733;</span>
+              <span class="star full">&#9733;</span>
+              <span class="star half">&#9733;</span>
+            </div>
+            <span class="rating-cap">Satisfacción general · <b>4.5 / 5</b></span>
+          </div>
+          <p class="hero-meta">4 participantes · salto percibido +2.0 (1-5)</p>
+        </div>
+      </div>
+      <div class="impact-hook">
+        <span class="hook-mark">&#9656;</span>
+        <p class="hook-text">
+          El equipo respondió bien el <strong>100%</strong> de la evaluación de conocimiento sobre Claude. Es un grupo piloto de apenas 4 personas: la tendencia es sólida, aunque la muestra todavía es pequeña.
+        </p>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Hidrocaven · Dashboard de Impacto</span>
+      </div>
+    </section>
+
+    <!-- 03 · Desglose por eje -->
+    <section class="slide s-data s-ejes">
+      <span class="counter">03 / 10</span>
+      <p class="eyebrow">02 · Desglose</p>
+      <h2>Qué mide cada eje.</h2>
+      <p class="sub">Cada eje aporta al índice según su peso. Solo uno es una medición objetiva; los otros tres son autopercepción del participante al cierre.</p>
+      <div class="grid">
+        <div class="eje">
+          <div class="top"><span class="num">81</span><span class="peso">peso 30%</span></div>
+          <h3>Competencia percibida</h3>
+          <p>Cuánto se siente el participante capaz de operar Claude sin supervisión. <span class="tag-percibido">percibido</span></p>
+        </div>
+        <div class="eje measured">
+          <div class="top"><span class="num">100</span><span class="peso">peso 35%</span></div>
+          <h3>Retención objetiva</h3>
+          <p>Aciertos en las tres preguntas técnicas sobre Claude con respuesta correcta. El dato más duro del informe. <span class="tag-medido">medido</span></p>
+        </div>
+        <div class="eje">
+          <div class="top"><span class="num">100</span><span class="peso">peso 20%</span></div>
+          <h3>Aplicabilidad e impacto</h3>
+          <p>Qué tanto resuelve Claude problemas del rol de Compras y promete recuperar tiempo de ejecución. <span class="tag-percibido">percibido</span></p>
+        </div>
+        <div class="eje">
+          <div class="top"><span class="num">92</span><span class="peso">peso 15%</span></div>
+          <h3>Calidad de la experiencia</h3>
+          <p>Claridad, acompañamiento, ritmo y dominio técnico del facilitador. <span class="tag-percibido">percibido</span></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 · Salto de aprendizaje percibido -->
+    <section class="slide s-salto">
+      <span class="counter">04 / 10</span>
+      <p class="eyebrow">03 · Salto de aprendizaje</p>
+      <h2>De dónde partieron, a dónde llegaron.</h2>
+      <div class="journey">
+        <div class="milestone">
+          <span class="ms-cap">Antes · percibido</span>
+          <span class="ms-num">2.3</span>
+          <span class="ms-of">dominio previo<br>(escala 1-5)</span>
+        </div>
+        <div class="track">
+          <div class="track-fill"></div>
+          <div class="delta">
+            <span class="d-num">+2.0</span>
+            <span class="d-lbl">salto percibido</span>
+          </div>
+        </div>
+        <div class="milestone end">
+          <span class="ms-cap">Al cierre</span>
+          <span class="ms-num">4.3</span>
+          <span class="ms-of">capaz sin supervisión<br>(escala 1-5)</span>
+        </div>
+      </div>
+      <p class="salto-note">Es un salto <strong>percibido y retrospectivo</strong>: ambas cifras se preguntaron al cierre, no antes de empezar. Con 4 participantes, refleja cómo vivió el equipo su propio avance, no una medición con punto de partida real.</p>
+    </section>
+
+    <!-- 05 · Retención objetiva (Bloque C - medido) -->
+    <section class="slide s-data s-reten">
+      <span class="counter">05 / 10</span>
+      <p class="eyebrow">04 · Retención objetiva <span class="tag-medido">medido</span></p>
+      <h2>Lo que de verdad quedó.</h2>
+      <div class="global">
+        <span class="pct">100%</span>
+        <span class="txt">de aciertos en la evaluación de conocimiento técnico sobre Claude al cierre.</span>
+      </div>
+      <div class="qrow">
+        <div class="q">Formatos que Claude lee de forma nativa<small>PDF, Excel, Word e imágenes, sin necesidad de reconocimiento óptico de caracteres (OCR) aparte.</small></div>
+        <div class="score">100%<small> · 4 de 4</small></div>
+      </div>
+      <div class="qrow">
+        <div class="q">Instrucciones personalizadas en un Proyecto de Claude<small>Se aplican automáticamente a cada conversación nueva del Proyecto, sin repetirlas.</small></div>
+        <div class="score">100%<small> · 4 de 4</small></div>
+      </div>
+      <div class="qrow">
+        <div class="q">Tareas Programadas de Claude, en la nube<small>Se ejecutan aunque el computador del usuario esté apagado.</small></div>
+        <div class="score">100%<small> · 4 de 4</small></div>
+      </div>
+      <p class="note-honest">Los 4 participantes respondieron correctamente las tres preguntas técnicas de cierre: 100% de retención objetiva. Es el único bloque del informe que mide conocimiento real, no percepción.</p>
+    </section>
+
+    <!-- 06 · Resultados por departamento -->
+    <section class="slide s-data s-depto">
+      <span class="counter">06 / 10</span>
+      <p class="eyebrow">05 · Por área</p>
+      <h2>Índice por departamento.</h2>
+      <p class="sub">El equipo de Compras concentra la mitad de la muestra (2 participantes); Compras Internacionales y Contabilidad aportan un participante cada uno, por lo que su cifra es referencial.</p>
+      <div class="hbars">
+        <div class="hbar-row">
+          <span class="hbar-label">Compras <small>2 participantes</small></span>
+          <div class="hbar-track"><div class="hbar-fill" style="--w:95%"></div></div>
+          <span class="hbar-val">95</span>
+        </div>
+        <div class="hbar-row">
+          <span class="hbar-label">Compras Internacionales <small>1 participante</small></span>
+          <div class="hbar-track"><div class="hbar-fill" style="--w:92%"></div></div>
+          <span class="hbar-val">92</span>
+        </div>
+        <div class="hbar-row">
+          <span class="hbar-label">Contabilidad <small>1 participante</small></span>
+          <div class="hbar-track"><div class="hbar-fill" style="--w:91%"></div></div>
+          <span class="hbar-val">91</span>
+        </div>
+      </div>
+      <p class="note-honest">Con grupos de 1 a 2 personas por área, estas cifras son un referente inicial del piloto, no una comparación con significancia estadística entre departamentos.</p>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Hidrocaven · Dashboard de Impacto</span>
+      </div>
+    </section>
+
+    <!-- 07 · Calidad de la experiencia (Bloque D) -->
+    <section class="slide s-data s-calidad">
+      <span class="counter">07 / 10</span>
+      <p class="eyebrow">06 · Experiencia formativa <span class="tag-percibido">percibido</span></p>
+      <h2>Cómo vivieron la formación.</h2>
+      <p class="sub">Valoración del facilitador y la dinámica de las sesiones, en escala 1-5 normalizada a 0-100.</p>
+      <div class="hbars">
+        <div class="hbar-row">
+          <span class="hbar-label">Acompañamiento <small>dudas resueltas con precisión</small></span>
+          <div class="hbar-track"><div class="hbar-fill" style="--w:100%"></div></div>
+          <span class="hbar-val">100</span>
+        </div>
+        <div class="hbar-row">
+          <span class="hbar-label">Dominio técnico <small>profundidad de las soluciones</small></span>
+          <div class="hbar-track"><div class="hbar-fill" style="--w:93.75%"></div></div>
+          <span class="hbar-val">94</span>
+        </div>
+        <div class="hbar-row">
+          <span class="hbar-label">Claridad expositiva <small>casos reales de Compras y Logística</small></span>
+          <div class="hbar-track"><div class="hbar-fill" style="--w:87.5%"></div></div>
+          <span class="hbar-val">88</span>
+        </div>
+        <div class="hbar-row">
+          <span class="hbar-label">Gestión del tiempo <small>ritmo para asimilar</small></span>
+          <div class="hbar-track"><div class="hbar-fill" style="--w:87.5%"></div></div>
+          <span class="hbar-val">88</span>
+        </div>
+      </div>
+      <p class="note-honest">Los cuatro indicadores superan el 85%. El margen de mejora más claro está en el ritmo de la sesión y en sumar más casos propios de Compras y Logística.</p>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Hidrocaven · Dashboard de Impacto</span>
+      </div>
+    </section>
+
+    <!-- 08 · Recomendaciones de expansión (Bloque E reformulado para el cliente) -->
+    <section class="slide s-reco">
+      <span class="counter">08 / 10</span>
+      <p class="eyebrow">07 · Recomendaciones de expansión</p>
+      <h2>Próximos pasos de formación.</h2>
+      <div class="cols">
+        <div class="card">
+          <span class="label">Áreas que se beneficiarían</span>
+          <ul class="rank">
+            <li><span class="n">1</span> Contabilidad <span class="c">2 menciones</span></li>
+            <li><span class="n">2</span> Administración <span class="c">2 menciones</span></li>
+            <li><span class="n">3</span> Ventas <span class="c">1 mención</span></li>
+          </ul>
+        </div>
+        <div class="card">
+          <span class="label">Habilidades más deseadas</span>
+          <ul class="rank">
+            <li><span class="n">1</span> Skills y Proyectos <span class="c">2</span></li>
+            <li><span class="n">2</span> Más experticia en IA <span class="c">1</span></li>
+            <li><span class="n">3</span> Programación web <span class="c">1</span></li>
+          </ul>
+        </div>
+        <div class="card">
+          <span class="label">Procesos a automatizar</span>
+          <ul class="rank">
+            <li><span class="n">1</span> Reportes y análisis de datos <span class="c">3</span></li>
+            <li><span class="n">2</span> Creación de entregables <span class="c">1</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="hook">
+        El equipo eligió <strong>Claude</strong> como su herramienta de mayor uso (3 de 4 respuestas) y, para los próximos 6 meses, la prioridad que más se repite ya no es solo capacitar personas: es desarrollar <strong>infraestructura propia o modelos a la medida</strong>. Es la puerta natural a un siguiente servicio con Hidrocaven.
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Hidrocaven · Dashboard de Impacto</span>
+      </div>
+    </section>
+
+    <!-- 09 · Participación (nombres + área, sin puntajes ni cédula §4.16) -->
+    <section class="slide s-data s-part">
+      <span class="counter">09 / 10</span>
+      <p class="eyebrow">08 · Participación</p>
+      <h2>Quiénes completaron la evaluación.</h2>
+      <div class="roster">
+        <div class="p"><span class="nm">Carlos Eduardo Córdova Yzquier</span><span class="dp">Compras Internacionales</span></div>
+        <div class="p"><span class="nm">Anibal José Monía Merlano</span><span class="dp">Compras</span></div>
+        <div class="p"><span class="nm">Liliana Ramirez</span><span class="dp">Compras</span></div>
+        <div class="p"><span class="nm">José Mazza</span><span class="dp">Contabilidad</span></div>
+      </div>
+      <p class="privacy">4 de 4 participantes respondieron la encuesta. Por privacidad, no se publican puntajes individuales ni documentos de identidad: el informe es siempre agregado.</p>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Hidrocaven · Dashboard de Impacto</span>
+      </div>
+    </section>
+
+    <!-- 10 · Cierre -->
+    <section class="slide s-end">
+      <span class="counter">10 / 10</span>
+      <div class="end-logo">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia Educación">
+      </div>
+      <p class="end-message">
+        El equipo aprendió.<br>Llevémoslo al <span class="hl-orange">siguiente</span> <span class="hl-yellow">equipo</span>.
+      </p>
+      <div class="cta-wrap">
+        <a class="cta" href="https://calendly.com/intezia/30min" target="_blank" rel="noopener">Conversemos el próximo paso</a>
+      </div>
+      <div class="end-contact">
+        <p class="contact-line">
+          <span class="contact-label">Asesora:</span>
+          Isabella Palazzone <span class="dot">·</span> ipalazzone@intezia.com
+        </p>
+        <p class="contact-line">
+          <span class="contact-label">Empresa:</span>
+          Intezia C.A J-505657950 <span class="dot">·</span> servicio@intezia.com
+        </p>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

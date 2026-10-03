@@ -1,0 +1,876 @@
+<!doctype html>
+<!--
+  Propuesta — Laboratorios Farma · Gestión Humana regional (CAI-032)
+  Servicio: combo DETECCIÓN + HABILIDADES. División: Educación. Fuente primaria: Ficha de
+  Levantamiento (Levantamiento_Laboratorios_Farma_2026-09-29.pdf, asesora María Iribarren) +
+  instrucciones directas del usuario sobre estructura, agrupación y calendario.
+
+  QUÉ ES: primera propuesta de Gestión Humana (Tecnología ya es cliente por separado, y el plan
+  integral CAP-049 de 2026-06-10 vive en clientes/propuestas/laboratorios-farma/, sin relación
+  con este proyecto — por eso el slug de esta carpeta es
+  laboratorios-farma-gestion-humana, no laboratorios-farma).
+
+  ESTRUCTURA (instrucción directa del usuario, consistente con la ESTRUCTURA ACORDADA de la
+  ficha): 1 sesión de Detección (2h, conjunta, líderes de las 6 subáreas) + Habilidades: módulo
+  compartido (3h, las 20 personas) + proyecto final por grupo (2h x 5 grupos = 10h). Total 15h,
+  Virtual. UNA sola cotización (no "Inversión por fases" ni multi-página): Detección aquí es
+  chica (levantamiento previo que calibra Habilidades), como en banco-plaza-copilot-producto/
+  CAI-026, no una Detección grande multi-área tipo la-tienda-del-blumer/.
+
+  6 SUBÁREAS → 5 GRUPOS (decisión de agrupación, a pedido explícito del usuario — ver brief.md):
+  Seguros y Seguridad y Salud Laboral se combinan en 1 solo grupo (mismo perfil: verificación
+  de datos + reportes/cumplimiento), a diferencia de Bienestar (100% comunicados). Da 5 grupos,
+  el número que la propia ficha ya anticipaba ("María dijo 5 en la sesión"), cubriendo las 6
+  subáreas sin dejar ninguna fuera — responde directo al pedido explícito de Claudia de
+  claridad de alcance ("para no crearnos una expectativa falsa").
+  Grupos: 1 Selección · 2 Nómina · 3 Desarrollo · 4 Seguros y Seguridad y Salud Laboral · 5 Bienestar.
+
+  CALENDARIO (a pedido explícito del usuario, 2026-09-29): kick-off miércoles 7 de octubre.
+  Desde la semana del 12, se usan los días que la propia ficha marca como preferidos
+  (lunes/jueves/viernes — Nómina no puede parar 2 días seguidos). Con 7 sesiones y solo 3 días
+  por semana, el patrón se extiende una semana más (12-16 y 19-23 oct) en vez de forzar más de
+  1-2 sesiones reales por día. Sin hora indicada por el usuario — se omiten los .cal-time de
+  .steps-calendar (omitir-no-inventar-placeholder.md), igual que en fibraspol/DET-024.
+
+  Con certificado de participación INTEZIA (hay Habilidades real, 13h de práctica) — a
+  diferencia de una Detección pura. Con Garantía y Seguimiento 30-60-90, descuento urgente, ROI
+  y calendario de inicio en la Propuesta Económica (Ficha Comercial disponible). Sin afirmar
+  migración de stack (§4.11): Microsoft 365/Copilot ya son el entorno del cliente. Sin prometer
+  conexión directa con SAP ni el portal de selección (dato sensible, reforzado en rmx-ethics).
+
+  Base estructural (mecánica "sesión compartida + N sesiones por subgrupo, 1 sola cotización"):
+  farmaceutica-24/DET-010. Shell visual vigente (Beneficios v3, Cierre escalera, roadmap
+  .rmx-linear, descuento urgente + ROI + garantía 30-60-90 + .s-followup, .steps-calendar):
+  hjb-quimica/CAI-031 (overrides.css clonado de ahí, sin los bloques .s-vision/.s-incluye que
+  no aplican aquí — 1 sola ruta, 1 sola Propuesta Económica).
+  Impacto (§4.9): Microsoft & LinkedIn — 2024 Work Trend Index Annual Report (78% BYOAI sin
+  gobernanza, 39% capacitación formal, 60% líderes sin visión/plan de IA, 59% no sabe cuantificar
+  el retorno) — memoria fuente-impacto-byoai-gobernanza-dispersa.md.
+  Sin slide de Metodología ABR ni Equipo facilitador (§4.10a). Beneficios v3, Cierre escalera,
+  servicio@intezia.com.
+
+  ACTUALIZACIÓN 2026-09-30 — de 5 grupos a 7 procesos, con licencia de Copilot por proceso:
+  el usuario reportó que Copilot básico (GPT-5.6, límite de 5 requerimientos diarios) no cubre
+  todos los procesos y que Gestión Humana evaluaría gestionar licencias Copilot Business ante
+  la Gerencia Corporativa de TI. Se destraba la agrupación anterior (Seguros y Seguridad y
+  Salud Laboral vuelven a ser 2 procesos separados) y se suma un 7mo proceso, Indicador de
+  Gestión (antes cubierto solo dentro del módulo compartido, ahora con su propio proyecto
+  final) — 7 procesos, 2h cada uno: Selección, Nómina, Desarrollo, Seguros, Seguridad y Salud
+  Laboral, Bienestar, Indicador de Gestión.
+  Clasificación por licencia (criterio: frecuencia + sensibilidad del dato + volumen de
+  interacción por sesión — vigente para Etapa 2, ver actualización 2026-10-01 abajo):
+    - Copilot básico (Etapa 2): Desarrollo, Bienestar.
+    - Requiere Copilot Business (Etapa 2, dato sensible o uso diario/alto volumen): Selección,
+      Nómina, Seguros, Seguridad y Salud Laboral, Indicador de Gestión.
+  15 slides (antes 14).
+
+  ACTUALIZACIÓN 2026-10-01 — Etapa 1 se recorta a 2 prácticas en básico; Etapa 2 (7 proyectos)
+  pasa a ruta sin cotizar (instrucción directa del usuario, ver brief.md para el detalle
+  completo):
+    - Etapa 1 (lo que se cotiza): Detección (2h, sin cambio) + Habilidades: módulo compartido
+      (3h, sin cambio) + 2 prácticas de 2h (Ausentismo en Nómina, Selección/filtro de
+      currículos), ambas con Copilot básico. Total 9h (antes 19h).
+    - Slide 05/15 "Licencias de Copilot por proceso" (.s-licenses) se reencuadra: deja de
+      presentarse como clasificación de Intezia a validar, y pasa a presentarse como el
+      ENTREGABLE que produce la Detección — el mapa, proceso por proceso, con el que Claudia
+      justifica ante Tecnología la compra de Business. La tabla de 7 filas se mantiene (describe
+      la versión a pleno volumen de cada proceso, vigente para Etapa 2); las filas de Selección
+      y Nómina suman una nota aclarando que ya arrancan en Etapa 1 con básico, en versión
+      acotada al límite de 5 solicitudes diarias.
+    - Etapa 2 (ruta sin cotizar, visión): proyecto final de 2h por cada uno de los 7 procesos.
+      Para Selección y Nómina es una profundización de la práctica de Etapa 1 (a pleno volumen,
+      con Business); para el resto, es su primer proyecto final.
+    - Roadmap (slide 06): tags internos renombrados de "Etapa 1/2/3" a "Paso 1/2/3" para no
+      chocar con el vocabulario nuevo de Etapa 1/Etapa 2 (ver brief.md, nota de vocabulario).
+    - Calendario (borrador de Intezia, a confirmar): kick-off miércoles 14 de octubre;
+      Detección lunes 19; módulo compartido jueves 22; práctica Ausentismo lunes 26; práctica
+      Selección jueves 29. Ejecución antes del 11 de diciembre (orden de compra en octubre) —
+      plazo que aplica solo a Etapa 1; Etapa 2 sigue sin fecha fija.
+    - meta.json: estado pasa de "Enviada" a "En corrección" (§4.19).
+    - Diagnóstico e Impacto se mantienen sin cambios. 15 slides (sin cambio de cantidad).
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Propuesta · Gestión Humana · Laboratorios Farma · Intezia</title>
+  <link rel="stylesheet" href="../_base/styles.css">
+  <link rel="stylesheet" href="overrides.css">
+</head>
+<body>
+
+  <main class="deck">
+
+    <!-- 1 · Portada -->
+    <section class="slide s-cover">
+      <span class="counter">01 / 15</span>
+      <div class="logo-big">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia">
+      </div>
+      <div class="body">
+        <p class="eyebrow">Propuesta formativa · Servicio de Detección y Habilidades</p>
+        <h1>
+          De usar IA suelta,<br>
+          <span class="hl">a un mismo criterio regional.</span>
+        </h1>
+        <p class="lead">
+          Levantamos cómo trabaja hoy cada una de las 6 subáreas de Gestión Humana, en los 4 países, y construimos en vivo los dos primeros asistentes en <strong>Microsoft Copilot</strong> (Ausentismo y Selección), con la licencia básica que ya tienen. La Detección deja mapeado qué licencia necesita cada subárea para sumar el resto.
+        </p>
+      </div>
+      <div class="id-line">
+        <span class="codigo">Código: CAI-032</span>
+        <span class="cliente">Laboratorios Farma</span>
+      </div>
+    </section>
+
+    <!-- 2 · Punto de dolor + Diagnóstico -->
+    <section class="slide s-pain">
+      <span class="counter">02 / 15</span>
+      <span class="quote-mark">&ldquo;</span>
+      <div class="body">
+        <h2>&ldquo;Desde alguien que no sabe absolutamente nada.&rdquo;</h2>
+        <p class="context">
+          Laboratorios Farma ya capacitó con Intezia a su equipo de Tecnología en fundamentos y agentes de IA. Ahora Gestión Humana abre su propio proceso, con <strong>Copilot</strong> como ecosistema (Microsoft 365) y sin un criterio compartido entre Venezuela, Ecuador, Perú y Colombia.
+        </p>
+        <p class="diag-title">Diagnóstico</p>
+        <ol>
+          <li>El portal de selección no muestra el nombre del candidato ni filtra por perfil: cada currículo se revisa y descarga uno por uno.</li>
+          <li>Nómina cruza a mano, todos los días, el reporte del control de acceso contra una macro de Excel.</li>
+          <li>Los datos de SAP se bajan a Excel cada semana para revisarlos y armar reportes e indicadores.</li>
+          <li>El equipo usa Teams solo para comunicarse: el resto del ecosistema Microsoft está sin explotar.</li>
+          <li>El uso de IA es autodidacta y disperso entre las 6 subáreas: ninguna tiene licencia de Copilot Business confirmada, aunque no todas la necesitan por igual.</li>
+        </ol>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">LABORATORIOS FARMA · CAI-032</span>
+      </div>
+    </section>
+
+    <!-- 3 · Objetivos estratégicos -->
+    <section class="slide s-goals">
+      <span class="counter">03 / 15</span>
+      <p class="eyebrow">02 · Objetivos</p>
+      <h2>A dónde llevamos<br>a Gestión Humana.</h2>
+      <div class="columns">
+        <div class="general">
+          <p class="label">Objetivo general</p>
+          <p>
+            Levantar cómo trabaja hoy cada una de las 6 subáreas de Gestión Humana, nivelar a las 20 personas del equipo en Microsoft Copilot, y construir en vivo los dos primeros asistentes, sobre el cuello de botella de Ausentismo y Selección, en los 4 países donde opera el equipo.
+          </p>
+        </div>
+        <div class="specifics">
+          <p class="label">Objetivos específicos</p>
+          <ol>
+            <li>Levantar en una sola sesión cómo trabaja cada una de las 6 subáreas: procesos, herramientas y permisos.</li>
+            <li>Nivelar a todo el equipo en el ecosistema Microsoft y Copilot antes de dividir por proceso.</li>
+            <li>Construir los dos primeros asistentes reales, Ausentismo (Nómina) y Selección, con la licencia básica que ya tienen.</li>
+            <li>Dejar mapeado qué licencia necesita cada subárea (entregable de la Detección) y planteada la ruta de la Etapa 2, sin cotizarla todavía.</li>
+          </ol>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">LABORATORIOS FARMA · CAI-032</span>
+      </div>
+    </section>
+
+    <!-- 4 · Programa -->
+    <section class="slide s-program">
+      <span class="counter">04 / 15</span>
+      <p class="eyebrow">03 · El proyecto</p>
+      <h2>Dos asistentes ahora,<br><span class="hl">toda la ruta a la vista.</span></h2>
+      <p class="meta">Detección conjunta + módulo compartido + prácticas en Ausentismo y Selección. Los otros 5 procesos siguen en la Etapa 2, una vez Tecnología active Copilot Business.</p>
+      <div class="modules">
+        <div class="module">
+          <span class="roman">I</span>
+          <h3>Detección</h3>
+          <p class="obj">Levanta cómo trabaja hoy cada una de las 6 subáreas, con sus líderes.</p>
+          <ul class="topics">
+            <li>Procesos y herramientas</li>
+            <li>Permisos y datos sensibles</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">II</span>
+          <h3>Habilidades compartida</h3>
+          <p class="obj">Nivela a las 20 personas en el ecosistema Microsoft y Copilot.</p>
+          <ul class="topics">
+            <li>Copilot en Outlook, Teams, Excel, Word</li>
+            <li>Qué es un asistente</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">III</span>
+          <h3>Prácticas sobre 2 procesos críticos</h3>
+          <p class="obj">Ausentismo y Selección construyen su asistente con la licencia básica que ya tienen.</p>
+          <ul class="topics">
+            <li>Ausentismo (Nómina)</li>
+            <li>Selección (filtro de currículos)</li>
+          </ul>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">LABORATORIOS FARMA · CAI-032</span>
+      </div>
+    </section>
+
+    <!-- 5 · Licencias de Copilot por proceso (slide a la medida, 2026-09-30) -->
+    <section class="slide s-licenses">
+      <span class="counter">05 / 15</span>
+      <p class="eyebrow">03 · Entregable de la Detección</p>
+      <h2>El mapa que te lleva<br><span class="hl">la Detección.</span></h2>
+      <p class="lic-intro">La Detección entrega, proceso por proceso, qué licencia de Copilot necesita cada subárea y por qué: el insumo con el que Gestión Humana justifica ante Tecnología la compra de Business.</p>
+
+      <div class="lic-grid">
+        <div class="lic-row lic-ok">
+          <span class="lic-proceso">Desarrollo</span>
+          <span class="lic-badge">Copilot básico</span>
+          <p class="lic-nota">Detección de necesidades y comunicados: uso puntual, sin dato sensible.</p>
+        </div>
+        <div class="lic-row lic-ok">
+          <span class="lic-proceso">Bienestar</span>
+          <span class="lic-badge">Copilot básico</span>
+          <p class="lic-nota">Redacción de comunicados de actividades: uso puntual, sin dato sensible.</p>
+        </div>
+        <div class="lic-row lic-business">
+          <span class="lic-proceso">Selección</span>
+          <span class="lic-badge">Requiere Business</span>
+          <p class="lic-nota">Filtra currículos y datos de candidatos a diario: volumen alto, dato personal. Ya arranca en Etapa 1, con básico y alcance acotado.</p>
+        </div>
+        <div class="lic-row lic-business">
+          <span class="lic-proceso">Nómina</span>
+          <span class="lic-badge">Requiere Business</span>
+          <p class="lic-nota">Cruce diario de asistencia y datos de SAP: uso diario, dato de nómina. Ya arranca en Etapa 1, con básico y alcance acotado.</p>
+        </div>
+        <div class="lic-row lic-business">
+          <span class="lic-proceso">Seguros</span>
+          <span class="lic-badge">Requiere Business</span>
+          <p class="lic-nota">Verificación de datos y reportes de pólizas: dato personal sensible.</p>
+        </div>
+        <div class="lic-row lic-business">
+          <span class="lic-proceso">Seguridad y Salud Laboral</span>
+          <span class="lic-badge">Requiere Business</span>
+          <p class="lic-nota">Inspecciones y cumplimiento normativo: dato de salud, sector regulado.</p>
+        </div>
+        <div class="lic-row lic-business">
+          <span class="lic-proceso">Indicador de Gestión</span>
+          <span class="lic-badge">Requiere Business</span>
+          <p class="lic-nota">Cruza datos de las 6 subáreas en un solo reporte: volumen alto de consultas.</p>
+        </div>
+      </div>
+
+      <div class="lic-cta">
+        <span class="lic-cta-tag">Siguiente paso de Tecnología</span>
+        <p>Gestionar ante la Gerencia Corporativa de TI la activación de Copilot Business para los 5 procesos de Etapa 2, y para llevar Selección y Nómina a su versión a pleno volumen.</p>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">LABORATORIOS FARMA · CAI-032</span>
+      </div>
+    </section>
+
+    <!-- 6 · Roadmap · Detección → Habilidades → Resultado (3 etapas) -->
+    <section class="slide s-roadmap">
+      <span class="counter">06 / 15</span>
+      <p class="eyebrow">04 · Roadmap</p>
+      <h2>Levantar antes<br><span class="hl">de construir en cada proceso</span>.</h2>
+
+      <div class="rmx-field">
+        <div class="rmx-linear">
+
+          <div class="rmx-lrow-nodes">
+            <div class="rmx-lcol"><div class="rmx-node rmx-node-f2">1</div></div>
+            <div class="rmx-arrow"></div>
+            <div class="rmx-lcol"><div class="rmx-node rmx-node-f3">2</div></div>
+            <div class="rmx-arrow"></div>
+            <div class="rmx-lcol"><div class="rmx-node rmx-node-f4">3</div></div>
+            <div class="rmx-arrow"></div>
+            <div class="rmx-lcol"><div class="rmx-node rmx-node-r">&#9733;</div></div>
+          </div>
+
+          <div class="rmx-lrow-cards">
+            <div class="rmx-lcol">
+              <div class="rmx-card rmx-card-f2">
+                <span class="rmx-card-tag">Paso 1 · Detección</span>
+                <div class="rmx-card-name">Levantamiento con líderes (2h)</div>
+                <ul class="rmx-facets">
+                  <li><span>Qué pasa</span><p>2h con los líderes de las 6 subáreas: procesos y permisos.</p></li>
+                  <li><span>Con quién</span><p>Un líder o persona clave por subárea, de los 4 países.</p></li>
+                  <li><span>Entrega</span><p>Diagnóstico real y el mapa de licencias por proceso.</p></li>
+                </ul>
+              </div>
+            </div>
+            <div class="rmx-lspacer"></div>
+            <div class="rmx-lcol">
+              <div class="rmx-card rmx-card-f3">
+                <span class="rmx-card-tag">Paso 2 · Habilidades</span>
+                <div class="rmx-card-name">Compartido + 2 prácticas</div>
+                <ul class="rmx-facets">
+                  <li><span>Qué pasa</span><p>Compartido (3h) + prácticas (2h c/u) en Ausentismo y Selección.</p></li>
+                  <li><span>Con quién</span><p>Las 20 personas de Gestión Humana.</p></li>
+                  <li><span>Entrega</span><p>2 asistentes en Copilot, con la licencia básica que ya tienen.</p></li>
+                </ul>
+              </div>
+            </div>
+            <div class="rmx-lspacer"></div>
+            <div class="rmx-lcol">
+              <div class="rmx-card rmx-card-f4">
+                <span class="rmx-card-tag">Paso 3 · Cierre Etapa 1</span>
+                <div class="rmx-card-name">Asistentes instalados</div>
+                <ul class="rmx-facets">
+                  <li><span>Qué pasa</span><p>Ausentismo y Selección cierran con su asistente funcionando y un caso ya resuelto.</p></li>
+                  <li><span>Con quién</span><p>Nómina, Selección y Claudia Hernández.</p></li>
+                  <li><span>Entrega</span><p>Certificado, workbook y el mapa de licencias para Etapa 2.</p></li>
+                </ul>
+              </div>
+            </div>
+            <div class="rmx-lspacer"></div>
+            <div class="rmx-lcol">
+              <div class="rmx-result-card">
+                <span class="rmx-result-label">Entregable insignia · 2 asistentes + mapa de licencias</span>
+                <div class="rmx-result-title">Un criterio compartido, <b>2 asistentes ya funcionando</b></div>
+                <ul>
+                  <li>Diagnóstico real de las 6 subáreas</li>
+                  <li>Equipo nivelado en Copilot</li>
+                  <li>2 asistentes funcionando: Ausentismo y Selección</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /.rmx-linear -->
+
+        <div class="rmx-ethics">
+          <span class="rmx-ethics-tag">Dato sensible · SAP bajo permisos de Tecnología</span>
+          <p>Los asistentes viven en Copilot; SAP y el portal de selección requieren permiso de Tecnología.</p>
+        </div>
+
+      </div><!-- /.rmx-field -->
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">LABORATORIOS FARMA · CAI-032</span>
+      </div>
+    </section>
+
+    <!-- 7 · Cronograma · Detección -->
+    <section class="slide s-schedule">
+      <span class="counter">07 / 15</span>
+      <p class="eyebrow">04 · Cronograma · Detección</p>
+
+      <div class="ses-head">
+        <div>
+          <span class="ses-mod">Sesión conjunta · Líderes de las 6 subáreas · Virtual</span>
+          <h2>Detección</h2>
+        </div>
+        <div class="ses-meta"><span class="ses-dur">2h</span></div>
+      </div>
+
+      <div class="ses-body">
+        <div class="ses-block">
+          <span class="label">Temas</span>
+          <div class="chips">
+            <span class="chip">Procesos por subárea</span>
+            <span class="chip">Portal, SAP, Excel, control de acceso</span>
+            <span class="chip">Permisos y datos sensibles</span>
+            <span class="chip">Curación de Habilidades</span>
+          </div>
+        </div>
+        <div class="ses-block">
+          <span class="label">Tiempo · Total 2 h</span>
+          <div class="timebar">
+            <div class="seg" style="flex:20">20' Encuadre y objetivo</div>
+            <div class="seg" style="flex:80">80' Recorrido por las 6 subáreas</div>
+            <div class="seg" style="flex:15">15' Mapeo de permisos y datos sensibles</div>
+            <div class="seg" style="flex:5">5' Cierre</div>
+          </div>
+        </div>
+        <div class="ses-cols">
+          <div class="ses-block">
+            <span class="label">Qué se hace</span>
+            <ul>
+              <li>Cada líder describe cómo trabaja su subárea hoy, con qué herramientas y con qué permisos</li>
+              <li>Identificamos el cuello de botella principal de cada una de las 6 subáreas</li>
+              <li>Mapeamos qué datos son sensibles (SAP, portal de selección) y qué requiere permiso de Tecnología</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Qué se logra</span>
+            <ul>
+              <li>Diagnóstico real de las 6 subáreas, no una hipótesis genérica</li>
+              <li>El contenido del módulo compartido y los 7 proyectos finales queda calibrado</li>
+              <li>Claridad sobre qué se automatiza directo y qué necesita autorización de Tecnología</li>
+            </ul>
+          </div>
+          <div class="ses-block block-rec">
+            <span class="label">Recursos y entornos</span>
+            <ul>
+              <li>Sesión virtual por Teams, con los líderes de las 6 subáreas</li>
+              <li>Guion de levantamiento Intezia</li>
+              <li>Sin tocar SAP ni el portal de selección directamente</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">LABORATORIOS FARMA · CAI-032</span>
+      </div>
+    </section>
+
+    <!-- 8 · Cronograma · Habilidades compartida -->
+    <section class="slide s-schedule">
+      <span class="counter">08 / 15</span>
+      <p class="eyebrow">04 · Cronograma · Habilidades compartida</p>
+
+      <div class="ses-head">
+        <div>
+          <span class="ses-mod">Sesión conjunta · Las 20 personas de Gestión Humana · Virtual</span>
+          <h2>Habilidades · módulo compartido</h2>
+        </div>
+        <div class="ses-meta"><span class="ses-dur">3h</span></div>
+      </div>
+
+      <div class="ses-body">
+        <div class="ses-block">
+          <span class="label">Temas</span>
+          <div class="chips">
+            <span class="chip">Ecosistema Microsoft y Copilot</span>
+            <span class="chip">Qué es un asistente</span>
+            <span class="chip">Copilot en Outlook, Teams, Excel y Word</span>
+            <span class="chip">Ruta de Etapa 1 y Etapa 2</span>
+          </div>
+        </div>
+        <div class="ses-block">
+          <span class="label">Tiempo · Total 3 h</span>
+          <div class="timebar">
+            <div class="seg" style="flex:40">40' Ecosistema Microsoft y Copilot</div>
+            <div class="seg" style="flex:70">70' Copilot en Outlook, Teams, Excel y Word</div>
+            <div class="seg" style="flex:50">50' Qué es un asistente y para qué sirve</div>
+            <div class="seg" style="flex:20">20' Ruta de Etapa 1 y Etapa 2, cierre</div>
+          </div>
+        </div>
+        <div class="ses-cols">
+          <div class="ses-block">
+            <span class="label">Qué se hace</span>
+            <ul>
+              <li>Presentamos el ecosistema Microsoft y dónde vive Copilot en cada herramienta</li>
+              <li>Practicamos Copilot en Outlook, Teams, Excel y Word con casos simples</li>
+              <li>Explicamos qué es un asistente y cómo se construye uno</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Qué se logra</span>
+            <ul>
+              <li>Las 20 personas llegan a las prácticas de Ausentismo y Selección con un lenguaje común</li>
+              <li>Primeros prompts aplicados en las 4 herramientas</li>
+              <li>Expectativas alineadas sobre qué corre ya en Etapa 1 y qué sigue en Etapa 2</li>
+            </ul>
+          </div>
+          <div class="ses-block block-rec">
+            <span class="label">Recursos y entornos</span>
+            <ul>
+              <li>Sesión virtual por Teams, todo el equipo junto</li>
+              <li>Cuentas de Copilot (licencias a confirmar con Tecnología)</li>
+              <li>Workbook digital</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">LABORATORIOS FARMA · CAI-032</span>
+      </div>
+    </section>
+
+    <!-- 9 · Cronograma · Proyecto final por proceso -->
+    <section class="slide s-schedule">
+      <span class="counter">09 / 15</span>
+      <p class="eyebrow">04 · Cronograma · Prácticas de Etapa 1</p>
+
+      <div class="ses-head">
+        <div>
+          <span class="ses-mod">Se repite para cada práctica · Ausentismo y Selección · Virtual</span>
+          <h2>Prácticas · Ausentismo y Selección</h2>
+        </div>
+        <div class="ses-meta"><span class="ses-dur">2h</span></div>
+      </div>
+
+      <div class="ses-body">
+        <div class="ses-block">
+          <span class="label">Temas</span>
+          <div class="chips">
+            <span class="chip">Cuello de botella de Ausentismo o Selección</span>
+            <span class="chip">Construcción del asistente</span>
+            <span class="chip">Prueba con un caso real</span>
+            <span class="chip">Qué mejora con Copilot Business</span>
+          </div>
+        </div>
+        <div class="ses-block">
+          <span class="label">Tiempo · Total 2 h</span>
+          <div class="timebar">
+            <div class="seg" style="flex:20">20' Contexto y cuello de botella</div>
+            <div class="seg" style="flex:70">70' Construcción del asistente en Copilot básico</div>
+            <div class="seg" style="flex:20">20' Prueba con un caso real</div>
+            <div class="seg" style="flex:10">10' Cierre y mejora con Business</div>
+          </div>
+        </div>
+        <div class="ses-cols">
+          <div class="ses-block">
+            <span class="label">Qué se hace</span>
+            <ul>
+              <li>Ausentismo (Nómina): cruza a diario el control de acceso contra la macro de Excel, por hora, puerta y día</li>
+              <li>Selección: filtra y responde currículos del portal web, uno por uno, con Copilot</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Qué se logra</span>
+            <ul>
+              <li>Ausentismo y Selección se llevan su asistente funcionando, dentro del límite de 5 solicitudes diarias</li>
+              <li>Un primer caso real resuelto en la misma sesión</li>
+              <li>Queda claro qué mejora cada proceso al pasar a Copilot Business en la Etapa 2</li>
+            </ul>
+          </div>
+          <div class="ses-block block-rec">
+            <span class="label">Recursos y entornos</span>
+            <ul>
+              <li>Sesión virtual por Teams, abierta a todo el equipo</li>
+              <li>Cuentas de Copilot básico (límite de 5 solicitudes diarias)</li>
+              <li>Casos reales de Ausentismo y Selección, levantados en la Detección</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">LABORATORIOS FARMA · CAI-032</span>
+      </div>
+    </section>
+
+    <!-- 10 · Beneficios (formato v3) -->
+    <section class="slide s-benefits s-benefits-v2">
+      <span class="counter">10 / 15</span>
+      <p class="eyebrow">05 · Beneficios</p>
+      <h2>Lo que <span class="hl">se llevan</span>.</h2>
+      <div class="grid">
+        <div class="block">
+          <p class="label">Resultados</p>
+          <ul>
+            <li>Un criterio común de <strong>Copilot</strong> en las 6 subáreas, en los 4 países.</li>
+            <li>2 asistentes reales: Ausentismo y Selección, ya con su licencia.</li>
+            <li>Diagnóstico real de las 6 subáreas antes de construir nada.</li>
+            <li>Alcance claro desde el día uno: qué sigue después.</li>
+          </ul>
+        </div>
+        <div class="block">
+          <p class="label">Por qué Detección y Habilidades</p>
+          <p>
+            El equipo primero levanta cómo trabaja cada subárea, y luego construye sobre eso: nada de contenido genérico ni tiempo perdido en <strong>cómo escribir el prompt</strong>.
+          </p>
+        </div>
+        <div class="block">
+          <p class="label">Entregables</p>
+        </div>
+        <div class="block">
+          <p class="label">Valor inmediato</p>
+        </div>
+      </div>
+
+      <div class="multi-box entregables-box" data-field="Entregables"></div>
+      <div class="multi-box acreditaciones-box" data-field="Acreditacion"></div>
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">LABORATORIOS FARMA · CAI-032</span>
+      </div>
+    </section>
+
+    <!-- 11 · Impacto / estudios — datos de estudios reales, fuente citada (CLAUDE.md §4.9) -->
+    <section class="slide s-impact">
+      <span class="counter">11 / 15</span>
+
+      <div class="impact-head">
+        <p class="eyebrow">06 · Impacto</p>
+        <h2>Usar IA suelta<br><span class="hl">no construye un criterio</span>.</h2>
+      </div>
+
+      <div class="impact-body">
+        <div class="chart-panel">
+          <p class="panel-title">Cómo usan hoy la IA los equipos, sin gobernanza</p>
+          <div class="bars">
+            <div class="bar-row">
+              <span class="bar-label">Usuarios de IA que llevan sus propias herramientas al trabajo, sin gobernanza corporativa</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:78%"><span class="bar-val">78%</span></div></div>
+            </div>
+            <div class="bar-row">
+              <span class="bar-label">Usuarios de IA que recibieron alguna capacitación formal de su empresa</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:39%"><span class="bar-val">39%</span></div></div>
+            </div>
+          </div>
+          <div class="bar-axis"><span class="scale"><span>0</span><span>25</span><span>50</span><span>75</span><span>100%</span></span></div>
+          <p class="panel-source">Fuente: Microsoft &amp; LinkedIn &mdash; 2024 Work Trend Index Annual Report (encuesta a 31,000 trabajadores en 31 mercados, Edelman Data &amp; Intelligence, 2024).</p>
+        </div>
+
+        <div class="gauge-panel">
+          <div class="gauge" style="--pct:60">
+            <div class="gauge-core">
+              <span class="gauge-num">60<span class="pct">%</span></span>
+              <span class="gauge-cap">de los líderes admite que su empresa no tiene una visión ni un plan de IA</span>
+            </div>
+          </div>
+          <div class="chips">
+            <div class="chip">
+              <span class="chip-num">59%</span>
+              <span class="chip-lbl">de los líderes no sabe cómo cuantificar el retorno de la IA</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="impact-hook">
+        <span class="hook-mark">&#9656;</span>
+        <p class="hook-text">
+          El 78% de quienes usan IA hoy llevan sus propias herramientas al trabajo, sin gobernanza corporativa, y solo el 39% recibió alguna capacitación formal de su empresa (Microsoft &amp; LinkedIn, 2024). Es exactamente el punto de partida de Gestión Humana en Laboratorios Farma: uso autodidacta, disperso entre 6 subáreas y 4 países. La Detección ordena antes de construir, y el módulo compartido nivela antes de dividir por proceso.
+        </p>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">LABORATORIOS FARMA · CAI-032</span>
+      </div>
+    </section>
+
+    <!-- 12 · Propuesta Económica (estándar: Duración + Programa + Notas + Cotización, con
+         descuento urgente + ROI + garantía 30-60-90) -->
+    <section class="slide s-price">
+      <span class="counter">12 / 15</span>
+      <h2 class="title">Propuesta Económica</h2>
+
+      <div class="block">
+        <span class="block-eyebrow">Duración</span>
+        <p class="block-value">Detección (2h) + Habilidades: compartido (3h) + 2 prácticas (2h c/u) · 9h totales · Virtual.</p>
+      </div>
+
+      <div class="block block-programa">
+        <span class="block-eyebrow">Programa</span>
+      </div>
+      <div class="multi-box programa-box" data-field="Programa"></div>
+
+      <div class="block block-cotizacion">
+        <span class="block-eyebrow">Cotización</span>
+      </div>
+
+      <span class="cot-label cot-label-base">Propuesta + Inversión</span>
+      <div class="cot-frame base-frame"></div>
+
+      <span class="cot-label cot-label-discount">Descuento</span>
+      <span class="cot-sign-minus">&minus;$</span>
+      <div class="cot-frame discount-frame"></div>
+      <span class="cot-urgent-note">Descuento válido por 15 días</span>
+
+      <span class="cot-label cot-label-total">TOTAL</span>
+      <div class="cot-frame total-frame"></div>
+
+      <p class="cot-validity">Cotización válida por 30 días.</p>
+
+      <div class="cot-roi-box">
+        <span class="cot-roi-label">ROI estimado</span>
+        <p class="cot-roi-text">Automatizar el filtrado de currículos y el cruce diario de asistencia libera horas cada semana en Selección y Nómina, dentro del límite de Copilot básico. El resto de los procesos, y la versión a pleno volumen de estos dos, se suman en Etapa 2, en cuanto Tecnología active Copilot Business, sin perder el impulso del proyecto.</p>
+      </div>
+
+      <div class="cot-garantia-badge">
+        <span class="cot-garantia-tag">Garantía 30-60-90</span>
+        <p class="cot-garantia-text">Estamos contigo hasta que la habilidad quede instalada.</p>
+      </div>
+
+      <div class="cot-terms-box">
+        <span class="cot-terms-label">Importante</span>
+        <p class="cot-terms-text">Este servicio se presta bajo nuestros <a href="https://drive.google.com/file/d/1PA-ZSt4KnyY5dpxXzgkIk6-yfGlV2eF8/view?usp=drive_link" target="_blank" rel="noopener">términos y condiciones</a>. Al avanzar con esta propuesta, ambas partes los aceptan.</p>
+      </div>
+
+      <div class="block block-notes-container">
+        <span class="block-eyebrow">Notas</span>
+      </div>
+      <div class="multi-box notas-box" data-field="Notas"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">LABORATORIOS FARMA · CAI-032</span>
+      </div>
+    </section>
+
+    <!-- 13 · Seguimiento 30-60-90 (garantía explicada + ROI) -->
+    <section class="slide s-roadmap s-followup">
+      <span class="counter">13 / 15</span>
+      <p class="eyebrow">07 · Garantía de seguimiento</p>
+      <h2>No los dejamos solos <span class="hl">después del servicio</span>.</h2>
+      <p class="followup-intro">Verificamos que Ausentismo y Selección usen su asistente, abran la puerta a la Etapa 2 y generen impacto real en Gestión Humana, no solo que la sesión haya terminado bien.</p>
+
+      <div class="followup-cards">
+        <div class="rmx-card rmx-card-f2">
+          <span class="rmx-card-tag">30 días</span>
+          <div class="rmx-card-name">¿Se usan los asistentes?</div>
+          <ul class="rmx-facets">
+            <li><span>Medimos</span><p>Si Nómina y Selección ya usan su asistente en el día a día, dentro del límite de Copilot básico.</p></li>
+            <li><span>Aportamos</span><p>Nivelación y resolución de dudas sobre casos reales.</p></li>
+          </ul>
+        </div>
+        <div class="rmx-card rmx-card-f3">
+          <span class="rmx-card-tag">60 días</span>
+          <div class="rmx-card-name">¿Qué construyó cada proceso?</div>
+          <ul class="rmx-facets">
+            <li><span>Medimos</span><p>Qué automatizaciones nuevas armó cada proceso por su cuenta, más allá de la práctica.</p></li>
+            <li><span>Aportamos</span><p>Mapeo de esas construcciones y revisión de buenas prácticas.</p></li>
+          </ul>
+        </div>
+        <div class="rmx-card rmx-card-f4">
+          <span class="rmx-card-tag">90 días</span>
+          <div class="rmx-card-name">¿Cuánto tiempo ahorraron?</div>
+          <ul class="rmx-facets">
+            <li><span>Medimos</span><p>El tiempo que Nómina y Selección recuperaron en cruces de asistencia y revisión de currículos.</p></li>
+            <li><span>Aportamos</span><p>Análisis de impacto y el mapa de licencias listo para activar la Etapa 2.</p></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="followup-roi">
+        <span class="followup-roi-label">ROI en el tiempo</span>
+        <p class="followup-roi-text">El retorno de este programa no se mide en el módulo compartido, sino en la curva de los 90 días: a 30 días Nómina y Selección ya usan su asistente con Copilot básico; a 60 cada uno construye nuevas automatizaciones por su cuenta; y a 90 ese tiempo recuperado respalda la decisión de activar la Etapa 2 con Copilot Business.</p>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">LABORATORIOS FARMA · CAI-032</span>
+      </div>
+    </section>
+
+    <!-- 14 · Próximos pasos (logística, sin acuerdos económicos · §4.15, con calendario) -->
+    <section class="slide s-steps">
+      <span class="counter">14 / 15</span>
+      <p class="eyebrow">08 · Próximos pasos</p>
+      <h2>Cómo arrancamos.</h2>
+      <div class="step-cards">
+        <div class="step-card">
+          <span class="ghost">01</span>
+        </div>
+        <div class="step-card">
+          <span class="ghost">02</span>
+        </div>
+        <div class="step-card">
+          <span class="ghost">03</span>
+        </div>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-01-titulo" data-field="Paso01Titulo">
+        <span class="acro-default-text">Confirmamos fechas</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-01-body" data-field="Paso01Body">
+        <span class="acro-default-text">Confirmamos con Claudia y Nelson las fechas tentativas de Detección, el módulo compartido y las prácticas de Ausentismo y Selección.</span>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-02-titulo" data-field="Paso02Titulo">
+        <span class="acro-default-text">Acceso y logística</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-02-body" data-field="Paso02Body">
+        <span class="acro-default-text">Coordinamos el acceso a Copilot básico y la participación de todo el equipo en las 4 sesiones de Etapa 1.</span>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-03-titulo" data-field="Paso03Titulo">
+        <span class="acro-default-text">Reunión de arranque</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-03-body" data-field="Paso03Body">
+        <span class="acro-default-text">Sesión breve con Claudia para alinear el alcance de Etapa 1 y la ruta hacia la Etapa 2.</span>
+      </div>
+
+      <div class="steps-calendar">
+        <span class="steps-calendar-tag">Calendario tentativo &middot; próxima fecha: miércoles 14 de octubre</span>
+        <p class="steps-calendar-result">Para el 29 de octubre, Nómina y Selección ya tienen su asistente funcionando con Copilot básico; los 5 procesos de Etapa 2 arrancan en cuanto Tecnología active Copilot Business.</p>
+        <div class="steps-calendar-grid">
+          <div class="cal-col">
+            <div class="cal-row">
+              <span class="cal-date">Mié 14 oct</span><span class="cal-title">Kick-off &middot; alcance y logística</span>
+            </div>
+            <div class="cal-row">
+              <span class="cal-date">Lun 19 oct</span><span class="cal-title">Detección &middot; mapeo con las 6 subáreas</span>
+            </div>
+            <div class="cal-row">
+              <span class="cal-date">Jue 22 oct</span><span class="cal-title">Módulo compartido &middot; Copilot</span>
+            </div>
+          </div>
+          <div class="cal-col">
+            <div class="cal-row">
+              <span class="cal-date">Lun 26 oct</span><span class="cal-title">Práctica Ausentismo (Nómina) &middot; básico</span>
+            </div>
+            <div class="cal-row">
+              <span class="cal-date">Jue 29 oct</span><span class="cal-title">Práctica Selección &middot; básico</span>
+            </div>
+            <div class="cal-row">
+              <span class="cal-date">A definir</span><span class="cal-title">Etapa 2 (5 procesos), en cuanto Tecnología active Copilot Business</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">LABORATORIOS FARMA · CAI-032</span>
+      </div>
+    </section>
+
+    <!-- 15 · Cierre (ruta/escalera editable) -->
+    <section class="slide s-end">
+      <span class="counter">15 / 15</span>
+
+      <div class="end-logo">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia">
+      </div>
+
+      <div class="end-summit" data-field="CierreResultado">
+        <span class="acro-default-text">Gestión Humana de Laboratorios Farma, con un criterio común de Copilot y sus 2 primeros procesos automatizados.</span>
+      </div>
+
+      <div class="end-stairs">
+        <div class="stair-step stair-1">
+          <span class="stair-label">Paso 1</span>
+          <div class="stair-field" data-field="CierrePaso1">
+            <span class="acro-default-text">Detección conjunta</span>
+          </div>
+        </div>
+        <div class="stair-step stair-2">
+          <span class="stair-label">Paso 2</span>
+          <div class="stair-field" data-field="CierrePaso2">
+            <span class="acro-default-text">Módulo compartido de Copilot</span>
+          </div>
+        </div>
+        <div class="stair-step stair-3">
+          <span class="stair-label">Paso 3</span>
+          <div class="stair-field" data-field="CierrePaso3">
+            <span class="acro-default-text">Ausentismo y Selección, con básico</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cta-wrap">
+        <span class="cta">Esperamos tu respuesta</span>
+      </div>
+
+      <div class="end-contact">
+        <p class="contact-line">
+          <span class="contact-label">Asesora de ventas:</span>
+          María Iribarren <span class="dot">&middot;</span> +58 414-0570056 <span class="dot">&middot;</span> miribarren@intezia.com
+        </p>
+        <p class="contact-line">
+          <span class="contact-label">Empresa:</span>
+          Intezia C.A J-505657950 <span class="dot">&middot;</span> servicio@intezia.com
+        </p>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

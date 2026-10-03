@@ -1,0 +1,103 @@
+<!-- BLOQUE ADD-ON · Roadmap multi-fase (s-roadmap)
+     Cómo usar:
+       1. Pega este <section> en index.html en la posición deseada.
+       2. Ajusta el number del .counter ("NN / TOTAL") y renumera las demás slides.
+       3. Copia plantillas/slides/roadmap.css al overrides.css de la propuesta y
+          enlázalo tras ../_base/styles.css.
+       4. Corre `node scripts/verificar-overflow.js <slug>` para certificar 0 desborde.
+     Estructura: origen (F1) → bifurcación de sesiones → convergencia → destino (★).
+     Edita textos de badge, nodos, cards y el bloque de ética/metodología. -->
+<section class="slide s-roadmap">
+  <span class="counter">NN / TOTAL</span>
+  <p class="eyebrow">04 · Roadmap · Plan de dos fases</p>
+  <h2>De diagnóstico a <span class="hl">resultado del eje temático</span>.</h2>
+
+  <div class="rmx-field">
+    <div class="rmx-journey">
+
+      <!-- ORIGEN · F1 -->
+      <div class="rmx-origin">
+        <div class="rmx-origin-top">
+          <span class="rmx-badge">Cotizado · N áreas</span>
+        </div>
+        <div class="rmx-node rmx-node-f1">F1</div>
+        <div class="rmx-origin-bot">
+          <div class="rmx-origin-name">Diagnóstico Operativo</div>
+          <div class="rmx-origin-meta">Área 1 · Área 2 · Área 3 · Área 4</div>
+          <div class="rmx-origin-out">Levantamos los procesos <strong>antes de recomendar</strong> herramienta alguna.</div>
+        </div>
+      </div>
+
+      <!-- BIFURCACIÓN (sesiones) -->
+      <div class="rmx-fork">
+        <div class="rmx-branch rmx-up"></div>
+        <div class="rmx-branch rmx-dn"></div>
+      </div>
+
+      <!-- RUTAS · Sesión 1 / Sesión 2 -->
+      <div class="rmx-routes">
+
+        <div class="rmx-route rmx-route-f2">
+          <div class="rmx-node rmx-node-f2">S1</div>
+          <div class="rmx-card rmx-card-f2">
+            <span class="rmx-card-tag">Sesión 1 · Áreas A y B</span>
+            <div class="rmx-card-name">Levantamiento operativo</div>
+            <ul class="rmx-facets">
+              <li><span>Área</span><p>Líderes de <strong>Área A</strong> y <strong>Área B</strong>.</p></li>
+              <li><span>Foco</span><p>Procesos clave de las dos áreas.</p></li>
+              <li><span>Entrega</span><p>Inventario de tareas manuales de las dos áreas.</p></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="rmx-route rmx-route-f3">
+          <div class="rmx-node rmx-node-f3">S2</div>
+          <div class="rmx-card rmx-card-f3">
+            <span class="rmx-card-tag">Sesión 2 · Áreas C y D</span>
+            <div class="rmx-card-name">Priorización conjunta</div>
+            <ul class="rmx-facets">
+              <li><span>Área</span><p>Líderes de <strong>Área C</strong> y <strong>Área D</strong>.</p></li>
+              <li><span>Foco</span><p>Procesos clave de las dos áreas.</p></li>
+              <li><span>Entrega</span><p>Priorización conjunta: qué automatizar primero.</p></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- CONVERGENCIA -->
+      <div class="rmx-merge">
+        <div class="rmx-branch rmx-up"></div>
+        <div class="rmx-branch rmx-dn"></div>
+      </div>
+
+      <!-- DESTINO -->
+      <div class="rmx-result">
+        <div class="rmx-node rmx-node-r">★</div>
+        <div class="rmx-result-card">
+          <span class="rmx-result-label">Entregable insignia · Pivot a la Fase 2</span>
+          <div class="rmx-result-title">Entregable <b>insignia de la Fase 1</b></div>
+          <ul>
+            <li>Informe de diagnóstico</li>
+            <li>Recomendación de ecosistema</li>
+            <li>Plan de acción por fases</li>
+            <li>Workbook digital y constancia INTEZIA</li>
+            <li>Fase 2: alcance y cotización aparte</li>
+          </ul>
+        </div>
+      </div>
+
+    </div><!-- /.rmx-journey -->
+
+    <div class="rmx-ethics">
+      <span class="rmx-ethics-tag">Metodología ABR · Diagnóstico antes de invertir</span>
+      <p>Intezia no recomienda herramienta ni licencia antes del diagnóstico. El entregable de Fase 1 define qué automatizar, en qué orden y con qué ecosistema: <strong>la Fase 2 se diseña a la medida de los hallazgos</strong>, nunca al revés.</p>
+    </div>
+
+  </div><!-- /.rmx-field -->
+
+  <div class="foot">
+    <img src="../../../logos/educacion/BLANCO.png" alt="">
+    <span class="meta">Cliente · CÓDIGO</span>
+  </div>
+</section>

@@ -1,0 +1,333 @@
+<!doctype html>
+<!--
+  Dashboard de Impacto Edu-Trace · DAMASCO · Ruta Soporte (CAP-037)
+  Vista CLIENTE (entregable). Datos: clientes/dashboards/damasco-soporte/resultados.json
+  Bloque E reformulado como "recomendaciones de expansión". Bloque C con 1 sola pregunta
+  calificable (§4.18: las otras 2 preguntas del bloque variable son diagnóstico abierto,
+  confirmado con el usuario, y se presentan como Bloque E en slide 08).
+  Lenguaje honesto (§4.17): B/D = percibido · C = medido. Sin cédula/correo (§4.16).
+  "Por departamento" (slide 06) reformulada a "por participante": las 4 etiquetas de área
+  (Soporte/Dpto sistemas/Sistema/It) son el mismo equipo escrito distinto por cada persona.
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard de Impacto · DAMASCO Soporte · Intezia Educación</title>
+  <link rel="stylesheet" href="../../propuestas/_base/styles.css">
+  <link rel="stylesheet" href="overrides.css">
+</head>
+<body>
+  <main class="deck">
+
+    <!-- 01 · Portada -->
+    <section class="slide s-cover">
+      <span class="counter">01 / 10</span>
+      <div class="logo-big">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia Educación">
+      </div>
+      <div class="body">
+        <p class="eyebrow">Dashboard de Impacto · Edu-Trace</p>
+        <h1>
+          Soporte e Infraestructura,<br>
+          <span class="hl">con IA</span>
+        </h1>
+        <p class="lead">
+          Resultados de la capacitación medidos con la <strong>Encuesta Edu-Trace</strong> de cierre. Cuatro participantes del equipo de Soporte e Infraestructura de DAMASCO, evaluados en competencia, <strong>retención de conocimiento</strong> y experiencia formativa.
+        </p>
+      </div>
+      <div class="id-line">
+        <span class="codigo">Edu-Trace · DAMASCO · Ruta Soporte</span>
+        <span class="cliente">DAMASCO</span>
+      </div>
+    </section>
+
+    <!-- 02 · Hero del Índice (reusa .s-impact: barras de eje + gauge) -->
+    <section class="slide s-impact">
+      <span class="counter">02 / 10</span>
+      <div class="impact-head">
+        <p class="eyebrow">01 · Resultado global</p>
+        <h2>Índice de Impacto<br><span class="hl">Edu-Trace</span>.</h2>
+      </div>
+      <div class="impact-body">
+        <div class="chart-panel">
+          <p class="panel-title">Los cuatro ejes que componen el índice (0-100)</p>
+          <div class="bars">
+            <div class="bar-row">
+              <span class="bar-label">Competencia percibida</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:75%"><span class="bar-val">75</span></div></div>
+            </div>
+            <div class="bar-row">
+              <span class="bar-label">Retención objetiva · medido</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:100%"><span class="bar-val">100</span></div></div>
+            </div>
+            <div class="bar-row">
+              <span class="bar-label">Aplicabilidad e impacto</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:97%"><span class="bar-val">97</span></div></div>
+            </div>
+            <div class="bar-row">
+              <span class="bar-label">Calidad de la experiencia</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:92.3%"><span class="bar-val">92</span></div></div>
+            </div>
+          </div>
+          <div class="bar-axis"><span class="scale"><span>0</span><span>25</span><span>50</span><span>75</span><span>100</span></span></div>
+          <p class="panel-source">Ponderación: Retención objetiva 35% · Competencia 30% · Aplicabilidad 20% · Calidad 15%. La retención es el único eje medido; el resto es autopercibido.</p>
+        </div>
+        <div class="gauge-panel">
+          <div class="gauge" style="--pct:91">
+            <div class="gauge-core">
+              <span class="gauge-num">91</span>
+              <span class="gauge-cap idx">Índice · de 100</span>
+            </div>
+          </div>
+          <div class="rating">
+            <div class="stars">
+              <span class="star full">&#9733;</span>
+              <span class="star full">&#9733;</span>
+              <span class="star full">&#9733;</span>
+              <span class="star full">&#9733;</span>
+              <span class="star half">&#9733;</span>
+            </div>
+            <span class="rating-cap">Satisfacción general · <b>4.5 / 5</b></span>
+          </div>
+          <p class="hero-meta">4 participantes · salto percibido +1.0 (1-5)</p>
+        </div>
+      </div>
+      <div class="impact-hook">
+        <span class="hook-mark">&#9656;</span>
+        <p class="hook-text">
+          El equipo no solo quedó satisfecho: <strong>respondió bien el 100%</strong> de la evaluación de conocimiento técnico. La satisfacción se siente; <strong>la retención se mide</strong>.
+        </p>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">DAMASCO · Dashboard de Impacto</span>
+      </div>
+    </section>
+
+    <!-- 03 · Desglose por eje -->
+    <section class="slide s-data s-ejes">
+      <span class="counter">03 / 10</span>
+      <p class="eyebrow">02 · Desglose</p>
+      <h2>Qué mide cada eje.</h2>
+      <p class="sub">Cada eje aporta al índice según su peso. Solo uno es una medición objetiva; los otros tres son autopercepción del participante al cierre.</p>
+      <div class="grid">
+        <div class="eje">
+          <div class="top"><span class="num">75</span><span class="peso">peso 30%</span></div>
+          <h3>Competencia percibida</h3>
+          <p>Cuánto se siente el participante capaz de operar lo aprendido sin supervisión. <span class="tag-percibido">percibido</span></p>
+        </div>
+        <div class="eje measured">
+          <div class="top"><span class="num">100</span><span class="peso">peso 35%</span></div>
+          <h3>Retención objetiva</h3>
+          <p>Aciertos en la pregunta técnica con respuesta correcta. El dato más duro del informe. <span class="tag-medido">medido</span></p>
+        </div>
+        <div class="eje">
+          <div class="top"><span class="num">97</span><span class="peso">peso 20%</span></div>
+          <h3>Aplicabilidad e impacto</h3>
+          <p>Qué tanto resuelve problemas del rol y promete recuperar tiempo de ejecución. <span class="tag-percibido">percibido</span></p>
+        </div>
+        <div class="eje">
+          <div class="top"><span class="num">92</span><span class="peso">peso 15%</span></div>
+          <h3>Calidad de la experiencia</h3>
+          <p>Claridad, acompañamiento, ritmo y dominio técnico del facilitador. <span class="tag-percibido">percibido</span></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 · Salto de aprendizaje percibido -->
+    <section class="slide s-salto">
+      <span class="counter">04 / 10</span>
+      <p class="eyebrow">03 · Salto de aprendizaje</p>
+      <h2>De dónde partieron, a dónde llegaron.</h2>
+      <div class="journey">
+        <div class="milestone">
+          <span class="ms-cap">Antes · percibido</span>
+          <span class="ms-num">3.0</span>
+          <span class="ms-of">dominio previo<br>(escala 1-5)</span>
+        </div>
+        <div class="track">
+          <div class="track-fill"></div>
+          <div class="delta">
+            <span class="d-num">+1.0</span>
+            <span class="d-lbl">salto percibido</span>
+          </div>
+        </div>
+        <div class="milestone end">
+          <span class="ms-cap">Al cierre</span>
+          <span class="ms-num">4.0</span>
+          <span class="ms-of">capaz sin supervisión<br>(escala 1-5)</span>
+        </div>
+      </div>
+      <p class="salto-note">Es un salto <strong>percibido y retrospectivo</strong>: ambas cifras se preguntaron al cierre, no antes de empezar. Refleja cómo vive el equipo su propio avance, no una medición con punto de partida real.</p>
+    </section>
+
+    <!-- 05 · Retención objetiva (Bloque C - medido) -->
+    <section class="slide s-data s-reten">
+      <span class="counter">05 / 10</span>
+      <p class="eyebrow">04 · Retención objetiva <span class="tag-medido">medido</span></p>
+      <h2>Lo que de verdad quedó.</h2>
+      <div class="global">
+        <span class="pct">100%</span>
+        <span class="txt">de aciertos en la evaluación de conocimiento técnico al cierre.</span>
+      </div>
+      <div class="qrow">
+        <div class="q">Verificar antes de ejecutar en un sistema real<small>Probar en un entorno sin impacto o validar con un compañero: nunca ejecutar la sugerencia de la IA directo en producción.</small></div>
+        <div class="score">100%<small> · 4 de 4</small></div>
+      </div>
+      <p class="note-honest">Esta fue la única pregunta calificable del bloque técnico: valida el hábito de seguridad frente a las sugerencias de la IA antes de tocar un sistema real. Las otras dos preguntas del bloque (tarea a resolver y barrera de adopción) fueron diagnóstico abierto, no una prueba de conocimiento; sus resultados se presentan en las recomendaciones de expansión.</p>
+    </section>
+
+    <!-- 06 · Resultados por participante -->
+    <section class="slide s-data s-depto">
+      <span class="counter">06 / 10</span>
+      <p class="eyebrow">05 · Por participante</p>
+      <h2>Índice por participante.</h2>
+      <p class="sub">Los cuatro respondieron como parte del mismo equipo de Soporte e Infraestructura, cada uno con su propia forma de nombrar el área: la cifra es individual, no una comparación entre departamentos distintos.</p>
+      <div class="hbars">
+        <div class="hbar-row">
+          <span class="hbar-label">Soporte <small>1 participante</small></span>
+          <div class="hbar-track"><div class="hbar-fill" style="--w:100%"></div></div>
+          <span class="hbar-val">100</span>
+        </div>
+        <div class="hbar-row">
+          <span class="hbar-label">Dpto sistemas <small>1 participante</small></span>
+          <div class="hbar-track"><div class="hbar-fill" style="--w:92%"></div></div>
+          <span class="hbar-val">92</span>
+        </div>
+        <div class="hbar-row">
+          <span class="hbar-label">Sistema <small>1 participante</small></span>
+          <div class="hbar-track"><div class="hbar-fill" style="--w:87%"></div></div>
+          <span class="hbar-val">87</span>
+        </div>
+        <div class="hbar-row">
+          <span class="hbar-label">IT <small>1 participante</small></span>
+          <div class="hbar-track"><div class="hbar-fill" style="--w:83%"></div></div>
+          <span class="hbar-val">83</span>
+        </div>
+      </div>
+      <p class="note-honest">Todos pertenecen al mismo equipo de Soporte e Infraestructura: la diferencia refleja el punto de partida individual de cada persona, no una brecha entre áreas de DAMASCO.</p>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">DAMASCO · Dashboard de Impacto</span>
+      </div>
+    </section>
+
+    <!-- 07 · Calidad de la experiencia (Bloque D) -->
+    <section class="slide s-data s-calidad">
+      <span class="counter">07 / 10</span>
+      <p class="eyebrow">06 · Experiencia formativa <span class="tag-percibido">percibido</span></p>
+      <h2>Cómo vivieron la formación.</h2>
+      <p class="sub">Valoración del facilitador y la dinámica de las sesiones, en escala 1-5 normalizada a 0-100.</p>
+      <div class="hbars">
+        <div class="hbar-row">
+          <span class="hbar-label">Acompañamiento <small>dudas resueltas con precisión</small></span>
+          <div class="hbar-track"><div class="hbar-fill" style="--w:100%"></div></div>
+          <span class="hbar-val">100</span>
+        </div>
+        <div class="hbar-row">
+          <span class="hbar-label">Gestión del tiempo <small>ritmo para asimilar</small></span>
+          <div class="hbar-track"><div class="hbar-fill" style="--w:100%"></div></div>
+          <span class="hbar-val">100</span>
+        </div>
+        <div class="hbar-row">
+          <span class="hbar-label">Dominio técnico <small>profundidad de las soluciones</small></span>
+          <div class="hbar-track"><div class="hbar-fill" style="--w:93.75%"></div></div>
+          <span class="hbar-val">94</span>
+        </div>
+        <div class="hbar-row">
+          <span class="hbar-label">Claridad expositiva <small>casos reales de la empresa</small></span>
+          <div class="hbar-track"><div class="hbar-fill" style="--w:75%"></div></div>
+          <span class="hbar-val">75</span>
+        </div>
+      </div>
+      <p class="note-honest">Claridad expositiva es el punto más bajo: una señal para reforzar casos prácticos específicos de infraestructura y soporte en próximas sesiones.</p>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">DAMASCO · Dashboard de Impacto</span>
+      </div>
+    </section>
+
+    <!-- 08 · Recomendaciones de expansión (Bloque E reformulado para el cliente) -->
+    <section class="slide s-reco">
+      <span class="counter">08 / 10</span>
+      <p class="eyebrow">07 · Recomendaciones de expansión</p>
+      <h2>Próximos pasos de formación.</h2>
+      <div class="cols">
+        <div class="card">
+          <span class="label">Áreas que piden formación</span>
+          <ul class="rank">
+            <li><span class="n">1</span> Desarrollo <span class="c">2 menciones</span></li>
+            <li><span class="n">2</span> Casi todos los departamentos <span class="c">1 mención</span></li>
+            <li><span class="n">3</span> Cobranzas y RRHH <span class="c">1 mención</span></li>
+          </ul>
+        </div>
+        <div class="card">
+          <span class="label">Habilidades más deseadas</span>
+          <ul class="rank">
+            <li><span class="n">1</span> Ciberseguridad <span class="c">1</span></li>
+            <li><span class="n">2</span> Programación <span class="c">1</span></li>
+            <li><span class="n">3</span> Bases de datos <span class="c">1</span></li>
+          </ul>
+        </div>
+        <div class="card">
+          <span class="label">Procesos a automatizar</span>
+          <ul class="rank">
+            <li><span class="n">1</span> Reportes <span class="c">2</span></li>
+            <li><span class="n">2</span> CRM <span class="c">1</span></li>
+            <li><span class="n">3</span> WhatsApp <span class="c">1</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="hook">
+        Los participantes ya identifican tareas concretas para aplicar esto: diagnóstico de fallas, consulta de procedimientos e incidencias. El siguiente paso natural es <strong>Desarrollo</strong>, el área que el propio equipo de Soporte señala con más fuerza.
+      </div>
+      <p class="note-honest on-dark">Mitad del grupo (2 de 4) señala accesos, permisos o licencias como lo único que podría frenar el uso dentro de un mes: una barrera operativa, no de adopción, fácil de resolver desde DAMASCO.</p>
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">DAMASCO · Dashboard de Impacto</span>
+      </div>
+    </section>
+
+    <!-- 09 · Participación (nombres + área, sin puntajes ni cédula §4.16) -->
+    <section class="slide s-data s-part">
+      <span class="counter">09 / 10</span>
+      <p class="eyebrow">08 · Participación</p>
+      <h2>Quiénes completaron la evaluación.</h2>
+      <div class="roster">
+        <div class="p"><span class="nm">Jorvan Pina</span><span class="dp">IT</span></div>
+        <div class="p"><span class="nm">David Alejandro Sosa</span><span class="dp">Soporte</span></div>
+        <div class="p"><span class="nm">Ruben Eduardo Vera Aguiar</span><span class="dp">Dpto sistemas</span></div>
+        <div class="p"><span class="nm">Gabriel Sánchez</span><span class="dp">Sistema</span></div>
+      </div>
+      <p class="privacy">Cuatro participantes del equipo de Soporte e Infraestructura respondieron la Encuesta Edu-Trace de cierre. Por privacidad, no se publican puntajes individuales ni documentos de identidad: el informe es siempre agregado.</p>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">DAMASCO · Dashboard de Impacto</span>
+      </div>
+    </section>
+
+    <!-- 10 · Cierre -->
+    <section class="slide s-end">
+      <span class="counter">10 / 10</span>
+      <div class="end-logo">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia Educación">
+      </div>
+      <p class="end-message">
+        El equipo aprendió.<br>Llevémoslo al <span class="hl-orange">siguiente</span> <span class="hl-yellow">paso</span>.
+      </p>
+      <div class="end-contact">
+        <p class="contact-line">
+          <span class="contact-label">Asesora:</span>
+          María Iribarren <span class="dot">·</span> +58 414 0570056 <span class="dot">·</span> miribarren@intezia.com
+        </p>
+        <p class="contact-line">
+          <span class="contact-label">Empresa:</span>
+          Intezia C.A J-505657950 <span class="dot">·</span> servicio@intezia.com
+        </p>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

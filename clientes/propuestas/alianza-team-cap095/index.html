@@ -1,0 +1,533 @@
+<!doctype html>
+<!--
+  Propuesta — Alianza Team · Fundamentals con logros inmediatos (CAP-095)
+  Servicio: HABILIDADES (Modelo Intezia · empresa/tipos-de-documento.md §0) · Capacitación
+  personalizada para 3 participantes ("miembros de Alianza Team", sin área ni nombres
+  específicos — instrucción explícita del usuario). REEMPLAZO COMPLETO de la versión
+  anterior de este documento (2026-08-05): la anterior era 2 fases (Diagnóstico + 25
+  personas de I+D, roadmap fork, Mapa de Calor, Metodología ABR, Beneficios viejo) — se
+  descarta entera. CAP-094 (versión masiva, mismo cliente) queda intacta como referencia de
+  cuenta, sin tocar.
+
+  AJUSTE (2026-09-04): a pedido del usuario, se pasó de 4 sesiones de 2h a **2 sesiones de
+  4h** (mismas 8h totales, sin cambio). Las 4 herramientas (Google, Claude, n8n, GCP) se
+  agrupan en 2 módulos de 2 herramientas cada uno: Módulo I · Google + Claude (fundamentos
+  y prompting) y Módulo II · n8n + Google Cloud (automatización y caso real). Cada sesión de
+  4h trae su propio timebar de 4 bloques (patrón ya usado en dhl/index.html Fase 2 para
+  sesiones largas con varios temas). Bajó de 13 a 11 slides (2 cronogramas en vez de 4).
+  Nivel Fundamentals: cada módulo sigue cerrando con un logro inmediato aplicable, no solo
+  teoría. Sin mención de modalidad (a definir en el arranque, instrucción explícita del
+  usuario, sin cambios). Estructura adaptada del patrón de capacitación personalizada más
+  reciente del sistema (dhl-cerebro-digital/grupo-ferrara-cai007): 1 slide de cronograma por
+  sesión (.ruta), Beneficios v3, Cierre escalera. Migrado de styles.css local (legacy) a
+  ../_base/styles.css + overrides.css.
+  11 slides. Ver brief.md y programa.md.
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Propuesta · Fundamentals con logros inmediatos · Alianza Team · Intezia</title>
+  <link rel="stylesheet" href="../_base/styles.css">
+  <link rel="stylesheet" href="overrides.css">
+</head>
+<body>
+
+  <main class="deck">
+
+    <!-- 1 · Portada -->
+    <section class="slide s-cover">
+      <span class="counter">01 / 11</span>
+      <div class="logo-big">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia">
+      </div>
+      <div class="body">
+        <p class="eyebrow">Propuesta personalizada · Servicio de Habilidades</p>
+        <h1>
+          Fundamentals con<br>
+          <span class="hl">logros inmediatos</span>
+        </h1>
+        <p class="lead">
+          Una capacitación personalizada para 3 miembros de Alianza Team: de los fundamentos a resolver problemas reales, con <strong>Google</strong>, <strong>Claude</strong>, <strong>n8n</strong> y <strong>Google Cloud (GCP)</strong>.
+        </p>
+      </div>
+      <div class="id-line">
+        <span class="codigo">Código: CAP-095</span>
+        <span class="cliente">Alianza Team</span>
+      </div>
+    </section>
+
+    <!-- 2 · Punto de dolor + Diagnóstico -->
+    <section class="slide s-pain">
+      <span class="counter">02 / 11</span>
+      <span class="quote-mark">&ldquo;</span>
+      <div class="body">
+        <h2>4 herramientas no son 4 aprendizajes sueltos.</h2>
+        <p class="context">
+          Alianza Team quiere que estos 3 miembros dominen Google, Claude, n8n y Google Cloud (GCP), pero cada herramienta por separado no basta: el objetivo es aplicarlas juntas a su día a día. Un programa de Fundamentals, con un <strong>logro inmediato</strong> en cada herramienta, conecta ese aprendizaje desde la primera sesión.
+        </p>
+        <p class="diag-title">Diagnóstico</p>
+        <ol>
+          <li>Los 3 miembros parten de niveles distintos con cada herramienta, sin un recorrido común que las conecte.</li>
+          <li>Cuatro herramientas aprendidas por separado generan una curva dispersa, sin un mismo criterio compartido.</li>
+          <li>El objetivo no es solo aprender cada herramienta, sino aplicarlas juntas para resolver problemas reales.</li>
+          <li>Automatizar con n8n requiere primero fundamentos sólidos de prompting con Google y Claude.</li>
+          <li>Sin una ruta de fundamentos a logros inmediatos, el aprendizaje corre el riesgo de quedarse en lo teórico.</li>
+        </ol>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">ALIANZA TEAM · CAP-095</span>
+      </div>
+    </section>
+
+    <!-- 3 · Objetivos estratégicos -->
+    <section class="slide s-goals">
+      <span class="counter">03 / 11</span>
+      <p class="eyebrow">02 · Objetivos</p>
+      <h2>A dónde llevamos<br>a los 3 miembros.</h2>
+      <div class="columns">
+        <div class="general">
+          <p class="label">Objetivo general</p>
+          <p>
+            Desarrollar en los 3 miembros de Alianza Team el dominio práctico de Google, Claude, n8n y Google Cloud (GCP), con un logro inmediato en cada herramienta y un mismo criterio compartido entre las cuatro, aplicado a su día a día.
+          </p>
+        </div>
+        <div class="specifics">
+          <p class="label">Objetivos específicos</p>
+          <ol>
+            <li>Dominar los fundamentos de Google y Claude: prompting efectivo y buenas prácticas de uso diario.</li>
+            <li>Automatizar una tarea real con n8n, conectando las herramientas entre sí.</li>
+            <li>Aplicar los fundamentos de GCP a un caso real, resuelto de principio a fin.</li>
+          </ol>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">ALIANZA TEAM · CAP-095</span>
+      </div>
+    </section>
+
+    <!-- 4 · Programa -->
+    <section class="slide s-program">
+      <span class="counter">04 / 11</span>
+      <p class="eyebrow">03 · Programa</p>
+      <h2>2 módulos · 8 horas.</h2>
+      <p class="meta">Fundamentals, con un logro inmediato por herramienta. 3 participantes.</p>
+      <div class="modules">
+        <div class="module">
+          <span class="roman">I</span>
+          <h3>Fundamentals de Google y Claude</h3>
+          <p class="obj">Domine los fundamentos de Google y Claude, y el prompting efectivo para su día a día.</p>
+          <ul class="topics">
+            <li>1.1 Fundamentos de Google</li>
+            <li>1.2 Fundamentos de Claude y Projects</li>
+            <li>1.3 Anatomía del prompt</li>
+            <li>1.4 Logro inmediato: casos propios resueltos</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">II</span>
+          <h3>Automatización con n8n y Google Cloud</h3>
+          <p class="obj">Automatice una tarea real con n8n y aplique los fundamentos de Google Cloud (GCP) a un problema real, con las 4 herramientas juntas.</p>
+          <ul class="topics">
+            <li>2.1 Fundamentos de n8n</li>
+            <li>2.2 Fundamentos de Google Cloud</li>
+            <li>2.3 Conectar las 4 herramientas</li>
+            <li>2.4 Logro inmediato: problema resuelto</li>
+          </ul>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">ALIANZA TEAM · CAP-095</span>
+      </div>
+    </section>
+
+    <!-- 5 · Desglose instructivo — Sesión 1 -->
+    <section class="slide s-schedule">
+      <span class="counter">05 / 11</span>
+      <p class="eyebrow">04 · Cronograma · Ruta de aprendizaje</p>
+
+      <div class="ruta">
+        <div class="ruta-node">1</div>
+        <div class="ruta-track"><div class="ruta-fill" style="width:50%"></div></div>
+        <span class="ruta-step">Sesión 1 de 2</span>
+      </div>
+
+      <div class="ses-head">
+        <div>
+          <span class="ses-mod">Módulo I · Sesión en vivo</span>
+          <h2>Módulo I: Fundamentals de Google y Claude</h2>
+        </div>
+        <div class="ses-meta"><span class="ses-dur">4 h</span></div>
+      </div>
+
+      <div class="ses-body">
+        <div class="ses-block">
+          <span class="label">Temas</span>
+          <div class="chips">
+            <span class="chip">Fundamentos de Google</span>
+            <span class="chip">Fundamentos de Claude</span>
+            <span class="chip">Anatomía del prompt</span>
+            <span class="chip">Casos propios resueltos</span>
+          </div>
+        </div>
+        <div class="ses-block">
+          <span class="label">Tiempo · Total 4 h</span>
+          <div class="timebar">
+            <div class="seg" style="flex:60">60' Fundamentos de Google + práctica</div>
+            <div class="seg" style="flex:90">90' Fundamentos de Claude + Projects</div>
+            <div class="seg" style="flex:60">60' Prompting avanzado y casos propios</div>
+            <div class="seg" style="flex:30">30' Cierre y dudas</div>
+          </div>
+        </div>
+        <div class="ses-cols">
+          <div class="ses-block">
+            <span class="label">Estrategias de enseñanza</span>
+            <ul>
+              <li>Demostración guiada en vivo (Google y Claude)</li>
+              <li>Sesión interactiva</li>
+              <li>Preguntas socráticas</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Estrategias de aprendizaje</span>
+            <ul>
+              <li>Práctica de prompting guiada</li>
+              <li>Organiza su propio Project en Claude</li>
+              <li>Casos propios de cada participante</li>
+            </ul>
+          </div>
+          <div class="ses-block block-rec">
+            <span class="label">Recursos y entornos</span>
+            <ul>
+              <li>Cuenta de Google y de Claude</li>
+              <li>Workbook digital</li>
+              <li>Casos reales de los 3 participantes</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">ALIANZA TEAM · CAP-095</span>
+      </div>
+    </section>
+
+    <!-- 6 · Desglose instructivo — Sesión 2 -->
+    <section class="slide s-schedule">
+      <span class="counter">06 / 11</span>
+      <p class="eyebrow">04 · Cronograma · Ruta de aprendizaje</p>
+
+      <div class="ruta">
+        <div class="ruta-node">2</div>
+        <div class="ruta-track"><div class="ruta-fill" style="width:100%"></div></div>
+        <span class="ruta-step">Sesión 2 de 2</span>
+      </div>
+
+      <div class="ses-head">
+        <div>
+          <span class="ses-mod">Módulo II · Sesión en vivo</span>
+          <h2>Módulo II: Automatización con n8n y Google Cloud</h2>
+        </div>
+        <div class="ses-meta"><span class="ses-dur">4 h</span></div>
+      </div>
+
+      <div class="ses-body">
+        <div class="ses-block">
+          <span class="label">Temas</span>
+          <div class="chips">
+            <span class="chip">Fundamentos de n8n</span>
+            <span class="chip">Conectar Google y Claude</span>
+            <span class="chip">Fundamentos de Google Cloud</span>
+            <span class="chip">Problema resuelto</span>
+          </div>
+        </div>
+        <div class="ses-block">
+          <span class="label">Tiempo · Total 4 h</span>
+          <div class="timebar">
+            <div class="seg" style="flex:60">60' Fundamentos de n8n</div>
+            <div class="seg" style="flex:90">90' Automatización guiada (Google + Claude)</div>
+            <div class="seg" style="flex:60">60' Fundamentos de Google Cloud</div>
+            <div class="seg" style="flex:30">30' Cierre y plan</div>
+          </div>
+        </div>
+        <div class="ses-cols">
+          <div class="ses-block">
+            <span class="label">Estrategias de enseñanza</span>
+            <ul>
+              <li>Demostración guiada (n8n y Google Cloud)</li>
+              <li>Construcción de un flujo real</li>
+              <li>Cierre con plan de continuidad</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Estrategias de aprendizaje</span>
+            <ul>
+              <li>Automatiza un proceso real con n8n</li>
+              <li>Aplica Google Cloud a un problema real</li>
+              <li>Deja su plan de continuidad</li>
+            </ul>
+          </div>
+          <div class="ses-block block-rec">
+            <span class="label">Recursos y entornos</span>
+            <ul>
+              <li>Cuenta de n8n y de Google Cloud (GCP)</li>
+              <li>Plantilla de flujo</li>
+              <li>Casos reales de los 3 participantes</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">ALIANZA TEAM · CAP-095</span>
+      </div>
+    </section>
+
+    <!-- 9 · Beneficios (formato v3: Resultados · Por qué Habilidades · Entregables · Valor inmediato) -->
+    <section class="slide s-benefits s-benefits-v2">
+      <span class="counter">07 / 11</span>
+      <p class="eyebrow">05 · Beneficios</p>
+      <h2>Lo que <span class="hl">se llevan</span>.</h2>
+      <div class="grid">
+        <div class="block">
+          <p class="label">Resultados</p>
+          <ul>
+            <li>Los 3 miembros con <strong>dominio práctico</strong> de Google, Claude, n8n y Google Cloud (GCP).</li>
+            <li>Al menos una automatización real construida con n8n, conectando las demás herramientas.</li>
+            <li>Un criterio compartido entre las 4 herramientas, no 4 aprendizajes sueltos.</li>
+          </ul>
+        </div>
+        <div class="block">
+          <p class="label">Por qué Habilidades</p>
+          <p>
+            Alianza Team instala la capacidad en el equipo: los 3 miembros aprenden haciendo, con sus propios casos, y quedan en condiciones de <strong>sostener el uso</strong> de las 4 herramientas sin depender del consultor.
+          </p>
+        </div>
+        <div class="block">
+          <p class="label">Entregables</p>
+        </div>
+        <div class="block">
+          <p class="label">Valor inmediato</p>
+        </div>
+      </div>
+
+      <!-- Cajas multiline editables (vacías en HTML — el contenido vive dentro del AcroForm /V). -->
+      <div class="multi-box entregables-box" data-field="Entregables"></div>
+      <div class="multi-box acreditaciones-box" data-field="Acreditacion"></div>
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">ALIANZA TEAM · CAP-095</span>
+      </div>
+    </section>
+
+    <!-- 10 · Impacto / estudios — datos de estudios reales, fuente citada (§4.9) -->
+    <section class="slide s-impact">
+      <span class="counter">08 / 11</span>
+
+      <div class="impact-head">
+        <p class="eyebrow">06 · Impacto</p>
+        <h2>La evidencia no deja<br><span class="hl">lugar a dudas</span>.</h2>
+      </div>
+
+      <div class="impact-body">
+        <div class="chart-panel">
+          <p class="panel-title">Mejora de productividad por área de trabajo</p>
+          <div class="bars">
+            <div class="bar-row">
+              <span class="bar-label">Marketing y contenidos</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:50%"><span class="bar-val">+50%</span></div></div>
+            </div>
+            <div class="bar-row">
+              <span class="bar-label">Desarrollo de software</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:26%"><span class="bar-val">+26%</span></div></div>
+            </div>
+            <div class="bar-row">
+              <span class="bar-label">Atención al cliente</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:15%"><span class="bar-val">+15%</span></div></div>
+            </div>
+          </div>
+          <div class="bar-axis"><span class="scale"><span>0</span><span>25</span><span>50</span><span>75</span><span>100%</span></span></div>
+          <p class="panel-source">Fuente: Stanford HAI — AI Index Report 2026 (cap. Economía) · McKinsey — The State of AI 2025 · Anthropic Economic Index 2025.</p>
+        </div>
+
+        <div class="gauge-panel">
+          <div class="gauge" style="--pct:78">
+            <div class="gauge-core">
+              <span class="gauge-num">78<span class="pct">%</span></span>
+              <span class="gauge-cap">ya usa IA</span>
+            </div>
+          </div>
+          <div class="chips">
+            <div class="chip">
+              <span class="chip-num">2.6&times;</span>
+              <span class="chip-lbl">adopción vs. 2023</span>
+            </div>
+            <div class="chip">
+              <span class="chip-num">1 de 3</span>
+              <span class="chip-lbl">escala su IA</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="impact-hook">
+        <span class="hook-mark">&#9656;</span>
+        <p class="hook-text">
+          <strong>8 de cada 10 empresas</strong> ya usan IA. Solo <strong>una de cada tres</strong> la convierte en resultados. Un logro inmediato en cada herramienta es lo que separa aprender IA de que la IA trabaje para los 3 miembros de Alianza Team.
+        </p>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">ALIANZA TEAM · CAP-095</span>
+      </div>
+    </section>
+
+    <!-- 11 · Propuesta Económica (estándar: Duración + Programa + Notas + Cotización) -->
+    <section class="slide s-price">
+      <span class="counter">09 / 11</span>
+      <h2 class="title">Propuesta Económica</h2>
+
+      <div class="block">
+        <span class="block-eyebrow">Duración</span>
+        <p class="block-value">8 horas en total · 2 sesiones de 4 h · 3 participantes.</p>
+      </div>
+
+      <div class="block block-programa">
+        <span class="block-eyebrow">Programa</span>
+      </div>
+      <div class="multi-box programa-box" data-field="Programa"></div>
+
+      <div class="block block-cotizacion">
+        <span class="block-eyebrow">Cotización</span>
+      </div>
+
+      <span class="cot-label cot-label-base">Propuesta + Inversión</span>
+      <div class="cot-frame base-frame"></div>
+
+      <span class="cot-label cot-label-discount">Descuento</span>
+      <div class="cot-frame discount-frame"></div>
+
+      <span class="cot-label cot-label-total">TOTAL</span>
+      <div class="cot-frame total-frame"></div>
+
+      <p class="cot-validity">Cotización válida por 30 días.</p>
+      <div class="cot-terms-box">
+        <span class="cot-terms-label">Importante</span>
+        <p class="cot-terms-text">Este servicio se presta bajo nuestros <a href="https://drive.google.com/file/d/1PA-ZSt4KnyY5dpxXzgkIk6-yfGlV2eF8/view?usp=drive_link" target="_blank" rel="noopener">términos y condiciones</a>. Al avanzar con esta propuesta, ambas partes los aceptan.</p>
+      </div>
+
+      <div class="block block-notes-container">
+        <span class="block-eyebrow">Notas</span>
+      </div>
+      <div class="multi-box notas-box" data-field="Notas"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">ALIANZA TEAM · CAP-095</span>
+      </div>
+    </section>
+
+    <!-- 12 · Próximos pasos (logística, sin acuerdos económicos · §4.15) -->
+    <section class="slide s-steps">
+      <span class="counter">10 / 11</span>
+      <p class="eyebrow">07 · Próximos pasos</p>
+      <h2>Cómo arrancamos.</h2>
+      <div class="step-cards">
+        <div class="step-card">
+          <span class="ghost">01</span>
+        </div>
+        <div class="step-card">
+          <span class="ghost">02</span>
+        </div>
+        <div class="step-card">
+          <span class="ghost">03</span>
+        </div>
+      </div>
+
+      <!-- Editable AcroForm placeholders (3 pasos × título + body) -->
+      <div class="acro-area acro-title acro-paso-01-titulo" data-field="Paso01Titulo">
+        <span class="acro-default-text">Confirmamos fechas</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-01-body" data-field="Paso01Body">
+        <span class="acro-default-text">Validamos el calendario de las 2 sesiones con los 3 miembros de Alianza Team.</span>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-02-titulo" data-field="Paso02Titulo">
+        <span class="acro-default-text">Acceso y logística</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-02-body" data-field="Paso02Body">
+        <span class="acro-default-text">Coordinamos accesos a Google, Claude, n8n y Google Cloud (GCP), y la modalidad de las sesiones.</span>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-03-titulo" data-field="Paso03Titulo">
+        <span class="acro-default-text">Reunión de arranque</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-03-body" data-field="Paso03Body">
+        <span class="acro-default-text">Sesión de unos 30 minutos para elegir los casos reales que cada participante llevará al programa.</span>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">ALIANZA TEAM · CAP-095</span>
+      </div>
+    </section>
+
+    <!-- 13 · Cierre (ruta/escalera editable) -->
+    <section class="slide s-end">
+      <span class="counter">11 / 11</span>
+
+      <div class="end-logo">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia">
+      </div>
+
+      <!-- Resultado (cinta superior) — caja editable, ventas la redacta por cliente -->
+      <div class="end-summit" data-field="CierreResultado">
+        <span class="acro-default-text">Alianza Team, con 3 miembros que dominan Google, Claude, n8n y Google Cloud (GCP).</span>
+      </div>
+
+      <!-- Escalera de 3 pasos — cada uno con su caja editable -->
+      <div class="end-stairs">
+        <div class="stair-step stair-1">
+          <span class="stair-label">Paso 1</span>
+          <div class="stair-field" data-field="CierrePaso1">
+            <span class="acro-default-text">Fundamentals de Google y Claude</span>
+          </div>
+        </div>
+        <div class="stair-step stair-2">
+          <span class="stair-label">Paso 2</span>
+          <div class="stair-field" data-field="CierrePaso2">
+            <span class="acro-default-text">Automatización con n8n</span>
+          </div>
+        </div>
+        <div class="stair-step stair-3">
+          <span class="stair-label">Paso 3</span>
+          <div class="stair-field" data-field="CierrePaso3">
+            <span class="acro-default-text">Google Cloud y problema resuelto</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cta-wrap">
+        <span class="cta">Esperamos tu respuesta</span>
+      </div>
+
+      <div class="end-contact">
+        <p class="contact-line">
+          <span class="contact-label">Asesora de ventas:</span>
+          Flavia Martínez <span class="dot">·</span> +58 414-5756615 <span class="dot">·</span> fmartinez@intezia.com
+        </p>
+        <p class="contact-line">
+          <span class="contact-label">Empresa:</span>
+          Intezia C.A J-505657950 <span class="dot">·</span> servicio@intezia.com
+        </p>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

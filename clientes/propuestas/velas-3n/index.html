@@ -1,0 +1,625 @@
+<!doctype html>
+<!--
+  Propuesta — Velas 3N (DET-013)
+  Servicio: DETECCIÓN (Modelo Intezia). División: Educación. Primer contacto, sin servicio
+  previo. Fuente primaria: Ficha de Levantamiento (Levantamiento_Velas_3N_2026-09-10.pdf,
+  asesora Verónica Rubio) + precisiones directas del usuario 2026-09-14.
+
+  4 ÁREAS A NIVEL DE GERENCIA (confirmado con el usuario — la ficha lista 4 "Area priorizada"
+  que agrupan varias coordinaciones cada una; se descartó desglosar en las ~10 coordinaciones
+  individuales por costo/alcance para una mediana empresa con presupuesto sin definir):
+  Dirección General, Gerencia de Ventas (Mercadeo, Ventas), Gerencia de Administración
+  (Talento Humano, Contabilidad, Soporte Técnico, Compras), Gerencia de Producción
+  (Mantenimiento, Producción, Almacenes). Cada sesión de área es GRUPAL (gerente + sus
+  coordinadores juntos), mismo patrón que igamcor/.
+  4 HORAS de Detección por área (16h) + FUNDAMENTALS (2h grupal, para los líderes y
+  coordinadores de las 4 áreas, dentro del máximo de 25 — integrado desde el inicio) = 18h
+  totales. MODALIDAD VIRTUAL (dato explícito de la ficha).
+  SIN CIFRA EXACTA DE UNIVERSO: la ficha trae un número ambiguo sin confirmar para Velas 3N
+  específicamente — el deck habla de "líderes y coordinadores" sin comprometer un número
+  (confirmado con el usuario, mismo criterio de "omitir, no inventar").
+  HERRAMIENTA: SIN recomendación preliminar firme (a diferencia de otras Detecciones de esta
+  sesión) — no hay "campeón" personal de ninguna herramienta. Se menciona el ecosistema Google
+  Workspace y el uso informal de Gemini por Mercadeo solo como CONTEXTO en el Reporte Final,
+  confirmado con el usuario. Punto crítico de la asesora: alinear con la persona interna que ya
+  integra IA al ERP Odoo — reflejado en el roadmap (Etapa 3, "Con quién").
+  Preocupación del cliente sobre desplazamiento laboral: abordada con honestidad en Diagnóstico
+  (bullet 4) e Impacto, con datos reales sobre crecimiento de roles técnicos en manufactura —
+  nunca se promete ni se niega un efecto sobre el empleo.
+  Sin slide de Mapa de Calor ni Metodología ABR ni Equipo facilitador expuestos (§4.10a). Sin
+  certificado (Detección pura). Beneficios v3, Cierre escalera, servicio@intezia.com.
+  .rmx-ethics con padding-right:230px aplicado por defecto (memoria
+  bug-rmx-ethics-choca-nombre-cliente-largo.md, corregida 2026-09-10: el bug no depende de que
+  el nombre del cliente sea largo).
+  Sin <strong> dentro de ningún <li> de .s-pain/.s-goals/.s-schedule (bug-strong-flex-specifics.md).
+  Impacto (§4.9): Manufacturing Leadership Council — Encuesta 2024 (78% ve la IA como parte de
+  su estrategia digital, solo 52% tiene estrategia de IA establecida) + Deloitte — Future of
+  Digital Customer Experience (2024, 55% de fabricantes de productos industriales ya usa IA
+  generativa) + Deloitte + Manufacturing Institute (2026, empleo de técnicos de manufactura
+  crecería 6x más rápido que el de producción tradicional hacia 2030 — dato real que responde
+  a la preocupación del cliente sobre desplazamiento laboral, sin prometer ni negar nada).
+  12 slides · precio estándar (Propuesta Económica, un solo servicio).
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Propuesta · Velas 3N · Intezia</title>
+  <link rel="stylesheet" href="../_base/styles.css">
+  <link rel="stylesheet" href="overrides.css">
+</head>
+<body>
+
+  <main class="deck">
+
+    <!-- 1 · Portada -->
+    <section class="slide s-cover">
+      <span class="counter">01 / 12</span>
+      <div class="logo-big">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia">
+      </div>
+      <div class="body">
+        <p class="eyebrow">Propuesta formativa · Servicio de Detección</p>
+        <h1>
+          Del uso disperso<br>
+          <span class="hl">a la claridad real.</span>
+        </h1>
+        <p class="lead">
+          Nivelamos a los líderes con <strong>Fundamentals</strong> y auditamos las 4 áreas de Velas 3N, con 4 horas dedicadas a cada una y un logro inmediato en cada sesión, para entender qué es capaz de hacer la IA en su operación.
+        </p>
+      </div>
+      <div class="id-line">
+        <span class="codigo">Código: DET-013</span>
+        <span class="cliente">Velas 3N</span>
+      </div>
+    </section>
+
+    <!-- 2 · Punto de dolor + Diagnóstico -->
+    <section class="slide s-pain">
+      <span class="counter">02 / 12</span>
+      <span class="quote-mark">&ldquo;</span>
+      <div class="body">
+        <h2>"No tenemos idea de lo que es capaz de hacer la IA en la empresa."</h2>
+        <p class="context">
+          Velas 3N nunca ha recibido una propuesta de IA, ni de Intezia ni de terceros. El uso hoy es disparejo: el equipo de Mercadeo prueba herramientas de generación de imagen y Gemini de forma informal, mientras una persona interna ya integra IA al ERP Odoo, en un esfuerzo paralelo sin conexión con el resto de la operación.
+        </p>
+        <p class="diag-title">Diagnóstico</p>
+        <ol>
+          <li>La empresa nunca ha recibido una propuesta de IA: no tiene idea de qué es capaz de hacer dentro de su sistema.</li>
+          <li>El equipo de Mercadeo ya prueba herramientas de generación de imagen y Gemini de forma informal, sin licencias ni criterio organizacional.</li>
+          <li>Una persona interna ya integra IA al ERP Odoo, un esfuerzo que hoy avanza sin conexión con el resto de las áreas.</li>
+          <li>Hay preocupación genuina de que la IA sustituya parte del personal: el equipo busca claridad y una ruta concreta antes de invertir.</li>
+          <li>Sin un diagnóstico previo, cada gerencia seguiría probando la IA por su cuenta, sin un criterio común ni una inducción clara para sus líderes.</li>
+        </ol>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">VELAS 3N · DET-013</span>
+      </div>
+    </section>
+
+    <!-- 3 · Objetivos estratégicos -->
+    <section class="slide s-goals">
+      <span class="counter">03 / 12</span>
+      <p class="eyebrow">02 · Objetivos</p>
+      <h2>A dónde llevamos<br>a las 4 áreas.</h2>
+      <div class="columns">
+        <div class="general">
+          <p class="label">Objetivo general</p>
+          <p>
+            Auditar las 4 áreas de Velas 3N (Dirección General, Ventas, Administración, Producción) con Fundamentals y 4 horas por área, dejando un logro inmediato en cada una, para entender el nivel de madurez de IA de la organización y dar a sus líderes una inducción clara.
+          </p>
+        </div>
+        <div class="specifics">
+          <p class="label">Objetivos específicos</p>
+          <ol>
+            <li>Nivelar a los líderes y coordinadores de las 4 áreas con una sesión de Fundamentals antes de auditar.</li>
+            <li>Auditar las 4 áreas con 4 horas dedicadas a cada una, en sesiones grupales virtuales por gerencia.</li>
+            <li>Dejar un logro inmediato en cada área, empezando por dar claridad sobre qué es capaz de hacer la IA hoy.</li>
+            <li>Entregar un Reporte Final que integre los hallazgos con el desarrollo de IA que ya construyen en su ERP Odoo.</li>
+          </ol>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">VELAS 3N · DET-013</span>
+      </div>
+    </section>
+
+    <!-- 4 · Programa -->
+    <section class="slide s-program">
+      <span class="counter">04 / 12</span>
+      <p class="eyebrow">03 · El proyecto</p>
+      <h2>4 áreas, un mismo criterio.</h2>
+      <p class="meta">Fundamentals + Detección con logro inmediato por área, modalidad virtual.</p>
+      <div class="modules">
+        <div class="module">
+          <span class="roman">I</span>
+          <h3>Fundamentals</h3>
+          <p class="obj">Nivela a los líderes y coordinadores en fundamentos de IA antes de auditar.</p>
+          <ul class="topics">
+            <li>Fundamentos de IA</li>
+            <li>Kick-off grupal</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">II</span>
+          <h3>Trabajo por Área</h3>
+          <p class="obj">Una sesión de 4 horas por cada una de las 4 áreas, con un logro inmediato en cada una.</p>
+          <ul class="topics">
+            <li>4 áreas · 4h c/u</li>
+            <li>Logro inmediato por área</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">III</span>
+          <h3>Priorización</h3>
+          <p class="obj">Se prioriza cada hallazgo por impacto, esfuerzo y riesgo, y se unifica el Índice de Madurez.</p>
+          <ul class="topics">
+            <li>Mapa de Calor</li>
+            <li>Índice de Madurez</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">IV</span>
+          <h3>Reporte Final</h3>
+          <p class="obj">Diagnóstico completo + contexto de ecosistema, integrado con el desarrollo de IA en Odoo.</p>
+          <ul class="topics">
+            <li>Contexto de ecosistema</li>
+            <li>Ruta de inducción</li>
+          </ul>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">VELAS 3N · DET-013</span>
+      </div>
+    </section>
+
+    <!-- 5 · Roadmap · Detección (3 etapas) -->
+    <section class="slide s-roadmap">
+      <span class="counter">05 / 12</span>
+      <p class="eyebrow">04 · Roadmap · Detección</p>
+      <h2>Auditar antes<br><span class="hl">de asumir dónde está la oportunidad</span>.</h2>
+
+      <div class="rmx-field">
+        <div class="rmx-linear">
+
+          <div class="rmx-lrow-nodes">
+            <div class="rmx-lcol"><div class="rmx-node rmx-node-f2">1</div></div>
+            <div class="rmx-arrow"></div>
+            <div class="rmx-lcol"><div class="rmx-node rmx-node-f3">2</div></div>
+            <div class="rmx-arrow"></div>
+            <div class="rmx-lcol"><div class="rmx-node rmx-node-f4">3</div></div>
+            <div class="rmx-arrow"></div>
+            <div class="rmx-lcol"><div class="rmx-node rmx-node-r">&#9733;</div></div>
+          </div>
+
+          <div class="rmx-lrow-cards">
+            <div class="rmx-lcol">
+              <div class="rmx-card rmx-card-f2">
+                <span class="rmx-card-tag">Etapa 1 · Fundamentals y Trabajo por Área</span>
+                <div class="rmx-card-name">Fundamentals + 4h por área</div>
+                <ul class="rmx-facets">
+                  <li><span>Qué pasa</span><p>Nivelamos con Fundamentals y auditamos las 4 áreas.</p></li>
+                  <li><span>Con quién</span><p>El gerente y sus coordinadores.</p></li>
+                  <li><span>Entrega</span><p>Equipo nivelado + logro inmediato por área.</p></li>
+                </ul>
+              </div>
+            </div>
+            <div class="rmx-lspacer"></div>
+            <div class="rmx-lcol">
+              <div class="rmx-card rmx-card-f3">
+                <span class="rmx-card-tag">Etapa 2 · Priorización</span>
+                <div class="rmx-card-name">Mapa de Calor de oportunidades</div>
+                <ul class="rmx-facets">
+                  <li><span>Qué pasa</span><p>Se prioriza cada hallazgo por impacto, esfuerzo y riesgo, y se unifica el indicador.</p></li>
+                  <li><span>Con quién</span><p>Equipo consultor Intezia.</p></li>
+                  <li><span>Entrega</span><p>Mapa de Calor de las 4 áreas + Índice de Madurez.</p></li>
+                </ul>
+              </div>
+            </div>
+            <div class="rmx-lspacer"></div>
+            <div class="rmx-lcol">
+              <div class="rmx-card rmx-card-f4">
+                <span class="rmx-card-tag">Etapa 3 · Reporte Final</span>
+                <div class="rmx-card-name">Ruta de inducción para líderes</div>
+                <ul class="rmx-facets">
+                  <li><span>Qué pasa</span><p>Se entrega el diagnóstico completo, integrado con el desarrollo en Odoo.</p></li>
+                  <li><span>Con quién</span><p>César Rondón y el equipo de Odoo.</p></li>
+                  <li><span>Entrega</span><p>Reporte Final + ruta de inducción.</p></li>
+                </ul>
+              </div>
+            </div>
+            <div class="rmx-lspacer"></div>
+            <div class="rmx-lcol">
+              <div class="rmx-result-card">
+                <span class="rmx-result-label">Entregable insignia · Índice de Madurez</span>
+                <div class="rmx-result-title">Claridad real, <b>no supuestos</b></div>
+                <ul>
+                  <li>Equipo nivelado con Fundamentals</li>
+                  <li>Logro inmediato por área</li>
+                  <li>Índice de Madurez + Reporte Final</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /.rmx-linear -->
+
+        <div class="rmx-ethics">
+          <span class="rmx-ethics-tag">Metodología ABR · Diagnóstico antes de recomendar</span>
+          <p>El Reporte Final confirma la ruta con los hallazgos reales, no antes.</p>
+        </div>
+
+      </div><!-- /.rmx-field -->
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">VELAS 3N · DET-013</span>
+      </div>
+    </section>
+
+    <!-- 6 · Cronograma · Fundamentals -->
+    <section class="slide s-schedule">
+      <span class="counter">06 / 12</span>
+      <p class="eyebrow">04 · Cronograma · Fundamentals</p>
+
+      <div class="ses-head">
+        <div>
+          <span class="ses-mod">Sesión grupal · Líderes y coordinadores de las 4 áreas · Modalidad virtual</span>
+          <h2>Fundamentals</h2>
+        </div>
+        <div class="ses-meta"><span class="ses-dur">2h</span></div>
+      </div>
+
+      <div class="ses-body">
+        <div class="ses-block">
+          <span class="label">Temas</span>
+          <div class="chips">
+            <span class="chip">Qué es y qué no es la IA</span>
+            <span class="chip">Casos reales del sector manufactura</span>
+            <span class="chip">Ruta de las 4 sesiones</span>
+            <span class="chip">Preguntas y expectativas</span>
+          </div>
+        </div>
+        <div class="ses-block">
+          <span class="label">Tiempo · Total 2 h</span>
+          <div class="timebar">
+            <div class="seg" style="flex:30">30' Encuadre y fundamentos</div>
+            <div class="seg" style="flex:45">45' Casos reales del sector</div>
+            <div class="seg" style="flex:30">30' Ruta de las 4 sesiones</div>
+            <div class="seg" style="flex:15">15' Cierre y preguntas</div>
+          </div>
+        </div>
+        <div class="ses-cols">
+          <div class="ses-block">
+            <span class="label">Qué se hace</span>
+            <ul>
+              <li>Presentamos qué es y qué no es la IA, con casos reales del sector manufactura</li>
+              <li>Explicamos la ruta de las 4 sesiones de auditoría que siguen</li>
+              <li>Abrimos espacio a preguntas y expectativas, incluida la preocupación sobre el personal</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Qué se logra</span>
+            <ul>
+              <li>Los líderes llegan a sus sesiones de área con un lenguaje común</li>
+              <li>Expectativas alineadas sobre la auditoría</li>
+              <li>Primera identificación de dónde cada gerencia ve oportunidad</li>
+            </ul>
+          </div>
+          <div class="ses-block block-rec">
+            <span class="label">Recursos y entornos</span>
+            <ul>
+              <li>Sesión virtual, líderes y coordinadores de las 4 áreas</li>
+              <li>Sin herramientas técnicas todavía</li>
+              <li>Casos reales del sector manufactura</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">VELAS 3N · DET-013</span>
+      </div>
+    </section>
+
+    <!-- 7 · Cronograma · Estructura de las 4 horas por área -->
+    <section class="slide s-schedule">
+      <span class="counter">07 / 12</span>
+      <p class="eyebrow">04 · Cronograma · Estructura por área</p>
+
+      <div class="ses-head">
+        <div>
+          <span class="ses-mod">Se repite en cada una de las 4 gerencias · Modalidad virtual</span>
+          <h2>Estructura de las 4 horas</h2>
+        </div>
+        <div class="ses-meta"><span class="ses-dur">4h</span></div>
+      </div>
+
+      <div class="ses-body">
+        <div class="ses-block">
+          <span class="label">Temas</span>
+          <div class="chips">
+            <span class="chip">Procesos reales del área</span>
+            <span class="chip">Cuellos de botella</span>
+            <span class="chip">Logro inmediato aplicable</span>
+            <span class="chip">Coordinación con el desarrollo en Odoo</span>
+          </div>
+        </div>
+        <div class="ses-block">
+          <span class="label">Tiempo · Total 4 h</span>
+          <div class="timebar">
+            <div class="seg" style="flex:45">45' Contexto y objetivos</div>
+            <div class="seg" style="flex:90">90' Levantamiento de procesos</div>
+            <div class="seg" style="flex:75">75' Construcción del logro inmediato</div>
+            <div class="seg" style="flex:30">30' Cierre y siguientes pasos</div>
+          </div>
+        </div>
+        <div class="ses-cols">
+          <div class="ses-block">
+            <span class="label">Qué se hace</span>
+            <ul>
+              <li>Entrevistamos al gerente y a sus coordinadores sobre los procesos reales del área</li>
+              <li>Identificamos el cuello de botella más relevante</li>
+              <li>Construimos en la misma sesión un logro inmediato aplicable</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Qué se logra</span>
+            <ul>
+              <li>Inventario real de procesos del área</li>
+              <li>Un logro inmediato que la gerencia ya puede usar</li>
+              <li>Información lista para el Mapa de Calor conjunto</li>
+            </ul>
+          </div>
+          <div class="ses-block block-rec">
+            <span class="label">Recursos y entornos</span>
+            <ul>
+              <li>Sesión virtual con el gerente y sus coordinadores</li>
+              <li>Guion de levantamiento Intezia</li>
+              <li>Sin tocar los sistemas internos de Velas 3N</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">VELAS 3N · DET-013</span>
+      </div>
+    </section>
+
+    <!-- 8 · Beneficios (formato v3) -->
+    <section class="slide s-benefits s-benefits-v2">
+      <span class="counter">08 / 12</span>
+      <p class="eyebrow">05 · Beneficios</p>
+      <h2>Lo que <span class="hl">se llevan</span>.</h2>
+      <div class="grid">
+        <div class="block">
+          <p class="label">Resultados</p>
+          <ul>
+            <li>Las <strong>4 áreas</strong> auditadas, cada una con un logro inmediato, empezando por claridad sobre qué puede hacer la IA.</li>
+            <li>Equipo nivelado con Fundamentals antes de la auditoría.</li>
+            <li>Un Índice de Madurez claro y una ruta de inducción para los líderes.</li>
+          </ul>
+        </div>
+        <div class="block">
+          <p class="label">Por qué Detección</p>
+          <p>
+            Antes de recomendar una herramienta, Velas 3N conoce sus 4 áreas a fondo, con un <strong>logro tangible</strong> ya funcionando en cada una, integrando lo que ya construyen en su ERP Odoo.
+          </p>
+        </div>
+        <div class="block">
+          <p class="label">Entregables</p>
+        </div>
+        <div class="block">
+          <p class="label">Valor inmediato</p>
+        </div>
+      </div>
+
+      <div class="multi-box entregables-box" data-field="Entregables"></div>
+      <div class="multi-box acreditaciones-box" data-field="Acreditacion"></div>
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">VELAS 3N · DET-013</span>
+      </div>
+    </section>
+
+    <!-- 9 · Impacto / estudios — datos reales, fuente citada (CLAUDE.md §4.9) -->
+    <section class="slide s-impact">
+      <span class="counter">09 / 12</span>
+
+      <div class="impact-head">
+        <p class="eyebrow">06 · Impacto</p>
+        <h2>El uso disperso no da resultados.<br><span class="hl">La claridad sí</span>.</h2>
+      </div>
+
+      <div class="impact-body">
+        <div class="chart-panel">
+          <p class="panel-title">Cómo adopta IA hoy el sector manufactura</p>
+          <div class="bars">
+            <div class="bar-row">
+              <span class="bar-label">Fabricantes que ya ven la IA como parte de su estrategia digital</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:78%"><span class="bar-val">78%</span></div></div>
+            </div>
+            <div class="bar-row">
+              <span class="bar-label">Fabricantes con una estrategia corporativa de IA ya establecida</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:52%"><span class="bar-val">52%</span></div></div>
+            </div>
+          </div>
+          <div class="bar-axis"><span class="scale"><span>0</span><span>25</span><span>50</span><span>75</span><span>100%</span></span></div>
+          <p class="panel-source">Fuente: Manufacturing Leadership Council &mdash; Encuesta 2024.</p>
+        </div>
+
+        <div class="gauge-panel">
+          <div class="gauge" style="--pct:55">
+            <div class="gauge-core">
+              <span class="gauge-num">55<span class="pct">%</span></span>
+              <span class="gauge-cap">de los fabricantes de productos industriales ya usa herramientas de IA generativa</span>
+            </div>
+          </div>
+          <div class="chips">
+            <div class="chip">
+              <span class="chip-num">6&times;</span>
+              <span class="chip-lbl">empleo técnico crece frente a producción tradicional</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="impact-hook">
+        <span class="hook-mark">&#9656;</span>
+        <p class="hook-text">
+          El 78% de los fabricantes ya ve la IA como parte de su estrategia digital, pero solo el 52% tiene una estrategia corporativa establecida (Manufacturing Leadership Council, 2024): el punto de partida de Velas 3N, uso disperso y sin criterio común. El 55% de los fabricantes de productos industriales ya usa IA generativa (Deloitte, 2024), y se espera que el empleo de técnicos de manufactura crezca 6 veces más rápido que el de producción tradicional hacia 2030 (Deloitte + Manufacturing Institute, 2026): la evidencia no apunta a menos empleo. La Detección da a los líderes de Velas 3N la claridad que hoy no tienen.
+        </p>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">VELAS 3N · DET-013</span>
+      </div>
+    </section>
+
+    <!-- 10 · Propuesta Económica (estándar: Duración + Programa + Notas + Cotización) -->
+    <section class="slide s-price">
+      <span class="counter">10 / 12</span>
+      <h2 class="title">Propuesta Económica</h2>
+
+      <div class="block">
+        <span class="block-eyebrow">Duración</span>
+        <p class="block-value">Fundamentals (2h) + 4 áreas · 4 horas por área (16h) · 18h totales · modalidad virtual.</p>
+      </div>
+
+      <div class="block block-programa">
+        <span class="block-eyebrow">Programa</span>
+      </div>
+      <div class="multi-box programa-box" data-field="Programa"></div>
+
+      <div class="block block-cotizacion">
+        <span class="block-eyebrow">Cotización</span>
+      </div>
+
+      <span class="cot-label cot-label-base">Propuesta + Inversión</span>
+      <div class="cot-frame base-frame"></div>
+
+      <span class="cot-label cot-label-discount">Descuento</span>
+      <div class="cot-frame discount-frame"></div>
+
+      <span class="cot-label cot-label-total">TOTAL</span>
+      <div class="cot-frame total-frame"></div>
+
+      <p class="cot-validity">Cotización válida por 30 días.</p>
+      <div class="cot-terms-box">
+        <span class="cot-terms-label">Importante</span>
+        <p class="cot-terms-text">Este servicio se presta bajo nuestros <a href="https://drive.google.com/file/d/1PA-ZSt4KnyY5dpxXzgkIk6-yfGlV2eF8/view?usp=drive_link" target="_blank" rel="noopener">términos y condiciones</a>. Al avanzar con esta propuesta, ambas partes los aceptan.</p>
+      </div>
+
+      <div class="block block-notes-container">
+        <span class="block-eyebrow">Notas</span>
+      </div>
+      <div class="multi-box notas-box" data-field="Notas"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">VELAS 3N · DET-013</span>
+      </div>
+    </section>
+
+    <!-- 11 · Próximos pasos -->
+    <section class="slide s-steps">
+      <span class="counter">11 / 12</span>
+      <p class="eyebrow">07 · Próximos pasos</p>
+      <h2>Cómo arrancamos.</h2>
+      <div class="step-cards">
+        <div class="step-card">
+          <span class="ghost">01</span>
+        </div>
+        <div class="step-card">
+          <span class="ghost">02</span>
+        </div>
+        <div class="step-card">
+          <span class="ghost">03</span>
+        </div>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-01-titulo" data-field="Paso01Titulo">
+        <span class="acro-default-text">Confirmamos fechas</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-01-body" data-field="Paso01Body">
+        <span class="acro-default-text">Definimos el calendario de las 4 sesiones de gerencia y la sesión de Fundamentals con César Rondón.</span>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-02-titulo" data-field="Paso02Titulo">
+        <span class="acro-default-text">Acceso y logística</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-02-body" data-field="Paso02Body">
+        <span class="acro-default-text">Coordinamos el acceso virtual de cada gerencia y sumamos a la persona que integra IA al ERP Odoo.</span>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-03-titulo" data-field="Paso03Titulo">
+        <span class="acro-default-text">Reunión de arranque</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-03-body" data-field="Paso03Body">
+        <span class="acro-default-text">Sesión de unos 30 minutos con César Rondón para alinear el alcance y el orden de las 4 áreas.</span>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">VELAS 3N · DET-013</span>
+      </div>
+    </section>
+
+    <!-- 12 · Cierre (ruta/escalera editable) -->
+    <section class="slide s-end">
+      <span class="counter">12 / 12</span>
+
+      <div class="end-logo">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia">
+      </div>
+
+      <div class="end-summit" data-field="CierreResultado">
+        <span class="acro-default-text">Velas 3N, con las 4 áreas auditadas y claridad real sobre qué puede hacer la IA en su operación.</span>
+      </div>
+
+      <div class="end-stairs">
+        <div class="stair-step stair-1">
+          <span class="stair-label">Paso 1</span>
+          <div class="stair-field" data-field="CierrePaso1">
+            <span class="acro-default-text">Fundamentals y trabajo por área</span>
+          </div>
+        </div>
+        <div class="stair-step stair-2">
+          <span class="stair-label">Paso 2</span>
+          <div class="stair-field" data-field="CierrePaso2">
+            <span class="acro-default-text">Índice de Madurez unificado</span>
+          </div>
+        </div>
+        <div class="stair-step stair-3">
+          <span class="stair-label">Paso 3</span>
+          <div class="stair-field" data-field="CierrePaso3">
+            <span class="acro-default-text">Reporte Final + ruta de inducción</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cta-wrap">
+        <span class="cta">Esperamos tu respuesta</span>
+      </div>
+
+      <div class="end-contact">
+        <p class="contact-line">
+          <span class="contact-label">Asesora de ventas:</span>
+          Verónica Rubio <span class="dot">·</span> +58 422 3355505 <span class="dot">·</span> vrubio01@intezia.com
+        </p>
+        <p class="contact-line">
+          <span class="contact-label">Empresa:</span>
+          Intezia C.A J-505657950 <span class="dot">·</span> servicio@intezia.com
+        </p>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

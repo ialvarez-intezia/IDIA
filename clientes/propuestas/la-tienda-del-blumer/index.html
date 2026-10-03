@@ -1,0 +1,713 @@
+<!doctype html>
+<!--
+  Propuesta — La Tienda del Blumer (DET-020)
+  Servicio: DETECCIÓN pura (Modelo Intezia). División: Educación. Primer contacto, sin
+  servicio previo. Fuente primaria: Ficha de Levantamiento
+  (Levantamiento_La_tienda_del_Blumer_2026-09-23.pdf, asesora Verónica Rubio) + instrucción
+  directa del usuario sobre el enfoque de "visión de ruta".
+
+  7 GRUPOS DE DETECCIÓN (dato directo de la ficha): Recursos Humanos, Tesorería, Contabilidad
+  (foco especial, revisión manual de facturas), Sistemas (~4 personas, soporte técnico diario),
+  Administrativo (gestión de tiendas), Logística/Compras (importaciones desde China),
+  Inventario.
+  4 HORAS de Fundamentals grupal (pedido explícito del usuario, no las 2h por defecto — grupo
+  más grande, ~30 personas, 7 áreas) + 4 HORAS de Detección por área × 7 = 28h → 32h totales.
+  Modalidad MIXTA (dato explícito de la ficha).
+  CON LOGRO INMEDIATO por sesión de área (patrón toyocentro/amv-tecnologia) — ancla en
+  Contabilidad: revisión de facturas 100% manual, "razón declarada de por qué esa área tiene
+  tanto personal" (cita de la ficha). Mismo tipo de dolor que amv-tecnologia/ (DET-019) — se
+  REUTILIZA el mismo estudio de Impacto (Ardent Partners, Accounts Payable) verificado en esa
+  propuesta.
+
+  VISIÓN DE RUTA — instrucción explícita del usuario ("armada con visión de ruta... no
+  presentar Detección como un servicio aislado"): se agregó una slide NUEVA dedicada ("La ruta
+  completa", slide 06) que muestra Detección (ahora, cotizada) → Habilidades (después, a
+  futuro, NO cotizada) → Autonomía en IA (más adelante, visión final de la clienta) — separada
+  del roadmap operativo interno de la Detección (slide 05: Fundamentals+Áreas → Priorización →
+  Reporte Final), para no mezclar pasos operativos de este documento con fases de negocio
+  futuras. Mismo patrón conceptual que amcor/ (Fase 1 cotizada + Fase 2 "a la medida del
+  diagnóstico"), extendido a 2 fases futuras con su propia slide. El ROI de la hoja de
+  cotización menciona explícitamente el logro inmediato POR ÁREA y la hoja de ruta trazada
+  (instrucción explícita del usuario: "dejar en claro que se dejan logros inmediatos y se deja
+  una hoja de ruta trazada, mencionalo en el roi").
+
+  SIN pre-recomendar ninguna herramienta de IA (Metodología ABR): el Reporte Final entrega la
+  recomendación formal de ecosistema de IA. Sin certificado (Detección pura). SIN garantía
+  30-60-90 (ese marco es de Habilidades, no de Detección). Beneficios v3, Cierre escalera,
+  servicio@intezia.com. Sin slide de Mapa de Calor ni Metodología ABR ni Equipo facilitador
+  expuestos (§4.10a).
+
+  Calendario resumido por área (9 filas: Kick-off + Fundamentals + 7 áreas) en vez de las 16
+  sesiones individuales de 2h, para no desbordar la caja .steps-calendar-grid. Hora del
+  kick-off no especificada por el usuario — se usó 10-11 por consistencia con el resto de
+  propuestas de esta sesión (confirmar con Verónica antes de enviar, ver brief.md).
+
+  13 slides · precio estándar (Propuesta Económica, un solo servicio).
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Propuesta · La Tienda del Blumer · Intezia</title>
+  <link rel="stylesheet" href="../_base/styles.css">
+  <link rel="stylesheet" href="overrides.css">
+</head>
+<body>
+
+  <main class="deck">
+
+    <!-- 1 · Portada -->
+    <section class="slide s-cover">
+      <span class="counter">01 / 13</span>
+      <div class="logo-big">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia">
+      </div>
+      <div class="body">
+        <p class="eyebrow">Propuesta formativa · Servicio de Detección</p>
+        <h1>
+          La puerta de entrada,<br>
+          <span class="hl">con toda la ruta trazada.</span>
+        </h1>
+        <p class="lead">
+          Auditamos las 7 áreas de La Tienda del Blumer con Fundamentals y un <strong>logro inmediato</strong> en cada una, dejando trazado el camino hacia Habilidades y hacia un equipo de Sistemas autónomo en IA.
+        </p>
+      </div>
+      <div class="id-line">
+        <span class="codigo">Código: DET-020</span>
+        <span class="cliente">La Tienda del Blumer</span>
+      </div>
+    </section>
+
+    <!-- 2 · Punto de dolor + Diagnóstico -->
+    <section class="slide s-pain">
+      <span class="counter">02 / 13</span>
+      <span class="quote-mark">&ldquo;</span>
+      <div class="body">
+        <h2>&ldquo;No queremos que cada área lo haga por su lado.&rdquo;</h2>
+        <p class="context">
+          La Tienda del Blumer es una empresa familiar de retail, con tiendas a nivel nacional y oficina administrativa en Valencia, en su primer contacto con Intezia. Usan Google Workspace y apenas están migrando su servidor local a la nube.
+        </p>
+        <p class="diag-title">Diagnóstico</p>
+        <ol>
+          <li>En Contabilidad, todas las facturas que llegan se revisan manualmente, una por una: la razón declarada de por qué esa área tiene tanto personal.</li>
+          <li>La información del negocio vive dispersa: cada área tiene su propio sistema, sin visibilidad cruzada.</li>
+          <li>El uso de IA hoy es prácticamente nulo y desigual entre áreas, sin un método común.</li>
+          <li>Apenas están dando el primer paso hacia la nube, sin una base de datos limpia todavía.</li>
+          <li>Hay resistencia esperada en varios líderes veteranos, sobre todo en Contabilidad, frente a un proceso de cambio real.</li>
+        </ol>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">LA TIENDA DEL BLUMER · DET-020</span>
+      </div>
+    </section>
+
+    <!-- 3 · Objetivos estratégicos -->
+    <section class="slide s-goals">
+      <span class="counter">03 / 13</span>
+      <p class="eyebrow">02 · Objetivos</p>
+      <h2>A dónde llevamos<br>a La Tienda del Blumer.</h2>
+      <div class="columns">
+        <div class="general">
+          <p class="label">Objetivo general</p>
+          <p>
+            Auditar las 7 áreas de La Tienda del Blumer con Fundamentals y 4 horas dedicadas a cada una, dejando un logro inmediato en cada área y una hoja de ruta clara hacia Habilidades y hacia la autonomía tecnológica del propio equipo de Sistemas.
+          </p>
+        </div>
+        <div class="specifics">
+          <p class="label">Objetivos específicos</p>
+          <ol>
+            <li>Nivelar a las 7 áreas con una sesión de Fundamentals antes de auditar.</li>
+            <li>Auditar cada área con 4 horas dedicadas, modalidad mixta.</li>
+            <li>Dejar un logro inmediato en cada área, empezando por Contabilidad.</li>
+            <li>Entregar un Reporte Final con el mapa de oportunidades y la ruta hacia Habilidades y autonomía tecnológica.</li>
+          </ol>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">LA TIENDA DEL BLUMER · DET-020</span>
+      </div>
+    </section>
+
+    <!-- 4 · Programa -->
+    <section class="slide s-program">
+      <span class="counter">04 / 13</span>
+      <p class="eyebrow">03 · El proyecto</p>
+      <h2>7 áreas, una ruta clara.</h2>
+      <p class="meta">Fundamentals + Detección con logro inmediato por área, y el camino trazado hacia Habilidades.</p>
+      <div class="modules">
+        <div class="module">
+          <span class="roman">I</span>
+          <h3>Fundamentals</h3>
+          <p class="obj">Nivela a las 7 áreas en fundamentos de IA antes de auditar.</p>
+          <ul class="topics">
+            <li>Fundamentos de IA</li>
+            <li>Kick-off</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">II</span>
+          <h3>Trabajo por Área</h3>
+          <p class="obj">Una sesión de 4 horas por cada una de las 7 áreas, con un logro inmediato en cada una.</p>
+          <ul class="topics">
+            <li>7 áreas · 4h c/u</li>
+            <li>Logro inmediato por área</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">III</span>
+          <h3>Priorización</h3>
+          <p class="obj">Se prioriza cada hallazgo por impacto, esfuerzo y riesgo, y se unifica el Índice de Madurez.</p>
+          <ul class="topics">
+            <li>Mapa de Calor</li>
+            <li>Índice de Madurez</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">IV</span>
+          <h3>Reporte Final</h3>
+          <p class="obj">Diagnóstico completo + mapa de oportunidades, con la hoja de ruta hacia Habilidades.</p>
+          <ul class="topics">
+            <li>Mapa de oportunidades</li>
+            <li>Hoja de ruta a Habilidades</li>
+          </ul>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">LA TIENDA DEL BLUMER · DET-020</span>
+      </div>
+    </section>
+
+    <!-- 5 · Roadmap · Detección (3 etapas) -->
+    <section class="slide s-roadmap">
+      <span class="counter">05 / 13</span>
+      <p class="eyebrow">04 · Roadmap · Detección</p>
+      <h2>Diagnosticar antes<br><span class="hl">de centralizar a ciegas</span>.</h2>
+
+      <div class="rmx-field">
+        <div class="rmx-linear">
+
+          <div class="rmx-lrow-nodes">
+            <div class="rmx-lcol"><div class="rmx-node rmx-node-f2">1</div></div>
+            <div class="rmx-arrow"></div>
+            <div class="rmx-lcol"><div class="rmx-node rmx-node-f3">2</div></div>
+            <div class="rmx-arrow"></div>
+            <div class="rmx-lcol"><div class="rmx-node rmx-node-f4">3</div></div>
+            <div class="rmx-arrow"></div>
+            <div class="rmx-lcol"><div class="rmx-node rmx-node-r">&#9733;</div></div>
+          </div>
+
+          <div class="rmx-lrow-cards">
+            <div class="rmx-lcol">
+              <div class="rmx-card rmx-card-f2">
+                <span class="rmx-card-tag">Etapa 1 · Fundamentals y Trabajo por Área</span>
+                <div class="rmx-card-name">Fundamentals + 4h por área</div>
+                <ul class="rmx-facets">
+                  <li><span>Qué pasa</span><p>Nivelamos con Fundamentals y auditamos las 7 áreas, 4h cada una.</p></li>
+                  <li><span>Con quién</span><p>Las 7 áreas de la empresa.</p></li>
+                  <li><span>Entrega</span><p>Equipo nivelado + logro inmediato por área.</p></li>
+                </ul>
+              </div>
+            </div>
+            <div class="rmx-lspacer"></div>
+            <div class="rmx-lcol">
+              <div class="rmx-card rmx-card-f3">
+                <span class="rmx-card-tag">Etapa 2 · Priorización</span>
+                <div class="rmx-card-name">Mapa de Calor de oportunidades</div>
+                <ul class="rmx-facets">
+                  <li><span>Qué pasa</span><p>Se prioriza cada hallazgo por impacto, esfuerzo y riesgo, y se unifica el indicador.</p></li>
+                  <li><span>Con quién</span><p>Equipo consultor Intezia.</p></li>
+                  <li><span>Entrega</span><p>Mapa de Calor de las 7 áreas + Índice de Madurez.</p></li>
+                </ul>
+              </div>
+            </div>
+            <div class="rmx-lspacer"></div>
+            <div class="rmx-lcol">
+              <div class="rmx-card rmx-card-f4">
+                <span class="rmx-card-tag">Etapa 3 · Reporte Final</span>
+                <div class="rmx-card-name">Mapa de oportunidades priorizado</div>
+                <ul class="rmx-facets">
+                  <li><span>Qué pasa</span><p>Se entrega el diagnóstico completo, con la hoja de ruta hacia Habilidades.</p></li>
+                  <li><span>Con quién</span><p>Mariana Duque.</p></li>
+                  <li><span>Entrega</span><p>Reporte Final + hoja de ruta.</p></li>
+                </ul>
+              </div>
+            </div>
+            <div class="rmx-lspacer"></div>
+            <div class="rmx-lcol">
+              <div class="rmx-result-card">
+                <span class="rmx-result-label">Entregable insignia · Mapa de oportunidades</span>
+                <div class="rmx-result-title">De un uso disperso a <b>decisiones con datos</b></div>
+                <ul>
+                  <li>Equipo nivelado con Fundamentals</li>
+                  <li>Logro inmediato por área</li>
+                  <li>Mapa de oportunidades + hoja de ruta hacia Habilidades</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /.rmx-linear -->
+
+        <div class="rmx-ethics">
+          <span class="rmx-ethics-tag">Metodología ABR · Diagnóstico antes de recomendar</span>
+          <p>El Reporte Final confirma la recomendación con los hallazgos reales de las 7 áreas, no antes.</p>
+        </div>
+
+      </div><!-- /.rmx-field -->
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">LA TIENDA DEL BLUMER · DET-020</span>
+      </div>
+    </section>
+
+    <!-- 6 · La ruta completa (visión: Detección hoy, Habilidades después, Autonomía en IA a futuro) -->
+    <section class="slide s-roadmap s-vision">
+      <span class="counter">06 / 13</span>
+      <p class="eyebrow">04 · La ruta completa</p>
+      <h2>La Detección es la puerta,<br><span class="hl">no el destino</span>.</h2>
+      <p class="vision-intro">Esta propuesta cotiza la Detección. El camino no termina ahí: así es la ruta completa que Mariana ya visualiza para La Tienda del Blumer.</p>
+
+      <div class="vision-track">
+        <div class="vision-step vision-step-now">
+          <span class="vision-tag">Ahora &middot; cotizado en este documento</span>
+          <div class="vision-name">Detección</div>
+          <p class="vision-desc">Auditamos las 7 áreas, nivelamos con Fundamentals y dejamos un logro inmediato en cada una.</p>
+        </div>
+        <div class="vision-arrow"></div>
+        <div class="vision-step vision-step-next">
+          <span class="vision-tag">Después &middot; a futuro, no cotizado</span>
+          <div class="vision-name">Habilidades</div>
+          <p class="vision-desc">Cada área aprende a sostener y escalar lo que la Detección encontró, sobre sus propios procesos reales.</p>
+        </div>
+        <div class="vision-arrow"></div>
+        <div class="vision-step vision-step-future">
+          <span class="vision-tag">Más adelante &middot; visión de Mariana</span>
+          <div class="vision-name">Autonomía en IA</div>
+          <p class="vision-desc">El equipo de Sistemas consolida y escala lo construido, hasta centralizar la información del negocio en un solo ecosistema.</p>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">LA TIENDA DEL BLUMER · DET-020</span>
+      </div>
+    </section>
+
+    <!-- 7 · Cronograma · Fundamentals -->
+    <section class="slide s-schedule">
+      <span class="counter">07 / 13</span>
+      <p class="eyebrow">04 · Cronograma · Fundamentals</p>
+
+      <div class="ses-head">
+        <div>
+          <span class="ses-mod">Sesión grupal · Las 7 áreas &middot; Modalidad mixta</span>
+          <h2>Fundamentals</h2>
+        </div>
+        <div class="ses-meta"><span class="ses-dur">4h</span></div>
+      </div>
+
+      <div class="ses-body">
+        <div class="ses-block">
+          <span class="label">Temas</span>
+          <div class="chips">
+            <span class="chip">Qué es y qué no es la IA</span>
+            <span class="chip">Casos reales de retail</span>
+            <span class="chip">Ruta de las 7 sesiones</span>
+            <span class="chip">Preguntas y expectativas</span>
+          </div>
+        </div>
+        <div class="ses-block">
+          <span class="label">Tiempo &middot; Total 4 h</span>
+          <div class="timebar">
+            <div class="seg" style="flex:60">60' Encuadre y fundamentos</div>
+            <div class="seg" style="flex:90">90' Casos reales de La Tienda del Blumer</div>
+            <div class="seg" style="flex:60">60' Ruta de las 7 sesiones</div>
+            <div class="seg" style="flex:30">30' Cierre y preguntas</div>
+          </div>
+        </div>
+        <div class="ses-cols">
+          <div class="ses-block">
+            <span class="label">Qué se hace</span>
+            <ul>
+              <li>Presentamos qué es y qué no es la IA, con foco en el sector retail</li>
+              <li>Explicamos la ruta de las 7 sesiones de auditoría que siguen</li>
+              <li>Abrimos espacio a preguntas y expectativas del equipo</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Qué se logra</span>
+            <ul>
+              <li>El equipo llega a sus sesiones de área con un lenguaje común</li>
+              <li>Expectativas alineadas sobre la auditoría</li>
+              <li>Primera identificación de dónde cada área ve oportunidad</li>
+            </ul>
+          </div>
+          <div class="ses-block block-rec">
+            <span class="label">Recursos y entornos</span>
+            <ul>
+              <li>Sesión modalidad mixta</li>
+              <li>Sin herramientas técnicas todavía</li>
+              <li>Casos reales del sector retail</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">LA TIENDA DEL BLUMER · DET-020</span>
+      </div>
+    </section>
+
+    <!-- 8 · Cronograma · Estructura de las 4 horas por área -->
+    <section class="slide s-schedule">
+      <span class="counter">08 / 13</span>
+      <p class="eyebrow">04 · Cronograma · Estructura por área</p>
+
+      <div class="ses-head">
+        <div>
+          <span class="ses-mod">Se repite en cada una de las 7 áreas &middot; modalidad mixta</span>
+          <h2>Estructura de las 4 horas</h2>
+        </div>
+        <div class="ses-meta"><span class="ses-dur">4h</span></div>
+      </div>
+
+      <div class="ses-body">
+        <div class="ses-block">
+          <span class="label">Temas</span>
+          <div class="chips">
+            <span class="chip">Procesos reales del área</span>
+            <span class="chip">Cuellos de botella</span>
+            <span class="chip">Logro inmediato aplicable</span>
+            <span class="chip">Datos y sistemas del área</span>
+          </div>
+        </div>
+        <div class="ses-block">
+          <span class="label">Tiempo &middot; Total 4 h</span>
+          <div class="timebar">
+            <div class="seg" style="flex:45">45' Contexto y objetivos</div>
+            <div class="seg" style="flex:90">90' Levantamiento de procesos</div>
+            <div class="seg" style="flex:75">75' Construcción del logro inmediato</div>
+            <div class="seg" style="flex:30">30' Cierre y siguientes pasos</div>
+          </div>
+        </div>
+        <div class="ses-cols">
+          <div class="ses-block">
+            <span class="label">Qué se hace</span>
+            <ul>
+              <li>Entrevistamos al equipo del área sobre sus procesos reales</li>
+              <li>Identificamos el cuello de botella más relevante</li>
+              <li>Construimos en la misma sesión un logro inmediato aplicable</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Qué se logra</span>
+            <ul>
+              <li>Inventario real de procesos del área</li>
+              <li>Un logro inmediato que el área ya puede usar</li>
+              <li>Información lista para el Mapa de Calor conjunto</li>
+            </ul>
+          </div>
+          <div class="ses-block block-rec">
+            <span class="label">Recursos y entornos</span>
+            <ul>
+              <li>Sesión modalidad mixta</li>
+              <li>Guion de levantamiento Intezia</li>
+              <li>Sin tocar los sistemas actuales del área</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">LA TIENDA DEL BLUMER · DET-020</span>
+      </div>
+    </section>
+
+    <!-- 9 · Beneficios (formato v3) -->
+    <section class="slide s-benefits s-benefits-v2">
+      <span class="counter">09 / 13</span>
+      <p class="eyebrow">05 · Beneficios</p>
+      <h2>Lo que <span class="hl">se llevan</span>.</h2>
+      <div class="grid">
+        <div class="block">
+          <p class="label">Resultados</p>
+          <ul>
+            <li>Las <strong>7 áreas</strong> auditadas, cada una con un logro inmediato aplicado a su propia operación.</li>
+            <li>Equipo nivelado con Fundamentals antes de la auditoría.</li>
+            <li>Un mapa de oportunidades priorizado y la hoja de ruta hacia Habilidades.</li>
+          </ul>
+        </div>
+        <div class="block">
+          <p class="label">Por qué Detección</p>
+          <p>
+            No nos quedamos en el diagnóstico en papel: <strong>construimos, probamos y dejamos instalado</strong> un logro tangible en cada área, y trazamos la hoja de ruta hacia Habilidades y hacia un equipo de Sistemas autónomo en IA.
+          </p>
+        </div>
+        <div class="block">
+          <p class="label">Entregables</p>
+        </div>
+        <div class="block">
+          <p class="label">Valor inmediato</p>
+        </div>
+      </div>
+
+      <div class="multi-box entregables-box" data-field="Entregables"></div>
+      <div class="multi-box acreditaciones-box" data-field="Acreditacion"></div>
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">LA TIENDA DEL BLUMER · DET-020</span>
+      </div>
+    </section>
+
+    <!-- 10 · Impacto / estudios — datos reales, fuente citada (CLAUDE.md §4.9) -->
+    <section class="slide s-impact">
+      <span class="counter">10 / 13</span>
+
+      <div class="impact-head">
+        <p class="eyebrow">06 · Impacto</p>
+        <h2>Cada factura manual<br><span class="hl">cuesta más de lo que parece</span>.</h2>
+      </div>
+
+      <div class="impact-body">
+        <div class="chart-panel">
+          <p class="panel-title">Cómo procesa facturas la empresa promedio hoy</p>
+          <div class="bars">
+            <div class="bar-row">
+              <span class="bar-label">Facturas procesadas sin intervención manual (promedio)</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:33%"><span class="bar-val">33%</span></div></div>
+            </div>
+            <div class="bar-row">
+              <span class="bar-label">Facturas sin intervención manual (mejor de su clase)</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:49%"><span class="bar-val">49%</span></div></div>
+            </div>
+            <div class="bar-row">
+              <span class="bar-label">Excepciones que exigen revisión manual (promedio)</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:22%"><span class="bar-val">22%</span></div></div>
+            </div>
+          </div>
+          <div class="bar-axis"><span class="scale"><span>0</span><span>25</span><span>50</span><span>75</span><span>100%</span></span></div>
+          <p class="panel-source">Fuente: Ardent Partners &mdash; Accounts Payable Metrics That Matter (2025).</p>
+        </div>
+
+        <div class="gauge-panel">
+          <div class="gauge" style="--pct:70">
+            <div class="gauge-core">
+              <span class="gauge-num">70<span class="pct">%</span></span>
+              <span class="gauge-cap">menos costo por factura, del promedio al mejor de su clase</span>
+            </div>
+          </div>
+          <div class="chips">
+            <div class="chip">
+              <span class="chip-num">5.6&times;</span>
+              <span class="chip-lbl">más rápido procesa facturas el mejor de su clase</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="impact-hook">
+        <span class="hook-mark">&#9656;</span>
+        <p class="hook-text">
+          El procesamiento promedio de facturas en la industria toma 17.4 días, con solo 33% sin intervención manual y 22% de excepciones que exigen revisión (Ardent Partners, 2025): el mismo cuello de botella que enfrenta hoy Contabilidad en La Tienda del Blumer. El mejor de su clase procesa 5.6 veces más rápido y con 70% menos costo por factura.
+        </p>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">LA TIENDA DEL BLUMER · DET-020</span>
+      </div>
+    </section>
+
+    <!-- 11 · Propuesta Económica (estándar: Duración + Programa + Notas + Cotización) -->
+    <section class="slide s-price">
+      <span class="counter">11 / 13</span>
+      <h2 class="title">Propuesta Económica</h2>
+
+      <div class="block">
+        <span class="block-eyebrow">Duración</span>
+        <p class="block-value">Fundamentals (4h) + 7 áreas &middot; 4h por área (28h) &middot; 32h totales &middot; modalidad mixta.</p>
+      </div>
+
+      <div class="block block-programa">
+        <span class="block-eyebrow">Programa</span>
+      </div>
+      <div class="multi-box programa-box" data-field="Programa"></div>
+
+      <div class="block block-cotizacion">
+        <span class="block-eyebrow">Cotización</span>
+      </div>
+
+      <span class="cot-label cot-label-base">Propuesta + Inversión</span>
+      <div class="cot-frame base-frame"></div>
+
+      <span class="cot-label cot-label-discount">Descuento</span>
+      <span class="cot-sign-minus">&minus;$</span>
+      <div class="cot-frame discount-frame"></div>
+      <span class="cot-urgent-note">Descuento válido por 15 días</span>
+
+      <span class="cot-label cot-label-total">TOTAL</span>
+      <div class="cot-frame total-frame"></div>
+
+      <p class="cot-validity">Cotización válida por 30 días.</p>
+
+      <div class="cot-roi-box">
+        <span class="cot-roi-label">ROI estimado</span>
+        <p class="cot-roi-text">Cada una de las 7 sesiones de área construye, además del diagnóstico, un logro inmediato aplicable desde el primer día: La Tienda del Blumer no se lleva solo un hallazgo en papel. El Reporte Final entrega el mapa de oportunidades priorizado y la hoja de ruta completa hacia Habilidades y hacia un equipo de Sistemas autónomo en IA, la base real sobre la que decidir los próximos pasos.</p>
+      </div>
+
+      <div class="cot-terms-box">
+        <span class="cot-terms-label">Importante</span>
+        <p class="cot-terms-text">Este servicio se presta bajo nuestros <a href="https://drive.google.com/file/d/1PA-ZSt4KnyY5dpxXzgkIk6-yfGlV2eF8/view?usp=drive_link" target="_blank" rel="noopener">términos y condiciones</a>. Al avanzar con esta propuesta, ambas partes los aceptan.</p>
+      </div>
+
+      <div class="block block-notes-container">
+        <span class="block-eyebrow">Notas</span>
+      </div>
+      <div class="multi-box notas-box" data-field="Notas"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">LA TIENDA DEL BLUMER · DET-020</span>
+      </div>
+    </section>
+
+    <!-- 12 · Próximos pasos -->
+    <section class="slide s-steps">
+      <span class="counter">12 / 13</span>
+      <p class="eyebrow">07 · Próximos pasos</p>
+      <h2>Cómo arrancamos.</h2>
+      <div class="step-cards">
+        <div class="step-card">
+          <span class="ghost">01</span>
+        </div>
+        <div class="step-card">
+          <span class="ghost">02</span>
+        </div>
+        <div class="step-card">
+          <span class="ghost">03</span>
+        </div>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-01-titulo" data-field="Paso01Titulo">
+        <span class="acro-default-text">Confirmamos fechas</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-01-body" data-field="Paso01Body">
+        <span class="acro-default-text">Definimos con Mariana el calendario de Fundamentals y las 7 sesiones de área.</span>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-02-titulo" data-field="Paso02Titulo">
+        <span class="acro-default-text">Acceso y logística</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-02-body" data-field="Paso02Body">
+        <span class="acro-default-text">Coordinamos la modalidad mixta y el acceso de cada una de las 7 áreas.</span>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-03-titulo" data-field="Paso03Titulo">
+        <span class="acro-default-text">Reunión de arranque</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-03-body" data-field="Paso03Body">
+        <span class="acro-default-text">Sesión de unos 30 minutos con Mariana para alinear el alcance y el orden de las 7 áreas.</span>
+      </div>
+
+      <div class="steps-calendar">
+        <span class="steps-calendar-tag">Calendario de inicio &middot; próxima fecha: jueves 1 de octubre</span>
+        <p class="steps-calendar-result">En 8 semanas, las 7 áreas quedan auditadas con un logro inmediato en cada una.</p>
+        <div class="steps-calendar-grid">
+          <div class="cal-col">
+            <div class="cal-row">
+              <span class="cal-date">Jue 1 oct</span><span class="cal-time">10-11</span><span class="cal-title">Kick-off</span>
+            </div>
+            <div class="cal-row">
+              <span class="cal-date">6 y 8 oct</span><span class="cal-time">14-16</span><span class="cal-title">Fundamentals</span>
+            </div>
+            <div class="cal-row">
+              <span class="cal-date">13 y 15 oct</span><span class="cal-time">14-16</span><span class="cal-title">Auditoría RRHH</span>
+            </div>
+            <div class="cal-row">
+              <span class="cal-date">20 y 22 oct</span><span class="cal-time">14-16</span><span class="cal-title">Auditoría Tesorería</span>
+            </div>
+            <div class="cal-row">
+              <span class="cal-date">27 y 29 oct</span><span class="cal-time">14-16</span><span class="cal-title">Auditoría Contabilidad</span>
+            </div>
+          </div>
+          <div class="cal-col">
+            <div class="cal-row">
+              <span class="cal-date">3 y 5 nov</span><span class="cal-time">14-16</span><span class="cal-title">Auditoría Sistemas</span>
+            </div>
+            <div class="cal-row">
+              <span class="cal-date">10 y 12 nov</span><span class="cal-time">14-16</span><span class="cal-title">Auditoría Administrativo</span>
+            </div>
+            <div class="cal-row">
+              <span class="cal-date">17 y 19 nov</span><span class="cal-time">14-16</span><span class="cal-title">Auditoría Logística/Compras</span>
+            </div>
+            <div class="cal-row">
+              <span class="cal-date">24 y 26 nov</span><span class="cal-time">14-16</span><span class="cal-title">Auditoría Inventario</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">LA TIENDA DEL BLUMER · DET-020</span>
+      </div>
+    </section>
+
+    <!-- 13 · Cierre (ruta/escalera editable) -->
+    <section class="slide s-end">
+      <span class="counter">13 / 13</span>
+
+      <div class="end-logo">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia">
+      </div>
+
+      <div class="end-summit" data-field="CierreResultado">
+        <span class="acro-default-text">La Tienda del Blumer, con sus 7 áreas auditadas y la ruta trazada hacia Habilidades y autonomía tecnológica.</span>
+      </div>
+
+      <div class="end-stairs">
+        <div class="stair-step stair-1">
+          <span class="stair-label">Paso 1</span>
+          <div class="stair-field" data-field="CierrePaso1">
+            <span class="acro-default-text">Fundamentals y trabajo por área</span>
+          </div>
+        </div>
+        <div class="stair-step stair-2">
+          <span class="stair-label">Paso 2</span>
+          <div class="stair-field" data-field="CierrePaso2">
+            <span class="acro-default-text">Mapa de oportunidades priorizado</span>
+          </div>
+        </div>
+        <div class="stair-step stair-3">
+          <span class="stair-label">Paso 3</span>
+          <div class="stair-field" data-field="CierrePaso3">
+            <span class="acro-default-text">Reporte Final + ruta a Habilidades</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cta-wrap">
+        <span class="cta">Esperamos tu respuesta</span>
+      </div>
+
+      <div class="end-contact">
+        <p class="contact-line">
+          <span class="contact-label">Asesora de ventas:</span>
+          Verónica Rubio <span class="dot">&middot;</span> +58 422 3355505 <span class="dot">&middot;</span> vrubio01@intezia.com
+        </p>
+        <p class="contact-line">
+          <span class="contact-label">Empresa:</span>
+          Intezia C.A J-505657950 <span class="dot">&middot;</span> servicio@intezia.com
+        </p>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

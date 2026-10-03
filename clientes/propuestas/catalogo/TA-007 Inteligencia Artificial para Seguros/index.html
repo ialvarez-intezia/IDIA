@@ -1,0 +1,514 @@
+<!doctype html>
+<!--
+  Producto de Catálogo — Inteligencia Artificial para Seguros (TA-007)
+  División: Educación · Audiencia: corredores, agentes y analistas
+  Tipo: Taller → 10 slides (sin slide de evaluación 30/50/20).
+  Versión: 2026-05 · Stack actualizado a frontier models, Custom GPTs y
+  Claude Projects (Bibliotecario de la Agencia).
+
+  Decisiones de plantilla (idénticas a TA-002 / TA-004 / TA-006):
+  - Sin facilitador nombrado.
+  - Sin asesora de ventas en el cierre.
+  - Footer: "Catálogo · Sector Seguros".
+
+  Overrides CSS locales (también idénticos a TA-006 + uno extra):
+  - .team-single (un solo bloque genérico, sin avatar)
+  - cierre con :only-child (sin opacity reducido)
+  - 6 módulos exactos → 3×2 con cards más altas y tipografía proporcional
+  - 4 sesiones exactas → tightening vertical
+  - 4+ objetivos específicos → grid 2 columnas (esta propuesta tiene 6)
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Catálogo · Inteligencia Artificial para Seguros · Intezia Educación</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <main class="deck">
+
+    <!-- 1 · Portada -->
+    <section class="slide s-cover">
+      <span class="counter">01 / 10</span>
+      <div class="logo-big">
+        <img src="../../../../logos/educacion/BLANCO.png" alt="Intezia Educación">
+      </div>
+      <div class="body">
+        <p class="eyebrow">Producto de catálogo · Especialización sectorial</p>
+        <h1>
+          Inteligencia<br>
+          Artificial para<br>
+          <span class="hl">Seguros</span>
+        </h1>
+        <p class="lead">
+          De la póliza en papel a la gestión inteligente de riesgos. Capacita a tu equipo de corredores y analistas para leer riesgos en segundos, comparar condicionados complejos y comunicar con precisión técnica y empatía comercial.
+        </p>
+      </div>
+      <div class="id-line">
+        <span class="codigo">Código: TA-007</span>
+        <span class="cliente">Catálogo · Sector Seguros</span>
+      </div>
+    </section>
+
+    <!-- 2 · Punto de dolor + Diagnóstico -->
+    <section class="slide s-pain">
+      <span class="counter">02 / 10</span>
+      <span class="quote-mark">“</span>
+      <div class="body">
+        <h2>El sector asegurador vive de la información. Si la lees lento, pierdes el riesgo y al cliente.</h2>
+        <p class="context">
+          Condicionados densos, expedientes médicos complejos, propuestas de valor, cartas de rechazo, ajustes de prima, apelaciones, análisis de cartera. Cada conversación con un cliente o aseguradora exige precisión técnica con empatía comercial. La IA libera ese tiempo y eleva la calidad del consejo profesional.
+        </p>
+        <p class="diag-title">Diagnóstico</p>
+        <ol>
+          <li>Corredores y analistas leyendo páginas de condicionados cuando podrían entender el riesgo en segundos.</li>
+          <li>Traducción manual de jerga técnica a lenguaje del cliente que ralentiza la prospección.</li>
+          <li>Cartas de rechazo, ajuste o apelación que requieren tiempo desproporcionado para fundamentarse bien.</li>
+          <li>Conocimiento de la agencia disperso entre carpetas y personas, sin un punto único de consulta.</li>
+          <li>Cartera de clientes con oportunidades de cross-selling no detectadas por falta de tiempo de análisis.</li>
+        </ol>
+      </div>
+      <div class="foot">
+        <img src="../../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Catálogo · Sector Seguros</span>
+      </div>
+    </section>
+
+    <!-- 3 · Objetivos estratégicos (6 específicos → grid 2-col por override) -->
+    <section class="slide s-goals">
+      <span class="counter">03 / 10</span>
+      <p class="eyebrow">02 · Objetivos</p>
+      <h2>A dónde llevamos<br>al equipo asegurador.</h2>
+      <div class="columns">
+        <div class="general">
+          <p class="label">Objetivo general</p>
+          <p>
+            Capacitar a corredores, agentes y analistas del sector asegurador en la integración de la IA al ciclo completo de su trabajo —desde el análisis técnico del riesgo hasta la inteligencia de cartera—, transformando la lectura de información densa en gestión inteligente de riesgos, con precisión técnica y empatía comercial.
+          </p>
+        </div>
+        <div class="specifics">
+          <p class="label">Objetivos específicos</p>
+          <ol>
+            <li>Analizar condicionados y expedientes complejos con IA para extraer información de riesgo.</li>
+            <li>Segmentar por estilo de vida y traducir jerga técnica a lenguaje del cliente.</li>
+            <li>Simular objeciones (roleplay con IA) y redactar propuestas de valor.</li>
+            <li>Construir un Custom GPT ("Bibliotecario de la Agencia") con base de conocimiento.</li>
+            <li>Redactar comunicaciones sensibles bien fundamentadas (rechazos, ajustes, apelaciones).</li>
+            <li>Auditar cartera y detectar oportunidades de cross-selling con IA.</li>
+          </ol>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Catálogo · Sector Seguros</span>
+      </div>
+    </section>
+
+    <!-- 4 · Programa (6 módulos → grid 3×2 proporcional por override local) -->
+    <section class="slide s-program">
+      <span class="counter">04 / 10</span>
+      <p class="eyebrow">03 · Programa</p>
+      <h2>6 módulos.</h2>
+      <p class="meta">6 módulos · 4 sesiones · 8 horas · distribución por carga cognitiva</p>
+      <div class="modules">
+        <div class="module">
+          <span class="roman">I</span>
+          <h3>Análisis de Riesgo</h3>
+          <p class="obj">Lee, resume y extrae información clave de condicionados y expedientes complejos con IA.</p>
+          <ul class="topics">
+            <li>1.1 Lectura de condicionados</li>
+            <li>1.2 Resumen de expedientes</li>
+            <li>1.3 Extracción estructurada</li>
+            <li>1.4 Comparativa entre aseguradoras</li>
+            <li>1.5 Verificación crítica</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">II</span>
+          <h3>Marketing de Nicho</h3>
+          <p class="obj">Segmenta clientes por estilo de vida y traduce términos técnicos a lenguaje simple.</p>
+          <ul class="topics">
+            <li>2.1 Segmentación por estilo</li>
+            <li>2.2 Buyer persona del asegurado</li>
+            <li>2.3 Traducción de jerga</li>
+            <li>2.4 Mensajería diferenciada</li>
+            <li>2.5 Contenido educativo</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">III</span>
+          <h3>Ventas Consultivas</h3>
+          <p class="obj">Simula objeciones con roleplay asistido por IA y redacta propuestas de valor.</p>
+          <ul class="topics">
+            <li>3.1 Venta consultiva</li>
+            <li>3.2 Simulador de objeciones</li>
+            <li>3.3 Propuestas de valor</li>
+            <li>3.4 Manejo de objeciones</li>
+            <li>3.5 Cierre consultivo</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">IV</span>
+          <h3>Asistentes Virtuales (Custom GPTs)</h3>
+          <p class="obj">Construye el "Bibliotecario de la Agencia" para consultas técnicas inmediatas.</p>
+          <ul class="topics">
+            <li>4.1 Anatomía Custom GPT</li>
+            <li>4.2 Diseño de instrucciones</li>
+            <li>4.3 Carga documental</li>
+            <li>4.4 Pruebas y refinamiento</li>
+            <li>4.5 Privacidad y versiones</li>
+            <li>4.6 Despliegue al equipo</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">V</span>
+          <h3>Comunicación Asertiva</h3>
+          <p class="obj">Redacta cartas de rechazo, ajustes de prima y apelaciones bien fundamentadas.</p>
+          <ul class="topics">
+            <li>5.1 Comunicación sensible</li>
+            <li>5.2 Cartas de rechazo</li>
+            <li>5.3 Ajustes de prima</li>
+            <li>5.4 Apelaciones fundamentadas</li>
+            <li>5.5 Verificación humana</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">VI</span>
+          <h3>Inteligencia de Cartera</h3>
+          <p class="obj">Audita la cartera, detecta oportunidades de cross-selling y planifica con IA.</p>
+          <ul class="topics">
+            <li>6.1 Auditoría con IA</li>
+            <li>6.2 Patrones y segmentos</li>
+            <li>6.3 Cross-selling</li>
+            <li>6.4 Renovaciones y churn</li>
+            <li>6.5 Plan estratégico</li>
+            <li>6.6 Métricas y mejora</li>
+          </ul>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Catálogo · Sector Seguros</span>
+      </div>
+    </section>
+
+    <!-- 5 · Cronograma (4 sesiones → tightening proporcional por override local) -->
+    <section class="slide s-schedule">
+      <span class="counter">05 / 10</span>
+      <p class="eyebrow">04 · Cronograma · Distribución por carga cognitiva</p>
+      <h2>Desglose instructivo<br>sesión por sesión.</h2>
+      <div class="sessions">
+        <div class="session">
+          <div class="header">
+            <span>Sesión 1 — Información y Posicionamiento · Semana 1</span>
+          </div>
+          <div class="grid">
+            <div>
+              <span class="label">Temas</span>
+              Módulos I + II<br>1.1-1.5 · 2.1-2.5
+            </div>
+            <div>
+              <span class="label">Tiempo</span>
+              120 min<br>(60' Módulo I · 60' Módulo II)
+            </div>
+            <div>
+              <span class="label">Estrategias enseñanza</span>
+              Demostración de lectura de un condicionado real anonimizado · comparativa entre aseguradoras · taller de buyer persona del asegurado · traducción de jerga
+            </div>
+            <div>
+              <span class="label">Estrategias aprendizaje</span>
+              Análisis de un condicionado propio · construcción del buyer persona del nicho · traducción de fragmento técnico
+            </div>
+            <div>
+              <span class="label">Recursos</span>
+              ChatGPT · Claude · Gemini · plantillas de extracción y comparativa · workbook
+            </div>
+          </div>
+        </div>
+
+        <div class="session">
+          <div class="header">
+            <span>Sesión 2 — Comunicación con el Cliente · Semana 2</span>
+          </div>
+          <div class="grid">
+            <div>
+              <span class="label">Temas</span>
+              Módulos III + V<br>3.1-3.5 · 5.1-5.5
+            </div>
+            <div>
+              <span class="label">Tiempo</span>
+              120 min<br>(60' Módulo III · 60' Módulo V)
+            </div>
+            <div>
+              <span class="label">Estrategias enseñanza</span>
+              Simulador de objeciones (roleplay con IA) · taller de propuestas de valor · marco de redacción de comunicaciones sensibles · práctica de tono empático
+            </div>
+            <div>
+              <span class="label">Estrategias aprendizaje</span>
+              Roleplay con objeciones reales · propuesta de valor para nicho propio · redacción de carta de rechazo / ajuste / apelación
+            </div>
+            <div>
+              <span class="label">Recursos</span>
+              Plataformas de roleplay con IA · plantillas de propuestas y comunicaciones · workbook
+            </div>
+          </div>
+        </div>
+
+        <div class="session">
+          <div class="header">
+            <span>Sesión 3 — Construcción del "Bibliotecario" · Semana 3 · sesión completa para M4</span>
+          </div>
+          <div class="grid">
+            <div>
+              <span class="label">Temas</span>
+              Módulo IV (full)<br>4.1-4.6
+            </div>
+            <div>
+              <span class="label">Tiempo</span>
+              120 min<br>(30' arquitectura · 30' instrucciones + carga · 45' pruebas + refinado · 15' despliegue + privacidad)
+            </div>
+            <div>
+              <span class="label">Estrategias enseñanza</span>
+              Construcción paso a paso de un Custom GPT con base de conocimiento · facilitación del refinado iterativo · marco de privacidad y versiones
+            </div>
+            <div>
+              <span class="label">Estrategias aprendizaje</span>
+              Construcción del "Bibliotecario de la Agencia" propio: instrucciones + base documental + pruebas reales · plan de despliegue
+            </div>
+            <div>
+              <span class="label">Recursos</span>
+              ChatGPT (Custom GPTs / Knowledge) · Claude Projects · Gemini Gems · documentos anonimizados de la agencia · plantilla de instrucciones
+            </div>
+          </div>
+        </div>
+
+        <div class="session">
+          <div class="header">
+            <span>Sesión 4 — Inteligencia de Cartera · Semana 4 · sesión completa para M6</span>
+          </div>
+          <div class="grid">
+            <div>
+              <span class="label">Temas</span>
+              Módulo VI (full)<br>6.1-6.6
+            </div>
+            <div>
+              <span class="label">Tiempo</span>
+              120 min<br>(30' auditoría con IA · 30' patrones y segmentos · 30' cross-selling y churn · 30' plan + métricas)
+            </div>
+            <div>
+              <span class="label">Estrategias enseñanza</span>
+              Análisis de un dataset de cartera anonimizado · facilitación de la matriz de cross-selling · construcción del plan con KPIs
+            </div>
+            <div>
+              <span class="label">Estrategias aprendizaje</span>
+              Análisis de cartera real / sintética · matriz de cross-selling propia · plan estratégico con métricas a 90 días
+            </div>
+            <div>
+              <span class="label">Recursos</span>
+              Datasets anonimizados · ChatGPT (Data Analysis) · Claude con Files · plantilla de matriz cross-selling y plan
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Catálogo · Sector Seguros</span>
+      </div>
+    </section>
+
+    <!-- 6 · Metodología ABR (FIJA) -->
+    <section class="slide s-orange">
+      <span class="counter">06 / 10</span>
+      <p class="eyebrow">05 · Metodología</p>
+      <h2>Aprendizaje<br>Basado en Retos</h2>
+      <p class="sub">Modelo Intezia · Tres pilares</p>
+      <div class="pillars">
+        <div class="pillar">
+          <span class="num">01</span>
+          <h3>Tutoría activa</h3>
+          <p>El facilitador acompaña la práctica con feedback inmediato sobre los entregables del corredor: análisis, propuesta, carta, Custom GPT, mapa de cartera.</p>
+        </div>
+        <div class="pillar">
+          <span class="num">02</span>
+          <h3>Transferibilidad inmediata</h3>
+          <p>Cada módulo entrega un activo aplicable al día siguiente. Al cierre, el participante tiene un kit operativo + Custom GPT propio.</p>
+        </div>
+        <div class="pillar">
+          <span class="num">03</span>
+          <h3>Curaduría de contenidos</h3>
+          <p>Herramientas curadas al estado del arte de la IA aplicada al sector seguros, con énfasis en confidencialidad y manejo de datos sensibles del asegurado.</p>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Intezia · Modelo ABR</span>
+      </div>
+    </section>
+
+    <!-- 7 · Beneficios (perfil egreso + beneficio + entregables + acreditación + equipo genérico) -->
+    <section class="slide s-benefits">
+      <span class="counter">07 / 10</span>
+      <p class="eyebrow">06 · Beneficios del taller</p>
+      <h2>Lo que se llevan.</h2>
+      <div class="grid">
+        <div class="block">
+          <p class="label">Perfil de egreso</p>
+          <ul>
+            <li><strong>Saber:</strong> domina cómo aplicar IA al ciclo del corredor.</li>
+            <li><strong>Saber hacer:</strong> analiza riesgo, traduce, vende, construye GPT, comunica, audita cartera.</li>
+            <li><strong>Saber ser:</strong> resguarda confidencialidad y mantiene precisión técnica con empatía comercial.</li>
+          </ul>
+        </div>
+        <div class="block">
+          <p class="label">Beneficio del programa formativo</p>
+          <p>
+            El corredor / analista transita <strong>de la póliza en papel a la gestión inteligente de riesgos</strong>. Lee condicionados en segundos, opera con un Custom GPT propio (Bibliotecario) y planifica su cartera con detección de cross-selling.
+          </p>
+        </div>
+        <div class="block">
+          <p class="label">Entregables</p>
+        </div>
+        <div class="block">
+          <p class="label">Acreditación</p>
+        </div>
+      </div>
+
+      <!-- Cajas multiline editables (HTML detrás vacío — contenido en el AcroForm /V) -->
+      <div class="multi-box entregables-box" data-field="Entregables"></div>
+      <div class="multi-box acreditaciones-box" data-field="Acreditacion"></div>
+      <div class="team team-single">
+        <p class="label">Equipo facilitador</p>
+        <div class="members">
+          <div class="person">
+            <div>
+              <h4>Equipo INTEZIA Education</h4>
+              <p class="role">Facilitación · Coordinación</p>
+              <p>Para audiencias del sector seguros se priorizan facilitadores con experiencia previa documentada en corretaje, suscripción o gestión de cartera. Asignación específica al kick-off de cada cliente.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Catálogo · Sector Seguros</span>
+      </div>
+    </section>
+
+    <!-- 8 · Propuesta Económica (5 campos AcroForm) -->
+    <section class="slide s-price">
+      <span class="counter">08 / 10</span>
+      <h2 class="title">Propuesta Económica</h2>
+
+      <!-- Bloque 1 · Duración -->
+      <div class="block">
+        <span class="block-eyebrow">Duración</span>
+        <p class="block-value">8 horas en total · 4 sesiones de 2 horas · 1 sesión por semana. Modalidad a definir con el cliente.</p>
+      </div>
+
+      <!-- Bloque 2 · Programa (multiline editable + acento amarillo en el label) -->
+      <div class="block block-programa">
+        <span class="block-eyebrow">Programa</span>
+      </div>
+      <div class="multi-box programa-box" data-field="Programa"></div>
+
+      <!-- Bloque 3 · Cotización (filas absolutas, alineadas) -->
+      <div class="block block-cotizacion">
+        <span class="block-eyebrow">Cotización</span>
+      </div>
+
+      <span class="cot-label cot-label-base">Propuesta + Inversión</span>
+      <div class="cot-frame base-frame"></div>
+
+      <span class="cot-label cot-label-discount">Descuento</span>
+      <div class="cot-frame discount-frame"></div>
+
+      <span class="cot-label cot-label-total">TOTAL</span>
+      <div class="cot-frame total-frame"></div>
+
+      <p class="cot-validity">Válido únicamente por 7 días en divisas.</p>
+
+      <!-- Bloque 4 · Notas (multiline editable + acento naranja en el label) -->
+      <div class="block block-notes-container">
+        <span class="block-eyebrow">Notas</span>
+      </div>
+      <div class="multi-box notas-box" data-field="Notas"></div>
+
+      <div class="foot">
+        <img src="../../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Catálogo · Sector Seguros</span>
+      </div>
+    </section>
+
+    <!-- 9 · Próximos pasos -->
+    <section class="slide s-steps">
+      <span class="counter">09 / 10</span>
+      <p class="eyebrow">07 · Próximos pasos</p>
+      <h2>Cómo arrancamos.</h2>
+      <div class="step-cards">
+        <div class="step-card">
+          <span class="ghost">01</span>
+        </div>
+        <div class="step-card">
+          <span class="ghost">02</span>
+        </div>
+        <div class="step-card">
+          <span class="ghost">03</span>
+        </div>
+      </div>
+
+      <!-- Editable AcroForm placeholders (3 pasos × título + body) -->
+      <div class="acro-area acro-title acro-paso-01-titulo" data-field="Paso01Titulo">
+        <span class="acro-default-text">Solicitas la propuesta personalizada</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-01-body" data-field="Paso01Body">
+        <span class="acro-default-text">Tu equipo INTEZIA prepara la cotización ajustada a tu agencia o aseguradora y modalidad preferida.</span>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-02-titulo" data-field="Paso02Titulo">
+        <span class="acro-default-text">Confirmamos sede, fechas y grupo</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-02-body" data-field="Paso02Body">
+        <span class="acro-default-text">Definimos juntos la modalidad (presencial · online síncrono · híbrido), la sede o entorno virtual, las fechas y el grupo de participantes.</span>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-03-titulo" data-field="Paso03Titulo">
+        <span class="acro-default-text">Firmamos y arrancamos</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-03-body" data-field="Paso03Body">
+        <span class="acro-default-text">Contrato simple + factura del 50 % de anticipo. Vigencia de la cotización: 30 días desde la emisión.</span>
+      </div>
+      <div class="foot">
+        <img src="../../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Catálogo · Sector Seguros</span>
+      </div>
+    </section>
+
+    <!-- 10 · Cierre (sin asesora — solo institucional) -->
+    <section class="slide s-end">
+      <span class="counter">10 / 10</span>
+
+      <div class="end-logo">
+        <img src="../../../../logos/educacion/BLANCO.png" alt="Intezia Educación">
+      </div>
+
+      <p class="end-message">
+        De la <span class="hl-orange">póliza en papel</span><br>a la <span class="hl-yellow">gestión inteligente</span>.
+      </p>
+
+      <div class="cta-wrap">
+        <span class="cta">Solicita tu Propuesta</span>
+      </div>
+
+      <div class="end-contact">
+        <p class="contact-line">
+          <span class="contact-label">Empresa:</span>
+          Intezia C.A J-505657950 <span class="dot">·</span> info@intezia.com
+        </p>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

@@ -1,0 +1,604 @@
+/* =============================================================================
+   Dashboard de Impacto Edu-Trace — overrides locales (sobre ../../propuestas/_base/styles.css)
+   Cliente: Zoom Miami · IA Bootcamp Zoom Miami (CAP-046)
+   Deck de 11 slides (10 estándar + 08 Adopción de IA: split real Gemini/ChatGPT
+   vale la pena mostrarlo, siendo un bootcamp enfocado en Gemini). "Por
+   departamento" SÍ se muestra aquí (a diferencia de Zoom Legal/Ailyn Gruszka):
+   el campo de área trae variantes de texto libre del mismo equipo ("Customer
+   service"/"Customer Services"/"Customer Services Supervisor"/"Atención al
+   Cliente") que se consolidan en un solo grupo real, y los 2 restantes de
+   n=1 (Sucursal, Tráfico) se agregan en "Otras áreas individuales" — con eso
+   los 4 grupos finales quedan todos en n≥2, sin exponer puntaje individual
+   de nadie (§4.16). Roster en modo compacto (4 columnas) por N=11.
+   Lenguaje visual PROPIO del dashboard (no atado al patrón de propuestas), pero
+   brandeado: #000 / #F4BA1A / #E58423 / #FFF. Tipografías grandes y legibles.
+   Sin alturas fijas que recorten (§4.10).
+   ============================================================================= */
+
+/* ---------- Encabezado común de slides de datos ---------- */
+.s-data {
+  background: var(--white);
+  color: var(--black);
+  padding: 54px 64px 72px;
+  display: flex;
+  flex-direction: column;
+}
+.s-data::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 12px; height: 100%;
+  background: var(--gradient-warm);
+}
+.s-data .eyebrow { color: var(--orange); margin-bottom: 10px; }
+.s-data h2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1.05;
+  letter-spacing: -0.015em;
+  margin-bottom: 8px;
+}
+.s-data .sub {
+  font-family: var(--font-display);
+  font-size: 17px;
+  line-height: 1.45;
+  color: rgba(0, 0, 0, 0.66);
+  max-width: 920px;
+  margin-bottom: 24px;
+}
+
+/* Nota honesta de medición (§4.17) */
+.note-honest {
+  font-family: var(--font-display);
+  font-size: 14.5px;
+  line-height: 1.45;
+  color: rgba(0, 0, 0, 0.6);
+  margin-top: 18px;
+}
+.note-honest strong { color: var(--black); }
+.note-honest.on-dark { color: rgba(255, 255, 255, 0.7); }
+
+/* Badge "medido" vs "percibido" */
+.tag-medido, .tag-percibido {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  vertical-align: middle;
+}
+.tag-medido    { background: var(--black); color: var(--yellow); }
+.tag-percibido { background: rgba(0,0,0,0.08); color: rgba(0,0,0,0.6); }
+
+/* =============================================================================
+   HERO — overrides de los textos chicos del _base .s-impact (legibilidad)
+   ============================================================================= */
+.s-impact .panel-title { font-size: 12.5px; margin-bottom: 18px; }
+.s-impact .panel-source { font-size: 12.5px; line-height: 1.5; margin-top: 16px; }
+.s-impact .bar-label { font-size: 15px; }
+.s-impact .bar-axis .scale { font-size: 11.5px; }
+.s-impact .gauge-cap { font-size: 11.5px; max-width: 160px; }
+.s-impact .bars { gap: 18px; }
+.s-impact .bar-track { height: 34px; }
+.s-impact .bar-val { font-size: 17px; }
+
+/* Calificación final en estrellas (1-5) — Satisfacción general */
+.s-impact .rating {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.s-impact .stars { display: flex; gap: 7px; }
+.s-impact .star {
+  position: relative;
+  font-size: 46px;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.18);
+  filter: drop-shadow(0 0 10px rgba(229, 132, 35, 0.35));
+}
+.s-impact .star.full { color: var(--yellow); }
+.s-impact .star.half::before {
+  content: "\2605";
+  position: absolute;
+  left: 0; top: 0;
+  width: 50%;
+  overflow: hidden;
+  color: var(--yellow);
+}
+.s-impact .rating-cap {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--white);
+}
+.s-impact .rating-cap b { color: var(--yellow); font-size: 16px; }
+.s-impact .hero-meta {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+}
+
+/* =============================================================================
+   Barras horizontales (slides 06/07): grandes y centradas verticalmente
+   ============================================================================= */
+.s-data .hbars {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  flex: 1;
+  justify-content: center;
+}
+.hbar-row {
+  display: grid;
+  grid-template-columns: 340px 1fr 76px;
+  align-items: center;
+  gap: 24px;
+}
+.hbar-label {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.2;
+}
+.hbar-label small {
+  display: block;
+  font-weight: 400;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.6);
+  margin-top: 4px;
+}
+.hbar-track {
+  height: 48px;
+  background: rgba(0, 0, 0, 0.07);
+  border: 2px solid var(--black);
+}
+.hbar-fill { height: 100%; width: var(--w); background: var(--gradient-warm); }
+.hbar-val {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 34px;
+  color: var(--orange);
+  text-align: right;
+}
+
+/* =============================================================================
+   Slide · Desglose por eje (2×2 cards)
+   ============================================================================= */
+.s-ejes .grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  flex: 1;
+  min-height: 0;
+}
+.s-ejes .eje {
+  border: 3px solid var(--black);
+  padding: 26px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: center;
+}
+.s-ejes .eje .top { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
+.s-ejes .eje .num {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 1;
+  color: var(--orange);
+  letter-spacing: -0.03em;
+}
+.s-ejes .eje h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 1.15;
+}
+.s-ejes .eje .peso {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.5);
+}
+.s-ejes .eje p {
+  font-size: 15px;
+  line-height: 1.5;
+  color: rgba(0, 0, 0, 0.75);
+}
+.s-ejes .eje.measured { border-color: var(--orange); background: rgba(244, 186, 26, 0.10); }
+
+/* =============================================================================
+   Slide · Salto de aprendizaje — DISEÑO PROPIO (recorrido visual, fondo amarillo)
+   ============================================================================= */
+.s-salto {
+  background: var(--yellow);
+  color: var(--black);
+  padding: 54px 72px 64px;
+  display: flex;
+  flex-direction: column;
+}
+.s-salto::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 10px; background: var(--black);
+}
+.s-salto .counter { color: var(--black); }
+.s-salto .eyebrow { color: var(--black); margin-bottom: 10px; }
+.s-salto h2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 46px;
+  line-height: 1.03;
+  letter-spacing: -0.02em;
+  margin-bottom: 6px;
+  max-width: 900px;
+}
+
+.s-salto .journey {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+.s-salto .milestone {
+  flex: 0 0 312px;
+  background: var(--white);
+  border: 4px solid var(--black);
+  padding: 34px 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.s-salto .milestone.end { background: var(--black); color: var(--white); }
+.s-salto .ms-cap {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+.s-salto .milestone.end .ms-cap { color: var(--yellow); }
+.s-salto .ms-num {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 132px;
+  line-height: 0.88;
+  letter-spacing: -0.05em;
+}
+.s-salto .milestone.end .ms-num { color: var(--yellow); }
+.s-salto .ms-of { font-size: 14px; line-height: 1.3; color: rgba(0, 0, 0, 0.55); text-align: center; }
+.s-salto .milestone.end .ms-of { color: rgba(255, 255, 255, 0.62); }
+
+.s-salto .track {
+  flex: 1;
+  position: relative;
+  height: 26px;
+  background: rgba(0, 0, 0, 0.14);
+  border: 3px solid var(--black);
+  display: flex;
+  align-items: center;
+}
+.s-salto .track-fill { height: 100%; width: 60%; background: var(--black); }
+.s-salto .delta {
+  position: absolute;
+  left: 50%; top: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--black);
+  color: var(--yellow);
+  border: 4px solid var(--white);
+  padding: 16px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.25);
+}
+.s-salto .delta .d-num {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 46px;
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+.s-salto .delta .d-lbl {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+.s-salto .salto-note {
+  margin-top: 26px;
+  background: var(--black);
+  color: var(--white);
+  padding: 18px 24px;
+  font-family: var(--font-display);
+  font-size: 15px;
+  line-height: 1.45;
+}
+.s-salto .salto-note strong { color: var(--yellow); }
+
+/* =============================================================================
+   Slide · Retención objetiva (Bloque C — medido)
+   ============================================================================= */
+.s-reten .global {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  background: var(--black);
+  color: var(--white);
+  padding: 22px 30px;
+  margin-bottom: 24px;
+}
+.s-reten .global .pct {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 1;
+  color: var(--yellow);
+  letter-spacing: -0.03em;
+}
+.s-reten .global .txt {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 1.3;
+}
+.s-reten .qrow {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+.s-reten .qrow:last-child { border-bottom: none; }
+.s-reten .qrow .q {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 19px;
+}
+.s-reten .qrow .q small {
+  display: block;
+  font-weight: 400;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.55);
+  margin-top: 3px;
+}
+.s-reten .qrow .score {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 36px;
+  color: var(--orange);
+  white-space: nowrap;
+}
+.s-reten .qrow .score small { font-size: 15px; color: rgba(0,0,0,0.5); }
+
+/* =============================================================================
+   Slide · Recomendaciones / Inteligencia comercial (fondo negro)
+   ============================================================================= */
+.s-reco {
+  background: var(--black);
+  color: var(--white);
+  padding: 54px 64px 72px;
+  display: flex;
+  flex-direction: column;
+}
+.s-reco::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; width: 8px; height: 100%; background: var(--gradient-warm);
+}
+.s-reco .counter { color: var(--white); }
+.s-reco .eyebrow { color: var(--orange); margin-bottom: 10px; }
+.s-reco h2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 1.05;
+  margin-bottom: 26px;
+}
+.s-reco .cols {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  flex: 1;
+  min-height: 0;
+}
+.s-reco .card {
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.05);
+  padding: 26px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.s-reco .card .label {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 12.5px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--orange);
+}
+.s-reco .rank { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 14px; }
+.s-reco .rank li {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 19px;
+}
+.s-reco .rank li .n {
+  flex: 0 0 34px;
+  height: 34px;
+  background: var(--yellow);
+  color: var(--black);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 16px;
+}
+.s-reco .rank li .c {
+  margin-left: auto;
+  font-size: 14.5px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.6);
+}
+.s-reco .hook {
+  margin: 26px -64px 0;
+  padding: 22px 64px;
+  background: var(--orange);
+  color: var(--black);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.3;
+}
+.s-reco .hook strong { box-shadow: inset 0 -0.32em 0 rgba(0, 0, 0, 0.18); }
+
+/* =============================================================================
+   Slide · Participación (nombres + depto, sin puntajes, sin cédula §4.16)
+   ============================================================================= */
+.s-part .roster {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  flex: 1;
+  min-height: 0;
+  align-content: center;
+}
+.s-part .p {
+  border: 2px solid var(--black);
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.s-part .p .nm {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.2;
+}
+.s-part .p .dp {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 11.5px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--orange);
+}
+.s-part .privacy {
+  font-family: var(--font-display);
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.6);
+  margin-top: 18px;
+}
+
+/* ---------- Roster compacto (N moderado-alto, aquí N=22: 4 columnas) ---------- */
+.s-part.compact .roster {
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px 20px;
+  align-content: start;
+}
+.s-part.compact .p {
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.14);
+  padding: 6px 2px;
+  gap: 1px;
+}
+.s-part.compact .p .nm { font-size: 13px; line-height: 1.15; }
+.s-part.compact .p .dp { font-size: 10.5px; letter-spacing: 0; text-transform: none; color: rgba(0, 0, 0, 0.55); line-height: 1.15; }
+
+/* =============================================================================
+   Slide · Adopción de IA (a la medida — encuesta con bloque de adopción/ROI)
+   ============================================================================= */
+.s-adopcion .stats-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin: 8px 0 30px;
+}
+.s-adopcion .stat-card {
+  border: 3px solid var(--black);
+  padding: 22px 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.s-adopcion .stat-card .big {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 52px;
+  line-height: 1;
+  color: var(--orange);
+  letter-spacing: -0.02em;
+}
+.s-adopcion .stat-card .lbl {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 16px;
+}
+.s-adopcion .stat-card .sub {
+  font-size: 13px;
+  color: rgba(0, 0, 0, 0.6);
+}
+.s-adopcion .cols2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  flex: 1;
+  min-height: 0;
+}
+.s-adopcion .mini-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 12.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--orange);
+  margin-bottom: 16px;
+}
+.s-adopcion .mini-row { margin-bottom: 16px; }
+.s-adopcion .mini-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 5px;
+}
+.s-adopcion .mini-label {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 14.5px;
+}
+.s-adopcion .mini-val {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--orange);
+}
+.s-adopcion .mini-track {
+  height: 20px;
+  background: rgba(0, 0, 0, 0.07);
+  border: 1.5px solid var(--black);
+}
+.s-adopcion .mini-fill { height: 100%; width: var(--w); background: var(--gradient-warm); }
+.s-adopcion .note-honest {
+  margin-top: 20px;
+  font-size: 13.5px;
+  color: rgba(0, 0, 0, 0.55);
+  line-height: 1.4;
+}

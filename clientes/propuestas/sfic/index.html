@@ -1,0 +1,906 @@
+<!doctype html>
+<!--
+  Propuesta — SFIC × Intezia (alianza académica)
+  Programa: Diplomado para Aumentar la Productividad del Negocio (DIP-006)
+  División: Educación · Eje temático: Productividad empresarial con IA
+  Tipo: Diplomado → 17 slides. Cronograma = desglose instructivo CANÓNICO
+        (formato cumbre-andina: .ruta + .ses-head + .chips + .timebar +
+        .ses-cols), una slide por fase (6 fases). Slide a la medida de
+        Cuadro de Responsabilidades de la alianza (.s-resp, en overrides.css).
+  CSS: ../_base/styles.css (canónico) + overrides.css (solo lo propio).
+  Branding: 100 % Intezia. SFIC se menciona como aliado académico (sin logo).
+  Folder: clientes/propuestas/sfic/ (plano → paths con 3 ../)
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Propuesta · SFIC × Intezia · Diplomado de Productividad del Negocio · Intezia Educación</title>
+  <link rel="stylesheet" href="../_base/styles.css">
+  <link rel="stylesheet" href="overrides.css">
+</head>
+<body>
+
+  <main class="deck">
+
+    <!-- 1 · Portada -->
+    <section class="slide s-cover">
+      <span class="counter">01 / 17</span>
+      <div class="logo-big">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia Educación">
+      </div>
+      <div class="body">
+        <p class="eyebrow">Propuesta académica · Alianza SFIC × Intezia</p>
+        <h1>
+          Diplomado para<br>
+          aumentar la<br>
+          <span class="hl">Productividad</span> del negocio
+        </h1>
+        <p class="lead">
+          40 horas en formato online para formar a la primera generación de <strong>Arquitectos de IA</strong>: ejecutivos que aprenden a instruir, delegar y orquestar ecosistemas de IA para escalar la productividad de su negocio.
+        </p>
+      </div>
+      <div class="id-line">
+        <span class="codigo">Código: DIP-006</span>
+        <span class="cliente">SFIC × Intezia</span>
+      </div>
+    </section>
+
+    <!-- 2 · Punto de dolor + Diagnóstico (Introducción) -->
+    <section class="slide s-pain">
+      <span class="counter">02 / 17</span>
+      <span class="quote-mark">“</span>
+      <div class="body">
+        <h2>La ventaja ya no es acceder a la IA. Es orquestarla.</h2>
+        <p class="context">
+          En el horizonte empresarial de 2026, la IA dejó de ser una herramienta de soporte para convertirse en el <strong>sistema operativo</strong> de los negocios de alto rendimiento. La brecha competitiva no reside en el acceso a la tecnología, sino en la capacidad de los líderes para diseñar una <strong>arquitectura estratégica</strong> que la orqueste.
+        </p>
+        <p class="diag-title">Diagnóstico</p>
+        <ol>
+          <li>El uso superficial de herramientas no mueve la aguja: hace falta una reingeniería de la operación.</li>
+          <li>Los ejecutivos no necesitan programar: necesitan aprender a instruir, delegar y orquestar la IA.</li>
+          <li>Sin marcos de prompting comunes, los resultados dependen de quién escriba la instrucción.</li>
+          <li>La automatización y los agentes ya permiten que procesos completos trabajen solos.</li>
+          <li>La adopción sin gobernanza expone a la empresa: datos sensibles, propiedad intelectual y riesgo legal.</li>
+        </ol>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">SFIC × Intezia · Diplomado · Propuesta</span>
+      </div>
+    </section>
+
+    <!-- 3 · Objetivos estratégicos -->
+    <section class="slide s-goals">
+      <span class="counter">03 / 17</span>
+      <p class="eyebrow">02 · Objetivos</p>
+      <h2>A dónde<br>llevamos al líder.</h2>
+      <div class="columns">
+        <div class="general">
+          <p class="label">Objetivo general</p>
+          <p>
+            Formar <strong>Arquitectos de IA</strong> capaces de diseñar, liderar e implementar la integración de la IA en sus negocios, articulando el dominio de herramientas con visión estratégica, para escalar la productividad de forma medible.
+          </p>
+        </div>
+        <div class="specifics">
+          <p class="label">Objetivos específicos</p>
+          <ol>
+            <li>Dominar la instrucción de la IA con los marcos RTF (Rol, Tarea, Formato) y COAST.</li>
+            <li>Construir asistentes personalizados y sistemas de gestión del conocimiento.</li>
+            <li>Acelerar marketing, comunicación y análisis de datos con IA.</li>
+            <li>Diseñar arquitecturas de automatización y ecosistemas multi-agente.</li>
+            <li>Establecer gobernanza, ética y un plan de retorno de inversión (ROI).</li>
+            <li>Entregar una Estrategia de Innovación con IA para el propio negocio.</li>
+          </ol>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">SFIC × Intezia · Diplomado · Propuesta</span>
+      </div>
+    </section>
+
+    <!-- 4 · Programa (6 fases → grid por CSS :has()) -->
+    <section class="slide s-program">
+      <span class="counter">04 / 17</span>
+      <p class="eyebrow">03 · Programa</p>
+      <h2>6 fases · 18 módulos.</h2>
+      <p class="meta">De la alfabetización digital a la arquitectura de automatización · 40 horas académicas</p>
+      <div class="modules">
+        <div class="module">
+          <span class="roman">I</span>
+          <h3>Fundamentos y Alfabetización Digital</h3>
+          <p class="obj">Entiende la IA y aprende a instruirla con método.</p>
+          <ul class="topics">
+            <li>Desmitificar la IA</li>
+            <li>El arte de instruir</li>
+            <li>Contexto y precisión</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">II</span>
+          <h3>Productividad y Asistentes a Medida</h3>
+          <p class="obj">Crea empleados digitales y consulta tus propios datos.</p>
+          <ul class="topics">
+            <li>Asistentes (GPTs y Gems)</li>
+            <li>Conocimiento: NotebookLM</li>
+            <li>Investigar: Perplexity</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">III</span>
+          <h3>IA en Marketing y Comunicación</h3>
+          <p class="obj">Produce campañas y captura el valor de cada reunión.</p>
+          <ul class="topics">
+            <li>Anuncios en minutos</li>
+            <li>Guiones con Manus</li>
+            <li>Minutas automáticas</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">IV</span>
+          <h3>Análisis de Datos y Decisiones</h3>
+          <p class="obj">Convierte datos en decisiones y simula escenarios.</p>
+          <ul class="topics">
+            <li>Análisis financiero</li>
+            <li>Simulación de escenarios</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">V</span>
+          <h3>Arquitectura de Automatización</h3>
+          <p class="obj">Conecta apps y diseña ecosistemas multi-agente.</p>
+          <ul class="topics">
+            <li>Automatizar con n8n</li>
+            <li>Integrar apps y datos</li>
+            <li>Multi-agente</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">VI</span>
+          <h3>Visión Gerencial y Cierre</h3>
+          <p class="obj">Lidera el cambio, mide el ROI y presenta tu estrategia.</p>
+          <ul class="topics">
+            <li>Gobernanza y ética</li>
+            <li>Liderazgo del cambio</li>
+            <li>Roadmap e implementación</li>
+            <li>Demo Day</li>
+          </ul>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">SFIC × Intezia · Diplomado · Propuesta</span>
+      </div>
+    </section>
+
+    <!-- 5 · Desglose instructivo · Fase I -->
+    <section class="slide s-schedule">
+      <span class="counter">05 / 17</span>
+      <p class="eyebrow">04 · Cronograma · Ruta de aprendizaje</p>
+
+      <div class="ruta">
+        <div class="ruta-node">1</div>
+        <div class="ruta-track"><div class="ruta-fill" style="width:16.66%"></div></div>
+        <span class="ruta-step">Fase 1 de 6</span>
+      </div>
+
+      <div class="ses-head">
+        <div>
+          <span class="ses-mod">Fase I · Online</span>
+          <h2>Fundamentos y Alfabetización Digital</h2>
+        </div>
+        <div class="ses-meta"><span class="ses-dur">~7 h</span></div>
+      </div>
+
+      <div class="ses-body">
+        <div class="ses-block">
+          <span class="label">Módulos</span>
+          <div class="chips">
+            <span class="chip">M1 Desmitificar la IA</span>
+            <span class="chip">M2 El arte de instruir</span>
+            <span class="chip">M3 Contexto y precisión</span>
+          </div>
+        </div>
+        <div class="ses-block">
+          <span class="label">Tiempo · Total ~7 h</span>
+          <div class="timebar">
+            <div class="seg" style="flex:90">90' Fundamentos</div>
+            <div class="seg" style="flex:120">120' Instruir a la IA</div>
+            <div class="seg" style="flex:120">120' Contexto y precisión</div>
+            <div class="seg" style="flex:90">90' Práctica guiada</div>
+          </div>
+        </div>
+        <div class="ses-cols">
+          <div class="ses-block">
+            <span class="label">Estrategias de enseñanza</span>
+            <ul>
+              <li>Clase interactiva</li>
+              <li>Demo en vivo de modelos</li>
+              <li>Set-up guiado paso a paso</li>
+              <li>Preguntas socráticas</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Estrategias de aprendizaje</span>
+            <ul>
+              <li>Reescritura de un comunicado real</li>
+              <li>Prompting en parejas</li>
+              <li>Iteración de instrucciones</li>
+              <li>Bitácora de aprendizaje</li>
+            </ul>
+          </div>
+          <div class="ses-block block-rec">
+            <span class="label">Recursos y entornos</span>
+            <ul>
+              <li>ChatGPT · Gemini</li>
+              <li>Plantillas de prompting</li>
+              <li>Workbook digital</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">SFIC × Intezia · Diplomado · Propuesta</span>
+      </div>
+    </section>
+
+    <!-- 6 · Desglose instructivo · Fase II -->
+    <section class="slide s-schedule">
+      <span class="counter">06 / 17</span>
+      <p class="eyebrow">04 · Cronograma · Ruta de aprendizaje</p>
+
+      <div class="ruta">
+        <div class="ruta-node">2</div>
+        <div class="ruta-track"><div class="ruta-fill" style="width:33.33%"></div></div>
+        <span class="ruta-step">Fase 2 de 6</span>
+      </div>
+
+      <div class="ses-head">
+        <div>
+          <span class="ses-mod">Fase II · Online</span>
+          <h2>Productividad y Asistentes a Medida</h2>
+        </div>
+        <div class="ses-meta"><span class="ses-dur">~7 h</span></div>
+      </div>
+
+      <div class="ses-body">
+        <div class="ses-block">
+          <span class="label">Módulos</span>
+          <div class="chips">
+            <span class="chip">M4 Asistentes (GPTs y Gems)</span>
+            <span class="chip">M5 NotebookLM</span>
+            <span class="chip">M6 Perplexity</span>
+          </div>
+        </div>
+        <div class="ses-block">
+          <span class="label">Tiempo · Total ~7 h</span>
+          <div class="timebar">
+            <div class="seg" style="flex:120">120' Asistentes a medida</div>
+            <div class="seg" style="flex:120">120' Gestión del conocimiento</div>
+            <div class="seg" style="flex:90">90' Investigación</div>
+            <div class="seg" style="flex:90">90' Práctica guiada</div>
+          </div>
+        </div>
+        <div class="ses-cols">
+          <div class="ses-block">
+            <span class="label">Estrategias de enseñanza</span>
+            <ul>
+              <li>Construcción guiada de asistentes</li>
+              <li>Demo de gestión documental segura</li>
+              <li>Casos por área del negocio</li>
+              <li>Feedback in-situ</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Estrategias de aprendizaje</span>
+            <ul>
+              <li>Crear un asistente propio</li>
+              <li>Consultor sobre archivos del negocio</li>
+              <li>Análisis de mercado en tiempo real</li>
+              <li>Bitácora de aprendizaje</li>
+            </ul>
+          </div>
+          <div class="ses-block block-rec">
+            <span class="label">Recursos y entornos</span>
+            <ul>
+              <li>Custom GPTs · Google Gems</li>
+              <li>NotebookLM</li>
+              <li>Perplexity</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">SFIC × Intezia · Diplomado · Propuesta</span>
+      </div>
+    </section>
+
+    <!-- 7 · Desglose instructivo · Fase III -->
+    <section class="slide s-schedule">
+      <span class="counter">07 / 17</span>
+      <p class="eyebrow">04 · Cronograma · Ruta de aprendizaje</p>
+
+      <div class="ruta">
+        <div class="ruta-node">3</div>
+        <div class="ruta-track"><div class="ruta-fill" style="width:50%"></div></div>
+        <span class="ruta-step">Fase 3 de 6</span>
+      </div>
+
+      <div class="ses-head">
+        <div>
+          <span class="ses-mod">Fase III · Online</span>
+          <h2>IA en Marketing y Comunicación</h2>
+        </div>
+        <div class="ses-meta"><span class="ses-dur">~7 h</span></div>
+      </div>
+
+      <div class="ses-body">
+        <div class="ses-block">
+          <span class="label">Módulos</span>
+          <div class="chips">
+            <span class="chip">M7 Anuncios en minutos</span>
+            <span class="chip">M8 Guiones con Manus</span>
+            <span class="chip">M9 Minutas automáticas</span>
+          </div>
+        </div>
+        <div class="ses-block">
+          <span class="label">Tiempo · Total ~7 h</span>
+          <div class="timebar">
+            <div class="seg" style="flex:120">120' Producción de anuncios</div>
+            <div class="seg" style="flex:120">120' Guiones y contenidos</div>
+            <div class="seg" style="flex:90">90' Minutas de reunión</div>
+            <div class="seg" style="flex:90">90' Práctica guiada</div>
+          </div>
+        </div>
+        <div class="ses-cols">
+          <div class="ses-block">
+            <span class="label">Estrategias de enseñanza</span>
+            <ul>
+              <li>Flujo de producción en vivo</li>
+              <li>Estructura de narrativas y guiones</li>
+              <li>Demo de captura de reuniones</li>
+              <li>Feedback in-situ</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Estrategias de aprendizaje</span>
+            <ul>
+              <li>Campaña completa (segmentación, hooks)</li>
+              <li>Guion para LinkedIn</li>
+              <li>Resumen ejecutivo automático</li>
+              <li>Bitácora de aprendizaje</li>
+            </ul>
+          </div>
+          <div class="ses-block block-rec">
+            <span class="label">Recursos y entornos</span>
+            <ul>
+              <li>Herramientas de video y copy</li>
+              <li>Manus</li>
+              <li>Zoom · Meet · Teams</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">SFIC × Intezia · Diplomado · Propuesta</span>
+      </div>
+    </section>
+
+    <!-- 8 · Desglose instructivo · Fase IV -->
+    <section class="slide s-schedule">
+      <span class="counter">08 / 17</span>
+      <p class="eyebrow">04 · Cronograma · Ruta de aprendizaje</p>
+
+      <div class="ruta">
+        <div class="ruta-node">4</div>
+        <div class="ruta-track"><div class="ruta-fill" style="width:66.66%"></div></div>
+        <span class="ruta-step">Fase 4 de 6</span>
+      </div>
+
+      <div class="ses-head">
+        <div>
+          <span class="ses-mod">Fase IV · Online</span>
+          <h2>Análisis de Datos y Decisiones</h2>
+        </div>
+        <div class="ses-meta"><span class="ses-dur">~6 h</span></div>
+      </div>
+
+      <div class="ses-body">
+        <div class="ses-block">
+          <span class="label">Módulos</span>
+          <div class="chips">
+            <span class="chip">M10 Análisis financiero y de datos</span>
+            <span class="chip">M11 Simulación de escenarios</span>
+          </div>
+        </div>
+        <div class="ses-block">
+          <span class="label">Tiempo · Total ~6 h</span>
+          <div class="timebar">
+            <div class="seg" style="flex:180">180' Análisis de datos</div>
+            <div class="seg" style="flex:120">120' Simulación de escenarios</div>
+            <div class="seg" style="flex:60">60' Práctica guiada</div>
+          </div>
+        </div>
+        <div class="ses-cols">
+          <div class="ses-block">
+            <span class="label">Estrategias de enseñanza</span>
+            <ul>
+              <li>Análisis guiado de un Excel real</li>
+              <li>Simulación de negociaciones</li>
+              <li>Mentoría de casos</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Estrategias de aprendizaje</span>
+            <ul>
+              <li>Proyección del próximo trimestre</li>
+              <li>Simulación de una decisión difícil</li>
+              <li>Bitácora de aprendizaje</li>
+            </ul>
+          </div>
+          <div class="ses-block block-rec">
+            <span class="label">Recursos y entornos</span>
+            <ul>
+              <li>ChatGPT (análisis de datos)</li>
+              <li>Hojas de cálculo del negocio</li>
+              <li>Workbook digital</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">SFIC × Intezia · Diplomado · Propuesta</span>
+      </div>
+    </section>
+
+    <!-- 9 · Desglose instructivo · Fase V -->
+    <section class="slide s-schedule">
+      <span class="counter">09 / 17</span>
+      <p class="eyebrow">04 · Cronograma · Ruta de aprendizaje</p>
+
+      <div class="ruta">
+        <div class="ruta-node">5</div>
+        <div class="ruta-track"><div class="ruta-fill" style="width:83.33%"></div></div>
+        <span class="ruta-step">Fase 5 de 6</span>
+      </div>
+
+      <div class="ses-head">
+        <div>
+          <span class="ses-mod">Fase V · Online</span>
+          <h2>Arquitectura de Automatización</h2>
+        </div>
+        <div class="ses-meta"><span class="ses-dur">~8 h</span></div>
+      </div>
+
+      <div class="ses-body">
+        <div class="ses-block">
+          <span class="label">Módulos</span>
+          <div class="chips">
+            <span class="chip">M12 Automatizar con n8n</span>
+            <span class="chip">M13 Integrar apps y datos</span>
+            <span class="chip">M14 Multi-agente</span>
+          </div>
+        </div>
+        <div class="ses-block">
+          <span class="label">Tiempo · Total ~8 h</span>
+          <div class="timebar">
+            <div class="seg" style="flex:150">150' Automatización n8n</div>
+            <div class="seg" style="flex:120">120' Integraciones</div>
+            <div class="seg" style="flex:120">120' Multi-agente</div>
+            <div class="seg" style="flex:90">90' Práctica guiada</div>
+          </div>
+        </div>
+        <div class="ses-cols">
+          <div class="ses-block">
+            <span class="label">Estrategias de enseñanza</span>
+            <ul>
+              <li>Construcción de flujos en vivo</li>
+              <li>Diseño de orquestación multi-agente</li>
+              <li>Debugging en vivo</li>
+              <li>Mentoría</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Estrategias de aprendizaje</span>
+            <ul>
+              <li>Flujo de venta automatizada</li>
+              <li>Diseño con disparadores y ramas</li>
+              <li>Del lead a la factura</li>
+              <li>Bitácora de aprendizaje</li>
+            </ul>
+          </div>
+          <div class="ses-block block-rec">
+            <span class="label">Recursos y entornos</span>
+            <ul>
+              <li>n8n</li>
+              <li>Gestión de clientes (CRM) · hojas</li>
+              <li>Slack · WhatsApp</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">SFIC × Intezia · Diplomado · Propuesta</span>
+      </div>
+    </section>
+
+    <!-- 10 · Desglose instructivo · Fase VI -->
+    <section class="slide s-schedule">
+      <span class="counter">10 / 17</span>
+      <p class="eyebrow">04 · Cronograma · Ruta de aprendizaje</p>
+
+      <div class="ruta">
+        <div class="ruta-node">6</div>
+        <div class="ruta-track"><div class="ruta-fill" style="width:100%"></div></div>
+        <span class="ruta-step">Fase 6 de 6</span>
+      </div>
+
+      <div class="ses-head">
+        <div>
+          <span class="ses-mod">Fase VI · Online (cierre presencial opcional)</span>
+          <h2>Visión Gerencial y Cierre</h2>
+        </div>
+        <div class="ses-meta"><span class="ses-dur">~6 h</span></div>
+      </div>
+
+      <div class="ses-body">
+        <div class="ses-block">
+          <span class="label">Módulos</span>
+          <div class="chips">
+            <span class="chip">M15 Gobernanza y ética</span>
+            <span class="chip">M16 Liderazgo del cambio</span>
+            <span class="chip">M17 Roadmap e implementación</span>
+            <span class="chip">M18 Demo Day</span>
+          </div>
+        </div>
+        <div class="ses-block">
+          <span class="label">Tiempo · Total ~6 h</span>
+          <div class="timebar">
+            <div class="seg" style="flex:90">90' Gobernanza y ética</div>
+            <div class="seg" style="flex:90">90' Liderazgo del cambio</div>
+            <div class="seg" style="flex:90">90' Roadmap y retorno</div>
+            <div class="seg" style="flex:90">90' Demo Day</div>
+          </div>
+        </div>
+        <div class="ses-cols">
+          <div class="ses-block">
+            <span class="label">Estrategias de enseñanza</span>
+            <ul>
+              <li>Masterclass de gobernanza</li>
+              <li>Mentoría del roadmap</li>
+              <li>Moderación del Demo Day</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Estrategias de aprendizaje</span>
+            <ul>
+              <li>Plan de implementación a 6 y 12 meses</li>
+              <li>Presentación de la estrategia de IA</li>
+              <li>Networking ejecutivo</li>
+            </ul>
+          </div>
+          <div class="ses-block block-rec">
+            <span class="label">Recursos y entornos</span>
+            <ul>
+              <li>Plantilla de gobernanza</li>
+              <li>Calculadora de retorno de inversión (ROI)</li>
+              <li>Rúbrica de evaluación final</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">SFIC × Intezia · Diplomado · Propuesta</span>
+      </div>
+    </section>
+
+    <!-- 11 · Sistema de evaluación (DIPLOMADO) -->
+    <section class="slide s-eval">
+      <span class="counter">11 / 17</span>
+      <p class="eyebrow">05 · Sistema de evaluación</p>
+      <h2>Cómo medimos<br>el aprendizaje.</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Tipo</th>
+            <th>Instrumento</th>
+            <th>Ponderación</th>
+            <th>Entrega</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Formativa</td>
+            <td>Participación activa y retos prácticos por módulo</td>
+            <td class="weight">30 %</td>
+            <td>Continua</td>
+          </tr>
+          <tr>
+            <td>Sumativa parcial</td>
+            <td>Entregables por fase: asistentes propios · flujos de automatización · piezas de marketing · análisis de datos</td>
+            <td class="weight">50 %</td>
+            <td>Cierre de cada fase</td>
+          </tr>
+          <tr>
+            <td>Sumativa final</td>
+            <td>Estrategia de Innovación con IA: roadmap de transformación + presentación en Demo Day</td>
+            <td class="weight">20 %</td>
+            <td>Demo Day</td>
+          </tr>
+          <tr>
+            <td><strong>Total</strong></td>
+            <td></td>
+            <td class="weight">100 %</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="min-grade">Calificación mínima para certificación: <strong>70 / 100</strong>.</p>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">SFIC × Intezia · Diplomado · Propuesta</span>
+      </div>
+    </section>
+
+    <!-- 12 · Metodología ABR (FIJA) -->
+    <section class="slide s-orange">
+      <span class="counter">12 / 17</span>
+      <p class="eyebrow">06 · Metodología</p>
+      <h2>Aprendizaje<br>Basado en Retos</h2>
+      <p class="sub">Modelo Intezia · Tres pilares</p>
+      <div class="pillars">
+        <div class="pillar">
+          <span class="num">01</span>
+          <h3>Tutoría activa</h3>
+          <p>El facilitador acompaña la práctica con feedback en tiempo real durante todas las sesiones online síncronas.</p>
+        </div>
+        <div class="pillar">
+          <span class="num">02</span>
+          <h3>Transferibilidad inmediata</h3>
+          <p>Cada módulo cierra con un entregable aplicable al negocio. El proyecto final es un roadmap de transformación real.</p>
+        </div>
+        <div class="pillar">
+          <span class="num">03</span>
+          <h3>Curaduría de contenidos</h3>
+          <p>Sin teoría desconectada. Currículo revisado para mantenerse al día con el estado del arte de la IA.</p>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Intezia · Modelo ABR</span>
+      </div>
+    </section>
+
+    <!-- 13 · Beneficios (perfil egreso + beneficio + entregables + acreditación + equipo) -->
+    <section class="slide s-benefits">
+      <span class="counter">13 / 17</span>
+      <p class="eyebrow">07 · Beneficios del diplomado</p>
+      <h2>Lo que se llevan.</h2>
+      <div class="grid">
+        <div class="block">
+          <p class="label">Perfil de egreso</p>
+          <ul>
+            <li><strong>Saber:</strong> distingue capacidades y límites de la IA generativa y operativa.</li>
+            <li><strong>Saber hacer:</strong> diseña asistentes, automatizaciones y prompts efectivos; construye su roadmap.</li>
+            <li><strong>Saber ser:</strong> lidera la adopción de IA con criterio ético y de gobernanza.</li>
+          </ul>
+        </div>
+        <div class="block">
+          <p class="label">Beneficio del programa formativo</p>
+          <p>
+            Los participantes culminan convertidos en <strong>Arquitectos de IA</strong>. Se llevan una Estrategia de Innovación accionable, una librería de automatizaciones lista para usar y el networking del ecosistema de la South Florida International College (SFIC) en Miami.
+          </p>
+        </div>
+        <div class="block">
+          <p class="label">Entregables</p>
+        </div>
+        <div class="block">
+          <p class="label">Acreditación</p>
+        </div>
+      </div>
+
+      <!-- Cajas multiline editables (HTML detrás vacío — contenido en el AcroForm /V) -->
+      <div class="multi-box entregables-box" data-field="Entregables"></div>
+      <div class="multi-box acreditaciones-box" data-field="Acreditacion"></div>
+      <div class="team team-single">
+        <p class="label">Equipo facilitador</p>
+        <div class="members">
+          <div class="person">
+            <div>
+              <h4>Andrés Fornerino</h4>
+              <p class="role">Facilitador · Profesor especialista en el área</p>
+              <p>Profesor especialista en productividad empresarial con IA, lidera la facilitación del diplomado con feedback en tiempo real durante las sesiones. El equipo INTEZIA aporta la coordinación y el PM responsable como punto único de contacto durante el diplomado.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">SFIC × Intezia · Diplomado · Propuesta</span>
+      </div>
+    </section>
+
+    <!-- 14 · Cuadro de Responsabilidades (slide a la medida · alianza) -->
+    <section class="slide s-resp">
+      <span class="counter">14 / 17</span>
+      <p class="eyebrow">08 · Alianza SFIC × Intezia</p>
+      <h2>Quién hace qué.</h2>
+      <table class="resp-table">
+        <thead>
+          <tr>
+            <th class="area-col">Área</th>
+            <th>Intezia</th>
+            <th>SFIC</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="area-col">Académica y contenido</td>
+            <td>Diseño del contenido, selección de instructores y materiales de práctica.</td>
+            <td>Aval académico y certificación institucional bajo sus estándares.</td>
+          </tr>
+          <tr>
+            <td class="area-col">Marketing y promoción</td>
+            <td>Lineamientos de marca y 2 vídeos editados por curso para publicación conjunta.</td>
+            <td>Ejecución de la campaña (redes, mailing, web) y piezas gráficas.</td>
+          </tr>
+          <tr>
+            <td class="area-col">Comercialización</td>
+            <td>Apoyo técnico en sesiones informativas y webinars de preventa.</td>
+            <td>Gestión de ventas, cierre de inscripciones y recaudación.</td>
+          </tr>
+          <tr>
+            <td class="area-col">Inversión en publicidad</td>
+            <td>Aporte mayoritario: hasta 500 USD por programa (devolutivo, recuperación prioritaria).</td>
+            <td>Ejecución de pauta en sus canales oficiales (inversión opcional).</td>
+          </tr>
+          <tr>
+            <td class="area-col">Operaciones</td>
+            <td>Acceso a la plataforma y herramientas de IA; seguimiento de calidad educativa.</td>
+            <td>Logística, soporte en su plataforma y reporte semanal de métricas.</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">SFIC × Intezia · Diplomado · Propuesta</span>
+      </div>
+    </section>
+
+    <!-- 15 · Propuesta Económica (5 campos AcroForm: precio + descuento + total auto + Programa + Notas) -->
+    <section class="slide s-price">
+      <span class="counter">15 / 17</span>
+      <h2 class="title">Propuesta Económica</h2>
+
+      <!-- Bloque 1 · Duración -->
+      <div class="block">
+        <span class="block-eyebrow">Duración</span>
+        <p class="block-value">40 horas académicas · modalidad online · de 30 a 40 participantes.</p>
+      </div>
+
+      <!-- Bloque 2 · Programa (multiline editable + acento amarillo en el label) -->
+      <div class="block block-programa">
+        <span class="block-eyebrow">Programa</span>
+      </div>
+      <div class="multi-box programa-box" data-field="Programa"></div>
+
+      <!-- Bloque 3 · Cotización (filas absolutas, alineadas) -->
+      <div class="block block-cotizacion">
+        <span class="block-eyebrow">Cotización</span>
+      </div>
+
+      <span class="cot-label cot-label-base">Propuesta + Inversión</span>
+      <div class="cot-frame base-frame"></div>
+
+      <span class="cot-label cot-label-discount">Descuento</span>
+      <div class="cot-frame discount-frame"></div>
+
+      <span class="cot-label cot-label-total">TOTAL</span>
+      <div class="cot-frame total-frame"></div>
+
+      <p class="cot-validity">Inversión por participante. Vigencia de la propuesta: 30 días.</p>
+
+      <!-- Bloque 4 · Notas (multiline editable + acento naranja en el label) -->
+      <div class="block block-notes-container">
+        <span class="block-eyebrow">Notas</span>
+      </div>
+      <div class="multi-box notas-box" data-field="Notas"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">SFIC × Intezia · Diplomado · Propuesta</span>
+      </div>
+    </section>
+
+    <!-- 16 · Próximos pasos -->
+    <section class="slide s-steps">
+      <span class="counter">16 / 17</span>
+      <p class="eyebrow">09 · Próximos pasos</p>
+      <h2>Cómo arrancamos.</h2>
+      <div class="step-cards">
+        <div class="step-card">
+          <span class="ghost">01</span>
+        </div>
+        <div class="step-card">
+          <span class="ghost">02</span>
+        </div>
+        <div class="step-card">
+          <span class="ghost">03</span>
+        </div>
+      </div>
+
+      <!-- Editable AcroForm placeholders (3 pasos × título + body) -->
+      <div class="acro-area acro-title acro-paso-01-titulo" data-field="Paso01Titulo">
+        <span class="acro-default-text">Fechas y cohorte</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-01-body" data-field="Paso01Body">
+        <span class="acro-default-text">Definimos juntos la fecha de inicio, el calendario de sesiones online y el grupo de participantes.</span>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-02-titulo" data-field="Paso02Titulo">
+        <span class="acro-default-text">Acceso y logística</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-02-body" data-field="Paso02Body">
+        <span class="acro-default-text">Habilitamos acceso a la plataforma, participantes y agenda de sesiones junto al equipo de SFIC.</span>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-03-titulo" data-field="Paso03Titulo">
+        <span class="acro-default-text">Kick-off</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-03-body" data-field="Paso03Body">
+        <span class="acro-default-text">Reunión breve con el equipo INTEZIA para personalizar casos y ejemplos al negocio de los participantes.</span>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">SFIC × Intezia · Diplomado · Propuesta</span>
+      </div>
+    </section>
+
+    <!-- 17 · Cierre -->
+    <section class="slide s-end">
+      <span class="counter">17 / 17</span>
+
+      <div class="end-logo">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia Educación">
+      </div>
+
+      <p class="end-message">
+        Danos la oportunidad de<br>llevarte al <span class="hl-orange">siguiente nivel</span><br>con <span class="hl-yellow">IA</span>.
+      </p>
+
+      <div class="cta-wrap">
+        <span class="cta">Esperamos tu Respuesta</span>
+      </div>
+
+      <div class="end-contact">
+        <p class="contact-line">
+          <span class="contact-label">Asesora de ventas:</span>
+          Isabella Palazzone <span class="dot">·</span> info@intezia.com
+        </p>
+        <p class="contact-line">
+          <span class="contact-label">Alianza:</span>
+          South Florida International College (SFIC) <span class="dot">·</span> Intezia
+        </p>
+        <p class="contact-line">
+          <span class="contact-label">Empresa:</span>
+          Intezia C.A J-505657950 <span class="dot">·</span> info@intezia.com
+        </p>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

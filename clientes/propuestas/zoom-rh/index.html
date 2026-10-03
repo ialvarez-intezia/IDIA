@@ -1,0 +1,992 @@
+<!doctype html>
+<!--
+  Propuesta — Zoom · Gestión Humana (CAP-050 · Fase 2 Zoom)
+  Programa: Inteligencia para Gestión Humana
+  División: Educación · 5 formaciones en una sola propuesta (multi-track, cada área ve su
+  formación por separado, patrón zoom-comercial/ extendido a 5 tracks): Compensación y
+  Beneficios · Estadística Organizacional · Seguridad y Salud Laboral (SSL) · Selección ·
+  Capacitación. Las 5 formaciones son uniformes: 2 módulos / 1 sesión / 4h cada una (Comp.,
+  Estadística y SSL comprimidas de 4 módulos/2 sesiones/8h el 2026-08-17 a pedido del cliente;
+  Selección y Capacitación separadas de Selección/Evaluación/Potencial el mismo día, con
+  filtrado de CVs agregado a Selección).
+  Restricciones de contenido del cliente (2026-08-17, ver brief.md): sin AppSheet, n8n, Apps
+  Script, APIs ni otra herramienta de desarrollo (todo el uso de IA es nativo de Gemini en
+  Google Workspace, Gems y NotebookLM); sin cálculo de nómina ni analítica salarial; sin
+  pruebas psicométricas.
+  Estructura: 22 slides · incluye slide de Impacto · SIN slide de Propuesta Económica
+  (cotizado dentro del acuerdo marco con Zoom).
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Propuesta · Zoom Gestión Humana · Intezia Educación</title>
+  <link rel="stylesheet" href="../_base/styles.css">
+  <link rel="stylesheet" href="overrides.css">
+</head>
+<body>
+
+  <main class="deck">
+
+    <!-- 1 · Portada -->
+    <section class="slide s-cover">
+      <span class="counter">01 / 22</span>
+      <div class="logo-big">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia Educación">
+      </div>
+      <div class="body">
+        <p class="eyebrow">Propuesta formativa</p>
+        <h1>
+          Inteligencia para<br>
+          <span class="hl">Gestión Humana</span>
+        </h1>
+        <p class="lead">
+          Cinco formaciones de <strong>1 sesión de 4 horas</strong> cada una para que Gestión Humana de Zoom lleve la IA a sus 5 frentes: <strong>Compensación y Beneficios</strong>, <strong>Estadística Organizacional</strong>, <strong>Seguridad y Salud Laboral</strong>, <strong>Selección</strong> y <strong>Capacitación</strong>, con Gemini, Gems y NotebookLM.
+        </p>
+      </div>
+      <div class="id-line">
+        <span class="codigo">Código: CAP-050 · Fase 2</span>
+        <span class="cliente">Zoom</span>
+      </div>
+    </section>
+
+    <!-- 2 · Punto de dolor + Diagnóstico (compartido: 5 áreas) -->
+    <section class="slide s-pain">
+      <span class="counter">02 / 22</span>
+      <span class="quote-mark">&ldquo;</span>
+      <div class="body">
+        <h2>Gestión Humana sostiene 5 frentes operativos a pulso.</h2>
+        <p class="context">
+          Compensación y Beneficios, Estadística Organizacional, Seguridad y Salud Laboral (SSL), Selección y Capacitación operan hoy con procesos manuales propios. Esta Fase 2 abre <strong>5 formaciones independientes</strong>, una por área, cada una con protocolo de <strong>protección de datos</strong> y decisión humana explícita.
+        </p>
+        <p class="diag-title">Diagnóstico</p>
+        <ol>
+          <li>Compensación y Beneficios: un equipo de 3 personas gestiona el ciclo de vida de 1.200 empleados (relación 1:400) con evaluaciones 360° y cartas de resultados armadas a mano.</li>
+          <li>Estadística Organizacional: el Maestro de Datos nacional se actualiza cada semana a mano, y el screening de expedientes de onboarding genera retrabajo en cada ingreso.</li>
+          <li>Seguridad y Salud Laboral: las inspecciones de sucursal dependen de revisar fotos una por una, sin forma ágil de verificar a distancia si un reporte es cierto.</li>
+          <li>Selección y Capacitación: los informes técnicos de evaluación llegan sin traducir, y las promociones se deciden sin cruzar sistemáticamente cargo y resultados.</li>
+          <li>Las 5 áreas comparten el mismo cuello de botella: información fragmentada en pestañas y formularios, sin protocolo común de protección de datos.</li>
+        </ol>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Zoom · Propuesta</span>
+      </div>
+    </section>
+
+    <!-- 3 · Objetivos estratégicos · Track Compensación y Beneficios -->
+    <section class="slide s-goals">
+      <span class="counter">03 / 22</span>
+      <p class="eyebrow">02 · Objetivos · Compensación y Beneficios</p>
+      <h2>A dónde llevamos<br>a Compensación y Beneficios.</h2>
+      <div class="columns">
+        <div class="general">
+          <p class="label">Objetivo general</p>
+          <p>
+            Transformar a Compensación y Beneficios de Zoom en una unidad que consolida y comunica con <strong>protección de datos</strong>: que deje de armar cartas a mano para consolidar la evaluación 360° con Gemini y notificar resultados a escala sin perder el toque personal.
+          </p>
+        </div>
+        <div class="specifics">
+          <p class="label">Objetivos específicos</p>
+          <ol>
+            <li>Consolidar los resultados de la evaluación 360° (Google Forms, 7 competencias) en un solo panel con Gemini, sin perder la segmentación por grupo.</li>
+            <li>Traducir los puntajes de competencias en párrafos narrativos coherentes con Generación de Lenguaje Natural (NLG).</li>
+            <li>Automatizar el envío masivo y personalizado de comunicados de resultados, sin correos uno por uno.</li>
+            <li>Aplicar un protocolo de anonimización de datos antes de cualquier carga a una IA pública, y cerrar con el Reto IA ZOOM.</li>
+          </ol>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Zoom · Track Compensación y Beneficios</span>
+      </div>
+    </section>
+
+    <!-- 4 · Programa · Track Compensación y Beneficios -->
+    <section class="slide s-program">
+      <span class="counter">04 / 22</span>
+      <p class="eyebrow">03 · Programa · Compensación y Beneficios</p>
+      <h2>2 módulos · 4 horas.</h2>
+      <p class="meta">1 sesión de 4 horas · Evaluación 360°, cartas y notificaciones con IA</p>
+      <div class="modules">
+        <div class="module">
+          <span class="roman">I</span>
+          <h3>Evaluación 360° y Redacción con IA</h3>
+          <p class="obj">Consolidar la evaluación 360° con Gemini y traducir puntajes en párrafos con Generación de Lenguaje Natural.</p>
+          <ul class="topics">
+            <li>1.1 Lectura y consolidación de formularios</li>
+            <li>1.2 Protección de datos personales</li>
+            <li>1.3 De puntaje a párrafo (NLG)</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">II</span>
+          <h3>Notificaciones y Reto IA ZOOM</h3>
+          <p class="obj">Automatizar el envío masivo y personalizado de comunicados, y cerrar con el Reto IA ZOOM.</p>
+          <ul class="topics">
+            <li>2.1 Combinación de correspondencia con IA</li>
+            <li>2.2 Qué nunca se sube sin anonimizar</li>
+            <li>2.3 Reto IA ZOOM</li>
+          </ul>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Zoom · Track Compensación y Beneficios</span>
+      </div>
+    </section>
+
+    <!-- 5 · Desglose instructivo · Compensación y Beneficios · Sesión única (Módulos I y II) -->
+    <section class="slide s-schedule">
+      <span class="counter">05 / 22</span>
+      <p class="eyebrow">04 · Cronograma · Compensación y Beneficios</p>
+
+      <div class="ruta">
+        <div class="ruta-node">1</div>
+        <div class="ruta-track"><div class="ruta-fill" style="width:100%"></div></div>
+        <span class="ruta-step">Compensación · Sesión única</span>
+      </div>
+
+      <div class="ses-head">
+        <div>
+          <span class="ses-mod">Módulos I y II · In-Company</span>
+          <h2>De la Evaluación 360° al Reto IA ZOOM</h2>
+        </div>
+        <div class="ses-meta"><span class="ses-dur">4 h</span></div>
+      </div>
+
+      <div class="ses-body">
+        <div class="ses-block">
+          <span class="label">Temas</span>
+          <div class="chips">
+            <span class="chip">1.1 Lectura de formularios</span>
+            <span class="chip">1.3 De puntaje a párrafo (NLG)</span>
+            <span class="chip">2.1 Combinación de correspondencia</span>
+            <span class="chip">2.2 Datos sin anonimizar</span>
+          </div>
+        </div>
+        <div class="ses-block">
+          <span class="label">Tiempo · Total 4 h</span>
+          <div class="timebar">
+            <div class="seg" style="flex:15">15' Contexto</div>
+            <div class="seg" style="flex:100">100' Módulo I · Evaluación 360° y NLG</div>
+            <div class="seg" style="flex:100">100' Módulo II · Notificaciones</div>
+            <div class="seg" style="flex:25">25' Reto IA ZOOM + Cierre</div>
+          </div>
+        </div>
+        <div class="ses-cols">
+          <div class="ses-block">
+            <span class="label">Estrategias de enseñanza</span>
+            <ul>
+              <li>Demo guiada en Gemini: consolidación de formularios y carta con NLG</li>
+              <li>Encuadre de protección de datos: qué no cargar sin anonimizar</li>
+              <li>Demo de combinación de correspondencia sobre un lote real</li>
+              <li>Reto IA ZOOM: presentación cruzada de 3 minutos</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Estrategias de aprendizaje</span>
+            <ul>
+              <li>Panel de evaluación 360° consolidado</li>
+              <li>Primera carta redactada con IA</li>
+              <li>Lote de comunicados personalizados</li>
+              <li>Participación en el Reto IA ZOOM</li>
+            </ul>
+          </div>
+          <div class="ses-block block-rec">
+            <span class="label">Recursos y entornos</span>
+            <ul>
+              <li>Google Workspace + Gemini</li>
+              <li>Gemini Gems</li>
+              <li>NotebookLM</li>
+              <li>Datos de evaluación anonimizados</li>
+              <li>Workbook digital</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Zoom · Track Compensación y Beneficios</span>
+      </div>
+    </section>
+
+    <!-- 7 · Objetivos estratégicos · Track Estadística Organizacional -->
+    <section class="slide s-goals">
+      <span class="counter">06 / 22</span>
+      <p class="eyebrow">05 · Objetivos · Estadística Organizacional</p>
+      <h2>A dónde llevamos<br>a Estadística Organizacional.</h2>
+      <div class="columns">
+        <div class="general">
+          <p class="label">Objetivo general</p>
+          <p>
+            Transformar al equipo de Estadística Organizacional de Zoom en una unidad que valida y documenta con Gemini: que deje de revisar expedientes y redactar descriptivos a mano para automatizar el screening de onboarding, generar descriptivos de cargo desde la entrevista grabada y mantener el organigrama al día.
+          </p>
+        </div>
+        <div class="specifics">
+          <p class="label">Objetivos específicos</p>
+          <ol>
+            <li>Validar expedientes de onboarding (cédulas, títulos, referencias) con Gemini directamente desde Drive, detectando faltantes sin descarga manual.</li>
+            <li>Generar el descriptivo de cargo completo a partir de la transcripción de la entrevista en Meet, con prompting estructurado según el formato institucional de Zoom.</li>
+            <li>Mantener actualizado el Maestro de Datos nacional en Google Sheets, aplicando un protocolo de anonimización antes de compartir información sensible con una IA.</li>
+            <li>Generar un borrador de organigrama actualizado con Gemini a partir de los ingresos y egresos del Maestro de Datos, para revisión y publicación del equipo.</li>
+          </ol>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Zoom · Track Estadística Organizacional</span>
+      </div>
+    </section>
+
+    <!-- 8 · Programa · Track Estadística Organizacional -->
+    <section class="slide s-program">
+      <span class="counter">07 / 22</span>
+      <p class="eyebrow">06 · Programa · Estadística Organizacional</p>
+      <h2>2 módulos · 4 horas.</h2>
+      <p class="meta">1 sesión de 4 horas · Maestro de Datos, expedientes, descriptivos y organigramas</p>
+      <div class="modules">
+        <div class="module">
+          <span class="roman">I</span>
+          <h3>Maestro de Datos y Expedientes</h3>
+          <p class="obj">Mantener el Maestro de Datos al día y validar expedientes de onboarding con Gemini desde Drive.</p>
+          <ul class="topics">
+            <li>1.1 Consolidación del Maestro con Gemini</li>
+            <li>1.2 Protección de datos sensibles</li>
+            <li>1.3 Validación de expedientes desde Drive</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">II</span>
+          <h3>Descriptivos, Organigramas y Reto IA ZOOM</h3>
+          <p class="obj">Generar el descriptivo de cargo desde Meet y el organigrama desde el Maestro, y cerrar con el Reto IA ZOOM.</p>
+          <ul class="topics">
+            <li>2.1 Descriptivo de cargo desde Meet</li>
+            <li>2.2 Organigrama desde el Maestro</li>
+            <li>2.3 Reto IA ZOOM</li>
+          </ul>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Zoom · Track Estadística Organizacional</span>
+      </div>
+    </section>
+
+    <!-- 9 · Desglose instructivo · Estadística Organizacional · Sesión única (Módulos I y II) -->
+    <section class="slide s-schedule">
+      <span class="counter">08 / 22</span>
+      <p class="eyebrow">07 · Cronograma · Estadística Organizacional</p>
+
+      <div class="ruta">
+        <div class="ruta-node">1</div>
+        <div class="ruta-track"><div class="ruta-fill" style="width:100%"></div></div>
+        <span class="ruta-step">Estadística · Sesión única</span>
+      </div>
+
+      <div class="ses-head">
+        <div>
+          <span class="ses-mod">Módulos I y II · In-Company</span>
+          <h2>Del Maestro de Datos al Reto IA ZOOM</h2>
+        </div>
+        <div class="ses-meta"><span class="ses-dur">4 h</span></div>
+      </div>
+
+      <div class="ses-body">
+        <div class="ses-block">
+          <span class="label">Temas</span>
+          <div class="chips">
+            <span class="chip">1.1 Consolidación del Maestro</span>
+            <span class="chip">1.3 Validación de expedientes</span>
+            <span class="chip">2.1 Descriptivo desde Meet</span>
+            <span class="chip">2.2 Organigrama desde el Maestro</span>
+          </div>
+        </div>
+        <div class="ses-block">
+          <span class="label">Tiempo · Total 4 h</span>
+          <div class="timebar">
+            <div class="seg" style="flex:15">15' Contexto</div>
+            <div class="seg" style="flex:100">100' Módulo I · Maestro y Expedientes</div>
+            <div class="seg" style="flex:100">100' Módulo II · Descriptivos y Organigramas</div>
+            <div class="seg" style="flex:25">25' Reto IA ZOOM + Cierre</div>
+          </div>
+        </div>
+        <div class="ses-cols">
+          <div class="ses-block">
+            <span class="label">Estrategias de enseñanza</span>
+            <ul>
+              <li>Demo guiada sobre el Maestro de Datos real: altas y bajas en vivo</li>
+              <li>Demo de validación de expedientes desde Drive con Gemini</li>
+              <li>Reto: grabar y transcribir una entrevista para el descriptivo</li>
+              <li>Reto IA ZOOM: presentación cruzada de 3 minutos</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Estrategias de aprendizaje</span>
+            <ul>
+              <li>Maestro de Datos consolidado y anonimizado</li>
+              <li>Primer lote de expedientes validado con IA</li>
+              <li>Descriptivo de cargo generado desde Meet</li>
+              <li>Participación en el Reto IA ZOOM</li>
+            </ul>
+          </div>
+          <div class="ses-block block-rec">
+            <span class="label">Recursos y entornos</span>
+            <ul>
+              <li>Google Workspace + Gemini</li>
+              <li>Gemini Gems</li>
+              <li>NotebookLM</li>
+              <li>Datos anonimizados del Maestro</li>
+              <li>Workbook digital</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Zoom · Track Estadística Organizacional</span>
+      </div>
+    </section>
+
+    <!-- 11 · Objetivos estratégicos · Track Seguridad y Salud Laboral -->
+    <section class="slide s-goals">
+      <span class="counter">09 / 22</span>
+      <p class="eyebrow">08 · Objetivos · Seguridad y Salud Laboral</p>
+      <h2>A dónde llevamos<br>a Seguridad y Salud Laboral.</h2>
+      <div class="columns">
+        <div class="general">
+          <p class="label">Objetivo general</p>
+          <p>
+            Transformar al equipo de Seguridad y Salud Laboral (SSL) de Zoom en una unidad que verifica e interpreta con Gemini: que deje de descargar fotos una por una para analizar evidencia de inspección directamente en Drive, generar el riesgo por cargo con sustento normativo y mantener el cumplimiento legal bajo control.
+          </p>
+        </div>
+        <div class="specifics">
+          <p class="label">Objetivos específicos</p>
+          <ol>
+            <li>Analizar la evidencia fotográfica de las inspecciones de sucursal (extintores, señalética, equipos de protección) con Gemini directamente desde Drive.</li>
+            <li>Generar el riesgo asociado a cada cargo (físico, químico, ergonómico) y sus medidas preventivas, usando Gemini como consultor experto en normativa.</li>
+            <li>Redactar notificaciones de riesgo con sustento legal mediante prompting especializado, citando la norma correspondiente a cada función.</li>
+            <li>Mantener un tablero de control de vencimientos (delegados, comités, Inspectoría) con alertas redactadas por Gemini para anticipar cada plazo legal.</li>
+          </ol>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Zoom · Track Seguridad y Salud Laboral</span>
+      </div>
+    </section>
+
+    <!-- 12 · Programa · Track Seguridad y Salud Laboral -->
+    <section class="slide s-program">
+      <span class="counter">10 / 22</span>
+      <p class="eyebrow">09 · Programa · Seguridad y Salud Laboral</p>
+      <h2>2 módulos · 4 horas.</h2>
+      <p class="meta">1 sesión de 4 horas · Inspecciones, riesgo por cargo y cumplimiento legal con IA</p>
+      <div class="modules">
+        <div class="module">
+          <span class="roman">I</span>
+          <h3>Visión de IA en Inspecciones y Riesgo</h3>
+          <p class="obj">Analizar evidencia fotográfica y generar el riesgo por cargo con Gemini.</p>
+          <ul class="topics">
+            <li>1.1 Lectura de evidencia fotográfica</li>
+            <li>1.2 Riesgo por cargo con IA</li>
+            <li>1.3 Prompting con sustento normativo</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">II</span>
+          <h3>Cumplimiento y Reto IA ZOOM</h3>
+          <p class="obj">Mantener un tablero de vencimientos legales con alertas de Gemini, y cerrar con el Reto IA ZOOM.</p>
+          <ul class="topics">
+            <li>2.1 Tablero de vencimientos en Sheets</li>
+            <li>2.2 Alertas anticipadas por Gemini</li>
+            <li>2.3 Reto IA ZOOM</li>
+          </ul>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Zoom · Track Seguridad y Salud Laboral</span>
+      </div>
+    </section>
+
+    <!-- 13 · Desglose instructivo · Seguridad y Salud Laboral · Sesión única (Módulos I y II) -->
+    <section class="slide s-schedule">
+      <span class="counter">11 / 22</span>
+      <p class="eyebrow">10 · Cronograma · Seguridad y Salud Laboral</p>
+
+      <div class="ruta">
+        <div class="ruta-node">1</div>
+        <div class="ruta-track"><div class="ruta-fill" style="width:100%"></div></div>
+        <span class="ruta-step">SSL · Sesión única</span>
+      </div>
+
+      <div class="ses-head">
+        <div>
+          <span class="ses-mod">Módulos I y II · In-Company</span>
+          <h2>De la Inspección al Reto IA ZOOM</h2>
+        </div>
+        <div class="ses-meta"><span class="ses-dur">4 h</span></div>
+      </div>
+
+      <div class="ses-body">
+        <div class="ses-block">
+          <span class="label">Temas</span>
+          <div class="chips">
+            <span class="chip">1.1 Evidencia fotográfica</span>
+            <span class="chip">1.2 Riesgo por cargo con IA</span>
+            <span class="chip">2.1 Tablero de vencimientos</span>
+            <span class="chip">2.2 Alertas anticipadas</span>
+          </div>
+        </div>
+        <div class="ses-block">
+          <span class="label">Tiempo · Total 4 h</span>
+          <div class="timebar">
+            <div class="seg" style="flex:15">15' Contexto</div>
+            <div class="seg" style="flex:100">100' Módulo I · Inspecciones y Riesgo</div>
+            <div class="seg" style="flex:100">100' Módulo II · Cumplimiento</div>
+            <div class="seg" style="flex:25">25' Reto IA ZOOM + Cierre</div>
+          </div>
+        </div>
+        <div class="ses-cols">
+          <div class="ses-block">
+            <span class="label">Estrategias de enseñanza</span>
+            <ul>
+              <li>Demo de análisis de fotos de inspección con Gemini desde Drive</li>
+              <li>Demo de riesgo por cargo con Gemini, consultor de Seguridad y Salud Laboral (SSL)</li>
+              <li>Demo de un tablero de vencimientos (delegados, comités, Inspectoría)</li>
+              <li>Reto IA ZOOM: presentación cruzada de 3 minutos</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Estrategias de aprendizaje</span>
+            <ul>
+              <li>Reporte de hallazgos generado desde una carpeta real</li>
+              <li>Mapa de riesgo por cargo con medidas preventivas</li>
+              <li>Tablero de control de vencimientos configurado</li>
+              <li>Participación en el Reto IA ZOOM</li>
+            </ul>
+          </div>
+          <div class="ses-block block-rec">
+            <span class="label">Recursos y entornos</span>
+            <ul>
+              <li>Google Workspace + Gemini</li>
+              <li>Gemini Gems</li>
+              <li>NotebookLM</li>
+              <li>Normativa local de SSL</li>
+              <li>Workbook digital</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Zoom · Track Seguridad y Salud Laboral</span>
+      </div>
+    </section>
+
+    <!-- 15 · Objetivos estratégicos · Track Selección -->
+    <section class="slide s-goals">
+      <span class="counter">12 / 22</span>
+      <p class="eyebrow">11 · Objetivos · Selección</p>
+      <h2>A dónde llevamos<br>a Selección.</h2>
+      <div class="columns">
+        <div class="general">
+          <p class="label">Objetivo general</p>
+          <p>
+            Transformar al equipo de Selección de Zoom en una unidad que filtra y documenta con Gemini: que deje de revisar CVs y redactar guías a mano para filtrar candidatos con criterio de IA, generar el descriptivo de cargo desde la entrevista grabada y traducir informes técnicos a lenguaje de negocio.
+          </p>
+        </div>
+        <div class="specifics">
+          <p class="label">Objetivos específicos</p>
+          <ol>
+            <li>Filtrar hojas de vida con criterio de IA, agilizando la primera etapa del ciclo de selección.</li>
+            <li>Generar descriptivos de cargo, ofertas y guías de entrevista con Gemini.</li>
+            <li>Producir el descriptivo de cargo completo desde la grabación de la entrevista en Meet.</li>
+            <li>Traducir informes técnicos de evaluación a lenguaje de negocio, estandarizado por familia de cargo, con un Gem de apoyo a selección.</li>
+          </ol>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Zoom · Track Selección</span>
+      </div>
+    </section>
+
+    <!-- 16 · Programa · Track Selección -->
+    <section class="slide s-program">
+      <span class="counter">13 / 22</span>
+      <p class="eyebrow">12 · Programa · Selección</p>
+      <h2>2 módulos · 4 horas.</h2>
+      <p class="meta">1 sesión de 4 horas · Filtrado de CVs, descriptivos y traductor de informes</p>
+      <div class="modules">
+        <div class="module">
+          <span class="roman">I</span>
+          <h3>Filtrado y Documentación</h3>
+          <p class="obj">Filtrar hojas de vida y generar descriptivos, ofertas y guías de entrevista con Gemini.</p>
+          <ul class="topics">
+            <li>1.1 Filtrado de CVs con IA</li>
+            <li>1.2 Descriptivos de cargo y ofertas</li>
+            <li>1.3 Guías de entrevista con IA</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">II</span>
+          <h3>Traductor de Informes y Gem</h3>
+          <p class="obj">Generar el descriptivo desde la entrevista grabada y traducir informes técnicos a lenguaje de negocio.</p>
+          <ul class="topics">
+            <li>2.1 La entrevista que se escribe sola</li>
+            <li>2.2 Traductor de informes por familia de cargo</li>
+            <li>2.3 Gem de apoyo a selección y Reto IA ZOOM</li>
+          </ul>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Zoom · Track Selección</span>
+      </div>
+    </section>
+
+    <!-- 17 · Desglose instructivo · Selección · Sesión única (Módulos I y II) -->
+    <section class="slide s-schedule">
+      <span class="counter">14 / 22</span>
+      <p class="eyebrow">13 · Cronograma · Selección</p>
+
+      <div class="ruta">
+        <div class="ruta-node">1</div>
+        <div class="ruta-track"><div class="ruta-fill" style="width:100%"></div></div>
+        <span class="ruta-step">Selección · Sesión única</span>
+      </div>
+
+      <div class="ses-head">
+        <div>
+          <span class="ses-mod">Módulos I y II · In-Company</span>
+          <h2>Selección con IA: de CVs a Informes</h2>
+        </div>
+        <div class="ses-meta"><span class="ses-dur">4 h</span></div>
+      </div>
+
+      <div class="ses-body">
+        <div class="ses-block">
+          <span class="label">Temas</span>
+          <div class="chips">
+            <span class="chip">1.1 Filtrado de CVs con IA</span>
+            <span class="chip">1.2 Descriptivos y ofertas</span>
+            <span class="chip">2.1 Entrevista que se escribe sola</span>
+            <span class="chip">2.2 Traductor de informes</span>
+          </div>
+        </div>
+        <div class="ses-block">
+          <span class="label">Tiempo · Total 4 h</span>
+          <div class="timebar">
+            <div class="seg" style="flex:15">15' Contexto</div>
+            <div class="seg" style="flex:100">100' Módulo I · Filtrado y Documentación</div>
+            <div class="seg" style="flex:100">100' Módulo II · Traductor y Gem</div>
+            <div class="seg" style="flex:25">25' Reto IA ZOOM + Cierre</div>
+          </div>
+        </div>
+        <div class="ses-cols">
+          <div class="ses-block">
+            <span class="label">Estrategias de enseñanza</span>
+            <ul>
+              <li>Demo de filtrado de hojas de vida con criterio de IA sobre un lote real</li>
+              <li>Construcción guiada de descriptivos, ofertas y guías de entrevista</li>
+              <li>Reto: grabar una entrevista en Meet y generar el descriptivo antes de cerrar el bloque</li>
+              <li>Construcción guiada de un Gem de apoyo a selección, con expectativas realistas</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Estrategias de aprendizaje</span>
+            <ul>
+              <li>Primer lote de CVs filtrado con criterio de IA</li>
+              <li>Descriptivo de cargo y guía de entrevista generados</li>
+              <li>Descriptivo generado desde la grabación de Meet</li>
+              <li>Gem de apoyo operativo + participación en el Reto IA ZOOM</li>
+            </ul>
+          </div>
+          <div class="ses-block block-rec">
+            <span class="label">Recursos y entornos</span>
+            <ul>
+              <li>Google Workspace + Gemini</li>
+              <li>Gemini Gems</li>
+              <li>NotebookLM</li>
+              <li>CVs y datos anonimizados</li>
+              <li>Workbook digital</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Zoom · Track Selección</span>
+      </div>
+    </section>
+
+    <!-- 18 · Objetivos estratégicos · Track Capacitación -->
+    <section class="slide s-goals">
+      <span class="counter">15 / 22</span>
+      <p class="eyebrow">14 · Objetivos · Capacitación</p>
+      <h2>A dónde llevamos<br>a Capacitación.</h2>
+      <div class="columns">
+        <div class="general">
+          <p class="label">Objetivo general</p>
+          <p>
+            Transformar a Capacitación de Zoom en una unidad que sustenta el desarrollo con datos: cruzar funciones de cargo con resultados de evaluación y traducir el análisis de brechas en un plan accionable, con la decisión siempre en manos del equipo humano.
+          </p>
+        </div>
+        <div class="specifics">
+          <p class="label">Objetivos específicos</p>
+          <ol>
+            <li>Cruzar las funciones del cargo con los resultados de evaluación de la persona para identificar brechas de competencia.</li>
+            <li>Construir un análisis de brechas (Gap Analysis) que alimente el plan de capacitación de cada colaborador.</li>
+            <li>Aplicar un protocolo de anonimización de datos personales en todo el proceso.</li>
+            <li>Dejar explícito que la decisión sobre ascensos la toma siempre el equipo humano de RRHH.</li>
+          </ol>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Zoom · Track Capacitación</span>
+      </div>
+    </section>
+
+    <!-- 19 · Programa · Track Capacitación -->
+    <section class="slide s-program">
+      <span class="counter">16 / 22</span>
+      <p class="eyebrow">15 · Programa · Capacitación</p>
+      <h2>2 módulos · 4 horas.</h2>
+      <p class="meta">1 sesión de 4 horas · Gap Analysis y plan de capacitación</p>
+      <div class="modules">
+        <div class="module">
+          <span class="roman">I</span>
+          <h3>Gap Analysis para Desarrollo</h3>
+          <p class="obj">Cruzar funciones de cargo con resultados de la persona para construir un análisis de brechas.</p>
+          <ul class="topics">
+            <li>1.1 Funciones de cargo vs. resultados</li>
+            <li>1.2 Análisis de brechas (Gap Analysis)</li>
+            <li>1.3 Protección de datos personales</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">II</span>
+          <h3>Plan y Criterio Humano</h3>
+          <p class="obj">Traducir el análisis de brechas en un plan de capacitación, con la decisión siempre en manos del equipo humano.</p>
+          <ul class="topics">
+            <li>2.1 De la brecha al plan de capacitación</li>
+            <li>2.2 Regla de decisión humana</li>
+            <li>2.3 Reto IA ZOOM</li>
+          </ul>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Zoom · Track Capacitación</span>
+      </div>
+    </section>
+
+    <!-- 20 · Desglose instructivo · Capacitación · Sesión única (Módulos I y II) -->
+    <section class="slide s-schedule">
+      <span class="counter">17 / 22</span>
+      <p class="eyebrow">16 · Cronograma · Capacitación</p>
+
+      <div class="ruta">
+        <div class="ruta-node">1</div>
+        <div class="ruta-track"><div class="ruta-fill" style="width:100%"></div></div>
+        <span class="ruta-step">Capacitación · Sesión única</span>
+      </div>
+
+      <div class="ses-head">
+        <div>
+          <span class="ses-mod">Módulos I y II · In-Company</span>
+          <h2>Gap Analysis y Plan de Capacitación</h2>
+        </div>
+        <div class="ses-meta"><span class="ses-dur">4 h</span></div>
+      </div>
+
+      <div class="ses-body">
+        <div class="ses-block">
+          <span class="label">Temas</span>
+          <div class="chips">
+            <span class="chip">1.1 Funciones vs. resultados</span>
+            <span class="chip">1.2 Análisis de brechas</span>
+            <span class="chip">2.1 Plan de capacitación</span>
+            <span class="chip">2.2 Decisión humana</span>
+          </div>
+        </div>
+        <div class="ses-block">
+          <span class="label">Tiempo · Total 4 h</span>
+          <div class="timebar">
+            <div class="seg" style="flex:15">15' Contexto</div>
+            <div class="seg" style="flex:100">100' Módulo I · Gap Analysis</div>
+            <div class="seg" style="flex:100">100' Módulo II · Plan y Criterio Humano</div>
+            <div class="seg" style="flex:25">25' Reto IA ZOOM + Cierre</div>
+          </div>
+        </div>
+        <div class="ses-cols">
+          <div class="ses-block">
+            <span class="label">Estrategias de enseñanza</span>
+            <ul>
+              <li>Demo guiada cruzando funciones de cargo con resultados de un caso real</li>
+              <li>Construcción guiada de un análisis de brechas (Gap Analysis)</li>
+              <li>Traducción del análisis en un plan de capacitación accionable</li>
+              <li>Encuadre repetido: la decisión sobre ascensos la toma siempre RRHH</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Estrategias de aprendizaje</span>
+            <ul>
+              <li>Análisis de brechas construido sobre un caso real</li>
+              <li>Plan de capacitación borrador derivado del análisis</li>
+              <li>Protocolo de decisión humana documentado</li>
+              <li>Participación en el Reto IA ZOOM</li>
+            </ul>
+          </div>
+          <div class="ses-block block-rec">
+            <span class="label">Recursos y entornos</span>
+            <ul>
+              <li>Google Workspace + Gemini</li>
+              <li>Gemini Gems</li>
+              <li>NotebookLM</li>
+              <li>Funciones de cargo de Zoom</li>
+              <li>Workbook digital</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Zoom · Track Capacitación</span>
+      </div>
+    </section>
+
+    <!-- 21 · Metodología ABR (FIJA, compartida) -->
+    <section class="slide s-orange">
+      <span class="counter">18 / 22</span>
+      <p class="eyebrow">17 · Metodología</p>
+      <h2>Aprendizaje<br>Basado en Retos</h2>
+      <p class="sub">Modelo Intezia · Tres pilares</p>
+      <div class="pillars">
+        <div class="pillar">
+          <span class="num">01</span>
+          <h3>Tutoría activa</h3>
+          <p>El facilitador acompaña la práctica con <strong>feedback en tiempo real</strong>. No se limita a exponer: trabaja codo a codo con cada participante en sus casos reales, sea Compensación, Estadística, Seguridad Laboral, Selección o Capacitación.</p>
+        </div>
+        <div class="pillar">
+          <span class="num">02</span>
+          <h3>Transferibilidad inmediata</h3>
+          <p>Cada ejercicio sale de un caso real de la formación correspondiente. Lo que se practica en cada sesión, el equipo lo aplica al día siguiente en su propia área.</p>
+        </div>
+        <div class="pillar">
+          <span class="num">03</span>
+          <h3>Curaduría de contenidos</h3>
+          <p>Sin teoría desconectada. Solo lo que sirve, actualizado y validado por la práctica con <strong>equipos de Gestión Humana</strong> que ya usan IA en sus procesos, con protocolo de protección de datos verificado.</p>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Intezia · Modelo ABR</span>
+      </div>
+    </section>
+
+    <!-- 22 · Beneficios (perfil egreso + beneficio + entregables + equipo, compartido) -->
+    <section class="slide s-benefits">
+      <span class="counter">19 / 22</span>
+      <p class="eyebrow">18 · Beneficios del programa</p>
+      <h2>Lo que se llevan.</h2>
+      <div class="grid">
+        <div class="block">
+          <p class="label">Perfil de egreso</p>
+          <ul>
+            <li><strong>Saber:</strong> distinguen Gemini, Gems y NotebookLM y qué herramienta usar en cada proceso de su área.</li>
+            <li><strong>Saber hacer:</strong> consolidan evaluaciones, validan expedientes, analizan evidencia de inspección o traducen informes técnicos, según su track.</li>
+            <li><strong>Saber ser:</strong> aplican protección de datos y criterio humano en cada proceso: un Gem traduce o consolida, la decisión sobre una persona la toma siempre el equipo humano.</li>
+          </ul>
+        </div>
+        <div class="block">
+          <p class="label">Beneficio del programa formativo</p>
+          <p>
+            Gestión Humana de Zoom gana 5 equipos que dejan de procesar a mano: <strong>Compensación y Beneficios</strong> consolida su evaluación 360° y comunica resultados a escala, <strong>Estadística Organizacional</strong> valida expedientes y mantiene el Maestro de Datos al día, Seguridad y Salud Laboral analiza evidencia de inspección, Selección filtra CVs y documenta el ciclo de contratación, y Capacitación traduce resultados en planes de desarrollo. Al inicio y a los 30 días medimos el tiempo ahorrado con Gemini en cada área: la cifra alimenta el Reto IA ZOOM.
+          </p>
+        </div>
+        <div class="block">
+          <p class="label">Entregables</p>
+        </div>
+        <div class="block">
+          <p class="label">Acreditación</p>
+        </div>
+      </div>
+
+      <!-- Cajas multiline editables (vacías en HTML — el contenido vive
+           dentro del AcroForm /V, no aquí, para evitar superposición). -->
+      <div class="multi-box entregables-box" data-field="Entregables"></div>
+      <div class="multi-box acreditaciones-box" data-field="Acreditacion"></div>
+      <div class="team">
+        <p class="label">Equipo facilitador</p>
+        <div class="members">
+          <div class="person">
+            <div class="avatar" data-photo="">ED</div>
+            <div>
+              <h4>Equipo Education</h4>
+              <p class="role">Consultores facilitadores · IA aplicada</p>
+              <p>Experiencia directa en procesos de Gestión Humana: evaluación de desempeño, gestión documental, seguridad laboral y selección.</p>
+            </div>
+          </div>
+          <div class="person">
+            <div class="avatar" data-photo="">EC</div>
+            <div>
+              <h4>Coordinación Education</h4>
+              <p class="role">Punto de contacto</p>
+              <p>Acompañamiento durante las 5 formaciones y los 30 días de medición posteriores.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Zoom · Propuesta</span>
+      </div>
+    </section>
+
+    <!-- 23 · Impacto / estudios — datos de estudios reales, fuente citada (CLAUDE.md §4.9) -->
+    <section class="slide s-impact">
+      <span class="counter">20 / 22</span>
+
+      <div class="impact-head">
+        <p class="eyebrow">19 · Impacto</p>
+        <h2>La IA ya transforma<br><span class="hl">la gestión del talento</span>.</h2>
+      </div>
+
+      <div class="impact-body">
+        <div class="chart-panel">
+          <p class="panel-title">Impacto de la IA en los procesos de Gestión Humana</p>
+          <div class="bars">
+            <div class="bar-row">
+              <span class="bar-label">Profesionales de RRHH con IA en selección que reportan ahorro de tiempo</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:89%"><span class="bar-val">89%</span></div></div>
+            </div>
+            <div class="bar-row">
+              <span class="bar-label">Empleadores que reportan mayor eficiencia con IA en RRHH</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:85%"><span class="bar-val">85%</span></div></div>
+            </div>
+            <div class="bar-row">
+              <span class="bar-label">Organizaciones que ya usan IA para apoyar la selección de personal</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:51%"><span class="bar-val">51%</span></div></div>
+            </div>
+          </div>
+          <div class="bar-axis"><span class="scale"><span>0</span><span>25</span><span>50</span><span>75</span><span>100%</span></span></div>
+          <p class="panel-source">Fuente: SHRM · Talent Trends 2025 · The Role of AI in HR Continues to Expand. SHRM · State of AI in HR 2026 Full Report.</p>
+        </div>
+
+        <div class="gauge-panel">
+          <div class="gauge" style="--pct:43">
+            <div class="gauge-core">
+              <span class="gauge-num">43<span class="pct">%</span></span>
+              <span class="gauge-cap">de organizaciones ya integran IA en sus procesos de RRHH</span>
+            </div>
+          </div>
+          <div class="chips">
+            <div class="chip">
+              <span class="chip-num">89%</span>
+              <span class="chip-lbl">ahorran tiempo con IA en selección de personal</span>
+            </div>
+            <div class="chip">
+              <span class="chip-num">51%</span>
+              <span class="chip-lbl">de orgs. usan IA en el proceso de selección</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="impact-hook">
+        <span class="hook-mark">&#9656;</span>
+        <p class="hook-text">
+          El <strong>89% de los profesionales de RRHH</strong> que ya usan IA en selección reportan ahorro de tiempo. La diferencia entre un departamento que procesa y uno que <strong>decide</strong> ya no es opinión: es evidencia.
+        </p>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Zoom · Propuesta</span>
+      </div>
+    </section>
+
+    <!-- 24 · Próximos pasos (compartido) -->
+    <section class="slide s-steps">
+      <span class="counter">21 / 22</span>
+      <p class="eyebrow">20 · Próximos pasos</p>
+      <h2>Cómo arrancamos.</h2>
+      <div class="step-cards">
+        <div class="step-card">
+          <span class="ghost">01</span>
+        </div>
+        <div class="step-card">
+          <span class="ghost">02</span>
+        </div>
+        <div class="step-card">
+          <span class="ghost">03</span>
+        </div>
+      </div>
+
+      <!-- Editable AcroForm placeholders (3 pasos × título + body) -->
+      <div class="acro-area acro-title acro-paso-01-titulo" data-field="Paso01Titulo">
+        <span class="acro-default-text">Confirmamos fechas</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-01-body" data-field="Paso01Body">
+        <span class="acro-default-text">Validamos fecha y zona horaria de la sesión de cada una de las 5 formaciones y el acceso al entorno de trabajo.</span>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-02-titulo" data-field="Paso02Titulo">
+        <span class="acro-default-text">Acceso y logística</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-02-body" data-field="Paso02Body">
+        <span class="acro-default-text">Confirmamos la lista de participantes de cada área, el acceso al entorno Google de Zoom y la agenda de las sesiones.</span>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-03-titulo" data-field="Paso03Titulo">
+        <span class="acro-default-text">Kick-off y línea base</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-03-body" data-field="Paso03Body">
+        <span class="acro-default-text">Reunión de ~30 min por área para alinear casos reales y registrar la tarea más repetitiva de cada equipo.</span>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Zoom · Propuesta</span>
+      </div>
+    </section>
+
+    <!-- 25 · Cierre -->
+    <section class="slide s-end">
+      <span class="counter">22 / 22</span>
+
+      <div class="end-logo">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia Educación">
+      </div>
+
+      <p class="end-message">
+        De <span class="hl-orange">procesar a mano</span><br>a <span class="hl-yellow">decidir con datos</span>.
+      </p>
+
+      <div class="cta-wrap">
+        <a class="cta" href="https://calendly.com/intezia/30min?month=2026-08" target="_blank" rel="noopener">Esperamos tu respuesta</a>
+      </div>
+
+      <div class="end-contact">
+        <p class="contact-line">
+          <span class="contact-label">Asesora de ventas:</span>
+          María Iribarren <span class="dot">·</span> +58 414 0570056 <span class="dot">·</span> miribarren@intezia.com
+        </p>
+        <p class="contact-line">
+          <span class="contact-label">Empresa:</span>
+          Intezia C.A J-505657950 <span class="dot">·</span> info@intezia.com
+        </p>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

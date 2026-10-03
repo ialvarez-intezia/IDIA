@@ -1,0 +1,460 @@
+/* =============================================================================
+   Dashboard de Impacto Edu-Trace — APB Group · IA para la Eficiencia en RRHH
+   Variante CHART-FORWARD: más gráficos, menos métricas grandes.
+   Sobre ../../propuestas/_base/styles.css. Branding #000 / #F4BA1A / #E58423 / #FFF.
+   Charts en SVG/CSS puro (sin dependencias) → render fiable en Chrome headless y
+   pasa verificar-overflow.js. Sin alturas fijas que recorten (§4.10).
+   N=8 (Gestión Humana 5 · Tecnología 2 · ITS 1). Lenguaje honesto (§4.17):
+   B/D = percibido · C = medido.
+   ============================================================================= */
+
+/* ---------- Encabezado común de slides de datos ---------- */
+.s-data {
+  background: var(--white);
+  color: var(--black);
+  padding: 54px 64px 64px;
+  display: flex;
+  flex-direction: column;
+}
+.s-data::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 12px; height: 100%;
+  background: var(--gradient-warm);
+}
+.s-data .eyebrow { color: var(--orange); margin-bottom: 10px; }
+.s-data h2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1.05;
+  letter-spacing: -0.015em;
+  margin-bottom: 8px;
+}
+.s-data .sub {
+  font-family: var(--font-display);
+  font-size: 17px;
+  line-height: 1.45;
+  color: rgba(0, 0, 0, 0.66);
+  max-width: 920px;
+  margin-bottom: 24px;
+}
+
+/* Nota honesta de medición (§4.17) */
+.note-honest {
+  font-family: var(--font-display);
+  font-size: 14.5px;
+  line-height: 1.45;
+  color: rgba(0, 0, 0, 0.6);
+  margin-top: 18px;
+}
+.note-honest strong { color: var(--black); }
+.note-honest.on-dark { color: rgba(255, 255, 255, 0.7); }
+
+/* Badge "medido" vs "percibido" */
+.tag-medido, .tag-percibido {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  vertical-align: middle;
+}
+.tag-medido    { background: var(--black); color: var(--yellow); }
+.tag-percibido { background: rgba(0,0,0,0.08); color: rgba(0,0,0,0.6); }
+
+/* =============================================================================
+   HERO — overrides de los textos chicos del _base .s-impact (legibilidad)
+   ============================================================================= */
+.s-impact .panel-title { font-size: 12.5px; margin-bottom: 18px; }
+.s-impact .panel-source { font-size: 12.5px; line-height: 1.5; margin-top: 16px; }
+.s-impact .bar-label { font-size: 15px; }
+.s-impact .bar-axis .scale { font-size: 11.5px; }
+.s-impact .gauge-cap { font-size: 11.5px; max-width: 160px; }
+.s-impact .bars { gap: 18px; }
+.s-impact .bar-track { height: 34px; }
+.s-impact .bar-val { font-size: 17px; }
+
+/* Calificación final en estrellas (1-5) — Satisfacción general */
+.s-impact .rating { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+.s-impact .stars { display: flex; gap: 7px; }
+.s-impact .star {
+  position: relative;
+  font-size: 46px;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.18);
+  filter: drop-shadow(0 0 10px rgba(229, 132, 35, 0.35));
+}
+.s-impact .star.full { color: var(--yellow); }
+.s-impact .star.half::before {
+  content: "\2605";
+  position: absolute;
+  left: 0; top: 0;
+  width: 50%;
+  overflow: hidden;
+  color: var(--yellow);
+}
+.s-impact .rating-cap {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--white);
+}
+.s-impact .rating-cap b { color: var(--yellow); font-size: 16px; }
+.s-impact .hero-meta {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+}
+
+/* =============================================================================
+   CHART · RADAR de los 4 ejes (slide 03) — reemplaza las cards de métricas
+   ============================================================================= */
+.s-radar .radar-wrap {
+  display: grid;
+  grid-template-columns: 1fr 0.9fr;
+  gap: 44px;
+  align-items: center;
+  flex: 1;
+  min-height: 0;
+}
+.s-radar svg.radar { width: 100%; height: auto; display: block; }
+.s-radar .radar-grid { fill: none; stroke: rgba(0,0,0,0.14); stroke-width: 1.5; }
+.s-radar .radar-axis { stroke: rgba(0,0,0,0.22); stroke-width: 1.5; }
+.s-radar .radar-shape { fill: rgba(244,186,26,0.30); stroke: var(--orange); stroke-width: 3; }
+.s-radar .radar-dot { fill: var(--black); }
+.s-radar .radar-dot.measured { fill: var(--orange); }
+.s-radar .radar-cap {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 13px;
+  fill: rgba(0,0,0,0.62);
+  letter-spacing: 0.02em;
+}
+
+/* Leyenda del radar a la derecha — filas compactas, no cards de número grande */
+.s-radar .legend { display: flex; flex-direction: column; gap: 16px; }
+.s-radar .leg {
+  display: grid;
+  grid-template-columns: 14px 1fr auto;
+  align-items: center;
+  gap: 14px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(0,0,0,0.12);
+}
+.s-radar .leg:last-child { border-bottom: none; }
+.s-radar .leg .swatch { width: 14px; height: 14px; background: var(--orange); }
+.s-radar .leg.measured .swatch { background: var(--black); }
+.s-radar .leg .name {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.15;
+}
+.s-radar .leg .name small {
+  display: block;
+  font-weight: 400;
+  font-size: 12.5px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(0,0,0,0.45);
+  margin-top: 3px;
+}
+.s-radar .leg .v {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 30px;
+  color: var(--orange);
+  text-align: right;
+}
+.s-radar .leg.measured .v { color: var(--black); }
+
+/* =============================================================================
+   CHART · DONUT genérico (retención y composición)
+   ============================================================================= */
+.donut { display: block; }
+.donut .track { fill: none; stroke: rgba(0,0,0,0.09); }
+.donut .seg   { fill: none; stroke: url(#warm); stroke-linecap: butt;
+                transform: rotate(-90deg); transform-origin: 50% 50%; }
+.donut .seg.full { stroke: var(--orange); }
+.donut .ctr-num {
+  font-family: var(--font-display);
+  font-weight: 700;
+  fill: var(--black);
+  text-anchor: middle;
+}
+.donut .ctr-sub {
+  font-family: var(--font-display);
+  font-weight: 700;
+  fill: rgba(0,0,0,0.5);
+  text-anchor: middle;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+}
+
+/* Retención (Bloque C medido) — 3 donuts en fila + banda global */
+.s-reten-c .global {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  background: var(--black);
+  color: var(--white);
+  padding: 20px 28px;
+  margin-bottom: 26px;
+}
+.s-reten-c .global .pct {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 1;
+  color: var(--yellow);
+  letter-spacing: -0.03em;
+}
+.s-reten-c .global .txt {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 1.3;
+}
+.s-reten-c .rings {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  flex: 1;
+  align-content: center;
+}
+.s-reten-c .ring-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+}
+.s-reten-c .ring-card svg { width: 168px; height: 168px; }
+.s-reten-c .ring-card .ring-q {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.25;
+}
+.s-reten-c .ring-card .ring-d {
+  font-family: var(--font-display);
+  font-size: 13px;
+  color: rgba(0,0,0,0.55);
+  line-height: 1.35;
+}
+.s-reten-c .donut .ctr-num { font-size: 42px; }
+
+/* Composición del grupo (slide 06) — donut de 3 segmentos + perfil */
+.s-comp .comp-wrap {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 52px;
+  align-items: center;
+  flex: 1;
+  min-height: 0;
+}
+.s-comp .donut-comp svg { width: 300px; height: 300px; }
+.s-comp .donut-comp .ctr-num { font-size: 76px; }
+.s-comp .seg-gh  { stroke: var(--yellow); }
+.s-comp .seg-tec { stroke: var(--orange); }
+.s-comp .seg-its { stroke: var(--black); }
+.s-comp .comp-legend { display: flex; flex-direction: column; gap: 18px; }
+.s-comp .cl {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border-bottom: 1px solid rgba(0,0,0,0.12);
+  padding-bottom: 18px;
+}
+.s-comp .cl:last-of-type { border-bottom: none; }
+.s-comp .cl .dot { width: 20px; height: 20px; flex: 0 0 20px; }
+.s-comp .cl .dot.gh  { background: var(--yellow); }
+.s-comp .cl .dot.tec { background: var(--orange); }
+.s-comp .cl .dot.its { background: var(--black); }
+.s-comp .cl .lbl {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 21px;
+}
+.s-comp .cl .lbl small {
+  display: block;
+  font-weight: 400;
+  font-size: 13.5px;
+  color: rgba(0,0,0,0.55);
+  margin-top: 4px;
+}
+.s-comp .cl .cn {
+  margin-left: auto;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 30px;
+  color: var(--orange);
+}
+.s-comp .note-honest { margin-top: 14px; }
+
+/* =============================================================================
+   Barras horizontales (slide 07 calidad): grandes y centradas verticalmente
+   ============================================================================= */
+.s-data .hbars {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  flex: 1;
+  justify-content: center;
+}
+.hbar-row {
+  display: grid;
+  grid-template-columns: 340px 1fr 76px;
+  align-items: center;
+  gap: 24px;
+}
+.hbar-label { font-family: var(--font-display); font-weight: 700; font-size: 20px; line-height: 1.2; }
+.hbar-label small {
+  display: block;
+  font-weight: 400;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.6);
+  margin-top: 4px;
+}
+.hbar-track { height: 46px; background: rgba(0, 0, 0, 0.07); border: 2px solid var(--black); }
+.hbar-fill { height: 100%; width: var(--w); background: var(--gradient-warm); }
+.hbar-val { font-family: var(--font-display); font-weight: 700; font-size: 34px; color: var(--orange); text-align: right; }
+
+/* =============================================================================
+   Slide · Salto de aprendizaje — recorrido visual, fondo amarillo
+   ============================================================================= */
+.s-salto {
+  background: var(--yellow);
+  color: var(--black);
+  padding: 54px 72px 64px;
+  display: flex;
+  flex-direction: column;
+}
+.s-salto::before { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 10px; background: var(--black); }
+.s-salto .counter { color: var(--black); }
+.s-salto .eyebrow { color: var(--black); margin-bottom: 10px; }
+.s-salto h2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 46px;
+  line-height: 1.03;
+  letter-spacing: -0.02em;
+  margin-bottom: 6px;
+  max-width: 900px;
+}
+.s-salto .journey { flex: 1; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.s-salto .milestone {
+  flex: 0 0 312px;
+  background: var(--white);
+  border: 4px solid var(--black);
+  padding: 34px 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.s-salto .milestone.end { background: var(--black); color: var(--white); }
+.s-salto .ms-cap { font-family: var(--font-display); font-weight: 700; font-size: 14px; letter-spacing: 0.16em; text-transform: uppercase; }
+.s-salto .milestone.end .ms-cap { color: var(--yellow); }
+.s-salto .ms-num { font-family: var(--font-display); font-weight: 700; font-size: 132px; line-height: 0.88; letter-spacing: -0.05em; }
+.s-salto .milestone.end .ms-num { color: var(--yellow); }
+.s-salto .ms-of { font-size: 14px; line-height: 1.3; color: rgba(0, 0, 0, 0.55); text-align: center; }
+.s-salto .milestone.end .ms-of { color: rgba(255, 255, 255, 0.62); }
+.s-salto .track { flex: 1; position: relative; height: 26px; background: rgba(0, 0, 0, 0.14); border: 3px solid var(--black); display: flex; align-items: center; }
+.s-salto .track-fill { height: 100%; width: 50%; background: var(--black); }
+.s-salto .delta {
+  position: absolute;
+  left: 50%; top: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--black);
+  color: var(--yellow);
+  border: 4px solid var(--white);
+  padding: 16px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.25);
+}
+.s-salto .delta .d-num { font-family: var(--font-display); font-weight: 700; font-size: 46px; line-height: 1; letter-spacing: -0.03em; }
+.s-salto .delta .d-lbl { font-family: var(--font-display); font-weight: 700; font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; }
+.s-salto .salto-note {
+  margin-top: 26px;
+  background: var(--black);
+  color: var(--white);
+  padding: 18px 24px;
+  font-family: var(--font-display);
+  font-size: 15px;
+  line-height: 1.45;
+}
+.s-salto .salto-note strong { color: var(--yellow); }
+
+/* =============================================================================
+   Slide · Recomendaciones / Inteligencia comercial (fondo negro)
+   ============================================================================= */
+.s-reco {
+  background: var(--black);
+  color: var(--white);
+  padding: 54px 64px 72px;
+  display: flex;
+  flex-direction: column;
+}
+.s-reco::before { content: ""; position: absolute; top: 0; left: 0; width: 8px; height: 100%; background: var(--gradient-warm); }
+.s-reco .counter { color: var(--white); }
+.s-reco .eyebrow { color: var(--orange); margin-bottom: 10px; }
+.s-reco h2 { font-family: var(--font-display); font-weight: 700; font-size: 40px; line-height: 1.05; margin-bottom: 26px; }
+.s-reco .cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; flex: 1; min-height: 0; }
+.s-reco .card {
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.05);
+  padding: 26px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.s-reco .card .label { font-family: var(--font-display); font-weight: 700; font-size: 12.5px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--orange); }
+.s-reco .rank { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 14px; }
+.s-reco .rank li { display: flex; align-items: center; gap: 14px; font-family: var(--font-display); font-weight: 700; font-size: 17px; }
+.s-reco .rank li .n {
+  flex: 0 0 34px; height: 34px;
+  background: var(--yellow); color: var(--black);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 16px;
+}
+.s-reco .rank li .c { margin-left: auto; font-size: 14.5px; font-weight: 400; color: rgba(255, 255, 255, 0.6); }
+.s-reco .hook {
+  margin: 26px -64px 0;
+  padding: 22px 64px;
+  background: var(--gradient-warm);
+  color: var(--black);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 1.3;
+}
+.s-reco .hook strong { box-shadow: inset 0 -0.32em 0 rgba(0, 0, 0, 0.18); }
+
+/* =============================================================================
+   Slide · Participación (nombres + depto, sin puntajes, sin cédula §4.16)
+   ============================================================================= */
+.s-part .roster {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  flex: 1;
+  min-height: 0;
+  align-content: center;
+}
+.s-part .p { border: 2px solid var(--black); padding: 18px 24px; display: flex; flex-direction: column; gap: 4px; }
+.s-part .p .nm { font-family: var(--font-display); font-weight: 700; font-size: 19px; line-height: 1.2; }
+.s-part .p .dp { font-family: var(--font-display); font-weight: 700; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--orange); }
+.s-part .privacy { font-family: var(--font-display); font-size: 14px; color: rgba(0, 0, 0, 0.6); margin-top: 18px; }

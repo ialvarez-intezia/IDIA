@@ -1,0 +1,707 @@
+<!doctype html>
+<!--
+  Propuesta — Hoteles Cumberland (DET-011)
+  Servicio: DETECCIÓN (Modelo Intezia). División: Educación. Primer contacto, sin servicio
+  previo. Fuente primaria: Ficha de Levantamiento (Levantamiento_Hoteles_Cumberland_2026-09-08.pdf,
+  asesora Verónica Rubio) + precisiones directas del usuario 2026-09-09.
+  8 ÁREAS CORPORATIVAS Y ADMINISTRATIVAS (ajuste de alcance 2026-09-09 — reemplaza la versión
+  anterior de 13 áreas / "toda la operación"). La empresa opera dividida entre área operativa
+  (atención directa del hotel y huéspedes) y área corporativa/administrativa; este documento
+  cubre ÚNICAMENTE la segunda: Ventas, Reservaciones, Marketing, Contabilidad, Administración,
+  Cuentas por Pagar, Fiscal, Tesorería. ~12-16 personas incluyendo al Director General.
+  2 HORAS de Detección por área (16h) + FUNDAMENTALS (2h grupal, sesión real dentro de este
+  servicio, no solo recomendación a futuro — instrucción explícita del usuario) = 18h totales
+  (ajuste 2026-09-14, instrucción directa del usuario — reemplaza las 4h/32h/34h originales).
+  Cada sesión de área deja un LOGRO INMEDIATO aplicable, más corto que en la versión de 4h pero
+  dentro de la misma sesión (instrucción explícita: mantenerlo, solo acortarlo), empezando por
+  Reservaciones y el área contable. Recepción (atención directa al huésped) queda fuera de
+  alcance por ser área operativa.
+  Recomendación de Claude: mención ÚNICA y breve (instrucción explícita del usuario, mismo
+  criterio que farmaceutica-24/), en la etapa de Reporte Final del roadmap — Leudo Gonzalez
+  (Director General) ya lo conoce a título personal e informal. No contradice la metodología
+  ABR: se presenta como lectura preliminar del contexto, a confirmar con los hallazgos.
+  SIN slide de Mapa de Calor (tabla ilustrativa) — instrucción explícita del usuario, mismo
+  ajuste que farmaceutica-24/. "Mapa de Calor" sigue como nombre del entregable de la Etapa de
+  Priorización, sin slide propia.
+  SIN Certificado de participación INTEZIA en Entregables ni Programa — la Detección
+  (incluido Fundamentals, que es preparación, no capacitación certificada) es una auditoría,
+  no un curso (memoria: deteccion-sin-certificado.md).
+  Base estructural: farmaceutica-24/ (DET-010) — mismo shell (Beneficios v3, Cierre escalera,
+  roadmap .rmx-linear de 3 etapas + resultado, precio estándar), con una slide de cronograma
+  adicional para Fundamentals.
+  Impacto (§4.9): Hotel Tech Report — 2025 State of Hotel Guest Technology Report (58%/70%) +
+  Kamran y Dastgeer (2025) — The Impact of AI on Guest Satisfaction in Hotels (tiempo de
+  respuesta 30s→18s, resolución 90.6%→95.5%, quejas negativas 28%→12%).
+
+  ACTUALIZACIÓN 2026-09-30 — de 8 áreas a 7, unificando 3 pares/tríos y sumando 2 áreas nuevas:
+  instrucción directa del usuario. Las 8 áreas anteriores (Ventas, Reservaciones, Marketing,
+  Contabilidad, Administración, Cuentas por Pagar, Fiscal, Tesorería) se reorganizan así:
+    - Ventas + Marketing + Reservaciones → 1 sola área, "Ventas, Marketing y Reservaciones"
+      (3h). Reservaciones conserva más peso dentro de esa sesión por ser el dolor #1 citado por
+      el cliente (confirmado con el usuario) — Ventas y Marketing se auditan más brevemente.
+    - Administración + Contabilidad → 1 sola área, "Administración y Contabilidad" (3h).
+    - Cuentas por Pagar, Fiscal y Tesorería siguen como áreas separadas (2h c/u, sin cambio).
+    - Recursos Humanos y Auditoría (interna/financiera, confirmado con el usuario — no
+      "night audit" operativo) se SUMAN como áreas nuevas dentro del alcance corporativo/
+      administrativo (2h c/u). Recursos Humanos se redacta en términos genéricos (selección,
+      nómina, comunicados) — sin ficha propia, instrucción explícita de no inventar headcount
+      ni herramientas específicas.
+  7 áreas totales: 2 de 3h (Ventas/Marketing/Reservaciones, Administración/Contabilidad) + 5 de
+  2h (Cuentas por Pagar, Fiscal, Tesorería, Recursos Humanos, Auditoría) = 16h + Fundamentals
+  (2h, sin cambio) = 18h totales — MISMO TOTAL que antes (coincidencia: 8×2h=16h también daba
+  16h de áreas). El universo de personas se mantiene en 12-16 (confirmado con el usuario: estas
+  funciones ya estaban contempladas, solo no tenían sesión propia). Nueva slide de cronograma
+  "Estructura de las 3 horas" (07/13) para las 2 áreas de 3h; la slide de "Estructura de las 2
+  horas" pasa a representar las 5 áreas restantes. 13 slides (antes 12).
+  13 slides · precio estándar (Propuesta Económica, un solo servicio).
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Propuesta · Hoteles Cumberland · Intezia</title>
+  <link rel="stylesheet" href="../_base/styles.css">
+  <link rel="stylesheet" href="overrides.css">
+</head>
+<body>
+
+  <main class="deck">
+
+    <!-- 1 · Portada -->
+    <section class="slide s-cover">
+      <span class="counter">01 / 13</span>
+      <div class="logo-big">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia">
+      </div>
+      <div class="body">
+        <p class="eyebrow">Propuesta formativa · Servicio de Detección</p>
+        <h1>
+          De adopción cero<br>
+          <span class="hl">a una base real.</span>
+        </h1>
+        <p class="lead">
+          Nivelamos al equipo con <strong>Fundamentals</strong> y auditamos las 7 áreas corporativas y administrativas de Hoteles Cumberland, con 3 horas en Ventas/Marketing/Reservaciones y en Administración/Contabilidad, 2 horas en el resto, y un logro inmediato en cada sesión.
+        </p>
+      </div>
+      <div class="id-line">
+        <span class="codigo">Código: DET-011</span>
+        <span class="cliente">Hoteles Cumberland</span>
+      </div>
+    </section>
+
+    <!-- 2 · Punto de dolor + Diagnóstico -->
+    <section class="slide s-pain">
+      <span class="counter">02 / 13</span>
+      <span class="quote-mark">&ldquo;</span>
+      <div class="body">
+        <h2>El área corporativa también repite tareas, aunque el huésped no lo vea.</h2>
+        <p class="context">
+          Hoteles Cumberland parte de una <strong>adopción de IA en cero</strong>: solo el Director General ha explorado la IA de forma personal, sin implementación ni formación para el equipo. Esta propuesta cubre el área corporativa y administrativa, en 7 áreas (comercial, back-office, Recursos Humanos y Auditoría); el área operativa, de atención directa al huésped, se evalúa en un alcance aparte.
+        </p>
+        <p class="diag-title">Diagnóstico</p>
+        <ol>
+          <li>Reservaciones: 2 personas procesan solicitudes para los 4 hoteles, alto volumen repetitivo, sin cobertura fuera de horario laboral.</li>
+          <li>Conciliación bancaria y cuentas por pagar: uno de los procesos más evidentes para automatizar, según el propio cliente.</li>
+          <li>Gestión fiscal y estados financieros: una sola persona centraliza los impuestos de las 4 sedes, y los estados financieros por unidad de negocio se arman a mano.</li>
+          <li>Ventas, Marketing, Recursos Humanos y Auditoría todavía no tienen un criterio común de uso de IA.</li>
+          <li>La adopción de IA hoy es cero a nivel corporativo, sin formación previa para el equipo.</li>
+        </ol>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">HOTELES CUMBERLAND · DET-011</span>
+      </div>
+    </section>
+
+    <!-- 3 · Objetivos estratégicos -->
+    <section class="slide s-goals">
+      <span class="counter">03 / 13</span>
+      <p class="eyebrow">02 · Objetivos</p>
+      <h2>A dónde llevamos<br>a las 7 áreas.</h2>
+      <div class="columns">
+        <div class="general">
+          <p class="label">Objetivo general</p>
+          <p>
+            Auditar el área corporativa y administrativa de Hoteles Cumberland (7 áreas) con Fundamentals, 3 horas en Ventas/Marketing/Reservaciones y en Administración/Contabilidad, y 2 horas en el resto, dejando un logro inmediato en cada una, para llevar la adopción de IA de cero a una base real.
+          </p>
+        </div>
+        <div class="specifics">
+          <p class="label">Objetivos específicos</p>
+          <ol>
+            <li>Nivelar al equipo con una sesión de Fundamentals (2h) antes de auditar, dado que la adopción de IA hoy es cero.</li>
+            <li>Unificamos Ventas/Marketing/Reservaciones y Administración/Contabilidad (3h c/u), y sumamos Recursos Humanos y Auditoría al alcance (2h c/u), modalidad mixta.</li>
+            <li>Dejar un logro inmediato y aplicable en cada área, empezando por Reservaciones y el área contable.</li>
+            <li>Entregar un Reporte Final que valide dónde aplicar IA y confirme la recomendación de ecosistema de IA.</li>
+          </ol>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">HOTELES CUMBERLAND · DET-011</span>
+      </div>
+    </section>
+
+    <!-- 4 · Programa -->
+    <section class="slide s-program">
+      <span class="counter">04 / 13</span>
+      <p class="eyebrow">03 · El proyecto</p>
+      <h2>7 áreas, un mismo punto de partida.</h2>
+      <p class="meta">Fundamentals + Detección con logro inmediato por área.</p>
+      <div class="modules">
+        <div class="module">
+          <span class="roman">I</span>
+          <h3>Fundamentals</h3>
+          <p class="obj">Nivela al equipo en fundamentos de IA antes de auditar, dado que la adopción hoy es cero.</p>
+          <ul class="topics">
+            <li>Fundamentos de IA</li>
+            <li>Kick-off grupal</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">II</span>
+          <h3>Trabajo por Área</h3>
+          <p class="obj">Unimos Ventas/Marketing/Reservaciones y Administración/Contabilidad, y sumamos Recursos Humanos y Auditoría: 7 áreas con un logro inmediato en cada una.</p>
+          <ul class="topics">
+            <li>7 áreas · 3h o 2h</li>
+            <li>Logro inmediato por área</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">III</span>
+          <h3>Priorización</h3>
+          <p class="obj">Se prioriza cada hallazgo por impacto, esfuerzo y riesgo, y se arma el Mapa de Calor.</p>
+          <ul class="topics">
+            <li>Mapa de Calor</li>
+            <li>Priorización de procesos</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">IV</span>
+          <h3>Reporte Final</h3>
+          <p class="obj">Diagnóstico completo + recomendación de ecosistema de IA, base para la futura capacitación.</p>
+          <ul class="topics">
+            <li>Recomendación de IA</li>
+            <li>Base para Habilidades</li>
+          </ul>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">HOTELES CUMBERLAND · DET-011</span>
+      </div>
+    </section>
+
+    <!-- 5 · Roadmap · Detección (3 etapas) -->
+    <section class="slide s-roadmap">
+      <span class="counter">05 / 13</span>
+      <p class="eyebrow">04 · Roadmap · Detección</p>
+      <h2>Auditar antes<br><span class="hl">de asumir dónde está la oportunidad</span>.</h2>
+
+      <div class="rmx-field">
+        <div class="rmx-linear">
+
+          <div class="rmx-lrow-nodes">
+            <div class="rmx-lcol"><div class="rmx-node rmx-node-f2">1</div></div>
+            <div class="rmx-arrow"></div>
+            <div class="rmx-lcol"><div class="rmx-node rmx-node-f3">2</div></div>
+            <div class="rmx-arrow"></div>
+            <div class="rmx-lcol"><div class="rmx-node rmx-node-f4">3</div></div>
+            <div class="rmx-arrow"></div>
+            <div class="rmx-lcol"><div class="rmx-node rmx-node-r">&#9733;</div></div>
+          </div>
+
+          <div class="rmx-lrow-cards">
+            <div class="rmx-lcol">
+              <div class="rmx-card rmx-card-f2">
+                <span class="rmx-card-tag">Etapa 1 · Fundamentals y Trabajo por Área</span>
+                <div class="rmx-card-name">Fundamentals + 7 áreas</div>
+                <ul class="rmx-facets">
+                  <li><span>Qué pasa</span><p>Nivelamos con Fundamentals y auditamos las 7 áreas: 3h en 2 de ellas, 2h en el resto.</p></li>
+                  <li><span>Con quién</span><p>Todo el equipo (Fundamentals) y un referente por área.</p></li>
+                  <li><span>Entrega</span><p>Equipo nivelado + inventario y logro inmediato, por área.</p></li>
+                </ul>
+              </div>
+            </div>
+            <div class="rmx-lspacer"></div>
+            <div class="rmx-lcol">
+              <div class="rmx-card rmx-card-f3">
+                <span class="rmx-card-tag">Etapa 2 · Priorización</span>
+                <div class="rmx-card-name">Mapa de Calor de oportunidades</div>
+                <ul class="rmx-facets">
+                  <li><span>Qué pasa</span><p>Se prioriza cada hallazgo por impacto, esfuerzo y riesgo.</p></li>
+                  <li><span>Con quién</span><p>Equipo consultor Intezia.</p></li>
+                  <li><span>Entrega</span><p>Mapa de Calor de las 7 áreas.</p></li>
+                </ul>
+              </div>
+            </div>
+            <div class="rmx-lspacer"></div>
+            <div class="rmx-lcol">
+              <div class="rmx-card rmx-card-f4">
+                <span class="rmx-card-tag">Etapa 3 · Reporte Final</span>
+                <div class="rmx-card-name">Recomendación de ecosistema de IA</div>
+                <ul class="rmx-facets">
+                  <li><span>Qué pasa</span><p>Se entrega el diagnóstico completo, con una primera recomendación de IA (<strong>Claude</strong>).</p></li>
+                  <li><span>Con quién</span><p>Leudo Gonzalez y liderazgo de la empresa.</p></li>
+                  <li><span>Entrega</span><p>Reporte Final + base para una futura capacitación.</p></li>
+                </ul>
+              </div>
+            </div>
+            <div class="rmx-lspacer"></div>
+            <div class="rmx-lcol">
+              <div class="rmx-result-card">
+                <span class="rmx-result-label">Entregable insignia · Mapa de Calor de las 7 áreas</span>
+                <div class="rmx-result-title">De adopción cero a <b>una base real</b></div>
+                <ul>
+                  <li>Equipo nivelado con Fundamentals</li>
+                  <li>Logro inmediato por área</li>
+                  <li>Mapa de Calor + Reporte Final</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /.rmx-linear -->
+
+        <div class="rmx-ethics">
+          <span class="rmx-ethics-tag">Metodología ABR · Diagnóstico antes de recomendar</span>
+          <p>El Reporte Final confirma o ajusta la recomendación de IA según los hallazgos reales de las 7 áreas, no antes.</p>
+        </div>
+
+      </div><!-- /.rmx-field -->
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">HOTELES CUMBERLAND · DET-011</span>
+      </div>
+    </section>
+
+    <!-- 6 · Cronograma · Fundamentals -->
+    <section class="slide s-schedule">
+      <span class="counter">06 / 13</span>
+      <p class="eyebrow">04 · Cronograma · Fundamentals</p>
+
+      <div class="ses-head">
+        <div>
+          <span class="ses-mod">Sesión grupal · Equipo corporativo/administrativo (12-16 personas) · Modalidad mixta</span>
+          <h2>Fundamentals</h2>
+        </div>
+        <div class="ses-meta"><span class="ses-dur">2h</span></div>
+      </div>
+
+      <div class="ses-body">
+        <div class="ses-block">
+          <span class="label">Temas</span>
+          <div class="chips">
+            <span class="chip">Qué es y qué no es la IA</span>
+            <span class="chip">Casos reales del sector hotelero</span>
+            <span class="chip">Ruta de las 7 sesiones</span>
+            <span class="chip">Preguntas y expectativas</span>
+          </div>
+        </div>
+        <div class="ses-block">
+          <span class="label">Tiempo · Total 2 h</span>
+          <div class="timebar">
+            <div class="seg" style="flex:30">30' Encuadre y fundamentos</div>
+            <div class="seg" style="flex:45">45' Casos reales del sector hotelero</div>
+            <div class="seg" style="flex:30">30' Ruta de las 7 sesiones</div>
+            <div class="seg" style="flex:15">15' Cierre y preguntas</div>
+          </div>
+        </div>
+        <div class="ses-cols">
+          <div class="ses-block">
+            <span class="label">Qué se hace</span>
+            <ul>
+              <li>Presentamos qué es y qué no es la IA, con casos reales de hotelería</li>
+              <li>Explicamos la ruta de las 7 sesiones de auditoría que siguen</li>
+              <li>Abrimos espacio a preguntas y expectativas del equipo</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Qué se logra</span>
+            <ul>
+              <li>El equipo llega a sus sesiones de área con un lenguaje común</li>
+              <li>Expectativas alineadas sobre la auditoría</li>
+              <li>Primera identificación de dónde cada quien ve oportunidad</li>
+            </ul>
+          </div>
+          <div class="ses-block block-rec">
+            <span class="label">Recursos y entornos</span>
+            <ul>
+              <li>Sesión mixta, equipo corporativo/administrativo</li>
+              <li>Sin herramientas técnicas todavía</li>
+              <li>Casos reales del sector hotelero</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">HOTELES CUMBERLAND · DET-011</span>
+      </div>
+    </section>
+
+    <!-- 7 · Cronograma · Estructura de las 3 horas (Ventas/Marketing/Reservaciones y
+         Administración/Contabilidad, 2026-09-30) -->
+    <section class="slide s-schedule">
+      <span class="counter">07 / 13</span>
+      <p class="eyebrow">04 · Cronograma · Estructura de las 3 horas</p>
+
+      <div class="ses-head">
+        <div>
+          <span class="ses-mod">Ventas/Marketing/Reservaciones y Administración/Contabilidad · Modalidad mixta</span>
+          <h2>Estructura de las 3 horas</h2>
+        </div>
+        <div class="ses-meta"><span class="ses-dur">3h</span></div>
+      </div>
+
+      <div class="ses-body">
+        <div class="ses-block">
+          <span class="label">Temas</span>
+          <div class="chips">
+            <span class="chip">Procesos de cada función unificada</span>
+            <span class="chip">Reservaciones con mayor profundidad</span>
+            <span class="chip">Cuellos de botella</span>
+            <span class="chip">Logro inmediato aplicable</span>
+          </div>
+        </div>
+        <div class="ses-block">
+          <span class="label">Tiempo · Total 3 h</span>
+          <div class="timebar">
+            <div class="seg" style="flex:20">20' Contexto y objetivos</div>
+            <div class="seg" style="flex:70">70' Levantamiento de procesos (foco en Reservaciones)</div>
+            <div class="seg" style="flex:70">70' Construcción del logro inmediato</div>
+            <div class="seg" style="flex:20">20' Cierre y siguientes pasos</div>
+          </div>
+        </div>
+        <div class="ses-cols">
+          <div class="ses-block">
+            <span class="label">Qué se hace</span>
+            <ul>
+              <li>Entrevistamos a los referentes de las funciones que se unifican en la sesión</li>
+              <li>En Ventas, Marketing y Reservaciones, profundizamos más en Reservaciones: es el dolor #1 citado por el cliente</li>
+              <li>Construimos en la misma sesión un logro inmediato para la función con mayor cuello de botella</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Qué se logra</span>
+            <ul>
+              <li>Inventario real de procesos de las funciones unificadas</li>
+              <li>Un logro inmediato que la función con mayor cuello de botella ya puede usar</li>
+              <li>Información lista para el Mapa de Calor conjunto</li>
+            </ul>
+          </div>
+          <div class="ses-block block-rec">
+            <span class="label">Recursos y entornos</span>
+            <ul>
+              <li>Sesión mixta (presencial o virtual, según la función)</li>
+              <li>Guion de levantamiento Intezia</li>
+              <li>Sin tocar los sistemas internos de Hoteles Cumberland</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">HOTELES CUMBERLAND · DET-011</span>
+      </div>
+    </section>
+
+    <!-- 8 · Cronograma · Estructura de las 2 horas por área -->
+    <section class="slide s-schedule">
+      <span class="counter">08 / 13</span>
+      <p class="eyebrow">04 · Cronograma · Estructura por área</p>
+
+      <div class="ses-head">
+        <div>
+          <span class="ses-mod">Se repite en cada una de las 5 áreas restantes · Modalidad mixta</span>
+          <h2>Estructura de las 2 horas</h2>
+        </div>
+        <div class="ses-meta"><span class="ses-dur">2h</span></div>
+      </div>
+
+      <div class="ses-body">
+        <div class="ses-block">
+          <span class="label">Temas</span>
+          <div class="chips">
+            <span class="chip">Procesos reales del área</span>
+            <span class="chip">Cuellos de botella</span>
+            <span class="chip">Logro inmediato aplicable</span>
+            <span class="chip">Datos financieros y de personal sensibles</span>
+          </div>
+        </div>
+        <div class="ses-block">
+          <span class="label">Tiempo · Total 2 h</span>
+          <div class="timebar">
+            <div class="seg" style="flex:15">15' Contexto y objetivos</div>
+            <div class="seg" style="flex:45">45' Levantamiento de procesos</div>
+            <div class="seg" style="flex:45">45' Construcción del logro inmediato</div>
+            <div class="seg" style="flex:15">15' Cierre y siguientes pasos</div>
+          </div>
+        </div>
+        <div class="ses-cols">
+          <div class="ses-block">
+            <span class="label">Qué se hace</span>
+            <ul>
+              <li>Entrevistamos al referente del área sobre sus procesos reales</li>
+              <li>Identificamos el cuello de botella más relevante</li>
+              <li>Construimos en la misma sesión un logro inmediato aplicable</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Qué se logra</span>
+            <ul>
+              <li>Inventario real de procesos del área</li>
+              <li>Un logro inmediato que el área ya puede usar</li>
+              <li>Información lista para el Mapa de Calor conjunto</li>
+            </ul>
+          </div>
+          <div class="ses-block block-rec">
+            <span class="label">Recursos y entornos</span>
+            <ul>
+              <li>Sesión mixta (presencial o virtual, según el área)</li>
+              <li>Guion de levantamiento Intezia</li>
+              <li>Sin tocar los sistemas internos de Hoteles Cumberland</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">HOTELES CUMBERLAND · DET-011</span>
+      </div>
+    </section>
+
+    <!-- 9 · Beneficios (formato v3) -->
+    <section class="slide s-benefits s-benefits-v2">
+      <span class="counter">09 / 13</span>
+      <p class="eyebrow">05 · Beneficios</p>
+      <h2>Lo que <span class="hl">se llevan</span>.</h2>
+      <div class="grid">
+        <div class="block">
+          <p class="label">Resultados</p>
+          <ul>
+            <li>Las <strong>7 áreas</strong> corporativas y administrativas auditadas, cada una con un logro inmediato, empezando por Reservaciones y el área contable.</li>
+            <li>Equipo nivelado con Fundamentals antes de la auditoría.</li>
+            <li>Base lista para la futura capacitación puntual en conciliación bancaria.</li>
+          </ul>
+        </div>
+        <div class="block">
+          <p class="label">Por qué Detección</p>
+          <p>
+            Antes de recomendar una herramienta, Hoteles Cumberland conoce sus 7 áreas corporativas y administrativas a fondo, partiendo de una adopción de IA en <strong>cero</strong>.
+          </p>
+        </div>
+        <div class="block">
+          <p class="label">Entregables</p>
+        </div>
+        <div class="block">
+          <p class="label">Valor inmediato</p>
+        </div>
+      </div>
+
+      <div class="multi-box entregables-box" data-field="Entregables"></div>
+      <div class="multi-box acreditaciones-box" data-field="Acreditacion"></div>
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">HOTELES CUMBERLAND · DET-011</span>
+      </div>
+    </section>
+
+    <!-- 10 · Impacto / estudios — datos de estudios reales, fuente citada (CLAUDE.md §4.9) -->
+    <section class="slide s-impact">
+      <span class="counter">10 / 13</span>
+
+      <div class="impact-head">
+        <p class="eyebrow">06 · Impacto</p>
+        <h2>El huésped ya espera<br><span class="hl">una respuesta inmediata</span>.</h2>
+      </div>
+
+      <div class="impact-body">
+        <div class="chart-panel">
+          <p class="panel-title">Cómo perciben los huéspedes la IA en hotelería</p>
+          <div class="bars">
+            <div class="bar-row">
+              <span class="bar-label">Huéspedes que creen que la IA puede mejorar su estadía</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:58%"><span class="bar-val">58%</span></div></div>
+            </div>
+            <div class="bar-row">
+              <span class="bar-label">Huéspedes a quienes un chatbot de IA les resulta útil para solicitudes simples</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:70%"><span class="bar-val">70%</span></div></div>
+            </div>
+          </div>
+          <div class="bar-axis"><span class="scale"><span>0</span><span>25</span><span>50</span><span>75</span><span>100%</span></span></div>
+          <p class="panel-source">Fuente: Hotel Tech Report &mdash; 2025 State of Hotel Guest Technology Report.</p>
+        </div>
+
+        <div class="gauge-panel">
+          <div class="gauge" style="--pct:95.5">
+            <div class="gauge-core">
+              <span class="gauge-num">95.5<span class="pct">%</span></span>
+              <span class="gauge-cap">tasa de resolución de consultas con chatbots de IA en hoteles (antes: 90.6%)</span>
+            </div>
+          </div>
+          <div class="chips">
+            <div class="chip">
+              <span class="chip-num">&minus;57%</span>
+              <span class="chip-lbl">menos quejas negativas tras implementar chatbots de IA (28% &rarr; 12%)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="impact-hook">
+        <span class="hook-mark">&#9656;</span>
+        <p class="hook-text">
+          El 58% de los huéspedes cree que la IA puede mejorar su estadía, y el 70% encuentra útil un chatbot para solicitudes simples (Hotel Tech Report, 2025). En hoteles que ya implementaron chatbots de atención, el tiempo de respuesta bajó de 30 a 18 segundos y las quejas negativas cayeron de 28% a 12% (Kamran y Dastgeer, 2025). Para Hoteles Cumberland, esa misma lógica aplicada a Reservaciones es la diferencia entre depender de 2 personas y ofrecer cobertura real.
+        </p>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">HOTELES CUMBERLAND · DET-011</span>
+      </div>
+    </section>
+
+    <!-- 11 · Propuesta Económica (estándar: Duración + Programa + Notas + Cotización) -->
+    <section class="slide s-price">
+      <span class="counter">11 / 13</span>
+      <h2 class="title">Propuesta Económica</h2>
+
+      <div class="block">
+        <span class="block-eyebrow">Duración</span>
+        <p class="block-value">Fundamentals (2h) + 7 áreas corporativas: 3h en 2 de ellas + 2h en el resto (16h) · 18h totales · modalidad mixta.</p>
+      </div>
+
+      <div class="block block-programa">
+        <span class="block-eyebrow">Programa</span>
+      </div>
+      <div class="multi-box programa-box" data-field="Programa"></div>
+
+      <div class="block block-cotizacion">
+        <span class="block-eyebrow">Cotización</span>
+      </div>
+
+      <span class="cot-label cot-label-base">Propuesta + Inversión</span>
+      <div class="cot-frame base-frame"></div>
+
+      <span class="cot-label cot-label-discount">Descuento</span>
+      <div class="cot-frame discount-frame"></div>
+
+      <span class="cot-label cot-label-total">TOTAL</span>
+      <div class="cot-frame total-frame"></div>
+
+      <p class="cot-validity">Cotización válida por 30 días.</p>
+      <div class="cot-terms-box">
+        <span class="cot-terms-label">Importante</span>
+        <p class="cot-terms-text">Este servicio se presta bajo nuestros <a href="https://drive.google.com/file/d/1PA-ZSt4KnyY5dpxXzgkIk6-yfGlV2eF8/view?usp=drive_link" target="_blank" rel="noopener">términos y condiciones</a>. Al avanzar con esta propuesta, ambas partes los aceptan.</p>
+      </div>
+
+      <div class="block block-notes-container">
+        <span class="block-eyebrow">Notas</span>
+      </div>
+      <div class="multi-box notas-box" data-field="Notas"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">HOTELES CUMBERLAND · DET-011</span>
+      </div>
+    </section>
+
+    <!-- 12 · Próximos pasos -->
+    <section class="slide s-steps">
+      <span class="counter">12 / 13</span>
+      <p class="eyebrow">07 · Próximos pasos</p>
+      <h2>Cómo arrancamos.</h2>
+      <div class="step-cards">
+        <div class="step-card">
+          <span class="ghost">01</span>
+        </div>
+        <div class="step-card">
+          <span class="ghost">02</span>
+        </div>
+        <div class="step-card">
+          <span class="ghost">03</span>
+        </div>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-01-titulo" data-field="Paso01Titulo">
+        <span class="acro-default-text">Confirmamos fechas</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-01-body" data-field="Paso01Body">
+        <span class="acro-default-text">Definimos el calendario de las 7 sesiones, la sesión de Fundamentals y un referente por área.</span>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-02-titulo" data-field="Paso02Titulo">
+        <span class="acro-default-text">Acceso y logística</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-02-body" data-field="Paso02Body">
+        <span class="acro-default-text">Coordinamos la modalidad mixta de cada sesión y los accesos necesarios del equipo corporativo.</span>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-03-titulo" data-field="Paso03Titulo">
+        <span class="acro-default-text">Reunión de arranque</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-03-body" data-field="Paso03Body">
+        <span class="acro-default-text">Sesión de unos 30 minutos con Leudo Gonzalez para alinear el alcance y el orden de las 7 áreas.</span>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">HOTELES CUMBERLAND · DET-011</span>
+      </div>
+    </section>
+
+    <!-- 13 · Cierre (ruta/escalera editable) -->
+    <section class="slide s-end">
+      <span class="counter">13 / 13</span>
+
+      <div class="end-logo">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia">
+      </div>
+
+      <div class="end-summit" data-field="CierreResultado">
+        <span class="acro-default-text">Hoteles Cumberland, con las 7 áreas corporativas auditadas y un logro inmediato ya funcionando en cada una.</span>
+      </div>
+
+      <div class="end-stairs">
+        <div class="stair-step stair-1">
+          <span class="stair-label">Paso 1</span>
+          <div class="stair-field" data-field="CierrePaso1">
+            <span class="acro-default-text">Fundamentals y trabajo por área</span>
+          </div>
+        </div>
+        <div class="stair-step stair-2">
+          <span class="stair-label">Paso 2</span>
+          <div class="stair-field" data-field="CierrePaso2">
+            <span class="acro-default-text">Mapa de Calor priorizado</span>
+          </div>
+        </div>
+        <div class="stair-step stair-3">
+          <span class="stair-label">Paso 3</span>
+          <div class="stair-field" data-field="CierrePaso3">
+            <span class="acro-default-text">Reporte Final + recomendación de IA</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cta-wrap">
+        <span class="cta">Esperamos tu respuesta</span>
+      </div>
+
+      <div class="end-contact">
+        <p class="contact-line">
+          <span class="contact-label">Asesora de ventas:</span>
+          Verónica Rubio <span class="dot">·</span> +58 422 3355505 <span class="dot">·</span> vrubio01@intezia.com
+        </p>
+        <p class="contact-line">
+          <span class="contact-label">Empresa:</span>
+          Intezia C.A J-505657950 <span class="dot">·</span> servicio@intezia.com
+        </p>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

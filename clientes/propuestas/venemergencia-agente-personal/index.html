@@ -1,0 +1,433 @@
+<!doctype html>
+<!--
+  Propuesta — Venemergencia · Agente Personal para Andrés Simón (CAI-028)
+  Servicio: HABILIDADES (interpretación — ver nota abajo). División: Educación. Alianza: sí
+  (Venemergencia ya tiene marco de alianza con Intezia, ver venemergencia/brief.md). Asesora:
+  María Iribarren. Fuente: instrucción directa del usuario (2026-09-24) + PDF de referencia
+  "Cotización Propuesta Agente Personal Gabriel Cohen" (formato viejo, otro cliente, a
+  adaptar) + informe de actividades diarias de David Prato (2026-03-27, cliente "Constructora
+  Sambil", cuenta gabriel.cohen2010@gmail.com) usado SOLO como contexto técnico general de
+  cómo opera el producto "Agente Personal" de Intezia (OpenClaw + WhatsApp + Google
+  Workspace) — ninguno de los dos documentos es específico de Andrés Simón.
+
+  QUÉ ES: construcción NUEVA desde cero (confirmado por el usuario — no es "optimización y
+  ampliación" de un asistente ya existente, a diferencia de Gabriel Cohen) de un asistente
+  personal para Andrés Simón, mismo alcance funcional que la referencia de Gabriel Cohen
+  (confirmado explícitamente por el usuario): operación en múltiples grupos de WhatsApp,
+  gestión de contactos, automatización de correos, control de consumo de IA — sobre OpenClaw,
+  integrado a Google Workspace.
+
+  NOTA DE CLASIFICACIÓN (servicio, §4.1a): este es un proyecto de DESARROLLO a la medida (el
+  propio PDF de referencia lo separa como línea de negocio "Desarrollo", distinta de
+  "Educación" — ver su infografía de la rueda Consultoría/Educación/Fundación/Evento). El
+  catálogo actual del sistema (Detección/Habilidades/Políticas/Innovación) no tiene una
+  categoría para esto. Se clasificó como "habilidades" por ser la más cercana (mismo
+  razonamiento que un Cerebro Digital: una IA personalizada construida para un individuo
+  específico), pero es una interpretación documentada, no una categoría exacta — ver
+  brief.md. NO lleva certificado (es una entrega de software, no una capacitación) ni slide
+  de Seguimiento 30-60-90 (no hay adopción de currículo que verificar) — el rol de
+  "acompañamiento post-entrega" lo cubre la slide nueva de Mantenimiento y Soporte.
+
+  FORMATO: el PDF de referencia (Gabriel Cohen) usa un diseño distinto al sistema (fondo
+  oscuro con degradado, sin AcroForms, precios en REF/Bs a tasa BCV Euro) — confirmado
+  explícitamente por el usuario que se adapta al formato CANÓNICO de Intezia (paleta
+  amarillo/negro/naranja, AcroForms editables, precio en $ vacío para que ventas lo complete).
+
+  ESTRUCTURA (8 slides, más corta que las propuestas de capacitación — no hay Programa de
+  módulos ni Cronograma de sesiones curriculares, porque no es un currículo): Portada →
+  Objetivos (.s-goals, con el disclaimer de OpenClaw en fase temprana) → Beneficios v3 →
+  Impacto (reutiliza las fuentes ya verificadas de banco-activo-cerebros-digitales/) →
+  Propuesta Económica → Mantenimiento y Soporte (slide NUEVA, opcional, sin campo de precio
+  AcroForm — ver brief.md) → Cómo arrancamos + calendario → Cierre.
+
+  CALENDARIO: kick-off martes 6 de octubre (instrucción directa del usuario, mes asumido
+  octubre por continuidad con el resto de propuestas de esta sesión — confirmar). Sesiones
+  martes y jueves "a partir del 12" — como el 12 de octubre es lunes, la primera sesión
+  martes/jueves real cae el 13 (mismo criterio ya aplicado en banco-activo-cerebros-digitales/
+  y banco-activo-deteccion-negocios/ para fechas de inicio que no caen en el día pedido).
+  Las 6 sesiones (nombradas por fase técnica: auditoría/configuración, integración con Google
+  Workspace, memoria y comportamiento, operación multigrupo, validación, entrega) son una
+  INTERPRETACIÓN del ritmo martes/jueves pedido por el usuario — no vienen de un desglose de
+  horas dado explícitamente. Documentado en brief.md para confirmar.
+
+  Sin slide de Impacto con datos inventados (§4.9): se reutilizan fuentes ya verificadas en
+  el sistema (Stanford HAI, McKinsey, Anthropic Economic Index). Sin afirmar migración de
+  stack (§4.11).
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Propuesta · Agente Personal · Venemergencia · Intezia</title>
+  <link rel="stylesheet" href="../_base/styles.css">
+  <link rel="stylesheet" href="overrides.css">
+</head>
+<body>
+
+  <main class="deck">
+
+    <!-- 1 · Portada -->
+    <section class="slide s-cover">
+      <span class="counter">01 / 08</span>
+      <div class="logo-big">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia">
+      </div>
+      <div class="body">
+        <p class="eyebrow">Propuesta formativa · Servicio de Habilidades</p>
+        <h1>
+          De todo a mano,<br>
+          <span class="hl">a un asistente que ya lo resolvió.</span>
+        </h1>
+        <p class="lead">
+          Diseñamos y construimos el <strong>asistente personal</strong> de Andrés Simón para operar en múltiples grupos de WhatsApp, gestionar sus contactos y automatizar sus correos, con control real sobre el consumo de IA y el manejo de su información.
+        </p>
+      </div>
+      <div class="id-line">
+        <span class="codigo">Código: CAI-028</span>
+        <span class="cliente">Venemergencia</span>
+      </div>
+    </section>
+
+    <!-- 2 · Objetivos estratégicos -->
+    <section class="slide s-goals">
+      <span class="counter">02 / 08</span>
+      <p class="eyebrow">01 · Objetivos</p>
+      <h2>A dónde llevamos<br>el día a día de Andrés Simón.</h2>
+      <div class="columns">
+        <div class="general">
+          <p class="label">Objetivo general</p>
+          <p>
+            Diseñar y construir el asistente personal de Andrés Simón para operar de forma eficiente en múltiples grupos de WhatsApp, integrando gestión de contactos, automatización de correos y control de consumo de inteligencia artificial, con estabilidad operativa y control sobre su información.
+          </p>
+        </div>
+        <div class="specifics">
+          <p class="label">Objetivos específicos</p>
+          <ol>
+            <li>Gestionar múltiples conversaciones de WhatsApp de forma simultánea, cada una con su propio contexto.</li>
+            <li>Automatizar tareas operativas del día a día: correos, agenda y contactos.</li>
+            <li>Mantener privacidad y control de acceso por tipo de usuario.</li>
+            <li>Prevenir y manejar con cuidado la información, dado que la solución se apoya en una herramienta de automatización de reciente lanzamiento en fase temprana.</li>
+          </ol>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">VENEMERGENCIA · CAI-028</span>
+      </div>
+    </section>
+
+    <!-- 3 · Beneficios (formato v3) -->
+    <section class="slide s-benefits s-benefits-v2">
+      <span class="counter">03 / 08</span>
+      <p class="eyebrow">02 · Beneficios</p>
+      <h2>Lo que <span class="hl">se llevan</span>.</h2>
+      <div class="grid">
+        <div class="block">
+          <p class="label">Resultados</p>
+          <ul>
+            <li>Un <strong>asistente personal</strong> operando en múltiples grupos de WhatsApp, cada uno con su propio contexto.</li>
+            <li>Correos, agenda y contactos gestionados automáticamente, sin intervención manual repetitiva.</li>
+            <li>Control real del consumo de IA y de quién accede a qué información.</li>
+          </ul>
+        </div>
+        <div class="block">
+          <p class="label">Por qué Habilidades</p>
+          <p>
+            Andrés Simón no solo recibe el asistente: queda con el <strong>control operativo</strong> para ajustarlo, escalarlo y decidir qué automatizar después, sin depender de un tercero para cada cambio.
+          </p>
+        </div>
+        <div class="block">
+          <p class="label">Entregables</p>
+        </div>
+        <div class="block">
+          <p class="label">Valor inmediato</p>
+        </div>
+      </div>
+
+      <div class="multi-box entregables-box" data-field="Entregables"></div>
+      <div class="multi-box acreditaciones-box" data-field="Acreditacion"></div>
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">VENEMERGENCIA · CAI-028</span>
+      </div>
+    </section>
+
+    <!-- 4 · Impacto / estudios — datos de estudios reales, fuente citada (§4.9) -->
+    <section class="slide s-impact">
+      <span class="counter">04 / 08</span>
+
+      <div class="impact-head">
+        <p class="eyebrow">03 · Impacto</p>
+        <h2>La evidencia no deja<br><span class="hl">lugar a dudas</span>.</h2>
+      </div>
+
+      <div class="impact-body">
+        <div class="chart-panel">
+          <p class="panel-title">Mejora de productividad por área de trabajo</p>
+          <div class="bars">
+            <div class="bar-row">
+              <span class="bar-label">Marketing y contenidos</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:50%"><span class="bar-val">+50%</span></div></div>
+            </div>
+            <div class="bar-row">
+              <span class="bar-label">Desarrollo de software</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:26%"><span class="bar-val">+26%</span></div></div>
+            </div>
+            <div class="bar-row">
+              <span class="bar-label">Atención al cliente</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:15%"><span class="bar-val">+15%</span></div></div>
+            </div>
+          </div>
+          <div class="bar-axis"><span class="scale"><span>0</span><span>25</span><span>50</span><span>75</span><span>100%</span></span></div>
+          <p class="panel-source">Fuente: Stanford HAI &mdash; AI Index Report 2026 (cap. Economía) &middot; McKinsey &mdash; The State of AI 2025 &middot; Anthropic Economic Index 2025.</p>
+        </div>
+
+        <div class="gauge-panel">
+          <div class="gauge" style="--pct:78">
+            <div class="gauge-core">
+              <span class="gauge-num">78<span class="pct">%</span></span>
+              <span class="gauge-cap">ya usa IA</span>
+            </div>
+          </div>
+          <div class="chips">
+            <div class="chip">
+              <span class="chip-num">2.6&times;</span>
+              <span class="chip-lbl">adopción vs. 2023</span>
+            </div>
+            <div class="chip">
+              <span class="chip-num">1 de 3</span>
+              <span class="chip-lbl">escala su IA</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="impact-hook">
+        <span class="hook-mark">&#9656;</span>
+        <p class="hook-text">
+          <strong>8 de cada 10 empresas</strong> ya usan IA. Solo <strong>una de cada tres</strong> la convierte en resultados. Un asistente personal es lo que separa usar IA de que la IA trabaje para usted, con su propio contexto y criterio.
+        </p>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">VENEMERGENCIA · CAI-028</span>
+      </div>
+    </section>
+
+    <!-- 5 · Propuesta Económica -->
+    <section class="slide s-price">
+      <span class="counter">05 / 08</span>
+      <h2 class="title">Propuesta Económica</h2>
+
+      <div class="block">
+        <span class="block-eyebrow">Duración</span>
+        <p class="block-value">Diseño, desarrollo e implementación en unas 4 semanas, con acompañamiento posterior.</p>
+      </div>
+
+      <div class="block block-programa">
+        <span class="block-eyebrow">Programa</span>
+      </div>
+      <div class="multi-box programa-box" data-field="Programa"></div>
+
+      <div class="block block-cotizacion">
+        <span class="block-eyebrow">Cotización</span>
+      </div>
+
+      <span class="cot-label cot-label-base">Propuesta + Inversión</span>
+      <div class="cot-frame base-frame"></div>
+
+      <span class="cot-label cot-label-discount">Descuento</span>
+      <span class="cot-sign-minus">&minus;$</span>
+      <div class="cot-frame discount-frame"></div>
+      <span class="cot-urgent-note">Descuento válido por 15 días</span>
+
+      <span class="cot-label cot-label-total">TOTAL</span>
+      <div class="cot-frame total-frame"></div>
+
+      <p class="cot-validity">Cotización válida por 30 días.</p>
+
+      <div class="cot-roi-box">
+        <span class="cot-roi-label">ROI estimado</span>
+        <p class="cot-roi-text">Cada tarea que hoy Andrés Simón resuelve manualmente en WhatsApp, correo o agenda pasa a resolverse sola: el tiempo que eso libera se reinvierte en las decisiones que más dependen de su criterio.</p>
+      </div>
+
+      <div class="cot-terms-box">
+        <span class="cot-terms-label">Importante</span>
+        <p class="cot-terms-text">Este servicio se presta bajo nuestros <a href="https://drive.google.com/file/d/1PA-ZSt4KnyY5dpxXzgkIk6-yfGlV2eF8/view?usp=drive_link" target="_blank" rel="noopener">términos y condiciones</a>. Al avanzar con esta propuesta, ambas partes los aceptan.</p>
+      </div>
+
+      <div class="block block-notes-container">
+        <span class="block-eyebrow">Notas</span>
+      </div>
+      <div class="multi-box notas-box" data-field="Notas"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">VENEMERGENCIA · CAI-028</span>
+      </div>
+    </section>
+
+    <!-- 6 · Mantenimiento y Soporte (opcional) — slide a la medida, ver overrides.css -->
+    <section class="slide s-steps s-maintenance">
+      <span class="counter">06 / 08</span>
+      <p class="eyebrow">04 · Mantenimiento y soporte (opcional)</p>
+      <h2>Después de la entrega,<br>seguimos disponibles.</h2>
+      <p class="maint-desc">El servicio de soporte incluye la atención de incidencias operativas sobre la solución ya implementada, además de la revisión y el acompañamiento técnico ante interrupciones del servicio. Contempla también la aplicación de actualizaciones sobre los componentes ya instalados, siempre dentro del alcance actual de la solución.</p>
+
+      <div class="maint-grid">
+        <div class="maint-col maint-yes">
+          <p class="maint-label">Incluye</p>
+          <ul class="maint-list">
+            <li>Soporte correctivo sobre la solución ya implementada.</li>
+            <li>Acompañamiento técnico y diagnóstico ante incidencias operativas.</li>
+            <li>Actualizaciones y mantenimiento de los componentes existentes.</li>
+            <li>Revisión y atención de fallas de conectividad o acceso.</li>
+          </ul>
+        </div>
+        <div class="maint-col maint-no">
+          <p class="maint-label">No incluye</p>
+          <ul class="maint-list">
+            <li>Nuevas integraciones o desarrollos.</li>
+            <li>Incorporación de nuevas herramientas o servicios.</li>
+            <li>Cambios fuera del alcance actual de la implementación.</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="maint-note">Cuota mensual, se cotiza aparte de esta propuesta con tu asesora comercial.</p>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">VENEMERGENCIA · CAI-028</span>
+      </div>
+    </section>
+
+    <!-- 7 · Próximos pasos -->
+    <section class="slide s-steps">
+      <span class="counter">07 / 08</span>
+      <p class="eyebrow">05 · Próximos pasos</p>
+      <h2>Cómo arrancamos.</h2>
+      <div class="step-cards">
+        <div class="step-card">
+          <span class="ghost">01</span>
+        </div>
+        <div class="step-card">
+          <span class="ghost">02</span>
+        </div>
+        <div class="step-card">
+          <span class="ghost">03</span>
+        </div>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-01-titulo" data-field="Paso01Titulo">
+        <span class="acro-default-text">Confirmamos accesos</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-01-body" data-field="Paso01Body">
+        <span class="acro-default-text">Coordinamos con Andrés Simón las credenciales y accesos necesarios para comenzar la configuración.</span>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-02-titulo" data-field="Paso02Titulo">
+        <span class="acro-default-text">Configuración y pruebas</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-02-body" data-field="Paso02Body">
+        <span class="acro-default-text">Configuramos el agente sobre la plataforma de automatización y validamos cada capacidad con Andrés Simón en las sesiones de seguimiento.</span>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-03-titulo" data-field="Paso03Titulo">
+        <span class="acro-default-text">Entrega</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-03-body" data-field="Paso03Body">
+        <span class="acro-default-text">Entregamos el proyecto finalizado junto con las credenciales correspondientes.</span>
+      </div>
+
+      <div class="steps-calendar">
+        <span class="steps-calendar-tag">Calendario de inicio &middot; próxima fecha: martes 6 de octubre</span>
+        <p class="steps-calendar-result">En 4 semanas, el asistente personal de Andrés Simón queda configurado, validado y entregado.</p>
+        <div class="steps-calendar-grid">
+          <div class="cal-col">
+            <div class="cal-row">
+              <span class="cal-date">Mar 6 oct</span><span class="cal-time">10-11</span><span class="cal-title">Kick-off</span>
+            </div>
+            <div class="cal-row">
+              <span class="cal-date">Mar 13 oct</span><span class="cal-time">10-12</span><span class="cal-title">Auditoría y configuración</span>
+            </div>
+            <div class="cal-row">
+              <span class="cal-date">Jue 15 oct</span><span class="cal-time">10-12</span><span class="cal-title">Integración con Google Workspace</span>
+            </div>
+            <div class="cal-row">
+              <span class="cal-date">Mar 20 oct</span><span class="cal-time">10-12</span><span class="cal-title">Memoria y comportamiento</span>
+            </div>
+          </div>
+          <div class="cal-col">
+            <div class="cal-row">
+              <span class="cal-date">Jue 22 oct</span><span class="cal-time">10-12</span><span class="cal-title">Operación multigrupo</span>
+            </div>
+            <div class="cal-row">
+              <span class="cal-date">Mar 27 oct</span><span class="cal-time">10-12</span><span class="cal-title">Validación funcional</span>
+            </div>
+            <div class="cal-row">
+              <span class="cal-date">Jue 29 oct</span><span class="cal-time">10-12</span><span class="cal-title">Ajustes y entrega</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">VENEMERGENCIA · CAI-028</span>
+      </div>
+    </section>
+
+    <!-- 8 · Cierre (ruta/escalera editable) -->
+    <section class="slide s-end">
+      <span class="counter">08 / 08</span>
+
+      <div class="end-logo">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia">
+      </div>
+
+      <div class="end-summit" data-field="CierreResultado">
+        <span class="acro-default-text">El asistente personal de Andrés Simón operando en WhatsApp, correo y agenda, con sus credenciales entregadas.</span>
+      </div>
+
+      <div class="end-stairs">
+        <div class="stair-step stair-1">
+          <span class="stair-label">Paso 1</span>
+          <div class="stair-field" data-field="CierrePaso1">
+            <span class="acro-default-text">Configuración e integración</span>
+          </div>
+        </div>
+        <div class="stair-step stair-2">
+          <span class="stair-label">Paso 2</span>
+          <div class="stair-field" data-field="CierrePaso2">
+            <span class="acro-default-text">Memoria y comportamiento</span>
+          </div>
+        </div>
+        <div class="stair-step stair-3">
+          <span class="stair-label">Paso 3</span>
+          <div class="stair-field" data-field="CierrePaso3">
+            <span class="acro-default-text">Entrega y capacitación de uso</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cta-wrap">
+        <span class="cta">Esperamos tu respuesta</span>
+      </div>
+
+      <div class="end-contact">
+        <p class="contact-line">
+          <span class="contact-label">Asesora de ventas:</span>
+          María Iribarren <span class="dot">&middot;</span> +58 414-0570056 <span class="dot">&middot;</span> miribarren@intezia.com
+        </p>
+        <p class="contact-line">
+          <span class="contact-label">Empresa:</span>
+          Intezia C.A J-505657950 <span class="dot">&middot;</span> servicio@intezia.com
+        </p>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

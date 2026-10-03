@@ -1,0 +1,314 @@
+<!doctype html>
+<!--
+  Catálogo Charlas Eventos Intezia 2026 — documento institucional
+  8 charlas + 5 páginas institucionales + Conclusión + CTA = 15 páginas
+  Formato: A4 landscape · paleta canónica · sin AcroForms · sin precio
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Catálogo de Charlas para Eventos · Intezia 2026</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Slide imagen full-page (para páginas 2, 3, 5 importadas del catálogo viejo) */
+    .s-img-page { background: var(--black); padding: 0; }
+    .s-img-page img { width: 100%; height: 100%; object-fit: contain; display: block; }
+
+    /* Mismos estilos institucionales que el Catálogo Talleres */
+    .s-cat-cover { background: var(--black); color: var(--white); padding: 56px 80px 80px; overflow: hidden; }
+    .s-cat-cover::before { content: ""; position: absolute; top: -160px; right: -160px; width: 460px; height: 460px; background: var(--gradient-warm); transform: rotate(45deg); z-index: 0; }
+    .s-cat-cover .counter { color: var(--yellow); z-index: 5; }
+    .s-cat-cover .logo-big { position: relative; z-index: 2; margin-left: -28px; }
+    .s-cat-cover .logo-big img { height: 180px; width: auto; display: block; }
+    .s-cat-cover .body { position: relative; z-index: 2; margin-top: 36px; flex: 1; display: flex; flex-direction: column; justify-content: center; }
+    .s-cat-cover .eyebrow { color: var(--yellow); margin-bottom: 18px; }
+    .s-cat-cover h1 { font-family: var(--font-display); font-weight: 700; font-size: 84px; line-height: 0.95; letter-spacing: -0.025em; margin-bottom: 24px; max-width: 880px; }
+    .s-cat-cover h1 .hl { display: inline-block; background: var(--yellow); color: var(--black); padding: 0 12px; margin: 4px 0; }
+    .s-cat-cover .lead { font-family: var(--font-display); font-weight: 400; font-size: 19px; line-height: 1.5; max-width: 720px; opacity: 0.92; }
+    .s-cat-cover .badge-line { position: absolute; bottom: 56px; left: 80px; right: 80px; display: flex; justify-content: space-between; align-items: center; font-family: var(--font-display); font-weight: 700; font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--yellow); z-index: 3; }
+    .s-cat-cover .badge-line .right { color: var(--white); opacity: 0.7; text-align: right; }
+
+    .s-detras { background: var(--black); color: var(--white); padding: 56px 64px 80px; }
+    .s-detras::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 8px; background: var(--gradient-warm); }
+    .s-detras .counter { color: var(--yellow); }
+    .s-detras .eyebrow { color: var(--yellow); margin-bottom: 8px; }
+    .s-detras h2 { font-family: var(--font-display); font-weight: 700; font-size: 44px; line-height: 1.0; margin-bottom: 28px; }
+    .s-detras h2 .hl-y { color: var(--yellow); }
+    .s-detras .team-row { display: grid; grid-template-columns: 1fr 1fr 280px; gap: 28px; margin-bottom: 28px; }
+    .s-detras .founder { background: rgba(244, 186, 26, 0.08); border-left: 4px solid var(--yellow); padding: 16px 18px; }
+    .s-detras .founder h3 { font-family: var(--font-display); font-weight: 700; font-size: 22px; color: var(--yellow); }
+    .s-detras .founder p { font-family: var(--font-display); font-weight: 700; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--white); opacity: 0.8; margin-top: 4px; }
+    .s-detras .consultores { background: var(--gradient-warm); color: var(--black); padding: 16px 18px; display: flex; flex-direction: column; justify-content: center; }
+    .s-detras .consultores .num { font-family: var(--font-display); font-weight: 700; font-size: 48px; line-height: 1; letter-spacing: -0.03em; }
+    .s-detras .consultores .lbl { font-family: var(--font-display); font-weight: 700; font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase; margin-top: 4px; }
+    .s-detras .qs { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+    .s-detras .q { background: rgba(255, 255, 255, 0.04); border-top: 3px solid var(--orange); padding: 16px 18px; }
+    .s-detras .q h4 { font-family: var(--font-display); font-weight: 700; font-size: 16px; color: var(--yellow); margin-bottom: 8px; }
+    .s-detras .q p { font-size: 13px; line-height: 1.5; color: var(--white); opacity: 0.92; }
+    .s-detras .q strong { color: var(--yellow); font-weight: 700; }
+
+    .s-areas { background: var(--black); color: var(--white); padding: 56px 64px 80px; }
+    .s-areas::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 8px; background: var(--gradient-warm-rev); }
+    .s-areas .counter { color: var(--yellow); }
+    .s-areas .eyebrow { color: var(--yellow); margin-bottom: 8px; }
+    .s-areas h2 { font-family: var(--font-display); font-weight: 700; font-size: 44px; line-height: 1.0; margin-bottom: 24px; }
+    .s-areas h2 .hl-y { color: var(--yellow); }
+    .s-areas .areas-grid { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 14px; height: 470px; }
+    .s-areas .area { background: rgba(255, 255, 255, 0.05); border-left: 5px solid var(--yellow); padding: 18px 22px; }
+    .s-areas .area:nth-child(2) { border-color: var(--orange); }
+    .s-areas .area:nth-child(3) { border-color: var(--orange); }
+    .s-areas .area:nth-child(4) { border-color: var(--yellow); }
+    .s-areas .area h4 { font-family: var(--font-display); font-weight: 700; font-size: 22px; color: var(--yellow); margin-bottom: 6px; }
+    .s-areas .area:nth-child(2) h4, .s-areas .area:nth-child(3) h4 { color: var(--orange); }
+    .s-areas .area p { font-size: 13.5px; line-height: 1.5; opacity: 0.92; margin-bottom: 8px; }
+    .s-areas .area .num { font-family: var(--font-display); font-weight: 700; font-size: 28px; color: var(--white); letter-spacing: -0.02em; }
+    .s-areas .area .num small { font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--yellow); margin-left: 8px; }
+
+    .s-manifesto { background: var(--black); color: var(--white); padding: 80px 96px; display: flex; flex-direction: column; justify-content: center; }
+    .s-manifesto::after { content: ""; position: absolute; bottom: 0; right: 0; width: 60%; height: 14px; background: var(--gradient-warm-rev); }
+    .s-manifesto .counter { color: var(--yellow); }
+    .s-manifesto h2 { font-family: var(--font-display); font-weight: 700; font-size: 56px; line-height: 1.0; letter-spacing: -0.02em; margin-bottom: 32px; color: var(--yellow); }
+    .s-manifesto p { font-family: var(--font-display); font-size: 17px; line-height: 1.6; margin-bottom: 18px; max-width: 920px; }
+    .s-manifesto p strong { color: var(--yellow); font-weight: 700; }
+    .s-manifesto .closing { font-family: var(--font-display); font-weight: 700; font-size: 19px; color: var(--white); border-left: 5px solid var(--orange); padding-left: 18px; margin-top: 8px; }
+
+    .s-ecosystem { background: var(--white); color: var(--black); padding: 56px 64px 80px; }
+    .s-ecosystem::before { content: ""; position: absolute; top: 0; left: 0; width: 12px; height: 100%; background: var(--yellow); }
+    .s-ecosystem .eyebrow { color: var(--orange); margin-bottom: 8px; }
+    .s-ecosystem h2 { font-family: var(--font-display); font-weight: 700; font-size: 40px; line-height: 1.0; margin-bottom: 8px; }
+    .s-ecosystem h2 .hl-y { color: var(--orange); }
+    .s-ecosystem .sub { font-family: var(--font-display); font-weight: 400; font-size: 16px; margin-bottom: 28px; max-width: 720px; }
+    .s-ecosystem .sectors { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .s-ecosystem .sector { background: var(--black); color: var(--white); padding: 22px 26px; min-height: 160px; }
+    .s-ecosystem .sector:nth-child(2) { background: var(--yellow); color: var(--black); }
+    .s-ecosystem .sector:nth-child(3) { background: var(--orange); color: var(--black); }
+    .s-ecosystem .sector:nth-child(4) { background: var(--black); color: var(--white); }
+    .s-ecosystem .sector h4 { font-family: var(--font-display); font-weight: 700; font-size: 22px; margin-bottom: 8px; letter-spacing: -0.01em; }
+    .s-ecosystem .sector ul { list-style: none; padding: 0; }
+    .s-ecosystem .sector ul li { font-size: 13.5px; line-height: 1.6; font-weight: 700; opacity: 0.95; }
+    .s-ecosystem .sector ul li::before { content: "▸ "; font-weight: 700; }
+
+    .s-conclusion { background: var(--black); color: var(--white); padding: 80px 96px; display: flex; flex-direction: column; justify-content: center; }
+    .s-conclusion::after { content: ""; position: absolute; bottom: 0; left: 0; width: 100%; height: 14px; background: var(--gradient-warm); }
+    .s-conclusion .counter { color: var(--yellow); }
+    .s-conclusion h2 { font-family: var(--font-display); font-weight: 700; font-size: 56px; line-height: 1.0; letter-spacing: -0.02em; margin-bottom: 28px; color: var(--yellow); }
+    .s-conclusion p { font-family: var(--font-display); font-size: 17px; line-height: 1.6; margin-bottom: 16px; max-width: 920px; }
+    .s-conclusion p strong { color: var(--yellow); font-weight: 700; }
+    .s-conclusion .quote { font-family: var(--font-display); font-weight: 700; font-style: italic; font-size: 22px; color: var(--orange); border-left: 5px solid var(--orange); padding-left: 22px; margin-top: 12px; max-width: 900px; }
+
+    .s-cat-cta { background: var(--black); color: var(--white); padding: 56px 56px; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+    .s-cat-cta::before { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 14px; background: var(--gradient-warm); }
+    .s-cat-cta::after { content: ""; position: absolute; bottom: 0; right: 0; width: 60%; height: 14px; background: var(--gradient-warm-rev); }
+    .s-cat-cta .counter { color: var(--yellow); }
+    .s-cat-cta .end-logo img { height: 200px; }
+    .s-cat-cta .end-message { font-family: var(--font-display); font-weight: 700; font-size: 36px; line-height: 1.15; letter-spacing: -0.015em; margin-top: 24px; max-width: 760px; }
+    .s-cat-cta .end-message .hl-y { color: var(--yellow); }
+    .s-cat-cta .end-message .hl-o { color: var(--orange); }
+    .s-cat-cta .cta-wrap { margin-top: 32px; }
+    .s-cat-cta .cta { background: var(--yellow); color: var(--black); font-family: var(--font-display); font-weight: 700; font-size: 20px; letter-spacing: 0.2em; text-transform: uppercase; padding: 22px 56px; box-shadow: 10px 10px 0 var(--orange); }
+    .s-cat-cta .footer-line { position: absolute; bottom: 36px; left: 0; right: 0; text-align: center; font-family: var(--font-display); font-weight: 700; font-size: 12px; letter-spacing: 0.18em; color: var(--white); opacity: 0.7; }
+
+    .s-program .meta { line-height: 1.45; }
+  </style>
+</head>
+<body>
+
+  <main class="deck">
+
+    <!-- 1 · Portada del catálogo de charlas -->
+    <section class="slide s-cat-cover">
+      <span class="counter">01 / 15</span>
+      <div class="logo-big"><img src="../../../../logos/educacion/BLANCO.png" alt="Intezia Educación"></div>
+      <div class="body">
+        <p class="eyebrow">Catálogo de Charlas para Eventos · Adaptables</p>
+        <h1>Catálogo de<br><span class="hl">charlas 2026</span></h1>
+        <p class="lead">
+          8 charlas Intezia adaptables a eventos, webinars, congresos sectoriales y comités directivos · sin tiempo fijo · enmarcadas por sector (empresarial · salud · tecnológico · educación · compliance · live consulting) · cada una abre conversación comercial con el cliente.
+        </p>
+      </div>
+      <div class="badge-line">
+        <span>Consultoría de IA #1 en LATAM</span>
+        <span class="right">Respaldados por Microsoft for Startups</span>
+      </div>
+    </section>
+
+    <!-- 2 · Detrás de la empresa · imagen del catálogo viejo -->
+    <section class="slide s-img-page">
+      <img src="../_assets-paginas-viejas/pagina-02.png" alt="Detrás de la empresa">
+    </section>
+
+        <!-- 3 · 4 Áreas Intezia · imagen del catálogo viejo -->
+    <section class="slide s-img-page">
+      <img src="../_assets-paginas-viejas/pagina-03.png" alt="Áreas Intezia">
+    </section>
+
+        <!-- 4 · Manifiesto -->
+    <section class="slide s-manifesto">
+      <span class="counter">04 / 15</span>
+      <h2>Bienvenidos a la era de la<br>Inteligencia Operativa</h2>
+      <p>La historia de los negocios se divide en dos: los que <strong>observaron la ola</strong> de la inteligencia artificial y los que <strong>aprendieron a navegarla</strong>. Hoy, la ventaja competitiva no la tiene quien posee más tecnología, sino quien tiene el equipo capaz de <strong>pensar y construir</strong> con ella.</p>
+      <p>En Intezia <strong>no impartimos cursos · instalamos capacidades</strong>. Transformamos la ansiedad tecnológica en Inteligencia Operativa. Nuestra misión es convertir a su organización en una maquinaria eficiente, donde la IA se encarga de lo repetitivo y su talento humano se libera para hacer lo que mejor sabe hacer: <strong>crear, estrategar y liderar</strong>.</p>
+      <p class="closing">Este catálogo de charlas es la puerta de entrada. Cada charla abre una conversación. Cada conversación, un proyecto.</p>
+    </section>
+
+    <!-- 5 · Ecosistema de confianza · imagen del catálogo viejo -->
+    <section class="slide s-img-page">
+      <img src="../_assets-paginas-viejas/pagina-05.png" alt="Ecosistema de Confianza">
+    </section>
+
+        <!-- ===== 8 CHARLAS · una por página ===== -->
+
+    <!-- 6 · Charla 01 · Nuevas Tecnologías -->
+    <section class="slide s-program">
+      <span class="counter">06 / 15</span>
+      <p class="eyebrow">Charla 01 · Empresarial · Negocios · Adaptable 15-45 min</p>
+      <h2>Nuevas Tecnologías, Desafíos y Casos en IA</h2>
+      <p class="meta">Mapa actualizado del estado del arte 2026 · tecnologías, desafíos del mercado actual y casos de éxito de implementación corporativa</p>
+      <div class="modules">
+        <div class="module"><span class="roman">I</span><h3>Apertura</h3><p class="obj">Gancho ejecutivo y promesa de 3 noticias clave del momento.</p><ul class="topics"><li>1.1 Gancho ejecutivo</li><li>1.2 Por qué este momento</li><li>1.3 Promesa · 3 noticias</li><li>1.4 Setup conversacional</li></ul></div>
+        <div class="module"><span class="roman">II</span><h3>Nuevas Tecnologías 2026</h3><p class="obj">Estado del arte sintetizado: modelos frontera, agentes, MCP y video generativo.</p><ul class="topics"><li>2.1 Modelos frontera Claude · GPT-5 · Gemini</li><li>2.2 Agentes y Computer Use</li><li>2.3 MCP · conectores universales</li><li>2.4 Veo · Sora · Runway</li></ul></div>
+        <div class="module"><span class="roman">III</span><h3>Desafíos del Mercado</h3><p class="obj">Tensiones reales que enfrenta la adopción corporativa de IA hoy.</p><ul class="topics"><li>3.1 Adopción atomizada</li><li>3.2 ROI medible</li><li>3.3 Gobernanza y AUP</li><li>3.4 Brecha de talento</li></ul></div>
+        <div class="module"><span class="roman">IV</span><h3>Casos de Éxito</h3><p class="obj">Cuatro casos representativos del portafolio Intezia por sector.</p><ul class="topics"><li>4.1 Legal · Legal Bots</li><li>4.2 Financiero · Claude avanzado</li><li>4.3 Salud · NotebookLM</li><li>4.4 Corporativo · ROI medido</li></ul></div>
+        <div class="module"><span class="roman">V</span><h3>Cierre + Feedback</h3><p class="obj">Síntesis, la pregunta para el comité y CTA institucional.</p><ul class="topics"><li>5.1 Síntesis · 3 pilares</li><li>5.2 La pregunta para el comité</li><li>5.3 Espacio de feedback</li><li>5.4 CTA · siguiente conversación</li></ul></div>
+      </div>
+      <div class="foot"><img src="../../../../logos/educacion/NEGRO.png" alt=""><span class="meta">Charla 01 · Nuevas Tecnologías en IA</span></div>
+    </section>
+
+    <!-- 7 · Charla 02 · Salud Aumentada -->
+    <section class="slide s-program">
+      <span class="counter">07 / 15</span>
+      <p class="eyebrow">Charla 02 · Sector Salud · Adaptable 15-45 min</p>
+      <h2>Salud Aumentada · IA para Profesionales del Sector</h2>
+      <p class="meta">IA generativa aplicada a la práctica clínica, investigación y comunicación médica · NotebookLM como cerebro · Gems como asistentes</p>
+      <div class="modules">
+        <div class="module"><span class="roman">I</span><h3>Apertura</h3><p class="obj">¿Cuánto tiempo cuesta una historia clínica manual? Gancho ético del setup.</p><ul class="topics"><li>1.1 Gancho · tiempo del profesional</li><li>1.2 Por qué este momento</li><li>1.3 Promesa · 3 áreas de impacto</li><li>1.4 Setup ético · qué SÍ y qué NO</li></ul></div>
+        <div class="module"><span class="roman">II</span><h3>Práctica Clínica Aumentada</h3><p class="obj">Gemini, Claude, NotebookLM y Gems aplicados al flujo clínico.</p><ul class="topics"><li>2.1 Resúmenes de consulta</li><li>2.2 Gems para historias (SOAP)</li><li>2.3 NotebookLM cerebro médico</li><li>2.4 Privacidad · qué NO subir</li></ul></div>
+        <div class="module"><span class="roman">III</span><h3>Investigación y Comunicación</h3><p class="obj">Lectura asistida de papers y comunicación médica con pacientes.</p><ul class="topics"><li>3.1 Lectura asistida de papers</li><li>3.2 Análisis comparativo de evidencia</li><li>3.3 Comunicación con pacientes</li><li>3.4 Higgsfield para video médico</li></ul></div>
+        <div class="module"><span class="roman">IV</span><h3>Casos de Implementación</h3><p class="obj">Cuatro casos reales del portafolio Intezia en salud.</p><ul class="topics"><li>4.1 Médico independiente</li><li>4.2 Clínica · automatización</li><li>4.3 Laboratorio · investigación</li><li>4.4 Comunicación pública</li></ul></div>
+        <div class="module"><span class="roman">V</span><h3>Cierre + Feedback</h3><p class="obj">Síntesis y la pregunta para el comité médico institucional.</p><ul class="topics"><li>5.1 Síntesis · 3 áreas</li><li>5.2 Pregunta para el comité médico</li><li>5.3 Espacio de feedback</li><li>5.4 CTA · siguiente conversación</li></ul></div>
+      </div>
+      <div class="foot"><img src="../../../../logos/educacion/NEGRO.png" alt=""><span class="meta">Charla 02 · Salud Aumentada</span></div>
+    </section>
+
+    <!-- 8 · Charla 03 · Crecimiento Empresarial -->
+    <section class="slide s-program">
+      <span class="counter">08 / 15</span>
+      <p class="eyebrow">Charla 03 · Empresarial · Crecimiento · Adaptable 15-45 min</p>
+      <h2>IA para el Crecimiento Empresarial</h2>
+      <p class="meta">Productividad, ventas, marketing y estrategia · 4 palancas para multiplicar resultado sin sumar headcount · mapa práctico para directivos</p>
+      <div class="modules">
+        <div class="module"><span class="roman">I</span><h3>Apertura</h3><p class="obj">Mini-encuesta inicial: ¿cuántas horas semanales pierdes en tareas que IA puede hacer?</p><ul class="topics"><li>1.1 Gancho · horas perdidas</li><li>1.2 Por qué este momento</li><li>1.3 Promesa · 4 palancas</li><li>1.4 Mini-encuesta inicial</li></ul></div>
+        <div class="module"><span class="roman">II</span><h3>Productividad y Operación</h3><p class="obj">Correos, minutas, análisis básico y asistentes virtuales del rol.</p><ul class="topics"><li>2.1 Correos y minutas asistidas</li><li>2.2 Excel y análisis básico</li><li>2.3 Asistentes virtuales del rol</li><li>2.4 Automatización con MCP</li></ul></div>
+        <div class="module"><span class="roman">III</span><h3>Ventas y Marketing Asistidos</h3><p class="obj">Investigación de cuentas, propuestas personalizadas y Brand Voice consistente.</p><ul class="topics"><li>3.1 Investigación de cuentas</li><li>3.2 Propuestas personalizadas</li><li>3.3 Brand Voice consistente</li><li>3.4 Métricas y A/B testing</li></ul></div>
+        <div class="module"><span class="roman">IV</span><h3>Estrategia y Decisión Aumentada</h3><p class="obj">Sparring con Opus + extended thinking sobre la agenda del directivo.</p><ul class="topics"><li>4.1 Sparring con Opus</li><li>4.2 Frameworks asistidos FODA · GTM</li><li>4.3 Reportes para directorio</li><li>4.4 Activos + gobernanza</li></ul></div>
+        <div class="module"><span class="roman">V</span><h3>Cierre + Feedback</h3><p class="obj">Mini-encuesta final y CTA para abrir conversación con el comité.</p><ul class="topics"><li>5.1 Síntesis · 4 palancas</li><li>5.2 Mini-encuesta final</li><li>5.3 Espacio de feedback</li><li>5.4 CTA · siguiente conversación</li></ul></div>
+      </div>
+      <div class="foot"><img src="../../../../logos/educacion/NEGRO.png" alt=""><span class="meta">Charla 03 · IA para el Crecimiento Empresarial</span></div>
+    </section>
+
+    <!-- 9 · Charla 04 · Stack Técnico -->
+    <section class="slide s-program">
+      <span class="counter">09 / 15</span>
+      <p class="eyebrow">Charla 04 · Tecnológico · Adaptable 15-45 min</p>
+      <h2>El Stack Técnico de IA 2026</h2>
+      <p class="meta">Mapa técnico opinionado · modelos frontera, agentes, Computer Use, MCP, code generation y multimedia · qué usar, cuándo, por qué</p>
+      <div class="modules">
+        <div class="module"><span class="roman">I</span><h3>Apertura</h3><p class="obj">¿Qué cambió en el stack en los últimos 6 meses? Pregunta al público técnico.</p><ul class="topics"><li>1.1 Qué cambió 6 meses</li><li>1.2 Por qué este momento</li><li>1.3 Promesa · mapa opinionado</li><li>1.4 Pregunta al público técnico</li></ul></div>
+        <div class="module"><span class="roman">II</span><h3>Modelos Frontera 2026</h3><p class="obj">Claude, GPT-5, Gemini, Copilot · capacidades y criterios de selección.</p><ul class="topics"><li>2.1 Claude 4.7 · razonamiento</li><li>2.2 GPT-5 / o-series</li><li>2.3 Gemini 2.5 · ecosistema</li><li>2.4 Copilot · integración M365</li></ul></div>
+        <div class="module"><span class="roman">III</span><h3>Agentes · Computer Use · MCP</h3><p class="obj">Anatomía de agentes en producción y arquitectura de conectores.</p><ul class="topics"><li>3.1 Anatomía de un agente</li><li>3.2 Computer Use en producción</li><li>3.3 MCP · arquitectura</li><li>3.4 Servidores oficiales y custom</li></ul></div>
+        <div class="module"><span class="roman">IV</span><h3>Code · Multimedia · Enterprise</h3><p class="obj">Code generation, video generativo y casos enterprise documentados.</p><ul class="topics"><li>4.1 Claude Code · Cursor · Copilot</li><li>4.2 Veo · Sora · Runway</li><li>4.3 Higgsfield · Canva con IA</li><li>4.4 Casos enterprise</li></ul></div>
+        <div class="module"><span class="roman">V</span><h3>Cierre + Q&A Técnica</h3><p class="obj">Síntesis y 3 movimientos técnicos clave + Q&A abierta.</p><ul class="topics"><li>5.1 Síntesis · 3 movimientos técnicos</li><li>5.2 Pregunta para el equipo</li><li>5.3 Q&A técnica abierta</li><li>5.4 CTA · siguiente conversación</li></ul></div>
+      </div>
+      <div class="foot"><img src="../../../../logos/educacion/NEGRO.png" alt=""><span class="meta">Charla 04 · El Stack Técnico de IA 2026</span></div>
+    </section>
+
+    <!-- 10 · Charla 05 · Emprendedores -->
+    <section class="slide s-program">
+      <span class="counter">10 / 15</span>
+      <p class="eyebrow">Charla 05 · Emprendimiento · Negocios · Adaptable 15-45 min</p>
+      <h2>IA para Emprendedores · De la Idea al Producto con Agentes</h2>
+      <p class="meta">Cómo opera un emprendedor solo (o equipo de 2) como si fuera 10 personas · validación, MVP, ventas tempranas y operación con agentes</p>
+      <div class="modules">
+        <div class="module"><span class="roman">I</span><h3>Apertura</h3><p class="obj">¿Qué tan grande sería tu negocio si fueras 10 personas? Setup action over polish.</p><ul class="topics"><li>1.1 Gancho · ser equipo de 10</li><li>1.2 Por qué este momento</li><li>1.3 Promesa · 4 movimientos</li><li>1.4 Pregunta a emprendedores</li></ul></div>
+        <div class="module"><span class="roman">II</span><h3>Validación + MVP</h3><p class="obj">Investigación asistida, buyer personas y MVP en horas con code generation.</p><ul class="topics"><li>2.1 Investigación con Deep Research</li><li>2.2 Buyer personas vivas</li><li>2.3 MVP con code generation / no-code</li><li>2.4 Landing en horas</li></ul></div>
+        <div class="module"><span class="roman">III</span><h3>Ventas Tempranas</h3><p class="obj">Listas de prospectos, outreach personalizado y asistente comercial.</p><ul class="topics"><li>3.1 Listas de prospectos</li><li>3.2 Outreach con Brand Voice</li><li>3.3 Asistente de seguimiento</li><li>3.4 Métricas mínimas para iterar</li></ul></div>
+        <div class="module"><span class="roman">IV</span><h3>Operación con Agentes</h3><p class="obj">Asistentes virtuales, automatización con MCP y sparring estratégico.</p><ul class="topics"><li>4.1 Asistentes virtuales</li><li>4.2 Automatización con MCP</li><li>4.3 Computer Use · tareas browser</li><li>4.4 Sparring estratégico</li></ul></div>
+        <div class="module"><span class="roman">V</span><h3>Cierre + Feedback</h3><p class="obj">¿Cuál movimiento haces esta semana? CTA para acompañamiento Intezia.</p><ul class="topics"><li>5.1 Síntesis · 4 movimientos</li><li>5.2 ¿Qué movimiento esta semana?</li><li>5.3 Espacio de feedback</li><li>5.4 CTA · acompañamiento Intezia</li></ul></div>
+      </div>
+      <div class="foot"><img src="../../../../logos/educacion/NEGRO.png" alt=""><span class="meta">Charla 05 · IA para Emprendedores</span></div>
+    </section>
+
+    <!-- 11 · Charla 06 · Gobernanza Ética AUP -->
+    <section class="slide s-program">
+      <span class="counter">11 / 15</span>
+      <p class="eyebrow">Charla 06 · Compliance · Directorio · Adaptable 15-45 min</p>
+      <h2>Gobernanza, Ética y AUP de IA</h2>
+      <p class="meta">Marco mínimo necesario para que el comité apruebe inversión en IA con tranquilidad · AUP, zona de no-uso, métricas, riesgos y firma indelegable</p>
+      <div class="modules">
+        <div class="module"><span class="roman">I</span><h3>Apertura</h3><p class="obj">¿Sabe qué subió ayer al ChatGPT su mejor talento? Setup cero pánico.</p><ul class="topics"><li>1.1 Gancho · qué subió tu talento</li><li>1.2 Por qué este momento</li><li>1.3 Promesa · marco mínimo viable</li><li>1.4 Pregunta socrática al directorio</li></ul></div>
+        <div class="module"><span class="roman">II</span><h3>AUP Corporativo</h3><p class="obj">Qué es un AUP, estructura mínima, vendor approval y revisión trimestral.</p><ul class="topics"><li>2.1 AUP · qué es y por qué</li><li>2.2 Estructura mínima</li><li>2.3 Vendor approval list</li><li>2.4 Onboarding y revisión</li></ul></div>
+        <div class="module"><span class="roman">III</span><h3>Zona de No-Uso y Riesgos</h3><p class="obj">Datos confidenciales, PI, información personal y decisiones no delegables.</p><ul class="topics"><li>3.1 Datos confidenciales y PI</li><li>3.2 Información personal</li><li>3.3 Decisiones que NO se delegan</li><li>3.4 Marco sectorial</li></ul></div>
+        <div class="module"><span class="roman">IV</span><h3>Métricas y Firma Indelegable</h3><p class="obj">Métricas de adopción, ROI y firma profesional indelegable con casos reales.</p><ul class="topics"><li>4.1 Métricas de adopción</li><li>4.2 ROI de inversión en IA</li><li>4.3 Firma profesional indelegable</li><li>4.4 Casos de gobernanza implementada</li></ul></div>
+        <div class="module"><span class="roman">V</span><h3>Cierre + Feedback</h3><p class="obj">3 documentos firmables como tesis y la pregunta para el directorio.</p><ul class="topics"><li>5.1 Síntesis · 3 documentos firmables</li><li>5.2 La pregunta para el directorio</li><li>5.3 Espacio de feedback</li><li>5.4 CTA · sesión específica para AUP</li></ul></div>
+      </div>
+      <div class="foot"><img src="../../../../logos/educacion/NEGRO.png" alt=""><span class="meta">Charla 06 · Gobernanza, Ética y AUP de IA</span></div>
+    </section>
+
+    <!-- 12 · Charla 07 · Live Consulting -->
+    <section class="slide s-program">
+      <span class="counter">12 / 15</span>
+      <p class="eyebrow">Charla 07 · Formato Participativo · Premium · Transversal</p>
+      <h2>Asesoría de IA en Vivo · Live Consulting</h2>
+      <p class="meta">3 voluntarios al azar · cada uno trae un problema real · en vivo se diseña la arquitectura de la solución con IA · formato más participativo del catálogo</p>
+      <div class="modules">
+        <div class="module"><span class="roman">I</span><h3>Apertura · Reglas del Juego</h3><p class="obj">Reglas del formato, selección al azar y cronómetro visible.</p><ul class="topics"><li>1.1 Reglas del juego</li><li>1.2 Por qué este formato funciona</li><li>1.3 Selección al azar · 3 voluntarios</li><li>1.4 Cronómetro visible</li></ul></div>
+        <div class="module"><span class="roman">II</span><h3>Caso 1 · Diagnóstico + Arquitectura</h3><p class="obj">Problema real del voluntario 1: reformulación, diseño y decisión de stack.</p><ul class="topics"><li>2.1 Problema del voluntario 1</li><li>2.2 Reformulación en términos de IA</li><li>2.3 Diseño de arquitectura</li><li>2.4 Decisión de stack</li></ul></div>
+        <div class="module"><span class="roman">III</span><h3>Caso 2 · Diagnóstico + Arquitectura</h3><p class="obj">Problema del voluntario 2 · diseño contrastado con el caso 1.</p><ul class="topics"><li>3.1 Problema del voluntario 2</li><li>3.2 Reformulación y diseño</li><li>3.3 Diferencias vs caso 1</li><li>3.4 Captura de la arquitectura</li></ul></div>
+        <div class="module"><span class="roman">IV</span><h3>Caso 3 · Diagnóstico + Arquitectura</h3><p class="obj">Problema del voluntario 3, síntesis comparativa y patrón común de diseño.</p><ul class="topics"><li>4.1 Problema del voluntario 3</li><li>4.2 Reformulación y diseño</li><li>4.3 Síntesis comparativa</li><li>4.4 Patrón común de diseño</li></ul></div>
+        <div class="module"><span class="roman">V</span><h3>Cierre + Feedback</h3><p class="obj">3 arquitecturas mostradas y entrega a los voluntarios post-mortem.</p><ul class="topics"><li>5.1 Síntesis · 3 arquitecturas</li><li>5.2 ¿Tu caso se parece?</li><li>5.3 Entrega a voluntarios</li><li>5.4 CTA · datos institucionales</li></ul></div>
+      </div>
+      <div class="foot"><img src="../../../../logos/educacion/NEGRO.png" alt=""><span class="meta">Charla 07 · Live Consulting</span></div>
+    </section>
+
+    <!-- 13 · Charla 08 · Docente Aumentado -->
+    <section class="slide s-program">
+      <span class="counter">13 / 15</span>
+      <p class="eyebrow">Charla 08 · Educación · Adaptable 15-45 min</p>
+      <h2>El Docente Aumentado · Educación 2026</h2>
+      <p class="meta">IA generativa al servicio del docente y la institución · planificación, evaluación, contenido, investigación · con marco pedagógico y ética académica como brújula</p>
+      <div class="modules">
+        <div class="module"><span class="roman">I</span><h3>Apertura</h3><p class="obj">¿Tus estudiantes ya usan IA · vos lo sabés? Mini-encuesta inicial.</p><ul class="topics"><li>1.1 Gancho · estudiantes y IA</li><li>1.2 Por qué este momento</li><li>1.3 Promesa · 4 movidas</li><li>1.4 Mini-encuesta inicial</li></ul></div>
+        <div class="module"><span class="roman">II</span><h3>Planificación y Diseño Didáctico</h3><p class="obj">Planificación asistida, diseño adaptado y material multi-formato.</p><ul class="topics"><li>2.1 Planificación asistida</li><li>2.2 Diseño adaptado al grupo</li><li>2.3 Material didáctico multi-formato</li><li>2.4 NotebookLM cerebro docente</li></ul></div>
+        <div class="module"><span class="roman">III</span><h3>Evaluación y Retroalimentación</h3><p class="obj">Evaluación asistida, feedback personalizado y rúbrica para trabajos con IA.</p><ul class="topics"><li>3.1 Evaluación asistida</li><li>3.2 Retroalimentación a escala</li><li>3.3 Rúbrica para trabajos con IA</li><li>3.4 Detección y conversación honesta</li></ul></div>
+        <div class="module"><span class="roman">IV</span><h3>Investigación y Honestidad Académica</h3><p class="obj">Investigación con criterio, comunicación y honestidad académica como marco.</p><ul class="topics"><li>4.1 Investigación con criterio</li><li>4.2 Comunicación con estudiantes</li><li>4.3 Honestidad académica</li><li>4.4 Marco institucional</li></ul></div>
+        <div class="module"><span class="roman">V</span><h3>Cierre + Feedback</h3><p class="obj">¿Qué movimiento empiezas esta semana? CTA institucional con Intezia.</p><ul class="topics"><li>5.1 Síntesis · 4 movidas</li><li>5.2 ¿Qué movimiento esta semana?</li><li>5.3 Espacio de feedback</li><li>5.4 CTA · institucional con Intezia</li></ul></div>
+      </div>
+      <div class="foot"><img src="../../../../logos/educacion/NEGRO.png" alt=""><span class="meta">Charla 08 · El Docente Aumentado</span></div>
+    </section>
+
+    <!-- 14 · Conclusión -->
+    <section class="slide s-conclusion">
+      <span class="counter">14 / 15</span>
+      <h2>Su traje a la medida</h2>
+      <p>Cada charla del catálogo es <strong>adaptable</strong>. Sin tiempo fijo, sin temario rígido, sin "talla única". Marketing Intezia coordina con su evento, su audiencia y su intención · y diseña la versión exacta de la charla que necesita.</p>
+      <p><strong>Lo mejor de Intezia es que cada charla abre una conversación.</strong> El catálogo no termina en el evento; abre la puerta para un proyecto en serio · capacitación, consultoría o desarrollo a la medida de su organización.</p>
+      <p>Si busca una charla más, hay muchas opciones. Si busca un <strong>socio estratégico</strong> que active a su gente con IA y diseñe el siguiente paso, solo hay uno.</p>
+      <p class="quote">Cada charla es una puerta. Cada conversación, un proyecto.</p>
+    </section>
+
+    <!-- 15 · CTA / Cierre -->
+    <section class="slide s-cat-cta">
+      <span class="counter">15 / 15</span>
+      <div class="end-logo"><img src="../../../../logos/educacion/BLANCO.png" alt="Intezia Educación"></div>
+      <p class="end-message">
+        Rellena el <span class="hl-y">formulario</span><br>
+        y agenda la charla que <span class="hl-o">activa</span> a tu equipo.
+      </p>
+      <div class="cta-wrap"><span class="cta">Aplica Aquí</span></div>
+      <p class="footer-line">INTEZIA.COM · info@intezia.com · J-505657950 · Respaldados por Microsoft for Startups</p>
+    </section>
+
+  </main>
+</body>
+</html>

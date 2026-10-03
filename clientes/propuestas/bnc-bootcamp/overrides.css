@@ -1,0 +1,40 @@
+/* Overrides locales · BNC CAP-001 (IA Bootcamp · Fase 2)
+   Equipo facilitador con 3 personas → grid de 3 columnas (el _base trae 2). */
+.s-benefits .team .members {
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 18px;
+}
+
+/* Tercera persona: avatar amarillo (el _base solo recolorea la 2.ª a naranja). */
+.s-benefits .team .person:nth-child(3) .avatar {
+  background: var(--yellow);
+  color: var(--black);
+}
+
+/* Programa con 5 módulos (3×2): el _base solo fija min-height pero deja fuentes
+   grandes y muestra .obj, lo que desborda la card. Aplicamos modo compacto
+   equivalente al de 4 módulos: ocultar .obj y reducir tipografía/padding. */
+.s-program .modules:has(> .module:nth-child(5)):not(:has(> .module:nth-child(7))) .module {
+  min-height: 0;
+  padding: 56px 14px 14px;
+}
+.s-program .modules:has(> .module:nth-child(5)):not(:has(> .module:nth-child(7))) .module .roman {
+  font-size: 50px;
+  top: 4px;
+}
+.s-program .modules:has(> .module:nth-child(5)):not(:has(> .module:nth-child(7))) .module h3 {
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+.s-program .modules:has(> .module:nth-child(5)):not(:has(> .module:nth-child(7))) .module .obj {
+  font-size: 12px;
+  line-height: 1.35;
+  margin-bottom: 6px;
+}
+.s-program .modules:has(> .module:nth-child(5)):not(:has(> .module:nth-child(7))) .module .topics {
+  gap: 3px;
+}
+.s-program .modules:has(> .module:nth-child(5)):not(:has(> .module:nth-child(7))) .module .topics li {
+  font-size: 12.5px;
+  padding: 2px 8px;
+}

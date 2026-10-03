@@ -1,0 +1,584 @@
+<!doctype html>
+<!--
+  Propuesta — Suiche 7B (CAP-009)
+  Programa: Claude Esencial · Introducción
+  División: Educación · Tipo: Capacitación in-company
+  Audiencia: colaboradores sin conocimiento previo de Claude · sector financiero
+  Modalidad: Presencial u Online (un solo deck cubre ambas)
+  Stack: Claude 4.7 Sonnet/Opus/Haiku (Claude-céntrico, sin multi-vendor)
+  Estructura: 4 módulos · 4 sesiones × 2h = 8 horas · 1:1 ratio
+
+  Decisiones de plantilla (cliente real):
+  - Primera de 2 propuestas alternativas (CAP-009 intro + CAP-010 avanzado)
+  - INCLUYE consultor: Isaac Rodriguez
+  - INCLUYE asesora: Flavia Martínez (en cierre)
+  - CTA cierre: "Esperamos tu Respuesta"
+  - Footer: "Suiche 7B · Propuesta · CAP-009"
+  - 12 slides · incluye 3 slides "Propuesta Económica" (Opción A/B/C)
+    para 3 tiers de pricing — el script agregar-campo-precio.py soporta
+    multi-page con sufijos _2, _3 en los field names.
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Propuesta · Suiche 7B · CAP-009 · Claude Esencial · Intezia Educación</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <main class="deck">
+
+    <!-- 1 · Portada -->
+    <section class="slide s-cover">
+      <span class="counter">01 / 13</span>
+      <div class="logo-big">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia Educación">
+      </div>
+      <div class="body">
+        <p class="eyebrow">Capacitación in-company · Introducción a Claude · Presencial u Online</p>
+        <h1>
+          Claude<br>
+          Esencial<br>
+          para tu <span class="hl">día</span>
+        </h1>
+        <p class="lead">
+          Programa formativo a medida para los colaboradores de Suiche 7B — bases prácticas para usar Claude en el día a día laboral, con marco de privacidad y verificación que respeta los lineamientos del sector financiero.
+        </p>
+      </div>
+      <div class="id-line">
+        <span class="codigo">Código: CAP-009</span>
+        <span class="cliente">Suiche 7B</span>
+      </div>
+    </section>
+
+    <!-- 2 · Punto de dolor + Diagnóstico -->
+    <section class="slide s-pain">
+      <span class="counter">02 / 13</span>
+      <span class="quote-mark">“</span>
+      <div class="body">
+        <h2>Tener Claude no es saber usarlo. Saber usarlo es lo que cambia tu día.</h2>
+        <p class="context">
+          Suiche 7B opera infraestructura crítica del sistema financiero venezolano y sus colaboradores manejan información sensible a diario. La pregunta "¿puedo usar IA para esto?" aparece cada vez con más frecuencia. Este programa entrega las bases prácticas para responderla con criterio: qué es Claude, cómo se conversa con él, dónde aplicarlo en tareas cotidianas y — crítico para el sector — qué privacidad proteger y cómo verificar resultados antes de tomar decisiones.
+        </p>
+        <p class="diag-title">Diagnóstico</p>
+        <ol>
+          <li>Claude está disponible — pero los colaboradores siguen redactando correos manualmente y resumiendo documentos a mano.</li>
+          <li>Conocimiento desigual — algunos lo prueban una vez, otros no se atreven, otros pegan datos sensibles sin saber el riesgo.</li>
+          <li>La curva de adopción individual es lenta — sin marco común, cada persona descubre por su cuenta y a su ritmo.</li>
+          <li>Las tareas repetitivas (correos, resúmenes, búsquedas, redacción) se hacen como en 2023 — el potencial está sin explotar.</li>
+          <li>La banca exige privacidad y verificación — usar Claude sin marco es un riesgo, no un recurso.</li>
+        </ol>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Suiche 7B · Propuesta · CAP-009</span>
+      </div>
+    </section>
+
+    <!-- 3 · Objetivos -->
+    <section class="slide s-goals">
+      <span class="counter">03 / 13</span>
+      <p class="eyebrow">02 · Objetivos</p>
+      <h2>A dónde llevamos<br>al equipo de Suiche 7B.</h2>
+      <div class="columns">
+        <div class="general">
+          <p class="label">Objetivo general</p>
+          <p>
+            Habilitar a los colaboradores de Suiche 7B en el uso esencial de Claude para el día a día laboral — operar la interfaz con criterio, redactar correos y documentos asistidos, analizar información cotidiana y aplicar buenas prácticas de privacidad y verificación, todo dentro de un marco común que respete los lineamientos del sector financiero y la criticidad operativa de la red interbancaria.
+          </p>
+        </div>
+        <div class="specifics">
+          <p class="label">Objetivos específicos</p>
+          <ol>
+            <li>Reconocer qué es Claude, cómo opera y cuándo es la mejor herramienta para cada tarea cotidiana del rol.</li>
+            <li>Operar prompts efectivos con el framework INTEZIA (Rol, Objetivo, Audiencia, Contexto, Formato).</li>
+            <li>Aplicar Claude a redacción de correos, análisis de documentos, búsqueda inteligente y síntesis ejecutiva.</li>
+            <li>Reconocer datos sensibles, prácticas de seguridad y manejo responsable en el sector financiero.</li>
+            <li>Egresar con un kit personal de prompts y plantillas listo para aplicar al día siguiente en el puesto de trabajo.</li>
+          </ol>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Suiche 7B · Propuesta · CAP-009</span>
+      </div>
+    </section>
+
+    <!-- 4 · Programa (4 módulos · grid 2×2 canónico) -->
+    <section class="slide s-program">
+      <span class="counter">04 / 13</span>
+      <p class="eyebrow">03 · Programa</p>
+      <h2>4 módulos.</h2>
+      <p class="meta">4 módulos · 4 sesiones · 8 horas académicas · 1 módulo por sesión de 2 horas · presencial u online</p>
+      <div class="modules">
+        <div class="module">
+          <span class="roman">I</span>
+          <h3>Bienvenida a Claude · ¿Qué es y qué no es?</h3>
+          <p class="obj">Reconocer qué es Claude, qué lo diferencia y cuándo es la mejor herramienta para cada tarea cotidiana — sin mitos ni curva de aprendizaje innecesaria.</p>
+          <ul class="topics">
+            <li>1.1 Qué es Claude · qué lo diferencia</li>
+            <li>1.2 Sonnet · Opus · Haiku · cuál usar</li>
+            <li>1.3 Mitos y realidades sobre IA</li>
+            <li>1.4 Casos donde Claude es la mejor opción</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">II</span>
+          <h3>Interfaz, Conversación y Prompts</h3>
+          <p class="obj">Operar la interfaz de Claude con criterio y construir prompts efectivos que generen respuestas útiles, precisas y replicables — desde el primer intento.</p>
+          <ul class="topics">
+            <li>2.1 Interfaz Claude · funcionalidades básicas</li>
+            <li>2.2 Anatomía de un prompt efectivo</li>
+            <li>2.3 Framework INTEZIA · Rol · Objetivo · Audiencia · Contexto · Formato</li>
+            <li>2.4 Cómo evitar alucinaciones</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">III</span>
+          <h3>Aplicaciones del Día a Día</h3>
+          <p class="obj">Aplicar Claude a las tareas más comunes del puesto: correos, documentos, búsquedas y reuniones — con resultados listos para usar al día siguiente.</p>
+          <ul class="topics">
+            <li>3.1 Redacción de correos profesionales</li>
+            <li>3.2 Análisis y resumen de documentos</li>
+            <li>3.3 Búsqueda inteligente y verificación</li>
+            <li>3.4 Síntesis de reuniones y notas</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">IV</span>
+          <h3>Buenas Prácticas · Privacidad, Seguridad y Verificación</h3>
+          <p class="obj">Operar con marco común de privacidad, seguridad y verificación — crítico para el sector financiero y la criticidad operativa de Suiche 7B.</p>
+          <ul class="topics">
+            <li>4.1 Datos sensibles · qué nunca compartir</li>
+            <li>4.2 Privacidad y compliance en banca</li>
+            <li>4.3 Verificación crítica anti-hallucinations</li>
+            <li>4.4 Marco ético del uso de Claude en Suiche 7B</li>
+          </ul>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Suiche 7B · Propuesta · CAP-009</span>
+      </div>
+    </section>
+
+    <!-- 5 · Cronograma · Parte 1 (Sesiones 1-2 · Fundamentos) -->
+    <section class="slide s-schedule">
+      <span class="counter">05 / 13</span>
+      <p class="eyebrow">04 · Cronograma · Parte 1 · Sesiones 1-2 · Fundamentos · presencial u online</p>
+      <h2>Desglose instructivo<br>sesión por sesión.</h2>
+      <div class="sessions">
+        <div class="session">
+          <div class="header">
+            <span>Sesión 1 — Bienvenida a Claude · Presencial u Online</span>
+          </div>
+          <div class="grid">
+            <div>
+              <span class="label">Temas</span>
+              Módulo I (full)<br>1.1-1.4
+            </div>
+            <div>
+              <span class="label">Tiempo</span>
+              120 min<br>(30' qué es Claude · 30' Sonnet/Opus/Haiku · 30' mitos · 30' casos del rol)
+            </div>
+            <div>
+              <span class="label">Estrategias enseñanza</span>
+              Demo en vivo de Claude resolviendo una tarea cotidiana del sector financiero · comparativa breve con otros modelos · plenaria sobre dónde aplica y dónde no
+            </div>
+            <div>
+              <span class="label">Estrategias aprendizaje</span>
+              Cada participante ejecuta una primera conversación útil con Claude · responde 3 casos de uso del rol · escribe sus 3 ganchos para empezar a usarlo el lunes
+            </div>
+            <div>
+              <span class="label">Recursos</span>
+              Claude Pro · Claude.ai · plantilla de bitácora INTEZIA
+            </div>
+          </div>
+        </div>
+
+        <div class="session">
+          <div class="header">
+            <span>Sesión 2 — Interfaz, Conversación y Prompts · Presencial u Online</span>
+          </div>
+          <div class="grid">
+            <div>
+              <span class="label">Temas</span>
+              Módulo II (full)<br>2.1-2.4
+            </div>
+            <div>
+              <span class="label">Tiempo</span>
+              120 min<br>(20' interfaz · 30' anatomía del prompt · 50' framework INTEZIA práctico · 20' anti-alucinaciones)
+            </div>
+            <div>
+              <span class="label">Estrategias enseñanza</span>
+              Recorrido guiado de la interfaz · construcción paso a paso de un prompt aplicando los 5 elementos del framework · taller de prompts antes/después
+            </div>
+            <div>
+              <span class="label">Estrategias aprendizaje</span>
+              Cada participante construye su primer prompt completo del framework · resuelve 3 tareas reales con criterio · arma su mini-librería personal de prompts
+            </div>
+            <div>
+              <span class="label">Recursos</span>
+              Claude Pro · cheatsheet del framework INTEZIA · plantillas de prompts por tarea
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Suiche 7B · Propuesta · CAP-009</span>
+      </div>
+    </section>
+
+    <!-- 6 · Cronograma · Parte 2 (Sesiones 3-4 · Aplicación) -->
+    <section class="slide s-schedule">
+      <span class="counter">06 / 13</span>
+      <p class="eyebrow">04 · Cronograma · Parte 2 · Sesiones 3-4 · Aplicación · presencial u online</p>
+      <h2>Desglose instructivo<br>sesión por sesión.</h2>
+      <div class="sessions">
+        <div class="session">
+          <div class="header">
+            <span>Sesión 3 — Aplicaciones del Día a Día · Presencial u Online</span>
+          </div>
+          <div class="grid">
+            <div>
+              <span class="label">Temas</span>
+              Módulo III (full)<br>3.1-3.4
+            </div>
+            <div>
+              <span class="label">Tiempo</span>
+              120 min<br>(30' correos · 30' análisis de documentos · 30' búsqueda inteligente · 30' síntesis de reuniones)
+            </div>
+            <div>
+              <span class="label">Estrategias enseñanza</span>
+              Workshop de 4 estaciones · cada estación cubre un tipo de tarea · facilitación 1:1 sobre el caso real que cada participante traiga al aula
+            </div>
+            <div>
+              <span class="label">Estrategias aprendizaje</span>
+              Cada participante resuelve 4 tareas reales del rol con Claude · sale con 4 plantillas listas para usar y un correo profesional ya redactado para enviar
+            </div>
+            <div>
+              <span class="label">Recursos</span>
+              Claude Pro · plantillas INTEZIA por tipo de tarea · documentos reales del rol (anonimizados)
+            </div>
+          </div>
+        </div>
+
+        <div class="session">
+          <div class="header">
+            <span>Sesión 4 — Privacidad, Seguridad y Verificación · Presencial u Online</span>
+          </div>
+          <div class="grid">
+            <div>
+              <span class="label">Temas</span>
+              Módulo IV (full)<br>4.1-4.4
+            </div>
+            <div>
+              <span class="label">Tiempo</span>
+              120 min<br>(30' datos sensibles · 30' compliance bancario · 30' verificación · 30' marco Suiche 7B)
+            </div>
+            <div>
+              <span class="label">Estrategias enseñanza</span>
+              Casos reales de incidentes públicos del sector financiero · taller de identificación de datos sensibles · co-construcción del marco de uso responsable de Claude en Suiche 7B
+            </div>
+            <div>
+              <span class="label">Estrategias aprendizaje</span>
+              Checklist personal de uso seguro · contribución al marco interno · ejercicio de verificación crítica con caso real del rol
+            </div>
+            <div>
+              <span class="label">Recursos</span>
+              Plantilla INTEZIA de marco de uso · checklist de privacidad · casos reales del sector banca
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Suiche 7B · Propuesta · CAP-009</span>
+      </div>
+    </section>
+
+    <!-- 6 · Metodología ABR -->
+    <section class="slide s-orange">
+      <span class="counter">07 / 13</span>
+      <p class="eyebrow">05 · Metodología</p>
+      <h2>Aprendizaje<br>Basado en Retos</h2>
+      <p class="sub">Modelo Intezia · Tres pilares</p>
+      <div class="pillars">
+        <div class="pillar">
+          <span class="num">01</span>
+          <h3>Tutoría activa</h3>
+          <p>Isaac Rodriguez acompaña la práctica — sea presencial u online — con feedback inmediato sobre los entregables del colaborador: bitácora de primera conversación, prompts del framework, plantillas por tarea, checklist de seguridad. Mentoría personal durante las 4 sesiones.</p>
+        </div>
+        <div class="pillar">
+          <span class="num">02</span>
+          <h3>Transferibilidad inmediata</h3>
+          <p>Cada sesión se construye sobre los flujos reales del día a día en Suiche 7B: correos, documentos, búsquedas, reuniones. Lo que se entrena el lunes se aplica el martes en el rol propio — sin curvas teóricas innecesarias.</p>
+        </div>
+        <div class="pillar">
+          <span class="num">03</span>
+          <h3>Curaduría Claude-céntrica</h3>
+          <p>Stack curado al estado del arte 2026 — Claude Sonnet, Opus y Haiku — operados con énfasis explícito en privacidad, verificación y compliance bancario para el manejo de información crítica de la red interbancaria.</p>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Intezia · Modelo ABR</span>
+      </div>
+    </section>
+
+    <!-- 7 · Beneficios + Equipo -->
+    <section class="slide s-benefits">
+      <span class="counter">08 / 13</span>
+      <p class="eyebrow">06 · Beneficios del programa</p>
+      <h2>Lo que se llevan.</h2>
+      <div class="grid">
+        <div class="block">
+          <p class="label">Perfil de egreso</p>
+          <ul>
+            <li><strong>Saber:</strong> reconoce qué es Claude, qué lo diferencia y cuándo aplicarlo.</li>
+            <li><strong>Saber hacer:</strong> redacta, analiza, busca y sintetiza con Claude usando el framework INTEZIA.</li>
+            <li><strong>Saber ser:</strong> opera con privacidad, verificación y criterio profesional del sector financiero.</li>
+          </ul>
+        </div>
+        <div class="block">
+          <p class="label">Beneficio del programa formativo</p>
+          <p>
+            El equipo de Suiche 7B transita <strong>de Claude desconocido a Claude cotidiano</strong>. Cada colaborador egresa con un kit funcional aplicado al rol: framework de prompting dominado, plantillas por tarea, mini-librería personal de prompts, checklist de seguridad y un correo profesional generado durante la sesión — listo para usar al día siguiente en el puesto.
+          </p>
+        </div>
+        <div class="block">
+          <p class="label">Entregables · Kit personal</p>
+        </div>
+        <div class="block">
+          <p class="label">Acreditación</p>
+        </div>
+      </div>
+
+      <div class="multi-box entregables-box" data-field="Entregables"></div>
+      <div class="multi-box acreditaciones-box" data-field="Acreditacion"></div>
+      <div class="team">
+        <p class="label">Equipo facilitador</p>
+        <div class="members">
+          <div class="person">
+            <div class="avatar" data-photo="">IR</div>
+            <div>
+              <h4>Isaac Rodriguez</h4>
+              <p class="role">Consultor · Facilitador Senior</p>
+              <p>Especialista en IA generativa aplicada al entorno corporativo. Acompañamiento durante las 4 sesiones (presencial u online) y mentoría personal sobre el kit de prompts de cada participante.</p>
+            </div>
+          </div>
+          <div class="person">
+            <div class="avatar" data-photo="">IE</div>
+            <div>
+              <h4>Equipo INTEZIA Education</h4>
+              <p class="role">Coordinación · Project Management</p>
+              <p>Punto único de contacto durante el programa y los 30 días posteriores al cierre.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Suiche 7B · Propuesta · CAP-009</span>
+      </div>
+    </section>
+
+    <!-- 8 · Propuesta Económica · Opción A -->
+    <section class="slide s-price">
+      <span class="counter">09 / 13</span>
+      <h2 class="title">Propuesta Económica · Opción A</h2>
+
+      <div class="block">
+        <span class="block-eyebrow">Duración</span>
+        <p class="block-value">8 horas · 4 sesiones de 2 h · 1 módulo por sesión · presencial u online · distribución a definir.</p>
+      </div>
+
+      <div class="block block-programa">
+        <span class="block-eyebrow">Programa</span>
+      </div>
+      <div class="multi-box programa-box" data-field="Programa"></div>
+
+      <div class="block block-cotizacion">
+        <span class="block-eyebrow">Cotización</span>
+      </div>
+
+      <span class="cot-label cot-label-base">Propuesta + Inversión</span>
+      <div class="cot-frame base-frame"></div>
+
+      <span class="cot-label cot-label-discount">Descuento</span>
+      <div class="cot-frame discount-frame"></div>
+
+      <span class="cot-label cot-label-total">TOTAL</span>
+      <div class="cot-frame total-frame"></div>
+
+      <p class="cot-validity">Válido únicamente por 7 días en divisas.</p>
+
+      <div class="block block-notes-container">
+        <span class="block-eyebrow">Notas</span>
+      </div>
+      <div class="multi-box notas-box" data-field="Notas"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Suiche 7B · Propuesta · CAP-009 · Opción A</span>
+      </div>
+    </section>
+
+    <!-- 9 · Propuesta Económica · Opción B -->
+    <section class="slide s-price">
+      <span class="counter">10 / 13</span>
+      <h2 class="title">Propuesta Económica · Opción B</h2>
+
+      <div class="block">
+        <span class="block-eyebrow">Duración</span>
+        <p class="block-value">8 horas · 4 sesiones de 2 h · 1 módulo por sesión · presencial u online · distribución a definir.</p>
+      </div>
+
+      <div class="block block-programa">
+        <span class="block-eyebrow">Programa</span>
+      </div>
+      <div class="multi-box programa-box" data-field="Programa"></div>
+
+      <div class="block block-cotizacion">
+        <span class="block-eyebrow">Cotización</span>
+      </div>
+
+      <span class="cot-label cot-label-base">Propuesta + Inversión</span>
+      <div class="cot-frame base-frame"></div>
+
+      <span class="cot-label cot-label-discount">Descuento</span>
+      <div class="cot-frame discount-frame"></div>
+
+      <span class="cot-label cot-label-total">TOTAL</span>
+      <div class="cot-frame total-frame"></div>
+
+      <p class="cot-validity">Válido únicamente por 7 días en divisas.</p>
+
+      <div class="block block-notes-container">
+        <span class="block-eyebrow">Notas</span>
+      </div>
+      <div class="multi-box notas-box" data-field="Notas"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Suiche 7B · Propuesta · CAP-009 · Opción B</span>
+      </div>
+    </section>
+
+    <!-- 10 · Propuesta Económica · Opción C -->
+    <section class="slide s-price">
+      <span class="counter">11 / 13</span>
+      <h2 class="title">Propuesta Económica · Opción C</h2>
+
+      <div class="block">
+        <span class="block-eyebrow">Duración</span>
+        <p class="block-value">8 horas · 4 sesiones de 2 h · 1 módulo por sesión · presencial u online · distribución a definir.</p>
+      </div>
+
+      <div class="block block-programa">
+        <span class="block-eyebrow">Programa</span>
+      </div>
+      <div class="multi-box programa-box" data-field="Programa"></div>
+
+      <div class="block block-cotizacion">
+        <span class="block-eyebrow">Cotización</span>
+      </div>
+
+      <span class="cot-label cot-label-base">Propuesta + Inversión</span>
+      <div class="cot-frame base-frame"></div>
+
+      <span class="cot-label cot-label-discount">Descuento</span>
+      <div class="cot-frame discount-frame"></div>
+
+      <span class="cot-label cot-label-total">TOTAL</span>
+      <div class="cot-frame total-frame"></div>
+
+      <p class="cot-validity">Válido únicamente por 7 días en divisas.</p>
+
+      <div class="block block-notes-container">
+        <span class="block-eyebrow">Notas</span>
+      </div>
+      <div class="multi-box notas-box" data-field="Notas"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Suiche 7B · Propuesta · CAP-009 · Opción C</span>
+      </div>
+    </section>
+
+    <!-- 11 · Próximos pasos -->
+    <section class="slide s-steps">
+      <span class="counter">12 / 13</span>
+      <p class="eyebrow">07 · Próximos pasos</p>
+      <h2>Cómo arrancamos.</h2>
+      <div class="step-cards">
+        <div class="step-card">
+          <span class="ghost">01</span>
+        </div>
+        <div class="step-card">
+          <span class="ghost">02</span>
+        </div>
+        <div class="step-card">
+          <span class="ghost">03</span>
+        </div>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-01-titulo" data-field="Paso01Titulo">
+        <span class="acro-default-text">Eligen opción y modalidad</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-01-body" data-field="Paso01Body">
+        <span class="acro-default-text">Suiche 7B selecciona la opción económica (A · B · C) que mejor se ajuste a su cohort y modalidad. Definimos juntos calendario de las 4 sesiones (semanal · quincenal · intensivo) y — si es presencial — la sede dentro de Suiche 7B.</span>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-02-titulo" data-field="Paso02Titulo">
+        <span class="acro-default-text">Firmamos acuerdo</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-02-body" data-field="Paso02Body">
+        <span class="acro-default-text">Contrato simple + factura del 50 % de anticipo. Vigencia: 30 días desde la emisión. Pago en Bolívares a tasa EURO BCV. Vigencia en divisas: 7 días.</span>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-03-titulo" data-field="Paso03Titulo">
+        <span class="acro-default-text">Kick-off con Isaac Rodriguez</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-03-body" data-field="Paso03Body">
+        <span class="acro-default-text">Reunión breve de alineación con el consultor para personalizar los casos del aula a flujos reales del cliente — correos típicos, documentos del rol, ejemplos del día a día — y blindar el marco de seguridad con el contexto específico del sector financiero y la criticidad operativa de Suiche 7B.</span>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Suiche 7B · Propuesta · CAP-009</span>
+      </div>
+    </section>
+
+    <!-- 12 · Cierre -->
+    <section class="slide s-end">
+      <span class="counter">13 / 13</span>
+
+      <div class="end-logo">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia Educación">
+      </div>
+
+      <p class="end-message">
+        De Claude <span class="hl-orange">desconocido</span><br>a Claude <span class="hl-yellow">cotidiano</span>.
+      </p>
+
+      <div class="cta-wrap">
+        <span class="cta">Esperamos tu Respuesta</span>
+      </div>
+
+      <div class="end-contact">
+        <p class="contact-line">
+          <span class="contact-label">Asesora de ventas:</span>
+          Flavia Martínez <span class="dot">·</span> +58 414-5756615 <span class="dot">·</span> fmartinez@intezia.com
+        </p>
+        <p class="contact-line">
+          <span class="contact-label">Empresa:</span>
+          Intezia C.A J-505657950 <span class="dot">·</span> info@intezia.com
+        </p>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

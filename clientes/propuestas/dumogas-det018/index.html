@@ -1,0 +1,700 @@
+<!doctype html>
+<!--
+  Propuesta — Dumogas, Propuesta 2 (DET-018)
+  Servicio: DETECCIÓN (diagnóstico ágil) + construcción a la medida, ambas cotizadas en este
+  documento (2h + 2h por área). División: Educación. Fuente primaria: misma Ficha de
+  Levantamiento que dumogas/ (DET-017, Levantamiento_Dumogas_2026-09-21.pdf, asesora
+  Verónica Rubio).
+
+  SEGUNDO DE 2 CAMINOS DE COTIZACIÓN pedidos por la ficha (Bloque F): "1 propuesta: Detección
+  con fundamentals completo" (= dumogas/, DET-017, ya construida) / "1 propuesta: 2 horas de
+  detección por cada área, fundamentals prácticos compartidos y un extra de horas enfocada en
+  sus procesos a cada área" (= este documento). Documento separado con código propio, mismo
+  criterio que maurel-prom/ + maurel-prom-copilot/ (2 propuestas reales para el mismo cliente).
+
+  DIMENSIONAMIENTO (revisado 2026-09-21 a pedido del usuario — "no puede quedar sin horas
+  exactas"): la ficha da 2 números fijos (2h diagnóstico/área, fundamentals compartido) y 1
+  abierto ("un extra de horas enfocada en sus procesos a cada área", sin cifra). Se resolvió el
+  número abierto con **2h de construcción por área** — reutiliza el lineamiento por defecto de
+  Detección (4h/área) ya usado en la Propuesta 1, sin inventar una cifra nueva, solo particionado
+  en 2 sesiones de 2h (diagnóstico + construcción) en vez de 1 sesión de 4h. Total: 2h
+  Fundamentals + 7×(2h+2h) = 30h — MISMO TOTAL que la Propuesta 1 (dumogas/DET-017). El
+  diferenciador entre las 2 propuestas ya no es "menos horas": es la ESTRUCTURA — Propuesta 1 =
+  1 sesión de 4h por área (diagnóstico + construcción integrados) vs. Propuesta 2 = 2 sesiones de
+  2h por área (diagnóstico completo de las 7 áreas primero, construcción después, con el Mapa de
+  Calor ya en mano) — sesiones más cortas y fáciles de agendar para un equipo de 1 analista por
+  área. Ver brief.md → "Decisión de dimensionamiento".
+  MISMAS 7 ÁREAS que DET-017: Tesorería, Cuentas por pagar, Cuentas por cobrar, Caja, Recursos
+  Humanos, Tributos, Almacén. 1 persona por área. 9 personas en Fundamentals. Modalidad virtual
+  para diagnóstico y construcción (mismo dato explícito de la ficha para las sesiones por área).
+  CON logro construido en la sesión de Construcción (2h, ya cotizada) — a diferencia del
+  diagnóstico (2h, sin construir), que sigue siendo puro, más cerca del patrón
+  pilotes-perforados/andromeda que del patrón toyocentro.
+  Se reutiliza la frase real de la ficha (Bloque específico Habilidades) "usar el sistema
+  administrativo con IA y no como una hoja de cálculo" para enmarcar la Etapa de Construcción,
+  sin fijar horas ni alcance todavía.
+  Mismas restricciones que DET-017: sin patrocinio ejecutivo fuerte asumido, sin nombre del
+  sistema administrativo (Galex), sin certificado, sin Mapa de Calor visual ni Metodología ABR
+  ni Equipo facilitador expuestos (§4.10a). Beneficios v3, Cierre escalera, servicio@intezia.com.
+  .rmx-ethics con padding-right:230px por defecto (bug-rmx-ethics-choca-nombre-cliente-largo.md).
+  Sin <strong> dentro de ningún <li> de .s-pain/.s-goals/.s-schedule (bug-strong-flex-specifics.md).
+  1 solo chip en el gauge-panel de Impacto (bug-impact-gauge-chips-collision.md).
+  Impacto (§4.9): mismas fuentes ya verificadas en DET-017 (mismo cliente/sector, no cambia con
+  la estructura de horas) — OCDE, AI adoption by small and medium-sized enterprises (diciembre
+  2025) + McKinsey, The state of AI in early 2025 (abril 2025).
+  13 slides (12 + 1 cronograma de Construcción) · precio estándar (Propuesta Económica, 30h
+  totales cotizadas completas en este documento, sin línea abierta).
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Propuesta · Dumogas (2) · Intezia</title>
+  <link rel="stylesheet" href="../_base/styles.css">
+  <link rel="stylesheet" href="overrides.css">
+</head>
+<body>
+
+  <main class="deck">
+
+    <!-- 1 · Portada -->
+    <section class="slide s-cover">
+      <span class="counter">01 / 13</span>
+      <div class="logo-big">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia">
+      </div>
+      <div class="body">
+        <p class="eyebrow">Propuesta formativa · Servicio de Detección</p>
+        <h1>
+          Diagnóstico ágil,<br>
+          <span class="hl">construcción a la medida.</span>
+        </h1>
+        <p class="lead">
+          Auditamos las 7 áreas operativas de Dumogas con 2 horas de diagnóstico por área y Fundamentals prácticos compartidos, y construimos en una segunda sesión de 2 horas el <strong>logro a la medida</strong> de cada área, ya con el hallazgo real en mano.
+        </p>
+      </div>
+      <div class="id-line">
+        <span class="codigo">Código: DET-018</span>
+        <span class="cliente">Dumogas</span>
+      </div>
+    </section>
+
+    <!-- 2 · Punto de dolor + Diagnóstico -->
+    <section class="slide s-pain">
+      <span class="counter">02 / 13</span>
+      <span class="quote-mark">&ldquo;</span>
+      <div class="body">
+        <h2>&ldquo;Automatizar procesos claves para ir de la mano de la tecnología avanzada.&rdquo;</h2>
+        <p class="context">
+          Dumogas es una empresa de venta de gas, primer contacto con Intezia. El equipo usa la IA hoy de forma suelta y sin criterio, sin haber recibido formación previa, y sin un ecosistema tecnológico definido: la información del negocio vive en varios sistemas separados por área.
+        </p>
+        <p class="diag-title">Diagnóstico</p>
+        <ol>
+          <li>Dumogas no tiene un ecosistema tecnológico definido: la información del negocio vive en varios sistemas separados por área.</li>
+          <li>El equipo usa la IA de forma suelta y sin criterio, sin haber recibido formación previa.</li>
+          <li>La conciliación diaria se hace con retraso, no en tiempo real, y maneja información confidencial.</li>
+          <li>Con un equipo pequeño cubriendo 7 áreas operativas, cada analista sostiene procesos completos sin apoyo de IA.</li>
+          <li>El equipo necesita un diagnóstico real de cada área antes de construir, aunque sea en sesiones cortas.</li>
+        </ol>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">DUMOGAS · DET-018</span>
+      </div>
+    </section>
+
+    <!-- 3 · Objetivos estratégicos -->
+    <section class="slide s-goals">
+      <span class="counter">03 / 13</span>
+      <p class="eyebrow">02 · Objetivos</p>
+      <h2>A dónde llevamos<br>a Dumogas.</h2>
+      <div class="columns">
+        <div class="general">
+          <p class="label">Objetivo general</p>
+          <p>
+            Diagnosticar las 7 áreas operativas de Dumogas con Fundamentals prácticos y 2 horas de diagnóstico por área, y construir en una segunda sesión de 2 horas el logro a la medida de cada una, ya con el hallazgo real en mano, empezando por la conciliación diaria.
+          </p>
+        </div>
+        <div class="specifics">
+          <p class="label">Objetivos específicos</p>
+          <ol>
+            <li>Nivelar al equipo con una sesión de Fundamentals prácticos compartida, antes de auditar.</li>
+            <li>Auditar las 7 áreas con 2 horas de diagnóstico por área, modalidad virtual.</li>
+            <li>Construir en una segunda sesión de 2 horas por área un logro a la medida de cada hallazgo.</li>
+            <li>Entregar un Reporte Final con el mapa de oportunidades y los logros construidos por área.</li>
+          </ol>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">DUMOGAS · DET-018</span>
+      </div>
+    </section>
+
+    <!-- 4 · Programa -->
+    <section class="slide s-program">
+      <span class="counter">04 / 13</span>
+      <p class="eyebrow">03 · El proyecto</p>
+      <h2>Primero el diagnóstico, luego la construcción.</h2>
+      <p class="meta">Fundamentals prácticos + 2h de diagnóstico y 2h de construcción por área.</p>
+      <div class="modules">
+        <div class="module">
+          <span class="roman">I</span>
+          <h3>Fundamentals prácticos</h3>
+          <p class="obj">Nivela al equipo de Dumogas en fundamentos prácticos de IA, compartidos entre las 7 áreas.</p>
+          <ul class="topics">
+            <li>Fundamentos prácticos</li>
+            <li>Kick-off compartido</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">II</span>
+          <h3>Diagnóstico por Área</h3>
+          <p class="obj">Una sesión de 2 horas por cada una de las 7 áreas, con foco en procesos reales.</p>
+          <ul class="topics">
+            <li>7 áreas · 2h c/u</li>
+            <li>Sin construir aún</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">III</span>
+          <h3>Priorización</h3>
+          <p class="obj">Se prioriza cada hallazgo y se define el alcance de construcción de cada área.</p>
+          <ul class="topics">
+            <li>Mapa de Calor</li>
+            <li>Alcance por área</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">IV</span>
+          <h3>Construcción a la medida</h3>
+          <p class="obj">Una segunda sesión de 2 horas por área, para construir el logro definido en el diagnóstico.</p>
+          <ul class="topics">
+            <li>7 áreas · 2h c/u</li>
+            <li>Logro construido</li>
+          </ul>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">DUMOGAS · DET-018</span>
+      </div>
+    </section>
+
+    <!-- 5 · Roadmap · Detección (3 etapas) -->
+    <section class="slide s-roadmap">
+      <span class="counter">05 / 13</span>
+      <p class="eyebrow">04 · Roadmap · Detección</p>
+      <h2>Diagnosticar rápido,<br><span class="hl">construir con criterio</span>.</h2>
+
+      <div class="rmx-field">
+        <div class="rmx-linear">
+
+          <div class="rmx-lrow-nodes">
+            <div class="rmx-lcol"><div class="rmx-node rmx-node-f2">1</div></div>
+            <div class="rmx-arrow"></div>
+            <div class="rmx-lcol"><div class="rmx-node rmx-node-f3">2</div></div>
+            <div class="rmx-arrow"></div>
+            <div class="rmx-lcol"><div class="rmx-node rmx-node-f4">3</div></div>
+            <div class="rmx-arrow"></div>
+            <div class="rmx-lcol"><div class="rmx-node rmx-node-r">&#9733;</div></div>
+          </div>
+
+          <div class="rmx-lrow-cards">
+            <div class="rmx-lcol">
+              <div class="rmx-card rmx-card-f2">
+                <span class="rmx-card-tag">Etapa 1 · Fundamentals y Diagnóstico</span>
+                <div class="rmx-card-name">Fundamentals + 2h por área</div>
+                <ul class="rmx-facets">
+                  <li><span>Qué pasa</span><p>Nivelamos con Fundamentals prácticos y auditamos las 7 áreas, 2h cada una.</p></li>
+                  <li><span>Con quién</span><p>El equipo de Dumogas, un analista por área.</p></li>
+                  <li><span>Entrega</span><p>Equipo nivelado + diagnóstico por área.</p></li>
+                </ul>
+              </div>
+            </div>
+            <div class="rmx-lspacer"></div>
+            <div class="rmx-lcol">
+              <div class="rmx-card rmx-card-f3">
+                <span class="rmx-card-tag">Etapa 2 · Priorización</span>
+                <div class="rmx-card-name">Mapa de Calor de oportunidades</div>
+                <ul class="rmx-facets">
+                  <li><span>Qué pasa</span><p>Se prioriza cada hallazgo y se define el alcance de construcción de cada área.</p></li>
+                  <li><span>Con quién</span><p>Equipo consultor Intezia.</p></li>
+                  <li><span>Entrega</span><p>Mapa de Calor + alcance de construcción por área.</p></li>
+                </ul>
+              </div>
+            </div>
+            <div class="rmx-lspacer"></div>
+            <div class="rmx-lcol">
+              <div class="rmx-card rmx-card-f4">
+                <span class="rmx-card-tag">Etapa 3 · Construcción a la medida</span>
+                <div class="rmx-card-name">2h de construcción por área</div>
+                <ul class="rmx-facets">
+                  <li><span>Qué pasa</span><p>Construimos el logro de cada área en una segunda sesión de 2h.</p></li>
+                  <li><span>Con quién</span><p>Daviana y el equipo de cada área.</p></li>
+                  <li><span>Entrega</span><p>Un logro construido en cada una de las 7 áreas.</p></li>
+                </ul>
+              </div>
+            </div>
+            <div class="rmx-lspacer"></div>
+            <div class="rmx-lcol">
+              <div class="rmx-result-card">
+                <span class="rmx-result-label">Entregable insignia · Mapa de oportunidades</span>
+                <div class="rmx-result-title">Diagnóstico ágil, <b>construcción a la medida</b></div>
+                <ul>
+                  <li>Equipo nivelado con Fundamentals prácticos</li>
+                  <li>Diagnóstico real de las 7 áreas</li>
+                  <li>Un logro construido en cada una de las 7 áreas</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /.rmx-linear -->
+
+        <div class="rmx-ethics">
+          <span class="rmx-ethics-tag">Metodología ABR · Diagnóstico antes de construir</span>
+          <p>La construcción de cada área se dimensiona con el hallazgo real del diagnóstico, no antes.</p>
+        </div>
+
+      </div><!-- /.rmx-field -->
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">DUMOGAS · DET-018</span>
+      </div>
+    </section>
+
+    <!-- 6 · Cronograma · Fundamentals prácticos -->
+    <section class="slide s-schedule">
+      <span class="counter">06 / 13</span>
+      <p class="eyebrow">04 · Cronograma · Fundamentals prácticos</p>
+
+      <div class="ses-head">
+        <div>
+          <span class="ses-mod">Sesión grupal · equipo de Dumogas (9 personas) · Modalidad virtual</span>
+          <h2>Fundamentals prácticos</h2>
+        </div>
+        <div class="ses-meta"><span class="ses-dur">2h</span></div>
+      </div>
+
+      <div class="ses-body">
+        <div class="ses-block">
+          <span class="label">Temas</span>
+          <div class="chips">
+            <span class="chip">Qué es y qué no es la IA</span>
+            <span class="chip">Práctica con casos de Dumogas</span>
+            <span class="chip">Ruta de las 7 sesiones</span>
+            <span class="chip">Preguntas y expectativas</span>
+          </div>
+        </div>
+        <div class="ses-block">
+          <span class="label">Tiempo · Total 2 h</span>
+          <div class="timebar">
+            <div class="seg" style="flex:20">20' Encuadre breve</div>
+            <div class="seg" style="flex:60">60' Práctica guiada con casos de Dumogas</div>
+            <div class="seg" style="flex:25">25' Ruta de las 7 sesiones</div>
+            <div class="seg" style="flex:15">15' Cierre y preguntas</div>
+          </div>
+        </div>
+        <div class="ses-cols">
+          <div class="ses-block">
+            <span class="label">Qué se hace</span>
+            <ul>
+              <li>Presentamos lo esencial de la IA y practicamos con casos reales de Dumogas</li>
+              <li>Explicamos la ruta de las 7 sesiones de diagnóstico que siguen</li>
+              <li>Abrimos espacio a preguntas y expectativas del equipo</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Qué se logra</span>
+            <ul>
+              <li>El equipo llega a sus sesiones de área con práctica real, no solo teoría</li>
+              <li>Expectativas alineadas sobre el diagnóstico</li>
+              <li>Primera identificación de dónde cada área ve oportunidad</li>
+            </ul>
+          </div>
+          <div class="ses-block block-rec">
+            <span class="label">Recursos y entornos</span>
+            <ul>
+              <li>Sesión virtual, equipo de Dumogas</li>
+              <li>Casos reales del negocio de venta de gas</li>
+              <li>Sin tocar los sistemas internos todavía</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">DUMOGAS · DET-018</span>
+      </div>
+    </section>
+
+    <!-- 7 · Cronograma · Estructura de las 2 horas por área -->
+    <section class="slide s-schedule">
+      <span class="counter">07 / 13</span>
+      <p class="eyebrow">04 · Cronograma · Estructura por área</p>
+
+      <div class="ses-head">
+        <div>
+          <span class="ses-mod">Se repite en cada una de las 7 áreas · Modalidad virtual</span>
+          <h2>Estructura de las 2 horas</h2>
+        </div>
+        <div class="ses-meta"><span class="ses-dur">2h</span></div>
+      </div>
+
+      <div class="ses-body">
+        <div class="ses-block">
+          <span class="label">Temas</span>
+          <div class="chips">
+            <span class="chip">Procesos reales del área</span>
+            <span class="chip">Cuellos de botella</span>
+            <span class="chip">Datos y sistemas del área</span>
+            <span class="chip">Alcance de construcción</span>
+          </div>
+        </div>
+        <div class="ses-block">
+          <span class="label">Tiempo · Total 2 h</span>
+          <div class="timebar">
+            <div class="seg" style="flex:20">20' Contexto y objetivos</div>
+            <div class="seg" style="flex:60">60' Levantamiento de procesos reales</div>
+            <div class="seg" style="flex:25">25' Alcance de la sesión de construcción</div>
+            <div class="seg" style="flex:15">15' Cierre y siguientes pasos</div>
+          </div>
+        </div>
+        <div class="ses-cols">
+          <div class="ses-block">
+            <span class="label">Qué se hace</span>
+            <ul>
+              <li>Entrevistamos al analista del área sobre sus procesos reales</li>
+              <li>Identificamos el cuello de botella más relevante</li>
+              <li>Delimitamos, sin construir aún, qué se construye en la próxima sesión</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Qué se logra</span>
+            <ul>
+              <li>Inventario real de procesos del área</li>
+              <li>El alcance definido de la sesión de construcción que sigue</li>
+              <li>Información lista para el Mapa de Calor conjunto</li>
+            </ul>
+          </div>
+          <div class="ses-block block-rec">
+            <span class="label">Recursos y entornos</span>
+            <ul>
+              <li>Sesión virtual por área</li>
+              <li>Guion de levantamiento Intezia</li>
+              <li>Sin tocar los sistemas internos de Dumogas</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">DUMOGAS · DET-018</span>
+      </div>
+    </section>
+
+    <!-- 8 · Cronograma · Estructura de la Construcción por área -->
+    <section class="slide s-schedule">
+      <span class="counter">08 / 13</span>
+      <p class="eyebrow">04 · Cronograma · Construcción por área</p>
+
+      <div class="ses-head">
+        <div>
+          <span class="ses-mod">Segunda sesión, se repite en cada una de las 7 áreas · Modalidad virtual</span>
+          <h2>Estructura de la Construcción</h2>
+        </div>
+        <div class="ses-meta"><span class="ses-dur">2h</span></div>
+      </div>
+
+      <div class="ses-body">
+        <div class="ses-block">
+          <span class="label">Temas</span>
+          <div class="chips">
+            <span class="chip">Logro definido en el diagnóstico</span>
+            <span class="chip">Construcción guiada</span>
+            <span class="chip">Prueba con datos reales</span>
+            <span class="chip">Cómo replicarlo</span>
+          </div>
+        </div>
+        <div class="ses-block">
+          <span class="label">Tiempo · Total 2 h</span>
+          <div class="timebar">
+            <div class="seg" style="flex:15">15' Retomamos el alcance definido</div>
+            <div class="seg" style="flex:75">75' Construcción guiada del logro</div>
+            <div class="seg" style="flex:20">20' Prueba con datos reales del área</div>
+            <div class="seg" style="flex:10">10' Cierre y cómo replicarlo</div>
+          </div>
+        </div>
+        <div class="ses-cols">
+          <div class="ses-block">
+            <span class="label">Qué se hace</span>
+            <ul>
+              <li>Retomamos el alcance que quedó definido en el diagnóstico del área</li>
+              <li>Construimos en vivo el logro, sobre datos reales del área</li>
+              <li>Probamos el resultado con un caso real antes de cerrar</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Qué se logra</span>
+            <ul>
+              <li>Un logro construido y funcionando en el área</li>
+              <li>El analista sabe cómo usarlo y replicarlo</li>
+              <li>Información lista para el Reporte Final</li>
+            </ul>
+          </div>
+          <div class="ses-block block-rec">
+            <span class="label">Recursos y entornos</span>
+            <ul>
+              <li>Sesión virtual por área</li>
+              <li>Alcance definido en la sesión de diagnóstico</li>
+              <li>Datos y casos reales del área</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">DUMOGAS · DET-018</span>
+      </div>
+    </section>
+
+    <!-- 9 · Beneficios (formato v3) -->
+    <section class="slide s-benefits s-benefits-v2">
+      <span class="counter">09 / 13</span>
+      <p class="eyebrow">05 · Beneficios</p>
+      <h2>Lo que <span class="hl">se llevan</span>.</h2>
+      <div class="grid">
+        <div class="block">
+          <p class="label">Resultados</p>
+          <ul>
+            <li>Las <strong>7 áreas</strong> operativas diagnosticadas, con un logro construido en cada una.</li>
+            <li>Equipo nivelado con Fundamentals prácticos antes del diagnóstico.</li>
+            <li>Un mapa de oportunidades priorizado, con la construcción de las 7 áreas ya incluida.</li>
+          </ul>
+        </div>
+        <div class="block">
+          <p class="label">Por qué Detección</p>
+          <p>
+            El diagnóstico llega primero: Dumogas ve el hallazgo real de cada área en una sesión corta, y construye después, ya con <strong>alcance definido</strong>, para usar su sistema administrativo con IA, no como una hoja de cálculo.
+          </p>
+        </div>
+        <div class="block">
+          <p class="label">Entregables</p>
+        </div>
+        <div class="block">
+          <p class="label">Valor inmediato</p>
+        </div>
+      </div>
+
+      <div class="multi-box entregables-box" data-field="Entregables"></div>
+      <div class="multi-box acreditaciones-box" data-field="Acreditacion"></div>
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">DUMOGAS · DET-018</span>
+      </div>
+    </section>
+
+    <!-- 10 · Impacto / estudios — datos reales, fuente citada (CLAUDE.md §4.9) -->
+    <section class="slide s-impact">
+      <span class="counter">10 / 13</span>
+
+      <div class="impact-head">
+        <p class="eyebrow">06 · Impacto</p>
+        <h2>El uso suelto de IA<br><span class="hl">no es una estrategia</span>.</h2>
+      </div>
+
+      <div class="impact-body">
+        <div class="chart-panel">
+          <p class="panel-title">Cómo adopta IA la pequeña y mediana empresa hoy</p>
+          <div class="bars">
+            <div class="bar-row">
+              <span class="bar-label">Pequeñas empresas que ya usan IA</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:17%"><span class="bar-val">17%</span></div></div>
+            </div>
+            <div class="bar-row">
+              <span class="bar-label">Medianas empresas que ya usan IA</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:30%"><span class="bar-val">30%</span></div></div>
+            </div>
+            <div class="bar-row">
+              <span class="bar-label">Equipos de Finanzas con más ingresos por IA generativa</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:70%"><span class="bar-val">70%</span></div></div>
+            </div>
+          </div>
+          <div class="bar-axis"><span class="scale"><span>0</span><span>25</span><span>50</span><span>75</span><span>100%</span></span></div>
+          <p class="panel-source">Fuentes: OCDE &mdash; AI adoption by small and medium-sized enterprises (diciembre 2025) &middot; McKinsey &mdash; The state of AI in early 2025 (abril 2025).</p>
+        </div>
+
+        <div class="gauge-panel">
+          <div class="gauge" style="--pct:76">
+            <div class="gauge-core">
+              <span class="gauge-num">76<span class="pct">%</span></span>
+              <span class="gauge-cap">de las empresas que ya usan IA sigue en nivel principiante</span>
+            </div>
+          </div>
+          <div class="chips">
+            <div class="chip">
+              <span class="chip-num">14%</span>
+              <span class="chip-lbl">de empresas OCDE ya usa IA, el doble que en 2020</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="impact-hook">
+        <span class="hook-mark">&#9656;</span>
+        <p class="hook-text">
+          La adopción de IA entre pequeñas empresas casi se duplicó en 4 años, pero solo el 17% ya la usa, y el 76% de quienes la usan sigue en nivel principiante, con herramientas sueltas para tareas aisladas (OCDE, 2025): el mismo punto de partida de Dumogas. En Finanzas, el 70% de los equipos que ya usan IA generativa reportó más ingresos en 2024 (McKinsey, 2025).
+        </p>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">DUMOGAS · DET-018</span>
+      </div>
+    </section>
+
+    <!-- 11 · Propuesta Económica (estándar: Duración + Programa + Notas + Cotización) -->
+    <section class="slide s-price">
+      <span class="counter">11 / 13</span>
+      <h2 class="title">Propuesta Económica</h2>
+
+      <div class="block">
+        <span class="block-eyebrow">Duración</span>
+        <p class="block-value">Fundamentals prácticos (2h) + 7 áreas · 4h/área en 2 sesiones (28h) · 30h totales · virtual.</p>
+      </div>
+
+      <div class="block block-programa">
+        <span class="block-eyebrow">Programa</span>
+      </div>
+      <div class="multi-box programa-box" data-field="Programa"></div>
+
+      <div class="block block-cotizacion">
+        <span class="block-eyebrow">Cotización</span>
+      </div>
+
+      <span class="cot-label cot-label-base">Propuesta + Inversión</span>
+      <div class="cot-frame base-frame"></div>
+
+      <span class="cot-label cot-label-discount">Descuento</span>
+      <div class="cot-frame discount-frame"></div>
+
+      <span class="cot-label cot-label-total">TOTAL</span>
+      <div class="cot-frame total-frame"></div>
+
+      <p class="cot-validity">Cotización válida por 30 días.</p>
+      <div class="cot-terms-box">
+        <span class="cot-terms-label">Importante</span>
+        <p class="cot-terms-text">Este servicio se presta bajo nuestros <a href="https://drive.google.com/file/d/1PA-ZSt4KnyY5dpxXzgkIk6-yfGlV2eF8/view?usp=drive_link" target="_blank" rel="noopener">términos y condiciones</a>. Al avanzar con esta propuesta, ambas partes los aceptan.</p>
+      </div>
+
+      <div class="block block-notes-container">
+        <span class="block-eyebrow">Notas</span>
+      </div>
+      <div class="multi-box notas-box" data-field="Notas"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">DUMOGAS · DET-018</span>
+      </div>
+    </section>
+
+    <!-- 12 · Próximos pasos -->
+    <section class="slide s-steps">
+      <span class="counter">12 / 13</span>
+      <p class="eyebrow">07 · Próximos pasos</p>
+      <h2>Cómo arrancamos.</h2>
+      <div class="step-cards">
+        <div class="step-card">
+          <span class="ghost">01</span>
+        </div>
+        <div class="step-card">
+          <span class="ghost">02</span>
+        </div>
+        <div class="step-card">
+          <span class="ghost">03</span>
+        </div>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-01-titulo" data-field="Paso01Titulo">
+        <span class="acro-default-text">Confirmamos fechas</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-01-body" data-field="Paso01Body">
+        <span class="acro-default-text">Definimos con Daviana el calendario de Fundamentals y las sesiones de diagnóstico y construcción por área.</span>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-02-titulo" data-field="Paso02Titulo">
+        <span class="acro-default-text">Acceso y logística</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-02-body" data-field="Paso02Body">
+        <span class="acro-default-text">Coordinamos el acceso virtual y la participación de un analista por cada una de las 7 áreas.</span>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-03-titulo" data-field="Paso03Titulo">
+        <span class="acro-default-text">Reunión de arranque</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-03-body" data-field="Paso03Body">
+        <span class="acro-default-text">Sesión de unos 30 minutos con Daviana para alinear el alcance y el orden de las 7 áreas.</span>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">DUMOGAS · DET-018</span>
+      </div>
+    </section>
+
+    <!-- 13 · Cierre (ruta/escalera editable) -->
+    <section class="slide s-end">
+      <span class="counter">13 / 13</span>
+
+      <div class="end-logo">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia">
+      </div>
+
+      <div class="end-summit" data-field="CierreResultado">
+        <span class="acro-default-text">Dumogas, con sus 7 áreas diagnosticadas y un logro construido en cada una.</span>
+      </div>
+
+      <div class="end-stairs">
+        <div class="stair-step stair-1">
+          <span class="stair-label">Paso 1</span>
+          <div class="stair-field" data-field="CierrePaso1">
+            <span class="acro-default-text">Fundamentals y diagnóstico por área</span>
+          </div>
+        </div>
+        <div class="stair-step stair-2">
+          <span class="stair-label">Paso 2</span>
+          <div class="stair-field" data-field="CierrePaso2">
+            <span class="acro-default-text">Mapa de oportunidades priorizado</span>
+          </div>
+        </div>
+        <div class="stair-step stair-3">
+          <span class="stair-label">Paso 3</span>
+          <div class="stair-field" data-field="CierrePaso3">
+            <span class="acro-default-text">Construcción del logro por área</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cta-wrap">
+        <span class="cta">Esperamos tu respuesta</span>
+      </div>
+
+      <div class="end-contact">
+        <p class="contact-line">
+          <span class="contact-label">Asesora de ventas:</span>
+          Verónica Rubio <span class="dot">·</span> +58 422 3355505 <span class="dot">·</span> vrubio01@intezia.com
+        </p>
+        <p class="contact-line">
+          <span class="contact-label">Empresa:</span>
+          Intezia C.A J-505657950 <span class="dot">·</span> servicio@intezia.com
+        </p>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

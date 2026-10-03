@@ -1,0 +1,707 @@
+<!doctype html>
+<!--
+  Propuesta — DHL (división Express)
+  Servicio: DETECCIÓN + HABILIDADES, combo (Modelo Intezia · empresa/tipos-de-documento.md §0,
+  servicio sigue siendo "deteccion" por combo parcial de 2 servicios, §4.1a punto 1) · Código
+  DET-004. División: Educación (cliente corporativo).
+  AJUSTE (2026-09-03): al cliente le gustó la Fase 1 de Detección presentada y pidió ver la
+  ruta completa hasta Habilidades, para llevarla ante su Dirección. Fuente: nueva Ficha de
+  Levantamiento Intezia — DHL (2026-09-20, Verónica Rubio), con el Bloque específico de
+  Habilidades ya lleno (4 temas reales) + precisiones directas del usuario:
+  - Fase 2 · Habilidades: 4 sesiones de 2h (8h) — una por tema: (1) automatización de órdenes
+    de compra por gasto/estación, (2) análisis de datos sobre su sistema de gestión de
+    mantenimiento, (3) generación y actualización de dashboards de mantenimiento, (4)
+    seguimiento y KPIs. Virtual, mismo equipo de Mantenimiento e Infraestructura.
+  - Ambas fases (Detección + Habilidades) cotizadas ya, en el mismo documento — reemplaza el
+    esquema anterior de "Fase 2 se cotiza tras el diagnóstico". Mismo patrón que Simple TV
+    DET-002 y Embutidos Zeus DET-003: "Inversión por fases" de 2 filas.
+  Eje: diagnóstico y automatización de los procesos de tickets de mantenimiento y órdenes de
+  compra de Mantenimiento e Infraestructura, con Copilot, dentro del entorno Microsoft 365 que
+  DHL ya usa.
+  §4.11: no se afirma que DHL migra/adopta stack; Copilot se enmarca dentro de su entorno
+  Microsoft actual. No se menciona Claude ni ninguna otra suite. No se nombra al interlocutor
+  (dato interno del brief.md).
+  Base: mismo archivo (esquema nuevo 2026-08-26, sin Metodología ABR, sin Equipo facilitador
+  §4.10a; cierre tipo escalera editable).
+
+  AJUSTE (2026-09-04): 3 pedidos del usuario tras conversar con Miguel.
+  1. **Menos foco exclusivo en Copilot**: Miguel aclaró que Copilot es la herramienta que ya
+     usan y les parece bien seguir usándola, pero quieren explorar otras además de esa — la
+     redacción ya no debe leerse como "todo es con Copilot". Se suavizó el copy de Portada,
+     Objetivos, Beneficios y Roadmap para enmarcar Copilot como punto de partida, no como
+     techo. La slide de Impacto (§4.9) mantiene sus cifras reales tal cual, específicas de
+     Copilot (Microsoft Work Trend Index) — son evidencia de por qué vale la pena seguir
+     usándolo, no una promesa de exclusividad.
+     **Precisión posterior del usuario, misma sesión**: sí nombrar a Claude explícitamente
+     como la otra herramienta a evaluar (no dejarlo genérico) — la Detección identifica qué
+     proceso conviene resolver con Copilot y cuál con Claude, caso por caso. Esto no
+     contradice el §4.11 de la ficha original ("solo Microsoft, por ahora"): no se afirma que
+     DHL adopta o migra a Claude, se plantea como una evaluación de la Detección, no como un
+     hecho consumado.
+  2. **Fase 1 pasa a ser un solo bloque de Auditoría + Nivelación** (ya lo era en el
+     cronograma real, slide 05 sin cambios de fondo; el ajuste es visual, en la slide 04 "El
+     camino", que mostraba 3 tarjetas — Auditoría / Nivelación / Habilidades — como si
+     Nivelación fuera una fase aparte. Ahora son 2 tarjetas: Fase 1 (Auditoría+Nivelación
+     fusionada) y Habilidades partida en 2).
+  3. **Habilidades se divide en Fase 2 y Fase 3** (antes 1 sola fase de 4 sesiones) —
+     decisión confirmada con el usuario (AskUserQuestion): Fase 2 = Automatización de compras
+     + Análisis de datos (construir, 2 sesiones/4h); Fase 3 = Dashboards + Seguimiento y KPIs
+     (medir y sostener, 2 sesiones/4h) **+ espacio abierto para otros procesos de
+     Mantenimiento e Infraestructura que la Fase 1 identifique** — nunca inventados, solo
+     mencionados como alcance a definir. Las 3 fases se cotizan ahora (mismo criterio que ya
+     regía para las 2 anteriores) — con 3 fases reales, `agregar-campo-precio.py` ya inyecta
+     PrecioFase1/2/3 y los suma por defecto (`make_fase_subtotal_js(3)`); `customize-dhl.py`
+     deja de eliminar PrecioFase3 (ya no es huérfana).
+  13 slides (antes 12 — se agrega 1 slide de Cronograma para la nueva Fase 3).
+
+  AJUSTE (2026-09-07): la hoja de precio vuelve al patrón ESTÁNDAR "Propuesta Económica"
+  (columna derecha: Propuesta + Inversión / Descuento / TOTAL) — instrucción explícita del
+  usuario: no desglosar las 3 fases en cajas de precio separadas a la izquierda ("Inversión
+  por fases"), sino cotizar como se hace regularmente en el resto del sistema. Se retira
+  `.fase-price-list` (PrecioFase1/2/3) y se recupera el bloque de Duración (texto de las 3
+  fases en una sola línea) + Programa (AcroForm, resume las 3 fases como bullets). El
+  marcador cambia de "Inversión por fases" a "Propuesta Económica" — agregar-campo-precio.py
+  ya no inyecta PrecioFase1-3, inyecta PrecioBase/Descuento/PrecioTotal/Programa/Notas
+  directo; `customize-dhl.py` ya no necesita ninguna lógica especial de precio.
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Propuesta · DHL · Intezia</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <main class="deck">
+
+    <!-- 1 · Portada -->
+    <section class="slide s-cover">
+      <span class="counter">01 / 13</span>
+      <div class="logo-big">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia">
+      </div>
+      <div class="body">
+        <p class="eyebrow">Propuesta de negocio · Servicio de Detección y Habilidades</p>
+        <h1>
+          Diagnóstico y capacitación<br>
+          <span class="hl">para DHL</span>
+        </h1>
+        <p class="lead">
+          Diagnosticamos los procesos de <strong>Mantenimiento</strong> e Infraestructura, priorizamos sus cuellos de botella y capacitamos al equipo para resolverlos con la herramienta que mejor encaje en cada caso: <strong>Copilot</strong>, dentro de su entorno <strong>Microsoft 365</strong>, o <strong>Claude</strong>.
+        </p>
+      </div>
+      <div class="id-line">
+        <span class="codigo">Código: DET-004</span>
+        <span class="cliente">DHL</span>
+      </div>
+    </section>
+
+    <!-- 2 · Punto de dolor + Diagnóstico -->
+    <section class="slide s-pain">
+      <span class="counter">02 / 13</span>
+      <span class="quote-mark">&ldquo;</span>
+      <div class="body">
+        <h2>Tickets de mantenimiento, procesados a mano en Excel para una función crítica.</h2>
+        <p class="context">
+          El equipo de Mantenimiento e Infraestructura sostiene la continuidad operativa de DHL: cada ticket puede terminar en una orden de compra real. Hoy ese seguimiento se hace de forma <strong>manual</strong> en Excel. Antes de automatizar nada, la Detección define qué cuello de botella atacar primero y con qué herramienta.
+        </p>
+        <p class="diag-title">Diagnóstico</p>
+        <ol>
+          <li>Los tickets de mantenimiento se generan en un sistema de gestión, pero el análisis de costos, la gestión de proveedores y el seguimiento se llevan de forma manual en Excel.</li>
+          <li>Cerca de 480 horas en 20 días se destinan a este flujo, con un equipo de aproximadamente 10 personas entre ejecutores, analistas y coordinadores.</li>
+          <li>El proceso manual genera errores y pérdida de tiempo en una función crítica, incluida la generación de órdenes de compra.</li>
+          <li>El equipo ya usa Copilot de forma básica, pero no alcanza para automatizar procesos ni para tareas de análisis de datos.</li>
+          <li>Falta claridad sobre qué cuellos de botella pesan más y con qué herramienta resolverlos; esa es la pregunta que responde la Detección.</li>
+        </ol>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">DHL · DET-004</span>
+      </div>
+    </section>
+
+    <!-- 3 · Objetivos estratégicos -->
+    <section class="slide s-goals">
+      <span class="counter">03 / 13</span>
+      <p class="eyebrow">02 · Objetivos</p>
+      <h2>A dónde llevamos<br>a Mantenimiento e Infraestructura.</h2>
+      <div class="columns">
+        <div class="general">
+          <p class="label">Objetivo general</p>
+          <p>
+            Diagnosticar los procesos de Mantenimiento e Infraestructura de DHL para identificar y priorizar sus cuellos de botella, y entregar una hoja de ruta clara de qué resolver con IA y con qué herramienta: Copilot, dentro del entorno Microsoft 365 que la empresa ya usa, o Claude, según convenga a cada proceso.
+          </p>
+        </div>
+        <div class="specifics">
+          <p class="label">Objetivos específicos</p>
+          <ol>
+            <li>Auditar el proceso de tickets de mantenimiento, desde su generación hasta la orden de compra, con un guion estructurado, e identificar logros inmediatos aplicables desde la primera sesión.</li>
+            <li>Medir el punto de partida con la Matriz de Madurez Digital y priorizar las oportunidades por impacto y esfuerzo.</li>
+            <li>Nivelar al equipo en el uso de Copilot dentro de su entorno Microsoft 365, en paralelo al diagnóstico.</li>
+            <li>Entregar un Reporte Final con la hoja de ruta priorizada y capacitar al equipo, en Fase 2 y Fase 3, para que aplique esas prioridades con las herramientas más adecuadas para cada proceso.</li>
+          </ol>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">DHL · DET-004</span>
+      </div>
+    </section>
+
+    <!-- 4 · El camino (3 tarjetas: Fase 1 Auditoría+Nivelación, Fase 2 y Fase 3 Habilidades) -->
+    <section class="slide s-program">
+      <span class="counter">04 / 13</span>
+      <p class="eyebrow">03 · El camino</p>
+      <h2>De la Detección a las Habilidades.</h2>
+      <p class="meta">3 fases, cotizadas juntas en este documento.</p>
+      <div class="modules">
+        <div class="module">
+          <span class="roman">I</span>
+          <h3>Detección + Nivelación</h3>
+          <p class="obj">Auditamos el proceso real de tickets, desde su generación hasta la orden de compra, priorizamos sus cuellos de botella y, en paralelo, nivelamos al equipo en Copilot.</p>
+          <ul class="topics">
+            <li>Matriz de Madurez</li>
+            <li>Reporte Final</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">II</span>
+          <h3>Habilidades I · Automatización y datos</h3>
+          <p class="obj">2 sesiones de 2h para automatizar la generación de órdenes de compra y analizar los datos del sistema de mantenimiento.</p>
+          <ul class="topics">
+            <li>Automatización de compras</li>
+            <li>Análisis de datos</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">III</span>
+          <h3>Habilidades II · Dashboards y más procesos</h3>
+          <p class="obj">2 sesiones de 2h para construir dashboards y un esquema de seguimiento, con espacio abierto para otros procesos que la auditoría identifique.</p>
+          <ul class="topics">
+            <li>Dashboards y KPIs</li>
+            <li>Procesos adicionales a definir</li>
+          </ul>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">DHL · DET-004</span>
+      </div>
+    </section>
+
+    <!-- 5 · Fase 1: Detección + nivelación de Copilot -->
+    <section class="slide s-schedule">
+      <span class="counter">05 / 13</span>
+      <p class="eyebrow">04 · Fase 1 de 3 · Ruta por fase</p>
+
+      <div class="ruta">
+        <div class="ruta-node">1</div>
+        <div class="ruta-track"><div class="ruta-fill" style="width:33.33%"></div></div>
+        <span class="ruta-step">Detección</span>
+      </div>
+
+      <div class="ses-head">
+        <div>
+          <span class="ses-mod">Fase 1 · Auditoría + nivelación de Copilot · Virtual, equipo distribuido en México</span>
+          <h2>Detección</h2>
+        </div>
+      </div>
+
+      <div class="ses-body">
+        <div class="ses-block">
+          <span class="label">Temas</span>
+          <div class="chips">
+            <span class="chip">Auditoría de Mantenimiento</span>
+            <span class="chip">Matriz de Madurez Digital</span>
+            <span class="chip">Impacto vs. esfuerzo</span>
+            <span class="chip">Nivelación de Copilot</span>
+            <span class="chip">Reporte Final</span>
+          </div>
+        </div>
+        <div class="ses-cols">
+          <div class="ses-block">
+            <span class="label">Qué se hace</span>
+            <ul>
+              <li>Auditamos el proceso de tickets de mantenimiento (generación, costos, proveedores, compra) con un guion estructurado, en sesiones virtuales</li>
+              <li>Medimos el punto de partida con la Matriz de Madurez Digital y priorizamos por impacto y esfuerzo</li>
+              <li>En paralelo, nivelamos al equipo en Copilot dentro de su entorno Microsoft 365</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Qué se logra</span>
+            <ul>
+              <li>Un diagnóstico claro de los cuellos de botella del proceso, priorizados por peso</li>
+              <li>Logros inmediatos aplicables desde las primeras sesiones</li>
+              <li>El equipo con una base más sólida para usar Copilot en su día a día</li>
+            </ul>
+          </div>
+          <div class="ses-block block-rec">
+            <span class="label">Recursos y entornos</span>
+            <ul>
+              <li>Guion de auditoría Intezia y Matriz de Madurez Digital</li>
+              <li>Entorno Microsoft 365 que DHL ya utiliza</li>
+              <li>Sesiones virtuales, con equipo distribuido en México</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">DHL · DET-004</span>
+      </div>
+    </section>
+
+    <!-- 6 · Fase 2: Habilidades I · Automatización y datos -->
+    <section class="slide s-schedule">
+      <span class="counter">06 / 13</span>
+      <p class="eyebrow">04 · Fase 2 de 3 · Ruta por fase</p>
+
+      <div class="ruta">
+        <div class="ruta-node">2</div>
+        <div class="ruta-track"><div class="ruta-fill" style="width:66.66%"></div></div>
+        <span class="ruta-step">Habilidades I</span>
+      </div>
+
+      <div class="ses-head">
+        <div>
+          <span class="ses-mod">Fase 2 · Habilidades I · 2 sesiones de 2h · Virtual, equipo distribuido en México</span>
+          <h2>Automatización y datos</h2>
+        </div>
+        <div class="ses-meta"><span class="ses-dur">4h</span></div>
+      </div>
+
+      <div class="ses-body">
+        <div class="ses-block">
+          <span class="label">Temas</span>
+          <div class="chips">
+            <span class="chip">Automatización de compras</span>
+            <span class="chip">Análisis de datos</span>
+          </div>
+        </div>
+        <div class="ses-block">
+          <span class="label">Tiempo · 2 sesiones de 2h (4h)</span>
+          <div class="timebar">
+            <div class="seg" style="flex:1">Sesión 1 · Automatización de compras (2h)</div>
+            <div class="seg" style="flex:1">Sesión 2 · Análisis de datos (2h)</div>
+          </div>
+        </div>
+        <div class="ses-cols">
+          <div class="ses-block">
+            <span class="label">Qué se hace</span>
+            <ul>
+              <li>Automatizamos la generación de órdenes de compra según gasto y estación, partiendo de Copilot dentro de su entorno Microsoft 365</li>
+              <li>Analizamos los datos del sistema de gestión de mantenimiento para identificar patrones y prioridades</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Qué se logra</span>
+            <ul>
+              <li>Órdenes de compra generadas con reglas claras, sin depender del Excel manual</li>
+              <li>Decisiones de mantenimiento basadas en datos reales, no en percepción</li>
+            </ul>
+          </div>
+          <div class="ses-block block-rec">
+            <span class="label">Recursos y entornos</span>
+            <ul>
+              <li>Datos del sistema de gestión de mantenimiento y del histórico de compras</li>
+              <li>Copilot y herramientas del entorno Microsoft 365 de DHL</li>
+              <li>Sesiones virtuales, con equipo distribuido en México</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">DHL · DET-004</span>
+      </div>
+    </section>
+
+    <!-- 7 · Fase 3: Habilidades II · Dashboards y más procesos -->
+    <section class="slide s-schedule">
+      <span class="counter">07 / 13</span>
+      <p class="eyebrow">04 · Fase 3 de 3 · Ruta por fase</p>
+
+      <div class="ruta">
+        <div class="ruta-node">3</div>
+        <div class="ruta-track"><div class="ruta-fill" style="width:100%"></div></div>
+        <span class="ruta-step">Habilidades II</span>
+      </div>
+
+      <div class="ses-head">
+        <div>
+          <span class="ses-mod">Fase 3 · Habilidades II · 2 sesiones de 2h · Virtual, equipo distribuido en México</span>
+          <h2>Dashboards y más procesos</h2>
+        </div>
+        <div class="ses-meta"><span class="ses-dur">4h</span></div>
+      </div>
+
+      <div class="ses-body">
+        <div class="ses-block">
+          <span class="label">Temas</span>
+          <div class="chips">
+            <span class="chip">Dashboards de mantenimiento</span>
+            <span class="chip">Seguimiento y KPIs</span>
+            <span class="chip">Procesos adicionales a definir</span>
+          </div>
+        </div>
+        <div class="ses-block">
+          <span class="label">Tiempo · 2 sesiones de 2h (4h)</span>
+          <div class="timebar">
+            <div class="seg" style="flex:1">Sesión 1 · Dashboards de mantenimiento (2h)</div>
+            <div class="seg" style="flex:1">Sesión 2 · Seguimiento y KPIs (2h)</div>
+          </div>
+        </div>
+        <div class="ses-cols">
+          <div class="ses-block">
+            <span class="label">Qué se hace</span>
+            <ul>
+              <li>Construimos y actualizamos dashboards de mantenimiento, y definimos un esquema de seguimiento con Indicadores Clave de Desempeño (KPIs)</li>
+              <li>Dejamos espacio para capacitar otros procesos de Mantenimiento e Infraestructura que la Fase 1 identifique, con Copilot o Claude según lo que convenga a cada uno</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Qué se logra</span>
+            <ul>
+              <li>Dashboards siempre actualizados y KPIs propios para medir la operación</li>
+              <li>Una ruta clara para seguir capacitando al equipo sobre lo que arroje la auditoría</li>
+            </ul>
+          </div>
+          <div class="ses-block block-rec">
+            <span class="label">Recursos y entornos</span>
+            <ul>
+              <li>Datos del sistema de gestión de mantenimiento</li>
+              <li>Copilot dentro del entorno Microsoft 365, o Claude, según el proceso</li>
+              <li>Sesiones virtuales, con equipo distribuido en México</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">DHL · DET-004</span>
+      </div>
+    </section>
+
+    <!-- 8 · Roadmap · Detección → Habilidades I → Habilidades II -->
+    <section class="slide s-roadmap">
+      <span class="counter">08 / 13</span>
+      <p class="eyebrow">04 · Roadmap</p>
+      <h2>De la Detección a las <span class="hl">Habilidades</span>.</h2>
+
+      <div class="rmx-field">
+        <div class="rmx-linear">
+
+          <div class="rmx-lrow-nodes">
+            <div class="rmx-lcol"><div class="rmx-node rmx-node-f2">1</div></div>
+            <div class="rmx-arrow"></div>
+            <div class="rmx-lcol"><div class="rmx-node rmx-node-f3">2</div></div>
+            <div class="rmx-arrow"></div>
+            <div class="rmx-lcol"><div class="rmx-node rmx-node-f4">3</div></div>
+            <div class="rmx-arrow"></div>
+            <div class="rmx-lcol"><div class="rmx-node rmx-node-r">&#9733;</div></div>
+          </div>
+
+          <div class="rmx-lrow-cards">
+            <div class="rmx-lcol">
+              <div class="rmx-card rmx-card-f2">
+                <span class="rmx-card-tag">Fase 1 · Detección</span>
+                <div class="rmx-card-name">Auditoría + Nivelación</div>
+                <ul class="rmx-facets">
+                  <li><span>Qué pasa</span><p>Auditamos el proceso, medimos la madurez y nivelamos al equipo en Copilot.</p></li>
+                  <li><span>Con quién</span><p>Equipo de Mantenimiento e Infraestructura de DHL, virtual.</p></li>
+                  <li><span>Entrega</span><p>Reporte Final con la hoja de ruta priorizada, herramienta por proceso.</p></li>
+                </ul>
+              </div>
+            </div>
+            <div class="rmx-lspacer"></div>
+            <div class="rmx-lcol">
+              <div class="rmx-card rmx-card-f3">
+                <span class="rmx-card-tag">Fase 2 · Habilidades I</span>
+                <div class="rmx-card-name">Automatización y datos</div>
+                <ul class="rmx-facets">
+                  <li><span>Qué pasa</span><p>2 sesiones de 2h: automatización de compras y análisis de datos.</p></li>
+                  <li><span>Con quién</span><p>El equipo, sobre sus tareas reales.</p></li>
+                  <li><span>Entrega</span><p>Compras automatizadas y decisiones basadas en datos.</p></li>
+                </ul>
+              </div>
+            </div>
+            <div class="rmx-lspacer"></div>
+            <div class="rmx-lcol">
+              <div class="rmx-card rmx-card-f4">
+                <span class="rmx-card-tag">Fase 3 · Habilidades II</span>
+                <div class="rmx-card-name">Dashboards y más procesos</div>
+                <ul class="rmx-facets">
+                  <li><span>Qué pasa</span><p>Dashboards, KPIs, y espacio para más procesos.</p></li>
+                  <li><span>Con quién</span><p>El equipo de Mantenimiento e Infraestructura.</p></li>
+                  <li><span>Entrega</span><p>Esquema de seguimiento propio y ruta de expansión.</p></li>
+                </ul>
+              </div>
+            </div>
+            <div class="rmx-lspacer"></div>
+            <div class="rmx-lcol">
+              <div class="rmx-result-card">
+                <span class="rmx-result-label">Cierre del proyecto</span>
+                <div class="rmx-result-title">Mantenimiento de DHL, optimizado con IA</div>
+                <ul>
+                  <li>Cuellos de botella resueltos con la herramienta que convenga a cada uno</li>
+                  <li>Equipo autónomo, más estratégico que ejecutor</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /.rmx-linear -->
+
+        <div class="rmx-ethics">
+          <span class="rmx-ethics-tag">Plan completo, listo para decidir</span>
+          <p>Las 3 fases vienen <strong>desarrolladas y cotizadas en esta misma propuesta</strong>: DHL define presupuesto con el plan completo sobre la mesa.</p>
+        </div>
+
+      </div><!-- /.rmx-field -->
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">DHL · DET-004</span>
+      </div>
+    </section>
+
+    <!-- 8 · Beneficios (formato v3: Resultados · Por qué Detección · Entregables · Valor inmediato) -->
+    <section class="slide s-benefits s-benefits-v2">
+      <span class="counter">09 / 13</span>
+      <p class="eyebrow">05 · Beneficios</p>
+      <h2>Lo que <span class="hl">se llevan</span>.</h2>
+      <div class="grid">
+        <div class="block">
+          <p class="label">Resultados</p>
+          <ul>
+            <li><strong>Hoja de ruta clara</strong> de qué resolver primero y con qué herramienta.</li>
+            <li>El proceso de tickets y compras, hoy manual, automatizado con Copilot o Claude.</li>
+            <li>Equipo con un esquema propio de seguimiento e Indicadores Clave de Desempeño (KPIs), sin depender del consultor.</li>
+          </ul>
+        </div>
+        <div class="block">
+          <p class="label">Por qué Detección y Habilidades</p>
+          <p>
+            Diagnosticar antes de capacitar evita invertir en la herramienta equivocada: las Fases 2 y 3 resuelven los cuellos de botella que la Fase 1 <strong>priorizó sobre la operación real</strong>, no sobre un supuesto.
+          </p>
+        </div>
+        <div class="block">
+          <p class="label">Entregables</p>
+        </div>
+        <div class="block">
+          <p class="label">Valor inmediato</p>
+        </div>
+      </div>
+
+      <!-- Cajas multiline editables (vacías en HTML — el contenido vive dentro del AcroForm /V). -->
+      <div class="multi-box entregables-box" data-field="Entregables"></div>
+      <div class="multi-box acreditaciones-box" data-field="Acreditacion"></div>
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">DHL · DET-004</span>
+      </div>
+    </section>
+
+    <!-- 9 · Impacto / estudios — datos de estudios reales, fuente citada (CLAUDE.md §4.9) -->
+    <section class="slide s-impact">
+      <span class="counter">10 / 13</span>
+
+      <div class="impact-head">
+        <p class="eyebrow">06 · Impacto</p>
+        <h2>La evidencia no deja<br><span class="hl">lugar a dudas</span>.</h2>
+      </div>
+
+      <div class="impact-body">
+        <div class="chart-panel">
+          <p class="panel-title">Impacto de la IA en mantenimiento y en el trabajo con Copilot</p>
+          <div class="bars">
+            <div class="bar-row">
+              <span class="bar-label">Mantenimiento predictivo con IA · reducción de tiempo de inactividad</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:50%"><span class="bar-val">-50%</span></div></div>
+            </div>
+            <div class="bar-row">
+              <span class="bar-label">Mantenimiento predictivo con IA · reducción de costos de mantenimiento</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:40%"><span class="bar-val">-40%</span></div></div>
+            </div>
+          </div>
+          <div class="bar-axis"><span class="scale"><span>0</span><span>15</span><span>30</span><span>45</span><span>60%</span></span></div>
+          <p class="panel-source">Fuentes: McKinsey &amp; Company &mdash; Prediction at scale: How industry can get more value out of maintenance, 2021 &middot; Microsoft &mdash; Work Trend Index 2024 (What Can Copilot&rsquo;s Earliest Users Teach Us About AI at Work?).</p>
+        </div>
+
+        <div class="gauge-panel">
+          <div class="gauge" style="--pct:77">
+            <div class="gauge-core">
+              <span class="gauge-num">77<span class="pct">%</span></span>
+              <span class="gauge-cap">de los usuarios de Copilot reportó más productividad</span>
+            </div>
+          </div>
+          <div class="chips">
+            <div class="chip">
+              <span class="chip-num">29%</span>
+              <span class="chip-lbl">más rápidos en sus tareas con Copilot</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="impact-hook">
+        <span class="hook-mark">&#9656;</span>
+        <p class="hook-text">
+          El proceso de tickets y órdenes de compra concentra el mayor tiempo manual de Mantenimiento e Infraestructura: el <strong>mantenimiento predictivo</strong> con IA puede reducir hasta 50% el tiempo de inactividad y hasta 40% los costos de mantenimiento (McKinsey, 2021). El 77% de los usuarios de Copilot reporta un aumento medible de productividad (Microsoft, 2024), la herramienta que el equipo ya usa. Diagnosticar primero permite dirigir ese impacto al cuello de botella que más pesa, y decidir si conviene resolverlo con Copilot, con Claude, o con ambos.
+        </p>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">DHL · DET-004</span>
+      </div>
+    </section>
+
+    <!-- 10 · Propuesta Económica (estándar: Duración + Programa + Notas + Cotización, solo
+         columna derecha — sin desglose de precio por fase a la izquierda) -->
+    <section class="slide s-price">
+      <span class="counter">11 / 13</span>
+      <h2 class="title">Propuesta Económica</h2>
+
+      <div class="block">
+        <span class="block-eyebrow">Duración</span>
+        <p class="block-value">3 fases · Detección y nivelación de Copilot (Fase 1) + Habilidades I y II (4h c/u) · virtual.</p>
+      </div>
+
+      <div class="block block-programa">
+        <span class="block-eyebrow">Programa</span>
+      </div>
+      <div class="multi-box programa-box" data-field="Programa"></div>
+
+      <div class="block block-cotizacion">
+        <span class="block-eyebrow">Cotización</span>
+      </div>
+
+      <span class="cot-label cot-label-base">Propuesta + Inversión</span>
+      <div class="cot-frame base-frame"></div>
+
+      <span class="cot-label cot-label-discount">Descuento</span>
+      <div class="cot-frame discount-frame"></div>
+
+      <span class="cot-label cot-label-total">TOTAL</span>
+      <div class="cot-frame total-frame"></div>
+
+      <p class="cot-validity">Cotización válida por 30 días.</p>
+      <div class="cot-terms-box">
+        <span class="cot-terms-label">Importante</span>
+        <p class="cot-terms-text">Este servicio se presta bajo nuestros <a href="https://drive.google.com/file/d/1PA-ZSt4KnyY5dpxXzgkIk6-yfGlV2eF8/view?usp=drive_link" target="_blank" rel="noopener">términos y condiciones</a>. Al avanzar con esta propuesta, ambas partes los aceptan.</p>
+      </div>
+
+      <div class="block block-notes-container">
+        <span class="block-eyebrow">Notas</span>
+      </div>
+      <div class="multi-box notas-box" data-field="Notas"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">DHL · DET-004</span>
+      </div>
+    </section>
+
+    <!-- 11 · Próximos pasos -->
+    <section class="slide s-steps">
+      <span class="counter">12 / 13</span>
+      <p class="eyebrow">07 · Próximos pasos</p>
+      <h2>Cómo arrancamos.</h2>
+      <div class="step-cards">
+        <div class="step-card">
+          <span class="ghost">01</span>
+        </div>
+        <div class="step-card">
+          <span class="ghost">02</span>
+        </div>
+        <div class="step-card">
+          <span class="ghost">03</span>
+        </div>
+      </div>
+
+      <!-- Editable AcroForm placeholders (3 pasos × título + body) -->
+      <div class="acro-area acro-title acro-paso-01-titulo" data-field="Paso01Titulo">
+        <span class="acro-default-text">Confirmamos fechas</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-01-body" data-field="Paso01Body">
+        <span class="acro-default-text">Definimos calendario y horario de las sesiones virtuales de ambas fases, con el equipo distribuido en México.</span>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-02-titulo" data-field="Paso02Titulo">
+        <span class="acro-default-text">Acceso y logística</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-02-body" data-field="Paso02Body">
+        <span class="acro-default-text">Coordinamos participantes de Mantenimiento e Infraestructura, agenda y accesos para la auditoría y las sesiones de Habilidades.</span>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-03-titulo" data-field="Paso03Titulo">
+        <span class="acro-default-text">Kick-off del proyecto</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-03-body" data-field="Paso03Body">
+        <span class="acro-default-text">Reunión de arranque (~30 min) para alinear el alcance de ambas fases y priorizar el diagnóstico.</span>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">DHL · DET-004</span>
+      </div>
+    </section>
+
+    <!-- 12 · Cierre -->
+    <section class="slide s-end">
+      <span class="counter">13 / 13</span>
+
+      <div class="end-logo">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia">
+      </div>
+
+      <!-- Resultado (cinta superior) — caja editable, ventas la redacta por cliente -->
+      <div class="end-summit" data-field="CierreResultado">
+        <span class="acro-default-text">El proceso de tickets y compras de DHL, optimizado con IA.</span>
+      </div>
+
+      <!-- Escalera de 3 pasos — cada uno con su caja editable -->
+      <div class="end-stairs">
+        <div class="stair-step stair-1">
+          <span class="stair-label">Paso 1</span>
+          <div class="stair-field" data-field="CierrePaso1">
+            <span class="acro-default-text">Diagnóstico priorizado</span>
+          </div>
+        </div>
+        <div class="stair-step stair-2">
+          <span class="stair-label">Paso 2</span>
+          <div class="stair-field" data-field="CierrePaso2">
+            <span class="acro-default-text">Automatización y datos</span>
+          </div>
+        </div>
+        <div class="stair-step stair-3">
+          <span class="stair-label">Paso 3</span>
+          <div class="stair-field" data-field="CierrePaso3">
+            <span class="acro-default-text">Dashboards y más procesos</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cta-wrap">
+        <span class="cta">Esperamos tu respuesta</span>
+      </div>
+
+      <div class="end-contact">
+        <p class="contact-line">
+          <span class="contact-label">Asesora de ventas:</span>
+          Verónica Rubio <span class="dot">·</span> +58 422 3355505 <span class="dot">·</span> vrubio01@intezia.com
+        </p>
+        <p class="contact-line">
+          <span class="contact-label">Empresa:</span>
+          Intezia C.A J-505657950 <span class="dot">·</span> servicio@intezia.com
+        </p>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

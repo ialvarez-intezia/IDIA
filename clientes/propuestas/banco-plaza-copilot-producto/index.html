@@ -1,0 +1,683 @@
+<!doctype html>
+<!--
+  Propuesta — Banco Plaza · Copilot para Producto, Alexis (CAI-026)
+  Servicio: combo DETECCIÓN + HABILIDADES (servicio: "deteccion" en meta.json, mismo criterio
+  que simple-tv-det002/ DET-002 §4.1a — combo Detección+Habilidades sigue siendo "deteccion").
+  Código CAI-026 por instrucción explícita del usuario (continúa la numeración de las 2
+  propuestas anteriores de Banco Plaza del mismo día: CAI-024 Mercadeo, CAI-025 Cerebros
+  Digitales). División: Educación. Sin Ficha Comercial (2026-09-23).
+
+  QUÉ ES: 1 solo participante, Alexis, del área de Producto de Banco Plaza. Se le enseña
+  Microsoft Copilot (licencias que YA maneja toda la organización) para sacarle el máximo
+  provecho a sus tareas del día a día. Empieza con una Detección individual (4h, 2 sesiones
+  de levantamiento) — NO se asume un temario genérico: se levantan las tareas y fricciones
+  reales de Alexis antes de diseñar la práctica. Con ese insumo, 8h de Habilidades (4
+  sesiones prácticas). El temario de Habilidades que este deck muestra es una HIPÓTESIS DE
+  TRABAJO (investigación de qué hace típicamente un área de Producto en un banco, instrucción
+  de Jean) — se dice explícitamente que puede ajustarse tras la Detección.
+
+  HORAS (confirmadas explícitas por el usuario, 2026-09-23): Kick-off (1h, aparte, no cuenta)
+  + Detección (4h, 2 sesiones) + Habilidades (8h, 4 sesiones) = 12h de propuesta.
+
+  BASE ESTRUCTURAL: clonado de banco-plaza-mercadeo/ (CAI-024) — mismo shell visual que las 2
+  propuestas anteriores de la cuenta el mismo día: roadmap .rmx-linear de 2 etapas + estrella
+  en 1 sola página, .s-schedule con Temas/Timebar/3 columnas, Beneficios v3, Cierre escalera,
+  .s-followup (Seguimiento 30-60-90), .steps-calendar. Se prefirió sobre el patrón "Inversión
+  por fases" de simple-tv-det002/ (2 cajas de precio separadas) por ser un alcance más chico
+  (12h, 1 persona) sin una segunda propuesta competidora que comparar fase por fase.
+
+  Calendario (dato directo del usuario): Kick-off jueves 1 de octubre 10-11 (aparte). Sesiones
+  lunes/miércoles 14-16 desde el 5 de octubre: Detección ses.1 (lun 5 oct), Detección ses.2
+  (mié 7 oct), Habilidades ses.1-4 (lun 12, mié 14, lun 19, mié 21 oct).
+
+  Garantía 30-60-90 + slide de Seguimiento: SÍ aplican (hay componente real de Habilidades).
+  Con certificado (Habilidades con capacitación real). Sin slide de Mapa de Calor ni
+  Metodología ABR ni Equipo facilitador expuestos (§4.10a). Hook de Impacto redactado nuevo,
+  NO reutiliza la frase viajera "la diferencia no es la herramienta, es saber usarla" (ya
+  vendida a 3 clientes, ver plantillas/redaccion.md). 13 slides.
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Propuesta · Copilot para Producto · Banco Plaza · Intezia</title>
+  <link rel="stylesheet" href="../_base/styles.css">
+  <link rel="stylesheet" href="overrides.css">
+</head>
+<body>
+
+  <main class="deck">
+
+    <!-- 1 · Portada -->
+    <section class="slide s-cover">
+      <span class="counter">01 / 13</span>
+      <div class="logo-big">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia">
+      </div>
+      <div class="body">
+        <p class="eyebrow">Propuesta formativa · Servicio de Detección y Habilidades</p>
+        <h1>
+          De usar Copilot,<br>
+          <span class="hl">a que Copilot te entienda.</span>
+        </h1>
+        <p class="lead">
+          Levantamos las tareas reales de Alexis en Producto y lo capacitamos en <strong>Microsoft Copilot</strong> aplicado a ellas, con las licencias que Banco Plaza ya tiene en toda la organización.
+        </p>
+      </div>
+      <div class="id-line">
+        <span class="codigo">Código: CAI-026</span>
+        <span class="cliente">Banco Plaza</span>
+      </div>
+    </section>
+
+    <!-- 2 · Punto de dolor + Diagnóstico -->
+    <section class="slide s-pain">
+      <span class="counter">02 / 13</span>
+      <span class="quote-mark">&ldquo;</span>
+      <div class="body">
+        <h2>&ldquo;Tenemos Copilot, pero no sabemos si lo usamos bien.&rdquo;</h2>
+        <p class="context">
+          Banco Plaza ya tiene licencias de Copilot para toda la organización, pero eso no garantiza que cada persona le saque el máximo provecho a sus tareas específicas. Alexis, en Producto, tiene procesos propios que una capacitación genérica de Copilot no resuelve con precisión.
+        </p>
+        <p class="diag-title">Diagnóstico</p>
+        <ol>
+          <li>Las licencias de Copilot ya están adquiridas, pero el uso real varía persona a persona.</li>
+          <li>Producto tiene tareas específicas (documentos, análisis, presentaciones a comités) que un temario genérico de Copilot no cubre con precisión.</li>
+          <li>Sin un levantamiento previo, la práctica corre el riesgo de enseñar casos que Alexis no usa en su día a día.</li>
+          <li>El conocimiento de qué automatizar hoy vive solo en la experiencia de Alexis, no en un método documentado.</li>
+          <li>Falta confirmar, antes de practicar, cuáles son realmente sus tareas de mayor fricción.</li>
+        </ol>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">BANCO PLAZA · CAI-026</span>
+      </div>
+    </section>
+
+    <!-- 3 · Objetivos estratégicos -->
+    <section class="slide s-goals">
+      <span class="counter">03 / 13</span>
+      <p class="eyebrow">02 · Objetivos</p>
+      <h2>A dónde llevamos<br>a Alexis en Producto.</h2>
+      <div class="columns">
+        <div class="general">
+          <p class="label">Objetivo general</p>
+          <p>
+            Levantar el contexto real de las tareas de Alexis en el área de Producto de Banco Plaza y capacitarlo en el uso avanzado de Microsoft Copilot aplicado específicamente a esas tareas, para que le saque el máximo provecho a su día a día.
+          </p>
+        </div>
+        <div class="specifics">
+          <p class="label">Objetivos específicos</p>
+          <ol>
+            <li>Diagnosticar en la Detección el uso actual de Copilot y las tareas reales de Alexis en Producto.</li>
+            <li>Confirmar o ajustar, con esos hallazgos, el temario de las sesiones prácticas de Habilidades.</li>
+            <li>Capacitar a Alexis en Copilot aplicado a documentos, análisis y presentaciones de Producto.</li>
+            <li>Dejarlo con procesos y prompts reutilizables para su trabajo diario.</li>
+          </ol>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">BANCO PLAZA · CAI-026</span>
+      </div>
+    </section>
+
+    <!-- 4 · El servicio (2 pilares: Detección + Habilidades) -->
+    <section class="slide s-program">
+      <span class="counter">04 / 13</span>
+      <p class="eyebrow">03 · El servicio</p>
+      <h2>Primero el diagnóstico, después la práctica.</h2>
+      <p class="meta">Detección individual y Habilidades prácticas, en un solo programa.</p>
+      <div class="modules">
+        <div class="module">
+          <span class="roman">I</span>
+          <h3>Detección</h3>
+          <p class="obj">Levantamos las tareas reales de Alexis en Producto y sus fricciones actuales con Copilot.</p>
+          <ul class="topics">
+            <li>Mapeo de tareas y herramientas</li>
+            <li>Priorización de casos de uso</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">II</span>
+          <h3>Habilidades: Copilot para Producto</h3>
+          <p class="obj">Practicamos Copilot sobre los documentos, análisis y presentaciones reales de Alexis. Temario preliminar, se confirma tras la Detección.</p>
+          <ul class="topics">
+            <li>Documentos de producto (Word)</li>
+            <li>Análisis y rentabilidad (Excel)</li>
+            <li>Presentaciones a comités (PowerPoint)</li>
+            <li>Reuniones y seguimiento (Teams/Outlook)</li>
+          </ul>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">BANCO PLAZA · CAI-026</span>
+      </div>
+    </section>
+
+    <!-- 5 · Roadmap (2 etapas + resultado, 1 sola página) -->
+    <section class="slide s-roadmap">
+      <span class="counter">05 / 13</span>
+      <p class="eyebrow">04 · Roadmap</p>
+      <h2>Del levantamiento,<br><span class="hl">a la práctica a la medida</span>.</h2>
+
+      <div class="rmx-field">
+        <div class="rmx-linear">
+
+          <div class="rmx-lrow-nodes">
+            <div class="rmx-lcol"><div class="rmx-node rmx-node-f2">1</div></div>
+            <div class="rmx-arrow"></div>
+            <div class="rmx-lcol"><div class="rmx-node rmx-node-f3">2</div></div>
+            <div class="rmx-arrow"></div>
+            <div class="rmx-lcol"><div class="rmx-node rmx-node-r">&#9733;</div></div>
+          </div>
+
+          <div class="rmx-lrow-cards">
+            <div class="rmx-lcol">
+              <div class="rmx-card rmx-card-f2">
+                <span class="rmx-card-tag">Etapa 1 · Detección</span>
+                <div class="rmx-card-name">4h &middot; 2 sesiones</div>
+                <ul class="rmx-facets">
+                  <li><span>Qué pasa</span><p>Levantamos las tareas reales de Alexis y sus fricciones con Copilot.</p></li>
+                  <li><span>Con quién</span><p>Alexis, del área de Producto.</p></li>
+                  <li><span>Entrega</span><p>Temario de Habilidades confirmado.</p></li>
+                </ul>
+              </div>
+            </div>
+            <div class="rmx-lspacer"></div>
+            <div class="rmx-lcol">
+              <div class="rmx-card rmx-card-f3">
+                <span class="rmx-card-tag">Etapa 2 · Habilidades</span>
+                <div class="rmx-card-name">8h &middot; 4 sesiones</div>
+                <ul class="rmx-facets">
+                  <li><span>Qué pasa</span><p>Practicamos Copilot sobre documentos, análisis y presentaciones reales.</p></li>
+                  <li><span>Con quién</span><p>Alexis, del área de Producto.</p></li>
+                  <li><span>Entrega</span><p>Procesos y prompts propios, listos para su día a día.</p></li>
+                </ul>
+              </div>
+            </div>
+            <div class="rmx-lspacer"></div>
+            <div class="rmx-lcol">
+              <div class="rmx-result-card">
+                <span class="rmx-result-label">Al cierre del programa</span>
+                <div class="rmx-result-title">De Copilot genérico, <b>a un método propio</b></div>
+                <ul>
+                  <li>Temario calibrado a tareas reales, no a supuestos</li>
+                  <li>Documentos, análisis y presentaciones resueltos con Copilot</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /.rmx-linear -->
+
+        <div class="rmx-ethics">
+          <span class="rmx-ethics-tag">Metodología ABR · Contexto real antes de practicar</span>
+          <p>La fase de Habilidades no arranca con un temario cerrado: se confirma con lo que la Detección encuentra en las 2 primeras sesiones.</p>
+        </div>
+
+      </div><!-- /.rmx-field -->
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">BANCO PLAZA · CAI-026</span>
+      </div>
+    </section>
+
+    <!-- 6 · Detección (levantamiento) -->
+    <section class="slide s-schedule">
+      <span class="counter">06 / 13</span>
+      <p class="eyebrow">04 · Detección</p>
+
+      <div class="ses-head">
+        <div>
+          <span class="ses-mod">2 sesiones con Alexis &middot; Modalidad a definir</span>
+          <h2>Detección &middot; levantamiento con Producto</h2>
+        </div>
+        <div class="ses-meta"><span class="ses-dur">4h</span></div>
+      </div>
+
+      <div class="ses-body">
+        <div class="ses-block">
+          <span class="label">Temas</span>
+          <div class="chips">
+            <span class="chip">Mapeo de tareas y herramientas</span>
+            <span class="chip">Fricciones actuales con Copilot</span>
+            <span class="chip">Priorización de casos de uso</span>
+            <span class="chip">Diseño del temario a medida</span>
+          </div>
+        </div>
+        <div class="ses-block">
+          <span class="label">Tiempo &middot; Total 4 h</span>
+          <div class="timebar">
+            <div class="seg" style="flex:120">2h Sesión 1: mapeo de tareas y herramientas</div>
+            <div class="seg" style="flex:120">2h Sesión 2: priorización y diseño del temario</div>
+          </div>
+        </div>
+        <div class="ses-cols">
+          <div class="ses-block">
+            <span class="label">Qué se hace</span>
+            <ul>
+              <li>Levantamos los documentos, análisis y presentaciones reales que Alexis produce en Producto</li>
+              <li>Identificamos dónde Copilot ya se usa y dónde hay fricción o desconocimiento</li>
+              <li>Priorizamos los casos de mayor impacto para las sesiones de Habilidades</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Qué se logra</span>
+            <ul>
+              <li>Un mapa claro de las tareas reales de Alexis en Producto</li>
+              <li>Casos de uso priorizados, no genéricos</li>
+              <li>El temario de Habilidades queda confirmado o ajustado</li>
+            </ul>
+          </div>
+          <div class="ses-block block-rec">
+            <span class="label">Recursos y entornos</span>
+            <ul>
+              <li>Sesión con Alexis</li>
+              <li>Documentos y casos reales de Producto</li>
+              <li>Cuenta Copilot ya asignada</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">BANCO PLAZA · CAI-026</span>
+      </div>
+    </section>
+
+    <!-- 7 · Habilidades (Copilot para Producto, preliminar) -->
+    <section class="slide s-schedule">
+      <span class="counter">07 / 13</span>
+      <p class="eyebrow">04 · Habilidades</p>
+
+      <div class="ses-head">
+        <div>
+          <span class="ses-mod">4 sesiones con Alexis &middot; Temario preliminar, sujeto a ajuste tras la Detección</span>
+          <h2>Habilidades &middot; Copilot para Producto</h2>
+        </div>
+        <div class="ses-meta"><span class="ses-dur">8h</span></div>
+      </div>
+
+      <div class="ses-body">
+        <div class="ses-block">
+          <span class="label">Temas (preliminar)</span>
+          <div class="chips">
+            <span class="chip">Documentos de producto (Word)</span>
+            <span class="chip">Análisis y rentabilidad (Excel)</span>
+            <span class="chip">Presentaciones a comités (PowerPoint)</span>
+            <span class="chip">Reuniones y seguimiento (Teams/Outlook)</span>
+          </div>
+        </div>
+        <div class="ses-block">
+          <span class="label">Tiempo &middot; Total 8 h</span>
+          <div class="timebar">
+            <div class="seg" style="flex:120">2h Documentos de producto</div>
+            <div class="seg" style="flex:120">2h Análisis y rentabilidad</div>
+            <div class="seg" style="flex:120">2h Presentaciones a comités</div>
+            <div class="seg" style="flex:120">2h Reuniones y seguimiento</div>
+          </div>
+        </div>
+        <div class="ses-cols">
+          <div class="ses-block">
+            <span class="label">Qué se hace</span>
+            <ul>
+              <li>Practicamos Copilot sobre documentos, datos y presentaciones reales de Alexis</li>
+              <li>Ajustamos cada sesión según lo confirmado en la Detección</li>
+              <li>Construimos prompts y procesos reutilizables para cada tarea</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Qué se logra</span>
+            <ul>
+              <li>Documentos, análisis y presentaciones propias resueltas con Copilot</li>
+              <li>Procesos reutilizables para el trabajo diario de Producto</li>
+              <li>Autonomía para decidir cuándo y cómo apoyarse en Copilot</li>
+            </ul>
+          </div>
+          <div class="ses-block block-rec">
+            <span class="label">Recursos y entornos</span>
+            <ul>
+              <li>Sesión con Alexis</li>
+              <li>Copilot dentro de Word, Excel, PowerPoint, Teams y Outlook</li>
+              <li>Casos y documentos reales priorizados en la Detección</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">BANCO PLAZA · CAI-026</span>
+      </div>
+    </section>
+
+    <!-- 8 · Beneficios (formato v3) -->
+    <section class="slide s-benefits s-benefits-v2">
+      <span class="counter">08 / 13</span>
+      <p class="eyebrow">05 · Beneficios</p>
+      <h2>Lo que <span class="hl">se llevan</span>.</h2>
+      <div class="grid">
+        <div class="block">
+          <p class="label">Resultados</p>
+          <ul>
+            <li>Un <strong>diagnóstico real</strong> de sus tareas y fricciones con Copilot en Producto.</li>
+            <li>Un temario de Habilidades calibrado a su contexto, no genérico.</li>
+            <li>Documentos, análisis y presentaciones propias resueltas con Copilot.</li>
+          </ul>
+        </div>
+        <div class="block">
+          <p class="label">Por qué Detección + Habilidades</p>
+          <p>
+            No asumimos un temario genérico: primero levantamos las tareas reales de Producto, y sobre eso <strong>construimos, probamos y dejamos instalado</strong> el uso de Copilot en el día a día de Alexis.
+          </p>
+        </div>
+        <div class="block">
+          <p class="label">Entregables</p>
+        </div>
+        <div class="block">
+          <p class="label">Valor inmediato</p>
+        </div>
+      </div>
+
+      <div class="multi-box entregables-box" data-field="Entregables"></div>
+      <div class="multi-box acreditaciones-box" data-field="Acreditacion"></div>
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">BANCO PLAZA · CAI-026</span>
+      </div>
+    </section>
+
+    <!-- 9 · Impacto / estudios — datos reales, fuente citada (CLAUDE.md §4.9) -->
+    <section class="slide s-impact">
+      <span class="counter">09 / 13</span>
+
+      <div class="impact-head">
+        <p class="eyebrow">06 · Impacto</p>
+        <h2>La evidencia no deja<br><span class="hl">lugar a dudas</span>.</h2>
+      </div>
+
+      <div class="impact-body">
+        <div class="chart-panel">
+          <p class="panel-title">Usuarios de Copilot que reportan mejoras por tipo de tarea</p>
+          <div class="bars">
+            <div class="bar-row">
+              <span class="bar-label">Redacción: primer borrador más rápido</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:85%"><span class="bar-val">85%</span></div></div>
+            </div>
+            <div class="bar-row">
+              <span class="bar-label">Búsqueda de información en archivos</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:75%"><span class="bar-val">75%</span></div></div>
+            </div>
+            <div class="bar-row">
+              <span class="bar-label">Menos tiempo procesando correo</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:64%"><span class="bar-val">64%</span></div></div>
+            </div>
+          </div>
+          <div class="bar-axis"><span class="scale"><span>0</span><span>25</span><span>50</span><span>75</span><span>100%</span></span></div>
+          <p class="panel-source">Fuente: Microsoft &mdash; Work Trend Index Special Report: "What Can Copilot's Earliest Users Teach Us About Generative AI at Work?" (noviembre 2023).</p>
+        </div>
+
+        <div class="gauge-panel">
+          <div class="gauge" style="--pct:70">
+            <div class="gauge-core">
+              <span class="gauge-num">70<span class="pct">%</span></span>
+              <span class="gauge-cap">más productivos</span>
+            </div>
+          </div>
+          <div class="chips">
+            <div class="chip">
+              <span class="chip-num">4&times;</span>
+              <span class="chip-lbl">más rápido tras reunión</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="impact-hook">
+        <span class="hook-mark">&#9656;</span>
+        <p class="hook-text">
+          Producto no necesita otra herramienta: ya tiene Copilot. Lo que falta es <strong>calibrarlo a sus propias tareas</strong>. Por eso este programa arranca levantando el trabajo real de Alexis, no repitiendo un mismo temario para cualquier área del banco.
+        </p>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">BANCO PLAZA · CAI-026</span>
+      </div>
+    </section>
+
+    <!-- 10 · Propuesta Económica -->
+    <section class="slide s-price">
+      <span class="counter">10 / 13</span>
+      <h2 class="title">Propuesta Económica</h2>
+
+      <div class="block">
+        <span class="block-eyebrow">Duración</span>
+        <p class="block-value">Detección 4h + Habilidades 8h &middot; 12h de propuesta + kick-off (1h, aparte) &middot; modalidad a definir.</p>
+      </div>
+
+      <div class="block block-programa">
+        <span class="block-eyebrow">Programa</span>
+      </div>
+      <div class="multi-box programa-box" data-field="Programa"></div>
+
+      <div class="block block-cotizacion">
+        <span class="block-eyebrow">Cotización</span>
+      </div>
+
+      <span class="cot-label cot-label-base">Propuesta + Inversión</span>
+      <div class="cot-frame base-frame"></div>
+
+      <span class="cot-label cot-label-discount">Descuento</span>
+      <span class="cot-sign-minus">&minus;$</span>
+      <div class="cot-frame discount-frame"></div>
+      <span class="cot-urgent-note">Descuento válido por 15 días</span>
+
+      <span class="cot-label cot-label-total">TOTAL</span>
+      <div class="cot-frame total-frame"></div>
+
+      <p class="cot-validity">Cotización válida por 30 días.</p>
+
+      <div class="cot-roi-box">
+        <span class="cot-roi-label">ROI estimado</span>
+        <p class="cot-roi-text">La Detección evita practicar sobre casos genéricos: cada hora de Habilidades se invierte en las tareas donde Alexis realmente pierde tiempo hoy, no en un temario que podría no aplicarle.</p>
+      </div>
+
+      <div class="cot-garantia-badge">
+        <span class="cot-garantia-tag">Garantía 30-60-90</span>
+        <p class="cot-garantia-text">Estamos contigo hasta que la habilidad quede instalada.</p>
+      </div>
+
+      <div class="cot-terms-box">
+        <span class="cot-terms-label">Importante</span>
+        <p class="cot-terms-text">Este servicio se presta bajo nuestros <a href="https://drive.google.com/file/d/1PA-ZSt4KnyY5dpxXzgkIk6-yfGlV2eF8/view?usp=drive_link" target="_blank" rel="noopener">términos y condiciones</a>. Al avanzar con esta propuesta, ambas partes los aceptan.</p>
+      </div>
+
+      <div class="block block-notes-container">
+        <span class="block-eyebrow">Notas</span>
+      </div>
+      <div class="multi-box notas-box" data-field="Notas"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">BANCO PLAZA · CAI-026</span>
+      </div>
+    </section>
+
+    <!-- 11 · Seguimiento 30-60-90 (garantía explicada + ROI) -->
+    <section class="slide s-roadmap s-followup">
+      <span class="counter">11 / 13</span>
+      <p class="eyebrow">07 · Garantía de seguimiento</p>
+      <h2>No lo dejamos solo <span class="hl">después del servicio</span>.</h2>
+      <p class="followup-intro">Verificamos que Alexis use lo aprendido, lo multiplique en nuevas tareas y genere impacto real en su productividad: no solo que la sesión haya terminado bien.</p>
+
+      <div class="followup-cards">
+        <div class="rmx-card rmx-card-f2">
+          <span class="rmx-card-tag">30 días</span>
+          <div class="rmx-card-name">¿Se usa lo instalado?</div>
+          <ul class="rmx-facets">
+            <li><span>Medimos</span><p>Uso real de Copilot en las tareas de Producto que priorizamos juntos.</p></li>
+            <li><span>Aportamos</span><p>Nivelación, estrategias y recomendaciones para el uso correcto.</p></li>
+          </ul>
+        </div>
+        <div class="rmx-card rmx-card-f3">
+          <span class="rmx-card-tag">60 días</span>
+          <div class="rmx-card-name">¿Qué construyó?</div>
+          <ul class="rmx-facets">
+            <li><span>Medimos</span><p>Ya no lo entregado en las sesiones: qué procesos o prompts propios construyó Alexis por su cuenta.</p></li>
+            <li><span>Aportamos</span><p>Mapeo de esas construcciones y arranque de la medición de ahorro de tiempo.</p></li>
+          </ul>
+        </div>
+        <div class="rmx-card rmx-card-f4">
+          <span class="rmx-card-tag">90 días</span>
+          <div class="rmx-card-name">¿Cuánto ahorró?</div>
+          <ul class="rmx-facets">
+            <li><span>Medimos</span><p>No contamos construcciones: contabilizamos el tiempo ahorrado con todo lo aprendido y automatizado.</p></li>
+            <li><span>Aportamos</span><p>Análisis de impacto en productividad y en qué se reinvierte ese tiempo.</p></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="followup-roi">
+        <span class="followup-roi-label">ROI en el tiempo</span>
+        <p class="followup-roi-text">El retorno de este programa no se mide en las 8 horas de práctica, sino en la curva de los 90 días: a 30 días Alexis ya usa Copilot en las tareas que priorizamos; a 60, empieza a extenderlo a otras tareas de Producto por su cuenta; a 90, el tiempo que hoy consumen sus tareas repetitivas se puede reinvertir en trabajo de mayor valor.</p>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">BANCO PLAZA · CAI-026</span>
+      </div>
+    </section>
+
+    <!-- 12 · Próximos pasos -->
+    <section class="slide s-steps">
+      <span class="counter">12 / 13</span>
+      <p class="eyebrow">08 · Próximos pasos</p>
+      <h2>Cómo arrancamos.</h2>
+      <div class="step-cards">
+        <div class="step-card">
+          <span class="ghost">01</span>
+        </div>
+        <div class="step-card">
+          <span class="ghost">02</span>
+        </div>
+        <div class="step-card">
+          <span class="ghost">03</span>
+        </div>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-01-titulo" data-field="Paso01Titulo">
+        <span class="acro-default-text">Confirmamos fechas</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-01-body" data-field="Paso01Body">
+        <span class="acro-default-text">Definimos con Alexis el calendario del kick-off, la Detección y las sesiones de Habilidades.</span>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-02-titulo" data-field="Paso02Titulo">
+        <span class="acro-default-text">Acceso y logística</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-02-body" data-field="Paso02Body">
+        <span class="acro-default-text">Coordinamos el acceso a Copilot y la agenda de las sesiones con Alexis.</span>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-03-titulo" data-field="Paso03Titulo">
+        <span class="acro-default-text">Kick-off de contexto</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-03-body" data-field="Paso03Body">
+        <span class="acro-default-text">Reunión de arranque (~1h) para alinear objetivos antes de empezar la Detección.</span>
+      </div>
+
+      <div class="steps-calendar">
+        <span class="steps-calendar-tag">Calendario de inicio &middot; próxima fecha: jueves 1 de octubre</span>
+        <p class="steps-calendar-result">En 3 semanas, Alexis tiene su temario confirmado y Copilot instalado en su día a día de Producto.</p>
+        <div class="steps-calendar-grid">
+          <div class="cal-col">
+            <div class="cal-row">
+              <span class="cal-date">Jue 1 oct</span><span class="cal-time">10-11</span><span class="cal-title">Kick-off</span>
+            </div>
+            <div class="cal-row">
+              <span class="cal-date">Lun 5 oct</span><span class="cal-time">14-16</span><span class="cal-title">Detección &middot; sesión 1</span>
+            </div>
+            <div class="cal-row">
+              <span class="cal-date">Mié 7 oct</span><span class="cal-time">14-16</span><span class="cal-title">Detección &middot; sesión 2</span>
+            </div>
+            <div class="cal-row">
+              <span class="cal-date">Lun 12 oct</span><span class="cal-time">14-16</span><span class="cal-title">Habilidades &middot; sesión 1</span>
+            </div>
+          </div>
+          <div class="cal-col">
+            <div class="cal-row">
+              <span class="cal-date">Mié 14 oct</span><span class="cal-time">14-16</span><span class="cal-title">Habilidades &middot; sesión 2</span>
+            </div>
+            <div class="cal-row">
+              <span class="cal-date">Lun 19 oct</span><span class="cal-time">14-16</span><span class="cal-title">Habilidades &middot; sesión 3</span>
+            </div>
+            <div class="cal-row">
+              <span class="cal-date">Mié 21 oct</span><span class="cal-time">14-16</span><span class="cal-title">Habilidades &middot; sesión 4</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">BANCO PLAZA · CAI-026</span>
+      </div>
+    </section>
+
+    <!-- 13 · Cierre (ruta/escalera editable) -->
+    <section class="slide s-end">
+      <span class="counter">13 / 13</span>
+
+      <div class="end-logo">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia">
+      </div>
+
+      <div class="end-summit" data-field="CierreResultado">
+        <span class="acro-default-text">Alexis, con Copilot calibrado a sus tareas reales de Producto.</span>
+      </div>
+
+      <div class="end-stairs">
+        <div class="stair-step stair-1">
+          <span class="stair-label">Paso 1</span>
+          <div class="stair-field" data-field="CierrePaso1">
+            <span class="acro-default-text">Detección con Producto</span>
+          </div>
+        </div>
+        <div class="stair-step stair-2">
+          <span class="stair-label">Paso 2</span>
+          <div class="stair-field" data-field="CierrePaso2">
+            <span class="acro-default-text">Copilot en acción</span>
+          </div>
+        </div>
+        <div class="stair-step stair-3">
+          <span class="stair-label">Paso 3</span>
+          <div class="stair-field" data-field="CierrePaso3">
+            <span class="acro-default-text">Autonomía en Producto</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cta-wrap">
+        <span class="cta">Esperamos tu respuesta</span>
+      </div>
+
+      <div class="end-contact">
+        <p class="contact-line">
+          <span class="contact-label">Asesora de ventas:</span>
+          Flavia Martínez <span class="dot">&middot;</span> +58 414-5756615 <span class="dot">&middot;</span> fmartinez@intezia.com
+        </p>
+        <p class="contact-line">
+          <span class="contact-label">Empresa:</span>
+          Intezia C.A J-505657950 <span class="dot">&middot;</span> servicio@intezia.com
+        </p>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

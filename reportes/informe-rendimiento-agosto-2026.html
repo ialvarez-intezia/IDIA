@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Informe de Rendimiento · Agosto 2026</title>
+<style>
+  :root{
+    --black:#000000;
+    --gold:#F4BA1A;
+    --orange:#E58423;
+    --white:#FFFFFF;
+    --ink:#141414;
+    --grey:#6b6b6b;
+    --line:rgba(0,0,0,.10);
+    --paper:#ffffff;
+    --soft:#faf8f4;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  @page{ size:A4 portrait; margin:0; }
+  html,body{ background:#3a3a3a; }
+  body{
+    font-family:"Inter","Helvetica Neue",Arial,system-ui,sans-serif;
+    color:var(--ink);
+    -webkit-font-smoothing:antialiased;
+    line-height:1.5;
+  }
+  .mono{ font-family:"SF Mono","Roboto Mono",ui-monospace,Menlo,Consolas,monospace; }
+
+  .page{
+    position:relative;
+    width:210mm; height:297mm;
+    background:var(--paper);
+    margin:0 auto;
+    overflow:hidden;
+    page-break-after:always;
+    display:flex; flex-direction:column;
+  }
+  .page:last-child{ page-break-after:auto; }
+  .pad{ padding:14mm 15mm 15mm; flex:1; display:flex; flex-direction:column; }
+
+  .runhead{
+    display:flex; justify-content:space-between; align-items:center;
+    font-size:8.5pt; letter-spacing:.18em; text-transform:uppercase;
+    color:var(--grey); padding:9mm 16mm 0;
+  }
+  .runhead .dot{ width:7px;height:7px;background:var(--gold);border-radius:50%;display:inline-block;margin-right:7px;vertical-align:middle;}
+  .runfoot{
+    position:absolute; bottom:8mm; left:16mm; right:16mm;
+    display:flex; justify-content:space-between; align-items:center;
+    font-size:8pt; letter-spacing:.14em; text-transform:uppercase; color:var(--grey);
+    border-top:1px solid var(--line); padding-top:3mm;
+  }
+  .runfoot b{ color:var(--ink); }
+
+  .eyebrow{
+    font-size:9pt; letter-spacing:.32em; text-transform:uppercase;
+    color:var(--orange); font-weight:700; margin-bottom:6mm;
+    display:flex; align-items:center; gap:10px;
+  }
+  .eyebrow::before{ content:""; width:26px; height:3px; background:var(--gold); display:inline-block;}
+  h1.sec{ font-size:27pt; font-weight:800; line-height:1.08; letter-spacing:-.02em; margin-bottom:4mm; }
+  h2.sub{ font-size:13pt; font-weight:800; letter-spacing:-.01em; margin:3.5mm 0 2mm; }
+  h3.mini{ font-size:10.5pt; font-weight:800; text-transform:uppercase; letter-spacing:.08em; margin-bottom:2mm;}
+  p.lead{ font-size:11pt; color:#2b2b2b; max-width:155mm; }
+  p.body{ font-size:9.5pt; color:#333; margin-bottom:2.5mm; }
+  .hl{ background:var(--gold); padding:0 .18em; border-radius:2px; }
+  .hlo{ color:var(--orange); font-weight:700; }
+  strong{ font-weight:700; }
+
+  .cover{ background:var(--black); color:#fff; }
+  .cover .grid-bg{
+    position:absolute; inset:0;
+    background-image:
+      linear-gradient(rgba(244,186,26,.06) 1px,transparent 1px),
+      linear-gradient(90deg,rgba(244,186,26,.06) 1px,transparent 1px);
+    background-size:14mm 14mm;
+  }
+  .cover .corner{ position:absolute; width:34px;height:34px;border:3px solid var(--gold);}
+  .cover .c-tl{ top:14mm;left:14mm;border-right:none;border-bottom:none;}
+  .cover .c-br{ bottom:14mm;right:14mm;border-left:none;border-top:none;}
+  .cover-inner{ position:relative; z-index:2; padding:24mm 18mm; height:100%; display:flex; flex-direction:column;}
+  .brandmark{ display:flex; align-items:center; gap:12px; font-weight:800; font-size:13pt; letter-spacing:.02em;}
+  .brandmark .sq{ width:30px;height:30px;background:var(--gold); border-radius:7px; display:grid;place-items:center; color:#000; font-weight:900; font-size:13pt;}
+  .cover .kicker{ margin-top:auto; font-size:10pt; letter-spacing:.34em; text-transform:uppercase; color:var(--gold); font-weight:700;}
+  .cover h1{ font-size:44pt; font-weight:900; line-height:1.0; letter-spacing:-.025em; margin:6mm 0 5mm;}
+  .cover h1 em{ font-style:normal; color:var(--gold);}
+  .cover .desc{ font-size:12pt; color:#cfcfcf; max-width:140mm; line-height:1.5;}
+  .cover .period{ margin-top:8mm; font-size:10.5pt; color:#fff; font-weight:700; letter-spacing:.05em;}
+  .cover .period span{ color:var(--orange);}
+  .cover-stats{ display:flex; gap:0; margin-top:10mm; border-top:1px solid rgba(255,255,255,.18); padding-top:6mm;}
+  .cover-stats div{ flex:1; }
+  .cover-stats .n{ font-size:24pt; font-weight:900; color:var(--gold); line-height:1;}
+  .cover-stats .l{ font-size:8pt; letter-spacing:.1em; text-transform:uppercase; color:#bdbdbd; margin-top:2mm;}
+
+  .stat-row{ display:grid; grid-template-columns:repeat(4,1fr); gap:5mm; margin:5mm 0;}
+  .stat{ border:1.5px solid var(--ink); border-radius:10px; padding:6mm 5mm; background:var(--white);}
+  .stat .n{ font-size:25pt; font-weight:900; line-height:1; letter-spacing:-.02em;}
+  .stat .n small{ font-size:11pt; }
+  .stat .l{ font-size:8pt; letter-spacing:.08em; text-transform:uppercase; color:var(--grey); margin-top:2.5mm; font-weight:700;}
+  .stat.gold{ background:var(--gold); border-color:var(--gold);}
+  .stat.black{ background:var(--black); border-color:var(--black); color:#fff;}
+  .stat.black .l{ color:#cfcfcf;}
+  .stat.orange{ background:var(--orange); border-color:var(--orange); color:#fff;}
+  .stat.orange .l{ color:#ffe8d4;}
+
+  .twocol{ columns:2; column-gap:9mm; }
+  .twocol p{ font-size:9.3pt; color:#3a3a3a; margin-bottom:2.5mm; break-inside:avoid;}
+
+  .callout{ border-left:4px solid var(--orange); background:var(--soft); padding:5mm 6mm; border-radius:0 8px 8px 0; margin:4mm 0;}
+  .callout .q{ font-size:10.5pt; font-weight:700; line-height:1.4; color:var(--ink);}
+  .callout .src{ font-size:8.3pt; color:var(--grey); margin-top:2mm; letter-spacing:.04em;}
+
+  .note{ font-size:8pt; color:var(--grey); font-style:italic; margin-top:3mm; line-height:1.4;}
+
+  /* table */
+  table.tbl{ width:100%; border-collapse:collapse; margin-top:2mm; font-size:8.3pt; }
+  table.tbl th{ text-align:left; font-size:7.5pt; letter-spacing:.08em; text-transform:uppercase; color:var(--grey); border-bottom:1.5px solid var(--ink); padding:1.3mm 2mm; }
+  table.tbl td{ padding:1.3mm 2mm; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.tbl tr:nth-child(even) td{ background:var(--soft); }
+  .badge{ display:inline-block; font-size:7pt; font-weight:800; letter-spacing:.05em; background:var(--ink); color:#fff; padding:2px 7px; border-radius:5px;}
+  .badge.g{ background:var(--gold); color:#000;}
+  .badge.o{ background:var(--orange); color:#fff;}
+
+  /* mini table de ancho completo (alto volumen) */
+  table.tbl.mini{ font-size:7pt; line-height:1.05; }
+  table.tbl.mini th{ font-size:6.6pt; padding:.6mm 2mm; line-height:1.1; }
+  table.tbl.mini td{ padding:.55mm 2mm; }
+  table.tbl.mini td.tp{ color:#555; }
+  table.tbl.mini col.c-fecha{ width:11mm; }
+  table.tbl.mini col.c-cod{ width:18mm; }
+  table.tbl.mini col.c-cli{ width:48mm; }
+
+  /* KPI board */
+  .legend{ display:flex; flex-wrap:wrap; gap:5mm; margin:3mm 0 1mm; }
+  .legend .lg{ display:flex; align-items:center; gap:6px; font-size:7.6pt; color:#444; font-weight:700; letter-spacing:.03em; text-transform:uppercase;}
+  .legend .pill{ width:12px;height:12px;border-radius:4px; display:inline-block;}
+  .pill.fix{ background:var(--gold);}
+  .pill.open{ background:var(--orange);}
+  .pill.rule{ background:var(--black);}
+  .pill.na{ background:#9a9a9a;}
+
+  .kpi-grid{ display:grid; grid-template-columns:1fr 1fr; gap:3mm; margin-top:1.5mm; }
+  .kpi{ position:relative; border:1.5px solid var(--ink); border-radius:10px; padding:3.2mm 3.5mm 3.2mm 5.5mm; overflow:hidden; background:var(--white); display:flex; flex-direction:column; gap:.8mm;}
+  .kpi::before{ content:""; position:absolute; left:0; top:0; bottom:0; width:5px; }
+  .kpi.k-fix::before{ background:var(--gold);}
+  .kpi.k-open::before{ background:var(--orange);}
+  .kpi.k-rule::before{ background:var(--ink);}
+  .kpi .st{ font-size:7.3pt; font-weight:800; letter-spacing:.12em; text-transform:uppercase; display:inline-flex; align-items:center; gap:6px;}
+  .kpi.k-fix .st{ color:#b07d00;}
+  .kpi.k-open .st{ color:var(--orange);}
+  .kpi.k-rule .st{ color:var(--ink);}
+  .kpi .kt{ font-size:9.8pt; font-weight:800; line-height:1.16; letter-spacing:-.005em;}
+  .kpi .kd{ font-size:7.9pt; color:#444; line-height:1.32;}
+  .kpi.full{ grid-column:1 / -1; }
+
+  .warnbox{ border:1.5px solid var(--ink); border-radius:10px; padding:3mm 5mm; background:var(--soft); margin:2mm 0;}
+  .warnbox h4{ font-size:9.3pt; font-weight:800; margin-bottom:1.2mm; display:flex; align-items:center; gap:6px;}
+  .warnbox h4::before{ content:"⚠"; color:var(--orange); }
+  .warnbox p{ font-size:8.5pt; color:#3a3a3a; line-height:1.4; margin-bottom:1.2mm;}
+  .warnbox ul{ margin:1.5mm 0 0 4mm; font-size:8.5pt; color:#3a3a3a; line-height:1.5;}
+
+  .approxrow{ display:flex; align-items:baseline; gap:9px; margin:.5mm 0 2mm; flex-wrap:wrap;}
+  .approxrow .an{ font-size:18pt; font-weight:900; color:var(--orange); line-height:1; white-space:nowrap;}
+  .approxrow .al{ font-size:7.3pt; letter-spacing:.09em; text-transform:uppercase; color:var(--grey); font-weight:800;}
+  .approx-src{ font-size:7.6pt; color:var(--grey); font-style:italic; line-height:1.4; margin-top:1mm;}
+
+  /* Servicios page */
+  .svc-grid{ display:grid; grid-template-columns:repeat(5,1fr); gap:3mm; margin:4mm 0; }
+  .svc{ border:1.5px solid var(--ink); border-radius:10px; padding:4mm 2.5mm; text-align:center; background:var(--white);}
+  .svc .n{ font-size:20pt; font-weight:900; line-height:1;}
+  .svc .l{ font-size:6.8pt; letter-spacing:.04em; text-transform:uppercase; color:var(--grey); font-weight:800; margin-top:2mm; line-height:1.25;}
+  .svc.pend{ background:var(--soft); border-style:dashed; color:#999;}
+  .svc.pend .n{ color:#bbb;}
+  .pilot-row{ display:grid; grid-template-columns:repeat(3,1fr); gap:4mm; margin:3mm 0 1mm;}
+  .pilot{ border-left:4px solid var(--gold); background:var(--soft); border-radius:0 8px 8px 0; padding:3.5mm 4mm;}
+  .pilot .pt{ font-size:7.2pt; letter-spacing:.08em; text-transform:uppercase; color:var(--orange); font-weight:800;}
+  .pilot .pn{ font-size:10pt; font-weight:800; margin:1mm 0;}
+  .pilot .pd{ font-size:8pt; color:#444; line-height:1.35;}
+</style>
+</head>
+<body>
+
+<!-- ============ PÁGINA 1 · PORTADA ============ -->
+<section class="page cover">
+  <div class="grid-bg"></div>
+  <div class="corner c-tl"></div>
+  <div class="corner c-br"></div>
+  <div class="cover-inner">
+    <div class="brandmark"><span class="sq">i</span> INTEZIA · SISTEMA IsaIA</div>
+
+    <div class="kicker">Informe de Rendimiento</div>
+    <h1>Agosto<br>a otra <em>escala</em>.</h1>
+    <p class="desc">Corte operativo del sistema de propuestas comerciales de Intezia: qué se produjo, qué se rompió, qué se corrigió y qué cambió de raíz en el modelo de servicio.</p>
+    <p class="period">Período cubierto: <span>1 → 31 agosto 2026</span></p>
+
+    <div class="cover-stats">
+      <div><div class="n">55</div><div class="l">Propuestas entregadas</div></div>
+      <div><div class="n">37</div><div class="l">Clientes distintos</div></div>
+      <div><div class="n">12</div><div class="l">Dashboards Edu-Trace</div></div>
+      <div><div class="n">5</div><div class="l">Servicios del Modelo Intezia, ya formalizados</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PÁGINA 2 · RESUMEN EJECUTIVO ============ -->
+<section class="page">
+  <div class="runhead"><span><span class="dot"></span>Informe de Rendimiento</span><span>01 · Resumen ejecutivo</span></div>
+  <div class="pad">
+    <div class="eyebrow">Resumen ejecutivo</div>
+    <h1 class="sec">Tres veces el volumen de julio,<br>y el sistema cambió de forma.</h1>
+    <p class="lead">Agosto entregó <strong>55 propuestas comerciales registradas</strong> a <strong>37 clientes distintos</strong> (DUSA, Zoom, Simple TV, IESA, DHL, Aerocentro Miami, Alianza Team, Puro Lomo, Doral, entre otros), <span class="hl">≈3x el volumen de julio</span> (18 propuestas), más <strong>12 Dashboards de Impacto Edu-Trace</strong> cerrados (frente a 1 solo en julio). El hito real del mes no es el volumen: es que el sistema formalizó su <strong>eje de Servicio</strong> (Detección · Habilidades · Políticas · Innovación · Integral) el 26 de agosto y migró el código de Capacitación In-Company de <span class="mono">CAP-</span> a <span class="mono">CAI-</span> el día 30. Dos cambios estructurales de nomenclatura y arquitectura, en la misma semana, documentados en tiempo real en <span class="mono">CLAUDE.md §4.1a/§4.1b</span>.</p>
+
+    <div class="stat-row">
+      <div class="stat gold"><div class="n">55</div><div class="l">Propuestas · agosto</div></div>
+      <div class="stat"><div class="n">7 / 5 / 2 / 1</div><div class="l">Hab. / Det. / Inn. / Integral*</div></div>
+      <div class="stat black"><div class="n">100%</div><div class="l">División Educación</div></div>
+      <div class="stat orange"><div class="n">1</div><div class="l">Primera propuesta Aprobada</div></div>
+    </div>
+    <p class="note" style="margin-top:-2mm;">*Conteo real de <span class="mono">meta.json → servicio</span>, campo vigente solo desde el 26 de agosto (detalle y honestidad de esta cifra en la sección 03 · Servicios).</p>
+
+    <h2 class="sub">Lo esencial de un vistazo</h2>
+    <div class="twocol">
+      <p><strong>Ritmo casi al doble cada día.</strong> 55 propuestas en 31 días (~1.8/día), con dos picos de 7 documentos en un solo día: el 3 de agosto (DUSA ×3, Puro Lomo ×2, Laboratorios Conspat, Miami Emprendedores) y el 24 de agosto (las 7 piezas de la alianza académica con IESA).</p>
+      <p><strong>Primera venta que avanza en el pipeline.</strong> CAP-101 Puro Lomo (11 de agosto) es la primera propuesta del histórico completo del sistema que pasa a estado <strong>Aprobada</strong>: todo lo demás, en julio y antes, seguía en Enviada al cierre de su mes.</p>
+      <p><strong>Tres servicios nuevos con piloto real.</strong> Detección (DET-001 Amcor, 26 ago), Innovación (INN-001 Zoom, 30 ago) e Integral (ALL-001 Simple TV, 28 ago) pasaron de "pendientes de formato" a decks entregados en el mismo mes.</p>
+      <p><strong>Dashboards de Impacto en modo producción.</strong> 12 cerrados en agosto vs. 1 en julio: de flujo ocasional a cadencia semanal, con Zoom como cuenta más activa (4 de los 12: IT, Legal, Miami, Operaciones).</p>
+      <p><strong>Cuentas multi-propuesta se multiplicaron.</strong> IESA (7 documentos, alianza académica bespoke), Simple TV (4, cruzando Detección + Habilidades + Integral en la misma cuenta), DUSA (4) y Zoom (3 propuestas + 4 dashboards = 7 entregas).</p>
+      <p><strong>La metadata todavía alcanza al ritmo de entrega.</strong> De las 55 propuestas, solo 15 (las emitidas desde el 26 de agosto) llevan el campo <span class="mono">servicio</span> en su <span class="mono">meta.json</span>; las 40 restantes son legacy de este mismo mes, sin backfill retroactivo por política (§4.19). Detalle en la sección 03.</p>
+    </div>
+
+    <div class="callout">
+      <div class="q">«Ya no se harán CAP in company para servicios nuevos... sigue con CAI... de ahora en adelante será así a menos que yo te indique lo contrario.»</div>
+      <div class="src">Instrucción del usuario · 2026-08-30 · consolidado en CLAUDE.md §2 y empresa/catalogo.md</div>
+    </div>
+  </div>
+  <div class="runfoot"><span>Intezia C.A. · Documento interno</span><span><b>02</b> / 08</span></div>
+</section>
+
+<!-- ============ PÁGINA 3 · LO ENTREGADO (PROPUESTAS) ============ -->
+<section class="page">
+  <div class="runhead"><span><span class="dot"></span>Informe de Rendimiento</span><span>02 · Lo entregado · Propuestas</span></div>
+  <div class="pad">
+    <div class="eyebrow">Producción del mes</div>
+    <h1 class="sec">55 propuestas, 37 clientes.</h1>
+    <p class="lead">Cada fila es una entrega real, registrada por <span class="mono">generar-pdf.sh</span> en <span class="mono">meta.json</span> el día en que el PDF salió (§4.19, fuente fechada determinista). Las 7 piezas de IESA (mismo día, misma alianza) se agrupan en una sola fila para legibilidad; el resto se lista una a una.</p>
+
+    <table class="tbl mini">
+      <colgroup><col class="c-fecha"><col class="c-cod"><col class="c-cli"><col></colgroup>
+      <thead><tr><th>Fecha</th><th>Código</th><th>Cliente</th><th>Tipo</th></tr></thead>
+      <tbody>
+        <tr><td>31 ago</td><td>CH-010</td><td>DUSA</td><td class="tp">Charla 2 · Comercial/RRHH/Sistemas</td></tr>
+        <tr><td>30 ago</td><td>INN-002</td><td>Zoom</td><td class="tp">Innovación · ciclo 3/6/12m (Opción B)</td></tr>
+        <tr><td>30 ago</td><td>INN-001</td><td>Zoom</td><td class="tp">Innovación · ciclo 3/6/12m (Opción A)</td></tr>
+        <tr><td>30 ago</td><td>DET-004</td><td>DHL</td><td class="tp">Detección · Mantenimiento e Infraestructura</td></tr>
+        <tr><td>30 ago</td><td>CAI-006</td><td>Miosoty Villalobos</td><td class="tp">Cap. In-Company · 4 mód/16h</td></tr>
+        <tr><td>30 ago</td><td>CAI-005</td><td>DHL (M. Hernández)</td><td class="tp">Cap. personalizada · 1 participante</td></tr>
+        <tr><td>30 ago</td><td>CAI-004</td><td>Yoyokids</td><td class="tp">Cap. In-Company · 4 mód/8h</td></tr>
+        <tr><td>28 ago</td><td>DET-003</td><td>Embutidos Zeus</td><td class="tp">Detección · 4 áreas</td></tr>
+        <tr><td>28 ago</td><td>DET-002</td><td>Simple TV</td><td class="tp">Detección + Habilidades · IA Champions</td></tr>
+        <tr><td>28 ago</td><td>CAI-003</td><td>Simple TV</td><td class="tp">Habilidades c/ Detección integrada · 14 áreas</td></tr>
+        <tr><td>28 ago</td><td>CAI-002</td><td>Simple TV</td><td class="tp">Habilidades · IA Champions</td></tr>
+        <tr><td>28 ago</td><td>ALL-001</td><td>Simple TV</td><td class="tp">Plan integral · 4 servicios</td></tr>
+        <tr><td>27 ago</td><td>CAI-001</td><td>Cavedatos</td><td class="tp">Cap. In-Company · Habilidades</td></tr>
+        <tr><td>26 ago</td><td>DET-001</td><td>Amcor Rigid Packaging</td><td class="tp">Detección · Compras (+ATC)</td></tr>
+        <tr><td>26 ago</td><td>CAP-030</td><td>Go Pharma</td><td class="tp">Cap. In-Company · Detección+Habilidades</td></tr>
+        <tr><td>25 ago</td><td>CAP-114</td><td>Enzo Chiesa</td><td class="tp">Cap. In-Company · 3 mód/6h</td></tr>
+        <tr><td>25 ago</td><td>CAP-113</td><td>Daniela Chiesa</td><td class="tp">Cap. In-Company · 3 mód/6h</td></tr>
+        <tr><td>24 ago</td><td>(×7)</td><td>IESA</td><td class="tp">Alianza académica · 2 programas + 5 microcredenciales</td></tr>
+        <tr><td>21 ago</td><td>CAP-112</td><td>Pagasi</td><td class="tp">Cap. In-Company · 3 áreas</td></tr>
+        <tr><td>20 ago</td><td>CAP-111</td><td>Grupo Giraud</td><td class="tp">Cap. In-Company · Etapas 1-3</td></tr>
+        <tr><td>19 ago</td><td>CAP-109</td><td>Diego</td><td class="tp">Cap. personalizada · 6 mód/12h</td></tr>
+        <tr><td>19 ago</td><td>CAP-109</td><td>Good Latam</td><td class="tp">Cap. In-Company · 14 ses/28h Híbrido</td></tr>
+        <tr><td>17 ago</td><td>CAP-108</td><td>Casupo</td><td class="tp">Cap. In-Company · Fase 1 Auditoría</td></tr>
+        <tr><td>17 ago</td><td>CAP-050</td><td>Zoom</td><td class="tp">Cap. In-Company · 5 formaciones RH</td></tr>
+        <tr><td>16 ago</td><td>CAP-107</td><td>Corp. EasyAccess</td><td class="tp">Detección · cotización y CRM</td></tr>
+        <tr><td>14 ago</td><td>CAP-106</td><td>Grupo Osorio</td><td class="tp">Cap. In-Company · Piloto Dirección</td></tr>
+        <tr><td>14 ago</td><td>CAP-105</td><td>Fivenca</td><td class="tp">Ampliación de acompañamiento</td></tr>
+        <tr><td>13 ago</td><td>CH-009</td><td>Venemergencia</td><td class="tp">Charla · masterclass 90 min</td></tr>
+        <tr><td>13 ago</td><td>CAP-104</td><td>Fasto</td><td class="tp">Cap. In-Company · Piloto Compras</td></tr>
+        <tr><td>13 ago</td><td>CAP-103</td><td>Luppro</td><td class="tp">Cap. In-Company · 2 mód/8h</td></tr>
+        <tr><td>13 ago</td><td>CAP-102</td><td>Servicom</td><td class="tp">Cap. In-Company · 3 etapas/7h</td></tr>
+        <tr><td>12 ago</td><td>TA-034</td><td>RUSH Academy</td><td class="tp">Taller · alianza co-facilitada</td></tr>
+        <tr><td>11 ago</td><td>CAP-101</td><td>Puro Lomo</td><td class="tp">Cap. In-Company · Mercadeo <span class="badge g">Aprobada</span></td></tr>
+        <tr><td>11 ago</td><td>CAP-100</td><td>Canguro</td><td class="tp">Cap. In-Company · Piloto adopción</td></tr>
+        <tr><td>10 ago</td><td>CAP-098</td><td>IOED</td><td class="tp">Cap. In-Company · Digitalización 3 fases</td></tr>
+        <tr><td>07 ago</td><td>CAP-097</td><td>Calzados Discovery</td><td class="tp">Cap. In-Company · Agente de leads</td></tr>
+        <tr><td>06 ago</td><td>CAP-096</td><td>AgroMundial</td><td class="tp">Cap. In-Company · Piloto Compras/Comercial</td></tr>
+        <tr><td>05 ago</td><td>CAP-095</td><td>Alianza Team</td><td class="tp">Cap. In-Company · Diagnóstico+Medida (Corp.)</td></tr>
+        <tr><td>05 ago</td><td>CAP-094</td><td>Alianza Team</td><td class="tp">Cap. In-Company · Diagnóstico+Medida</td></tr>
+        <tr><td>04 ago</td><td>CH-008</td><td>Doral (Miami) × SFIC</td><td class="tp">Charla · evento online gratuito</td></tr>
+        <tr><td>04 ago</td><td>CAP-093</td><td>Doral (D. Nibia)</td><td class="tp">Cap. In-Company · sesión regalo</td></tr>
+        <tr><td>04 ago</td><td>CAP-092</td><td>Doral</td><td class="tp">Cap. In-Company · 4 mód/12h Online</td></tr>
+        <tr><td>03 ago</td><td>CH-007</td><td>DUSA</td><td class="tp">Charla 1 · Finanzas y Sistemas</td></tr>
+        <tr><td>03 ago</td><td>CAP-091</td><td>Puro Lomo</td><td class="tp">Cap. In-Company · 2 mód/8h Presencial</td></tr>
+        <tr><td>03 ago</td><td>CAP-090</td><td>Puro Lomo</td><td class="tp">Cap. In-Company · 2 mód/8h Presencial</td></tr>
+        <tr><td>03 ago</td><td>CAP-089</td><td>Laboratorios Conspat</td><td class="tp">Cap. In-Company · Auditoría+Nivelación</td></tr>
+        <tr><td>03 ago</td><td>CAP-088</td><td>DUSA</td><td class="tp">Cap. In-Company · Auditoría automatización</td></tr>
+        <tr><td>03 ago</td><td>CAP-087</td><td>DUSA</td><td class="tp">Cap. In-Company · 4 ses/8h+construcción</td></tr>
+        <tr><td>03 ago</td><td>CAP-086</td><td>Miami Emprendedores</td><td class="tp">Cap. In-Company · alianza sin cotización</td></tr>
+      </tbody>
+    </table>
+    <p class="note">Fuente: <span class="mono">clientes/INDEX.md</span> (regenerado 2026-08-31). Excluye 3 propuestas en <span class="mono">Borrador</span> sin <span class="mono">fecha_entrega</span> y las ~44 legacy sin <span class="mono">meta.json</span>. <span class="mono">CAP-109</span> aparece dos veces el mismo día para dos clientes distintos (Diego / Good Latam). Colisión de código no detectada hasta este informe, pendiente de corrección en <span class="mono">INDEX.json</span>.</p>
+  </div>
+  <div class="runfoot"><span>Intezia C.A. · Documento interno</span><span><b>03</b> / 08</span></div>
+</section>
+
+<!-- ============ PÁGINA 4 · LO ENTREGADO (DASHBOARDS) ============ -->
+<section class="page">
+  <div class="runhead"><span><span class="dot"></span>Informe de Rendimiento</span><span>02 · Lo entregado · Dashboards</span></div>
+  <div class="pad">
+    <div class="eyebrow">Flujo paralelo</div>
+    <h1 class="sec">12 Dashboards de Impacto, de flujo ocasional a cadencia semanal.</h1>
+    <p class="lead">En julio se cerró <strong>1 solo</strong> Dashboard Edu-Trace en todo el mes. Agosto cerró <strong>12</strong>: casi 3 por semana. Zoom es la cuenta más activa: 4 de los 12 dashboards (IT, Legal, Miami, Operaciones), sumados a sus 3 propuestas del mes (CAP-050, INN-001, INN-002), la convierten en la cuenta con más entregas de agosto (7 documentos).</p>
+
+    <table class="tbl">
+      <thead><tr><th>PDF generado</th><th>Cliente</th><th>Índice de Impacto</th><th>N (respuestas)</th></tr></thead>
+      <tbody>
+        <tr><td>30 ago</td><td>Equipos y Sistemas Hidrocaven</td><td><strong>93</strong>/100</td><td>2</td></tr>
+        <tr><td>30 ago</td><td>Zoom · IT</td><td><strong>90</strong>/100</td><td>1</td></tr>
+        <tr><td>28 ago</td><td>Miami Emprendedores</td><td><strong>90</strong>/100</td><td>1</td></tr>
+        <tr><td>28 ago</td><td>Pago Tronic</td><td><strong>85</strong>/100</td><td>1</td></tr>
+        <tr><td>28 ago</td><td>Zoom · Operaciones</td><td><strong>77</strong>/100</td><td>1</td></tr>
+        <tr><td>21 ago</td><td>Empléate</td><td><strong>86</strong>/100</td><td>2</td></tr>
+        <tr><td>19 ago</td><td>Alejandro Soteldo</td><td><strong>69</strong>/100</td><td>1</td></tr>
+        <tr><td>14 ago</td><td>Zoom · Miami</td><td><strong>82</strong>/100</td><td>2</td></tr>
+        <tr><td>12 ago</td><td>Ailyn Gruszka</td><td><strong>77</strong>/100</td><td>2</td></tr>
+        <tr><td>10 ago</td><td>Venemergencia</td><td><strong>90</strong>/100</td><td>1</td></tr>
+        <tr><td>05 ago</td><td>Zoom · Legal</td><td><strong>93</strong>/100</td><td>7</td></tr>
+        <tr><td>03 ago</td><td>Credicard</td><td><strong>86</strong>/100</td><td>1</td></tr>
+      </tbody>
+    </table>
+
+    <div class="stat-row" style="margin-top:5mm;">
+      <div class="stat gold"><div class="n">≈85</div><div class="l">Índice promedio · agosto</div></div>
+      <div class="stat"><div class="n">93</div><div class="l">Índice más alto (Hidrocaven, Zoom Legal)</div></div>
+      <div class="stat"><div class="n">69</div><div class="l">Índice más bajo (Alejandro Soteldo)</div></div>
+      <div class="stat black"><div class="n">4/12</div><div class="l">Con n≤1, honestidad §4.17</div></div>
+    </div>
+
+    <p class="note" style="margin-top:2mm;">§4.17 (honestidad de medición) aplica también aquí: <strong>9 de los 12 dashboards de agosto tienen N=1 o N=2</strong>: muestras <em>referenciales</em>, no representativas de todo el equipo capacitado. Solo Zoom Legal (N=7) tiene un tamaño de muestra que permite leer el Índice con más confianza. Ningún índice de esta tabla se pondera por tamaño de muestra: son promedios simples, tal como los define <span class="mono">plantillas/dashboard-edutrace.md</span>.</p>
+  </div>
+  <div class="runfoot"><span>Intezia C.A. · Documento interno</span><span><b>04</b> / 08</span></div>
+</section>
+
+<!-- ============ PÁGINA 5 · SERVICIOS (HITO DEL MES) ============ -->
+<section class="page">
+  <div class="runhead"><span><span class="dot"></span>Informe de Rendimiento</span><span>03 · Servicios · el hito del mes</span></div>
+  <div class="pad">
+    <div class="eyebrow">Arquitectura del sistema</div>
+    <h1 class="sec">De un solo modelo curricular<br>a cinco servicios formales.</h1>
+    <p class="lead">El 26 de agosto el sistema incorporó el <strong>Modelo Intezia de Servicios</strong> (Detección · Habilidades · Políticas · Innovación, más <strong>Integral</strong> agregado el 28 como 5to valor) como eje bloqueante, ortogonal a la división Fundación/Educación, junto a una bandera aparte <span class="mono">alianza</span>. Origen: <em>Modelo Maestro de Servicio</em> + <em>Manual de la Ficha Comercial Intezia</em> (Dirección de Productos y Servicios, agosto 2026). Documentado en <span class="mono">CLAUDE.md §4.1a/§4.1b</span>.</p>
+
+    <h2 class="sub">Servicio registrado en meta.json (campo vigente desde el 26 de agosto)</h2>
+    <div class="svc-grid">
+      <div class="svc"><div class="n">7</div><div class="l">Habilidades</div></div>
+      <div class="svc"><div class="n">5</div><div class="l">Detección</div></div>
+      <div class="svc"><div class="n">2</div><div class="l">Innovación</div></div>
+      <div class="svc"><div class="n">1</div><div class="l">Integral</div></div>
+      <div class="svc pend"><div class="n">0</div><div class="l">Políticas · sin piloto de formato</div></div>
+    </div>
+    <p class="note" style="margin-top:-1mm;">Base: 15 de las 55 propuestas de agosto (las emitidas desde el 26). Las 40 restantes (1&ndash;25 de agosto) no llevan el campo por política de no-backfill retroactivo (§4.19): no es que carezcan de servicio, es que su <span class="mono">meta.json</span> nació antes de que el campo existiera. Por contenido, prácticamente todas esas 40 son también Habilidades (capacitaciones, talleres, charlas).</p>
+
+    <h2 class="sub">Tres pilotos que nacieron este mes</h2>
+    <div class="pilot-row">
+      <div class="pilot">
+        <div class="pt">26 ago · Detección</div>
+        <div class="pn">DET-001 · Amcor</div>
+        <div class="pd">Primer deck de Detección del sistema, nacido de una Ficha Comercial real. Fase 1 diagnóstico cotizada, Fase 2 Habilidades progresiva.</div>
+      </div>
+      <div class="pilot">
+        <div class="pt">28 ago · Integral</div>
+        <div class="pn">ALL-001 · Simple TV</div>
+        <div class="pd">Primer plan que combina los 4 servicios como una sola hoja de ruta secuencial. 5to valor del campo, confirmado con el usuario antes de asumirlo.</div>
+      </div>
+      <div class="pilot">
+        <div class="pt">30 ago · Innovación</div>
+        <div class="pn">INN-001/002 · Zoom</div>
+        <div class="pd">Primer plan de acompañamiento continuo con cotización "Inversión por Permanencia" a 3/6/12 meses.</div>
+      </div>
+    </div>
+
+    <h2 class="sub">Dos cambios de nomenclatura, la misma semana</h2>
+    <div class="twocol">
+      <p><strong>Código CAI- reemplaza CAP-</strong> para Capacitación In-Company nueva (30 ago, instrucción directa del usuario). Ya asignados: CAI-001 a CAI-006. Las ~114 propuestas <span class="mono">CAP-###</span> existentes no se tocan. Taller sigue siendo <span class="mono">TA-</span>.</p>
+      <p><strong>Bandera <span class="mono">alianza</span> introducida, aún en 0/55.</strong> Ningún <span class="mono">meta.json</span> de agosto la tiene en <span class="mono">true</span> todavía, ni siquiera los casos evidentes por contenido (RUSH Academy TA-034, Miami Emprendedores CAP-086, IESA): se crearon sin el campo o antes del 26 de agosto. Pendiente de backfill, mismo criterio de no retroactividad.</p>
+    </div>
+  </div>
+  <div class="runfoot"><span>Intezia C.A. · Documento interno</span><span><b>05</b> / 08</span></div>
+</section>
+
+<!-- ============ PÁGINA 6 · CALIDAD Y AUTO-CORRECCIÓN ============ -->
+<section class="page">
+  <div class="runhead"><span><span class="dot"></span>Informe de Rendimiento</span><span>04 · Calidad y auto-corrección</span></div>
+  <div class="pad">
+    <div class="eyebrow">Qué se rompió y qué se aprendió</div>
+    <h1 class="sec">Más volumen, más hallazgos, mismo hábito de documentar.</h1>
+    <p class="lead">Agosto produjo <strong>≈16 hallazgos de plantilla</strong> documentados en el changelog (frente a 5 en julio), un crecimiento proporcional al del volumen (≈3x). Se seleccionan aquí los <strong>7 más significativos</strong>: los que se convirtieron en regla permanente o revelaron un límite nuevo del sistema de verificación.</p>
+
+    <div class="legend">
+      <span class="lg"><span class="pill fix"></span>Corregido</span>
+      <span class="lg"><span class="pill rule"></span>Nueva regla / estándar</span>
+      <span class="lg"><span class="pill open"></span>Resuelto de raíz (reportado por cliente)</span>
+    </div>
+
+    <div class="kpi-grid">
+      <div class="kpi k-fix">
+        <div class="st">● Corregido · 03 ago</div>
+        <div class="kt">2 colisiones internas invisibles al detector (DUSA CAP-087)</div>
+        <div class="kd">Caja AcroForm Entregables angosta + chips de Impacto que se solapan con la banda inferior. De aquí nace la regla derivada: renderizar <span class="mono">SIEMPRE</span> el PDF a imagen y revisar a ojo los 4 puntos ciegos conocidos (Programa, Beneficios, Roadmap, Impacto).</div>
+      </div>
+      <div class="kpi k-rule">
+        <div class="st">● Nueva regla · 13 ago</div>
+        <div class="kt">Vigencia de cotización 7→30 días, corregida en el canónico</div>
+        <div class="kd">El clon mono-fase (<span class="mono">cumbre-andina/</span>) decía "7 días", contradiciendo la política oficial (30 días). Corregido y propagado a <span class="mono">_base/styles.css</span>: todo clon nuevo lo hereda. ~90 decks legacy con "7 días" quedan sin tocar por ahora.</div>
+      </div>
+      <div class="kpi k-fix">
+        <div class="st">● Corregido · 13/25 ago</div>
+        <div class="kt">Placeholders "[Condiciones de pago...]" y "[Nombre del programa]" visibles en el PDF</div>
+        <div class="kd">Omitir la clave <span class="mono">Notas</span>/<span class="mono">Programa</span> en <span class="mono">acroforms.json</span> no la deja vacía: hereda un placeholder real. Regla: declarar <span class="mono">""</span> explícito en ambas claves cuando no aplican.</div>
+      </div>
+      <div class="kpi k-fix">
+        <div class="st">● Corregido · 16 ago</div>
+        <div class="kt">.cot-progressive reintroducido colisiona con .cot-terms-box</div>
+        <div class="kd">Clonar <span class="mono">fasto/</span> (fase única) para un caso con cotización progresiva reintrodujo un párrafo que cae exactamente encima de la caja "Importante", invisible para <span class="mono">verificar-overflow.js</span> por no ser desborde de página.</div>
+      </div>
+      <div class="kpi k-rule">
+        <div class="st">● Nueva regla · 28 ago</div>
+        <div class="kt">Cierre escalera: texto fantasma sin @media print</div>
+        <div class="kd">Toda clase contenedora nueva de un campo AcroForm horneado debe sumarse a la regla que oculta el texto demo antes de imprimir a PDF, o Chrome hornea contenido duplicado. Confirmado en Corp. EasyAccess CAP-107.</div>
+      </div>
+      <div class="kpi k-fix">
+        <div class="st">● Corregido · 28 ago</div>
+        <div class="kt">Orden del par customize: rebake_dark siempre al final</div>
+        <div class="kd"><span class="mono">customize-acroforms.py</span> re-hornea Entregables/Acreditación con fondo blanco por defecto: si corre después de un script propio con Beneficios oscuro (v3) o Cierre escalera, pisa el diseño. Regla fijada en el checklist §10.</div>
+      </div>
+      <div class="kpi k-open full">
+        <div class="st">● Resuelto de raíz · 31 ago</div>
+        <div class="kt">NeedAppearances: Adobe/Preview regeneraban y cortaban campos que el detector daba por correctos</div>
+        <div class="kd">Un cliente (DUSA) reportó "no se ve el texto completo en Entregables" en un PDF que tanto el verificador automático como el render de control (<span class="mono">pdftoppm</span>) daban por perfecto. La causa: el PDF fuerza <span class="mono">/NeedAppearances=True</span>, y Adobe/Preview regeneran la apariencia de <em>todos</em> los campos con un motor de layout distinto al del script, cortando texto que sí cabía en el original horneado. <strong>Corregido el mismo día en <span class="mono">customize-acroforms.py</span></strong> (pone <span class="mono">/NeedAppearances=False</span> como paso final): toda propuesta que use el par estándar de aquí en adelante sale ya corregida. Límite conocido: los decks con <span class="mono">customize-&lt;slug&gt;.py</span> propio (Beneficios v3 oscuro, Cierre escalera) no pasan por este fix automáticamente.</div>
+      </div>
+    </div>
+
+    <div class="warnbox">
+      <h4>Tasa de defecto en producción, con datos reales</h4>
+      <p><strong>1 de 67</strong> entregas de agosto (55 propuestas + 12 dashboards, ≈1.5%) salió con un defecto confirmado por el cliente en el PDF final (DUSA, caso NeedAppearances), una tasa <em>menor</em> que la de julio (5.6%) pese a ≈3-4x más volumen. A diferencia de julio, la causa raíz quedó resuelta el mismo día en el script compartido, no pendiente. El resto de los ≈16 hallazgos del mes se cazaron y corrigieron <em>antes</em> de la entrega final.</p>
+    </div>
+  </div>
+  <div class="runfoot"><span>Intezia C.A. · Documento interno</span><span><b>06</b> / 08</span></div>
+</section>
+
+<!-- ============ PÁGINA 7 · LÍMITES DE MEDICIÓN ============ -->
+<section class="page">
+  <div class="runhead"><span><span class="dot"></span>Informe de Rendimiento</span><span>05 · Límites de este informe</span></div>
+  <div class="pad">
+    <div class="eyebrow">Honestidad de medición</div>
+    <h1 class="sec">Lo que este informe<br>no <em style="font-style:normal;color:var(--orange);">mide</em>, pero sí puede <em style="font-style:normal;color:var(--orange);">aproximar</em>.</h1>
+    <p class="lead">Mismo principio que rige la slide de Impacto de cada propuesta (§4.9, ninguna cifra se inventa) y que ya aplicó el informe de julio: nada de lo siguiente es una medición exacta. Agosto tiene más rastro en el changelog que julio (≈16 hallazgos documentados vs. 5), lo que sostiene un <strong>aproximado fundamentado</strong> algo más confiable, con el mismo método declarado.</p>
+
+    <div class="warnbox">
+      <h4>Consumo de tokens</h4>
+      <div class="approxrow"><span class="an">≈ 3,3&ndash;5,0 M</span><span class="al">tokens estimados · agosto completo</span></div>
+      <p><strong>≈ 55.000&ndash;95.000 por propuesta</strong> en promedio, sobre 55 propuestas + 12 dashboards. Método: mismo rango de julio (30k&ndash;80k por clon simple), ajustado al alza por más trabajo estructural este mes (3 servicios nuevos, migración de código, rediseños de Beneficios/Cierre). Se pondera: ≈30 propuestas de clon directo en el rango bajo, ≈25 con rediseño estructural o primer piloto de servicio en el rango alto. Los 12 dashboards se estiman aparte, ≈15k&ndash;25k c/u.</p>
+      <p class="approx-src">No incluye el resto de la actividad del mes (este informe, conversaciones exploratorias, memoria persistente). El dato exacto de token/costo solo vive en el panel de uso de la cuenta (Claude Console / facturación de Anthropic).</p>
+    </div>
+
+    <div class="warnbox">
+      <h4>Tiempo activo de construcción</h4>
+      <div class="approxrow"><span class="an">≈ 50&ndash;70 min</span><span class="al">promedio ponderado por propuesta</span></div>
+      <p>Método: mismo criterio de julio (clon directo ≈ 20&ndash;45 min · tipo nuevo o primer piloto de servicio ≈ 1&ndash;2 h), sobre la mezcla ≈30/25 de arriba → ≈ 50&ndash;58 h activas en 55 propuestas, más ≈4&ndash;6 h en los 12 dashboards (≈20&ndash;30 min c/u vía <span class="mono">edutrace-procesar.py</span>). <strong>No es latencia de respuesta</strong> (el sistema no guarda marca de inicio/fin): es tiempo de trabajo por entrega, inferido de rondas de revisión documentadas.</p>
+      <p class="approx-src">Dato relacionado que sí es real: 7 documentos salieron en un solo día en dos ocasiones (3 y 24 de agosto). El pico de agosto supera cualquier día de julio (máximo 6, el 28 de julio).</p>
+    </div>
+
+    <div class="warnbox">
+      <h4>Tasa de defecto, con denominador ampliado</h4>
+      <div class="approxrow"><span class="an">≈ 24%</span><span class="al">entregas con algún defecto detectado en construcción</span></div>
+      <p>Sobre las 67 entregas del mes (55 propuestas + 12 dashboards), <strong>≈16 tuvieron al menos un defecto de plantilla</strong> descubierto en construcción (16/67 ≈ 24%, en línea con el 26% de julio). De esos ≈16, <strong>15 se cazaron y corrigieron antes del PDF final</strong>; solo 1 llegó al cliente sin corregir de inmediato (1/67 ≈ 1.5%, ya reportado en la sección 04); ese caso terminó con corrección de raíz en el script compartido el mismo día, no con una nota pendiente. La brecha entre 24% y 1.5% sigue siendo la métrica más honesta del mes: cuánto detecta el sistema <em>antes</em> de que el cliente lo vea.</p>
+    </div>
+
+    <p class="note">Estas tres cifras son aproximaciones fundamentadas, no mediciones instrumentadas: se derivan de la mezcla de complejidad y de las rondas de revisión escritas en el changelog de agosto, no de un contador real de tokens o tiempo. Dato exacto de tokens/costo: panel de uso de la cuenta de Anthropic.</p>
+  </div>
+  <div class="runfoot"><span>Intezia C.A. · Documento interno</span><span><b>07</b> / 08</span></div>
+</section>
+
+<!-- ============ PÁGINA 8 · CIERRE ============ -->
+<section class="page cover">
+  <div class="grid-bg"></div>
+  <div class="corner c-tl"></div>
+  <div class="corner c-br"></div>
+  <div class="cover-inner">
+    <div class="brandmark"><span class="sq">i</span> INTEZIA · SISTEMA IsaIA</div>
+    <div class="kicker" style="margin-top:auto;">Balance del mes</div>
+    <h1 style="font-size:36pt;">Más escala,<br>un modelo de <em>servicio</em><br>completo.</h1>
+    <p class="desc">55 propuestas a 37 clientes, 12 dashboards de impacto cerrados, y un modelo de 5 servicios que pasó de existir en un documento interno a tener piloto real en Detección, Innovación e Integral en el mismo mes. El único defecto que llegó a un cliente se resolvió de raíz el mismo día, no quedó pendiente. La metadata del nuevo eje de servicio sigue poniéndose al día con el ritmo de entrega: declarado, no escondido.</p>
+
+    <div class="cover-stats" style="margin-top:9mm;">
+      <div><div class="n">55</div><div class="l">Propuestas entregadas</div></div>
+      <div><div class="n">≈3x</div><div class="l">Volumen de julio, en 1 mes</div></div>
+      <div><div class="n">1.5%</div><div class="l">Tasa de defecto confirmado por el cliente</div></div>
+      <div><div class="n">3</div><div class="l">Servicios nuevos con piloto real este mes</div></div>
+    </div>
+
+    <p style="margin-top:10mm;font-size:9pt;letter-spacing:.18em;text-transform:uppercase;color:#8a8a8a;">
+      Informe generado el 31 de agosto de 2026 · Período 1&ndash;31 agosto 2026 · Intezia C.A.
+    </p>
+  </div>
+</section>
+
+</body>
+</html>
