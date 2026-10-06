@@ -6,7 +6,7 @@ Router del sistema. Léelo siempre. Carga archivos hijos **solo cuando la tarea 
 
 ## 1. Identidad
 
-Intezia capacita bajo dos divisiones: **Fundación** (social/comunitario) y **Educación** (corporativo/profesional). Toda propuesta se adscribe además a uno de **4 servicios** del Modelo Intezia — **Detección**, **Habilidades**, **Políticas**, **Innovación** — eje ortogonal a la división (§4.1a). Dentro de Habilidades, tres categorías curriculares: **Charla**, **Curso/Diplomado**, **Taller/Capacitación In-Company**. Modalidad (Presencial / Online Síncrono / Asíncrono / Híbrido) = atributo transversal. **Alianza** es una bandera aparte (`alianza: sí|no`), no un 5to servicio.
+Intezia capacita bajo dos divisiones: **Fundación** (social/comunitario) y **Educación** (corporativo/profesional). Toda propuesta se adscribe además a uno de **4 servicios** del Modelo Intezia — **Detección**, **Habilidades**, **Políticas**, **Innovación** — eje ortogonal a la división (§4.1a). Dentro de Habilidades, tres categorías curriculares: **Charla**, **Curso/Diplomado**, **Taller/Capacitación In-Company**; el servicio se entrega **por defecto en el formato compacto de 5 slides** (§4.21). Modalidad (Presencial / Online Síncrono / Asíncrono / Híbrido) = atributo transversal. **Alianza** es una bandera aparte (`alianza: sí|no`), no un 5to servicio.
 
 > `empresa/identidad.md` · `empresa/divisiones.md` · `empresa/tipos-de-documento.md` · `empresa/catalogo.md`
 
@@ -60,7 +60,9 @@ Antes de generar cualquier salida (visual o de texto), además de la división:
 4. **Portada visible — bloqueante (2026-09-01)**: el eyebrow de la Portada (`.s-cover
    .eyebrow`) debe nombrar el/los servicio(s) reales de `brief.md → servicio`, no solo el
    tipo de documento genérico. "Propuesta formativa · Capacitación in-company" no dice nada
-   del servicio — corrige a "Propuesta formativa · Servicio de Habilidades". Si el servicio
+   del servicio — corrige a "Propuesta formativa · Servicio de Habilidades" (en los decks
+   canónicos) o a **"Propuesta de proyecto · Servicio de Habilidades"** (plantilla compacta
+   §4.21: la propuesta se presenta como proyecto, no como capacitación; dirección 2026-10-05). Si el servicio
    es un combo (ej. Detección + Habilidades cotizadas juntas, como DET-xxx), menciona ambos:
    "Servicio de Detección y Habilidades". Aplica a toda propuesta nueva o regenerada de aquí
    en adelante — no retroactivo a decks ya entregados salvo que se pida. Detalle y ejemplos
@@ -71,7 +73,7 @@ Antes de generar cualquier salida (visual o de texto), además de la división:
 | Servicio | Patrón de estructura | Estado |
 |---|---|---|
 | Detección | Clonar y adaptar `clientes/propuestas/pilotes-perforados/` (roadmap origen→bifurcación→rutas→convergencia→resultado + mapa de calor 6 columnas) | Sin piloto canónico propio — construir caso por caso hasta que exista |
-| Habilidades | `plantillas/diseno-{charla\|taller-capacitacion\|curso-diplomado}.md` (§4.2) | Vigente — estructura de siempre, con vocabulario del modelo (Kick-off = Etapa 1, Workbook = entregable insignia, Seguimiento 30-60-90) |
+| Habilidades | **Plantilla compacta** `plantillas/habilidades-compacto.md` (§4.21): 5 slides + retorno opcional, dirigida por `datos.json`. Solo charla/curso/diplomado/programa de módulos sin soluciones: preguntar antes y, si el usuario lo decide, `plantillas/diseno-{charla\|taller-capacitacion\|curso-diplomado}.md` (§4.2) | **Estándar desde 2026-10-05** — caso base `clientes/propuestas/dusa-cai035/` (CAI-035). Los decks canónicos de Habilidades ya entregados no se tocan |
 | Políticas | **Pendiente de decisión de formato** (Ivana + David: ¿deck o informe de consultoría?) | No construir hasta que se resuelva — ver `empresa/tipos-de-documento.md §0` |
 | Innovación | Clonar `clientes/propuestas/zoom-innovacion/` (roadmap `.rmx-linear` adaptado a ciclo recurrente: Kick-off→Ejecución→Medición→se repite + cotización "Inversión por Permanencia" de 3 columnas 3/6/12 meses) | Piloto: `clientes/propuestas/zoom-innovacion/` (INN-001, 2026-08-30) |
 | Integral (§4.1b) | Clonar `clientes/propuestas/aerocentro/` (multi-fase, roadmap `.rmx-linear`) y extender de 3 a 4 fases — el grid ya es flexible por número de columnas, no requiere cambios de CSS | Piloto: `clientes/propuestas/simple-tv-all001/` (ALL-001, 2026-08-28) |
@@ -113,6 +115,8 @@ para un combo Detección+Habilidades, como DET-002).
 | diplomado | `plantillas/diseno-curso-diplomado.md` | Diplomado (≥8 módulos, ≥6 temas) |
 
 En duda entre subtipos → preguntar antes de generar.
+
+> **Habilidades:** desde 2026-10-05 esta tabla aplica solo a los casos de la guardia de §4.21 punto 5 (charla, curso, diplomado o taller/capacitación como programa de módulos, y solo si el usuario elige el deck canónico). El formato por defecto del servicio es la plantilla compacta.
 
 ### 4.3 Eje temático
 
@@ -160,6 +164,8 @@ cifras de impacto de la IA — o del eje temático — en empresas. **Ninguna ci
 4. El contenido se adapta al **eje temático** de cada propuesta.
 
 > Detalle: `plantillas/propuesta-comercial.md` → *Slide 9 · Impacto / estudios*.
+>
+> **No aplica a la plantilla compacta de Habilidades (§4.21):** no lleva slide de Impacto, y su slide de retorno **no cita estudios ni la web** (decisión 2026-10-05); usa método o cifras del propio cliente.
 
 ### 4.10 Sin overflow visual — bloqueante
 
@@ -322,6 +328,8 @@ largo es una marca de "voz de IA" que ventas detecta y rechaza.
    (slides, clases, AcroForms). Leer el `index.html` del clon canónico completo **solo**
    si queda una duda estructural que la referencia no resuelve.
 
+**Decks compactos de Habilidades (§4.21):** la lectura mínima es `clientes/propuestas/<slug>/datos.json` (la fuente), `brief.md`, `programa.md` y `plantillas/habilidades-compacto.md`; el `index.html` es generado (no se edita). Los puntos 3, 4 y 6 de arriba no aplican (la estructura y las reglas de copy ya están en la spec compacta). Excepción: `dusa-cai035/` no tiene `datos.json` (se construyó a mano): leer su `index.html`.
+
 **Campos AcroForm mínimos — bloqueante antes de entregar:**
 
 | Campo | Contenido requerido |
@@ -332,7 +340,7 @@ largo es una marca de "voz de IA" que ventas detecta y rechaza.
 | `Paso01–03 Body` | Descripción ≤ 130 chars. Más larga se corta en el PDF sin clic |
 | Campos de precio | **Vacío intencional.** Ventas los llena en Adobe Reader |
 
-Si el programa elimina la slide `s-price` (instrucción de no-precios del director), los 5 campos de precio no aplican. Los otros 8 campos siguen siendo obligatorios y deben pre-llenarse.
+Si el programa elimina la slide `s-price` (instrucción de no-precios del director), los 5 campos de precio no aplican. Los otros 8 campos siguen siendo obligatorios y deben pre-llenarse. (La plantilla compacta de Habilidades tiene solo 7 campos: ver §4.21 punto 4.)
 
 El `programa.md` debe existir en `clientes/propuestas/<slug>/` antes de construir el deck. La sección §5.2 del `programa.md` (desglose instructivo) es la fuente de verdad para derivar los `Entregables`.
 
@@ -466,6 +474,59 @@ Backend **en archivos, versionado en git** (sin nube).
    lee ni agrupa por `servicio` — el campo ya se declara en `meta.json` (§4.19) pero falta
    el cambio de código en el script para reflejarlo en `clientes/INDEX.{json,md}`.
 
+### 4.21 Servicio de Habilidades — plantilla compacta por defecto — bloqueante
+
+Decisión 2026-10-05 (caso base: DUSA CAI-035, tras las correcciones de dirección).
+**Toda propuesta nueva del servicio de Habilidades se hace con la plantilla compacta**:
+5 slides (4 en Fundación) + 1 de retorno opcional, dirigida por un `datos.json` que alimenta
+un generador. No se clona un deck canónico de ~13 slides para Habilidades salvo la guardia
+del punto 5.
+
+1. **Entrada (§4.1a):** división, servicio = `habilidades` y `alianza` confirmados con el
+   usuario, como siempre. Sin ellos no se genera.
+2. **Formato y flujo:** Portada (titular-objetivo) · Alcance · Ruta · Inversión (solo
+   Educación) · Entregables · Retorno esperado (opcional). Spec completa, esquema de
+   `datos.json`, límites y diagnóstico: `plantillas/habilidades-compacto.md`. Flujo:
+   `datos.json` → `python3 scripts/generar-habilidades-compacto.py <slug>` →
+   `node scripts/verificar-habilidades-compacto.js <slug>` →
+   `bash scripts/pdf-habilidades-compacto.sh <slug>`. El `datos.json` es la fuente: se edita
+   ahí y se regenera, nunca el `index.html` generado. Sin docx de insumo, se arma el
+   `datos.json` con el usuario pidiéndole soluciones, horas y fases: **no se inventan**.
+3. **Reglas propias (bloqueantes), además de las de marca y copy del sistema:**
+   - **Nombre del proyecto = frase-objetivo estilo título de tesis** («Optimización de
+     procesos y datos con inteligencia artificial en 10 áreas de DUSA»), no un titular de
+     dolor. El eyebrow dice «Propuesta de proyecto · Servicio de Habilidades».
+   - **Sin estudios ni web en la slide de retorno.** Método (`metodo`) o cifras del propio
+     cliente (`cifras`, con tipo de dato por fila y origen documentado). Nunca se inventan
+     volúmenes, tiempos, costo hora, escalas salariales ni dotación: sin datos del cliente,
+     modo `metodo`.
+   - **Posiciones y nómina** solo con `aval_posiciones` registrado (quién del cliente,
+     cuándo, por qué medio) y reconfirmado antes de enviar. Sin aval, capacidad y tiempo.
+   - Semanas, no fechas calendario. Las horas se calculan, no se escriben. «Hacia la
+     semana N» es aritmética que servicio confirma.
+   - Sin Metodología ni Equipo facilitador (§4.10a), sin Próximos pasos ni Cierre.
+4. **Qué cambia del resto del sistema:** 7 campos de AcroForm (no 13; Fundación: 2) y no
+   aplican `Paso01–03` ni §4.15 (no hay slide de pasos); `Entregables` y `Acreditacion` son
+   las dos cajas editables de la slide 5, no los institucionales del §4.14; sin slide de
+   Impacto (§4.9), sin Calendario de inicio ni ROI de la hoja de cotización. Siguen
+   vigentes §4.1, 4.4, 4.8, 4.10, 4.10a, 4.11, 4.12, 4.13, 4.19 y el checklist §10.
+5. **Guardia — preguntar antes:** si la solicitud es una **charla, curso, diplomado o un
+   taller/capacitación cuyo contenido es un programa de módulos y sesiones** (sin lista de
+   soluciones por área), el formato compacto no encaja de forma natural. Pregunta una sola
+   vez: «¿Lo armo en el esquema compacto de Habilidades (reexpresando el programa como
+   entregables por área) o en el deck canónico de ~13 slides?». Sin respuesta, no generar.
+   Registrar la elección en `brief.md`.
+6. **Decks anteriores:** los de Habilidades ya entregados (formato canónico) no se tocan ni
+   se convierten (mismo criterio que §4.10a). `dusa-cai035/` es el caso base y se
+   construyó a mano (sin `datos.json`): sus cambios se hacen sobre su `index.html`;
+   `datos.ejemplo-dusa.json` solo lo reproduce, con diferencias deliberadas.
+7. **Pruebas:** tras tocar el generador, correr la prueba de aceptación
+   (`plantillas/habilidades-compacto.md` §12) con `datos.ejemplo-dusa.json` y
+   `datos.ejemplo-fundacion.json`.
+
+> Caso base: 2026-10-04/05 DUSA CAI-035. Detalle y trazabilidad de decisiones:
+> `plantillas/habilidades-compacto.md` y `aprendizajes.md`.
+
 ---
 
 ## 5. Delegación — qué cargar según la tarea
@@ -476,10 +537,12 @@ Backend **en archivos, versionado en git** (sin nube).
 | **Propuesta de Detección** | `empresa/tipos-de-documento.md §0` + `clientes/propuestas/pilotes-perforados/` (semilla) | — |
 | **Propuesta de Políticas** | `empresa/tipos-de-documento.md §0` (formato pendiente — confirmar con el usuario antes de generar) | — |
 | **Propuesta de Innovación** | Clonar `clientes/propuestas/zoom-innovacion/` (piloto INN-001) — mismo criterio de reutilización que cualquier otro servicio (§6 Paso 0) | — |
+| **Propuesta de Habilidades** (cualquier categoría; formato por defecto desde 2026-10-05, §4.21) | `plantillas/habilidades-compacto.md` (spec + flujo) · `plantillas/habilidades-compacto-canonico/` (CSS, `datos.plantilla.json`, ejemplos) · insumo: docx de Productos y Servicios o informe de Detección. `empresa/tipos-de-documento.md §0` solo si hay duda de servicio. **No se clona un deck** | — |
 | **Propuesta clon** (mismo servicio + mismo tipo ya existe en `clientes/propuestas/`) | ninguno — pero §4.14 lectura mínima sigue siendo obligatoria + §10 checklist antes de entregar | — |
-| **Propuesta nueva** (tipo sin precedente o primer deck del sistema) | `plantillas/propuesta-comercial.md` + `empresa/marca-visual.md` + `plantillas/diseno-{tipo}.md` + `empresa/politicas-comerciales.md` | `ckm-slides` |
+| **Propuesta nueva** (tipo sin precedente o primer deck del sistema; **no** Habilidades, que usa la plantilla compacta) | `plantillas/propuesta-comercial.md` + `empresa/marca-visual.md` + `plantillas/diseno-{tipo}.md` + `empresa/politicas-comerciales.md` | `ckm-slides` |
 | Slide con duda puntual o edge case | `plantillas/propuesta-comercial-ref.md` (sección puntual) | — |
-| Diseño pedagógico | `plantillas/diseno-{tipo}.md` + `empresa/tipos-de-documento.md` | — |
+| Diseño pedagógico (decks canónicos y `programa.md`) | `plantillas/diseno-{tipo}.md` + `empresa/tipos-de-documento.md` | — |
+| Retorno esperado con cifras del cliente (hoja de captura xlsx) | `plantillas/habilidades-compacto.md` §4 paso 3b + `scripts/habilidades-retorno-xlsx.py` | — |
 | Calendario | `plantillas/calendario.md` | MCP `claude_ai_Google_Calendar` |
 | Generar / entender PDF y AcroForms | `plantillas/generar-pdf.md` | — |
 | **Dashboard de Impacto Edu-Trace** (cliente cerrado, hay `encuesta.csv`) | `plantillas/dashboard-edutrace.md` + `plantillas/generar-dashboard.md` + `empresa/marca-visual.md` | — |
@@ -507,11 +570,13 @@ Regla de oro: carga el mínimo necesario. La mayoría de propuestas son clones �
 
 Antes de cargar cualquier archivo de instrucciones:
 
+0. **Habilidades → no se clona** (§4.21): se usa la plantilla compacta (`plantillas/habilidades-compacto.md §4`). Lo que sigue aplica a los demás servicios y a los casos de la guardia de §4.21 punto 5.
 1. Busca en `clientes/propuestas/` si ya existe un deck del **mismo servicio** (§4.1a — Detección, Habilidades, Políticas, Innovación) **y** del **mismo tipo de documento** (taller, capacitación, curso, diplomado) con la misma división. No clonar un deck de Habilidades cuando lo que hace falta es uno de Detección, aunque los dos sean nominalmente "capacitación in-company".
 2. **Si existe** → clonar con `cp -r clientes/propuestas/<slug-origen>/ clientes/propuestas/<slug-nuevo>/` y editar con `Edit` solo las secciones que cambian (contenido de cada slide, código, cliente, módulos, impacto). **No cargar `propuesta-comercial.md` ni `marca-visual.md`** — la estructura ya es correcta.
 3. **Si no existe** (primer deck de ese tipo) → continuar desde el paso 1 cargando los archivos indicados en §5.
 
 > El deck de referencia para clonar (por tipo):
+> - **Habilidades (servicio): no se clona.** Plantilla compacta dirigida por datos, `plantillas/habilidades-compacto.md` (§4.21). Lo que sigue es solo para los casos de la guardia (charla, curso, diplomado o programa de módulos, si el usuario elige el deck canónico).
 > - Taller / Capacitación mono-fase → `cumbre-andina/`
 > - Taller / Capacitación multi-fase **con roadmap de 3 etapas** (Diagnóstico → Construcción por Intezia → Implementación — default desde 2026-07-23, ver `plantillas/propuesta-comercial.md` → *Roadmap*) → `aerocentro/` (CAP-082, declarado estándar 2026-08-07: 3 fases / 5 etapas numeradas de forma corrida, 1 sola hoja de cotización para la Fase 1 con Fase 2-3 cotizadas de forma progresiva, roadmap en 3 páginas independientes). `pago-tronic/` queda como origen histórico del patrón de 3 etapas (2026-07-23), útil si el caso es más simple (una sola fase de diagnóstico+construcción+implementación, sin subdividir en 5 etapas).
 > - Taller / Capacitación multi-fase con roadmap de 2 etapas (caso puntual sin fase de construcción propia) → `pilotes-perforados/`
@@ -530,6 +595,8 @@ Antes de cargar cualquier archivo de instrucciones:
 ---
 
 ### Pasos 1–7 (solo cuando no hay clon disponible)
+
+> Habilidades tiene su propio flujo (§4.21): `plantillas/habilidades-compacto.md §4`. Los pasos 1–3 (división, carpeta, brief con `servicio`/`alianza` y `meta.json`) aplican igual; del 4 en adelante lo hace el generador.
 
 1. **División**: pregunta si no se infiere del contexto.
 2. **Carpeta**: `clientes/propuestas/<slug>/` (todo plano, sin sub-subcarpetas).
@@ -554,6 +621,8 @@ Slug: minúsculas, sin tildes, espacios → guiones. Ej: "Banco del Pacífico" �
 ## 6.A Flujo de modificación (propuesta existente)
 
 > Para ajustes a un deck ya existente. No para propuestas desde cero (ver §6).
+
+> **Deck compacto de Habilidades (§4.21):** leer `datos.json` + `brief.md` (+ `programa.md`), editar **`datos.json`** (no el `index.html`), regenerar con `python3 scripts/generar-habilidades-compacto.py <slug>`, medir con `node scripts/verificar-habilidades-compacto.js <slug>` y generar el PDF con `bash scripts/pdf-habilidades-compacto.sh <slug>` (incluye el par de campos). Detalle en `plantillas/habilidades-compacto.md §4`. Excepción: `dusa-cai035/` (hecho a mano) se edita en su `index.html` y se regenera con `generar-pdf.sh` + `customize-acroforms.py` + `customize-dusa-cai035.py`.
 
 1. **Leer primero (§4.14 — bloqueante):**
    - `clientes/propuestas/<slug>/brief.md`
@@ -593,10 +662,10 @@ Slug: minúsculas, sin tildes, espacios → guiones. Ej: "Banco del Pacífico" �
 │   ├── fundacion/{BLANCO,NEGRO}.png
 │   ├── educacion/{BLANCO,NEGRO}.png
 │   └── intezia/{BLANCO,NEGRO}.png    ← genérico sin división, para artefactos comerciales (Brief de Kickoff)
-├── plantillas/                       ← propuesta-comercial, calendario, diseños, generar-pdf, dashboard-edutrace, brief-kickoff, kickoff-canonico/
+├── plantillas/                       ← propuesta-comercial, calendario, diseños, generar-pdf, dashboard-edutrace, brief-kickoff, kickoff-canonico/, habilidades-compacto.md + habilidades-compacto-canonico/ (§4.21)
 ├── fuentes/formatos-oficiales/       ← PDFs oficiales (referencia inmutable)
-├── scripts/                          ← generar-pdf.sh, agregar-campo-precio.py, edutrace-procesar.py, generar-dashboard.sh
-├── clientes/propuestas/<slug>/       ← brief.md, programa.md, index.html, overrides.css?, kickoff.html?, "<CÓDIGO> <Título>.pdf"
+├── scripts/                          ← generar-pdf.sh, agregar-campo-precio.py, edutrace-procesar.py, generar-dashboard.sh, generar-habilidades-compacto.py + verificar-habilidades-compacto.js + pdf-habilidades-compacto.sh + habilidades-importar-insumo.py + habilidades-retorno-xlsx.py (§4.21)
+├── clientes/propuestas/<slug>/       ← brief.md, programa.md, index.html, overrides.css?, kickoff.html?, "<CÓDIGO> <Título>.pdf"; en Habilidades compacto además datos.json (fuente), retorno-captura.xlsx? (interna), _pdf-anteriores/
 └── clientes/dashboards/<slug>/       ← encuesta.csv (gitignored), mapeo.json, resultados.json, index-cliente.html, overrides.css
 ```
 
@@ -652,6 +721,8 @@ Este sistema es **vivo**: mejora con cada conversación.
 
 Detecta: §4.13 guión largo · comillas tipográficas en atributos HTML · placeholders `[CÓDIGO]` sin llenar · **§4.15 términos económicos en «Cómo arrancamos»** (en el HTML y en `acroforms*.json`) · ausencia de fuente de pre-llenado (`acroforms*.json` o `customize-<slug>.py`) · **§4.10 desborde visual** (corre `verificar-overflow.js` y reporta slide + caja que se sale, recorta o **trunca con «…»**).
 
+**Deck compacto de Habilidades (§4.21):** `verificar-propuesta.sh` detecta el deck por `habilidades-compacto.css` y corre además `verificar-habilidades-compacto.js` (holguras exactas en Chrome). Antes: `generar-habilidades-compacto.py <slug>` sin ✗ y con **todos los ⚠ leídos uno por uno** (el aval de posiciones, «Hacia la semana N» y la semana de medición piden confirmación humana antes de enviar). El PDF sale de `pdf-habilidades-compacto.sh`, que ya hace el par PDF-customize.
+
 ### Paso 2 — Verificación manual (no automatizable)
 
 | # | Regla | Qué verificar |
@@ -661,6 +732,7 @@ Detecta: §4.13 guión largo · comillas tipográficas en atributos HTML · plac
 | 3 | §4.12 Acrónimos glosados | Todo acrónimo de jerga (AUP, RCTF, GenAI…) expandido en la primera aparición de CADA slide donde aparece |
 | 4 | §4.14 AcroForms pre-llenados | `Entregables`, `Acreditacion`, `Paso01–03 Titulo` y `Paso01–03 Body` tienen contenido real, no placeholders vacíos |
 | 5 | Par PDF-customize | Si se corrió `generar-pdf.sh`, se corrió `customize-acroforms.py <slug>` (o el `customize-<slug>.py` propio) inmediatamente después |
+| 6 | §4.21 Compacto de Habilidades | Titular-objetivo y eyebrow «Propuesta de proyecto»; retorno sin estudios ni web; cifras y posiciones solo con datos y aval del cliente registrados; 7 campos en el PDF (Fundación: 2) y revisión visual de cada página, incluido el texto horneado de las cajas de la slide 5 |
 
 ### Regla del par PDF-customize
 

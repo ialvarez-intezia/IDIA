@@ -3,6 +3,7 @@
 > **FORMATO HORIZONTAL — PERMANENTE**: A4 landscape (1123×794 px @ 96 dpi → 842×595 pt PDF). No revertir a vertical sin instrucción explícita.
 > **REFERENCIA CANÓNICA**: `clientes/propuestas/cumbre-andina/` (taller mono-fase) · `clientes/propuestas/pilotes-perforados/` (multi-fase). Para propuesta nueva → clonar la más parecida y editar solo el contenido.
 > **Detalle por slide**: cargar `plantillas/propuesta-comercial-ref.md` solo para dudas puntuales o construcción desde cero sin clon disponible.
+> **Habilidades (desde 2026-10-05)**: este documento describe el deck canónico de ~13 slides. El servicio de Habilidades se entrega por defecto con la **plantilla compacta** (`plantillas/habilidades-compacto.md`, `CLAUDE.md §4.21`); este deck solo se usa en los demás servicios y en los casos de la guardia de §4.21 punto 5. Las *Reglas de copy* de abajo (guion largo, siglas, anglicismos, eyebrow con servicio) siguen aplicando a ambos.
 
 ---
 
@@ -483,9 +484,12 @@ El roadmap (`.s-roadmap`) presenta el proyecto como **3 etapas secuenciales**, n
     → «Servicio de Políticas»; `innovacion` → «Servicio de Innovación» (o «Plan de
     Innovación», ya usado en Zoom INN-001); `integral` → nombra las fases reales del plan,
     no los 4 servicios genéricos (ej. «Plan Integral · 4 fases»).
-  - Ejemplo aplicado: «Propuesta formativa · Servicio de Habilidades» (Charla/Taller/
-    Capacitación/Curso/Diplomado solo-Habilidades) · «Propuesta de negocio · Servicio de
-    Detección y Habilidades» (combo cotizado junto, estilo DET-002 Simple TV).
+  - Ejemplo aplicado: «Propuesta formativa · Servicio de Habilidades» (deck canónico:
+    Charla/Taller/Capacitación/Curso/Diplomado solo-Habilidades) · **«Propuesta de proyecto ·
+    Servicio de Habilidades»** (plantilla compacta de Habilidades, `CLAUDE.md §4.21`: se
+    presenta como proyecto, no como capacitación; dirección 2026-10-05, DUSA CAI-035) ·
+    «Propuesta de negocio · Servicio de Detección y Habilidades» (combo cotizado junto,
+    estilo DET-002 Simple TV).
   - Caso base: 2026-09-01, Simple TV CAI-002 («Capacitación in-company» → «Servicio de
     Habilidades»).
 - **No centrar la venta en un ejemplo anecdótico único (2026-09-23)**: si el brief trae un

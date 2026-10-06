@@ -7,6 +7,60 @@
 
 ---
 
+## 2026-10-05 — [arquitectura] Habilidades pasa a plantilla compacta por defecto (`CLAUDE.md` §4.21)
+Decisión del usuario: de ahora en adelante IDIA hace **todas** las propuestas del servicio de Habilidades con el esquema compacto de DUSA CAI-035 (5 slides, 4 en
+Fundación, + retorno opcional, dirigido por `datos.json`). Cambios: nueva §4.21 en el router (reglas propias: titular-objetivo, eyebrow «Propuesta de proyecto ·
+Servicio de Habilidades», retorno sin estudios ni web, cifras y posiciones solo con datos y aval del cliente, 7 campos de PDF, guardia para charla/curso/diplomado/programa
+de módulos: preguntar antes de forzar); ajustes en §1, §4.1a (punto 4 y tabla servicio→patrón), §4.2, §4.9, §4.14, §5, §6 (Paso 0 y pasos), §6.A, §7 y §10;
+`empresa/tipos-de-documento.md` (fila y nota de Habilidades), `plantillas/propuesta-comercial.md` (aviso y ejemplo de eyebrow), spec `habilidades-compacto.md` (§1 por defecto
+y guardia, origen/aval/defaults por división, certificado fuera por defecto, validaciones nuevas). Los decks de Habilidades ya entregados no se tocan. `dusa-cai035` se
+regeneró (PDF con la slide 6 sincronizada, par PDF-customize aplicado, verificador sin hallazgos); el PDF previo quedó en `_pdf-anteriores/`. Pendientes de datos del
+cliente (no bloquean): costo hora, escalas, dotación, volúmenes, moneda de los parafiscales, informe de Detección en docx.
+
+## 2026-10-05 — [plantilla] Habilidades compacto v1.3: titular-objetivo y slide de retorno sin citas (modelo: DUSA CAI-035)
+Nueva plantilla genérica `plantillas/habilidades-compacto.md` (+ `habilidades-compacto-canonico/`, `scripts/generar-habilidades-compacto.py`,
+`verificar-habilidades-compacto.js`, `customize-habilidades-compacto.py`, `pdf-habilidades-compacto.sh`, `habilidades-importar-insumo.py`,
+`habilidades-retorno-xlsx.py`). Dirigida por datos (`datos.json` → deck + campos del PDF + `programa.md`); las cifras se calculan. La v1.3 toma como
+modelo las dos últimas correcciones de dirección sobre DUSA: (1) el nombre del proyecto es una **frase-objetivo estilo título de tesis** (campo
+`portada.titulo_lineas` + franja; el h1 baja de tamaño solo; aviso si el nombre del PDF `<CÓDIGO> <titular>` pasa de 90 caracteres) y el eyebrow dice
+«Propuesta de proyecto»; (2) módulo opcional `retorno` (slide final, sin campos de PDF): modo `metodo` (cómo se calcula, metas 30-60-90, destino del
+tiempo) o modo `cifras` (tabla por área con tipo de dato rotulado), **sin estudios ni referencias de la web** (el generador lo bloquea). Circuito de datos:
+`habilidades-retorno-xlsx.py crear` → hoja azul/gris → `leer` → `datos.json`; se niega a inventar (una solución sin los tres datos no cuenta; cobertura
+parcial se rotula «(n de m procesos)». Pruebas: 282 casos negativos + 55 del módulo + 45 de la hoja, sin errores internos; ejemplos `datos.ejemplo-dusa.json` (6 slides)
+y `datos.ejemplo-fundacion.json` (5 slides). Endurecida tras revisión independiente (origen de datos, aval de posiciones, horas por posición, tipos de dato,
+defaults de Fundación sin dinero, ids internos y línea base duplicada avisados). **Integrada al router el mismo día**: ver la primera entrada de arriba.
+
+## 2026-10-05 — [regla] Portada: nombre del proyecto como frase-objetivo (estilo título de tesis) y slide de retorno sin citas externas (caso DUSA CAI-035)
+Dos correcciones de dirección. (1) El nombre de la propuesta es una frase que responde al objetivo del servicio, estilo
+título de tesis («Optimización de procesos y datos con inteligencia artificial en 10 áreas de DUSA»), no un titular de
+dolor. Límite práctico: `generar-pdf.sh` arma el nombre del PDF con «<CÓDIGO> <h1>» y lo corta a 90 caracteres, así
+que el título debe tener ≤ 82 caracteres (con código de 7) o el archivo queda cortado a media palabra; el h1 baja a
+46 px en `overrides.css`. (2) La slide de retorno no cita estudios ni nada de la web: presenta el método de cálculo por
+área y proceso, las metas 30-60-90 y el destino del tiempo recuperado, y recibirá cifras propias cuando se completen
+los datos (`retorno-captura.xlsx`). La literatura verificada queda solo como respaldo oral en `programa.md` §6.
+(Resuelto en la plantilla v1.3: `portada.titulo_lineas` de 1 a 3 líneas más franja, con tamaño de h1 según el largo.)
+
+## 2026-10-05 — [regla] «Propuesta de proyecto» en vez de «Propuesta formativa» cuando el servicio ordena procesos y construye (caso DUSA CAI-035)
+Revisión de dirección: la portada decía «Propuesta formativa», pero el proyecto ordena procesos y datos, construye
+soluciones y mide su efecto; presentarlo como capacitación lo reduce. Cambio: eyebrow «Propuesta de proyecto · Servicio
+de Habilidades» (sigue nombrando el servicio, §4.1a punto 4) y lead con verbos de proyecto. Ya aplicado en `dusa-cai035`
+y en el default de la plantilla compacta; reflejado el mismo día en el ejemplo de §4.1a punto 4 de `CLAUDE.md` y en
+`plantillas/propuesta-comercial.md → Reglas de copy`. Misma revisión: la cuenta de
+dotación y nómina se plantea de frente a los dueños cuando el cliente lo avala, **con datos** (no se estima sin marcarlo):
+ver la entrada siguiente y `clientes/propuestas/dusa-cai035/retorno-captura.xlsx`.
+
+## 2026-10-05 — [regla] Propuestas a directivos llevan lámina final de retorno estimado (caso DUSA CAI-035)
+Criterio comercial (David, vía el usuario): la directiva decide con dinero y tiempo, así que la propuesta
+necesita el **retorno de inversión real o aproximado** (ahorro de tiempo, reenfoque del trabajo, crecer sin
+sumar gente a la nómina, nunca "sacar gente") y una proyección de la organización, incluida la extensión a
+otras áreas y líneas de negocio. Se agregó la slide 6 `.s-roi` a `dusa-cai035` (6 páginas). **Cómo se hace
+sin inventar (§4.9)**: sin horas por proceso/tarifa/nómina del cliente no hay cifra propia; se usan 3 estudios
+verificados con fuente primaria, cada barra con su base (producción por hora ≠ tiempo liberado ≠ autorreporte),
+rotulados como estudios ajenos, y la medición real queda atada a la línea base de la semana 1 + seguimiento
+30-60-90. La verificación corrigió datos de memoria (Brynjolfsson publicado = 15%, no 14%/34%; Bick 5,4% =
+2,2 h/semana, no 1,1). Detalle y estudios descartados: `clientes/propuestas/dusa-cai035/{brief,programa}.md`.
+Pendiente de decidir: llevarla como slide opcional al canon de Habilidades. **Actualización mismo día**: la dirección pidió además plantear de frente la reducción de puestos y de nómina (con el aval del cliente) y mostrar el retorno con datos duros por área y proceso; las fichas disponibles dicen «No declarado» en volumen y horas, así que la slide 6 con estudios ajenos queda provisional hasta tener esos datos.
+
 ## 2026-10-01 — [cliente:hjb-quimica] CAI-031 — reconstrucción total: de Habilidades pura a combo Detección+Habilidades
 Tras mesa de trabajo real con Vianey Reyes, la propuesta cambió de estructura completa:
 de "2 poblaciones de Habilidades" (gerencial + especializada) a Detección de 15 áreas +

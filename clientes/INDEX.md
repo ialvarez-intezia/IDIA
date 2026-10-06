@@ -1,166 +1,168 @@
 # Índice relacional — Sistema de Propuestas Intezia
 
-> Generado por `scripts/indexar.py` el **2026-10-02**. No editar a mano: se regenera. Fuente fechada = los `meta.json` (§4.19).
+> Generado por `scripts/indexar.py` el **2026-10-05**. No editar a mano: se regenera. Fuente fechada = los `meta.json` (§4.19).
 
-**195 propuestas** · 151 registradas · 44 pendientes de backfill · 23 dashboards
+**196 propuestas** · 152 registradas · 44 pendientes de backfill · 23 dashboards
 
-**Pipeline:** Aprobada: 3 · Borrador: 3 · Enviada: 145  
-**División:** educacion: 150 · fundacion: 1
+**Pipeline:** Aprobada: 3 · Borrador: 3 · Enviada: 146  
+**División:** educacion: 151 · fundacion: 1
 
 ## ⏱️ Cotizaciones — ventana de 30 días
 
 | Código | Cliente | Entregada | Días | Estado cotización |
 |---|---|---|---|---|
-| CAP-INT-01 | Intezia (interna) | 2026-06-07 | 117 | ⚠️ vencida hace 87d |
-| CAP-048 | CrediYA | 2026-06-07 | 117 | ⚠️ vencida hace 87d |
-| CAP-043 | Colchones Regal | 2026-06-08 | 116 | ⚠️ vencida hace 86d |
-| TA-025 | Ninja Park | 2026-06-09 | 115 | ⚠️ vencida hace 85d |
-| CAP-047 | Venemergencia | 2026-06-09 | 115 | ⚠️ vencida hace 85d |
-| CAP-052 | Anabella | 2026-06-10 | 114 | ⚠️ vencida hace 84d |
-| CAP-049 | Laboratorios Farma | 2026-06-10 | 114 | ⚠️ vencida hace 84d |
-| TA-026 | Skalto | 2026-06-11 | 113 | ⚠️ vencida hace 83d |
-| CAP-055 | Corporación Bel | 2026-06-11 | 113 | ⚠️ vencida hace 83d |
-| CAP-053 | Representaciones Joalca | 2026-06-11 | 113 | ⚠️ vencida hace 83d |
-| (sin código) | Patricia | 2026-06-11 | 113 | ⚠️ vencida hace 83d |
-| CAP-056 | Meru | 2026-06-12 | 112 | ⚠️ vencida hace 82d |
-| CAP-054 | Bit Honor | 2026-06-12 | 112 | ⚠️ vencida hace 82d |
-| (sin código) | Fivenca | 2026-06-12 | 112 | ⚠️ vencida hace 82d |
-| CAP-061 | Fivenca | 2026-06-16 | 108 | ⚠️ vencida hace 78d |
-| CAP-060 | Catálogo (genérica) | 2026-06-16 | 108 | ⚠️ vencida hace 78d |
-| CAP-063 | PetWao | 2026-06-17 | 107 | ⚠️ vencida hace 77d |
-| CAP-062 | Fivenca | 2026-06-17 | 107 | ⚠️ vencida hace 77d |
-| CAP-064 | Petroval | 2026-06-18 | 106 | ⚠️ vencida hace 76d |
-| CAP-070 | Ailyn Gruszka | 2026-07-03 | 91 | ⚠️ vencida hace 61d |
-| TA-024 | Dr. Care | 2026-07-16 | 78 | ⚠️ vencida hace 48d |
-| CAP-079 | Beeper | 2026-07-16 | 78 | ⚠️ vencida hace 48d |
-| CAP-078 | Diram | 2026-07-16 | 78 | ⚠️ vencida hace 48d |
-| TA-030 | Empléate | 2026-07-18 | 76 | ⚠️ vencida hace 46d |
-| CAP-080 | Robin Agency | 2026-07-20 | 74 | ⚠️ vencida hace 44d |
-| CAP-081 | Pago Tronic | 2026-07-22 | 72 | ⚠️ vencida hace 42d |
-| CAP-083 | Aerocentro | 2026-07-23 | 71 | ⚠️ vencida hace 41d |
-| CAP-082 | Aerocentro | 2026-07-23 | 71 | ⚠️ vencida hace 41d |
-| CU-012 | URBE University (Doral, Florida) | 2026-07-24 | 70 | ⚠️ vencida hace 40d |
-| CAP-075 | Médica Campestre | 2026-07-24 | 70 | ⚠️ vencida hace 40d |
-| TA-031 | Producto de catálogo · sin colegio asignado (vía aliada) | 2026-07-28 | 66 | ⚠️ vencida hace 36d |
-| CAP-085 | Messangi | 2026-07-28 | 66 | ⚠️ vencida hace 36d |
-| CAP-059 | Zoom | 2026-07-28 | 66 | ⚠️ vencida hace 36d |
-| CAP-058 | Zoom | 2026-07-28 | 66 | ⚠️ vencida hace 36d |
-| CAP-046 | Zoom Miami | 2026-07-28 | 66 | ⚠️ vencida hace 36d |
-| CH-007 | DUSA | 2026-08-03 | 60 | ⚠️ vencida hace 30d |
-| CAP-091 | Puro Lomo | 2026-08-03 | 60 | ⚠️ vencida hace 30d |
-| CAP-090 | Puro Lomo | 2026-08-03 | 60 | ⚠️ vencida hace 30d |
-| CAP-089 | Laboratorios Conspat | 2026-08-03 | 60 | ⚠️ vencida hace 30d |
-| CAP-088 | DUSA | 2026-08-03 | 60 | ⚠️ vencida hace 30d |
-| CAP-087 | DUSA | 2026-08-03 | 60 | ⚠️ vencida hace 30d |
-| CAP-086 | Miami Emprendedores | 2026-08-03 | 60 | ⚠️ vencida hace 30d |
-| CH-008 | Comunidad de Doral (Miami) × South Florida International College (SFIC) | 2026-08-04 | 59 | ⚠️ vencida hace 29d |
-| CAP-093 | Doral (David Nibia) | 2026-08-04 | 59 | ⚠️ vencida hace 29d |
-| CAP-092 | Doral | 2026-08-04 | 59 | ⚠️ vencida hace 29d |
-| CAP-094 | Alianza Team | 2026-08-05 | 58 | ⚠️ vencida hace 28d |
-| CAP-096 | AgroMundial | 2026-08-06 | 57 | ⚠️ vencida hace 27d |
-| CAP-097 | Calzados Discovery | 2026-08-07 | 56 | ⚠️ vencida hace 26d |
-| CAP-098 | IOED | 2026-08-10 | 53 | ⚠️ vencida hace 23d |
-| CAP-100 | Canguro | 2026-08-11 | 52 | ⚠️ vencida hace 22d |
-| TA-034 | RUSH Academy | 2026-08-12 | 51 | ⚠️ vencida hace 21d |
-| CH-009 | Venemergencia | 2026-08-13 | 50 | ⚠️ vencida hace 20d |
-| CAP-103 | Luppro | 2026-08-13 | 50 | ⚠️ vencida hace 20d |
-| CAP-102 | Servicom | 2026-08-13 | 50 | ⚠️ vencida hace 20d |
-| CAP-106 | Grupo Osorio | 2026-08-14 | 49 | ⚠️ vencida hace 19d |
-| CAP-105 | Fivenca | 2026-08-14 | 49 | ⚠️ vencida hace 19d |
-| CAP-107 | Corporaciones EasyAccess | 2026-08-16 | 47 | ⚠️ vencida hace 17d |
-| CAP-108 | Casupo | 2026-08-17 | 46 | ⚠️ vencida hace 16d |
-| CAP-050 | Zoom | 2026-08-17 | 46 | ⚠️ vencida hace 16d |
-| CAP-109 | Diego | 2026-08-19 | 44 | ⚠️ vencida hace 14d |
-| CAP-109 | Good Latam | 2026-08-19 | 44 | ⚠️ vencida hace 14d |
-| CAP-111 | Grupo Giraud | 2026-08-20 | 43 | ⚠️ vencida hace 13d |
-| CAP-112 | Pagasi | 2026-08-21 | 42 | ⚠️ vencida hace 12d |
-| (sin código) | IESA | 2026-08-24 | 39 | ⚠️ vencida hace 9d |
-| (sin código) | IESA | 2026-08-24 | 39 | ⚠️ vencida hace 9d |
-| (sin código) | IESA | 2026-08-24 | 39 | ⚠️ vencida hace 9d |
-| (sin código) | IESA | 2026-08-24 | 39 | ⚠️ vencida hace 9d |
-| (sin código) | IESA | 2026-08-24 | 39 | ⚠️ vencida hace 9d |
-| (sin código) | IESA | 2026-08-24 | 39 | ⚠️ vencida hace 9d |
-| (sin código) | IESA | 2026-08-24 | 39 | ⚠️ vencida hace 9d |
-| CAP-114 | Enzo Chiesa | 2026-08-25 | 38 | ⚠️ vencida hace 8d |
-| CAP-113 | Daniela Chiesa | 2026-08-25 | 38 | ⚠️ vencida hace 8d |
-| DET-001 | Amcor Rigid Packaging de Venezuela | 2026-08-26 | 37 | ⚠️ vencida hace 7d |
-| CAP-030 | Go Pharma | 2026-08-26 | 37 | ⚠️ vencida hace 7d |
-| CAI-001 | Cavedatos | 2026-08-27 | 36 | ⚠️ vencida hace 6d |
-| DET-003 | Embutidos Zeus | 2026-08-28 | 35 | ⚠️ vencida hace 5d |
-| DET-002 | Simple TV | 2026-08-28 | 35 | ⚠️ vencida hace 5d |
-| CAI-003 | Simple TV | 2026-08-28 | 35 | ⚠️ vencida hace 5d |
-| CAI-002 | Simple TV | 2026-08-28 | 35 | ⚠️ vencida hace 5d |
-| ALL-001 | Simple TV | 2026-08-28 | 35 | ⚠️ vencida hace 5d |
-| INN-002 | Zoom | 2026-08-30 | 33 | ⚠️ vencida hace 3d |
-| INN-001 | Zoom | 2026-08-30 | 33 | ⚠️ vencida hace 3d |
-| DET-004 | DHL | 2026-08-30 | 33 | ⚠️ vencida hace 3d |
-| CAI-006 | Miosoty Villalobos | 2026-08-30 | 33 | ⚠️ vencida hace 3d |
-| CAI-005 | DHL (Miguel Hernández) | 2026-08-30 | 33 | ⚠️ vencida hace 3d |
-| CAI-004 | Yoyokids | 2026-08-30 | 33 | ⚠️ vencida hace 3d |
-| CH-010 | DUSA | 2026-08-31 | 32 | ⚠️ vencida hace 2d |
-| DET-005 | Grupo Ferrara | 2026-09-01 | 31 | ⚠️ vencida hace 1d |
-| CAI-007 | Grupo Ferrara | 2026-09-01 | 31 | ⚠️ vencida hace 1d |
-| CAP-095 | Alianza Team | 2026-09-02 | 30 | 🔸 vence en 0d |
-| DET-006 | Everest | 2026-09-03 | 29 | 🔸 vence en 1d |
-| CH-011 | INCRET | 2026-09-03 | 29 | 🔸 vence en 1d |
-| CAI-009 | Miguel Ángel da Silva | 2026-09-03 | 29 | 🔸 vence en 1d |
-| CAI-008 | Aerocentro | 2026-09-03 | 29 | 🔸 vence en 1d |
-| DET-007 | Industria de Café Yocoima | 2026-09-04 | 28 | 🔸 vence en 2d |
-| CAI-011 | Bidzi | 2026-09-04 | 28 | 🔸 vence en 2d |
-| DET-008 | Productos Bixa | 2026-09-07 | 25 | 🔸 vence en 5d |
-| CAI-015 | Simple TV | 2026-09-07 | 25 | 🔸 vence en 5d |
-| CAI-014 | Simple TV | 2026-09-07 | 25 | 🔸 vence en 5d |
-| CAI-013 | Simple TV | 2026-09-07 | 25 | 🔸 vence en 5d |
-| CAI-012 | DUSA | 2026-09-07 | 25 | 🔸 vence en 5d |
-| ALL-002 | Simple TV | 2026-09-07 | 25 | 🔸 vence en 5d |
-| CAI-017 | Zoom | 2026-09-08 | 24 | 🔸 vence en 6d |
-| CAI-016 | IMECA | 2026-09-08 | 24 | 🔸 vence en 6d |
-| DET-011 | Hoteles Cumberland | 2026-09-09 | 23 | 🔸 vence en 7d |
-| DET-010 | Farmacéutica 24 | 2026-09-09 | 23 | 🔸 vence en 7d |
-| CH-013 | Grupo Ferrara | 2026-09-09 | 23 | 🔸 vence en 7d |
-| CAI-010 | Good Latam | 2026-09-09 | 23 | 🔸 vence en 7d |
-| DET-012 | Igamcor | 2026-09-10 | 22 | ✅ vigente (8d) |
-| CH-014 | City of Doral | 2026-09-10 | 22 | ✅ vigente (8d) |
-| CAI-019 | Corporación Socialista de Cemento (CSC) | 2026-09-10 | 22 | ✅ vigente (8d) |
-| CAI-018 | Venezolano de Crédito | 2026-09-10 | 22 | ✅ vigente (8d) |
-| DET-013 | Velas 3N | 2026-09-14 | 18 | ✅ vigente (12d) |
-| DET-014 | Toyocentro | 2026-09-15 | 17 | ✅ vigente (13d) |
-| DET-015 | Robin Agency | 2026-09-16 | 16 | ✅ vigente (14d) |
-| CAI-020 | Venezolano de Crédito | 2026-09-16 | 16 | ✅ vigente (14d) |
-| CAI-021 | Maurel & Prom Venezuela | 2026-09-17 | 15 | ✅ vigente (15d) |
-| CAI-021 | Maurel & Prom Venezuela | 2026-09-17 | 15 | ✅ vigente (15d) |
-| ALL-003 | Maurel & Prom Venezuela | 2026-09-17 | 15 | ✅ vigente (15d) |
-| ALL-003 | Maurel & Prom Venezuela | 2026-09-17 | 15 | ✅ vigente (15d) |
-| CAI-022 | HCA Venezuela | 2026-09-18 | 14 | ✅ vigente (16d) |
-| DET-016 | Andrómeda | 2026-09-20 | 12 | ✅ vigente (18d) |
-| DET-018 | Dumogas | 2026-09-21 | 11 | ✅ vigente (19d) |
-| DET-017 | Dumogas | 2026-09-21 | 11 | ✅ vigente (19d) |
-| DET-020 | La Tienda del Blumer | 2026-09-23 | 9 | ✅ vigente (21d) |
-| DET-019 | AMV Tecnología | 2026-09-23 | 9 | ✅ vigente (21d) |
-| CAI-026 | Banco Plaza | 2026-09-23 | 9 | ✅ vigente (21d) |
-| CAI-025 | Banco Plaza | 2026-09-23 | 9 | ✅ vigente (21d) |
-| CAI-024 | Banco Plaza | 2026-09-23 | 9 | ✅ vigente (21d) |
-| CAI-023 | AMV Tecnología | 2026-09-23 | 9 | ✅ vigente (21d) |
-| DET-022 | ESS Solutions | 2026-09-24 | 8 | ✅ vigente (22d) |
-| DET-021 | Banco Activo | 2026-09-24 | 8 | ✅ vigente (22d) |
-| CAI-028 | Venemergencia | 2026-09-24 | 8 | ✅ vigente (22d) |
-| CAI-027 | Banco Activo | 2026-09-24 | 8 | ✅ vigente (22d) |
-| DET-023 | Sociedad Anticancerosa de Venezuela (Clínica) | 2026-09-25 | 7 | ✅ vigente (23d) |
-| CAI-029 | Luis Sosa | 2026-09-25 | 7 | ✅ vigente (23d) |
-| CAI-030 | FastMed | 2026-09-27 | 5 | ✅ vigente (25d) |
-| CAI-031 | HJB Química | 2026-09-28 | 4 | ✅ vigente (26d) |
-| DET-024 | Fibraspol | 2026-09-29 | 3 | ✅ vigente (27d) |
-| CAI-032 | Laboratorios Farma | 2026-09-29 | 3 | ✅ vigente (27d) |
-| TA-036 | Alfonzo Rivas & Cia. | 2026-09-30 | 2 | ✅ vigente (28d) |
-| TA-035 | Universidad Metropolitana (Unimet) · Gerencia de Atención Socioeconómica Estudiantil | 2026-09-30 | 2 | ✅ vigente (28d) |
-| DET-024 | G-MAX | 2026-10-01 | 1 | ✅ vigente (29d) |
-| CAI-034 | N58 Banco Digital | 2026-10-01 | 1 | ✅ vigente (29d) |
-| CAI-033 | Grupo Nena (Droguería Nena · Farmacia Xana) | 2026-10-01 | 1 | ✅ vigente (29d) |
+| CAP-INT-01 | Intezia (interna) | 2026-06-07 | 120 | ⚠️ vencida hace 90d |
+| CAP-048 | CrediYA | 2026-06-07 | 120 | ⚠️ vencida hace 90d |
+| CAP-043 | Colchones Regal | 2026-06-08 | 119 | ⚠️ vencida hace 89d |
+| TA-025 | Ninja Park | 2026-06-09 | 118 | ⚠️ vencida hace 88d |
+| CAP-047 | Venemergencia | 2026-06-09 | 118 | ⚠️ vencida hace 88d |
+| CAP-052 | Anabella | 2026-06-10 | 117 | ⚠️ vencida hace 87d |
+| CAP-049 | Laboratorios Farma | 2026-06-10 | 117 | ⚠️ vencida hace 87d |
+| TA-026 | Skalto | 2026-06-11 | 116 | ⚠️ vencida hace 86d |
+| CAP-055 | Corporación Bel | 2026-06-11 | 116 | ⚠️ vencida hace 86d |
+| CAP-053 | Representaciones Joalca | 2026-06-11 | 116 | ⚠️ vencida hace 86d |
+| (sin código) | Patricia | 2026-06-11 | 116 | ⚠️ vencida hace 86d |
+| CAP-056 | Meru | 2026-06-12 | 115 | ⚠️ vencida hace 85d |
+| CAP-054 | Bit Honor | 2026-06-12 | 115 | ⚠️ vencida hace 85d |
+| (sin código) | Fivenca | 2026-06-12 | 115 | ⚠️ vencida hace 85d |
+| CAP-061 | Fivenca | 2026-06-16 | 111 | ⚠️ vencida hace 81d |
+| CAP-060 | Catálogo (genérica) | 2026-06-16 | 111 | ⚠️ vencida hace 81d |
+| CAP-063 | PetWao | 2026-06-17 | 110 | ⚠️ vencida hace 80d |
+| CAP-062 | Fivenca | 2026-06-17 | 110 | ⚠️ vencida hace 80d |
+| CAP-064 | Petroval | 2026-06-18 | 109 | ⚠️ vencida hace 79d |
+| CAP-070 | Ailyn Gruszka | 2026-07-03 | 94 | ⚠️ vencida hace 64d |
+| TA-024 | Dr. Care | 2026-07-16 | 81 | ⚠️ vencida hace 51d |
+| CAP-079 | Beeper | 2026-07-16 | 81 | ⚠️ vencida hace 51d |
+| CAP-078 | Diram | 2026-07-16 | 81 | ⚠️ vencida hace 51d |
+| TA-030 | Empléate | 2026-07-18 | 79 | ⚠️ vencida hace 49d |
+| CAP-080 | Robin Agency | 2026-07-20 | 77 | ⚠️ vencida hace 47d |
+| CAP-081 | Pago Tronic | 2026-07-22 | 75 | ⚠️ vencida hace 45d |
+| CAP-083 | Aerocentro | 2026-07-23 | 74 | ⚠️ vencida hace 44d |
+| CAP-082 | Aerocentro | 2026-07-23 | 74 | ⚠️ vencida hace 44d |
+| CU-012 | URBE University (Doral, Florida) | 2026-07-24 | 73 | ⚠️ vencida hace 43d |
+| CAP-075 | Médica Campestre | 2026-07-24 | 73 | ⚠️ vencida hace 43d |
+| TA-031 | Producto de catálogo · sin colegio asignado (vía aliada) | 2026-07-28 | 69 | ⚠️ vencida hace 39d |
+| CAP-085 | Messangi | 2026-07-28 | 69 | ⚠️ vencida hace 39d |
+| CAP-059 | Zoom | 2026-07-28 | 69 | ⚠️ vencida hace 39d |
+| CAP-058 | Zoom | 2026-07-28 | 69 | ⚠️ vencida hace 39d |
+| CAP-046 | Zoom Miami | 2026-07-28 | 69 | ⚠️ vencida hace 39d |
+| CH-007 | DUSA | 2026-08-03 | 63 | ⚠️ vencida hace 33d |
+| CAP-091 | Puro Lomo | 2026-08-03 | 63 | ⚠️ vencida hace 33d |
+| CAP-090 | Puro Lomo | 2026-08-03 | 63 | ⚠️ vencida hace 33d |
+| CAP-089 | Laboratorios Conspat | 2026-08-03 | 63 | ⚠️ vencida hace 33d |
+| CAP-088 | DUSA | 2026-08-03 | 63 | ⚠️ vencida hace 33d |
+| CAP-087 | DUSA | 2026-08-03 | 63 | ⚠️ vencida hace 33d |
+| CAP-086 | Miami Emprendedores | 2026-08-03 | 63 | ⚠️ vencida hace 33d |
+| CH-008 | Comunidad de Doral (Miami) × South Florida International College (SFIC) | 2026-08-04 | 62 | ⚠️ vencida hace 32d |
+| CAP-093 | Doral (David Nibia) | 2026-08-04 | 62 | ⚠️ vencida hace 32d |
+| CAP-092 | Doral | 2026-08-04 | 62 | ⚠️ vencida hace 32d |
+| CAP-094 | Alianza Team | 2026-08-05 | 61 | ⚠️ vencida hace 31d |
+| CAP-096 | AgroMundial | 2026-08-06 | 60 | ⚠️ vencida hace 30d |
+| CAP-097 | Calzados Discovery | 2026-08-07 | 59 | ⚠️ vencida hace 29d |
+| CAP-098 | IOED | 2026-08-10 | 56 | ⚠️ vencida hace 26d |
+| CAP-100 | Canguro | 2026-08-11 | 55 | ⚠️ vencida hace 25d |
+| TA-034 | RUSH Academy | 2026-08-12 | 54 | ⚠️ vencida hace 24d |
+| CH-009 | Venemergencia | 2026-08-13 | 53 | ⚠️ vencida hace 23d |
+| CAP-103 | Luppro | 2026-08-13 | 53 | ⚠️ vencida hace 23d |
+| CAP-102 | Servicom | 2026-08-13 | 53 | ⚠️ vencida hace 23d |
+| CAP-106 | Grupo Osorio | 2026-08-14 | 52 | ⚠️ vencida hace 22d |
+| CAP-105 | Fivenca | 2026-08-14 | 52 | ⚠️ vencida hace 22d |
+| CAP-107 | Corporaciones EasyAccess | 2026-08-16 | 50 | ⚠️ vencida hace 20d |
+| CAP-108 | Casupo | 2026-08-17 | 49 | ⚠️ vencida hace 19d |
+| CAP-050 | Zoom | 2026-08-17 | 49 | ⚠️ vencida hace 19d |
+| CAP-109 | Diego | 2026-08-19 | 47 | ⚠️ vencida hace 17d |
+| CAP-109 | Good Latam | 2026-08-19 | 47 | ⚠️ vencida hace 17d |
+| CAP-111 | Grupo Giraud | 2026-08-20 | 46 | ⚠️ vencida hace 16d |
+| CAP-112 | Pagasi | 2026-08-21 | 45 | ⚠️ vencida hace 15d |
+| (sin código) | IESA | 2026-08-24 | 42 | ⚠️ vencida hace 12d |
+| (sin código) | IESA | 2026-08-24 | 42 | ⚠️ vencida hace 12d |
+| (sin código) | IESA | 2026-08-24 | 42 | ⚠️ vencida hace 12d |
+| (sin código) | IESA | 2026-08-24 | 42 | ⚠️ vencida hace 12d |
+| (sin código) | IESA | 2026-08-24 | 42 | ⚠️ vencida hace 12d |
+| (sin código) | IESA | 2026-08-24 | 42 | ⚠️ vencida hace 12d |
+| (sin código) | IESA | 2026-08-24 | 42 | ⚠️ vencida hace 12d |
+| CAP-114 | Enzo Chiesa | 2026-08-25 | 41 | ⚠️ vencida hace 11d |
+| CAP-113 | Daniela Chiesa | 2026-08-25 | 41 | ⚠️ vencida hace 11d |
+| DET-001 | Amcor Rigid Packaging de Venezuela | 2026-08-26 | 40 | ⚠️ vencida hace 10d |
+| CAP-030 | Go Pharma | 2026-08-26 | 40 | ⚠️ vencida hace 10d |
+| CAI-001 | Cavedatos | 2026-08-27 | 39 | ⚠️ vencida hace 9d |
+| DET-003 | Embutidos Zeus | 2026-08-28 | 38 | ⚠️ vencida hace 8d |
+| DET-002 | Simple TV | 2026-08-28 | 38 | ⚠️ vencida hace 8d |
+| CAI-003 | Simple TV | 2026-08-28 | 38 | ⚠️ vencida hace 8d |
+| CAI-002 | Simple TV | 2026-08-28 | 38 | ⚠️ vencida hace 8d |
+| ALL-001 | Simple TV | 2026-08-28 | 38 | ⚠️ vencida hace 8d |
+| INN-002 | Zoom | 2026-08-30 | 36 | ⚠️ vencida hace 6d |
+| INN-001 | Zoom | 2026-08-30 | 36 | ⚠️ vencida hace 6d |
+| DET-004 | DHL | 2026-08-30 | 36 | ⚠️ vencida hace 6d |
+| CAI-006 | Miosoty Villalobos | 2026-08-30 | 36 | ⚠️ vencida hace 6d |
+| CAI-005 | DHL (Miguel Hernández) | 2026-08-30 | 36 | ⚠️ vencida hace 6d |
+| CAI-004 | Yoyokids | 2026-08-30 | 36 | ⚠️ vencida hace 6d |
+| CH-010 | DUSA | 2026-08-31 | 35 | ⚠️ vencida hace 5d |
+| DET-005 | Grupo Ferrara | 2026-09-01 | 34 | ⚠️ vencida hace 4d |
+| CAI-007 | Grupo Ferrara | 2026-09-01 | 34 | ⚠️ vencida hace 4d |
+| CAP-095 | Alianza Team | 2026-09-02 | 33 | ⚠️ vencida hace 3d |
+| DET-006 | Everest | 2026-09-03 | 32 | ⚠️ vencida hace 2d |
+| CH-011 | INCRET | 2026-09-03 | 32 | ⚠️ vencida hace 2d |
+| CAI-009 | Miguel Ángel da Silva | 2026-09-03 | 32 | ⚠️ vencida hace 2d |
+| CAI-008 | Aerocentro | 2026-09-03 | 32 | ⚠️ vencida hace 2d |
+| DET-007 | Industria de Café Yocoima | 2026-09-04 | 31 | ⚠️ vencida hace 1d |
+| CAI-011 | Bidzi | 2026-09-04 | 31 | ⚠️ vencida hace 1d |
+| DET-008 | Productos Bixa | 2026-09-07 | 28 | 🔸 vence en 2d |
+| CAI-015 | Simple TV | 2026-09-07 | 28 | 🔸 vence en 2d |
+| CAI-014 | Simple TV | 2026-09-07 | 28 | 🔸 vence en 2d |
+| CAI-013 | Simple TV | 2026-09-07 | 28 | 🔸 vence en 2d |
+| CAI-012 | DUSA | 2026-09-07 | 28 | 🔸 vence en 2d |
+| ALL-002 | Simple TV | 2026-09-07 | 28 | 🔸 vence en 2d |
+| CAI-017 | Zoom | 2026-09-08 | 27 | 🔸 vence en 3d |
+| CAI-016 | IMECA | 2026-09-08 | 27 | 🔸 vence en 3d |
+| DET-011 | Hoteles Cumberland | 2026-09-09 | 26 | 🔸 vence en 4d |
+| DET-010 | Farmacéutica 24 | 2026-09-09 | 26 | 🔸 vence en 4d |
+| CH-013 | Grupo Ferrara | 2026-09-09 | 26 | 🔸 vence en 4d |
+| CAI-010 | Good Latam | 2026-09-09 | 26 | 🔸 vence en 4d |
+| DET-012 | Igamcor | 2026-09-10 | 25 | 🔸 vence en 5d |
+| CH-014 | City of Doral | 2026-09-10 | 25 | 🔸 vence en 5d |
+| CAI-019 | Corporación Socialista de Cemento (CSC) | 2026-09-10 | 25 | 🔸 vence en 5d |
+| CAI-018 | Venezolano de Crédito | 2026-09-10 | 25 | 🔸 vence en 5d |
+| DET-013 | Velas 3N | 2026-09-14 | 21 | ✅ vigente (9d) |
+| DET-014 | Toyocentro | 2026-09-15 | 20 | ✅ vigente (10d) |
+| DET-015 | Robin Agency | 2026-09-16 | 19 | ✅ vigente (11d) |
+| CAI-020 | Venezolano de Crédito | 2026-09-16 | 19 | ✅ vigente (11d) |
+| CAI-021 | Maurel & Prom Venezuela | 2026-09-17 | 18 | ✅ vigente (12d) |
+| CAI-021 | Maurel & Prom Venezuela | 2026-09-17 | 18 | ✅ vigente (12d) |
+| ALL-003 | Maurel & Prom Venezuela | 2026-09-17 | 18 | ✅ vigente (12d) |
+| ALL-003 | Maurel & Prom Venezuela | 2026-09-17 | 18 | ✅ vigente (12d) |
+| CAI-022 | HCA Venezuela | 2026-09-18 | 17 | ✅ vigente (13d) |
+| DET-016 | Andrómeda | 2026-09-20 | 15 | ✅ vigente (15d) |
+| DET-018 | Dumogas | 2026-09-21 | 14 | ✅ vigente (16d) |
+| DET-017 | Dumogas | 2026-09-21 | 14 | ✅ vigente (16d) |
+| DET-020 | La Tienda del Blumer | 2026-09-23 | 12 | ✅ vigente (18d) |
+| DET-019 | AMV Tecnología | 2026-09-23 | 12 | ✅ vigente (18d) |
+| CAI-026 | Banco Plaza | 2026-09-23 | 12 | ✅ vigente (18d) |
+| CAI-025 | Banco Plaza | 2026-09-23 | 12 | ✅ vigente (18d) |
+| CAI-024 | Banco Plaza | 2026-09-23 | 12 | ✅ vigente (18d) |
+| CAI-023 | AMV Tecnología | 2026-09-23 | 12 | ✅ vigente (18d) |
+| DET-022 | ESS Solutions | 2026-09-24 | 11 | ✅ vigente (19d) |
+| DET-021 | Banco Activo | 2026-09-24 | 11 | ✅ vigente (19d) |
+| CAI-028 | Venemergencia | 2026-09-24 | 11 | ✅ vigente (19d) |
+| CAI-027 | Banco Activo | 2026-09-24 | 11 | ✅ vigente (19d) |
+| DET-023 | Sociedad Anticancerosa de Venezuela (Clínica) | 2026-09-25 | 10 | ✅ vigente (20d) |
+| CAI-029 | Luis Sosa | 2026-09-25 | 10 | ✅ vigente (20d) |
+| CAI-030 | FastMed | 2026-09-27 | 8 | ✅ vigente (22d) |
+| CAI-031 | HJB Química | 2026-09-28 | 7 | ✅ vigente (23d) |
+| DET-024 | Fibraspol | 2026-09-29 | 6 | ✅ vigente (24d) |
+| CAI-032 | Laboratorios Farma | 2026-09-29 | 6 | ✅ vigente (24d) |
+| TA-036 | Alfonzo Rivas & Cia. | 2026-09-30 | 5 | ✅ vigente (25d) |
+| TA-035 | Universidad Metropolitana (Unimet) · Gerencia de Atención Socioeconómica Estudiantil | 2026-09-30 | 5 | ✅ vigente (25d) |
+| DET-024 | G-MAX | 2026-10-01 | 4 | ✅ vigente (26d) |
+| CAI-034 | N58 Banco Digital | 2026-10-01 | 4 | ✅ vigente (26d) |
+| CAI-033 | Grupo Nena (Droguería Nena · Farmacia Xana) | 2026-10-01 | 4 | ✅ vigente (26d) |
+| CAI-035 | DUSA | 2026-10-04 | 1 | ✅ vigente (29d) |
 
 ## 📋 Propuestas registradas
 
 | Código | Cliente | Tipo | Estado | Entrega | Div | PDF |
 |---|---|---|---|---|---|---|
+| CAI-035 | DUSA | Capacitación In-Company · Servicio de Habilidades · 44 soluciones en 10 áreas · 500 h de sesión · 11 semanas + seguimiento 30-60-90 | Enviada | 2026-10-04 | educacion | ✓ |
 | DET-024 | G-MAX | Detección · Kick-off (1h) + Fundamentals (2 grupos de 2h, 51 personas) + auditoría de 22 departamentos agrupados en 4 frentes (Seguros y Cobranzas 4h, Atención al Paciente 4h, Resto corporativo 8h, Asistencial 4h = 20h), 25h totales, modalidad presencial | Enviada | 2026-10-01 | educacion | ✓ |
 | CAI-034 | N58 Banco Digital | Capacitación In-Company · Producción de creativos y SEO con Claude + Fundamentals, Construcción e Implementación para Mercadeo · Kick-off (1h, aparte) + Fundamentals (2h) + Construcción (6h, con el cliente) + Implementación (4h) · 12h de propuesta, modalidad presencial | Enviada | 2026-10-01 | educacion | ✓ |
 | CAI-033 | Grupo Nena (Droguería Nena · Farmacia Xana) | Capacitación In-Company · 2ª cohorte Habilidades (4 sesiones, 11h) + Innovación (3 meses, hasta 2 sesiones de 2h/mes) | Enviada | 2026-10-01 | educacion | ✓ |
@@ -318,7 +320,7 @@
 - **Simple TV** (8): ALL-001, ALL-002, CAI-002, CAI-003, CAI-013, CAI-014, CAI-015, DET-002
 - **IESA** (7): (sin código), (sin código), (sin código), (sin código), (sin código), (sin código), (sin código)
 - **Zoom** (7): CAP-058, INN-001, INN-002, CAP-077, CAP-059, CAI-017, CAP-050
-- **DUSA** (5): CH-007, CAI-012, CAP-087, CAP-088, CH-010
+- **DUSA** (6): CH-007, CAI-012, CAI-035, CAP-087, CAP-088, CH-010
 - **Fivenca** (4): CAP-062, CAP-105, (sin código), CAP-061
 - **Maurel & Prom Venezuela** (4): ALL-003, CAI-021, CAI-021, ALL-003
 - **Aerocentro** (3): CAP-082, CAI-008, CAP-083

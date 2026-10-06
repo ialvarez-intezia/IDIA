@@ -1,0 +1,259 @@
+{
+ "version": 1,
+ "cliente": {
+  "nombre": "Fundación Semilla Verde",
+  "slug": "fundacion-semilla-verde",
+  "codigo": "CAI-099",
+  "nombre_pie": "Semilla Verde"
+ },
+ "division": "fundacion",
+ "alianza": false,
+ "eje": "Gestión de programas sociales y reportes a donantes con Microsoft 365 Copilot",
+ "origen": "Informe de Detección de Fundación Semilla Verde, septiembre de 2026",
+ "fuente_insumo": "Informe de Detección (ficha de área de Programas y Voluntariado)",
+ "portada": {
+  "titulo_lineas": [
+   "Reducción del trabajo manual",
+   "en registros y reportes"
+  ],
+  "titulo_destacado": "con inteligencia artificial",
+  "lead": "La auditoría de Detección identificó dónde el equipo pierde horas cada semana. Este proyecto ordena los registros y los reportes, construye y deja adoptadas las soluciones que atienden cada punto, y mide su efecto.",
+  "hechos": [
+   {
+    "num": "+400",
+    "texto": "fichas de beneficiarios se registran a mano, en hojas distintas, cada mes.",
+    "resuelto_por": [
+     "A1-1",
+     "A1-2"
+    ]
+   },
+   {
+    "num": "12 h",
+    "texto": "por semana se dedican a consolidar reportes de voluntariado para los donantes.",
+    "resuelto_por": [
+     "A2-2",
+     "A2-3"
+    ]
+   },
+   {
+    "num": "3 de 10",
+    "texto": "solicitudes de apoyo llegan duplicadas o incompletas y se responden tarde.",
+    "resuelto_por": [
+     "A1-2",
+     "A2-4"
+    ]
+   }
+  ],
+  "fuente": "Fuente: auditoría de Detección de Fundación Semilla Verde."
+ },
+ "carriles": [
+  {
+   "id": "copilot",
+   "nombre": "Microsoft 365 Copilot",
+   "nombre_corto": "Copilot",
+   "color": "amarillo"
+  }
+ ],
+ "areas": [
+  {
+   "id": "A1",
+   "nombre": "Registro de beneficiarios",
+   "carril": "copilot",
+   "frente": "A",
+   "proceso_base": true,
+   "soluciones": [
+    {
+     "id": "A1-1",
+     "entregable": "Ficha única de registro de beneficiarios",
+     "C": 8,
+     "T": 3,
+     "A": 3,
+     "fase": "F1"
+    },
+    {
+     "id": "A1-2",
+     "entregable": "Reglas de depuración de duplicados",
+     "C": 6,
+     "T": 2,
+     "A": 2,
+     "fase": "F1"
+    },
+    {
+     "id": "A1-3",
+     "entregable": "Tablero de beneficiarios por programa",
+     "C": 10,
+     "T": 4,
+     "A": 4,
+     "fase": "F2"
+    }
+   ]
+  },
+  {
+   "id": "A2",
+   "nombre": "Voluntariado y reportes a donantes",
+   "carril": "copilot",
+   "frente": "B",
+   "soluciones": [
+    {
+     "id": "A2-1",
+     "entregable": "Asistente de convocatoria de voluntarios",
+     "C": 8,
+     "T": 3,
+     "A": 3,
+     "fase": "F1"
+    },
+    {
+     "id": "A2-2",
+     "entregable": "Plantilla de reporte mensual para donantes",
+     "C": 10,
+     "T": 4,
+     "A": 4,
+     "fase": "F1"
+    },
+    {
+     "id": "A2-3",
+     "entregable": "Borrador de informe de impacto por programa",
+     "C": 12,
+     "T": 4,
+     "A": 4,
+     "fase": "F2"
+    },
+    {
+     "id": "A2-4",
+     "entregable": "Asistente de respuestas a solicitudes de apoyo",
+     "C": 10,
+     "T": 3,
+     "A": 3,
+     "fase": "F2"
+    },
+    {
+     "id": "A2-5",
+     "entregable": "Resumen de actas de la junta directiva",
+     "C": 6,
+     "T": 2,
+     "A": 2,
+     "fase": "F1"
+    }
+   ],
+   "nombre_frente": "Voluntariado y reportes"
+  }
+ ],
+ "alcance": {
+  "subtitulo": "Ordenamos registros y reportes, y construimos asistentes de IA, plantillas y tableros **con el equipo de cada área**.",
+  "pasos": [
+   "Construimos junto a quien ejecuta el proceso.",
+   "Probamos con ese equipo y con casos reales de la fundación.",
+   "Adoptamos: el equipo la usa en su trabajo diario."
+  ],
+  "quien_construye": "Intezia construye cada solución junto al equipo de la fundación, dentro de las licencias que ya opera."
+ },
+ "fases": [
+  {
+   "id": "F1",
+   "titulo": "Fase 1",
+   "rango": "Semanas 1-5",
+   "descripcion": "prioridad de cada área, sin dependencias",
+   "destacada": true
+  },
+  {
+   "id": "F2",
+   "titulo": "Fase 2",
+   "rango": "Semanas 5-9",
+   "descripcion": "necesita un dato o una solución previa"
+  }
+ ],
+ "frentes": [
+  {
+   "id": "A",
+   "carril": "copilot",
+   "semanas": "S1-S9",
+   "celdas": {
+    "F1": "Ficha única de registro y reglas de depuración de duplicados.",
+    "F2": "Tablero de beneficiarios por programa."
+   }
+  },
+  {
+   "id": "B",
+   "carril": "copilot",
+   "semanas": "S2-S9",
+   "celdas": {
+    "F1": "Convocatoria de voluntarios, reporte a donantes y resumen de actas.",
+    "F2": "Informe de impacto y respuestas a solicitudes de apoyo."
+   }
+  }
+ ],
+ "ruta": {
+  "semanas_total": 9,
+  "tope_h_semana": 20,
+  "hitos": [
+   {
+    "titulo": "Semana 1 · Arranque",
+    "texto": "Línea base de horas por proceso."
+   },
+   {
+    "titulo": "Semana 5 · Fase 1",
+    "texto": "Soluciones prioritarias adoptadas por el equipo."
+   },
+   {
+    "titulo": "Semana 9 · Cierre",
+    "texto": "Cierre de la construcción y entrega al equipo."
+   }
+  ]
+ },
+ "seguimiento": {
+  "rango": "30, 60 y 90 días",
+  "texto": "Desde el cierre de cada área",
+  "items": [
+   {
+    "dias": "30 días",
+    "texto": "Uso real y ajustes"
+   },
+   {
+    "dias": "60 días",
+    "texto": "Ahorro medido contra la línea base"
+   },
+   {
+    "dias": "90 días",
+    "texto": "Retorno en tiempo ahorrado y habilidades instaladas"
+   }
+  ]
+ },
+ "entregables": {
+  "transversales": [
+   "Línea base de horas por proceso, en la semana 1.",
+   "Seguimiento a 30, 60 y 90 días con medición del ahorro."
+  ],
+  "valor_inmediato": [
+   "Semana 1: línea base de horas por proceso.",
+   "Semana 5: {n_f1} soluciones prioritarias adoptadas.",
+   "Semana 9: todas las soluciones en uso en la fundación."
+  ],
+  "titulo": "Lo que recibe Semilla Verde."
+ },
+ "siglas_ok": [],
+ "supuestos": [
+  "Se asume que la fundación ya cuenta con licencias de Microsoft 365 Copilot; confirmar con el usuario."
+ ],
+ "pendientes": [
+  "Confirmar asesora comercial y código definitivo."
+ ],
+ "retorno": {
+  "modo": "metodo",
+  "posiciones": false,
+  "destino": [
+   {
+    "rotulo": "Mismo equipo, más volumen",
+    "texto": "Si el tiempo se libera, el mismo equipo puede **atender a más personas** sin ampliar la plantilla."
+   },
+   {
+    "rotulo": "Trabajo reenfocado",
+    "texto": "El equipo de voluntariado puede dejar de consolidar a mano los reportes a donantes y pasar a revisarlos y a preparar el informe de impacto de cada programa."
+   },
+   {
+    "rotulo": "Otros programas",
+    "texto": "Con el retorno medido, {cliente_corto} decide si lleva este mismo ciclo de construir, probar y adoptar a **otros programas y áreas**."
+   }
+  ]
+ },
+ "_comentario": "Ejemplo ficticio de Fundación (4 slides + retorno = 5; sin hoja de inversión). Sirve como prueba de aceptación de la variante Fundación; no corresponde a ningún cliente real."
+}

@@ -5,7 +5,10 @@
 > Modelo Intezia antes de generar nada. El resto del archivo (§1 en adelante) describe
 > las **tres categorías curriculares**, que hoy en la práctica solo aplican **dentro de
 > Habilidades** — los otros tres servicios tienen (o tendrán) su propia estructura de
-> entregable, no un deck de charla/taller/curso/diplomado forzado.
+> entregable, no un deck de charla/taller/curso/diplomado forzado. Desde 2026-10-05 el
+> propio servicio de Habilidades se entrega por defecto con la **plantilla compacta**
+> (`plantillas/habilidades-compacto.md`); el deck de ~13 slides por categoría queda para
+> los casos de la guardia de `CLAUDE.md §4.21`.
 
 ---
 
@@ -19,7 +22,7 @@
 | Servicio | En una frase | Duración típica | Estado de la estructura de deck |
 |---|---|---|---|
 | **Detección** | Diagnosticar el negocio, nivelar al equipo y entregar logros inmediatos antes del informe final. | Kick-off + 4 etapas · 5 a 15 días | **Pendiente** — base reaprovechable: clonar y adaptar `clientes/propuestas/pilotes-perforados/` (roadmap origen→bifurcación→rutas→convergencia→resultado + mapa de calor de 6 columnas es estructuralmente cercano a Matriz de Madurez Digital + Protocolo de Clasificación de IA por Impacto vs. Esfuerzo). Sin piloto canónico propio todavía. |
-| **Habilidades** | Capacitar al equipo sobre sus propias tareas reales y dejar la capacidad instalada, con adopción verificada a 30-60-90 días. | Kick-off + 3 sesiones de hasta 2h o más | **Vigente** — es la estructura que ya existe (§1 de este archivo): Charla / Taller / Capacitación In-Company / Curso / Diplomado. Seguimiento 30-60-90 especificado en §0.2. Ajuste pendiente de vocabulario: nombrar Kick-off como Etapa 1, Workbook como entregable insignia. |
+| **Habilidades** | Capacitar al equipo sobre sus propias tareas reales y dejar la capacidad instalada, con adopción verificada a 30-60-90 días. | Kick-off + 3 sesiones de hasta 2h o más | **Vigente — formato por defecto desde 2026-10-05: plantilla compacta** (`plantillas/habilidades-compacto.md`, `CLAUDE.md §4.21`): 5 slides (Portada con titular-objetivo · Alcance · Ruta · Inversión · Entregables) + 1 de retorno esperado opcional, dirigida por `datos.json`; caso base `clientes/propuestas/dusa-cai035/`. Las categorías Charla / Taller / Capacitación In-Company / Curso / Diplomado (§1 de este archivo) siguen existiendo como tipos de catálogo; su deck canónico de ~13 slides solo se usa si el usuario lo elige en la guardia de §4.21 punto 5. Seguimiento 30-60-90 especificado en §0.2. Ajuste pendiente de vocabulario: nombrar Kick-off como Etapa 1, Workbook como entregable insignia. |
 | **Políticas** | Formalizar cómo la empresa usa la IA, con gobierno, roles claros y su Brújula IA de herramientas recomendadas. | Kick-off + 3 · 3 a 5 semanas | **Especificación completa desde 2026-09-09** — ver §0.1 (metodología, 4 etapas, roles, entregables). Sigue **pendiente solo la decisión de formato de la propuesta comercial** (Ivana + David: deck vs. informe de consultoría) — se paga por entregable, no por horas de clase, no tiene "Programa de módulos" con sentido real. No construir la estructura de la propuesta hasta que esa decisión de formato se resuelva. |
 | **Innovación** | Sostener la madurez con cadencia mensual de charlas y masterclasses, y evaluación continua de adopción de IA. | Kick-off + 2 · 3, 6 o 12 meses | **Piloto**: `clientes/propuestas/zoom-innovacion/` (INN-001, 2026-08-30). Reemplaza "Programa = N módulos" por 3 sesiones/mes de distribución flexible (Opción A, sin desglose por sesión fijo) y resuelve el cronograma recurrente con un roadmap `.rmx-linear` adaptado (Kick-off → Ejecución → Medición → se repite, en vez de fases con fin). Cotización propia: "Inversión por Permanencia" (`CICLO_PRICE_FIELDS`, ver `plantillas/generar-pdf.md`). |
 | **Integral** | Ofrecer los 4 servicios de arriba como fases secuenciales de un mismo plan estratégico (Detección → Habilidades → Políticas → Innovación). | Variable — 4 fases, duración de cada una a definir tras el diagnóstico | **Piloto**: `clientes/propuestas/simple-tv-all001/` (ALL-001, 2026-08-28). Clona `aerocentro/` (multi-fase) y extiende su roadmap de 3 a 4 fases. Políticas e Innovación se representan a nivel de resumen de roadmap (tarjeta de etapa + resultado), no con su plantilla dedicada — esa sigue pendiente. Ver `CLAUDE.md §4.1b`. |
@@ -34,6 +37,8 @@ es menos detallada en el resto del deck — confirmar alcance con el usuario cas
 los 4 servicios como un solo plan, confirma con el usuario si corresponde `integral` (no se
 asume tampoco). División y servicio son ejes **ortogonales**: un cliente puede adquirir
 cualquiera de los 5 servicios sin importar su división.
+
+**Habilidades no se clona:** se usa la plantilla compacta dirigida por datos (`CLAUDE.md §4.21`).
 
 **Al clonar (Paso 0 de `CLAUDE.md §6`):** el criterio de reutilización ya no es solo "mismo
 tipo de documento + misma división" — ahora es **mismo servicio + mismo tipo de documento +

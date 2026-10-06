@@ -238,6 +238,19 @@ else
   WARNINGS=$((WARNINGS+1))
 fi
 
+# ── Decks de la plantilla compacta de Habilidades: holguras exactas (plantillas/habilidades-compacto.md) ──
+# Detecta colisiones entre bloques con posición absoluta que verificar-overflow.js no ve.
+if [[ -f "$DIR/habilidades-compacto.css" ]] && command -v node >/dev/null 2>&1; then
+  if COMPACTO_OUT=$(node "$ROOT/scripts/verificar-habilidades-compacto.js" "$HTML" 2>/dev/null); then
+    echo "✓  Holguras del deck compacto de Habilidades (verificar-habilidades-compacto.js)"
+  else
+    echo "❌ Holguras del deck compacto de Habilidades:"
+    echo "$COMPACTO_OUT" | grep -E '✗|→' | head -14
+    echo ""
+    ERRORS=$((ERRORS+1))
+  fi
+fi
+
 # ── Resultado ──────────────────────────────────────────────────────────────────
 echo ""
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
