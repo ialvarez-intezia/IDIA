@@ -58,10 +58,16 @@ const MEDIR = `(async () => {
       s.querySelectorAll('.rg-front').forEach((fr, i) => {
         const fr_r = fr.getBoundingClientRect().right - 10;
         let peorNw = 0, quien = '';
-        fr.querySelectorAll('.nw, .rg-front-tag, .rg-front-h').forEach((el) => { const ex = el.getBoundingClientRect().right - fr_r; if (ex > peorNw) { peorNw = ex; quien = el.textContent.trim().slice(0, 40); } });
+        fr.querySelectorAll('.nw, .rg-front-name, .rg-front-tag, .rg-front-h').forEach((el) => { const ex = el.getBoundingClientRect().right - fr_r; if (ex > peorNw) { peorNw = ex; quien = el.textContent.trim().slice(0, 40); } });
         add(n, 'ruta: rótulo del frente #' + (i + 1) + ' dentro de su tarjeta', -peorNw, 0, peorNw ? 'sobresale ' + Math.round(peorNw) + ' px: «' + quien + '». Definir areas[].nombre_frente más corto (≤ 30 caracteres) o carriles[].nombre_corto' : '');
       });
       overflowEls(n, s, '.rg-phase', 'cabecera de fase'); overflowEls(n, s, '.rg-follow', 'seguimiento');
+      s.querySelectorAll('.rg-phase').forEach((ph, i) => {
+        const pr = ph.getBoundingClientRect().right - 10; let peor = 0, quien = '';
+        ph.querySelectorAll('.rg-phase-tag, .rg-phase-n').forEach((el) => { const ex = el.getBoundingClientRect().right - pr; if (ex > peor) { peor = ex; quien = el.textContent.trim().slice(0, 30); } });
+        const tg = ph.querySelector('.rg-phase-tag'); const partida = tg && tg.getBoundingClientRect().height > 24;
+        add(n, 'ruta: rótulo y conteo de la fase #' + (i + 1) + ' en una línea dentro de su cabecera', partida ? -1 : -peor, 0, (peor || partida) ? 'sobresale o se parte: «' + quien + '». Acortar fases[].titulo' : '');
+      });
       const grid = s.querySelector('.route-grid'); const miles = s.querySelector('.route-miles');
       if (grid && miles) add(n, 'ruta: grilla vs línea de hitos', top(s, miles) - bot(s, grid), 8);
     }

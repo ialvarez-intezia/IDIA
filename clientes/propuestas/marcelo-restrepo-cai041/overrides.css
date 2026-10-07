@@ -1,0 +1,53 @@
+/* Ajustes propios de esta propuesta (se enlaza después de habilidades-compacto.css). */
+
+/* ===========================================================================
+   CAI-041: 3 bloques y 4 entregables (la plantilla está pensada para 40+).
+   Se amplía la escala de las slides 2, 3 y 5 y la composición va bajo el nombre del bloque.
+   =========================================================================== */
+
+/* Slide 2 · Alcance: 3 filas grandes que ocupan todo el panel. */
+.s-scope .scope-panel { flex: 1; display: flex; flex-direction: column; padding: 18px 28px 6px; }
+.s-scope .scope-head { margin-bottom: 4px; }
+.s-scope .scope-rows { flex: 1; display: flex; flex-direction: column; }
+.s-scope .scope-rows li { flex: 1; padding: 0; }
+.s-scope .scope-rows .area { flex: 1 1 auto; padding-right: 22px; font-size: 22px; line-height: 1.2; }
+.s-scope .scope-rows .area .comp {
+  display: block;
+  margin-top: 6px;
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.35;
+  color: rgba(0, 0, 0, 0.62);
+}
+.s-scope .scope-rows .units { --uw: 34px; --ug: 7px; height: 34px; }
+.s-scope .scope-rows .n { font-size: 34px; }
+
+/* Slide 3 · Ruta: 1 frente y 2 fases (formato con las soluciones como protagonistas): se amplía la escala
+   para que la fila única no quede con media slide vacía. */
+.s-route .rg-front { padding: 14px 16px 12px 18px; }
+.s-route .rg-front-name { font-size: 22px; }
+.s-route .rg-front .rg-front-tag { font-size: 10px; padding: 3px 9px; }
+.s-route .rg-front-h { font-size: 12px; margin-top: 8px; }
+.s-route .rg-front-h b { font-size: 16px; }
+.s-route .rg-front-areas { font-size: 13px; margin-top: 8px; }
+.s-route .rg-cell { padding: 14px 18px; }
+.s-route .rg-h { font-size: 22px; margin-bottom: 10px; }
+.s-route .rg-h b { font-size: 48px; }
+.s-route .rg-h i { font-size: 15px; white-space: nowrap; }
+.s-route .rg-cell p { font-size: 15.5px; line-height: 1.4; }
+.s-route .route-miles { margin-top: 26px; }
+.s-route .mile b { font-size: 15px; margin-bottom: 5px; }
+.s-route .mile p { font-size: 13.5px; line-height: 1.36; }
+.s-route .route-note { margin-top: 16px; font-size: 12px; max-width: 1020px; }
+
+/* Slide 5 · Entregables: los 3 bloques se apilan como filas anchas (nombre a la izquierda, entregables a la derecha). */
+.s-deliv .deliv-carriles { margin-top: 24px; margin-bottom: 10px; }
+.s-deliv .dc { font-size: 13px; padding: 8px 18px; }
+.s-deliv .deliv-cols { grid-template-columns: 1fr; gap: 12px; height: 398px; }
+.s-deliv .deliv-col { display: flex; align-items: center; padding: 10px 30px; min-height: 0; }
+.s-deliv .da { display: grid; grid-template-columns: 330px 1fr; column-gap: 36px; align-items: center; width: 100%; }
+.s-deliv .da-name { font-size: 22px; line-height: 1.2; margin-bottom: 0; }
+.s-deliv .da-name i { min-width: 30px; height: 30px; line-height: 30px; font-size: 14px; }
+.s-deliv .da li { font-size: 19px; line-height: 1.3; padding: 5px 0 5px 22px; }
+.s-deliv .da li::before { top: 14px; width: 8px; height: 8px; }

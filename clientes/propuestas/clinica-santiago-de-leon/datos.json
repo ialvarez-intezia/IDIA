@@ -1,0 +1,385 @@
+{
+ "version": 1,
+ "cliente": {
+  "nombre": "Clínica Santiago de León",
+  "slug": "clinica-santiago-de-leon",
+  "codigo": "DET-027",
+  "nombre_pie": "Santiago de León"
+ },
+ "division": "educacion",
+ "alianza": false,
+ "servicio_rotulo": "Servicio de Detección",
+ "meta_servicio": "deteccion",
+ "meta_tipo": "Detección · Fundamentals (3 grupos de 2h, hasta 25 personas cada uno) + auditoría de 4 áreas (Admisión, Finanzas y Facturación, Almacén, Atención al Paciente), 4h por área (16h), 22h totales · formato compacto",
+ "vocabulario": {
+  "solucion": [
+   "entregable",
+   "entregables"
+  ],
+  "proceso_base": [
+   "etapa previa",
+   "etapas previas"
+  ]
+ },
+ "eje": "Auditar Admisión, Finanzas y Facturación, Almacén y Atención al Paciente de la Clínica Santiago de León, con un logro inmediato en cada área, para llegar a un mapa de oportunidades de IA y un caso que la Dirección pueda llevar a su Junta Directiva",
+ "origen": "Ficha de Levantamiento de la Clínica Santiago de León (registrada el 05/10/2026 por la asesora comercial) e instrucción directa del usuario del 06/10/2026",
+ "fuente_insumo": "Ficha de Levantamiento de la Clínica Santiago de León",
+ "portada": {
+  "titulo_lineas": [
+   "Mapa de oportunidades de IA",
+   "para digitalizar 4 áreas"
+  ],
+  "titulo_destacado": "de {cliente_corto}",
+  "lead": "Este proyecto nivela al equipo de {n_areas_txt}, levanta sus procesos, deja un **logro inmediato** en cada una y entrega un mapa priorizado y un caso para la Junta Directiva, para decidir con datos qué automatizar primero.",
+  "hechos": [
+   {
+    "num": "Casi 1 h",
+    "texto": "tarda la aprobación del seguro, aunque el triaje con IA detecta la patología en unos 5 minutos.",
+    "resuelto_por": [
+     "ADM-1"
+    ]
+   },
+   {
+    "num": "15 min",
+    "texto": "toma armar cada presupuesto, de forma manual y ítem por ítem, en SAP.",
+    "resuelto_por": [
+     "FIN-1"
+    ]
+   },
+   {
+    "num": "Quejas",
+    "texto": "de pacientes por precios distintos al llamar y al llegar a la clínica.",
+    "resuelto_por": [
+     "ATP-1"
+    ]
+   },
+   {
+    "num": "2.000",
+    "texto": "pacientes al mes, aproximadamente: el consumo de insumos se calcula a mano.",
+    "resuelto_por": [
+     "ALM-1"
+    ]
+   }
+  ],
+  "fuente": "Fuente: Ficha de Levantamiento de la Clínica Santiago de León (05/10/2026)."
+ },
+ "carriles": [
+  {
+   "id": "det",
+   "nombre": "Detección",
+   "nombre_corto": "Detección",
+   "color": "amarillo"
+  }
+ ],
+ "areas": [
+  {
+   "id": "FUN",
+   "nombre": "Fundamentals",
+   "carril": "det",
+   "frente": "A",
+   "proceso_base": true,
+   "nombre_catalogo": "Fundamentals",
+   "composicion": "3 grupos de hasta 25 personas, por áreas y turnos.",
+   "soluciones": [
+    {
+     "id": "FUN-1",
+     "entregable": "Primera sesión de nivelación en IA",
+     "h": 2,
+     "fase": "F1",
+     "detalle": "Fundamentals de 2 h para el primer grupo (máximo 25 personas por sesión). El universo declarado en la ficha es de unas 60 a 70 personas de las 4 áreas, con turnos de guardia de mañana, tarde y noche en Admisión y Almacén; por eso son 3 grupos de 2 h, armados con la clínica por áreas y turnos. Temas: qué es y qué no es la IA, y en qué se diferencia de la automatización; ejemplos aplicados a salud y a sus áreas; cuidado de la información de pacientes; preguntas y expectativas. El kick-off de arranque se hace aparte y no suma horas."
+    },
+    {
+     "id": "FUN-2",
+     "entregable": "Segunda sesión de nivelación en IA",
+     "h": 2,
+     "fase": "F1",
+     "detalle": "Fundamentals de 2 h para el segundo grupo, con el mismo contenido que el primero."
+    },
+    {
+     "id": "FUN-3",
+     "entregable": "Tercera sesión de nivelación en IA",
+     "h": 2,
+     "fase": "F1",
+     "detalle": "Fundamentals de 2 h para el tercer grupo, con el mismo contenido que el primero."
+    }
+   ]
+  },
+  {
+   "id": "ADM",
+   "nombre": "Admisión",
+   "carril": "det",
+   "frente": "A",
+   "composicion": "Aprobación de seguros, con turnos de guardia.",
+   "soluciones": [
+    {
+     "id": "ADM-1",
+     "entregable": "Inventario de procesos y logro inmediato de Admisión",
+     "h": 4,
+     "fase": "F2",
+     "detalle": "Sesión de 4 h con 1 o 2 personas del área (jefe o gerente de la unidad). Proceso a levantar: aprobación del seguro para el ingreso de pacientes (cerca de 1 hora, frente a unos 5 minutos del triaje con IA ya instalado, que hoy está aislado de la aprobación del seguro y del presupuesto). Candidato a logro inmediato identificado en la ficha: conectar el resultado del triaje con la aprobación del seguro y el presupuesto. El primer paso aplicable se define en la sesión con lo que la clínica ya tiene; se trabaja en conjunto con Finanzas y Facturación."
+    }
+   ]
+  },
+  {
+   "id": "FIN",
+   "nombre": "Finanzas y Facturación",
+   "carril": "det",
+   "frente": "A",
+   "composicion": "Presupuestos y facturación, hoy manuales en SAP.",
+   "soluciones": [
+    {
+     "id": "FIN-1",
+     "entregable": "Inventario de procesos y logro inmediato de Finanzas y Facturación",
+     "h": 4,
+     "fase": "F2",
+     "detalle": "Sesión de 4 h con 1 o 2 personas del área. Proceso a levantar: generación de presupuesto y facturación en SAP (cerca de 15 minutos por presupuesto, ítems seleccionados uno por uno, nada predeterminado, dependiente de la persona y propenso a error). Se trabaja en conjunto con Admisión: el presupuesto es el paso siguiente a la aprobación del seguro."
+    }
+   ]
+  },
+  {
+   "id": "ATP",
+   "nombre": "Atención al Paciente",
+   "carril": "det",
+   "frente": "A",
+   "composicion": "Información y comunicación con el paciente.",
+   "soluciones": [
+    {
+     "id": "ATP-1",
+     "entregable": "Inventario de procesos y logro inmediato de Atención al Paciente",
+     "h": 4,
+     "fase": "F3",
+     "detalle": "Sesión de 4 h con 1 o 2 personas del área. Proceso a levantar: la comunicación de precios y de estado al paciente, con las inconsistencias que generan quejas (precio distinto por teléfono que al llegar a la clínica). Se apoya en lo levantado en Admisión y Finanzas."
+    }
+   ]
+  },
+  {
+   "id": "ALM",
+   "nombre": "Almacén (Inventario)",
+   "carril": "det",
+   "frente": "A",
+   "composicion": "Control y reposición de insumos, con turnos de guardia.",
+   "soluciones": [
+    {
+     "id": "ALM-1",
+     "entregable": "Inventario de procesos y logro inmediato de Almacén",
+     "h": 4,
+     "fase": "F3",
+     "detalle": "Sesión de 4 h con 1 o 2 personas del área. Proceso a levantar: control y reposición de inventario. Hoy el consumo de insumos por patología y por mes se calcula a mano a partir de unos 2.000 pacientes atendidos al mes; no hay reposición automática basada en estadísticas de pacientes."
+    }
+   ]
+  }
+ ],
+ "alcance": {
+  "titulo": "Un logro inmediato en cada una de las 4 áreas.",
+  "subtitulo": "Nivelamos al equipo y auditamos **4 áreas**, separando lo que necesita IA de lo que solo se automatiza.",
+  "etiqueta_pasos": "Cada área, cuatro pasos",
+  "pasos": [
+    "Entrevistamos a 1 o 2 personas por área sobre sus procesos.",
+    "Identificamos el cuello de botella más relevante.",
+    "Construimos en sesión un logro inmediato aplicable.",
+    "Dejamos el inventario de procesos documentado para el Mapa de Calor."
+  ],
+  "quien_construye": "Intezia levanta y construye cada logro en sesión, con las personas de cada área, sobre su forma de trabajo actual.",
+  "fuera_alcance": [
+   "El área de Tecnología: se mapea más adelante, como indicó la clínica.",
+   "Desarrollos e integraciones a medida: son la etapa que sigue a la Detección.",
+   "Licencias de IA: no se incluyen en esta propuesta."
+  ]
+ },
+ "fases": [
+  {
+   "id": "F1",
+   "titulo": "Inicio",
+   "rango": "Semana 1",
+   "descripcion": "Fundamentals en 3 grupos"
+  },
+  {
+   "id": "F2",
+   "titulo": "Seguro",
+   "rango": "Semana 2",
+   "descripcion": "Admisión y Finanzas",
+   "destacada": true
+  },
+  {
+   "id": "F3",
+   "titulo": "Logros",
+   "rango": "Semana 3",
+   "descripcion": "Atención y Almacén"
+  }
+ ],
+ "frentes": [
+  {
+   "id": "A",
+   "carril": "det",
+   "semanas": "S1-S4",
+   "etiqueta": "Las 4 áreas · S1-S4",
+   "areas_html": "Fundamentals y auditoría por áreas",
+   "celdas": {
+    "F1": "3 sesiones de 2 h: Fundamentals por grupos de hasta 25 personas.",
+    "F2": "Admisión y Finanzas, 4 h cada una, con el flujo del seguro y el presupuesto como foco.",
+    "F3": "Atención al Paciente y Almacén, 4 h cada una, con un logro inmediato por área."
+   }
+  }
+ ],
+ "ruta": {
+  "semanas_total": 4,
+  "tope_h_semana": 20,
+  "titulo": "Del kick-off al Reporte Final en 4 semanas.",
+  "subtitulo": "Semanas de trabajo desde el arranque. El **Reporte Final** se entrega en la semana 4.",
+  "nota": "S = semana de trabajo desde el arranque, cuya fecha se acuerda con {cliente}. Las {h_total} h son una proyección de sesión: {h_f1}, {h_f2} y {h_f3} h de las fases 1, 2 y 3. El kick-off de arranque no suma horas. El horario de cada sesión se acuerda con cada jefe de unidad.",
+  "hitos": [
+   {
+    "titulo": "Semana 1 · Nivelación",
+    "texto": "Kick-off y Fundamentals de 2 h en 3 grupos, de hasta 25 personas cada uno."
+   },
+   {
+    "titulo": "Semana 2 · Seguros y presupuestos",
+    "texto": "Admisión y Finanzas, 4 h cada una, con el flujo del seguro y el presupuesto como foco."
+   },
+   {
+    "titulo": "Semana 3 · Pacientes e inventario",
+    "texto": "Atención al Paciente y Almacén, 4 h cada una, con un logro inmediato por área."
+   },
+   {
+    "titulo": "Semana 4 · Reporte Final",
+    "texto": "Mapa de Calor, Índice de Madurez, hoja de ruta y caso para la Junta Directiva."
+   }
+  ]
+ },
+ "seguimiento": {
+  "tipo": "cierre",
+  "etiqueta": "Cierre",
+  "rango": "Reporte Final",
+  "texto": "Trabajo del equipo consultor",
+  "items": [
+   {
+    "dias": "Priorizar",
+    "texto": "Hallazgos por impacto y riesgo."
+   },
+   {
+    "dias": "Reportar",
+    "texto": "Diagnóstico y mapa de oportunidades."
+   },
+   {
+    "dias": "Proyectar",
+    "texto": "Hoja de ruta y caso para la Junta."
+   }
+  ]
+ },
+ "inversion": {
+  "sin_garantia": true,
+  "duracion": "22 h de sesión: Fundamentals (6 h, 3 grupos) y 4 áreas (16 h), en 4 semanas.",
+  "programa": [
+   "Servicio de Detección para la Clínica Santiago de León (DET-027): Fundamentals + 4 áreas de auditoría.",
+   "Fundamentals (3 grupos de 2h) y 4 áreas de auditoría de 4h cada una.",
+   "Cobertura: Admisión, Finanzas y Facturación, Almacén y Atención al Paciente."
+  ],
+  "notas": [
+   "Las sesiones se trabajan sin datos que identifiquen a pacientes. Fechas y modalidad, a coordinar con la clínica.",
+   "El Reporte Final recomienda el ecosistema de IA y las licencias a adquirir; esta propuesta no incluye licencias.",
+   "Habilidades y Políticas, la ruta que sigue, no forman parte de esta inversión."
+  ]
+ },
+ "entregables": {
+  "titulo": "Lo que recibe la clínica.",
+  "subtitulo": "Lo que se llevan: **{n_entregables_txt}**, uno por sesión y por área, más el Mapa de Calor y el Reporte Final con la hoja de ruta.",
+  "transversales": [
+   "Mapa de Calor e Índice de Madurez de las 4 áreas.",
+   "Reporte Final: mapa de oportunidades y hoja de ruta.",
+   "Caso para la Junta Directiva, con retorno e inversión."
+  ],
+  "valor_inmediato": [
+   "Semana 1: equipo con un lenguaje común de IA.",
+   "Semanas 2 y 3: un logro inmediato en cada área.",
+   "Semana 4: Reporte Final y caso para la Junta."
+  ],
+  "columnas_por_carril": [
+   2
+  ]
+ },
+ "retorno": {
+  "modo": "metodo",
+  "posiciones": false,
+  "titulo": "Retorno esperado: decidir con datos.",
+  "subtitulo": "El Reporte Final estima el retorno de cada oportunidad con los datos que cada área entrega en su sesión.",
+  "etiqueta_pasos": "Cómo se estima el retorno de cada oportunidad",
+  "pasos": [
+   {
+    "titulo": "Volumen",
+    "texto": "Cuántos presupuestos, aprobaciones y pedidos de insumos se procesan al mes."
+   },
+   {
+    "titulo": "Tiempo actual",
+    "texto": "Lo que toma hoy cada proceso, según la clínica, y se confirma en la sesión del área."
+   },
+   {
+    "titulo": "Tiempo con la solución",
+    "texto": "Estimación del equipo consultor para cada oportunidad del Mapa de Calor."
+   },
+   {
+    "titulo": "Horas recuperables",
+    "texto": "Volumen por la diferencia de tiempos: una estimación referencial, sin compromiso de resultado."
+   },
+   {
+    "titulo": "Prioridad",
+    "texto": "Cada oportunidad se ordena por impacto, esfuerzo y riesgo."
+   }
+  ],
+  "etiqueta_metas": "Qué decide la clínica con el Reporte Final",
+  "metas": [
+   {
+    "dias": "Prioridades",
+    "texto": "Qué automatizar primero en las 4 áreas, según impacto, esfuerzo y riesgo."
+   },
+   {
+    "dias": "Herramientas",
+    "texto": "Qué herramientas y licencias de IA adoptar, con datos de sus propias áreas."
+   },
+   {
+    "dias": "Junta Directiva",
+    "texto": "Qué inversión y qué retorno llevar a la Junta para decidir con datos."
+   }
+  ],
+  "etiqueta_destino": "Hacia dónde sigue la ruta",
+  "destino": [
+   {
+    "rotulo": "Ahora · Detección",
+    "texto": "Cada área sale de su sesión con un **logro inmediato** que ya puede usar."
+   },
+   {
+    "rotulo": "Después · Habilidades",
+    "texto": "El equipo aprende a aplicar la IA en sus procesos y a crear sus propios asistentes."
+   },
+   {
+    "rotulo": "Más adelante · Políticas",
+    "texto": "Una política de uso de IA que proteja la información de los pacientes."
+   }
+  ],
+  "gancho": "Con el Reporte Final, {cliente_corto} decide qué automatizar primero y qué llevar a su Junta Directiva, con datos de sus propias áreas y no a ciegas."
+ },
+ "siglas_ok": [
+  "IA",
+  "SAP"
+ ],
+ "supuestos": [
+  "División Educación inferida: clínica privada, cliente corporativo. Alianza: no (la ficha no menciona ninguna). Confirmar con la asesora.",
+  "Horas por el lineamiento de Detección: Fundamentals de 2 h con un máximo de 25 personas por sesión y 4 h por área en 4 áreas. Con un universo declarado de unas 60 a 70 personas (con turnos de guardia) salen 3 grupos de Fundamentals (6 h) y 16 h de áreas: 22 h en total. El kick-off de arranque va aparte y no suma horas (convención general).",
+  "Los 3 grupos de Fundamentals se arman con la clínica por áreas y turnos, que la ficha no detalla (cuántas personas hay por área ni cómo se reparten las guardias de mañana, tarde y noche). Si los turnos obligan a más grupos, suben las horas: confirmar.",
+  "Calendario propuesto por el sistema, no dictado por la ficha: 4 semanas (S1 kick-off y Fundamentals en 3 grupos, S2 Admisión y Finanzas, S3 Atención al Paciente y Almacén, S4 Reporte Final). Admisión y Finanzas van juntas porque comparten el flujo del seguro y el presupuesto. El Reporte Final va una semana después de la última sesión para dar tiempo al caso para la Junta. Orden y calendario por confirmar con servicio y con la asesora.",
+  "Cada sesión de área es de 4 h con 1 o 2 personas (la ficha dice «1 o 2 por área»: jefes y gerentes de cada unidad, sin nombres). Cada sesión de área se presenta como un entregable; el Mapa de Calor, el Índice de Madurez y el Reporte Final son trabajo del equipo consultor, sin sesión con el cliente ni horas propias: van como entregables transversales.",
+  "Caso para la Junta Directiva: la ficha pide «un caso con presupuesto que se pueda defender ante la Junta». El deck lo lleva como entregable del Reporte Final («con retorno e inversión»). Confirmar con servicio que el Reporte Final estándar incluye una estimación de inversión de la ruta que sigue.",
+  "El deck no cita el modelo HIPAA ni ninguna norma: la ficha dice que la clínica lo usa solo como referencia. Las sesiones se trabajan sin datos que identifican a pacientes (decisión de diseño por la sensibilidad de los datos médicos); confirmar con la clínica.",
+  "Logro inmediato: la ficha identifica conectar el triaje con la aprobación del seguro y el presupuesto. El deck lo presenta como el foco de la semana 2, no como un logro prometido; el primer paso aplicable se define en la sesión.",
+  "Modalidad, fechas y horarios se omiten: la ficha no los trae.",
+  "Retorno en modo método: la ficha trae tiempos declarados (aprobación del seguro cerca de 1 hora, presupuesto cerca de 15 minutos, triaje unos 5 minutos) y un volumen (unos 2.000 pacientes al mes), pero no costo hora ni tiempos con la solución; el Reporte Final los estima. Sin compromiso de resultado.",
+  "Reglas de Detección que se conservan: sin certificado, sin garantía 30-60-90, sin pre-recomendar herramienta de IA (el Reporte Final recomienda), sin dolor dramatizado ni citas textuales, sin nombres de personas del cliente ni su cargo, sin el uso personal de IA del contacto.",
+  "Fuera del deck y del alcance: el proceso 4 de la ficha (seguimiento de proyectos internos en Notion) no pertenece a ninguna de las 4 áreas priorizadas; el área de Tecnología (la ficha la deja para después) y el proyecto paralelo de investigación médica con IA que mencionó el contacto."
+ ],
+ "pendientes": [
+  "Definir inversión, descuento y total (campos vacíos para ventas). La disponibilidad presupuestaria no está definida, el patrocinio ejecutivo no está asegurado y la Junta Directiva decide: el valor debe poder defenderse ante ella y calzar con 22 h de sesión.",
+  "Confirmar con la asesora las fechas, los horarios, la modalidad y el orden de las áreas; el deck solo lleva semanas y no muestra asesora ni contacto.",
+  "Confirmar cuántas personas hay por área y cómo son los turnos, para fijar los 3 grupos de Fundamentals.",
+  "Confirmar si el Reporte Final se entrega en la semana 4 y si incluye una estimación de inversión de la ruta que sigue.",
+  "Confirmar la división (Educación), que no es alianza y si el kick-off va aparte (criterio por defecto)."
+ ]
+}

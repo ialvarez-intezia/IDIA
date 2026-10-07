@@ -1,350 +1,111 @@
 <!doctype html>
 <!--
-  Propuesta — N58 Banco Digital · Mercadeo con Claude (CAI-034)
-  Servicio: HABILIDADES. División: Educación. Fuente: Ficha de Levantamiento N58
-  (Flavia Martínez, 2026-10-01) — primer contacto, sin servicio previo. Ver brief.md.
+  Propuesta · N58 Banco Digital · Servicio de Habilidades (CAI-034)
+  División: Educación · Servicio: Habilidades (§4.1a) · Alianza: no
+  GENERADO por scripts/generar-habilidades-compacto.py (plantilla 1.3 (2026-10-05)) desde datos.json.
+  No editar a mano: editar datos.json y regenerar. Estilos propios del deck: overrides.css.
+  Fuente del insumo: Ficha de Levantamiento de N58 (01/10/2026) y brief.md de la propuesta CAI-034
 
-  QUÉ PIDE EL CLIENTE: Mercadeo de N58 (equipo pequeño: gerente + 2 de apoyo) necesita
-  producir el contenido de su lanzamiento a personas naturales — creativos (estáticos y
-  video) y artículos de posicionamiento SEO reputacional — y quedar capacitado (1 persona)
-  con una Skill de Claude entrenada con su marca. Prioridad del banco: terminar el
-  lanzamiento primero; esta propuesta se integra a ese calendario, no compite con él.
-  Modalidad: presencial (dato directo de la Ficha). Sin fecha de arranque ni resultados
-  esperados confirmados — se omiten el calendario de inicio con fechas y el ROI numérico en
-  vez de inventarlos (ver brief.md).
-
-  ESTRUCTURA: caso base banco-plaza-mercadeo/ (CAI-024, mismo servicio y tipo, mismo
-  sector) — reutilizado sin dejar rastro de ese cliente (instrucción directa del usuario).
-  3 módulos (no 2): Producción de creativos / Contenido SEO reputacional / Fundamentals +
-  Skill. 4 etapas: Kick-off (1h, aparte) → Fundamentals (2h) → Construcción (6h, 3
-  revisiones) → Implementación (4h, 2 sesiones). Total 12h de propuesta.
-
-  Impacto (§4.9): reutiliza cifras ya verificadas (mismo eje: adopción de IA en tareas de
-  mercadeo) — HubSpot State of AI for Marketers (2025), Salesforce State of Marketing 10ª
-  ed. (2026), McKinsey Economic Potential of Generative AI (2023). SIN <strong> en
-  .impact-hook .hook-text (memoria bug-strong-glitch-impact-hook-text.md).
-
-  Sin slide de Mapa de Calor ni Metodología ABR ni Equipo facilitador expuestos (§4.10a).
-  Con certificado (Habilidades con capacitación real, 1 persona). Beneficios v3, Cierre
-  escalera, servicio@intezia.com. Sin citas textuales (instrucción directa del usuario).
-  15 slides.
+  Formato compacto de 6 slides (distinto del deck canónico de ~13):
+    1 Portada con punto de dolor · 2 Alcance · 3 Ruta · 4 Inversión · 5 Entregables · 6 Retorno esperado
+  Marcadores de detección de AcroForms (agregar-campo-precio.py), por página: «Propuesta Económica»
+  solo en la slide de inversión; «Lo que se llevan» y «Entregables» solo en la de entregables.
+  Campos AcroForm: Programa, Notas, PrecioBase, Descuento, PrecioTotal (inversión) y Entregables, Acreditacion (entregables). Se reposicionan con scripts/customize-habilidades-compacto.py.
 -->
 <html lang="es">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Propuesta · N58 Banco Digital · Mercadeo con Claude · Intezia</title>
+  <title>Propuesta · N58 Banco Digital · Intezia Educación</title>
   <link rel="stylesheet" href="../_base/styles.css">
+  <link rel="stylesheet" href="habilidades-compacto.css">
   <link rel="stylesheet" href="overrides.css">
 </head>
 <body>
 
   <main class="deck">
 
-    <!-- 1 · Portada -->
+    <!-- 1 · Portada con punto de dolor -->
     <section class="slide s-cover">
-      <span class="counter">01 / 15</span>
+      <span class="counter">01 / 06</span>
       <div class="logo-big">
-        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia Educación">
       </div>
       <div class="body">
-        <p class="eyebrow">Propuesta formativa · Servicio de Habilidades</p>
-        <h1>
-          De un equipo de una persona,<br>
-          <span class="hl">a un mercadeo que no se detiene.</span>
+        <p class="eyebrow">Propuesta de proyecto · Servicio de Habilidades</p>
+        <h1 style="font-size:46px">
+          Producción del contenido<br>
+          de lanzamiento de N58<br>
+          <span class="hl">con Claude y una Skill propia</span>
         </h1>
         <p class="lead">
-          Producimos los creativos y los artículos del lanzamiento de N58, y dejamos a su equipo con una <strong>Skill de Claude</strong> entrenada con su marca para seguir solos.
+          Este proyecto produce los <strong>creativos</strong> y los artículos de posicionamiento en buscadores (SEO) del lanzamiento de N58, y deja a 1 persona de Mercadeo con una <strong>Skill</strong> de Claude con la marca del banco para seguir produciendo por su cuenta.
         </p>
+        <div class="pain-strip">
+          <div class="pain-item">
+            <span class="pain-num">3</span>
+            <span class="pain-lbl">personas en Mercadeo para un lanzamiento completo: gerencia, Instagram y apoyo operativo.</span>
+          </div>
+          <div class="pain-item">
+            <span class="pain-num">100%</span>
+            <span class="pain-lbl">digital: el banco debe llegar a un público acostumbrado a ir a la agencia.</span>
+          </div>
+          <div class="pain-item">
+            <span class="pain-num">SEO</span>
+            <span class="pain-lbl">reputacional sin gestión activa: hoy no se controla qué aparece primero al buscar la marca.</span>
+          </div>
+        </div>
+        <p class="pain-src">Fuente: Ficha de Levantamiento de N58 (01/10/2026).</p>
       </div>
       <div class="id-line">
         <span class="codigo">Código: CAI-034</span>
-        <span class="cliente">N58 Banco Digital</span>
+        <span class="cliente">N58</span>
       </div>
     </section>
 
-    <!-- 2 · Punto de dolor + Diagnóstico -->
-    <section class="slide s-pain">
-      <span class="counter">02 / 15</span>
-      <span class="quote-mark">&ldquo;</span>
-      <div class="body">
-        <h2>&ldquo;Que el contenido del lanzamiento avance solo, mientras el equipo sostiene todo lo demás.&rdquo;</h2>
-        <p class="context">
-          N58 está cerrando el lanzamiento de su cuenta para personas naturales. Mercadeo entra como parte de ese mismo calendario, no como un gasto aparte: el objetivo es que el contenido esté listo a tiempo, sin sumar más personas al equipo.
-        </p>
-        <p class="diag-title">Diagnóstico</p>
-        <ol>
-          <li>Mercadeo hoy es una persona con apoyo operativo, frente al volumen de piezas que exige un lanzamiento completo.</li>
-          <li>El público al que llega el banco todavía está acostumbrado a ir a la agencia, y cada pieza debe construir confianza en un canal 100% digital.</li>
-          <li>No existe todavía un proceso sistematizado de producción: cada pieza depende de capacidad puntual, no de un método repetible.</li>
-          <li>El posicionamiento en buscadores no se gestiona de forma activa, y hoy no hay control sobre qué aparece primero al buscar la marca.</li>
-          <li>El lanzamiento ya tiene su propio calendario: el apoyo de contenido debe integrarse a esa fecha, no sumar una decisión aparte.</li>
-        </ol>
-      </div>
-      <div class="foot">
-        <img src="../../../logos/educacion/NEGRO.png" alt="">
-        <span class="meta">N58 BANCO DIGITAL · CAI-034</span>
-      </div>
-    </section>
+    <!-- 2 · Alcance -->
+    <section class="slide s-scope">
+      <span class="counter">02 / 06</span>
+      <p class="eyebrow">02 · Alcance</p>
+      <h2>Contenido para el lanzamiento y una Skill propia.</h2>
+      <p class="sub">Producimos <strong>más de 50 creativos</strong> y <strong>4 artículos</strong>, dentro del calendario de lanzamiento ya en marcha del banco.</p>
 
-    <!-- 3 · Objetivos estratégicos -->
-    <section class="slide s-goals">
-      <span class="counter">03 / 15</span>
-      <p class="eyebrow">02 · Objetivos</p>
-      <h2>A dónde llevamos<br>el mercadeo de N58.</h2>
-      <div class="columns">
-        <div class="general">
-          <p class="label">Objetivo general</p>
-          <p>
-            Producir el contenido del lanzamiento de N58, creativos y artículos de posicionamiento en buscadores (SEO) reputacional, con Claude, y dejar a una persona del equipo de Mercadeo capacitada y con una Skill propia para seguir produciendo de forma autónoma.
-          </p>
-        </div>
-        <div class="specifics">
-          <p class="label">Objetivos específicos</p>
-          <ol>
-            <li>Levantar en el kick-off la marca, el calendario de lanzamiento y los productos prioritarios.</li>
-            <li>Producir más de 50 creativos (estáticos y video) para el lanzamiento.</li>
-            <li>Publicar 4 artículos de posicionamiento SEO reputacional.</li>
-            <li>Capacitar a 1 persona del equipo y construir junto a ella una Skill propia.</li>
-          </ol>
-        </div>
-      </div>
-      <div class="foot">
-        <img src="../../../logos/educacion/NEGRO.png" alt="">
-        <span class="meta">N58 BANCO DIGITAL · CAI-034</span>
-      </div>
-    </section>
+      <div class="scope-body">
+        <div class="scope-left">
 
-    <!-- 4 · El servicio (3 pilares) -->
-    <section class="slide s-program">
-      <span class="counter">04 / 15</span>
-      <p class="eyebrow">03 · El servicio</p>
-      <h2>3 frentes, un mismo lanzamiento.</h2>
-      <p class="meta">Creativos, posicionamiento y capacitación, en una sola ruta.</p>
-      <div class="modules">
-        <div class="module">
-          <span class="roman">I</span>
-          <h3>Producción de creativos</h3>
-          <p class="obj">Intezia produce el contenido gráfico y audiovisual del lanzamiento según la marca del banco.</p>
-          <ul class="topics">
-            <li>Bocetos y conceptos</li>
-            <li>Piezas estáticas y video</li>
-            <li>Llamados a la acción</li>
-          </ul>
-        </div>
-        <div class="module">
-          <span class="roman">II</span>
-          <h3>Contenido SEO reputacional</h3>
-          <p class="obj">Intezia produce los artículos que construyen reputación digital y posicionamiento en buscadores (SEO).</p>
-          <ul class="topics">
-            <li>Artículos de posicionamiento</li>
-            <li>Mitigación de riesgo reputacional</li>
-          </ul>
-        </div>
-        <div class="module">
-          <span class="roman">III</span>
-          <h3>Fundamentals + Skill</h3>
-          <p class="obj">La persona designada aprende Claude y construye, junto a Intezia, una Skill entrenada con su marca.</p>
-          <ul class="topics">
-            <li>Fundamentals de Claude</li>
-            <li>Construcción de la Skill</li>
-          </ul>
-        </div>
-      </div>
-      <div class="foot">
-        <img src="../../../logos/educacion/NEGRO.png" alt="">
-        <span class="meta">N58 BANCO DIGITAL · CAI-034</span>
-      </div>
-    </section>
-
-    <!-- 5 · Roadmap 1/2 · Kick-off y Fundamentals -->
-    <section class="slide s-roadmap">
-      <span class="counter">05 / 15</span>
-      <p class="eyebrow">04 · Roadmap · Etapas 1-2 de 4</p>
-      <h2>Primero la marca,<br><span class="hl">después el aprendizaje</span>.</h2>
-
-      <div class="rmx-field">
-        <div class="rmx-linear">
-
-          <div class="rmx-lrow-nodes">
-            <div class="rmx-lcol"><div class="rmx-node rmx-node-f2">1</div></div>
-            <div class="rmx-arrow"></div>
-            <div class="rmx-lcol"><div class="rmx-node rmx-node-f3">2</div></div>
-            <div class="rmx-arrow"></div>
-            <div class="rmx-lcol"><div class="rmx-node rmx-node-r">&#9733;</div></div>
-          </div>
-
-          <div class="rmx-lrow-cards">
-            <div class="rmx-lcol">
-              <div class="rmx-card rmx-card-f2">
-                <span class="rmx-card-tag">Etapa 1 · Kick-off</span>
-                <div class="rmx-card-name">1h &middot; aparte, sin contar en las 12h</div>
-                <ul class="rmx-facets">
-                  <li><span>Qué pasa</span><p>Levantamos marca, calendario de lanzamiento y productos prioritarios.</p></li>
-                  <li><span>Con quién</span><p>Gerente de Mercadeo.</p></li>
-                  <li><span>Entrega</span><p>Plan de piezas acordado.</p></li>
-                </ul>
-              </div>
+          <div class="scope-panel acc-y">
+            <div class="scope-head">
+              <span class="scope-tag">Claude</span>
+              <span class="scope-total"><b>6</b> entregables · 3 etapas</span>
             </div>
-            <div class="rmx-lspacer"></div>
-            <div class="rmx-lcol">
-              <div class="rmx-card rmx-card-f3">
-                <span class="rmx-card-tag">Etapa 2 · Fundamentals</span>
-                <div class="rmx-card-name">2h &middot; con el equipo</div>
-                <ul class="rmx-facets">
-                  <li><span>Qué pasa</span><p>El equipo aprende Claude aplicado a creativos y artículos.</p></li>
-                  <li><span>Con quién</span><p>Equipo de Mercadeo.</p></li>
-                  <li><span>Entrega</span><p>Criterio común para lo que sigue.</p></li>
-                </ul>
-              </div>
-            </div>
-            <div class="rmx-lspacer"></div>
-            <div class="rmx-lcol">
-              <div class="rmx-result-card">
-                <span class="rmx-result-label">Al cierre de esta etapa</span>
-                <div class="rmx-result-title">Equipo listo <b>para producir con criterio</b></div>
-                <ul>
-                  <li>Marca y calendario de lanzamiento levantados</li>
-                  <li>Lenguaje común de Claude para las etapas que siguen</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-        </div><!-- /.rmx-linear -->
-
-        <div class="rmx-ethics">
-          <span class="rmx-ethics-tag">Metodología ABR · Contexto real antes de producir</span>
-          <p>Intezia no produce el contenido del lanzamiento sin antes levantar la marca y el calendario reales en el kick-off.</p>
-        </div>
-
-      </div><!-- /.rmx-field -->
-
-      <div class="foot">
-        <img src="../../../logos/educacion/BLANCO.png" alt="">
-        <span class="meta">N58 BANCO DIGITAL · CAI-034</span>
-      </div>
-    </section>
-
-    <!-- 6 · Roadmap 2/2 · Construcción e Implementación -->
-    <section class="slide s-roadmap">
-      <span class="counter">06 / 15</span>
-      <p class="eyebrow">04 · Roadmap · Etapas 3-4 de 4</p>
-      <h2>Del contenido,<br><span class="hl">al equipo autónomo</span>.</h2>
-
-      <div class="rmx-field">
-        <div class="rmx-linear">
-
-          <div class="rmx-lrow-nodes">
-            <div class="rmx-lcol"><div class="rmx-node rmx-node-f2">3</div></div>
-            <div class="rmx-arrow"></div>
-            <div class="rmx-lcol"><div class="rmx-node rmx-node-f4">4</div></div>
-            <div class="rmx-arrow"></div>
-            <div class="rmx-lcol"><div class="rmx-node rmx-node-r">&#9733;</div></div>
-          </div>
-
-          <div class="rmx-lrow-cards">
-            <div class="rmx-lcol">
-              <div class="rmx-card rmx-card-f2">
-                <span class="rmx-card-tag">Etapa 3 · Construcción</span>
-                <div class="rmx-card-name">6h &middot; 3 revisiones de 2h</div>
-                <ul class="rmx-facets">
-                  <li><span>Qué pasa</span><p>Intezia produce creativos y artículos, y revisa avances con Mercadeo.</p></li>
-                  <li><span>Con quién</span><p>Equipo de Mercadeo.</p></li>
-                  <li><span>Entrega</span><p>Contenido del lanzamiento listo.</p></li>
-                </ul>
-              </div>
-            </div>
-            <div class="rmx-lspacer"></div>
-            <div class="rmx-lcol">
-              <div class="rmx-card rmx-card-f4">
-                <span class="rmx-card-tag">Etapa 4 · Implementación</span>
-                <div class="rmx-card-name">4h &middot; 2 sesiones</div>
-                <ul class="rmx-facets">
-                  <li><span>Qué pasa</span><p>Construimos la Skill entrenada con la marca.</p></li>
-                  <li><span>Con quién</span><p>1 persona designada de Mercadeo.</p></li>
-                  <li><span>Entrega</span><p>Skill operativa y persona certificada.</p></li>
-                </ul>
-              </div>
-            </div>
-            <div class="rmx-lspacer"></div>
-            <div class="rmx-lcol">
-              <div class="rmx-result-card">
-                <span class="rmx-result-label">Entregable insignia · Mercadeo autónomo</span>
-                <div class="rmx-result-title">De producción limitada a <b>un proceso propio</b></div>
-                <ul>
-                  <li>Más de 50 creativos del lanzamiento, listos</li>
-                  <li>4 artículos de posicionamiento publicados</li>
-                  <li>Skill de Claude operativa, 1 persona certificada</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-        </div><!-- /.rmx-linear -->
-      </div><!-- /.rmx-field -->
-
-      <div class="foot">
-        <img src="../../../logos/educacion/BLANCO.png" alt="">
-        <span class="meta">N58 BANCO DIGITAL · CAI-034</span>
-      </div>
-    </section>
-
-    <!-- 7 · Fundamentals de Claude -->
-    <section class="slide s-schedule">
-      <span class="counter">07 / 15</span>
-      <p class="eyebrow">04 · Fundamentals de Claude</p>
-
-      <div class="ses-head">
-        <div>
-          <span class="ses-mod">Sesión presencial con el equipo de Mercadeo</span>
-          <h2>Fundamentals de Claude</h2>
-        </div>
-        <div class="ses-meta"><span class="ses-dur">2h</span></div>
-      </div>
-
-      <div class="ses-body">
-        <div class="ses-block">
-          <span class="label">Temas</span>
-          <div class="chips">
-            <span class="chip">Qué es y qué no es Claude</span>
-            <span class="chip">Creativos y artículos con IA</span>
-            <span class="chip">Buenas prácticas de prompting</span>
-            <span class="chip">Ruta hacia la Skill</span>
-          </div>
-        </div>
-        <div class="ses-block">
-          <span class="label">Tiempo &middot; Total 2 h</span>
-          <div class="timebar">
-            <div class="seg" style="flex:30">30' Encuadre y fundamentos</div>
-            <div class="seg" style="flex:45">45' Casos de creativos y artículos</div>
-            <div class="seg" style="flex:30">30' Buenas prácticas</div>
-            <div class="seg" style="flex:15">15' Cierre y ruta hacia la Skill</div>
-          </div>
-        </div>
-        <div class="ses-cols">
-          <div class="ses-block">
-            <span class="label">Qué se hace</span>
-            <ul>
-              <li>Presentamos qué es y qué no es Claude, con foco en creativos y artículos</li>
-              <li>Revisamos casos reales de creativos y artículos aplicables a Mercadeo</li>
-              <li>Practicamos buenas prácticas de prompting sobre esos casos</li>
+            <ul class="scope-rows">
+              <li><span class="area">Fundamentals <small class="comp">Claude aplicado a creativos y artículos.</small></span><span class="units" style="--n:1"></span><span class="n">1</span></li>
+              <li><span class="area">Construcción <small class="comp">Creativos y artículos del lanzamiento, con 3 revisiones.</small></span><span class="units" style="--n:3"></span><span class="n">3</span></li>
+              <li><span class="area">Implementación <small class="comp">Skill con la marca, probada con casos reales.</small></span><span class="units" style="--n:2"></span><span class="n">2</span></li>
             </ul>
           </div>
-          <div class="ses-block">
-            <span class="label">Qué se logra</span>
-            <ul>
-              <li>El equipo llega a la Construcción con un lenguaje común</li>
-              <li>Primeras prácticas aplicadas a creativos y artículos</li>
-              <li>Claridad sobre qué resuelve Claude en el día a día de Mercadeo</li>
-            </ul>
+
+        </div>
+
+        <div class="scope-right">
+          <div class="scope-card">
+            <p class="scope-card-label">Cómo trabajamos</p>
+            <ol class="scope-steps">
+              <li>Levantamos marca, calendario y productos prioritarios en el kick-off.</li>
+              <li>Nivelamos a Mercadeo en Claude, aplicado a creativos y artículos.</li>
+              <li>Producimos creativos y artículos y los revisamos con Mercadeo.</li>
+              <li>Construimos con 1 persona la Skill y medimos a 30, 60 y 90 días.</li>
+            </ol>
           </div>
-          <div class="ses-block block-rec">
-            <span class="label">Recursos y entornos</span>
+          <div class="scope-card">
+            <p class="scope-card-label">Quién construye</p>
+            <p>Intezia produce los creativos y los artículos con la marca de N58 y construye con 1 persona de Mercadeo la Skill, un conjunto de instrucciones reutilizables de Claude.</p>
+          </div>
+          <div class="scope-card scope-out">
+            <p class="scope-card-label">Fuera de este alcance</p>
             <ul>
-              <li>Sesión presencial con el equipo de Mercadeo</li>
-              <li>Casos reales del lanzamiento</li>
-              <li>Sin herramientas técnicas todavía</li>
+              <li>Las licencias de Claude: no se incluyen en esta propuesta.</li>
+              <li>Formar a más de una persona: la Skill se construye con 1 persona designada de Mercadeo.</li>
             </ul>
           </div>
         </div>
@@ -352,240 +113,83 @@
 
       <div class="foot">
         <img src="../../../logos/educacion/NEGRO.png" alt="">
-        <span class="meta">N58 BANCO DIGITAL · CAI-034</span>
+        <span class="meta">N58 · CAI-034</span>
       </div>
     </section>
 
-    <!-- 8 · Construcción (producción con revisión) -->
-    <section class="slide s-schedule">
-      <span class="counter">08 / 15</span>
-      <p class="eyebrow">04 · Construcción</p>
+    <!-- 3 · Ruta -->
+    <section class="slide s-route">
+      <span class="counter">03 / 06</span>
+      <p class="eyebrow">03 · Ruta</p>
+      <h2>Del kick-off a una Skill propia, en 6 semanas.</h2>
+      <p class="sub">Semanas de trabajo desde el arranque, con <strong>seguimiento a 30, 60 y 90 días</strong> desde el cierre de la implementación.</p>
 
-      <div class="ses-head">
-        <div>
-          <span class="ses-mod">3 sesiones presenciales con el equipo de Mercadeo</span>
-          <h2>Construcción &middot; producción con revisión</h2>
-        </div>
-        <div class="ses-meta"><span class="ses-dur">6h</span></div>
-      </div>
+      <div class="route-grid" style="--cols:3; --rows:1; --rowh:214px">
 
-      <div class="ses-body">
-        <div class="ses-block">
-          <span class="label">Temas</span>
-          <div class="chips">
-            <span class="chip">Revisión de avance</span>
-            <span class="chip">Ajuste de dirección creativa</span>
-            <span class="chip">Parámetros de marca en producción</span>
-            <span class="chip">Artículos en revisión</span>
-          </div>
+        <div class="rg-corner"></div>
+        <div class="rg-phase rg-ph-1">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Bases</span><b class="rg-phase-n">1 entregable</b></span>
+          <span class="rg-phase-date">Semana 1</span>
+          <span class="rg-phase-txt">Fundamentals de Claude</span>
         </div>
-        <div class="ses-block">
-          <span class="label">Tiempo &middot; Total 6 h</span>
-          <div class="timebar">
-            <div class="seg" style="flex:120">2h Revisión de avance 1</div>
-            <div class="seg" style="flex:120">2h Revisión de avance 2</div>
-            <div class="seg" style="flex:120">2h Revisión de avance 3</div>
-          </div>
+        <div class="rg-phase rg-ph-2 hi">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Piezas</span><b class="rg-phase-n">3 entregables</b></span>
+          <span class="rg-phase-date">Semanas 2-4</span>
+          <span class="rg-phase-txt">Creativos y artículos</span>
         </div>
-        <div class="ses-cols">
-          <div class="ses-block">
-            <span class="label">Qué se hace</span>
-            <ul>
-              <li>Revisamos los creativos y artículos producidos hasta el momento</li>
-              <li>Ajustamos dirección creativa y editorial según el feedback de Mercadeo</li>
-              <li>Validamos que los parámetros de marca se respeten</li>
-            </ul>
-          </div>
-          <div class="ses-block">
-            <span class="label">Qué se logra</span>
-            <ul>
-              <li>Contenido alineado con la visión real de Mercadeo</li>
-              <li>Ajustes tempranos, sin esperar al cierre del lanzamiento</li>
-              <li>Equipo con visibilidad del proceso de producción</li>
-            </ul>
-          </div>
-          <div class="ses-block block-rec">
-            <span class="label">Recursos y entornos</span>
-            <ul>
-              <li>Sesión presencial con el equipo de Mercadeo</li>
-              <li>Avances de producción del lanzamiento</li>
-              <li>Parámetros de marca del kick-off</li>
-            </ul>
-          </div>
+        <div class="rg-phase rg-ph-3">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Skill</span><b class="rg-phase-n">2 entregables</b></span>
+          <span class="rg-phase-date">Semanas 5-6</span>
+          <span class="rg-phase-txt">La Skill queda en el equipo</span>
         </div>
-      </div>
+        <div class="rg-phase rg-fu">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Garantía</span></span>
+          <span class="rg-phase-date">30, 60 y 90 días</span>
+          <span class="rg-phase-txt">Desde el cierre de la implementación</span>
+        </div>
 
-      <div class="foot">
-        <img src="../../../logos/educacion/NEGRO.png" alt="">
-        <span class="meta">N58 BANCO DIGITAL · CAI-034</span>
-      </div>
-    </section>
-
-    <!-- 9 · Implementación de la Skill -->
-    <section class="slide s-schedule">
-      <span class="counter">09 / 15</span>
-      <p class="eyebrow">04 · Implementación de la Skill</p>
-
-      <div class="ses-head">
-        <div>
-          <span class="ses-mod">2 sesiones presenciales con el equipo de Mercadeo</span>
-          <h2>Implementación de la Skill</h2>
+        <div class="rg-front acc-y">
+          <span class="rg-front-top"><b class="rg-front-name">Claude</b><span class="rg-front-tag">Equipo de Mercadeo</span></span>
+          <span class="rg-front-h"><b>6 entregables</b> · <span class="nw">12 h</span> · <span class="nw">S1-S6</span></span>
+          <span class="rg-front-areas">Fundamentals, Construcción e Implementación</span>
         </div>
-        <div class="ses-meta"><span class="ses-dur">4h</span></div>
-      </div>
+        <div class="rg-cell"><span class="rg-h"><b>1</b> entregable <i>2 h</i></span><p>Sesión de 2 h: Claude aplicado a creativos y artículos, con casos reales del lanzamiento.</p></div>
+        <div class="rg-cell hi"><span class="rg-h"><b>3</b> entregables <i>6 h</i></span><p>3 sesiones de 2 h: Intezia produce entre sesiones y revisa los avances con Mercadeo.</p></div>
+        <div class="rg-cell"><span class="rg-h"><b>2</b> entregables <i>4 h</i></span><p>2 sesiones de 2 h: la Skill con la marca, probada con casos reales de producción.</p></div>
 
-      <div class="ses-body">
-        <div class="ses-block">
-          <span class="label">Temas</span>
-          <div class="chips">
-            <span class="chip">Estructura de una Skill</span>
-            <span class="chip">Parámetros de marca</span>
-            <span class="chip">Prueba con casos reales</span>
-            <span class="chip">Documentación y entrega</span>
-          </div>
-        </div>
-        <div class="ses-block">
-          <span class="label">Tiempo &middot; Total 4 h</span>
-          <div class="timebar">
-            <div class="seg" style="flex:120">2h Construcción de la Skill</div>
-            <div class="seg" style="flex:120">2h Prueba, ajuste y entrega</div>
-          </div>
-        </div>
-        <div class="ses-cols">
-          <div class="ses-block">
-            <span class="label">Sesión 1 &middot; 2h</span>
-            <ul>
-              <li>Explicamos cómo se estructura una Skill de Claude</li>
-              <li>Construimos junto a la persona designada la Skill sobre la marca real</li>
-            </ul>
-          </div>
-          <div class="ses-block">
-            <span class="label">Sesión 2 &middot; 2h</span>
-            <ul>
-              <li>Probamos la Skill con casos reales de producción</li>
-              <li>Ajustamos, documentamos y entregamos la versión final certificada</li>
-            </ul>
-          </div>
-          <div class="ses-block block-rec">
-            <span class="label">Recursos y entornos</span>
-            <ul>
-              <li>Sesión presencial con el equipo de Mercadeo</li>
-              <li>Parámetros de marca del kick-off</li>
-              <li>Skill documentada y lista para reutilizar</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="foot">
-        <img src="../../../logos/educacion/NEGRO.png" alt="">
-        <span class="meta">N58 BANCO DIGITAL · CAI-034</span>
-      </div>
-    </section>
-
-    <!-- 10 · Beneficios (formato v3) -->
-    <section class="slide s-benefits s-benefits-v2">
-      <span class="counter">10 / 15</span>
-      <p class="eyebrow">05 · Beneficios</p>
-      <h2>Lo que <span class="hl">se llevan</span>.</h2>
-      <div class="grid">
-        <div class="block">
-          <p class="label">Resultados</p>
+        <div class="rg-follow" style="grid-column:5; grid-row:2 / span 1">
           <ul>
-            <li>El contenido del <strong>lanzamiento resuelto</strong>, con creativos y artículos de posicionamiento según la marca real del banco.</li>
-            <li>1 persona de Mercadeo capacitada en Fundamentals de Claude.</li>
-            <li>Una Skill propia para seguir produciendo sin depender de Intezia.</li>
+            <li><b>30 días</b><span>Uso real de la Skill</span></li>
+            <li><b>60 días</b><span>Mejoras que construye el equipo</span></li>
+            <li><b>90 días</b><span>Tiempo ahorrado y su reinversión</span></li>
           </ul>
         </div>
-        <div class="block">
-          <p class="label">Por qué Habilidades</p>
-          <p>
-            No nos quedamos en la entrega del contenido del lanzamiento: <strong>construimos, probamos y dejamos instalada</strong> la Skill que reproduce el proceso, para que Mercadeo gane autonomía real, no solo un lanzamiento resuelto.
-          </p>
-        </div>
-        <div class="block">
-          <p class="label">Entregables</p>
-        </div>
-        <div class="block">
-          <p class="label">Valor inmediato</p>
-        </div>
       </div>
 
-      <div class="multi-box entregables-box" data-field="Entregables"></div>
-      <div class="multi-box acreditaciones-box" data-field="Acreditacion"></div>
-      <div class="foot">
-        <img src="../../../logos/educacion/BLANCO.png" alt="">
-        <span class="meta">N58 BANCO DIGITAL · CAI-034</span>
+      <div class="route-miles" style="grid-template-columns:repeat(5,1fr)">
+        <div class="mile"><span class="mile-d"></span><b>Kick-off · aparte</b><p>1 h con Mercadeo para levantar marca, calendario de lanzamiento y productos prioritarios.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>S1 · Fundamentals</b><p>2 h con el equipo: Claude aplicado a creativos y artículos.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>S2-S4 · Construcción</b><p>3 revisiones de 2 h: Intezia produce entre sesiones y ajusta con Mercadeo.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>S5-S6 · Implementación</b><p>2 sesiones de 2 h: la Skill con la marca, probada con casos reales.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>30 · 60 · 90 días</b><p>Seguimiento: uso de la Skill, nuevas construcciones y tiempo ahorrado.</p></div>
       </div>
-    </section>
-
-    <!-- 11 · Impacto / estudios — datos reales, fuente citada (CLAUDE.md §4.9) -->
-    <section class="slide s-impact">
-      <span class="counter">11 / 15</span>
-
-      <div class="impact-head">
-        <p class="eyebrow">06 · Impacto</p>
-        <h2>La evidencia no deja<br><span class="hl">lugar a dudas</span>.</h2>
-      </div>
-
-      <div class="impact-body">
-        <div class="chart-panel">
-          <p class="panel-title">Adopción de IA por tipo de tarea de marketing</p>
-          <div class="bars">
-            <div class="bar-row">
-              <span class="bar-label">Marketers que usan IA para creación de contenido escrito</span>
-              <div class="bar-track"><div class="bar-fill" style="--w:55%"><span class="bar-val">55%</span></div></div>
-            </div>
-            <div class="bar-row">
-              <span class="bar-label">Marketers que usan IA para generación de imágenes</span>
-              <div class="bar-track"><div class="bar-fill" style="--w:53%"><span class="bar-val">53%</span></div></div>
-            </div>
-            <div class="bar-row">
-              <span class="bar-label">Marketers que usan IA para generación de video corto</span>
-              <div class="bar-track"><div class="bar-fill" style="--w:56%"><span class="bar-val">56%</span></div></div>
-            </div>
-          </div>
-          <div class="bar-axis"><span class="scale"><span>0</span><span>20</span><span>40</span><span>60</span><span>80</span><span>100%</span></span></div>
-          <p class="panel-source">Fuentes: HubSpot &mdash; State of AI for Marketers (2025) &middot; Salesforce &mdash; State of Marketing, Décima Edición (2026) &middot; McKinsey &mdash; The Economic Potential of Generative AI: The Next Productivity Frontier (2023).</p>
-        </div>
-
-        <div class="gauge-panel">
-          <div class="gauge" style="--pct:75">
-            <div class="gauge-core">
-              <span class="gauge-num">75<span class="pct">%</span></span>
-              <span class="gauge-cap">de los marketers ya adoptó la IA en su operación</span>
-            </div>
-          </div>
-          <div class="chips">
-            <div class="chip">
-              <span class="chip-num">8h</span>
-              <span class="chip-lbl">por semana que los equipos de marketing esperan recuperar usando agentes de IA</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="impact-hook">
-        <span class="hook-mark">&#9656;</span>
-        <p class="hook-text">
-          El mercadeo de N58 no necesita más personas: necesita el mismo ritmo que ya es posible con IA. McKinsey estima que personalizar contenido con IA generativa puede aumentar la productividad de la función de marketing en un valor equivalente al 5-15% del gasto total del área. Con Claude, cada creativo o artículo que hoy depende de una sola persona se convierte en un proceso que el equipo sostiene solo.
-        </p>
-      </div>
+      <p class="route-note">S = semana de trabajo desde el arranque, cuya fecha se acuerda con N58 Banco Digital. Las 12 h son una proyección de sesión: 2, 6 y 4 h en las fases 1, 2 y 3. El kick-off de 1 h es aparte y no suma horas, igual que la producción de Intezia entre sesiones.</p>
 
       <div class="foot">
         <img src="../../../logos/educacion/BLANCO.png" alt="">
-        <span class="meta">N58 BANCO DIGITAL · CAI-034</span>
+        <span class="meta">N58 · CAI-034</span>
       </div>
     </section>
 
-    <!-- 12 · Propuesta Económica -->
+    <!-- 4 · Inversión (hoja de cotización estándar, por horas) -->
     <section class="slide s-price">
-      <span class="counter">12 / 15</span>
-      <h2 class="title">Propuesta Económica</h2>
+      <span class="counter">04 / 06</span>
+      <h2 class="title">Inversión por horas de sesión.</h2>
+      <p class="price-intro">Propuesta Económica · Servicio de Habilidades</p>
 
       <div class="block">
         <span class="block-eyebrow">Duración</span>
-        <p class="block-value">4 etapas &middot; 12h de propuesta + kick-off (1h, aparte) &middot; modalidad presencial.</p>
+        <p class="block-value">12 h de sesión presencial en 6 semanas de trabajo, más un kick-off de 1 h aparte.</p>
       </div>
 
       <div class="block block-programa">
@@ -609,20 +213,14 @@
       <div class="cot-frame total-frame"></div>
 
       <p class="cot-validity">Cotización válida por 30 días.</p>
-
-      <div class="cot-roi-box">
-        <span class="cot-roi-label">ROI estimado</span>
-        <p class="cot-roi-text">El contenido del lanzamiento resuelve el volumen que exige esta etapa sin sumar personas al equipo. La Skill que queda operando extiende ese retorno más allá del lanzamiento: Mercadeo sigue produciendo creativos y cuidando su posicionamiento sin depender de capacidad externa.</p>
+      <div class="cot-terms-box">
+        <span class="cot-terms-label">Importante</span>
+        <p class="cot-terms-text">Este servicio se presta bajo nuestros <a href="https://drive.google.com/file/d/1PA-ZSt4KnyY5dpxXzgkIk6-yfGlV2eF8/view?usp=drive_link" target="_blank" rel="noopener">términos y condiciones</a>. Al avanzar con esta propuesta, ambas partes los aceptan.</p>
       </div>
 
       <div class="cot-garantia-badge">
         <span class="cot-garantia-tag">Garantía 30-60-90</span>
         <p class="cot-garantia-text">Estamos contigo hasta que la habilidad quede instalada.</p>
-      </div>
-
-      <div class="cot-terms-box">
-        <span class="cot-terms-label">Importante</span>
-        <p class="cot-terms-text">Este servicio se presta bajo nuestros <a href="https://drive.google.com/file/d/1PA-ZSt4KnyY5dpxXzgkIk6-yfGlV2eF8/view?usp=drive_link" target="_blank" rel="noopener">términos y condiciones</a>. Al avanzar con esta propuesta, ambas partes los aceptan.</p>
       </div>
 
       <div class="block block-notes-container">
@@ -632,145 +230,125 @@
 
       <div class="foot">
         <img src="../../../logos/educacion/NEGRO.png" alt="">
-        <span class="meta">N58 BANCO DIGITAL · CAI-034</span>
+        <span class="meta">N58 · CAI-034</span>
       </div>
     </section>
 
-    <!-- 13 · Seguimiento 30-60-90 (garantía explicada + ROI) -->
-    <section class="slide s-roadmap s-followup">
-      <span class="counter">13 / 15</span>
-      <p class="eyebrow">07 · Garantía de seguimiento</p>
-      <h2>No te dejamos solo <span class="hl">después del lanzamiento</span>.</h2>
-      <p class="followup-intro">Verificamos que la Skill de contenido se use, se multiplique y genere impacto real en la productividad de Mercadeo: no solo que la sesión haya terminado bien.</p>
-
-      <div class="followup-cards">
-        <div class="rmx-card rmx-card-f2">
-          <span class="rmx-card-tag">30 días</span>
-          <div class="rmx-card-name">¿Se usa lo instalado?</div>
-          <ul class="rmx-facets">
-            <li><span>Medimos</span><p>Uso real de la Skill en la producción de creativos y artículos de Mercadeo.</p></li>
-            <li><span>Aportamos</span><p>Nivelación, estrategias y recomendaciones para el uso correcto.</p></li>
-          </ul>
-        </div>
-        <div class="rmx-card rmx-card-f3">
-          <span class="rmx-card-tag">60 días</span>
-          <div class="rmx-card-name">¿Qué construyeron?</div>
-          <ul class="rmx-facets">
-            <li><span>Medimos</span><p>Ya no la Skill entregada: cuántas variantes o mejoras construyó el equipo por su cuenta.</p></li>
-            <li><span>Aportamos</span><p>Mapeo de esas construcciones y arranque de la medición de ahorro de tiempo.</p></li>
-          </ul>
-        </div>
-        <div class="rmx-card rmx-card-f4">
-          <span class="rmx-card-tag">90 días</span>
-          <div class="rmx-card-name">¿Cuánto ahorraron?</div>
-          <ul class="rmx-facets">
-            <li><span>Medimos</span><p>No contamos variantes: contabilizamos el tiempo ahorrado con todo lo aprendido y automatizado.</p></li>
-            <li><span>Aportamos</span><p>Análisis de impacto en productividad y en qué se reinvierte ese tiempo.</p></li>
-          </ul>
-        </div>
+    <!-- 5 · Entregables (catálogo + piezas transversales) -->
+    <section class="slide s-deliv">
+      <span class="counter">05 / 06</span>
+      <p class="eyebrow">05 · Entregables</p>
+      <div class="deliv-head">
+        <h2>Lo que recibe Mercadeo.</h2>
+        <p class="deliv-sub"><span class="nw">Lo que se llevan</span>: <strong>6 entregables</strong> trabajados con el equipo de Mercadeo, más el seguimiento a 30, 60 y 90 días que mide su efecto.</p>
       </div>
 
-      <div class="followup-roi">
-        <span class="followup-roi-label">ROI en el tiempo</span>
-        <p class="followup-roi-text">El retorno de este proyecto no se mide en el contenido del lanzamiento, sino en la curva de los 90 días: a 30 días el equipo ya usa la Skill en su día a día; a 60, empieza a ajustarla y construir variantes propias; a 90, el tiempo que hoy limita el volumen de creativos y artículos se puede reinvertir en más piezas o en profundizar el posicionamiento en buscadores (SEO).</p>
+      <div class="deliv-carriles" style="--ncols:3">
+        <span class="dc acc-y" style="grid-column: span 3">Claude · 6 entregables</span>
       </div>
+
+      <div class="deliv-cols" style="--ncols:3">
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">Fundamentals <i>1</i></p>
+            <ul>
+              <li>Equipo de Mercadeo nivelado en Claude</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">Construcción <i>3</i></p>
+            <ul>
+              <li>Primer avance de creativos y artículos, revisado</li>
+              <li>Segundo avance de creativos y artículos, ajustado</li>
+              <li>Más de 50 creativos y 4 artículos publicados</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">Implementación <i>2</i></p>
+            <ul>
+              <li>Skill de Claude con la marca de N58</li>
+              <li>Skill probada y 1 persona formada para operarla</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="deliv-band">
+        <div class="db-card db-1">
+          <span class="db-label">Entregables transversales</span>
+        </div>
+        <div class="db-card db-2">
+          <span class="db-label">Valor inmediato</span>
+        </div>
+      </div>
+      <!-- Cajas multiline editables (vacías en HTML: el contenido vive dentro del AcroForm /V). -->
+      <div class="multi-box db-box db-box-1" data-field="Entregables"></div>
+      <div class="multi-box db-box db-box-2" data-field="Acreditacion"></div>
 
       <div class="foot">
         <img src="../../../logos/educacion/BLANCO.png" alt="">
-        <span class="meta">N58 BANCO DIGITAL · CAI-034</span>
+        <span class="meta">N58 · CAI-034</span>
       </div>
     </section>
 
-    <!-- 14 · Próximos pasos -->
-    <section class="slide s-steps">
-      <span class="counter">14 / 15</span>
-      <p class="eyebrow">08 · Próximos pasos</p>
-      <h2>Cómo arrancamos.</h2>
-      <div class="step-cards">
-        <div class="step-card">
-          <span class="ghost">01</span>
+    <!-- 6 · Retorno esperado (método de cálculo). Sin estudios ni citas externas. -->
+    <section class="slide s-roi">
+      <span class="counter">06 / 06</span>
+      <p class="eyebrow">06 · Retorno</p>
+      <h2>Retorno esperado: tiempo y dinero.</h2>
+      <p class="sub">Se calcula con los datos de Mercadeo, se confirma con la línea base de la semana 1 y se mide a 30, 60 y 90 días.</p>
+
+      <div class="roi-body">
+        <div class="roi-panel">
+          <p class="roi-panel-title">Cómo se calcula, por pieza</p>
+          <ol class="roi-steps">
+            <li><b>Volumen semanal</b><span>Cuántos creativos y artículos produce Mercadeo cada semana.</span></li>
+            <li><b>Tiempo actual por pieza</b><span>Se mide con el equipo en la primera sesión y es la <strong>línea base</strong>.</span></li>
+            <li><b>Tiempo con la Skill</b><span>Lo que toma la misma pieza con Claude y la Skill, ya en uso.</span></li>
+            <li><b>Horas recuperadas a la semana</b><span>Volumen semanal multiplicado por la diferencia entre el tiempo actual y el tiempo con la Skill.</span></li>
+            <li><b>Valor en dinero</b><span>Horas recuperadas multiplicadas por el costo hora de referencia que N58 valide.</span></li>
+          </ol>
         </div>
-        <div class="step-card">
-          <span class="ghost">02</span>
-        </div>
-        <div class="step-card">
-          <span class="ghost">03</span>
+
+        <div class="roi-right">
+          <p class="roi-right-title">Metas, desde el cierre de la implementación</p>
+          <div class="roi-card">
+            <b>30 días</b>
+            <p>La Skill en uso real en la producción de creativos y artículos.</p>
+          </div>
+          <div class="roi-card">
+            <b>60 días</b>
+            <p>Variantes y mejoras que construye el equipo y horas recuperadas medidas contra la línea base.</p>
+          </div>
+          <div class="roi-card">
+            <b>90 días</b>
+            <p>Medición del tiempo recuperado, su valor en dinero y en qué se reinvierte.</p>
+          </div>
         </div>
       </div>
 
-      <div class="acro-area acro-title acro-paso-01-titulo" data-field="Paso01Titulo">
-        <span class="acro-default-text">Confirmamos fechas</span>
-      </div>
-      <div class="acro-area acro-body acro-paso-01-body" data-field="Paso01Body">
-        <span class="acro-default-text">Definimos con el equipo de Mercadeo el calendario del kick-off, las revisiones y las sesiones de capacitación.</span>
-      </div>
-
-      <div class="acro-area acro-title acro-paso-02-titulo" data-field="Paso02Titulo">
-        <span class="acro-default-text">Acceso y logística</span>
-      </div>
-      <div class="acro-area acro-body acro-paso-02-body" data-field="Paso02Body">
-        <span class="acro-default-text">Coordinamos el acceso al manual de marca, el calendario de lanzamiento y los productos prioritarios.</span>
+      <div class="roi-dest-wrap">
+        <p class="roi-dest-title">Hacia dónde va el tiempo recuperado</p>
+        <div class="roi-dest">
+          <div class="rd-item"><b>Mismo equipo, más piezas</b><p>Si el tiempo se libera, Mercadeo puede producir <strong>más creativos y artículos</strong> con el mismo equipo.</p></div>
+          <div class="rd-item"><b>Más posicionamiento</b><p>Con el tiempo liberado, el equipo puede profundizar su posicionamiento en buscadores.</p></div>
+          <div class="rd-item"><b>Más allá del lanzamiento</b><p>La Skill sigue produciendo piezas y artículos en las <strong>campañas</strong> que vienen después.</p></div>
+        </div>
       </div>
 
-      <div class="acro-area acro-title acro-paso-03-titulo" data-field="Paso03Titulo">
-        <span class="acro-default-text">Kick-off de contenido</span>
-      </div>
-      <div class="acro-area acro-body acro-paso-03-body" data-field="Paso03Body">
-        <span class="acro-default-text">Reunión de arranque (~1h) para alinear objetivos, marca y calendario de lanzamiento antes de producir.</span>
-      </div>
+      <div class="roi-hook"><p>Hacia la semana 19 (6 semanas de trabajo más 90 días de seguimiento), N58 contará con el tiempo recuperado por Mercadeo medido y su valor en dinero.</p></div>
 
       <div class="foot">
         <img src="../../../logos/educacion/NEGRO.png" alt="">
-        <span class="meta">N58 BANCO DIGITAL · CAI-034</span>
-      </div>
-    </section>
-
-    <!-- 15 · Cierre (ruta/escalera editable) -->
-    <section class="slide s-end">
-      <span class="counter">15 / 15</span>
-
-      <div class="end-logo">
-        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia">
-      </div>
-
-      <div class="end-summit" data-field="CierreResultado">
-        <span class="acro-default-text">N58, con el contenido de su lanzamiento resuelto y un mercadeo que sigue produciendo solo.</span>
-      </div>
-
-      <div class="end-stairs">
-        <div class="stair-step stair-1">
-          <span class="stair-label">Paso 1</span>
-          <div class="stair-field" data-field="CierrePaso1">
-            <span class="acro-default-text">Kick-off de marca</span>
-          </div>
-        </div>
-        <div class="stair-step stair-2">
-          <span class="stair-label">Paso 2</span>
-          <div class="stair-field" data-field="CierrePaso2">
-            <span class="acro-default-text">Fundamentals de Claude</span>
-          </div>
-        </div>
-        <div class="stair-step stair-3">
-          <span class="stair-label">Paso 3</span>
-          <div class="stair-field" data-field="CierrePaso3">
-            <span class="acro-default-text">Construcción e implementación</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="cta-wrap">
-        <span class="cta">Esperamos tu respuesta</span>
-      </div>
-
-      <div class="end-contact">
-        <p class="contact-line">
-          <span class="contact-label">Asesora de ventas:</span>
-          Flavia Martínez <span class="dot">&middot;</span> +58 414-5756615 <span class="dot">&middot;</span> fmartinez@intezia.com
-        </p>
-        <p class="contact-line">
-          <span class="contact-label">Empresa:</span>
-          Intezia C.A J-505657950 <span class="dot">&middot;</span> servicio@intezia.com
-        </p>
+        <span class="meta">N58 · CAI-034</span>
       </div>
     </section>
 

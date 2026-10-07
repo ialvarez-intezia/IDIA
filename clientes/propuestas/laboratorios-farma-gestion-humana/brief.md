@@ -1,5 +1,156 @@
 # Brief — Laboratorios Farma · Gestión Humana regional (CAI-032)
 
+## Actualización 2026-10-05 (2) — reexpresada en el formato compacto (6 slides) · VIGENTE
+
+Instrucción directa del usuario, tras ver la primera pasada de abajo: "una propuesta debe responder
+**qué, cómo, qué me entrega y cuándo**; 15 slides es demasiado; compacta la información con el
+formato nuevo sin omitir lo importante, aplica lo que faltaba (las reglas que dijiste que no
+aplicaste), y coloca **Detección 4h, módulo conjunto 3h y prácticas 4h**". Esto reemplaza la
+decisión anterior de mantener el deck canónico.
+
+**Hoy el deck es compacto de 6 slides, dirigido por `datos.json`** (fuente única; `index.html`,
+`acroforms.json` y `programa.md` se generan). Flujo: `python3 scripts/generar-habilidades-compacto.py
+laboratorios-farma-gestion-humana` → `node scripts/verificar-habilidades-compacto.js ...` →
+`generar-pdf.sh` + `customize-acroforms.py <slug>` + `customize-habilidades-compacto.py <pdf>`
+(el wrapper `pdf-habilidades-compacto.sh` también sirve ahora que el generador respeta `meta_servicio`).
+El deck de 15 slides, su PDF y su script de customize están archivados en `_anterior-15-slides/`.
+
+### Horas (instrucción del usuario)
+
+| Pieza | Horas | Semana |
+|---|---|---|
+| Detección con los líderes de las 6 subáreas | **4 h** (antes 2) | 1 |
+| Módulo conjunto, las 20 personas | **3 h** (sin cambio) | 2 |
+| Práctica Ausentismo (Nómina) | **4 h** (antes 2) | 3 |
+| Práctica Selección (filtro de currículos) | **4 h** (antes 2) | 3 |
+| **Total Etapa 1** | **15 h** (antes 9) | 3 semanas |
+
+**Interpretación a confirmar**: «4h para prácticas» se leyó como **4 h cada una** (8 h entre las
+dos). Si el usuario quiso 4 h en total, cambiar `h` de NOM-1 y SEL-1 a 2 en `datos.json` y
+regenerar (total 11 h). Las 3 semanas y su orden son una proyección de Intezia a partir del
+calendario borrador anterior: confirmar con servicio y con María/Claudia.
+
+### Qué responde cada slide, y dónde quedó cada cosa del deck de 15
+
+| Pregunta | Slide compacta | Viene de (deck de 15) |
+|---|---|---|
+| Portada: proyecto + dolor | 1 | Portada, Diagnóstico (4 hechos resueltos por el alcance) |
+| **Qué** | 2 Alcance | Objetivos, Programa; qué queda fuera (SAP, Etapa 2, licencias) |
+| **Cómo y cuándo** | 3 Ruta | Roadmap, 3 Cronogramas, Seguimiento 30-60-90, calendario (ahora en semanas) |
+| Cuánto | 4 Inversión | Propuesta Económica, Licencias (2 tarjetas: básico Etapa 1 / Business Etapa 2), Notas |
+| **Qué me entrega** | 5 Entregables | Beneficios, mapa de licencias (entregable de la Detección), línea base |
+| Retorno | 6 Retorno esperado | ROI y "ROI en el tiempo" (modo método, sin cifras inventadas) |
+
+**Retirado por el formato compacto** (decisión del usuario: aplicar lo que faltaba): slide de
+Impacto con estudio (§4.9 no aplica al compacto), Próximos pasos y calendario con fechas, Cierre
+con contacto de la asesora, y la tabla de 7 procesos de la slide de Licencias (la clasificación
+completa sigue más abajo en este brief; el deck solo promete que la Detección la entrega).
+
+### Cambios al generador (para que acepte un combo)
+
+`scripts/generar-habilidades-compacto.py` tenía fijo «Servicio de Habilidades» en la slide de
+inversión y escribía `servicio: habilidades` en `meta.json`. Se agregaron tres claves **opcionales**
+en `datos.json`: `servicio_rotulo` («Servicio de Detección y Habilidades»), `meta_servicio`
+(`deteccion`, que es el valor de registro de un combo, §4.19) y `meta_tipo`. Sin las claves la
+salida es idéntica (comprobado: HTML, acroforms, programa.md y meta.json de los ejemplos de DUSA
+y Fundación sin diferencias; 4 y 2 avisos esperados; holguras en verde). **Falta formalizarlo en
+`plantillas/habilidades-compacto.md` §1** («los combos no se cubren») y en `CLAUDE.md` §4.1a:
+proponer al usuario antes de editar esos archivos estructurales.
+
+Ajustes propios del deck en `overrides.css`: con 4 soluciones (la plantilla está pensada para
+40+) se amplía la escala de la tarjeta de la slide 2 y del catálogo de la slide 5, para que no
+queden media página vacías.
+
+### Pendientes (a confirmar antes de reenviar)
+
+- «4h para prácticas»: ¿4 h cada una (15 h) o 4 h en total (11 h)? (ver tabla).
+- Línea base del tiempo de Ausentismo y Selección: supuesto de que cabe en las 4 h de la Detección.
+- Fechas y horas de las sesiones con María/Claudia (el deck ya solo lleva semanas). El plazo del
+  cliente (ejecución antes del 11 de diciembre, OC en octubre) sale del deck y queda aquí.
+- Inversión, descuento y total: campos vacíos para ventas. Sin asesora ni contacto en el deck.
+- Incoherencia heredada: la clasificación marca Desarrollo y Bienestar como Copilot básico, pero
+  la Etapa 2 se condiciona entera a Business. Confirmar la intención.
+- La propuesta ya salió con la versión del 2026-09-29: confirmar si se reenvía el PDF nuevo.
+
+## Actualización 2026-10-05 (1) — primera pasada sobre el deck de 15 slides · SUPERADA por la (2)
+
+> Se conserva por trazabilidad. Lo que sigue describe el deck de 15 slides, hoy archivado en
+> `_anterior-15-slides/`. Varias decisiones de abajo (ruta con fechas, slide de Impacto, Próximos
+> pasos) ya no aplican a la versión vigente.
+
+Pedido directo del usuario: ajustar la CAI-032 al "formato nuevo" de Habilidades (CLAUDE.md §4.21,
+dirección del 2026-10-05, caso base DUSA CAI-035). **Decisión de formato de esa pasada (preguntada
+con el usuario)**: mantener el deck canónico de 15 slides y aplicarle las reglas **de fondo** de
+Habilidades que sí se traducen. El PDF anterior quedó en `_pdf-anteriores/`; la propuesta pasó a
+"En corrección" y volvió a "Enviada" al regenerar (la `fecha_entrega` 2026-09-29 se respeta).
+
+### Qué se aplicó
+
+1. **Portada**: nombre del proyecto como frase-objetivo estilo título de tesis, "Incorporación de
+   IA con Microsoft Copilot en 6 subáreas de Gestión Humana" (73 caracteres; el PDF queda
+   "CAI-032 <titular>" de 81, sin cortarse), en lugar del titular "De usar IA suelta, a un mismo
+   criterio regional.". Eyebrow "Propuesta de proyecto · Servicio de Detección y Habilidades"
+   (combo: nombra ambos servicios, §4.1a punto 4). Lead con verbos de proyecto: levanta, nivela,
+   construye, deja en uso y mide.
+   - La regla "De X, a Y." de la memoria `titulo-portada-valor-no-mecanica` rige para los decks
+     canónicos de otros servicios; para propuestas de Habilidades prevalece la frase-objetivo
+     (dirección 2026-10-05).
+2. **Slide 2 sin cita**: se quitó la frase entre comillas "Desde alguien que no sabe absolutamente
+   nada.". No está en este brief ni en ninguna fuente del repo (la Ficha PDF no está versionada), y
+   la regla vigente (`copy-sin-dolor-inventado-ni-citas`, 2026-10-01) solo admite citas verbatim
+   entregadas por el usuario. Queda "Así arranca Gestión Humana con la IA." (mismo patrón que
+   G-MAX DET-024). **Si la frase sí sale de la Ficha y el usuario quiere conservarla, se repone.**
+   El punto 3 del Diagnóstico (SAP a Excel) ahora dice que lo retoma la Etapa 2: cada dolor
+   mostrado debe estar atendido por el alcance.
+3. **Retorno medible (método de la slide de retorno de Habilidades, sin slide nueva)**: la Detección
+   levanta la **línea base** del tiempo actual de Ausentismo y Selección, el "antes" contra el que
+   se mide el tiempo recuperado a 30-60-90. Sin esa línea base, el "¿cuánto tiempo ahorraron?" de
+   los 90 días no era medible. Aparece en Objetivos, Roadmap, Cronograma de Detección, Beneficios,
+   ROI de la hoja de cotización y Seguimiento 30-60-90. **Supuesto a confirmar con servicio**: el
+   levantamiento de la línea base cabe en las 2h de la Detección (se integra al recorrido de 80').
+   El ROI y el retorno quedan en condicional ("puede liberar"), sin garantía y sin contrastes
+   "no es X, sino Y".
+   - No se agregó la slide `.s-roi` de la plantilla compacta: ya existen el ROI de la hoja de
+     cotización y la slide de Seguimiento 30-60-90, y una tercera lo duplicaría.
+4. **Sin certificado de participación** (ya no va por defecto; el servicio se presenta como
+   proyecto; solo si el cliente lo pide). Se retiró del campo Entregables, de la tarjeta del Paso
+   3 del roadmap y de `programa.md`. Sustituye la decisión 2 de más abajo, que lo incluía.
+5. **Sin nombres de personas del cliente**: slide 6 ("Claudia Hernández") y Paso01/Paso03 de
+   "Cómo arrancamos" ("Claudia y Nelson") pasan a "Gestión Humana" y "los equipos de Nómina y
+   Selección". Los nombres siguen en este brief, que es interno.
+6. **Corrección de un defecto previo en Beneficios**: el bloque "Valor inmediato" mostraba en el
+   campo `Acreditacion` las 3 líneas institucionales viejas (registro en INTEZIA Education, modelo
+   pedagógico ABR, material curado). Eso contradice Beneficios v3 (Acreditacion se repurposa como
+   "Valor inmediato", como en `hjb-quimica` CAI-031) y exponía el modelo ABR (§4.10a). Ahora lleva
+   hitos reales por sesión. Entregables ya no mezcla institucionales: son piezas tangibles.
+7. **Redacción**: posicionamiento "construimos, probamos y dejamos instalado" en Objetivos y en
+   "Por qué Detección y Habilidades"; el "Qué se logra" de la Detección ahora nombra el mapa de
+   licencias (era el entregable central y no aparecía).
+8. **Defectos visuales heredados** (el detector no los ve): punto final fuera del `</span>` en 4
+   títulos (`bug-punto-final-fuera-de-span-flota`), banda negra de Programa 6px corta bajo un h2 de
+   2 líneas (`bug-program-meta-black-band`, fix local en `overrides.css`) y `.meta` de Programa de
+   160 caracteres (la plantilla pide ≤ 60), y tag "Paso 3 · Cierre Etapa 1" partido en 2 líneas.
+
+### Qué se mantuvo, y por qué
+
+- **Slide de Impacto con estudio real** (Microsoft & LinkedIn, 2024): §4.9 sigue vigente en los
+  decks canónicos. La regla "sin estudios ni web" del 2026-10-05 es de la slide de retorno de la
+  plantilla compacta, que no lleva Impacto.
+- **Calendario con fechas** de Etapa 1: pedido explícito del usuario y parte del deck canónico (la
+  regla de "semanas, no fechas" es de la plantilla compacta). Sigue siendo un borrador a confirmar.
+- **Próximos pasos y Cierre escalera**, propios del deck canónico.
+
+### Pendientes (a confirmar antes de reenviar)
+
+- Calendario de Etapa 1 y hora de cada sesión (sigue pendiente desde 2026-10-01).
+- Línea base cabe en las 2h de la Detección (supuesto de servicio, punto 3).
+- Incoherencia de fondo, heredada y sin tocar por ser decisión comercial: la tabla de Licencias
+  marca Desarrollo y Bienestar como "Copilot básico", pero el CTA de la slide 5 y el calendario
+  condicionan **los 5 procesos de Etapa 2** a que Tecnología active Business. Si Desarrollo y
+  Bienestar corren con básico, podrían arrancar antes; confirmar con el usuario cuál es la
+  intención y alinear slide 5, slide 14, Programa y Notas.
+- Propuesta ya enviada con la versión anterior: confirmar con el usuario si se reenvía el PDF nuevo.
+
 ## Actualización 2026-10-01 — Etapa 1 se recorta a 2 prácticas en básico; Etapa 2 (7 proyectos) pasa a ruta sin cotizar
 
 Instrucción directa del usuario, 2026-10-01, con el detalle de "lo que debe incluir la Etapa 1".
@@ -375,8 +526,9 @@ Copilot sin confirmar):
    proceso lleva marcada su licencia de Copilot (básico o Business). Explícito en Objetivos,
    Programa, la slide de Licencias y Beneficios del deck, respondiendo directo al pedido de
    Claudia de claridad de alcance.
-2. **Con certificado de participación INTEZIA** — hay componente real de Habilidades (7h de
-   práctica en Etapa 1: 3h módulo compartido + 2h Ausentismo + 2h Selección; 14h adicionales en
+2. ~~Con certificado de participación INTEZIA~~ — **retirado 2026-10-05** (ver la actualización de
+   arriba: el certificado ya no va por defecto). Sigue habiendo componente real de Habilidades (7h
+   de práctica en Etapa 1: 3h módulo compartido + 2h Ausentismo + 2h Selección; 14h adicionales en
    Etapa 2, sin cotizar), a diferencia de una Detección pura (`deteccion-sin-certificado.md`).
 3. **Con Garantía y Seguimiento 30-60-90** — mismo criterio que cualquier deck con Habilidades
    real (`seguimiento-30-60-90-habilidades.md`).

@@ -1,5 +1,80 @@
 # Brief — G-MAX (DET-024)
 
+## Actualización 2026-10-06 — reexpresada en el formato compacto adaptado a Detección (6 slides) · VIGENTE
+
+Instrucción directa del usuario: "mejorar la DET-024 usando este nuevo formato, a pesar de que el
+definido es de Habilidades, con una adaptación usando las reglas fijas de esta propuesta". El
+código **DET-024 está repetido** (también lo usa `fibraspol/`, sin relación): se preguntó y el
+usuario eligió G-MAX. El deck de 13 slides, su PDF y su `customize-g-max.py` están archivados en
+`_anterior-13-slides/` y `_pdf-anteriores/`; `scripts/customize-g-max.py` se retiró (el compacto usa
+el par genérico `customize-acroforms.py` + `customize-habilidades-compacto.py`).
+
+**Hoy el deck es compacto de 6 slides, dirigido por `datos.json`** (fuente única; `index.html`,
+`acroforms.json` y `programa.md` se generan). Flujo: `python3 scripts/generar-habilidades-compacto.py
+g-max` → `node scripts/verificar-habilidades-compacto.js g-max` → `generar-pdf.sh g-max` →
+`customize-acroforms.py g-max` → `customize-habilidades-compacto.py <pdf>`.
+
+### Reglas fijas de esta propuesta que se conservan (todas de este brief)
+
+Sin certificado (Detección pura) · sin garantía 30-60-90 (es de Habilidades) · sin pre-recomendar
+herramienta de IA (el Reporte Final la recomienda) · sin dolor dramatizado ni citas · sin mencionar
+el producto propio de cobranza ni la relación entre contactos · sin nombrar a Venemergencia · kick-off
+de 1 h **dentro** de las 25 h (excepción explícita del usuario) · 4 frentes y 2 grupos de Fundamentals
+con su composición visible (cuarta ronda) · 4 h por frente, 8 h en Resto corporativo · modalidad
+presencial · visión de ruta Detección → Habilidades → Políticas con nombres reales.
+
+### Cómo se mapeó Detección al esquema compacto
+
+| En el compacto | En G-MAX |
+|---|---|
+| Carril | «Detección» (no hay herramienta) |
+| Área | Cada **frente** (4) y «Arranque y Fundamentals» como etapa previa |
+| Solución / entregable | Cada **sesión**: kick-off (F0), Grupo 1, Grupo 2 y los 4 frentes = 7 entregables, 25 h |
+| Fases (3 columnas) | Nivelación (S1, 4 h) · Prioritarios (S2, 8 h) · Resto del mapa (S3-S4, 12 h) |
+| 5.ª columna de la ruta | «Cierre»: Priorizar · Reportar · Proyectar (en vez del seguimiento 30-60-90) |
+| Slide 5 transversales | Mapa de Calor e Índice de Madurez · Reporte Final · recomendación de ecosistema y licencias |
+| Slide 6 retorno (modo método) | «Decidir con datos»: cómo se estima el retorno de cada oportunidad y qué decide G-MAX (licencias, prioridades, control) |
+
+### Dónde quedó lo del deck de 13
+
+| Antes | Ahora |
+|---|---|
+| Diagnóstico (5 puntos) | 4 hechos de la portada, cada uno atendido por un entregable |
+| Objetivos, Programa, composición de los 4 frentes y de los 2 grupos | Slide 2 (cada frente muestra sus departamentos y los grupos) |
+| Roadmap de 3 etapas, 3 cronogramas, calendario con fechas | Slide 3 (en semanas; los tiempos de cada sesión viven en `programa.md`) |
+| Visión de ruta | Hito de cierre (slide 3) y tarjetas «Ahora / Después / Más adelante» (slide 6) |
+| Beneficios | Slide 5 |
+| ROI | Slide 6 |
+| Propuesta Económica | Slide 4, sin garantía |
+| Impacto (caso del sector salud, Venemergencia sin nombrar) | **Retirado**: el compacto no lleva Impacto (§4.9). Los datos reales siguen más abajo en este brief |
+| Próximos pasos, Cierre con el contacto de María | **Retirados** por el formato compacto |
+
+### Calendario: 4 semanas, no 3
+
+El brief fijaba «~3 semanas» (12 oct a 2 nov). En semanas relativas al arranque son **4**: la sesión
+Asistencial cae el lunes 2 de noviembre (semana 4) y el Reporte Final en la primera semana de
+noviembre (también semana 4). Fechas y horas (8-10 y 8-12) siguen en la sección de calendario de más
+abajo; el deck solo lleva semanas. Confirmar con servicio y con cada responsable.
+
+### Cambios al generador (opcionales, sin efecto si no se usan)
+
+`scripts/generar-habilidades-compacto.py` ahora acepta: `vocabulario` (entregable/frente/etapa previa
+en vez de solución/área/proceso base), `area.composicion` (texto bajo el nombre del frente en la
+slide 2), `frentes[].etiqueta`, `inversion.sin_garantia` y `seguimiento.tipo = "cierre"`. Comprobado:
+DUSA, Fundación y CAI-032 salen idénticos (HTML, acroforms, programa y meta). Falta formalizarlo en
+`plantillas/habilidades-compacto.md` §1 y `CLAUDE.md` §4.1a (proponer al usuario antes de editar esos
+archivos estructurales). El estilo de `.comp`, y la escala de las slides 2 y 5 para pocos entregables,
+viven en el `overrides.css` de este deck.
+
+### Pendientes (a confirmar antes de reenviar)
+
+- Calendario de 4 semanas, fechas y horas de cada sesión, y orden de los frentes (con María).
+- Inversión, descuento y total: campos vacíos para ventas. El deck ya no muestra asesora ni contacto.
+- El Grupo 1 de Fundamentals (~29) supera el máximo de 25 por sesión del lineamiento de Detección
+  (composición definida por el usuario, no se modificó). ¿Se divide?
+- La propuesta ya salió el 2026-10-01: confirmar si se reenvía el PDF nuevo.
+- Otro DET-024 (Fibraspol) sigue con el formato anterior.
+
 ## Datos administrativos
 
 - **Empresa**: G-MAX (clínica privada, salud, 1,5 años operativa)

@@ -125,6 +125,7 @@ DESTINO_FUND = [
 ]
 
 SUB_ENTREGABLES = "Lo que se llevan: **{n_entregables_txt}**, uno por cada solución construida, probada y adoptada, más el seguimiento a {rango_seguimiento} que mide su efecto."
+SUB_ENTREGABLES_SIN_SEG = "Lo que se llevan: **{n_entregables_txt}**, uno por cada solución construida, probada y adoptada."
 
 # ----------------------------------------------------------------------------------------------
 # Esquema de tipos (valida antes de calcular: evita tracebacks por datos mal formados)
@@ -134,27 +135,29 @@ ESQUEMAS = {
              "fuente_insumo": "str", "portada": "dict:portada", "carriles": "list:dict:carril", "areas": "list:dict:area",
              "alcance": "dict:alcance", "fases": "list:dict:fase", "frentes": "list:dict:frente", "ruta": "dict:ruta",
              "seguimiento": "dict:seguimiento", "inversion": "dict:inversion", "entregables": "dict:entregables",
-             "retorno": "dict:retorno", "siglas_ok": "list:str", "supuestos": "list:str", "pendientes": "list:str"},
+             "retorno": "dict:retorno", "siglas_ok": "list:str", "supuestos": "list:str", "pendientes": "list:str",
+             "servicio_rotulo": "str", "meta_servicio": "str", "meta_tipo": "str", "vocabulario": "dict:vocabulario", "sin_hoja_cotizacion": "bool"},
+    "vocabulario": {"solucion": "list:str", "area": "list:str", "proceso_base": "list:str"},
     "cliente": {"nombre": "str", "slug": "str", "codigo": "str", "nombre_pie": "str"},
     "portada": {"eyebrow": "str", "titulo_lineas": "list:str", "titulo_linea1": "str", "titulo_destacado": "str", "lead": "str",
                 "hechos": "list:dict:hecho", "fuente": "str"},
     "hecho": {"num": "str", "texto": "str", "resuelto_por": "list:str"},
     "carril": {"id": "str", "nombre": "str", "nombre_corto": "str", "color": "str"},
     "area": {"id": "str", "nombre": "str", "carril": "str", "frente": "str", "nombre_frente": "str", "nombre_catalogo": "str",
-             "proceso_base": "bool", "soluciones": "list:dict:solucion"},
+             "proceso_base": "bool", "composicion": "str", "soluciones": "list:dict:solucion"},
     "solucion": {"id": "str", "entregable": "str", "C": "num", "T": "num", "A": "num", "h": "num", "fase": "str",
                  "detalle": "str", "_revisar": "bool"},
     "alcance": {"titulo": "str", "subtitulo": "str", "pasos": "list:str", "quien_construye": "str", "fuera_alcance": "list:str",
                 "compacto": "bool", "etiqueta_proceso_base": "str", "etiqueta_pasos": "str", "etiqueta_quien": "str",
                 "etiqueta_fuera": "str"},
     "fase": {"id": "str", "titulo": "str", "rango": "str", "descripcion": "str", "destacada": "bool"},
-    "frente": {"id": "str", "carril": "str", "semanas": "str", "celdas": "dict:str", "areas_html": "str"},
+    "frente": {"id": "str", "carril": "str", "semanas": "str", "celdas": "dict:str", "areas_html": "str", "etiqueta": "str"},
     "ruta": {"semanas_total": "int", "tope_h_semana": "int", "hitos": "list:dict:hito", "titulo": "str", "subtitulo": "str", "nota": "str"},
     "hito": {"titulo": "str", "texto": "str"},
-    "seguimiento": {"rango": "str", "texto": "str", "items": "list:dict:item", "etiqueta": "str"},
+    "seguimiento": {"rango": "str", "texto": "str", "items": "list:dict:item", "etiqueta": "str", "tipo": "str"},
     "item": {"dias": "str", "texto": "str"},
     "inversion": {"notas": "list:str", "licencias": "dict:licencias", "titulo": "str", "duracion": "str", "programa": "list:str",
-                  "garantia_texto": "str"},
+                  "garantia_texto": "str", "sin_garantia": "bool"},
     "licencias": {"titulo": "str", "tarjetas": "list:dict:tarjeta", "nota": "str"},
     "tarjeta": {"nombre": "str", "color": "str", "texto": "str"},
     "retorno": {"modo": "str", "titulo": "str", "subtitulo": "str", "posiciones": "bool", "pasos": "list:dict:paso_retorno",
@@ -384,6 +387,7 @@ def entero_horas(v, donde, rep):
 
 
 def calcular(d, rep):
+    set_vocab(d)
     """Valida estructura y devuelve (ctx, agg). Supone tipos ya validados."""
     agg = {"n_total": 0, "h_total": 0, "n_areas": 0, "n_bases": 0, "fase": {}, "frente": {}, "celda": {}, "carril": {}, "area": {}}
     carriles = d.get("carriles") or []
@@ -524,9 +528,9 @@ def calcular(d, rep):
     ctx = {
         "cliente": cl.get("nombre", ""), "cliente_corto": corto, "codigo": cl.get("codigo", ""),
         "n_total": agg["n_total"], "h_total": agg["h_total"], "n_areas": agg["n_areas"], "n_bases": agg["n_bases"],
-        "n_total_txt": "%d %s" % (agg["n_total"], plural(agg["n_total"], "solución", "soluciones")),
+        "n_total_txt": "%d %s" % (agg["n_total"], plural(agg["n_total"], *VOC["solucion"])),
         "n_entregables_txt": "%d %s" % (agg["n_total"], plural(agg["n_total"], "entregable", "entregables")),
-        "n_areas_txt": "%d %s" % (agg["n_areas"], plural(agg["n_areas"], "área", "áreas")),
+        "n_areas_txt": "%d %s" % (agg["n_areas"], plural(agg["n_areas"], *VOC["area"])),
         "semanas": sem, "semanas_txt": ("%d %s" % (sem, plural(sem, "semana", "semanas"))) if isinstance(sem, int) else "", "tope_h_semana": tope, "tope_h_dia": int(round(tope / 5.0)),
         "rango_seguimiento": seg.get("rango", ""),
     }
@@ -559,6 +563,11 @@ def validar_semantica(d, ctx, agg, rep, silent):
         rep.err("division", "debe ser 'educacion' o 'fundacion' (no se infiere: preguntar y guardar, CLAUDE.md §4.1)")
     if not isinstance(d.get("alianza"), bool):
         rep.err("alianza", "debe ser true o false (confirmar con el usuario, CLAUDE.md §4.1a punto 2)")
+    for _k, _v in (d.get("vocabulario") or {}).items() if isinstance(d.get("vocabulario"), dict) else []:
+        if _k in VOC_DEF and not (isinstance(_v, list) and len(_v) == 2 and all(isinstance(i, str) and i.strip() for i in _v)):
+            rep.err("vocabulario.%s" % _k, "debe ser [singular, plural], dos textos no vacíos")
+    if d.get("meta_servicio") and d["meta_servicio"] not in ("habilidades", "deteccion", "politicas", "innovacion", "integral"):
+        rep.err("meta_servicio", "valor inválido «%s»: usar habilidades | deteccion | politicas | innovacion | integral (CLAUDE.md §4.19)" % d["meta_servicio"])
     cl = d.get("cliente") or {}
     for k in ("nombre", "slug", "codigo"):
         if not cl.get(k):
@@ -587,8 +596,9 @@ def validar_semantica(d, ctx, agg, rep, silent):
         rep.aviso("portada.titulo_linea1", "se ignora porque existe titulo_lineas")
     if len(p.get("titulo_lineas") or []) > 3:
         rep.err("portada.titulo_lineas", "máximo 3 líneas antes de la franja amarilla; hay %d" % len(p["titulo_lineas"]))
-    if p.get("eyebrow") and "habilidades" not in p["eyebrow"].lower():
-        rep.err("portada.eyebrow", "debe nombrar el servicio («Servicio de Habilidades»): CLAUDE.md §4.1a punto 4 es bloqueante")
+    _corto = re.sub(r"^servicio de ", "", rotulo_servicio(d).lower())
+    if p.get("eyebrow") and "habilidades" not in p["eyebrow"].lower() and _corto not in p["eyebrow"].lower():
+        rep.err("portada.eyebrow", "debe nombrar el servicio («%s»): CLAUDE.md §4.1a punto 4 es bloqueante" % rotulo_servicio(d))
     lin_t, dest_t, px_t, cpl_t, tot_t = titulo_portada(p, rs)
     maxnom = 90 - len(cl.get("codigo") or "") - 1
     if tot_t > maxnom:
@@ -699,14 +709,17 @@ def validar_semantica(d, ctx, agg, rep, silent):
                 rep.aviso("frentes[%s]" % fr.get("id"), "el insumo declaraba %s h y datos.json suma %d h (¿cambio intencional? borrar _horas_fuente si sí)" % (mm.group(1), agg["frente"][fr["id"]][1]))
     sg = d.get("seguimiento") or {}
     its = sg.get("items") or []
-    if not (2 <= len(its) <= 3):
-        rep.err("seguimiento.items", "se necesitan 2 o 3 check-ins (30/60/90 días); hay %d" % len(its))
-    for it in its:
-        if not it.get("dias") or not it.get("texto"):
-            rep.err("seguimiento.items", "cada check-in necesita dias y texto")
-    for k in ("rango", "texto"):
-        if not sg.get(k):
-            rep.err("seguimiento.%s" % k, "falta")
+    if seg_tipo(d) not in ("seguimiento", "cierre", "ninguno"):
+        rep.err("seguimiento.tipo", "debe ser 'seguimiento' (por defecto), 'cierre' o 'ninguno'")
+    if seg_hay_columna(d):
+        if not (2 <= len(its) <= 3):
+            rep.err("seguimiento.items", "se necesitan 2 o 3 check-ins (30/60/90 días); hay %d" % len(its))
+        for it in its:
+            if not it.get("dias") or not it.get("texto"):
+                rep.err("seguimiento.items", "cada check-in necesita dias y texto")
+        for k in ("rango", "texto"):
+            if not sg.get(k):
+                rep.err("seguimiento.%s" % k, "falta")
     en = d.get("entregables") or {}
     for k in ("transversales", "valor_inmediato"):
         if not en.get(k):
@@ -733,7 +746,7 @@ def validar_semantica(d, ctx, agg, rep, silent):
     tars = lic.get("tarjetas") or []
     if len(tars) > 2:
         rep.err("inversion.licencias.tarjetas", "máximo 2 tarjetas")
-    if d.get("division") != "fundacion":
+    if not sin_inversion(d):
         for i, c in enumerate(tars):
             for k in ("nombre", "texto"):
                 if not c.get(k):
@@ -744,9 +757,10 @@ def validar_semantica(d, ctx, agg, rep, silent):
                 rep.err("inversion.licencias.tarjetas[%d].color" % i, "debe ser 'amarillo' o 'naranja'")
         if len(rs(inv.get("duracion") or "")) > 112:
             rep.aviso("inversion.duracion", "%d caracteres: máx. ~110 (2 líneas)" % len(rs(inv["duracion"])))
-    if d.get("division") == "fundacion":
+    if sin_inversion(d):
         if inv:
-            rep.aviso("inversion", "se ignora en Fundación (no hay slide de inversión); llevar licencias y notas a otra parte si hacen falta")
+            rep.aviso("inversion", "se ignora en Fundación (no hay slide de inversión); llevar licencias y notas a otra parte si hacen falta" if d.get("division") == "fundacion"
+                      else "se ignora: sin_hoja_cotizacion = true (el deck no lleva hoja de inversión); llevar licencias y notas a otra parte si hacen falta")
     else:
         if tars and not inv.get("notas"):
             rep.aviso("inversion.notas", "hay licenciamiento pero no hay notas: aclarar si se contrata aparte (confirmar quién lo contrata)")
@@ -760,8 +774,8 @@ def validar_semantica(d, ctx, agg, rep, silent):
 # ----------------------------------------------------------------------------------------------
 def nombre_catalogo(a):
     n = a.get("nombre_catalogo") or a["nombre"]
-    if a.get("proceso_base") and "proceso base" not in n.lower():
-        n += " (proceso base)"
+    if a.get("proceso_base") and VOC["proceso_base"][0] not in n.lower():
+        n += " (%s)" % VOC["proceso_base"][0]
     return n
 
 
@@ -878,7 +892,7 @@ def cupo_catalogo(d, R):
     """Cupo en px de la columna más alta: depende del alto de la cabecera (título + subtítulo)."""
     en = d["entregables"]
     titulo = R.t(en.get("titulo") or "Todo lo que {cliente_corto} recibe.", "entregables.titulo")
-    sub = sin_marcado(R.t(en.get("subtitulo") or SUB_ENTREGABLES, "entregables.subtitulo"))
+    sub = sin_marcado(R.t(en.get("subtitulo") or (SUB_ENTREGABLES if seg_hay_columna(d) else SUB_ENTREGABLES_SIN_SEG), "entregables.subtitulo"))
     h2_ancho = min(560.0, len(titulo) * 19.0)
     lh2 = lineas_wrap(titulo, 560 / 19.0)
     ancho_sub = max(300.0, min(520.0, 1011 - 28 - h2_ancho))
@@ -903,10 +917,56 @@ def foot(R, variante):
     )
 
 
+VOC_DEF = {"solucion": ("solución", "soluciones"), "area": ("área", "áreas"), "proceso_base": ("proceso base", "procesos base")}
+VOC = dict(VOC_DEF)
+
+
+def set_vocab(d):
+    """Vocabulario de la propuesta. Por defecto el de Habilidades (soluciones, áreas, proceso base); otro servicio, p. ej. Detección
+    (entregables, frentes, etapa previa), lo declara en datos.json → vocabulario = {solucion, area, proceso_base}: [singular, plural]."""
+    VOC.clear()
+    VOC.update(VOC_DEF)
+    v = d.get("vocabulario") if isinstance(d.get("vocabulario"), dict) else {}
+    for k in VOC_DEF:
+        x = v.get(k)
+        if isinstance(x, list) and len(x) == 2 and all(isinstance(i, str) and i.strip() for i in x):
+            VOC[k] = (x[0].strip(), x[1].strip())
+
+
+def vocab_por_defecto():
+    return VOC == VOC_DEF
+
+
+def seg_tipo(d):
+    return (d.get("seguimiento") or {}).get("tipo") or "seguimiento"
+
+
+def seg_es_seguimiento(d):
+    """True salvo que seguimiento.tipo = «cierre» (la 5.ª columna de la ruta muestra el cierre y la ruta posterior, no un seguimiento)
+    o «ninguno» (la propuesta no lleva seguimiento ni 5.ª columna)."""
+    return seg_tipo(d) not in ("cierre", "ninguno")
+
+
+def seg_hay_columna(d):
+    """False si seguimiento.tipo = «ninguno»: la ruta no muestra la 5.ª columna y no se exigen rango, texto ni check-ins."""
+    return seg_tipo(d) != "ninguno"
+
+
+def sin_inversion(d):
+    """True si el deck no lleva hoja de inversión: Fundación, o datos.json → sin_hoja_cotizacion = true (propuesta sin cotización en el deck)."""
+    return d.get("division") == "fundacion" or bool(d.get("sin_hoja_cotizacion"))
+
+
+def rotulo_servicio(d):
+    """Rótulo del servicio que se muestra en el deck. Por defecto «Servicio de Habilidades»; un combo (p. ej. Detección + Habilidades)
+    lo declara en datos.json → servicio_rotulo (CLAUDE.md §4.1a punto 4: nombrar los servicios reales)."""
+    return (d.get("servicio_rotulo") or "Servicio de Habilidades").strip()
+
+
 def s1_portada(d, R):
     p = d["portada"]
     T, M = R.T, R.M
-    eyebrow = p.get("eyebrow") or "Propuesta de proyecto · Servicio de Habilidades"
+    eyebrow = p.get("eyebrow") or ("Propuesta de proyecto · " + rotulo_servicio(d))
     hechos = "".join(
         '          <div class="pain-item">\n'
         '            <span class="pain-num">%s</span>\n'
@@ -975,22 +1035,26 @@ def s2_alcance(d, R):
             continue
         ca = R.agg["carril"][c["id"]]
         base = ""
-        if ca["bases"] == 1:
-            base = " y un proceso base"
-        elif ca["bases"] > 1:
-            base = " y %d procesos base" % ca["bases"]
+        if vocab_por_defecto():
+            if ca["bases"] == 1:
+                base = " y un proceso base"
+            elif ca["bases"] > 1:
+                base = " y %d procesos base" % ca["bases"]
+        elif ca["bases"]:
+            base = " y %d %s" % (ca["bases"], plural(ca["bases"], *VOC["proceso_base"]))
         filas = ""
         for a in areas:
             n = R.agg["area"][a["id"]][0]
             em = ""
             if a.get("proceso_base"):
-                em = " <em>(%s)</em>" % T(al.get("etiqueta_proceso_base") or "proceso base", "alcance.etiqueta_proceso_base")
+                em = " <em>(%s)</em>" % T(al.get("etiqueta_proceso_base") or VOC["proceso_base"][0], "alcance.etiqueta_proceso_base")
+            comp = (' <small class="comp">%s</small>' % T(a["composicion"], "areas.composicion")) if a.get("composicion") else ""
             uw = ""
             if n > 12:
                 uw = ";--uw:%dpx" % max(4, int(240 / n) - 4)
             filas += (
-                '              <li><span class="area">%s%s</span><span class="units" style="--n:%d%s"></span><span class="n">%d</span></li>\n'
-                % (T(a["nombre"], "areas.nombre"), em, n, uw, n)
+                '              <li><span class="area">%s%s%s</span><span class="units" style="--n:%d%s"></span><span class="n">%d</span></li>\n'
+                % (T(a["nombre"], "areas.nombre"), em, comp, n, uw, n)
             )
         paneles += (
             '          <div class="scope-panel %s">\n'
@@ -1000,8 +1064,8 @@ def s2_alcance(d, R):
             "            </div>\n"
             '            <ul class="scope-rows">\n%s            </ul>\n'
             "          </div>\n\n"
-            % (COLORES[c["color"]], T(c["nombre"], "carriles.nombre"), ca["n"], plural(ca["n"], "solución", "soluciones"),
-               ca["areas"], plural(ca["areas"], "área", "áreas"), base, filas)
+            % (COLORES[c["color"]], T(c["nombre"], "carriles.nombre"), ca["n"], plural(ca["n"], *VOC["solucion"]),
+               ca["areas"], plural(ca["areas"], *VOC["area"]), base, filas)
         )
     pasos = "".join("              <li>%s</li>\n" % M(x, "alcance.pasos") for x in al["pasos"])
     num = {2: "dos", 3: "tres", 4: "cuatro"}[len(al["pasos"])]
@@ -1052,6 +1116,16 @@ def lista_areas(nombres):
     return ", ".join(items[:-1]) + " y " + items[-1]
 
 
+def mayus1(s):
+    """Primera letra en mayúscula, sin tocar el marcado (**) ni los tokens: las descripciones de fase se leen como frase."""
+    for i, ch in enumerate(s):
+        if ch.isalpha():
+            return s[:i] + ch.upper() + s[i + 1:]
+        if ch not in "*_ ":
+            break
+    return s
+
+
 def s3_ruta(d, R):
     T, M = R.T, R.M
     ruta = d["ruta"]
@@ -1061,26 +1135,34 @@ def s3_ruta(d, R):
     ncols = len(fases_cols)
     rowh = {1: 214, 2: 130, 3: 104}[nf]
     titulo = ruta.get("titulo") or ("%s, {semanas_txt}." % PALABRAS_FRENTES[nf])
-    sub = ruta.get("subtitulo") or "Semanas de trabajo desde el arranque, con **seguimiento a {rango_seguimiento}** desde el cierre de cada área."
+    con_garantia = seg_es_seguimiento(d) and not sin_inversion(d) and not (d.get("inversion") or {}).get("sin_garantia")
+    sub = ruta.get("subtitulo") or (
+        ("Semanas de trabajo desde el arranque, con **seguimiento y garantía a {rango_seguimiento}** desde el cierre de cada área." if con_garantia
+         else "Semanas de trabajo desde el arranque, con **seguimiento a {rango_seguimiento}** desde el cierre de cada área.")
+        if seg_hay_columna(d) else "Semanas de trabajo desde el arranque.")
     hdr = '        <div class="rg-corner"></div>\n'
+    # Los protagonistas de la ruta son las soluciones (procesos), no las horas (formato pedido el 2026-10-06): la cabecera de fase
+    # muestra cuántas se construyen en ella; las horas quedan en pequeño en cada frente y celda, y el total en la nota.
     for i, f in enumerate(fases_cols, 1):
         n, h = R.agg["fase"].get(f["id"], [0, 0])
         hi = bool(f.get("destacada"))
-        etiqueta = "<b>%d de %d h</b>" % (h, R.agg["h_total"]) if hi else "<b>%d h</b>" % h
         hdr += (
             '        <div class="rg-phase rg-ph-%d%s">\n'
-            '          <span class="rg-phase-tag">%s</span>\n'
+            '          <span class="rg-phase-top"><span class="rg-phase-tag">%s</span><b class="rg-phase-n">%d %s</b></span>\n'
             '          <span class="rg-phase-date">%s</span>\n'
-            '          <span class="rg-phase-txt">%s · %s</span>\n'
-            "        </div>\n" % (i, " hi" if hi else "", T(f["titulo"], "fases.titulo"), T(f["rango"], "fases.rango"), etiqueta, M(f["descripcion"], "fases.descripcion"))
+            '          <span class="rg-phase-txt">%s</span>\n'
+            "        </div>\n" % (i, " hi" if hi else "", T(f["titulo"], "fases.titulo"), n, plural(n, *VOC["solucion"]),
+                                 T(f["rango"], "fases.rango"), M(mayus1(f["descripcion"]), "fases.descripcion"))
         )
-    hdr += (
-        '        <div class="rg-phase rg-fu">\n'
-        '          <span class="rg-phase-tag">%s</span>\n'
-        '          <span class="rg-phase-date">%s</span>\n'
-        '          <span class="rg-phase-txt">%s</span>\n'
-        "        </div>\n" % (T(seg.get("etiqueta") or "Seguimiento", "seguimiento.etiqueta"), T(seg["rango"], "seguimiento.rango"), M(seg["texto"], "seguimiento.texto"))
-    )
+    if seg_hay_columna(d):
+        hdr += (
+            '        <div class="rg-phase rg-fu">\n'
+            '          <span class="rg-phase-top"><span class="rg-phase-tag">%s</span></span>\n'
+            '          <span class="rg-phase-date">%s</span>\n'
+            '          <span class="rg-phase-txt">%s</span>\n'
+            "        </div>\n" % (T(seg.get("etiqueta") or ("Garantía" if con_garantia else "Seguimiento"), "seguimiento.etiqueta"),
+                                 T(seg["rango"], "seguimiento.rango"), M(mayus1(seg["texto"]), "seguimiento.texto"))
+        )
     cuerpo = ""
     carriles = dict((c["id"], c) for c in d["carriles"])
     for fr in d["frentes"]:
@@ -1088,12 +1170,15 @@ def s3_ruta(d, R):
         car = carriles[fr["carril"]]
         nombres = [sin_marcado(R.t(a.get("nombre_frente") or a["nombre"], "areas.nombre_frente")) for a in d["areas"] if a["frente"] == fr["id"]]
         areas_html = fr.get("areas_html") or lista_areas(nombres)
+        semanas_fr = (' · <span class="nw">%s</span>' % T(fr["semanas"], "frentes.semanas")) if fr.get("semanas") else ""
         cuerpo += (
             '        <div class="rg-front %s">\n'
-            '          <span class="rg-front-tag">Frente %s · %s</span>\n'
-            '          <span class="rg-front-h"><b>%d h</b> · %s</span>\n'
+            '          <span class="rg-front-top"><b class="rg-front-name">%s</b><span class="rg-front-tag">%s</span></span>\n'
+            '          <span class="rg-front-h"><b>%d %s</b> · <span class="nw">%d h</span>%s</span>\n'
             '          <span class="rg-front-areas">%s</span>\n'
-            "        </div>\n" % (COLORES[car["color"]], T(fr["id"], "frentes.id"), T(fr["semanas"], "frentes.semanas"), h, T(car["nombre_corto"], "carriles.nombre_corto"), areas_html)
+            "        </div>\n" % (COLORES[car["color"]], T(car["nombre_corto"], "carriles.nombre_corto"),
+                                 T(fr.get("etiqueta") or ("Frente %s" % fr["id"]), "frentes.etiqueta"),
+                                 n, plural(n, *VOC["solucion"]), h, semanas_fr, areas_html)
         )
         for f in fases_cols:
             nn, hh = R.agg["celda"].get((fr["id"], f["id"]), [0, 0])
@@ -1101,19 +1186,22 @@ def s3_ruta(d, R):
             txt = (fr.get("celdas") or {}).get(f["id"], "")
             if nn:
                 cuerpo += (
-                    '        <div class="rg-cell%s"><span class="rg-h"><b>%d</b> h <i>%d %s</i></span><p>%s</p></div>\n'
-                    % (hi, hh, nn, plural(nn, "solución", "soluciones"), M(txt, "frentes.celdas"))
+                    '        <div class="rg-cell%s"><span class="rg-h"><b>%d</b> %s <i>%d h</i></span><p>%s</p></div>\n'
+                    % (hi, nn, plural(nn, *VOC["solucion"]), hh, M(txt, "frentes.celdas"))
                 )
             else:
                 cuerpo += '        <div class="rg-cell empty%s"><p>Sin entregas en esta fase.</p></div>\n' % hi
-    items = "".join(
-        "            <li><b>%s</b><span>%s</span></li>\n" % (T(i["dias"], "seguimiento.items.dias"), M(i["texto"], "seguimiento.items")) for i in seg["items"]
-    )
-    follow = (
-        '        <div class="rg-follow" style="grid-column:%d; grid-row:2 / span %d">\n'
-        "          <ul>\n%s          </ul>\n"
-        "        </div>\n" % (ncols + 2, nf, items)
-    )
+    follow = ""
+    if seg_hay_columna(d):
+        items = "".join(
+            "            <li><b>%s</b><span>%s</span></li>\n" % (T(i["dias"], "seguimiento.items.dias"), M(i["texto"], "seguimiento.items")) for i in seg["items"]
+        )
+        follow = (
+            '        <div class="rg-follow" style="grid-column:%d; grid-row:2 / span %d">\n'
+            "          <ul>\n%s          </ul>\n"
+            "        </div>\n" % (ncols + 2, nf, items)
+        )
+    grid_cols = "" if seg_hay_columna(d) else "; grid-template-columns:226px repeat(%d,1fr)" % ncols  # sin 5.ª columna: la grilla acaba en la última fase
     hitos = ruta["hitos"]
     mil = "".join(
         '        <div class="mile"><span class="mile-d"></span><b>%s</b><p>%s</p></div>\n'
@@ -1136,11 +1224,11 @@ def s3_ruta(d, R):
         '      <p class="eyebrow">03 · Ruta</p>\n'
         "      <h2>%s</h2>\n"
         '      <p class="sub">%s</p>\n\n'
-        '      <div class="route-grid" style="--cols:%d; --rows:%d; --rowh:%dpx">\n\n%s\n%s\n%s      </div>\n\n'
+        '      <div class="route-grid" style="--cols:%d; --rows:%d; --rowh:%dpx%s">\n\n%s\n%s\n%s      </div>\n\n'
         '      <div class="route-miles" style="grid-template-columns:repeat(%d,1fr)">\n%s      </div>\n'
         '      <p class="route-note">%s</p>\n\n%s'
         "    </section>\n"
-        % (R.contador(3), T(titulo, "ruta.titulo"), M(sub, "ruta.subtitulo"), ncols, nf, rowh,
+        % (R.contador(3), T(titulo, "ruta.titulo"), M(sub, "ruta.subtitulo"), ncols, nf, rowh, grid_cols,
            hdr, cuerpo, follow, len(hitos), mil, M(nota, "ruta.nota"), foot(R, "oscuro"))
     )
 
@@ -1149,7 +1237,7 @@ def programa_auto(d, R):
     t = R.t
     carriles = dict((c["id"], c) for c in d["carriles"])
     una = len(d["carriles"]) == 1
-    lineas = ["Servicio de Habilidades · {cliente_corto}, {n_areas_txt} ({codigo})."]
+    lineas = [rotulo_servicio(d) + " · {cliente_corto}, {n_areas_txt} ({codigo})."]
     partes = []
     for fr in d["frentes"]:
         h = R.agg["frente"].get(fr["id"], [0, 0])[1]
@@ -1166,7 +1254,7 @@ def programa_auto(d, R):
     if una:
         lineas.append("Herramienta: %s." % carriles[d["frentes"][0]["carril"]]["nombre"])
     lineas.append("Horas de sesión: trabajo conjunto con quien ejecuta cada proceso.")
-    lineas.append("{n_total_txt} construidas, probadas y adoptadas.")
+    lineas.append("{n_total_txt} construidas, probadas y adoptadas." if vocab_por_defecto() else "{n_total_txt}.")
     return [t(x, "inversion.programa") for x in lineas]
 
 
@@ -1176,6 +1264,11 @@ def s4_inversion(d, R, idx):
     titulo = inv.get("titulo") or "Inversión por horas de sesión."
     dur = inv.get("duracion") or "Proyección de {h_total} h de sesión en {semanas_txt} de trabajo desde el arranque, más seguimiento a {rango_seguimiento}."
     garantia = inv.get("garantia_texto") or "Estamos contigo hasta que la habilidad quede instalada."
+    garantia_html = "" if inv.get("sin_garantia") else (
+        '      <div class="cot-garantia-badge">\n'
+        '        <span class="cot-garantia-tag">Garantía 30-60-90</span>\n'
+        '        <p class="cot-garantia-text">%s</p>\n'
+        "      </div>\n\n" % T(garantia, "inversion.garantia_texto"))
     lic = inv.get("licencias") or {}
     lic_html = ""
     if lic.get("tarjetas"):
@@ -1200,7 +1293,7 @@ def s4_inversion(d, R, idx):
         '    <section class="slide s-price">\n'
         '      <span class="counter">%s</span>\n'
         '      <h2 class="title">%s</h2>\n'
-        '      <p class="price-intro">Propuesta Económica · Servicio de Habilidades</p>\n\n'
+        '      <p class="price-intro">Propuesta Económica · %s</p>\n\n'
         '      <div class="block">\n'
         '        <span class="block-eyebrow">Duración</span>\n'
         '        <p class="block-value">%s</p>\n'
@@ -1225,16 +1318,13 @@ def s4_inversion(d, R, idx):
         '        <span class="cot-terms-label">Importante</span>\n'
         '        <p class="cot-terms-text">Este servicio se presta bajo nuestros <a href="https://drive.google.com/file/d/1PA-ZSt4KnyY5dpxXzgkIk6-yfGlV2eF8/view?usp=drive_link" target="_blank" rel="noopener">términos y condiciones</a>. Al avanzar con esta propuesta, ambas partes los aceptan.</p>\n'
         "      </div>\n\n"
-        '      <div class="cot-garantia-badge">\n'
-        '        <span class="cot-garantia-tag">Garantía 30-60-90</span>\n'
-        '        <p class="cot-garantia-text">%s</p>\n'
-        "      </div>\n\n"
+        '%s'
         '      <div class="block block-notes-container">\n'
         '        <span class="block-eyebrow">Notas</span>\n'
         "      </div>\n"
         '      <div class="multi-box notas-box" data-field="Notas"></div>\n\n%s%s'
         "    </section>\n"
-        % (R.contador(idx), T(titulo, "inversion.titulo"), M(dur, "inversion.duracion"), T(garantia, "inversion.garantia_texto"), lic_html, foot(R, "claro"))
+        % (R.contador(idx), T(titulo, "inversion.titulo"), T(rotulo_servicio(d), "servicio_rotulo"), M(dur, "inversion.duracion"), garantia_html, lic_html, foot(R, "claro"))
     )
 
 
@@ -1242,7 +1332,7 @@ def s5_entregables(d, R, idx, columnas, ncols):
     T, M = R.T, R.M
     en = d["entregables"]
     titulo = en.get("titulo") or "Todo lo que {cliente_corto} recibe."
-    sub = en.get("subtitulo") or SUB_ENTREGABLES
+    sub = en.get("subtitulo") or (SUB_ENTREGABLES if seg_hay_columna(d) else SUB_ENTREGABLES_SIN_SEG)
     compacto = bool(en.get("compacto"))
     sub_html = M(sub, "entregables.subtitulo")
     sub_html = re.sub(r"(Lo que se llevan)", r'<span class="nw">\1</span>', sub_html, count=1, flags=re.I)
@@ -1682,8 +1772,8 @@ def render_html(d, R, columnas, ncols):
     total = R.total
     cab = (
         "<!doctype html>\n<!--\n"
-        "  Propuesta · %s · Servicio de Habilidades (%s)\n"
-        "  División: %s · Servicio: Habilidades (§4.1a) · Alianza: %s\n"
+        "  Propuesta · %s · %s (%s)\n"
+        "  División: %s · Servicio: %s (§4.1a) · Alianza: %s\n"
         "  GENERADO por scripts/generar-habilidades-compacto.py (plantilla %s) desde datos.json.\n"
         "  No editar a mano: editar datos.json y regenerar. Estilos propios del deck: overrides.css.\n"
         "  Fuente del insumo: %s\n\n"
@@ -1693,11 +1783,13 @@ def render_html(d, R, columnas, ncols):
         "  solo en la slide de inversión; «Lo que se llevan» y «Entregables» solo en la de entregables.\n"
         "  Campos AcroForm: %s. Se reposicionan con scripts/customize-habilidades-compacto.py.\n"
         "-->\n"
-        % (cm(d["cliente"]["nombre"]), cm(d["cliente"]["codigo"]), R.div_nombre, "sí" if d.get("alianza") else "no", VERSION_PLANTILLA,
+        % (cm(d["cliente"]["nombre"]), cm(rotulo_servicio(d)), cm(d["cliente"]["codigo"]), R.div_nombre,
+           cm(re.sub(r"^Servicio de ", "", rotulo_servicio(d))), "sí" if d.get("alianza") else "no", VERSION_PLANTILLA,
            cm(d.get("fuente_insumo") or "(no indicado)"), total, "4 Inversión · 5 Entregables" if R.con_precio else "4 Entregables",
            (" · %d Retorno esperado" % total) if d.get("retorno") else "",
            "Programa, Notas, PrecioBase, Descuento, PrecioTotal (inversión) y Entregables, Acreditacion (entregables)" if R.con_precio
-           else "Entregables, Acreditacion (entregables); sin hoja de inversión por ser Fundación")
+           else ("Entregables, Acreditacion (entregables); sin hoja de inversión por ser Fundación" if d.get("division") == "fundacion"
+                 else "Entregables, Acreditacion (entregables); sin hoja de cotización (sin_hoja_cotizacion)"))
     )
     head = (
         '<html lang="es">\n<head>\n  <meta charset="utf-8">\n'
@@ -1792,19 +1884,19 @@ def validar_acroforms(af, rep):
 def construir_programa_md(d, R):
     t = R.t
     L = []
-    L.append("# Programa interno · %s · Servicio de Habilidades (%s)\n" % (d["cliente"]["nombre"], d["cliente"]["codigo"]))
+    L.append("# Programa interno · %s · %s (%s)\n" % (d["cliente"]["nombre"], rotulo_servicio(d), d["cliente"]["codigo"]))
     L.append("> Documento interno (no se muestra al cliente). **Generado** por `scripts/generar-habilidades-compacto.py` desde `datos.json`: no editar a mano.")
     if d.get("fuente_insumo"):
         L.append("> Fuente del insumo: %s." % d["fuente_insumo"])
     L.append("")
     L.append("## 1. Resumen\n")
-    L.append("- **%s en %s%s**, **%d h** de sesión, más seguimiento a %s." % (
-        R.ctx["n_total_txt"], R.ctx["n_areas_txt"], (" (más %d %s)" % (R.agg["n_bases"], plural(R.agg["n_bases"], "proceso base", "procesos base"))) if R.agg["n_bases"] else "",
-        R.agg["h_total"], d["seguimiento"]["rango"]))
+    L.append("- **%s en %s%s**, **%d h** de sesión%s." % (
+        R.ctx["n_total_txt"], R.ctx["n_areas_txt"], (" (más %d %s)" % (R.agg["n_bases"], plural(R.agg["n_bases"], *VOC["proceso_base"]))) if R.agg["n_bases"] else "",
+        R.agg["h_total"], (", más seguimiento a %s" % d["seguimiento"]["rango"]) if seg_es_seguimiento(d) else ""))
     for c in d["carriles"]:
         ca = R.agg["carril"].get(c["id"])
         if ca:
-            L.append("- Carril **%s**: %d %s, %d h." % (c["nombre"], ca["n"], plural(ca["n"], "solución", "soluciones"), ca["h"]))
+            L.append("- Carril **%s**: %d %s, %d h." % (c["nombre"], ca["n"], plural(ca["n"], *VOC["solucion"]), ca["h"]))
     L.append("- Horas por fase: " + " · ".join("%s %d h (%d sol.)" % (f["id"], R.agg["fase"].get(f["id"], [0, 0])[1], R.agg["fase"].get(f["id"], [0, 0])[0]) for f in d["fases"]) + ".")
     L.append("")
     L.append("## 2. Frentes y ruta\n")
@@ -1832,7 +1924,7 @@ def construir_programa_md(d, R):
     for a in d["areas"]:
         n, h = R.agg["area"][a["id"]]
         L.append("### %s · %d %s · %d h · carril %s · frente %s%s\n" % (
-            cel(a["nombre"]), n, plural(n, "solución", "soluciones"), h, carr[a["carril"]]["nombre"], a["frente"], " · proceso base" if a.get("proceso_base") else ""))
+            cel(a["nombre"]), n, plural(n, *VOC["solucion"]), h, carr[a["carril"]]["nombre"], a["frente"], (" · " + VOC["proceso_base"][0]) if a.get("proceso_base") else ""))
         L.append("| ID | Entregable (nombre en el deck) | Detalle de la fuente | C | T | A | Total | Fase |\n|---|---|---|---|---|---|---|---|")
         for s in a["soluciones"]:
             L.append("| %s | %s | %s | %s | %s | %s | %d | %s |" % (
@@ -1889,14 +1981,21 @@ def construir_programa_md(d, R):
     return "\n".join(L) + "\n"
 
 
+def tipo_meta_defecto(d, R):
+    base = "Capacitación In-Company · Servicio de Habilidades · %s en %s · %d h de sesión · %s semanas" % (
+        R.ctx["n_total_txt"], R.ctx["n_areas_txt"], R.agg["h_total"], d["ruta"]["semanas_total"])
+    if seg_hay_columna(d):
+        return base + " + seguimiento %s" % d["seguimiento"].get("rango", "")
+    return base + ", sin seguimiento"
+
+
 def datos_meta(d, R):
     return {
         "codigo": d["cliente"]["codigo"],
         "cliente": d["cliente"]["nombre"],
-        "tipo": "Capacitación In-Company · Servicio de Habilidades · %s en %s · %d h de sesión · %s semanas + seguimiento %s"
-                % (R.ctx["n_total_txt"], R.ctx["n_areas_txt"], R.agg["h_total"], d["ruta"]["semanas_total"], d["seguimiento"]["rango"]),
+        "tipo": d.get("meta_tipo") or tipo_meta_defecto(d, R),
         "eje": sin_marcado(R.t(d.get("eje") or "", "eje")),
-        "servicio": "habilidades",
+        "servicio": d.get("meta_servicio") or "habilidades",
         "alianza": bool(d.get("alianza")),
     }
 
@@ -1943,11 +2042,25 @@ def construir_brief(d, R):
         "N_TOTAL": str(R.agg["n_total"]), "N_AREAS": str(R.agg["n_areas"]), "H_TOTAL": str(R.agg["h_total"]),
         "N_TOTAL_TXT": R.ctx["n_total_txt"], "N_AREAS_TXT": R.ctx["n_areas_txt"],
         "NOTA_PRECIO": ("Precios de inversión, descuento y total: vacíos, los llena ventas." if R.con_precio
-                        else "Sin hoja de inversión (Fundación): el deck no lleva precios ni campos de cotización."),
-        "SEMANAS": str(d["ruta"]["semanas_total"]), "SEGUIMIENTO": d["seguimiento"]["rango"],
+                        else ("Sin hoja de inversión (Fundación): el deck no lleva precios ni campos de cotización." if d.get("division") == "fundacion"
+                              else "Sin hoja de cotización (sin_hoja_cotizacion): el deck no lleva precios ni campos de cotización; el precio se comunica por otro medio.")),
+        "SEMANAS": str(d["ruta"]["semanas_total"]), "SEGUIMIENTO": d["seguimiento"].get("rango", ""),
         "SUPUESTOS": sup, "PENDIENTES": pen, "SLIDES": str(R.total),
-        "PRECIO": "con hoja de inversión (campos de precio vacíos para ventas)" if R.con_precio else "sin hoja de inversión (Fundación)",
+        "PRECIO": "con hoja de inversión (campos de precio vacíos para ventas)" if R.con_precio else ("sin hoja de inversión (Fundación)" if d.get("division") == "fundacion" else "sin hoja de cotización"),
     }
+    # Otro servicio (p. ej. Detección, datos.json → meta_servicio): el brief nombra el servicio real, no «Habilidades».
+    ms = (d.get("meta_servicio") or "habilidades").strip()
+    if ms != "habilidades":
+        plantilla = plantilla.replace("# Brief · {{CLIENTE}} · Servicio de Habilidades ({{CODIGO}})", "# Brief · {{CLIENTE}} · %s ({{CODIGO}})" % rotulo_servicio(d))
+        plantilla = plantilla.replace("- **Servicio (§4.1a)**: `habilidades`", "- **Servicio (§4.1a)**: `%s`" % ms)
+        plantilla = plantilla.replace("categoría de catálogo Capacitación In-Company (`{{CODIGO}}`)", "%s (`{{CODIGO}}`)" % (d.get("meta_tipo") or rotulo_servicio(d)))
+        plantilla = plantilla.replace(
+            "- Retorno esperado (slide opcional, módulo `retorno` de `datos.json`): sin estudios ni citas de la web. En modo método explica cómo se calculará; en modo cifras muestra solo datos del cliente con su tipo (medido, declarado, estimación). «Hacia la semana N» (construcción + 90 días) por confirmar con servicio. Datos: `retorno-captura.xlsx` (`scripts/habilidades-retorno-xlsx.py`).",
+            "- Retorno esperado (slide opcional, módulo `retorno` de `datos.json`): sin estudios ni citas de la web. En modo método explica cómo se estima el retorno de cada oportunidad y qué decide el cliente con el Reporte Final, sin compromiso de resultado; en modo cifras muestra solo datos del cliente con su tipo (medido, declarado, estimación).")
+    if not seg_hay_columna(d):
+        plantilla = plantilla.replace(" · seguimiento a {{SEGUIMIENTO}}", " · sin seguimiento")
+    if d["ruta"].get("semanas_total") == 1:
+        plantilla = plantilla.replace("{{SEMANAS}} semanas", "{{SEMANAS}} semana")
     for k, v in sub.items():
         plantilla = plantilla.replace("{{%s}}" % k, v)
     return plantilla
@@ -2040,7 +2153,7 @@ def _imprimir(rep, ctx):
         d, agg = ctx
         print("== Habilidades compacto · %s (%s) ==" % ((d.get("cliente") or {}).get("nombre", "?"), (d.get("cliente") or {}).get("codigo", "?")))
         print("   %d %s · %d %s · %d h · frentes %s · fases %s" % (
-            agg["n_total"], plural(agg["n_total"], "solución", "soluciones"), agg["n_areas"], plural(agg["n_areas"], "área", "áreas"), agg["h_total"],
+            agg["n_total"], plural(agg["n_total"], *VOC["solucion"]), agg["n_areas"], plural(agg["n_areas"], *VOC["area"]), agg["h_total"],
             ", ".join("%s=%dh" % (k, v[1]) for k, v in sorted(agg["frente"].items(), key=lambda kv: str(kv[0]))),
             ", ".join("%s=%dh" % (k, v[1]) for k, v in sorted(agg["fase"].items(), key=lambda kv: str(kv[0])))))
     for a in rep.avisos:
@@ -2089,12 +2202,12 @@ def ejecutar(args):
     for k in sorted(set(claves_dup)):
         rep.err("datos.json", "la clave «%s» aparece repetida en el mismo objeto (JSON se queda con la última y pierde la anterior): borrar el duplicado" % k)
     # 1) Estructura: pendientes, tipos y secciones obligatorias (siempre abortan)
-    saltar = ("inversion",) if d.get("division") == "fundacion" else ()
+    saltar = ("inversion",) if sin_inversion(d) else ()
     pend = []
     buscar_pendientes(d, "", pend, saltar)
     for ruta_ph, msg in pend:
         rep.err(ruta_ph, msg)
-    chequear_tipos(d if d.get("division") != "fundacion" else dict((k, v) for k, v in d.items() if k != "inversion"), "raiz", "", rep)
+    chequear_tipos(d if not sin_inversion(d) else dict((k, v) for k, v in d.items() if k != "inversion"), "raiz", "", rep)
     for k in ("cliente", "portada", "carriles", "areas", "fases", "frentes", "ruta", "seguimiento", "alcance", "entregables"):
         if not d.get(k):
             rep.err(k, "falta la sección obligatoria")
@@ -2118,7 +2231,7 @@ def ejecutar(args):
     R.M = lambda x, donde: md(R.t(x, donde))
     div_nombre, div_dir = DIVISIONES.get(d.get("division"), ("Educación", "educacion"))
     R.div_nombre = div_nombre
-    R.con_precio = d.get("division") != "fundacion"
+    R.con_precio = not sin_inversion(d)
     R.total = (5 if R.con_precio else 4) + (1 if d.get("retorno") else 0)
     R.contador = lambda i: "%02d / %02d" % (i, R.total)
     R.codigo = d["cliente"].get("codigo", "")
@@ -2156,7 +2269,7 @@ def ejecutar(args):
     titulo2 = R.t(d["alcance"].get("titulo") or titulo_alcance_defecto(R), "alcance.titulo")
     if len(titulo2) > 50:
         rep.aviso("alcance.titulo", "el titular de %d caracteres pasa a 2 líneas: usar un nombre_pie corto o definir alcance.titulo" % len(titulo2))
-    sub5 = sin_marcado(R.t(d["entregables"].get("subtitulo") or SUB_ENTREGABLES, "entregables.subtitulo"))
+    sub5 = sin_marcado(R.t(d["entregables"].get("subtitulo") or (SUB_ENTREGABLES if seg_hay_columna(d) else SUB_ENTREGABLES_SIN_SEG), "entregables.subtitulo"))
     if MARCA_BENEF not in sub5.lower():
         rep.err("entregables.subtitulo", "debe contener la frase «Lo que se llevan» (marcador de las cajas de formulario)")
 

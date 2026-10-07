@@ -1,0 +1,355 @@
+{
+ "version": 1,
+ "cliente": {
+  "nombre": "Steam Solutions",
+  "slug": "steam-solutions",
+  "codigo": "CAI-038",
+  "nombre_pie": "Steam Solutions"
+ },
+ "division": "educacion",
+ "alianza": false,
+ "vocabulario": {
+  "solucion": [
+   "entregable",
+   "entregables"
+  ],
+  "area": [
+   "módulo",
+   "módulos"
+  ]
+ },
+ "eje": "Desarrollo guiado por especificaciones con agentes de IA en el equipo de desarrollo de Steam Solutions: método común, agentes de desarrollo, pruebas y despliegue, y un flujo común adoptado por el equipo",
+ "origen": "Ficha de Levantamiento de Steam Solutions (registrada el 30/09/2026 por la asesora comercial) e instrucción directa del usuario del 06/10/2026: la herramienta de IA para desarrollo se define en el kick-off",
+ "fuente_insumo": "Ficha de Levantamiento de Steam Solutions",
+ "portada": {
+  "titulo_lineas": [
+   "Desarrollo guiado por",
+   "especificaciones con agentes de IA"
+  ],
+  "titulo_destacado": "en {cliente_corto}",
+  "lead": "Este proyecto instala en el equipo de desarrollo una **metodología por especificaciones** y lo guía para que construya agentes de IA que desarrollen, prueben y desplieguen, con un método común que mantenga por su cuenta.",
+  "hechos": [
+   {
+    "num": "Ocho",
+    "texto": "personas de desarrollo, de distintos niveles, usan la IA de forma suelta y sin criterio.",
+    "resuelto_por": [
+     "FUN-1",
+     "MET-1"
+    ]
+   },
+   {
+    "num": "Ninguna",
+    "texto": "herramienta de IA está homologada para todo el equipo: hoy usan cuatro distintas.",
+    "resuelto_por": [
+     "FUN-1",
+     "FLU-1"
+    ]
+   },
+   {
+    "num": "Aislado",
+    "texto": "es hoy el proceso: cada persona trabaja a su manera, sin una metodología común.",
+    "resuelto_por": [
+     "MET-1",
+     "FLU-1"
+    ]
+   }
+  ],
+  "fuente": "Fuente: Ficha de Levantamiento de Steam Solutions (30/09/2026)."
+ },
+ "carriles": [
+  {
+   "id": "dev",
+   "nombre": "Desarrollo con IA",
+   "nombre_corto": "Desarrollo con IA",
+   "color": "amarillo"
+  }
+ ],
+ "areas": [
+  {
+   "id": "FM",
+   "nombre": "Fundamentals y método",
+   "carril": "dev",
+   "frente": "A",
+   "nombre_catalogo": "Método y criterios",
+   "composicion": "Criterios de uso de la IA y especificación previa.",
+   "soluciones": [
+    {
+     "id": "FUN-1",
+     "entregable": "Guía de criterios y reglas de uso de la IA en desarrollo",
+     "h": 2,
+     "fase": "F1",
+     "detalle": "Fundamentals de 2 h con los 8 desarrolladores, en un solo grupo (bajo el máximo de 25 por sesión). Temas: cómo trabaja un asistente de IA para programar y cómo trabaja un agente, qué contexto y qué permisos necesita, qué se revisa siempre antes de aceptar un cambio, y qué reglas de datos aplican (trabajo en ambiente de desarrollo con datos sintéticos, como ya lo hace el equipo). La guía descargable resume los criterios y reglas comunes. Registra la línea base del tiempo que toma hoy probar y desplegar. La herramienta de IA para desarrollo ya se definió en el kick-off, que va aparte."
+    },
+    {
+     "id": "MET-1",
+     "entregable": "Plantilla de especificación e instrucciones reutilizables (skills)",
+     "h": 2,
+     "fase": "F1",
+     "detalle": "Sesión práctica de 2 h para instalar el método: el prototipo de pantalla (insumo para validar requerimientos con el cliente) se convierte en una especificación completa, y se definen las instrucciones reutilizables (skills) que la IA lee antes de programar. Se trabaja sobre una tarea real del equipo. Entrega la plantilla de especificación y las primeras instrucciones reutilizables."
+    }
+   ]
+  },
+  {
+   "id": "AG",
+   "nombre": "Agentes de IA",
+   "carril": "dev",
+   "frente": "A",
+   "composicion": "Desarrollo, pruebas y despliegue, sobre tareas reales.",
+   "soluciones": [
+    {
+     "id": "DEV-1",
+     "entregable": "Agente de desarrollo, probado en una tarea real",
+     "h": 4,
+     "fase": "F2",
+     "detalle": "Sesión práctica de 4 h en la que el equipo construye, con la guía de Intezia, un agente de desarrollo que parte de la especificación (tareas de Odoo y Python, o de las apps móviles, según la tarea real elegida) y lo prueba en esa tarea hasta que funciona. Intezia orienta y revisa; el equipo es quien lo construye."
+    },
+    {
+     "id": "TES-1",
+     "entregable": "Agente de pruebas automatizadas, probado en una tarea real",
+     "h": 4,
+     "fase": "F2",
+     "detalle": "Sesión práctica de 4 h en la que el equipo construye, con la guía de Intezia, un agente que escribe y ejecuta pruebas automatizadas a partir de la especificación, y lo prueba sobre el código que produce el agente de desarrollo hasta que funciona."
+    },
+    {
+     "id": "DEP-1",
+     "entregable": "Agente de despliegue, probado en un ambiente de desarrollo",
+     "h": 4,
+     "fase": "F2",
+     "detalle": "Sesión práctica de 4 h en la que el equipo construye, con la guía de Intezia, un agente que prepara y ejecuta el despliegue, y lo prueba en un ambiente de desarrollo con datos sintéticos hasta que funciona. Las sesiones no despliegan a producción."
+    }
+   ]
+  },
+  {
+   "id": "IM",
+   "nombre": "Implementación",
+   "carril": "dev",
+   "frente": "A",
+   "composicion": "El flujo común, documentado y adoptado por el equipo.",
+   "soluciones": [
+    {
+     "id": "FLU-1",
+     "entregable": "Flujo común de especificación, código, pruebas y despliegue",
+     "h": 2,
+     "fase": "F3",
+     "detalle": "Sesión de 2 h para unir el método y los 3 agentes en un solo flujo: de la especificación al despliegue, con responsables, criterios de revisión y reglas de uso. El equipo lo documenta, con la guía de Intezia, y lo adopta en una tarea real, para dejar de trabajar cada quien a su manera."
+    }
+   ]
+  }
+ ],
+ "alcance": {
+  "titulo": "Un método común y tres agentes para el equipo.",
+  "subtitulo": "Nivelamos al equipo, instalamos el método y **guiamos** la construcción de **3 agentes** sobre tareas reales.",
+  "etiqueta_pasos": "Cómo trabajamos",
+  "pasos": [
+   "Nivelamos al equipo en criterios y reglas de uso de la IA.",
+   "Instalamos el método: especificar antes de programar.",
+   "Guiamos al equipo para que construya tres agentes que funcionen.",
+   "Dejamos el flujo común adoptado y medimos a 30, 60 y 90 días."
+  ],
+  "quien_construye": "Intezia guía la construcción para que cada agente funcione; **el equipo es quien lo construye**, sobre tareas reales en Odoo y Python.",
+  "fuera_alcance": [
+   "Producción y datos reales de salud: las sesiones usan un ambiente de desarrollo con datos sintéticos.",
+   "La licencia de la herramienta de IA, que va aparte."
+  ]
+ },
+ "fases": [
+  {
+   "id": "F1",
+   "titulo": "Método",
+   "rango": "Semanas 1 y 2",
+   "descripcion": "criterios y especificación"
+  },
+  {
+   "id": "F2",
+   "titulo": "Agentes",
+   "rango": "Semanas 3 a 5",
+   "descripcion": "desarrollo, pruebas y despliegue",
+   "destacada": true
+  },
+  {
+   "id": "F3",
+   "titulo": "Implementación",
+   "rango": "Semana 6",
+   "descripcion": "el flujo común queda adoptado"
+  }
+ ],
+ "frentes": [
+  {
+   "id": "A",
+   "carril": "dev",
+   "semanas": "S1-S6",
+   "etiqueta": "Equipo de desarrollo",
+   "areas_html": "Equipo de desarrollo de Steam Solutions",
+   "celdas": {
+    "F1": "2 sesiones de 2 h: criterios de uso de la IA y plantilla de especificación.",
+    "F2": "3 sesiones de 4 h: el equipo construye sus 3 agentes, con nuestra guía.",
+    "F3": "Sesión de 2 h: el flujo común, documentado y adoptado por el equipo."
+   }
+  }
+ ],
+ "ruta": {
+  "semanas_total": 6,
+  "tope_h_semana": 20,
+  "titulo": "Del kick-off a un flujo común en 6 semanas.",
+  "subtitulo": "Semanas desde el arranque, en modalidad mixta, con **seguimiento a 30, 60 y 90 días** tras el cierre.",
+  "nota": "S = semana de trabajo desde el arranque, cuya fecha se acuerda con {cliente}. Las {h_total} h son una proyección de sesión: {h_f1}, {h_f2} y {h_f3} h en las fases 1, 2 y 3. El kick-off de 1 h es aparte y no suma horas.",
+  "hitos": [
+   {
+    "titulo": "Kick-off · aparte",
+    "texto": "1 h para definir la herramienta de IA, la tarea real de práctica y la disponibilidad."
+   },
+   {
+    "titulo": "Semanas 1 y 2 · Método",
+    "texto": "2 sesiones de 2 h: criterios de uso de la IA y especificación antes de programar."
+   },
+   {
+    "titulo": "Semanas 3 a 5 · Agentes",
+    "texto": "3 sesiones de 4 h: el equipo construye sus agentes, con nuestra guía, sobre tareas reales."
+   },
+   {
+    "titulo": "Semana 6 · Implementación",
+    "texto": "Flujo común de especificación, código, pruebas y despliegue, adoptado por el equipo."
+   },
+   {
+    "titulo": "30 · 60 · 90 días",
+    "texto": "Seguimiento: uso, nuevos agentes y tiempo recuperado contra la línea base."
+   }
+  ]
+ },
+ "seguimiento": {
+  "rango": "30, 60 y 90 días",
+  "texto": "Desde el cierre de la implementación",
+  "items": [
+   {
+    "dias": "30 días",
+    "texto": "Uso de agentes y método"
+   },
+   {
+    "dias": "60 días",
+    "texto": "Nuevos agentes del equipo"
+   },
+   {
+    "dias": "90 días",
+    "texto": "Tiempo y calidad contra la línea base"
+   }
+  ]
+ },
+ "inversion": {
+  "notas": [
+   "La herramienta de IA para desarrollo se define en el kick-off con el equipo. Su licencia va aparte de esta inversión.",
+   "Las sesiones se trabajan en ambiente de desarrollo con datos sintéticos, como ya lo hace el equipo."
+  ],
+  "licencias": {
+   "titulo": "Licenciamiento · aparte de esta inversión",
+   "tarjetas": [
+    {
+     "nombre": "Herramienta de IA · a definir",
+     "color": "amarillo",
+     "texto": "Se elige en el **kick-off**, con el equipo y según su flujo de trabajo. Un criterio es que su pago y su renovación funcionen de forma estable desde Venezuela."
+    }
+   ],
+   "nota": "Esta propuesta no incluye precios de lista: dependen de la herramienta que se elija y el cliente los confirma con el proveedor. Pueden variar."
+  },
+  "programa": [
+   "Desarrollo guiado por especificaciones con agentes de IA para el equipo de Steam Solutions (CAI-038).",
+   "Fundamentals (2h) + método (2h) + 3 agentes (12h) + flujo común (2h). Modalidad mixta.",
+   "18h totales de sesión, más 1h de kick-off aparte. Licencia de la herramienta de IA aparte."
+  ]
+ },
+ "entregables": {
+  "titulo": "Lo que recibe el equipo.",
+  "subtitulo": "Lo que se llevan: **{n_entregables_txt}** trabajados con el equipo de desarrollo, más el seguimiento a {rango_seguimiento} que mide su efecto.",
+  "transversales": [
+   "Línea base del tiempo actual de probar y desplegar.",
+   "Seguimiento a 30, 60 y 90 días con medición del tiempo."
+  ],
+  "valor_inmediato": [
+   "Semana 2: método por especificaciones listo para usar.",
+   "Semana 5: 3 agentes funcionando, construidos por el equipo.",
+   "Semana 6: flujo común adoptado por el equipo."
+  ]
+ },
+ "retorno": {
+  "modo": "metodo",
+  "posiciones": false,
+  "subtitulo": "Se calcula con los datos del equipo de desarrollo, se confirma con la línea base de la semana 1 y se mide a 30, 60 y 90 días.",
+  "etiqueta_pasos": "Cómo se calcula, por tarea",
+  "etiqueta_metas": "Metas, desde el cierre de la implementación",
+  "destino": [
+   {
+    "rotulo": "Mismo equipo, más proyectos",
+    "texto": "Si el tiempo se libera, el equipo puede atender **más desarrollos** a clientes con las mismas personas."
+   },
+   {
+    "rotulo": "Trabajo reenfocado",
+    "texto": "Con el tiempo liberado, puede dedicarse a validar requerimientos con el cliente y a diseñar mejor."
+   },
+   {
+    "rotulo": "Otros equipos",
+    "texto": "Con el retorno medido, {cliente_corto} decide si lleva este método a **otros equipos** de la empresa."
+   }
+  ],
+  "pasos": [
+   {
+    "titulo": "Volumen semanal",
+    "texto": "Cuántos cambios de código, pruebas y despliegues se hacen cada semana."
+   },
+   {
+    "titulo": "Tiempo actual por tarea",
+    "texto": "Se mide con el equipo en la primera sesión y es la **línea base**."
+   },
+   {
+    "titulo": "Tiempo con los agentes",
+    "texto": "Lo que toma el mismo trabajo con el método y los agentes, ya en uso."
+   },
+   {
+    "titulo": "Horas recuperadas a la semana",
+    "texto": "Volumen semanal multiplicado por la diferencia entre el tiempo actual y el tiempo con agentes."
+   },
+   {
+    "titulo": "Valor en dinero",
+    "texto": "Horas recuperadas multiplicadas por el costo hora de referencia que {cliente_corto} valide."
+   }
+  ],
+  "metas": [
+   {
+    "dias": "30 días",
+    "texto": "El método y los agentes en uso real por el equipo de desarrollo."
+   },
+   {
+    "dias": "60 días",
+    "texto": "Nuevos agentes del equipo y horas recuperadas medidas contra la línea base."
+   },
+   {
+    "dias": "90 días",
+    "texto": "Medición del retorno en tiempo y calidad, con el valor de las horas recuperadas."
+   }
+  ],
+  "gancho": "Hacia la semana {semana_medicion} ({semanas} semanas de trabajo más 90 días de seguimiento), el equipo contará con el tiempo recuperado medido y su valor en dinero."
+ },
+ "siglas_ok": [
+  "IA"
+ ],
+ "supuestos": [
+  "Código CAI-038 indicado por el usuario (siguiente libre tras CAI-037). División Educación y alianza «no» inferidas: software house privada, cliente corporativo, sin alianza en la ficha. Confirmar con la asesora.",
+  "Guardia §4.21 punto 5: no se preguntó. El contenido son soluciones concretas (un método y 3 agentes), no un programa de módulos de charla o curso, así que va directo al compacto, como CAI-032 y CAI-037.",
+  "Herramienta de IA: por instrucción del usuario (06/10/2026) se define en el kick-off. El deck no nombra ninguna herramienta ni las 4 que usa hoy el equipo (ficha); dice que se elige en el kick-off. El problema de pago con tarjetas en Venezuela que tuvo el equipo con una membresía se anticipa como criterio de elección (pago y renovación estables), sin nombrar la herramienta (§4.11: no se afirma que el cliente cambie de stack).",
+  "Horas: 18 h por instrucción del usuario (06/10/2026). Se había propuesto 12 h (el tope del lineamiento de Habilidades: 8 a 12 h por área, hasta 5 procesos, con 2 h por agente) y el usuario subió cada agente a 4 h para dar holgura. Excede el tope del lineamiento: es una excepción decidida por el usuario. Son Fundamentals 2 h, método 2 h, 3 agentes de 4 h y flujo común 2 h. El kick-off de 1 h va aparte y no suma (como CAI-034 y CAI-037).",
+  "Reparto y calendario propuestos por el sistema: 6 sesiones, una por semana, en 6 semanas (Fundamentals y método de 2 h en las semanas 1 y 2, un agente de 4 h por semana en las 3 a 5 y el flujo común de 2 h en la 6). Se supuso una sesión de 4 h por agente; también podría ser en 2 sesiones de 2 h según la disponibilidad semipresencial (4 o 5 personas en la oficina por día, el resto remoto), que la ficha deja para el kick-off: confirmar.",
+  "Rol del equipo y de Intezia (instrucción del usuario, 06/10/2026): Intezia guía la construcción para que cada agente funcione, pero es el equipo quien lo construye. Por eso se quitó de «Fuera de este alcance» el punto «agentes terminados para producción» y el deck dice «guiamos» donde antes decía «construimos». Cada entregable sigue acotado a «probado en una tarea real» o «en un ambiente de desarrollo». La expectativa del cliente (agentes «autónomos y robustos») se consolida en el seguimiento a 30, 60 y 90 días; con 4 h por agente (subido por el usuario para dar holgura), confirmar con servicio que alcanza para que funcionen.",
+  "Se trabaja en ambiente de desarrollo con datos sintéticos, que es la política que el cliente ya sigue (su solución vendida a clínicas está sujeta a normativa de datos de salud). El deck no cita ninguna norma.",
+  "Las 8 personas son los programadores del equipo de desarrollo (no incluye servidores/plataforma): un solo grupo de Fundamentals. Quién asiste a cada sesión de agentes depende de la disponibilidad semipresencial: confirmar.",
+  "Los hechos de la portada salen de la ficha. «Cuatro distintas» cuenta las herramientas que la ficha menciona (cuatro), sin nombrarlas. Se omitió la frase de la ficha sobre falta de rigor en especificaciones: se dice neutral que falta un método común.",
+  "«Skills» aparece solo en un entregable y glosado como «instrucciones reutilizables (skills)» (§4.12 y §4.4: término nativo de las herramientas de IA). En el resto del deck se dice «especificación».",
+  "Línea base del tiempo actual de probar y desplegar: se levanta en la sesión de Fundamentals (2 h). Confirmar con servicio que cabe.",
+  "Retorno en modo método: la ficha no trae volúmenes, tiempos ni costo hora. «Hacia la semana N» es aritmética (semanas de trabajo + 13): confirmar con servicio.",
+  "Sin certificado de participación por defecto (§4.21). Sin nombres de personas del cliente ni su cargo. La sede (oficinas del cliente o sala de Intezia) y los viáticos no van en el deck: son un tema comercial pendiente."
+ ],
+ "pendientes": [
+  "Definir inversión, descuento y total (campos vacíos para ventas). Si las sesiones son en las oficinas del cliente (San Antonio de los Altos) hay que evaluar viáticos y transporte del consultor; la alternativa es la sala de Intezia (Las Mercedes). Son 18 h de sesión: 6 más que el tope del lineamiento (12 h).",
+  "Confirmar con la asesora la sede, las fechas, los horarios y la disponibilidad semanal (kick-off), y cuántas personas asisten a cada sesión.",
+  "Definir la herramienta de IA en el kick-off y resolver cómo se paga y se renueva su licencia desde Venezuela antes de cotizar la parte de licencias.",
+  "Confirmar con servicio el reparto de las 18 h y si cada agente va en 1 sesión de 4 h o en 2 de 2 h, según la disponibilidad del equipo.",
+  "La ficha dice que la propuesta se enviaba esa misma semana y que había sesión de revisión el lunes a las 3:30 pm: confirmar la fecha vigente."
+ ]
+}

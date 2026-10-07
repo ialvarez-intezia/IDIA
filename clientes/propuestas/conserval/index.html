@@ -1,0 +1,357 @@
+<!doctype html>
+<!--
+  Propuesta · Conserval (Balance) · Servicio de Detección (DET-026)
+  División: Educación · Servicio: Detección (§4.1a) · Alianza: no
+  GENERADO por scripts/generar-habilidades-compacto.py (plantilla 1.3 (2026-10-05)) desde datos.json.
+  No editar a mano: editar datos.json y regenerar. Estilos propios del deck: overrides.css.
+  Fuente del insumo: Ficha de Levantamiento de Conserval (marca comercial Balance)
+
+  Formato compacto de 6 slides (distinto del deck canónico de ~13):
+    1 Portada con punto de dolor · 2 Alcance · 3 Ruta · 4 Inversión · 5 Entregables · 6 Retorno esperado
+  Marcadores de detección de AcroForms (agregar-campo-precio.py), por página: «Propuesta Económica»
+  solo en la slide de inversión; «Lo que se llevan» y «Entregables» solo en la de entregables.
+  Campos AcroForm: Programa, Notas, PrecioBase, Descuento, PrecioTotal (inversión) y Entregables, Acreditacion (entregables). Se reposicionan con scripts/customize-habilidades-compacto.py.
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Propuesta · Conserval (Balance) · Intezia Educación</title>
+  <link rel="stylesheet" href="../_base/styles.css">
+  <link rel="stylesheet" href="habilidades-compacto.css">
+  <link rel="stylesheet" href="overrides.css">
+</head>
+<body>
+
+  <main class="deck">
+
+    <!-- 1 · Portada con punto de dolor -->
+    <section class="slide s-cover">
+      <span class="counter">01 / 06</span>
+      <div class="logo-big">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia Educación">
+      </div>
+      <div class="body">
+        <p class="eyebrow">Propuesta de proyecto · Servicio de Detección</p>
+        <h1 style="font-size:46px">
+          Mapa de oportunidades de IA<br>
+          para la atención y los pagos<br>
+          <span class="hl">en 3 áreas de Conserval</span>
+        </h1>
+        <p class="lead">
+          Este proyecto nivela al equipo de Conserval, levanta los procesos de 3 áreas, deja un <strong>logro inmediato</strong> en cada una y entrega un mapa de oportunidades priorizado, para decidir con datos cómo automatizar con IA.
+        </p>
+        <div class="pain-strip">
+          <div class="pain-item">
+            <span class="pain-num">50 a 60</span>
+            <span class="pain-lbl">reportes de pago llegan al día por WhatsApp, y una persona valida cada captura a mano.</span>
+          </div>
+          <div class="pain-item">
+            <span class="pain-num">6 cuentas</span>
+            <span class="pain-lbl">de Gmail se revisan una por una, con unos 5 condominios por cuenta.</span>
+          </div>
+          <div class="pain-item">
+            <span class="pain-num">Mensual</span>
+            <span class="pain-lbl">el envío de recibos de servicios de terceros se resolvió en parte, pero sin estandarizar.</span>
+          </div>
+          <div class="pain-item">
+            <span class="pain-num">Sin IA</span>
+            <span class="pain-lbl">estructurada en el equipo: solo cuentan con un chatbot básico por menú en WhatsApp.</span>
+          </div>
+        </div>
+        <p class="pain-src">Fuente: Ficha de Levantamiento de Conserval (30/09/2026).</p>
+      </div>
+      <div class="id-line">
+        <span class="codigo">Código: DET-026</span>
+        <span class="cliente">Conserval</span>
+      </div>
+    </section>
+
+    <!-- 2 · Alcance -->
+    <section class="slide s-scope">
+      <span class="counter">02 / 06</span>
+      <p class="eyebrow">02 · Alcance</p>
+      <h2>Un logro inmediato en cada una de las 3 áreas.</h2>
+      <p class="sub">Nivelamos al equipo y auditamos <strong>3 áreas</strong> de Conserval en 2 sesiones de 2 h cada una.</p>
+
+      <div class="scope-body">
+        <div class="scope-left">
+
+          <div class="scope-panel acc-y">
+            <div class="scope-head">
+              <span class="scope-tag">Detección</span>
+              <span class="scope-total"><b>4</b> entregables · 3 áreas y 1 etapa previa</span>
+            </div>
+            <ul class="scope-rows">
+              <li><span class="area">Fundamentals <em>(etapa previa)</em> <small class="comp">Un solo grupo con el equipo de Conserval.</small></span><span class="units" style="--n:1"></span><span class="n">1</span></li>
+              <li><span class="area">Atención al cliente <small class="comp">Reportes de pago por WhatsApp y correos de los condominios.</small></span><span class="units" style="--n:1"></span><span class="n">1</span></li>
+              <li><span class="area">Conciliación de pagos <small class="comp">Cuentas por cobrar: conciliar con el banco y precargar el pago.</small></span><span class="units" style="--n:1"></span><span class="n">1</span></li>
+              <li><span class="area">Cuentas por pagar <small class="comp">Pago a servicios de terceros y recibos del condominio.</small></span><span class="units" style="--n:1"></span><span class="n">1</span></li>
+            </ul>
+          </div>
+
+        </div>
+
+        <div class="scope-right">
+          <div class="scope-card">
+            <p class="scope-card-label">Cada área, cuatro pasos</p>
+            <ol class="scope-steps">
+              <li>Entrevistamos a las 2 o 3 personas del área sobre sus procesos.</li>
+              <li>Identificamos el cuello de botella más relevante.</li>
+              <li>Construimos en sesión un logro inmediato aplicable.</li>
+              <li>Dejamos el inventario de procesos documentado para el Mapa de Calor.</li>
+            </ol>
+          </div>
+          <div class="scope-card">
+            <p class="scope-card-label">Quién construye</p>
+            <p>Intezia levanta y construye cada logro en sesión, con las personas de cada área, sobre su forma de trabajo actual.</p>
+          </div>
+          <div class="scope-card scope-out">
+            <p class="scope-card-label">Fuera de este alcance</p>
+            <ul>
+              <li>Integraciones a medida entre sus herramientas: son el horizonte que sigue a la Detección.</li>
+              <li>La confirmación final de un pago y la tasa de cambio: siguen en manos de una persona.</li>
+              <li>Licencias de IA: no se incluyen en esta propuesta.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Conserval · DET-026</span>
+      </div>
+    </section>
+
+    <!-- 3 · Ruta -->
+    <section class="slide s-route">
+      <span class="counter">03 / 06</span>
+      <p class="eyebrow">03 · Ruta</p>
+      <h2>Del kick-off al Reporte Final en 4 semanas.</h2>
+      <p class="sub">Semanas de trabajo desde el arranque, en modalidad mixta. El <strong>Reporte Final</strong> se entrega en la semana 4.</p>
+
+      <div class="route-grid" style="--cols:3; --rows:1; --rowh:214px">
+
+        <div class="rg-corner"></div>
+        <div class="rg-phase rg-ph-1">
+          <span class="rg-phase-tag">Nivelación</span>
+          <span class="rg-phase-date">Semana 1</span>
+          <span class="rg-phase-txt"><b>2 h</b> · Fundamentals en 1 grupo</span>
+        </div>
+        <div class="rg-phase rg-ph-2 hi">
+          <span class="rg-phase-tag">Pagos y atención</span>
+          <span class="rg-phase-date">Semanas 2 y 3</span>
+          <span class="rg-phase-txt"><b>8 de 14 h</b> · Atención y Conciliación</span>
+        </div>
+        <div class="rg-phase rg-ph-3">
+          <span class="rg-phase-tag">Cierre del mapa</span>
+          <span class="rg-phase-date">Semana 4</span>
+          <span class="rg-phase-txt"><b>4 h</b> · Cuentas por pagar y Reporte Final</span>
+        </div>
+        <div class="rg-phase rg-fu">
+          <span class="rg-phase-tag">Cierre</span>
+          <span class="rg-phase-date">Reporte Final</span>
+          <span class="rg-phase-txt">Trabajo del equipo consultor</span>
+        </div>
+
+        <div class="rg-front acc-y">
+          <span class="rg-front-tag">Las 3 áreas · S1-S4</span>
+          <span class="rg-front-h"><b>14 h</b> · Detección</span>
+          <span class="rg-front-areas">Fundamentals y auditoría por áreas</span>
+        </div>
+        <div class="rg-cell"><span class="rg-h"><b>2</b> h <i>1 entregable</i></span><p>Fundamentals de 2 h para el equipo, en un solo grupo.</p></div>
+        <div class="rg-cell hi"><span class="rg-h"><b>8</b> h <i>2 entregables</i></span><p>Atención al cliente y Conciliación de pagos, 4 h cada una, en 2 sesiones de 2 h.</p></div>
+        <div class="rg-cell"><span class="rg-h"><b>4</b> h <i>1 entregable</i></span><p>Cuentas por pagar (4 h, 2 sesiones de 2 h) y entrega del Reporte Final.</p></div>
+
+        <div class="rg-follow" style="grid-column:5; grid-row:2 / span 1">
+          <ul>
+            <li><b>Priorizar</b><span>Hallazgos por impacto y riesgo.</span></li>
+            <li><b>Reportar</b><span>Diagnóstico y mapa de oportunidades.</span></li>
+            <li><b>Proyectar</b><span>Hoja de ruta hacia la capacidad propia.</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="route-miles" style="grid-template-columns:repeat(4,1fr)">
+        <div class="mile"><span class="mile-d"></span><b>Semana 1 · Nivelación</b><p>Kick-off y Fundamentals de 2 h para el equipo, en un solo grupo.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Semanas 2 y 3 · Pagos y atención</b><p>Atención al cliente y Conciliación de pagos: 2 sesiones de 2 h cada una.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Semana 4 · Cuentas por pagar</b><p>2 sesiones de 2 h con un logro inmediato para el pago a terceros.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Semana 4 · Reporte Final</b><p>Mapa de Calor, Índice de Madurez y hoja de ruta, entregados a la Dirección.</p></div>
+      </div>
+      <p class="route-note">S = semana de trabajo desde el arranque, cuya fecha se acuerda con Conserval. Las 14 h son una proyección de sesión: 2, 8 y 4 h de las fases 1, 2 y 3. El kick-off de arranque no suma horas. Cada sesión dura 2 h y su horario se acuerda con cada responsable.</p>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Conserval · DET-026</span>
+      </div>
+    </section>
+
+    <!-- 4 · Inversión (hoja de cotización estándar, por horas) -->
+    <section class="slide s-price">
+      <span class="counter">04 / 06</span>
+      <h2 class="title">Inversión por horas de sesión.</h2>
+      <p class="price-intro">Propuesta Económica · Servicio de Detección</p>
+
+      <div class="block">
+        <span class="block-eyebrow">Duración</span>
+        <p class="block-value">14 h de sesión en modalidad mixta: Fundamentals (2 h) y 3 áreas (12 h), en 4 semanas.</p>
+      </div>
+
+      <div class="block block-programa">
+        <span class="block-eyebrow">Programa</span>
+      </div>
+      <div class="multi-box programa-box" data-field="Programa"></div>
+
+      <div class="block block-cotizacion">
+        <span class="block-eyebrow">Cotización</span>
+      </div>
+
+      <span class="cot-label cot-label-base">Propuesta + Inversión</span>
+      <div class="cot-frame base-frame"></div>
+
+      <span class="cot-label cot-label-discount">Descuento</span>
+      <span class="cot-sign-minus">&minus;$</span>
+      <div class="cot-frame discount-frame"></div>
+      <span class="cot-urgent-note">Descuento válido por 15 días</span>
+
+      <span class="cot-label cot-label-total">TOTAL</span>
+      <div class="cot-frame total-frame"></div>
+
+      <p class="cot-validity">Cotización válida por 30 días.</p>
+      <div class="cot-terms-box">
+        <span class="cot-terms-label">Importante</span>
+        <p class="cot-terms-text">Este servicio se presta bajo nuestros <a href="https://drive.google.com/file/d/1PA-ZSt4KnyY5dpxXzgkIk6-yfGlV2eF8/view?usp=drive_link" target="_blank" rel="noopener">términos y condiciones</a>. Al avanzar con esta propuesta, ambas partes los aceptan.</p>
+      </div>
+
+      <div class="block block-notes-container">
+        <span class="block-eyebrow">Notas</span>
+      </div>
+      <div class="multi-box notas-box" data-field="Notas"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Conserval · DET-026</span>
+      </div>
+    </section>
+
+    <!-- 5 · Entregables (catálogo + piezas transversales) -->
+    <section class="slide s-deliv">
+      <span class="counter">05 / 06</span>
+      <p class="eyebrow">05 · Entregables</p>
+      <div class="deliv-head">
+        <h2>Lo que recibe Conserval.</h2>
+        <p class="deliv-sub"><span class="nw">Lo que se llevan</span>: <strong>4 entregables</strong>, uno por área y uno de Fundamentals, más el Mapa de Calor y el Reporte Final con la hoja de ruta.</p>
+      </div>
+
+      <div class="deliv-carriles" style="--ncols:2">
+        <span class="dc acc-y" style="grid-column: span 2">Detección · 4 entregables</span>
+      </div>
+
+      <div class="deliv-cols" style="--ncols:2">
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">Fundamentals (etapa previa) <i>1</i></p>
+            <ul>
+              <li>Equipo nivelado en IA con un lenguaje común</li>
+            </ul>
+          </div>
+          <div class="da">
+            <p class="da-name">Atención al cliente <i>1</i></p>
+            <ul>
+              <li>Inventario de procesos y logro inmediato de Atención al cliente</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">Conciliación de pagos <i>1</i></p>
+            <ul>
+              <li>Inventario de procesos y logro inmediato de Conciliación de pagos</li>
+            </ul>
+          </div>
+          <div class="da">
+            <p class="da-name">Cuentas por pagar <i>1</i></p>
+            <ul>
+              <li>Inventario de procesos y logro inmediato de Cuentas por pagar</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="deliv-band">
+        <div class="db-card db-1">
+          <span class="db-label">Entregables transversales</span>
+        </div>
+        <div class="db-card db-2">
+          <span class="db-label">Valor inmediato</span>
+        </div>
+      </div>
+      <!-- Cajas multiline editables (vacías en HTML: el contenido vive dentro del AcroForm /V). -->
+      <div class="multi-box db-box db-box-1" data-field="Entregables"></div>
+      <div class="multi-box db-box db-box-2" data-field="Acreditacion"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Conserval · DET-026</span>
+      </div>
+    </section>
+
+    <!-- 6 · Retorno esperado (método de cálculo). Sin estudios ni citas externas. -->
+    <section class="slide s-roi">
+      <span class="counter">06 / 06</span>
+      <p class="eyebrow">06 · Retorno</p>
+      <h2>Retorno esperado: decidir con datos.</h2>
+      <p class="sub">El Reporte Final estima el retorno de cada oportunidad con los datos que cada área entrega en su sesión.</p>
+
+      <div class="roi-body">
+        <div class="roi-panel">
+          <p class="roi-panel-title">Cómo se estima el retorno de cada oportunidad</p>
+          <ol class="roi-steps">
+            <li><b>Volumen</b><span>Cuántos reportes de pago, correos y recibos se procesan, levantado con el área.</span></li>
+            <li><b>Tiempo actual</b><span>Lo que toma hoy cada ejecución, medido en la sesión del área.</span></li>
+            <li><b>Tiempo con la solución</b><span>Estimación del equipo consultor para cada oportunidad del Mapa de Calor.</span></li>
+            <li><b>Horas recuperables</b><span>Volumen por la diferencia de tiempos: una estimación referencial, sin compromiso de resultado.</span></li>
+            <li><b>Prioridad</b><span>Cada oportunidad se ordena por impacto, esfuerzo y riesgo.</span></li>
+          </ol>
+        </div>
+
+        <div class="roi-right">
+          <p class="roi-right-title">Qué decide Conserval con el Reporte Final</p>
+          <div class="roi-card">
+            <b>Herramientas</b>
+            <p>Qué herramientas y licencias usar, partiendo de las que ya tiene.</p>
+          </div>
+          <div class="roi-card">
+            <b>Prioridades</b>
+            <p>Qué procesos automatizar primero, según impacto, esfuerzo y riesgo.</p>
+          </div>
+          <div class="roi-card">
+            <b>Capacidad</b>
+            <p>Qué debe aprender el equipo para usar y conectar la IA por su cuenta.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="roi-dest-wrap">
+        <p class="roi-dest-title">Hacia dónde sigue la ruta</p>
+        <div class="roi-dest">
+          <div class="rd-item"><b>Ahora · Detección</b><p>Cada área sale de su sesión con un <strong>logro inmediato</strong> que ya puede usar.</p></div>
+          <div class="rd-item"><b>Después · Habilidades</b><p>El equipo aprende a aplicar la IA a los procesos priorizados y a crear sus propios asistentes.</p></div>
+          <div class="rd-item"><b>Más adelante · Políticas</b><p>Una política de uso de IA y de seguridad de datos: qué información puede usar cada herramienta.</p></div>
+        </div>
+      </div>
+
+      <div class="roi-hook"><p>Con el Reporte Final, Conserval decide dónde automatizar primero y con qué herramientas, con datos de sus propias áreas y sin gastar a ciegas.</p></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Conserval · DET-026</span>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

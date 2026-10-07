@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
 customize-laboratorios-farma-gestion-humana.py — Ajuste especial CAI-032 Laboratorios Farma ·
-Gestión Humana regional (combo Detección + Habilidades: módulo compartido + proyecto final en
-7 procesos, con licencia de Copilot básico o Business según el proceso). Precio estándar
+Gestión Humana regional (combo Detección + Habilidades: Etapa 1 = Detección + módulo compartido +
+2 prácticas en Copilot básico; Etapa 2 = proyecto final en 7 procesos, sin cotizar). Precio estándar
 (Propuesta Económica, un solo servicio combinado) — sin lógica de PrecioFaseN.
 
 Clonado de scripts/customize-hjb-quimica.py (CAI-031) — mismo mecanismo, solo cambian los

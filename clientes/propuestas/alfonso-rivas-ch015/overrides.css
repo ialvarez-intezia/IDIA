@@ -1,0 +1,47 @@
+/* Ajustes propios de esta propuesta (se enlaza después de habilidades-compacto.css). */
+
+/* ===========================================================================
+   CH-015 (charla de 2 h): solo 2 entregables y 2 fases. La plantilla está pensada para 40+ entregables;
+   se amplía la escala tipográfica de las slides 2, 3 y 4 para que no queden medio vacías.
+   =========================================================================== */
+
+/* Slide 2 · Alcance: cada parte muestra su descripción bajo el nombre */
+.s-scope .scope-panel { flex: 1; display: flex; flex-direction: column; padding: 18px 28px 6px; }
+.s-scope .scope-head { margin-bottom: 4px; }
+.s-scope .scope-rows { flex: 1; display: flex; flex-direction: column; }
+.s-scope .scope-rows li { flex: 1; padding: 0; }
+.s-scope .scope-rows .area { flex: 1 1 auto; padding-right: 22px; font-size: 24px; line-height: 1.2; }
+.s-scope .scope-rows .area .comp {
+  display: block;
+  margin-top: 6px;
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.35;
+  color: rgba(0, 0, 0, 0.62);
+}
+.s-scope .scope-rows .units { --uw: 32px; --ug: 6px; height: 32px; }
+.s-scope .scope-rows .n { font-size: 32px; }
+
+/* Slide 3 · Ruta: una sola fila y 2 fases */
+.s-route .rg-front-areas { font-size: 14px; }
+.s-route .rg-front-h b { font-size: 26px; }
+.s-route .rg-cell { padding: 16px 20px; }
+.s-route .rg-h { font-size: 16px; margin-bottom: 10px; }
+.s-route .rg-h b { font-size: 44px; }
+.s-route .rg-h i { font-size: 12px; }
+.s-route .rg-cell p { font-size: 19px; line-height: 1.4; }
+.s-route .route-miles { margin-top: 30px; }
+.s-route .mile b { font-size: 16px; margin-bottom: 6px; }
+.s-route .mile p { font-size: 14.5px; line-height: 1.38; }
+.s-route .route-note { margin-top: 18px; font-size: 12.5px; max-width: 1020px; }
+
+/* Slide 4 · Entregables: una sola columna ancha con las 2 partes apiladas */
+.s-deliv .deliv-carriles { margin-top: 40px; margin-bottom: 10px; }
+.s-deliv .dc { font-size: 13px; padding: 8px 18px; }
+.s-deliv .deliv-col { padding: 30px 44px 24px; min-height: 340px; }
+.s-deliv .da-name { font-size: 25px; line-height: 1.2; margin-bottom: 10px; }
+.s-deliv .da-name i { min-width: 36px; height: 36px; line-height: 36px; font-size: 16px; }
+.s-deliv .da li { font-size: 25px; line-height: 1.4; padding: 4px 0 4px 22px; }
+.s-deliv .da li::before { top: 17px; width: 10px; height: 10px; }
+.s-deliv .da + .da { margin-top: 26px; padding-top: 26px; }

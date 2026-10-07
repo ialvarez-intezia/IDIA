@@ -1,5 +1,69 @@
 # Brief — N58 Banco Digital · Mercadeo con Claude (CAI-034)
 
+## Actualización 2026-10-06 — reexpresada en el formato compacto de Habilidades (6 slides) · VIGENTE
+
+Instrucción directa del usuario: «ajustar la CAI-034 hacia el nuevo formato». El deck canónico de 15
+slides (enviado el 2026-10-01), su PDF y su `customize-n58-banco-digital.py` están archivados en
+`_anterior-15-slides/`; `scripts/customize-n58-banco-digital.py` se retiró (el compacto usa el par
+genérico `customize-acroforms.py` + `customize-habilidades-compacto.py`, igual que G-MAX y CAI-032).
+
+**Hoy el deck es compacto de 6 slides, dirigido por `datos.json`** (fuente única; `index.html`,
+`acroforms.json` y `programa.md` se generan). Flujo: `python3 scripts/generar-habilidades-compacto.py
+n58-banco-digital` → `node scripts/verificar-habilidades-compacto.js n58-banco-digital` →
+`bash scripts/pdf-habilidades-compacto.sh n58-banco-digital`.
+
+> **Cuidado con el PDF de soberanía de datos:** el wrapper aparta (y ante un fallo borra) todos los
+> `*.pdf` de la carpeta, y `customize-acroforms.py` exige exactamente uno. Antes de correr
+> `pdf-habilidades-compacto.sh`, sacar `Soberanía de Datos - N58 (Tecnología).pdf` de esta carpeta y
+> devolverlo después. `soberania-datos.html` no se ve afectado.
+
+### Cómo se mapeó la propuesta al esquema compacto
+
+| En el compacto | En CAI-034 |
+|---|---|
+| Carril | «Claude» (una sola herramienta) |
+| Área (vocabulario «etapa») | Fundamentals · Construcción · Implementación (las 3 etapas con horas; el kick-off de 1 h va aparte) |
+| Solución / entregable | Cada **sesión de 2 h**: 1 + 3 + 2 = 6 entregables, 12 h (misma estructura que CAI-037) |
+| Fases (3 columnas) | Bases (S1, 2 h) · Piezas (S2-S4, 6 h) · Skill (S5-S6, 4 h) |
+| Entregables de la Construcción | Primer avance revisado · segundo avance ajustado · entrega final (más de 50 creativos y 4 artículos publicados) |
+| Entregables de la Implementación | Skill construida con la marca · Skill probada y 1 persona formada |
+| 5.ª columna de la ruta | «Garantía 30-60-90» (uso real · mejoras que construye el equipo · tiempo ahorrado) |
+| Slide 6 retorno (modo método) | Línea base por pieza → horas recuperadas → valor en dinero, sin cifras del cliente |
+
+### Qué cambió respecto al deck de 15 slides
+
+| Antes | Ahora |
+|---|---|
+| Certificado INTEZIA y workbook digital para la persona formada | **Retirados** (§4.21: no van por defecto). Decidir con el usuario si el cliente los espera |
+| Slide de Impacto con HubSpot, Salesforce y McKinsey | Retirada (§4.9 no aplica al compacto); el retorno va en modo método |
+| ROI estimado en la hoja de cotización y slide de seguimiento 30-60-90 | Hoja estándar con garantía 30-60-90; el seguimiento es la 5.ª columna de la ruta |
+| Próximos pasos «Cómo arrancamos» y Cierre escalera | Retirados (el compacto no los lleva); la logística de arranque queda en el kick-off |
+| 3 módulos (Creativos · SEO · Fundamentals + Skill) | 3 etapas con horas; creativos y artículos van juntos en la Construcción |
+| Sin semanas | 6 semanas propuestas por el sistema (1 sesión por semana): confirmar con el calendario de lanzamiento |
+| «Skill entrenada con la marca» | «Skill con la marca» (cambio de redacción, no de alcance) |
+| Titular «De un equipo de una persona, a un mercadeo que no se detiene.» | Frase-objetivo: «Producción del contenido de lanzamiento de N58 con Claude y una Skill propia» |
+
+### Se conserva del brief anterior
+
+Encuadre «parte del calendario de lanzamiento, no un gasto de mercadeo aparte» (subtítulo de la slide 2
+y primera nota de la hoja de inversión) · más de 50 creativos y 4 artículos publicados, tal como se
+escuchó en la reunión · 1 persona formada · modalidad presencial · 12 h de sesión y kick-off de 1 h
+aparte · sin citas textuales · sin nombres de personas del cliente · sin afirmar migración de stack
+(§4.11) · sin Metodología ni Equipo facilitador (§4.10a) · documento de soberanía de datos aparte.
+
+### Pendientes (también en `datos.json`)
+
+Inversión, descuento y total (ventas) · fecha de arranque y calendario de lanzamiento (valida las 6
+semanas) · persona a formar designada · quién publica los 4 artículos y dónde · quién contrata la
+cuenta de Claude · si se esperan el certificado y el workbook · dotación de Mercadeo (3 personas según
+este brief; el deck anterior decía una con apoyo) · nombres y contenido de cada avance de la Construcción
+con servicio · línea base dentro de Fundamentals y «Hacia la semana 19» (aritmética).
+
+---
+
+> Lo que sigue es el brief original del deck de 15 slides (2026-10-01), conservado como contexto del
+> cliente y trazabilidad. Donde contradice la actualización de arriba, manda la actualización.
+
 ## Datos administrativos
 
 - **Empresa**: N58 Banco Digital
@@ -11,7 +75,10 @@
 - **Servicio (§4.1a)**: `habilidades` — confirmado en la Ficha de Levantamiento
   ("Servicios de interés: Habilidades").
 - **Alianza**: `false` (confirmado con el usuario, 2026-10-01).
-- **Tipo de documento**: Capacitación In-Company (`CAI-034`).
+- **Tipo de documento**: Capacitación In-Company (`CAI-034`), presentada al cliente como **propuesta de proyecto**; formato compacto de 6 slides (con hoja de inversión, campos de precio vacíos para ventas).
+<!--auto:inicio-->
+- **Alcance**: 6 entregables en 3 etapas · 12 h de sesión · 6 semanas de trabajo desde el arranque · seguimiento a 30, 60 y 90 días
+<!--auto:fin-->
 - **Fuente**: Ficha de Levantamiento N58 (Flavia Martínez, 2026-10-01) — primer contacto,
   sin servicio previo de Intezia, sin propuesta previa.
 
@@ -60,7 +127,7 @@
 - **Formación**: 1 persona del equipo de Mercadeo, capacitada en Fundamentals de Claude y
   con una Skill propia entrenada con la marca del banco.
 
-## Decisiones de diseño (2026-10-01)
+## Decisiones de diseño (2026-10-01, deck de 15 slides; ver la actualización de arriba para lo vigente)
 
 1. **Caso base estructural**: `banco-plaza-mercadeo/` (CAI-024) — mismo servicio
    (Habilidades), mismo tipo (Capacitación In-Company mono-fase), mismo sector (banca). Se
@@ -97,16 +164,16 @@
     el usuario): más de 50 creativos, 4 artículos SEO publicados, 1 persona formada y
     certificada, Skill de Claude entrenada con la marca.
 
-## Impacto (§4.9)
+## Impacto (§4.9) — retirado en el compacto
 
-Reutiliza las cifras ya verificadas en `banco-plaza-mercadeo/` / `puro-lomo-bajo-mercadeo/`
+El deck de 15 slides reutilizaba las cifras ya verificadas en `banco-plaza-mercadeo/` / `puro-lomo-bajo-mercadeo/`
 (mismo eje: adopción de IA en tareas de mercadeo/creatividad) — HubSpot (State of AI for
 Marketers, 2025), Salesforce (State of Marketing, 10ª edición, 2026), McKinsey (The Economic
 Potential of Generative AI, 2023). Sin `<strong>` en `.impact-hook .hook-text` (memoria
 `bug-strong-glitch-impact-hook-text.md` — el origen Banco Plaza sí lo tenía y se corrige en
 este clon).
 
-## Entregables
+## Entregables (compromisos escuchados en la reunión; el compacto los reexpresa en 6 entregables por sesión)
 
 - Más de 50 creativos (estáticos y video) para el lanzamiento, según la paleta y tono de
   marca de N58.
