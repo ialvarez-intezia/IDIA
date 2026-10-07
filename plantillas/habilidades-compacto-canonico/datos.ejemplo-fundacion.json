@@ -1,5 +1,5 @@
 {
- "version": 1,
+ "version": 2,
  "cliente": {
   "nombre": "Fundación Semilla Verde",
   "slug": "fundacion-semilla-verde",
@@ -8,7 +8,7 @@
  },
  "division": "fundacion",
  "alianza": false,
- "eje": "Gestión de programas sociales y reportes a donantes con Microsoft 365 Copilot",
+ "eje": "Gestión de programas sociales, voluntariado y reportes a donantes con Microsoft 365 Copilot",
  "origen": "Informe de Detección de Fundación Semilla Verde, septiembre de 2026",
  "fuente_insumo": "Informe de Detección (ficha de área de Programas y Voluntariado)",
  "portada": {
@@ -31,8 +31,8 @@
     "num": "12 h",
     "texto": "por semana se dedican a consolidar reportes de voluntariado para los donantes.",
     "resuelto_por": [
-     "A2-2",
-     "A2-3"
+     "A4-1",
+     "A4-2"
     ]
    },
    {
@@ -40,7 +40,7 @@
     "texto": "solicitudes de apoyo llegan duplicadas o incompletas y se responden tarde.",
     "resuelto_por": [
      "A1-2",
-     "A2-4"
+     "A4-3"
     ]
    }
   ],
@@ -61,6 +61,7 @@
    "carril": "copilot",
    "frente": "A",
    "proceso_base": true,
+   "para_que": "Una sola ficha por persona, sin duplicados ni hojas distintas",
    "soluciones": [
     {
      "id": "A1-1",
@@ -90,12 +91,46 @@
   },
   {
    "id": "A2",
-   "nombre": "Voluntariado y reportes a donantes",
+   "nombre": "Programas y seguimiento",
    "carril": "copilot",
-   "frente": "B",
+   "frente": "A",
+   "para_que": "El avance de cada programa claro y a tiempo, sin armar hojas a mano",
    "soluciones": [
     {
      "id": "A2-1",
+     "entregable": "Plantilla de plan y seguimiento por programa",
+     "C": 7,
+     "T": 3,
+     "A": 3,
+     "fase": "F1"
+    },
+    {
+     "id": "A2-2",
+     "entregable": "Resumen mensual de avance por programa",
+     "C": 6,
+     "T": 3,
+     "A": 2,
+     "fase": "F2"
+    },
+    {
+     "id": "A2-3",
+     "entregable": "Alertas de metas atrasadas",
+     "C": 5,
+     "T": 2,
+     "A": 2,
+     "fase": "F2"
+    }
+   ]
+  },
+  {
+   "id": "A3",
+   "nombre": "Voluntariado",
+   "carril": "copilot",
+   "frente": "A",
+   "para_que": "Convocatorias, horas y actas listas sin consolidar a mano",
+   "soluciones": [
+    {
+     "id": "A3-1",
      "entregable": "Asistente de convocatoria de voluntarios",
      "C": 8,
      "T": 3,
@@ -103,7 +138,32 @@
      "fase": "F1"
     },
     {
-     "id": "A2-2",
+     "id": "A3-2",
+     "entregable": "Control de horas y certificados de voluntarios",
+     "C": 6,
+     "T": 3,
+     "A": 2,
+     "fase": "F1"
+    },
+    {
+     "id": "A3-3",
+     "entregable": "Resumen de actas de la junta directiva",
+     "C": 6,
+     "T": 2,
+     "A": 2,
+     "fase": "F1"
+    }
+   ]
+  },
+  {
+   "id": "A4",
+   "nombre": "Donantes y reportes",
+   "carril": "copilot",
+   "frente": "B",
+   "para_que": "Reportes e informes de impacto listos, y respuestas a donantes más rápidas",
+   "soluciones": [
+    {
+     "id": "A4-1",
      "entregable": "Plantilla de reporte mensual para donantes",
      "C": 10,
      "T": 4,
@@ -111,7 +171,7 @@
      "fase": "F1"
     },
     {
-     "id": "A2-3",
+     "id": "A4-2",
      "entregable": "Borrador de informe de impacto por programa",
      "C": 12,
      "T": 4,
@@ -119,7 +179,7 @@
      "fase": "F2"
     },
     {
-     "id": "A2-4",
+     "id": "A4-3",
      "entregable": "Asistente de respuestas a solicitudes de apoyo",
      "C": 10,
      "T": 3,
@@ -127,38 +187,102 @@
      "fase": "F2"
     },
     {
-     "id": "A2-5",
-     "entregable": "Resumen de actas de la junta directiva",
-     "C": 6,
+     "id": "A4-4",
+     "entregable": "Agradecimientos personalizados a donantes",
+     "C": 5,
      "T": 2,
      "A": 2,
      "fase": "F1"
     }
-   ],
-   "nombre_frente": "Voluntariado y reportes"
+   ]
+  },
+  {
+   "id": "A5",
+   "nombre": "Administración y finanzas",
+   "carril": "copilot",
+   "frente": "B",
+   "para_que": "Donaciones conciliadas y gastos por programa a la vista",
+   "soluciones": [
+    {
+     "id": "A5-1",
+     "entregable": "Conciliación de donaciones recibidas",
+     "C": 9,
+     "T": 4,
+     "A": 3,
+     "fase": "F1"
+    },
+    {
+     "id": "A5-2",
+     "entregable": "Resumen de gastos por programa",
+     "C": 8,
+     "T": 3,
+     "A": 3,
+     "fase": "F2"
+    },
+    {
+     "id": "A5-3",
+     "entregable": "Informe de cuentas para la junta",
+     "C": 7,
+     "T": 3,
+     "A": 2,
+     "fase": "F2"
+    }
+   ]
+  },
+  {
+   "id": "A6",
+   "nombre": "Comunicaciones",
+   "carril": "copilot",
+   "frente": "B",
+   "para_que": "Contenidos y boletines al día, con las historias de cada programa",
+   "soluciones": [
+    {
+     "id": "A6-1",
+     "entregable": "Calendario de contenidos por programa",
+     "C": 4,
+     "T": 2,
+     "A": 2,
+     "fase": "F1"
+    },
+    {
+     "id": "A6-2",
+     "entregable": "Borradores del boletín mensual",
+     "C": 6,
+     "T": 3,
+     "A": 2,
+     "fase": "F1"
+    },
+    {
+     "id": "A6-3",
+     "entregable": "Historias de impacto para redes",
+     "C": 5,
+     "T": 2,
+     "A": 2,
+     "fase": "F2"
+    }
+   ]
   }
  ],
  "alcance": {
-  "subtitulo": "Ordenamos registros y reportes, y construimos asistentes de IA, plantillas y tableros **con el equipo de cada área**.",
-  "pasos": [
-   "Construimos junto a quien ejecuta el proceso.",
-   "Probamos con ese equipo y con casos reales de la fundación.",
-   "Adoptamos: el equipo la usa en su trabajo diario."
-  ],
-  "quien_construye": "Intezia construye cada solución junto al equipo de la fundación, dentro de las licencias que ya opera."
+  "subtitulo": "Ordenamos registros y reportes, y construimos asistentes, plantillas y tableros **con el equipo de cada área**.",
+  "fuera_alcance": [
+   "Lo que el área de tecnología de la fundación desarrolla por su cuenta, como el portal de donantes.",
+   "Cambiar el sistema de contabilidad: trabajamos sobre los reportes que ya salen de él.",
+   "Datos de beneficiarios menores de edad: se trabajan solo con registros sin nombre ni documento."
+  ]
  },
  "fases": [
   {
    "id": "F1",
    "titulo": "Fase 1",
-   "rango": "Semanas 1-5",
+   "rango": "Semanas 1 a 5",
    "descripcion": "prioridad de cada área, sin dependencias",
    "destacada": true
   },
   {
    "id": "F2",
    "titulo": "Fase 2",
-   "rango": "Semanas 5-9",
+   "rango": "Semanas 5 a 10",
    "descripcion": "necesita un dato o una solución previa"
   }
  ],
@@ -166,24 +290,26 @@
   {
    "id": "A",
    "carril": "copilot",
-   "semanas": "S1-S9",
+   "nombre": "Beneficiarios y voluntariado",
+   "semanas": "1 a 9",
    "celdas": {
-    "F1": "Ficha única de registro y reglas de depuración de duplicados.",
-    "F2": "Tablero de beneficiarios por programa."
+    "F1": "Ficha única, depuración de duplicados, plan por programa, convocatoria, horas y actas.",
+    "F2": "Tablero de beneficiarios, resumen de avance y alertas de metas atrasadas."
    }
   },
   {
    "id": "B",
    "carril": "copilot",
-   "semanas": "S2-S9",
+   "nombre": "Donantes, finanzas y comunicaciones",
+   "semanas": "2 a 10",
    "celdas": {
-    "F1": "Convocatoria de voluntarios, reporte a donantes y resumen de actas.",
-    "F2": "Informe de impacto y respuestas a solicitudes de apoyo."
+    "F1": "Reporte a donantes, agradecimientos, conciliación de donaciones, calendario y boletín.",
+    "F2": "Informe de impacto, respuestas de apoyo, gastos por programa, cuentas y redes."
    }
   }
  ],
  "ruta": {
-  "semanas_total": 9,
+  "semanas_total": 10,
   "tope_h_semana": 20,
   "hitos": [
    {
@@ -195,10 +321,14 @@
     "texto": "Soluciones prioritarias adoptadas por el equipo."
    },
    {
-    "titulo": "Semana 9 · Cierre",
+    "titulo": "Semana 10 · Cierre",
     "texto": "Cierre de la construcción y entrega al equipo."
    }
-  ]
+  ],
+  "siguiente_etapa": {
+   "titulo": "Segunda etapa, a definir.",
+   "texto": "Las áreas que quedan fuera de esta primera etapa, como Alianzas y Gestión de eventos, se evalúan con el retorno medido a 30, 60 y 90 días."
+  }
  },
  "seguimiento": {
   "rango": "30, 60 y 90 días",
@@ -226,7 +356,7 @@
   "valor_inmediato": [
    "Semana 1: línea base de horas por proceso.",
    "Semana 5: {n_f1} soluciones prioritarias adoptadas.",
-   "Semana 9: todas las soluciones en uso en la fundación."
+   "Semana 10: todas las soluciones en uso en la fundación."
   ],
   "titulo": "Lo que recibe Semilla Verde."
  },
@@ -235,7 +365,7 @@
   "Se asume que la fundación ya cuenta con licencias de Microsoft 365 Copilot; confirmar con el usuario."
  ],
  "pendientes": [
-  "Confirmar asesora comercial y código definitivo."
+  "Confirmar asesora comercial, código definitivo y quién contrata el licenciamiento."
  ],
  "retorno": {
   "modo": "metodo",
@@ -247,7 +377,7 @@
    },
    {
     "rotulo": "Trabajo reenfocado",
-    "texto": "El equipo de voluntariado puede dejar de consolidar a mano los reportes a donantes y pasar a revisarlos y a preparar el informe de impacto de cada programa."
+    "texto": "El equipo de voluntariado y de donantes puede dejar de consolidar a mano los reportes y pasar a revisarlos y a preparar el informe de impacto de cada programa."
    },
    {
     "rotulo": "Otros programas",
@@ -255,5 +385,31 @@
    }
   ]
  },
- "_comentario": "Ejemplo ficticio de Fundación (4 slides + retorno = 5; sin hoja de inversión). Sirve como prueba de aceptación de la variante Fundación; no corresponde a ningún cliente real."
+ "_comentario": "Ejemplo ficticio de Fundación (7 slides: portada, alcance, ruta, cómo trabajamos, entregables, retorno y próximos pasos; sin inversión ni pago). Sirve como prueba de aceptación de la variante Fundación; no corresponde a ningún cliente real. La asesora y el resto de los datos son de ejemplo: en una propuesta real va la asesora comercial que atiende al cliente y cada cifra sale del informe de Detección.",
+ "metodo": {
+  "quien_construye": "Intezia construye cada solución junto al equipo de la fundación, dentro de las licencias que ya opera.",
+  "practica": [
+   {
+    "titulo": "Licencias",
+    "texto": "Todo se construye con Microsoft 365 Copilot, que la fundación ya opera: no se compra ninguna herramienta nueva."
+   },
+   {
+    "titulo": "Pruebas",
+    "texto": "Cada solución se prueba con los registros y reportes reales de un mes antes de adoptarla."
+   }
+  ],
+  "datos": "Trabajamos con casos reales de la fundación, dentro de sus cuentas. Los datos de beneficiarios se usan sin nombre ni documento, y el equipo de tecnología autoriza cada acceso."
+ },
+ "logistica": {
+  "modalidad": "Sesiones de trabajo presenciales en la sede de la fundación, con apoyo virtual entre sesiones.",
+  "participantes": "Quienes ejecutan cada proceso: unas 12 personas entre las seis áreas.",
+  "arranque": "Semana por acordar con la fundación; el trabajo se cuenta en semanas desde ese día."
+ },
+ "proximos_pasos": {
+  "asesora": {
+   "nombre": "Asesora comercial de Intezia",
+   "cargo": "Business Development",
+   "correo": "servicio@intezia.com"
+  }
+ }
 }

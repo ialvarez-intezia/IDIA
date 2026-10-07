@@ -2,10 +2,12 @@
 """
 customize-dusa-cai035.py — Ajuste especial CAI-035 DUSA (Habilidades, 44 soluciones en 10 áreas).
 
-Deck compacto de 6 slides (la 6, Retorno, no lleva campos; la lógica sigue operando solo en la 5). Lo que el flujo estándar (generar-pdf.sh + customize-acroforms.py)
-no cubre:
+Deck compacto de 7 slides (la 7, Retorno, no lleva campos; la 6, Facilidad de pago, lleva los 5 campos PagoCuota1..5 que
+agrega agregar-campo-precio.py y que NO se tocan aquí; la lógica de este script opera solo en la 4). Los campos se ubican
+por NOMBRE, no por página, así que el orden de las slides no afecta. Lo que el flujo estándar (generar-pdf.sh +
+customize-acroforms.py) no cubre:
 
-  Slide 5 («¿Qué tendrás a cambio?», catálogo de entregables): las dos cajas AcroForm
+  Slide 4 («¿Qué tendrás a cambio?», catálogo de entregables): las dos cajas AcroForm
   `Entregables` (usada como «Entregables transversales») y `Acreditacion` (usada como «Valor
   inmediato», nombre conservado por compatibilidad con agregar-campo-precio.py) NO van en las
   4 tarjetas de Beneficios v3, sino en una franja inferior de 2 tarjetas oscuras. Este script:
@@ -104,7 +106,7 @@ def main() -> None:
     # Entregables / Acreditacion con la versión oscura y el nuevo /Rect.
     rebake_bold_fields(writer)
     n = rebake_dark(writer, DELIV_LAYOUT)
-    print(f"✓ Slide 5: {n} caja(s) reposicionada(s) y re-horneada(s) con fondo oscuro.")
+    print(f"✓ Slide 4: {n} caja(s) reposicionada(s) y re-horneada(s) con fondo oscuro.")
 
     acro = writer._root_object["/AcroForm"]
     acro[NameObject("/NeedAppearances")] = BooleanObject(False)

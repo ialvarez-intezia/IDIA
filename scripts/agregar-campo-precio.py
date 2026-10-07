@@ -47,6 +47,14 @@ columnas. No colisiona con "Propuesta Económica" ni "Inversión por fases":
 cada PDF se procesa por separado. Origen: INN-001 Zoom (2026-08-30, primer
 piloto del servicio Innovación).
 
+Variante "Facilidad de pago" (plan de pago en cuotas ligadas a hitos del proyecto,
+hoja aparte a continuación de la cotización; servicio Habilidades, formato
+compacto): marker propio "Facilidad de pago" (el H2 de la slide), grupo
+plan_pago_fields() — PagoCuota1..N (monto de cada cuota, editables, vacíos a
+propósito: los escribe ventas; sin auto-cálculo). No colisiona con "Propuesta
+Económica": son páginas distintas del mismo PDF, y la página del plan no debe
+repetir ninguno de los otros markers. Origen: CAI-035 DUSA (2026-10-06).
+
 Compatibilidad de lectores:
 - Adobe Reader: todos los campos editables + cálculo automático del total
 - Preview macOS: campos editables funcionan; el JS de cálculo no se ejecuta
@@ -54,6 +62,7 @@ Compatibilidad de lectores:
 Uso:
     python3 agregar-campo-precio.py <ruta-al-pdf>
 """
+import re
 import sys
 from pathlib import Path
 
@@ -378,6 +387,46 @@ CICLO_PRICE_FIELDS = [
     },
 ]
 
+# Variante "Facilidad de pago": 5 cuotas ligadas a hitos (CAI-035 DUSA, 2026-10-06).
+# Un campo de monto por cuota, bajo su tarjeta; vacíos a propósito (los llena ventas
+# en Adobe Reader). Coordenadas sincronizadas con overrides.css del deck
+# (.s-pay .pay-frame: top=498, alto=50, ancho=159, left=72/277/482/687/892; px → pt ×0.75):
+#   y1 = 595 − (498 + 50)·0.75 = 184  ·  y2 = 595 − 498·0.75 = 221.5
+def _pago_cuota_field(n, x1, x2):
+    return {
+        "name": f"PagoCuota{n}",
+        "tooltip": f"Monto de la cuota {n} (editable).",
+        "rect": (x1, 184, x2, 221.5),
+        "font_size": 14,
+        "font_color": "0 g",
+        "quadding": 1,
+        "multiline": False,
+        "readonly": False,
+        "default": "",
+        "calc_action": False,
+    }
+
+
+def plan_pago_fields(page):
+    """Un campo de monto por cuota, bajo su tarjeta. La cantidad de cuotas se lee del texto de la página
+    («Cuota 1», «Cuota 2», …; se ignoran los espacios porque el rótulo lleva letter-spacing) y la geometría es la de
+    scripts/generar-habilidades-compacto.py → geometria_pago(n): tarjetas de 1011 px con 14 px de separación y el marco
+    del monto 16 px adentro de cada tarjeta (px × 0,75 = pt). Con 5 cuotas da los rects originales de CAI-035 DUSA."""
+    try:
+        texto = re.sub(r"\s+", "", (page.extract_text() or "")).casefold()
+    except Exception:
+        texto = ""
+    nums = [int(x) for x in re.findall(r"cuota(\d+)", texto)]
+    n = max(nums) if nums else 5
+    gap = 14.0
+    w = (1011.0 - gap * (n - 1)) / n
+    campos = []
+    for i in range(n):
+        left = 56.0 + i * (w + gap)
+        campos.append(_pago_cuota_field(i + 1, round((left + 16) * 0.75, 3), round((left + w - 16) * 0.75, 3)))
+    return campos
+
+
 # Slide 7: Beneficios → 1 caja multiline para Entregables + 1 para Acreditación.
 # Sin viñetas fijas: el equipo de ventas escribe la cantidad de líneas que
 # necesite, separadas con Enter. CSS px → pt PDF (factor 0.75).
@@ -453,6 +502,7 @@ PAGE_GROUPS = [
     {"marker": "Propuesta Económica", "fields": PRECIO_FIELDS},
     {"marker": "Inversión por fases", "fields": FASE_PRICE_FIELDS},
     {"marker": "Inversión por Permanencia", "fields": CICLO_PRICE_FIELDS},
+    {"marker": "Facilidad de pago", "fields_fn": plan_pago_fields},
     # 'requires': la slide de Beneficios de un Taller/Curso lleva los bloques
     # 'Entregables' y 'Acreditación'; la de una Charla comparte el h2 'Lo que
     # se llevan' pero NO tiene esos bloques (es contenido estático). El extra
@@ -629,7 +679,8 @@ def add_fields(pdf_path: Path) -> None:
             page = writer.pages[page_idx]
             names_in_page = []
 
-            for spec in group["fields"]:
+            fields_pagina = group["fields_fn"](reader.pages[page_idx]) if group.get("fields_fn") else group["fields"]
+            for spec in fields_pagina:
                 # Clona el spec con el name sufijado
                 new_spec = {**spec, "name": spec["name"] + suffix}
                 field = build_field(new_spec)

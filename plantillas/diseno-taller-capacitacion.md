@@ -1,5 +1,7 @@
 # Plantilla operativa: Taller / Capacitación In-Company
 
+> **Habilidades (desde 2026-10-07):** el deck de esta categoría se entrega **siempre** en la plantilla compacta (`plantillas/habilidades-compacto.md`, `CLAUDE.md §4.21`; la receta para reexpresar un taller o una capacitación está en su §1b). Este documento queda como guía para **diseñar el programa y los entregables** (módulos, temas, desglose instructivo) y para los decks canónicos que ya existen; no decide el formato del deck.
+
 > Refleja el formato oficial `fuentes/formatos-oficiales/taller-capacitacion.pdf`. Genera `clientes/propuestas/<slug>/programa.md` con esta estructura cuando el tipo sea **Taller** o **Capacitación**.
 
 > **Pre-requisitos**: `brief.md` con `division: fundacion | educacion`. Si no está, pregunta primero.

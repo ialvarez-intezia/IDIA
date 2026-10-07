@@ -1,44 +1,23 @@
 {
-  "_ayuda_general": "Copie este archivo a clientes/propuestas/<slug>/datos.json y reemplace TODOS los POR_DEFINIR (el generador se niega a publicar mientras quede alguno). Las claves que empiezan con _ayuda se ignoran. Detalle de cada campo: plantillas/habilidades-compacto.md. Para partir del docx de insumo use scripts/habilidades-importar-insumo.py. Tokens (en minúsculas) disponibles en los textos de cara al cliente: {cliente} {cliente_corto} {codigo} {n_total} {n_total_txt} {n_areas} {n_areas_txt} {h_total} {semanas} {semanas_txt} {semana_medicion} {tope_h_semana} {tope_h_dia} {rango_seguimiento} {n_f0..n_f3} {h_f0..h_f3} {n_frente_<id>} {h_frente_<id>} (id en minúsculas) {n_carril_<id>} {h_carril_<id>}. **Negrita**: solo en portada.lead/hechos.texto, alcance.*, fases.descripcion, frentes.celdas, ruta.*, seguimiento.*, licencias.texto, inversion.duracion y entregables.subtitulo (máx. ~3 por slide); en nombres de entregable y en los campos de formulario se ignora. Sin fechas calendario del cronograma: usar semanas.",
-  "version": 1,
-  "_ayuda_retorno": "MÓDULO OPCIONAL «retorno» (slide final, sin campos de PDF). Para activarlo agregue la clave \"retorno\" a este archivo (quite el guion bajo de _ejemplo_retorno). Modo \"metodo\" (por defecto): cómo se calcula el retorno (volumen, tiempo actual = línea base, tiempo con la solución, horas recuperadas, valor en dinero —o capacidad liberada en Fundación— y, si posiciones=true, posiciones y costo anual), metas a 30-60-90 y destino del tiempo recuperado; no lleva cifras. Modo \"cifras\": tabla por área con horas actuales y con la solución, valor del tiempo y, si posiciones=true, posiciones y costo anual; exige costo_hora_usd, nota_datos, origen_datos {documento, fecha, validado_por} (procedencia verificable), tipo_dato por área (medido | declarado | estimacion; las estimaciones se rotulan) y, con posiciones, horas_por_posicion. posiciones=true plantea de frente la reducción de puestos y la contratación evitada: exige aval_posiciones {quien, fecha, medio} (quién del cliente lo aceptó) y solo debe activarse cuando el cliente lo avala. La slide NUNCA cita estudios, informes ni referencias de la web ni promete retorno. Use el modo cifras solo con datos del cliente (scripts/habilidades-retorno-xlsx.py crea y lee la hoja de captura); sin datos, modo metodo. «Hacia la semana N» = semanas_total + 13 (90 días de seguimiento): confirmar con servicio.",
-  "_ejemplo_retorno": {
-    "modo": "metodo",
-    "posiciones": false,
-    "destino": [
-      {
-        "rotulo": "Mismo equipo, más volumen",
-        "texto": "Si el tiempo se libera, el mismo equipo puede procesar más ... **sin contratar más personal**."
-      },
-      {
-        "rotulo": "Trabajo reenfocado",
-        "texto": "Ejemplo real de reenfoque en dos áreas, con las cifras de la portada."
-      },
-      {
-        "rotulo": "Otras áreas y líneas de negocio",
-        "texto": "Con el retorno medido, {cliente_corto} decide si lleva este mismo ciclo de construir, probar y adoptar a **otras áreas y líneas de negocio**."
-      }
-    ],
-    "_modo_cifras": "Cambie modo a \"cifras\" y agregue costo_hora_usd, nota_datos, origen_datos: {documento, fecha, validado_por} y areas: [{\"area\": \"<id o nombre del área>\", \"tipo_dato\": \"medido|declarado|estimacion\", \"horas_actuales\": 0, \"horas_con_solucion\": 0, \"retrabajo_usd\": 0, \"tardios_usd\": 0}]; con posiciones=true: horas_por_posicion, aval_posiciones y por área posiciones_hoy, posiciones_reducibles, posiciones_evitables (opcional), costo_anual_usd, tipo_dato_posiciones (opcional). etiqueta opcional acorta el nombre del área en la tabla.",
-    "_aval_posiciones": "Con posiciones=true agregar aval_posiciones: {\"quien\": \"nombre y cargo en el cliente\", \"fecha\": \"AAAA-MM-DD\", \"medio\": \"reunión, correo, mensaje\"}."
-  },
+  "_ayuda_general": "Copie este archivo a clientes/propuestas/<slug>/datos.json y reemplace TODOS los POR_DEFINIR (el generador se niega a publicar mientras quede alguno). Las claves que empiezan con _ayuda o _ejemplo se ignoran. Detalle de cada campo: plantillas/habilidades-compacto.md (v2). Para partir del docx de insumo use scripts/habilidades-importar-insumo.py. ORDEN DE LA PROPUESTA (Ventas, 2026-10-07): portada · alcance · ruta · cómo trabajamos · entregables · retorno · inversión · facilidad de pago · próximos pasos (Fundación y «sin cotización» no llevan inversión ni pago). LENGUAJE DEL CLIENTE: sin «proceso base», «Frente A», «S1-S3», «carril», «8 de 15 h»; «valor» o «inversión», nunca «precio» ni «costo»; no repetir información entre slides. Tokens (en minúsculas) disponibles en los textos de cara al cliente: {cliente} {cliente_corto} {codigo} {n_total} {n_total_txt} {n_areas} {n_areas_txt} {n_frentes_txt} {h_total} {semanas} {semanas_txt} {semana_medicion} {tope_h_semana} {tope_h_dia} {rango_seguimiento} {n_cuotas} {n_cuotas_palabra} {n_f0..n_f3} {h_f0..h_f3} {n_frente_<id>} {h_frente_<id>} (id en minúsculas) {n_carril_<id>} {h_carril_<id>}. **Negrita**: solo en portada.lead/hechos/contratacion, alcance.subtitulo/fuera_alcance, metodo.*, ruta.*, seguimiento.*, licencias.texto, inversion.duracion, pago.*, retorno.* y entregables.subtitulo (máx. ~3 por slide); en nombres de entregable y en los campos de formulario se ignora. Sin fechas calendario del cronograma: usar semanas.",
+  "version": 2,
   "cliente": {
     "nombre": "POR_DEFINIR",
     "slug": "POR_DEFINIR",
     "codigo": "POR_DEFINIR",
     "_ayuda_opcionales": [
-      "nombre_pie: (opcional) nombre corto del pie de página; por defecto = nombre"
+      "nombre_pie: (opcional) nombre corto del pie de página y de los titulares; por defecto = nombre (úsalo si el nombre supera ~12 caracteres)"
     ]
   },
   "division": "POR_DEFINIR",
-  "_ayuda_division": "educacion | fundacion. No se infiere: preguntar y guardar (CLAUDE.md §4.1). Fundación omite la slide de inversión (4 slides).",
+  "_ayuda_division": "educacion | fundacion. No se infiere: preguntar y guardar (CLAUDE.md §4.1). Fundación omite inversión y facilidad de pago.",
   "alianza": "POR_DEFINIR",
   "_ayuda_alianza": "true | false. Bandera aparte del servicio (no es un 5to servicio): preguntar al usuario si la propuesta nace de una alianza (CLAUDE.md §4.1a punto 2).",
   "eje": "POR_DEFINIR",
   "origen": "POR_DEFINIR",
   "fuente_insumo": "POR_DEFINIR",
-  "_ayuda_origen": "Qué informe de Detección sustenta la propuesta (nombre y fecha).",
-  "_ayuda_portada": "El titular es una FRASE-OBJETIVO estilo título de tesis, no un titular de dolor: «Optimización de procesos y datos con inteligencia artificial en 10 áreas de DUSA». Va en 1 a 3 líneas (titulo_lineas) más la franja amarilla (titulo_destacado, que admite tokens como {n_areas} y {cliente_corto}). Sin punto final. Largo total ≤ 82 caracteres con un código de 7 (generar-pdf.sh nombra el PDF «<CÓDIGO> <titular>» y lo corta a 90). El tamaño del h1 se ajusta solo (64/54/46/42 px). El lead usa verbos de proyecto: ordena procesos y datos, construye, deja adoptado, mide el efecto.",
+  "_ayuda_origen": "origen = qué informe de Detección o ficha sustenta la propuesta (nombre y fecha). fuente_insumo = el archivo del que salió el reparto de soluciones y horas.",
+  "_ayuda_portada": "1 · PORTADA = «¿cuál es mi problema?». El titular es una FRASE-OBJETIVO estilo título de tesis, no un titular de dolor: «Optimización de procesos y datos con inteligencia artificial en 10 áreas de DUSA». Va en 1 a 3 líneas (titulo_lineas) más la franja amarilla (titulo_destacado, que admite tokens). Sin punto final. Largo total ≤ 82 caracteres con un código de 7. El lead usa verbos de proyecto (ordena, construye, deja adoptado, mide). 'hechos': 3 datos de la auditoría (num ≤ 9 caracteres; texto ≤ ~95) con el DOLOR REAL del cliente y su magnitud; cada uno debe estar resuelto por soluciones DEL ALCANCE (resuelto_por lista sus ids). Sin datos del cliente documentados, no se inventan: usar hechos de contenido y decirlo en supuestos.",
   "portada": {
     "titulo_lineas": [
       "POR_DEFINIR"
@@ -68,8 +47,13 @@
         ]
       }
     ],
-    "fuente": "POR_DEFINIR",
-    "_ayuda": "Titular-objetivo: frase nominal estilo título de tesis en 1 a 3 líneas (titulo_lineas) más la franja amarilla (titulo_destacado, con tokens), p. ej. «Optimización de procesos y datos con inteligencia artificial en {n_areas_txt} de {cliente_corto}». Nombrar un proceso o dominio propio del cliente (no copiar el ejemplo de DUSA). El dolor va en los 3 datos de 'hechos', no en el titular. 'hechos': 3 cifras de la auditoría (num corto: '+300', '5', '10 a 15'; ≤ 9 caracteres; texto ≤ ~95 caracteres); cada una debe nombrar un dolor y su magnitud, no solo un volumen. REGLA: cada hecho debe estar resuelto por soluciones DEL ALCANCE (resuelto_por lista sus ids); un dolor que queda fuera de alcance (lo asume el cliente/Sistemas) no va en la portada."
+    "fuente": "POR_DEFINIR"
+  },
+  "_ejemplo_portada_contratacion": {
+    "num": "≈10",
+    "texto": "posiciones a tiempo completo harían falta para sostener a mano este mismo volumen de trabajo. Con los procesos optimizados, es **alta la probabilidad** de no tener que contratarlas.",
+    "fuente": "Documento del cliente o del informe de Detección de donde sale la cifra (con fecha)",
+    "_ayuda": "OPCIONAL: franja bajo los hechos. La contratación evitada se plantea como PROBABILIDAD, nunca como compromiso («alta probabilidad», «podría»); sin porcentajes sin base. La cifra exige fuente documentada. Para activarla, mueva este objeto a portada.contratacion."
   },
   "carriles": [
     {
@@ -85,7 +69,7 @@
       "color": "naranja"
     }
   ],
-  "_ayuda_carriles": "1 o 2 carriles = herramientas/plataformas sobre las que se construye (p. ej. Microsoft 365 Copilot y Claude Team). Si hay 1 solo, borrar el segundo. color: amarillo | naranja.",
+  "_ayuda_carriles": "1 o 2 «carriles» = herramientas o plataformas sobre las que se construye (p. ej. Microsoft 365 Copilot y Claude Team). El cliente lo ve como la herramienta; la palabra «carril» no sale en el deck. Si hay una sola, borrar la segunda. color: amarillo | naranja.",
   "areas": [
     {
       "id": "A1",
@@ -93,6 +77,7 @@
       "carril": "herramienta1",
       "frente": "A",
       "proceso_base": false,
+      "para_que": "POR_DEFINIR",
       "soluciones": [
         {
           "id": "A1-1",
@@ -115,8 +100,8 @@
         }
       ],
       "_ayuda_opcionales": [
-        "nombre_frente: (opcional) nombre corto para el rótulo del frente en la slide de ruta",
-        "nombre_catalogo: (opcional) nombre para el catálogo de entregables"
+        "nombre_catalogo: (opcional) nombre del área para el catálogo de entregables (slide 5)",
+        "composicion: (opcional) texto pequeño bajo el nombre del área en el alcance (p. ej. los departamentos o grupos que la componen)"
       ]
     },
     {
@@ -124,6 +109,7 @@
       "nombre": "POR_DEFINIR",
       "carril": "herramienta2",
       "frente": "B",
+      "para_que": "POR_DEFINIR",
       "soluciones": [
         {
           "id": "B1-1",
@@ -143,21 +129,43 @@
       ]
     }
   ],
-  "_ayuda_areas": "Una entrada por área; el ORDEN es el orden de aparición en las slides 2 y 5. 'entregable' = nombre corto del entregable (≤ 36 caracteres ideal = 1 línea, ≤ 72 recomendado, máx. 99): el sustantivo de lo que SE ENTREGA y su matiz ('propuesta de', 'sugerido', 'archivo para carga', 'trasladados a'), no el tema. C/T/A = horas de construcción, pruebas y adopción (enteros). El total se calcula. fase ∈ F0..F3 (F0 = arranque, sin columna). Un proceso previo que condiciona a otros (p. ej. ordenar una base de datos) va con proceso_base: true.",
+  "_ayuda_areas": "Una entrada por área; el ORDEN es el orden de aparición en las slides de alcance y entregables. 'para_que' = qué resolvemos en esa área y para qué, en palabras del cliente (≤ 78 caracteres con dos herramientas, ≤ 95 con una; máx. 150): es lo que hace que el alcance explique el «para qué». 'entregable' = nombre corto de lo que SE ENTREGA (≤ 36 caracteres ideal = 1 línea, ≤ 72 recomendado, máx. 99). C/T/A = horas de construcción, pruebas y adopción (enteros). El total se calcula. fase ∈ F0..F3 (F0 = arranque, sin columna). Un paso previo que condiciona a otros (p. ej. ordenar una base de datos) va con proceso_base: true y el cliente lo ve como «paso previo».",
   "alcance": {
     "subtitulo": "POR_DEFINIR",
-    "pasos": [
-      "Construimos junto a quien ejecuta el proceso.",
-      "Probamos con ese equipo y con POR_DEFINIR.",
-      "Adoptamos: el equipo la usa en su trabajo diario."
-    ],
-    "quien_construye": "POR_DEFINIR",
     "fuera_alcance": [
       "POR_DEFINIR"
     ],
     "compacto": false,
-    "_ayuda": "titulo opcional (por defecto '{n_total_txt} en {n_areas_txt} de {cliente_corto}.'). subtitulo: 1 línea (≤ ~110 caracteres) que gloce qué se construye (p. ej. asistentes de IA, validadores y tableros). fuera_alcance: lo que el cliente asume con sus propios desarrollos, lo que requiere un aplicativo, restricciones de datos sensibles; si no hay, borrar la clave."
+    "_ayuda": "2 · ALCANCE = «¿qué voy a hacer y para qué?». titulo opcional (por defecto '{n_total_txt} en {n_areas_txt} de {cliente_corto}.'). subtitulo: 1 línea (≤ ~110 caracteres) que gloce qué se construye. fuera_alcance: lo que el cliente asume con sus propios desarrollos, lo que requiere un aplicativo, restricciones de datos sensibles; máx. 5 puntos de ≤ ~130 caracteres; si no hay, borrar la clave. Los pasos de trabajo y «quién construye» NO van aquí: pasaron a «metodo» (slide «Cómo trabajamos»)."
   },
+  "metodo": {
+    "quien_construye": "POR_DEFINIR",
+    "practica": [
+      {
+        "titulo": "POR_DEFINIR",
+        "texto": "POR_DEFINIR"
+      }
+    ],
+    "datos": "POR_DEFINIR",
+    "_ayuda": "4 · CÓMO TRABAJAMOS = «¿cómo funciona en la práctica?». TI y los directivos van a preguntarlo: si no está escrito se asume que no funciona. 'practica' (1 a 3 puntos, texto ≤ ~170 caracteres): licencias y límites de uso, qué se hace en cada herramienta, ventanas de prueba, qué NO hace. 'datos' (≤ ~250 caracteres): cómo se cuidan los datos sensibles (casos reales anonimizados, accesos que autoriza el área de tecnología del cliente, qué no entra a la plataforma). 'quien_construye' (≤ ~200 caracteres, opcional): quién construye y quién gobierna accesos. Los 4 pasos por solución son fijos (construimos, probamos, adoptamos, medimos); 'por_que_orden' explica por qué en ese orden (por defecto se arma con las fases). NO se expone la metodología ABR (§4.10a): esta slide explica cómo trabajamos, no la pedagogía.",
+    "_ayuda_opcionales": [
+      "titulo, subtitulo, pasos (3 o 4: titulo ≤ 18 + texto ≤ 90), por_que_orden (≤ ~300 caracteres): sustituyen los textos por defecto",
+      "etiqueta_ejemplos, nota_ejemplos: rótulo y nota de la franja de casos ya logrados"
+    ]
+  },
+  "_ejemplo_metodo_ejemplos": [
+    {
+      "area": "Nombre del área del cliente",
+      "titulo": "Nombre de lo que se construyó",
+      "antes": "30 a 40 min",
+      "despues": "3 a 4 min",
+      "texto": "Qué hace y qué se midió, con las cifras tal como las dice la fuente. Con el agente, el análisis se resolvió en **3 a 4 min**.",
+      "fuente": "Informe o documento del cliente (con fecha)"
+    },
+    {
+      "_ayuda": "OPCIONAL: 1 a 3 casos YA LOGRADOS con este cliente (p. ej. lo que sus equipos construyeron en la Detección o el kickoff). Cada uno exige 'fuente' documentada del propio cliente; antes/después son opcionales y se muestran solo si hay ambos. NUNCA se inventan casos ni cifras. Para activarlos, mueva esta lista a metodo.ejemplos."
+    }
+  ],
   "fases": [
     {
       "id": "F0",
@@ -166,29 +174,30 @@
     {
       "id": "F1",
       "titulo": "Fase 1",
-      "rango": "Semanas 1-5",
+      "rango": "Semanas 1 a 5",
       "descripcion": "prioridad de cada área, sin dependencias",
       "destacada": true
     },
     {
       "id": "F2",
       "titulo": "Fase 2",
-      "rango": "Semanas 5-8",
+      "rango": "Semanas 5 a 8",
       "descripcion": "necesita un acuerdo, un dato o una solución previa"
     },
     {
       "id": "F3",
       "titulo": "Fase 3",
-      "rango": "Semanas 7-11",
+      "rango": "Semanas 7 a 11",
       "descripcion": "extensiones, cruces y tableros"
     }
   ],
-  "_ayuda_fases": "2 o 3 fases con columna (F1..F3) + F0 opcional (arranque, no tiene columna: sus horas se explican en la nota y en el primer hito). Rangos en SEMANAS desde el arranque, nunca fechas calendario (el cronograma es relativo al arranque).",
+  "_ayuda_fases": "2 o 3 fases con columna (F1..F3) + F0 opcional (arranque, no tiene columna: sus horas se explican en la nota y en el primer hito). Rangos en SEMANAS desde el arranque, nunca fechas calendario. Con una sola línea de trabajo y 3 fases, los títulos de fase deben ser cortos (≤ 6 caracteres) porque comparten la cabecera con «N soluciones».",
   "frentes": [
     {
       "id": "A",
       "carril": "herramienta1",
-      "semanas": "S1-S11",
+      "nombre": "POR_DEFINIR",
+      "semanas": "1 a 11",
       "celdas": {
         "F1": "POR_DEFINIR (≤ ~90 caracteres)",
         "F2": "POR_DEFINIR",
@@ -198,7 +207,8 @@
     {
       "id": "B",
       "carril": "herramienta2",
-      "semanas": "S2-S7",
+      "nombre": "POR_DEFINIR",
+      "semanas": "2 a 7",
       "celdas": {
         "F1": "POR_DEFINIR",
         "F2": "POR_DEFINIR",
@@ -206,7 +216,7 @@
       }
     }
   ],
-  "_ayuda_frentes": "1 a 3 frentes = equipos de trabajo que avanzan en paralelo; cada área apunta a un frente y todas las áreas de un frente son del mismo carril. 'celdas': qué se construye en esa fase (texto humano, no ids); las horas y el conteo de soluciones de cada celda se calculan. Una celda sin soluciones se muestra vacía.",
+  "_ayuda_frentes": "3 · RUTA = «¿cómo y en cuánto tiempo?». 1 a 3 «líneas de trabajo» que avanzan en paralelo (el id A, B, C es interno: el cliente ve el 'nombre', p. ej. «Nómina y Servicio Médico», ≤ 44 caracteres y máx. 2 líneas en la tarjeta). Cada área apunta a una línea y todas las áreas de una línea son de la misma herramienta. 'semanas': «1 a 11» (números, nunca «S1-S11»). 'celdas': qué se construye en esa fase (texto humano, no ids). Las soluciones van en grande y las horas en pequeño; el conteo y las horas de cada celda se calculan. Una celda sin soluciones se muestra vacía.",
   "ruta": {
     "semanas_total": "POR_DEFINIR (número)",
     "tope_h_semana": 20,
@@ -228,12 +238,19 @@
         "texto": "Cierre de la construcción."
       }
     ],
-    "_ayuda": "3 a 5 hitos (titulo corto; texto ≤ ~90 caracteres). Sin fechas calendario. Si una fase (F1 destacada) concentra más horas, marcarla en fases[].destacada.",
+    "_ayuda": "3 a 5 hitos (titulo corto ≤ ~28 caracteres; texto ≤ ~90). Sin fechas calendario. Una sola línea de tiempo: no repetir en otra slide lo que dicen estos hitos.",
     "_ayuda_opcionales": [
-      "titulo: (opcional) por defecto 'Tres frentes en paralelo, {semanas} semanas.'",
+      "titulo: (opcional) por defecto «Dos líneas de trabajo en paralelo, 11 semanas.»",
       "subtitulo: (opcional)",
-      "nota: (opcional) por defecto se compone con las horas por fase"
+      "nota: (opcional, ≤ ~340 caracteres) por defecto se compone con las horas por fase",
+      "siguiente_etapa: (opcional) {titulo, texto}: ruta completa o etapa 2 si existe y está documentada; no se inventa"
     ]
+  },
+  "logistica": {
+    "modalidad": "POR_DEFINIR",
+    "participantes": "POR_DEFINIR",
+    "arranque": "POR_DEFINIR",
+    "_ayuda": "Cuatro fichas al pie de «Cómo trabajamos»: modalidad (presencial, virtual, mixta), participantes (quién ejecuta cada proceso, cuántos), arranque (cómo se fija la fecha) y ritmo (opcional; por defecto «hasta {tope_h_semana} horas de trabajo por semana en cada línea de trabajo»). ≤ ~95 caracteres cada una. No se inventan: si el insumo no lo dice, ponerlo en supuestos."
   },
   "seguimiento": {
     "rango": "30, 60 y 90 días",
@@ -252,29 +269,7 @@
         "texto": "Retorno en tiempo ahorrado y habilidades instaladas"
       }
     ],
-    "_ayuda": "Marco 30-60-90 del servicio Habilidades (empresa/tipos-de-documento.md §0.2). No prometer resultados medidos: es lo que se mide, no una cifra garantizada."
-  },
-  "inversion": {
-    "notas": [
-      "POR_DEFINIR"
-    ],
-    "licencias": {
-      "titulo": "Licenciamiento · aparte de esta inversión",
-      "tarjetas": [
-        {
-          "nombre": "POR_DEFINIR",
-          "color": "naranja",
-          "texto": "**USD POR_DEFINIR** por POR_DEFINIR."
-        }
-      ],
-      "nota": "POR_DEFINIR (fuente y fecha de los precios; 'Pueden variar.')"
-    },
-    "_ayuda": "Los precios de inversión, descuento y total NO van aquí: quedan vacíos para ventas. 'notas' = texto pre-llenado del campo Notas (≤ 6 líneas): confirmar quién contrata el licenciamiento antes de afirmarlo. 'licencias' es opcional (borrar la clave si no hay costos de terceros); máx. 2 tarjetas de ≤ ~230 caracteres. El retorno esperado no va aquí: es la slide opcional «retorno» (método o cifras del cliente, sin estudios).",
-    "_ayuda_opcionales": [
-      "titulo: (opcional) por defecto 'Inversión por horas de sesión.'",
-      "duracion: (opcional) por defecto 'Proyección de {h_total} h de sesión en {semanas} semanas de trabajo desde el arranque, más seguimiento a {rango_seguimiento}.'",
-      "programa: (opcional) líneas del campo Programa; por defecto se arma con los frentes"
-    ]
+    "_ayuda": "Marco 30-60-90 del servicio Habilidades (empresa/tipos-de-documento.md §0.2): en la ruta es la columna «Garantía». No prometer resultados medidos: es lo que se mide, no una cifra garantizada. tipo (opcional): 'seguimiento' (por defecto) | 'cierre' (la última columna muestra el cierre y la ruta posterior, p. ej. Detección) | 'ninguno' (sin quinta columna ni rango/items). Con 'cierre' o 'ninguno' el retorno exige retorno.metas propios."
   },
   "entregables": {
     "transversales": [
@@ -287,24 +282,88 @@
       "POR_DEFINIR"
     ],
     "compacto": false,
-    "_ayuda": "Se cargan en las dos cajas editables de la franja inferior (campos Entregables y Acreditacion): 2 o 3 viñetas de una línea cada una (~60 caracteres; máx. 4 líneas en total). transversales = piezas que no son una solución (línea base, seguimiento). El «Certificado de participación» ya no va por defecto (rastro de curso): solo si el cliente lo pide. valor_inmediato = lo que el cliente ve primero; con semanas, no con fechas, y solo hitos respaldados por el insumo. 'compacto': true si el catálogo no cabe."
+    "_ayuda": "5 · ENTREGABLES = «¿con qué me quedo?». Antes del retorno y de la inversión. Se cargan en las dos cajas editables de la franja inferior (campos Entregables y Acreditacion; el cliente ve «Para todas las áreas» y «Valor inmediato»): 2 o 3 viñetas de una línea cada una (~60 caracteres; máx. 4 líneas en total). transversales = piezas que no son una solución (línea base, seguimiento). valor_inmediato = lo que el cliente ve primero, con semanas y solo hitos respaldados por el insumo. 'compacto': true si el catálogo no cabe. El «Certificado de participación» no va por defecto: solo si el cliente lo pide."
+  },
+  "_ejemplo_retorno": {
+    "modo": "metodo",
+    "posiciones": false,
+    "destino": [
+      {
+        "rotulo": "Mismo equipo, más volumen",
+        "texto": "Si el tiempo se libera, el mismo equipo puede procesar más ... **sin contratar más personal**."
+      },
+      {
+        "rotulo": "Trabajo reenfocado",
+        "texto": "Con el tiempo liberado, las personas de cada área dejan de armar y consolidar a mano para validar, analizar y decidir."
+      },
+      {
+        "rotulo": "Otras áreas y líneas de negocio",
+        "texto": "Con el retorno medido, {cliente_corto} decide si lleva este mismo ciclo a **otras áreas y líneas de negocio**."
+      }
+    ],
+    "_ayuda": "6 · RETORNO = «¿qué gano con esto?». OBLIGATORIO por defecto (Ventas, 2026-10-07; va ANTES de la inversión): si se omite la clave 'retorno' se genera en modo método. Solo se omite con datos.json → omitir: [\"retorno\"] (charla, sesión única) y se avisa. Modo \"metodo\" (por defecto): cómo se calcula el retorno (volumen, tiempo actual = línea base, tiempo con la solución, horas recuperadas, valor en dinero —o capacidad liberada en Fundación— y, si posiciones=true, posiciones y valor anual), calendario de garantía 30-60-90 y «Hacia dónde va el proyecto» (tono aspiracional); no lleva cifras. Modo \"cifras\": tabla por área con horas actuales y con la solución, valor del tiempo y, si posiciones=true, posiciones y valor anual; exige costo_hora_usd, nota_datos, origen_datos {documento, fecha, validado_por}, tipo_dato por área (medido | declarado | estimacion) y, con posiciones, horas_por_posicion. posiciones=true plantea de frente la reducción de puestos y la contratación evitada: exige aval_posiciones {quien, fecha, medio} y solo se activa con aval del cliente. La slide NUNCA cita estudios, informes ni referencias de la web ni promete retorno. Use el modo cifras solo con datos del cliente (scripts/habilidades-retorno-xlsx.py crea y lee la hoja de captura). «Hacia la semana N» = semanas_total + 13 (90 días de seguimiento): confirmar con servicio. Para personalizar, mueva este objeto a la clave 'retorno'."
+  },
+  "inversion": {
+    "licencias": {
+      "titulo": "Licenciamiento · aparte de esta inversión",
+      "tarjetas": [
+        {
+          "nombre": "POR_DEFINIR",
+          "color": "naranja",
+          "texto": "**USD POR_DEFINIR** por POR_DEFINIR."
+        }
+      ],
+      "nota": "POR_DEFINIR (fuente y fecha de los valores; 'Pueden variar.')"
+    },
+    "_ayuda": "7 · INVERSIÓN (antepenúltima). Se llama «Inversión del proyecto» (cobramos por proyecto, no por horas de sesión). Los montos de inversión, descuento y total NO van aquí: quedan vacíos para ventas. 'notas' (opcional) = texto pre-llenado del campo Notas (≤ 6 líneas); por defecto lleva la garantía 30-60-90 y los términos y condiciones. 'licencias' es opcional (borrar la clave si no hay costos de terceros): máx. 2 tarjetas de ≤ ~230 caracteres; confirmar quién contrata el licenciamiento antes de afirmarlo y escribir «valor», no «precio». El retorno esperado no va aquí: tiene su propia slide, antes de la inversión.",
+    "_ayuda_opcionales": [
+      "titulo: (opcional) por defecto «Inversión del proyecto.»",
+      "duracion: (opcional) por defecto «Proyecto de 44 soluciones a realizar en un total de 11 semanas, con seguimiento y garantía a 30, 60 y 90 días. 500 horas de trabajo.» (las horas van al final y en pequeño)",
+      "programa: (opcional) líneas del campo Programa (≤ 6 líneas); por defecto: soluciones primero y horas en pequeño",
+      "garantia_texto: (opcional) texto de la tarjeta de garantía; sin_garantia: true la quita (Detección, charlas)"
+    ]
+  },
+  "pago": {
+    "cuotas": [
+      {
+        "cuando": "Al aprobar",
+        "hito": "Anticipo al aprobar la propuesta",
+        "pct": 50
+      },
+      {
+        "cuando": "Al cierre",
+        "hito": "Saldo al cierre del proyecto",
+        "pct": 50
+      }
+    ],
+    "mensaje": "POR_DEFINIR",
+    "facturacion": "POR_DEFINIR",
+    "_ayuda": "8 · FACILIDAD DE PAGO (penúltima, hoja aparte). 2 a 6 cuotas ligadas a hitos de la ruta; los porcentajes suman 100 y los MONTOS NO se escriben aquí: salen como campos vacíos y editables (PagoCuota1..N) para ventas. Si se omite la clave 'pago' se usa el plan estándar de empresa/politicas-comerciales.md (anticipo 50 % y saldo 50 % al cierre) y se avisa. 'cuando' ≤ 16 caracteres («Semana 5», «+30 días»); 'hito' ≤ ~70 caracteres con 5 cuotas (se ve en 4 líneas). 'mensaje' (≤ ~220): la comodidad que se le da al cliente. 'facturacion' (≤ ~190): moneda y tasa a la que se factura. Ventas debe confirmar el plan antes de enviar."
+  },
+  "proximos_pasos": {
+    "asesora": {
+      "nombre": "POR_DEFINIR",
+      "correo": "POR_DEFINIR",
+      "cargo": "Business Development"
+    },
+    "_ayuda": "9 · PRÓXIMOS PASOS (última slide) = «¿qué hago ahora y a quién le escribo?». 'asesora' = la asesora comercial que atiende al cliente (nombre y correo obligatorios; cargo y telefono opcionales; ver la Ficha Comercial). Los 3 pasos por defecto son de logística (fecha y zona horaria, accesos y agenda, reunión de arranque de ~30 min): sin acuerdos económicos (§4.15). Se pueden sustituir con proximos_pasos.pasos (exactamente 3, titulo ≤ 22 + texto ≤ 120). titulo y subtitulo opcionales."
   },
   "siglas_ok": [],
+  "frases_ok": [],
+  "_ayuda_siglas_frases": "siglas_ok: siglas propias del cliente que no se glosan (HCM, JD...). frases_ok: nombres de soluciones o procesos del cliente que llevan «costo» o «precio» (p. ej. «tablas de precios») y no deben marcarse como jerga.",
   "supuestos": [
-    "POR_DEFINIR: lo que se asumió y hay que confirmar (p. ej. quién contrata el licenciamiento)."
+    "POR_DEFINIR: lo que se asumió y hay que confirmar (p. ej. quién contrata el licenciamiento, la modalidad, la asesora)."
   ],
   "pendientes": [
-    "Definir inversión, descuento y total (campos vacíos para ventas)."
+    "Definir inversión, descuento, total y los montos de las cuotas (campos vacíos para ventas)."
   ],
   "_ayuda_opcionales_raiz": [
-    "cliente.nombre_pie: nombre corto del cliente para los titulares por defecto y el pie (úsalo si cliente.nombre supera ~12 caracteres)",
-    "areas[].nombre_frente: nombre corto del área para el rótulo del frente en la slide 3; areas[].nombre_catalogo: nombre para el catálogo de la slide 5",
-    "alcance.titulo, alcance.etiqueta_pasos / etiqueta_quien / etiqueta_fuera / etiqueta_proceso_base: sustituyen los textos por defecto",
-    "ruta.titulo, ruta.subtitulo, ruta.nota: sustituyen los textos por defecto (la nota por defecto se compone con las horas por fase)",
-    "frentes[].areas_html: HTML del rótulo de áreas del frente (solo si el automático no sirve)",
-    "inversion.titulo, inversion.duracion, inversion.programa[], inversion.garantia_texto: sustituyen los textos por defecto",
-    "entregables.titulo, entregables.subtitulo (debe conservar la frase «Lo que se llevan»), entregables.etiqueta_transversales / etiqueta_valor, entregables.compacto, entregables.columnas_por_carril ([k1,k2]: columnas por carril, suma <= 4, un valor por carril en orden)"
+    "OTROS SERVICIOS (Detección, combos, charlas): servicio_rotulo «Servicio de Detección y Habilidades» (se nombra en la portada, la inversión y el brief), meta_servicio (habilidades | deteccion | politicas | innovacion | integral) y meta_tipo (texto de meta.json → tipo)",
+    "vocabulario: {solucion, area, proceso_base}: [singular, plural] para cambiar las palabras del deck (p. ej. entregable/entregables, frente/frentes, etapa previa/etapas previas)",
+    "sin_hoja_cotizacion: true (el deck no lleva inversión ni facilidad de pago; igual que Fundación). omitir: lista con slides a quitar de entre metodo, retorno, proximos, inversion, pago (se avisa: Ventas las pide en toda propuesta)",
+    "seguimiento.tipo ('seguimiento' | 'cierre' | 'ninguno'), inversion.sin_garantia (true)",
+    "areas[].nombre_catalogo, areas[].composicion; alcance.titulo, alcance.etiqueta_proceso_base / etiqueta_fuera; ruta.titulo, ruta.subtitulo, ruta.nota",
+    "inversion.titulo, inversion.duracion, inversion.programa[], inversion.garantia_texto; entregables.titulo, entregables.subtitulo (debe conservar la frase «Lo que se llevan»), entregables.etiqueta_transversales / etiqueta_valor, entregables.columnas_por_carril ([k1,k2]: columnas por carril, suma <= 4)"
   ],
-  "_ayuda_F0": "F0 = horas de arranque (semana 1). Si se declara una solución F0 cuenta en {n_total}, en las horas y en el catálogo de entregables. La línea base de horas ya es un entregable transversal por defecto: no duplicarla como solución.",
-  "_ayuda_licencias": "inversion.licencias es opcional: borrar la clave si no hay costos de terceros. En Fundación toda la sección inversion se ignora."
+  "_ayuda_F0": "F0 = horas de arranque (semana 1). Si se declara una solución F0 cuenta en {n_total}, en las horas y en el catálogo de entregables. La línea base de horas ya es un entregable transversal por defecto: no duplicarla como solución."
 }

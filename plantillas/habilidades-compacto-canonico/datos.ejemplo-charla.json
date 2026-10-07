@@ -1,0 +1,208 @@
+{
+ "version": 2,
+ "cliente": {
+  "nombre": "Empresa Demo C.A.",
+  "slug": "empresa-demo",
+  "codigo": "CH-000",
+  "nombre_pie": "Empresa Demo"
+ },
+ "division": "educacion",
+ "alianza": false,
+ "eje": "Charla de IA para líderes (receta de charla)",
+ "origen": "Ejemplo ilustrativo con datos ficticios (prueba de la receta)",
+ "fuente_insumo": "Datos ficticios",
+ "supuestos": [
+  "Ejemplo ilustrativo: la adaptación de la categoría se anota aquí."
+ ],
+ "pendientes": [
+  "Confirmar modalidad, asesora y fechas con servicio."
+ ],
+ "proximos_pasos": {
+  "asesora": {
+   "nombre": "Nombre de la asesora comercial",
+   "cargo": "Business Development",
+   "correo": "servicio@intezia.com"
+  }
+ },
+ "sin_hoja_cotizacion": true,
+ "omitir": [
+  "retorno"
+ ],
+ "vocabulario": {
+  "solucion": [
+   "entregable",
+   "entregables"
+  ],
+  "area": [
+   "parte",
+   "partes"
+  ]
+ },
+ "portada": {
+  "eyebrow": "Propuesta de charla · Servicio de Habilidades",
+  "titulo_lineas": [
+   "Charla de inteligencia artificial",
+   "para líderes"
+  ],
+  "titulo_destacado": "en 2 horas, sencilla y práctica",
+  "lead": "Una charla de dos horas para entender qué es y qué no es la inteligencia artificial, y decidir con criterio cómo empezar a usarla en el equipo.",
+  "hechos": [
+   {
+    "num": "2 h",
+    "texto": "en una sola sesión, sin preparación previa ni conocimientos técnicos.",
+    "resuelto_por": [
+     "P1-1"
+    ]
+   },
+   {
+    "num": "2",
+    "texto": "partes: entender la IA y decidir cómo empezar.",
+    "resuelto_por": [
+     "P1-1",
+     "P2-1"
+    ]
+   },
+   {
+    "num": "1",
+    "texto": "primer paso concreto que cada líder se lleva para su equipo.",
+    "resuelto_por": [
+     "P2-1"
+    ]
+   }
+  ],
+  "fuente": "Contenido de la charla; no son datos del cliente."
+ },
+ "carriles": [
+  {
+   "id": "charla",
+   "nombre": "Charla de IA",
+   "nombre_corto": "Charla",
+   "color": "amarillo"
+  }
+ ],
+ "areas": [
+  {
+   "id": "P1",
+   "nombre": "Entender la IA",
+   "carril": "charla",
+   "frente": "A",
+   "para_que": "Saber qué es y qué no es la IA, con ejemplos sencillos",
+   "soluciones": [
+    {
+     "id": "P1-1",
+     "entregable": "Guía rápida de IA para líderes",
+     "h": 1,
+     "fase": "F1"
+    }
+   ]
+  },
+  {
+   "id": "P2",
+   "nombre": "Decidir y empezar",
+   "carril": "charla",
+   "frente": "A",
+   "para_que": "Decidir con criterio y llevarse un primer paso",
+   "soluciones": [
+    {
+     "id": "P2-1",
+     "entregable": "Preguntas clave para decidir con IA",
+     "h": 1,
+     "fase": "F2"
+    }
+   ]
+  }
+ ],
+ "alcance": {
+  "subtitulo": "Una charla en dos partes de una hora, **sencilla y sin tecnicismos**.",
+  "fuera_alcance": [
+   "Datos o procesos propios de la empresa: la charla es general."
+  ]
+ },
+ "metodo": {
+  "practica": [
+   {
+    "titulo": "Formato",
+    "texto": "Una sola sesión de 2 h, con ejemplos y preguntas abiertas."
+   }
+  ],
+  "datos": "No se usan datos de la empresa: todos los ejemplos son generales.",
+  "pasos": [
+   {
+    "titulo": "Explicamos",
+    "texto": "Qué es la IA, sin tecnicismos."
+   },
+   {
+    "titulo": "Mostramos",
+    "texto": "Ejemplos reales y sencillos."
+   },
+   {
+    "titulo": "Decidimos",
+    "texto": "Cómo y por dónde empezar."
+   }
+  ]
+ },
+ "logistica": {
+  "modalidad": "Una sesión de 2 horas, presencial o virtual.",
+  "participantes": "Los líderes de la empresa que se convoquen.",
+  "arranque": "La fecha y la hora se acuerdan con el equipo."
+ },
+ "fases": [
+  {
+   "id": "F1",
+   "titulo": "Hora 1",
+   "rango": "Primera hora",
+   "descripcion": "entender qué es la IA",
+   "destacada": true
+  },
+  {
+   "id": "F2",
+   "titulo": "Hora 2",
+   "rango": "Segunda hora",
+   "descripcion": "decidir y empezar"
+  }
+ ],
+ "frentes": [
+  {
+   "id": "A",
+   "carril": "charla",
+   "nombre": "Charla de IA para líderes",
+   "semanas": "1 a 1",
+   "celdas": {
+    "F1": "Qué es la IA y qué no es, con ejemplos de la vida diaria.",
+    "F2": "Cómo decidir con criterio y cuál es el primer paso."
+   }
+  }
+ ],
+ "ruta": {
+  "semanas_total": 1,
+  "tope_h_semana": 20,
+  "hitos": [
+   {
+    "titulo": "Antes de la charla",
+    "texto": "No hace falta preparación previa."
+   },
+   {
+    "titulo": "La charla de 2 h",
+    "texto": "Dos partes de una hora."
+   },
+   {
+    "titulo": "Al cerrar",
+    "texto": "Cada líder se lleva su primer paso."
+   }
+  ]
+ },
+ "seguimiento": {
+  "tipo": "ninguno"
+ },
+ "entregables": {
+  "titulo": "Lo que recibe cada líder.",
+  "subtitulo": "Lo que se llevan: **2 entregables**, uno por cada parte de la charla.",
+  "transversales": [
+   "Material de la charla en digital."
+  ],
+  "valor_inmediato": [
+   "Al cerrar: un primer paso para su equipo."
+  ]
+ },
+ "_comentario": "Ejemplo ficticio de CHARLA (receta de plantillas/habilidades-compacto.md §1b): 2 h = 2 partes de 1 h, sin cotización ni seguimiento y sin slide de retorno. Los hechos de la portada son de contenido, no del cliente. No corresponde a ningún cliente real."
+}

@@ -12,7 +12,10 @@ Qué extrae (de forma literal): carriles, áreas (con proceso base si el encabez
 soluciones (id, texto completo → `detalle`, C/T/A, fase), frentes (id, carril, áreas, horas), el tope de horas
 por semana y las semanas de trabajo si el texto los dice.
 Qué NO puede extraer y deja como POR_DEFINIR (el generador se niega a publicar mientras existan):
-datos del cliente, división, textos de portada/alcance/ruta, rangos de semanas de las fases, hitos.
+datos del cliente, división, textos de portada/alcance/ruta, rangos de semanas de las fases, hitos y, desde la
+plantilla v2 (2026-10-07), lo que pide Ventas: areas[].para_que (qué resuelve cada área, con palabras del cliente),
+frentes[].nombre (nombre de la línea de trabajo que ve el cliente), metodo (quién construye, cómo funciona en la
+práctica, cómo se cuidan los datos), logistica (modalidad, participantes, arranque) y proximos_pasos.asesora.
 Los nombres cortos de entregable se proponen acortando el texto del insumo y quedan marcados `_revisar`
 (el generador también bloquea hasta que se revisen y se borre la marca).
 
@@ -215,7 +218,7 @@ def main():
                     base_flag = True
                     nombre = re.sub(r"^Proceso base\s*" + DASH + r"\s*", "", nombre, flags=re.I)
                     nombre = nombre[:1].upper() + nombre[1:]
-                area_act = {"id": None, "nombre": nombre, "carril": carril_act["id"], "frente": PD, "soluciones": []}
+                area_act = {"id": None, "nombre": nombre, "carril": carril_act["id"], "frente": PD, "para_que": PD, "soluciones": []}
                 if base_flag:
                     area_act["proceso_base"] = True
                 areas.append(area_act)
@@ -262,7 +265,7 @@ def main():
             cand = resolver_carril(tag, carriles)
             if cand is None:
                 avisos.append("frente %s: no se pudo asociar «%s» a un carril; asignarlo a mano" % (m.group(1), m.group(2)))
-            frentes.append({"id": m.group(1), "carril": cand["id"] if cand else PD, "semanas": PD,
+            frentes.append({"id": m.group(1), "carril": cand["id"] if cand else PD, "nombre": PD, "semanas": PD,
                             "_alcance_fuente": c[1] if len(c) > 1 else "", "_horas_fuente": (c[2] if len(c) > 2 else ""), "celdas": {}})
 
     # Asignar frente por coincidencia de NOMBRE COMPLETO (tokens), no por primera palabra
@@ -331,7 +334,7 @@ def main():
         else:
             fases.append({"id": f, "titulo": "Fase " + f[1:], "rango": PD, "descripcion": PD})
     d = {
-        "version": 1,
+        "version": 2,
         "cliente": {"nombre": a.nombre, "slug": a.slug, "codigo": a.codigo},
         "division": PD,
         "alianza": "POR_DEFINIR",
@@ -342,14 +345,16 @@ def main():
                     "hechos": [{"num": PD, "texto": PD, "resuelto_por": []} for _ in range(3)], "fuente": PD},
         "carriles": carriles,
         "areas": areas,
-        "alcance": {"subtitulo": PD, "pasos": [PD, PD, PD], "quien_construye": PD, "fuera_alcance": [PD]},
+        "alcance": {"subtitulo": PD, "fuera_alcance": [PD]},
+        "metodo": {"quien_construye": PD, "practica": [{"titulo": PD, "texto": PD}], "datos": PD},
         "fases": fases,
         "frentes": [{k: v for k, v in fr.items() if not k.startswith("_")} for fr in frentes],
         "ruta": {"semanas_total": semanas, "tope_h_semana": tope, "hitos": [{"titulo": PD, "texto": PD} for _ in range(4)]},
+        "logistica": {"modalidad": PD, "participantes": PD, "arranque": PD},
         "seguimiento": {"rango": "30, 60 y 90 días", "texto": "Desde el cierre de cada área",
                         "items": [{"dias": "30 días", "texto": PD}, {"dias": "60 días", "texto": PD}, {"dias": "90 días", "texto": PD}]},
-        "inversion": {"notas": [PD]},
         "entregables": {"transversales": [PD], "valor_inmediato": [PD]},
+        "proximos_pasos": {"asesora": {"nombre": PD, "correo": PD}},
         "supuestos": [], "pendientes": []}
     # Referencias de la fuente para el humano que completa (el generador las ignora: empiezan con _)
     for fr, orig in zip(d["frentes"], frentes):

@@ -3,7 +3,7 @@
 > **FORMATO HORIZONTAL — PERMANENTE**: A4 landscape (1123×794 px @ 96 dpi → 842×595 pt PDF). No revertir a vertical sin instrucción explícita.
 > **REFERENCIA CANÓNICA**: `clientes/propuestas/cumbre-andina/` (taller mono-fase) · `clientes/propuestas/pilotes-perforados/` (multi-fase). Para propuesta nueva → clonar la más parecida y editar solo el contenido.
 > **Detalle por slide**: cargar `plantillas/propuesta-comercial-ref.md` solo para dudas puntuales o construcción desde cero sin clon disponible.
-> **Habilidades (desde 2026-10-05)**: este documento describe el deck canónico de ~13 slides. El servicio de Habilidades se entrega por defecto con la **plantilla compacta** (`plantillas/habilidades-compacto.md`, `CLAUDE.md §4.21`); este deck solo se usa en los demás servicios y en los casos de la guardia de §4.21 punto 5. Las *Reglas de copy* de abajo (guion largo, siglas, anglicismos, eyebrow con servicio) siguen aplicando a ambos.
+> **Habilidades (desde 2026-10-05)**: este documento describe el deck canónico de ~13 slides. El servicio de Habilidades se entrega **siempre** con la **plantilla compacta** (`plantillas/habilidades-compacto.md`, `CLAUDE.md §4.21`; todas sus categorías, cualquier cliente); este deck solo se usa en los demás servicios y, en Habilidades, si el usuario pide expresamente el canónico. Las *Reglas de copy* de abajo (guion largo, siglas, anglicismos, eyebrow con servicio) siguen aplicando a ambos.
 
 ---
 

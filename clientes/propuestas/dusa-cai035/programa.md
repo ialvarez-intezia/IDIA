@@ -147,7 +147,7 @@ Fuera de todo alcance: el montaje y la descarga en la banca en línea (la IA no 
 
 ## 6. Respaldo oral de evidencia externa (NO está en el deck)
 
-El 2026-10-05 se pidió que la slide 6 no cite estudios ni nada de la web; esta sección queda solo como respaldo interno para ventas, por si la directiva pregunta qué dice la literatura. Documento interno de respaldo para ventas. Verificado con fuentes primarias el 2026-10-05 (workflow multiagente, 7 estudios). Regla: las cifras de la slide son de estudios ajenos, rotuladas como tales; **DUSA no tiene hoy horas por proceso, tarifa ni nómina en el sistema**, así que no hay cifra propia. El retorno de DUSA se mide con la línea base de la semana 1 en el seguimiento 30-60-90.
+El 2026-10-05 se pidió que la slide de retorno (hoy la 7) no cite estudios ni nada de la web; esta sección queda solo como respaldo interno para ventas, por si la directiva pregunta qué dice la literatura. Documento interno de respaldo para ventas. Verificado con fuentes primarias el 2026-10-05 (workflow multiagente, 7 estudios). Regla: las cifras de la slide son de estudios ajenos, rotuladas como tales; **DUSA no tiene hoy horas por proceso, tarifa ni nómina en el sistema**, así que no hay cifra propia. El retorno de DUSA se mide con la línea base de la semana 1 en el seguimiento 30-60-90.
 
 ### 6.1 Versión anterior de la slide (3 barras, escala 0 a 50%, cada una con su base; retirada)
 
@@ -176,3 +176,27 @@ La escala común solo fija la longitud de las barras: **no se suman ni se convie
 - Que las tres barras son comparables o aditivas.
 - «Hacia la semana 24» (en la slide: «cerca de 6 meses del arranque») = construcción cerrada en la S11 + 90 días de seguimiento (~13 semanas) desde el cierre del último frente: 24 semanas son ~5,5 meses. **Confirmar con servicio antes de reenviar**; si no se sostiene, cambiar por «unos 90 días después del cierre del último frente».
 - «Un 5% declarado son unas 2 horas por semana»: aritmética del propio estudio sobre una jornada de 40 h (2,2 h en la versión de feb. 2025; 2,1 h en la de oct. 2025). Sobre **todos** los trabajadores el mismo estudio da 1,4% de las horas.
+
+## 7. Ejemplos ya construidos con los equipos de DUSA (slide 2) y plan de pago (slide 6)
+
+Interno. Fuentes de lo que muestra el deck, para que ventas lo respalde de palabra.
+
+**Ejemplos (Informe Final de Auditoría IA, 04/09/2026, sección «Logros inmediatos construidos durante las sesiones de fundamentos y auditoría»; también en el deck «Cierre de Detección» presentado al Comité Ejecutivo de DUSA):**
+- Contabilidad y Cuentas por Pagar, agente de estructuración de estados financieros: montar un estado a mano toma de 2 a 3 h y analizarlo de 30 a 40 min; con 10 estados por ciclo. Con el estado ya estructurado, el análisis se resolvió en 3 a 4 min respetando el formato del área. (El deck de cierre resume «de 2 a 3 horas a 3 a 4 minutos»; el informe distingue armar y analizar: la slide sigue al informe.)
+- Cuentas por Cobrar, validador del consolidado de cobros contra la base de datos corporativa (SQL Server): la líder estimó que procesar la data a mano requeriría alrededor de 8 personas con conocimiento avanzado; el informe dice que el agente cierra esa brecha sin ampliar la estructura.
+- Comercial Región Centro-Sur, generador de creativos para puntos de activación: antes no existía por falta de tiempo, herramientas y formación en diseño.
+- Límite que NO se debe afirmar: el informe aclara que ninguno de esos usos está todavía convertido en proceso (no hay automatización en producción). Por eso la slide dice «construyeron» y «punto de partida del proyecto», no «en producción».
+
+**Posiciones de la portada (≈10):** Informe Final, «Contra qué se compara esta inversión»: 5 a 6 en Cuentas por Cobrar, 3 de brecha en Tesorería, 1 posición a tiempo completo más media en Contabilidad y Cuentas por Pagar, 1 de diseño en Comercial; Finanzas es riesgo de continuidad, no dotación adicional. El informe no tiene las escalas salariales de DUSA.
+
+**Plan de pago (cuadro enviado el 2026-10-06):**
+
+| Cuota | Hito | % |
+|---|---|---|
+| 1 | Arranque (semana 1) | 30 |
+| 2 | 19 soluciones prioritarias adoptadas (semana 5) | 25 |
+| 3 | Cierre de la fase 2 (semana 8) | 25 |
+| 4 | Cierre de la construcción (semana 11) | 10 |
+| 5 | 30 días después del cierre, con las soluciones ya en uso y dentro de la garantía 30-60-90 | 10 |
+
+Los montos van vacíos en el deck (campos `PagoCuota1..5`) y los llena ventas; los hitos coinciden con la ruta de la slide 3 (fases 1 a 3 y semana 11) y con el valor inmediato de la slide 4 (semana 5: 19 soluciones prioritarias adoptadas).

@@ -11,7 +11,7 @@
 - **Tipo de documento**: Capacitación In-Company (`CAI-035`, siguiente número libre de la serie; el último era CAI-034, N58 Banco Digital)
 - **Eje temático**: construcción, pruebas y adopción de 44 soluciones con Microsoft Copilot (Finanzas y Comercial Centro-Sur) y Claude Team (Recursos Humanos)
 - **Fecha del brief**: 2026-10-04
-- **Estado**: `Enviada` el 2026-10-04 (versión de 5 slides, ver `meta.json`); la versión de 6 slides, con la slide de retorno, queda pendiente de reenvío
+- **Estado**: `Enviada` el 2026-10-04 (versión de 5 slides, ver `meta.json`). La versión vigente es de **7 slides** (retorno del 2026-10-05 más las correcciones de la reunión del 2026-10-06: reorden, plan de pago y ejemplos ya construidos) y queda pendiente de reenvío
 - **`fecha_arranque_deseada`**: no hay. El insumo vigente (`_6`) quitó las fechas calendario: la ruta es relativa al arranque (11 semanas de trabajo; seguimiento hasta 90 días después del cierre). El deck no muestra fechas de inicio ni de cierre.
 - **`resultados_esperados`**: no hay Ficha Comercial ni respuesta explícita del cliente, y las fichas de Recursos Humanos casi no declararon horas por proceso: **DUSA no tiene hoy una línea base de horas** (se mide en la semana 1). Por eso la hoja de cotización no lleva ROI propio. El 2026-10-05 el usuario pidió una lámina final de retorno (ver «Slide 6»): usa rangos de estudios reales, rotulados como estimación externa, y NO cifras propias de DUSA.
 
@@ -35,14 +35,17 @@ Efecto en el deck: se retiraron todas las fechas calendario (slides 3, 4 y 5), e
 
 Los títulos que dio el usuario (¿Qué voy a hacer?, etc.) eran una guía de contenido, no títulos literales. El nombre del proyecto es una frase-objetivo estilo tesis; los titulares internos son afirmativos: «44 soluciones en 10 áreas de DUSA», «Tres frentes en paralelo, 11 semanas», «Inversión por horas de sesión», «Todo lo que DUSA recibe».
 
-| # | Contenido pedido | Slide |
+**Numeración vigente desde el 2026-10-06** (las menciones anteriores a esa fecha en este brief usan el orden previo: 4 Inversión, 5 Entregables, 6 Retorno).
+
+| # | Contenido | Slide |
 |---|---|---|
-| 1 | Portada con punto de dolor | `.s-cover`: «Optimización de procesos y datos con inteligencia artificial en 10 áreas de DUSA» + 3 datos de la auditoría (el titular de dolor anterior pasó a ser el nombre histórico) |
-| 2 | ¿Qué voy a hacer? | `.s-scope`: alcance (44 soluciones, 10 áreas, 2 herramientas), quién construye, qué queda fuera |
-| 3 | ¿Cómo lo voy a hacer? | `.s-route`: 3 frentes × 3 fases con horas, seguimiento 30-60-90, hitos |
-| 4 | ¿Cuánto te va a costar? | `.s-price` estándar (por horas) + licenciamiento aparte + descuento urgente + garantía 30-60-90 |
-| 5 | ¿Qué tendrás a cambio? | `.s-deliv`: catálogo de los **44 entregables** (uno por solución) + entregables transversales + valor inmediato. Énfasis en entregables por pedido directo del usuario (2026-10-04) |
-| 6 | Retorno (agregada el 2026-10-05) | `.s-roi`: retorno esperado como método de cálculo por área y proceso (volumen, tiempo actual, tiempo con la solución, horas recuperadas, dinero, posiciones y costo anual), metas a 30-60-90 días, destino del tiempo recuperado y semana 24. **Sin estudios ni citas externas** (pedido del 2026-10-05) y sin cifras propias hasta tener los datos. Sin campos AcroForm |
+| 1 | Portada con punto de dolor | `.s-cover`: «Optimización de procesos y datos con inteligencia artificial en 10 áreas de DUSA» + 3 datos de la auditoría + «≈10 posiciones» con la probabilidad de no contratarlas (2026-10-06) |
+| 2 | ¿Qué voy a hacer? | `.s-scope`: alcance (44 soluciones, 10 áreas, 2 herramientas), **cuatro pasos por solución** (el 4.º mide el retorno), franja **«Ya lo hicimos con los equipos de DUSA»** (3 agentes del informe final de Detección) y qué queda fuera. «Quién construye» se fundió en los pasos 1 y 2 para dar lugar a la franja |
+| 3 | ¿Cómo lo voy a hacer? | `.s-route`: 3 frentes × 3 fases, **soluciones primero y horas en pequeño**, «seguimiento y garantía» 30-60-90, hitos |
+| 4 | ¿Qué tendrás a cambio? | `.s-deliv`: catálogo de los **44 entregables** + entregables transversales + valor inmediato. Subió antes del precio (reunión del 2026-10-06) |
+| 5 | ¿Cuánto te va a costar? | `.s-price` estándar (por horas) + licenciamiento aparte + descuento urgente + garantía 30-60-90. Duración reordenada: soluciones, semanas y, al final, las horas |
+| 6 | Facilidad de pago (nueva 2026-10-06) | `.s-pay`: 5 cuotas ligadas a hitos (30, 25, 25, 10 y 10 %; semanas 1, 5, 8, 11 y 30 días después del cierre). Montos **vacíos y editables** (campos `PagoCuota1..5`) |
+| 7 | Retorno | `.s-roi`: método de cálculo, **calendario de garantía** y «hacia dónde va el proyecto». Sin estudios ni citas externas y sin cifras propias hasta tener los datos. Sin campos AcroForm |
 
 
 El usuario pidió **5 slides** el 2026-10-04 y **una lámina final de retorno** el 2026-10-05: no hay Impacto genérico, Próximos pasos ni Cierre. Tampoco hay contacto de la asesora comercial en el deck.
@@ -63,14 +66,34 @@ Mensaje de revisión sobre informe, ruta de procesos y propuesta ("el cliente qu
 
 La slide 6 actual es el **método** del retorno, sin cifras: debe completarse con los datos de DUSA cuando existan. No enviarla a los directores como versión final si ellos esperan números.
 
-## Slide 6 · Retorno (2026-10-05)
+## Correcciones de la reunión del 2026-10-06 (estado)
+
+Reunión de Keiber Quintana con María Iribarren sobre esta propuesta (transcripción de la reunión). Cada pedido, su estado y las decisiones tomadas donde la reunión daba cifras sin respaldo:
+
+| Pedido | Estado |
+|---|---|
+| Portada: poner la contratación como **probabilidad**, no como compromiso | **Hecho.** «≈10 posiciones a tiempo completo harían falta para sostener a mano este mismo volumen de trabajo. Con los procesos optimizados, es alta la probabilidad de no tener que contratarlas.» Fuente de las ≈10: Informe Final de Auditoría IA (04/09/2026), tabla «Contra qué se compara esta inversión» (5 a 6 en Cuentas por Cobrar, 3 de brecha en Tesorería, 1,5 en Contabilidad, 1 de diseño en Comercial). Las «6 personas» de la reunión son las 5 a 6 de Cuentas por Cobrar. **No se usó el «10 %»** que se dijo en voz alta («no sé, 10%, algo así»): no tiene base. Si dirección quiere una cifra de probabilidad, definirla con datos |
+| Slide 2: **cuarto paso** «medimos el retorno y el impacto» | **Hecho.** «Medimos el retorno en tiempo y las oportunidades de optimización para la empresa» (sin la sigla ROI, §4.12). «Quién construye» se fundió en los pasos 1 y 2 |
+| Slide 2: **ejemplos de éxito** de los kickoffs (cuadro visual) | **Hecho** con lo documentado en el Informe Final (04/09/2026, sección «Logros inmediatos construidos durante las sesiones de fundamentos y auditoría») y el deck «Cierre de Detección»: (1) Contabilidad y Cuentas por Pagar, agente de estados financieros: armar a mano 2 a 3 h y analizar 30 a 40 min; con el agente, el análisis se resolvió en 3 a 4 min. (2) Cuentas por Cobrar, validador de cobros contra la base corporativa: la líder estimó unas 8 personas para hacerlo a mano. (3) Comercial Región Centro-Sur, generador de creativos: antes no existía. **No se usó «casi 2 semanas de trabajo»** (conciliación de pagos, dicho en la reunión): en las fuentes, «dos semanas» es la demora actual de validar un pago entre Comercial y Cobranza (ficha de Comercial Centro-Sur e informe), no un ahorro medido del validador. Tampoco «9 soluciones instaladas»: el informe habla de «agentes adicionales» sin número. Confirmar con Keiber si quiere alguna de las dos |
+| Slide 3: «seguimiento **y garantía**» | **Hecho** en el subtítulo y en la 5.ª columna (tarjeta «Garantía · 30, 60 y 90 días · Seguimiento desde el cierre de cada área») |
+| Slide 3: **soluciones primero**, horas más pequeñas | **Hecho.** Frentes: nombre de la herramienta grande («Claude Team», «Copilot») y «16 soluciones · 208 h · S1-S11» con las horas en pequeño. Celdas: «6 soluciones» grande y «87 h» chico. Fases: conteo de soluciones (19, 13 y 11); las horas por fase quedan en la nota al pie, que además explica que el mapeo de Finanzas (1 solución, 12 h) abre el Frente C: por eso el Frente C dice 17 y sus celdas suman 16 |
+| **Orden**: «Todo lo que DUSA recibe» antes del precio | **Hecho.** Portada, Alcance, Ruta, Entregables, Inversión, Facilidad de pago, Retorno |
+| Inversión: **Duración** con las 500 h al final | **Hecho.** «Proyecto de 44 soluciones a realizar en un total de 11 semanas, con seguimiento y garantía a 30, 60 y 90 días. 500 horas de trabajo.» El título «Inversión por horas de sesión» se dejó igual (no se pidió cambiarlo) |
+| Inversión: quitar las notas de licenciamiento, poner «términos y condiciones, garantía» | **Hecho en el campo `Notas`** (pre-llenado editable): garantía 30-60-90 y términos y condiciones. María dijo que ajustaría el texto ella en Adobe. `Programa` ahora dice «soluciones» antes que horas (16, 11 y 17 por frente). **El precio sigue vacío** para ventas |
+| **Plan de pago** en hoja aparte tras la inversión, **montos como placeholder** | **Hecho** (slide 6). Cuadro enviado por Keiber el 2026-10-06 (imagen): «Facilidad de pago · 5 cuotas ligadas a hitos del proyecto». Montos vacíos y editables (`PagoCuota1..5`). En la reunión se habló antes de 4 cuotas (30, 25, 25, 20); vale el cuadro enviado (5). La última frase del cuadro venía mal puntuada («Cada factura se emite en divisas o BS a BCV Euro se liquida a la tasa del día de pago») y se escribió «Cada factura se emite en divisas o en bolívares (Bs) a la tasa BCV Euro, y se liquida a la tasa del día de pago»: **confirmar** que ese es el sentido |
+| Retorno: «**Calendario de garantía** y cálculo del ROI» | **Hecho** como «Calendario de garantía y cálculo del retorno», con «Desde el cierre de cada área» debajo (se evitó la sigla, §4.12) |
+| Retorno: «**Hacia dónde va el proyecto**» (global) | **Hecho.** «Trabajo reenfocado» ya no nombra Nómina ni Finanzas: habla de las personas de cada área y de reenfocar sus posiciones hacia trabajo más estratégico |
+| Retorno: tono **aspiracional** en «Otras áreas y líneas de negocio» | **Hecho:** «…avanza hacia una empresa inteligente, con la inteligencia artificial en el centro de su operación» (en vez de «AI first», §4.4) |
+| Comité interno de DUSA para medir el retorno real (costo hora, etc.) | **No va en el deck.** Se contó como contexto: DUSA formaría un comité con un líder por área, a pedido de tecnología, para medir el retorno junto con Intezia. Es la razón por la que la slide 7 no trae costo hora |
+
+## Slide 7 · Retorno (creada el 2026-10-05 como slide 6; la 7 desde el 2026-10-06)
 
 **Origen del pedido.** Criterio comercial (David, vía el usuario): a la directiva hay que mostrarle el retorno de inversión real o aproximado, en ahorro de tiempo y en dinero, el reenfoque del trabajo, crecer sin sumar gente a la nómina, la oportunidad de reducción de puestos y de nómina (planteada de frente, con el aval del cliente), y una proyección de la organización, incluida la extensión a otras áreas y líneas de negocio.
 
 **Versión vigente (sin estudios).** El usuario pidió el 2026-10-05 que la slide **no cite estudios ni nada relacionado con la web**. La slide quedó como método y metas, con datos y vocabulario de DUSA únicamente:
 - Panel «Cómo se calcula, por área y por proceso»: 6 pasos (volumen mensual → tiempo actual por ejecución, que es la línea base de la semana 1 → tiempo con la solución → horas recuperadas al mes → valor en dinero con el costo hora de referencia, más retrabajo, errores y pagos o cobros tardíos cuando haya dato → posiciones y costo anual según las escalas salariales de DUSA).
-- Metas, desde el cierre de cada área: 30 días (soluciones en uso real y línea base validada), 60 días (horas recuperadas medidas), 90 días (retorno en dinero y en posiciones).
-- «Hacia dónde va el tiempo recuperado»: mismo equipo con más volumen sin ampliar la nómina (condicional), trabajo reenfocado (Nómina y Finanzas, con los datos de la portada) y ampliación a otras áreas y líneas de negocio.
+- Calendario de garantía y cálculo del retorno, desde el cierre de cada área (antes «Metas»): 30 días (soluciones en uso real y línea base validada), 60 días (horas recuperadas medidas), 90 días (retorno en dinero y en posiciones).
+- «Hacia dónde va el proyecto» (antes «…el tiempo recuperado»): mismo equipo con más volumen sin ampliar la nómina (condicional), trabajo reenfocado en global (personas y posiciones hacia trabajo más estratégico) y ampliación a otras áreas y líneas de negocio, con tono aspiracional (empresa inteligente).
 - Gancho: «Hacia la semana 24, DUSA conoce el tiempo recuperado, su valor en dinero y las posiciones equivalentes en cada área».
 
 **Sin cifras de retorno.** Las fichas de levantamiento disponibles (Nómina, Servicio Médico, Agente de Parafiscales) dicen «No declarado» en volumen mensual y horas por ejecución; no hay costo hora, escalas salariales ni dotación equivalente salvo Cuentas por Cobrar (≈8 personas, según el mensaje de revisión). La hoja `retorno-captura.xlsx` precarga lo que sí existe (con fuente) y calcula todo con fórmulas cuando se completen los datos. **Cuando estén, esta slide pasa de método a cifras por área** (y se agrega la página equivalente al informe).
@@ -98,9 +121,9 @@ DUSA ya tiene 5 propuestas en `clientes/propuestas/`: `CH-007`, `CH-010` (charla
 
 ## Notas de diseño
 
-- Base: `_base/styles.css` + `overrides.css` local. Portada, hoja de cotización (descuento urgente, garantía 30-60-90, términos) heredadas de `_base`; slides 2, 3, 5 y 6 son componentes propios de este deck.
+- Base: `_base/styles.css` + `overrides.css` local. Portada, hoja de cotización (descuento urgente, garantía 30-60-90, términos) heredadas de `_base`; slides 2, 3, 4, 6 y 7 son componentes propios de este deck.
 - Slide 5 reemplaza Beneficios v3 por un catálogo de entregables (pedido del usuario). Las cajas AcroForm `Entregables` y `Acreditacion` (usada como «Valor inmediato») se reubican en una franja inferior con `scripts/customize-dusa-cai035.py`.
-- Marcadores de detección de AcroForms (no repetir en otras slides): «Propuesta Económica» solo en la slide 4; «Lo que se llevan» y «Entregables» solo en la slide 5.
+- Marcadores de detección de AcroForms (no repetir en otras slides): «Lo que se llevan» y «Entregables» solo en la slide 4; «Propuesta Económica» solo en la slide 5; «Facilidad de pago» (título) solo en la slide 6. Las páginas se ubican por texto, no por posición.
 - Sin Metodología ABR ni Equipo facilitador (§4.10a). Sin afirmar migración de stack (§4.11): Claude Team se suma, Copilot es el Microsoft 365 que DUSA ya opera. Sin guion largo (§4.13).
 
 ## Flujo de generación
@@ -111,11 +134,15 @@ python3 scripts/customize-acroforms.py dusa-cai035
 python3 scripts/customize-dusa-cai035.py "clientes/propuestas/dusa-cai035/<PDF>"
 ```
 
-PDF de 6 páginas (la versión de 5 slides ya enviada quedó en `_pdf-anteriores/`). `generar-pdf.sh` no es ejecutable directo: correr con `bash scripts/generar-pdf.sh dusa-cai035`.
+PDF de 7 páginas (las versiones de 5 y de 6 slides quedaron en `_pdf-anteriores/`). Los campos `PagoCuota1..5` los agrega `agregar-campo-precio.py` (grupo `PLAN_PAGO_FIELDS`, creado para esta propuesta; sus coordenadas están sincronizadas con `.s-pay .pay-frame` de `overrides.css`). `generar-pdf.sh` no es ejecutable directo: correr con `bash scripts/generar-pdf.sh dusa-cai035`.
 
 Nota de entorno: los scripts usan `pypdf`, que no estaba instalado en el Python del sistema; se instaló en un entorno virtual aparte para generar y revisar el PDF.
 
 ## Pendientes
+
+- **Confirmar con Keiber** (reunión del 2026-10-06): (a) el sentido de la última frase del plan de pago (divisas o bolívares a la tasa BCV Euro y liquidación a la tasa del día); (b) si quiere usar «casi 2 semanas de trabajo» o «9 soluciones instaladas», que hoy no tienen respaldo en las fuentes; (c) si quiere una cifra de probabilidad de no contratar (el «10 %» dicho en voz alta no se usó).
+- **Montos del plan de pago**: los escribe ventas en Adobe Reader (`PagoCuota1..5`); deben sumar el total de la slide 5. No se anotan en este repositorio.
+- **Plantilla compacta**: los cambios de esta reunión (orden, soluciones primero, plan de pago, franja de ejemplos, cuarto paso) no están en `plantillas/habilidades-compacto*`; queda propuesto llevarlos (ver `aprendizajes.md`).
 
 - Regla de crecimiento de asientos de Claude Team: la `_6` la conserva (si un asiento toca su límite semanal dos semanas seguidas en un proceso de F1 o F2, se suma uno o pasa a Premium), pero la tarjeta de la slide 4 dice «5 en total, USD 100 al mes». Confirmar si «cinco en total» sustituye esa regla o si debe mencionarse.
 

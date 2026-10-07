@@ -251,6 +251,20 @@ if [[ -f "$DIR/habilidades-compacto.css" ]] && command -v node >/dev/null 2>&1; 
   fi
 fi
 
+# ── Servicio de Habilidades: plantilla compacta como único formato (CLAUDE.md §4.21) ──
+# Aviso (no bloqueante, para no estorbar cambios puntuales en decks ya entregados): una propuesta registrada como
+# servicio «habilidades» en meta.json cuyo deck no es el compacto (no tiene habilidades-compacto.css).
+if [[ -f "$DIR/meta.json" && ! -f "$DIR/habilidades-compacto.css" ]]; then
+  SERV_META=$(python3 -c "import json,sys; print(json.load(open(sys.argv[1], encoding='utf-8-sig')).get('servicio',''))" "$DIR/meta.json" 2>/dev/null || true)
+  if [[ "$SERV_META" == "habilidades" ]]; then
+    echo "⚠️  Propuesta de Habilidades fuera de la plantilla compacta (CLAUDE.md §4.21): toda charla, taller, capacitación, curso o diplomado"
+    echo "     de Habilidades se entrega con plantillas/habilidades-compacto.md (recetas por categoría en su §1b). Si esto es un cambio puntual"
+    echo "     sobre un deck ya entregado puede seguir así; si es una propuesta nueva o se pidió rehacerla, hay que armarla con la plantilla."
+    echo ""
+    WARNINGS=$((WARNINGS+1))
+  fi
+fi
+
 # ── Resultado ──────────────────────────────────────────────────────────────────
 echo ""
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"

@@ -1,16 +1,17 @@
 /* ============================================================================
-   Overrides · DUSA · Servicio de Habilidades (CAI-035) · deck compacto de 6 slides
+   Overrides · DUSA · Servicio de Habilidades (CAI-035) · deck compacto de 7 slides
    El núcleo visual vive en ../_base/styles.css (portada, hoja de cotización estándar,
    descuento urgente, garantía). Aquí solo lo propio de este deck. Paleta de marca únicamente:
    #000000 / #F4BA1A / #E58423 / #FFFFFF (§4.1) + la excepción acotada del descuento urgente
    (ya definida en _base).
 
-   Slide 1  .s-cover  (portada con punto de dolor)
-   Slide 2  .s-scope  (¿Qué voy a hacer?)
-   Slide 3  .s-route  (¿Cómo lo voy a hacer?)
-   Slide 4  .s-price  (hoja de cotización estándar: rects de AcroForm = los de _base, no moverlos)
-   Slide 5  .s-deliv  (¿Qué tendrás a cambio? catálogo de entregables)
-   Slide 6  .s-roi    (Retorno: estudios reales, tiempo recuperado y proyección de DUSA; sin campos AcroForm)
+   Slide 1  .s-cover  (portada con punto de dolor + ≈10 posiciones y probabilidad de no contratarlas)
+   Slide 2  .s-scope  (¿Qué voy a hacer? cuatro pasos por solución + ejemplos ya construidos con los equipos de DUSA)
+   Slide 3  .s-route  (¿Cómo lo voy a hacer? soluciones primero, horas en pequeño)
+   Slide 4  .s-deliv  (¿Qué tendrás a cambio? catálogo de entregables; las 2 cajas AcroForm se reubican en customize-dusa-cai035.py)
+   Slide 5  .s-price  (hoja de cotización estándar: rects de AcroForm = los de _base, no moverlos)
+   Slide 6  .s-pay    (Facilidad de pago: 5 cuotas ligadas a hitos; los 5 campos PagoCuota1..5 de agregar-campo-precio.py)
+   Slide 7  .s-roi    (Retorno: método, calendario de garantía y destino del proyecto; sin campos AcroForm)
    ============================================================================ */
 
 /* ===========================================================================
@@ -24,12 +25,12 @@
   font-size: 46px;
   line-height: 1.12;
   max-width: 900px;
-  margin-bottom: 22px;
+  margin-bottom: 18px;
 }
 .s-cover .lead {
   font-size: 17px;
   max-width: 730px;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
 .s-cover .pain-strip {
   display: flex;
@@ -60,6 +61,30 @@
   line-height: 1.35;
   color: rgba(255, 255, 255, 0.85);
 }
+.s-cover .hire-note {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  max-width: 900px;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.22);
+}
+.s-cover .hire-num {
+  flex: 0 0 auto;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 1;
+  color: var(--yellow);
+}
+.s-cover .hire-note p {
+  font-family: var(--font-body);
+  font-size: 12.5px;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.85);
+}
+.s-cover .hire-note p strong { color: var(--white); font-weight: 700; }
 .s-cover .pain-src {
   margin-top: 12px;
   font-family: var(--font-body);
@@ -73,7 +98,7 @@
 .s-scope {
   background: var(--white);
   color: var(--black);
-  padding: 44px 56px 0;
+  padding: 40px 56px 0;
 }
 .s-scope .counter { color: var(--black); }
 .s-scope .eyebrow { color: var(--orange); margin-bottom: 6px; }
@@ -89,26 +114,27 @@
   font-size: 15px;
   line-height: 1.4;
   max-width: 860px;
-  margin-bottom: 20px;
+  margin-bottom: 14px;
   color: rgba(0, 0, 0, 0.78);
 }
 .s-scope .sub strong { color: var(--black); font-weight: 700; }
 
 .s-scope .scope-body {
   display: grid;
-  grid-template-columns: 1fr 340px;
+  grid-template-columns: 1fr 380px;
   gap: 24px;
   align-items: stretch;
 }
-.s-scope .scope-left { display: flex; flex-direction: column; gap: 14px; }
+.s-scope .scope-left { display: flex; flex-direction: column; gap: 12px; }
 
 .s-scope .scope-panel {
   --c: var(--yellow);
   border: 1px solid rgba(0, 0, 0, 0.14);
   border-top: 4px solid var(--c);
   border-radius: 13px;
-  padding: 12px 20px 4px;
+  padding: 10px 20px 3px;
   background: var(--white);
+  flex: 1 1 auto;
 }
 .s-scope .scope-claude { --c: var(--orange); }
 .s-scope .scope-head {
@@ -144,7 +170,7 @@
 .s-scope .scope-rows li {
   display: flex;
   align-items: center;
-  padding: 5px 0;
+  padding: 3px 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 .s-scope .scope-rows li:last-child { border-bottom: 0; }
@@ -173,6 +199,7 @@
   font-family: var(--font-display);
   font-weight: 700;
   font-size: 18px;
+  line-height: 1.15;
   min-width: 24px;
   text-align: right;
 }
@@ -185,7 +212,7 @@
   flex: 1 1 auto;
   border: 1px solid rgba(0, 0, 0, 0.14);
   border-radius: 13px;
-  padding: 14px 18px;
+  padding: 12px 18px;
   background: var(--white);
 }
 .s-scope .scope-card-label {
@@ -205,15 +232,15 @@
 .s-scope .scope-card p,
 .s-scope .scope-card li {
   font-family: var(--font-body);
-  font-size: 12.5px;
-  line-height: 1.4;
+  font-size: 12px;
+  line-height: 1.38;
 }
 .s-scope .scope-card strong { font-weight: 700; }
 .s-scope .scope-steps { list-style: none; counter-reset: st; }
 .s-scope .scope-steps li {
   counter-increment: st;
   position: relative;
-  padding: 3px 0 3px 28px;
+  padding: 2.5px 0 2.5px 28px;
 }
 .s-scope .scope-steps li::before {
   content: counter(st);
@@ -254,6 +281,72 @@
   width: 6px; height: 6px;
   background: var(--orange);
 }
+
+/* Ejemplos ya construidos con los equipos de DUSA (informe final de Detección, 04/09/2026) */
+.s-scope .scope-proof {
+  display: grid;
+  grid-template-columns: 178px 1fr;
+  gap: 14px;
+  align-items: center;
+  margin-top: 12px;
+  padding: 11px 16px 12px;
+  background: rgba(244, 186, 26, 0.10);
+  border: 1px solid rgba(244, 186, 26, 0.45);
+  border-top: 4px solid var(--yellow);
+  border-radius: 13px;
+}
+.s-scope .sp-head { display: flex; flex-direction: column; gap: 7px; }
+.s-scope .sp-tag {
+  align-self: flex-start;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 10.5px;
+  line-height: 1.3;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  background: var(--yellow);
+  color: var(--black);
+  padding: 5px 12px;
+  border-radius: 12px;
+}
+.s-scope .sp-head p {
+  font-family: var(--font-body);
+  font-size: 10.5px;
+  line-height: 1.36;
+  color: rgba(0, 0, 0, 0.78);
+}
+.s-scope .sp-cases { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.s-scope .sp-case {
+  background: var(--white);
+  border: 1px solid rgba(0, 0, 0, 0.14);
+  border-radius: 10px;
+  padding: 8px 12px 9px;
+}
+.s-scope .sp-area {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 9px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--orange);
+  margin-bottom: 2px;
+}
+.s-scope .sp-case b {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 1.2;
+  margin-bottom: 3px;
+}
+.s-scope .sp-case p {
+  font-family: var(--font-body);
+  font-size: 11px;
+  line-height: 1.36;
+  color: rgba(0, 0, 0, 0.82);
+}
+.s-scope .sp-case p strong { font-weight: 700; color: var(--black); }
 .s-scope .foot .meta { color: var(--black); }
 
 /* ===========================================================================
@@ -362,12 +455,36 @@
 .s-route .rg-c { border-left-color: var(--yellow); }
 .s-route .rg-b .rg-front-tag,
 .s-route .rg-a .rg-front-tag { color: var(--orange); background: rgba(229, 132, 35, 0.15); }
+.s-route .rg-front-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+}
 .s-route .rg-front-h {
   font-family: var(--font-display);
-  font-size: 13px;
-  color: rgba(255, 255, 255, 0.85);
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 1.1;
+  color: var(--white);
+  white-space: nowrap;
 }
-.s-route .rg-front-h b { font-size: 19px; color: var(--white); }
+.s-route .rg-front .rg-front-tag { font-size: 9px; letter-spacing: 0.08em; padding: 3px 7px; white-space: nowrap; }
+.s-route .rg-phase-top { display: flex; align-items: center; justify-content: space-between; gap: 6px; }
+.s-route .rg-phase-n {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 12px;
+  color: var(--white);
+  white-space: nowrap;
+}
+.s-route .rg-front-n {
+  font-family: var(--font-display);
+  font-size: 10.5px;
+  color: rgba(255, 255, 255, 0.62);
+}
+.s-route .rg-front-n strong { font-size: 13px; font-weight: 700; color: var(--white); }
+.s-route .rg-front-n small { font-size: 10.5px; }
 .s-route .nw { white-space: nowrap; }
 .s-route .rg-cell p, .s-route .rg-front-areas, .s-route .mile p, .s-route .route-note { text-wrap: balance; }
 .s-route .rg-front-areas {
@@ -391,11 +508,9 @@
 .s-route .rg-h i {
   margin-left: auto;
   font-style: normal;
-  font-weight: 700;
-  font-size: 10px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.7);
+  font-weight: 400;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.6);
 }
 .s-route .rg-cell p {
   font-family: var(--font-body);
@@ -492,7 +607,7 @@
 .s-route .foot .meta { color: rgba(255, 255, 255, 0.65); }
 
 /* ===========================================================================
-   Slide 4 · ¿Cuánto te va a costar?  (base: hoja de cotización estándar de _base)
+   Slide 5 · ¿Cuánto te va a costar?  (base: hoja de cotización estándar de _base)
    Los rects de AcroForm (Programa, Notas, PrecioBase, Descuento, PrecioTotal) son los de
    scripts/agregar-campo-precio.py → PRECIO_FIELDS. NO mover .programa-box, .notas-box ni los
    .cot-frame (están definidos en _base con las mismas coordenadas).
@@ -513,7 +628,8 @@
 .s-price .cot-terms-text a { color: var(--black); text-decoration: underline; text-decoration-color: var(--orange); text-decoration-thickness: 2px; text-underline-offset: 3px; }
 .s-price > .block:not(.block-programa):not(.block-cotizacion):not(.block-notes-container) { border-bottom: 0; }
 .s-price .title { text-transform: none; margin-bottom: 8px; }
-.s-price .block-value { font-size: 16px; }
+.s-price .block-value { font-size: 15px; line-height: 1.3; text-wrap: balance; }
+.s-price .block-programa { top: 206px; }
 .s-price .lic-card p { text-wrap: pretty; }
 
 .s-price .lic-wrap {
@@ -568,7 +684,7 @@
 }
 
 /* ===========================================================================
-   Slide 5 · ¿Qué tendrás a cambio? (catálogo de entregables)
+   Slide 4 · ¿Qué tendrás a cambio? (catálogo de entregables)
    Las 2 cajas AcroForm (.db-box-1/2) se reposicionan en scripts/customize-dusa-cai035.py:
    si se mueven aquí, recalcular allí (px × 0.75 → pt).
    =========================================================================== */
@@ -726,7 +842,165 @@
 .s-deliv .foot .meta { color: rgba(255, 255, 255, 0.65); }
 
 /* ===========================================================================
-   Slide 6 · Retorno esperado (método de cálculo, metas a 30-60-90 y destino del tiempo recuperado)
+   Slide 6 · Facilidad de pago (5 cuotas ligadas a hitos del proyecto)
+   Los 5 marcos .pay-frame son los campos AcroForm PagoCuota1..5 (agregar-campo-precio.py → PLAN_PAGO_FIELDS):
+   si se mueven aquí, recalcular allí (px × 0.75 → pt; y_pt = 595 − (top + alto) × 0.75).
+   Montos vacíos a propósito: los escribe ventas en Adobe Reader.
+   Marcador de detección de página: «Facilidad de pago» (el h2 de la slide; no repetirlo en otras slides).
+   =========================================================================== */
+.s-pay {
+  background: var(--black);
+  color: var(--white);
+  padding: 44px 56px 0;
+}
+.s-pay::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 8px; height: 100%;
+  background: var(--gradient-warm);
+  z-index: 4;
+}
+.s-pay .counter { color: var(--yellow); }
+.s-pay .eyebrow { color: var(--orange); margin-bottom: 6px; }
+.s-pay h2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.05;
+  margin-bottom: 8px;
+}
+.s-pay .sub {
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.4;
+  max-width: 900px;
+  color: rgba(255, 255, 255, 0.82);
+}
+.s-pay .sub strong { color: var(--yellow); font-weight: 700; }
+
+.s-pay .pay-line {
+  position: absolute;
+  top: 211px; left: 56px;
+  width: 1011px; height: 2px;
+  background: var(--gradient-warm);
+  opacity: 0.55;
+}
+.s-pay .pay-step {
+  --c: var(--yellow);
+  position: absolute;
+  top: 228px;
+  width: 191px;
+  height: 336px;
+  padding: 16px 16px 0;
+  background: rgba(255, 255, 255, 0.045);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-top: 4px solid var(--c);
+  border-radius: 13px;
+}
+.s-pay .ps1 { left: 56px;  background: rgba(244, 186, 26, 0.09); border-color: rgba(244, 186, 26, 0.45); }
+.s-pay .ps2 { left: 261px; --c: var(--orange); }
+.s-pay .ps3 { left: 466px; }
+.s-pay .ps4 { left: 671px; --c: var(--orange); }
+.s-pay .ps5 { left: 876px; --c: var(--white); }
+.s-pay .ps1, .s-pay .ps2, .s-pay .ps3, .s-pay .ps4, .s-pay .ps5 { border-top-color: var(--c); }
+.s-pay .ps-d {
+  position: absolute;
+  top: -26px; left: 16px;
+  width: 12px; height: 12px;
+  background: var(--yellow);
+  transform: rotate(45deg);
+}
+.s-pay .ps-tag {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 999px;
+  color: var(--c);
+  background: rgba(255, 255, 255, 0.08);
+}
+.s-pay .ps-when {
+  display: block;
+  margin-top: 12px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.1;
+  color: var(--white);
+}
+.s-pay .ps-hito {
+  margin-top: 6px;
+  font-family: var(--font-body);
+  font-size: 12.5px;
+  line-height: 1.38;
+  color: rgba(255, 255, 255, 0.82);
+}
+.s-pay .ps-pct {
+  position: absolute;
+  left: 16px; top: 170px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 62px;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--c);
+}
+.s-pay .ps-lbl {
+  position: absolute;
+  left: 16px; top: 246px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 10px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--orange);
+}
+.s-pay .pay-frame {
+  position: absolute;
+  top: 498px;
+  width: 159px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.94);
+  border-radius: 6px;
+  z-index: 2;
+}
+.s-pay .pf1 { left: 72px; }
+.s-pay .pf2 { left: 277px; }
+.s-pay .pf3 { left: 482px; }
+.s-pay .pf4 { left: 687px; }
+.s-pay .pf5 { left: 892px; }
+
+.s-pay .pay-note {
+  position: absolute;
+  top: 594px; left: 56px;
+  width: 1011px;
+}
+.s-pay .pn-main {
+  max-width: 900px;
+  padding-left: 16px;
+  border-left: 4px solid var(--yellow);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.35;
+}
+.s-pay .pn-sub {
+  max-width: 900px;
+  margin-top: 10px;
+  padding-left: 20px;
+  font-family: var(--font-body);
+  font-size: 12.5px;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.7);
+}
+.s-pay .foot .meta { color: rgba(255, 255, 255, 0.65); }
+
+/* ===========================================================================
+   Slide 7 · Retorno esperado (método de cálculo, calendario de garantía y destino del proyecto)
    Fondo blanco (alterna con la slide 5, oscura). Sin cifras ni citas externas: solo método y datos de DUSA.
    Sin campos AcroForm: no repetir en esta slide las frases «Propuesta Económica», «Lo que se llevan» ni
    «Cómo arrancamos» (agregar-campo-precio.py ubica los campos por texto de página).
@@ -749,7 +1023,7 @@
   font-family: var(--font-body);
   font-size: 15px;
   line-height: 1.4;
-  max-width: 960px;
+  max-width: 1011px;
   margin-bottom: 16px;
   color: rgba(0, 0, 0, 0.78);
 }
@@ -781,6 +1055,16 @@
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--orange);
+}
+.s-roi .roi-right-title { text-wrap: balance; }
+.s-roi .roi-right-title small {
+  display: block;
+  margin-top: 3px;
+  font-weight: 400;
+  font-size: 11px;
+  letter-spacing: 0;
+  text-transform: none;
+  color: rgba(0, 0, 0, 0.6);
 }
 .s-roi .roi-steps { list-style: none; counter-reset: rs; margin-top: 4px; }
 .s-roi .roi-steps li {

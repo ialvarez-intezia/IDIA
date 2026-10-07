@@ -1,5 +1,7 @@
 # Plantilla operativa: Diseño de Charla
 
+> **Habilidades (desde 2026-10-07):** el deck de esta categoría se entrega **siempre** en la plantilla compacta (`plantillas/habilidades-compacto.md`, `CLAUDE.md §4.21`; la receta para reexpresar una charla está en su §1b). Este documento queda como guía para **diseñar el programa y los entregables** (módulos, temas, desglose instructivo) y para los decks canónicos que ya existen; no decide el formato del deck.
+
 > Traducción accionable del formato oficial `fuentes/formatos-oficiales/charla.pdf`. Genera el archivo `clientes/<empresa-slug>/programa.md` siguiendo este esquema cuando el tipo de documento sea **Charla**.
 
 > **Pre-requisitos antes de generar**: el `brief.md` del cliente debe tener `division: fundacion | educacion`. Si no, pregunta al usuario primero.

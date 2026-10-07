@@ -43,33 +43,60 @@ const MEDIR = `(async () => {
       const src = s.querySelector('.pain-src') || s.querySelector('.pain-strip');
       const idl = s.querySelector('.id-line');
       if (src && idl) add(n, 'portada: fuente/datos de dolor vs línea de código', top(s, idl) - bot(s, src), 8);
+      const hire = s.querySelector('.hire-note'); const strip = s.querySelector('.pain-strip');
+      if (hire && strip) add(n, 'portada: datos de dolor vs franja de contratación', top(s, hire) - bot(s, strip), 6);
+      if (hire && src) add(n, 'portada: franja de contratación vs fuente', top(s, src) - bot(s, hire), 4);
       const h1 = s.querySelector('h1'); const lead = s.querySelector('.lead');
       if (h1 && lead) add(n, 'portada: titular vs lead', top(s, lead) - bot(s, h1), 6);
     }
     if (s.classList.contains('s-scope')) {
-      const sl = s.querySelector('.scope-left'), sr = s.querySelector('.scope-right');
-      add(n, 'alcance: bloque principal vs pie', footTop - bot(s, s.querySelector('.scope-body')), 8,
-        'columna izquierda ' + Math.round(sl.getBoundingClientRect().height) + ' px (' + sl.querySelectorAll('.scope-rows li').length + ' filas); columna derecha ' + Math.round(sr.getBoundingClientRect().height) + ' px (' + [...sr.querySelectorAll('.scope-card')].map(c => Math.round(c.getBoundingClientRect().height)).join('+') + '). Acortar subtitulo, pasos, quien_construye o fuera_alcance, o usar alcance.compacto');
-      overflowEls(n, s, '.scope-card', 'tarjeta');
+      const paneles = s.querySelector('.scope-panels'), fuera = s.querySelector('.scope-out');
+      const ultimo = fuera || paneles;
+      const filas = s.querySelectorAll('.scope-rows li').length;
+      add(n, 'alcance: ' + (fuera ? 'franja «Fuera de este alcance»' : 'paneles') + ' vs pie', footTop - bot(s, ultimo), 8,
+        'paneles ' + Math.round(paneles.getBoundingClientRect().height) + ' px (' + filas + ' filas)' + (fuera ? ', franja de fuera de alcance ' + Math.round(fuera.getBoundingClientRect().height) + ' px' : '') + '. Acortar subtitulo, para_que o fuera_alcance, o usar alcance.compacto');
+      if (fuera) add(n, 'alcance: paneles vs franja «Fuera de este alcance»', top(s, fuera) - bot(s, paneles), 8);
+      overflowEls(n, s, '.scope-panel', 'panel de herramienta'); overflowEls(n, s, '.scope-out', 'franja de fuera de alcance');
+      s.querySelectorAll('.scope-rows li').forEach((li, i) => {
+        const a = li.querySelector('.area'), nn = li.querySelector('.n');
+        const ar = a.getBoundingClientRect(), nr = nn.getBoundingClientRect();
+        if (ar.right > nr.left + 1 && ar.bottom > nr.top + 1 && ar.top < nr.bottom - 1) out.push({ slide: n, check: 'alcance: fila ' + (i + 1) + ' (' + a.textContent.trim().slice(0, 30) + ') pisa la píldora de soluciones', holgura: -Math.round(ar.right - nr.left), minimo: 0, ok: false, detalle: 'acortar el nombre del área (≤ 38 caracteres con una herramienta, ≤ 46 con dos)' });
+      });
     }
     if (s.classList.contains('s-route')) {
-      add(n, 'ruta: nota inferior vs pie', footTop - bot(s, s.querySelector('.route-note')), 8);
-      overflowEls(n, s, '.rg-cell', 'celda'); overflowEls(n, s, '.rg-front', 'frente');
+      const nota = s.querySelector('.route-note'), sig = s.querySelector('.route-next');
+      const ultimo = sig || nota;
+      if (ultimo) add(n, 'ruta: ' + (sig ? 'siguiente etapa' : 'nota inferior') + ' vs pie', footTop - bot(s, ultimo), 8);
+      if (nota && sig) add(n, 'ruta: nota vs siguiente etapa', top(s, sig) - bot(s, nota), 3);
+      overflowEls(n, s, '.rg-cell', 'celda'); overflowEls(n, s, '.rg-front', 'línea de trabajo');
       s.querySelectorAll('.rg-front').forEach((fr, i) => {
-        const fr_r = fr.getBoundingClientRect().right - 10;
-        let peorNw = 0, quien = '';
-        fr.querySelectorAll('.nw, .rg-front-name, .rg-front-tag, .rg-front-h').forEach((el) => { const ex = el.getBoundingClientRect().right - fr_r; if (ex > peorNw) { peorNw = ex; quien = el.textContent.trim().slice(0, 40); } });
-        add(n, 'ruta: rótulo del frente #' + (i + 1) + ' dentro de su tarjeta', -peorNw, 0, peorNw ? 'sobresale ' + Math.round(peorNw) + ' px: «' + quien + '». Definir areas[].nombre_frente más corto (≤ 30 caracteres) o carriles[].nombre_corto' : '');
+        const lim = fr.getBoundingClientRect().right - 8;
+        let peor = 0, quien = '';
+        fr.querySelectorAll('.rg-front-h, .rg-front-tool, .rg-front-n, .rg-front-meta').forEach((el) => { const ex = el.getBoundingClientRect().right - lim; if (ex > peor) { peor = ex; quien = el.textContent.trim().slice(0, 40); } });
+        add(n, 'ruta: línea de trabajo #' + (i + 1) + ' dentro de su tarjeta (ancho)', -peor, 0, peor ? 'sobresale ' + Math.round(peor) + ' px: «' + quien + '». Acortar frentes[].nombre (≤ 36 caracteres con 3 líneas de trabajo) o carriles[].nombre_corto' : '');
+        const h = fr.querySelector('.rg-front-h'); const lineas = Math.round(h.getBoundingClientRect().height / parseFloat(getComputedStyle(h).lineHeight));
+        add(n, 'ruta: nombre de la línea de trabajo #' + (i + 1) + ' (máx. 2 líneas)', 2 - lineas, 0, 'el nombre ocupa ' + lineas + ' líneas: acortar frentes[].nombre', 'líneas de margen');
       });
-      overflowEls(n, s, '.rg-phase', 'cabecera de fase'); overflowEls(n, s, '.rg-follow', 'seguimiento');
+      overflowEls(n, s, '.rg-phase', 'cabecera de fase'); overflowEls(n, s, '.rg-follow', 'garantía');
       s.querySelectorAll('.rg-phase').forEach((ph, i) => {
         const pr = ph.getBoundingClientRect().right - 10; let peor = 0, quien = '';
         ph.querySelectorAll('.rg-phase-tag, .rg-phase-n').forEach((el) => { const ex = el.getBoundingClientRect().right - pr; if (ex > peor) { peor = ex; quien = el.textContent.trim().slice(0, 30); } });
         const tg = ph.querySelector('.rg-phase-tag'); const partida = tg && tg.getBoundingClientRect().height > 24;
-        add(n, 'ruta: rótulo y conteo de la fase #' + (i + 1) + ' en una línea dentro de su cabecera', partida ? -1 : -peor, 0, (peor || partida) ? 'sobresale o se parte: «' + quien + '». Acortar fases[].titulo' : '');
+        add(n, 'ruta: rótulo y conteo de la fase #' + (i + 1) + ' en una línea dentro de su cabecera', partida ? -1 : -peor, 0, (peor || partida) ? 'sobresale o se parte: «' + quien + '». Acortar fases[].titulo (≤ 6 caracteres con 3 fases y una sola línea de trabajo)' : '');
       });
       const grid = s.querySelector('.route-grid'); const miles = s.querySelector('.route-miles');
       if (grid && miles) add(n, 'ruta: grilla vs línea de hitos', top(s, miles) - bot(s, grid), 8);
+      if (miles && nota) add(n, 'ruta: hitos vs nota', top(s, nota) - bot(s, miles), 3);
+    }
+    if (s.classList.contains('s-method')) {
+      const logi = s.querySelector('.mt-logi');
+      if (logi) add(n, 'método: logística vs pie', footTop - bot(s, logi), 8, 'Acortar los textos de cada bloque (prácticas, datos, casos ya logrados) o los 4 datos de logística');
+      const bloques = ['.mt-steps', '.mt-strips', '.mt-proof', '.mt-info', '.mt-logi'].map((q) => s.querySelector(q)).filter(Boolean);
+      for (let k = 1; k < bloques.length; k++) add(n, 'método: bloque ' + (k + 1) + ' vs bloque ' + k, top(s, bloques[k]) - bot(s, bloques[k - 1]), 4);
+      overflowEls(n, s, '.mt-steps li', 'paso'); overflowEls(n, s, '.mt-case', 'caso ya logrado'); overflowEls(n, s, '.mt-card', 'tarjeta de información');
+      overflowEls(n, s, '.mt-tile', 'dato de logística'); overflowEls(n, s, '.mt-why', 'franja «por qué»'); overflowEls(n, s, '.mt-who', 'franja «quién construye»');
+      const h2m = s.querySelector('h2'); const subm = s.querySelector('.sub');
+      if (h2m && subm) add(n, 'método: título vs subtítulo', top(s, subm) - bot(s, h2m), 2);
     }
     if (s.classList.contains('s-price')) {
       const dur = s.querySelector('.block-value'); const prog = s.querySelector('.block-programa');
@@ -107,6 +134,30 @@ const MEDIR = `(async () => {
       const head = s.querySelector('.deliv-carriles');
       const cols = s.querySelector('.deliv-cols');
       if (head && cols) add(n, 'entregables: barras de carril vs columnas', top(s, cols) - bot(s, head), 2);
+    }
+    if (s.classList.contains('s-pay')) {
+      const nota = s.querySelector('.pay-note');
+      if (nota) add(n, 'pago: nota vs pie', footTop - bot(s, nota), 8);
+      const pasos = [...s.querySelectorAll('.pay-step')], marcos = [...s.querySelectorAll('.pay-frame')];
+      add(n, 'pago: una caja de monto por cuota', Math.min(pasos.length, marcos.length) - Math.max(pasos.length, marcos.length), 0, pasos.length + ' cuotas y ' + marcos.length + ' cajas de monto', '');
+      pasos.forEach((p, i) => {
+        const hito = p.querySelector('.ps-hito'), pct = p.querySelector('.ps-pct'), cuando = p.querySelector('.ps-when');
+        if (hito && pct) add(n, 'pago: hito de la cuota ' + (i + 1) + ' vs porcentaje', top(s, pct) - bot(s, hito), 4, 'acortar el hito (≤ 70 caracteres) o usar menos cuotas');
+        if (cuando) { const ex = cuando.scrollWidth - cuando.clientWidth; if (ex > 1) out.push({ slide: n, check: 'pago: «cuándo» de la cuota ' + (i + 1) + ' no cabe en una línea', holgura: -ex, minimo: 0, ok: false, detalle: 'acortar pago.cuotas[].cuando (≤ 12 caracteres)' }); }
+        const m = marcos[i];
+        if (m) {
+          const pr = p.getBoundingClientRect(), mr = m.getBoundingClientRect();
+          add(n, 'pago: caja de monto de la cuota ' + (i + 1) + ' dentro de su tarjeta', Math.min(mr.left - pr.left, pr.right - mr.right, mr.top - pr.top, pr.bottom - mr.bottom), 6, 'las cajas deben coincidir con scripts/agregar-campo-precio.py → plan_pago_fields()');
+        }
+      });
+      overflowEls(n, s, '.pay-step', 'tarjeta de cuota'); overflowEls(n, s, '.pay-note', 'nota del plan de pago');
+    }
+    if (s.classList.contains('s-next')) {
+      const ct = s.querySelector('.nx-contact');
+      if (ct) add(n, 'próximos pasos: contacto vs pie', footTop - bot(s, ct), 8);
+      const st = s.querySelector('.nx-steps');
+      if (st && ct) add(n, 'próximos pasos: pasos vs contacto', top(s, ct) - bot(s, st), 8);
+      overflowEls(n, s, '.nx-step', 'paso'); overflowEls(n, s, '.nx-card', 'tarjeta de contacto');
     }
     if (s.classList.contains('s-roi')) {
       const rbody = s.querySelector('.roi-body'), dest = s.querySelector('.roi-dest-wrap'), hook = s.querySelector('.roi-hook');
