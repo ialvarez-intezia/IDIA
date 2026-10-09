@@ -1,6 +1,83 @@
 # Brief — G-MAX (DET-024)
 
-## Actualización 2026-10-06 — reexpresada en el formato compacto adaptado a Detección (6 slides) · VIGENTE
+## Ajuste 2026-10-08 (noche): sin facilidad de pago y fundamentos de IA de regalo · SOLO G-MAX
+
+Instrucción del usuario: «quitarle la lámina del 50 50 y [...] poner que los fundamentos de IA serán un regalo de parte
+de Intezia. Solo a esta propuesta de G-MAX, no estandarices esto.»
+
+- `datos.json` → `"omitir": ["pago"]`: el deck queda en **8 slides** (sin «Facilidad de pago») y el PDF con **7 campos**
+  (sin `PagoCuota1..2`).
+- **Fundamentos de IA = regalo de Intezia**: en la etapa «Nivelación» de la ruta («Un regalo de Intezia», resaltado) y
+  como primera línea del campo `Notas` de la inversión. Internamente la nivelación sigue siendo de 4 h: en
+  `programa.md` el total de referencia de 25 h la incluye; lo que se cotiza son el arranque y el levantamiento (21 h),
+  a confirmar con ventas.
+- **No es un cambio de la plantilla**: el formato de Detección sigue llevando la facilidad de pago y no regala la
+  nivelación. `plantillas/habilidades-compacto-canonico/datos.ejemplo-deteccion.json` conserva la versión estándar.
+
+## Actualización 2026-10-08 — rehecha (9 slides) con las correcciones de Keiber · VIGENTE (con el ajuste de arriba)
+
+**Pedido:** David (2026-10-08): «genera la propuesta para el servicio de detección de GMAX basándote en la reunión
+que tuvimos con el cliente», con la transcripción de la reunión de levantamiento. Se preguntó qué hacer con la
+DET-024 existente y el usuario eligió **rehacerla en el formato nuevo con el mismo código**, aplicando las correcciones de la
+reunión de **Keiber Quintana con David y María (2026-10-08)**. Keiber pidió armarla **desde la transcripción del
+cliente** («no uses ese mensaje de María», el correo con las «áreas prioritarias») y **enviársela a ella primero,
+antes que a María**. Por eso `meta.json` queda en **«En corrección»** hasta que Keiber la apruebe.
+
+### Correcciones de Keiber (2026-10-08) y cómo se aplicaron
+
+| Corrección | Aplicación |
+|---|---|
+| En una Detección no se dice qué frentes son prioritarios antes de detectar; «Resto corporativo» con el grueso de las áreas está mal; Atención al Paciente no salió como prioridad | Sin frentes ni prioridades. El alcance muestra las **4 áreas que nombró la Gerente General** (Gerencia de Operaciones, Gerencia de Tecnología, Dirección Médica, Recursos Humanos) y sus departamentos de la lista de personal |
+| No juntar departamentos en la misma sesión («gallinero»): cada líder habla de lo suyo | «Un espacio por departamento» en Cómo trabajamos; levantamiento con el líder y su mano derecha |
+| **20 horas**, sin decir cuántas por área; logística las reparte según lo que necesite cada departamento | Ruta e inversión: «20 horas de levantamiento presencial, repartidas según lo que necesite cada departamento» |
+| En la propuesta **no van semanas ni sesiones**: se cuadran en el kickoff | Ruta en 5 etapas sin semanas ni sesiones; el calendario se acuerda en la reunión de arranque. Sin grupos de Fundamentals visibles |
+| El logro inmediato no está garantizado por área; sí a nivel proyecto: **al menos 3** | Entregables: «al menos tres» logros; método: si un proceso exige mucho esfuerzo, pasa al Mapa de Calor |
+| Quitar los números de los entregables («7 entregables», «3 entregables»…); no volver a nombrar las áreas en entregables; una página «bella» de lo que recibe | Slide 5 con 6 tarjetas sin conteos ni áreas: alcance y calendario, equipo nivelado, logros inmediatos, Mapa de Calor, Informe Final y hoja de ruta, inversión inteligente en licencias |
+| Alcance = lo global (auditar y entregar logros) y ahí van las áreas | Slide 2: «Auditamos cada área y dejamos logros inmediatos», qué auditamos y para qué |
+| Orden: qué hacemos, cómo, qué se llevan, retorno | Orden v2: portada, alcance, ruta, cómo trabajamos, entregables, retorno, inversión, pago, próximos pasos |
+| Que lo entienda alguien que no estuvo en la reunión | Menos cifras: solo «3» (cobranza), «20 horas», «al menos tres» y los porcentajes del pago |
+| No mandar tarea a los líderes antes de la sesión | «Sin tarea previa» en Cómo trabajamos |
+
+### Cómo se armó el deck
+
+- **Desde 2026-10-08 (misma tarde) se genera desde `datos.json`** con el formato de Detección de la plantilla compacta
+  v3 (`"formato": "deteccion"`, `plantillas/deteccion-compacto.md`, CLAUDE.md §4.22). Este deck es el caso base de ese
+  formato: `plantillas/habilidades-compacto-canonico/datos.ejemplo-deteccion.json` es su `datos.json` en la versión
+  estándar (sin el ajuste de pago y regalo, que es solo de G-MAX).
+  El texto de las 9 slides es idéntico al de la primera versión armada a mano (comparado slide por slide).
+- Para cambiar algo: editar `datos.json` y correr `python3 scripts/generar-habilidades-compacto.py g-max` y
+  `bash scripts/pdf-habilidades-compacto.sh g-max` (después, devolver `meta.json` a «En corrección» si sigue en
+  revisión). `index.html`, `acroforms.json` y `programa.md` son generados: no se editan a mano.
+- Archivado: el compacto de 6 slides (con su `datos.json` v1 y su PDF) en `_anterior-6-slides/`; el PDF de la
+  versión armada a mano (mismo texto) en `_pdf-anteriores/`.
+
+### Datos de la reunión con el cliente que se usaron
+
+- 3 personas en cobranza a seguros arman a mano el expediente de cobro, sin criterios unificados, y sin
+  seguimiento claro de la facturación vencida («cuánto me deben a 90 días»).
+- Cada gerencia entrega un informe de gestión mensual que la Gerente General lee uno por uno; quiere estructura,
+  almacenamiento y trazabilidad mes a mes y por trimestre.
+- El proceso contable y administrativo se lleva en Excel, con un volumen alto de operaciones (en paralelo se
+  parametriza su sistema; meta: tenerlo listo para el inicio del año contable; **contexto interno**, §4.11).
+- Quieren control sobre qué herramienta usa cada puesto y qué datos salen de cada área (seguridad de la
+  información de la clínica); hoy cada quien usa la IA que quiere.
+- 48 personas en la reunión (≈28 corporativas, ≈20 asistenciales); la lista de personal confirmó 51.
+- Objetivo: crecer en automatización y no en personal; encontrar dónde reducir costos.
+- Modalidad presencial, jornadas de mañana; Recursos Humanos confirmará los participantes por departamento.
+
+### Supuestos y pendientes (confirmar con Keiber antes de enviar a María)
+
+1. **Horas**: el deck dice 20 h de levantamiento; el arranque (1 h) y la nivelación (4 h) van sin horas. Total
+   interno 25 h (`programa.md`). ¿Las 20 h eran el levantamiento o el total?
+2. **Logros inmediatos**: «al menos tres» para todo el proyecto.
+3. **Áreas y departamentos**: sin asignar cada departamento a su área (no hay organigrama desglosado).
+4. **Plan de pago**: 50 % al aprobar y 50 % con el Informe Final (estándar de `empresa/politicas-comerciales.md`);
+   montos vacíos para ventas. Sin línea de facturación (moneda y tasa): confirmar con ventas.
+5. **Asesora**: María Iribarren, con su teléfono y correo de las propuestas anteriores (sin cargo).
+6. Nombre del entregable: «Informe Final» (como la skill de cierre de Detección), no «Reporte Final».
+7. Inversión, descuento y total: vacíos para ventas (María anticipó un descuento de arranque).
+
+## Actualización 2026-10-06 — reexpresada en el formato compacto adaptado a Detección (6 slides) · REEMPLAZADA (archivada en `_anterior-6-slides/`)
 
 Instrucción directa del usuario: "mejorar la DET-024 usando este nuevo formato, a pesar de que el
 definido es de Habilidades, con una adaptación usando las reglas fijas de esta propuesta". El

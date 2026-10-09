@@ -2,14 +2,15 @@
 <!--
   Propuesta · G-MAX · Servicio de Detección (DET-024)
   División: Educación · Servicio: Detección (§4.1a) · Alianza: no
-  GENERADO por scripts/generar-habilidades-compacto.py (plantilla 1.3 (2026-10-05)) desde datos.json.
+  GENERADO por scripts/generar-habilidades-compacto.py (plantilla 3.0 (2026-10-08), formato deteccion) desde datos.json.
   No editar a mano: editar datos.json y regenerar. Estilos propios del deck: overrides.css.
-  Fuente del insumo: Ficha de Levantamiento de G-MAX y lista de personal
+  Fuente del insumo: Transcripción de la reunión con G-MAX y lista de personal
 
-  Formato compacto de 6 slides (distinto del deck canónico de ~13):
-    1 Portada con punto de dolor · 2 Alcance · 3 Ruta · 4 Inversión · 5 Entregables · 6 Retorno esperado
-  Marcadores de detección de AcroForms (agregar-campo-precio.py), por página: «Propuesta Económica»
-  solo en la slide de inversión; «Lo que se llevan» y «Entregables» solo en la de entregables.
+  Formato compacto de 8 slides, en el orden de las preguntas del cliente (Ventas, 2026-10-07), sin semanas, sesiones
+  ni fechas (Keiber, 2026-10-08):
+    1 Portada · 2 Alcance · 3 Ruta · 4 Cómo trabajamos · 5 Entregables · 6 Retorno · 7 Inversión · 8 Próximos pasos
+  Marcadores de detección de AcroForms (agregar-campo-precio.py), por página: «Propuesta Económica» solo en la slide de
+  inversión; «Lo que se llevan» y «Entregables» solo en la de entregables; «Facilidad de pago» solo en la de pago.
   Campos AcroForm: Programa, Notas, PrecioBase, Descuento, PrecioTotal (inversión) y Entregables, Acreditacion (entregables). Se reposicionan con scripts/customize-habilidades-compacto.py.
 -->
 <html lang="es">
@@ -25,9 +26,9 @@
 
   <main class="deck">
 
-    <!-- 1 · Portada con punto de dolor -->
+    <!-- 1 · Portada: ¿cuál es mi problema? -->
     <section class="slide s-cover">
-      <span class="counter">01 / 06</span>
+      <span class="counter">01 / 08</span>
       <div class="logo-big">
         <img src="../../../logos/educacion/BLANCO.png" alt="Intezia Educación">
       </div>
@@ -36,10 +37,10 @@
         <h1 style="font-size:46px">
           Mapa de oportunidades de IA<br>
           con control de la información<br>
-          <span class="hl">en 22 departamentos</span>
+          <span class="hl">en G-MAX</span>
         </h1>
         <p class="lead">
-          Este proyecto nivela a las 51 personas de G-MAX, audita sus departamentos en cuatro frentes, deja un <strong>logro inmediato</strong> en cada uno y entrega un mapa de oportunidades priorizado, para decidir qué licencias adquirir sin invertir a ciegas.
+          Auditamos la operación de G-MAX proceso por proceso, con quien hace el trabajo. Dejamos <strong>logros inmediatos</strong> en el camino y entregamos un mapa de oportunidades para invertir en IA con datos y con control de la información.
         </p>
         <div class="pain-strip">
           <div class="pain-item">
@@ -48,18 +49,18 @@
           </div>
           <div class="pain-item">
             <span class="pain-num">Cada mes</span>
-            <span class="pain-lbl">las gerencias entregan un informe de gestión sin formato común ni trazabilidad.</span>
+            <span class="pain-lbl">las gerencias entregan su informe de gestión y la dirección los lee uno por uno.</span>
           </div>
           <div class="pain-item">
             <span class="pain-num">En Excel</span>
-            <span class="pain-lbl">se lleva el proceso contable y administrativo, con un volumen importante de operaciones.</span>
+            <span class="pain-lbl">se lleva el proceso contable y administrativo, con un volumen alto de operaciones.</span>
           </div>
           <div class="pain-item">
             <span class="pain-num">Ninguna</span>
-            <span class="pain-lbl">política de uso de IA define qué herramienta usa cada puesto ni qué datos salen de cada área.</span>
+            <span class="pain-lbl">regla define qué herramienta de IA usa cada puesto ni qué datos salen de la clínica.</span>
           </div>
         </div>
-        <p class="pain-src">Fuente: Ficha de Levantamiento de G-MAX y lista de personal (51 personas).</p>
+        <p class="pain-src">Fuente: reunión de levantamiento con la dirección de G-MAX.</p>
       </div>
       <div class="id-line">
         <span class="codigo">Código: DET-024</span>
@@ -67,55 +68,61 @@
       </div>
     </section>
 
-    <!-- 2 · Alcance -->
-    <section class="slide s-scope">
-      <span class="counter">02 / 06</span>
+    <!-- 2 · Alcance (Detección): qué auditamos y para qué, sin conteos ni horas por área -->
+    <section class="slide s-scope s-det-scope">
+      <span class="counter">02 / 08</span>
       <p class="eyebrow">02 · Alcance</p>
-      <h2>Un logro inmediato en cada uno de los 4 frentes.</h2>
-      <p class="sub">Nivelamos a las 51 personas y auditamos 22 departamentos, agrupados en <strong>4 frentes</strong> de trabajo presencial.</p>
+      <h2>Auditamos cada área y dejamos logros inmediatos.</h2>
+      <p class="sub">Revisamos <strong>proceso por proceso</strong> las cuatro áreas de G-MAX, con quien hace el trabajo en cada departamento.</p>
 
-      <div class="scope-body">
-        <div class="scope-left">
-
-          <div class="scope-panel acc-y">
-            <div class="scope-head">
-              <span class="scope-tag">Detección</span>
-              <span class="scope-total"><b>7</b> entregables · 4 frentes y 1 etapa previa</span>
-            </div>
-            <ul class="scope-rows">
-              <li><span class="area">Arranque y Fundamentals <em>(etapa previa)</em> <small class="comp">Kick-off de 1 h. Grupo 1, corporativo y operativo (~29 personas): frentes 1 a 3. Grupo 2, asistencial (~22 personas): frente 4.</small></span><span class="units" style="--n:3"></span><span class="n">3</span></li>
-              <li><span class="area">Seguros y Cobranzas <small class="comp">Seguros. Frente prioritario.</small></span><span class="units" style="--n:1"></span><span class="n">1</span></li>
-              <li><span class="area">Atención al Paciente <small class="comp">Atención al Paciente. Frente prioritario.</small></span><span class="units" style="--n:1"></span><span class="n">1</span></li>
-              <li><span class="area">Resto corporativo <small class="comp">Gerencia General, Administración y Tesorería, Informes de gestión gerencial, Logística, Almacén, Farmacia, Servicios Generales, Tecnología, Procesos y Recursos Humanos. Dos jornadas de 4 h.</small></span><span class="units" style="--n:1"></span><span class="n">1</span></li>
-              <li><span class="area">Asistencial <small class="comp">Dirección Médica (con Hemodiálisis), Enfermería y Laboratorio.</small></span><span class="units" style="--n:1"></span><span class="n">1</span></li>
-            </ul>
+      <div class="scope-panels det-scope">
+        <div class="det-panel det-que">
+          <p class="det-panel-label">Qué auditamos</p>
+          <div class="det-areas">
+            <span class="det-area">Gerencia de Operaciones</span>
+            <span class="det-area">Gerencia de Tecnología</span>
+            <span class="det-area">Dirección Médica</span>
+            <span class="det-area">Recursos Humanos</span>
           </div>
-
+          <p class="det-deps-label">Con sus departamentos</p>
+          <ul class="det-deps">
+            <li>Gerencia General</li>
+            <li>Administración y Tesorería</li>
+            <li>Seguros</li>
+            <li>Atención al Paciente</li>
+            <li>Logística</li>
+            <li>Almacén</li>
+            <li>Farmacia</li>
+            <li>Servicios Generales</li>
+            <li>Tecnología</li>
+            <li>Auditoría y Procesos</li>
+            <li>Recursos Humanos</li>
+            <li>Dirección Médica</li>
+            <li>Hemodiálisis</li>
+            <li>Enfermería</li>
+            <li>Laboratorio</li>
+          </ul>
+          <p class="det-foco">El foco está en el trabajo <strong>corporativo y administrativo</strong>. En el área asistencial, el levantamiento es puntual, con sus coordinaciones.</p>
         </div>
 
-        <div class="scope-right">
-          <div class="scope-card">
-            <p class="scope-card-label">Cada frente, cuatro pasos</p>
-            <ol class="scope-steps">
-              <li>Entrevistamos al equipo sobre sus procesos reales.</li>
-              <li>Identificamos el cuello de botella más relevante.</li>
-              <li>Construimos en la sesión un logro inmediato aplicable.</li>
-              <li>Dejamos el inventario listo para el Mapa de Calor.</li>
-            </ol>
-          </div>
-          <div class="scope-card">
-            <p class="scope-card-label">Quién construye</p>
-            <p>Intezia levanta y construye cada logro en sesión presencial, con el líder y la mano derecha de cada departamento, sin tocar los sistemas actuales.</p>
-          </div>
-          <div class="scope-card scope-out">
-            <p class="scope-card-label">Fuera de este alcance</p>
-            <ul>
-              <li>La herramienta de IA a adoptar: la recomienda el Reporte Final.</li>
-              <li>Habilidades y Políticas, la ruta que sigue a la Detección.</li>
-              <li>Cambios en los sistemas actuales de cada frente.</li>
-            </ul>
-          </div>
+        <div class="det-panel det-para">
+          <p class="det-panel-label">Para qué</p>
+          <ol class="det-goals">
+            <li><b>Ver la operación real</b><span>Cómo trabaja hoy cada departamento y dónde se pierde tiempo.</span></li>
+            <li><b>Mejorar desde ya</b><span>Logros inmediatos que el equipo usa mientras avanza el levantamiento.</span></li>
+            <li><b>Invertir con criterio</b><span>Elegir herramientas y licencias de IA sobre una base cierta.</span></li>
+            <li><b>Cuidar la información</b><span>Saber qué datos maneja cada puesto y dónde hace falta control.</span></li>
+          </ol>
         </div>
+      </div>
+
+      <div class="scope-out">
+        <p class="scope-card-label">Fuera de este alcance</p>
+        <ul>
+          <li>Licencias y herramientas de IA: se eligen con el Informe Final.</li>
+          <li>Cambios en los sistemas de G-MAX: el levantamiento no los modifica.</li>
+          <li>Desarrollos a la medida o integraciones: si el Informe Final los recomienda, se cotizan aparte.</li>
+        </ul>
       </div>
 
       <div class="foot">
@@ -124,63 +131,56 @@
       </div>
     </section>
 
-    <!-- 3 · Ruta -->
-    <section class="slide s-route">
-      <span class="counter">03 / 06</span>
+    <!-- 3 · Ruta (Detección): etapas sin semanas ni sesiones (se acuerdan en el arranque) y sin horas por área -->
+    <section class="slide s-route s-det-route">
+      <span class="counter">03 / 08</span>
       <p class="eyebrow">03 · Ruta</p>
-      <h2>Del kick-off al Reporte Final en 4 semanas.</h2>
-      <p class="sub">Semanas de trabajo desde el arranque, en modalidad presencial. El <strong>Reporte Final</strong> se entrega en la semana 4.</p>
+      <h2>Del arranque al Informe Final, en cinco etapas.</h2>
+      <p class="sub">El calendario y el orden de las áreas se acuerdan con la dirección en la <strong>reunión de arranque</strong>.</p>
 
-      <div class="route-grid" style="--cols:3; --rows:1; --rowh:214px">
-
-        <div class="rg-corner"></div>
-        <div class="rg-phase rg-ph-1">
-          <span class="rg-phase-tag">Nivelación</span>
-          <span class="rg-phase-date">Semana 1</span>
-          <span class="rg-phase-txt"><b>4 h</b> · Fundamentals en 2 grupos</span>
+      <div class="det-line"></div>
+      <div class="det-stages" style="--n:5">
+        <div class="det-stage acc-y">
+          <span class="ds-d"></span>
+          <span class="ds-n">1</span>
+          <b class="ds-t">Arranque</b>
+          <p>Reunión con la dirección: alcance, responsables de cada departamento y calendario.</p>
         </div>
-        <div class="rg-phase rg-ph-2">
-          <span class="rg-phase-tag">Prioritarios</span>
-          <span class="rg-phase-date">Semana 2</span>
-          <span class="rg-phase-txt"><b>8 h</b> · los dos frentes clave</span>
+        <div class="det-stage acc-o">
+          <span class="ds-d"></span>
+          <span class="ds-n">2</span>
+          <b class="ds-t">Nivelación</b>
+          <p>Fundamentos de IA para todo el equipo, con ejemplos de su propio trabajo. <strong>Un regalo de Intezia.</strong></p>
         </div>
-        <div class="rg-phase rg-ph-3 hi">
-          <span class="rg-phase-tag">Resto del mapa</span>
-          <span class="rg-phase-date">Semanas 3 y 4</span>
-          <span class="rg-phase-txt"><b>12 de 25 h</b> · corporativo y asistencial</span>
+        <div class="det-stage acc-y hi">
+          <span class="ds-d"></span>
+          <span class="ds-n">3</span>
+          <b class="ds-t">Levantamiento</b>
+          <p>Departamento por departamento, con cada líder y su mano derecha.</p>
+          <p class="ds-h"><strong>20 horas</strong> presenciales, repartidas según lo que necesite cada uno.</p>
         </div>
-        <div class="rg-phase rg-fu">
-          <span class="rg-phase-tag">Cierre</span>
-          <span class="rg-phase-date">Reporte Final</span>
-          <span class="rg-phase-txt">Trabajo del equipo consultor</span>
+        <div class="det-stage acc-o">
+          <span class="ds-d"></span>
+          <span class="ds-n">4</span>
+          <b class="ds-t">Priorización</b>
+          <p>Intezia cruza lo levantado en todas las áreas y ordena las oportunidades.</p>
         </div>
-
-        <div class="rg-front acc-y">
-          <span class="rg-front-tag">Los 4 frentes · S1-S4</span>
-          <span class="rg-front-h"><b>25 h</b> · Detección</span>
-          <span class="rg-front-areas">Kick-off, Fundamentals y auditoría presencial</span>
-        </div>
-        <div class="rg-cell"><span class="rg-h"><b>4</b> h <i>2 entregables</i></span><p>Fundamentals presencial en 2 grupos: corporativo y operativo, y asistencial.</p></div>
-        <div class="rg-cell"><span class="rg-h"><b>8</b> h <i>2 entregables</i></span><p>Seguros y Cobranzas (4 h) y Atención al Paciente (4 h), los dos frentes prioritarios.</p></div>
-        <div class="rg-cell hi"><span class="rg-h"><b>12</b> h <i>2 entregables</i></span><p>Resto corporativo (8 h, en 2 jornadas) y Asistencial (4 h).</p></div>
-
-        <div class="rg-follow" style="grid-column:5; grid-row:2 / span 1">
-          <ul>
-            <li><b>Priorizar</b><span>Hallazgos por impacto y riesgo.</span></li>
-            <li><b>Reportar</b><span>Diagnóstico y mapa de oportunidades.</span></li>
-            <li><b>Proyectar</b><span>Hoja de ruta hacia Habilidades y Políticas.</span></li>
-          </ul>
+        <div class="det-stage acc-w">
+          <span class="ds-d"></span>
+          <span class="ds-n">5</span>
+          <b class="ds-t">Informe Final</b>
+          <p>Diagnóstico y hoja de ruta, presentados a la dirección.</p>
         </div>
       </div>
 
-      <div class="route-miles" style="grid-template-columns:repeat(5,1fr)">
-        <div class="mile"><span class="mile-d"></span><b>Semana 1 · Nivelación</b><p>Kick-off de 1 h y Fundamentals en 2 grupos, de ~29 y ~22 personas.</p></div>
-        <div class="mile"><span class="mile-d"></span><b>Semana 2 · Prioritarios</b><p>Seguros y Cobranzas y Atención al Paciente: 4 h cada uno, con un logro inmediato.</p></div>
-        <div class="mile"><span class="mile-d"></span><b>Semana 3 · Resto corporativo</b><p>9 departamentos en 2 jornadas de 4 h, con un logro inmediato.</p></div>
-        <div class="mile"><span class="mile-d"></span><b>Semana 4 · Asistencial</b><p>Dirección Médica, Enfermería y Laboratorio: 4 h, con un logro inmediato.</p></div>
-        <div class="mile"><span class="mile-d"></span><b>Semana 4 · Reporte Final</b><p>Mapa de Calor, Índice de Madurez y hoja de ruta, entregados a la Gerencia General.</p></div>
+      <div class="route-next det-next">
+        <p class="det-next-label">La ruta completa de G-MAX</p>
+        <div class="det-next-items" style="--n:3">
+          <div class="dn-item now"><span class="dn-when">Ahora</span><b>Detección</b><p>Esta propuesta.</p></div>
+          <div class="dn-item"><span class="dn-when">Después</span><b>Habilidades</b><p>Formación práctica por área sobre lo que encontró la Detección.</p></div>
+          <div class="dn-item"><span class="dn-when">Más adelante</span><b>Políticas</b><p>Manual de uso de IA de la clínica, con reglas claras para todo el equipo.</p></div>
+        </div>
       </div>
-      <p class="route-note">S = semana de trabajo desde el arranque, cuya fecha se acuerda con G-MAX. Las 25 h son una proyección de sesión: 1 h de kick-off más 4, 8 y 12 h de las fases 1, 2 y 3. Los frentes se auditan en el orden de prioridad de la Gerencia General y el horario de cada sesión se acuerda con cada responsable.</p>
 
       <div class="foot">
         <img src="../../../logos/educacion/BLANCO.png" alt="">
@@ -188,15 +188,170 @@
       </div>
     </section>
 
-    <!-- 4 · Inversión (hoja de cotización estándar, por horas) -->
+    <!-- 4 · Cómo trabajamos: pasos, por qué en ese orden, casos reales, práctica, datos y logística -->
+    <section class="slide s-method roomy">
+      <span class="counter">04 / 08</span>
+      <p class="eyebrow">04 · Cómo trabajamos</p>
+      <h2>Así trabajamos en cada departamento.</h2>
+      <p class="sub">Nos sentamos con quien hace el trabajo, con sus casos reales, y salimos de cada levantamiento con algo concreto.</p>
+
+      <ol class="mt-steps" style="--n:4">
+          <li><b>Entrevistamos</b><span>Al líder de cada departamento y a su mano derecha.</span></li>
+          <li><b>Mapeamos</b><span>Procesos, tiempos, herramientas y cuellos de botella del día a día.</span></li>
+          <li><b>Construimos</b><span>Un logro inmediato en el momento, cuando el proceso lo permite.</span></li>
+          <li><b>Priorizamos</b><span>Cada oportunidad por impacto, esfuerzo y riesgo.</span></li>
+      </ol>
+      <div class="mt-strips">
+        <p class="mt-why"><b>Por qué en este orden</b> Primero nivelamos al equipo, para que todos hablen el mismo idioma sobre IA. Después levantamos cada departamento por separado, para que cada líder hable de sus procesos sin esperar a otros. Al final priorizamos con la foto completa de la clínica.</p>
+        <p class="mt-who"><b>Quién construye</b> Intezia levanta y construye junto a cada líder. La Gerencia de Tecnología de G-MAX autoriza los accesos y las herramientas con las que se trabaja.</p>
+      </div>
+
+      <div class="mt-info">
+        <div class="mt-card">
+          <p class="mt-card-label">Cómo funciona en la práctica</p>
+          <ul><li><b>Sin tarea previa.</b> Los líderes no preparan nada antes: todo se levanta en la conversación.</li><li><b>Un espacio por departamento.</b> Nadie espera mientras otra área expone sus procesos.</li><li><b>Sin forzar soluciones.</b> Si un proceso exige mucho esfuerzo, no se resuelve en el momento: pasa al Mapa de Calor con su prioridad.</li></ul>
+        </div>
+        <div class="mt-card">
+          <p class="mt-card-label">Cómo cuidamos sus datos</p>
+          <p>Trabajamos con ejemplos reales sin sacar datos de pacientes ni información financiera de los equipos de G-MAX. Los logros usan solo las cuentas autorizadas, y sus sistemas no se modifican.</p>
+        </div>
+      </div>
+
+      <div class="mt-logi">
+        <div class="mt-tile"><span>Modalidad</span><b>Presencial, en las instalaciones de G-MAX.</b></div>
+        <div class="mt-tile"><span>Participantes</span><b>Todo el equipo en la nivelación; cada líder y su mano derecha en el levantamiento.</b></div>
+        <div class="mt-tile"><span>Ritmo de trabajo</span><b>Jornadas de mañana, en el horario que acuerde cada responsable.</b></div>
+        <div class="mt-tile"><span>Arranque</span><b>La fecha la fija G-MAX al confirmar la propuesta.</b></div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">G-MAX · DET-024</span>
+      </div>
+    </section>
+
+    <!-- 5 · Entregables (Detección): lo que recibe, sin conteos ni áreas; «Lo que se llevan» + «Entregables» ubican los campos -->
+    <section class="slide s-deliv s-det-deliv">
+      <span class="counter">05 / 08</span>
+      <p class="eyebrow">05 · Entregables</p>
+      <div class="deliv-head">
+        <h2>Lo que recibe G-MAX.</h2>
+        <p class="deliv-sub"><span class="nw">Lo que se llevan</span>: un diagnóstico para decidir, mejoras que ya funcionan y una hoja de ruta para seguir.</p>
+      </div>
+
+      <div class="det-cards" style="--cols:3; --rows:2">
+        <div class="det-card acc-y">
+          <span class="dk-when">Al arrancar</span>
+          <b>Alcance y calendario</b>
+          <p>Acordados con la dirección: responsables de cada departamento y orden de las áreas.</p>
+        </div>
+        <div class="det-card acc-y">
+          <span class="dk-when">Al arrancar</span>
+          <b>Equipo nivelado en IA</b>
+          <p>Todo el personal con un lenguaje común sobre IA y su uso responsable.</p>
+        </div>
+        <div class="det-card acc-o">
+          <span class="dk-when">En el levantamiento</span>
+          <b>Logros inmediatos</b>
+          <p><strong>Al menos tres</strong> soluciones construidas con el equipo, en uso desde el primer día.</p>
+        </div>
+        <div class="det-card acc-w">
+          <span class="dk-when">Al cierre</span>
+          <b>Mapa de Calor</b>
+          <p>Todas las oportunidades de la clínica en un solo mapa, con su Índice de Madurez en IA, para ver por dónde empezar.</p>
+        </div>
+        <div class="det-card acc-w">
+          <span class="dk-when">Al cierre</span>
+          <b>Informe Final y hoja de ruta</b>
+          <p>Diagnóstico por área y ruta de adopción de IA, con un resumen ejecutivo de una página.</p>
+        </div>
+        <div class="det-card acc-w">
+          <span class="dk-when">Al cierre</span>
+          <b>Inversión inteligente en licencias</b>
+          <p>Qué ecosistema de IA adquirir y para qué puestos, con la <strong>inversión estimada</strong>.</p>
+        </div>
+      </div>
+
+      <div class="deliv-band">
+        <div class="db-card db-1">
+          <span class="db-label">Para todo el proyecto</span>
+        </div>
+        <div class="db-card db-2">
+          <span class="db-label">Valor inmediato</span>
+        </div>
+      </div>
+      <!-- Cajas multiline editables (vacías en HTML: el contenido vive dentro del AcroForm /V, ver acroforms.json). -->
+      <div class="multi-box db-box db-box-1" data-field="Entregables"></div>
+      <div class="multi-box db-box db-box-2" data-field="Acreditacion"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">G-MAX · DET-024</span>
+      </div>
+    </section>
+
+    <!-- 6 · Retorno: ¿qué gano? (método de cálculo). Sin estudios ni citas externas. -->
+    <section class="slide s-roi">
+      <span class="counter">06 / 08</span>
+      <p class="eyebrow">06 · Retorno</p>
+      <h2>Retorno esperado: decidir con datos.</h2>
+      <p class="sub">El Informe Final estima el retorno de cada oportunidad con lo que cada departamento cuenta en su levantamiento.</p>
+
+      <div class="roi-body">
+        <div class="roi-panel">
+          <p class="roi-panel-title">Cómo se estima el retorno de cada oportunidad</p>
+          <ol class="roi-steps">
+            <li><b>Volumen</b><span>Cuántas veces al mes se repite cada tarea, por ejemplo, armar el expediente de cobro de un seguro.</span></li>
+            <li><b>Tiempo actual</b><span>Lo que toma hoy cada vez, según el líder del departamento y su mano derecha.</span></li>
+            <li><b>Tiempo con la solución</b><span>La estimación de Intezia para cada oportunidad del Mapa de Calor.</span></li>
+            <li><b>Horas recuperables</b><span>Volumen por la diferencia de tiempos: una estimación de referencia, no un compromiso de resultado.</span></li>
+            <li><b>Prioridad</b><span>Impacto, esfuerzo y riesgo de cada oportunidad, para decidir por dónde empezar.</span></li>
+          </ol>
+        </div>
+
+        <div class="roi-right">
+          <p class="roi-right-title">Qué decide G-MAX con el Informe Final</p>
+          <div class="roi-card">
+            <b>Licencias</b>
+            <p>Cuáles adquirir, cuáles no y para qué puestos.</p>
+          </div>
+          <div class="roi-card">
+            <b>Prioridades</b>
+            <p>Qué procesos mejorar primero y con qué tipo de solución.</p>
+          </div>
+          <div class="roi-card">
+            <b>Control</b>
+            <p>Qué herramienta usa cada puesto y qué información puede salir de cada área.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="roi-dest-wrap">
+        <p class="roi-dest-title">Hacia dónde va G-MAX</p>
+        <div class="roi-dest">
+          <div class="rd-item"><b>Crecer en automatización</b><p>Con los procesos ordenados, el mismo equipo podría atender más volumen <strong>sin sumar personal</strong>.</p></div>
+          <div class="rd-item"><b>Trabajo reenfocado</b><p>Menos tiempo en tareas manuales y repetitivas, y más tiempo para analizar, decidir y atender al paciente.</p></div>
+          <div class="rd-item"><b>Información trazable</b><p>Informes y datos estructurados y guardados, para seguir el avance mes a mes y por trimestre.</p></div>
+        </div>
+      </div>
+
+      <div class="roi-hook"><p>Con el Informe Final, G-MAX decide qué licencias adquirir y qué procesos mejorar primero, con datos de su propia operación y no a ciegas.</p></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">G-MAX · DET-024</span>
+      </div>
+    </section>
+
+    <!-- 7 · Inversión (hoja de cotización estándar; antepenúltima slide) -->
     <section class="slide s-price">
-      <span class="counter">04 / 06</span>
-      <h2 class="title">Inversión por horas de sesión.</h2>
+      <span class="counter">07 / 08</span>
+      <h2 class="title">Inversión del proyecto.</h2>
       <p class="price-intro">Propuesta Económica · Servicio de Detección</p>
 
       <div class="block">
         <span class="block-eyebrow">Duración</span>
-        <p class="block-value">25 h de sesión presencial: kick-off (1 h), Fundamentals (4 h) y 4 frentes (20 h), en 4 semanas.</p>
+        <p class="block-value">Reunión de arranque, nivelación en IA de todo el equipo y <strong>20 horas de levantamiento presencial</strong>, repartidas según cada departamento.</p>
       </div>
 
       <div class="block block-programa">
@@ -236,131 +391,47 @@
       </div>
     </section>
 
-    <!-- 5 · Entregables (catálogo + piezas transversales) -->
-    <section class="slide s-deliv">
-      <span class="counter">05 / 06</span>
-      <p class="eyebrow">05 · Entregables</p>
-      <div class="deliv-head">
-        <h2>Lo que recibe G-MAX.</h2>
-        <p class="deliv-sub"><span class="nw">Lo que se llevan</span>: <strong>7 entregables</strong> por sesión, más el Mapa de Calor y el Reporte Final con la hoja de ruta.</p>
-      </div>
+    <!-- 9 · Próximos pasos: qué hacer y a quién escribir (última slide) -->
+    <section class="slide s-next">
+      <span class="counter">08 / 08</span>
+      <p class="eyebrow">08 · Próximos pasos</p>
+      <h2>Tres pasos para arrancar.</h2>
+      <p class="sub">Esto es lo que sigue cuando G-MAX confirme la propuesta.</p>
 
-      <div class="deliv-carriles" style="--ncols:3">
-        <span class="dc acc-y" style="grid-column: span 3">Detección · 7 entregables</span>
-      </div>
-
-      <div class="deliv-cols" style="--ncols:3">
-
-        <div class="deliv-col acc-y">
-          <div class="da">
-            <p class="da-name">Arranque y Fundamentals (etapa previa) <i>3</i></p>
-            <ul>
-              <li>Alcance, calendario y responsables acordados</li>
-              <li>Grupo 1 nivelado en IA: corporativo y operativo (~29)</li>
-              <li>Grupo 2 nivelado en IA: asistencial (~22)</li>
-            </ul>
-          </div>
+      <div class="nx-steps">
+        <div class="nx-step acc-y">
+          <span class="nx-num">1</span>
+          <b>Fecha de arranque</b>
+          <p>Acordamos con la dirección la fecha de la reunión de arranque y el horario de las jornadas.</p>
         </div>
-
-        <div class="deliv-col acc-y">
-          <div class="da">
-            <p class="da-name">Seguros y Cobranzas <i>1</i></p>
-            <ul>
-              <li>Inventario de procesos y logro inmediato de Seguros y Cobranzas</li>
-            </ul>
-          </div>
-          <div class="da">
-            <p class="da-name">Atención al Paciente <i>1</i></p>
-            <ul>
-              <li>Inventario de procesos y logro inmediato de Atención al Paciente</li>
-            </ul>
-          </div>
+        <div class="nx-step acc-o">
+          <span class="nx-num">2</span>
+          <b>Lista de responsables</b>
+          <p>Recursos Humanos confirma los departamentos y quién participa en cada uno; con eso armamos la agenda.</p>
         </div>
-
-        <div class="deliv-col acc-y">
-          <div class="da">
-            <p class="da-name">Resto corporativo <i>1</i></p>
-            <ul>
-              <li>Inventario de procesos y logro inmediato de 9 departamentos</li>
-            </ul>
-          </div>
-          <div class="da">
-            <p class="da-name">Asistencial <i>1</i></p>
-            <ul>
-              <li>Inventario de procesos y logro inmediato del frente Asistencial</li>
-            </ul>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="deliv-band">
-        <div class="db-card db-1">
-          <span class="db-label">Entregables transversales</span>
-        </div>
-        <div class="db-card db-2">
-          <span class="db-label">Valor inmediato</span>
+        <div class="nx-step acc-w">
+          <span class="nx-num">3</span>
+          <b>Reunión de arranque</b>
+          <p>Una hora con la dirección para cerrar el alcance, el orden de las áreas y el calendario.</p>
         </div>
       </div>
-      <!-- Cajas multiline editables (vacías en HTML: el contenido vive dentro del AcroForm /V). -->
-      <div class="multi-box db-box db-box-1" data-field="Entregables"></div>
-      <div class="multi-box db-box db-box-2" data-field="Acreditacion"></div>
+
+      <div class="nx-contact">
+        <div class="nx-card nx-ase">
+          <span class="nx-label">¿Dudas? Escribe a tu asesora comercial</span>
+          <b class="nx-name">María Iribarren</b>
+          <p class="nx-line"><a href="mailto:miribarren@intezia.com">miribarren@intezia.com</a></p>
+          <p class="nx-line">+58 414 0570056</p>
+        </div>
+        <div class="nx-card nx-emp">
+          <span class="nx-label">Intezia</span>
+          <p class="nx-line">Intezia C.A J-505657950</p>
+          <p class="nx-line"><a href="mailto:servicio@intezia.com">servicio@intezia.com</a></p>
+        </div>
+      </div>
 
       <div class="foot">
         <img src="../../../logos/educacion/BLANCO.png" alt="">
-        <span class="meta">G-MAX · DET-024</span>
-      </div>
-    </section>
-
-    <!-- 6 · Retorno esperado (método de cálculo). Sin estudios ni citas externas. -->
-    <section class="slide s-roi">
-      <span class="counter">06 / 06</span>
-      <p class="eyebrow">06 · Retorno</p>
-      <h2>Retorno esperado: decidir con datos.</h2>
-      <p class="sub">El Reporte Final estima el retorno de cada oportunidad con los datos que cada frente entrega en su sesión.</p>
-
-      <div class="roi-body">
-        <div class="roi-panel">
-          <p class="roi-panel-title">Cómo se estima el retorno de cada oportunidad</p>
-          <ol class="roi-steps">
-            <li><b>Volumen</b><span>Cuántas veces se ejecuta cada proceso al mes, levantado con el equipo de cada frente.</span></li>
-            <li><b>Tiempo actual</b><span>Lo que toma hoy cada ejecución, medido en la sesión del frente.</span></li>
-            <li><b>Tiempo con la solución</b><span>Estimación del equipo consultor para cada oportunidad del Mapa de Calor.</span></li>
-            <li><b>Horas recuperables</b><span>Volumen por la diferencia de tiempos: una estimación referencial, sin compromiso de resultado.</span></li>
-            <li><b>Prioridad</b><span>Cada oportunidad se ordena por impacto, esfuerzo y riesgo.</span></li>
-          </ol>
-        </div>
-
-        <div class="roi-right">
-          <p class="roi-right-title">Qué decide G-MAX con el Reporte Final</p>
-          <div class="roi-card">
-            <b>Licencias</b>
-            <p>Cuáles adquirir y cuáles no, con datos de sus propios frentes.</p>
-          </div>
-          <div class="roi-card">
-            <b>Prioridades</b>
-            <p>Qué procesos mejorar primero, según impacto, esfuerzo y riesgo.</p>
-          </div>
-          <div class="roi-card">
-            <b>Control</b>
-            <p>Qué herramienta usa cada puesto y qué datos salen de cada área.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="roi-dest-wrap">
-        <p class="roi-dest-title">Hacia dónde sigue la ruta</p>
-        <div class="roi-dest">
-          <div class="rd-item"><b>Ahora · Detección</b><p>Cada frente sale de su sesión con un <strong>logro inmediato</strong> que ya puede usar.</p></div>
-          <div class="rd-item"><b>Después · Habilidades</b><p>Capacitación práctica para que cada frente sostenga y escale lo que la Detección encontró.</p></div>
-          <div class="rd-item"><b>Más adelante · Políticas</b><p>Una política de uso de IA: qué herramienta usa cada puesto y qué información sale de cada área.</p></div>
-        </div>
-      </div>
-
-      <div class="roi-hook"><p>Con el Reporte Final, G-MAX decide qué licencias adquirir y qué procesos mejorar primero, con datos de sus propios frentes y no a ciegas.</p></div>
-
-      <div class="foot">
-        <img src="../../../logos/educacion/NEGRO.png" alt="">
         <span class="meta">G-MAX · DET-024</span>
       </div>
     </section>

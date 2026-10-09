@@ -1,0 +1,389 @@
+{
+ "version": 1,
+ "cliente": {
+  "nombre": "G-MAX",
+  "slug": "g-max",
+  "codigo": "DET-024",
+  "nombre_pie": "G-MAX"
+ },
+ "division": "educacion",
+ "alianza": false,
+ "servicio_rotulo": "Servicio de Detección",
+ "meta_servicio": "deteccion",
+ "meta_tipo": "Detección · Kick-off (1h) + Fundamentals (2 grupos de 2h, 51 personas) + auditoría de 22 departamentos agrupados en 4 frentes (Seguros y Cobranzas 4h, Atención al Paciente 4h, Resto corporativo 8h, Asistencial 4h = 20h), 25h totales, modalidad presencial · formato compacto",
+ "vocabulario": {
+  "solucion": [
+   "entregable",
+   "entregables"
+  ],
+  "area": [
+   "frente",
+   "frentes"
+  ],
+  "proceso_base": [
+   "etapa previa",
+   "etapas previas"
+  ]
+ },
+ "eje": "Auditar los departamentos de G-MAX (foco en Seguros y Cobranzas y Atención al Paciente) para construir un mapa de oportunidades de IA con control sobre el uso de la información, antes de invertir en licencias",
+ "origen": "Ficha de Levantamiento de G-MAX (registrada el 29/09/2026, asesora comercial), lista de personal (51 personas, 22 departamentos) e instrucciones directas del usuario del 01/10/2026",
+ "fuente_insumo": "Ficha de Levantamiento de G-MAX y lista de personal",
+ "portada": {
+  "eyebrow": "Propuesta de proyecto · Servicio de Detección",
+  "titulo_lineas": [
+   "Mapa de oportunidades de IA",
+   "con control de la información"
+  ],
+  "titulo_destacado": "en 22 departamentos",
+  "lead": "Este proyecto nivela a las 51 personas de {cliente_corto}, audita sus departamentos en cuatro frentes, deja un **logro inmediato** en cada uno y entrega un mapa de oportunidades priorizado, para decidir qué licencias adquirir sin invertir a ciegas.",
+  "hechos": [
+   {
+    "num": "3",
+    "texto": "personas arman a mano el expediente de cobro de cada seguro, sin criterios unificados.",
+    "resuelto_por": [
+     "FSC-1"
+    ]
+   },
+   {
+    "num": "Cada mes",
+    "texto": "las gerencias entregan un informe de gestión sin formato común ni trazabilidad.",
+    "resuelto_por": [
+     "RCO-1"
+    ]
+   },
+   {
+    "num": "En Excel",
+    "texto": "se lleva el proceso contable y administrativo, con un volumen importante de operaciones.",
+    "resuelto_por": [
+     "RCO-1"
+    ]
+   },
+   {
+    "num": "Ninguna",
+    "texto": "política de uso de IA define qué herramienta usa cada puesto ni qué datos salen de cada área.",
+    "resuelto_por": [
+     "FU-1",
+     "FU-2",
+     "RCO-1"
+    ]
+   }
+  ],
+  "fuente": "Fuente: Ficha de Levantamiento de G-MAX y lista de personal (51 personas)."
+ },
+ "carriles": [
+  {
+   "id": "det",
+   "nombre": "Detección",
+   "nombre_corto": "Detección",
+   "color": "amarillo"
+  }
+ ],
+ "areas": [
+  {
+   "id": "ARR",
+   "nombre": "Arranque y Fundamentals",
+   "carril": "det",
+   "frente": "A",
+   "proceso_base": true,
+   "nombre_catalogo": "Arranque y Fundamentals",
+   "composicion": "Kick-off de 1 h. Grupo 1, corporativo y operativo (~29 personas): frentes 1 a 3. Grupo 2, asistencial (~22 personas): frente 4.",
+   "soluciones": [
+    {
+     "id": "KO-1",
+     "entregable": "Alcance, calendario y responsables acordados",
+     "h": 1,
+     "fase": "F0",
+     "detalle": "Kick-off de 1 h, presencial, con la Gerencia General: alcance, orden de los frentes y calendario. Se incluye en el total de horas por instrucción explícita del usuario (excepción a la convención general, que lo deja aparte)."
+    },
+    {
+     "id": "FU-1",
+     "entregable": "Grupo 1 nivelado en IA: corporativo y operativo (~29)",
+     "h": 2,
+     "fase": "F1",
+     "detalle": "Fundamentals presencial de 2 h para el Grupo 1: Gerencia General, Administración, Seguros, Atención al Paciente, Logística, Almacén, Farmacia, Servicios Generales, Tecnología, Procesos y Recursos Humanos. Temas: qué es y qué no es la IA, casos reales de salud clínica, ruta de los 4 frentes, preguntas y expectativas. Tiempos: 30' encuadre y fundamentos, 45' casos reales de G-MAX, 30' ruta de los 4 frentes, 15' cierre y preguntas."
+    },
+    {
+     "id": "FU-2",
+     "entregable": "Grupo 2 nivelado en IA: asistencial (~22)",
+     "h": 2,
+     "fase": "F1",
+     "detalle": "Fundamentals presencial de 2 h para el Grupo 2: Dirección Médica, Enfermería y Laboratorio. Mismos temas y tiempos que el Grupo 1, con ejemplos del día a día clínico-asistencial."
+    }
+   ]
+  },
+  {
+   "id": "FSC",
+   "nombre": "Seguros y Cobranzas",
+   "carril": "det",
+   "frente": "A",
+   "composicion": "Seguros. Frente prioritario.",
+   "soluciones": [
+    {
+     "id": "FSC-1",
+     "entregable": "Inventario de procesos y logro inmediato de Seguros y Cobranzas",
+     "h": 4,
+     "fase": "F2",
+     "detalle": "Sesión presencial de 4 h con el líder y la mano derecha de Seguros. Estructura: 45' contexto y objetivos, 90' levantamiento de procesos, 75' construcción del logro inmediato, 30' cierre y siguientes pasos. Sin tocar los sistemas actuales del frente."
+    }
+   ]
+  },
+  {
+   "id": "ATP",
+   "nombre": "Atención al Paciente",
+   "carril": "det",
+   "frente": "A",
+   "composicion": "Atención al Paciente. Frente prioritario.",
+   "soluciones": [
+    {
+     "id": "ATP-1",
+     "entregable": "Inventario de procesos y logro inmediato de Atención al Paciente",
+     "h": 4,
+     "fase": "F2",
+     "detalle": "Sesión presencial de 4 h con el líder y la mano derecha del departamento. Misma estructura de 4 h que el resto de los frentes."
+    }
+   ]
+  },
+  {
+   "id": "RCO",
+   "nombre": "Resto corporativo",
+   "carril": "det",
+   "frente": "A",
+   "composicion": "Gerencia General, Administración y Tesorería, Informes de gestión gerencial, Logística, Almacén, Farmacia, Servicios Generales, Tecnología, Procesos y Recursos Humanos. Dos jornadas de 4 h.",
+   "soluciones": [
+    {
+     "id": "RCO-1",
+     "entregable": "Inventario de procesos y logro inmediato de 9 departamentos",
+     "h": 8,
+     "fase": "F3",
+     "detalle": "Dos jornadas presenciales de 4 h por volumen (9 departamentos: Gerencia General, Administración y Tesorería, Logística, Almacén con Almacén Quirófano, Farmacia con sus 3 sub-ubicaciones, Servicios Generales, Tecnología, Procesos y Recursos Humanos; Informes de gestión gerencial se levanta de forma transversal vía Gerencia General). Candidato a logro inmediato identificado en la ficha: la estructura del informe de gestión mensual."
+    }
+   ]
+  },
+  {
+   "id": "ASI",
+   "nombre": "Asistencial",
+   "carril": "det",
+   "frente": "A",
+   "composicion": "Dirección Médica (con Hemodiálisis), Enfermería y Laboratorio.",
+   "soluciones": [
+    {
+     "id": "ASI-1",
+     "entregable": "Inventario de procesos y logro inmediato del frente Asistencial",
+     "h": 4,
+     "fase": "F3",
+     "detalle": "Sesión presencial de 4 h con Dirección Médica (+ Hemodiálisis), Enfermería (4 sub-áreas) y Laboratorio."
+    }
+   ]
+  }
+ ],
+ "alcance": {
+  "titulo": "Un logro inmediato en cada uno de los 4 frentes.",
+  "subtitulo": "Nivelamos a las 51 personas y auditamos 22 departamentos, agrupados en **4 frentes** de trabajo presencial.",
+  "etiqueta_pasos": "Cada frente, cuatro pasos",
+  "pasos": [
+   "Entrevistamos al equipo sobre sus procesos reales.",
+   "Identificamos el cuello de botella más relevante.",
+   "Construimos en la sesión un logro inmediato aplicable.",
+   "Dejamos el inventario listo para el Mapa de Calor."
+  ],
+  "quien_construye": "Intezia levanta y construye cada logro en sesión presencial, con el líder y la mano derecha de cada departamento, sin tocar los sistemas actuales.",
+  "fuera_alcance": [
+   "La herramienta de IA a adoptar: la recomienda el Reporte Final.",
+   "Habilidades y Políticas, la ruta que sigue a la Detección.",
+   "Cambios en los sistemas actuales de cada frente."
+  ]
+ },
+ "fases": [
+  {
+   "id": "F0",
+   "descripcion": "Arranque: kick-off de 1 h"
+  },
+  {
+   "id": "F1",
+   "titulo": "Nivelación",
+   "rango": "Semana 1",
+   "descripcion": "Fundamentals en 2 grupos"
+  },
+  {
+   "id": "F2",
+   "titulo": "Prioritarios",
+   "rango": "Semana 2",
+   "descripcion": "los dos frentes clave"
+  },
+  {
+   "id": "F3",
+   "titulo": "Resto del mapa",
+   "rango": "Semanas 3 y 4",
+   "descripcion": "corporativo y asistencial",
+   "destacada": true
+  }
+ ],
+ "frentes": [
+  {
+   "id": "A",
+   "carril": "det",
+   "semanas": "S1-S4",
+   "etiqueta": "Los 4 frentes · S1-S4",
+   "areas_html": "Kick-off, Fundamentals y auditoría presencial",
+   "celdas": {
+    "F1": "Fundamentals presencial en 2 grupos: corporativo y operativo, y asistencial.",
+    "F2": "Seguros y Cobranzas (4 h) y Atención al Paciente (4 h), los dos frentes prioritarios.",
+    "F3": "Resto corporativo (8 h, en 2 jornadas) y Asistencial (4 h)."
+   }
+  }
+ ],
+ "ruta": {
+  "semanas_total": 4,
+  "tope_h_semana": 20,
+  "titulo": "Del kick-off al Reporte Final en 4 semanas.",
+  "subtitulo": "Semanas de trabajo desde el arranque, en modalidad presencial. El **Reporte Final** se entrega en la semana 4.",
+  "nota": "S = semana de trabajo desde el arranque, cuya fecha se acuerda con {cliente}. Las {h_total} h son una proyección de sesión: {h_f0} h de kick-off más {h_f1}, {h_f2} y {h_f3} h de las fases 1, 2 y 3. Los frentes se auditan en el orden de prioridad de la Gerencia General y el horario de cada sesión se acuerda con cada responsable.",
+  "hitos": [
+   {
+    "titulo": "Semana 1 · Nivelación",
+    "texto": "Kick-off de 1 h y Fundamentals en 2 grupos, de ~29 y ~22 personas."
+   },
+   {
+    "titulo": "Semana 2 · Prioritarios",
+    "texto": "Seguros y Cobranzas y Atención al Paciente: 4 h cada uno, con un logro inmediato."
+   },
+   {
+    "titulo": "Semana 3 · Resto corporativo",
+    "texto": "9 departamentos en 2 jornadas de 4 h, con un logro inmediato."
+   },
+   {
+    "titulo": "Semana 4 · Asistencial",
+    "texto": "Dirección Médica, Enfermería y Laboratorio: 4 h, con un logro inmediato."
+   },
+   {
+    "titulo": "Semana 4 · Reporte Final",
+    "texto": "Mapa de Calor, Índice de Madurez y hoja de ruta, entregados a la Gerencia General."
+   }
+  ]
+ },
+ "seguimiento": {
+  "tipo": "cierre",
+  "etiqueta": "Cierre",
+  "rango": "Reporte Final",
+  "texto": "Trabajo del equipo consultor",
+  "items": [
+   {
+    "dias": "Priorizar",
+    "texto": "Hallazgos por impacto y riesgo."
+   },
+   {
+    "dias": "Reportar",
+    "texto": "Diagnóstico y mapa de oportunidades."
+   },
+   {
+    "dias": "Proyectar",
+    "texto": "Hoja de ruta hacia Habilidades y Políticas."
+   }
+  ]
+ },
+ "inversion": {
+  "sin_garantia": true,
+  "duracion": "25 h de sesión presencial: kick-off (1 h), Fundamentals (4 h) y 4 frentes (20 h), en 4 semanas.",
+  "programa": [
+   "Servicio de Detección para G-MAX (DET-024): Fundamentals + 4 frentes de auditoría.",
+   "Presencial · Seguros y Cobranzas (4h), Atención al Paciente (4h), Resto corporativo (8h), Asistencial (4h).",
+   "Cobertura: los 22 departamentos de G-MAX en 4 frentes, con foco inicial en Seguros y Cobranzas y Atención al Paciente."
+  ],
+  "notas": [
+   "Modalidad presencial, en las oficinas de G-MAX, a coordinar con la Gerencia General.",
+   "El Reporte Final recomienda el ecosistema de IA y las licencias a adquirir; esta propuesta no incluye licencias.",
+   "Habilidades y Políticas, la ruta que sigue, no forman parte de esta inversión."
+  ]
+ },
+ "entregables": {
+  "titulo": "Lo que recibe G-MAX.",
+  "subtitulo": "Lo que se llevan: **{n_entregables_txt}** por sesión, más el Mapa de Calor y el Reporte Final con la hoja de ruta.",
+  "transversales": [
+   "Mapa de Calor e Índice de Madurez de los 4 frentes.",
+   "Reporte Final: mapa de oportunidades y hoja de ruta.",
+   "Recomendación de ecosistema de IA y de licencias."
+  ],
+  "valor_inmediato": [
+   "Semana 1: equipo nivelado con un lenguaje común de IA.",
+   "Semana 2: un logro inmediato en cada frente prioritario.",
+   "Semanas 3 y 4: un logro inmediato en los frentes restantes."
+  ]
+ },
+ "retorno": {
+  "modo": "metodo",
+  "posiciones": false,
+  "titulo": "Retorno esperado: decidir con datos.",
+  "subtitulo": "El Reporte Final estima el retorno de cada oportunidad con los datos que cada frente entrega en su sesión.",
+  "etiqueta_pasos": "Cómo se estima el retorno de cada oportunidad",
+  "pasos": [
+   {
+    "titulo": "Volumen",
+    "texto": "Cuántas veces se ejecuta cada proceso al mes, levantado con el equipo de cada frente."
+   },
+   {
+    "titulo": "Tiempo actual",
+    "texto": "Lo que toma hoy cada ejecución, medido en la sesión del frente."
+   },
+   {
+    "titulo": "Tiempo con la solución",
+    "texto": "Estimación del equipo consultor para cada oportunidad del Mapa de Calor."
+   },
+   {
+    "titulo": "Horas recuperables",
+    "texto": "Volumen por la diferencia de tiempos: una estimación referencial, sin compromiso de resultado."
+   },
+   {
+    "titulo": "Prioridad",
+    "texto": "Cada oportunidad se ordena por impacto, esfuerzo y riesgo."
+   }
+  ],
+  "etiqueta_metas": "Qué decide G-MAX con el Reporte Final",
+  "metas": [
+   {
+    "dias": "Licencias",
+    "texto": "Cuáles adquirir y cuáles no, con datos de sus propios frentes."
+   },
+   {
+    "dias": "Prioridades",
+    "texto": "Qué procesos mejorar primero, según impacto, esfuerzo y riesgo."
+   },
+   {
+    "dias": "Control",
+    "texto": "Qué herramienta usa cada puesto y qué datos salen de cada área."
+   }
+  ],
+  "etiqueta_destino": "Hacia dónde sigue la ruta",
+  "destino": [
+   {
+    "rotulo": "Ahora · Detección",
+    "texto": "Cada frente sale de su sesión con un **logro inmediato** que ya puede usar."
+   },
+   {
+    "rotulo": "Después · Habilidades",
+    "texto": "Capacitación práctica para que cada frente sostenga y escale lo que la Detección encontró."
+   },
+   {
+    "rotulo": "Más adelante · Políticas",
+    "texto": "Una política de uso de IA: qué herramienta usa cada puesto y qué información sale de cada área."
+   }
+  ],
+  "gancho": "Con el Reporte Final, {cliente_corto} decide qué licencias adquirir y qué procesos mejorar primero, con datos de sus propios frentes y no a ciegas."
+ },
+ "siglas_ok": [
+  "IA"
+ ],
+ "supuestos": [
+  "Calendario: el brief fija 8 sesiones del 12 de octubre al 2 de noviembre de 2026 y el Reporte Final en la primera semana de noviembre. En semanas relativas al arranque son 4 (la sesión Asistencial cae el lunes de la semana 4), no 3; el deck ya no lleva fechas ni horas (8-10 y 8-12), que siguen en brief.md. Confirmar con servicio y con cada responsable.",
+  "Kick-off de 1 h incluido en las 25 h (instrucción explícita del usuario del 01/10/2026; excepción a la convención general).",
+  "Cada sesión se presenta como un entregable (7 en total: kick-off, 2 grupos de Fundamentals y 4 frentes). El Mapa de Calor, el Índice de Madurez y el Reporte Final son trabajo del equipo consultor, sin sesión con el cliente ni horas propias: van como entregables transversales.",
+  "Retorno en modo método: la ficha no trae volúmenes ni tiempos por proceso; el Reporte Final los estima con lo que cada frente entregue en su sesión (estimación referencial, sin compromiso de resultado).",
+  "Retirado del deck por el formato compacto: slide de Impacto (caso propio del sector salud, Venemergencia sin nombrar, queda documentado en brief.md), Próximos pasos con calendario de fechas y horas, Cierre con el contacto de la asesora, y los 3 cronogramas por sesión (sus tiempos viven en programa.md).",
+  "Reglas de Detección que se conservan: sin certificado, sin garantía 30-60-90, sin pre-recomendar herramienta de IA (el Reporte Final la recomienda), sin dolor dramatizado ni citas, sin mencionar el producto propio de cobranza, y sin nombrar a Venemergencia.",
+  "El Grupo 1 de Fundamentals (~29 personas) supera el máximo de 25 por sesión del lineamiento de Detección; composición de los grupos definida por el usuario, no se modificó."
+ ],
+ "pendientes": [
+  "Definir inversión, descuento y total (campos vacíos para ventas; María ya anticipó un descuento de arranque).",
+  "Confirmar con María Iribarren las fechas y horas de cada sesión y el orden de los frentes; el deck solo lleva semanas y no muestra asesora ni contacto.",
+  "Confirmar si el Grupo 1 de Fundamentals (~29) se divide para respetar el máximo de 25 personas por sesión."
+ ]
+}

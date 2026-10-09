@@ -1,0 +1,35 @@
+/* Ajustes propios de esta propuesta (se enlaza después de habilidades-compacto.css). */
+
+/* ===========================================================================
+   DET-024 (Detección): cada frente muestra su composición (departamentos) bajo el nombre.
+   =========================================================================== */
+.s-scope .scope-panel { flex: 1; display: flex; flex-direction: column; padding: 18px 28px 6px; }
+.s-scope .scope-head { margin-bottom: 4px; }
+.s-scope .scope-rows { flex: 1; display: flex; flex-direction: column; }
+.s-scope .scope-rows li { flex: 1; padding: 0; }
+.s-scope .scope-rows .area { flex: 1 1 auto; padding-right: 22px; font-size: 18px; line-height: 1.2; }
+.s-scope .scope-rows .area em { font-size: 12.5px; }
+.s-scope .scope-rows .area .comp {
+  display: block;
+  margin-top: 5px;
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 12.5px;
+  line-height: 1.35;
+  color: rgba(0, 0, 0, 0.62);
+}
+.s-scope .scope-rows .units { --uw: 26px; --ug: 6px; height: 26px; }
+.s-scope .scope-rows .n { font-size: 26px; }
+
+/* ===========================================================================
+   Slide 5 · Entregables: con 7 entregables (la plantilla está pensada para 40+) las tarjetas del
+   catálogo quedaban diminutas y dejaban media página vacía. Se amplía la escala y se reparte la altura.
+   =========================================================================== */
+.s-deliv .deliv-carriles { margin-top: 34px; margin-bottom: 10px; }
+.s-deliv .dc { font-size: 13px; padding: 8px 18px; }
+.s-deliv .deliv-col { padding: 22px 24px 18px; min-height: 372px; }
+.s-deliv .da-name { font-size: 18px; line-height: 1.2; margin-bottom: 12px; }
+.s-deliv .da-name i { min-width: 32px; height: 32px; line-height: 32px; font-size: 15px; }
+.s-deliv .da li { font-size: 16px; line-height: 1.4; padding: 4px 0 4px 20px; }
+.s-deliv .da li::before { top: 13px; width: 8px; height: 8px; }
+.s-deliv .da + .da { margin-top: 20px; padding-top: 20px; }
