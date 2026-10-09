@@ -1,5 +1,45 @@
 # Brief · Marcelo Restrepo · Servicio de Habilidades (CAI-040)
 
+## Corrección 2026-10-08: propuesta combinada (mensajes + Cerebro Digital) en la plantilla v3 · VIGENTE
+
+**Pedido:** David (2026-10-08): «corrige la propuesta que te adjunté con el nuevo estándar que pautamos», con el PDF
+combinado «CAI-040 Monitoreo de mensajes y Cerebro Digital de marca personal con Claude» (8 slides, generado ese día
+fuera de este repositorio: une esta CAI-040 y la CAI-041) y las correcciones de **Keiber Quintana** en la reunión
+«Propuesta Marcelo» del mismo día.
+
+**Lo que se corrigió**
+
+| Corrección | Aplicación |
+|---|---|
+| Nuevo estándar v3: ni semanas ni sesiones (CLAUDE.md §4.23); «lo entregable, las fechas, es lo mismo que con el laboratorio» | Fuera «en 6 semanas», «Semanas 1 a 3/4 a 6», «2 sesiones, 4 h», el ritmo por sesiones, «Semana 1/3/4» del valor inmediato, «Hacia la semana 19», «6 sesiones de 2h» del programa y del valor por parte, y la «agenda de las sesiones». Ruta por fases (Mensajes, Cerebro) e hitos por evento; duración en horas |
+| «Restos de la plantilla» en la slide 5: «Para todas las áreas» (Marcelo es una persona) | La caja pasa a «Para todo el proyecto». También se escribieron para una persona los textos que decían «cada área» (subtítulo de la ruta, calendario de garantía, ritmo) |
+| «Falta un detalle del plan de Claude»: decir desde ya que probablemente haga falta un plan superior al básico, para que no se sienta como un costo escondido | «Cómo trabajamos»: «lo más probable es un plan superior al básico». Notas de la inversión: Max (desde USD 100 al mes, valor de lista a octubre de 2026) en lugar de Pro (USD 20 al mes). Paso 2 de próximos pasos: «con el plan que corresponda» |
+| «Revisa técnicamente» (TikTok) | Verificado en fuentes oficiales (abajo). La prueba de TikTok que mencionó Keiber queda pendiente: no se sabe su resultado |
+
+**Se conserva del PDF combinado:** 9 soluciones en 6 bloques (18 h: 12 h de mensajes y 6 h del Cerebro Digital), la
+reunión de arranque de 1 h aparte, sin facilidad de pago y el **valor por parte** (Parte 1 Clon digital, Parte 2 Redes
+sociales; la suma se calcula sola en el PDF). Para eso el generador ganó la opción `inversion.partes` (campos
+`PrecioParte1..N`; ver `plantillas/habilidades-compacto.md` §5). El PDF combinado queda en `_anterior-8-slides/` y la
+CAI-040 original (solo mensajes, v1, 6 slides) en `_anterior-6-slides/`.
+
+**Revisión técnica (fuentes consultadas el 2026-10-08):**
+- Claude in Chrome está disponible en todos los planes de pago (Pro, Max, Team, Enterprise) desde el 26/08/2026, no en
+  el plan gratuito, ni en otros navegadores Chromium ni en el celular (claude.com/blog/claude-in-chrome-generally-available,
+  support.claude.com/en/articles/12012173).
+- Las tareas en segundo plano siguen corriendo al cambiar de pestaña **mientras Chrome esté abierto** (centro de ayuda).
+  Las tareas programadas existen; corren con el computador encendido y Chrome abierto (lo dice el deck).
+- Planes (claude.com/pricing): Pro USD 20 al mes (17 con pago anual); Max desde USD 100 al mes, con 5 o 20 veces el uso
+  de Pro. Recorrer miles de mensajes consume mucho uso: de ahí la recomendación de Max.
+- TikTok: falta confirmar con su cuenta que la bandeja de mensajes se lee desde la versión web sin verificaciones.
+  Keiber: «hay que sumar la prueba; hicimos prueba de esta aquí». Preguntar el resultado para decirlo en el deck.
+- Riesgos que no van en el deck: un mensaje ajeno puede traer instrucciones ocultas (por eso Claude solo lee y avisa) y
+  el uso automatizado de las redes puede chocar con sus condiciones de uso.
+
+**Pendientes:** el resultado de la prueba de TikTok; el valor de cada parte (ventas); confirmar con Marcelo el plan de
+Claude y quién lo paga; si la CAI-041 suelta se retira, porque ahora es la Parte 1 de esta propuesta.
+
+---
+
 > Generado por `scripts/generar-habilidades-compacto.py` la primera vez (no se sobrescribe después). Completar a mano lo que falte; los datos del deck viven en `datos.json`.
 
 ## Datos administrativos
@@ -9,10 +49,12 @@
 - **División Intezia**: `educacion`
 - **Servicio (§4.1a)**: `habilidades`
 - **Alianza**: `no`
-- **Tipo de documento**: categoría de catálogo Capacitación In-Company (`CAI-040`), presentada al cliente como **propuesta de proyecto**; formato compacto de 6 slides (con hoja de inversión (campos de precio vacíos para ventas))
-- **Eje temático**: Monitoreo diario de los mensajes directos de Instagram y TikTok con Claude, desde el navegador, para que Marcelo no pierda personas clave, invitaciones a eventos ni propuestas. Claude solo lee y avisa; no responde
+- **Tipo de documento**: categoría de catálogo Capacitación In-Company (`CAI-040`), presentada al cliente como **propuesta de proyecto**; formato compacto v3 de 8 slides (hoja de inversión con valor por parte, sin facilidad de pago; campos de valor vacíos para ventas)
+- **Eje temático**: Monitoreo diario de los mensajes directos de Instagram y TikTok con Claude (solo lee y avisa) y Cerebro Digital de marca personal para preparar videos y diseños, construidos en vivo con Marcelo
 <!--auto:inicio-->
-- **Alcance**: 6 soluciones en 3 bloques · 12 h de sesión · 3 semanas de trabajo desde el arranque · seguimiento a 30, 60 y 90 días
+- **Alcance**: 9 soluciones en 6 bloques · 18 h de trabajo · seguimiento a 30, 60 y 90 días
+- **Orden de las slides**: 1 Portada · 2 Alcance · 3 Ruta · 4 Cómo trabajamos · 5 Entregables · 6 Retorno · 7 Inversión · 8 Próximos pasos
+- **Asesora comercial que ve el cliente (última slide)**: María Iribarren, Asesora comercial · miribarren@intezia.com · +58 414 0570056
 <!--auto:fin-->
 - **Estado**: `Enviada` (2026-10-06, por convención: terminado = enviado)
 - **Asesora comercial**: María Iribarren · +58 414-0570056 · miribarren@intezia.com (datos de `fivenca-acompanamiento/`; el deck no lleva slide de cierre ni contacto). El usuario dijo solo «María»: confirmar que es la misma.

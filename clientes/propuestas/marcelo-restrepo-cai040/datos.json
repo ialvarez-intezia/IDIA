@@ -1,5 +1,5 @@
 {
- "version": 1,
+ "version": 3,
  "cliente": {
   "nombre": "Marcelo Restrepo",
   "slug": "marcelo-restrepo-cai040",
@@ -8,23 +8,25 @@
  },
  "division": "educacion",
  "alianza": false,
- "meta_tipo": "Capacitación In-Company · Monitoreo de mensajes con Claude · 6 sesiones de 2 h · 12 h",
+ "eje": "Monitoreo diario de los mensajes directos de Instagram y TikTok con Claude (solo lee y avisa) y Cerebro Digital de marca personal para preparar videos y diseños, construidos en vivo con Marcelo",
+ "origen": "PDF de la propuesta combinada CAI-040 (generado el 08/10/2026 fuera de este repositorio: une CAI-040 y CAI-041), contexto comercial de la asesora del 06/10/2026 y correcciones de Keiber Quintana del 08/10/2026",
+ "fuente_insumo": "Propuesta CAI-040 combinada (PDF de 8 slides) y contexto comercial de la asesora",
+ "omitir": [
+  "pago"
+ ],
  "vocabulario": {
   "area": [
    "bloque",
    "bloques"
   ]
  },
- "eje": "Monitoreo diario de los mensajes directos de Instagram y TikTok con Claude, desde el navegador, para que Marcelo no pierda personas clave, invitaciones a eventos ni propuestas. Claude solo lee y avisa; no responde",
- "origen": "Contexto comercial compartido por el usuario el 06/10/2026 (conversación de la asesora con el cliente). Propuesta 1 de 2; la segunda (Cerebro Digital de marca personal) va aparte. Sin Ficha Comercial",
- "fuente_insumo": "Contexto comercial de la asesora; instrucción directa del usuario",
  "portada": {
   "titulo_lineas": [
-   "Monitoreo diario de mensajes",
-   "directos de Instagram y TikTok"
+   "Monitoreo de mensajes y",
+   "Cerebro Digital de marca personal"
   ],
   "titulo_destacado": "con Claude",
-  "lead": "Este proyecto deja a **{cliente_corto}** al tanto de lo que importa en sus mensajes directos. **Claude** revisa cada día su bandeja de Instagram y de TikTok, detecta a las personas clave, las invitaciones y las propuestas, y le avisa. No responde nada en su nombre.",
+  "lead": "Este proyecto deja a Marcelo al tanto de lo que importa en sus mensajes directos y construye con él su **Cerebro Digital**, un asistente en Claude que conoce su marca. En los mensajes, Claude lee y avisa; no responde.",
   "hechos": [
    {
     "num": "2 redes",
@@ -43,15 +45,22 @@
     ]
    },
    {
-    "num": "1 aviso",
-    "texto": "al día con lo importante: personas clave, invitaciones a eventos y propuestas.",
+    "num": "1 cerebro",
+    "texto": "con su marca guardada en Claude: su voz, su audiencia y su estilo visual.",
     "resuelto_por": [
-     "CA-1",
-     "CA-2"
+     "MA-1"
+    ]
+   },
+   {
+    "num": "2 usos",
+    "texto": "videos y diseños: guion y plan de edición, y piezas con su identidad visual.",
+    "resuelto_por": [
+     "VI-1",
+     "DI-1"
     ]
    }
   ],
-  "fuente": "Datos declarados por {cliente_corto} en la conversación comercial con Intezia."
+  "fuente": "Datos declarados por Marcelo en la conversación comercial con Intezia."
  },
  "carriles": [
   {
@@ -65,165 +74,238 @@
   {
    "id": "CA",
    "nombre": "Criterio y aviso diario",
+   "para_que": "Acordar qué es importante y recibir un solo aviso al día con ambas redes",
    "carril": "claude",
    "frente": "A",
-   "composicion": "Guía de prioridad y aviso diario único. 2 sesiones, 4 h.",
+   "composicion": "Guía de prioridad y aviso diario único.",
    "soluciones": [
     {
      "id": "CA-1",
      "entregable": "Guía de prioridad: qué se avisa y con qué urgencia",
      "h": 2,
      "fase": "F1",
-     "detalle": "Sesión 1 de 2 h, en vivo con Marcelo. Define qué es importante: personas clave (quiénes y de qué tipo de organización), invitaciones a eventos y propuestas de trabajo o alianzas; qué es ruido y se deja pasar; cómo se ordena la urgencia (hoy, esta semana, sin prisa) y cómo quiere recibir el aviso. Levanta la línea base: cuánto tiempo dedica hoy a revisar sus mensajes y cuántos mensajes llegan por semana. Prueba de acceso: Claude abre Instagram y TikTok en su navegador, con su sesión, y confirma qué puede leer en cada red. Entrega la guía de prioridad escrita, que alimenta todas las revisiones."
+     "detalle": "Referencia interna para el kickoff (1 bloque de 2 h, en vivo con Marcelo). Define qué es importante: personas clave (quiénes y de qué tipo de organización), invitaciones a eventos y propuestas de trabajo o alianzas; qué es ruido; cómo se ordena la urgencia (hoy, esta semana, sin prisa) y cómo quiere recibir el aviso. Levanta la línea base: cuánto tiempo dedica hoy a revisar sus mensajes y cuántos mensajes llegan por semana. Prueba de acceso: Claude abre Instagram y TikTok en su navegador, con su sesión, y confirma qué puede leer en cada red. Entrega la guía de prioridad escrita."
     },
     {
      "id": "CA-2",
      "entregable": "Aviso diario único de Instagram y TikTok",
      "h": 2,
-     "fase": "F3",
-     "detalle": "Sesión 6 de 2 h. Une las dos revisiones en un solo aviso al día: quién escribió, qué pide, por qué importa, en qué red está y cuán urgente es. Fija la hora de la revisión diaria y su ejecución programada en el navegador. Marcelo la corre por sí mismo con Intezia al lado, ajusta la guía de prioridad con lo que vio en la semana y deja claro qué hacer si un día no corre (computador apagado, sesión cerrada). Entrega el aviso diario funcionando y la rutina para mantenerlo."
+     "fase": "F1",
+     "detalle": "Referencia interna (2 h). Une las dos revisiones en un solo aviso al día: quién escribió, qué pide, por qué importa, en qué red está y cuán urgente es. Fija la hora de la revisión diaria y su ejecución programada en el navegador (corre con el computador encendido y Chrome abierto). Marcelo la corre por sí mismo con Intezia al lado, ajusta la guía con lo que vio y deja claro qué hacer si un día no corre."
     }
    ]
   },
   {
    "id": "IG",
    "nombre": "Instagram",
+   "para_que": "Revisar cada día sus mensajes de Instagram y rescatar lo que quedó enterrado",
    "carril": "claude",
    "frente": "A",
-   "composicion": "Revisión diaria y rescate de la bandeja. 2 sesiones, 4 h.",
+   "composicion": "Revisión diaria y rescate de la bandeja.",
    "soluciones": [
     {
      "id": "IG-1",
      "entregable": "Revisión diaria de mensajes directos de Instagram",
      "h": 2,
      "fase": "F1",
-     "detalle": "Sesión 2 de 2 h. Se escribe con Marcelo la instrucción que Claude sigue cada día: abre la bandeja de mensajes directos de Instagram en el navegador de Marcelo, lee los mensajes nuevos, los clasifica con la guía de prioridad y prepara la lista de lo importante. Solo lee y avisa: no responde, no envía, no abre enlaces ni archivos de los mensajes. Se prueba sobre su bandeja real y se afina con los resultados. Entrega la revisión diaria de Instagram funcionando."
+     "detalle": "Referencia interna (2 h). Se escribe con Marcelo la instrucción que Claude sigue cada día: abre la bandeja de mensajes directos de Instagram en su navegador, lee los mensajes nuevos, los clasifica con la guía de prioridad y prepara la lista de lo importante. Solo lee y avisa: no responde, no envía, no abre enlaces ni archivos. Se prueba sobre su bandeja real."
     },
     {
      "id": "IG-2",
      "entregable": "Rescate de oportunidades de la bandeja de Instagram",
      "h": 2,
-     "fase": "F2",
-     "detalle": "Sesión 3 de 2 h. Recorre por lotes la bandeja acumulada de Instagram (miles de mensajes sin responder) para encontrar lo que quedó enterrado: personas clave, invitaciones y propuestas que nunca se atendieron. Se arma con Marcelo el orden de los lotes (de lo más reciente a lo más antiguo, o por tipo de remitente) y se corre el primero en la sesión; los siguientes los corre él con la instrucción ya construida. Entrega la primera lista de oportunidades rescatadas, ordenada por urgencia."
+     "fase": "F1",
+     "detalle": "Referencia interna (2 h). Recorre por lotes la bandeja acumulada de Instagram (miles de mensajes sin responder) para encontrar personas clave, invitaciones y propuestas que nunca se atendieron. Se corre el primer lote con Intezia; los siguientes los corre Marcelo. Entrega la primera lista de oportunidades rescatadas, ordenada por urgencia."
     }
    ]
   },
   {
    "id": "TT",
    "nombre": "TikTok",
+   "para_que": "Lo mismo en TikTok, sin abrir la bandeja a mano",
    "carril": "claude",
    "frente": "A",
-   "composicion": "Revisión diaria y rescate de la bandeja. 2 sesiones, 4 h.",
+   "composicion": "Revisión diaria y rescate de la bandeja.",
    "soluciones": [
     {
      "id": "TT-1",
      "entregable": "Revisión diaria de mensajes directos de TikTok",
      "h": 2,
-     "fase": "F2",
-     "detalle": "Sesión 4 de 2 h. Misma revisión que en Instagram aplicada a TikTok: Claude abre la bandeja de mensajes en el navegador de Marcelo, lee lo nuevo y lo clasifica con la guía de prioridad. Esta es la red que se confirma con pruebas reales sobre su cuenta: si TikTok limita lo que se puede leer desde el navegador (bandeja no disponible en la versión web, verificaciones de seguridad), se ajusta aquí el alcance con Marcelo antes de seguir. Solo lee y avisa. Entrega la revisión diaria de TikTok funcionando."
+     "fase": "F1",
+     "detalle": "Referencia interna (2 h). Misma revisión que en Instagram aplicada a TikTok. Es la red que se confirma con pruebas reales sobre su cuenta: si TikTok limita lo que se puede leer desde el navegador (bandeja no disponible en la versión web, verificaciones de seguridad), se ajusta el alcance con Marcelo antes de seguir. Solo lee y avisa."
     },
     {
      "id": "TT-2",
      "entregable": "Rescate de oportunidades de la bandeja de TikTok",
      "h": 2,
-     "fase": "F3",
-     "detalle": "Sesión 5 de 2 h. Recorre por lotes la bandeja acumulada de TikTok con el mismo método del rescate de Instagram, sobre mensajes sin responder. Se corre el primer lote en la sesión y Marcelo sigue con los demás. Entrega la primera lista de oportunidades rescatadas de TikTok, ordenada por urgencia."
+     "fase": "F1",
+     "detalle": "Referencia interna (2 h). Recorre por lotes la bandeja acumulada de TikTok con el mismo método del rescate de Instagram. Entrega la primera lista de oportunidades rescatadas de TikTok, ordenada por urgencia."
+    }
+   ]
+  },
+  {
+   "id": "MA",
+   "nombre": "Marca",
+   "para_que": "Dejar su voz, su audiencia y su marca guardadas en Claude con memoria propia",
+   "carril": "claude",
+   "frente": "A",
+   "composicion": "Propósito, voz y audiencia, y su cerebro en Claude.",
+   "soluciones": [
+    {
+     "id": "MA-1",
+     "entregable": "Project de Claude (memoria propia) con su voz y su marca",
+     "h": 2,
+     "fase": "F2",
+     "detalle": "Referencia interna (2 h). Qué es un Cerebro Digital y fundamentos de Claude. Define el propósito de su cerebro de marca y deja por escrito su voz y tono, su audiencia, sus pilares de contenido, sus formatos y lo que nunca diría. Carga en un Project de Claude ese documento, sus mejores guiones y videos, ejemplos de diseño y su identidad visual, y verifica con una pieza real. No se carga contenido sin publicar ni datos de terceros. Línea base del tiempo por pieza. Requiere que Marcelo traiga su material desde la reunión de arranque."
+    }
+   ]
+  },
+  {
+   "id": "VI",
+   "nombre": "Video",
+   "para_que": "Preparar el guion y el plan de edición de cada video con su voz",
+   "carril": "claude",
+   "frente": "A",
+   "composicion": "Guion, plan de edición y subtítulos.",
+   "soluciones": [
+    {
+     "id": "VI-1",
+     "entregable": "Instrucción reutilizable de video: guion y plan de edición",
+     "h": 2,
+     "fase": "F2",
+     "detalle": "Referencia interna (2 h). Qué es una Skill (instrucción reutilizable). Construye la Skill de video: de una idea y su voz, el guion con gancho, apertura, desarrollo y cierre; el plan de edición (cortes, ritmo, textos en pantalla); los subtítulos, y el título y la descripción para cada red. Se prueba con un video real. Claude prepara y propone; el montaje lo hace Marcelo en su herramienta de edición."
+    }
+   ]
+  },
+  {
+   "id": "DI",
+   "nombre": "Diseño",
+   "para_que": "Diseñar carruseles y portadas con su identidad visual",
+   "carril": "claude",
+   "frente": "A",
+   "composicion": "Carruseles y portadas con su identidad.",
+   "soluciones": [
+    {
+     "id": "DI-1",
+     "entregable": "Instrucción reutilizable de diseño: carruseles y portadas",
+     "h": 2,
+     "fase": "F2",
+     "detalle": "Referencia interna (2 h). Construye la Skill de diseño: carruseles y portadas con su identidad visual, diseñados con Claude y exportables. Se confirma qué funciones de diseño de Claude incluye su plan. Se prueba con una pieza real. Ajuste final del cerebro y plan de uso semanal."
     }
    ]
   }
  ],
  "alcance": {
-  "titulo": "Seis soluciones para no perder lo importante.",
-  "subtitulo": "**Claude** revisa cada día los mensajes directos de **Instagram y TikTok** y avisa solo de lo que importa.",
-  "etiqueta_pasos": "Cómo trabajamos",
-  "pasos": [
-   "Acuerda qué es importante: personas clave, eventos y propuestas.",
-   "Claude revisa Instagram desde su navegador, solo para leer y avisar.",
-   "Suma TikTok y rescata lo que quedó enterrado en las bandejas.",
-   "Une todo en un aviso diario y lo deja funcionando solo."
-  ],
-  "quien_construye": "Se construye **con {cliente_corto}, en sesiones en vivo** y sobre sus bandejas reales, hasta que lo usa solo en su día a día.",
+  "titulo": "Nueve soluciones para mensajes y marca.",
+  "subtitulo": "**Claude** revisa cada día sus mensajes directos y guarda la marca de Marcelo para sus **videos y diseños**.",
   "fuera_alcance": [
-   "Responder, enviar o publicar mensajes en su nombre: Claude solo lee y avisa.",
-   "Abrir enlaces o archivos recibidos en los mensajes.",
-   "Licencias de Claude, que van aparte."
+   "Responder, enviar o publicar mensajes en su nombre, y abrir sus enlaces o archivos: Claude no actúa sobre los mensajes.",
+   "Montar el video: lo hace Marcelo en su herramienta de edición.",
+   "Publicar en sus redes: el cerebro prepara y Marcelo decide.",
+   "Las licencias de Claude: van aparte (detalle en la inversión)."
   ]
+ },
+ "metodo": {
+  "pasos": [
+   {
+    "titulo": "Construimos",
+    "texto": "Con Marcelo, en vivo y con su contenido real."
+   },
+   {
+    "titulo": "Probamos",
+    "texto": "Sobre sus bandejas y sus piezas reales, hasta que funcione."
+   },
+   {
+    "titulo": "Adoptamos",
+    "texto": "Marcelo lo usa solo, cada día."
+   },
+   {
+    "titulo": "Medimos",
+    "texto": "El tiempo recuperado contra la línea base, a 30, 60 y 90 días."
+   }
+  ],
+  "por_que_orden": "Primero se ordenan los mensajes, que es donde hoy se pierden las oportunidades; después se construye el Cerebro Digital de su marca.",
+  "quien_construye": "Se construye con **Marcelo, en vivo** y sobre sus bandejas y su contenido reales, hasta que lo usa solo en su día a día.",
+  "practica": [
+   {
+    "titulo": "Claude solo lee y avisa",
+    "texto": "No responde, no envía ni abre enlaces: un mensaje ajeno nunca es una instrucción."
+   },
+   {
+    "titulo": "Claude prepara, Marcelo decide",
+    "texto": "Prepara guion, edición y diseños; Marcelo monta y publica."
+   },
+   {
+    "titulo": "Desde su navegador y su plan",
+    "texto": "Corre con el computador y Chrome abiertos; por el volumen, lo más probable es un plan superior al básico."
+   }
+  ],
+  "datos": "Los mensajes contienen datos de terceros: Claude solo los lee y no actúa sobre ellos. En el cerebro no se carga contenido sin publicar ni datos de terceros, solo la marca y las piezas de Marcelo."
  },
  "fases": [
   {
    "id": "F1",
-   "titulo": "Base",
-   "rango": "Semana 1",
-   "descripcion": "criterio e Instagram"
-  },
-  {
-   "id": "F2",
-   "titulo": "Redes",
-   "rango": "Semana 2",
-   "descripcion": "rescate y TikTok",
+   "titulo": "Mensajes",
+   "descripcion": "criterio, Instagram y TikTok",
    "destacada": true
   },
   {
-   "id": "F3",
-   "titulo": "Rutina",
-   "rango": "Semana 3",
-   "descripcion": "aviso único y uso propio"
+   "id": "F2",
+   "titulo": "Cerebro",
+   "descripcion": "marca, video y diseño"
   }
  ],
  "frentes": [
   {
    "id": "A",
    "carril": "claude",
-   "semanas": "S1-S3",
-   "etiqueta": "En vivo con Marcelo",
-   "areas_html": "Criterio y aviso, Instagram y TikTok",
+   "nombre": "En vivo con Marcelo",
    "celdas": {
-    "F1": "Guía de prioridad y revisión diaria de Instagram, probadas sobre su bandeja real.",
-    "F2": "Rescate de la bandeja acumulada de Instagram y revisión diaria de TikTok.",
-    "F3": "Rescate de la bandeja de TikTok y un único aviso diario con ambas redes."
+    "F1": "Guía de prioridad, Instagram y TikTok probados en su bandeja real y un aviso diario único.",
+    "F2": "Su marca en un Project de Claude e instrucciones de video y diseño con su contenido real."
    }
   }
  ],
  "ruta": {
-  "semanas_total": 3,
-  "tope_h_semana": 20,
-  "titulo": "Del criterio al aviso diario en 3 semanas.",
-  "subtitulo": "Semanas desde el arranque, con **seguimiento y garantía a 30, 60 y 90 días** tras el cierre de las sesiones.",
-  "nota": "S = semana de trabajo desde el arranque, cuya fecha se acuerda con {cliente}. Las {h_total} h son una proyección de sesión: dos sesiones de 2 h por semana ({h_f1} h en cada fase). El kick-off de 1 h es aparte y no suma horas.",
+  "titulo": "Mensajes y Cerebro Digital, en dos fases.",
+  "subtitulo": "El calendario se acuerda en la reunión de arranque. La **garantía y el seguimiento** a 30, 60 y 90 días corren desde el cierre del proyecto.",
+  "nota": "Las {h_total} horas de trabajo son una proyección: {h_f1} h de mensajes y {h_f2} h del Cerebro Digital. La reunión de arranque (1 h) va aparte y no suma horas.",
   "hitos": [
    {
-    "titulo": "Kick-off · aparte",
-    "texto": "1 h para dejar listo su navegador y acordar la agenda de las sesiones."
+    "titulo": "Arranque",
+    "texto": "1 h, aparte: su navegador listo, su material reunido y el calendario acordado."
    },
    {
-    "titulo": "Semana 1 · Criterio",
-    "texto": "Guía de prioridad acordada y primera revisión real de su bandeja de Instagram."
+    "titulo": "Mensajes",
+    "texto": "Guía de prioridad, Instagram, TikTok y un aviso diario único, funcionando."
    },
    {
-    "titulo": "Semana 2 · TikTok",
-    "texto": "Oportunidades rescatadas en Instagram y revisión diaria de TikTok en marcha."
+    "titulo": "Cerebro Digital",
+    "texto": "Su marca en un Project de Claude y las instrucciones de video y de diseño."
    },
    {
-    "titulo": "Semana 3 · Aviso diario",
-    "texto": "Un solo aviso al día con lo importante de ambas redes, funcionando."
-   },
-   {
-    "titulo": "30 · 60 · 90 días",
-    "texto": "Seguimiento: uso diario, ajustes del criterio y tiempo recuperado."
+    "titulo": "Cierre",
+    "texto": "Marcelo usa el aviso y el cerebro por su cuenta; empieza la garantía."
    }
   ]
  },
+ "logistica": {
+  "modalidad": "En vivo con Marcelo, en remoto o presencial, según se acuerde al arrancar.",
+  "participantes": "Una sola persona: Marcelo, acompañado por Intezia en todo el proyecto.",
+  "ritmo": "Según su agenda de contenido, sin frenar sus publicaciones.",
+  "arranque": "La fecha la fija Marcelo; la reunión de arranque (1 h, aparte) deja listo su navegador y su material."
+ },
  "seguimiento": {
   "rango": "30, 60 y 90 días",
-  "texto": "Seguimiento desde el cierre de las sesiones",
+  "texto": "Seguimiento desde el cierre del proyecto",
   "items": [
    {
     "dias": "30 días",
-    "texto": "Uso diario del aviso"
+    "texto": "Uso diario del aviso y del cerebro"
    },
    {
     "dias": "60 días",
-    "texto": "Ajustes del criterio"
+    "texto": "Ajustes del criterio y nuevas construcciones"
    },
    {
     "dias": "90 días",
@@ -231,92 +313,59 @@
    }
   ]
  },
- "inversion": {
-  "notas": [
-   "La revisión corre desde el navegador de {cliente_corto}: requiere el computador encendido y el navegador abierto a la hora acordada.",
-   "Claude solo lee y avisa: no responde, no envía y no abre enlaces ni archivos de los mensajes."
-  ],
-  "licencias": {
-   "titulo": "Licenciamiento · aparte de esta inversión",
-   "tarjetas": [
-    {
-     "nombre": "Claude · plan de pago de Marcelo",
-     "color": "amarillo",
-     "texto": "{cliente_corto} necesita su cuenta de **Claude** con un plan de pago. Recorrer miles de mensajes consume uso del plan: el plan adecuado se define en la **primera sesión**."
-    }
-   ],
-   "nota": "Esta propuesta no incluye precios de lista: dependen del plan que se elija y el cliente los confirma con el proveedor. Pueden variar."
-  },
-  "programa": [
-   "Monitoreo diario de mensajes directos con Claude para Marcelo Restrepo (CAI-040).",
-   "6 sesiones de 2h en vivo con Marcelo, en 3 semanas. Modalidad a coordinar.",
-   "12h totales de sesión, más 1h de kick-off aparte. Licencias aparte."
-  ]
- },
  "entregables": {
   "titulo": "Lo que recibe Marcelo.",
   "subtitulo": "Lo que se llevan: **{n_entregables_txt}** en {n_areas_txt}, más el seguimiento a {rango_seguimiento} que mide su efecto.",
+  "etiqueta_transversales": "Para todo el proyecto",
+  "etiqueta_valor": "Valor inmediato",
   "transversales": [
-   "Línea base del tiempo que hoy dedica a revisar mensajes.",
+   "Línea base del tiempo en revisar mensajes y en cada pieza.",
    "Criterio de uso seguro: Claude solo lee y avisa.",
    "Seguimiento a 30, 60 y 90 días con medición del tiempo."
   ],
   "valor_inmediato": [
-   "Semana 1: guía de prioridad e Instagram bajo revisión.",
-   "Semana 2: bandeja de Instagram rescatada y TikTok en marcha.",
-   "Semana 3: un aviso diario con lo importante de ambas redes."
-  ],
-  "columnas_por_carril": [
-   3
+   "Al arrancar: guía de prioridad e Instagram en revisión.",
+   "Al cerrar los mensajes: un aviso diario con ambas redes.",
+   "Con el cerebro: su marca cargada y un primer guion."
   ]
  },
  "retorno": {
   "modo": "metodo",
   "posiciones": false,
-  "titulo": "Retorno esperado: tiempo y oportunidades.",
-  "subtitulo": "Se calcula con los datos de {cliente_corto}, se confirma con la línea base de la primera sesión y se mide a 30, 60 y 90 días.",
+  "titulo": "Retorno esperado: tiempo y más contenido.",
+  "subtitulo": "Se calcula con los datos de Marcelo, se confirma con la línea base del arranque y se mide a 30, 60 y 90 días.",
   "etiqueta_pasos": "Cómo se calcula",
-  "etiqueta_metas": "Metas, desde el cierre de las sesiones",
-  "destino": [
-   {
-    "rotulo": "Oportunidades a tiempo",
-    "texto": "Cada persona clave, invitación o propuesta llega a **{cliente_corto}** cuando todavía se puede atender."
-   },
-   {
-    "rotulo": "Menos tiempo en bandejas",
-    "texto": "Si el tiempo se libera, puede dedicarlo a **crear contenido** y a responder lo que de verdad importa."
-   },
-   {
-    "rotulo": "Una revisión que crece",
-    "texto": "Con el resultado medido, {cliente_corto} decide si amplía lo que Claude revisa por él."
-   }
-  ],
   "pasos": [
    {
-    "titulo": "Mensajes por semana",
-    "texto": "Cuántos mensajes directos llegan a cada red cada semana."
+    "titulo": "Volumen semanal",
+    "texto": "Cuántos mensajes llegan a cada red y cuántas piezas publica Marcelo cada semana."
    },
    {
-    "titulo": "Tiempo actual de revisión",
-    "texto": "Cuánto dedica hoy a revisarlos. Se mide en la primera sesión y es la **línea base**."
+    "titulo": "Tiempo actual",
+    "texto": "Cuánto dedica hoy a revisar mensajes y a preparar cada pieza. Es la línea base."
    },
    {
-    "titulo": "Mensajes importantes avisados",
+    "titulo": "Oportunidades avisadas",
     "texto": "Cuántas personas clave, invitaciones y propuestas detecta Claude cada semana."
    },
    {
     "titulo": "Oportunidades atendidas",
-    "texto": "Cuántas de esas oportunidades {cliente_corto} responde o agenda a tiempo."
+    "texto": "Cuántas de esas oportunidades Marcelo responde o agenda a tiempo."
    },
    {
-    "titulo": "Horas recuperadas a la semana",
-    "texto": "Diferencia entre el tiempo actual de revisión y el que toma leer el aviso diario."
+    "titulo": "Tiempo con Claude",
+    "texto": "Lo que toma leer el aviso diario y preparar una pieza con el cerebro ya en uso."
+   },
+   {
+    "titulo": "Horas recuperadas",
+    "texto": "Diferencia entre el tiempo actual y el tiempo con Claude, por semana, y las piezas adicionales que permite."
    }
   ],
+  "etiqueta_metas": "Calendario de garantía, desde el cierre del proyecto",
   "metas": [
    {
     "dias": "30 días",
-    "texto": "El aviso diario en uso real, con las dos redes cubiertas."
+    "texto": "El aviso diario en uso real, con las dos redes cubiertas, y el cerebro aplicado en cada pieza."
    },
    {
     "dias": "60 días",
@@ -324,35 +373,87 @@
    },
    {
     "dias": "90 días",
-    "texto": "Medición del tiempo recuperado y de las oportunidades atendidas."
+    "texto": "Medición del tiempo recuperado, de las oportunidades atendidas y de las piezas adicionales."
    }
   ],
-  "gancho": "Hacia la semana {semana_medicion} ({semanas} semanas de trabajo más 90 días de seguimiento), {cliente_corto} contará con su tiempo recuperado y sus oportunidades atendidas medidos."
+  "destino": [
+   {
+    "rotulo": "Oportunidades a tiempo",
+    "texto": "Cada persona clave, invitación o propuesta llega a Marcelo cuando todavía se puede atender."
+   },
+   {
+    "rotulo": "Más contenido",
+    "texto": "Si el tiempo se libera, puede dedicarlo a crear más piezas con su voz, sin trabajar más horas."
+   },
+   {
+    "rotulo": "Un sistema que crece",
+    "texto": "Con el resultado medido, Marcelo decide si amplía lo que Claude revisa y prepara por él."
+   }
+  ],
+  "gancho": "A los 90 días del cierre, Marcelo contará con su tiempo recuperado y sus oportunidades atendidas, medidos."
  },
- "siglas_ok": [
-  "IA"
- ],
+ "inversion": {
+  "programa": [
+   "Monitoreo de mensajes y Cerebro Digital de marca personal con Claude para Marcelo Restrepo (CAI-040).",
+   "Redes sociales (monitoreo de mensajes): 12 h. Clon digital (Cerebro Digital): 6 h.",
+   "18 h de trabajo, más 1 h de reunión de arranque aparte. Modalidad a coordinar."
+  ],
+  "notas": [
+   "Licencias de Claude, aparte: por el volumen de mensajes, lo más probable es que Marcelo necesite el plan Max (desde USD 100 al mes, valor de lista a octubre de 2026) en lugar de Pro (USD 20 al mes).",
+   "Garantía 30-60-90: seguimiento a 30, 60 y 90 días desde el cierre del proyecto, con las soluciones en uso."
+  ],
+  "partes": [
+   {
+    "rotulo": "Parte 1",
+    "nombre": "Clon digital",
+    "texto": "Cerebro Digital de marca personal · 6 h"
+   },
+   {
+    "rotulo": "Parte 2",
+    "nombre": "Redes sociales",
+    "texto": "Monitoreo de mensajes de Instagram y TikTok · 12 h"
+   }
+  ]
+ },
+ "proximos_pasos": {
+  "asesora": {
+   "nombre": "María Iribarren",
+   "cargo": "Asesora comercial",
+   "correo": "miribarren@intezia.com",
+   "telefono": "+58 414 0570056"
+  },
+  "pasos": [
+   {
+    "titulo": "Fecha de arranque",
+    "texto": "Confirmamos con Marcelo la fecha de la reunión de arranque."
+   },
+   {
+    "titulo": "Cuenta y navegador",
+    "texto": "Dejamos lista su cuenta de Claude con el plan que corresponda, preparamos su navegador y reunimos su material."
+   },
+   {
+    "titulo": "Reunión de arranque",
+    "texto": "Una hora para alinear el criterio, ver sus bandejas y su identidad visual, y acordar el calendario."
+   }
+  ]
+ },
+ "siglas_ok": [],
+ "frases_ok": [],
  "supuestos": [
-  "Código CAI-040 dado por el usuario (no aparece en el repositorio). División Educación y alianza «no» inferidas: cliente profesional individual (creador de contenido de finanzas) sin vínculo con Fundación ni alianza. Asesora María (María Iribarren, la de Fivenca): confirmar que es ella. Sin Ficha Comercial: todo sale del contexto comercial que pasó el usuario.",
-  "Esta es la propuesta 1 de 2 que pidió la asesora. La segunda (Cerebro Digital enfocado en su marca personal, para editar videos y hacer diseños) va en otra propuesta y no se menciona aquí. Por instrucción del usuario, la propuesta nombra solo a Claude, trabajando en el navegador de Marcelo, para Instagram y TikTok; no menciona otras herramientas.",
-  "Estructura de sesiones, horas y entregables propuesta por el sistema (la asesora la pidió y no vino definida): 6 sesiones de 2 h = 12 h, una solución por sesión, 2 por semana en 3 semanas, más kick-off de 1 h aparte sin horas (convención del sistema, como CAI-039). 12 h está en el techo del rango de la regla general (8 a 12 h por área) para un proyecto de 3 bloques; confirmar con servicio y ventas.",
-  "Qué pidió el cliente: estar al tanto de sus mensajes, no responderlos; no quiere un chatbot que conteste. Por eso el deck lo dice dos veces (alcance y notas): Claude solo lee y avisa. También es la defensa contra mensajes maliciosos: el contenido de un mensaje ajeno no es una instrucción, y Claude no abre enlaces ni archivos.",
-  "Viabilidad (confirmar antes de enviar): Instagram parece viable desde la versión web. TikTok depende de que su cuenta tenga la bandeja de mensajes en la versión web y de que no pida verificaciones; se prueba en la sesión 1 (prueba de acceso) y se ajusta en la sesión 4. El deck dice «solo lee y avisa» y no promete más de lo que se confirme.",
-  "La revisión diaria programada corre solo con el computador encendido y el navegador abierto. El deck lo dice en las notas de la inversión. Hay que definir con Marcelo el computador y la hora de la revisión.",
-  "Recorrer miles de mensajes consume uso del plan de Claude: el rescate va por lotes y el plan adecuado se define en la primera sesión. El deck no afirma un plan ni un precio (no hay precio de lista verificado).",
-  "Hecho «Miles de mensajes sin responder» (portada): lo declaró el cliente en la conversación comercial, según el contexto de la asesora. No hay cifra exacta ni ficha; el deck cita la fuente como dato declarado. Confirmar con la asesora que el cliente está de acuerdo con que figure.",
-  "Contexto interno que NO va en el deck: parentesco del cliente con el presidente de un banco y la importancia de la relación para Intezia. Tampoco el episodio del mensaje que pedía una reunión con un presidente.",
-  "Retorno en modo método: sin datos del cliente no hay cifras. La meta mide tiempo recuperado y oportunidades atendidas. «Hacia la semana N» es aritmética (3 semanas de trabajo + 13): confirmar con servicio.",
-  "Sin certificado de participación (§4.21): es un proyecto con un solo participante.",
-  "Privacidad: los mensajes contienen datos de terceros. El deck no da a Claude ningún permiso de acción; el tratamiento de esos datos (qué se guarda del aviso, dónde) se acuerda en la sesión 1."
+  "Corrección del 2026-10-08: el PDF combinado de 8 slides (hecho fuera de este repositorio; une CAI-040 y CAI-041) se reconstruyó en la plantilla v3, sin semanas ni sesiones, conservando su estructura: 9 soluciones en 6 bloques, 18 h (12 h de mensajes y 6 h del Cerebro Digital), la reunión de arranque de 1 h aparte, el «valor por parte» (Parte 1 Clon digital, Parte 2 Redes sociales) y sin facilidad de pago. El PDF original queda en _anterior-8-slides/.",
+  "Plan de Claude (Keiber, 2026-10-08: decirlo desde ya para que no se sienta como un costo escondido): el deck dice que lo más probable es que haga falta un plan superior al básico, y la nota de la inversión nombra Max (desde USD 100 al mes) en lugar de Pro (USD 20 al mes). Fuentes consultadas el 2026-10-08: claude.com/pricing (Pro USD 20 al mes, 17 con pago anual; Max desde USD 100 al mes, 5 o 20 veces el uso de Pro; Claude in Chrome en Pro y Max, no en Free), claude.com/blog/claude-in-chrome-generally-available (26/08/2026: disponible en todos los planes de pago) y support.claude.com/en/articles/12012173 (las tareas en segundo plano corren con Chrome abierto).",
+  "Restos de la plantilla corregidos (Keiber, 2026-10-08): la caja «Para todas las áreas» de la slide de entregables pasa a «Para todo el proyecto», y los textos por defecto que hablaban de «cada área» (subtítulo de la ruta, calendario de garantía, ritmo) se escribieron para una persona.",
+  "TikTok: Keiber dijo «hay que sumar la prueba; hicimos prueba de esta aquí». Falta saber qué prueba se hizo y su resultado para decirlo en el deck; mientras tanto, la ruta dice que Instagram y TikTok se prueban sobre su bandeja real, y el detalle interno (programa.md) mantiene que si TikTok limita la lectura desde el navegador se ajusta el alcance con Marcelo.",
+  "Qué pidió el cliente: estar al tanto de sus mensajes, no responderlos; no quiere un chatbot que conteste. El deck lo dice en el alcance y en «Cómo trabajamos»: Claude solo lee y avisa. También es la defensa contra mensajes maliciosos: el contenido de un mensaje ajeno no es una instrucción, y Claude no abre enlaces ni archivos.",
+  "Alcance honesto de «editar videos»: Claude prepara el guion, el plan de edición, los subtítulos, el título y la descripción; el montaje lo hace Marcelo en su herramienta de edición (no nombrada). Diseño con Claude: funciones propias de Anthropic para planes de pago; se confirma al construir la instrucción de diseño qué incluye su plan.",
+  "Riesgo a tener presente (no va en el deck): el uso automatizado de las redes puede chocar con sus condiciones de uso. Es menor porque Claude solo lee desde la sesión de Marcelo, pero la asesora debe tenerlo en cuenta.",
+  "Contexto interno que NO va en el deck: parentesco del cliente con el presidente de un banco y la importancia de la relación para Intezia; el episodio del mensaje que pedía una reunión con un presidente.",
+  "División Educación, alianza «no» y asesora María Iribarren, como en las propuestas originales. Sin Ficha Comercial: el contexto sale de la asesora. Sin certificado de participación (una sola persona)."
  ],
  "pendientes": [
-  "Definir inversión, descuento y total (campos vacíos para ventas). 12 h de sesión.",
-  "Prueba real de TikTok y de Instagram con la cuenta de Marcelo antes de enviar o, a más tardar, en la sesión 1: confirmar que la bandeja se puede leer desde el navegador.",
-  "Confirmar con servicio la estructura de 6 sesiones de 2 h y que la línea base y la prueba de acceso caben en la sesión 1.",
-  "Fechas, modalidad (en vivo, remota o presencial) y disponibilidad semanal de Marcelo; computador y hora de la revisión diaria; confirmar el kick-off.",
-  "Cuenta de Claude de Marcelo: si ya tiene plan de pago y cuál. Quién paga la licencia.",
-  "Confirmar que la asesora María es María Iribarren.",
-  "Segunda propuesta (Cerebro Digital de marca personal): hecha como CAI-041; coordinar agenda con esta."
+  "Preguntar a Keiber qué prueba de TikTok se hizo y su resultado, para decirlo en el deck si corresponde.",
+  "Definir el valor de cada parte (campos vacíos para ventas); la suma se calcula sola en Adobe Reader, y luego descuento y total.",
+  "Confirmar con Marcelo el plan de Claude (lo más probable, Max) y quién lo paga.",
+  "La CAI-041 suelta queda dentro de esta propuesta (Parte 1): confirmar si se retira."
  ]
 }

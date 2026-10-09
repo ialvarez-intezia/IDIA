@@ -2,14 +2,15 @@
 <!--
   Propuesta · Marcelo Restrepo · Servicio de Habilidades (CAI-040)
   División: Educación · Servicio: Habilidades (§4.1a) · Alianza: no
-  GENERADO por scripts/generar-habilidades-compacto.py (plantilla 1.3 (2026-10-05)) desde datos.json.
+  GENERADO por scripts/generar-habilidades-compacto.py (plantilla 3.0 (2026-10-08), formato habilidades) desde datos.json.
   No editar a mano: editar datos.json y regenerar. Estilos propios del deck: overrides.css.
-  Fuente del insumo: Contexto comercial de la asesora; instrucción directa del usuario
+  Fuente del insumo: Propuesta CAI-040 combinada (PDF de 8 slides) y contexto comercial de la asesora
 
-  Formato compacto de 6 slides (distinto del deck canónico de ~13):
-    1 Portada con punto de dolor · 2 Alcance · 3 Ruta · 4 Inversión · 5 Entregables · 6 Retorno esperado
-  Marcadores de detección de AcroForms (agregar-campo-precio.py), por página: «Propuesta Económica»
-  solo en la slide de inversión; «Lo que se llevan» y «Entregables» solo en la de entregables.
+  Formato compacto de 8 slides, en el orden de las preguntas del cliente (Ventas, 2026-10-07), sin semanas, sesiones
+  ni fechas (Keiber, 2026-10-08):
+    1 Portada · 2 Alcance · 3 Ruta · 4 Cómo trabajamos · 5 Entregables · 6 Retorno · 7 Inversión · 8 Próximos pasos
+  Marcadores de detección de AcroForms (agregar-campo-precio.py), por página: «Propuesta Económica» solo en la slide de
+  inversión; «Lo que se llevan» y «Entregables» solo en la de entregables; «Facilidad de pago» solo en la de pago.
   Campos AcroForm: Programa, Notas, PrecioBase, Descuento, PrecioTotal (inversión) y Entregables, Acreditacion (entregables). Se reposicionan con scripts/customize-habilidades-compacto.py.
 -->
 <html lang="es">
@@ -25,21 +26,21 @@
 
   <main class="deck">
 
-    <!-- 1 · Portada con punto de dolor -->
+    <!-- 1 · Portada: ¿cuál es mi problema? -->
     <section class="slide s-cover">
-      <span class="counter">01 / 06</span>
+      <span class="counter">01 / 08</span>
       <div class="logo-big">
         <img src="../../../logos/educacion/BLANCO.png" alt="Intezia Educación">
       </div>
       <div class="body">
         <p class="eyebrow">Propuesta de proyecto · Servicio de Habilidades</p>
         <h1 style="font-size:46px">
-          Monitoreo diario de mensajes<br>
-          directos de Instagram y TikTok<br>
+          Monitoreo de mensajes y<br>
+          Cerebro Digital de marca personal<br>
           <span class="hl">con Claude</span>
         </h1>
         <p class="lead">
-          Este proyecto deja a <strong>Marcelo</strong> al tanto de lo que importa en sus mensajes directos. <strong>Claude</strong> revisa cada día su bandeja de Instagram y de TikTok, detecta a las personas clave, las invitaciones y las propuestas, y le avisa. No responde nada en su nombre.
+          Este proyecto deja a Marcelo al tanto de lo que importa en sus mensajes directos y construye con él su <strong>Cerebro Digital</strong>, un asistente en Claude que conoce su marca. En los mensajes, Claude lee y avisa; no responde.
         </p>
         <div class="pain-strip">
           <div class="pain-item">
@@ -51,8 +52,12 @@
             <span class="pain-lbl">de mensajes sin responder: Claude los recorre para rescatar lo que importa.</span>
           </div>
           <div class="pain-item">
-            <span class="pain-num">1 aviso</span>
-            <span class="pain-lbl">al día con lo importante: personas clave, invitaciones a eventos y propuestas.</span>
+            <span class="pain-num">1 cerebro</span>
+            <span class="pain-lbl">con su marca guardada en Claude: su voz, su audiencia y su estilo visual.</span>
+          </div>
+          <div class="pain-item">
+            <span class="pain-num">2 usos</span>
+            <span class="pain-lbl">videos y diseños: guion y plan de edición, y piezas con su identidad visual.</span>
           </div>
         </div>
         <p class="pain-src">Datos declarados por Marcelo en la conversación comercial con Intezia.</p>
@@ -63,53 +68,38 @@
       </div>
     </section>
 
-    <!-- 2 · Alcance -->
-    <section class="slide s-scope">
-      <span class="counter">02 / 06</span>
+    <!-- 2 · Alcance: qué vamos a hacer y para qué -->
+    <section class="slide s-scope roomy">
+      <span class="counter">02 / 08</span>
       <p class="eyebrow">02 · Alcance</p>
-      <h2>Seis soluciones para no perder lo importante.</h2>
-      <p class="sub"><strong>Claude</strong> revisa cada día los mensajes directos de <strong>Instagram y TikTok</strong> y avisa solo de lo que importa.</p>
+      <h2>Nueve soluciones para mensajes y marca.</h2>
+      <p class="sub"><strong>Claude</strong> revisa cada día sus mensajes directos y guarda la marca de Marcelo para sus <strong>videos y diseños</strong>.</p>
 
-      <div class="scope-body">
-        <div class="scope-left">
-
-          <div class="scope-panel acc-y">
-            <div class="scope-head">
-              <span class="scope-tag">Claude</span>
-              <span class="scope-total"><b>6</b> soluciones · 3 bloques</span>
-            </div>
-            <ul class="scope-rows">
-              <li><span class="area">Criterio y aviso diario <small class="comp">Guía de prioridad y aviso diario único. 2 sesiones, 4 h.</small></span><span class="units" style="--n:2"></span><span class="n">2</span></li>
-              <li><span class="area">Instagram <small class="comp">Revisión diaria y rescate de la bandeja. 2 sesiones, 4 h.</small></span><span class="units" style="--n:2"></span><span class="n">2</span></li>
-              <li><span class="area">TikTok <small class="comp">Revisión diaria y rescate de la bandeja. 2 sesiones, 4 h.</small></span><span class="units" style="--n:2"></span><span class="n">2</span></li>
-            </ul>
+      <div class="scope-panels one" style="--np:1">
+        <div class="scope-panel acc-y">
+          <div class="scope-head">
+            <span class="scope-tag">Claude</span>
+            <span class="scope-total"><b>9</b> soluciones · 6 bloques</span>
           </div>
-
+          <ul class="scope-rows">
+              <li><span class="area">Criterio y aviso diario <small class="comp">Guía de prioridad y aviso diario único.</small></span><span class="n">2 soluciones</span><span class="para">Acordar qué es importante y recibir un solo aviso al día con ambas redes</span></li>
+              <li><span class="area">Instagram <small class="comp">Revisión diaria y rescate de la bandeja.</small></span><span class="n">2 soluciones</span><span class="para">Revisar cada día sus mensajes de Instagram y rescatar lo que quedó enterrado</span></li>
+              <li><span class="area">TikTok <small class="comp">Revisión diaria y rescate de la bandeja.</small></span><span class="n">2 soluciones</span><span class="para">Lo mismo en TikTok, sin abrir la bandeja a mano</span></li>
+              <li><span class="area">Marca <small class="comp">Propósito, voz y audiencia, y su cerebro en Claude.</small></span><span class="n">1 solución</span><span class="para">Dejar su voz, su audiencia y su marca guardadas en Claude con memoria propia</span></li>
+              <li><span class="area">Video <small class="comp">Guion, plan de edición y subtítulos.</small></span><span class="n">1 solución</span><span class="para">Preparar el guion y el plan de edición de cada video con su voz</span></li>
+              <li><span class="area">Diseño <small class="comp">Carruseles y portadas con su identidad.</small></span><span class="n">1 solución</span><span class="para">Diseñar carruseles y portadas con su identidad visual</span></li>
+          </ul>
         </div>
+      </div>
 
-        <div class="scope-right">
-          <div class="scope-card">
-            <p class="scope-card-label">Cómo trabajamos</p>
-            <ol class="scope-steps">
-              <li>Acuerda qué es importante: personas clave, eventos y propuestas.</li>
-              <li>Claude revisa Instagram desde su navegador, solo para leer y avisar.</li>
-              <li>Suma TikTok y rescata lo que quedó enterrado en las bandejas.</li>
-              <li>Une todo en un aviso diario y lo deja funcionando solo.</li>
-            </ol>
-          </div>
-          <div class="scope-card">
-            <p class="scope-card-label">Quién construye</p>
-            <p>Se construye <strong>con Marcelo, en sesiones en vivo</strong> y sobre sus bandejas reales, hasta que lo usa solo en su día a día.</p>
-          </div>
-          <div class="scope-card scope-out">
-            <p class="scope-card-label">Fuera de este alcance</p>
-            <ul>
-              <li>Responder, enviar o publicar mensajes en su nombre: Claude solo lee y avisa.</li>
-              <li>Abrir enlaces o archivos recibidos en los mensajes.</li>
-              <li>Licencias de Claude, que van aparte.</li>
-            </ul>
-          </div>
-        </div>
+      <div class="scope-out">
+        <p class="scope-card-label">Fuera de este alcance</p>
+        <ul>
+          <li>Responder, enviar o publicar mensajes en su nombre, y abrir sus enlaces o archivos: Claude no actúa sobre los mensajes.</li>
+          <li>Montar el video: lo hace Marcelo en su herramienta de edición.</li>
+          <li>Publicar en sus redes: el cerebro prepara y Marcelo decide.</li>
+          <li>Las licencias de Claude: van aparte (detalle en la inversión).</li>
+        </ul>
       </div>
 
       <div class="foot">
@@ -118,63 +108,54 @@
       </div>
     </section>
 
-    <!-- 3 · Ruta -->
+    <!-- 3 · Ruta: qué pasa en cada fase -->
     <section class="slide s-route">
-      <span class="counter">03 / 06</span>
+      <span class="counter">03 / 08</span>
       <p class="eyebrow">03 · Ruta</p>
-      <h2>Del criterio al aviso diario en 3 semanas.</h2>
-      <p class="sub">Semanas desde el arranque, con <strong>seguimiento y garantía a 30, 60 y 90 días</strong> tras el cierre de las sesiones.</p>
+      <h2>Mensajes y Cerebro Digital, en dos fases.</h2>
+      <p class="sub">El calendario se acuerda en la reunión de arranque. La <strong>garantía y el seguimiento</strong> a 30, 60 y 90 días corren desde el cierre del proyecto.</p>
 
-      <div class="route-grid" style="--cols:3; --rows:1; --rowh:214px">
+      <div class="route-grid n1" style="--cols:2; --rows:1; --rowh:214px">
 
         <div class="rg-corner"></div>
-        <div class="rg-phase rg-ph-1">
-          <span class="rg-phase-top"><span class="rg-phase-tag">Base</span><b class="rg-phase-n">2 soluciones</b></span>
-          <span class="rg-phase-date">Semana 1</span>
-          <span class="rg-phase-txt">Criterio e Instagram</span>
+        <div class="rg-phase rg-ph-1 hi">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Mensajes</span><b class="rg-phase-n">6 soluciones</b></span>
+          <span class="rg-phase-name">Criterio, Instagram y TikTok</span>
         </div>
-        <div class="rg-phase rg-ph-2 hi">
-          <span class="rg-phase-top"><span class="rg-phase-tag">Redes</span><b class="rg-phase-n">2 soluciones</b></span>
-          <span class="rg-phase-date">Semana 2</span>
-          <span class="rg-phase-txt">Rescate y TikTok</span>
-        </div>
-        <div class="rg-phase rg-ph-3">
-          <span class="rg-phase-top"><span class="rg-phase-tag">Rutina</span><b class="rg-phase-n">2 soluciones</b></span>
-          <span class="rg-phase-date">Semana 3</span>
-          <span class="rg-phase-txt">Aviso único y uso propio</span>
+        <div class="rg-phase rg-ph-2">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Cerebro</span><b class="rg-phase-n">3 soluciones</b></span>
+          <span class="rg-phase-name">Marca, video y diseño</span>
         </div>
         <div class="rg-phase rg-fu">
           <span class="rg-phase-top"><span class="rg-phase-tag">Garantía</span></span>
           <span class="rg-phase-date">30, 60 y 90 días</span>
-          <span class="rg-phase-txt">Seguimiento desde el cierre de las sesiones</span>
+          <span class="rg-phase-txt">Seguimiento desde el cierre del proyecto</span>
         </div>
 
         <div class="rg-front acc-y">
-          <span class="rg-front-top"><b class="rg-front-name">Claude</b><span class="rg-front-tag">En vivo con Marcelo</span></span>
-          <span class="rg-front-h"><b>6 soluciones</b> · <span class="nw">12 h</span> · <span class="nw">S1-S3</span></span>
-          <span class="rg-front-areas">Criterio y aviso, Instagram y TikTok</span>
+          <span class="rg-front-h">En vivo con Marcelo</span>
+          <span class="rg-front-row"><span class="rg-front-tool">Claude</span><b class="rg-front-n">9 soluciones</b></span>
+          <span class="rg-front-meta">18 h de trabajo</span>
         </div>
-        <div class="rg-cell"><span class="rg-h"><b>2</b> soluciones <i>4 h</i></span><p>Guía de prioridad y revisión diaria de Instagram, probadas sobre su bandeja real.</p></div>
-        <div class="rg-cell hi"><span class="rg-h"><b>2</b> soluciones <i>4 h</i></span><p>Rescate de la bandeja acumulada de Instagram y revisión diaria de TikTok.</p></div>
-        <div class="rg-cell"><span class="rg-h"><b>2</b> soluciones <i>4 h</i></span><p>Rescate de la bandeja de TikTok y un único aviso diario con ambas redes.</p></div>
+        <div class="rg-cell hi"><span class="rg-h"><b>6</b> soluciones <i>12 h</i></span><p>Guía de prioridad, Instagram y TikTok probados en su bandeja real y un aviso diario único.</p></div>
+        <div class="rg-cell"><span class="rg-h"><b>3</b> soluciones <i>6 h</i></span><p>Su marca en un Project de Claude e instrucciones de video y diseño con su contenido real.</p></div>
 
-        <div class="rg-follow" style="grid-column:5; grid-row:2 / span 1">
+        <div class="rg-follow" style="grid-column:4; grid-row:2 / span 1">
           <ul>
-            <li><b>30 días</b><span>Uso diario del aviso</span></li>
-            <li><b>60 días</b><span>Ajustes del criterio</span></li>
+            <li><b>30 días</b><span>Uso diario del aviso y del cerebro</span></li>
+            <li><b>60 días</b><span>Ajustes del criterio y nuevas construcciones</span></li>
             <li><b>90 días</b><span>Tiempo recuperado contra la línea base</span></li>
           </ul>
         </div>
       </div>
 
-      <div class="route-miles" style="grid-template-columns:repeat(5,1fr)">
-        <div class="mile"><span class="mile-d"></span><b>Kick-off · aparte</b><p>1 h para dejar listo su navegador y acordar la agenda de las sesiones.</p></div>
-        <div class="mile"><span class="mile-d"></span><b>Semana 1 · Criterio</b><p>Guía de prioridad acordada y primera revisión real de su bandeja de Instagram.</p></div>
-        <div class="mile"><span class="mile-d"></span><b>Semana 2 · TikTok</b><p>Oportunidades rescatadas en Instagram y revisión diaria de TikTok en marcha.</p></div>
-        <div class="mile"><span class="mile-d"></span><b>Semana 3 · Aviso diario</b><p>Un solo aviso al día con lo importante de ambas redes, funcionando.</p></div>
-        <div class="mile"><span class="mile-d"></span><b>30 · 60 · 90 días</b><p>Seguimiento: uso diario, ajustes del criterio y tiempo recuperado.</p></div>
+      <div class="route-miles" style="grid-template-columns:repeat(4,1fr)">
+        <div class="mile"><span class="mile-d"></span><b>Arranque</b><p>1 h, aparte: su navegador listo, su material reunido y el calendario acordado.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Mensajes</b><p>Guía de prioridad, Instagram, TikTok y un aviso diario único, funcionando.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Cerebro Digital</b><p>Su marca en un Project de Claude y las instrucciones de video y de diseño.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Cierre</b><p>Marcelo usa el aviso y el cerebro por su cuenta; empieza la garantía.</p></div>
       </div>
-      <p class="route-note">S = semana de trabajo desde el arranque, cuya fecha se acuerda con Marcelo Restrepo. Las 12 h son una proyección de sesión: dos sesiones de 2 h por semana (4 h en cada fase). El kick-off de 1 h es aparte y no suma horas.</p>
+      <p class="route-note">Las 18 horas de trabajo son una proyección: 12 h de mensajes y 6 h del Cerebro Digital. La reunión de arranque (1 h) va aparte y no suma horas.</p>
 
       <div class="foot">
         <img src="../../../logos/educacion/BLANCO.png" alt="">
@@ -182,15 +163,194 @@
       </div>
     </section>
 
-    <!-- 4 · Inversión (hoja de cotización estándar, por horas) -->
+    <!-- 4 · Cómo trabajamos: pasos, por qué en ese orden, casos reales, práctica, datos y logística -->
+    <section class="slide s-method roomy">
+      <span class="counter">04 / 08</span>
+      <p class="eyebrow">04 · Cómo trabajamos</p>
+      <h2>Así trabajamos cada solución.</h2>
+      <p class="sub">Trabajamos junto a quien ejecuta cada proceso, con sus casos reales, y dejamos medido el resultado.</p>
+
+      <ol class="mt-steps" style="--n:4">
+          <li><b>Construimos</b><span>Con Marcelo, en vivo y con su contenido real.</span></li>
+          <li><b>Probamos</b><span>Sobre sus bandejas y sus piezas reales, hasta que funcione.</span></li>
+          <li><b>Adoptamos</b><span>Marcelo lo usa solo, cada día.</span></li>
+          <li><b>Medimos</b><span>El tiempo recuperado contra la línea base, a 30, 60 y 90 días.</span></li>
+      </ol>
+      <div class="mt-strips">
+        <p class="mt-why"><b>Por qué en este orden</b> Primero se ordenan los mensajes, que es donde hoy se pierden las oportunidades; después se construye el Cerebro Digital de su marca.</p>
+        <p class="mt-who"><b>Quién construye</b> Se construye con <strong>Marcelo, en vivo</strong> y sobre sus bandejas y su contenido reales, hasta que lo usa solo en su día a día.</p>
+      </div>
+
+      <div class="mt-info">
+        <div class="mt-card">
+          <p class="mt-card-label">Cómo funciona en la práctica</p>
+          <ul><li><b>Claude solo lee y avisa.</b> No responde, no envía ni abre enlaces: un mensaje ajeno nunca es una instrucción.</li><li><b>Claude prepara, Marcelo decide.</b> Prepara guion, edición y diseños; Marcelo monta y publica.</li><li><b>Desde su navegador y su plan.</b> Corre con el computador y Chrome abiertos; por el volumen, lo más probable es un plan superior al básico.</li></ul>
+        </div>
+        <div class="mt-card">
+          <p class="mt-card-label">Cómo cuidamos sus datos</p>
+          <p>Los mensajes contienen datos de terceros: Claude solo los lee y no actúa sobre ellos. En el cerebro no se carga contenido sin publicar ni datos de terceros, solo la marca y las piezas de Marcelo.</p>
+        </div>
+      </div>
+
+      <div class="mt-logi">
+        <div class="mt-tile"><span>Modalidad</span><b>En vivo con Marcelo, en remoto o presencial, según se acuerde al arrancar.</b></div>
+        <div class="mt-tile"><span>Participantes</span><b>Una sola persona: Marcelo, acompañado por Intezia en todo el proyecto.</b></div>
+        <div class="mt-tile"><span>Ritmo de trabajo</span><b>Según su agenda de contenido, sin frenar sus publicaciones.</b></div>
+        <div class="mt-tile"><span>Arranque</span><b>La fecha la fija Marcelo; la reunión de arranque (1 h, aparte) deja listo su navegador y su material.</b></div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Marcelo · CAI-040</span>
+      </div>
+    </section>
+
+    <!-- 5 · Entregables: ¿con qué me quedo? (catálogo + piezas transversales) -->
+    <section class="slide s-deliv roomy">
+      <span class="counter">05 / 08</span>
+      <p class="eyebrow">05 · Entregables</p>
+      <div class="deliv-head">
+        <h2>Lo que recibe Marcelo.</h2>
+        <p class="deliv-sub"><span class="nw">Lo que se llevan</span>: <strong>9 entregables</strong> en 6 bloques, más el seguimiento a 30, 60 y 90 días que mide su efecto.</p>
+      </div>
+
+      <div class="deliv-carriles" style="--ncols:3">
+        <span class="dc acc-y" style="grid-column: span 3">Claude · 9 entregables</span>
+      </div>
+
+      <div class="deliv-cols" style="--ncols:3">
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">Criterio y aviso diario</p>
+            <ul>
+              <li>Guía de prioridad: qué se avisa y con qué urgencia</li>
+              <li>Aviso diario único de Instagram y TikTok</li>
+            </ul>
+          </div>
+          <div class="da">
+            <p class="da-name">Instagram</p>
+            <ul>
+              <li>Revisión diaria de mensajes directos de Instagram</li>
+              <li>Rescate de oportunidades de la bandeja de Instagram</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">TikTok</p>
+            <ul>
+              <li>Revisión diaria de mensajes directos de TikTok</li>
+              <li>Rescate de oportunidades de la bandeja de TikTok</li>
+            </ul>
+          </div>
+          <div class="da">
+            <p class="da-name">Marca</p>
+            <ul>
+              <li>Project de Claude (memoria propia) con su voz y su marca</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">Video</p>
+            <ul>
+              <li>Instrucción reutilizable de video: guion y plan de edición</li>
+            </ul>
+          </div>
+          <div class="da">
+            <p class="da-name">Diseño</p>
+            <ul>
+              <li>Instrucción reutilizable de diseño: carruseles y portadas</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="deliv-band">
+        <div class="db-card db-1">
+          <span class="db-label">Para todo el proyecto</span>
+        </div>
+        <div class="db-card db-2">
+          <span class="db-label">Valor inmediato</span>
+        </div>
+      </div>
+      <!-- Cajas multiline editables (vacías en HTML: el contenido vive dentro del AcroForm /V). -->
+      <div class="multi-box db-box db-box-1" data-field="Entregables"></div>
+      <div class="multi-box db-box db-box-2" data-field="Acreditacion"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Marcelo · CAI-040</span>
+      </div>
+    </section>
+
+    <!-- 6 · Retorno: ¿qué gano? (método de cálculo). Sin estudios ni citas externas. -->
+    <section class="slide s-roi">
+      <span class="counter">06 / 08</span>
+      <p class="eyebrow">06 · Retorno</p>
+      <h2>Retorno esperado: tiempo y más contenido.</h2>
+      <p class="sub">Se calcula con los datos de Marcelo, se confirma con la línea base del arranque y se mide a 30, 60 y 90 días.</p>
+
+      <div class="roi-body">
+        <div class="roi-panel">
+          <p class="roi-panel-title">Cómo se calcula</p>
+          <ol class="roi-steps">
+            <li><b>Volumen semanal</b><span>Cuántos mensajes llegan a cada red y cuántas piezas publica Marcelo cada semana.</span></li>
+            <li><b>Tiempo actual</b><span>Cuánto dedica hoy a revisar mensajes y a preparar cada pieza. Es la línea base.</span></li>
+            <li><b>Oportunidades avisadas</b><span>Cuántas personas clave, invitaciones y propuestas detecta Claude cada semana.</span></li>
+            <li><b>Oportunidades atendidas</b><span>Cuántas de esas oportunidades Marcelo responde o agenda a tiempo.</span></li>
+            <li><b>Tiempo con Claude</b><span>Lo que toma leer el aviso diario y preparar una pieza con el cerebro ya en uso.</span></li>
+            <li><b>Horas recuperadas</b><span>Diferencia entre el tiempo actual y el tiempo con Claude, por semana, y las piezas adicionales que permite.</span></li>
+          </ol>
+        </div>
+
+        <div class="roi-right">
+          <p class="roi-right-title">Calendario de garantía, desde el cierre del proyecto</p>
+          <div class="roi-card">
+            <b>30 días</b>
+            <p>El aviso diario en uso real, con las dos redes cubiertas, y el cerebro aplicado en cada pieza.</p>
+          </div>
+          <div class="roi-card">
+            <b>60 días</b>
+            <p>Criterio ajustado y oportunidades atendidas contadas contra la línea base.</p>
+          </div>
+          <div class="roi-card">
+            <b>90 días</b>
+            <p>Medición del tiempo recuperado, de las oportunidades atendidas y de las piezas adicionales.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="roi-dest-wrap">
+        <p class="roi-dest-title">Hacia dónde va el proyecto</p>
+        <div class="roi-dest">
+          <div class="rd-item"><b>Oportunidades a tiempo</b><p>Cada persona clave, invitación o propuesta llega a Marcelo cuando todavía se puede atender.</p></div>
+          <div class="rd-item"><b>Más contenido</b><p>Si el tiempo se libera, puede dedicarlo a crear más piezas con su voz, sin trabajar más horas.</p></div>
+          <div class="rd-item"><b>Un sistema que crece</b><p>Con el resultado medido, Marcelo decide si amplía lo que Claude revisa y prepara por él.</p></div>
+        </div>
+      </div>
+
+      <div class="roi-hook"><p>A los 90 días del cierre, Marcelo contará con su tiempo recuperado y sus oportunidades atendidas, medidos.</p></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Marcelo · CAI-040</span>
+      </div>
+    </section>
+
+    <!-- 7 · Inversión (hoja de cotización estándar; antepenúltima slide) -->
     <section class="slide s-price">
-      <span class="counter">04 / 06</span>
-      <h2 class="title">Inversión por horas de sesión.</h2>
+      <span class="counter">07 / 08</span>
+      <h2 class="title">Inversión del proyecto.</h2>
       <p class="price-intro">Propuesta Económica · Servicio de Habilidades</p>
 
       <div class="block">
         <span class="block-eyebrow">Duración</span>
-        <p class="block-value">Proyección de 12 h de sesión en 3 semanas de trabajo desde el arranque, más seguimiento a 30, 60 y 90 días.</p>
+        <p class="block-value">Proyecto de 9 soluciones en dos fases, con seguimiento y garantía a 30, 60 y 90 días. 18 horas de trabajo.</p>
       </div>
 
       <div class="block block-programa">
@@ -202,7 +362,7 @@
         <span class="block-eyebrow">Cotización</span>
       </div>
 
-      <span class="cot-label cot-label-base">Propuesta + Inversión</span>
+      <span class="cot-label cot-label-base">Suma de ambas partes</span>
       <div class="cot-frame base-frame"></div>
 
       <span class="cot-label cot-label-discount">Descuento</span>
@@ -229,16 +389,24 @@
       </div>
       <div class="multi-box notas-box" data-field="Notas"></div>
 
-      <div class="lic-wrap">
-        <span class="lic-eyebrow">Licenciamiento · aparte de esta inversión</span>
-        <div class="lic-cards">
-          <div class="lic-card acc-y">
-            <span class="lic-name">Claude · plan de pago de Marcelo</span>
-            <p>Marcelo necesita su cuenta de <strong>Claude</strong> con un plan de pago. Recorrer miles de mensajes consume uso del plan: el plan adecuado se define en la <strong>primera sesión</strong>.</p>
+      <div class="partes-wrap">
+        <span class="partes-eyebrow">Valor por parte</span>
+        <div class="partes-cards">
+          <div class="parte-card acc-y">
+            <span class="parte-tag">Parte 1</span>
+            <b class="parte-name">Clon digital</b>
+            <p>Cerebro Digital de marca personal · 6 h</p>
+          </div>
+          <div class="parte-card acc-o">
+            <span class="parte-tag">Parte 2</span>
+            <b class="parte-name">Redes sociales</b>
+            <p>Monitoreo de mensajes de Instagram y TikTok · 12 h</p>
           </div>
         </div>
-        <p class="lic-note">Esta propuesta no incluye precios de lista: dependen del plan que se elija y el cliente los confirma con el proveedor. Pueden variar.</p>
       </div>
+      <!-- Cajas de monto por parte: campos PrecioParte1..N (agregar-campo-precio.py → partes_fields); PrecioBase las suma. -->
+      <div class="parte-frame" style="left:68.00px; top:618.00px; width:210.00px; height:34.00px"></div>
+      <div class="parte-frame" style="left:314.00px; top:618.00px; width:210.00px; height:34.00px"></div>
 
       <div class="foot">
         <img src="../../../logos/educacion/NEGRO.png" alt="">
@@ -246,120 +414,48 @@
       </div>
     </section>
 
-    <!-- 5 · Entregables (catálogo + piezas transversales) -->
-    <section class="slide s-deliv">
-      <span class="counter">05 / 06</span>
-      <p class="eyebrow">05 · Entregables</p>
-      <div class="deliv-head">
-        <h2>Lo que recibe Marcelo.</h2>
-        <p class="deliv-sub"><span class="nw">Lo que se llevan</span>: <strong>6 entregables</strong> en 3 bloques, más el seguimiento a 30, 60 y 90 días que mide su efecto.</p>
-      </div>
+    <!-- 9 · Próximos pasos: qué hacer y a quién escribir (última slide) -->
+    <section class="slide s-next">
+      <span class="counter">08 / 08</span>
+      <p class="eyebrow">08 · Próximos pasos</p>
+      <h2>Tres pasos para arrancar.</h2>
+      <p class="sub">Esto es lo que sigue cuando Marcelo confirme la propuesta.</p>
 
-      <div class="deliv-carriles" style="--ncols:3">
-        <span class="dc acc-y" style="grid-column: span 3">Claude · 6 entregables</span>
-      </div>
-
-      <div class="deliv-cols" style="--ncols:3">
-
-        <div class="deliv-col acc-y">
-          <div class="da">
-            <p class="da-name">Criterio y aviso diario <i>2</i></p>
-            <ul>
-              <li>Guía de prioridad: qué se avisa y con qué urgencia</li>
-              <li>Aviso diario único de Instagram y TikTok</li>
-            </ul>
-          </div>
+      <div class="nx-steps">
+        <div class="nx-step acc-y">
+          <span class="nx-num">1</span>
+          <b>Fecha de arranque</b>
+          <p>Confirmamos con Marcelo la fecha de la reunión de arranque.</p>
         </div>
-
-        <div class="deliv-col acc-y">
-          <div class="da">
-            <p class="da-name">Instagram <i>2</i></p>
-            <ul>
-              <li>Revisión diaria de mensajes directos de Instagram</li>
-              <li>Rescate de oportunidades de la bandeja de Instagram</li>
-            </ul>
-          </div>
+        <div class="nx-step acc-o">
+          <span class="nx-num">2</span>
+          <b>Cuenta y navegador</b>
+          <p>Dejamos lista su cuenta de Claude con el plan que corresponda, preparamos su navegador y reunimos su material.</p>
         </div>
-
-        <div class="deliv-col acc-y">
-          <div class="da">
-            <p class="da-name">TikTok <i>2</i></p>
-            <ul>
-              <li>Revisión diaria de mensajes directos de TikTok</li>
-              <li>Rescate de oportunidades de la bandeja de TikTok</li>
-            </ul>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="deliv-band">
-        <div class="db-card db-1">
-          <span class="db-label">Entregables transversales</span>
-        </div>
-        <div class="db-card db-2">
-          <span class="db-label">Valor inmediato</span>
+        <div class="nx-step acc-w">
+          <span class="nx-num">3</span>
+          <b>Reunión de arranque</b>
+          <p>Una hora para alinear el criterio, ver sus bandejas y su identidad visual, y acordar el calendario.</p>
         </div>
       </div>
-      <!-- Cajas multiline editables (vacías en HTML: el contenido vive dentro del AcroForm /V). -->
-      <div class="multi-box db-box db-box-1" data-field="Entregables"></div>
-      <div class="multi-box db-box db-box-2" data-field="Acreditacion"></div>
+
+      <div class="nx-contact">
+        <div class="nx-card nx-ase">
+          <span class="nx-label">¿Dudas? Escribe a tu asesora comercial</span>
+          <b class="nx-name">María Iribarren</b>
+          <span class="nx-role">Asesora comercial</span>
+          <p class="nx-line"><a href="mailto:miribarren@intezia.com">miribarren@intezia.com</a></p>
+          <p class="nx-line">+58 414 0570056</p>
+        </div>
+        <div class="nx-card nx-emp">
+          <span class="nx-label">Intezia</span>
+          <p class="nx-line">Intezia C.A J-505657950</p>
+          <p class="nx-line"><a href="mailto:servicio@intezia.com">servicio@intezia.com</a></p>
+        </div>
+      </div>
 
       <div class="foot">
         <img src="../../../logos/educacion/BLANCO.png" alt="">
-        <span class="meta">Marcelo · CAI-040</span>
-      </div>
-    </section>
-
-    <!-- 6 · Retorno esperado (método de cálculo). Sin estudios ni citas externas. -->
-    <section class="slide s-roi">
-      <span class="counter">06 / 06</span>
-      <p class="eyebrow">06 · Retorno</p>
-      <h2>Retorno esperado: tiempo y oportunidades.</h2>
-      <p class="sub">Se calcula con los datos de Marcelo, se confirma con la línea base de la primera sesión y se mide a 30, 60 y 90 días.</p>
-
-      <div class="roi-body">
-        <div class="roi-panel">
-          <p class="roi-panel-title">Cómo se calcula</p>
-          <ol class="roi-steps">
-            <li><b>Mensajes por semana</b><span>Cuántos mensajes directos llegan a cada red cada semana.</span></li>
-            <li><b>Tiempo actual de revisión</b><span>Cuánto dedica hoy a revisarlos. Se mide en la primera sesión y es la <strong>línea base</strong>.</span></li>
-            <li><b>Mensajes importantes avisados</b><span>Cuántas personas clave, invitaciones y propuestas detecta Claude cada semana.</span></li>
-            <li><b>Oportunidades atendidas</b><span>Cuántas de esas oportunidades Marcelo responde o agenda a tiempo.</span></li>
-            <li><b>Horas recuperadas a la semana</b><span>Diferencia entre el tiempo actual de revisión y el que toma leer el aviso diario.</span></li>
-          </ol>
-        </div>
-
-        <div class="roi-right">
-          <p class="roi-right-title">Metas, desde el cierre de las sesiones</p>
-          <div class="roi-card">
-            <b>30 días</b>
-            <p>El aviso diario en uso real, con las dos redes cubiertas.</p>
-          </div>
-          <div class="roi-card">
-            <b>60 días</b>
-            <p>Criterio ajustado y oportunidades atendidas contadas contra la línea base.</p>
-          </div>
-          <div class="roi-card">
-            <b>90 días</b>
-            <p>Medición del tiempo recuperado y de las oportunidades atendidas.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="roi-dest-wrap">
-        <p class="roi-dest-title">Hacia dónde va el tiempo recuperado</p>
-        <div class="roi-dest">
-          <div class="rd-item"><b>Oportunidades a tiempo</b><p>Cada persona clave, invitación o propuesta llega a <strong>Marcelo</strong> cuando todavía se puede atender.</p></div>
-          <div class="rd-item"><b>Menos tiempo en bandejas</b><p>Si el tiempo se libera, puede dedicarlo a <strong>crear contenido</strong> y a responder lo que de verdad importa.</p></div>
-          <div class="rd-item"><b>Una revisión que crece</b><p>Con el resultado medido, Marcelo decide si amplía lo que Claude revisa por él.</p></div>
-        </div>
-      </div>
-
-      <div class="roi-hook"><p>Hacia la semana 16 (3 semanas de trabajo más 90 días de seguimiento), Marcelo contará con su tiempo recuperado y sus oportunidades atendidas medidos.</p></div>
-
-      <div class="foot">
-        <img src="../../../logos/educacion/NEGRO.png" alt="">
         <span class="meta">Marcelo · CAI-040</span>
       </div>
     </section>
