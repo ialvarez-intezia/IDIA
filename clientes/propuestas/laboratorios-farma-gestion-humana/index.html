@@ -2,14 +2,15 @@
 <!--
   Propuesta · Laboratorios Farma · Servicio de Detección y Habilidades (CAI-032)
   División: Educación · Servicio: Detección y Habilidades (§4.1a) · Alianza: no
-  GENERADO por scripts/generar-habilidades-compacto.py (plantilla 1.3 (2026-10-05)) desde datos.json.
+  GENERADO por scripts/generar-habilidades-compacto.py (plantilla 3.0 (2026-10-08), formato habilidades) desde datos.json.
   No editar a mano: editar datos.json y regenerar. Estilos propios del deck: overrides.css.
-  Fuente del insumo: Ficha de Levantamiento de Laboratorios Farma (Gestión Humana regional)
+  Fuente del insumo: PDF de 8 slides de la CAI-032 (horas y piezas) y correcciones de Keiber Quintana del 08/10/2026 (estructura)
 
-  Formato compacto de 6 slides (distinto del deck canónico de ~13):
-    1 Portada con punto de dolor · 2 Alcance · 3 Ruta · 4 Inversión · 5 Entregables · 6 Retorno esperado
-  Marcadores de detección de AcroForms (agregar-campo-precio.py), por página: «Propuesta Económica»
-  solo en la slide de inversión; «Lo que se llevan» y «Entregables» solo en la de entregables.
+  Formato compacto de 8 slides, en el orden de las preguntas del cliente (Ventas, 2026-10-07), sin semanas, sesiones
+  ni fechas (Keiber, 2026-10-08):
+    1 Portada · 2 Alcance · 3 Cómo trabajamos · 4 Ruta · 5 Entregables · 6 Retorno · 7 Inversión · 8 Próximos pasos
+  Marcadores de detección de AcroForms (agregar-campo-precio.py), por página: «Propuesta Económica» solo en la slide de
+  inversión; «Lo que se llevan» y «Entregables» solo en la de entregables; «Facilidad de pago» solo en la de pago.
   Campos AcroForm: Programa, Notas, PrecioBase, Descuento, PrecioTotal (inversión) y Entregables, Acreditacion (entregables). Se reposicionan con scripts/customize-habilidades-compacto.py.
 -->
 <html lang="es">
@@ -25,9 +26,9 @@
 
   <main class="deck">
 
-    <!-- 1 · Portada con punto de dolor -->
+    <!-- 1 · Portada: ¿cuál es mi problema? -->
     <section class="slide s-cover">
-      <span class="counter">01 / 06</span>
+      <span class="counter">01 / 08</span>
       <div class="logo-big">
         <img src="../../../logos/educacion/BLANCO.png" alt="Intezia Educación">
       </div>
@@ -39,7 +40,7 @@
           <span class="hl">en 6 subáreas de Gestión Humana</span>
         </h1>
         <p class="lead">
-          La Detección levanta cómo trabaja hoy cada subárea. Este proyecto nivela al equipo en <strong>Microsoft Copilot</strong>, construye y deja en uso los dos primeros asistentes con la licencia que ya tienen, y mide su efecto.
+          Primero, la Detección levanta cómo trabaja cada una de las 6 subáreas. Después, las 20 personas se entrenan juntas en <strong>Microsoft Copilot</strong>. Al final, 2 proyectos finales dejan en uso un asistente en Nómina y otro en Selección.
         </p>
         <div class="pain-strip">
           <div class="pain-item">
@@ -67,54 +68,48 @@
       </div>
     </section>
 
-    <!-- 2 · Alcance -->
-    <section class="slide s-scope">
-      <span class="counter">02 / 06</span>
+    <!-- 2 · Alcance por fases: qué vamos a hacer, en qué orden y para qué -->
+    <section class="slide s-scope fases roomy">
+      <span class="counter">02 / 08</span>
       <p class="eyebrow">02 · Alcance</p>
-      <h2>Diagnóstico, nivelación y 2 asistentes en uso.</h2>
-      <p class="sub">Levantamos cómo trabaja cada subárea, nivelamos al equipo y construimos <strong>2 asistentes de IA</strong> dentro de Copilot.</p>
+      <h2>Detección, entrenamiento y 2 proyectos finales.</h2>
+      <p class="sub">Levantamos cómo trabaja cada subárea, entrenamos a las 20 personas y construimos <strong>2 asistentes de IA</strong> en Copilot.</p>
 
-      <div class="scope-body">
-        <div class="scope-left">
-
-          <div class="scope-panel acc-y">
-            <div class="scope-head">
-              <span class="scope-tag">Microsoft Copilot</span>
-              <span class="scope-total"><b>4</b> soluciones · 2 áreas y 2 procesos base</span>
-            </div>
+      <div class="scope-panels one" style="--np:1">
+        <div class="scope-panel acc-y">
+          <div class="scope-head">
+            <span class="scope-tag">Microsoft Copilot</span>
+            <span class="scope-total"><b>2</b> soluciones · 2 subáreas</span>
+          </div>
+          <div class="scope-step">
+            <p class="step-h"><span class="step-n">1</span><b>Detección</b><span class="step-d">Con los líderes, antes de construir</span></p>
             <ul class="scope-rows">
-              <li><span class="area">Detección de las 6 subáreas <em>(proceso base)</em></span><span class="units" style="--n:1"></span><span class="n">1</span></li>
-              <li><span class="area">Módulo conjunto de Copilot <em>(proceso base)</em></span><span class="units" style="--n:1"></span><span class="n">1</span></li>
-              <li><span class="area">Nómina</span><span class="units" style="--n:1"></span><span class="n">1</span></li>
-              <li><span class="area">Selección</span><span class="units" style="--n:1"></span><span class="n">1</span></li>
+              <li class="base"><span class="area">Las 6 subáreas <small class="comp">Selección, Desarrollo, Nómina, Seguros, Bienestar y Seguridad y Salud Laboral</small></span><span class="para">Saber cómo trabaja hoy cada subárea y qué licencia de Copilot necesita cada proceso.</span></li>
             </ul>
           </div>
-
-        </div>
-
-        <div class="scope-right">
-          <div class="scope-card">
-            <p class="scope-card-label">Cada solución, cuatro pasos</p>
-            <ol class="scope-steps">
-              <li>Levantamos procesos, herramientas y permisos con los líderes.</li>
-              <li>Nivelamos a las 20 personas en Copilot y el ecosistema Microsoft.</li>
-              <li>Construimos y probamos Ausentismo y Selección con casos reales.</li>
-              <li>Dejamos los asistentes en uso y medimos a 30, 60 y 90 días.</li>
-            </ol>
+          <div class="scope-step">
+            <p class="step-h"><span class="step-n">2</span><b>Entrenamiento</b><span class="step-d">Todo el equipo junto, en Copilot</span></p>
+            <ul class="scope-rows">
+              <li class="base"><span class="area">Las 20 personas <small class="comp">Gestión Humana en Venezuela, Ecuador, Perú y Colombia</small></span><span class="para">Usar Copilot para su productividad y efectividad, con un mismo lenguaje y criterio.</span></li>
+            </ul>
           </div>
-          <div class="scope-card">
-            <p class="scope-card-label">Quién construye</p>
-            <p>Intezia construye cada asistente en vivo, con los equipos de Nómina y Selección, dentro de Copilot y de los archivos que ya manejan.</p>
-          </div>
-          <div class="scope-card scope-out">
-            <p class="scope-card-label">Fuera de este alcance</p>
-            <ul>
-              <li>La conexión directa con SAP o el portal de selección, que requiere permisos de Tecnología.</li>
-              <li>La Etapa 2, sin cotizar, cuando Tecnología active Copilot Business.</li>
-              <li>Las licencias de Copilot: la Etapa 1 usa la básica que ya tienen.</li>
+          <div class="scope-step hi">
+            <p class="step-h"><span class="step-n">3</span><b>Proyectos finales</b><span class="step-d">Uno para Nómina y otro para Selección</span></p>
+            <ul class="scope-rows">
+              <li><span class="area">Nómina</span><span class="n">1 solución</span><span class="para">Cruzar a diario el control de acceso con la macro de Excel, sin hacerlo a mano.</span></li>
+              <li><span class="area">Selección</span><span class="n">1 solución</span><span class="para">Filtrar por perfil los currículos del portal, que hoy se revisan uno a uno.</span></li>
             </ul>
           </div>
         </div>
+      </div>
+
+      <div class="scope-out">
+        <p class="scope-card-label">Fuera de este alcance</p>
+        <ul>
+          <li>La conexión directa de Copilot con SAP o con el portal de selección: requiere permisos de Tecnología.</li>
+          <li>Los proyectos de las otras subáreas: pasan a una Etapa 2, sin cotizar, cuando Tecnología active Copilot Business.</li>
+          <li>Las licencias de Copilot: el proyecto se hace con la básica que el equipo ya tiene.</li>
+        </ul>
       </div>
 
       <div class="foot">
@@ -123,45 +118,84 @@
       </div>
     </section>
 
-    <!-- 3 · Ruta -->
-    <section class="slide s-route">
-      <span class="counter">03 / 06</span>
-      <p class="eyebrow">03 · Ruta</p>
-      <h2>De la Detección a 2 asistentes en 3 semanas.</h2>
-      <p class="sub">Semanas de trabajo desde el arranque, con <strong>seguimiento a 30, 60 y 90 días</strong> desde el cierre de cada área.</p>
+    <!-- 4 · Cómo trabajamos: pasos, por qué en ese orden, casos reales, práctica, datos y logística -->
+    <section class="slide s-method roomy">
+      <span class="counter">03 / 08</span>
+      <p class="eyebrow">03 · Cómo trabajamos</p>
+      <h2>Así trabajamos cada solución.</h2>
+      <p class="sub">Trabajamos junto a quien ejecuta cada proceso, con sus casos reales, y dejamos medido el resultado.</p>
 
-      <div class="route-grid" style="--cols:3; --rows:1; --rowh:214px">
+      <ol class="mt-steps" style="--n:4">
+          <li><b>Construimos</b><span>Junto a Nómina y Selección, con sus casos reales anonimizados.</span></li>
+          <li><b>Probamos</b><span>Con el equipo y dentro del límite de Copilot básico.</span></li>
+          <li><b>Adoptamos</b><span>El equipo usa cada asistente en su trabajo diario.</span></li>
+          <li><b>Medimos</b><span>El tiempo recuperado contra la línea base, a 30, 60 y 90 días.</span></li>
+      </ol>
+      <div class="mt-strips">
+        <p class="mt-why"><b>Por qué en este orden</b> Primero se levanta cómo trabaja cada subárea; después todo el equipo se entrena con un mismo lenguaje en Copilot; al final, los 2 proyectos finales construyen un asistente en Nómina y otro en Selección.</p>
+        <p class="mt-who"><b>Quién construye</b> Intezia construye cada asistente en vivo, con los equipos de Nómina y Selección, dentro de Copilot y de los archivos que ya manejan.</p>
+      </div>
+
+      <div class="mt-info">
+        <div class="mt-card">
+          <p class="mt-card-label">Cómo funciona en la práctica</p>
+          <ul><li><b>Límite de 5 solicitudes al día.</b> Una carga el lote con el perfil buscado; las demás afinan el filtro.</li><li><b>Currículos sin conexión al portal.</b> Selección los descarga como hoy y los carga en lote a Copilot.</li><li><b>Ausentismo con reporte anonimizado.</b> Con códigos en lugar de nombres y documentos.</li></ul>
+        </div>
+        <div class="mt-card">
+          <p class="mt-card-label">Cómo cuidamos sus datos</p>
+          <p>Los 2 proyectos finales se trabajan con <strong>casos reales anonimizados</strong>: sin nombres, documentos de identidad ni datos de contacto de candidatos o del personal. El equipo prepara los casos antes de empezar.</p>
+        </div>
+      </div>
+
+      <div class="mt-logi">
+        <div class="mt-tile"><span>Modalidad</span><b>100 % virtual por Teams.</b></div>
+        <div class="mt-tile"><span>Participantes</span><b>20 personas de Gestión Humana, en 4 países: Venezuela, Ecuador, Perú y Colombia.</b></div>
+        <div class="mt-tile"><span>Ritmo de trabajo</span><b>Según la disponibilidad de cada subárea, sin frenar la nómina semanal de la planta.</b></div>
+        <div class="mt-tile"><span>Arranque</span><b>La fecha se acuerda en la reunión de arranque y el proyecto cierra antes de las vacaciones colectivas.</b></div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Laboratorios Farma · CAI-032</span>
+      </div>
+    </section>
+
+    <!-- 3 · Ruta: qué pasa en cada fase -->
+    <section class="slide s-route">
+      <span class="counter">04 / 08</span>
+      <p class="eyebrow">04 · Ruta</p>
+      <h2>De la Detección a 2 asistentes en uso.</h2>
+      <p class="sub">El calendario se acuerda en la reunión de arranque. La <strong>garantía y el seguimiento</strong> a 30, 60 y 90 días corren desde el cierre de los proyectos.</p>
+
+      <div class="route-grid n1" style="--cols:3; --rows:1; --rowh:214px">
 
         <div class="rg-corner"></div>
         <div class="rg-phase rg-ph-1">
-          <span class="rg-phase-tag">Detección</span>
-          <span class="rg-phase-date">Semana 1</span>
-          <span class="rg-phase-txt"><b>4 h</b> · levantar antes de construir</span>
+          <span class="rg-phase-top"><span class="rg-phase-tag">Detección</span></span>
+          <span class="rg-phase-name">Con los líderes, antes de construir</span>
         </div>
         <div class="rg-phase rg-ph-2">
-          <span class="rg-phase-tag">Nivelación</span>
-          <span class="rg-phase-date">Semana 2</span>
-          <span class="rg-phase-txt"><b>3 h</b> · un lenguaje común en Copilot</span>
+          <span class="rg-phase-top"><span class="rg-phase-tag">Entrenamiento</span></span>
+          <span class="rg-phase-name">Todo el equipo junto, en Copilot</span>
         </div>
         <div class="rg-phase rg-ph-3 hi">
-          <span class="rg-phase-tag">Prácticas</span>
-          <span class="rg-phase-date">Semana 3</span>
-          <span class="rg-phase-txt"><b>8 de 15 h</b> · dos asistentes construidos en vivo</span>
+          <span class="rg-phase-top"><span class="rg-phase-tag">Proyectos finales</span></span>
+          <span class="rg-phase-name">Uno para Nómina y otro para Selección</span>
         </div>
         <div class="rg-phase rg-fu">
-          <span class="rg-phase-tag">Seguimiento</span>
+          <span class="rg-phase-top"><span class="rg-phase-tag">Garantía</span></span>
           <span class="rg-phase-date">30, 60 y 90 días</span>
-          <span class="rg-phase-txt">Desde el cierre de las prácticas</span>
+          <span class="rg-phase-txt">Desde el cierre de los proyectos finales</span>
         </div>
 
         <div class="rg-front acc-y">
-          <span class="rg-front-tag">Frente A · S1-S3</span>
-          <span class="rg-front-h"><b>15 h</b> · Copilot</span>
-          <span class="rg-front-areas"><span class="nw">Detección de las 6 subáreas</span>, <span class="nw">Módulo conjunto de Copilot</span>, <span class="nw">Nómina</span> y <span class="nw">Selección</span></span>
+          <span class="rg-front-h">Gestión Humana regional</span>
+          <span class="rg-front-row"><span class="rg-front-tool">Copilot</span><b class="rg-front-n">2 soluciones</b></span>
+          <span class="rg-front-meta">20 h de trabajo</span>
         </div>
-        <div class="rg-cell"><span class="rg-h"><b>4</b> h <i>1 solución</i></span><p>Con los líderes de las 6 subáreas: diagnóstico, mapa de licencias y línea base.</p></div>
-        <div class="rg-cell"><span class="rg-h"><b>3</b> h <i>1 solución</i></span><p>Con las 20 personas: Copilot en Outlook, Teams, Excel y Word.</p></div>
-        <div class="rg-cell hi"><span class="rg-h"><b>8</b> h <i>2 soluciones</i></span><p>Ausentismo (Nómina) y Selección, 4 h cada una, con Copilot básico y un caso real.</p></div>
+        <div class="rg-cell"><span class="rg-h solo-h"><b>4</b> horas</span><p>Con los líderes de las 6 subáreas: diagnóstico, mapa de licencias y línea base de tiempos.</p></div>
+        <div class="rg-cell"><span class="rg-h solo-h"><b>8</b> horas</span><p>Las 20 personas juntas, con tareas reales de su día a día en Gestión Humana.</p></div>
+        <div class="rg-cell hi"><span class="rg-h"><b>2</b> soluciones <i>8 h</i></span><p>Ausentismo en Nómina y filtro de currículos en Selección, con casos reales.</p></div>
 
         <div class="rg-follow" style="grid-column:5; grid-row:2 / span 1">
           <ul>
@@ -172,14 +206,13 @@
         </div>
       </div>
 
-      <div class="route-miles" style="grid-template-columns:repeat(5,1fr)">
-        <div class="mile"><span class="mile-d"></span><b>Semana 1 · Detección</b><p>4 h con los líderes: diagnóstico, mapa de licencias y línea base de tiempos.</p></div>
-        <div class="mile"><span class="mile-d"></span><b>Semana 2 · Nivelación</b><p>3 h con las 20 personas: el equipo comparte un mismo lenguaje en Copilot.</p></div>
-        <div class="mile"><span class="mile-d"></span><b>Semana 3 · Prácticas</b><p>Ausentismo y Selección, 4 h cada una: 2 asistentes funcionando con un caso real.</p></div>
+      <div class="route-miles" style="grid-template-columns:repeat(4,1fr)">
+        <div class="mile"><span class="mile-d"></span><b>Detección</b><p>Diagnóstico de cada subárea, mapa de licencias por proceso y línea base de tiempos.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Entrenamiento</b><p>Las 20 personas usan Copilot con un mismo lenguaje y criterio.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Proyectos finales</b><p>Los 2 asistentes funcionan con casos reales en Nómina y Selección.</p></div>
         <div class="mile"><span class="mile-d"></span><b>30 · 60 · 90 días</b><p>Seguimiento: uso, nuevas construcciones y tiempo recuperado contra la línea base.</p></div>
-        <div class="mile"><span class="mile-d"></span><b>Etapa 2 · Sin fecha</b><p>Proyectos finales por proceso, cuando Tecnología active Copilot Business.</p></div>
       </div>
-      <p class="route-note">S = semana de trabajo desde el arranque, cuya fecha se acuerda con Laboratorios Farma. Las 15 h son una proyección de sesión: 4, 3 y 8 h en las fases 1, 2 y 3. Las sesiones se acuerdan en los días que prefiere el equipo, sin dos días seguidos para Nómina.</p>
+      <p class="route-note">Las 20 horas de trabajo son una proyección: 4 h de Detección, 8 h de entrenamiento y 8 h de proyectos finales.</p>
 
       <div class="foot">
         <img src="../../../logos/educacion/BLANCO.png" alt="">
@@ -187,15 +220,138 @@
       </div>
     </section>
 
-    <!-- 4 · Inversión (hoja de cotización estándar, por horas) -->
+    <!-- 5 · Entregables: ¿con qué me quedo? (catálogo + piezas transversales) -->
+    <section class="slide s-deliv roomy">
+      <span class="counter">05 / 08</span>
+      <p class="eyebrow">05 · Entregables</p>
+      <div class="deliv-head">
+        <h2>Lo que recibe el equipo.</h2>
+        <p class="deliv-sub"><span class="nw">Lo que se llevan</span>: <strong>4 entregables</strong>, más el seguimiento a 30, 60 y 90 días que mide su efecto.</p>
+      </div>
+
+      <div class="deliv-carriles" style="--ncols:3">
+        <span class="dc acc-y fase" style="grid-column: span 1">Detección · 1 entregable</span>
+        <span class="dc acc-y fase" style="grid-column: span 1">Entrenamiento · 1 entregable</span>
+        <span class="dc acc-y fase hi" style="grid-column: span 1">Proyectos finales · 2 entregables</span>
+      </div>
+
+      <div class="deliv-cols" style="--ncols:3">
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">Las 6 subáreas</p>
+            <ul>
+              <li>Diagnóstico de las 6 subáreas y mapa de licencias de Copilot por proceso<ul class="inc"><li>Cómo trabaja hoy cada subárea: procesos, herramientas y permisos</li><li>Qué licencia de Copilot necesita cada proceso, y por qué</li></ul></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">Todo el equipo</p>
+            <ul>
+              <li>Las 20 personas entrenadas en Copilot, con su workbook digital<ul class="inc"><li>Ecosistema Microsoft y Copilot</li><li>Asistentes y agentes de IA: qué son y para qué sirven</li><li>Copilot en Outlook y Teams</li><li>Copilot en Excel y Word</li></ul></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">Nómina</p>
+            <ul>
+              <li>Asistente de ausentismo, probado con un caso real anonimizado</li>
+            </ul>
+          </div>
+          <div class="da">
+            <p class="da-name">Selección</p>
+            <ul>
+              <li>Asistente de filtro de currículos, probado con casos reales anonimizados</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="deliv-band">
+        <div class="db-card db-1">
+          <span class="db-label">Para todo el proyecto</span>
+        </div>
+        <div class="db-card db-2">
+          <span class="db-label">Valor inmediato</span>
+        </div>
+      </div>
+      <!-- Cajas multiline editables (vacías en HTML: el contenido vive dentro del AcroForm /V). -->
+      <div class="multi-box db-box db-box-1" data-field="Entregables"></div>
+      <div class="multi-box db-box db-box-2" data-field="Acreditacion"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Laboratorios Farma · CAI-032</span>
+      </div>
+    </section>
+
+    <!-- 6 · Retorno: ¿qué gano? (método de cálculo). Sin estudios ni citas externas. -->
+    <section class="slide s-roi">
+      <span class="counter">06 / 08</span>
+      <p class="eyebrow">06 · Retorno</p>
+      <h2>Retorno esperado: tiempo y dinero.</h2>
+      <p class="sub">Se calcula con los datos de cada proceso, se confirma con la línea base de la Detección y se mide a 30, 60 y 90 días.</p>
+
+      <div class="roi-body">
+        <div class="roi-panel">
+          <p class="roi-panel-title">Cómo se calcula, proceso por proceso</p>
+          <ol class="roi-steps">
+            <li><b>Volumen semanal</b><span>Cuántos cruces de asistencia hace Nómina y cuántos currículos revisa Selección cada semana.</span></li>
+            <li><b>Tiempo actual por ejecución</b><span>Se mide en la Detección con los líderes de cada proceso y es la <strong>línea base</strong>.</span></li>
+            <li><b>Tiempo con el asistente</b><span>Lo que toma el mismo trabajo con Copilot, una vez que el asistente está en uso.</span></li>
+            <li><b>Horas recuperadas a la semana</b><span>Volumen semanal multiplicado por la diferencia entre el tiempo actual y el tiempo con el asistente.</span></li>
+            <li><b>Valor en dinero</b><span>Horas recuperadas multiplicadas por el valor hora de referencia que Laboratorios Farma valide.</span></li>
+          </ol>
+        </div>
+
+        <div class="roi-right">
+          <p class="roi-right-title">Calendario de garantía, desde el cierre de los proyectos finales</p>
+          <div class="roi-card">
+            <b>30 días</b>
+            <p>Los 2 asistentes en uso real en Nómina y Selección, dentro del límite de Copilot básico.</p>
+          </div>
+          <div class="roi-card">
+            <b>60 días</b>
+            <p>Nuevas construcciones del equipo y horas recuperadas medidas contra la línea base.</p>
+          </div>
+          <div class="roi-card">
+            <b>90 días</b>
+            <p>Medición del retorno en dinero, con el valor de las horas recuperadas de cada proceso.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="roi-dest-wrap">
+        <p class="roi-dest-title">Hacia dónde va el proyecto</p>
+        <div class="roi-dest">
+          <div class="rd-item"><b>Mismo equipo, más volumen</b><p>Si el tiempo se libera, Nómina y Selección pueden procesar <strong>más cruces de asistencia y más currículos</strong> con el mismo equipo.</p></div>
+          <div class="rd-item"><b>Trabajo reenfocado</b><p>Con el tiempo liberado, Nómina puede dedicarse a revisar las excepciones de asistencia y Selección a atender a los candidatos que filtra el asistente.</p></div>
+          <div class="rd-item"><b>Los otros 5 procesos</b><p>Con el retorno medido, Laboratorios Farma decide si lleva este mismo ciclo de construir, probar y adoptar a los <strong>otros 5 procesos</strong> de la Etapa 2.</p></div>
+        </div>
+      </div>
+
+      <div class="roi-hook"><p>A los 90 días del cierre de los proyectos finales, Laboratorios Farma contará con el tiempo recuperado medido y su valor en dinero, proceso por proceso.</p></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Laboratorios Farma · CAI-032</span>
+      </div>
+    </section>
+
+    <!-- 7 · Inversión (hoja de cotización estándar; antepenúltima slide) -->
     <section class="slide s-price">
-      <span class="counter">04 / 06</span>
-      <h2 class="title">Inversión por horas de sesión.</h2>
+      <span class="counter">07 / 08</span>
+      <h2 class="title">Inversión del proyecto.</h2>
       <p class="price-intro">Propuesta Económica · Servicio de Detección y Habilidades</p>
 
       <div class="block">
         <span class="block-eyebrow">Duración</span>
-        <p class="block-value">Proyección de 15 h de sesión en 3 semanas de trabajo desde el arranque, más seguimiento a 30, 60 y 90 días.</p>
+        <p class="block-value">Detección, entrenamiento de las 20 personas y 2 proyectos finales, con seguimiento y garantía a 30, 60 y 90 días. 20 horas de trabajo.</p>
       </div>
 
       <div class="block block-programa">
@@ -207,7 +363,7 @@
         <span class="block-eyebrow">Cotización</span>
       </div>
 
-      <span class="cot-label cot-label-base">Propuesta + Inversión</span>
+      <span class="cot-label cot-label-base">Suma de ambas partes</span>
       <div class="cot-frame base-frame"></div>
 
       <span class="cot-label cot-label-discount">Descuento</span>
@@ -234,20 +390,24 @@
       </div>
       <div class="multi-box notas-box" data-field="Notas"></div>
 
-      <div class="lic-wrap">
-        <span class="lic-eyebrow">Licenciamiento · aparte de esta inversión</span>
-        <div class="lic-cards">
-          <div class="lic-card acc-y">
-            <span class="lic-name">Copilot básico · Etapa 1</span>
-            <p>La licencia que el equipo <strong>ya tiene</strong>. Admite 5 solicitudes diarias: las 2 prácticas se construyen dentro de ese límite.</p>
+      <div class="partes-wrap">
+        <span class="partes-eyebrow">Valor por parte</span>
+        <div class="partes-cards">
+          <div class="parte-card acc-y">
+            <span class="parte-tag">Parte 1</span>
+            <b class="parte-name">Detección</b>
+            <p>Diagnóstico de las 6 subáreas · 4 h</p>
           </div>
-          <div class="lic-card acc-o">
-            <span class="lic-name">Copilot Business · Etapa 2</span>
-            <p>La gestiona Tecnología ante la Gerencia Corporativa de TI. El <strong>mapa de licencias</strong> de la Detección indica qué subárea la necesita y por qué.</p>
+          <div class="parte-card acc-o">
+            <span class="parte-tag">Parte 2</span>
+            <b class="parte-name">Habilidades</b>
+            <p>Entrenamiento y 2 proyectos finales · 16 h</p>
           </div>
         </div>
-        <p class="lic-note">Esta propuesta no incluye precios de lista: el costo de la licencia lo confirma Tecnología con Microsoft. Pueden variar.</p>
       </div>
+      <!-- Cajas de monto por parte: campos PrecioParte1..N (agregar-campo-precio.py → partes_fields); PrecioBase las suma. -->
+      <div class="parte-frame" style="left:68.00px; top:618.00px; width:210.00px; height:34.00px"></div>
+      <div class="parte-frame" style="left:314.00px; top:618.00px; width:210.00px; height:34.00px"></div>
 
       <div class="foot">
         <img src="../../../logos/educacion/NEGRO.png" alt="">
@@ -255,126 +415,48 @@
       </div>
     </section>
 
-    <!-- 5 · Entregables (catálogo + piezas transversales) -->
-    <section class="slide s-deliv">
-      <span class="counter">05 / 06</span>
-      <p class="eyebrow">05 · Entregables</p>
-      <div class="deliv-head">
-        <h2>Lo que recibe el equipo.</h2>
-        <p class="deliv-sub"><span class="nw">Lo que se llevan</span>: <strong>4 entregables</strong>, uno por cada solución construida, probada y adoptada, más el seguimiento a 30, 60 y 90 días que mide su efecto.</p>
-      </div>
+    <!-- 9 · Próximos pasos: qué hacer y a quién escribir (última slide) -->
+    <section class="slide s-next">
+      <span class="counter">08 / 08</span>
+      <p class="eyebrow">08 · Próximos pasos</p>
+      <h2>Tres pasos para arrancar.</h2>
+      <p class="sub">Esto es lo que sigue cuando Laboratorios Farma confirme la propuesta.</p>
 
-      <div class="deliv-carriles" style="--ncols:4">
-        <span class="dc acc-y" style="grid-column: span 4">Microsoft Copilot · 4 entregables</span>
-      </div>
-
-      <div class="deliv-cols" style="--ncols:4">
-
-        <div class="deliv-col acc-y">
-          <div class="da">
-            <p class="da-name" style="min-height:2.4em">Detección (proceso base) <i>1</i></p>
-            <ul>
-              <li>Diagnóstico de las 6 subáreas y mapa de licencias de Copilot por proceso</li>
-            </ul>
-          </div>
+      <div class="nx-steps">
+        <div class="nx-step acc-y">
+          <span class="nx-num">1</span>
+          <b>Fecha de arranque</b>
+          <p>Confirmamos con Laboratorios Farma la fecha de arranque y la zona horaria de cada país.</p>
         </div>
-
-        <div class="deliv-col acc-y">
-          <div class="da">
-            <p class="da-name">Módulo conjunto (proceso base) <i>1</i></p>
-            <ul>
-              <li>Sesión conjunta de nivelación para las 20 personas y workbook digital</li>
-            </ul>
-          </div>
+        <div class="nx-step acc-o">
+          <span class="nx-num">2</span>
+          <b>Accesos y participantes</b>
+          <p>Coordinamos los accesos a Teams y a Copilot, y quién participa por cada subárea.</p>
         </div>
-
-        <div class="deliv-col acc-y">
-          <div class="da">
-            <p class="da-name" style="min-height:2.4em">Nómina <i>1</i></p>
-            <ul>
-              <li>Asistente de ausentismo en Copilot, probado con un caso real</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="deliv-col acc-y">
-          <div class="da">
-            <p class="da-name" style="min-height:2.4em">Selección <i>1</i></p>
-            <ul>
-              <li>Asistente de filtro de currículos en Copilot, probado con un caso real</li>
-            </ul>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="deliv-band">
-        <div class="db-card db-1">
-          <span class="db-label">Entregables transversales</span>
-        </div>
-        <div class="db-card db-2">
-          <span class="db-label">Valor inmediato</span>
+        <div class="nx-step acc-w">
+          <span class="nx-num">3</span>
+          <b>Reunión de arranque</b>
+          <p>Una reunión de unos 30 minutos para acordar el calendario, alinear los casos reales y medir la línea base.</p>
         </div>
       </div>
-      <!-- Cajas multiline editables (vacías en HTML: el contenido vive dentro del AcroForm /V). -->
-      <div class="multi-box db-box db-box-1" data-field="Entregables"></div>
-      <div class="multi-box db-box db-box-2" data-field="Acreditacion"></div>
+
+      <div class="nx-contact">
+        <div class="nx-card nx-ase">
+          <span class="nx-label">¿Dudas? Escribe a tu asesora comercial</span>
+          <b class="nx-name">María Iribarren</b>
+          <span class="nx-role">Asesora comercial</span>
+          <p class="nx-line"><a href="mailto:miribarren@intezia.com">miribarren@intezia.com</a></p>
+          <p class="nx-line">+58 414 0570056</p>
+        </div>
+        <div class="nx-card nx-emp">
+          <span class="nx-label">Intezia</span>
+          <p class="nx-line">Intezia C.A J-505657950</p>
+          <p class="nx-line"><a href="mailto:servicio@intezia.com">servicio@intezia.com</a></p>
+        </div>
+      </div>
 
       <div class="foot">
         <img src="../../../logos/educacion/BLANCO.png" alt="">
-        <span class="meta">Laboratorios Farma · CAI-032</span>
-      </div>
-    </section>
-
-    <!-- 6 · Retorno esperado (método de cálculo). Sin estudios ni citas externas. -->
-    <section class="slide s-roi">
-      <span class="counter">06 / 06</span>
-      <p class="eyebrow">06 · Retorno</p>
-      <h2>Retorno esperado: tiempo y dinero.</h2>
-      <p class="sub">Se calcula con los datos de cada área, se confirma con la línea base de la semana 1 y se mide con metas a 30, 60 y 90 días.</p>
-
-      <div class="roi-body">
-        <div class="roi-panel">
-          <p class="roi-panel-title">Cómo se calcula, por área y por proceso</p>
-          <ol class="roi-steps">
-            <li><b>Volumen semanal</b><span>Cuántos cruces de asistencia hace Nómina y cuántos currículos revisa Selección cada semana.</span></li>
-            <li><b>Tiempo actual por ejecución</b><span>Se mide en la Detección con los líderes de cada proceso y es la <strong>línea base</strong>.</span></li>
-            <li><b>Tiempo con el asistente</b><span>Lo que toma el mismo trabajo con Copilot, una vez que el asistente está en uso.</span></li>
-            <li><b>Horas recuperadas a la semana</b><span>Volumen semanal multiplicado por la diferencia entre el tiempo actual y el tiempo con el asistente.</span></li>
-            <li><b>Valor en dinero</b><span>Horas recuperadas multiplicadas por el costo hora de referencia que Laboratorios Farma valide.</span></li>
-          </ol>
-        </div>
-
-        <div class="roi-right">
-          <p class="roi-right-title">Metas, desde el cierre de cada área</p>
-          <div class="roi-card">
-            <b>30 días</b>
-            <p>Los 2 asistentes en uso real en Nómina y Selección, dentro del límite de Copilot básico.</p>
-          </div>
-          <div class="roi-card">
-            <b>60 días</b>
-            <p>Nuevas construcciones del equipo y horas recuperadas medidas contra la línea base.</p>
-          </div>
-          <div class="roi-card">
-            <b>90 días</b>
-            <p>Medición del retorno en dinero, con el valor de las horas recuperadas de cada proceso.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="roi-dest-wrap">
-        <p class="roi-dest-title">Hacia dónde va el tiempo recuperado</p>
-        <div class="roi-dest">
-          <div class="rd-item"><b>Mismo equipo, más volumen</b><p>Si el tiempo se libera, Nómina y Selección pueden procesar <strong>más cruces de asistencia y más currículos</strong> con el mismo equipo.</p></div>
-          <div class="rd-item"><b>Trabajo reenfocado</b><p>Con el tiempo liberado, Nómina puede dedicarse a revisar las excepciones de asistencia y Selección a atender a los candidatos que filtra el asistente.</p></div>
-          <div class="rd-item"><b>Los otros 5 procesos</b><p>Con el retorno medido, Laboratorios Farma decide si lleva este mismo ciclo de construir, probar y adoptar a los <strong>otros 5 procesos</strong> de la Etapa 2.</p></div>
-        </div>
-      </div>
-
-      <div class="roi-hook"><p>Hacia la semana 16 (3 semanas de construcción más 90 días de seguimiento), Laboratorios Farma contará con el tiempo recuperado medido y su valor en dinero, área por área.</p></div>
-
-      <div class="foot">
-        <img src="../../../logos/educacion/NEGRO.png" alt="">
         <span class="meta">Laboratorios Farma · CAI-032</span>
       </div>
     </section>

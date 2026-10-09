@@ -1,6 +1,41 @@
 # Brief — Laboratorios Farma · Gestión Humana regional (CAI-032)
 
-## Actualización 2026-10-05 (2) — reexpresada en el formato compacto (6 slides) · VIGENTE
+## Corrección 2026-10-08: correcciones de Keiber en la plantilla v3 (8 slides) · VIGENTE
+
+**Pedido:** David (2026-10-08): «corrige esta propuesta de Laboratorios Farma (adjunta) en base a las correcciones que
+se hablaron en la reunión», con el PDF «CAI-032 Incorporación de IA con Microsoft Copilot en 6 subáreas de Gestión
+Humana» (8 slides, generado fuera de este repositorio: 20 h, entrenamiento en 4 sesiones, valor por parte), las
+correcciones de **Keiber Quintana** (reunión «Laboratorios Farma», 2026-10-08) y la minuta de la reunión con el cliente
+(Claudia Hernández y Nelson González).
+
+| Corrección de Keiber | Aplicación |
+|---|---|
+| «Un entrenamiento compartido que las 20 usen Copilot para su productividad y efectividad, y 2 proyectos finales: nómina y selección. Nada más.» «Se tiene que entender visualmente: aquí se ven los 4 como componentes exactamente iguales», no la detección a las 6 subáreas y después el entrenamiento | Opción nueva del generador `por_fases`: el alcance se agrupa en 3 pasos numerados (1 Detección de las 6 subáreas, 2 Entrenamiento de las 20 personas, 3 Proyectos finales de Nómina y Selección, resaltado). La Detección y el entrenamiento son pasos previos y no se cuentan como soluciones: las soluciones son solo los 2 asistentes. La ruta (horas en las fases sin soluciones) y los entregables (una columna por fase) siguen la misma estructura. El entrenamiento deja de ser «4 soluciones» (una por sesión) y pasa a una sola pieza de 8 h |
+| «El mismo tema de las semanas, el cronograma» | Fuera «en 4 semanas», «Semana 1 / Semanas 2 y 3 / Semana 4», «4 sesiones», «2 sesiones por semana», «Hacia la semana 17», «línea base de la semana 1» y «agenda de sesiones». Ruta por fases e hitos por evento; el calendario se acuerda en la reunión de arranque |
+| «Así trabajamos [...] debería ir como tercera página» | Opción nueva `metodo_antes_de_ruta`: «Cómo trabajamos» pasa a la página 3 y la ruta a la 4 |
+| «En los entregables bien puestos» (en la de Marcelo, sobre lo mismo: «Para todas las áreas», «Valor inmediato») | Las 4 sesiones dejan de figurar como entregables: sus temas quedan como detalle del entregable del entrenamiento (opción nueva `incluye`), y la Detección dice qué incluye su diagnóstico y su mapa de licencias. «Para todas las áreas» pasa a «Para todo el proyecto»; el «Valor inmediato» va por evento («Al cerrar la Detección…»), sin semanas |
+
+**Se conserva del PDF enviado:** las horas (Detección 4 h, entrenamiento 8 h, 2 proyectos finales de 4 h: 20 h), la
+portada (titular, hechos y fuente; el lead ahora cuenta el orden: primero, después, al final), cómo funciona en la
+práctica (textos más cortos), el cuidado de los datos, el retorno en modo método, el **valor por parte** (Parte 1
+Detección 4 h, Parte 2 Habilidades 16 h; la suma se calcula sola en el PDF) y la propuesta sin facilidad de pago. El PDF
+enviado queda en `_anterior-8-slides/`; la versión compacta anterior del repositorio (6 slides, 15 h), en
+`_anterior-6-slides/`.
+
+**De la minuta con el cliente:** virtual por Teams; unas 18 a 20 personas en Venezuela (planta de Maracay y Caracas),
+Ecuador, Perú y Colombia; Microsoft 365 (Outlook, Teams, Excel, Word); Nómina cruza a diario el control de acceso con
+una macro de Excel; Selección revisa uno a uno los currículos del portal; a Nómina no se la puede parar dos días por
+semana (nómina semanal en la planta; prefieren jueves, viernes o lunes); ejecución antes del 11 de diciembre por las
+vacaciones colectivas, orden de compra en octubre y factura a más tardar la primera semana de noviembre. El deck solo
+dice que el proyecto «cierra antes de las vacaciones colectivas» (v3: sin fechas).
+
+**Pendientes:** el hilo de correos de Keiber con lo que se terminó de acordar con el cliente (no llegó; si cambia horas,
+piezas o participantes, corregir `datos.json` y regenerar); el valor de cada parte, el descuento y el total (ventas);
+confirmar con Tecnología (Leonardo) la licencia de Copilot de cada participante.
+
+---
+
+## Actualización 2026-10-05 (2) — reexpresada en el formato compacto (6 slides) · SUPERADA por la corrección del 2026-10-08
 
 Instrucción directa del usuario, tras ver la primera pasada de abajo: "una propuesta debe responder
 **qué, cómo, qué me entrega y cuándo**; 15 slides es demasiado; compacta la información con el
