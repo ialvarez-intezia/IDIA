@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 // verificar-habilidades-compacto.js <slug | ruta/index.html>
 //
-// Mide con Chrome headless (media print, 1123x794) las holguras exactas del deck compacto de Habilidades
+// Mide con Chrome headless (media print, 1123x794) las holguras exactas del deck compacto de Habilidades (y del formato
+// de Detección, plantillas/deteccion-compacto.md: slides .s-det-scope, .s-det-route y .s-det-deliv)
 // que el detector estándar (verificar-overflow.js) NO ve: colisiones entre bloques con posición absoluta,
 // texto que se sale de su tarjeta (scrollHeight) y distancia al pie de página. Complementa a
 // verificar-overflow.js (corre los dos). Spec: plantillas/habilidades-compacto.md.
@@ -57,8 +58,10 @@ const MEDIR = `(async () => {
         'paneles ' + Math.round(paneles.getBoundingClientRect().height) + ' px (' + filas + ' filas)' + (fuera ? ', franja de fuera de alcance ' + Math.round(fuera.getBoundingClientRect().height) + ' px' : '') + '. Acortar subtitulo, para_que o fuera_alcance, o usar alcance.compacto');
       if (fuera) add(n, 'alcance: paneles vs franja «Fuera de este alcance»', top(s, fuera) - bot(s, paneles), 8);
       overflowEls(n, s, '.scope-panel', 'panel de herramienta'); overflowEls(n, s, '.scope-out', 'franja de fuera de alcance');
+      overflowEls(n, s, '.scope-step', 'fase del alcance');
       s.querySelectorAll('.scope-rows li').forEach((li, i) => {
         const a = li.querySelector('.area'), nn = li.querySelector('.n');
+        if (!a || !nn) return;   // alcance por fases: los pasos previos no llevan píldora de soluciones
         const ar = a.getBoundingClientRect(), nr = nn.getBoundingClientRect();
         if (ar.right > nr.left + 1 && ar.bottom > nr.top + 1 && ar.top < nr.bottom - 1) out.push({ slide: n, check: 'alcance: fila ' + (i + 1) + ' (' + a.textContent.trim().slice(0, 30) + ') pisa la píldora de soluciones', holgura: -Math.round(ar.right - nr.left), minimo: 0, ok: false, detalle: 'acortar el nombre del área (≤ 38 caracteres con una herramienta, ≤ 46 con dos)' });
       });
@@ -88,6 +91,19 @@ const MEDIR = `(async () => {
       if (grid && miles) add(n, 'ruta: grilla vs línea de hitos', top(s, miles) - bot(s, grid), 8);
       if (miles && nota) add(n, 'ruta: hitos vs nota', top(s, nota) - bot(s, miles), 3);
     }
+    if (s.classList.contains('s-det-route')) {
+      const etapas = s.querySelector('.det-stages'), comp = s.querySelector('.det-next');
+      if (etapas && comp) add(n, 'ruta (Detección): etapas vs ruta completa', top(s, comp) - bot(s, etapas), 8);
+      if (etapas && !comp) add(n, 'ruta (Detección): etapas vs pie', footTop - bot(s, etapas), 8);
+      overflowEls(n, s, '.det-stage', 'etapa'); overflowEls(n, s, '.dn-item', 'tarjeta de la ruta completa');
+      s.querySelectorAll('.det-stage .ds-t').forEach((t, i) => {
+        const lineas = Math.round(t.getBoundingClientRect().height / parseFloat(getComputedStyle(t).lineHeight));
+        add(n, 'ruta (Detección): nombre de la etapa #' + (i + 1) + ' en una línea', 1 - lineas, 0, lineas > 1 ? 'el nombre ocupa ' + lineas + ' líneas: acortar deteccion.etapas[].titulo' : '', 'líneas de margen');
+      });
+    }
+    if (s.classList.contains('s-det-scope')) {
+      overflowEls(n, s, '.det-panel', 'panel del alcance');
+    }
     if (s.classList.contains('s-method')) {
       const logi = s.querySelector('.mt-logi');
       if (logi) add(n, 'método: logística vs pie', footTop - bot(s, logi), 8, 'Acortar los textos de cada bloque (prácticas, datos, casos ya logrados) o los 4 datos de logística');
@@ -111,6 +127,22 @@ const MEDIR = `(async () => {
       const terms = s.querySelector('.cot-terms-box'); const gar = s.querySelector('.cot-garantia-badge');
       if (terms && gar) add(n, 'inversión: términos vs garantía', top(s, gar) - bot(s, terms), 6);
       if (gar) add(n, 'inversión: garantía vs pie', footTop - bot(s, gar), 8);
+      const pw = s.querySelector('.partes-wrap');
+      if (pw) {
+        add(n, 'inversión: valor por parte vs pie', footTop - bot(s, pw), 8);
+        const nb = s.querySelector('.notas-box');
+        if (nb) add(n, 'inversión: valor por parte vs caja Notas', top(s, pw) - bot(s, nb), 4);
+        const cards = [...s.querySelectorAll('.parte-card')], frames = [...s.querySelectorAll('.parte-frame')];
+        add(n, 'inversión: una caja de monto por parte', Math.min(cards.length, frames.length) - Math.max(cards.length, frames.length), 0, cards.length + ' partes y ' + frames.length + ' cajas de monto', '');
+        cards.forEach((c, i) => {
+          const f = frames[i]; if (!f) return;
+          const cr = c.getBoundingClientRect(), fr = f.getBoundingClientRect();
+          add(n, 'inversión: caja de monto de la parte ' + (i + 1) + ' dentro de su tarjeta', Math.min(fr.left - cr.left, cr.right - fr.right, cr.bottom - fr.bottom), 6, 'las cajas deben coincidir con agregar-campo-precio.py → precio_fields()');
+          const ult = c.querySelector('p');
+          if (ult) add(n, 'inversión: texto de la parte ' + (i + 1) + ' vs su caja de monto', fr.top - ult.getBoundingClientRect().bottom, 4, 'acortar inversion.partes[].texto (máx. 2 líneas)');
+        });
+        overflowEls(n, s, '.parte-card', 'tarjeta de parte');
+      }
     }
     if (s.classList.contains('s-deliv')) {
       const band = s.querySelector('.deliv-band');
@@ -134,6 +166,11 @@ const MEDIR = `(async () => {
       const head = s.querySelector('.deliv-carriles');
       const cols = s.querySelector('.deliv-cols');
       if (head && cols) add(n, 'entregables: barras de carril vs columnas', top(s, cols) - bot(s, head), 2);
+    }
+    if (s.classList.contains('s-det-deliv')) {
+      const tarjetas = [...s.querySelectorAll('.det-card')], band = s.querySelector('.deliv-band');
+      if (tarjetas.length && band) add(n, 'entregables (Detección): tarjetas vs franja inferior', top(s, band) - Math.max(...tarjetas.map(t => bot(s, t))), 10, 'acortar deteccion.entregables[].texto o usar menos tarjetas');
+      overflowEls(n, s, '.det-card', 'tarjeta de entregable');
     }
     if (s.classList.contains('s-pay')) {
       const nota = s.querySelector('.pay-note');

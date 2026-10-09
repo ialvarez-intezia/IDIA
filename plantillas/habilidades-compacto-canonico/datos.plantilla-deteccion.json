@@ -1,0 +1,78 @@
+{
+ "_ayuda_general": "Plantilla de datos.json para una propuesta de DETECCIÓN (formato compacto v3, plantillas/deteccion-compacto.md). Copiar a clientes/propuestas/<slug>/datos.json y reemplazar TODOS los POR_DEFINIR (el generador no publica mientras quede alguno). Las claves _ayuda se ignoran. Todo lo que no está aquí sale de los valores por defecto del servicio (etapas, entregables, «Cómo trabajamos», retorno, inversión, pago y próximos pasos: ver la spec §5); para cambiar uno, se define la clave completa. Ejemplo real: datos.ejemplo-deteccion.json (G-MAX DET-024). REGLAS (Keiber Quintana, 2026-10-08): sin semanas, sesiones ni fechas; sin frentes ni áreas prioritarias; horas en global, sin reparto por área; al menos N logros inmediatos en el proyecto; entregables nombrados, sin conteos. Fuente: Ficha de Levantamiento + transcripción de la reunión con el cliente (no el resumen de la asesora).",
+ "version": 3,
+ "formato": "deteccion",
+ "cliente": {
+  "nombre": "POR_DEFINIR",
+  "slug": "POR_DEFINIR",
+  "codigo": "POR_DEFINIR",
+  "_ayuda": "codigo: el siguiente DET-0NN libre (clientes/INDEX.md). nombre_pie (opcional): nombre corto para el pie y los titulares si el nombre supera ~12 caracteres."
+ },
+ "division": "POR_DEFINIR",
+ "_ayuda_division": "educacion | fundacion (no se infiere: preguntar y guardar, CLAUDE.md §4.1). Fundación omite inversión y pago (7 slides).",
+ "alianza": "POR_DEFINIR",
+ "_ayuda_alianza": "true | false: preguntar aparte del servicio (CLAUDE.md §4.1a punto 2).",
+ "eje": "POR_DEFINIR",
+ "origen": "POR_DEFINIR",
+ "_ayuda_origen": "origen = de dónde sale la propuesta: transcripción de la reunión con el cliente (fecha, presencial o virtual), Ficha de Levantamiento y lista de personal si la hay. Si se contradicen, manda la transcripción.",
+ "fuente_insumo": "POR_DEFINIR",
+ "portada": {
+  "_ayuda": "1 · PORTADA = «¿cuál es mi problema?». Titular-objetivo estilo título de tesis (≤ 82 caracteres con el código, sin punto final), p. ej. «Mapa de oportunidades de IA / con control de la información / en G-MAX». Hechos: 2 a 4 dolores reales dichos por el cliente en la reunión (num ≤ 9 caracteres, texto ≤ ~95), sin dramatizar ni citas. En Detección no hace falta resuelto_por: el levantamiento cubre todos los dolores. La fuente se nombra sin personas: «Fuente: reunión de levantamiento con la dirección de <cliente>.»",
+  "titulo_lineas": [
+   "POR_DEFINIR",
+   "POR_DEFINIR"
+  ],
+  "titulo_destacado": "POR_DEFINIR",
+  "lead": "POR_DEFINIR",
+  "hechos": [
+   {
+    "num": "POR_DEFINIR",
+    "texto": "POR_DEFINIR"
+   },
+   {
+    "num": "POR_DEFINIR",
+    "texto": "POR_DEFINIR"
+   },
+   {
+    "num": "POR_DEFINIR",
+    "texto": "POR_DEFINIR"
+   }
+  ],
+  "fuente": "POR_DEFINIR"
+ },
+ "deteccion": {
+  "_ayuda": "2 · ALCANCE y 3 · RUTA. areas: 1 a 8, con el nombre que les da el cliente (no un «resto»); departamentos: los de la lista de personal (≤ 24 píldoras de ≤ ~30 caracteres); foco (opcional): dónde se concentra el levantamiento (p. ej. personal corporativo; lo asistencial, puntual). horas.levantamiento: total en global (lo único que se muestra); arranque y nivelacion: internas, para cotizar. logros_minimos: los que asegura el proyecto (por defecto 3), nunca uno por área. Opcionales con valor por defecto: para_que (4), etapas (5: Arranque, Nivelación, Levantamiento con las horas, Priorización, Informe Final), texto_horas, ruta_completa (Detección, Habilidades, Políticas), entregables (6 tarjetas) y sus etiquetas.",
+  "areas": [
+   "POR_DEFINIR"
+  ],
+  "departamentos": [
+   "POR_DEFINIR"
+  ],
+  "horas": {
+   "levantamiento": 20,
+   "arranque": 1,
+   "nivelacion": 4
+  },
+  "logros_minimos": 3
+ },
+ "logistica": {
+  "_ayuda": "Cuatro fichas al pie de «Cómo trabajamos». modalidad es obligatoria (presencial, virtual o mixta, y dónde); participantes, ritmo y arranque tienen valor por defecto. Sin semanas ni sesiones.",
+  "modalidad": "POR_DEFINIR"
+ },
+ "proximos_pasos": {
+  "_ayuda": "9 · PRÓXIMOS PASOS: la asesora comercial que atiende al cliente (nombre y correo obligatorios; teléfono y cargo opcionales). Los 3 pasos tienen valor por defecto (logística, sin términos económicos, CLAUDE.md §4.15).",
+  "asesora": {
+   "nombre": "POR_DEFINIR",
+   "correo": "POR_DEFINIR"
+  }
+ },
+ "siglas_ok": [
+  "IA"
+ ],
+ "supuestos": [
+  "POR_DEFINIR: lo que se asumió y hay que confirmar (horas, áreas, departamentos, plan de pago)."
+ ],
+ "pendientes": [
+  "Definir inversión, descuento, total y los montos de las cuotas (campos vacíos para ventas)."
+ ]
+}

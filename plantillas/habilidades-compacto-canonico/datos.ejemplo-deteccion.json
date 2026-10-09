@@ -1,0 +1,223 @@
+{
+ "version": 3,
+ "formato": "deteccion",
+ "cliente": {
+  "nombre": "G-MAX",
+  "slug": "g-max",
+  "codigo": "DET-024",
+  "nombre_pie": "G-MAX"
+ },
+ "division": "educacion",
+ "alianza": false,
+ "eje": "Auditar la operación real de G-MAX, proceso por proceso, para construir un mapa de oportunidades de IA con control sobre el uso de la información, antes de invertir en licencias",
+ "origen": "Transcripción de la reunión de levantamiento con G-MAX (presencial, fines de septiembre de 2026), lista de personal enviada por G-MAX (51 personas) y correcciones de Keiber Quintana del 08/10/2026",
+ "fuente_insumo": "Transcripción de la reunión con G-MAX y lista de personal",
+ "portada": {
+  "titulo_lineas": [
+   "Mapa de oportunidades de IA",
+   "con control de la información"
+  ],
+  "titulo_destacado": "en G-MAX",
+  "lead": "Auditamos la operación de {cliente_corto} proceso por proceso, con quien hace el trabajo. Dejamos **logros inmediatos** en el camino y entregamos un mapa de oportunidades para invertir en IA con datos y con control de la información.",
+  "hechos": [
+   {
+    "num": "3",
+    "texto": "personas arman a mano el expediente de cobro de cada seguro, sin criterios unificados."
+   },
+   {
+    "num": "Cada mes",
+    "texto": "las gerencias entregan su informe de gestión y la dirección los lee uno por uno."
+   },
+   {
+    "num": "En Excel",
+    "texto": "se lleva el proceso contable y administrativo, con un volumen alto de operaciones."
+   },
+   {
+    "num": "Ninguna",
+    "texto": "regla define qué herramienta de IA usa cada puesto ni qué datos salen de la clínica."
+   }
+  ],
+  "fuente": "Fuente: reunión de levantamiento con la dirección de G-MAX."
+ },
+ "deteccion": {
+  "areas": [
+   "Gerencia de Operaciones",
+   "Gerencia de Tecnología",
+   "Dirección Médica",
+   "Recursos Humanos"
+  ],
+  "departamentos": [
+   "Gerencia General",
+   "Administración y Tesorería",
+   "Seguros",
+   "Atención al Paciente",
+   "Logística",
+   "Almacén",
+   "Farmacia",
+   "Servicios Generales",
+   "Tecnología",
+   "Auditoría y Procesos",
+   "Recursos Humanos",
+   "Dirección Médica",
+   "Hemodiálisis",
+   "Enfermería",
+   "Laboratorio"
+  ],
+  "foco": "El foco está en el trabajo **corporativo y administrativo**. En el área asistencial, el levantamiento es puntual, con sus coordinaciones.",
+  "horas": {
+   "levantamiento": 20,
+   "arranque": 1,
+   "nivelacion": 4
+  },
+  "texto_horas": "**{h_levantamiento} horas** presenciales, repartidas según lo que necesite cada uno.",
+  "logros_minimos": 3,
+  "ruta_completa": [
+   {
+    "cuando": "Ahora",
+    "servicio": "Detección",
+    "texto": "Esta propuesta."
+   },
+   {
+    "cuando": "Después",
+    "servicio": "Habilidades",
+    "texto": "Formación práctica por área sobre lo que encontró la Detección."
+   },
+   {
+    "cuando": "Más adelante",
+    "servicio": "Políticas",
+    "texto": "Manual de uso de IA de la clínica, con reglas claras para todo el equipo."
+   }
+  ],
+  "entregables": [
+   {
+    "cuando": "Al arrancar",
+    "titulo": "Alcance y calendario",
+    "texto": "Acordados con la dirección: responsables de cada departamento y orden de las áreas."
+   },
+   {
+    "cuando": "Al arrancar",
+    "titulo": "Equipo nivelado en IA",
+    "texto": "Todo el personal con un lenguaje común sobre IA y su uso responsable."
+   },
+   {
+    "cuando": "En el levantamiento",
+    "titulo": "Logros inmediatos",
+    "texto": "**Al menos {logros_minimos_palabra}** soluciones construidas con el equipo, en uso desde el primer día."
+   },
+   {
+    "cuando": "Al cierre",
+    "titulo": "Mapa de Calor",
+    "texto": "Todas las oportunidades de la clínica en un solo mapa, con su Índice de Madurez en IA, para ver por dónde empezar."
+   },
+   {
+    "cuando": "Al cierre",
+    "titulo": "Informe Final y hoja de ruta",
+    "texto": "Diagnóstico por área y ruta de adopción de IA, con un resumen ejecutivo de una página."
+   },
+   {
+    "cuando": "Al cierre",
+    "titulo": "Inversión inteligente en licencias",
+    "texto": "Qué ecosistema de IA adquirir y para qué puestos, con la **inversión estimada**."
+   }
+  ]
+ },
+ "metodo": {
+  "por_que_orden": "Primero nivelamos al equipo, para que todos hablen el mismo idioma sobre IA. Después levantamos cada departamento por separado, para que cada líder hable de sus procesos sin esperar a otros. Al final priorizamos con la foto completa de la clínica.",
+  "quien_construye": "Intezia levanta y construye junto a cada líder. La Gerencia de Tecnología de {cliente_corto} autoriza los accesos y las herramientas con las que se trabaja.",
+  "datos": "Trabajamos con ejemplos reales sin sacar datos de pacientes ni información financiera de los equipos de {cliente_corto}. Los logros usan solo las cuentas autorizadas, y sus sistemas no se modifican."
+ },
+ "logistica": {
+  "modalidad": "Presencial, en las instalaciones de {cliente_corto}.",
+  "ritmo": "Jornadas de mañana, en el horario que acuerde cada responsable."
+ },
+ "retorno": {
+  "pasos": [
+   {
+    "titulo": "Volumen",
+    "texto": "Cuántas veces al mes se repite cada tarea, por ejemplo, armar el expediente de cobro de un seguro."
+   },
+   {
+    "titulo": "Tiempo actual",
+    "texto": "Lo que toma hoy cada vez, según el líder del departamento y su mano derecha."
+   },
+   {
+    "titulo": "Tiempo con la solución",
+    "texto": "La estimación de Intezia para cada oportunidad del Mapa de Calor."
+   },
+   {
+    "titulo": "Horas recuperables",
+    "texto": "Volumen por la diferencia de tiempos: una estimación de referencia, no un compromiso de resultado."
+   },
+   {
+    "titulo": "Prioridad",
+    "texto": "Impacto, esfuerzo y riesgo de cada oportunidad, para decidir por dónde empezar."
+   }
+  ],
+  "destino": [
+   {
+    "rotulo": "Crecer en automatización",
+    "texto": "Con los procesos ordenados, el mismo equipo podría atender más volumen **sin sumar personal**."
+   },
+   {
+    "rotulo": "Trabajo reenfocado",
+    "texto": "Menos tiempo en tareas manuales y repetitivas, y más tiempo para analizar, decidir y atender al paciente."
+   },
+   {
+    "rotulo": "Información trazable",
+    "texto": "Informes y datos estructurados y guardados, para seguir el avance mes a mes y por trimestre."
+   }
+  ]
+ },
+ "inversion": {
+  "duracion": "Reunión de arranque, nivelación en IA de todo el equipo y **{h_levantamiento} horas de levantamiento presencial**, repartidas según cada departamento.",
+  "programa": [
+   "Servicio de Detección · G-MAX (DET-024).",
+   "Arranque con la dirección y nivelación en IA de todo el equipo.",
+   "Levantamiento por departamento en las 4 áreas, con cada líder y su mano derecha.",
+   "Al menos 3 logros inmediatos, Mapa de Calor e Informe Final.",
+   "20 horas de levantamiento presencial."
+  ],
+  "notas": [
+   "Modalidad presencial, en las instalaciones de G-MAX.",
+   "Esta inversión no incluye licencias de IA.",
+   "Habilidades y Políticas, las etapas que siguen, se cotizan aparte."
+  ]
+ },
+ "proximos_pasos": {
+  "asesora": {
+   "nombre": "María Iribarren",
+   "correo": "miribarren@intezia.com",
+   "telefono": "+58 414 0570056"
+  },
+  "pasos": [
+   {
+    "titulo": "Fecha de arranque",
+    "texto": "Acordamos con la dirección la fecha de la reunión de arranque y el horario de las jornadas."
+   },
+   {
+    "titulo": "Lista de responsables",
+    "texto": "Recursos Humanos confirma los departamentos y quién participa en cada uno; con eso armamos la agenda."
+   },
+   {
+    "titulo": "Reunión de arranque",
+    "texto": "Una hora con la dirección para cerrar el alcance, el orden de las áreas y el calendario."
+   }
+  ]
+ },
+ "siglas_ok": [
+  "IA"
+ ],
+ "supuestos": [
+  "Horas: el deck dice 20 h de levantamiento en global (Keiber: «vamos a darle 20 horas, pero no le pongamos cuántas horas por área»). El arranque (1 h) y la nivelación (4 h) van sin horas; total interno 25 h. Confirmar con Keiber si las 20 h eran el levantamiento o el total.",
+  "Áreas: las 4 que nombró la Gerente General en la reunión (Gerencia de Operaciones, Gerencia de Tecnología, Dirección Médica y Recursos Humanos). Los departamentos salen de la lista de personal (22 contando sububicaciones) y no se asignan a cada área: no hay organigrama desglosado.",
+  "Logros inmediatos: al menos 3 en el proyecto, no uno por área (Keiber, 2026-10-08).",
+  "Lo que la cliente señaló como interés (cobranza a seguros, administración y tesorería, informes de gestión, atención al paciente) guía la conversación del arranque, pero no es una priorización del proyecto: en una Detección los focos salen del levantamiento.",
+  "Plan de pago estándar de Detección: 50 % al aprobar y 50 % con el Informe Final; montos vacíos para ventas.",
+  "Sin pre-recomendar herramienta de IA (el Informe Final la recomienda), sin mencionar el software propio de cobranza ni la relación entre contactos, sin nombrar a otros clientes."
+ ],
+ "pendientes": [
+  "Revisión de Keiber antes de enviar a María (pedido del 2026-10-08): meta.json queda en «En corrección».",
+  "Confirmar si las 20 h son de levantamiento o el total del proyecto.",
+  "Definir inversión, descuento y total, y los montos de las 2 cuotas (campos vacíos para ventas); línea de facturación (moneda y tasa) por confirmar con ventas."
+ ]
+}

@@ -1,5 +1,7 @@
 /* ============================================================================
-   Habilidades compacto · CSS genérico (v2.0, 2026-10-07) · deck en el orden de las preguntas del cliente
+   Habilidades y Detección compacto · CSS genérico (v3.0, 2026-10-08) · deck en el orden de las preguntas del cliente
+   v3.0 (Keiber Quintana, 2026-10-08): sin semanas ni sesiones (la fase se nombra, no se fecha) y slides propias de
+   Detección (.s-det-scope, .s-det-route, .s-det-deliv: plantillas/deteccion-compacto.md).
    Origen: clientes/propuestas/dusa-cai035 (CAI-035) + feedback consolidado de Ventas (2026-10-07). Se copia a cada
    propuesta como `habilidades-compacto.css` (copia congelada) con scripts/generar-habilidades-compacto.py.
    Va DESPUÉS de ../_base/styles.css y ANTES del overrides.css del deck.
@@ -294,6 +296,59 @@
   width: 6px; height: 6px;
   background: var(--orange);
 }
+/* Alcance por fases (datos.json → por_fases, v3.0): cada fase con su número, su nombre y su descripción, y debajo sus áreas.
+   Los pasos previos van sin píldora (solo se cuentan las soluciones) y la fase destacada se resalta. Caso base: CAI-032
+   Laboratorios Farma (Detección de 6 subáreas, entrenamiento compartido y 2 proyectos finales). */
+.s-scope.fases .scope-head { margin-bottom: 2px; }
+.s-scope.fases .scope-step { position: relative; padding: 0 0 2px 44px; }
+.s-scope.fases .scope-step + .scope-step { border-top: 1px solid rgba(0, 0, 0, 0.10); margin-top: 2px; }
+.s-scope.fases .step-h {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 8px 0 0 -44px;
+}
+.s-scope.fases .step-n {
+  flex: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 15px;
+  background: var(--black);
+  color: var(--yellow);
+}
+.s-scope.fases .step-h b {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.s-scope.fases .step-d {
+  font-family: var(--font-body);
+  font-size: 12.5px;
+  color: rgba(0, 0, 0, 0.62);
+}
+.s-scope.fases .scope-step.hi {
+  border-top: 0;
+  margin: 6px -14px 4px;
+  padding: 0 14px 2px 58px;
+  background: rgba(244, 186, 26, 0.13);
+  border-radius: 11px;
+}
+.s-scope.fases .scope-step.hi .step-h { margin-left: -44px; }
+.s-scope.fases .scope-step.hi .step-n { background: var(--yellow); color: var(--black); }
+.s-scope.fases .scope-step.hi .scope-rows li { border-bottom-color: rgba(0, 0, 0, 0.10); }
+.s-scope.fases .scope-panels.one .scope-rows li { grid-template-columns: 296px 1fr auto; }
+.s-scope.fases.roomy .scope-panels.one .scope-rows li { grid-template-columns: 300px 1fr auto; padding: 9px 0 10px; }
+.s-scope.fases.roomy .step-h b { font-size: 13px; }
+.s-scope.fases.roomy .step-d { font-size: 13.5px; }
+
 .s-scope .foot .meta { color: var(--black); }
 
 /* ===========================================================================
@@ -396,6 +451,16 @@
   color: rgba(255, 255, 255, 0.8);
 }
 .s-route .rg-phase-txt b { color: var(--white); font-weight: 700; }
+/* v3.0: la fase se nombra (qué agrupa), no se fecha: sin rango de semanas */
+.s-route .rg-phase-name {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 1.22;
+  color: var(--white);
+  text-wrap: balance;
+}
+.s-route .rg-phase-name b, .s-route .rg-phase-name strong { color: var(--yellow); }
 
 /* Línea de trabajo: nombre que entiende el cliente, herramienta y soluciones (semanas y horas, en pequeño) */
 .s-route .rg-front {
@@ -893,6 +958,80 @@
   color: rgba(0, 0, 0, 0.55);
 }
 
+/* «Valor por parte» (opcional, inversion.partes; CAI-040, 2026-10-08): un monto editable por parte, bajo las Notas.
+   Las tarjetas miden 130 px y las cajas .parte-frame las ubica el generador (geometria_partes); los campos PrecioParte1..N
+   de agregar-campo-precio.py → partes_fields() usan la misma geometría. No mover sin recalcular allí. */
+.s-price .partes-wrap {
+  position: absolute;
+  top: 512px;
+  left: 56px;
+  width: 480px;
+  height: 152px;
+  z-index: 2;
+}
+.s-price .partes-eyebrow {
+  display: block;
+  height: 14px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--orange);
+}
+.s-price .partes-cards {
+  position: absolute;
+  top: 22px;
+  left: 0;
+  width: 480px;
+  height: 130px;
+  display: flex;
+  gap: 12px;
+}
+.s-price .parte-card {
+  --c: var(--yellow);
+  flex: 1 1 0;
+  min-width: 0;
+  height: 130px;
+  box-sizing: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.14);
+  border-top: 4px solid var(--c);
+  border-radius: 10px;
+  padding: 8px 12px 0;
+  background: var(--white);
+}
+.s-price .parte-card.acc-o { --c: var(--orange); }
+.s-price .parte-tag {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 9.5px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.55);
+  margin-bottom: 3px;
+}
+.s-price .parte-name {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 12.5px;
+  line-height: 1.2;
+  margin-bottom: 3px;
+}
+.s-price .parte-card p {
+  font-family: var(--font-body);
+  font-size: 10.5px;
+  line-height: 1.32;
+  color: rgba(0, 0, 0, 0.75);
+}
+.s-price .parte-frame {
+  position: absolute;
+  background: rgba(244, 186, 26, 0.22);
+  border-radius: 4px;
+  z-index: 3;
+}
+
 /* ===========================================================================
    Slide 5 · Entregables: ¿con qué me quedo? Catálogo de entregables
    .deliv-cols tiene 4 columnas fijas; cada carril abarca k columnas (.dc style="grid-column: span k").
@@ -957,6 +1096,8 @@
 }
 .s-deliv .dc.acc-y { color: var(--yellow); background: rgba(244, 186, 26, 0.14); }
 .s-deliv .dc.acc-o { color: var(--orange); background: rgba(229, 132, 35, 0.16); }
+/* por_fases: una barra por fase; la de la fase destacada, en amarillo pleno */
+.s-deliv .dc.fase.hi { color: var(--black); background: var(--yellow); }
 
 .s-deliv .deliv-cols {
   display: grid;
@@ -1004,6 +1145,10 @@
   width: 5px; height: 5px;
   background: var(--c);
 }
+/* Lo que incluye un entregable (areas[].soluciones[].incluye, v3.0): viñetas menores, sin conteo ni horas propias */
+.s-deliv .da li .inc { margin-top: 3px; }
+.s-deliv .da li .inc li { padding: 1px 0 1px 12px; font-size: 0.88em; color: rgba(255, 255, 255, 0.7); }
+.s-deliv .da li .inc li::before { top: 0.64em; width: 6px; height: 2px; background: rgba(255, 255, 255, 0.5); }
 /* Modo compacto: más de ~46 entregables o nombres largos */
 .s-deliv.compact .da li { font-size: 10.5px; line-height: 1.26; padding: 1.5px 0 1.5px 12px; }
 .s-deliv.compact .da-name { font-size: 12px; }
@@ -1527,3 +1672,274 @@
 .s-next .nx-line { font-family: var(--font-body); font-size: 17px; line-height: 1.6; }
 .s-next .nx-line a { color: inherit; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 3px; }
 .s-next .foot .meta { color: rgba(255, 255, 255, 0.65); }
+
+/* ===========================================================================
+   Formato de Detección (v3.0, 2026-10-08; plantillas/deteccion-compacto.md). Caso base: G-MAX DET-024.
+   Slides 2, 3 y 5 propias: la Detección no muestra conteos de entregables, horas por área, semanas ni sesiones
+   (Keiber Quintana, 2026-10-08). La franja inferior de la slide 5 (.deliv-band, .db-box-1/2) es la misma de
+   Habilidades: la usa scripts/customize-habilidades-compacto.py para ubicar los campos Entregables y Acreditacion.
+   =========================================================================== */
+.s-det-scope .acc-y, .s-det-route .acc-y, .s-det-deliv .acc-y { --c: var(--yellow); }
+.s-det-scope .acc-o, .s-det-route .acc-o, .s-det-deliv .acc-o { --c: var(--orange); }
+.s-det-scope .acc-w, .s-det-route .acc-w, .s-det-deliv .acc-w { --c: var(--white); }
+
+/* Slide 2 · Alcance: qué auditamos (las áreas del cliente + sus departamentos) y para qué */
+.s-det-scope .scope-panels.det-scope {
+  display: grid;
+  grid-template-columns: 596px 1fr;
+  align-items: stretch;
+  gap: 16px;
+  margin-top: 4px;
+}
+.s-det-scope .det-panel {
+  background: var(--white);
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-top: 4px solid var(--yellow);
+  border-radius: 13px;
+  padding: 16px 22px 18px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+  min-width: 0;
+}
+.s-det-scope .det-para { border-top-color: var(--orange); }
+.s-det-scope .det-panel-label {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--black);
+  background: var(--yellow);
+  padding: 5px 12px;
+  border-radius: 999px;
+  margin-bottom: 14px;
+}
+.s-det-scope .det-para .det-panel-label { background: rgba(229, 132, 35, 0.16); color: var(--orange); }
+.s-det-scope .det-areas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.s-det-scope .det-areas.one { grid-template-columns: 1fr; }
+.s-det-scope .det-area {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.2;
+  padding: 13px 16px;
+  background: rgba(244, 186, 26, 0.12);
+  border-left: 4px solid var(--yellow);
+  border-radius: 8px;
+}
+.s-det-scope .det-deps-label {
+  margin: 16px 0 8px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--orange);
+}
+.s-det-scope .det-deps { list-style: none; display: flex; flex-wrap: wrap; gap: 6px; }
+.s-det-scope .det-deps li {
+  font-family: var(--font-body);
+  font-size: 12.5px;
+  line-height: 1.2;
+  padding: 5px 11px;
+  border: 1px solid rgba(0, 0, 0, 0.16);
+  border-radius: 999px;
+  color: rgba(0, 0, 0, 0.82);
+}
+.s-det-scope .det-foco {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  font-family: var(--font-body);
+  font-size: 13px;
+  line-height: 1.42;
+  color: rgba(0, 0, 0, 0.78);
+}
+.s-det-scope .det-foco strong { color: var(--black); }
+.s-det-scope .det-goals { list-style: none; counter-reset: g; display: flex; flex-direction: column; }
+.s-det-scope .det-goals li {
+  counter-increment: g;
+  position: relative;
+  padding: 14px 0 14px 46px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.s-det-scope .det-goals li:first-child { padding-top: 4px; }
+.s-det-scope .det-goals li:last-child { border-bottom: 0; padding-bottom: 0; }
+.s-det-scope .det-goals li::before {
+  content: counter(g);
+  position: absolute;
+  left: 0; top: 14px;
+  width: 30px; height: 30px;
+  border-radius: 50%;
+  background: var(--orange);
+  color: var(--white);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 30px;
+  text-align: center;
+}
+.s-det-scope .det-goals li:first-child::before { top: 4px; }
+.s-det-scope .det-goals b {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.2;
+  margin-bottom: 3px;
+}
+.s-det-scope .det-goals span {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 13px;
+  line-height: 1.4;
+  color: rgba(0, 0, 0, 0.75);
+}
+.s-det-scope .det-goals span strong { color: var(--black); }
+.s-det-scope .scope-out { margin-top: 16px; }
+.s-det-scope .scope-out li { font-size: 12.5px; }
+
+/* Slide 3 · Ruta: etapas en línea (--n = 4 a 6), sin semanas, sesiones ni horas por área, y la ruta completa */
+.s-det-route .det-line { height: 2px; margin: 20px 0 0; background: var(--gradient-warm); }
+.s-det-route .det-stages {
+  --n: 5;
+  display: grid;
+  grid-template-columns: repeat(var(--n), 1fr);
+  gap: 14px;
+  margin-top: 22px;
+}
+.s-det-route .det-stage {
+  position: relative;
+  min-height: 236px;
+  background: rgba(255, 255, 255, 0.045);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-top: 4px solid var(--c);
+  border-radius: 13px;
+  padding: 16px 18px 18px;
+  min-width: 0;
+}
+.s-det-route .det-stage.hi {
+  background: rgba(244, 186, 26, 0.10);
+  border-color: rgba(244, 186, 26, 0.55);
+  border-top-color: var(--yellow);
+}
+.s-det-route .ds-d {
+  position: absolute;
+  top: -35px; left: 18px;
+  width: 12px; height: 12px;
+  background: var(--c);
+  transform: rotate(45deg);
+}
+.s-det-route .ds-n {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 1;
+  color: var(--c);
+  margin-bottom: 12px;
+}
+.s-det-route .ds-t {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 1.15;
+  margin-bottom: 8px;
+}
+.s-det-route .det-stage p {
+  font-family: var(--font-body);
+  font-size: 13.5px;
+  line-height: 1.42;
+  color: rgba(255, 255, 255, 0.84);
+}
+.s-det-route .det-stage p strong { color: var(--yellow); font-family: var(--font-display); }
+.s-det-route .det-stage p.ds-h {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(244, 186, 26, 0.35);
+  color: var(--white);
+}
+.s-det-route .det-stages[style*="--n:6"] .ds-t { font-size: 17px; }
+.s-det-route .det-stages[style*="--n:6"] .det-stage p { font-size: 12.5px; }
+.s-det-route .route-next.det-next { margin-top: 34px; font-size: inherit; max-width: none; }
+.s-det-route .det-next-label {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--orange);
+  margin-bottom: 10px;
+}
+.s-det-route .det-next-items { --n: 3; display: grid; grid-template-columns: repeat(var(--n), 1fr); gap: 14px; }
+.s-det-route .dn-item { border: 1px dashed rgba(255, 255, 255, 0.28); border-radius: 13px; padding: 12px 18px 14px; }
+.s-det-route .dn-item.now { border: 1px solid var(--yellow); background: rgba(244, 186, 26, 0.08); }
+.s-det-route .dn-when {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 4px;
+}
+.s-det-route .dn-item.now .dn-when { color: var(--yellow); }
+.s-det-route .dn-item b {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 1.2;
+  color: var(--white);
+  margin-bottom: 3px;
+}
+.s-det-route .dn-item p { font-family: var(--font-body); font-size: 12.5px; line-height: 1.4; color: rgba(255, 255, 255, 0.78); }
+
+/* Slide 5 · Entregables: tarjetas nombradas (3 a 6; --cols 2 o 3), sin conteos ni áreas, + la franja de 2 cajas editables */
+.s-det-deliv .deliv-head { margin-bottom: 18px; }
+.s-det-deliv .det-cards {
+  --cols: 3;
+  --rows: 2;
+  display: grid;
+  grid-template-columns: repeat(var(--cols), 1fr);
+  grid-auto-rows: 202px;
+  gap: 14px;
+}
+.s-det-deliv .det-card {
+  background: rgba(255, 255, 255, 0.045);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-top: 4px solid var(--c);
+  border-radius: 13px;
+  padding: 16px 22px;
+  min-width: 0;
+}
+.s-det-deliv .dk-when {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 10.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--c);
+  background: rgba(255, 255, 255, 0.07);
+  padding: 4px 10px;
+  border-radius: 999px;
+  margin-bottom: 14px;
+}
+.s-det-deliv .det-card b {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  color: var(--white);
+  margin-bottom: 8px;
+}
+.s-det-deliv .det-card p { font-family: var(--font-body); font-size: 14px; line-height: 1.45; color: rgba(255, 255, 255, 0.84); }
+.s-det-deliv .det-card p strong { color: var(--yellow); }

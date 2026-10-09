@@ -9,10 +9,11 @@ con los frentes. Este script los lee y arma el esqueleto de datos.json para
 scripts/generar-habilidades-compacto.py.
 
 Qué extrae (de forma literal): carriles, áreas (con proceso base si el encabezado es «Proceso base — …»),
-soluciones (id, texto completo → `detalle`, C/T/A, fase), frentes (id, carril, áreas, horas), el tope de horas
-por semana y las semanas de trabajo si el texto los dice.
+soluciones (id, texto completo → `detalle`, C/T/A, fase) y frentes (id, carril, áreas, horas). Desde la plantilla v3
+(2026-10-08) la propuesta no lleva semanas ni sesiones: si el docx dice cuántas semanas de trabajo son o un tope de horas
+por semana, eso queda como supuesto interno (`supuestos`), nunca en el deck; el calendario se acuerda en el kickoff.
 Qué NO puede extraer y deja como POR_DEFINIR (el generador se niega a publicar mientras existan):
-datos del cliente, división, textos de portada/alcance/ruta, rangos de semanas de las fases, hitos y, desde la
+datos del cliente, división, textos de portada/alcance/ruta, la descripción de cada fase, hitos y, desde la
 plantilla v2 (2026-10-07), lo que pide Ventas: areas[].para_que (qué resuelve cada área, con palabras del cliente),
 frentes[].nombre (nombre de la línea de trabajo que ve el cliente), metodo (quién construye, cómo funciona en la
 práctica, cómo se cuidan los datos), logistica (modalidad, participantes, arranque) y proximos_pasos.asesora.
@@ -265,7 +266,7 @@ def main():
             cand = resolver_carril(tag, carriles)
             if cand is None:
                 avisos.append("frente %s: no se pudo asociar «%s» a un carril; asignarlo a mano" % (m.group(1), m.group(2)))
-            frentes.append({"id": m.group(1), "carril": cand["id"] if cand else PD, "nombre": PD, "semanas": PD,
+            frentes.append({"id": m.group(1), "carril": cand["id"] if cand else PD, "nombre": PD,
                             "_alcance_fuente": c[1] if len(c) > 1 else "", "_horas_fuente": (c[2] if len(c) > 2 else ""), "celdas": {}})
 
     # Asignar frente por coincidencia de NOMBRE COMPLETO (tokens), no por primera palabra
@@ -316,15 +317,12 @@ def main():
 
     m = (re.search(r"tope de (\d+)\s*(?:h|horas)?\s*(?:de sesi[oó]n\s*)?(?:por|a la|/)\s*semana", texto_total, re.I)
          or re.search(r"(?:hasta|m[aá]ximo de)\s+(\d+)\s*(?:h|horas)\s*(?:de sesi[oó]n\s*)?(?:por|a la|/)\s*semana", texto_total, re.I))
+    supuestos = []
     if m:
-        tope = int(m.group(1))
-    else:
-        tope = 20
-        avisos.append("no se encontró el tope de horas por semana en el docx: se dejó 20 (valor por defecto); confirmarlo")
+        supuestos.append("El insumo fija un tope de %s h de trabajo por semana: referencia interna para el kickoff; la propuesta no lo muestra (v3)." % m.group(1))
     m = re.search(r"toma (\d+) semanas de trabajo|durante (\d+) semanas de trabajo|(\d+) semanas de trabajo", texto_total)
-    semanas = int(next(g for g in m.groups() if g)) if m else PD
-    if semanas == PD:
-        avisos.append("no se encontró el número de semanas de trabajo en el docx: completar ruta.semanas_total")
+    if m:
+        supuestos.append("El insumo habla de %s semanas de trabajo: la propuesta no lleva semanas ni sesiones (Keiber, 2026-10-08); el calendario se acuerda en el kickoff." % next(g for g in m.groups() if g))
 
     fases_usadas = sorted({s["fase"] for ar in areas for s in ar["soluciones"]})
     fases = []
@@ -332,9 +330,9 @@ def main():
         if f == "F0":
             fases.append({"id": "F0", "descripcion": PD})
         else:
-            fases.append({"id": f, "titulo": "Fase " + f[1:], "rango": PD, "descripcion": PD})
+            fases.append({"id": f, "titulo": "Fase " + f[1:], "descripcion": PD})
     d = {
-        "version": 2,
+        "version": 3,
         "cliente": {"nombre": a.nombre, "slug": a.slug, "codigo": a.codigo},
         "division": PD,
         "alianza": "POR_DEFINIR",
@@ -349,13 +347,13 @@ def main():
         "metodo": {"quien_construye": PD, "practica": [{"titulo": PD, "texto": PD}], "datos": PD},
         "fases": fases,
         "frentes": [{k: v for k, v in fr.items() if not k.startswith("_")} for fr in frentes],
-        "ruta": {"semanas_total": semanas, "tope_h_semana": tope, "hitos": [{"titulo": PD, "texto": PD} for _ in range(4)]},
+        "ruta": {"hitos": [{"titulo": PD, "texto": PD} for _ in range(4)]},
         "logistica": {"modalidad": PD, "participantes": PD, "arranque": PD},
         "seguimiento": {"rango": "30, 60 y 90 días", "texto": "Desde el cierre de cada área",
                         "items": [{"dias": "30 días", "texto": PD}, {"dias": "60 días", "texto": PD}, {"dias": "90 días", "texto": PD}]},
         "entregables": {"transversales": [PD], "valor_inmediato": [PD]},
         "proximos_pasos": {"asesora": {"nombre": PD, "correo": PD}},
-        "supuestos": [], "pendientes": []}
+        "supuestos": supuestos, "pendientes": []}
     # Referencias de la fuente para el humano que completa (el generador las ignora: empiezan con _)
     for fr, orig in zip(d["frentes"], frentes):
         fr["_alcance_fuente"] = orig["_alcance_fuente"]

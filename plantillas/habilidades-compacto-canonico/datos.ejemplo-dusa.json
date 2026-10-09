@@ -1,5 +1,5 @@
 {
- "version": 2,
+ "version": 3,
  "cliente": {
   "nombre": "DUSA",
   "slug": "dusa-cai035",
@@ -588,7 +588,7 @@
   ],
   "datos": "Los archivos que se suben quedan en la cuenta de DUSA, y Sistemas evalúa y autoriza cada acceso a un sistema, como el de SPI. Con los datos de Nómina se trabaja con el líder del área.",
   "etiqueta_ejemplos": "Ya lo hicimos con los equipos de DUSA",
-  "nota_ejemplos": "Agentes que los equipos construyeron con Intezia en las sesiones de Detección: el punto de partida del proyecto.",
+  "nota_ejemplos": "Agentes que los equipos construyeron con Intezia durante la Detección: el punto de partida del proyecto.",
   "ejemplos": [
    {
     "area": "Contabilidad y Cuentas por Pagar",
@@ -620,20 +620,17 @@
   {
    "id": "F1",
    "titulo": "Fase 1",
-   "rango": "Semanas 1 a 5",
    "descripcion": "prioridad de cada área, sin dependencias",
    "destacada": true
   },
   {
    "id": "F2",
    "titulo": "Fase 2",
-   "rango": "Semanas 5 a 8",
    "descripcion": "necesita un acuerdo, un dato o una solución previa"
   },
   {
    "id": "F3",
    "titulo": "Fase 3",
-   "rango": "Semanas 7 a 11",
    "descripcion": "extensiones, cruces y tableros"
   }
  ],
@@ -641,7 +638,6 @@
   {
    "id": "A",
    "carril": "claude",
-   "semanas": "1 a 11",
    "celdas": {
     "F1": "Base de empleados, parafiscales, vacaciones, facturas y Servicio Médico",
     "F2": "Notificaciones, expediente de parafiscales, órdenes médicas y gastos",
@@ -652,7 +648,6 @@
   {
    "id": "B",
    "carril": "claude",
-   "semanas": "2 a 7",
    "celdas": {
     "F1": "Ingreso, CV, entrevistas, capacitación, consumo telefónico y comunicados",
     "F2": "Contratos con alertas, inducción de ingreso y obsequios de cumpleaños",
@@ -663,7 +658,6 @@
   {
    "id": "C",
    "carril": "copilot",
-   "semanas": "1 a 10",
    "celdas": {
     "F1": "Pagos, depurador, bandeja y tareas de tesorería, descuentos, premisas, creativos",
     "F2": "Estados financieros, planes de ventas, costos y administración, descuentos",
@@ -673,20 +667,18 @@
   }
  ],
  "ruta": {
-  "semanas_total": 11,
-  "tope_h_semana": 20,
   "nota": "Las {h_total} horas de trabajo son una proyección: {h_f0} h de arranque (el mapeo de Finanzas) más {h_f1}, {h_f2} y {h_f3} h de las fases 1, 2 y 3. Los parafiscales se prueban en una ventana real de cinco días hábiles. Las fases se traslapan: cada línea pasa a la siguiente cuando quien ejecuta el proceso ya opera lo anterior.",
   "hitos": [
    {
-    "titulo": "Semana 1 · Arranque",
+    "titulo": "Arranque",
     "texto": "Línea base de horas por proceso y mapeo de microprocesos de Finanzas ({h_f0} h)."
    },
    {
-    "titulo": "Semanas 1 y 2",
+    "titulo": "Primeros accesos",
     "texto": "Primeros asientos y licencias activos."
    },
    {
-    "titulo": "Semana 4",
+    "titulo": "Evidencia de capacitación",
     "texto": "Control de capacitación del personal de {cliente_corto}, con evidencia lista para la certificación."
    },
    {
@@ -694,15 +686,15 @@
     "texto": "Sistemas y Nómina acuerdan el criterio de correlativo de la base de empleados."
    },
    {
-    "titulo": "Semana 11",
+    "titulo": "Cierre",
     "texto": "Cierre de la construcción."
    }
   ]
  },
  "logistica": {
-  "modalidad": "Sesiones de trabajo del consultor con cada ejecutor, en su propia cuenta y con sus casos reales.",
+  "modalidad": "Trabajo del consultor con cada ejecutor, en su propia cuenta y con sus casos reales.",
   "participantes": "Quien ejecuta cada proceso en las 10 áreas, con un líder que valida los resultados de cada una.",
-  "arranque": "La fecha se acuerda con DUSA; el trabajo se cuenta en semanas desde ese día."
+  "arranque": "La fecha la fija DUSA al confirmar la propuesta."
  },
  "seguimiento": {
   "rango": "30, 60 y 90 días",
@@ -724,13 +716,13 @@
  },
  "entregables": {
   "transversales": [
-   "Línea base de horas por proceso, en la semana 1.",
+   "Línea base de horas por proceso, al arrancar.",
    "Seguimiento a 30, 60 y 90 días con medición del ahorro.",
    "Certificado de participación INTEZIA."
   ],
   "valor_inmediato": [
-   "Semana 4: evidencia de capacitación lista.",
-   "Semana 5: {n_f1} soluciones prioritarias adoptadas.",
+   "Evidencia de capacitación lista en la fase 1.",
+   "Fase 1: {n_f1} soluciones prioritarias adoptadas.",
    "Cuadro de descuentos: puente hasta la fase 2 del autopago."
   ]
  },
@@ -778,22 +770,22 @@
  "pago": {
   "cuotas": [
    {
-    "cuando": "Semana 1",
-    "hito": "Arranque",
+    "cuando": "Al arrancar",
+    "hito": "Reunión de arranque y línea base",
     "pct": 30
    },
    {
-    "cuando": "Semana 5",
+    "cuando": "Fase 1",
     "hito": "{n_f1} soluciones prioritarias adoptadas",
     "pct": 25
    },
    {
-    "cuando": "Semana 8",
+    "cuando": "Fase 2",
     "hito": "Cierre de la fase 2",
     "pct": 25
    },
    {
-    "cuando": "Semana 11",
+    "cuando": "Cierre",
     "hito": "Cierre de la construcción",
     "pct": 10
    },
@@ -831,9 +823,9 @@
   "El licenciamiento se contrata aparte de la inversión de Intezia (la fuente no indica quién contrata).",
   "El certificado de participación INTEZIA es el institucional estándar (no figura en el insumo).",
   "Retorno en modo método: las fichas de levantamiento dicen «No declarado» en volumen mensual y horas por ejecución, y no hay valor de la hora ni escalas salariales en el sistema. Pasar a modo 'cifras' cuando se completen (hoja retorno-captura.xlsx).",
-  "«Hacia la semana 24» es aritmética (semana 11 de construcción + 90 días de seguimiento): confirmar con el equipo de servicio.",
+  "Calendario: el insumo hablaba de 11 semanas de construcción; la v3 no muestra semanas (se acuerdan en la reunión de arranque).",
   "Aval de posiciones: el mensaje de revisión del 05/10/2026 indica que Wilmer está de acuerdo en plantearlo de frente; confirmarlo por escrito con DUSA antes de enviar y antes de circular el documento entre líderes de área.",
-  "Modalidad de las sesiones: el insumo no dice si son presenciales o virtuales; la slide describe solo el trabajo con cada ejecutor. Confirmar con servicio.",
+  "Modalidad del trabajo: el insumo no dice si son presenciales o virtuales; la slide describe solo el trabajo con cada ejecutor. Confirmar con servicio.",
   "Plan de pago: 5 cuotas (30, 25, 25, 10 y 10 %) del cuadro que envió Keiber el 06/10/2026; confirmar el sentido de la última frase de facturación."
  ],
  "pendientes": [

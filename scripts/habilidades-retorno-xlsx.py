@@ -638,7 +638,7 @@ def leer(args):
     nuevo = dict(d)
     nuevo["retorno"] = ret
     sup = [x for x in (nuevo.get("supuestos") or []) if not str(x).startswith(("Retorno en modo método", "Retorno en modo cifras"))]
-    sup.append("Retorno en modo cifras: datos de «%s» (%s), validados por %s; las filas marcadas (estimación) se confirman con la línea base de la semana 1." % (origen["documento"], origen["fecha"], origen["validado_por"]))
+    sup.append("Retorno en modo cifras: datos de «%s» (%s), validados por %s; las filas marcadas (estimación) se confirman con la línea base del arranque." % (origen["documento"], origen["fecha"], origen["validado_por"]))
     nuevo["supuestos"] = sup
 
     # --- validar con el generador ANTES de escribir

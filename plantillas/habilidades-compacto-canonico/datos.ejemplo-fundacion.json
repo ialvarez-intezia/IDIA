@@ -1,5 +1,5 @@
 {
- "version": 2,
+ "version": 3,
  "cliente": {
   "nombre": "Fundación Semilla Verde",
   "slug": "fundacion-semilla-verde",
@@ -275,14 +275,12 @@
   {
    "id": "F1",
    "titulo": "Fase 1",
-   "rango": "Semanas 1 a 5",
    "descripcion": "prioridad de cada área, sin dependencias",
    "destacada": true
   },
   {
    "id": "F2",
    "titulo": "Fase 2",
-   "rango": "Semanas 5 a 10",
    "descripcion": "necesita un dato o una solución previa"
   }
  ],
@@ -291,7 +289,6 @@
    "id": "A",
    "carril": "copilot",
    "nombre": "Beneficiarios y voluntariado",
-   "semanas": "1 a 9",
    "celdas": {
     "F1": "Ficha única, depuración de duplicados, plan por programa, convocatoria, horas y actas.",
     "F2": "Tablero de beneficiarios, resumen de avance y alertas de metas atrasadas."
@@ -301,7 +298,6 @@
    "id": "B",
    "carril": "copilot",
    "nombre": "Donantes, finanzas y comunicaciones",
-   "semanas": "2 a 10",
    "celdas": {
     "F1": "Reporte a donantes, agradecimientos, conciliación de donaciones, calendario y boletín.",
     "F2": "Informe de impacto, respuestas de apoyo, gastos por programa, cuentas y redes."
@@ -309,19 +305,17 @@
   }
  ],
  "ruta": {
-  "semanas_total": 10,
-  "tope_h_semana": 20,
   "hitos": [
    {
-    "titulo": "Semana 1 · Arranque",
+    "titulo": "Arranque",
     "texto": "Línea base de horas por proceso."
    },
    {
-    "titulo": "Semana 5 · Fase 1",
+    "titulo": "Fase 1",
     "texto": "Soluciones prioritarias adoptadas por el equipo."
    },
    {
-    "titulo": "Semana 10 · Cierre",
+    "titulo": "Cierre",
     "texto": "Cierre de la construcción y entrega al equipo."
    }
   ],
@@ -350,13 +344,13 @@
  },
  "entregables": {
   "transversales": [
-   "Línea base de horas por proceso, en la semana 1.",
+   "Línea base de horas por proceso, al arrancar.",
    "Seguimiento a 30, 60 y 90 días con medición del ahorro."
   ],
   "valor_inmediato": [
-   "Semana 1: línea base de horas por proceso.",
-   "Semana 5: {n_f1} soluciones prioritarias adoptadas.",
-   "Semana 10: todas las soluciones en uso en la fundación."
+   "Al arrancar: línea base de horas por proceso.",
+   "Fase 1: {n_f1} soluciones prioritarias adoptadas.",
+   "Cierre: todas las soluciones en uso en la fundación."
   ],
   "titulo": "Lo que recibe Semilla Verde."
  },
@@ -401,9 +395,9 @@
   "datos": "Trabajamos con casos reales de la fundación, dentro de sus cuentas. Los datos de beneficiarios se usan sin nombre ni documento, y el equipo de tecnología autoriza cada acceso."
  },
  "logistica": {
-  "modalidad": "Sesiones de trabajo presenciales en la sede de la fundación, con apoyo virtual entre sesiones.",
+  "modalidad": "Trabajo presencial en la sede de la fundación, con apoyo virtual entre encuentros.",
   "participantes": "Quienes ejecutan cada proceso: unas 12 personas entre las seis áreas.",
-  "arranque": "Semana por acordar con la fundación; el trabajo se cuenta en semanas desde ese día."
+  "arranque": "La fecha la fija la fundación al confirmar la propuesta."
  },
  "proximos_pasos": {
   "asesora": {

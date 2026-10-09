@@ -251,6 +251,35 @@ if [[ -f "$DIR/habilidades-compacto.css" ]] && command -v node >/dev/null 2>&1; 
   fi
 fi
 
+# ── §4.23 Sin semanas ni sesiones (Keiber, 2026-10-08) en los decks compactos v3 ─────────────────────────────
+# El generador ya lo bloquea; esto atrapa una edición a mano del index.html después de generar. Solo decks con CSS v3+
+# (los v1/v2 ya entregados no se revisan por esto). Las fuentes citadas (pain-src, mp-src, lic-note) y los comentarios
+# no cuentan; las tasas del cliente («12 h por semana», «cada semana») sí se permiten.
+if [[ -f "$DIR/habilidades-compacto.css" ]] && grep -q 'CSS genérico (v[3-9]' "$DIR/habilidades-compacto.css" 2>/dev/null; then
+  CAL_HITS=$(python3 - "$HTML" <<'PYEOF'
+import html, re, sys
+t = open(sys.argv[1], encoding="utf-8").read()
+t = re.sub(r"<!--.*?-->", " ", t, flags=re.S)
+t = re.sub(r'<(p|span) class="(?:pain-src|mp-src|lic-note)">.*?</\1>', " ", t, flags=re.S)
+rx = re.compile(r"(?<!por )(?<!cada )(?<!a la )\bsemanas?\b|\bsesi[oó]n(?:es)?\b", re.I)
+out = []
+for cls, cuerpo in re.findall(r'<section class="slide ([^"]*)">(.*?)</section>', t, re.S):
+    txt = html.unescape(re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", cuerpo)))
+    for m in rx.finditer(txt):
+        out.append("  %s: «…%s…»" % (cls.split()[0], txt[max(0, m.start() - 35):m.end() + 25].strip()))
+print("\n".join(out[:10]))
+PYEOF
+)
+  if [[ -n "$CAL_HITS" ]]; then
+    echo "❌ §4.23 La propuesta no lleva semanas ni sesiones (se acuerdan en el kickoff): corregir datos.json y regenerar"
+    echo "$CAL_HITS"
+    echo ""
+    ERRORS=$((ERRORS+1))
+  else
+    echo "✓  §4.23 Sin semanas ni sesiones en el deck compacto"
+  fi
+fi
+
 # ── Servicio de Habilidades: plantilla compacta como único formato (CLAUDE.md §4.21) ──
 # Aviso (no bloqueante, para no estorbar cambios puntuales en decks ya entregados): una propuesta registrada como
 # servicio «habilidades» en meta.json cuyo deck no es el compacto (no tiene habilidades-compacto.css).
