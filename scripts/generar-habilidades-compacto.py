@@ -88,6 +88,8 @@ RE_FECHA = re.compile(
     r"\b(0?[1-9]|[12]\d|3[01])-(0?[1-9]|1[0-2])-\d{4}\b|\b\d{1,2}\s+(de\s+)?" + MESES + r"\b|\b" + MESES + r"\b",
     re.I,
 )
+# Conteo de sesiones («6 sesiones», «dos sesiones», «una sesión», «sesión única»): se avisa si anunciar_duracion = false.
+RE_SESIONES = re.compile(r"\b(\d+|una|un|dos|tres|cuatro|cinco|seis|siete|ocho|nueve|diez|doce)\s+sesi(?:ón|on|ones)\b|\bsesi[óo]n\s+[úu]nica\b", re.I)
 RE_GUION_LARGO = re.compile("[\u2014\u2015\u2012\u2212\u2E3A\u2E3B]|-{2,}")
 # El guion mediano solo se tolera entre dos cifras (rangos como 10–15); «S1–S11» o «A – B» no.
 RE_GUION_MEDIO = re.compile("(?<!\\d)\u2013|\u2013(?!\\d)")
@@ -190,7 +192,7 @@ ESQUEMAS = {
              "pago": "dict:pago", "entregables": "dict:entregables", "retorno": "dict:retorno",
              "proximos_pasos": "dict:proximos_pasos", "siglas_ok": "list:str", "frases_ok": "list:str", "supuestos": "list:str", "pendientes": "list:str",
              "servicio_rotulo": "str", "meta_servicio": "str", "meta_tipo": "str", "vocabulario": "dict:vocabulario", "sin_hoja_cotizacion": "bool",
-             "omitir": "list:str"},
+             "omitir": "list:str", "anunciar_duracion": "bool"},
     "vocabulario": {"solucion": "list:str", "area": "list:str", "proceso_base": "list:str"},
     "cliente": {"nombre": "str", "slug": "str", "codigo": "str", "nombre_pie": "str"},
     "portada": {"eyebrow": "str", "titulo_lineas": "list:str", "titulo_linea1": "str", "titulo_destacado": "str", "lead": "str",
@@ -220,12 +222,14 @@ ESQUEMAS = {
     "seguimiento": {"rango": "str", "texto": "str", "items": "list:dict:item", "etiqueta": "str", "tipo": "str"},
     "item": {"dias": "str", "texto": "str"},
     "inversion": {"notas": "list:str", "licencias": "dict:licencias", "titulo": "str", "duracion": "str", "programa": "list:str",
-                  "garantia_texto": "str", "sin_garantia": "bool"},
+                  "garantia_texto": "str", "sin_garantia": "bool", "partes": "list:dict:parte", "etiqueta_partes": "str",
+                  "etiqueta_suma": "str"},
+    "parte": {"nombre": "str", "detalle": "str"},
     "licencias": {"titulo": "str", "tarjetas": "list:dict:tarjeta", "nota": "str"},
     "tarjeta": {"nombre": "str", "color": "str", "texto": "str"},
     "pago": {"titulo": "str", "subtitulo": "str", "cuotas": "list:dict:cuota", "mensaje": "str", "facturacion": "str"},
     "cuota": {"cuando": "str", "hito": "str", "pct": "num"},
-    "proximos_pasos": {"titulo": "str", "subtitulo": "str", "pasos": "list:dict:paso", "asesora": "dict:asesora"},
+    "proximos_pasos": {"titulo": "str", "subtitulo": "str", "pasos": "list:dict:paso", "asesora": "dict:asesora", "etiqueta_contacto": "str"},
     "asesora": {"nombre": "str", "cargo": "str", "correo": "str", "telefono": "str"},
     "retorno": {"modo": "str", "titulo": "str", "subtitulo": "str", "posiciones": "bool", "pasos": "list:dict:paso_retorno",
                 "etiqueta_pasos": "str", "metas": "list:dict:meta_retorno", "etiqueta_metas": "str", "destino": "list:dict:destino_retorno",
@@ -666,6 +670,18 @@ def validar_semantica(d, ctx, agg, rep, silent):
             rep.err("vocabulario.%s" % _k, "debe ser [singular, plural], dos textos no vacíos")
     if d.get("meta_servicio") and d["meta_servicio"] not in ("habilidades", "deteccion", "politicas", "innovacion", "integral"):
         rep.err("meta_servicio", "valor inválido «%s»: usar habilidades | deteccion | politicas | innovacion | integral (CLAUDE.md §4.19)" % d["meta_servicio"])
+    if "anunciar_duracion" in d and not isinstance(d["anunciar_duracion"], bool):
+        rep.err("anunciar_duracion", "debe ser true o false (preguntar al usuario si la propuesta anuncia las semanas y las sesiones)")
+    elif not anuncia_duracion(d):
+        for _donde, _txt in (("ruta.titulo", (d.get("ruta") or {}).get("titulo")), ("inversion.duracion", (d.get("inversion") or {}).get("duracion"))):
+            if isinstance(_txt, str) and re.search(r"\{semanas(?:_txt)?\}", _txt):
+                rep.err(_donde, "usa {semanas} o {semanas_txt} pero anunciar_duracion = false: quitar el número de semanas del texto")
+            elif isinstance(_txt, str) and re.search(r"semanas?\b", _txt, re.I):
+                rep.aviso(_donde, "nombra las semanas pero anunciar_duracion = false: confirmar que es intencional")
+        _quedan = ["el rango de cada fase y de cada línea de trabajo (slide 3)"]
+        if "retorno" in orden:
+            _quedan.append("el «Hacia la semana N» del retorno (slide 6)")
+        rep.aviso("anunciar_duracion", "false: el titular de la ruta y la Duración de la inversión no nombran las semanas, pero siguen visibles %s. Confirmar con el usuario si también deben ocultarse; sin número de sesiones en textos libres (composicion, hitos, descripciones)" % " y ".join(_quedan))
     for _x in (d.get("omitir") or []):
         if _x not in OMITIBLES:
             rep.err("omitir", "«%s» no se puede omitir: se admiten %s (portada, alcance, ruta y entregables son el núcleo de toda propuesta)" % (_x, ", ".join(OMITIBLES)))
@@ -965,6 +981,20 @@ def validar_semantica(d, ctx, agg, rep, silent):
                 rep.err("inversion.licencias.tarjetas[%d].color" % i, "debe ser 'amarillo' o 'naranja'")
         if len(rs(inv.get("duracion") or "")) > 140:
             rep.aviso("inversion.duracion", "%d caracteres: máx. ~135 (3 líneas)" % len(rs(inv["duracion"])))
+        # Cotización por partes (opcional): una caja de valor por parte a la izquierda y la suma (PrecioBase) a la derecha.
+        partes = inv.get("partes") or []
+        if partes:
+            if tars:
+                rep.err("inversion.partes", "comparte la zona inferior izquierda con inversion.licencias: usar una de las dos (el licenciamiento puede ir en inversion.notas)")
+            if not (2 <= len(partes) <= 3):
+                rep.err("inversion.partes", "se necesitan 2 o 3 partes; hay %d" % len(partes))
+            for i, p in enumerate(partes):
+                if not p.get("nombre"):
+                    rep.err("inversion.partes[%d]" % i, "falta nombre")
+                elif len(rs(p["nombre"])) > 26:
+                    rep.aviso("inversion.partes[%d].nombre" % i, "%d caracteres: máx. ~26 (una línea en la tarjeta)" % len(rs(p["nombre"])))
+                if len(rs(p.get("detalle"))) > 75:
+                    rep.aviso("inversion.partes[%d].detalle" % i, "%d caracteres: máx. ~70 (2 líneas en la tarjeta)" % len(rs(p["detalle"])))
         if tars and not inv.get("notas"):
             rep.aviso("inversion.notas", "hay licenciamiento pero no hay notas: se usan las de garantía y términos; aclarar si el licenciamiento se contrata aparte (confirmar quién lo contrata)")
     if "pago" in orden:
@@ -1019,7 +1049,10 @@ def validar_semantica(d, ctx, agg, rep, silent):
         else:
             for k in ("nombre", "correo"):
                 if not ase.get(k):
-                    rep.err("proximos_pasos.asesora.%s" % k, "falta")
+                    if k == "correo" and ase.get("telefono"):
+                        rep.aviso("proximos_pasos.asesora.correo", "sin correo: la slide muestra solo el teléfono y el correo general de Intezia; confirmar el correo del contacto antes de enviar")
+                    else:
+                        rep.err("proximos_pasos.asesora.%s" % k, "falta (el correo puede omitirse solo si hay teléfono)")
             if ase.get("correo") and not re.match(r"^[^@\s]+@[^@\s]+\.[A-Za-z]{2,}$", ase["correo"]):
                 rep.err("proximos_pasos.asesora.correo", "no parece un correo válido: %r" % ase["correo"])
         pasos_p = pp.get("pasos")
@@ -1079,6 +1112,12 @@ def seg_hay_columna(d):
 def sin_inversion(d):
     """True si el deck no lleva hoja de inversión ni de pago: Fundación, datos.json → sin_hoja_cotizacion = true, u omitir con «inversion»."""
     return d.get("division") == "fundacion" or bool(d.get("sin_hoja_cotizacion")) or "inversion" in (d.get("omitir") or [])
+
+
+def anuncia_duracion(d):
+    """False si datos.json → anunciar_duracion = false: el titular de la ruta y la Duración de la inversión no nombran el número de semanas.
+    Por defecto se anuncian (las propuestas anteriores no llevan la clave y no cambian)."""
+    return d.get("anunciar_duracion") is not False
 
 
 def con_garantia(d):
@@ -1399,7 +1438,7 @@ def s_ruta(d, R):
     nf = len(d["frentes"])
     ncols = len(fases_cols)
     rowh = {1: 214, 2: 130, 3: 104}[nf]
-    titulo = ruta.get("titulo") or ("%s, {semanas_txt}." % PALABRAS_FRENTES[nf])
+    titulo = ruta.get("titulo") or (("%s, {semanas_txt}." if anuncia_duracion(d) else "%s.") % PALABRAS_FRENTES[nf])
     if con_garantia(d):
         sub_def = "Semanas de trabajo desde el arranque. La **garantía y el seguimiento** a {rango_seguimiento} corren desde el cierre de cada área."
     elif seg_es_seguimiento(d):
@@ -1648,12 +1687,13 @@ def s_inversion(d, R):
     T, M = R.T, R.M
     inv = d.get("inversion") or {}
     titulo = inv.get("titulo") or "Inversión del proyecto."
+    en_semanas = " a realizar en un total de {semanas_txt}" if anuncia_duracion(d) else ""
     if con_garantia(d):
-        dur_def = "Proyecto de {n_total_txt} a realizar en un total de {semanas_txt}, con seguimiento y garantía a {rango_seguimiento}. {h_total} horas de trabajo."
+        dur_def = "Proyecto de {n_total_txt}" + en_semanas + ", con seguimiento y garantía a {rango_seguimiento}. {h_total} horas de trabajo."
     elif seg_es_seguimiento(d):
-        dur_def = "Proyecto de {n_total_txt} a realizar en un total de {semanas_txt}, con seguimiento a {rango_seguimiento}. {h_total} horas de trabajo."
+        dur_def = "Proyecto de {n_total_txt}" + en_semanas + ", con seguimiento a {rango_seguimiento}. {h_total} horas de trabajo."
     else:
-        dur_def = "Proyecto de {n_total_txt} a realizar en un total de {semanas_txt}. {h_total} horas de trabajo."
+        dur_def = "Proyecto de {n_total_txt}" + en_semanas + ". {h_total} horas de trabajo."
     dur = inv.get("duracion") or dur_def
     garantia = inv.get("garantia_texto") or "Estamos contigo hasta que la habilidad quede instalada."
     garantia_html = ("" if not con_garantia(d) else (
@@ -1680,6 +1720,28 @@ def s_inversion(d, R):
             '        <div class="lic-cards">\n%s        </div>\n%s'
             "      </div>\n\n" % (T(lic.get("titulo") or "Licenciamiento · aparte de esta inversión", "licencias.titulo"), cards, nota)
         )
+    # Cotización por partes (opcional): una caja de valor por parte (PrecioParte1..N) en la zona del licenciamiento y la
+    # suma en la caja base de la derecha. La geometría DEBE coincidir con scripts/agregar-campo-precio.py → partes_fields().
+    partes = inv.get("partes") or []
+    label_base = "Propuesta + Inversión"
+    if partes:
+        label_base = T(inv.get("etiqueta_suma") or "Suma de las partes", "inversion.etiqueta_suma")
+        tarjetas = ""
+        for i, p_ in enumerate(partes, 1):
+            det = ('            <p class="parte-det">%s</p>\n' % T(p_["detalle"], "inversion.partes.detalle")) if p_.get("detalle") else ""
+            tarjetas += (
+                '          <div class="parte-card %s">\n'
+                '            <span class="parte-tag">Parte %d</span>\n'
+                '            <b class="parte-name">%s</b>\n%s'
+                '            <div class="parte-frame"></div>\n'
+                "          </div>\n" % ("acc-y" if i % 2 else "acc-o", i, T(p_["nombre"], "inversion.partes.nombre"), det)
+            )
+        lic_html = (
+            '      <div class="partes-wrap">\n'
+            '        <span class="partes-eyebrow">%s</span>\n'
+            '        <div class="partes-cards">\n%s        </div>\n'
+            "      </div>\n\n" % (T(inv.get("etiqueta_partes") or "Valor por parte", "inversion.etiqueta_partes"), tarjetas)
+        )
     return (
         '    <!-- 7 · Inversión (hoja de cotización estándar; antepenúltima slide) -->\n'
         '    <section class="slide s-price">\n'
@@ -1697,7 +1759,7 @@ def s_inversion(d, R):
         '      <div class="block block-cotizacion">\n'
         '        <span class="block-eyebrow">Cotización</span>\n'
         "      </div>\n\n"
-        '      <span class="cot-label cot-label-base">Propuesta + Inversión</span>\n'
+        '      <span class="cot-label cot-label-base">%s</span>\n'
         '      <div class="cot-frame base-frame"></div>\n\n'
         '      <span class="cot-label cot-label-discount">Descuento</span>\n'
         '      <span class="cot-sign-minus">&minus;$</span>\n'
@@ -1716,7 +1778,7 @@ def s_inversion(d, R):
         "      </div>\n"
         '      <div class="multi-box notas-box" data-field="Notas"></div>\n\n%s%s'
         "    </section>\n"
-        % (R.contador("inversion"), T(titulo, "inversion.titulo"), T(rotulo_servicio(d), "servicio_rotulo"), M(dur, "inversion.duracion"), garantia_html, lic_html, foot(R, "claro"))
+        % (R.contador("inversion"), T(titulo, "inversion.titulo"), T(rotulo_servicio(d), "servicio_rotulo"), M(dur, "inversion.duracion"), label_base, garantia_html, lic_html, foot(R, "claro"))
     )
 
 
@@ -1867,7 +1929,8 @@ def s_proximos(d, R):
     lineas = ""
     if a.get("cargo"):
         lineas += '          <span class="nx-role">%s</span>\n' % T(a["cargo"], "proximos_pasos.asesora.cargo")
-    lineas += '          <p class="nx-line"><a href="mailto:%s">%s</a></p>\n' % (esc(a["correo"]), T(a["correo"], "proximos_pasos.asesora.correo"))
+    if a.get("correo"):
+        lineas += '          <p class="nx-line"><a href="mailto:%s">%s</a></p>\n' % (esc(a["correo"]), T(a["correo"], "proximos_pasos.asesora.correo"))
     if a.get("telefono"):
         lineas += '          <p class="nx-line">%s</p>\n' % T(a["telefono"], "proximos_pasos.asesora.telefono")
     return (
@@ -1880,7 +1943,7 @@ def s_proximos(d, R):
         '      <div class="nx-steps">\n%s      </div>\n\n'
         '      <div class="nx-contact">\n'
         '        <div class="nx-card nx-ase">\n'
-        '          <span class="nx-label">¿Dudas? Escribe a tu asesora comercial</span>\n'
+        '          <span class="nx-label">%s</span>\n'
         '          <b class="nx-name">%s</b>\n%s'
         "        </div>\n"
         '        <div class="nx-card nx-emp">\n'
@@ -1891,6 +1954,7 @@ def s_proximos(d, R):
         "      </div>\n\n%s"
         "    </section>\n"
         % (R.contador("proximos"), R.idx["proximos"], T(titulo, "proximos_pasos.titulo"), M(sub, "proximos_pasos.subtitulo"), cards,
+           T(pp.get("etiqueta_contacto") or "¿Dudas? Escribe a tu asesora comercial", "proximos_pasos.etiqueta_contacto"),
            T(a["nombre"], "proximos_pasos.asesora.nombre"), lineas, foot(R, "oscuro"))
     )
 
@@ -2591,8 +2655,9 @@ def construir_brief(d, R):
     ms = (d.get("meta_servicio") or "habilidades").strip()
     pp = d.get("proximos_pasos") or {}
     ase = pp.get("asesora") or {}
-    asesora = ("%s%s · %s%s" % (ase.get("nombre", ""), (", " + ase["cargo"]) if ase.get("cargo") else "", ase.get("correo", ""),
-                                (" · " + ase["telefono"]) if ase.get("telefono") else "")) if "proximos" in R.orden else "(esta propuesta omite la slide de próximos pasos)"
+    asesora = (("%s%s" % (ase.get("nombre", ""), (", " + ase["cargo"]) if ase.get("cargo") else "")
+                + "".join(" · " + ase[k] for k in ("correo", "telefono") if ase.get(k))) if "proximos" in R.orden
+               else "(esta propuesta omite la slide de próximos pasos)")
     if "retorno" not in R.orden:
         regla_retorno = "Sin slide de retorno (`omitir`): confirmar con ventas que aquí no aplica (charla, sesión única); si el cliente es directivo, el retorno estimado es lo que decide."
     elif ms == "habilidades":
@@ -2714,6 +2779,11 @@ def chequeos_html(html, d, rep):
             rep.err("slide " + cls, "llave suelta «{» o «}» cerca de «%s»" % txt[max(0, i - 20):i + 20])
         if RE_FECHA.search(textos_fecha.get(cls, txt)):
             rep.aviso("slide " + cls, "contiene una fecha o mes calendario. El insumo vigente de Habilidades es relativo al arranque (semanas); si es una fecha de fuente/precio está bien, si es del cronograma confirmar con el usuario")
+        if not anuncia_duracion(d):
+            _ts = textos_fecha.get(cls, txt)
+            _ms = RE_SESIONES.search(_ts)
+            if _ms:
+                rep.aviso("slide " + cls, "anunciar_duracion = false pero el texto cuenta sesiones «%s» cerca de «%s»: reescribir sin el conteo o confirmar que es intencional" % (_ms.group(0), _ts[max(0, _ms.start() - 25):_ms.end() + 25]))
     ids_sol = set(x.get("id") for a in d.get("areas") or [] if isinstance(a, dict) for x in a.get("soluciones") or [] if isinstance(x, dict) and x.get("id"))
     for cls, txt in textos:
         vis = sorted(i for i in ids_sol if re.search(r"(?<![A-Za-z0-9-])%s(?![A-Za-z0-9-])" % re.escape(i), txt))

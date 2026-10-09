@@ -6,35 +6,39 @@
 ## 1. Resumen
 
 - **6 entregables en 3 módulos**, **18 h** de sesión, más seguimiento a 30, 60 y 90 días.
-- Carril **Desarrollo con IA**: 6 entregables, 18 h.
+- Herramienta **Desarrollo con IA**: 6 entregables, 18 h.
 - Horas por fase: F1 4 h (2 sol.) · F2 12 h (3 sol.) · F3 2 h (1 sol.).
 
-## 2. Frentes y ruta
+## 2. Líneas de trabajo y ruta
 
-| Frente | Carril | Áreas | Semanas | Horas | Soluciones |
+| Línea de trabajo | Herramienta | Áreas | Semanas | Horas | Soluciones |
 |---|---|---|---|---|---|
-| A | Desarrollo con IA | Fundamentals y método, Agentes de IA, Implementación | S1-S6 | 18 | 6 |
+| Equipo de desarrollo | Desarrollo con IA | Fundamentals y método, Agentes de IA, Implementación | 1 a 6 | 18 | 6 |
 
-| Frente | Método (Semanas 1 y 2) | Agentes (Semanas 3 a 5) | Implementación (Semana 6) |
+| Línea de trabajo | Método (Semanas 1 y 2) | Agentes (Semanas 3 a 5) | Flujo (Semana 6) |
 |---|---|---|---|
-| A | 4 h · 2 sol. | 12 h · 3 sol. | 2 h · 1 sol. |
+| Equipo de desarrollo | 4 h · 2 sol. | 12 h · 3 sol. | 2 h · 1 sol. |
 
 - **Kick-off · aparte**: 1 h para definir la herramienta de IA, la tarea real de práctica y la disponibilidad.
 - **Semanas 1 y 2 · Método**: 2 sesiones de 2 h: criterios de uso de la IA y especificación antes de programar.
 - **Semanas 3 a 5 · Agentes**: 3 sesiones de 4 h: el equipo construye sus agentes, con nuestra guía, sobre tareas reales.
-- **Semana 6 · Implementación**: Flujo común de especificación, código, pruebas y despliegue, adoptado por el equipo.
+- **Semana 6 · Implementación**: El equipo une método y agentes en un solo flujo y lo adopta en una tarea real.
 - **30 · 60 · 90 días**: Seguimiento: uso, nuevos agentes y tiempo recuperado contra la línea base.
 
 ## 3. Soluciones y horas (C = construcción, T = pruebas, A = adopción)
 
-### Fundamentals y método · 2 entregables · 4 h · carril Desarrollo con IA · frente A
+### Fundamentals y método · 2 entregables · 4 h · Desarrollo con IA · línea A
+
+Para qué (lo que ve el cliente): Nivelar al equipo en criterios de IA e instalar el método de especificar antes de programar
 
 | ID | Entregable (nombre en el deck) | Detalle de la fuente | C | T | A | Total | Fase |
 |---|---|---|---|---|---|---|---|
 | FUN-1 | Guía de criterios y reglas de uso de la IA en desarrollo | Fundamentals de 2 h con los 8 desarrolladores, en un solo grupo (bajo el máximo de 25 por sesión). Temas: cómo trabaja un asistente de IA para programar y cómo trabaja un agente, qué contexto y qué permisos necesita, qué se revisa siempre antes de aceptar un cambio, y qué reglas de datos aplican (trabajo en ambiente de desarrollo con datos sintéticos, como ya lo hace el equipo). La guía descargable resume los criterios y reglas comunes. Registra la línea base del tiempo que toma hoy probar y desplegar. La herramienta de IA para desarrollo ya se definió en el kick-off, que va aparte. | - | - | - | 2 | F1 |
 | MET-1 | Plantilla de especificación e instrucciones reutilizables (skills) | Sesión práctica de 2 h para instalar el método: el prototipo de pantalla (insumo para validar requerimientos con el cliente) se convierte en una especificación completa, y se definen las instrucciones reutilizables (skills) que la IA lee antes de programar. Se trabaja sobre una tarea real del equipo. Entrega la plantilla de especificación y las primeras instrucciones reutilizables. | - | - | - | 2 | F1 |
 
-### Agentes de IA · 3 entregables · 12 h · carril Desarrollo con IA · frente A
+### Agentes de IA · 3 entregables · 12 h · Desarrollo con IA · línea A
+
+Para qué (lo que ve el cliente): Que el equipo construya, con nuestra guía, 3 agentes que desarrollan, prueban y despliegan
 
 | ID | Entregable (nombre en el deck) | Detalle de la fuente | C | T | A | Total | Fase |
 |---|---|---|---|---|---|---|---|
@@ -42,7 +46,9 @@
 | TES-1 | Agente de pruebas automatizadas, probado en una tarea real | Sesión práctica de 4 h en la que el equipo construye, con la guía de Intezia, un agente que escribe y ejecuta pruebas automatizadas a partir de la especificación, y lo prueba sobre el código que produce el agente de desarrollo hasta que funciona. | - | - | - | 4 | F2 |
 | DEP-1 | Agente de despliegue, probado en un ambiente de desarrollo | Sesión práctica de 4 h en la que el equipo construye, con la guía de Intezia, un agente que prepara y ejecuta el despliegue, y lo prueba en un ambiente de desarrollo con datos sintéticos hasta que funciona. Las sesiones no despliegan a producción. | - | - | - | 4 | F2 |
 
-### Implementación · 1 entregable · 2 h · carril Desarrollo con IA · frente A
+### Implementación · 1 entregable · 2 h · Desarrollo con IA · línea A
+
+Para qué (lo que ve el cliente): Unir el método y los agentes en un flujo común que el equipo adopte y mantenga
 
 | ID | Entregable (nombre en el deck) | Detalle de la fuente | C | T | A | Total | Fase |
 |---|---|---|---|---|---|---|---|
@@ -50,10 +56,10 @@
 
 ## 4. Fuera de alcance
 
-- Producción y datos reales de salud: las sesiones usan un ambiente de desarrollo con datos sintéticos.
+- Producción y datos reales de salud: el trabajo queda en el ambiente de desarrollo.
 - La licencia de la herramienta de IA, que va aparte.
 
-## 5. Supuestos a confirmar
+## 5. Supuestos a confirmar (antes del método)
 
 - Código CAI-038 indicado por el usuario (siguiente libre tras CAI-037). División Educación y alianza «no» inferidas: software house privada, cliente corporativo, sin alianza en la ficha. Confirmar con la asesora.
 - Guardia §4.21 punto 5: no se preguntó. El contenido son soluciones concretas (un método y 3 agentes), no un programa de módulos de charla o curso, así que va directo al compacto, como CAI-032 y CAI-037.
@@ -68,11 +74,35 @@
 - Línea base del tiempo actual de probar y desplegar: se levanta en la sesión de Fundamentals (2 h). Confirmar con servicio que cabe.
 - Retorno en modo método: la ficha no trae volúmenes, tiempos ni costo hora. «Hacia la semana N» es aritmética (semanas de trabajo + 13): confirmar con servicio.
 - Sin certificado de participación por defecto (§4.21). Sin nombres de personas del cliente ni su cargo. La sede (oficinas del cliente o sala de Intezia) y los viáticos no van en el deck: son un tema comercial pendiente.
+- Migración a la plantilla v2 (2026-10-08, instrucción del usuario: «ajustar la CAI-038 al nuevo formato»). Versión 1 a 2 según la spec §13. Contenido de fondo sin cambios: 18 h, 6 entregables en 3 módulos, 6 semanas, kick-off de 1 h aparte y seguimiento 30-60-90. Lo que se agregó por la v2: «Cómo trabajamos» (método, práctica, datos y logística), el para qué de cada módulo y la slide de próximos pasos con la asesora. Los 4 pasos y la regla «Intezia guía, el equipo construye» pasaron de «Alcance» a «Cómo trabajamos». «Costo hora» pasó a «valor hora» y «precios de lista» a «valores de lista».
+- Sin facilidad de pago: no se preguntó. El usuario la omitió en la CAI-032, la DET-024, la CAI-040 y la DET-026, así que se aplicó el mismo criterio con omitir: ["pago"]. Si Ventas la quiere, se agrega el plan por cuotas ligadas a hitos de la ruta.
+- Asesora (slide de próximos pasos): Verónica Rubio, con el teléfono y el correo de la Ficha de Levantamiento; el cargo «Asesora comercial» sale del brief. La versión anterior no mostraba contacto: ahora la última slide sí lo hace.
 
-## 6. Retorno esperado (slide 6)
+## 6. Cómo trabajamos (slide 4)
+
+**Por qué en este orden:** Primero se nivela al equipo y se instala el método; con él se construyen los agentes; al final se unen en un flujo común.
+
+- **Nivelamos**: Al equipo en criterios y reglas de uso de la IA.
+- **Instalamos**: El método: especificar antes de programar.
+- **Guiamos**: Al equipo para que construya tres agentes que funcionen.
+- **Dejamos listo**: El flujo común adoptado y su medición a 30, 60 y 90 días.
+
+- En la práctica, **Tareas reales**: Cada sesión práctica se trabaja sobre una tarea del equipo, en modalidad mixta.
+- En la práctica, **Herramienta**: La define el kick-off, con el equipo y su forma de trabajo, antes de la primera sesión práctica.
+- En la práctica, **Probado de verdad**: Cada agente se prueba en una tarea real hasta que funciona, no con ejemplos de manual.
+- Datos: Las sesiones usan un ambiente de desarrollo con datos sintéticos, como ya lo hace el equipo. Los agentes se prueban ahí, sin tocar producción ni datos reales de clientes.
+- Quién construye: Intezia guía la construcción para que cada agente funcione; el equipo es quien lo construye, sobre tareas reales en Odoo y Python.
+
+**Logística:** modalidad: Mixta, presencial y virtual, según la disponibilidad semanal del equipo. · participantes: Los 8 desarrolladores; quién asiste a cada sesión de agentes se acuerda en el kick-off. · arranque: El kick-off de 1 h, aparte, abre el proyecto; su fecha se confirma con el equipo..
+
+## 7. Retorno esperado (slide 6)
 
 Modo **metodo**. La slide no cita estudios ni referencias de la web ni promete retorno.
 Hacia la semana 19: construcción (6 semanas) más 90 días de seguimiento; aritmética a confirmar con servicio.
 
 Pasos del método: Volumen semanal; Tiempo actual por tarea; Tiempo con los agentes; Horas recuperadas a la semana; Valor en dinero.
+
+## 9. Próximos pasos (slide 8)
+
+Asesora comercial que ve el cliente: Verónica Rubio, Asesora comercial · vrubio01@intezia.com · +58 422 3355505.
 

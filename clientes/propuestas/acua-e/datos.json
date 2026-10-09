@@ -1,5 +1,5 @@
 {
- "version": 1,
+ "version": 2,
  "cliente": {
   "nombre": "Acua-e",
   "slug": "acua-e",
@@ -10,7 +10,7 @@
  "alianza": false,
  "servicio_rotulo": "Servicio de Detección",
  "meta_servicio": "deteccion",
- "meta_tipo": "Detección · Fundamentals (2h grupal, 12 personas) + auditoría de 3 áreas (Administración, Operaciones y Planta, Mercadeo), 4h por área (12h), 14h totales, modalidad presencial · formato compacto",
+ "meta_tipo": "Detección · Fundamentals (2h grupal, 12 personas) + auditoría de 3 áreas (Administración, Operaciones y Planta, Mercadeo), 4h por área (12h), 14h totales, modalidad presencial · formato compacto v2",
  "vocabulario": {
   "solucion": [
    "entregable",
@@ -22,7 +22,7 @@
   ]
  },
  "eje": "Auditar Administración, Operaciones y Planta, y Mercadeo de Acua-e, con un logro inmediato en cada área (empezando por el registro compartido de pedidos e inventario), para llegar a un mapa de oportunidades de IA y una ruta hacia la capacidad propia del equipo",
- "origen": "Ficha de Levantamiento de Acua-e (registrada el 02/10/2026, asesora Flavia Martínez) e instrucción directa del usuario del 06/10/2026",
+ "origen": "Ficha de Levantamiento de Acua-e (registrada el 02/10/2026, asesora Flavia Martínez) e instrucción directa del usuario del 06/10/2026 y ajuste al formato v2 del 08/10/2026",
  "fuente_insumo": "Ficha de Levantamiento de Acua-e",
  "portada": {
   "titulo_lineas": [
@@ -64,7 +64,8 @@
     ]
    }
   ],
-  "fuente": "Fuente: Ficha de Levantamiento de Acua-e (12 personas, 3 áreas)."
+  "fuente": "Fuente: Ficha de Levantamiento de Acua-e (12 personas, 3 áreas).",
+  "eyebrow": "Propuesta de proyecto · Servicio de Detección"
  },
  "carriles": [
   {
@@ -91,7 +92,8 @@
      "fase": "F1",
      "detalle": "Fundamentals presencial de 2 h para las 12 personas de Acua-e, en un solo grupo (bajo el máximo de 25 por sesión): personal operativo de laboratorio y planta, gerente de planta, administración y fundadora. Temas: qué es y qué no es la IA, ejemplos aplicados a su sector, la ruta de las 3 áreas, preguntas y expectativas. El kick-off de arranque se hace aparte y no suma horas."
     }
-   ]
+   ],
+   "para_que": "Que las 12 personas entiendan qué es la IA y hablen un lenguaje común antes de las 3 áreas"
   },
   {
    "id": "ADM",
@@ -107,7 +109,8 @@
      "fase": "F2",
      "detalle": "Sesión presencial de 4 h con 3 a 4 personas del área. Candidato a logro inmediato identificado en la ficha: el registro compartido de pedidos e inventario entre administración y planta, que se trabaja junto con Operaciones y Planta."
     }
-   ]
+   ],
+   "para_que": "Ordenar cómo se piden y se registran los pedidos a planta, y dejar un logro inmediato"
   },
   {
    "id": "OPE",
@@ -123,7 +126,8 @@
      "fase": "F2",
      "detalle": "Sesión presencial de 4 h con 3 a 4 personas del área, incluido el gerente de planta. Se trabaja en conjunto con la sesión de Administración el registro compartido de pedidos e inventario (logro inmediato ya identificado en la ficha)."
     }
-   ]
+   ],
+   "para_que": "Compartir con Administración un registro de pedidos e inventario, como logro inmediato"
   },
   {
    "id": "MER",
@@ -139,20 +143,13 @@
      "fase": "F3",
      "detalle": "Sesión presencial de 4 h con 3 a 4 personas del área. Proceso a levantar: desarrollo y revisión de contenido de marketing para redes. El agente de marketing farmacéutico es el horizonte que sigue a la Detección, no parte de su alcance."
     }
-   ]
+   ],
+   "para_que": "Ordenar cómo se desarrolla y se revisa el contenido de marketing, y dejar un logro inmediato"
   }
  ],
  "alcance": {
   "titulo": "Un logro inmediato en cada una de las 3 áreas.",
   "subtitulo": "Nivelamos a las **12 personas** y auditamos **3 áreas** de {cliente_corto} en sesiones presenciales de 4 h.",
-  "etiqueta_pasos": "Cada área, cuatro pasos",
-  "pasos": [
-   "Entrevistamos de 3 a 4 personas del área sobre sus procesos reales.",
-   "Identificamos el cuello de botella más relevante.",
-   "Construimos en la sesión un logro inmediato aplicable.",
-   "Dejamos el inventario de procesos documentado para el Mapa de Calor."
-  ],
-  "quien_construye": "Intezia levanta y construye cada logro en sesión presencial, con las personas de cada área, sobre su forma de trabajo actual.",
   "fuera_alcance": [
    "La herramienta de IA a adoptar: la recomienda el Reporte Final.",
    "Agentes de IA a medida, como el de marketing: son el horizonte que sigue a la Detección.",
@@ -162,20 +159,20 @@
  "fases": [
   {
    "id": "F1",
-   "titulo": "Nivelación",
+   "titulo": "Nivel",
    "rango": "Semana 1",
    "descripcion": "Fundamentals en 1 grupo"
   },
   {
    "id": "F2",
-   "titulo": "Prioritarias",
+   "titulo": "Pedidos",
    "rango": "Semana 2",
    "descripcion": "Administración y Planta",
    "destacada": true
   },
   {
    "id": "F3",
-   "titulo": "Cierre del mapa",
+   "titulo": "Mapa",
    "rango": "Semana 3",
    "descripcion": "Mercadeo y Reporte Final"
   }
@@ -184,14 +181,13 @@
   {
    "id": "A",
    "carril": "det",
-   "semanas": "S1-S3",
-   "etiqueta": "Las 3 áreas · S1-S3",
-   "areas_html": "Fundamentals y auditoría presencial",
+   "semanas": "1 a 3",
    "celdas": {
     "F1": "Fundamentals presencial de 2 h para las 12 personas, en un solo grupo.",
     "F2": "Administración y Operaciones y Planta, 4 h cada una, con pedidos e inventario como foco.",
     "F3": "Mercadeo (4 h), con un logro inmediato para el contenido de marketing."
-   }
+   },
+   "nombre": "Auditoría presencial"
   }
  ],
  "ruta": {
@@ -199,14 +195,14 @@
   "tope_h_semana": 20,
   "titulo": "Del kick-off al Reporte Final en 3 semanas.",
   "subtitulo": "Semanas de trabajo desde el arranque, en modalidad presencial. El **Reporte Final** se entrega en la semana 3.",
-  "nota": "S = semana de trabajo desde el arranque, cuya fecha se acuerda con {cliente}. Las {h_total} h son una proyección de sesión: {h_f1}, {h_f2} y {h_f3} h de las fases 1, 2 y 3. El kick-off de arranque no suma horas. El horario de cada sesión se acuerda con cada responsable.",
+  "nota": "Las {h_total} h son una proyección de sesión: {h_f1}, {h_f2} y {h_f3} h de las fases 1, 2 y 3. El kick-off de arranque no suma horas. La fecha de arranque se acuerda con {cliente}; el horario de cada sesión, con cada responsable.",
   "hitos": [
    {
     "titulo": "Semana 1 · Nivelación",
     "texto": "Kick-off y Fundamentals de 2 h para las 12 personas, en un solo grupo."
    },
    {
-    "titulo": "Semana 2 · Prioritarias",
+    "titulo": "Semana 2 · Pedidos e inventario",
     "texto": "Administración y Planta, 4 h cada una, con el registro de pedidos como logro candidato."
    },
    {
@@ -241,16 +237,16 @@
  },
  "inversion": {
   "sin_garantia": true,
-  "duracion": "14 h de sesión presencial: Fundamentals (2 h) y 3 áreas (12 h), en 3 semanas.",
+  "duracion": "Proyecto de 4 sesiones presenciales en 3 semanas. 14 horas de trabajo.",
   "programa": [
-   "Servicio de Detección para Acua-e (DET-025): Fundamentals + 3 áreas de auditoría.",
-   "Presencial · Fundamentals (2h), Administración (4h), Operaciones y Planta (4h), Mercadeo (4h).",
-   "Cobertura: Administración, Operaciones y Planta, y Mercadeo, con foco inicial en pedidos e inventario."
+   "Servicio de Detección para Acua-e (DET-025): Fundamentals y auditoría de 3 áreas.",
+   "Administración, Operaciones y Planta, y Mercadeo, con foco inicial en pedidos e inventario.",
+   "Fundamentals (2 h), Administración (4 h), Operaciones y Planta (4 h) y Mercadeo (4 h), en sesiones presenciales."
   ],
   "notas": [
-   "Modalidad presencial, en las oficinas de Acua-e, a coordinar con la Dirección.",
    "El Reporte Final recomienda el ecosistema de IA y las licencias a adquirir; esta propuesta no incluye licencias.",
-   "Habilidades y Políticas, la ruta que sigue, no forman parte de esta inversión."
+   "Habilidades y Políticas, la ruta que sigue, no forman parte de esta inversión.",
+   "Términos y condiciones: los del enlace de «Importante», que ambas partes aceptan al avanzar con esta propuesta."
   ]
  },
  "entregables": {
@@ -336,19 +332,95 @@
  "supuestos": [
   "División Educación inferida: pyme farmacéutica, cliente corporativo privado. Alianza: no (el lead vino del evento GoFarma; confirmar con Flavia que no es una alianza).",
   "Horas por el lineamiento de Detección: Fundamentals de 2 h (un solo grupo, 12 personas, bajo el máximo de 25) y 4 h por área en 3 áreas = 14 h. El kick-off de arranque va aparte y no suma horas (convención general; en G-MAX se incluyó por instrucción explícita, aquí no hay instrucción).",
-  "Calendario propuesto por el sistema, no dictado por la ficha: 3 semanas (S1 kick-off y Fundamentals, S2 Administración y Operaciones y Planta, S3 Mercadeo y Reporte Final). Las dos áreas ligadas al logro de pedidos e inventario van juntas en la semana 2. El Reporte Final en la semana 3 y el orden de las áreas hay que confirmarlos con servicio y con Flavia.",
+  "Calendario propuesto por el sistema, no dictado por la ficha: 3 semanas (semana 1 kick-off y Fundamentals, semana 2 Administración y Operaciones y Planta, semana 3 Mercadeo y Reporte Final). Las dos áreas ligadas al logro de pedidos e inventario van juntas en la semana 2. El Reporte Final en la semana 3 y el orden de las áreas hay que confirmarlos con servicio y con Flavia.",
   "Cada sesión se presenta como un entregable (4 en total: Fundamentals y las 3 áreas). El Mapa de Calor, el Índice de Madurez y el Reporte Final son trabajo del equipo consultor, sin sesión con el cliente ni horas propias: van como entregables transversales.",
   "Sesiones de área con 3 a 4 personas (dato de la ficha: «de 3 a 4 personas por área a entrevistar»), no solo con el líder del área.",
   "Retorno en modo método: la ficha no trae volúmenes ni tiempos por proceso; el Reporte Final los estima con lo que cada área entregue en su sesión (estimación referencial, sin compromiso de resultado).",
   "El agente de marketing farmacéutico y los agentes a medida se presentan solo como horizonte (Habilidades), no como alcance, por la nota explícita de la ficha (Bloque F: mantener Detección como primer paso). No se promete construirlos dentro de esta propuesta.",
   "Reglas de Detección que se conservan: sin certificado, sin garantía 30-60-90, sin pre-recomendar herramienta de IA (el cliente espera la recomendación del Reporte Final), sin dolor dramatizado ni citas textuales, sin datos personales de la fundadora (edad, sucesión, valoración de la empresa, uso personal de herramientas) ni nombres de personas.",
-  "La ficha menciona restricciones sobre lo que se puede afirmar en publicidad de productos farmacéuticos, sin nombrar una norma. El deck no cita ninguna regulación."
+  "La ficha menciona restricciones sobre lo que se puede afirmar en publicidad de productos farmacéuticos, sin nombrar una norma. El deck no cita ninguna regulación.",
+  "Migración a la plantilla v2 (2026-10-08, instrucción del usuario: «mejorar la DET-025 con el nuevo formato»). Versión 1 a 2 según la spec §13. Vocabulario de Detección conservado (entregable, etapa previa). Contenido de fondo sin cambios: 14 h, 4 entregables, 3 áreas más Fundamentals, 3 semanas, presencial, kick-off aparte. Lo que se agregó por la v2: «Cómo trabajamos» (método, práctica, datos y logística), el para qué de cada área y la slide de próximos pasos con la asesora. Los pasos de método y de próximos pasos por defecto son de Habilidades: se sobrescribieron.",
+  "Cómo se cuidan los datos (decisión del usuario, 2026-10-08): las sesiones levantan procesos, sin cargar a ninguna herramienta de IA información confidencial de Acua-e (fórmulas, datos de clientes); los logros se prueban con ejemplos armados para la sesión. La ficha no habla de datos: mismo criterio que G-MAX, Conserval y la clínica. Confirmar con la Dirección.",
+  "Sin facilidad de pago: no se preguntó. El usuario la omitió en las últimas propuestas migradas (CAI-032, DET-024, CAI-040, DET-026, CAI-038, DET-027), así que se aplicó el mismo criterio con omitir: [\"pago\"]. Si Ventas la quiere, se agrega con cuotas ligadas a los hitos de la ruta.",
+  "Asesora (slide de próximos pasos): Flavia Martínez, con el teléfono y el correo que figuran en su propuesta de Fibraspol; el cargo «Asesora comercial» es supuesto. La versión anterior no mostraba contacto: ahora la última slide sí lo hace."
  ],
  "pendientes": [
   "Definir inversión, descuento y total (campos vacíos para ventas). Disponibilidad presupuestaria no definida en la ficha y riesgo explícito de la asesora: el valor debe calzar con la escala de una pyme de 12 personas.",
-  "Confirmar con Flavia las fechas, los horarios y el orden de las áreas; el deck solo lleva semanas y no muestra asesora ni contacto.",
+  "Confirmar con Flavia las fechas, los horarios y el orden de las áreas; el deck solo lleva semanas.",
   "Confirmar si el Reporte Final se entrega en la semana 3 (misma semana de la última sesión) o en la 4.",
   "Confirmar con Flavia si el Reporte Final debe incluir de forma explícita la identificación de un líder interno de IA (la ficha lo menciona como candidato natural dentro del equipo familiar); no se incluyó en el deck.",
-  "Confirmar si el kick-off se cuenta aparte (criterio por defecto) o dentro de las horas."
+  "Confirmar si el kick-off se cuenta aparte (criterio por defecto) o dentro de las horas.",
+  "Confirmar con el usuario o Ventas si la propuesta lleva facilidad de pago (se omitió por el criterio de las últimas propuestas) y cómo se comunica el plan de pago.",
+  "Confirmar con Flavia su teléfono, su correo y su cargo en la última slide. Reenviar el PDF nuevo y avisar al cliente que reemplaza al del 06/10."
+ ],
+ "metodo": {
+  "titulo": "Así trabajamos cada área.",
+  "subtitulo": "Trabajamos en sesión presencial con 3 o 4 personas de cada área y dejamos todo listo para el Reporte Final.",
+  "quien_construye": "Intezia levanta y construye cada logro en sesión presencial, con las personas de cada área, sobre su forma de trabajo actual.",
+  "por_que_orden": "Primero se nivela al equipo; después Administración y Planta, que comparten el registro de pedidos e inventario; al final Mercadeo.",
+  "pasos": [
+   {
+    "titulo": "Entrevistamos",
+    "texto": "A 3 o 4 personas de cada área, sobre sus procesos reales."
+   },
+   {
+    "titulo": "Identificamos",
+    "texto": "El cuello de botella más relevante de cada área."
+   },
+   {
+    "titulo": "Construimos",
+    "texto": "En la misma sesión, un logro inmediato aplicable al área."
+   },
+   {
+    "titulo": "Dejamos listo",
+    "texto": "El inventario de procesos, que alimenta el Mapa de Calor."
+   }
+  ],
+  "practica": [
+   {
+    "titulo": "Sesiones presenciales",
+    "texto": "Fundamentals de 2 h para las 12 personas y una sesión de 4 h por área, en las oficinas de {cliente_corto}."
+   },
+   {
+    "titulo": "Sin sistema nuevo",
+    "texto": "El logro de cada área parte de cómo trabaja hoy el equipo, sin exigirle un sistema nuevo."
+   },
+   {
+    "titulo": "Dos áreas, un registro",
+    "texto": "Administración y Planta trabajan juntas el registro compartido de pedidos e inventario, como logro candidato."
+   }
+  ],
+  "datos": "En las sesiones se levantan procesos, no datos: no se carga a ninguna herramienta de IA información confidencial de {cliente_corto}, como fórmulas o datos de clientes. Los logros se prueban con ejemplos armados para la sesión."
+ },
+ "logistica": {
+  "modalidad": "Presencial, en las oficinas de {cliente_corto}, a coordinar con la Dirección.",
+  "participantes": "Las 12 personas de {cliente_corto} en Fundamentals; en cada área, de 3 a 4 personas.",
+  "arranque": "El kick-off, aparte, abre el proyecto; su fecha se confirma con la Dirección.",
+  "ritmo": "Fundamentals en la semana 1, dos áreas en la semana 2 y una en la semana 3."
+ },
+ "proximos_pasos": {
+  "asesora": {
+   "nombre": "Flavia Martínez",
+   "cargo": "Asesora comercial",
+   "correo": "fmartinez@intezia.com",
+   "telefono": "+58 414 5756615"
+  },
+  "pasos": [
+   {
+    "titulo": "Fecha de arranque",
+    "texto": "Confirmamos con la Dirección la fecha del kick-off y el orden de las áreas."
+   },
+   {
+    "titulo": "Accesos y agenda",
+    "texto": "Coordinamos los participantes de cada área y el horario de cada sesión en sus oficinas."
+   },
+   {
+    "titulo": "Kick-off de arranque",
+    "texto": "Reunión inicial para acordar alcance, calendario y responsables de cada área."
+   }
+  ]
+ },
+ "omitir": [
+  "pago"
  ]
 }

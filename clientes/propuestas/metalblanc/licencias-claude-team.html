@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DET-028 · Licencias de Claude Team · Metalblanc</title>
+<!--
+  Documento complementario de la propuesta DET-028 (Metalblanc): valor de lista de Claude Team, pago mensual y anual.
+  NO es parte del deck de 9 slides. Se imprime a A4 horizontal con Chrome:
+    "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless=new --disable-gpu \
+      --no-pdf-header-footer --print-to-pdf-no-header --virtual-time-budget=15000 \
+      --print-to-pdf="DET-028 Licencias de Claude Team.pdf" "file://$PWD/licencias-claude-team.html"
+  Fuente de los valores: claude.com/pricing, consultada el 08/10/2026 (asiento estándar 25 mensual / 20 con pago anual;
+  asiento premium 125 mensual / 100 con pago anual; USD, sin impuestos). Los totales son aritmética de 11 asientos.
+  Volver a consultar la fuente antes de reenviar: los valores del proveedor cambian.
+-->
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
+
+:root {
+  --black: #000000;
+  --yellow: #F4BA1A;
+  --orange: #E58423;
+  --white: #FFFFFF;
+  --ink-soft: #3a3a3a;
+  --line: #e4e4e4;
+  --tint-y: #FDF6E3;
+  --tint-o: #FCF1E6;
+  --font: "Graphit", "Inter", system-ui, sans-serif;
+}
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+@page { size: A4 landscape; margin: 0; }
+html, body { background: var(--white); }
+body {
+  font-family: var(--font);
+  color: var(--black);
+  -webkit-font-smoothing: antialiased;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+.page { position: relative; width: 1123px; height: 794px; overflow: hidden; background: var(--white); }
+
+/* ---------- Cabecera ---------- */
+.head { position: relative; height: 190px; background: var(--black); color: var(--white); padding: 30px 48px 0; overflow: hidden; }
+.head .diamond {
+  position: absolute; right: -88px; top: -150px; width: 270px; height: 270px;
+  background: linear-gradient(180deg, var(--yellow) 0%, var(--orange) 100%); transform: rotate(45deg);
+}
+.head .logo { height: 84px; display: block; margin: -28px 0 -18px -22px; position: relative; }
+.head .eyebrow {
+  font-size: 11.5px; font-weight: 700; letter-spacing: 0.17em; text-transform: uppercase;
+  color: var(--yellow); margin-bottom: 9px; position: relative;
+}
+.head h1 { font-size: 30px; line-height: 1.14; font-weight: 700; max-width: 1000px; position: relative; }
+.head h1 .hl { display: inline-block; background: var(--yellow); color: var(--black); padding: 0 11px 4px; margin-top: 5px; }
+.head .sub { position: relative; margin-top: 10px; font-size: 13.5px; color: rgba(255, 255, 255, 0.78); }
+.head .sub b { color: var(--white); font-weight: 600; }
+
+/* ---------- Cuerpo ---------- */
+.body { display: grid; grid-template-columns: 1.6fr 1fr; gap: 16px; padding: 16px 48px 0; }
+.card { border: 1px solid var(--line); border-top: 4px solid var(--yellow); border-radius: 12px; padding: 15px 20px 14px; }
+.card.c2 { border-top-color: var(--orange); }
+.card .lab { font-size: 10.5px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--orange); margin-bottom: 5px; }
+.card h2 { font-size: 18.5px; line-height: 1.2; font-weight: 700; margin-bottom: 11px; }
+
+/* Tabla de valores */
+table { width: 100%; border-collapse: collapse; }
+th, td { text-align: left; padding: 7px 8px; font-size: 13.2px; border-bottom: 1px solid var(--line); vertical-align: middle; }
+th { font-size: 10.5px; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 700; color: #555; padding-top: 4px; }
+td.seat { width: 150px; }
+td.seat b { display: block; font-size: 15px; }
+td.seat span { font-size: 12px; color: #555; }
+td.num { font-size: 20px; font-weight: 700; white-space: nowrap; }
+td.num small { display: block; font-size: 11.5px; font-weight: 400; color: #555; margin-top: 1px; }
+tr.sep td { border-bottom: none; padding: 0; height: 6px; }
+.pill {
+  display: inline-block; background: var(--yellow); color: var(--black); font-size: 11.5px; font-weight: 700;
+  padding: 2px 10px; border-radius: 999px; margin-top: 3px;
+}
+.save {
+  margin-top: 12px; padding: 9px 13px; background: var(--tint-y); border-left: 3px solid var(--yellow);
+  border-radius: 0 6px 6px 0; font-size: 13px; line-height: 1.4;
+}
+.save b { font-weight: 700; }
+
+/* Lado derecho */
+.card ul { list-style: none; }
+.card li { position: relative; padding: 0 0 8px 17px; font-size: 13.2px; line-height: 1.42; color: var(--ink-soft); }
+.card li::before { content: ""; position: absolute; left: 0; top: 6px; width: 7px; height: 7px; background: var(--orange); }
+.card li b { color: var(--black); font-weight: 700; }
+.card.dark { background: var(--black); border-color: var(--black); border-top-color: var(--yellow); }
+.card.dark .lab { color: var(--yellow); }
+.card.dark h2 { color: var(--white); }
+.card.dark li { color: rgba(255, 255, 255, 0.86); }
+.card.dark li b { color: var(--yellow); }
+.card.dark li::before { background: var(--yellow); }
+
+/* ---------- Notas ---------- */
+.notes { padding: 10px 48px 0; }
+.notes .rl { font-size: 10.5px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--orange); margin-bottom: 6px; }
+.notes p { font-size: 11.5px; line-height: 1.4; color: #444; margin-bottom: 2px; }
+.notes p b { color: var(--black); }
+
+/* ---------- Pie ---------- */
+.foot {
+  position: absolute; left: 0; right: 0; bottom: 0; height: 54px; background: var(--black); color: var(--white);
+  padding: 0 48px; display: flex; align-items: center; justify-content: space-between; font-size: 12.5px;
+}
+.foot .who b { font-weight: 700; }
+.foot .who span { color: rgba(255, 255, 255, 0.75); }
+.foot .code { font-size: 11px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--yellow); }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header class="head">
+    <div class="diamond"></div>
+    <img class="logo" src="../../../logos/educacion/BLANCO.png" alt="Intezia">
+    <div class="eyebrow">Documento complementario · Propuesta DET-028 · Valor de lista de licencias</div>
+    <h1>Claude Team: pago mensual y pago anual <span class="hl">para 11 personas</span></h1>
+    <div class="sub">Valores de lista del proveedor · <b>dólares estadounidenses (US$), sin impuestos</b> · consultados el 8 de octubre de 2026</div>
+  </header>
+
+  <main class="body">
+
+    <section class="card c1">
+      <div class="lab">Valor de lista</div>
+      <h2>Por asiento y para los 11 asientos del equipo</h2>
+      <table>
+        <thead>
+          <tr><th>Tipo de asiento</th><th>Pago mensual</th><th>Pago anual</th><th>11 asientos, mensual</th><th>11 asientos, anual</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="seat"><b>Estándar</b><span>Todas las funciones, más uso que Pro</span></td>
+            <td class="num">$25<small>por asiento al mes</small></td>
+            <td class="num">$20<small>por asiento al mes, $240 al año</small></td>
+            <td class="num">$275<small>al mes, $3.300 en 12 meses</small></td>
+            <td class="num">$2.640<small>al año ($220 al mes)</small></td>
+          </tr>
+          <tr class="sep"><td colspan="5"></td></tr>
+          <tr>
+            <td class="seat"><b>Premium</b><span>Mayor capacidad de uso</span></td>
+            <td class="num">$125<small>por asiento al mes</small></td>
+            <td class="num">$100<small>por asiento al mes, $1.200 al año</small></td>
+            <td class="num">$1.375<small>al mes, $16.500 en 12 meses</small></td>
+            <td class="num">$13.200<small>al año ($1.100 al mes)</small></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="save"><b>Con pago anual el valor baja 20 %:</b> en 11 asientos estándar son $660 menos al año ($2.640 frente a $3.300). Los asientos estándar y premium se pueden combinar en un mismo equipo.</div>
+    </section>
+
+    <section class="card c2 dark">
+      <div class="lab">Qué tener en cuenta</div>
+      <h2>Datos del plan Team</h2>
+      <ul>
+        <li><b>Incluye</b> todas las funciones de Claude, más uso que el plan individual, facturación centralizada y controles de administrador.</li>
+        <li><b>Protección de datos:</b> con Claude Team el contenido de la empresa no se usa para entrenar los modelos por defecto.</li>
+        <li><b>Plan individual, de referencia:</b> Claude Pro cuesta $20 al mes con pago mensual, o $17 al mes con pago anual ($200 por adelantado).</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <section class="notes">
+    <div class="rl">Condiciones de estos valores</div>
+    <p><b>Número de asientos:</b> se calculó con 11, el tamaño del equipo. El número y el tipo reales dependen de quiénes usen Claude y los confirma Metalblanc con el proveedor.</p>
+    <p><b>Valores del proveedor:</b> valores de lista de claude.com/pricing al 8 de octubre de 2026, sin impuestos. Pueden variar y no forman parte de la inversión de la propuesta DET-028.</p>
+    <p><b>Disponibilidad:</b> Claude se ofrece en los países que Anthropic lista como soportados (anthropic.com/supported-countries): confirmar el país de facturación y de uso antes de contratar.</p>
+  </section>
+
+  <footer class="foot">
+    <div class="who"><b>Flavia Martínez</b> <span>· Asesora comercial · fmartinez@intezia.com · +58 414 5756615</span></div>
+    <div class="code">DET-028 · Metalblanc</div>
+  </footer>
+
+</div>
+</body>
+</html>

@@ -1,151 +1,126 @@
-# Documento Oficial de Diseño Curricular e Instruccional
+# Programa interno · Sociedad Anticancerosa de Venezuela (Clínica) · Servicio de Detección y Habilidades (DET-023)
 
-**[LOGO INTEZIA — `logos/educacion/NEGRO.png`]**  /  **[LOGO Sociedad Anticancerosa de Venezuela]**
+> Documento interno (no se muestra al cliente). **Generado** por `scripts/generar-habilidades-compacto.py` desde `datos.json`: no editar a mano.
+> Fuente del insumo: Ficha de Levantamiento de la Sociedad Anticancerosa de Venezuela (Clínica).
 
-# Servicio de Detección
-## De 400 mensajes sin responder a un criterio común, en Administración y Central de Citas
+## 1. Resumen
 
-**Código**: DET-023
-**Versión**: Fundamentals (2h grupal) + auditoría de 2 áreas (Administración operativa, Central
-de Citas) · 4h por área (8h totales) · 10h totales, modalidad mixta
-**Elaborado por**: Equipo INTEZIA Education
-**Aprobado por**: Dirección Académica Intezia
-**Fecha de Aprobación**: 2026-09-25
+- **9 entregables en 4 subáreas (más 1 etapa previa)**, **50 h** de sesión, más seguimiento a 30, 60 y 90 días.
+- Herramienta **Detección y Habilidades**: 9 entregables, 50 h.
+- Horas por fase: F1 2 h (1 sol.) · F2 16 h (4 sol.) · F3 32 h (4 sol.).
 
----
+## 2. Líneas de trabajo y ruta
 
-## 1. Información general del programa
+| Línea de trabajo | Herramienta | Áreas | Semanas | Horas | Soluciones |
+|---|---|---|---|---|---|
+| 2 áreas, 4 subáreas | Detección y Habilidades | Nivelación del equipo, Compras y pagos, Conciliación, Confirmación de pacientes, Médicos y procedimientos | 1 a 6 | 50 | 9 |
 
-- **Nombre**: Detección de IA para la Sociedad Anticancerosa de Venezuela (Clínica)
-- **Empresa**: Sociedad Anticancerosa de Venezuela (Clínica) — salud, oncología, organización
-  sin fines de lucro
-- **Modalidad**: Mixta.
-- **Estructura**: 1 sesión grupal de Fundamentals (2h) + 2 áreas (Administración operativa,
-  Central de Citas) con una sesión de 4 horas cada una (8h) = 10 horas totales.
-- **Acreditación**: sin certificado — la Detección (incluida la sesión de Fundamentals) es una
-  auditoría, no un curso.
-- **Alcance de personas**: ~4 personas en Administración operativa, ~5 en Central de Citas.
-- **Alcance de sesiones**: la sesión de Fundamentals nivela a ambas áreas antes de la auditoría,
-  y responde directamente a la resistencia al cambio que ya hizo fracasar una automatización
-  anterior (un bot de conciliación comprado y abandonado). Cada una de las 2 áreas tiene su
-  propia sesión de 4 horas y deja un **logro inmediato** aplicable, sobre 2 candidatos que el
-  propio cliente ya identificó: automatizar respuestas repetitivas en Central de Citas, y
-  revisar la conciliación bancaria en Administración.
-
-> **Restricción de diseño (ficha de levantamiento):** Intezia no recomienda herramienta antes de
-> auditar (Metodología ABR). El cliente declara "aún no lo saben, esperan la recomendación". El
-> Reporte Final entrega una **recomendación de ecosistema de IA**, sin nombrar marca de
-> antemano, a confirmar con los hallazgos de las 2 áreas.
-
----
-
-## 2. Fundamentación y justificación pedagógica
-
-### 2.1 Planteamiento de la necesidad
-
-La Sociedad Anticancerosa de Venezuela (Clínica) tiene una adopción de IA desordenada: una
-licencia de Copilot genérica y subutilizada, uso personal de ChatGPT sin integrar a la
-información de la empresa, y un bot de conciliación ya comprado pero abandonado por resistencia
-al cambio del equipo. Lino Olivieri, Director de la Clínica, tiene alto compromiso personal con
-el proyecto, pero la organización no tiene todavía un objetivo estratégico de IA definido. Por
-eso la Detección abre con una sesión de Fundamentals que nivela a ambas áreas y trabaja
-explícitamente la resistencia al cambio, antes de auditar Administración y Central de Citas por
-separado y dejar en cada una un logro inmediato.
-
-### 2.2 Enfoque pedagógico (Modelo INTEZIA)
-
-Aprendizaje Basado en Retos (ABR) — tres pilares:
-
-- **Tutoría activa**: el consultor nivela al equipo en Fundamentals, con foco en reducir la
-  resistencia al cambio, y luego levanta cada área en vivo, sobre sus procesos e indicadores
-  reales.
-- **Transferibilidad inmediata**: cada sesión de 4 horas no termina en preguntas — deja un
-  logro inmediato aplicable en esa misma área.
-- **Curaduría de contenidos**: el Mapa de Calor y el Reporte Final se construyen desde
-  hallazgos reales de las 2 áreas, no desde supuestos.
-
----
-
-## 3. Perfiles académicos
-
-> **Detección**: no incluye Perfil de ingreso. La Sociedad designa al equipo de Administración
-> operativa (~4 personas) y de Central de Citas (~5 personas) para Fundamentals y sus
-> respectivas sesiones de área.
-
-### Perfil de egreso
-
-- **Saber (Cognitivo)**: el equipo entiende qué es y qué no es la IA (Fundamentals), con foco en
-  bajar la resistencia al cambio que hoy frena la adopción.
-- **Saber hacer (Procedimental)**: cada área se lleva un logro inmediato aplicable a su tarea
-  más repetitiva, construido en la misma sesión de 4 horas.
-- **Saber ser (Actitudinal)**: el equipo entiende la IA como una herramienta a auditar y
-  ordenar primero, sobre su propia operación real.
-
----
-
-## 4. Objetivos estratégicos
-
-### 4.1 Objetivo general
-
-Auditar Administración operativa y Central de Citas con una sesión grupal de Fundamentals y 4
-horas dedicadas a cada área, dejando un logro inmediato en cada una, para llevar el uso disperso
-de IA de hoy a un criterio común, empezando por automatizar las respuestas repetitivas de los
-400 mensajes diarios de Central de Citas y revisar la conciliación bancaria de Administración.
-
-### 4.2 Objetivos específicos
-
-1. Nivelar al equipo con una sesión de Fundamentals antes de auditar, bajando la resistencia al
-   cambio que hoy frena la adopción de IA.
-2. Auditar las 2 áreas con 4 horas dedicadas a cada una, modalidad mixta.
-3. Dejar un logro inmediato en cada área, empezando por Central de Citas y la conciliación de
-   Administración.
-4. Entregar un Reporte Final con el mapa de oportunidades priorizado y una recomendación de
-   ecosistema de IA.
-
----
-
-## 5. Estructura curricular y diseño instruccional
-
-### 5.1 Estructura modular (4 módulos)
-
-| Módulo | Objetivo Instructivo | Temas | Elaboración (Práctica del participante) |
+| Línea de trabajo | Nivel (Semana 1) | Mapa (Semanas 2 a 4) | Uso (Semanas 5 y 6) |
 |---|---|---|---|
-| **I: Fundamentals** | Nivela a Administración y Central de Citas en fundamentos de IA, bajando la resistencia al cambio. | 1.1 Qué es y qué no es la IA<br>1.2 Casos reales de la Clínica<br>1.3 Ruta de las 2 sesiones de auditoría | El equipo llega a sus sesiones de área con un lenguaje común y menos resistencia. |
-| **II: Trabajo por Área** | Audita cada una de las 2 áreas con 4 horas dedicadas, dejando un logro inmediato. | 2.1 Procesos reales del área<br>2.2 Cuellos de botella<br>2.3 Construcción del logro inmediato | Cada área se lleva un logro inmediato aplicable a su tarea más repetitiva. |
-| **III: Priorización** | Prioriza hallazgos por impacto, esfuerzo y riesgo. | 3.1 Consolidación de las 2 áreas<br>3.2 Mapa de Calor | El equipo consultor construye el Mapa de Calor priorizado de las 2 áreas. |
-| **IV: Reporte Final** | Entrega el diagnóstico completo, el mapa de oportunidades y la recomendación de ecosistema de IA. | 4.1 Diagnóstico consolidado<br>4.2 Mapa de oportunidades priorizado<br>4.3 Recomendación de ecosistema de IA | La Sociedad recibe el Reporte Final y la recomendación. |
+| 2 áreas, 4 subáreas | 2 h · 1 sol. | 16 h · 4 sol. | 32 h · 4 sol. |
 
-### 5.2 Desglose instructivo (cronograma y ruta de aprendizaje)
+- **Semana 1 · Nivelación**: Kick-off y Fundamentals de 2 h para todo el equipo, en un solo grupo.
+- **Semanas 2 y 3 · Detección**: 4 subáreas, 4 h cada una, dos por semana: diagnóstico y un logro inmediato por subárea.
+- **Semana 4 · Reporte Final**: Mapa de Calor, Índice de Madurez y recomendación de ecosistema de IA.
+- **Semanas 5 y 6 · Soluciones**: 4 subáreas, 8 h cada una, dos por semana: la solución de cada subárea, en uso.
+- **30 · 60 · 90 días**: Seguimiento: uso, nuevas construcciones y tiempo recuperado contra la línea base.
 
-| Módulo | Sesión | Temas y subtemas | Tiempo de ejecución | Estrategias de enseñanza (facilitador) | Estrategias de aprendizaje (participante) | Recursos y entornos |
-|---|---|---|---|---|---|---|
-| I | 1 sesión grupal | Tema 1: Fundamentals<br>1.1–1.3 | Total 2 h (30' encuadre y fundamentos / 45' casos reales de la Clínica / 30' ruta de las 2 sesiones / 15' cierre y preguntas) | Encuadre de qué es y qué no es la IA, con foco en bajar la resistencia al cambio | El equipo alinea expectativas antes de las sesiones de área | Sesión presencial o remota, Administración y Central de Citas juntas |
-| II | 2 sesiones (1 por área) | Tema 2: Trabajo por área<br>2.1–2.3 | Total 4 h por área (45' contexto y objetivos / 90' levantamiento de procesos e indicadores / 75' construcción del logro inmediato / 30' cierre y siguientes pasos) | Entrevista guiada sobre procesos reales, construcción asistida del logro inmediato | Cada área deja un inventario real y un logro inmediato aplicable | Sesión mixta, guion de levantamiento Intezia |
-| III | Consolidación | Tema 3: Priorización<br>3.1–3.2 | Trabajo de equipo consultor (sin sesión con el cliente) | Consolidación y priorización por impacto, esfuerzo y riesgo | — | Hallazgos de las 2 sesiones del Módulo II |
-| IV | Entrega | Tema 4: Reporte Final<br>4.1–4.3 | Reunión de entrega con Lino Olivieri | Presentación del diagnóstico, el mapa de oportunidades y la recomendación de ecosistema de IA | La Sociedad recibe el Reporte Final | Mapa de Calor + Reporte Final consolidado |
+## 3. Soluciones y horas (C = construcción, T = pruebas, A = adopción)
 
----
+### Nivelación del equipo · 1 entregable · 2 h · Detección y Habilidades · línea A · etapa previa
 
-## 6. Garantía de calidad y mejora continua
+Para qué (lo que ve el cliente): Que el equipo use la IA con un mismo criterio antes de auditar las 4 subáreas
 
-- **Construcción curricular**: cada una de las 2 sesiones se adapta a los procesos reales del
-  área (confirmación de citas, conciliación bancaria, entre otros).
-- **Encuesta de satisfacción**: monitoreo de la experiencia al cierre de cada sesión.
-- **Entregables**: equipo nivelado con Fundamentals, inventario de procesos por área, un logro
-  inmediato aplicable por cada una de las 2 áreas, Mapa de Calor priorizado, Reporte Final con
-  recomendación de ecosistema de IA. **Sin certificado de participación** — la Detección
-  (incluido Fundamentals) es una auditoría, no un curso.
-- **Beneficio del programa**: al finalizar, la Sociedad pasa de una adopción de IA desordenada a
-  un equipo nivelado y un logro tangible ya funcionando en Administración y Central de Citas,
-  con un mapa de oportunidades priorizado y una recomendación de ecosistema de IA.
+| ID | Entregable (nombre en el deck) | Detalle de la fuente | C | T | A | Total | Fase |
+|---|---|---|---|---|---|---|---|
+| NIV-1 | Equipo nivelado en IA con un lenguaje común | Fundamentals de 2 h para el equipo de la Sociedad, en un solo grupo (bajo el máximo de 25 por sesión). Temas: qué es y qué no es la IA, cómo preguntarle con criterio, ejemplos aplicados a la atención de citas y a la administración, y la ruta de las 4 subáreas. Responde a una adopción hoy dispersa: una licencia de Copilot genérica que casi no se usa, el uso personal de ChatGPT y un bot de conciliación comprado que el equipo no usa. El kick-off de arranque se hace aparte y no suma horas. | - | - | - | 2 | F1 |
 
----
+### Compras y pagos · 2 entregables · 12 h · Detección y Habilidades · línea A
 
-## 7. Perfil del equipo facilitador
+Para qué (lo que ve el cliente): Ordenar el flujo de compras y pagos y dejar en uso la solución que más tiempo recupere
 
-- **Detección (2 áreas + Fundamentals)**: facilitada por el **Equipo INTEZIA Education**, con
-  dominio de nivelación en fundamentos de IA, manejo de resistencia al cambio, levantamiento de
-  procesos y diagnóstico de madurez de IA.
-- **Asesora comercial**: Verónica Rubio.
-- **Competencias pedagógicas**: facilitación grupal (Fundamentals), entrevista guiada,
-  construcción asistida del logro inmediato por área, consolidación con lista de cotejo.
+| ID | Entregable (nombre en el deck) | Detalle de la fuente | C | T | A | Total | Fase |
+|---|---|---|---|---|---|---|---|
+| COM-1 | Diagnóstico y logro inmediato de Compras y pagos | Sesión de 4 h con las personas de Administración operativa que gestionan las compras y los pagos. Se levantan los procesos reales y sus cuellos de botella, y se construye en la misma sesión un logro inmediato aplicable a la subárea. El inventario de procesos alimenta el Mapa de Calor. | - | - | - | 4 | F2 |
+| COM-2 | Solución de Compras y pagos, construida y en uso | Sesión de 8 h con las mismas personas. Se construye la solución que la Detección priorizó para Compras y pagos, se prueba con ejemplos armados y el equipo la deja funcionando en su trabajo diario. Cuál es la solución se define con el Reporte Final. | - | - | - | 8 | F3 |
+
+### Conciliación · 2 entregables · 12 h · Detección y Habilidades · línea A
+
+Para qué (lo que ve el cliente): Reducir los 2 días semanales de conciliación y revisar el bot comprado
+
+| ID | Entregable (nombre en el deck) | Detalle de la fuente | C | T | A | Total | Fase |
+|---|---|---|---|---|---|---|---|
+| CON-1 | Diagnóstico y logro inmediato de Conciliación | Sesión de 4 h con la persona que concilia (un analista dedica 2 días a la semana a conciliar el caché, factura por factura) y el coordinador de administración. Candidato a logro inmediato identificado en la ficha: revisar la continuidad del bot de conciliación ya comprado, que el equipo no usa. | - | - | - | 4 | F2 |
+| CON-2 | Solución de Conciliación, construida y en uso | Sesión de 8 h con el equipo de Administración. Se construye la solución que la Detección priorizó para la conciliación bancaria y de caché, se prueba con ejemplos armados y se acompaña su adopción: que el analista y el equipo la usen en su trabajo diario. | - | - | - | 8 | F3 |
+
+### Confirmación de pacientes · 2 entregables · 12 h · Detección y Habilidades · línea A
+
+Para qué (lo que ve el cliente): Ordenar los 400 mensajes diarios y automatizar las respuestas repetitivas
+
+| ID | Entregable (nombre en el deck) | Detalle de la fuente | C | T | A | Total | Fase |
+|---|---|---|---|---|---|---|---|
+| PAC-1 | Diagnóstico y logro inmediato de Confirmación de pacientes | Sesión de 4 h con las personas de Central de Citas. Proceso a levantar: la confirmación de citas con los pacientes, unos 400 mensajes al día, con preguntas repetitivas que se atienden a mano y mensajes que quedan sin responder o mal respondidos. Candidato a logro inmediato identificado en la ficha: automatizar las respuestas repetitivas. | - | - | - | 4 | F2 |
+| PAC-2 | Solución de Confirmación de pacientes, construida y en uso | Sesión de 8 h con Central de Citas. Se construye la solución que la Detección priorizó para atender los mensajes repetitivos de los pacientes, se prueba con mensajes de ejemplo armados para la sesión, sin datos de pacientes, y el equipo la deja en uso. La conexión técnica con el sistema de citas queda fuera de esta propuesta. | - | - | - | 8 | F3 |
+
+### Médicos y procedimientos · 2 entregables · 12 h · Detección y Habilidades · línea A
+
+Para qué (lo que ve el cliente): Ordenar la confirmación con médicos y de procedimientos y automatizar lo repetitivo
+
+| ID | Entregable (nombre en el deck) | Detalle de la fuente | C | T | A | Total | Fase |
+|---|---|---|---|---|---|---|---|
+| MED-1 | Diagnóstico y logro inmediato de Médicos y procedimientos | Sesión de 4 h con las personas de Central de Citas que confirman la agenda con los médicos y los procedimientos. Se levantan los procesos reales y sus cuellos de botella, y se construye en la misma sesión un logro inmediato aplicable a la subárea. | - | - | - | 4 | F2 |
+| MED-2 | Solución de Médicos y procedimientos, construida y en uso | Sesión de 8 h con las mismas personas. Se construye la solución que la Detección priorizó para la confirmación con médicos y de procedimientos, se prueba con ejemplos armados y el equipo la deja funcionando en su trabajo diario. | - | - | - | 8 | F3 |
+
+## 4. Fuera de alcance
+
+- La conexión técnica con el sistema de citas: requiere permisos de quien lo administra.
+- Soluciones adicionales por subárea: cada una recibe 8 h de construcción, lo demás va en otra etapa.
+- Licencias de IA: la herramienta se define con el Reporte Final y su licencia va aparte.
+
+## 5. Supuestos a confirmar (antes del método)
+
+- Alcance nuevo (instrucción del usuario, 2026-10-08, con la ficha del 05/10): la DET-023 enviada el 25/09 era solo Detección de 2 áreas (10 h). La ficha actualizada marca Detección y Habilidades, habla de 6 sub-áreas de auditoría y el cliente pide ver el panorama combinado porque, al ser ONG, necesita la cifra total para gestionar financiamiento por proyecto. El deck pasa a un combo Detección + Habilidades (servicio_rotulo «Servicio de Detección y Habilidades»; meta.json sigue en `deteccion`, como los combos).
+- 2 áreas, 4 subáreas (instrucción del usuario, 2026-10-08, segunda indicación): son solo 2 áreas, Administración operativa y Central de Citas, que se dividen en las subáreas que tienen dentro. El deck lo dice así (portada, alcance, ruta y entregables) y usa «subárea» como vocabulario. Cuenta 4 subáreas: Detección a 4 h cada una (16 h) y Habilidades a 8 h cada una (32 h), más Fundamentals de 2 h: 50 h en total.
+- Nombres de las 4 subáreas: propuesta del sistema, a confirmar con la asesora y el cliente. La ficha dice que Administración operativa (compras, pagos, conciliación) y Central de Citas (confirmación de pacientes, médicos y procedimientos) suman 6 sub-áreas y que sus nombres NO están confirmados; el usuario habla de 4. Se agruparon las 6 de la ficha: Compras y pagos, Conciliación, Confirmación de pacientes, y Médicos y procedimientos. Si los grupos son otros, se cambian los nombres en datos.json y se regenera.
+- Horas: Fundamentals 2 h grupal (lineamiento de Detección) + 4 subáreas × 4 h de Detección = 18 h; Habilidades 4 subáreas × 8 h = 32 h (instrucción del usuario, «8 h por área en este caso particular»). Total 50 h. El kick-off va aparte y no suma horas.
+- Qué se construye en Habilidades: la ficha pide continuar los logros inmediatos de la Detección y que Administración y Central de Citas apliquen en el día a día las herramientas identificadas. Solo identifica dos candidatos (respuestas repetitivas y agendamiento en Central de Citas; continuidad del bot de conciliación ya comprado). Para no inventar soluciones, cada subárea recibe «la solución prioritaria que la Detección señale» (8 h) y su nombre se confirma con el Reporte Final; las C/T/A no se desglosan (solo h por solución).
+- Calendario propuesto por el sistema, no dictado por la ficha: 6 semanas (semana 1 kick-off y Fundamentals; semanas 2 y 3 Detección, dos subáreas por semana; semana 4 consolidación, Mapa de Calor y Reporte Final sin sesiones; semanas 5 y 6 Habilidades, dos subáreas por semana). Sesiones de 8 h por subárea: confirmar con la asesora si se parten en dos de 4 h. Confirmar con servicio.
+- Habilidades se construye después del Reporte Final porque este recomienda el ecosistema de IA («aún no lo saben, esperan la recomendación»): el deck no nombra ni pre-recomienda ninguna herramienta (Intezia no recomienda antes de auditar). Copilot ya está contratado pero casi no se usa; el Reporte Final dirá si se aprovecha. El licenciamiento va aparte y su valor lo confirma el cliente con el proveedor.
+- Modalidad mixta: es la de la propuesta enviada (la ficha anterior la traía en el bloque de Habilidades); la ficha del 05/10 no la repite. El deck dice «se acuerda con la Sociedad». Confirmar con la asesora.
+- Participantes: «unas 15 personas» sale del universo de la ficha (~4 en Administración operativa, 5 en Central de Citas y ~6 en la sede administrativa). La ficha no dice quiénes asisten a Fundamentals ni a cada sesión de subárea: se deja a coordinar. No se nombra a ninguna persona del cliente.
+- Datos de pacientes: la ficha no tiene certeza de una política formal de datos y se trata de salud (oncología). El deck dice que no se carga a ninguna herramienta información que identifique a pacientes ni historias clínicas, y que se prueba con ejemplos armados (mismo criterio que DET-027). Propuesta del sistema: confirmar con la Sociedad. Limita la solución de Central de Citas: la conexión con el sistema de citas queda fuera de alcance (la ficha la pide como expectativa).
+- Fuera del deck a propósito: los equipos médicos con IA embebida (endoscopio y ultrasonidos) no son parte de Administración ni de Central de Citas; el patrocinio ejecutivo no asegurado, la apertura al cambio «media» y quién firma (el Director no confirmó que firme) son contexto interno; la resistencia al cambio se trata en Fundamentals y en la adopción, sin nombrar a nadie. Quedan en brief.md.
+- Retorno en modo método: la ficha declara volúmenes (400 mensajes al día, 2 días a la semana de un analista) pero no tiempos por proceso ni valor hora. Esos dos datos van en la portada con su fuente; el retorno no usa cifras ni posiciones. «Sin compromiso de resultado». Sin casos ya logrados con el cliente ni contratación evitada.
+- «Hacia la semana N» del retorno es aritmética (6 semanas + 13): confirmar con el equipo de servicio.
+- Sin facilidad de pago (criterio de las últimas migraciones, 2026-10-08): la slide se omite con omitir: ["pago"]. El cliente necesita el total combinado para gestionar financiamiento: la hoja de inversión trae una caja de valor por parte (Detección 18 h y Habilidades 32 h) y la suma automática (inversion.partes). Ventas comunica el plan de pago por otro medio; el generador avisa que Ventas la pide en toda propuesta.
+- Asesora (slide de próximos pasos): Verónica Rubio, con el teléfono y el correo de la Ficha de Levantamiento de otras propuestas; el cargo «Asesora comercial» sale del brief.
+- Ajuste al formato compacto v2 (2026-10-08): el deck de 12 slides del 25/09 pasa a 8 slides (sin Impacto con estudios, Cierre, calendario con fechas ni certificado). Los dos estudios del deck anterior (BMJ Open 2016 y Ardent Partners 2025) no aplican en este formato (§4.21). El deck anterior, su programa.md y su brief.md quedan en _anterior-12-slides/.
+
+## 6. Cómo trabajamos (slide 4)
+
+**Por qué en este orden:** Primero se nivela al equipo; después se audita cada subárea y se prioriza con el Reporte Final; al final se construye en cada una la solución que el diagnóstico respalda.
+
+- **Levantamos**: Los procesos reales de cada subárea y su cuello de botella.
+- **Construimos**: Un logro inmediato en la Detección y, después, la solución prioritaria.
+- **Adoptamos**: El equipo usa la solución en su trabajo diario, con acompañamiento.
+- **Medimos**: El tiempo recuperado contra la línea base, a 30, 60 y 90 días.
+
+- En la práctica, **Sesiones por subárea**: 4 h por subárea en la Detección y 8 h en Habilidades, con las personas que hacen el trabajo, en modalidad mixta.
+- En la práctica, **Lo prioriza el diagnóstico**: Las soluciones nacen de los hallazgos de la Detección: el equipo construye lo que el propio diagnóstico señala.
+- En la práctica, **Hecho con quien lo usa**: Cada solución se construye con las personas que la van a usar, para que el equipo la adopte.
+- Datos: En las sesiones se trabaja con procesos y ejemplos armados para la sesión: no se carga a ninguna herramienta de IA información que identifique a pacientes ni historias clínicas de la Sociedad.
+- Quién construye: Intezia levanta y construye con las personas de cada subárea, en sesión, sobre su forma de trabajo actual.
+
+**Logística:** modalidad: Mixta: la modalidad de cada sesión se acuerda con la Sociedad. · participantes: Unas 15 personas de Administración, Central de Citas y la sede administrativa. · arranque: La fecha de arranque y el horario de cada sesión se acuerdan con la Sociedad..
+
+## 7. Retorno esperado (slide 6)
+
+Modo **metodo**. La slide no cita estudios ni referencias de la web ni promete retorno.
+Hacia la semana 19: construcción (6 semanas) más 90 días de seguimiento; aritmética a confirmar con servicio.
+
+Pasos del método: Volumen; Tiempo actual; Tiempo con la solución; Horas recuperadas; Valor en dinero.
+
+## 9. Próximos pasos (slide 8)
+
+Asesora comercial que ve el cliente: Verónica Rubio, Asesora comercial · vrubio01@intezia.com · +58 422 3355505.
+

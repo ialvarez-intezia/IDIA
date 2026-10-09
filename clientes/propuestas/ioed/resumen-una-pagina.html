@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CAP-098 · Resumen de una página · IOED</title>
+<!--
+  Resumen de una página de la propuesta CAP-098 (Fase 1 · Diagnóstico) para IOED.
+  Documento complementario del deck (NO es parte del deck de 8 slides): lo usa la contraparte de IOED para
+  presentar la propuesta internamente. Se imprime a A4 horizontal con Chrome:
+    "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless=new --disable-gpu \
+      --no-pdf-header-footer --print-to-pdf-no-header --virtual-time-budget=15000 \
+      --print-to-pdf="CAP-098 Resumen de una página.pdf" "file://$PWD/resumen-una-pagina.html"
+  Fuente de las cifras: datos.json (10 h, 5 sesiones, 4 semanas). Si cambia el deck, actualizar aquí.
+  Los pasos de confidencialidad llevan pendiente la validación de Tecnología (ver brief.md).
+-->
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
+
+:root {
+  --black: #000000;
+  --yellow: #F4BA1A;
+  --orange: #E58423;
+  --white: #FFFFFF;
+  --ink-soft: #3a3a3a;
+  --line: #e4e4e4;
+  --tint-y: #FDF6E3;
+  --tint-o: #FCF1E6;
+  --font: "Graphit", "Inter", system-ui, sans-serif;
+}
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+@page { size: A4 landscape; margin: 0; }
+html, body { background: var(--white); }
+body {
+  font-family: var(--font);
+  color: var(--black);
+  -webkit-font-smoothing: antialiased;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+.page {
+  position: relative;
+  width: 1123px;
+  height: 794px;
+  overflow: hidden;
+  background: var(--white);
+}
+
+/* ---------- Cabecera ---------- */
+.head {
+  position: relative;
+  height: 204px;
+  background: var(--black);
+  color: var(--white);
+  padding: 30px 48px 0;
+  overflow: hidden;
+}
+.head .diamond {
+  position: absolute;
+  right: -88px;
+  top: -150px;
+  width: 270px;
+  height: 270px;
+  background: linear-gradient(180deg, var(--yellow) 0%, var(--orange) 100%);
+  transform: rotate(45deg);
+}
+.head .logo { height: 84px; display: block; margin: -28px 0 -18px -22px; position: relative; }
+.head .eyebrow {
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+  color: var(--yellow);
+  margin-bottom: 9px;
+  position: relative;
+}
+.head h1 {
+  font-size: 30px;
+  line-height: 1.14;
+  font-weight: 700;
+  max-width: 1000px;
+  position: relative;
+}
+.head h1 .hl {
+  display: inline-block;
+  background: var(--yellow);
+  color: var(--black);
+  padding: 0 11px 4px;
+  margin-top: 5px;
+}
+.head .sub {
+  position: relative;
+  margin-top: 10px;
+  font-size: 13.5px;
+  color: rgba(255, 255, 255, 0.78);
+}
+.head .sub b { color: var(--white); font-weight: 600; }
+
+/* ---------- Tres bloques ---------- */
+.cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+  padding: 20px 48px 0;
+}
+.card {
+  border: 1px solid var(--line);
+  border-top: 4px solid var(--yellow);
+  border-radius: 12px;
+  padding: 15px 19px 14px;
+  min-height: 0;
+}
+.card.c2 { border-top-color: var(--orange); }
+.card .lab {
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--orange);
+  margin-bottom: 5px;
+}
+.card h2 {
+  font-size: 18.5px;
+  line-height: 1.2;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.card p.lead { font-size: 13.5px; line-height: 1.45; color: var(--ink-soft); margin-bottom: 12px; }
+.card ul { list-style: none; }
+.card li {
+  position: relative;
+  padding: 0 0 8px 17px;
+  font-size: 13.2px;
+  line-height: 1.42;
+  color: var(--ink-soft);
+}
+.card li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 7px;
+  height: 7px;
+  background: var(--orange);
+}
+.card li b { color: var(--black); font-weight: 700; }
+.card .note {
+  margin-top: 4px;
+  padding: 8px 12px;
+  background: var(--tint-y);
+  border-left: 3px solid var(--yellow);
+  border-radius: 0 6px 6px 0;
+  font-size: 12.5px;
+  line-height: 1.4;
+  color: var(--black);
+}
+
+/* Línea de tiempo de 4 semanas */
+.tl { position: relative; padding-left: 0; }
+.tl::before {
+  content: "";
+  position: absolute;
+  left: 82px;
+  top: 8px;
+  bottom: 12px;
+  width: 2px;
+  background: linear-gradient(180deg, var(--yellow), var(--orange));
+}
+.tl .st { position: relative; display: grid; grid-template-columns: 88px 1fr; gap: 0; padding-bottom: 10px; }
+.tl .st:last-child { padding-bottom: 0; }
+.tl .wk {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--black);
+  padding-top: 2px;
+  position: relative;
+}
+.tl .wk::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 3px;
+  width: 11px;
+  height: 11px;
+  background: var(--yellow);
+  transform: rotate(45deg);
+}
+.tl .st:nth-child(n+3) .wk::after { background: var(--orange); }
+.tl .tx { font-size: 13.2px; line-height: 1.4; color: var(--ink-soft); padding-left: 16px; }
+.tl .tx b { display: block; color: var(--black); font-size: 14px; margin-bottom: 1px; }
+
+/* Bloque de confidencialidad, oscuro porque es la primera preocupación */
+.card.c3 {
+  background: var(--black);
+  border-color: var(--black);
+  border-top-color: var(--yellow);
+  color: var(--white);
+}
+.card.c3 .lab { color: var(--yellow); }
+.card.c3 h2 { color: var(--white); }
+.card.c3 li { color: rgba(255, 255, 255, 0.86); }
+.card.c3 li b { color: var(--yellow); }
+.card.c3 li::before { background: var(--yellow); }
+
+/* ---------- Camino ---------- */
+.road { padding: 14px 48px 0; }
+.road .rl {
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--orange);
+  margin-bottom: 8px;
+}
+.road .steps { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; }
+.road .rs { border-radius: 10px; padding: 10px 14px 11px; font-size: 12.5px; line-height: 1.38; }
+.road .rs b { display: block; font-size: 13.5px; margin-bottom: 2px; }
+.road .rs.a { background: var(--yellow); color: var(--black); }
+.road .rs.b { background: var(--tint-o); border: 1px solid #f1cfa6; color: var(--black); }
+.road .rs.c { background: var(--white); border: 1px solid var(--line); color: var(--black); }
+.road .rl span { font-weight: 400; letter-spacing: 0; text-transform: none; font-size: 12px; color: #555; margin-left: 6px; }
+
+/* ---------- Pie ---------- */
+.foot {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 54px;
+  background: var(--black);
+  color: var(--white);
+  padding: 0 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12.5px;
+}
+.foot .who b { font-weight: 700; }
+.foot .who span { color: rgba(255, 255, 255, 0.75); }
+.foot .code {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--yellow);
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header class="head">
+    <div class="diamond"></div>
+    <img class="logo" src="../../../logos/educacion/BLANCO.png" alt="Intezia">
+    <div class="eyebrow">Resumen de la propuesta · Servicio de Detección · Fase 1 de 3</div>
+    <h1>Diagnóstico de procesos con IA y nivelación del equipo<br><span class="hl">en 2 áreas de IOED</span></h1>
+    <div class="sub"><b>Servicios Navales</b> y <b>Operaciones de Buques</b> · 10 horas de trabajo en 4 semanas · modalidad online</div>
+  </header>
+
+  <main class="cols">
+
+    <section class="card c1">
+      <div class="lab">1 · Qué hacemos</div>
+      <h2>Entender dónde ayuda la IA, sin comprar nada</h2>
+      <ul>
+        <li><b>Nivelamos al equipo</b> en IA con Fundamentals de 2&nbsp;h, sobre las herramientas que IOED ya tiene en Microsoft 365 E3.</li>
+        <li><b>Mesas de trabajo online</b> de 2&nbsp;h en cada área: una de procesos y trazabilidad y otra de accesos y datos.</li>
+        <li><b>Informe de diagnóstico priorizado</b> por área, con el control de acceso y la protección de datos evaluados.</li>
+      </ul>
+      <div class="note">Si IOED decide incorporar Claude, la nivelación se hace sobre esa herramienta.</div>
+    </section>
+
+    <section class="card c2">
+      <div class="lab">2 · Qué entregamos</div>
+      <h2>Un diagnóstico listo en los primeros 30 días</h2>
+      <div class="tl">
+        <div class="st"><div class="wk">Semana 1</div><div class="tx"><b>Equipo nivelado</b>Lenguaje común de IA y de uso seguro de datos.</div></div>
+        <div class="st"><div class="wk">Semana 2</div><div class="tx"><b>Procesos mapeados</b>Procesos y trazabilidad de cada área.</div></div>
+        <div class="st"><div class="wk">Semana 3</div><div class="tx"><b>Accesos y datos</b>Quién accede a qué información, por área.</div></div>
+        <div class="st"><div class="wk">Semana 4</div><div class="tx"><b>Informe de diagnóstico</b>Prioridades por impacto y riesgo, y la ruta de las fases siguientes.</div></div>
+      </div>
+    </section>
+
+    <section class="card c3">
+      <div class="lab">3 · Cómo cuidamos su información</div>
+      <h2>La confidencialidad es el primer criterio</h2>
+      <ul>
+        <li><b>Antes de iniciar:</b> se firma el acuerdo de confidencialidad.</li>
+        <li><b>Dónde se procesa:</b> dentro del entorno Microsoft 365 de IOED. Cualquier otra herramienta, como Claude, se valida antes con IOED y su área de tecnología.</li>
+        <li><b>Sin entrenar modelos:</b> se trabaja con licencias empresariales, que no usan la información del cliente para entrenar modelos.</li>
+        <li><b>Cómo se protege:</b> accede solo quien IOED autorice. En las mesas se levantan procesos, no documentos: no se carga información real a herramientas de IA.</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <section class="road">
+    <div class="rl">El camino completo<span>· Las fases 2 y 3 se definen con el informe de diagnóstico y no forman parte de esta propuesta.</span></div>
+    <div class="steps">
+      <div class="rs a"><b>Ahora · Fase 1 · Diagnóstico</b>Esta propuesta: nivelación, mesas de trabajo e informe priorizado.</div>
+      <div class="rs b"><b>Después · Fase 2 · Construcción</b>Diseño y validación de la solución de cada área, según lo que arroje el informe.</div>
+      <div class="rs c"><b>Más adelante · Fase 3 · Implementación</b>Activación en cada área y manual de seguridad y uso responsable de la IA.</div>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <div class="who"><b>Flavia Martínez</b> <span>· Asesora comercial · fmartinez@intezia.com · +58 414 5756615</span></div>
+    <div class="code">CAP-098 · IOED</div>
+  </footer>
+
+</div>
+</body>
+</html>

@@ -2,14 +2,14 @@
 <!--
   Propuesta · Acua-e · Servicio de Detección (DET-025)
   División: Educación · Servicio: Detección (§4.1a) · Alianza: no
-  GENERADO por scripts/generar-habilidades-compacto.py (plantilla 1.3 (2026-10-05)) desde datos.json.
+  GENERADO por scripts/generar-habilidades-compacto.py (plantilla 2.0 (2026-10-07)) desde datos.json.
   No editar a mano: editar datos.json y regenerar. Estilos propios del deck: overrides.css.
   Fuente del insumo: Ficha de Levantamiento de Acua-e
 
-  Formato compacto de 6 slides (distinto del deck canónico de ~13):
-    1 Portada con punto de dolor · 2 Alcance · 3 Ruta · 4 Inversión · 5 Entregables · 6 Retorno esperado
-  Marcadores de detección de AcroForms (agregar-campo-precio.py), por página: «Propuesta Económica»
-  solo en la slide de inversión; «Lo que se llevan» y «Entregables» solo en la de entregables.
+  Formato compacto de 8 slides, en el orden de las preguntas del cliente (Ventas, 2026-10-07):
+    1 Portada · 2 Alcance · 3 Ruta · 4 Cómo trabajamos · 5 Entregables · 6 Retorno · 7 Inversión · 8 Próximos pasos
+  Marcadores de detección de AcroForms (agregar-campo-precio.py), por página: «Propuesta Económica» solo en la slide de
+  inversión; «Lo que se llevan» y «Entregables» solo en la de entregables; «Facilidad de pago» solo en la de pago.
   Campos AcroForm: Programa, Notas, PrecioBase, Descuento, PrecioTotal (inversión) y Entregables, Acreditacion (entregables). Se reposicionan con scripts/customize-habilidades-compacto.py.
 -->
 <html lang="es">
@@ -25,9 +25,9 @@
 
   <main class="deck">
 
-    <!-- 1 · Portada con punto de dolor -->
+    <!-- 1 · Portada: ¿cuál es mi problema? -->
     <section class="slide s-cover">
-      <span class="counter">01 / 06</span>
+      <span class="counter">01 / 08</span>
       <div class="logo-big">
         <img src="../../../logos/educacion/BLANCO.png" alt="Intezia Educación">
       </div>
@@ -67,54 +67,35 @@
       </div>
     </section>
 
-    <!-- 2 · Alcance -->
-    <section class="slide s-scope">
-      <span class="counter">02 / 06</span>
+    <!-- 2 · Alcance: qué vamos a hacer y para qué -->
+    <section class="slide s-scope roomy">
+      <span class="counter">02 / 08</span>
       <p class="eyebrow">02 · Alcance</p>
       <h2>Un logro inmediato en cada una de las 3 áreas.</h2>
       <p class="sub">Nivelamos a las <strong>12 personas</strong> y auditamos <strong>3 áreas</strong> de Acua-e en sesiones presenciales de 4 h.</p>
 
-      <div class="scope-body">
-        <div class="scope-left">
-
-          <div class="scope-panel acc-y">
-            <div class="scope-head">
-              <span class="scope-tag">Detección</span>
-              <span class="scope-total"><b>4</b> entregables · 3 áreas y 1 etapa previa</span>
-            </div>
-            <ul class="scope-rows">
-              <li><span class="area">Fundamentals <em>(etapa previa)</em> <small class="comp">Un solo grupo con las 12 personas de Acua-e, en sus oficinas.</small></span><span class="units" style="--n:1"></span><span class="n">1</span></li>
-              <li><span class="area">Administración <small class="comp">Socia y equipo administrativo (3 personas). Pedidos con planta.</small></span><span class="units" style="--n:1"></span><span class="n">1</span></li>
-              <li><span class="area">Operaciones y Planta <small class="comp">Gerente de planta y personal operativo del laboratorio. Pedidos e inventario.</small></span><span class="units" style="--n:1"></span><span class="n">1</span></li>
-              <li><span class="area">Mercadeo <small class="comp">Mercadeo y contenido de campañas en redes. Lenguaje farmacéutico.</small></span><span class="units" style="--n:1"></span><span class="n">1</span></li>
-            </ul>
+      <div class="scope-panels one" style="--np:1">
+        <div class="scope-panel acc-y">
+          <div class="scope-head">
+            <span class="scope-tag">Detección</span>
+            <span class="scope-total"><b>4</b> entregables · 3 áreas</span>
           </div>
-
+          <ul class="scope-rows">
+              <li><span class="area">Fundamentals <em>(etapa previa)</em> <small class="comp">Un solo grupo con las 12 personas de Acua-e, en sus oficinas.</small></span><span class="n">1 entregable</span><span class="para">Que las 12 personas entiendan qué es la IA y hablen un lenguaje común antes de las 3 áreas</span></li>
+              <li><span class="area">Administración <small class="comp">Socia y equipo administrativo (3 personas). Pedidos con planta.</small></span><span class="n">1 entregable</span><span class="para">Ordenar cómo se piden y se registran los pedidos a planta, y dejar un logro inmediato</span></li>
+              <li><span class="area">Operaciones y Planta <small class="comp">Gerente de planta y personal operativo del laboratorio. Pedidos e inventario.</small></span><span class="n">1 entregable</span><span class="para">Compartir con Administración un registro de pedidos e inventario, como logro inmediato</span></li>
+              <li><span class="area">Mercadeo <small class="comp">Mercadeo y contenido de campañas en redes. Lenguaje farmacéutico.</small></span><span class="n">1 entregable</span><span class="para">Ordenar cómo se desarrolla y se revisa el contenido de marketing, y dejar un logro inmediato</span></li>
+          </ul>
         </div>
+      </div>
 
-        <div class="scope-right">
-          <div class="scope-card">
-            <p class="scope-card-label">Cada área, cuatro pasos</p>
-            <ol class="scope-steps">
-              <li>Entrevistamos de 3 a 4 personas del área sobre sus procesos reales.</li>
-              <li>Identificamos el cuello de botella más relevante.</li>
-              <li>Construimos en la sesión un logro inmediato aplicable.</li>
-              <li>Dejamos el inventario de procesos documentado para el Mapa de Calor.</li>
-            </ol>
-          </div>
-          <div class="scope-card">
-            <p class="scope-card-label">Quién construye</p>
-            <p>Intezia levanta y construye cada logro en sesión presencial, con las personas de cada área, sobre su forma de trabajo actual.</p>
-          </div>
-          <div class="scope-card scope-out">
-            <p class="scope-card-label">Fuera de este alcance</p>
-            <ul>
-              <li>La herramienta de IA a adoptar: la recomienda el Reporte Final.</li>
-              <li>Agentes de IA a medida, como el de marketing: son el horizonte que sigue a la Detección.</li>
-              <li>Licencias de IA: no se incluyen en esta propuesta.</li>
-            </ul>
-          </div>
-        </div>
+      <div class="scope-out">
+        <p class="scope-card-label">Fuera de este alcance</p>
+        <ul>
+          <li>La herramienta de IA a adoptar: la recomienda el Reporte Final.</li>
+          <li>Agentes de IA a medida, como el de marketing: son el horizonte que sigue a la Detección.</li>
+          <li>Licencias de IA: no se incluyen en esta propuesta.</li>
+        </ul>
       </div>
 
       <div class="foot">
@@ -123,45 +104,45 @@
       </div>
     </section>
 
-    <!-- 3 · Ruta -->
+    <!-- 3 · Ruta: qué pasa en cada fase -->
     <section class="slide s-route">
-      <span class="counter">03 / 06</span>
+      <span class="counter">03 / 08</span>
       <p class="eyebrow">03 · Ruta</p>
       <h2>Del kick-off al Reporte Final en 3 semanas.</h2>
       <p class="sub">Semanas de trabajo desde el arranque, en modalidad presencial. El <strong>Reporte Final</strong> se entrega en la semana 3.</p>
 
-      <div class="route-grid" style="--cols:3; --rows:1; --rowh:214px">
+      <div class="route-grid n1" style="--cols:3; --rows:1; --rowh:214px">
 
         <div class="rg-corner"></div>
         <div class="rg-phase rg-ph-1">
-          <span class="rg-phase-tag">Nivelación</span>
+          <span class="rg-phase-top"><span class="rg-phase-tag">Nivel</span><b class="rg-phase-n">1 entregable</b></span>
           <span class="rg-phase-date">Semana 1</span>
-          <span class="rg-phase-txt"><b>2 h</b> · Fundamentals en 1 grupo</span>
+          <span class="rg-phase-txt">Fundamentals en 1 grupo</span>
         </div>
         <div class="rg-phase rg-ph-2 hi">
-          <span class="rg-phase-tag">Prioritarias</span>
+          <span class="rg-phase-top"><span class="rg-phase-tag">Pedidos</span><b class="rg-phase-n">2 entregables</b></span>
           <span class="rg-phase-date">Semana 2</span>
-          <span class="rg-phase-txt"><b>8 de 14 h</b> · Administración y Planta</span>
+          <span class="rg-phase-txt">Administración y Planta</span>
         </div>
         <div class="rg-phase rg-ph-3">
-          <span class="rg-phase-tag">Cierre del mapa</span>
+          <span class="rg-phase-top"><span class="rg-phase-tag">Mapa</span><b class="rg-phase-n">1 entregable</b></span>
           <span class="rg-phase-date">Semana 3</span>
-          <span class="rg-phase-txt"><b>4 h</b> · Mercadeo y Reporte Final</span>
+          <span class="rg-phase-txt">Mercadeo y Reporte Final</span>
         </div>
         <div class="rg-phase rg-fu">
-          <span class="rg-phase-tag">Cierre</span>
+          <span class="rg-phase-top"><span class="rg-phase-tag">Cierre</span></span>
           <span class="rg-phase-date">Reporte Final</span>
           <span class="rg-phase-txt">Trabajo del equipo consultor</span>
         </div>
 
         <div class="rg-front acc-y">
-          <span class="rg-front-tag">Las 3 áreas · S1-S3</span>
-          <span class="rg-front-h"><b>14 h</b> · Detección</span>
-          <span class="rg-front-areas">Fundamentals y auditoría presencial</span>
+          <span class="rg-front-h">Auditoría presencial</span>
+          <span class="rg-front-row"><span class="rg-front-tool">Detección</span><b class="rg-front-n">4 entregables</b></span>
+          <span class="rg-front-meta">semanas 1 a 3 · 14 h</span>
         </div>
-        <div class="rg-cell"><span class="rg-h"><b>2</b> h <i>1 entregable</i></span><p>Fundamentals presencial de 2 h para las 12 personas, en un solo grupo.</p></div>
-        <div class="rg-cell hi"><span class="rg-h"><b>8</b> h <i>2 entregables</i></span><p>Administración y Operaciones y Planta, 4 h cada una, con pedidos e inventario como foco.</p></div>
-        <div class="rg-cell"><span class="rg-h"><b>4</b> h <i>1 entregable</i></span><p>Mercadeo (4 h), con un logro inmediato para el contenido de marketing.</p></div>
+        <div class="rg-cell"><span class="rg-h"><b>1</b> entregable <i>2 h</i></span><p>Fundamentals presencial de 2 h para las 12 personas, en un solo grupo.</p></div>
+        <div class="rg-cell hi"><span class="rg-h"><b>2</b> entregables <i>8 h</i></span><p>Administración y Operaciones y Planta, 4 h cada una, con pedidos e inventario como foco.</p></div>
+        <div class="rg-cell"><span class="rg-h"><b>1</b> entregable <i>4 h</i></span><p>Mercadeo (4 h), con un logro inmediato para el contenido de marketing.</p></div>
 
         <div class="rg-follow" style="grid-column:5; grid-row:2 / span 1">
           <ul>
@@ -174,11 +155,11 @@
 
       <div class="route-miles" style="grid-template-columns:repeat(4,1fr)">
         <div class="mile"><span class="mile-d"></span><b>Semana 1 · Nivelación</b><p>Kick-off y Fundamentals de 2 h para las 12 personas, en un solo grupo.</p></div>
-        <div class="mile"><span class="mile-d"></span><b>Semana 2 · Prioritarias</b><p>Administración y Planta, 4 h cada una, con el registro de pedidos como logro candidato.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Semana 2 · Pedidos e inventario</b><p>Administración y Planta, 4 h cada una, con el registro de pedidos como logro candidato.</p></div>
         <div class="mile"><span class="mile-d"></span><b>Semana 3 · Mercadeo</b><p>Sesión de 4 h con un logro inmediato para el contenido de marketing.</p></div>
         <div class="mile"><span class="mile-d"></span><b>Semana 3 · Reporte Final</b><p>Mapa de Calor, Índice de Madurez y hoja de ruta, entregados a la Dirección.</p></div>
       </div>
-      <p class="route-note">S = semana de trabajo desde el arranque, cuya fecha se acuerda con Acua-e. Las 14 h son una proyección de sesión: 2, 8 y 4 h de las fases 1, 2 y 3. El kick-off de arranque no suma horas. El horario de cada sesión se acuerda con cada responsable.</p>
+      <p class="route-note">Las 14 h son una proyección de sesión: 2, 8 y 4 h de las fases 1, 2 y 3. El kick-off de arranque no suma horas. La fecha de arranque se acuerda con Acua-e; el horario de cada sesión, con cada responsable.</p>
 
       <div class="foot">
         <img src="../../../logos/educacion/BLANCO.png" alt="">
@@ -186,47 +167,41 @@
       </div>
     </section>
 
-    <!-- 4 · Inversión (hoja de cotización estándar, por horas) -->
-    <section class="slide s-price">
-      <span class="counter">04 / 06</span>
-      <h2 class="title">Inversión por horas de sesión.</h2>
-      <p class="price-intro">Propuesta Económica · Servicio de Detección</p>
+    <!-- 4 · Cómo trabajamos: pasos, por qué en ese orden, casos reales, práctica, datos y logística -->
+    <section class="slide s-method">
+      <span class="counter">04 / 08</span>
+      <p class="eyebrow">04 · Cómo trabajamos</p>
+      <h2>Así trabajamos cada área.</h2>
+      <p class="sub">Trabajamos en sesión presencial con 3 o 4 personas de cada área y dejamos todo listo para el Reporte Final.</p>
 
-      <div class="block">
-        <span class="block-eyebrow">Duración</span>
-        <p class="block-value">14 h de sesión presencial: Fundamentals (2 h) y 3 áreas (12 h), en 3 semanas.</p>
+      <ol class="mt-steps" style="--n:4">
+          <li><b>Entrevistamos</b><span>A 3 o 4 personas de cada área, sobre sus procesos reales.</span></li>
+          <li><b>Identificamos</b><span>El cuello de botella más relevante de cada área.</span></li>
+          <li><b>Construimos</b><span>En la misma sesión, un logro inmediato aplicable al área.</span></li>
+          <li><b>Dejamos listo</b><span>El inventario de procesos, que alimenta el Mapa de Calor.</span></li>
+      </ol>
+      <div class="mt-strips">
+        <p class="mt-why"><b>Por qué en este orden</b> Primero se nivela al equipo; después Administración y Planta, que comparten el registro de pedidos e inventario; al final Mercadeo.</p>
+        <p class="mt-who"><b>Quién construye</b> Intezia levanta y construye cada logro en sesión presencial, con las personas de cada área, sobre su forma de trabajo actual.</p>
       </div>
 
-      <div class="block block-programa">
-        <span class="block-eyebrow">Programa</span>
-      </div>
-      <div class="multi-box programa-box" data-field="Programa"></div>
-
-      <div class="block block-cotizacion">
-        <span class="block-eyebrow">Cotización</span>
-      </div>
-
-      <span class="cot-label cot-label-base">Propuesta + Inversión</span>
-      <div class="cot-frame base-frame"></div>
-
-      <span class="cot-label cot-label-discount">Descuento</span>
-      <span class="cot-sign-minus">&minus;$</span>
-      <div class="cot-frame discount-frame"></div>
-      <span class="cot-urgent-note">Descuento válido por 15 días</span>
-
-      <span class="cot-label cot-label-total">TOTAL</span>
-      <div class="cot-frame total-frame"></div>
-
-      <p class="cot-validity">Cotización válida por 30 días.</p>
-      <div class="cot-terms-box">
-        <span class="cot-terms-label">Importante</span>
-        <p class="cot-terms-text">Este servicio se presta bajo nuestros <a href="https://drive.google.com/file/d/1PA-ZSt4KnyY5dpxXzgkIk6-yfGlV2eF8/view?usp=drive_link" target="_blank" rel="noopener">términos y condiciones</a>. Al avanzar con esta propuesta, ambas partes los aceptan.</p>
+      <div class="mt-info">
+        <div class="mt-card">
+          <p class="mt-card-label">Cómo funciona en la práctica</p>
+          <ul><li><b>Sesiones presenciales.</b> Fundamentals de 2 h para las 12 personas y una sesión de 4 h por área, en las oficinas de Acua-e.</li><li><b>Sin sistema nuevo.</b> El logro de cada área parte de cómo trabaja hoy el equipo, sin exigirle un sistema nuevo.</li><li><b>Dos áreas, un registro.</b> Administración y Planta trabajan juntas el registro compartido de pedidos e inventario, como logro candidato.</li></ul>
+        </div>
+        <div class="mt-card">
+          <p class="mt-card-label">Cómo cuidamos sus datos</p>
+          <p>En las sesiones se levantan procesos, no datos: no se carga a ninguna herramienta de IA información confidencial de Acua-e, como fórmulas o datos de clientes. Los logros se prueban con ejemplos armados para la sesión.</p>
+        </div>
       </div>
 
-      <div class="block block-notes-container">
-        <span class="block-eyebrow">Notas</span>
+      <div class="mt-logi">
+        <div class="mt-tile"><span>Modalidad</span><b>Presencial, en las oficinas de Acua-e, a coordinar con la Dirección.</b></div>
+        <div class="mt-tile"><span>Participantes</span><b>Las 12 personas de Acua-e en Fundamentals; en cada área, de 3 a 4 personas.</b></div>
+        <div class="mt-tile"><span>Ritmo de trabajo</span><b>Fundamentals en la semana 1, dos áreas en la semana 2 y una en la semana 3.</b></div>
+        <div class="mt-tile"><span>Arranque</span><b>El kick-off, aparte, abre el proyecto; su fecha se confirma con la Dirección.</b></div>
       </div>
-      <div class="multi-box notas-box" data-field="Notas"></div>
 
       <div class="foot">
         <img src="../../../logos/educacion/NEGRO.png" alt="">
@@ -234,9 +209,9 @@
       </div>
     </section>
 
-    <!-- 5 · Entregables (catálogo + piezas transversales) -->
-    <section class="slide s-deliv">
-      <span class="counter">05 / 06</span>
+    <!-- 5 · Entregables: ¿con qué me quedo? (catálogo + piezas transversales) -->
+    <section class="slide s-deliv roomy">
+      <span class="counter">05 / 08</span>
       <p class="eyebrow">05 · Entregables</p>
       <div class="deliv-head">
         <h2>Lo que recibe Acua-e.</h2>
@@ -251,13 +226,13 @@
 
         <div class="deliv-col acc-y">
           <div class="da">
-            <p class="da-name">Fundamentals (etapa previa) <i>1</i></p>
+            <p class="da-name">Fundamentals (etapa previa)</p>
             <ul>
               <li>Equipo de 12 personas nivelado en IA</li>
             </ul>
           </div>
           <div class="da">
-            <p class="da-name">Administración <i>1</i></p>
+            <p class="da-name">Administración</p>
             <ul>
               <li>Inventario de procesos y logro inmediato de Administración</li>
             </ul>
@@ -266,13 +241,13 @@
 
         <div class="deliv-col acc-y">
           <div class="da">
-            <p class="da-name">Operaciones y Planta <i>1</i></p>
+            <p class="da-name">Operaciones y Planta</p>
             <ul>
               <li>Inventario de procesos y logro inmediato de Operaciones y Planta</li>
             </ul>
           </div>
           <div class="da">
-            <p class="da-name">Mercadeo <i>1</i></p>
+            <p class="da-name">Mercadeo</p>
             <ul>
               <li>Inventario de procesos y logro inmediato de Mercadeo</li>
             </ul>
@@ -283,7 +258,7 @@
 
       <div class="deliv-band">
         <div class="db-card db-1">
-          <span class="db-label">Entregables transversales</span>
+          <span class="db-label">Para todas las áreas</span>
         </div>
         <div class="db-card db-2">
           <span class="db-label">Valor inmediato</span>
@@ -299,9 +274,9 @@
       </div>
     </section>
 
-    <!-- 6 · Retorno esperado (método de cálculo). Sin estudios ni citas externas. -->
+    <!-- 6 · Retorno: ¿qué gano? (método de cálculo). Sin estudios ni citas externas. -->
     <section class="slide s-roi">
-      <span class="counter">06 / 06</span>
+      <span class="counter">06 / 08</span>
       <p class="eyebrow">06 · Retorno</p>
       <h2>Retorno esperado: decidir con datos.</h2>
       <p class="sub">El Reporte Final estima el retorno de cada oportunidad con los datos que cada área entrega en su sesión.</p>
@@ -348,6 +323,100 @@
 
       <div class="foot">
         <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Acua-e · DET-025</span>
+      </div>
+    </section>
+
+    <!-- 7 · Inversión (hoja de cotización estándar; antepenúltima slide) -->
+    <section class="slide s-price">
+      <span class="counter">07 / 08</span>
+      <h2 class="title">Inversión del proyecto.</h2>
+      <p class="price-intro">Propuesta Económica · Servicio de Detección</p>
+
+      <div class="block">
+        <span class="block-eyebrow">Duración</span>
+        <p class="block-value">Proyecto de 4 sesiones presenciales en 3 semanas. 14 horas de trabajo.</p>
+      </div>
+
+      <div class="block block-programa">
+        <span class="block-eyebrow">Programa</span>
+      </div>
+      <div class="multi-box programa-box" data-field="Programa"></div>
+
+      <div class="block block-cotizacion">
+        <span class="block-eyebrow">Cotización</span>
+      </div>
+
+      <span class="cot-label cot-label-base">Propuesta + Inversión</span>
+      <div class="cot-frame base-frame"></div>
+
+      <span class="cot-label cot-label-discount">Descuento</span>
+      <span class="cot-sign-minus">&minus;$</span>
+      <div class="cot-frame discount-frame"></div>
+      <span class="cot-urgent-note">Descuento válido por 15 días</span>
+
+      <span class="cot-label cot-label-total">TOTAL</span>
+      <div class="cot-frame total-frame"></div>
+
+      <p class="cot-validity">Cotización válida por 30 días.</p>
+      <div class="cot-terms-box">
+        <span class="cot-terms-label">Importante</span>
+        <p class="cot-terms-text">Este servicio se presta bajo nuestros <a href="https://drive.google.com/file/d/1PA-ZSt4KnyY5dpxXzgkIk6-yfGlV2eF8/view?usp=drive_link" target="_blank" rel="noopener">términos y condiciones</a>. Al avanzar con esta propuesta, ambas partes los aceptan.</p>
+      </div>
+
+      <div class="block block-notes-container">
+        <span class="block-eyebrow">Notas</span>
+      </div>
+      <div class="multi-box notas-box" data-field="Notas"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Acua-e · DET-025</span>
+      </div>
+    </section>
+
+    <!-- 9 · Próximos pasos: qué hacer y a quién escribir (última slide) -->
+    <section class="slide s-next">
+      <span class="counter">08 / 08</span>
+      <p class="eyebrow">08 · Próximos pasos</p>
+      <h2>Tres pasos para arrancar.</h2>
+      <p class="sub">Esto es lo que sigue cuando Acua-e confirme la propuesta.</p>
+
+      <div class="nx-steps">
+        <div class="nx-step acc-y">
+          <span class="nx-num">1</span>
+          <b>Fecha de arranque</b>
+          <p>Confirmamos con la Dirección la fecha del kick-off y el orden de las áreas.</p>
+        </div>
+        <div class="nx-step acc-o">
+          <span class="nx-num">2</span>
+          <b>Accesos y agenda</b>
+          <p>Coordinamos los participantes de cada área y el horario de cada sesión en sus oficinas.</p>
+        </div>
+        <div class="nx-step acc-w">
+          <span class="nx-num">3</span>
+          <b>Kick-off de arranque</b>
+          <p>Reunión inicial para acordar alcance, calendario y responsables de cada área.</p>
+        </div>
+      </div>
+
+      <div class="nx-contact">
+        <div class="nx-card nx-ase">
+          <span class="nx-label">¿Dudas? Escribe a tu asesora comercial</span>
+          <b class="nx-name">Flavia Martínez</b>
+          <span class="nx-role">Asesora comercial</span>
+          <p class="nx-line"><a href="mailto:fmartinez@intezia.com">fmartinez@intezia.com</a></p>
+          <p class="nx-line">+58 414 5756615</p>
+        </div>
+        <div class="nx-card nx-emp">
+          <span class="nx-label">Intezia</span>
+          <p class="nx-line">Intezia C.A J-505657950</p>
+          <p class="nx-line"><a href="mailto:servicio@intezia.com">servicio@intezia.com</a></p>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
         <span class="meta">Acua-e · DET-025</span>
       </div>
     </section>

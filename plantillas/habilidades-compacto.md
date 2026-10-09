@@ -174,7 +174,9 @@ Antes de armar el `datos.json`, pedir al usuario lo que no esté ya en el insumo
 2. **Qué se vende:** categoría (charla, taller, capacitación, curso, diplomado o proyecto de soluciones), horas, sesiones, personas o grupos, modalidad.
 3. **Contenido:** áreas o módulos y qué entrega cada uno (informe de Detección, docx de Productos y Servicios o Ficha). Sin insumo, pedir las soluciones, las horas y las fases.
 4. **Herramientas y licencias:** 1 o 2 herramientas y quién contrata el licenciamiento (con el valor de lista y su fecha).
-5. **Calendario:** semanas, fases, hitos y cómo se fija el arranque.
+5. **Calendario:** semanas, fases, hitos y cómo se fija el arranque. **Preguntar siempre, sin asumir la respuesta (2026-10-08): «¿La propuesta anuncia la cantidad de semanas y de sesiones?»** Se pregunta en cada propuesta, aunque ya se tenga el calendario, porque el calendario sirve para dimensionar y no siempre se comunica al cliente.
+   - **Sí:** se deja `anunciar_duracion` ausente (equivale a `true`); el deck queda como siempre. Sin respuesta, tampoco se pone la clave, pero se anota en `pendientes` para confirmarlo antes de enviar.
+   - **No:** `anunciar_duracion: false` en `datos.json` y se anota en `supuestos`. El generador quita el número de semanas del titular de la ruta (slide 3) y de la Duración de la inversión (slide 7); las semanas se siguen pidiendo, porque la ruta, las horas y las cuotas dependen de ellas. Tampoco se escribe el número de sesiones en textos libres (`composicion`, hitos, descripciones de fase, `metodo`): el generador avisa (⚠) si aparece un conteo. Siguen visibles los rangos de cada fase y de cada línea de trabajo (slide 3) y el «Hacia la semana N» del retorno (slide 6): confirmar con el usuario si también deben ocultarse.
 6. **Cotización:** si lleva hoja de inversión, el plan de pago (cuotas, hitos y porcentajes), y si lleva seguimiento a 30, 60 y 90 días y garantía (si no, `sin_hoja_cotizacion`, `seguimiento.tipo` y `sin_garantia`).
 7. **Retorno:** si hay datos del cliente (volúmenes, tiempos, valor de la hora). Sin datos, modo método. Posiciones y nómina solo si el cliente lo avaló (aval registrado).
 8. **Portada y método:** los dolores reales del cliente con su fuente, los casos ya logrados con su fuente (si los hay), y los límites y datos sensibles (para «Cómo trabajamos»).
@@ -237,6 +239,7 @@ Opcionales, sin efecto si no se usan. Origen: propuestas de Detección y charlas
 | `inversion.sin_garantia` | Quita la garantía 30-60-90 de la inversión y de los textos por defecto |
 | `sin_hoja_cotizacion: true` | Sin inversión ni facilidad de pago (igual que Fundación) |
 | `omitir: [...]` | Quita slides de entre `metodo`, `retorno`, `proximos`, `inversion`, `pago` (se avisa: Ventas las pide en toda propuesta) |
+| `anunciar_duracion: false` | La propuesta **no anuncia** la cantidad de semanas ni de sesiones (se pregunta en cada propuesta, §4a punto 5). Quita las semanas del titular de la ruta («Tres líneas de trabajo en paralelo.») y de la Duración de la inversión («Proyecto de 44 soluciones, con seguimiento y garantía a 30, 60 y 90 días. 500 horas de trabajo.»). Ausente o `true`: se anuncian, como hasta ahora. Error (✗) si `ruta.titulo` o `inversion.duracion` usan `{semanas}` o `{semanas_txt}`; aviso (⚠) si nombran «semanas» a mano o si cualquier slide cuenta sesiones («6 sesiones», «una sesión»). Siguen visibles los rangos de semanas de la ruta y el «Hacia la semana N» del retorno (el generador lo avisa) |
 
 ## 6. Reglas de contenido
 
@@ -389,3 +392,4 @@ Después: regenerar con `--actualizar-css` (el generador se niega a regenerar un
 - **v1.3 (2026-10-05)**: titular-objetivo y retorno sin citas (caso DUSA).
 - **v1.4 (2026-10-06, GitHub)**: ruta con las soluciones como protagonistas; claves opcionales para otros servicios (`vocabulario`, `composicion`, `servicio_rotulo`, `meta_servicio`, `meta_tipo`, `sin_hoja_cotizacion`, `seguimiento.tipo`, `inversion.sin_garantia`).
 - **v2.0 (2026-10-07)**: reunión de DUSA del 2026-10-06 (orden, soluciones antes que horas, plan de pago, casos ya logrados, contratación como probabilidad, calendario de garantía, tono aspiracional) y `correcciones.pdf` de Ventas (preguntas del cliente en su orden, inversión antepenúltima, próximos pasos con la asesora, lenguaje del cliente, no repetir, anticipar preguntas). Absorbe las claves de la v1.4.
+- **v2.1 (2026-10-08)**: la entrevista (§4a punto 5) pregunta en cada propuesta si se anuncia la cantidad de semanas y de sesiones; clave opcional `anunciar_duracion` (por defecto se anuncian, sin cambio en los decks existentes).

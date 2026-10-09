@@ -1,5 +1,55 @@
 # Brief · Clínica Santiago de León · Servicio de Detección (DET-027)
 
+## Actualización 2026-10-08 · migrada a la plantilla v2 (8 slides) · VIGENTE
+
+Instrucción directa del usuario: «ajustar la DET-027 al nuevo formato». «Formato nuevo» = **plantilla compacta v2.0**
+(commit `93e0b67`, 2026-10-07): el `datos.json` v1.4 se migró según la spec §13 y se regeneró con
+`--actualizar-css --forzar-overrides`. Orden del deck: Portada · Alcance · Ruta · Cómo trabajamos · Entregables ·
+Retorno · Inversión · Próximos pasos. Los dos PDF de 6 slides (v1.4) quedan en `_pdf-anteriores/`. Sin cambios de
+contenido de fondo: 22 h, 7 entregables (3 sesiones de Fundamentals y 4 áreas), 4 semanas, kick-off aparte y caso
+para la Junta Directiva en el Reporte Final. El análisis interno de más abajo («Qué veo fuera del alcance de la IA»)
+sigue vigente y no va en el deck.
+
+### Decisiones
+
+- **Sin «Facilidad de pago»**: no se preguntó; el usuario la omitió en la CAI-032, la DET-024, la CAI-040, la DET-026 y
+  la CAI-038, así que se aplicó el mismo criterio (`omitir: ["pago"]`). Si Ventas la quiere, se agrega con cuotas
+  ligadas a los hitos de la ruta. Importa más aquí: la propuesta la presenta el campeón interno ante la Junta.
+- **Datos:** se mantiene «sin datos que identifiquen a pacientes» (decisión de la versión anterior; mismo criterio que
+  G-MAX y Conserval). Los logros se prueban con ejemplos armados para la sesión. No se cita HIPAA ni ninguna norma.
+- **Modalidad:** la ficha no la trae y la v2 exige una ficha de logística: dice «a acordar con la clínica» y que las
+  sesiones se agendan según los turnos de cada área.
+
+### Qué cambió respecto de la v1.4 (en el lenguaje de la v2)
+
+| v1.4 | v2 |
+|---|---|
+| `alcance.pasos` y `quien_construye` | `metodo` (4 pasos propios de Detección) y `metodo.quien_construye` |
+| (sin método, logística ni asesora) | `metodo.practica` (sesiones, con lo que ya tienen, IA o automatización), `metodo.datos`, `por_que_orden`, `logistica` y `proximos_pasos.asesora` |
+| (sin «para qué» por área) | `areas[].para_que` en Fundamentals y en las 4 áreas |
+| `frentes[].etiqueta`, `areas_html`, «S1-S4», «S = semana» | `frentes[].nombre` = «Auditoría de las 4 áreas», «1 a 4» y nota sin códigos |
+| «Precios distintos» en la portada y en Atención al Paciente | «Montos distintos» (la v2 bloquea «precio»; son los montos que cobra la clínica, no los de esta propuesta) |
+| Inversión «por horas de sesión»; Duración con las horas al frente | «Inversión del proyecto»; «Proyecto de 7 sesiones en 4 semanas: 3 de Fundamentals y 4 de área. 22 horas de trabajo.» |
+| Notas con datos y modalidad | Notas con licencias, Habilidades y Políticas, y términos y condiciones (datos y modalidad ya están en «Cómo trabajamos») |
+| Sin asesora ni contacto | Slide 8 con Verónica Rubio (teléfono y correo de la Ficha; el cargo «Asesora comercial» sale de este brief) |
+
+La slide 3 conserva la 5.ª columna «Cierre» (Priorizar · Reportar · Proyectar), sin garantía 30-60-90. «Inicio · Seguro ·
+Logros» y «Primera/Segunda/Tercera sesión de nivelación en IA» no cambiaron. `overrides.css` nuevo: escala de las
+slides 2, 3, 4 y 5 (la columna de la slide 5 no pasa de ~450 px o se mete debajo de las cajas del PDF).
+
+### Pendientes (a confirmar antes de reenviar)
+
+- Inversión, descuento y total (campos vacíos para ventas; la Junta decide y la disponibilidad presupuestaria no está
+  definida) y cómo se comunica el plan de pago (no hay slide).
+- Fechas, horarios, modalidad y orden de las áreas con Verónica; cuántas personas hay por área y cómo son los turnos
+  (de eso depende que sean 3 grupos de Fundamentals).
+- Si el Reporte Final incluye una estimación de inversión de la ruta que sigue (el deck promete «caso para la Junta,
+  con retorno e inversión»).
+- La propuesta ya salió el 2026-10-06: confirmar si se reenvía el PDF nuevo y avisar que reemplaza al anterior. Estado:
+  `Enviada` → `En corrección` → `Enviada` al regenerar (la `fecha_entrega` 2026-10-06 se respeta).
+
+> Lo que sigue es el brief original del 2026-10-06 (formato v1.4); las decisiones de arriba prevalecen.
+
 > Generado por `scripts/generar-habilidades-compacto.py` la primera vez (no se sobrescribe después). Completar a mano lo que falte; los datos del deck viven en `datos.json`.
 
 ## Datos administrativos
@@ -12,10 +62,12 @@
 - **Tipo de documento**: Detección · Fundamentals (3 grupos de 2h, hasta 25 personas cada uno) + auditoría de 4 áreas (Admisión, Finanzas y Facturación, Almacén, Atención al Paciente), 4h por área (16h), 22h totales · formato compacto (`DET-027`), presentada al cliente como **propuesta de proyecto**; formato compacto de 6 slides (con hoja de inversión (campos de precio vacíos para ventas))
 - **Eje temático**: Auditar Admisión, Finanzas y Facturación, Almacén y Atención al Paciente de la Clínica Santiago de León, con un logro inmediato en cada área, para llegar a un mapa de oportunidades de IA y un caso que la Dirección pueda llevar a su Junta Directiva
 <!--auto:inicio-->
-- **Alcance**: 7 entregables en 4 áreas · 22 h de sesión · 4 semanas de trabajo desde el arranque · seguimiento a Reporte Final
+- **Alcance**: 7 entregables en 4 áreas · 22 h de sesión · 4 semanas de trabajo desde el arranque · sin seguimiento
+- **Orden de las slides**: 1 Portada · 2 Alcance · 3 Ruta · 4 Cómo trabajamos · 5 Entregables · 6 Retorno · 7 Inversión · 8 Próximos pasos
+- **Asesora comercial que ve el cliente (última slide)**: Verónica Rubio, Asesora comercial · vrubio01@intezia.com · +58 422 3355505
 <!--auto:fin-->
 - **Estado**: `Enviada` (meta.json; fecha_entrega 2026-10-06, por convención «terminado = enviado»)
-- **Asesora comercial**: Verónica Rubio · +58 422 3355505 · vrubio01@intezia.com. El deck compacto no lleva slide de cierre ni contacto.
+- **Asesora comercial**: Verónica Rubio · +58 422 3355505 · vrubio01@intezia.com. Desde la v2 (2026-10-08) la slide 8 de próximos pasos la muestra.
 - **Contacto del cliente**: Jacobo Idbeis, Coordinador de Innovación y Proyectos Médicos: campeón interno y quien presentará la propuesta, pero **no decide**. Decide la Junta Directiva. Su nombre y cargo no aparecen en el deck.
 - **Ficha Comercial Intezia**: `Levantamiento_Clinica_Santiago_de_Leon_2026-10-05.pdf` (Ficha de Levantamiento, registrada 2026-10-05, elaborada por Verónica Rubio). Fuente primaria; qué se tomó y qué no está en la sección siguiente.
 - **fecha_arranque_deseada**: no declarada. El formato compacto no lleva Calendario de inicio.

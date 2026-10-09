@@ -1,5 +1,50 @@
 # Brief · Conserval (Balance) · Servicio de Detección (DET-026)
 
+## Actualización 2026-10-08 · migrada a la plantilla v2 (8 slides) · VIGENTE
+
+Instrucción directa del usuario: «ajustar la DET-026 al formato nuevo». «Formato nuevo» = **plantilla compacta v2.0**
+(commit `93e0b67`, 2026-10-07): el `datos.json` v1.4 se migró según la spec §13 y se regeneró con
+`--actualizar-css --forzar-overrides`. Orden del deck: Portada · Alcance · Ruta · Cómo trabajamos · Entregables ·
+Retorno · Inversión · Próximos pasos. El deck de 6 slides v1.4 y su PDF quedan en `_pdf-anteriores/`. Sin cambios de
+contenido de fondo: 14 h, 4 entregables, 3 áreas más Fundamentals, 4 semanas, modalidad mixta, kick-off aparte.
+
+### Decisiones del usuario al preguntar
+
+- **Sin «Facilidad de pago»** (igual que la CAI-032, la DET-024 y la CAI-040): `omitir: ["pago"]`; ventas comunica el
+  plan de pago por otro medio.
+- **Fundamentals:** «el equipo, sin cifra». El deck sigue sin decir si asisten las 2 o 3 personas de condominio o las 8
+  de la empresa; sigue pendiente de confirmar con la asesora.
+- **Datos:** «solo procesos, sin datos» (mismo criterio que G-MAX): las sesiones levantan procesos y no cargan a
+  ninguna herramienta de IA información que identifique a condóminos, clientes o personal. Por eso el logro de
+  Atención al cliente se prueba con **ejemplos armados para la sesión** y ya no con «capturas de ejemplo» a secas
+  (la nota del análisis de Gemini más abajo quedó en la versión anterior; vale esta decisión).
+
+### Qué cambió respecto de la v1.4 (en el lenguaje de la v2)
+
+| v1.4 | v2 |
+|---|---|
+| `alcance.pasos` y `quien_construye` | `metodo` (4 pasos propios de Detección: entrevistamos, identificamos, construimos, dejamos listo) |
+| (sin método, logística ni asesora) | `metodo.practica` (sesiones de 2 h, con lo que ya usan, una persona confirma), `metodo.datos`, `por_que_orden`, `logistica` y `proximos_pasos.asesora` |
+| (sin «para qué» por área) | `areas[].para_que` en Fundamentals y en cada área, con las palabras del cliente |
+| `frentes[].etiqueta`, `areas_html`, «S1-S4», «S = semana» | `frentes[].nombre` = «Auditoría de las 3 áreas», «1 a 4» y nota sin códigos |
+| Fases «Nivelación», «Pagos y atención», «Cierre del mapa» | «Nivel», «Pagos», «Mapa» (cabeceras de ≤ 6 caracteres: con «2 entregables» al lado no cabían más largas) |
+| Inversión «por horas de sesión», Duración con las horas al frente | «Inversión del proyecto»; «Proyecto de 7 sesiones en 4 semanas, en modalidad mixta. 14 horas de trabajo.» |
+| Sin asesora ni contacto | Slide 8 con Verónica Rubio (teléfono y correo de la Ficha; el cargo «Asesora comercial» sale de este brief) |
+
+La slide 3 conserva la 5.ª columna «Cierre» (Priorizar · Reportar · Proyectar), sin garantía 30-60-90. El retorno
+(modo método, «decidir con datos») no cambió. `overrides.css` nuevo: escala de las slides 2, 3, 4 y 5.
+
+### Pendientes (a confirmar antes de reenviar)
+
+- Inversión, descuento y total (campos vacíos para ventas; el cliente es sensible al precio por área) y cómo se
+  comunica el plan de pago (no hay slide).
+- Fechas, horarios y orden de las áreas con Verónica; quién asiste a Fundamentals; si el Reporte Final es en la
+  semana 4 o la 5; confirmar con el cliente que los logros se prueben con ejemplos armados.
+- La propuesta ya salió el 2026-10-06: confirmar si se reenvía el PDF nuevo. Estado: `Enviada` → `En corrección` →
+  `Enviada` al regenerar (la `fecha_entrega` 2026-10-06 se respeta).
+
+> Lo que sigue es el brief original del 2026-10-06 (formato v1.4); las decisiones de arriba prevalecen.
+
 > Generado por `scripts/generar-habilidades-compacto.py` la primera vez (no se sobrescribe después). Completar a mano lo que falte; los datos del deck viven en `datos.json`.
 
 ## Datos administrativos
@@ -12,10 +57,12 @@
 - **Tipo de documento**: Detección · Fundamentals (2h grupal) + auditoría de 3 áreas (Atención al cliente, Conciliación de pagos, Cuentas por pagar), 4h por área en 2 sesiones de 2h (12h), 14h totales, modalidad mixta · formato compacto (`DET-026`), presentada al cliente como **propuesta de proyecto**; formato compacto de 6 slides (con hoja de inversión (campos de precio vacíos para ventas))
 - **Eje temático**: Auditar Atención al cliente, Conciliación de pagos y Cuentas por pagar de Conserval, con un logro inmediato en cada área, para llegar a un mapa de oportunidades de IA y una ruta hacia la capacidad propia del equipo
 <!--auto:inicio-->
-- **Alcance**: 4 entregables en 3 áreas · 14 h de sesión · 4 semanas de trabajo desde el arranque · seguimiento a Reporte Final
+- **Alcance**: 4 entregables en 3 áreas · 14 h de sesión · 4 semanas de trabajo desde el arranque · sin seguimiento
+- **Orden de las slides**: 1 Portada · 2 Alcance · 3 Ruta · 4 Cómo trabajamos · 5 Entregables · 6 Retorno · 7 Inversión · 8 Próximos pasos
+- **Asesora comercial que ve el cliente (última slide)**: Verónica Rubio, Asesora comercial · vrubio01@intezia.com · +58 422 3355505
 <!--auto:fin-->
 - **Estado**: `Enviada` (meta.json; fecha_entrega 2026-10-06, por convención «terminado = enviado»)
-- **Asesora comercial**: Verónica Rubio · +58 422 3355505 · vrubio01@intezia.com. El deck compacto no lleva slide de cierre ni contacto.
+- **Asesora comercial**: Verónica Rubio · +58 422 3355505 · vrubio01@intezia.com. Desde la v2 (2026-10-08) la slide 8 de próximos pasos la muestra.
 - **Contacto / decisor**: el dueño y líder de Conserval (Fernando Luis Vegas), que decide y pagaría el servicio. Responsable interno de logística durante el servicio: Luis. Ningún nombre aparece en el deck.
 - **Ficha Comercial Intezia**: `Levantamiento_Conserval_marca_comercial_Balance_2026-10-05.pdf` (Ficha de Levantamiento, registrada 2026-09-30, elaborada por Verónica Rubio). Fuente primaria; qué se tomó y qué no está en la sección siguiente.
 - **fecha_arranque_deseada**: no declarada («a mutuo acuerdo»). El formato compacto no lleva Calendario de inicio.
@@ -98,7 +145,7 @@ Pedido del usuario (2026-10-06): avisarle qué de lo que pide el cliente queda f
 | Enseñarle a él y a su equipo a conectar la IA (no la básica) a Watiker y a los correos | **Es Habilidades**, no Detección. La Detección deja el mapa y un logro inmediato por área. |
 | Automatizar la mayor cantidad de procesos y ver el retorno a los 3 meses | Sin tiempos por proceso ni costo hora no hay línea base: de ahí el retorno en modo método. Expectativa alta del cliente: cuidar que no se lea como promesa. |
 
-**Datos confidenciales.** Las capturas de pago son datos confidenciales según la ficha y no hay política de datos formal. La búsqueda indica que en la API de pago de Gemini Google no usa los datos para mejorar sus productos y en la gratuita sí (y revisores humanos pueden leerlos), y que el contenido de cuentas Workspace queda excluido del entrenamiento. Antes de cargar datos reales hay que definir qué cuenta usa el cliente; mientras tanto, capturas de ejemplo.
+**Datos confidenciales.** Las capturas de pago son datos confidenciales según la ficha y no hay política de datos formal. La búsqueda indica que en la API de pago de Gemini Google no usa los datos para mejorar sus productos y en la gratuita sí (y revisores humanos pueden leerlos), y que el contenido de cuentas Workspace queda excluido del entrenamiento. Antes de cargar datos reales hay que definir qué cuenta usa el cliente; mientras tanto, ejemplos armados para la sesión (decisión del 2026-10-08: solo procesos, sin datos).
 
 **Por qué el deck no lo dice:** la propuesta no nombra Gemini ni sus límites. Lo que sí hace es dejar fuera de alcance «integraciones a medida entre sus herramientas» (horizonte) y «licencias», y ancla el Reporte Final en las herramientas que el cliente ya usa. «Después · Habilidades» dice «aplicar la IA a los procesos priorizados y crear sus propios asistentes», sin prometer conexiones con Watiker.
 

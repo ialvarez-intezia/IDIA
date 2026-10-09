@@ -1,5 +1,5 @@
 {
- "version": 1,
+ "version": 2,
  "cliente": {
   "nombre": "Conserval (Balance)",
   "slug": "conserval",
@@ -10,7 +10,7 @@
  "alianza": false,
  "servicio_rotulo": "Servicio de Detección",
  "meta_servicio": "deteccion",
- "meta_tipo": "Detección · Fundamentals (2h grupal) + auditoría de 3 áreas (Atención al cliente, Conciliación de pagos, Cuentas por pagar), 4h por área en 2 sesiones de 2h (12h), 14h totales, modalidad mixta · formato compacto",
+ "meta_tipo": "Detección · Fundamentals (2h grupal) + auditoría de 3 áreas (Atención al cliente, Conciliación de pagos, Cuentas por pagar), 4h por área en 2 sesiones de 2h (12h), 14h totales, modalidad mixta · formato compacto v2",
  "vocabulario": {
   "solucion": [
    "entregable",
@@ -22,9 +22,10 @@
   ]
  },
  "eje": "Auditar Atención al cliente, Conciliación de pagos y Cuentas por pagar de Conserval, con un logro inmediato en cada área, para llegar a un mapa de oportunidades de IA y una ruta hacia la capacidad propia del equipo",
- "origen": "Ficha de Levantamiento de Conserval (marca comercial Balance), registrada el 30/09/2026 por la asesora comercial, e instrucción directa del usuario del 06/10/2026",
+ "origen": "Ficha de Levantamiento de Conserval (marca comercial Balance), registrada el 30/09/2026 por la asesora comercial, instrucción directa del usuario del 06/10/2026 y ajuste al formato v2 del 08/10/2026",
  "fuente_insumo": "Ficha de Levantamiento de Conserval (marca comercial Balance)",
  "portada": {
+  "eyebrow": "Propuesta de proyecto · Servicio de Detección",
   "titulo_lineas": [
    "Mapa de oportunidades de IA",
    "para la atención y los pagos"
@@ -81,6 +82,7 @@
    "proceso_base": true,
    "nombre_catalogo": "Fundamentals",
    "composicion": "Un solo grupo con el equipo de Conserval.",
+   "para_que": "Que el equipo pierda el miedo a la IA y hable un lenguaje común antes de las 3 áreas",
    "soluciones": [
     {
      "id": "FUN-1",
@@ -97,13 +99,14 @@
    "carril": "det",
    "frente": "A",
    "composicion": "Reportes de pago por WhatsApp y correos de los condominios.",
+   "para_que": "Ordenar cómo se reciben los reportes de pago y los correos, y dejar un logro inmediato",
    "soluciones": [
     {
      "id": "ATE-1",
      "entregable": "Inventario de procesos y logro inmediato de Atención al cliente",
      "h": 4,
      "fase": "F2",
-     "detalle": "Dos sesiones de 2 h con las 2 o 3 personas del área de condominio (la líder y la persona que atiende WhatsApp). Procesos a levantar: recepción y validación de los reportes de pago (50 a 60 por día, una persona valida cada captura) y gestión de los correos de clientes en 6 cuentas de Gmail, unos 5 condominios por cuenta. Candidato a logro inmediato identificado en la ficha: pre-registrar los pagos reportados para que el equipo se dedique a lo que no se resuelve fácil (capturas mal tomadas, preguntas nuevas). El logro se define y se construye en la sesión con lo que el equipo ya usa; la conexión completa con el canal de WhatsApp es el horizonte que sigue a la Detección."
+     "detalle": "Dos sesiones de 2 h con las 2 o 3 personas del área de condominio (la líder y la persona que atiende WhatsApp). Procesos a levantar: recepción y validación de los reportes de pago (50 a 60 por día, una persona valida cada captura) y gestión de los correos de clientes en 6 cuentas de Gmail, unos 5 condominios por cuenta. Candidato a logro inmediato identificado en la ficha: pre-registrar los pagos reportados para que el equipo se dedique a lo que no se resuelve fácil (capturas mal tomadas, preguntas nuevas). El logro se define y se construye en la sesión con lo que el equipo ya usa y se prueba con ejemplos armados para la sesión, sin datos reales de condóminos; la conexión completa con el canal de WhatsApp es el horizonte que sigue a la Detección."
     }
    ]
   },
@@ -113,6 +116,7 @@
    "carril": "det",
    "frente": "A",
    "composicion": "Cuentas por cobrar: conciliar con el banco y precargar el pago.",
+   "para_que": "Ordenar la conciliación de los pagos con el banco y dejar un logro inmediato",
    "soluciones": [
     {
      "id": "CON-1",
@@ -129,6 +133,7 @@
    "carril": "det",
    "frente": "A",
    "composicion": "Pago a servicios de terceros y recibos del condominio.",
+   "para_que": "Estandarizar el pago a terceros y el envío mensual de recibos con un logro inmediato",
    "soluciones": [
     {
      "id": "CXP-1",
@@ -143,37 +148,29 @@
  "alcance": {
   "titulo": "Un logro inmediato en cada una de las 3 áreas.",
   "subtitulo": "Nivelamos al equipo y auditamos **3 áreas** de {cliente_corto} en 2 sesiones de 2 h cada una.",
-  "etiqueta_pasos": "Cada área, cuatro pasos",
-  "pasos": [
-   "Entrevistamos a las 2 o 3 personas del área sobre sus procesos.",
-   "Identificamos el cuello de botella más relevante.",
-   "Construimos en sesión un logro inmediato aplicable.",
-   "Dejamos el inventario de procesos documentado para el Mapa de Calor."
-  ],
-  "quien_construye": "Intezia levanta y construye cada logro en sesión, con las personas de cada área, sobre su forma de trabajo actual.",
   "fuera_alcance": [
    "Integraciones a medida entre sus herramientas: son el horizonte que sigue a la Detección.",
-   "La confirmación final de un pago y la tasa de cambio: siguen en manos de una persona.",
+   "Confirmar un pago en firme y aplicar la tasa de cambio: siguen en manos de una persona, como el equipo prefiere.",
    "Licencias de IA: no se incluyen en esta propuesta."
   ]
  },
  "fases": [
   {
    "id": "F1",
-   "titulo": "Nivelación",
+   "titulo": "Nivel",
    "rango": "Semana 1",
    "descripcion": "Fundamentals en 1 grupo"
   },
   {
    "id": "F2",
-   "titulo": "Pagos y atención",
+   "titulo": "Pagos",
    "rango": "Semanas 2 y 3",
    "descripcion": "Atención y Conciliación",
    "destacada": true
   },
   {
    "id": "F3",
-   "titulo": "Cierre del mapa",
+   "titulo": "Mapa",
    "rango": "Semana 4",
    "descripcion": "Cuentas por pagar y Reporte Final"
   }
@@ -182,9 +179,8 @@
   {
    "id": "A",
    "carril": "det",
-   "semanas": "S1-S4",
-   "etiqueta": "Las 3 áreas · S1-S4",
-   "areas_html": "Fundamentals y auditoría por áreas",
+   "nombre": "Auditoría de las 3 áreas",
+   "semanas": "1 a 4",
    "celdas": {
     "F1": "Fundamentals de 2 h para el equipo, en un solo grupo.",
     "F2": "Atención al cliente y Conciliación de pagos, 4 h cada una, en 2 sesiones de 2 h.",
@@ -197,7 +193,7 @@
   "tope_h_semana": 20,
   "titulo": "Del kick-off al Reporte Final en 4 semanas.",
   "subtitulo": "Semanas de trabajo desde el arranque, en modalidad mixta. El **Reporte Final** se entrega en la semana 4.",
-  "nota": "S = semana de trabajo desde el arranque, cuya fecha se acuerda con {cliente_corto}. Las {h_total}\u00a0h son una proyección de sesión: {h_f1}, {h_f2} y {h_f3}\u00a0h de las fases 1, 2 y 3. El kick-off de arranque no suma horas. Cada sesión dura 2 h y su horario se acuerda con cada responsable.",
+  "nota": "Las {h_total} h son una proyección de sesión: {h_f1}, {h_f2} y {h_f3} h de las fases 1, 2 y 3. El kick-off de arranque no suma horas. Cada sesión dura 2 h. La fecha de arranque se acuerda con {cliente_corto}.",
   "hitos": [
    {
     "titulo": "Semana 1 · Nivelación",
@@ -239,16 +235,16 @@
  },
  "inversion": {
   "sin_garantia": true,
-  "duracion": "14 h de sesión en modalidad mixta: Fundamentals (2 h) y 3 áreas (12 h), en 4 semanas.",
+  "duracion": "Proyecto de 7 sesiones en 4 semanas, en modalidad mixta. 14 horas de trabajo.",
   "programa": [
-   "Servicio de Detección para Conserval (DET-026): Fundamentals + 3 áreas de auditoría.",
-   "Modalidad mixta · Fundamentals (2h), Atención al cliente (4h), Conciliación de pagos (4h), Cuentas por pagar (4h).",
-   "Cobertura: Atención al cliente, Conciliación de pagos y Cuentas por pagar, con foco en los pagos de condóminos."
+   "Servicio de Detección para Conserval (DET-026): Fundamentals y auditoría de 3 áreas.",
+   "Atención al cliente, Conciliación de pagos y Cuentas por pagar, con un logro inmediato en cada una.",
+   "Fundamentals (2 h), Atención al cliente (4 h), Conciliación de pagos (4 h) y Cuentas por pagar (4 h)."
   ],
   "notas": [
-   "Modalidad mixta, entre presencial y virtual, a coordinar con la Dirección.",
    "El Reporte Final parte de las herramientas que Conserval ya usa; esta propuesta no incluye licencias.",
-   "Habilidades y Políticas, la ruta que sigue, no forman parte de esta inversión."
+   "Habilidades y Políticas, la ruta que sigue, no forman parte de esta inversión.",
+   "Términos y condiciones: los del enlace de «Importante», que ambas partes aceptan al avanzar con esta propuesta."
   ]
  },
  "entregables": {
@@ -335,20 +331,94 @@
   "División Educación inferida: empresa privada de administración de condominios, cliente corporativo. Alianza: no (la ficha no menciona ninguna). Confirmar con la asesora.",
   "Servicio de Detección por el código DET-026. La ficha marca Detección y Habilidades: Habilidades queda como horizonte («Después») y no se cotiza, igual que en DET-025. Cotizar ambas juntas sería un combo y cambiaría el formato.",
   "Horas por el lineamiento de Detección: Fundamentals de 2 h (un solo grupo, bajo el máximo de 25) y 4 h por área en 3 áreas = 14 h. El kick-off de arranque va aparte y no suma horas (convención general).",
-  "Sesiones de 2 h: la ficha dice que la duración que les funciona es de 2 horas, así que cada área de 4 h se parte en 2 sesiones de 2 h. Es propuesta del sistema: confirmar con servicio y con la asesora.",
-  "Calendario propuesto por el sistema, no dictado por la ficha: 4 semanas (S1 kick-off y Fundamentals, S2 y S3 Atención al cliente y Conciliación de pagos, S4 Cuentas por pagar y Reporte Final). Atención y Conciliación van primero porque comparten el flujo de pagos; Cuentas por pagar (mensual y ya resuelta en parte) al final. El orden difiere del de la ficha (Atención, Cuentas por pagar, Conciliación): confirmar.",
-  "Las 3 áreas comparten las mismas 2 o 3 personas del área de condominio (primera fase), así que cada sesión de área es con las mismas personas. La ficha no dice si Fundamentals es para esas personas o para las 8 del equipo: el deck dice «el equipo», sin cifra; en ambos casos es un solo grupo de 2 h.",
+  "Sesiones de 2 h: la ficha dice que la duración que les funciona es de 2 horas, así que cada área de 4 h se parte en 2 sesiones de 2 h. Son 7 sesiones en total (Fundamentals y 6 de área). Es propuesta del sistema: confirmar con servicio y con la asesora.",
+  "Calendario propuesto por el sistema, no dictado por la ficha: 4 semanas (semana 1 kick-off y Fundamentals, semanas 2 y 3 Atención al cliente y Conciliación de pagos, semana 4 Cuentas por pagar y Reporte Final). Atención y Conciliación van primero porque comparten el flujo de pagos; Cuentas por pagar (mensual y ya resuelta en parte) al final. El orden difiere del de la ficha (Atención, Cuentas por pagar, Conciliación): confirmar.",
+  "Las 3 áreas comparten las mismas 2 o 3 personas del área de condominio (primera fase), así que cada sesión de área es con las mismas personas. La ficha no dice si Fundamentals es para esas personas o para las 8 del equipo: el deck dice «el equipo», sin cifra (decisión del usuario, 2026-10-08); en ambos casos es un solo grupo de 2 h.",
   "Modalidad mixta (dato de la ficha en Detección y Habilidades; ambas partes en Caracas). El deck no detalla qué sesiones son presenciales y cuáles virtuales.",
   "Herramientas: la ficha pide anclar la propuesta en lo que el cliente ya usa y no salir de su zona de confort. El deck no nombra ni pre-recomienda ninguna herramienta; dice que el Reporte Final parte de las que ya usa. El análisis de lo que se puede y no se puede lograr con esas herramientas está solo en brief.md (interno).",
   "Retorno en modo método: la ficha declara el volumen de reportes de pago, pero no los tiempos por proceso ni el costo hora; el Reporte Final los estima con lo que cada área entregue. «Sin compromiso de resultado».",
   "Reglas de Detección que se conservan: sin certificado, sin garantía 30-60-90, sin dolor dramatizado ni citas textuales, sin datos personales ni nombres de personas del cliente.",
-  "Las capturas de pago son datos confidenciales según la ficha: el logro inmediato de Atención al cliente se prueba con capturas de ejemplo, sin datos reales de condóminos, hasta definir qué cuenta de IA se usa. Confirmar con el cliente."
+  "Cómo se cuidan los datos (decisión del usuario, 2026-10-08): las sesiones levantan procesos, sin cargar a ninguna herramienta de IA información que identifique a condóminos, clientes o personal; los logros se prueban con ejemplos armados para la sesión. La ficha marca las capturas de pago como confidenciales y no hay política de datos formal. Mismo criterio que G-MAX; confirmar con el cliente.",
+  "Migración a la plantilla v2 (2026-10-08, instrucción del usuario: «ajustar la DET-026 al formato nuevo»). Versión 1 a 2 según la spec §13. Vocabulario de Detección conservado (entregable, etapa previa). Lo que se agregó por la v2: «Cómo trabajamos» (método, práctica, datos y logística), el para qué de cada área y la slide de próximos pasos con la asesora. Los pasos de método y de próximos pasos por defecto son de Habilidades: se sobrescribieron.",
+  "Sin facilidad de pago (instrucción del usuario, 2026-10-08): la slide se omite con omitir: [\"pago\"]. Ventas comunica el plan de pago por otro medio; el generador avisa que Ventas la pide en toda propuesta.",
+  "Asesora (slide de próximos pasos): Verónica Rubio, con el teléfono y el correo de la Ficha de Levantamiento; el cargo «Asesora comercial» sale del brief. La versión anterior no mostraba contacto: ahora la última slide sí lo hace."
  ],
  "pendientes": [
-  "Definir inversión, descuento y total (campos vacíos para ventas). El cliente es sensible al precio por área y su disponibilidad presupuestaria está «en evaluación»: el programa muestra las horas de cada área para poder cotizar por área.",
-  "Confirmar con la asesora las fechas, los horarios y el orden de las áreas; el deck solo lleva semanas y no muestra asesora ni contacto.",
-  "Confirmar quién asiste a Fundamentals: las 2 o 3 personas del área de condominio o las 8 del equipo.",
+  "Definir inversión, descuento y total (campos vacíos para ventas) y cómo se comunica el plan de pago (la slide se omitió). El cliente es sensible al precio por área y su disponibilidad presupuestaria está «en evaluación»: el programa muestra las horas de cada área para poder cotizar por área.",
+  "Confirmar con la asesora las fechas, los horarios y el orden de las áreas.",
+  "Confirmar quién asiste a Fundamentals: las 2 o 3 personas del área de condominio o las 8 del equipo (el deck dice «el equipo», sin cifra).",
   "Confirmar si el Reporte Final se entrega en la semana 4 (misma semana de la última sesión) o en la 5.",
-  "Confirmar la división (Educación) y que no es alianza, y si el kick-off va aparte (criterio por defecto)."
- ]
+  "Confirmar la división (Educación) y que no es alianza, y si el kick-off va aparte (criterio por defecto).",
+  "Confirmar con el cliente que los logros se prueben con ejemplos armados y no con capturas reales hasta definir qué cuenta de IA usa."
+ ],
+ "omitir": [
+  "pago"
+ ],
+ "metodo": {
+  "titulo": "Así trabajamos cada área.",
+  "subtitulo": "Trabajamos en sesión con las 2 o 3 personas de cada área y dejamos todo listo para el Reporte Final.",
+  "quien_construye": "Intezia levanta y construye cada logro en sesión, con las personas de cada área, sobre su forma de trabajo actual.",
+  "por_que_orden": "Primero se nivela al equipo; después Atención y Conciliación, que comparten el flujo de pagos; al final Cuentas por pagar y el Reporte Final.",
+  "pasos": [
+   {
+    "titulo": "Entrevistamos",
+    "texto": "A las 2 o 3 personas del área, sobre sus procesos reales."
+   },
+   {
+    "titulo": "Identificamos",
+    "texto": "El cuello de botella más relevante de cada área."
+   },
+   {
+    "titulo": "Construimos",
+    "texto": "En la misma sesión, un logro inmediato aplicable al área."
+   },
+   {
+    "titulo": "Dejamos listo",
+    "texto": "El inventario de procesos, que alimenta el Mapa de Calor."
+   }
+  ],
+  "practica": [
+   {
+    "titulo": "Sesiones de 2 h",
+    "texto": "Fundamentals y 2 sesiones por área, en modalidad mixta, con las personas del área de condominio."
+   },
+   {
+    "titulo": "Con lo que ya usan",
+    "texto": "El logro de cada área se construye con las herramientas que el equipo ya tiene, sin cambiar sus sistemas."
+   },
+   {
+    "titulo": "Una persona confirma",
+    "texto": "La IA prepara el registro de cada pago y una persona del equipo lo confirma."
+   }
+  ],
+  "datos": "En las sesiones se levantan procesos, no datos: no se carga a ninguna herramienta de IA información que identifique a condóminos, clientes o personal de {cliente_corto}. Los logros se prueban con ejemplos armados para la sesión."
+ },
+ "logistica": {
+  "modalidad": "Mixta, presencial y virtual, a coordinar con la Dirección.",
+  "participantes": "El equipo de {cliente_corto} en Fundamentals; en cada área, las 2 o 3 personas del área de condominio.",
+  "arranque": "La fecha del kick-off se acuerda con {cliente_corto} y el horario de cada sesión, con cada responsable.",
+  "ritmo": "Hasta dos sesiones de 2 h por semana, en el orden de las áreas."
+ },
+ "proximos_pasos": {
+  "asesora": {
+   "nombre": "Verónica Rubio",
+   "cargo": "Asesora comercial",
+   "correo": "vrubio01@intezia.com",
+   "telefono": "+58 422 3355505"
+  },
+  "pasos": [
+   {
+    "titulo": "Fecha de arranque",
+    "texto": "Confirmamos con la Dirección la fecha del kick-off y el orden de las áreas."
+   },
+   {
+    "titulo": "Accesos y agenda",
+    "texto": "Coordinamos los participantes de cada área y el horario de cada sesión, presencial o virtual."
+   },
+   {
+    "titulo": "Kick-off de arranque",
+    "texto": "Reunión inicial para acordar alcance, calendario y el responsable de logística."
+   }
+  ]
+ }
 }

@@ -1,5 +1,5 @@
 {
- "version": 1,
+ "version": 2,
  "cliente": {
   "nombre": "N58 Banco Digital",
   "slug": "n58-banco-digital",
@@ -18,9 +18,9 @@
    "etapas"
   ]
  },
- "meta_tipo": "Capacitación In-Company · Producción del contenido de lanzamiento con Claude y Skill propia para Mercadeo · Fundamentals (2h) + Construcción (3 sesiones de 2h) + Implementación (2 sesiones de 2h), kick-off de 1h aparte · 12h de propuesta, modalidad presencial · formato compacto",
+ "meta_tipo": "Capacitación In-Company · Producción del contenido de lanzamiento con Claude y Skill propia para Mercadeo · Fundamentals (2h) + Construcción (3 sesiones de 2h) + Implementación (2 sesiones de 2h), kick-off de 1h aparte · 12h de propuesta, modalidad presencial · formato compacto v2",
  "eje": "Producción del contenido de lanzamiento de N58 (más de 50 creativos, estáticos y video, y 4 artículos de posicionamiento en buscadores) con Claude, con revisiones del equipo de Mercadeo durante la Construcción, tras nivelarlo en Fundamentals, hasta construir una Skill con la marca y formar a 1 persona del equipo",
- "origen": "Propuesta CAI-034 enviada el 01/10/2026 (deck canónico de 15 slides, archivado en _anterior-15-slides/), reexpresada en el formato compacto por instrucción directa del usuario (06/10/2026)",
+ "origen": "Propuesta CAI-034 enviada el 01/10/2026 (deck canónico de 15 slides, archivado en _anterior-15-slides/), reexpresada en el formato compacto por instrucción directa del usuario (06/10/2026) y ajuste al formato v2 del 08/10/2026",
  "fuente_insumo": "Ficha de Levantamiento de N58 (01/10/2026) y brief.md de la propuesta CAI-034",
  "portada": {
   "titulo_lineas": [
@@ -82,7 +82,8 @@
      "fase": "F1",
      "detalle": "Sesión presencial de 2 h con el equipo de Mercadeo. Qué es y qué no es Claude, casos reales de creativos y artículos aplicables a Mercadeo, buenas prácticas para pedirle a Claude (prompting) sobre esos casos y la ruta hacia la Skill. Registra la línea base del tiempo que toma hoy producir cada pieza. El kick-off de 1 h, donde se levantan la marca, el calendario de lanzamiento y los productos prioritarios, se hace aparte y no suma horas."
     }
-   ]
+   ],
+   "para_que": "Nivelar al equipo de Mercadeo en Claude, aplicado a creativos y artículos del lanzamiento"
   },
   {
    "id": "CO",
@@ -112,7 +113,8 @@
      "fase": "F2",
      "detalle": "Tercera sesión de revisión presencial de 2 h, de cierre de la producción. Quedan listos más de 50 creativos (estáticos y video) para el lanzamiento y los 4 artículos de posicionamiento en buscadores reputacional, publicados."
     }
-   ]
+   ],
+   "para_que": "Producir más de 50 creativos y 4 artículos del lanzamiento, revisados con Mercadeo"
   },
   {
    "id": "IM",
@@ -135,20 +137,13 @@
      "fase": "F3",
      "detalle": "Segunda sesión presencial de 2 h. Se prueba la Skill con casos reales de producción, se ajusta, se documenta y se entrega la versión final. La persona designada queda formada para operarla y reutilizarla."
     }
-   ]
+   ],
+   "para_que": "Dejar una Skill con la marca y a 1 persona formada para seguir produciendo"
   }
  ],
  "alcance": {
   "titulo": "Contenido para el lanzamiento y una Skill propia.",
   "subtitulo": "Producimos **más de 50 creativos** y **4 artículos**, dentro del calendario de lanzamiento ya en marcha del banco.",
-  "etiqueta_pasos": "Cómo trabajamos",
-  "pasos": [
-   "Levantamos marca, calendario y productos prioritarios en el kick-off.",
-   "Nivelamos a Mercadeo en Claude, aplicado a creativos y artículos.",
-   "Producimos creativos y artículos y los revisamos con Mercadeo.",
-   "Construimos con 1 persona la Skill y medimos a 30, 60 y 90 días."
-  ],
-  "quien_construye": "Intezia produce los creativos y los artículos con la marca de N58 y construye con 1 persona de Mercadeo la Skill, un conjunto de instrucciones reutilizables de Claude.",
   "fuera_alcance": [
    "Las licencias de Claude: no se incluyen en esta propuesta.",
    "Formar a más de una persona: la Skill se construye con 1 persona designada de Mercadeo."
@@ -164,14 +159,14 @@
   {
    "id": "F2",
    "titulo": "Piezas",
-   "rango": "Semanas 2-4",
+   "rango": "Semanas 2 a 4",
    "descripcion": "Creativos y artículos",
    "destacada": true
   },
   {
    "id": "F3",
    "titulo": "Skill",
-   "rango": "Semanas 5-6",
+   "rango": "Semanas 5 y 6",
    "descripcion": "La Skill queda en el equipo"
   }
  ],
@@ -179,14 +174,13 @@
   {
    "id": "A",
    "carril": "cl",
-   "semanas": "S1-S6",
-   "etiqueta": "Equipo de Mercadeo",
-   "areas_html": "Fundamentals, Construcción e Implementación",
+   "semanas": "1 a 6",
    "celdas": {
     "F1": "Sesión de 2 h: Claude aplicado a creativos y artículos, con casos reales del lanzamiento.",
     "F2": "3 sesiones de 2 h: Intezia produce entre sesiones y revisa los avances con Mercadeo.",
     "F3": "2 sesiones de 2 h: la Skill con la marca, probada con casos reales de producción."
-   }
+   },
+   "nombre": "Equipo de Mercadeo"
   }
  ],
  "ruta": {
@@ -194,22 +188,22 @@
   "tope_h_semana": 20,
   "titulo": "Del kick-off a una Skill propia, en 6 semanas.",
   "subtitulo": "Semanas de trabajo desde el arranque, con **seguimiento a 30, 60 y 90 días** desde el cierre de la implementación.",
-  "nota": "S = semana de trabajo desde el arranque, cuya fecha se acuerda con {cliente}. Las {h_total} h son una proyección de sesión: {h_f1}, {h_f2} y {h_f3} h en las fases 1, 2 y 3. El kick-off de 1 h es aparte y no suma horas, igual que la producción de Intezia entre sesiones.",
+  "nota": "Las {h_total} h son una proyección de sesión: {h_f1}, {h_f2} y {h_f3} h en las fases 1, 2 y 3. El kick-off de 1 h es aparte y no suma horas, igual que la producción de Intezia entre sesiones. La fecha de arranque se acuerda con {cliente}.",
   "hitos": [
    {
     "titulo": "Kick-off · aparte",
     "texto": "1 h con Mercadeo para levantar marca, calendario de lanzamiento y productos prioritarios."
    },
    {
-    "titulo": "S1 · Fundamentals",
+    "titulo": "Semana 1 · Fundamentals",
     "texto": "2 h con el equipo: Claude aplicado a creativos y artículos."
    },
    {
-    "titulo": "S2-S4 · Construcción",
+    "titulo": "Semanas 2 a 4 · Construcción",
     "texto": "3 revisiones de 2 h: Intezia produce entre sesiones y ajusta con Mercadeo."
    },
    {
-    "titulo": "S5-S6 · Implementación",
+    "titulo": "Semanas 5 y 6 · Implementación",
     "texto": "2 sesiones de 2 h: la Skill con la marca, probada con casos reales."
    },
    {
@@ -237,16 +231,16 @@
   ]
  },
  "inversion": {
-  "duracion": "12 h de sesión presencial en 6 semanas de trabajo, más un kick-off de 1 h aparte.",
+  "duracion": "Proyecto de 6 sesiones presenciales en 6 semanas, con seguimiento a 30, 60 y 90 días. 12 horas de trabajo, más 1 h de kick-off aparte.",
   "programa": [
    "Producción del contenido de lanzamiento con Claude y una Skill propia para Mercadeo de N58 (CAI-034).",
-   "Fundamentals (2h) + Construcción (3 sesiones de 2h) + Implementación (2 sesiones de 2h).",
-   "12h totales de sesión presencial, más 1h de kick-off aparte. Cobertura: equipo de Mercadeo."
+   "Fundamentals, Construcción (3 revisiones) e Implementación (2 sesiones): 6 sesiones presenciales.",
+   "Fundamentals (2 h), Construcción (6 h) e Implementación (4 h): 12 h, más 1 h de kick-off aparte."
   ],
   "notas": [
    "Se integra al calendario de lanzamiento ya en marcha del banco, no a un presupuesto de mercadeo aparte.",
-   "Modalidad presencial, coordinada con el equipo de Mercadeo. La producción de Intezia entre sesiones no suma horas de sesión.",
-   "Las licencias de Claude no están incluidas en esta propuesta."
+   "Las licencias de Claude no están incluidas en esta propuesta.",
+   "Términos y condiciones: los del enlace de «Importante», que ambas partes aceptan al avanzar con esta propuesta."
   ]
  },
  "entregables": {
@@ -299,7 +293,7 @@
    },
    {
     "titulo": "Valor en dinero",
-    "texto": "Horas recuperadas multiplicadas por el costo hora de referencia que {cliente_corto} valide."
+    "texto": "Horas recuperadas multiplicadas por el valor hora de referencia que {cliente_corto} valide."
    }
   ],
   "metas": [
@@ -329,7 +323,7 @@
   "Guardia §4.21 punto 5: la propuesta anterior era un programa de 3 módulos y 4 etapas (kick-off, Fundamentals, Construcción, Implementación). Se reexpresó como 6 entregables en 3 etapas, con la misma estructura de horas (2 + 6 + 4 = 12 h, kick-off de 1 h aparte), igual que se hizo en CAI-037 (equipo de TI de N58).",
   "Entregables: cada sesión de 2 h es un entregable. Fundamentals deja al equipo nivelado; las 3 revisiones de la Construcción se leen como tres avances acumulados (primer avance revisado, segundo avance ajustado y entrega final con más de 50 creativos y 4 artículos publicados); las 2 sesiones de Implementación dejan la Skill construida y la Skill probada con 1 persona formada. El deck anterior solo decía «revisión de avance 1, 2 y 3»: los nombres y lo que se entrega en cada avance son propuesta del sistema. Confirmar con servicio.",
   "Las 12 h son las sesiones con el cliente (2 + 6 + 4), igual que en el deck anterior. La producción de Intezia entre sesiones (creativos y artículos) no suma horas de sesión. Si servicio estima horas de producción, hay que decidir si se muestran.",
-  "Calendario propuesto por el sistema, no dictado por la ficha: 1 sesión por semana en 6 semanas (S1 Fundamentals, S2 a S4 Construcción, S5 y S6 Implementación). El deck anterior no traía semanas. Confirmar contra el calendario de lanzamiento del banco, que la ficha no detalla.",
+  "Calendario propuesto por el sistema, no dictado por la ficha: 1 sesión por semana en 6 semanas (semana 1 Fundamentals, semanas 2 a 4 Construcción, semanas 5 y 6 Implementación). El deck anterior no traía semanas. Confirmar contra el calendario de lanzamiento del banco, que la ficha no detalla.",
   "Sin certificado de participación ni workbook digital (§4.21: ya no van por defecto, la propuesta se presenta como proyecto). El deck anterior incluía el certificado INTEZIA y el workbook para la persona formada: si el cliente los espera, hay que decidirlo con el usuario.",
   "Sin slide de Impacto (§4.9 no aplica al formato compacto): se retiran las cifras de HubSpot, Salesforce y McKinsey del deck anterior. El retorno va en modo método, sin cifras del cliente: la ficha no trae volúmenes, tiempos ni costo hora de Mercadeo.",
   "Sin Próximos pasos, Cierre ni campos de pasos (el formato compacto no los lleva). La logística de arranque queda en el kick-off y en los pendientes. «Hacia la semana N» es aritmética (semanas de ejecución + 13): confirmar con servicio.",
@@ -339,7 +333,11 @@
   "Licencias: no se afirma quién contrata ni qué plan. La ficha dice que en Mercadeo usan Claude a título personal. La propuesta no incluye precios de lista. Confirmar quién contrata la cuenta que usará la Skill.",
   "Portada: los datos salen de la ficha. «3 personas» (gerencia, Instagram y apoyo operativo) es la dotación del brief; el deck anterior decía «una persona con apoyo operativo»: confirmar cuál es la correcta. «Sin gestión activa» del posicionamiento en buscadores también viene del diagnóstico del deck anterior.",
   "Reglas conservadas: sin citas textuales de la ficha, sin nombres de personas del cliente, sin afirmar migración de stack (N58 usa Microsoft 365 y Claude se suma: el stack no se menciona en el deck), sin Metodología ni Equipo facilitador (§4.10a).",
-  "Fuera de esta propuesta y de la carpeta del deck compacto: el documento de soberanía de datos para Tecnología (soberania-datos.html y su PDF), que sigue como antes."
+  "Fuera de esta propuesta y de la carpeta del deck compacto: el documento de soberanía de datos para Tecnología (soberania-datos.html y su PDF), que sigue como antes.",
+  "Migración a la plantilla v2 (2026-10-08, instrucción del usuario: «ajustar las CAI-034 y CAI-037 al nuevo formato, cada una por separado»). Versión 1 a 2 según la spec §13. Contenido de fondo sin cambios: 12 h, 6 entregables en 3 etapas, 6 semanas, presencial, kick-off de 1 h aparte, seguimiento 30-60-90. Lo que se agregó por la v2: «Cómo trabajamos» (método, práctica, datos y logística), el para qué de cada etapa y la slide de próximos pasos con la asesora. Los 4 pasos pasaron de «Alcance» a «Cómo trabajamos». «Costo hora» pasó a «valor hora».",
+  "Cómo se cuidan los datos (propuesta del sistema, 2026-10-08): las sesiones trabajan con la marca y los materiales del lanzamiento, sin cargar a Claude información de clientes del banco. Es el mismo criterio de repositorio de práctica de la CAI-037 y responde a la sensibilidad de datos de N58 (el documento de soberanía de datos para Tecnología sigue aparte). Confirmar con el banco.",
+  "Sin facilidad de pago: no se preguntó. El usuario la omitió en las últimas propuestas migradas, así que se aplicó el mismo criterio con omitir: [\"pago\"]. Si Ventas la quiere, se agrega con cuotas ligadas a los hitos de la ruta.",
+  "Asesora (slide de próximos pasos): Flavia Martínez, con el teléfono y el correo del brief; el cargo «Asesora comercial» es supuesto. El deck de 6 slides no mostraba contacto: ahora la última slide sí lo hace. La nota «modalidad presencial» pasó de las Notas de la hoja de inversión a «Cómo trabajamos» y a la Duración."
  ],
  "pendientes": [
   "Definir inversión, descuento y total (campos vacíos para ventas). La disponibilidad presupuestaria no estaba definida en la ficha.",
@@ -349,6 +347,78 @@
   "Confirmar quién contrata la cuenta de Claude que usará la Skill.",
   "Confirmar si el cliente espera el certificado y el workbook que tenía el deck anterior (retirados).",
   "Confirmar la dotación de Mercadeo (3 personas según el brief; el deck anterior decía una persona con apoyo).",
-  "Confirmar con servicio que la línea base cabe dentro de Fundamentals (2 h) y la aritmética de «Hacia la semana N»."
+  "Confirmar con servicio que la línea base cabe dentro de Fundamentals (2 h) y la aritmética de «Hacia la semana N».",
+  "Confirmar con el usuario o Ventas si la propuesta lleva facilidad de pago (se omitió por el criterio de las últimas propuestas) y cómo se comunica el plan de pago.",
+  "Confirmar con el banco que en las sesiones no se carga información de clientes a Claude. Reenviar el PDF nuevo y avisar que reemplaza al del 06/10 (el original de 15 slides salió el 01/10)."
+ ],
+ "metodo": {
+  "titulo": "Así trabajamos con Mercadeo.",
+  "subtitulo": "Intezia produce los creativos y los artículos, los revisa con Mercadeo y construye la Skill con 1 persona.",
+  "quien_construye": "Intezia produce los creativos y los artículos con la marca de N58 y construye la Skill con 1 persona de Mercadeo.",
+  "por_que_orden": "Primero se nivela a Mercadeo en Claude; después se producen y revisan las piezas del lanzamiento; al final se construye la Skill con la marca.",
+  "pasos": [
+   {
+    "titulo": "Levantamos",
+    "texto": "La marca, el calendario y los productos prioritarios, en el kick-off."
+   },
+   {
+    "titulo": "Nivelamos",
+    "texto": "A Mercadeo en Claude, aplicado a creativos y artículos."
+   },
+   {
+    "titulo": "Producimos",
+    "texto": "Creativos y artículos, revisados con Mercadeo en tres avances."
+   },
+   {
+    "titulo": "Dejamos listo",
+    "texto": "La Skill, 1 persona formada y la medición a 30, 60 y 90 días."
+   }
+  ],
+  "practica": [
+   {
+    "titulo": "Sesiones presenciales",
+    "texto": "6 sesiones de 2 h con el equipo de Mercadeo, una por semana."
+   },
+   {
+    "titulo": "Entre sesiones",
+    "texto": "Intezia produce las piezas con la marca acordada en el kick-off y las trae a cada revisión."
+   },
+   {
+    "titulo": "Qué es una Skill",
+    "texto": "Un conjunto de instrucciones reutilizables de Claude con la marca, el tono y los formatos del banco."
+   }
+  ],
+  "datos": "En las sesiones se trabaja con la marca y los materiales del lanzamiento: no se carga a Claude información de clientes del banco."
+ },
+ "logistica": {
+  "modalidad": "Presencial, coordinada con el equipo de Mercadeo.",
+  "participantes": "El equipo de Mercadeo; la Skill se construye con 1 persona designada.",
+  "arranque": "El kick-off de 1 h, aparte, levanta marca y productos; su fecha se acuerda con Mercadeo.",
+  "ritmo": "Una sesión de 2 h por semana, durante 6 semanas."
+ },
+ "proximos_pasos": {
+  "asesora": {
+   "nombre": "Flavia Martínez",
+   "cargo": "Asesora comercial",
+   "correo": "fmartinez@intezia.com",
+   "telefono": "+58 414 5756615"
+  },
+  "pasos": [
+   {
+    "titulo": "Fecha de arranque",
+    "texto": "Confirmamos con Mercadeo la fecha del kick-off y el calendario de lanzamiento."
+   },
+   {
+    "titulo": "Accesos y agenda",
+    "texto": "Coordinamos la persona que se forma, los accesos a la marca y el horario de cada sesión."
+   },
+   {
+    "titulo": "Kick-off de 1 hora",
+    "texto": "Una hora con Mercadeo, antes de la primera sesión, para dejar acordado qué se produce primero."
+   }
+  ]
+ },
+ "omitir": [
+  "pago"
  ]
 }

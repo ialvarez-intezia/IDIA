@@ -6,34 +6,38 @@
 ## 1. Resumen
 
 - **6 entregables en 3 etapas**, **12 h** de sesión, más seguimiento a 30, 60 y 90 días.
-- Carril **Claude**: 6 entregables, 12 h.
+- Herramienta **Claude**: 6 entregables, 12 h.
 - Horas por fase: F1 2 h (1 sol.) · F2 6 h (3 sol.) · F3 4 h (2 sol.).
 
-## 2. Frentes y ruta
+## 2. Líneas de trabajo y ruta
 
-| Frente | Carril | Áreas | Semanas | Horas | Soluciones |
+| Línea de trabajo | Herramienta | Áreas | Semanas | Horas | Soluciones |
 |---|---|---|---|---|---|
-| A | Claude | Fundamentals, Construcción, Implementación | S1-S6 | 12 | 6 |
+| Equipo de Mercadeo | Claude | Fundamentals, Construcción, Implementación | 1 a 6 | 12 | 6 |
 
-| Frente | Bases (Semana 1) | Piezas (Semanas 2-4) | Skill (Semanas 5-6) |
+| Línea de trabajo | Bases (Semana 1) | Piezas (Semanas 2 a 4) | Skill (Semanas 5 y 6) |
 |---|---|---|---|
-| A | 2 h · 1 sol. | 6 h · 3 sol. | 4 h · 2 sol. |
+| Equipo de Mercadeo | 2 h · 1 sol. | 6 h · 3 sol. | 4 h · 2 sol. |
 
 - **Kick-off · aparte**: 1 h con Mercadeo para levantar marca, calendario de lanzamiento y productos prioritarios.
-- **S1 · Fundamentals**: 2 h con el equipo: Claude aplicado a creativos y artículos.
-- **S2-S4 · Construcción**: 3 revisiones de 2 h: Intezia produce entre sesiones y ajusta con Mercadeo.
-- **S5-S6 · Implementación**: 2 sesiones de 2 h: la Skill con la marca, probada con casos reales.
+- **Semana 1 · Fundamentals**: 2 h con el equipo: Claude aplicado a creativos y artículos.
+- **Semanas 2 a 4 · Construcción**: 3 revisiones de 2 h: Intezia produce entre sesiones y ajusta con Mercadeo.
+- **Semanas 5 y 6 · Implementación**: 2 sesiones de 2 h: la Skill con la marca, probada con casos reales.
 - **30 · 60 · 90 días**: Seguimiento: uso de la Skill, nuevas construcciones y tiempo ahorrado.
 
 ## 3. Soluciones y horas (C = construcción, T = pruebas, A = adopción)
 
-### Fundamentals · 1 entregable · 2 h · carril Claude · frente A
+### Fundamentals · 1 entregable · 2 h · Claude · línea A
+
+Para qué (lo que ve el cliente): Nivelar al equipo de Mercadeo en Claude, aplicado a creativos y artículos del lanzamiento
 
 | ID | Entregable (nombre en el deck) | Detalle de la fuente | C | T | A | Total | Fase |
 |---|---|---|---|---|---|---|---|
 | FU-1 | Equipo de Mercadeo nivelado en Claude | Sesión presencial de 2 h con el equipo de Mercadeo. Qué es y qué no es Claude, casos reales de creativos y artículos aplicables a Mercadeo, buenas prácticas para pedirle a Claude (prompting) sobre esos casos y la ruta hacia la Skill. Registra la línea base del tiempo que toma hoy producir cada pieza. El kick-off de 1 h, donde se levantan la marca, el calendario de lanzamiento y los productos prioritarios, se hace aparte y no suma horas. | - | - | - | 2 | F1 |
 
-### Construcción · 3 entregables · 6 h · carril Claude · frente A
+### Construcción · 3 entregables · 6 h · Claude · línea A
+
+Para qué (lo que ve el cliente): Producir más de 50 creativos y 4 artículos del lanzamiento, revisados con Mercadeo
 
 | ID | Entregable (nombre en el deck) | Detalle de la fuente | C | T | A | Total | Fase |
 |---|---|---|---|---|---|---|---|
@@ -41,7 +45,9 @@
 | CO-2 | Segundo avance de creativos y artículos, ajustado | Segunda sesión de revisión presencial de 2 h. Intezia presenta el segundo avance de creativos y artículos, se ajustan la dirección creativa y editorial con Mercadeo y se valida que los parámetros de marca se respeten. | - | - | - | 2 | F2 |
 | CO-3 | Más de 50 creativos y 4 artículos publicados | Tercera sesión de revisión presencial de 2 h, de cierre de la producción. Quedan listos más de 50 creativos (estáticos y video) para el lanzamiento y los 4 artículos de posicionamiento en buscadores reputacional, publicados. | - | - | - | 2 | F2 |
 
-### Implementación · 2 entregables · 4 h · carril Claude · frente A
+### Implementación · 2 entregables · 4 h · Claude · línea A
+
+Para qué (lo que ve el cliente): Dejar una Skill con la marca y a 1 persona formada para seguir produciendo
 
 | ID | Entregable (nombre en el deck) | Detalle de la fuente | C | T | A | Total | Fase |
 |---|---|---|---|---|---|---|---|
@@ -53,13 +59,13 @@
 - Las licencias de Claude: no se incluyen en esta propuesta.
 - Formar a más de una persona: la Skill se construye con 1 persona designada de Mercadeo.
 
-## 5. Supuestos a confirmar
+## 5. Supuestos a confirmar (antes del método)
 
 - Conversión de CAI-034 (deck canónico de 15 slides, enviado el 01/10/2026) al formato compacto de Habilidades (6 slides) por instrucción directa del usuario (06/10/2026). El deck anterior, su PDF y su script de campos están archivados en _anterior-15-slides/.
 - Guardia §4.21 punto 5: la propuesta anterior era un programa de 3 módulos y 4 etapas (kick-off, Fundamentals, Construcción, Implementación). Se reexpresó como 6 entregables en 3 etapas, con la misma estructura de horas (2 + 6 + 4 = 12 h, kick-off de 1 h aparte), igual que se hizo en CAI-037 (equipo de TI de N58).
 - Entregables: cada sesión de 2 h es un entregable. Fundamentals deja al equipo nivelado; las 3 revisiones de la Construcción se leen como tres avances acumulados (primer avance revisado, segundo avance ajustado y entrega final con más de 50 creativos y 4 artículos publicados); las 2 sesiones de Implementación dejan la Skill construida y la Skill probada con 1 persona formada. El deck anterior solo decía «revisión de avance 1, 2 y 3»: los nombres y lo que se entrega en cada avance son propuesta del sistema. Confirmar con servicio.
 - Las 12 h son las sesiones con el cliente (2 + 6 + 4), igual que en el deck anterior. La producción de Intezia entre sesiones (creativos y artículos) no suma horas de sesión. Si servicio estima horas de producción, hay que decidir si se muestran.
-- Calendario propuesto por el sistema, no dictado por la ficha: 1 sesión por semana en 6 semanas (S1 Fundamentals, S2 a S4 Construcción, S5 y S6 Implementación). El deck anterior no traía semanas. Confirmar contra el calendario de lanzamiento del banco, que la ficha no detalla.
+- Calendario propuesto por el sistema, no dictado por la ficha: 1 sesión por semana en 6 semanas (semana 1 Fundamentals, semanas 2 a 4 Construcción, semanas 5 y 6 Implementación). El deck anterior no traía semanas. Confirmar contra el calendario de lanzamiento del banco, que la ficha no detalla.
 - Sin certificado de participación ni workbook digital (§4.21: ya no van por defecto, la propuesta se presenta como proyecto). El deck anterior incluía el certificado INTEZIA y el workbook para la persona formada: si el cliente los espera, hay que decidirlo con el usuario.
 - Sin slide de Impacto (§4.9 no aplica al formato compacto): se retiran las cifras de HubSpot, Salesforce y McKinsey del deck anterior. El retorno va en modo método, sin cifras del cliente: la ficha no trae volúmenes, tiempos ni costo hora de Mercadeo.
 - Sin Próximos pasos, Cierre ni campos de pasos (el formato compacto no los lleva). La logística de arranque queda en el kick-off y en los pendientes. «Hacia la semana N» es aritmética (semanas de ejecución + 13): confirmar con servicio.
@@ -70,11 +76,36 @@
 - Portada: los datos salen de la ficha. «3 personas» (gerencia, Instagram y apoyo operativo) es la dotación del brief; el deck anterior decía «una persona con apoyo operativo»: confirmar cuál es la correcta. «Sin gestión activa» del posicionamiento en buscadores también viene del diagnóstico del deck anterior.
 - Reglas conservadas: sin citas textuales de la ficha, sin nombres de personas del cliente, sin afirmar migración de stack (N58 usa Microsoft 365 y Claude se suma: el stack no se menciona en el deck), sin Metodología ni Equipo facilitador (§4.10a).
 - Fuera de esta propuesta y de la carpeta del deck compacto: el documento de soberanía de datos para Tecnología (soberania-datos.html y su PDF), que sigue como antes.
+- Migración a la plantilla v2 (2026-10-08, instrucción del usuario: «ajustar las CAI-034 y CAI-037 al nuevo formato, cada una por separado»). Versión 1 a 2 según la spec §13. Contenido de fondo sin cambios: 12 h, 6 entregables en 3 etapas, 6 semanas, presencial, kick-off de 1 h aparte, seguimiento 30-60-90. Lo que se agregó por la v2: «Cómo trabajamos» (método, práctica, datos y logística), el para qué de cada etapa y la slide de próximos pasos con la asesora. Los 4 pasos pasaron de «Alcance» a «Cómo trabajamos». «Costo hora» pasó a «valor hora».
+- Cómo se cuidan los datos (propuesta del sistema, 2026-10-08): las sesiones trabajan con la marca y los materiales del lanzamiento, sin cargar a Claude información de clientes del banco. Es el mismo criterio de repositorio de práctica de la CAI-037 y responde a la sensibilidad de datos de N58 (el documento de soberanía de datos para Tecnología sigue aparte). Confirmar con el banco.
+- Sin facilidad de pago: no se preguntó. El usuario la omitió en las últimas propuestas migradas, así que se aplicó el mismo criterio con omitir: ["pago"]. Si Ventas la quiere, se agrega con cuotas ligadas a los hitos de la ruta.
+- Asesora (slide de próximos pasos): Flavia Martínez, con el teléfono y el correo del brief; el cargo «Asesora comercial» es supuesto. El deck de 6 slides no mostraba contacto: ahora la última slide sí lo hace. La nota «modalidad presencial» pasó de las Notas de la hoja de inversión a «Cómo trabajamos» y a la Duración.
 
-## 6. Retorno esperado (slide 6)
+## 6. Cómo trabajamos (slide 4)
+
+**Por qué en este orden:** Primero se nivela a Mercadeo en Claude; después se producen y revisan las piezas del lanzamiento; al final se construye la Skill con la marca.
+
+- **Levantamos**: La marca, el calendario y los productos prioritarios, en el kick-off.
+- **Nivelamos**: A Mercadeo en Claude, aplicado a creativos y artículos.
+- **Producimos**: Creativos y artículos, revisados con Mercadeo en tres avances.
+- **Dejamos listo**: La Skill, 1 persona formada y la medición a 30, 60 y 90 días.
+
+- En la práctica, **Sesiones presenciales**: 6 sesiones de 2 h con el equipo de Mercadeo, una por semana.
+- En la práctica, **Entre sesiones**: Intezia produce las piezas con la marca acordada en el kick-off y las trae a cada revisión.
+- En la práctica, **Qué es una Skill**: Un conjunto de instrucciones reutilizables de Claude con la marca, el tono y los formatos del banco.
+- Datos: En las sesiones se trabaja con la marca y los materiales del lanzamiento: no se carga a Claude información de clientes del banco.
+- Quién construye: Intezia produce los creativos y los artículos con la marca de N58 y construye la Skill con 1 persona de Mercadeo.
+
+**Logística:** modalidad: Presencial, coordinada con el equipo de Mercadeo. · participantes: El equipo de Mercadeo; la Skill se construye con 1 persona designada. · arranque: El kick-off de 1 h, aparte, levanta marca y productos; su fecha se acuerda con Mercadeo..
+
+## 7. Retorno esperado (slide 6)
 
 Modo **metodo**. La slide no cita estudios ni referencias de la web ni promete retorno.
 Hacia la semana 19: construcción (6 semanas) más 90 días de seguimiento; aritmética a confirmar con servicio.
 
 Pasos del método: Volumen semanal; Tiempo actual por pieza; Tiempo con la Skill; Horas recuperadas a la semana; Valor en dinero.
+
+## 9. Próximos pasos (slide 8)
+
+Asesora comercial que ve el cliente: Flavia Martínez, Asesora comercial · fmartinez@intezia.com · +58 414 5756615.
 

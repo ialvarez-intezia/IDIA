@@ -1,6 +1,50 @@
 # Brief — G-MAX (DET-024)
 
-## Actualización 2026-10-06 — reexpresada en el formato compacto adaptado a Detección (6 slides) · VIGENTE
+## Actualización 2026-10-08 — migrada a la plantilla v2 (8 slides) · VIGENTE
+
+Instrucción directa del usuario: «ajustar la DET-024 con el formato nuevo». El código **DET-024 sigue repetido**
+(`fibraspol/` también lo usa, sin relación): se preguntó y el usuario eligió G-MAX otra vez. «Formato nuevo» =
+**plantilla compacta v2.0** (commit `93e0b67`, 2026-10-07): el `datos.json` v1.4 se migró según la spec §13 y se
+regeneró con `--actualizar-css --forzar-overrides`. Orden del deck: Portada · Alcance · Ruta · Cómo trabajamos ·
+Entregables · Retorno · Inversión · Próximos pasos. El deck de 6 slides v1.4 y su PDF quedan en `_pdf-anteriores/`.
+Sin cambios de contenido de fondo: 25 h, 7 entregables, 4 frentes, 2 grupos de Fundamentals, presencial.
+
+### Decisiones del usuario al preguntar
+
+- **Sin «Facilidad de pago»** (igual que la CAI-032): `omitir: ["pago"]`; ventas comunica el plan de pago por otro
+  medio. El generador avisa que Ventas la pide en toda propuesta.
+- **Datos:** «Se levantan procesos, sin datos personales»: las sesiones no cargan a ninguna herramienta de IA
+  información que identifique a pacientes, personal o clientes (mismo criterio que la DET-027 de la clínica).
+- **Grupo 1 de Fundamentals (~29 personas):** se deja como está, por encima del máximo de 25 por sesión del
+  lineamiento de Detección (decisión del usuario del 01/10, reconfirmada).
+
+### Qué cambió respecto de la v1.4 (en el lenguaje de la v2)
+
+| v1.4 | v2 |
+|---|---|
+| `alcance.pasos` y `quien_construye` | `metodo` (4 pasos propios de Detección: entrevistamos, identificamos, construimos, dejamos listo) |
+| (sin método, logística ni asesora) | `metodo.practica` (3 puntos), `metodo.datos`, `logistica` (presencial, 51 personas, arranque, ritmo) y `proximos_pasos.asesora` |
+| (sin «para qué» por frente) | `areas[].para_que` en cada frente, con las palabras del cliente |
+| `frentes[].etiqueta`, `areas_html`, «S1-S4», «S = semana» | `frentes[].nombre` = «Auditoría presencial», «1 a 4» y nota sin códigos |
+| Fases «Nivelación», «Prioritarios», «Resto del mapa» | «Nivel», «Clave», «Resto» (cabeceras de ≤ 6 caracteres: con «2 entregables» al lado no cabían más largas) |
+| Inversión «por horas», Duración con las horas al frente | «Inversión del proyecto»; «7 sesiones presenciales en 4 semanas. 25 horas de trabajo.» |
+| Sin asesora ni contacto | Slide 8 con María Iribarren (teléfono y correo de sus otras propuestas; el cargo «Asesora comercial» es supuesto) |
+
+La slide 3 conserva la 5.ª columna «Cierre» (Priorizar · Reportar · Proyectar), sin garantía 30-60-90. El retorno
+(modo método, «decidir con datos») no cambió. `overrides.css` nuevo: escala de las slides 3, 4 y 5.
+
+### Pendientes (a confirmar antes de reenviar)
+
+- Inversión, descuento y total (campos vacíos para ventas; María anticipó un descuento de arranque) y cómo se
+  comunica el plan de pago (no hay slide).
+- Fechas y horas de las sesiones, orden de los frentes y cargo de la asesora en la última slide (con María). El
+  deck dice «la fecha se acuerda con G-MAX»; el brief fija el kick-off para la semana del 12 de octubre de 2026,
+  que ya está encima.
+- La propuesta ya salió el 2026-10-01: confirmar si se reenvía el PDF nuevo. Estado: `Enviada` → `En corrección` →
+  `Enviada` al regenerar (la `fecha_entrega` 2026-10-01 se respeta).
+- Fibraspol, el otro DET-024, sigue en el deck canónico de 13 slides.
+
+## Actualización 2026-10-06 — reexpresada en el formato compacto adaptado a Detección (6 slides) · BASE (formato superado por la del 2026-10-08)
 
 Instrucción directa del usuario: "mejorar la DET-024 usando este nuevo formato, a pesar de que el
 definido es de Habilidades, con una adaptación usando las reglas fijas de esta propuesta". El

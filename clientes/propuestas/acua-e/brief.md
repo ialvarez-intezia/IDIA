@@ -1,5 +1,50 @@
 # Brief · Acua-e · Servicio de Detección (DET-025)
 
+## Actualización 2026-10-08 · migrada a la plantilla v2 (8 slides) · VIGENTE
+
+Instrucción directa del usuario: «mejorar la DET-025 con el nuevo formato». «Formato nuevo» = **plantilla compacta
+v2.0** (commit `93e0b67`, 2026-10-07): el `datos.json` v1.4 se migró según la spec §13 y se regeneró con
+`--actualizar-css --forzar-overrides`. Orden del deck: Portada · Alcance · Ruta · Cómo trabajamos · Entregables ·
+Retorno · Inversión · Próximos pasos. El PDF de 6 slides (v1.4) queda en `_pdf-anteriores/`. Sin cambios de contenido
+de fondo: 14 h, 4 entregables, 3 áreas más Fundamentals, 3 semanas, presencial, kick-off aparte.
+
+### Decisiones
+
+- **Datos** (respuesta del usuario al preguntar, 2026-10-08): «solo procesos, sin datos sensibles». Las sesiones
+  levantan procesos y no cargan a ninguna herramienta de IA información confidencial de Acua-e (fórmulas, datos de
+  clientes); los logros se prueban con ejemplos armados para la sesión. La ficha no habla de datos: mismo criterio que
+  G-MAX, Conserval y la clínica. El deck no cita ninguna norma de publicidad farmacéutica.
+- **Sin «Facilidad de pago»**: no se preguntó; el usuario la omitió en las últimas propuestas migradas, así que se
+  aplicó el mismo criterio (`omitir: ["pago"]`). Si Ventas la quiere, se agrega con cuotas ligadas a los hitos.
+
+### Qué cambió respecto de la v1.4 (en el lenguaje de la v2)
+
+| v1.4 | v2 |
+|---|---|
+| `alcance.pasos` y `quien_construye` | `metodo` (4 pasos propios de Detección) y `metodo.quien_construye` |
+| (sin método, logística ni asesora) | `metodo.practica` (sesiones presenciales, sin sistema nuevo, dos áreas un registro), `metodo.datos`, `por_que_orden`, `logistica` y `proximos_pasos.asesora` |
+| (sin «para qué» por área) | `areas[].para_que` en Fundamentals y en las 3 áreas |
+| `frentes[].etiqueta`, `areas_html`, «S1-S3», «S = semana» | `frentes[].nombre` = «Auditoría presencial», «1 a 3» y nota sin códigos |
+| Fases «Nivelación», «Prioritarias», «Cierre del mapa» | «Nivel», «Pedidos», «Mapa» (cabeceras de ≤ 7 caracteres: con «2 entregables» al lado no cabían más largas) |
+| Inversión «por horas de sesión»; Duración con las horas al frente | «Inversión del proyecto»; «Proyecto de 4 sesiones presenciales en 3 semanas. 14 horas de trabajo.» |
+| Notas con la modalidad | Notas con licencias, Habilidades y Políticas, y términos y condiciones (la modalidad ya está en «Cómo trabajamos») |
+| Sin asesora ni contacto | Slide 8 con Flavia Martínez (teléfono y correo tomados de su propuesta de Fibraspol; el cargo «Asesora comercial» es supuesto) |
+
+La slide 3 conserva la 5.ª columna «Cierre» (Priorizar · Reportar · Proyectar), sin garantía 30-60-90. El agente de
+marketing sigue solo como horizonte («Después · Habilidades» y fuera de alcance). `overrides.css` nuevo, el mismo
+escalado de las slides 2, 3, 4 y 5 que la DET-026 (4 filas y una sola línea de trabajo).
+
+### Pendientes (a confirmar antes de reenviar)
+
+- Inversión, descuento y total (campos vacíos para ventas; pyme de 12 personas, el valor debe calzar con su escala) y
+  cómo se comunica el plan de pago (no hay slide).
+- Con Flavia: su teléfono, su correo y su cargo en la última slide; fechas, horarios y orden de las áreas; si
+  el Reporte Final es en la semana 3 o la 4.
+- La propuesta ya salió el 2026-10-06: confirmar si se reenvía el PDF nuevo y avisar que reemplaza al anterior. Estado:
+  `Enviada` → `En corrección` → `Enviada` al regenerar (la `fecha_entrega` 2026-10-06 se respeta).
+
+> Lo que sigue es el brief original del 2026-10-06 (formato v1.4); las decisiones de arriba prevalecen.
+
 > Generado por `scripts/generar-habilidades-compacto.py` la primera vez (no se sobrescribe después). Completar a mano lo que falte; los datos del deck viven en `datos.json`.
 
 ## Datos administrativos
@@ -12,10 +57,12 @@
 - **Tipo de documento**: Detección · Fundamentals (2h grupal, 12 personas) + auditoría de 3 áreas (Administración, Operaciones y Planta, Mercadeo), 4h por área (12h), 14h totales, modalidad presencial · formato compacto (`DET-025`), presentada al cliente como **propuesta de proyecto**; formato compacto de 6 slides (con hoja de inversión (campos de precio vacíos para ventas))
 - **Eje temático**: Auditar Administración, Operaciones y Planta, y Mercadeo de Acua-e, con un logro inmediato en cada área (empezando por el registro compartido de pedidos e inventario), para llegar a un mapa de oportunidades de IA y una ruta hacia la capacidad propia del equipo
 <!--auto:inicio-->
-- **Alcance**: 4 entregables en 3 áreas · 14 h de sesión · 3 semanas de trabajo desde el arranque · seguimiento a Reporte Final
+- **Alcance**: 4 entregables en 3 áreas · 14 h de sesión · 3 semanas de trabajo desde el arranque · sin seguimiento
+- **Orden de las slides**: 1 Portada · 2 Alcance · 3 Ruta · 4 Cómo trabajamos · 5 Entregables · 6 Retorno · 7 Inversión · 8 Próximos pasos
+- **Asesora comercial que ve el cliente (última slide)**: Flavia Martínez, Asesora comercial · fmartinez@intezia.com · +58 414 5756615
 <!--auto:fin-->
 - **Estado**: `Enviada` (meta.json; fecha_entrega 2026-10-06)
-- **Asesora comercial**: Flavia Martínez (la ficha la registra como «Martinez»; en Fibraspol figura con tilde). El deck compacto no lleva slide de cierre ni contacto.
+- **Asesora comercial**: Flavia Martínez (la ficha la registra como «Martinez»; en Fibraspol figura con tilde). Desde la v2 (2026-10-08) la slide 8 de próximos pasos la muestra.
 - **Contacto / decisora**: la fundadora de Acua-e (Carolina Garcés), decisora única; la ficha dice que tiene una socia en administración. No aparece su nombre en el deck.
 - **Ficha Comercial Intezia**: `Levantamiento_Acua_e_2026-10-02.pdf` (Ficha de Levantamiento, registrada 2026-10-02, elaborada por Flavia Martínez). Es la fuente primaria; qué se tomó y qué no está en la sección siguiente.
 - **fecha_arranque_deseada**: no declarada. La ficha solo dice horizonte de incorporación de IA a corto plazo (0 a 3 meses). El formato compacto no lleva Calendario de inicio.

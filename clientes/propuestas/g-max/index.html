@@ -2,14 +2,14 @@
 <!--
   Propuesta · G-MAX · Servicio de Detección (DET-024)
   División: Educación · Servicio: Detección (§4.1a) · Alianza: no
-  GENERADO por scripts/generar-habilidades-compacto.py (plantilla 1.3 (2026-10-05)) desde datos.json.
+  GENERADO por scripts/generar-habilidades-compacto.py (plantilla 2.0 (2026-10-07)) desde datos.json.
   No editar a mano: editar datos.json y regenerar. Estilos propios del deck: overrides.css.
   Fuente del insumo: Ficha de Levantamiento de G-MAX y lista de personal
 
-  Formato compacto de 6 slides (distinto del deck canónico de ~13):
-    1 Portada con punto de dolor · 2 Alcance · 3 Ruta · 4 Inversión · 5 Entregables · 6 Retorno esperado
-  Marcadores de detección de AcroForms (agregar-campo-precio.py), por página: «Propuesta Económica»
-  solo en la slide de inversión; «Lo que se llevan» y «Entregables» solo en la de entregables.
+  Formato compacto de 8 slides, en el orden de las preguntas del cliente (Ventas, 2026-10-07):
+    1 Portada · 2 Alcance · 3 Ruta · 4 Cómo trabajamos · 5 Entregables · 6 Retorno · 7 Inversión · 8 Próximos pasos
+  Marcadores de detección de AcroForms (agregar-campo-precio.py), por página: «Propuesta Económica» solo en la slide de
+  inversión; «Lo que se llevan» y «Entregables» solo en la de entregables; «Facilidad de pago» solo en la de pago.
   Campos AcroForm: Programa, Notas, PrecioBase, Descuento, PrecioTotal (inversión) y Entregables, Acreditacion (entregables). Se reposicionan con scripts/customize-habilidades-compacto.py.
 -->
 <html lang="es">
@@ -25,9 +25,9 @@
 
   <main class="deck">
 
-    <!-- 1 · Portada con punto de dolor -->
+    <!-- 1 · Portada: ¿cuál es mi problema? -->
     <section class="slide s-cover">
-      <span class="counter">01 / 06</span>
+      <span class="counter">01 / 08</span>
       <div class="logo-big">
         <img src="../../../logos/educacion/BLANCO.png" alt="Intezia Educación">
       </div>
@@ -67,55 +67,36 @@
       </div>
     </section>
 
-    <!-- 2 · Alcance -->
-    <section class="slide s-scope">
-      <span class="counter">02 / 06</span>
+    <!-- 2 · Alcance: qué vamos a hacer y para qué -->
+    <section class="slide s-scope roomy">
+      <span class="counter">02 / 08</span>
       <p class="eyebrow">02 · Alcance</p>
       <h2>Un logro inmediato en cada uno de los 4 frentes.</h2>
       <p class="sub">Nivelamos a las 51 personas y auditamos 22 departamentos, agrupados en <strong>4 frentes</strong> de trabajo presencial.</p>
 
-      <div class="scope-body">
-        <div class="scope-left">
-
-          <div class="scope-panel acc-y">
-            <div class="scope-head">
-              <span class="scope-tag">Detección</span>
-              <span class="scope-total"><b>7</b> entregables · 4 frentes y 1 etapa previa</span>
-            </div>
-            <ul class="scope-rows">
-              <li><span class="area">Arranque y Fundamentals <em>(etapa previa)</em> <small class="comp">Kick-off de 1 h. Grupo 1, corporativo y operativo (~29 personas): frentes 1 a 3. Grupo 2, asistencial (~22 personas): frente 4.</small></span><span class="units" style="--n:3"></span><span class="n">3</span></li>
-              <li><span class="area">Seguros y Cobranzas <small class="comp">Seguros. Frente prioritario.</small></span><span class="units" style="--n:1"></span><span class="n">1</span></li>
-              <li><span class="area">Atención al Paciente <small class="comp">Atención al Paciente. Frente prioritario.</small></span><span class="units" style="--n:1"></span><span class="n">1</span></li>
-              <li><span class="area">Resto corporativo <small class="comp">Gerencia General, Administración y Tesorería, Informes de gestión gerencial, Logística, Almacén, Farmacia, Servicios Generales, Tecnología, Procesos y Recursos Humanos. Dos jornadas de 4 h.</small></span><span class="units" style="--n:1"></span><span class="n">1</span></li>
-              <li><span class="area">Asistencial <small class="comp">Dirección Médica (con Hemodiálisis), Enfermería y Laboratorio.</small></span><span class="units" style="--n:1"></span><span class="n">1</span></li>
-            </ul>
+      <div class="scope-panels one" style="--np:1">
+        <div class="scope-panel acc-y">
+          <div class="scope-head">
+            <span class="scope-tag">Detección</span>
+            <span class="scope-total"><b>7</b> entregables · 4 frentes</span>
           </div>
-
+          <ul class="scope-rows">
+              <li><span class="area">Arranque y Fundamentals <em>(etapa previa)</em> <small class="comp">Kick-off de 1 h. Grupo 1, corporativo y operativo (~29 personas): frentes 1 a 3. Grupo 2, asistencial (~22 personas): frente 4.</small></span><span class="n">3 entregables</span><span class="para">Alinear el alcance con la Gerencia General y nivelar a las 51 personas en IA</span></li>
+              <li><span class="area">Seguros y Cobranzas <small class="comp">Seguros. Frente prioritario.</small></span><span class="n">1 entregable</span><span class="para">Ordenar cómo se arma el expediente de cobro de cada seguro y dejar un logro inmediato</span></li>
+              <li><span class="area">Atención al Paciente <small class="comp">Atención al Paciente. Frente prioritario.</small></span><span class="n">1 entregable</span><span class="para">Identificar el cuello de botella de Atención al Paciente y resolver un caso en sesión</span></li>
+              <li><span class="area">Resto corporativo <small class="comp">Gerencia General, Administración y Tesorería, Informes de gestión gerencial, Logística, Almacén, Farmacia, Servicios Generales, Tecnología, Procesos y Recursos Humanos. Dos jornadas de 4 h.</small></span><span class="n">1 entregable</span><span class="para">Cubrir 9 departamentos, con la estructura del informe de gestión mensual como candidato</span></li>
+              <li><span class="area">Asistencial <small class="comp">Dirección Médica (con Hemodiálisis), Enfermería y Laboratorio.</small></span><span class="n">1 entregable</span><span class="para">Levantar los procesos de Dirección Médica, Enfermería y Laboratorio con un logro inmediato</span></li>
+          </ul>
         </div>
+      </div>
 
-        <div class="scope-right">
-          <div class="scope-card">
-            <p class="scope-card-label">Cada frente, cuatro pasos</p>
-            <ol class="scope-steps">
-              <li>Entrevistamos al equipo sobre sus procesos reales.</li>
-              <li>Identificamos el cuello de botella más relevante.</li>
-              <li>Construimos en la sesión un logro inmediato aplicable.</li>
-              <li>Dejamos el inventario listo para el Mapa de Calor.</li>
-            </ol>
-          </div>
-          <div class="scope-card">
-            <p class="scope-card-label">Quién construye</p>
-            <p>Intezia levanta y construye cada logro en sesión presencial, con el líder y la mano derecha de cada departamento, sin tocar los sistemas actuales.</p>
-          </div>
-          <div class="scope-card scope-out">
-            <p class="scope-card-label">Fuera de este alcance</p>
-            <ul>
-              <li>La herramienta de IA a adoptar: la recomienda el Reporte Final.</li>
-              <li>Habilidades y Políticas, la ruta que sigue a la Detección.</li>
-              <li>Cambios en los sistemas actuales de cada frente.</li>
-            </ul>
-          </div>
-        </div>
+      <div class="scope-out">
+        <p class="scope-card-label">Fuera de este alcance</p>
+        <ul>
+          <li>La herramienta de IA a adoptar: la recomienda el Reporte Final.</li>
+          <li>Habilidades y Políticas, la ruta que sigue a la Detección.</li>
+          <li>Cambios en los sistemas actuales de cada frente: la Detección levanta y propone, no modifica.</li>
+        </ul>
       </div>
 
       <div class="foot">
@@ -124,45 +105,45 @@
       </div>
     </section>
 
-    <!-- 3 · Ruta -->
+    <!-- 3 · Ruta: qué pasa en cada fase -->
     <section class="slide s-route">
-      <span class="counter">03 / 06</span>
+      <span class="counter">03 / 08</span>
       <p class="eyebrow">03 · Ruta</p>
       <h2>Del kick-off al Reporte Final en 4 semanas.</h2>
       <p class="sub">Semanas de trabajo desde el arranque, en modalidad presencial. El <strong>Reporte Final</strong> se entrega en la semana 4.</p>
 
-      <div class="route-grid" style="--cols:3; --rows:1; --rowh:214px">
+      <div class="route-grid n1" style="--cols:3; --rows:1; --rowh:214px">
 
         <div class="rg-corner"></div>
         <div class="rg-phase rg-ph-1">
-          <span class="rg-phase-tag">Nivelación</span>
+          <span class="rg-phase-top"><span class="rg-phase-tag">Nivel</span><b class="rg-phase-n">2 entregables</b></span>
           <span class="rg-phase-date">Semana 1</span>
-          <span class="rg-phase-txt"><b>4 h</b> · Fundamentals en 2 grupos</span>
+          <span class="rg-phase-txt">Fundamentals en 2 grupos</span>
         </div>
         <div class="rg-phase rg-ph-2">
-          <span class="rg-phase-tag">Prioritarios</span>
+          <span class="rg-phase-top"><span class="rg-phase-tag">Clave</span><b class="rg-phase-n">2 entregables</b></span>
           <span class="rg-phase-date">Semana 2</span>
-          <span class="rg-phase-txt"><b>8 h</b> · los dos frentes clave</span>
+          <span class="rg-phase-txt">Los dos frentes clave</span>
         </div>
         <div class="rg-phase rg-ph-3 hi">
-          <span class="rg-phase-tag">Resto del mapa</span>
+          <span class="rg-phase-top"><span class="rg-phase-tag">Resto</span><b class="rg-phase-n">2 entregables</b></span>
           <span class="rg-phase-date">Semanas 3 y 4</span>
-          <span class="rg-phase-txt"><b>12 de 25 h</b> · corporativo y asistencial</span>
+          <span class="rg-phase-txt">Corporativo y asistencial</span>
         </div>
         <div class="rg-phase rg-fu">
-          <span class="rg-phase-tag">Cierre</span>
+          <span class="rg-phase-top"><span class="rg-phase-tag">Cierre</span></span>
           <span class="rg-phase-date">Reporte Final</span>
           <span class="rg-phase-txt">Trabajo del equipo consultor</span>
         </div>
 
         <div class="rg-front acc-y">
-          <span class="rg-front-tag">Los 4 frentes · S1-S4</span>
-          <span class="rg-front-h"><b>25 h</b> · Detección</span>
-          <span class="rg-front-areas">Kick-off, Fundamentals y auditoría presencial</span>
+          <span class="rg-front-h">Auditoría presencial</span>
+          <span class="rg-front-row"><span class="rg-front-tool">Detección</span><b class="rg-front-n">7 entregables</b></span>
+          <span class="rg-front-meta">semanas 1 a 4 · 25 h</span>
         </div>
-        <div class="rg-cell"><span class="rg-h"><b>4</b> h <i>2 entregables</i></span><p>Fundamentals presencial en 2 grupos: corporativo y operativo, y asistencial.</p></div>
-        <div class="rg-cell"><span class="rg-h"><b>8</b> h <i>2 entregables</i></span><p>Seguros y Cobranzas (4 h) y Atención al Paciente (4 h), los dos frentes prioritarios.</p></div>
-        <div class="rg-cell hi"><span class="rg-h"><b>12</b> h <i>2 entregables</i></span><p>Resto corporativo (8 h, en 2 jornadas) y Asistencial (4 h).</p></div>
+        <div class="rg-cell"><span class="rg-h"><b>2</b> entregables <i>4 h</i></span><p>Fundamentals presencial en 2 grupos: corporativo y operativo, y asistencial.</p></div>
+        <div class="rg-cell"><span class="rg-h"><b>2</b> entregables <i>8 h</i></span><p>Seguros y Cobranzas (4 h) y Atención al Paciente (4 h), los dos frentes prioritarios.</p></div>
+        <div class="rg-cell hi"><span class="rg-h"><b>2</b> entregables <i>12 h</i></span><p>Resto corporativo (8 h, en 2 jornadas) y Asistencial (4 h).</p></div>
 
         <div class="rg-follow" style="grid-column:5; grid-row:2 / span 1">
           <ul>
@@ -176,11 +157,11 @@
       <div class="route-miles" style="grid-template-columns:repeat(5,1fr)">
         <div class="mile"><span class="mile-d"></span><b>Semana 1 · Nivelación</b><p>Kick-off de 1 h y Fundamentals en 2 grupos, de ~29 y ~22 personas.</p></div>
         <div class="mile"><span class="mile-d"></span><b>Semana 2 · Prioritarios</b><p>Seguros y Cobranzas y Atención al Paciente: 4 h cada uno, con un logro inmediato.</p></div>
-        <div class="mile"><span class="mile-d"></span><b>Semana 3 · Resto corporativo</b><p>9 departamentos en 2 jornadas de 4 h, con un logro inmediato.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Semana 3 · Corporativo</b><p>9 departamentos en 2 jornadas de 4 h, con un logro inmediato.</p></div>
         <div class="mile"><span class="mile-d"></span><b>Semana 4 · Asistencial</b><p>Dirección Médica, Enfermería y Laboratorio: 4 h, con un logro inmediato.</p></div>
         <div class="mile"><span class="mile-d"></span><b>Semana 4 · Reporte Final</b><p>Mapa de Calor, Índice de Madurez y hoja de ruta, entregados a la Gerencia General.</p></div>
       </div>
-      <p class="route-note">S = semana de trabajo desde el arranque, cuya fecha se acuerda con G-MAX. Las 25 h son una proyección de sesión: 1 h de kick-off más 4, 8 y 12 h de las fases 1, 2 y 3. Los frentes se auditan en el orden de prioridad de la Gerencia General y el horario de cada sesión se acuerda con cada responsable.</p>
+      <p class="route-note">Las 25 h son una proyección de sesión: 1 h de kick-off más 4, 8 y 12 h de las fases 1, 2 y 3. La fecha de arranque se acuerda con G-MAX.</p>
 
       <div class="foot">
         <img src="../../../logos/educacion/BLANCO.png" alt="">
@@ -188,47 +169,41 @@
       </div>
     </section>
 
-    <!-- 4 · Inversión (hoja de cotización estándar, por horas) -->
-    <section class="slide s-price">
-      <span class="counter">04 / 06</span>
-      <h2 class="title">Inversión por horas de sesión.</h2>
-      <p class="price-intro">Propuesta Económica · Servicio de Detección</p>
+    <!-- 4 · Cómo trabajamos: pasos, por qué en ese orden, casos reales, práctica, datos y logística -->
+    <section class="slide s-method">
+      <span class="counter">04 / 08</span>
+      <p class="eyebrow">04 · Cómo trabajamos</p>
+      <h2>Así trabajamos cada frente.</h2>
+      <p class="sub">Trabajamos en sesión presencial con el líder y la mano derecha de cada frente, y dejamos todo listo para el Reporte Final.</p>
 
-      <div class="block">
-        <span class="block-eyebrow">Duración</span>
-        <p class="block-value">25 h de sesión presencial: kick-off (1 h), Fundamentals (4 h) y 4 frentes (20 h), en 4 semanas.</p>
+      <ol class="mt-steps" style="--n:4">
+          <li><b>Entrevistamos</b><span>Al líder y a su mano derecha, sobre los procesos reales de cada frente.</span></li>
+          <li><b>Identificamos</b><span>El cuello de botella más relevante de cada frente.</span></li>
+          <li><b>Construimos</b><span>En la misma sesión, un logro inmediato aplicable al frente.</span></li>
+          <li><b>Dejamos listo</b><span>El inventario de procesos, que alimenta el Mapa de Calor.</span></li>
+      </ol>
+      <div class="mt-strips">
+        <p class="mt-why auto"><b>Por qué en este orden</b> Primero la fase 1 (Fundamentals en 2 grupos); después la fase 2 (los dos frentes clave); al final la fase 3 (corporativo y asistencial).</p>
+        <p class="mt-who"><b>Quién construye</b> Intezia levanta y construye cada logro en sesión presencial, con el líder y la mano derecha de cada departamento, sin tocar los sistemas actuales.</p>
       </div>
 
-      <div class="block block-programa">
-        <span class="block-eyebrow">Programa</span>
-      </div>
-      <div class="multi-box programa-box" data-field="Programa"></div>
-
-      <div class="block block-cotizacion">
-        <span class="block-eyebrow">Cotización</span>
-      </div>
-
-      <span class="cot-label cot-label-base">Propuesta + Inversión</span>
-      <div class="cot-frame base-frame"></div>
-
-      <span class="cot-label cot-label-discount">Descuento</span>
-      <span class="cot-sign-minus">&minus;$</span>
-      <div class="cot-frame discount-frame"></div>
-      <span class="cot-urgent-note">Descuento válido por 15 días</span>
-
-      <span class="cot-label cot-label-total">TOTAL</span>
-      <div class="cot-frame total-frame"></div>
-
-      <p class="cot-validity">Cotización válida por 30 días.</p>
-      <div class="cot-terms-box">
-        <span class="cot-terms-label">Importante</span>
-        <p class="cot-terms-text">Este servicio se presta bajo nuestros <a href="https://drive.google.com/file/d/1PA-ZSt4KnyY5dpxXzgkIk6-yfGlV2eF8/view?usp=drive_link" target="_blank" rel="noopener">términos y condiciones</a>. Al avanzar con esta propuesta, ambas partes los aceptan.</p>
+      <div class="mt-info">
+        <div class="mt-card">
+          <p class="mt-card-label">Cómo funciona en la práctica</p>
+          <ul><li><b>Sesiones presenciales.</b> Kick-off de 1 h, Fundamentals en 2 grupos de 2 h y 4 frentes de 4 h, en las oficinas de G-MAX.</li><li><b>Misma estructura de 4 h.</b> 45 min de contexto y objetivos, 90 de levantamiento de procesos, 75 de construcción del logro y 30 de cierre.</li><li><b>Sin tocar los sistemas.</b> La Detección no cambia los sistemas de cada frente ni elige la herramienta de IA: la recomienda el Reporte Final.</li></ul>
+        </div>
+        <div class="mt-card">
+          <p class="mt-card-label">Cómo cuidamos sus datos</p>
+          <p>En las sesiones se levantan procesos, no datos: no se carga a ninguna herramienta de IA información que identifique a pacientes, personal o clientes de G-MAX. Qué datos salen de cada área queda ordenado en el Reporte Final.</p>
+        </div>
       </div>
 
-      <div class="block block-notes-container">
-        <span class="block-eyebrow">Notas</span>
+      <div class="mt-logi">
+        <div class="mt-tile"><span>Modalidad</span><b>Presencial, en las oficinas de G-MAX, a coordinar con la Gerencia General.</b></div>
+        <div class="mt-tile"><span>Participantes</span><b>51 personas en 22 departamentos; en cada frente, el líder y su mano derecha.</b></div>
+        <div class="mt-tile"><span>Ritmo de trabajo</span><b>Una o dos sesiones por semana, en el orden de prioridad de la Gerencia General.</b></div>
+        <div class="mt-tile"><span>Arranque</span><b>La fecha se acuerda con G-MAX y el horario de cada sesión, con cada responsable.</b></div>
       </div>
-      <div class="multi-box notas-box" data-field="Notas"></div>
 
       <div class="foot">
         <img src="../../../logos/educacion/NEGRO.png" alt="">
@@ -236,9 +211,9 @@
       </div>
     </section>
 
-    <!-- 5 · Entregables (catálogo + piezas transversales) -->
-    <section class="slide s-deliv">
-      <span class="counter">05 / 06</span>
+    <!-- 5 · Entregables: ¿con qué me quedo? (catálogo + piezas transversales) -->
+    <section class="slide s-deliv roomy">
+      <span class="counter">05 / 08</span>
       <p class="eyebrow">05 · Entregables</p>
       <div class="deliv-head">
         <h2>Lo que recibe G-MAX.</h2>
@@ -253,7 +228,7 @@
 
         <div class="deliv-col acc-y">
           <div class="da">
-            <p class="da-name">Arranque y Fundamentals (etapa previa) <i>3</i></p>
+            <p class="da-name">Arranque y Fundamentals (etapa previa)</p>
             <ul>
               <li>Alcance, calendario y responsables acordados</li>
               <li>Grupo 1 nivelado en IA: corporativo y operativo (~29)</li>
@@ -264,13 +239,13 @@
 
         <div class="deliv-col acc-y">
           <div class="da">
-            <p class="da-name">Seguros y Cobranzas <i>1</i></p>
+            <p class="da-name">Seguros y Cobranzas</p>
             <ul>
               <li>Inventario de procesos y logro inmediato de Seguros y Cobranzas</li>
             </ul>
           </div>
           <div class="da">
-            <p class="da-name">Atención al Paciente <i>1</i></p>
+            <p class="da-name">Atención al Paciente</p>
             <ul>
               <li>Inventario de procesos y logro inmediato de Atención al Paciente</li>
             </ul>
@@ -279,13 +254,13 @@
 
         <div class="deliv-col acc-y">
           <div class="da">
-            <p class="da-name">Resto corporativo <i>1</i></p>
+            <p class="da-name">Resto corporativo</p>
             <ul>
               <li>Inventario de procesos y logro inmediato de 9 departamentos</li>
             </ul>
           </div>
           <div class="da">
-            <p class="da-name">Asistencial <i>1</i></p>
+            <p class="da-name">Asistencial</p>
             <ul>
               <li>Inventario de procesos y logro inmediato del frente Asistencial</li>
             </ul>
@@ -296,7 +271,7 @@
 
       <div class="deliv-band">
         <div class="db-card db-1">
-          <span class="db-label">Entregables transversales</span>
+          <span class="db-label">Para todas las áreas</span>
         </div>
         <div class="db-card db-2">
           <span class="db-label">Valor inmediato</span>
@@ -312,9 +287,9 @@
       </div>
     </section>
 
-    <!-- 6 · Retorno esperado (método de cálculo). Sin estudios ni citas externas. -->
+    <!-- 6 · Retorno: ¿qué gano? (método de cálculo). Sin estudios ni citas externas. -->
     <section class="slide s-roi">
-      <span class="counter">06 / 06</span>
+      <span class="counter">06 / 08</span>
       <p class="eyebrow">06 · Retorno</p>
       <h2>Retorno esperado: decidir con datos.</h2>
       <p class="sub">El Reporte Final estima el retorno de cada oportunidad con los datos que cada frente entrega en su sesión.</p>
@@ -361,6 +336,100 @@
 
       <div class="foot">
         <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">G-MAX · DET-024</span>
+      </div>
+    </section>
+
+    <!-- 7 · Inversión (hoja de cotización estándar; antepenúltima slide) -->
+    <section class="slide s-price">
+      <span class="counter">07 / 08</span>
+      <h2 class="title">Inversión del proyecto.</h2>
+      <p class="price-intro">Propuesta Económica · Servicio de Detección</p>
+
+      <div class="block">
+        <span class="block-eyebrow">Duración</span>
+        <p class="block-value">Proyecto de 7 sesiones presenciales en 4 semanas. 25 horas de trabajo.</p>
+      </div>
+
+      <div class="block block-programa">
+        <span class="block-eyebrow">Programa</span>
+      </div>
+      <div class="multi-box programa-box" data-field="Programa"></div>
+
+      <div class="block block-cotizacion">
+        <span class="block-eyebrow">Cotización</span>
+      </div>
+
+      <span class="cot-label cot-label-base">Propuesta + Inversión</span>
+      <div class="cot-frame base-frame"></div>
+
+      <span class="cot-label cot-label-discount">Descuento</span>
+      <span class="cot-sign-minus">&minus;$</span>
+      <div class="cot-frame discount-frame"></div>
+      <span class="cot-urgent-note">Descuento válido por 15 días</span>
+
+      <span class="cot-label cot-label-total">TOTAL</span>
+      <div class="cot-frame total-frame"></div>
+
+      <p class="cot-validity">Cotización válida por 30 días.</p>
+      <div class="cot-terms-box">
+        <span class="cot-terms-label">Importante</span>
+        <p class="cot-terms-text">Este servicio se presta bajo nuestros <a href="https://drive.google.com/file/d/1PA-ZSt4KnyY5dpxXzgkIk6-yfGlV2eF8/view?usp=drive_link" target="_blank" rel="noopener">términos y condiciones</a>. Al avanzar con esta propuesta, ambas partes los aceptan.</p>
+      </div>
+
+      <div class="block block-notes-container">
+        <span class="block-eyebrow">Notas</span>
+      </div>
+      <div class="multi-box notas-box" data-field="Notas"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">G-MAX · DET-024</span>
+      </div>
+    </section>
+
+    <!-- 9 · Próximos pasos: qué hacer y a quién escribir (última slide) -->
+    <section class="slide s-next">
+      <span class="counter">08 / 08</span>
+      <p class="eyebrow">08 · Próximos pasos</p>
+      <h2>Tres pasos para arrancar.</h2>
+      <p class="sub">Esto es lo que sigue cuando G-MAX confirme la propuesta.</p>
+
+      <div class="nx-steps">
+        <div class="nx-step acc-y">
+          <span class="nx-num">1</span>
+          <b>Fecha de arranque</b>
+          <p>Confirmamos con la Gerencia General la fecha del kick-off y el orden de los frentes.</p>
+        </div>
+        <div class="nx-step acc-o">
+          <span class="nx-num">2</span>
+          <b>Accesos y agenda</b>
+          <p>Coordinamos las salas, los participantes de cada frente y el horario de cada sesión.</p>
+        </div>
+        <div class="nx-step acc-w">
+          <span class="nx-num">3</span>
+          <b>Kick-off de 1 hora</b>
+          <p>Presencial, con la Gerencia General: alcance, calendario y responsables.</p>
+        </div>
+      </div>
+
+      <div class="nx-contact">
+        <div class="nx-card nx-ase">
+          <span class="nx-label">¿Dudas? Escribe a tu asesora comercial</span>
+          <b class="nx-name">María Iribarren</b>
+          <span class="nx-role">Asesora comercial</span>
+          <p class="nx-line"><a href="mailto:miribarren@intezia.com">miribarren@intezia.com</a></p>
+          <p class="nx-line">+58 414 0570056</p>
+        </div>
+        <div class="nx-card nx-emp">
+          <span class="nx-label">Intezia</span>
+          <p class="nx-line">Intezia C.A J-505657950</p>
+          <p class="nx-line"><a href="mailto:servicio@intezia.com">servicio@intezia.com</a></p>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
         <span class="meta">G-MAX · DET-024</span>
       </div>
     </section>

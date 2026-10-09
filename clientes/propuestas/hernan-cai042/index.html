@@ -1,0 +1,431 @@
+<!doctype html>
+<!--
+  Propuesta · Hernán · Servicio de Habilidades (CAI-042)
+  División: Educación · Servicio: Habilidades (§4.1a) · Alianza: no
+  GENERADO por scripts/generar-habilidades-compacto.py (plantilla 2.0 (2026-10-07)) desde datos.json.
+  No editar a mano: editar datos.json y regenerar. Estilos propios del deck: overrides.css.
+  Fuente del insumo: Ficha de Levantamiento de Hernán (07/10/2026)
+
+  Formato compacto de 8 slides, en el orden de las preguntas del cliente (Ventas, 2026-10-07):
+    1 Portada · 2 Alcance · 3 Ruta · 4 Cómo trabajamos · 5 Entregables · 6 Retorno · 7 Inversión · 8 Próximos pasos
+  Marcadores de detección de AcroForms (agregar-campo-precio.py), por página: «Propuesta Económica» solo en la slide de
+  inversión; «Lo que se llevan» y «Entregables» solo en la de entregables; «Facilidad de pago» solo en la de pago.
+  Campos AcroForm: Programa, Notas, PrecioBase, Descuento, PrecioTotal (inversión) y Entregables, Acreditacion (entregables). Se reposicionan con scripts/customize-habilidades-compacto.py.
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Propuesta · Hernán · Intezia Educación</title>
+  <link rel="stylesheet" href="../_base/styles.css">
+  <link rel="stylesheet" href="habilidades-compacto.css">
+  <link rel="stylesheet" href="overrides.css">
+</head>
+<body>
+
+  <main class="deck">
+
+    <!-- 1 · Portada: ¿cuál es mi problema? -->
+    <section class="slide s-cover">
+      <span class="counter">01 / 08</span>
+      <div class="logo-big">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia Educación">
+      </div>
+      <div class="body">
+        <p class="eyebrow">Propuesta de proyecto · Servicio de Habilidades</p>
+        <h1 style="font-size:54px">
+          Cerebro Digital con Claude<br>
+          que cubre todo el rol<br>
+          <span class="hl">de Hernán</span>
+        </h1>
+        <p class="lead">
+          Este proyecto lleva a <strong>Hernán</strong> del chat básico a su propio <strong>Cerebro Digital</strong>: un asistente en Claude con memoria, que conoce la Liga Venezolana de Fútbol, Modo Caracas, La Salumería y sus otras vertientes, y lo ayuda a decidir y a automatizar tareas repetitivas.
+        </p>
+        <div class="pain-strip">
+          <div class="pain-item">
+            <span class="pain-num">4 roles</span>
+            <span class="pain-lbl">a la vez: dirección comercial de la Liga, dos restaurantes y negocios familiares.</span>
+          </div>
+          <div class="pain-item">
+            <span class="pain-num">Chat</span>
+            <span class="pain-lbl">básico es hoy el uso de Claude, sin saber aprovecharlo más allá de lo elemental.</span>
+          </div>
+          <div class="pain-item">
+            <span class="pain-num">1 clon</span>
+            <span class="pain-lbl">digital propio pidió construir, con la información de su empresa y su rol completo.</span>
+          </div>
+          <div class="pain-item">
+            <span class="pain-num">Sesiones</span>
+            <span class="pain-lbl">constantes pidió, no un servicio puntual: aprender mientras construye su cerebro.</span>
+          </div>
+        </div>
+        <p class="pain-src">Fuente: Ficha de Levantamiento de Hernán (07/10/2026).</p>
+      </div>
+      <div class="id-line">
+        <span class="codigo">Código: CAI-042</span>
+        <span class="cliente">Hernán</span>
+      </div>
+    </section>
+
+    <!-- 2 · Alcance: qué vamos a hacer y para qué -->
+    <section class="slide s-scope roomy">
+      <span class="counter">02 / 08</span>
+      <p class="eyebrow">02 · Alcance</p>
+      <h2>Cinco entregables para un solo cerebro digital.</h2>
+      <p class="sub"><strong>Claude</strong> aprende el contexto de las 4 actividades de Hernán y trabaja con su criterio.</p>
+
+      <div class="scope-panels one" style="--np:1">
+        <div class="scope-panel acc-y">
+          <div class="scope-head">
+            <span class="scope-tag">Claude</span>
+            <span class="scope-total"><b>5</b> entregables · 3 bloques</span>
+          </div>
+          <ul class="scope-rows">
+              <li><span class="area">Fundamentos y contexto <small class="comp">Fundamentos de Claude y su Project con memoria propia. 2 sesiones, 4 h.</small></span><span class="n">2 entregables</span><span class="para">Aprender Claude más allá del chat y dejar el contexto de sus 4 actividades en su Project</span></li>
+              <li><span class="area">Memoria conectada <small class="comp">Grafo de notas en Obsidian y una Skill. 2 sesiones, 4 h.</small></span><span class="n">2 entregables</span><span class="para">Conectar todo su rol en un grafo de notas y sumar una instrucción reutilizable</span></li>
+              <li><span class="area">Uso real <small class="comp">Automatización y plan de uso. 1 sesión, 2 h.</small></span><span class="n">1 entregable</span><span class="para">Automatizar un proceso real y dejar su plan de uso semanal</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="scope-out">
+        <p class="scope-card-label">Fuera de este alcance</p>
+        <ul>
+          <li>Un cerebro por cada negocio o para otras personas: este proyecto es uno solo, para Hernán y todo su rol.</li>
+          <li>Desarrollos o integraciones a medida con los sistemas de la Liga o de los restaurantes.</li>
+          <li>Cargar datos confidenciales o de terceros: solo entra la información que Hernán decide compartir.</li>
+          <li>Las licencias de Claude y de otras herramientas, que van aparte.</li>
+        </ul>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Hernán · CAI-042</span>
+      </div>
+    </section>
+
+    <!-- 3 · Ruta: qué pasa en cada fase -->
+    <section class="slide s-route">
+      <span class="counter">03 / 08</span>
+      <p class="eyebrow">03 · Ruta</p>
+      <h2>De Claude a su cerebro en 5 semanas.</h2>
+      <p class="sub">Semanas de trabajo desde el arranque. La garantía y el seguimiento a 30, 60 y 90 días corren desde el cierre de las sesiones.</p>
+
+      <div class="route-grid n1" style="--cols:3; --rows:1; --rowh:214px">
+
+        <div class="rg-corner"></div>
+        <div class="rg-phase rg-ph-1">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Base</span><b class="rg-phase-n">2 entregables</b></span>
+          <span class="rg-phase-date">Semanas 1 y 2</span>
+          <span class="rg-phase-txt">Claude y contexto</span>
+        </div>
+        <div class="rg-phase rg-ph-2">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Grafo</span><b class="rg-phase-n">2 entregables</b></span>
+          <span class="rg-phase-date">Semanas 3 y 4</span>
+          <span class="rg-phase-txt">Grafo y Skill</span>
+        </div>
+        <div class="rg-phase rg-ph-3 hi">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Uso</span><b class="rg-phase-n">1 entregable</b></span>
+          <span class="rg-phase-date">Semana 5</span>
+          <span class="rg-phase-txt">Automatización</span>
+        </div>
+        <div class="rg-phase rg-fu">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Garantía</span></span>
+          <span class="rg-phase-date">30, 60 y 90 días</span>
+          <span class="rg-phase-txt">Seguimiento desde el cierre de las sesiones</span>
+        </div>
+
+        <div class="rg-front acc-y">
+          <span class="rg-front-h">En vivo con Hernán</span>
+          <span class="rg-front-row"><span class="rg-front-tool">Claude</span><b class="rg-front-n">5 entregables</b></span>
+          <span class="rg-front-meta">semanas 1 a 5 · 10 h</span>
+        </div>
+        <div class="rg-cell"><span class="rg-h"><b>2</b> entregables <i>4 h</i></span><p>Claude más allá del chat y su Project con el contexto de sus 4 actividades.</p></div>
+        <div class="rg-cell"><span class="rg-h"><b>2</b> entregables <i>4 h</i></span><p>Su rol completo en un grafo de notas y una instrucción reutilizable.</p></div>
+        <div class="rg-cell hi"><span class="rg-h"><b>1</b> entregable <i>2 h</i></span><p>Un proceso real automatizado y su plan de uso semanal.</p></div>
+
+        <div class="rg-follow" style="grid-column:5; grid-row:2 / span 1">
+          <ul>
+            <li><b>30 días</b><span>Uso semanal del cerebro</span></li>
+            <li><b>60 días</b><span>Ajustes y nuevas construcciones</span></li>
+            <li><b>90 días</b><span>Tiempo recuperado contra la línea base</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="route-miles" style="grid-template-columns:repeat(5,1fr)">
+        <div class="mile"><span class="mile-d"></span><b>Kick-off · aparte</b><p>1 h para dejar lista su cuenta, reunir su material y acordar la agenda.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Semanas 1 y 2 · Base</b><p>Claude más allá del chat y su Project con el contexto de sus actividades.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Semanas 3 y 4 · Grafo</b><p>Su rol completo en un grafo de Obsidian y una instrucción reutilizable.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Semana 5 · Uso</b><p>Un proceso real automatizado y su plan de uso semanal.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>30 · 60 · 90 días</b><p>Seguimiento: uso del cerebro, ajustes y tiempo recuperado.</p></div>
+      </div>
+      <p class="route-note">Las 10 h son una proyección de sesión: 4 h en las semanas 1 y 2, 4 h en las semanas 3 y 4 y 2 h en la semana 5, a razón de una sesión de 2 h por semana. El kick-off de 1 h es aparte y no suma horas.</p>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Hernán · CAI-042</span>
+      </div>
+    </section>
+
+    <!-- 4 · Cómo trabajamos: pasos, por qué en ese orden, casos reales, práctica, datos y logística -->
+    <section class="slide s-method">
+      <span class="counter">04 / 08</span>
+      <p class="eyebrow">04 · Cómo trabajamos</p>
+      <h2>Así trabajamos cada sesión.</h2>
+      <p class="sub">Sesiones en vivo con Hernán, sobre sus casos reales, hasta que usa su cerebro por sí mismo.</p>
+
+      <ol class="mt-steps" style="--n:4">
+          <li><b>Construimos</b><span>Con Hernán, en sesión en vivo y sobre un caso real.</span></li>
+          <li><b>Probamos</b><span>Con su información y sus tareas, hasta que funcione.</span></li>
+          <li><b>Adoptamos</b><span>Hernán lo usa solo, cada semana.</span></li>
+          <li><b>Medimos</b><span>El tiempo recuperado contra la línea base, a 30, 60 y 90 días.</span></li>
+      </ol>
+      <div class="mt-strips">
+        <p class="mt-why"><b>Por qué en este orden</b> Primero se aprende Claude y se deja el contexto de sus actividades; después se conecta todo en un grafo y se suma una instrucción reutilizable; al final se automatiza un proceso real.</p>
+        <p class="mt-who"><b>Quién construye</b> Se construye <strong>con Hernán, en sesiones en vivo</strong> y sobre casos reales de su día, hasta que lo usa solo.</p>
+      </div>
+
+      <div class="mt-info">
+        <div class="mt-card">
+          <p class="mt-card-label">Cómo funciona en la práctica</p>
+          <ul><li><b>Un solo cerebro.</b> Se diseña transversal: la Liga, los restaurantes y los negocios familiares comparten un mismo contexto y criterio, sin un asistente por negocio.</li><li><b>Desde cero, en vivo.</b> Cada sesión parte de lo que Hernán ya usa y de casos reales de su día: no hace falta conocimiento técnico previo.</li><li><b>Claude Pro y Obsidian.</b> Parte de su Claude Pro actual: la segunda sesión confirma si el plan alcanza. Obsidian es gratuito y se instala en la tercera sesión.</li></ul>
+        </div>
+        <div class="mt-card">
+          <p class="mt-card-label">Cómo cuidamos sus datos</p>
+          <p>Solo se carga en el cerebro lo que Hernán decide compartir: no se suben datos confidenciales ni de terceros sin su autorización. Los criterios de uso seguro se acuerdan en la primera sesión y se repasan en la última.</p>
+        </div>
+      </div>
+
+      <div class="mt-logi">
+        <div class="mt-tile"><span>Modalidad</span><b>Sesiones en vivo con Hernán; la modalidad (remota o presencial) se acuerda en el kick-off.</b></div>
+        <div class="mt-tile"><span>Participantes</span><b>Una sola persona, Hernán, con Intezia al lado en cada sesión.</b></div>
+        <div class="mt-tile"><span>Ritmo de trabajo</span><b>Una sesión de 2 h por semana durante 5 semanas.</b></div>
+        <div class="mt-tile"><span>Arranque</span><b>La fecha se acuerda con Hernán; un kick-off de 1 h, aparte, deja lista su cuenta y su material.</b></div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Hernán · CAI-042</span>
+      </div>
+    </section>
+
+    <!-- 5 · Entregables: ¿con qué me quedo? (catálogo + piezas transversales) -->
+    <section class="slide s-deliv roomy">
+      <span class="counter">05 / 08</span>
+      <p class="eyebrow">05 · Entregables</p>
+      <div class="deliv-head">
+        <h2>Lo que recibe Hernán.</h2>
+        <p class="deliv-sub"><span class="nw">Lo que se llevan</span>: <strong>5 entregables</strong> en 3 bloques, más el seguimiento a 30, 60 y 90 días que mide su efecto.</p>
+      </div>
+
+      <div class="deliv-carriles" style="--ncols:3">
+        <span class="dc acc-y" style="grid-column: span 3">Claude · 5 entregables</span>
+      </div>
+
+      <div class="deliv-cols" style="--ncols:3">
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">Fundamentos y contexto</p>
+            <ul>
+              <li>Claude más allá del chat y mapa de sus 4 actividades</li>
+              <li>Project de Claude con el contexto de sus actividades</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">Memoria conectada</p>
+            <ul>
+              <li>Grafo de notas en Obsidian con todo su rol conectado</li>
+              <li>Instrucción reutilizable (Skill) para una tarea real</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">Uso real</p>
+            <ul>
+              <li>Automatización de un proceso real y plan de uso semanal</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="deliv-band">
+        <div class="db-card db-1">
+          <span class="db-label">Para todo el proyecto</span>
+        </div>
+        <div class="db-card db-2">
+          <span class="db-label">Valor inmediato</span>
+        </div>
+      </div>
+      <!-- Cajas multiline editables (vacías en HTML: el contenido vive dentro del AcroForm /V). -->
+      <div class="multi-box db-box db-box-1" data-field="Entregables"></div>
+      <div class="multi-box db-box db-box-2" data-field="Acreditacion"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Hernán · CAI-042</span>
+      </div>
+    </section>
+
+    <!-- 6 · Retorno: ¿qué gano? (método de cálculo). Sin estudios ni citas externas. -->
+    <section class="slide s-roi">
+      <span class="counter">06 / 08</span>
+      <p class="eyebrow">06 · Retorno</p>
+      <h2>Retorno esperado: tiempo recuperado.</h2>
+      <p class="sub">Se calcula con los datos de Hernán, se confirma con la línea base de las primeras sesiones y se mide a 30, 60 y 90 días.</p>
+
+      <div class="roi-body">
+        <div class="roi-panel">
+          <p class="roi-panel-title">Cómo se calcula</p>
+          <ol class="roi-steps">
+            <li><b>Tareas repetitivas</b><span>Cuáles son y cuántas veces por semana se repiten en sus 4 actividades, levantadas en la primera sesión.</span></li>
+            <li><b>Tiempo actual</b><span>Cuánto dedica hoy a cada una. Es la <strong>línea base</strong>.</span></li>
+            <li><b>Tiempo con el cerebro</b><span>Lo que toma la misma tarea con el cerebro ya en uso.</span></li>
+            <li><b>Horas recuperadas</b><span>Diferencia entre ambos tiempos, por semana.</span></li>
+            <li><b>Uso real</b><span>Cuántas veces por semana usa el cerebro, para saber qué ajustar.</span></li>
+          </ol>
+        </div>
+
+        <div class="roi-right">
+          <p class="roi-right-title">Metas, desde el cierre de las sesiones</p>
+          <div class="roi-card">
+            <b>30 días</b>
+            <p>El cerebro en uso real cada semana, con su Project y su grafo al día.</p>
+          </div>
+          <div class="roi-card">
+            <b>60 días</b>
+            <p>Ajustes hechos y nuevas construcciones contadas contra la línea base.</p>
+          </div>
+          <div class="roi-card">
+            <b>90 días</b>
+            <p>Medición del tiempo recuperado en sus tareas repetitivas.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="roi-dest-wrap">
+        <p class="roi-dest-title">Hacia dónde va el proyecto</p>
+        <div class="roi-dest">
+          <div class="rd-item"><b>Un solo cerebro</b><p>Sus cuatro actividades comparten un asistente que conoce su contexto y su criterio.</p></div>
+          <div class="rd-item"><b>Tiempo para decidir</b><p>Si el tiempo se libera, puede dedicarlo a <strong>decidir y a crecer</strong> sus negocios, sin trabajar más horas.</p></div>
+          <div class="rd-item"><b>Un sistema que crece</b><p>Con el resultado medido, Hernán decide si amplía lo que el cerebro hace por él.</p></div>
+        </div>
+      </div>
+
+      <div class="roi-hook"><p>Hacia la semana 18 (5 semanas de trabajo más 90 días de seguimiento), Hernán contará con su tiempo recuperado medido.</p></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Hernán · CAI-042</span>
+      </div>
+    </section>
+
+    <!-- 7 · Inversión (hoja de cotización estándar; antepenúltima slide) -->
+    <section class="slide s-price">
+      <span class="counter">07 / 08</span>
+      <h2 class="title">Inversión del proyecto.</h2>
+      <p class="price-intro">Propuesta Económica · Servicio de Habilidades</p>
+
+      <div class="block">
+        <span class="block-eyebrow">Duración</span>
+        <p class="block-value">Proyecto de 5 entregables a realizar en un total de 5 semanas, con seguimiento y garantía a 30, 60 y 90 días. 10 horas de trabajo.</p>
+      </div>
+
+      <div class="block block-programa">
+        <span class="block-eyebrow">Programa</span>
+      </div>
+      <div class="multi-box programa-box" data-field="Programa"></div>
+
+      <div class="block block-cotizacion">
+        <span class="block-eyebrow">Cotización</span>
+      </div>
+
+      <span class="cot-label cot-label-base">Propuesta + Inversión</span>
+      <div class="cot-frame base-frame"></div>
+
+      <span class="cot-label cot-label-discount">Descuento</span>
+      <span class="cot-sign-minus">&minus;$</span>
+      <div class="cot-frame discount-frame"></div>
+      <span class="cot-urgent-note">Descuento válido por 15 días</span>
+
+      <span class="cot-label cot-label-total">TOTAL</span>
+      <div class="cot-frame total-frame"></div>
+
+      <p class="cot-validity">Cotización válida por 30 días.</p>
+      <div class="cot-terms-box">
+        <span class="cot-terms-label">Importante</span>
+        <p class="cot-terms-text">Este servicio se presta bajo nuestros <a href="https://drive.google.com/file/d/1PA-ZSt4KnyY5dpxXzgkIk6-yfGlV2eF8/view?usp=drive_link" target="_blank" rel="noopener">términos y condiciones</a>. Al avanzar con esta propuesta, ambas partes los aceptan.</p>
+      </div>
+
+      <div class="cot-garantia-badge">
+        <span class="cot-garantia-tag">Garantía 30-60-90</span>
+        <p class="cot-garantia-text">Estamos contigo hasta que la habilidad quede instalada.</p>
+      </div>
+
+      <div class="block block-notes-container">
+        <span class="block-eyebrow">Notas</span>
+      </div>
+      <div class="multi-box notas-box" data-field="Notas"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Hernán · CAI-042</span>
+      </div>
+    </section>
+
+    <!-- 9 · Próximos pasos: qué hacer y a quién escribir (última slide) -->
+    <section class="slide s-next">
+      <span class="counter">08 / 08</span>
+      <p class="eyebrow">08 · Próximos pasos</p>
+      <h2>Tres pasos para arrancar.</h2>
+      <p class="sub">Esto es lo que sigue cuando Hernán confirme la propuesta.</p>
+
+      <div class="nx-steps">
+        <div class="nx-step acc-y">
+          <span class="nx-num">1</span>
+          <b>Fecha de arranque</b>
+          <p>Confirmamos con Hernán la fecha de arranque y el día y la hora de las sesiones semanales.</p>
+        </div>
+        <div class="nx-step acc-o">
+          <span class="nx-num">2</span>
+          <b>Cuenta y material</b>
+          <p>Dejamos lista su cuenta de Claude y reunimos el material de sus actividades que decida compartir.</p>
+        </div>
+        <div class="nx-step acc-w">
+          <span class="nx-num">3</span>
+          <b>Kick-off de 1 hora</b>
+          <p>Una reunión para alinear objetivos, ver cómo trabaja hoy y acordar los casos reales de cada sesión.</p>
+        </div>
+      </div>
+
+      <div class="nx-contact">
+        <div class="nx-card nx-ase">
+          <span class="nx-label">¿Dudas? Escribe a tu asesora comercial</span>
+          <b class="nx-name">Verónica Rubio</b>
+          <span class="nx-role">Asesora comercial</span>
+          <p class="nx-line"><a href="mailto:vrubio01@intezia.com">vrubio01@intezia.com</a></p>
+          <p class="nx-line">+58 422 3355505</p>
+        </div>
+        <div class="nx-card nx-emp">
+          <span class="nx-label">Intezia</span>
+          <p class="nx-line">Intezia C.A J-505657950</p>
+          <p class="nx-line"><a href="mailto:servicio@intezia.com">servicio@intezia.com</a></p>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Hernán · CAI-042</span>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

@@ -1,0 +1,479 @@
+<!doctype html>
+<!--
+  Propuesta · Metalurgia Metalblanc · Servicio de Detección (DET-028)
+  División: Educación · Servicio: Detección (§4.1a) · Alianza: no
+  GENERADO por scripts/generar-habilidades-compacto.py (plantilla 2.0 (2026-10-07)) desde datos.json.
+  No editar a mano: editar datos.json y regenerar. Estilos propios del deck: overrides.css.
+  Fuente del insumo: Ficha de Levantamiento de Metalblanc (08/10/2026) y resumen de la reunión de la asesora
+
+  Formato compacto de 9 slides, en el orden de las preguntas del cliente (Ventas, 2026-10-07):
+    1 Portada · 2 Alcance · 3 Ruta · 4 Cómo trabajamos · 5 Entregables · 6 Retorno · 7 Inversión · 8 Facilidad de pago · 9 Próximos pasos
+  Marcadores de detección de AcroForms (agregar-campo-precio.py), por página: «Propuesta Económica» solo en la slide de
+  inversión; «Lo que se llevan» y «Entregables» solo en la de entregables; «Facilidad de pago» solo en la de pago.
+  Campos AcroForm: Programa, Notas, PrecioBase, Descuento, PrecioTotal (inversión), PagoCuota1..2 (pago) y Entregables, Acreditacion (entregables). Se reposicionan con scripts/customize-habilidades-compacto.py.
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Propuesta · Metalurgia Metalblanc · Intezia Educación</title>
+  <link rel="stylesheet" href="../_base/styles.css">
+  <link rel="stylesheet" href="habilidades-compacto.css">
+  <link rel="stylesheet" href="overrides.css">
+</head>
+<body>
+
+  <main class="deck">
+
+    <!-- 1 · Portada: ¿cuál es mi problema? -->
+    <section class="slide s-cover">
+      <span class="counter">01 / 09</span>
+      <div class="logo-big">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia Educación">
+      </div>
+      <div class="body">
+        <p class="eyebrow">Propuesta de proyecto · Servicio de Detección</p>
+        <h1 style="font-size:46px">
+          Presupuestos ágiles y mapa de<br>
+          oportunidades de IA<br>
+          <span class="hl">en 5 áreas de Metalblanc</span>
+        </h1>
+        <p class="lead">
+          Este proyecto nivela al equipo de 11 personas, arma con IA la <strong>estructura de costos</strong> y un primer presupuesto ágil, y levanta los procesos de 5 áreas para decidir con datos qué automatizar primero.
+        </p>
+        <div class="pain-strip">
+          <div class="pain-item">
+            <span class="pain-num">A mano</span>
+            <span class="pain-lbl">se arma cada presupuesto desde cero, sin estructura de costos para ninguna de sus líneas.</span>
+          </div>
+          <div class="pain-item">
+            <span class="pain-num">Clientes</span>
+            <span class="pain-lbl">que se van con la competencia cuando el presupuesto tarda demasiado.</span>
+          </div>
+          <div class="pain-item">
+            <span class="pain-num">Hojas</span>
+            <span class="pain-lbl">de cálculo guardan hoy la información del negocio, sin un sistema que la ordene.</span>
+          </div>
+          <div class="pain-item">
+            <span class="pain-num">Sin guía</span>
+            <span class="pain-lbl">para usar la IA: el equipo la usa suelta y sin formación previa.</span>
+          </div>
+        </div>
+        <p class="pain-src">Fuente: Ficha de Levantamiento de Metalblanc (08/10/2026, 11 personas).</p>
+      </div>
+      <div class="id-line">
+        <span class="codigo">Código: DET-028</span>
+        <span class="cliente">Metalblanc</span>
+      </div>
+    </section>
+
+    <!-- 2 · Alcance: qué vamos a hacer y para qué -->
+    <section class="slide s-scope compact">
+      <span class="counter">02 / 09</span>
+      <p class="eyebrow">02 · Alcance</p>
+      <h2>Un logro inmediato en cada una de las 5 áreas.</h2>
+      <p class="sub">Nivelamos a las <strong>11 personas</strong> y auditamos <strong>5 áreas</strong> de Metalblanc, con la <strong>estructura de costos</strong> primero.</p>
+
+      <div class="scope-panels one" style="--np:1">
+        <div class="scope-panel acc-y">
+          <div class="scope-head">
+            <span class="scope-tag">Detección</span>
+            <span class="scope-total"><b>6</b> entregables · 5 áreas</span>
+          </div>
+          <ul class="scope-rows">
+              <li><span class="area">Fundamentals <em>(etapa previa)</em> <small class="comp">Un solo grupo con las 11 personas de Metalblanc.</small></span><span class="n">1 entregable</span><span class="para">Que las 11 personas hablen un lenguaje común de IA antes de auditar las 5 áreas</span></li>
+              <li><span class="area">Estructura de costos <small class="comp">Entre Producción y Administración. Su prioridad, con productos estándar y personalizados.</small></span><span class="n">1 entregable</span><span class="para">Armar la estructura de costos y acelerar los presupuestos, su prioridad y primer logro</span></li>
+              <li><span class="area">Producción <small class="comp">Manufactura: cortes CNC, plasma y láser, y su línea estándar y personalizada.</small></span><span class="n">1 entregable</span><span class="para">Ordenar cómo se produce y se registra, y dejar un logro inmediato en manufactura</span></li>
+              <li><span class="area">Administración <small class="comp">Procesos administrativos que hoy viven en hojas de cálculo.</small></span><span class="n">1 entregable</span><span class="para">Ordenar los procesos administrativos de las hojas de cálculo, con un logro inmediato</span></li>
+              <li><span class="area">Ventas <small class="comp">Atención de clientes y camino hasta el presupuesto.</small></span><span class="n">1 entregable</span><span class="para">Ordenar el camino entre la solicitud del cliente y el presupuesto, con un logro inmediato</span></li>
+              <li><span class="area">Marketing <small class="comp">Contenido gráfico y de marketing, hoy con Gemini.</small></span><span class="n">1 entregable</span><span class="para">Ordenar cómo se crea el contenido gráfico y de marketing, con un logro inmediato</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="scope-out">
+        <p class="scope-card-label">Fuera de este alcance</p>
+        <ul>
+          <li>Desarrollar una app de presupuestos o implementar un ERP: la Detección entrega el mapa y las bases, eso viene después.</li>
+          <li>Construir y poner en uso las soluciones de cada área: son el horizonte que sigue a la Detección (Habilidades).</li>
+          <li>Licencias de IA: no se incluyen. El valor de lista de Claude Team se envía en un documento aparte.</li>
+        </ul>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Metalblanc · DET-028</span>
+      </div>
+    </section>
+
+    <!-- 3 · Ruta: qué pasa en cada fase -->
+    <section class="slide s-route">
+      <span class="counter">03 / 09</span>
+      <p class="eyebrow">03 · Ruta</p>
+      <h2>Del kick-off al Reporte Final en 4 semanas.</h2>
+      <p class="sub">Semanas de trabajo desde el arranque. El <strong>Reporte Final</strong> se entrega en la semana 4.</p>
+
+      <div class="route-grid n1" style="--cols:3; --rows:1; --rowh:214px">
+
+        <div class="rg-corner"></div>
+        <div class="rg-phase rg-ph-1">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Nivel</span><b class="rg-phase-n">1 entregable</b></span>
+          <span class="rg-phase-date">Semana 1</span>
+          <span class="rg-phase-txt">Fundamentals en 1 grupo</span>
+        </div>
+        <div class="rg-phase rg-ph-2 hi">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Costos</span><b class="rg-phase-n">2 entregables</b></span>
+          <span class="rg-phase-date">Semana 2</span>
+          <span class="rg-phase-txt">Estructura de costos y Producción</span>
+        </div>
+        <div class="rg-phase rg-ph-3">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Mapa</span><b class="rg-phase-n">3 entregables</b></span>
+          <span class="rg-phase-date">Semanas 3 y 4</span>
+          <span class="rg-phase-txt">Tres áreas y Reporte Final</span>
+        </div>
+        <div class="rg-phase rg-fu">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Cierre</span></span>
+          <span class="rg-phase-date">Reporte Final</span>
+          <span class="rg-phase-txt">Trabajo del equipo consultor</span>
+        </div>
+
+        <div class="rg-front acc-y">
+          <span class="rg-front-h">Auditoría de 5 áreas</span>
+          <span class="rg-front-row"><span class="rg-front-tool">Detección</span><b class="rg-front-n">6 entregables</b></span>
+          <span class="rg-front-meta">semanas 1 a 4 · 22 h</span>
+        </div>
+        <div class="rg-cell"><span class="rg-h"><b>1</b> entregable <i>2 h</i></span><p>Fundamentals de 2 h para las 11 personas, en un solo grupo.</p></div>
+        <div class="rg-cell hi"><span class="rg-h"><b>2</b> entregables <i>8 h</i></span><p>Estructura de costos y Producción, 4 h cada una: el primer logro, presupuestos ágiles.</p></div>
+        <div class="rg-cell"><span class="rg-h"><b>3</b> entregables <i>12 h</i></span><p>Administración, Ventas y Marketing, 4 h cada una, y el Reporte Final.</p></div>
+
+        <div class="rg-follow" style="grid-column:5; grid-row:2 / span 1">
+          <ul>
+            <li><b>Priorizar</b><span>Hallazgos por impacto y riesgo.</span></li>
+            <li><b>Reportar</b><span>Diagnóstico y mapa de oportunidades.</span></li>
+            <li><b>Proyectar</b><span>Hoja de ruta hacia las soluciones.</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="route-miles" style="grid-template-columns:repeat(4,1fr)">
+        <div class="mile"><span class="mile-d"></span><b>Semana 1 · Nivelación</b><p>Kick-off y Fundamentals de 2 h para las 11 personas, en un solo grupo.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Semana 2 · Presupuestos</b><p>Estructura de costos y Producción, 4 h cada una, con el presupuesto ágil como primer logro.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Semana 3 · Procesos</b><p>Administración y Ventas, 4 h cada una, con un logro inmediato por área.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Semana 4 · Reporte Final</b><p>Marketing (4 h) y el Reporte Final: Mapa de Calor, Índice de Madurez y hoja de ruta.</p></div>
+      </div>
+      <p class="route-note">Las 22 h son una proyección de sesión: 2, 8 y 12 h de las fases 1, 2 y 3. El kick-off de arranque no suma horas. La fecha de arranque se acuerda con Metalurgia Metalblanc; el horario de cada sesión, con cada responsable.</p>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Metalblanc · DET-028</span>
+      </div>
+    </section>
+
+    <!-- 4 · Cómo trabajamos: pasos, por qué en ese orden, casos reales, práctica, datos y logística -->
+    <section class="slide s-method">
+      <span class="counter">04 / 09</span>
+      <p class="eyebrow">04 · Cómo trabajamos</p>
+      <h2>Así trabajamos cada área.</h2>
+      <p class="sub">Trabajamos en sesión con las personas de cada área y dejamos todo listo para el Reporte Final.</p>
+
+      <ol class="mt-steps" style="--n:4">
+          <li><b>Entrevistamos</b><span>A las personas de cada área, sobre sus procesos reales.</span></li>
+          <li><b>Identificamos</b><span>El cuello de botella más relevante de cada área.</span></li>
+          <li><b>Construimos</b><span>En la misma sesión, un logro inmediato aplicable al área.</span></li>
+          <li><b>Dejamos listo</b><span>El inventario de procesos, que alimenta el Mapa de Calor.</span></li>
+      </ol>
+      <div class="mt-strips">
+        <p class="mt-why"><b>Por qué en este orden</b> Primero se nivela al equipo; después Estructura de costos y Producción, donde está la urgencia; al final Administración, Ventas y Marketing.</p>
+        <p class="mt-who"><b>Quién construye</b> Intezia levanta y construye cada logro en sesión, con las personas de cada área, sobre su forma de trabajo actual y sus hojas de cálculo.</p>
+      </div>
+
+      <div class="mt-info">
+        <div class="mt-card">
+          <p class="mt-card-label">Cómo funciona en la práctica</p>
+          <ul><li><b>Sesiones por área.</b> Fundamentals de 2 h para las 11 personas y una sesión de 4 h por área, con quienes la conocen.</li><li><b>Desde sus hojas de cálculo.</b> El logro de cada área parte de cómo trabaja hoy el equipo en Drive y Sheets, sin exigirle un sistema nuevo.</li><li><b>Acceso a la herramienta.</b> El acceso a Claude depende del país desde donde se use. Antes de arrancar se define cómo hacerlo dentro de las condiciones del proveedor; si no es viable, se usa Gemini.</li></ul>
+        </div>
+        <div class="mt-card">
+          <p class="mt-card-label">Cómo cuidamos sus datos</p>
+          <p>Solo se carga a la herramienta de IA lo que Metalblanc decide compartir, sin datos personales de sus clientes. Con Claude Team, el contenido de la empresa no se usa para entrenar los modelos (términos comerciales del proveedor).</p>
+        </div>
+      </div>
+
+      <div class="mt-logi">
+        <div class="mt-tile"><span>Modalidad</span><b>A coordinar con la dirección de Metalblanc, según lo que convenga a su operación.</b></div>
+        <div class="mt-tile"><span>Participantes</span><b>Las 11 personas de Metalblanc en Fundamentals; en cada área, quienes la conocen.</b></div>
+        <div class="mt-tile"><span>Ritmo de trabajo</span><b>Fundamentals en la semana 1, dos áreas en las semanas 2 y 3 y una en la 4.</b></div>
+        <div class="mt-tile"><span>Arranque</span><b>El kick-off, aparte, abre el proyecto; su fecha se confirma con la dirección.</b></div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Metalblanc · DET-028</span>
+      </div>
+    </section>
+
+    <!-- 5 · Entregables: ¿con qué me quedo? (catálogo + piezas transversales) -->
+    <section class="slide s-deliv roomy">
+      <span class="counter">05 / 09</span>
+      <p class="eyebrow">05 · Entregables</p>
+      <div class="deliv-head">
+        <h2>Lo que recibe Metalblanc.</h2>
+        <p class="deliv-sub"><span class="nw">Lo que se llevan</span>: <strong>6 entregables</strong> por sesión, más el Mapa de Calor y el Reporte Final con la hoja de ruta.</p>
+      </div>
+
+      <div class="deliv-carriles" style="--ncols:3">
+        <span class="dc acc-y" style="grid-column: span 3">Detección · 6 entregables</span>
+      </div>
+
+      <div class="deliv-cols" style="--ncols:3">
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">Fundamentals (etapa previa)</p>
+            <ul>
+              <li>Equipo de 11 personas nivelado en IA</li>
+            </ul>
+          </div>
+          <div class="da">
+            <p class="da-name">Estructura de costos</p>
+            <ul>
+              <li>Estructura de costos base y primer presupuesto ágil</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">Producción</p>
+            <ul>
+              <li>Inventario de procesos y logro inmediato de Producción</li>
+            </ul>
+          </div>
+          <div class="da">
+            <p class="da-name">Administración</p>
+            <ul>
+              <li>Inventario de procesos y logro inmediato de Administración</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">Ventas</p>
+            <ul>
+              <li>Inventario de procesos y logro inmediato de Ventas</li>
+            </ul>
+          </div>
+          <div class="da">
+            <p class="da-name">Marketing</p>
+            <ul>
+              <li>Inventario de procesos y logro inmediato de Marketing</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="deliv-band">
+        <div class="db-card db-1">
+          <span class="db-label">Para todas las áreas</span>
+        </div>
+        <div class="db-card db-2">
+          <span class="db-label">Valor inmediato</span>
+        </div>
+      </div>
+      <!-- Cajas multiline editables (vacías en HTML: el contenido vive dentro del AcroForm /V). -->
+      <div class="multi-box db-box db-box-1" data-field="Entregables"></div>
+      <div class="multi-box db-box db-box-2" data-field="Acreditacion"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Metalblanc · DET-028</span>
+      </div>
+    </section>
+
+    <!-- 6 · Retorno: ¿qué gano? (método de cálculo). Sin estudios ni citas externas. -->
+    <section class="slide s-roi">
+      <span class="counter">06 / 09</span>
+      <p class="eyebrow">06 · Retorno</p>
+      <h2>Retorno esperado: decidir con datos.</h2>
+      <p class="sub">El Reporte Final estima el retorno de cada oportunidad con los datos que cada área entrega en su sesión.</p>
+
+      <div class="roi-body">
+        <div class="roi-panel">
+          <p class="roi-panel-title">Cómo se estima el retorno de cada oportunidad</p>
+          <ol class="roi-steps">
+            <li><b>Volumen</b><span>Cuántos presupuestos y otras tareas se hacen al mes, por línea de producto, levantado con el área.</span></li>
+            <li><b>Tiempo actual</b><span>Lo que toma hoy cada ejecución, como armar un presupuesto, medido en la sesión del área.</span></li>
+            <li><b>Tiempo con la solución</b><span>Estimación del equipo consultor para cada oportunidad del Mapa de Calor.</span></li>
+            <li><b>Horas recuperables</b><span>Volumen por la diferencia de tiempos: una estimación referencial, sin compromiso de resultado.</span></li>
+            <li><b>Presupuestos perdidos</b><span>Cuántos clientes se van por la demora, contados con Ventas, para medir el efecto en ingresos.</span></li>
+            <li><b>Prioridad</b><span>Cada oportunidad se ordena por impacto, esfuerzo y riesgo.</span></li>
+          </ol>
+        </div>
+
+        <div class="roi-right">
+          <p class="roi-right-title">Qué decide Metalblanc con el Reporte Final</p>
+          <div class="roi-card">
+            <b>Herramientas</b>
+            <p>Qué herramientas y licencias usar, con datos de sus propias áreas.</p>
+          </div>
+          <div class="roi-card">
+            <b>Prioridades</b>
+            <p>Qué procesos mejorar primero, según impacto, esfuerzo y riesgo.</p>
+          </div>
+          <div class="roi-card">
+            <b>Orden</b>
+            <p>Qué procesos ordenar antes de dar el siguiente paso.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="roi-dest-wrap">
+        <p class="roi-dest-title">Hacia dónde sigue la ruta</p>
+        <div class="roi-dest">
+          <div class="rd-item"><b>Ahora · Detección</b><p>Mapa priorizado, bases de sus procesos y un <strong>logro inmediato</strong> en cada área.</p></div>
+          <div class="rd-item"><b>Después · Habilidades</b><p>El equipo construye y pone en uso las soluciones priorizadas, empezando por los presupuestos.</p></div>
+          <div class="rd-item"><b>Más adelante · Su siguiente paso</b><p>Con los procesos ordenados, Metalblanc decide cómo seguir, por ejemplo con un sistema de gestión (ERP).</p></div>
+        </div>
+      </div>
+
+      <div class="roi-hook"><p>Con el Reporte Final, Metalblanc decide con datos qué automatizar primero y cómo ordenar sus procesos, y no a ciegas.</p></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Metalblanc · DET-028</span>
+      </div>
+    </section>
+
+    <!-- 7 · Inversión (hoja de cotización estándar; antepenúltima slide) -->
+    <section class="slide s-price">
+      <span class="counter">07 / 09</span>
+      <h2 class="title">Inversión del proyecto.</h2>
+      <p class="price-intro">Propuesta Económica · Servicio de Detección</p>
+
+      <div class="block">
+        <span class="block-eyebrow">Duración</span>
+        <p class="block-value">Proyecto de 6 sesiones en 4 semanas. 22 horas de trabajo.</p>
+      </div>
+
+      <div class="block block-programa">
+        <span class="block-eyebrow">Programa</span>
+      </div>
+      <div class="multi-box programa-box" data-field="Programa"></div>
+
+      <div class="block block-cotizacion">
+        <span class="block-eyebrow">Cotización</span>
+      </div>
+
+      <span class="cot-label cot-label-base">Propuesta + Inversión</span>
+      <div class="cot-frame base-frame"></div>
+
+      <span class="cot-label cot-label-discount">Descuento</span>
+      <span class="cot-sign-minus">&minus;$</span>
+      <div class="cot-frame discount-frame"></div>
+      <span class="cot-urgent-note">Descuento válido por 15 días</span>
+
+      <span class="cot-label cot-label-total">TOTAL</span>
+      <div class="cot-frame total-frame"></div>
+
+      <p class="cot-validity">Cotización válida por 30 días.</p>
+      <div class="cot-terms-box">
+        <span class="cot-terms-label">Importante</span>
+        <p class="cot-terms-text">Este servicio se presta bajo nuestros <a href="https://drive.google.com/file/d/1PA-ZSt4KnyY5dpxXzgkIk6-yfGlV2eF8/view?usp=drive_link" target="_blank" rel="noopener">términos y condiciones</a>. Al avanzar con esta propuesta, ambas partes los aceptan.</p>
+      </div>
+
+      <div class="block block-notes-container">
+        <span class="block-eyebrow">Notas</span>
+      </div>
+      <div class="multi-box notas-box" data-field="Notas"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Metalblanc · DET-028</span>
+      </div>
+    </section>
+
+    <!-- 8 · Facilidad de pago: cuotas ligadas a hitos (penúltima slide). Montos vacíos y editables (AcroForm PagoCuota1..N). -->
+    <section class="slide s-pay">
+      <span class="counter">08 / 09</span>
+      <p class="eyebrow">08 · Pago</p>
+      <h2>Facilidad de pago: 2 cuotas ligadas a hitos.</h2>
+      <p class="sub">Cada cuota se paga al cumplirse un hito del proyecto, y las dos suman el <strong>100%</strong> de la inversión.</p>
+
+      <div class="pay-line"></div>
+      <div class="pay-route">
+        <div class="pay-step acc-y first" style="left:56.00px; width:498.50px">
+          <span class="ps-d"></span>
+          <span class="ps-tag">Cuota 1</span>
+          <b class="ps-when" style="font-size:28px">Al aprobar</b>
+          <p class="ps-hito">Anticipo al aprobar la propuesta</p>
+          <span class="ps-pct">50%</span>
+          <span class="ps-lbl">Monto</span>
+        </div>
+        <div class="pay-step acc-o" style="left:568.50px; width:498.50px">
+          <span class="ps-d"></span>
+          <span class="ps-tag">Cuota 2</span>
+          <b class="ps-when" style="font-size:28px">Al cierre</b>
+          <p class="ps-hito">Saldo al cierre del proyecto</p>
+          <span class="ps-pct">50%</span>
+          <span class="ps-lbl">Monto</span>
+        </div>
+      </div>
+      <div class="pay-frame" style="left:72.00px; width:466.50px"></div>
+      <div class="pay-frame" style="left:584.50px; width:466.50px"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Metalblanc · DET-028</span>
+      </div>
+    </section>
+
+    <!-- 9 · Próximos pasos: qué hacer y a quién escribir (última slide) -->
+    <section class="slide s-next">
+      <span class="counter">09 / 09</span>
+      <p class="eyebrow">09 · Próximos pasos</p>
+      <h2>Tres pasos para arrancar.</h2>
+      <p class="sub">Esto es lo que sigue cuando Metalblanc confirme la propuesta.</p>
+
+      <div class="nx-steps">
+        <div class="nx-step acc-y">
+          <span class="nx-num">1</span>
+          <b>Fecha de arranque</b>
+          <p>Confirmamos con la dirección la fecha del kick-off y el orden de las áreas.</p>
+        </div>
+        <div class="nx-step acc-o">
+          <span class="nx-num">2</span>
+          <b>Accesos y agenda</b>
+          <p>Coordinamos los participantes, el horario de cada sesión y el acceso a la herramienta de IA.</p>
+        </div>
+        <div class="nx-step acc-w">
+          <span class="nx-num">3</span>
+          <b>Kick-off de arranque</b>
+          <p>Reunión inicial para acordar alcance, calendario y responsables de cada área.</p>
+        </div>
+      </div>
+
+      <div class="nx-contact">
+        <div class="nx-card nx-ase">
+          <span class="nx-label">¿Dudas? Escribe a tu asesora comercial</span>
+          <b class="nx-name">Flavia Martínez</b>
+          <span class="nx-role">Asesora comercial</span>
+          <p class="nx-line"><a href="mailto:fmartinez@intezia.com">fmartinez@intezia.com</a></p>
+          <p class="nx-line">+58 414 5756615</p>
+        </div>
+        <div class="nx-card nx-emp">
+          <span class="nx-label">Intezia</span>
+          <p class="nx-line">Intezia C.A J-505657950</p>
+          <p class="nx-line"><a href="mailto:servicio@intezia.com">servicio@intezia.com</a></p>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Metalblanc · DET-028</span>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>
