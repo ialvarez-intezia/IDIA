@@ -1,5 +1,90 @@
 # Brief — Sociedad Anticancerosa de Venezuela (Clínica)
 
+## Actualización 2026-10-08 — ahora Detección + Habilidades, 2 áreas en 4 subáreas, plantilla compacta v2 (8 slides) · VIGENTE
+
+Instrucción directa del usuario: «reajustar la DET-023 porque ahora se le incluye Habilidades» con la **ficha comercial nueva**
+(`Levantamiento_Sociedad_Anticancerosa_de_Venezuela_Clinica_2026-10-05.pdf`, registrada el 2026-09-24, asesora Verónica Rubio):
+«para las horas de Habilidades serían 8 h por área en este caso particular, más la Detección que ya tenías reflejada, pero lee
+todo desde la ficha comercial». Una **segunda indicación** del mismo día fijó el alcance: «son solo 2 áreas, pero se dividen en las otras
+que están dentro de ellas; 16 h en Detección más 8 h en las 4, siendo 32 h, más Fundamentals de 2 h: 50 h en total». Se rehizo en la
+**plantilla compacta v2** (`datos.json` es la fuente; el código DET-023 se mantiene). Orden del deck: Portada · Alcance · Ruta · Cómo
+trabajamos · Entregables · Retorno · Inversión del proyecto · Próximos pasos. **Sin «Facilidad de pago»** (`omitir: ["pago"]`, criterio de las
+últimas migraciones; ventas comunica el plan por otro medio). El deck de 12 slides del 25/09, su `programa.md`, su `brief.md`, su PDF y su
+`customize-<slug>.py` quedan en `_anterior-12-slides/` (el PDF también en `_pdf-anteriores/`).
+
+> Una primera pasada del mismo día contó 6 áreas (74 h, 8 semanas) leyendo literalmente la ficha. La segunda indicación del usuario la
+> reemplazó: 2 áreas, 4 subáreas, 50 h, 6 semanas. Esa versión no se entregó.
+
+### Qué cambió en la ficha respecto de la del 25/09
+
+| Tema | Ficha anterior | Ficha nueva (05/10) |
+|---|---|---|
+| Servicios de interés | Detección, Habilidades (el usuario pidió solo Detección) | Detección, Habilidades: **ahora van juntas** |
+| Áreas de auditoría | 2 (Administración operativa, Central de Citas) | Las mismas 2, desagregadas en **sub-áreas** (la ficha dice 6; el usuario fijó 4); **nombres sin confirmar con el cliente** |
+| Habilidades | Contexto para una «Propuesta 2» futura | Pre-acordada con el cliente como paso 2: «una primera fase de Habilidades para partir de eso» |
+| Cifra | Precio de la Detección | El cliente **pidió el panorama de costo combinado** (Detección + Habilidades): al ser ONG necesita el total para gestionar financiamiento por proyecto |
+
+### Horas y semanas
+
+| Pieza | Horas | Semanas (propuesta del sistema) |
+|---|---|---|
+| Fundamentals (grupo único) | 2 h | 1 |
+| Detección: 4 subáreas × 4 h (= 16 h; equivale a 2 áreas × 8 h) | 16 h | 2 y 3 (dos subáreas por semana) |
+| Reporte Final, Mapa de Calor e Índice de Madurez (Intezia, sin sesión) | sin horas | 4 |
+| Habilidades: 4 subáreas × 8 h (instrucción del usuario) | 32 h | 5 y 6 (dos subáreas por semana) |
+| **Total** | **50 h** (Detección con Fundamentals 18 h + Habilidades 32 h) | **6 semanas**, más seguimiento 30-60-90 |
+
+El kick-off va aparte y no suma horas. «Hacia la semana 19» (6 + 13) es aritmética a confirmar con servicio.
+
+### Las 2 áreas y sus 4 subáreas (propuesta del sistema: confirmar con la asesora y el cliente)
+
+La ficha dice «Administración operativa (compras, pagos, conciliación)» y «Central de Citas / Atención al cliente (confirmación de
+pacientes, médicos y procedimientos)» y aclara que los nombres de las sub-áreas no están confirmados (cuenta 6). El usuario habla de 4,
+sin nombrarlas, así que se **agruparon las 6 de la ficha**: **Compras y pagos** y **Conciliación** (Administración operativa);
+**Confirmación de pacientes** y **Médicos y procedimientos** (Central de Citas). Si los grupos son otros, se cambian los nombres en
+`datos.json` y se regenera. El deck dice «2 áreas, 4 subáreas» (`vocabulario.area` = subárea).
+
+### Qué se construye en Habilidades (sin inventar soluciones)
+
+La ficha pide que Habilidades sea la «continuación directa de los logros inmediatos dejados en Detección» y que Administración y
+Central de Citas ya apliquen en el día a día las herramientas identificadas (se mide a 30-60-90). Solo hay dos candidatos
+nombrados: automatizar las respuestas repetitivas y el agendamiento de Central de Citas (400 mensajes al día) y revisar la
+continuidad del bot de conciliación ya comprado y no usado. Para las otras subáreas no hay insumo, así que cada subárea recibe «la
+solución prioritaria que señale la Detección» (un entregable de 8 h por subárea; sin desglose C/T/A) y el Reporte Final la nombra.
+**Habilidades se construye después del Reporte Final**, porque ese Reporte recomienda el ecosistema de IA («aún no lo saben,
+esperan la recomendación»): el deck no nombra herramienta. Copilot ya está contratado y casi no se usa.
+
+### Decisiones aplicadas sin preguntar (confirmar)
+
+- **Cotización por partes** (`inversion.partes`): una caja de valor por parte (Detección 18 h con Fundamentals, Habilidades 32 h) y la
+  suma automática, para dar el total combinado que pide el cliente. Los montos los llena ventas. El licenciamiento va en las notas.
+- **Modalidad mixta**: la de la propuesta enviada (la ficha nueva no la repite); el deck dice «se acuerda con la Sociedad».
+- **Datos de pacientes**: sin política formal de datos conocida; el deck dice que no se carga a ninguna herramienta información
+  que identifique a pacientes ni historias clínicas, y que se prueba con ejemplos armados. La **conexión con el sistema de citas
+  queda fuera** (la ficha la nombra como expectativa).
+- **Garantía 30-60-90** en Habilidades (es el estándar del servicio); sin certificado.
+- **Fuera del deck**: los equipos médicos con IA embebida (no son Administración ni Central de Citas), el patrocinio ejecutivo no
+  asegurado, la apertura al cambio «media», quién firma (Lino no confirmó que firme), y los nombres de personas del cliente.
+- **Impacto con estudios**: los dos estudios del deck anterior (BMJ Open 2016 y Ardent Partners 2025) no aplican al formato compacto.
+
+### Pendientes (a confirmar antes de reenviar)
+
+- Valor de Detección, de Habilidades, descuento y total (campos vacíos para ventas); cómo se comunica el plan de pago.
+- Nombres de las 4 subáreas (propuesta del sistema a partir de las 6 de la ficha).
+- Fechas, horarios y orden de las subáreas; si las sesiones de 8 h se parten en dos de 4 h.
+- Modalidad, quiénes asisten a Fundamentals y cuántas personas tiene cada subárea.
+- Datos de pacientes y conexión con el sistema de citas (criterio propuesto por el sistema).
+- Quién firma y aprueba (ONG con financiamiento por proyecto).
+- Reenviar el PDF avisando que reemplaza al del 25/09/2026.
+- Estado: `Enviada` el 2026-09-25 → `En corrección` → `Enviada` al regenerar (la `fecha_entrega` se respeta).
+
+---
+
+## Brief anterior (2026-09-25) · SUPERADO en alcance, áreas, horas y formato
+
+> Lo que sigue es el brief del deck de 12 slides (solo Detección, 2 áreas, 10 h). Sigue siendo válido como contexto del cliente
+> (stack, resistencia al cambio, citas textuales, restricciones), no como alcance.
+
 ---
 
 ## Datos administrativos

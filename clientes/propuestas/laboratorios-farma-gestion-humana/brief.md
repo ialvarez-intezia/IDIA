@@ -4,7 +4,7 @@
 
 **Pedido:** David (2026-10-08): «corrige esta propuesta de Laboratorios Farma (adjunta) en base a las correcciones que
 se hablaron en la reunión», con el PDF «CAI-032 Incorporación de IA con Microsoft Copilot en 6 subáreas de Gestión
-Humana» (8 slides, generado fuera de este repositorio: 20 h, entrenamiento en 4 sesiones, valor por parte), las
+Humana» (8 slides, hecho por Ivana sobre la plantilla v2, commit `a546b6b`: 20 h, entrenamiento en 4 sesiones, valor por parte), las
 correcciones de **Keiber Quintana** (reunión «Laboratorios Farma», 2026-10-08) y la minuta de la reunión con el cliente
 (Claudia Hernández y Nelson González).
 
@@ -17,9 +17,9 @@ correcciones de **Keiber Quintana** (reunión «Laboratorios Farma», 2026-10-08
 
 **Se conserva del PDF enviado:** las horas (Detección 4 h, entrenamiento 8 h, 2 proyectos finales de 4 h: 20 h), la
 portada (titular, hechos y fuente; el lead ahora cuenta el orden: primero, después, al final), cómo funciona en la
-práctica (textos más cortos), el cuidado de los datos, el retorno en modo método, el **valor por parte** (Parte 1
-Detección 4 h, Parte 2 Habilidades 16 h; la suma se calcula sola en el PDF) y la propuesta sin facilidad de pago. El PDF
-enviado queda en `_anterior-8-slides/`; la versión compacta anterior del repositorio (6 slides, 15 h), en
+práctica (textos más cortos), el cuidado de los datos, el retorno en modo método, el **valor por parte** (dos cajas,
+«Detección» y «Habilidades», sin más texto, como pidió el usuario en la pasada de Ivana; la suma se calcula sola en el
+PDF) y la propuesta sin facilidad de pago. La versión de Ivana (datos, deck y PDF) queda en `_anterior-8-slides/`; la versión compacta anterior del repositorio (6 slides, 15 h), en
 `_anterior-6-slides/`.
 
 **De la minuta con el cliente:** virtual por Teams; unas 18 a 20 personas en Venezuela (planta de Maracay y Caracas),
@@ -34,6 +34,87 @@ piezas o participantes, corregir `datos.json` y regenerar); el valor de cada par
 confirmar con Tecnología (Leonardo) la licencia de Copilot de cada participante.
 
 ---
+
+## Actualización 2026-10-08 (tarde) — cotización por partes en la hoja de inversión · SUPERADA por la corrección v3 del 2026-10-08 (de Ivana, commit `a546b6b`; archivada en `_anterior-8-slides/`)
+
+Instrucción directa del usuario: «ajustar la CAI-032 agregando a la izquierda campos de cotización por módulo, más los que ya
+tienes como total, descuento y total con descuento, ya lo hicimos con otra propuesta» (patrón `inversion.partes`, CAI-040 y DET-023).
+
+- **Slide 7 (Inversión):** 2 cajas de valor a la izquierda (`PrecioParte1..2`), una que dice **Detección** (4 h) y otra **Habilidades** (entrenamiento del equipo + 2 asistentes, 16 h), sin más texto (corrección del usuario: «solo 2 cuadros, uno que diga detección y otro habilidades, más nada»). A la derecha, `PrecioBase` es la **suma automática** («Suma de ambas partes»), más `Descuento` y `PrecioTotal` como antes. Todas vacías: las llena ventas (la suma y el total se calculan en Adobe Reader; Preview no ejecuta JS). Una primera versión con 3 partes (Detección, Entrenamiento, Dos asistentes) se descartó.
+- **Licenciamiento:** las 2 tarjetas («Copilot básico · Etapa 1», «Copilot Business · Etapa 2») salieron de la slide porque comparten zona con las partes;
+  quedan en la primera nota de la caja Notas y en `fuera_alcance`. El mapa de licencias sigue en el entregable de la Detección.
+- El PDF anterior pasó a `_pdf-anteriores/`. Estado `Enviada` y `fecha_entrega` 2026-09-29 se respetan. Los demás puntos de la propuesta no cambian.
+
+## Actualización 2026-10-08 — devolución del cliente (6 puntos) y migración a la plantilla v2 (8 slides) · SUPERADA por la corrección v3 del 2026-10-08 (de Ivana, commit `a546b6b`; archivada en `_anterior-8-slides/`)
+
+Instrucción directa del usuario: «ajustar la CAI-032 usando el nuevo formato y agregar estos arreglos» (devolución
+del cliente). «Nuevo formato» = **plantilla compacta v2.0** (commit `93e0b67`, 2026-10-07): el `datos.json` v1 se
+migró según la spec §13 y se regeneró con `--actualizar-css --forzar-overrides`. Orden del deck: Portada ·
+Alcance · Ruta · Cómo trabajamos · Entregables · Retorno · Inversión · Próximos pasos. **Sin «Facilidad de pago»**
+(decisión del usuario: «no la agregues»; `omitir: ["pago"]`; ventas comunica el plan por otro medio). El deck de
+6 slides v1.4 y su PDF quedan en `_pdf-anteriores/`.
+
+> Incidente de proceso: una primera pasada del mismo día, hecha sobre la v1.4 (6 slides), se perdió del árbol de
+> trabajo cuando el repositorio se actualizó con la v2 (árbol limpio, sin stash ni commit). Se rehízo entera sobre
+> la v2; las decisiones de abajo son las mismas que tomó el usuario en esa pasada.
+
+### Horas y semanas (decisiones del usuario al preguntar)
+
+| Pieza | Horas | Semanas |
+|---|---|---|
+| Detección con los líderes de las 6 subáreas | 4 h | 1 |
+| Entrenamiento para todo el equipo (antes «módulo conjunto» de 3 h) | **8 h: 4 sesiones de 2 h** | 2 y 3 (2 sesiones por semana) |
+| Práctica Ausentismo (Nómina) | 4 h | 4 |
+| Práctica Selección (filtro de currículos) | 4 h | 4 |
+| **Total Etapa 1** | **20 h** (antes 15 h) | **4 semanas** (antes 3) |
+
+Las 4 sesiones (ecosistema Microsoft y Copilot · asistentes y agentes · Copilot en Outlook y Teams · Copilot en Excel
+y Word) y sus nombres son propuesta del sistema a partir del temario que pidió el cliente. El workbook digital pasa
+a entregable transversal.
+
+### Qué se hizo con cada punto del cliente (y dónde queda en el deck v2)
+
+1. **Habilidades con más peso y temario:** 3 h pasan a 8 h; el módulo deja de ser «etapa previa» y es un área con
+   4 entregables visibles (uno por tema). Slide 2 (4 soluciones), 3 (fase «Equipo» destacada) y 5.
+2. **Datos sensibles con Copilot básico:** casos reales anonimizados, sin nombres ni documentos de identidad.
+   Slide 4, bloque «Cómo cuidamos sus datos» (`metodo.datos`), y el entregable de cada práctica. Supuesto: el equipo
+   del cliente prepara los casos antes de cada práctica.
+3. **Práctica de currículos y límite de 5 al día:** slide 4, «Cómo funciona en la práctica» (`metodo.practica`).
+   Decisión del usuario: descarga manual y carga en lote; una solicitud aplica el perfil al lote y las otras
+   afinan. **No verificado** cuántos archivos admite una solicitud de Copilot básico: el deck dice que cuántos por
+   lote se define en la Detección.
+4. **Los 5 procesos de la Etapa 2:** Desarrollo, Seguros, Bienestar, Seguridad y Salud Laboral e Indicadores de
+   Gestión, en la franja «Etapa 2» de la ruta (`ruta.siguiente_etapa`).
+5. **Logística:** slide 4, las 4 fichas (`logistica`): 100 % virtual por Teams · 20 personas en 4 países · ritmo de 2
+   sesiones por semana sin dos días seguidos para Nómina · ejecución antes del 11 de diciembre. El plazo es una fecha
+   calendario: el generador avisa y es deliberado (la ruta sigue en semanas).
+6. **Inversión del proyecto:** la v2 ya titula así la slide 7 y bloquea «precio» y avisa «costo». Textos: «valores de
+   lista», «valor de la licencia», «valor hora de referencia». No se tocaron los nombres internos de los campos del
+   PDF (`PrecioBase`, `PrecioTotal`) ni sus descripciones emergentes.
+
+### Ajustes de formato propios del deck
+
+- `vocabulario.proceso_base` = «etapa previa»: la v2 bloquea «proceso base» y Detección no es un «paso previo».
+- Línea de trabajo única «Gestión Humana regional» (con 1 línea el nombre admite ~30 caracteres).
+- `metodo.pasos` y `por_que_orden` propios: los de la plantilla afirmaban que se prueba «con el equipo de tecnología
+  del cliente», algo que la propuesta no dice.
+- `overrides.css` nuevo: escala de las slides 2, 3, 4 y 5 (pocas soluciones; los modos de aire de la v2 no alcanzan).
+- Cabeceras de fase cortas (Detección, Equipo, Casos): la columna es angosta con 1 línea de trabajo y 3 fases.
+- Asesora (slide 8): María Iribarren, con el teléfono y el correo de sus otras propuestas; el cargo es supuesto.
+
+### Pendientes (a confirmar antes de reenviar)
+
+- **Valor del proyecto:** el alcance pasó de 15 h a 20 h; los campos de inversión siguen vacíos para ventas.
+- Cómo se comunica el plan de pago (no hay slide) y el cargo de la asesora en la última slide.
+- Qué cubre la licencia básica dentro de Outlook, Teams, Excel y Word (el temario lo pide el cliente y el deck dice que
+  la Etapa 1 va con la básica): confirmar con Tecnología.
+- «4 h para prácticas» sigue leído como 4 h cada una (si son 4 h en total: 16 h).
+- Semanas, nombres de las sesiones y quién anonimiza: confirmar con servicio.
+- «Hacia la semana 17» del retorno es aritmética: confirmar con servicio.
+- Incoherencia heredada: Desarrollo y Bienestar figuran como Copilot básico en la clasificación, pero toda la Etapa 2
+  se condiciona a Business.
+- Estado: `Enviada` el 2026-09-29 → `En corrección` → `Enviada` al regenerar (la `fecha_entrega` se respeta).
+  Confirmar si se reenvía el PDF nuevo.
 
 ## Actualización 2026-10-05 (2) — reexpresada en el formato compacto (6 slides) · SUPERADA por la corrección del 2026-10-08
 

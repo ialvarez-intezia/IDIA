@@ -355,6 +355,8 @@
   "vocabulario: {solucion, area, proceso_base}: [singular, plural] para cambiar las palabras del deck (p. ej. entregable/entregables, frente/frentes, etapa previa/etapas previas)",
   "sin_hoja_cotizacion: true (el deck no lleva inversión ni facilidad de pago; igual que Fundación). omitir: lista con slides a quitar de entre metodo, retorno, proximos, inversion, pago (se avisa: Ventas las pide en toda propuesta)",
   "seguimiento.tipo ('seguimiento' | 'cierre' | 'ninguno'), inversion.sin_garantia (true)",
+  "inversion.partes: 2 o 3 partes [{nombre, detalle}] con un valor editable cada una (PrecioParte1..N) y la suma automática en la caja base (inversion.etiqueta_suma, p. ej. «Suma de ambas partes»; inversion.etiqueta_partes); no convive con inversion.licencias.tarjetas. anunciar_duracion (v2.1) se retiró en la v3: ninguna propuesta anuncia semanas ni sesiones",
+  "por_fases: true (alcance, ruta y entregables por fase; solo cuentan como soluciones las áreas que no son paso previo), metodo_antes_de_ruta: true («Cómo trabajamos» en la tercera página) y areas[].soluciones[].incluye (lo que incluye un entregable, sin horas propias): ver la spec §5",
   "areas[].nombre_catalogo, areas[].composicion; alcance.titulo, alcance.etiqueta_proceso_base / etiqueta_fuera; ruta.titulo, ruta.subtitulo, ruta.nota",
   "inversion.titulo, inversion.duracion, inversion.programa[], inversion.garantia_texto; entregables.titulo, entregables.subtitulo (debe conservar la frase «Lo que se llevan»), entregables.etiqueta_transversales / etiqueta_valor, entregables.columnas_por_carril ([k1,k2]: columnas por carril, suma <= 4)"
  ],

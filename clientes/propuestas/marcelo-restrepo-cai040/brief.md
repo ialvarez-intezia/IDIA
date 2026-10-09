@@ -3,8 +3,8 @@
 ## Corrección 2026-10-08: propuesta combinada (mensajes + Cerebro Digital) en la plantilla v3 · VIGENTE
 
 **Pedido:** David (2026-10-08): «corrige la propuesta que te adjunté con el nuevo estándar que pautamos», con el PDF
-combinado «CAI-040 Monitoreo de mensajes y Cerebro Digital de marca personal con Claude» (8 slides, generado ese día
-fuera de este repositorio: une esta CAI-040 y la CAI-041) y las correcciones de **Keiber Quintana** en la reunión
+combinado «CAI-040 Monitoreo de mensajes y Cerebro Digital de marca personal con Claude» (8 slides, hecho ese día por Ivana
+sobre la plantilla v2, commit `a546b6b`: une esta CAI-040 y la CAI-041) y las correcciones de **Keiber Quintana** en la reunión
 «Propuesta Marcelo» del mismo día.
 
 **Lo que se corrigió**
@@ -18,9 +18,10 @@ fuera de este repositorio: une esta CAI-040 y la CAI-041) y las correcciones de 
 
 **Se conserva del PDF combinado:** 9 soluciones en 6 bloques (18 h: 12 h de mensajes y 6 h del Cerebro Digital), la
 reunión de arranque de 1 h aparte, sin facilidad de pago y el **valor por parte** (Parte 1 Clon digital, Parte 2 Redes
-sociales; la suma se calcula sola en el PDF). Para eso el generador ganó la opción `inversion.partes` (campos
-`PrecioParte1..N`; ver `plantillas/habilidades-compacto.md` §5). El PDF combinado queda en `_anterior-8-slides/` y la
-CAI-040 original (solo mensajes, v1, 6 slides) en `_anterior-6-slides/`.
+sociales, con su detalle en horas; la suma se calcula sola en el PDF), con la opción `inversion.partes` de Ivana
+(campos `PrecioParte1..N`; ver `plantillas/habilidades-compacto.md` §5). La versión combinada de Ivana (datos, deck y
+PDF) queda en `_anterior-8-slides/`, la CAI-040 original (solo mensajes, v1, 6 slides) en `_anterior-6-slides/` y la
+CAI-041 suelta, que Ivana retiró al unificarlas, en `_anterior-cai041/`.
 
 **Revisión técnica (fuentes consultadas el 2026-10-08):**
 - Claude in Chrome está disponible en todos los planes de pago (Pro, Max, Team, Enterprise) desde el 26/08/2026, no en
@@ -36,7 +37,61 @@ CAI-040 original (solo mensajes, v1, 6 slides) en `_anterior-6-slides/`.
   el uso automatizado de las redes puede chocar con sus condiciones de uso.
 
 **Pendientes:** el resultado de la prueba de TikTok; el valor de cada parte (ventas); confirmar con Marcelo el plan de
-Claude y quién lo paga; si la CAI-041 suelta se retira, porque ahora es la Parte 1 de esta propuesta.
+Claude y quién lo paga. (La CAI-041 suelta ya quedó retirada: Ivana la archivó en `_anterior-cai041/`.)
+
+## Actualización 2026-10-08 · CAI-040 y CAI-041 unificadas en una sola propuesta (8 slides, plantilla v2) · SUPERADA por la corrección v3 del 2026-10-08 (de Ivana, commit `a546b6b`; archivada en `_anterior-8-slides/`)
+
+Instrucción directa del usuario: «ajustar la CAI-040 y la CAI-041, unificarlas y en la hoja de cotización un solo
+espacio para sumar ambos precios». Las dos se habían pedido juntas por la asesora y salieron el 06/10/2026 por
+separado. Ahora hay **una sola propuesta bajo el código CAI-040**, en la plantilla v2 (8 slides: portada · alcance ·
+ruta · cómo trabajamos · entregables · retorno · inversión · próximos pasos). La carpeta de la CAI-041 quedó archivada
+en `_anterior-cai041/` (no se borró; ya no aparece en `clientes/INDEX`) y el `datos.json` v1.4 de la CAI-040 en
+`_anterior-cai040/`. Los PDF originales están en `_pdf-anteriores/` y en `_anterior-cai041/`.
+
+### Decisiones del usuario al preguntar
+
+| Pregunta | Respuesta |
+|---|---|
+| Código | **CAI-040 para las dos** |
+| Calendario | **Una tras otra, 6 semanas**: mensajes en las semanas 1 a 3 (2 sesiones por semana, 12 h) y Cerebro Digital en las 4 a 6 (1 sesión por semana, 6 h). Total 18 h, igual a la suma de las dos. El orden (mensajes primero) lo propuso el sistema: confirmar |
+| Hoja de cotización | **Hoja estándar más un espacio para sumar ambos presupuestos**: a la izquierda dos cajas, «Clon digital» y «Redes sociales»; a la derecha una caja que suma ambas, más Descuento y TOTAL como siempre |
+| Facilidad de pago | **Omitirla** (`omitir: ["pago"]`), como en la CAI-032 y la DET-024 |
+
+### Cómo quedó la hoja de cotización (slide 7)
+
+- Izquierda, bajo «Notas»: «Valor por parte» con dos tarjetas (Parte 1 «Clon digital», Parte 2 «Redes sociales»), cada
+  una con su caja editable vacía (`PrecioParte1`, `PrecioParte2`). El licenciamiento ya no lleva tarjeta propia (compartía
+  esa zona): pasó a la primera línea de `Notas`.
+- Derecha: la caja base se llama «Suma de ambas partes» y **suma sola las dos cajas** en Adobe Reader (entiende «1.200»,
+  «1.200,50» y «2.250 REF»; si las partes están vacías respeta un monto tecleado a mano). Descuento y TOTAL (base menos
+  descuento) quedan como en la hoja estándar. Todos vacíos para ventas.
+- Preview macOS no ejecuta el JavaScript de cálculo: la suma funciona solo en Adobe Reader (igual que el TOTAL de siempre).
+- «Clon digital» es la palabra del usuario para el Cerebro Digital. El resto del deck dice «Cerebro Digital»; la
+  tarjeta dice «Clon digital · Cerebro Digital de marca personal · 3 sesiones» para unir las dos.
+- Es una **opción nueva del generador** (`inversion.partes`, `inversion.etiqueta_suma`), sin efecto si no se usa. Ver
+  `aprendizajes.md` (2026-10-08).
+
+### Cómo se unificó el contenido
+
+- 9 entregables en 6 bloques (Criterio y aviso, Instagram, TikTok, Marca, Video, Diseño) y una línea de trabajo, 2 fases
+  (Mensajes, Cerebro). Las sesiones y entregables son los de cada propuesta original, sin cambios.
+- **Un solo kick-off de 1 h** (aparte, sin horas): antes había uno por propuesta. Reúne los dos objetivos.
+- Mensajes (CAI-040): Claude solo lee y avisa. Cerebro (CAI-041): Claude prepara, Marcelo monta y publica. Las dos
+  frases están en «Cómo trabajamos» y en «Fuera de este alcance». «Cómo cuidamos sus datos»: mensajes con datos de
+  terceros (solo lectura) y cerebro sin contenido sin publicar ni datos de terceros.
+- Retorno unificado (mensajes y piezas), un solo seguimiento 30-60-90 y una sola cuenta de Claude (un solo plan).
+- Sin mencionar otras herramientas ni el parentesco bancario (contexto interno).
+
+### Pendientes (a confirmar antes de reenviar)
+
+- Valores de «Clon digital» y «Redes sociales» y descuento (campos vacíos para ventas; 18 h en total) y cómo se
+  comunica el plan de pago (no hay slide).
+- Orden de las partes (mensajes primero) y estructura de 9 sesiones en 6 semanas con servicio y la asesora.
+- Prueba real de TikTok e Instagram con la cuenta de Marcelo; qué incluye su plan de Claude en diseño; si el cerebro va
+  con Obsidian; que el cliente entiende que Claude no monta el video.
+- La asesora es María Iribarren (supuesto) y su cargo en la última slide.
+- Las dos propuestas originales ya salieron el 06/10/2026 (`fecha_entrega` se respeta): confirmar si se reenvía la
+  unificada y avisar al cliente de que reemplaza a las dos.
 
 ---
 

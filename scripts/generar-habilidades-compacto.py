@@ -130,6 +130,7 @@ DETECCION_ERR = [
 TOKENS_RETIRADOS = ("semanas", "semanas_txt", "semana_medicion", "tope_h_semana", "tope_h_dia")
 MOTIVO_V3 = "retirado en la v3 (2026-10-08): la propuesta no lleva semanas ni sesiones; el calendario se acuerda en el kickoff"
 RETIRADAS = {  # esquema -> claves que existían en la v2 y ya no se usan
+    "raiz": ("anunciar_duracion",),   # v2.1 (Ivana, 2026-10-08): en la v3 ninguna propuesta anuncia semanas ni sesiones
     "ruta": ("semanas_total", "tope_h_semana"),
     "frente": ("semanas",),
     "fase": ("rango",),
@@ -391,13 +392,13 @@ ESQUEMAS = {
     "item": {"dias": "str", "texto": "str"},
     "inversion": {"notas": "list:str", "licencias": "dict:licencias", "titulo": "str", "duracion": "str", "programa": "list:str",
                   "garantia_texto": "str", "sin_garantia": "bool", "partes": "list:dict:parte", "etiqueta_partes": "str",
-                  "etiqueta_base": "str"},
-    "parte": {"rotulo": "str", "nombre": "str", "texto": "str"},
+                  "etiqueta_suma": "str"},
+    "parte": {"nombre": "str", "detalle": "str"},
     "licencias": {"titulo": "str", "tarjetas": "list:dict:tarjeta", "nota": "str"},
     "tarjeta": {"nombre": "str", "color": "str", "texto": "str"},
     "pago": {"titulo": "str", "subtitulo": "str", "cuotas": "list:dict:cuota", "mensaje": "str", "facturacion": "str"},
     "cuota": {"cuando": "str", "hito": "str", "pct": "num"},
-    "proximos_pasos": {"titulo": "str", "subtitulo": "str", "pasos": "list:dict:paso", "asesora": "dict:asesora"},
+    "proximos_pasos": {"titulo": "str", "subtitulo": "str", "pasos": "list:dict:paso", "asesora": "dict:asesora", "etiqueta_contacto": "str"},
     "asesora": {"nombre": "str", "cargo": "str", "correo": "str", "telefono": "str"},
     "retorno": {"modo": "str", "titulo": "str", "subtitulo": "str", "posiciones": "bool", "pasos": "list:dict:paso_retorno",
                 "etiqueta_pasos": "str", "metas": "list:dict:meta_retorno", "etiqueta_metas": "str", "destino": "list:dict:destino_retorno",
@@ -1275,23 +1276,20 @@ def validar_semantica(d, ctx, agg, rep, silent):
                 rep.aviso("inversion.licencias.tarjetas[%d]" % i, "tarjeta de %d caracteres: máx. ~250; la sección podría chocar con el pie" % len(rs(c["texto"])))
             if c.get("color") and c["color"] not in COLORES:
                 rep.err("inversion.licencias.tarjetas[%d].color" % i, "debe ser 'amarillo' o 'naranja'")
+        # Cotización por partes (opcional): una caja de valor por parte a la izquierda y la suma (PrecioBase) a la derecha.
         partes = inv.get("partes") or []
         if partes:
-            if not (2 <= len(partes) <= 4):
-                rep.err("inversion.partes", "se admiten 2 a 4 partes con valor propio; hay %d" % len(partes))
             if tars:
-                rep.err("inversion.partes", "el «valor por parte» y las tarjetas de licenciamiento usan el mismo espacio de la hoja: llevar el licenciamiento a las notas")
-            tope_txt = 70 if len(partes) == 2 else 48
-            for i, x in enumerate(partes):
-                if not x.get("nombre") or not x.get("texto"):
-                    rep.err("inversion.partes[%d]" % i, "faltan nombre y texto (qué incluye la parte)")
-                    continue
-                if len(rs(x["nombre"])) > 24:
-                    rep.aviso("inversion.partes[%d].nombre" % i, "%d caracteres: máx. ~24 (una línea)" % len(rs(x["nombre"])))
-                if len(rs(x["texto"])) > tope_txt:
-                    rep.aviso("inversion.partes[%d].texto" % i, "%d caracteres: con %d partes caben ~%d (2 líneas)" % (len(rs(x["texto"])), len(partes), tope_txt))
-        if len(rs(inv.get("duracion") or "")) > 140:
-            rep.aviso("inversion.duracion", "%d caracteres: máx. ~135 (3 líneas)" % len(rs(inv["duracion"])))
+                rep.err("inversion.partes", "comparte la zona inferior izquierda con inversion.licencias: usar una de las dos (el licenciamiento puede ir en inversion.notas)")
+            if not (2 <= len(partes) <= 3):
+                rep.err("inversion.partes", "se necesitan 2 o 3 partes; hay %d" % len(partes))
+            for i, p in enumerate(partes):
+                if not p.get("nombre"):
+                    rep.err("inversion.partes[%d]" % i, "falta nombre")
+                elif len(rs(p["nombre"])) > 26:
+                    rep.aviso("inversion.partes[%d].nombre" % i, "%d caracteres: máx. ~26 (una línea en la tarjeta)" % len(rs(p["nombre"])))
+                if len(rs(p.get("detalle"))) > 75:
+                    rep.aviso("inversion.partes[%d].detalle" % i, "%d caracteres: máx. ~70 (2 líneas en la tarjeta)" % len(rs(p["detalle"])))
         if tars and not inv.get("notas"):
             rep.aviso("inversion.notas", "hay licenciamiento pero no hay notas: se usan las de garantía y términos; aclarar si el licenciamiento se contrata aparte (confirmar quién lo contrata)")
     if "pago" in orden:
@@ -1346,7 +1344,10 @@ def validar_semantica(d, ctx, agg, rep, silent):
         else:
             for k in ("nombre", "correo"):
                 if not ase.get(k):
-                    rep.err("proximos_pasos.asesora.%s" % k, "falta")
+                    if k == "correo" and ase.get("telefono"):
+                        rep.aviso("proximos_pasos.asesora.correo", "sin correo: la slide muestra solo el teléfono y el correo general de Intezia; confirmar el correo del contacto antes de enviar")
+                    else:
+                        rep.err("proximos_pasos.asesora.%s" % k, "falta (el correo puede omitirse solo si hay teléfono)")
             if ase.get("correo") and not re.match(r"^[^@\s]+@[^@\s]+\.[A-Za-z]{2,}$", ase["correo"]):
                 rep.err("proximos_pasos.asesora.correo", "no parece un correo válido: %r" % ase["correo"])
         pasos_p = pp.get("pasos")
@@ -2206,29 +2207,6 @@ def s_inversion(d, R):
         '        <span class="cot-garantia-tag">Garantía 30-60-90</span>\n'
         '        <p class="cot-garantia-text">%s</p>\n'
         "      </div>\n\n" % T(garantia, "inversion.garantia_texto")))
-    partes = inv.get("partes") or []
-    partes_html = ""
-    if partes:
-        tarjetas_p = cajas_p = ""
-        for i, (x, (left, w, caja)) in enumerate(zip(partes, geometria_partes(len(partes)))):
-            tarjetas_p += (
-                '          <div class="parte-card %s">\n'
-                '            <span class="parte-tag">%s</span>\n'
-                '            <b class="parte-name">%s</b>\n'
-                "            <p>%s</p>\n"
-                "          </div>\n" % ("acc-y" if i % 2 == 0 else "acc-o", T(x.get("rotulo") or "Parte %d" % (i + 1), "inversion.partes.rotulo"),
-                                     T(x["nombre"], "inversion.partes.nombre"), M(x["texto"], "inversion.partes.texto"))
-            )
-            cajas_p += '      <div class="parte-frame" style="left:%.2fpx; top:%.2fpx; width:%.2fpx; height:%.2fpx"></div>\n' % caja
-        partes_html = (
-            '      <div class="partes-wrap">\n'
-            '        <span class="partes-eyebrow">%s</span>\n'
-            '        <div class="partes-cards">\n%s        </div>\n'
-            "      </div>\n"
-            "      <!-- Cajas de monto por parte: campos PrecioParte1..N (agregar-campo-precio.py → partes_fields); PrecioBase las suma. -->\n"
-            "%s\n" % (T(inv.get("etiqueta_partes") or "Valor por parte", "inversion.etiqueta_partes"), tarjetas_p, cajas_p)
-        )
-    etq_base = inv.get("etiqueta_base") or (("Suma de ambas partes" if len(partes) == 2 else "Suma de las partes") if partes else "Propuesta + Inversión")
     lic = inv.get("licencias") or {}
     lic_html = ""
     if lic.get("tarjetas"):
@@ -2247,6 +2225,28 @@ def s_inversion(d, R):
             '        <span class="lic-eyebrow">%s</span>\n'
             '        <div class="lic-cards">\n%s        </div>\n%s'
             "      </div>\n\n" % (T(lic.get("titulo") or "Licenciamiento · aparte de esta inversión", "licencias.titulo"), cards, nota)
+        )
+    # Cotización por partes (opcional): una caja de valor por parte (PrecioParte1..N) en la zona del licenciamiento y la
+    # suma en la caja base de la derecha. La geometría DEBE coincidir con scripts/agregar-campo-precio.py → partes_fields().
+    partes = inv.get("partes") or []
+    label_base = "Propuesta + Inversión"
+    if partes:
+        label_base = T(inv.get("etiqueta_suma") or "Suma de las partes", "inversion.etiqueta_suma")
+        tarjetas = ""
+        for i, p_ in enumerate(partes, 1):
+            det = ('            <p class="parte-det">%s</p>\n' % T(p_["detalle"], "inversion.partes.detalle")) if p_.get("detalle") else ""
+            tarjetas += (
+                '          <div class="parte-card %s">\n'
+                '            <span class="parte-tag">Parte %d</span>\n'
+                '            <b class="parte-name">%s</b>\n%s'
+                '            <div class="parte-frame"></div>\n'
+                "          </div>\n" % ("acc-y" if i % 2 else "acc-o", i, T(p_["nombre"], "inversion.partes.nombre"), det)
+            )
+        lic_html = (
+            '      <div class="partes-wrap">\n'
+            '        <span class="partes-eyebrow">%s</span>\n'
+            '        <div class="partes-cards">\n%s        </div>\n'
+            "      </div>\n\n" % (T(inv.get("etiqueta_partes") or "Valor por parte", "inversion.etiqueta_partes"), tarjetas)
         )
     return (
         '    <!-- 7 · Inversión (hoja de cotización estándar; antepenúltima slide) -->\n'
@@ -2282,10 +2282,9 @@ def s_inversion(d, R):
         '      <div class="block block-notes-container">\n'
         '        <span class="block-eyebrow">Notas</span>\n'
         "      </div>\n"
-        '      <div class="multi-box notas-box" data-field="Notas"></div>\n\n%s%s%s'
+        '      <div class="multi-box notas-box" data-field="Notas"></div>\n\n%s%s'
         "    </section>\n"
-        % (R.contador("inversion"), T(titulo, "inversion.titulo"), T(rotulo_servicio(d), "servicio_rotulo"), M(dur, "inversion.duracion"),
-           T(etq_base, "inversion.etiqueta_base"), garantia_html, lic_html, partes_html, foot(R, "claro"))
+        % (R.contador("inversion"), T(titulo, "inversion.titulo"), T(rotulo_servicio(d), "servicio_rotulo"), M(dur, "inversion.duracion"), label_base, garantia_html, lic_html, foot(R, "claro"))
     )
 
 
@@ -2373,20 +2372,6 @@ def s_entregables(d, R, columnas, ncols):
            T(en.get("etiqueta_valor") or "Valor inmediato", "entregables.etiqueta_valor"), foot(R, "oscuro"))
     )
 
-# «Valor por parte» (opcional, inversion.partes): un monto editable por parte del proyecto, bajo las Notas de la hoja de
-# inversión. Origen: CAI-040 Marcelo Restrepo (2026-10-08), que cotiza por separado el monitoreo de mensajes y el Cerebro
-# Digital. DEBE coincidir con scripts/agregar-campo-precio.py → partes_fields() (px × 0,75 = pt).
-PARTES_TOP, PARTES_EYEBROW, PARTES_CARD_H, PARTES_FRAME_H, PARTES_PAD = 512.0, 22.0, 130.0, 34.0, 12.0
-
-
-def geometria_partes(n):
-    """(left, ancho) de cada tarjeta de parte y la caja de monto (left, top, ancho, alto), en px de la slide."""
-    gap = 12.0
-    w = (480.0 - gap * (n - 1)) / n
-    top_caja = PARTES_TOP + PARTES_EYEBROW + PARTES_CARD_H - PARTES_PAD - PARTES_FRAME_H
-    return [((56.0 + i * (w + gap)), w, (56.0 + i * (w + gap) + PARTES_PAD, top_caja, w - 2 * PARTES_PAD, PARTES_FRAME_H)) for i in range(n)]
-
-
 def geometria_pago(n):
     """Posición de las tarjetas de cuota (px de la slide). DEBE coincidir con scripts/agregar-campo-precio.py → plan_pago_fields()."""
     gap = 14.0
@@ -2459,7 +2444,8 @@ def s_proximos(d, R):
     lineas = ""
     if a.get("cargo"):
         lineas += '          <span class="nx-role">%s</span>\n' % T(a["cargo"], "proximos_pasos.asesora.cargo")
-    lineas += '          <p class="nx-line"><a href="mailto:%s">%s</a></p>\n' % (esc(a["correo"]), T(a["correo"], "proximos_pasos.asesora.correo"))
+    if a.get("correo"):
+        lineas += '          <p class="nx-line"><a href="mailto:%s">%s</a></p>\n' % (esc(a["correo"]), T(a["correo"], "proximos_pasos.asesora.correo"))
     if a.get("telefono"):
         lineas += '          <p class="nx-line">%s</p>\n' % T(a["telefono"], "proximos_pasos.asesora.telefono")
     return (
@@ -2472,7 +2458,7 @@ def s_proximos(d, R):
         '      <div class="nx-steps">\n%s      </div>\n\n'
         '      <div class="nx-contact">\n'
         '        <div class="nx-card nx-ase">\n'
-        '          <span class="nx-label">¿Dudas? Escribe a tu asesora comercial</span>\n'
+        '          <span class="nx-label">%s</span>\n'
         '          <b class="nx-name">%s</b>\n%s'
         "        </div>\n"
         '        <div class="nx-card nx-emp">\n'
@@ -2483,6 +2469,7 @@ def s_proximos(d, R):
         "      </div>\n\n%s"
         "    </section>\n"
         % (R.contador("proximos"), R.idx["proximos"], T(titulo, "proximos_pasos.titulo"), M(sub, "proximos_pasos.subtitulo"), cards,
+           T(pp.get("etiqueta_contacto") or "¿Dudas? Escribe a tu asesora comercial", "proximos_pasos.etiqueta_contacto"),
            T(a["nombre"], "proximos_pasos.asesora.nombre"), lineas, foot(R, "oscuro"))
     )
 
@@ -3417,8 +3404,9 @@ def construir_brief(d, R):
     ms = (d.get("meta_servicio") or "habilidades").strip()
     pp = d.get("proximos_pasos") or {}
     ase = pp.get("asesora") or {}
-    asesora = ("%s%s · %s%s" % (ase.get("nombre", ""), (", " + ase["cargo"]) if ase.get("cargo") else "", ase.get("correo", ""),
-                                (" · " + ase["telefono"]) if ase.get("telefono") else "")) if "proximos" in R.orden else "(esta propuesta omite la slide de próximos pasos)"
+    asesora = (("%s%s" % (ase.get("nombre", ""), (", " + ase["cargo"]) if ase.get("cargo") else "")
+                + "".join(" · " + ase[k] for k in ("correo", "telefono") if ase.get(k))) if "proximos" in R.orden
+               else "(esta propuesta omite la slide de próximos pasos)")
     if "retorno" not in R.orden:
         regla_retorno = "Sin slide de retorno (`omitir`): confirmar con ventas que aquí no aplica (charla, sesión única); si el cliente es directivo, el retorno estimado es lo que decide."
     elif ms == "habilidades":

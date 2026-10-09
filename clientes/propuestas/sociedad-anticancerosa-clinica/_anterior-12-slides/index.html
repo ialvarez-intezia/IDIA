@@ -1,0 +1,632 @@
+<!doctype html>
+<!--
+  Propuesta — Sociedad Anticancerosa de Venezuela, Clínica (DET-023)
+  Servicio: DETECCIÓN pura (Modelo Intezia). División: Educación — CONFIRMADA EXPLÍCITAMENTE CON
+  EL USUARIO (AskUserQuestion, 2026-09-25): aunque la ficha describe a la Sociedad como
+  "organización sin fines de lucro", el servicio es una Detección corporativa estándar (pagada),
+  no un programa social/comunitario de Fundación — ver brief.md. Primer contacto, sin servicio
+  previo. Fuente primaria: Ficha de Levantamiento
+  (Levantamiento_Sociedad_Anticancerosa_de_Venezuela_Clinica_2026-09-25.pdf, asesora Verónica
+  Rubio).
+
+  SOLO DETECCIÓN (sin combo Habilidades): la ficha trae "Servicios de interés: Detección,
+  Habilidades" y un Bloque específico de Habilidades completo, pero el usuario pidió una sola
+  propuesta bajo DET-023. El contenido de Habilidades queda solo en brief.md, como contexto para
+  una eventual Propuesta 2 no solicitada todavía (mismo patrón que Toyocentro/AMV con su fase de
+  Habilidades futura).
+
+  2 ÁREAS (dato directo de la ficha, sin ambigüedad): Administración operativa (compras, pagos,
+  conciliación, ~4 personas) y Central de Citas / Atención al cliente (confirmación de
+  pacientes, médicos, procedimientos, ~5 personas). 4 HORAS de Detección por área (8h) +
+  FUNDAMENTALS (2h grupal, lineamiento por defecto) = 10h totales. MODALIDAD MIXTA (inferida: la
+  ficha no da modalidad explícita para las sesiones de Detección en sí, pero el Bloque
+  específico de Habilidades sí dice "Mixta" para el proyecto en general, y hay 2 sedes físicas
+  — confirmar con Verónica antes de enviar).
+  CON LOGRO INMEDIATO por sesión de área (patrón toyocentro/velas-3n, no pilotes-perforados/
+  andromeda) — el cliente ya identificó 2 candidatos reales en la propia reunión (Bloque F,
+  "Logro(s) inmediato(s) ya identificado(s)"): (1) Central de Citas — automatizar respuestas
+  repetitivas e integración con el sistema de agendamiento (400 mensajes/día); (2)
+  Administración — revisar la continuidad de un bot de conciliación YA COMPRADO pero abandonado
+  por resistencia al cambio del equipo.
+  RESISTENCIA AL CAMBIO — tema explícito de diseño (Bloque F, cita textual): "esto valida
+  fuertemente arrancar con Detección + Fundamentos de IA para bajar esa resistencia." La slide
+  de Fundamentals y el Diagnóstico reflejan esto explícitamente, no es solo nivelación técnica.
+  SIN pre-recomendar herramienta (Metodología ABR): el cliente declara "aún no lo saben, esperan
+  la recomendación". SIN mencionar los equipos médicos con IA embebida (endoscopio Fuji,
+  ultrasonidos) — fuera de alcance de esta Detección. SIN afirmar patrocinio ejecutivo fuerte ni
+  a Lino como firmante final — la ficha aclara que la decisión probablemente escale a Dirección
+  General y que Lino "no confirmó quién firma en definitiva".
+  Sin slide de Mapa de Calor ni Metodología ABR ni Equipo facilitador expuestos (§4.10a). Sin
+  certificado (Detección pura). Beneficios v3, Cierre escalera, servicio@intezia.com.
+  .rmx-ethics con padding-right:230px aplicado por defecto (memoria
+  bug-rmx-ethics-choca-nombre-cliente-largo.md).
+  Sin <strong> dentro de ningún <li> de .s-pain/.s-goals/.s-schedule (bug-strong-flex-specifics.md).
+  1 solo chip en el gauge-panel de Impacto (bug-impact-gauge-chips-collision.md) — en este caso,
+  0 chips, dado que 2 fuentes reales ya cubren ambas áreas sin forzar un 3er dato.
+  Impacto (§4.9, verificado por WebSearch 2026-09-25): Robotham D, Satkunanathan S, Reynolds J,
+  Stahl D, Wykes T — "Using digital notifications to improve attendance in clinic: systematic
+  review and meta-analysis", BMJ Open (2016): pacientes con notificaciones automatizadas de
+  citas tienen 23% más probabilidad de asistir (67% vs. 54% sin notificaciones) y 25% menos
+  probabilidad de faltar — usado para Central de Citas. + Ardent Partners — Accounts Payable
+  Metrics That Matter (2025): 32.6% de tasa promedio de procesamiento de facturas sin
+  intervención manual en la industria — mismo dato ya verificado y usado en AMV Tecnología
+  DET-019, reutilizado aquí para Administración (conciliación).
+  12 slides · precio estándar (Propuesta Económica, un solo servicio).
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Propuesta · Sociedad Anticancerosa de Venezuela · Intezia</title>
+  <link rel="stylesheet" href="../_base/styles.css">
+  <link rel="stylesheet" href="overrides.css">
+</head>
+<body>
+
+  <main class="deck">
+
+    <!-- 1 · Portada -->
+    <section class="slide s-cover">
+      <span class="counter">01 / 12</span>
+      <div class="logo-big">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia">
+      </div>
+      <div class="body">
+        <p class="eyebrow">Propuesta formativa · Servicio de Detección</p>
+        <h1>
+          De 400 mensajes sin responder<br>
+          <span class="hl">a un criterio común.</span>
+        </h1>
+        <p class="lead">
+          Auditamos Administración operativa y Central de Citas con 4 horas dedicadas a cada área, y construimos un logro inmediato en cada sesión, empezando por <strong>automatizar las respuestas repetitivas</strong> de Central de Citas.
+        </p>
+      </div>
+      <div class="id-line">
+        <span class="codigo">Código: DET-023</span>
+        <span class="cliente">Sociedad Anticancerosa de Venezuela</span>
+      </div>
+    </section>
+
+    <!-- 2 · Punto de dolor + Diagnóstico -->
+    <section class="slide s-pain">
+      <span class="counter">02 / 12</span>
+      <span class="quote-mark">&ldquo;</span>
+      <div class="body">
+        <h2>&ldquo;Son cosas bastante repetitivas, sin embargo, salen mucho mal.&rdquo;</h2>
+        <p class="context">
+          La Clínica de la Sociedad Anticancerosa de Venezuela recibe cerca de 400 mensajes diarios en Central de Citas, con respuestas que quedan sin dar o mal dadas. Es el primer contacto de la Sociedad con Intezia: ya tienen licencia de Copilot, pero genérica y prácticamente sin usar a nivel organizativo.
+        </p>
+        <p class="diag-title">Diagnóstico</p>
+        <ol>
+          <li>Central de Citas recibe ~400 mensajes al día, con preguntas repetitivas manejadas manualmente y una integración con el sistema de citas totalmente manual.</li>
+          <li>Un analista de Administración dedica 2 días a la semana a la conciliación de caché, factura por factura.</li>
+          <li>Ya compraron un bot para automatizar la conciliación, pero no se usa por resistencia al cambio del equipo.</li>
+          <li>El uso de IA hoy es suelto y sin criterio: Copilot subutilizado y ChatGPT personal no integrado a la información de la empresa.</li>
+          <li>Sin diagnóstico o auditoría de IA previa, ni un objetivo estratégico de IA definido a nivel de toda la Sociedad.</li>
+        </ol>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">SOCIEDAD ANTICANCEROSA · DET-023</span>
+      </div>
+    </section>
+
+    <!-- 3 · Objetivos estratégicos -->
+    <section class="slide s-goals">
+      <span class="counter">03 / 12</span>
+      <p class="eyebrow">02 · Objetivos</p>
+      <h2>A dónde llevamos<br>la operación de la Clínica.</h2>
+      <div class="columns">
+        <div class="general">
+          <p class="label">Objetivo general</p>
+          <p>
+            Auditar Administración operativa y Central de Citas con 4 horas dedicadas a cada área, dejando un logro inmediato en cada una, para llevar el uso disperso de IA de hoy a un criterio común, empezando por Central de Citas y la conciliación de Administración.
+          </p>
+        </div>
+        <div class="specifics">
+          <p class="label">Objetivos específicos</p>
+          <ol>
+            <li>Nivelar al equipo con una sesión de Fundamentals, bajando la resistencia al cambio que hoy frena la adopción.</li>
+            <li>Auditar las 2 áreas con 4 horas dedicadas a cada una, modalidad mixta.</li>
+            <li>Dejar un logro inmediato en cada área, empezando por Central de Citas y la conciliación de Administración.</li>
+            <li>Entregar un Reporte Final con el mapa de oportunidades priorizado y una recomendación de ecosistema de IA.</li>
+          </ol>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">SOCIEDAD ANTICANCEROSA · DET-023</span>
+      </div>
+    </section>
+
+    <!-- 4 · Programa -->
+    <section class="slide s-program">
+      <span class="counter">04 / 12</span>
+      <p class="eyebrow">03 · El proyecto</p>
+      <h2>2 áreas, un mismo criterio.</h2>
+      <p class="meta">Fundamentals + Detección con logro inmediato por área, modalidad mixta.</p>
+      <div class="modules">
+        <div class="module">
+          <span class="roman">I</span>
+          <h3>Fundamentals</h3>
+          <p class="obj">Nivela a Administración y Central de Citas, bajando la resistencia al cambio.</p>
+          <ul class="topics">
+            <li>Fundamentos de IA</li>
+            <li>Kick-off grupal</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">II</span>
+          <h3>Trabajo por Área</h3>
+          <p class="obj">Una sesión de 4 horas por cada una de las 2 áreas, con un logro inmediato en cada una.</p>
+          <ul class="topics">
+            <li>2 áreas · 4h c/u</li>
+            <li>Logro inmediato por área</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">III</span>
+          <h3>Priorización</h3>
+          <p class="obj">Se prioriza cada hallazgo por impacto, esfuerzo y riesgo, y se unifica el Índice de Madurez.</p>
+          <ul class="topics">
+            <li>Mapa de Calor</li>
+            <li>Índice de Madurez</li>
+          </ul>
+        </div>
+        <div class="module">
+          <span class="roman">IV</span>
+          <h3>Reporte Final</h3>
+          <p class="obj">Diagnóstico completo + mapa de oportunidades, con recomendación de ecosistema de IA.</p>
+          <ul class="topics">
+            <li>Mapa de oportunidades</li>
+            <li>Recomendación de IA</li>
+          </ul>
+        </div>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">SOCIEDAD ANTICANCEROSA · DET-023</span>
+      </div>
+    </section>
+
+    <!-- 5 · Roadmap · Detección (3 etapas) -->
+    <section class="slide s-roadmap">
+      <span class="counter">05 / 12</span>
+      <p class="eyebrow">04 · Roadmap · Detección</p>
+      <h2>Auditar antes<br><span class="hl">de seguir automatizando a ciegas</span>.</h2>
+
+      <div class="rmx-field">
+        <div class="rmx-linear">
+
+          <div class="rmx-lrow-nodes">
+            <div class="rmx-lcol"><div class="rmx-node rmx-node-f2">1</div></div>
+            <div class="rmx-arrow"></div>
+            <div class="rmx-lcol"><div class="rmx-node rmx-node-f3">2</div></div>
+            <div class="rmx-arrow"></div>
+            <div class="rmx-lcol"><div class="rmx-node rmx-node-f4">3</div></div>
+            <div class="rmx-arrow"></div>
+            <div class="rmx-lcol"><div class="rmx-node rmx-node-r">&#9733;</div></div>
+          </div>
+
+          <div class="rmx-lrow-cards">
+            <div class="rmx-lcol">
+              <div class="rmx-card rmx-card-f2">
+                <span class="rmx-card-tag">Etapa 1 · Fundamentals y Trabajo por Área</span>
+                <div class="rmx-card-name">Fundamentals + 4h por área</div>
+                <ul class="rmx-facets">
+                  <li><span>Qué pasa</span><p>Nivelamos con Fundamentals y auditamos las 2 áreas, 4h cada una.</p></li>
+                  <li><span>Con quién</span><p>Administración operativa y Central de Citas.</p></li>
+                  <li><span>Entrega</span><p>Equipo nivelado + logro inmediato por área.</p></li>
+                </ul>
+              </div>
+            </div>
+            <div class="rmx-lspacer"></div>
+            <div class="rmx-lcol">
+              <div class="rmx-card rmx-card-f3">
+                <span class="rmx-card-tag">Etapa 2 · Priorización</span>
+                <div class="rmx-card-name">Mapa de Calor de oportunidades</div>
+                <ul class="rmx-facets">
+                  <li><span>Qué pasa</span><p>Se prioriza cada hallazgo por impacto, esfuerzo y riesgo, y se unifica el indicador.</p></li>
+                  <li><span>Con quién</span><p>Equipo consultor Intezia.</p></li>
+                  <li><span>Entrega</span><p>Mapa de Calor de las 2 áreas + Índice de Madurez.</p></li>
+                </ul>
+              </div>
+            </div>
+            <div class="rmx-lspacer"></div>
+            <div class="rmx-lcol">
+              <div class="rmx-card rmx-card-f4">
+                <span class="rmx-card-tag">Etapa 3 · Reporte Final</span>
+                <div class="rmx-card-name">Mapa de oportunidades priorizado</div>
+                <ul class="rmx-facets">
+                  <li><span>Qué pasa</span><p>Se entrega el diagnóstico completo, con la recomendación de ecosistema de IA.</p></li>
+                  <li><span>Con quién</span><p>Lino Olivieri y el liderazgo de la Sociedad.</p></li>
+                  <li><span>Entrega</span><p>Reporte Final + recomendación de IA.</p></li>
+                </ul>
+              </div>
+            </div>
+            <div class="rmx-lspacer"></div>
+            <div class="rmx-lcol">
+              <div class="rmx-result-card">
+                <span class="rmx-result-label">Entregable insignia · Mapa de oportunidades</span>
+                <div class="rmx-result-title">De un uso disperso a <b>un criterio común</b></div>
+                <ul>
+                  <li>Equipo nivelado con Fundamentals</li>
+                  <li>Logro inmediato por área</li>
+                  <li>Mapa de oportunidades + Reporte Final</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /.rmx-linear -->
+
+        <div class="rmx-ethics">
+          <span class="rmx-ethics-tag">Metodología ABR · Diagnóstico antes de recomendar</span>
+          <p>El Reporte Final confirma la recomendación con los hallazgos reales de las 2 áreas, no antes.</p>
+        </div>
+
+      </div><!-- /.rmx-field -->
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">SOCIEDAD ANTICANCEROSA · DET-023</span>
+      </div>
+    </section>
+
+    <!-- 6 · Cronograma · Fundamentals -->
+    <section class="slide s-schedule">
+      <span class="counter">06 / 12</span>
+      <p class="eyebrow">04 · Cronograma · Fundamentals</p>
+
+      <div class="ses-head">
+        <div>
+          <span class="ses-mod">Sesión grupal · Administración y Central de Citas · dentro del máximo de 25 personas</span>
+          <h2>Fundamentals</h2>
+        </div>
+        <div class="ses-meta"><span class="ses-dur">2h</span></div>
+      </div>
+
+      <div class="ses-body">
+        <div class="ses-block">
+          <span class="label">Temas</span>
+          <div class="chips">
+            <span class="chip">Qué es y qué no es la IA</span>
+            <span class="chip">Bajar la resistencia al cambio</span>
+            <span class="chip">Ruta de las 2 sesiones</span>
+            <span class="chip">Preguntas y expectativas</span>
+          </div>
+        </div>
+        <div class="ses-block">
+          <span class="label">Tiempo · Total 2 h</span>
+          <div class="timebar">
+            <div class="seg" style="flex:30">30' Encuadre y fundamentos</div>
+            <div class="seg" style="flex:45">45' Casos reales de la Clínica</div>
+            <div class="seg" style="flex:30">30' Ruta de las 2 sesiones</div>
+            <div class="seg" style="flex:15">15' Cierre y preguntas</div>
+          </div>
+        </div>
+        <div class="ses-cols">
+          <div class="ses-block">
+            <span class="label">Qué se hace</span>
+            <ul>
+              <li>Presentamos qué es y qué no es la IA, con foco en bajar la resistencia al cambio</li>
+              <li>Explicamos la ruta de las 2 sesiones de auditoría que siguen</li>
+              <li>Abrimos espacio a preguntas y expectativas del equipo</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Qué se logra</span>
+            <ul>
+              <li>El equipo llega a sus sesiones de área con un lenguaje común</li>
+              <li>Expectativas alineadas sobre la auditoría</li>
+              <li>Primera identificación de dónde cada área ve oportunidad</li>
+            </ul>
+          </div>
+          <div class="ses-block block-rec">
+            <span class="label">Recursos y entornos</span>
+            <ul>
+              <li>Sesión grupal, Administración y Central de Citas</li>
+              <li>Sin herramientas técnicas todavía</li>
+              <li>Casos reales de la Clínica</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">SOCIEDAD ANTICANCEROSA · DET-023</span>
+      </div>
+    </section>
+
+    <!-- 7 · Cronograma · Estructura de las 4 horas por área -->
+    <section class="slide s-schedule">
+      <span class="counter">07 / 12</span>
+      <p class="eyebrow">04 · Cronograma · Estructura por área</p>
+
+      <div class="ses-head">
+        <div>
+          <span class="ses-mod">Se repite en cada una de las 2 áreas · modalidad mixta</span>
+          <h2>Estructura de las 4 horas</h2>
+        </div>
+        <div class="ses-meta"><span class="ses-dur">4h</span></div>
+      </div>
+
+      <div class="ses-body">
+        <div class="ses-block">
+          <span class="label">Temas</span>
+          <div class="chips">
+            <span class="chip">Procesos reales del área</span>
+            <span class="chip">Cuellos de botella</span>
+            <span class="chip">Logro inmediato aplicable</span>
+            <span class="chip">Datos y sistemas del área</span>
+          </div>
+        </div>
+        <div class="ses-block">
+          <span class="label">Tiempo · Total 4 h</span>
+          <div class="timebar">
+            <div class="seg" style="flex:45">45' Contexto y objetivos</div>
+            <div class="seg" style="flex:90">90' Levantamiento de procesos</div>
+            <div class="seg" style="flex:75">75' Construcción del logro inmediato</div>
+            <div class="seg" style="flex:30">30' Cierre y siguientes pasos</div>
+          </div>
+        </div>
+        <div class="ses-cols">
+          <div class="ses-block">
+            <span class="label">Qué se hace</span>
+            <ul>
+              <li>Entrevistamos al equipo del área sobre sus procesos reales</li>
+              <li>Identificamos el cuello de botella más relevante</li>
+              <li>Construimos en la misma sesión un logro inmediato aplicable</li>
+            </ul>
+          </div>
+          <div class="ses-block">
+            <span class="label">Qué se logra</span>
+            <ul>
+              <li>Inventario real de procesos del área</li>
+              <li>Un logro inmediato que el área ya puede usar</li>
+              <li>Información lista para el Mapa de Calor conjunto</li>
+            </ul>
+          </div>
+          <div class="ses-block block-rec">
+            <span class="label">Recursos y entornos</span>
+            <ul>
+              <li>Sesión presencial o remota por área</li>
+              <li>Guion de levantamiento Intezia</li>
+              <li>Sin tocar los sistemas internos de la Clínica</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">SOCIEDAD ANTICANCEROSA · DET-023</span>
+      </div>
+    </section>
+
+    <!-- 8 · Beneficios (formato v3) -->
+    <section class="slide s-benefits s-benefits-v2">
+      <span class="counter">08 / 12</span>
+      <p class="eyebrow">05 · Beneficios</p>
+      <h2>Lo que <span class="hl">se llevan</span>.</h2>
+      <div class="grid">
+        <div class="block">
+          <p class="label">Resultados</p>
+          <ul>
+            <li>Las <strong>2 áreas</strong> auditadas, cada una con un logro inmediato, empezando por Central de Citas.</li>
+            <li>Equipo nivelado con Fundamentals, con menos resistencia al cambio.</li>
+            <li>Un mapa de oportunidades priorizado y una recomendación de ecosistema de IA.</li>
+          </ul>
+        </div>
+        <div class="block">
+          <p class="label">Por qué Detección</p>
+          <p>
+            Antes de comprar o reactivar herramientas a ciegas, la Sociedad conoce sus 2 áreas a fondo, con un <strong>logro tangible</strong> ya funcionando en cada una.
+          </p>
+        </div>
+        <div class="block">
+          <p class="label">Entregables</p>
+        </div>
+        <div class="block">
+          <p class="label">Valor inmediato</p>
+        </div>
+      </div>
+
+      <div class="multi-box entregables-box" data-field="Entregables"></div>
+      <div class="multi-box acreditaciones-box" data-field="Acreditacion"></div>
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">SOCIEDAD ANTICANCEROSA · DET-023</span>
+      </div>
+    </section>
+
+    <!-- 9 · Impacto / estudios — datos reales, fuente citada (CLAUDE.md §4.9) -->
+    <section class="slide s-impact">
+      <span class="counter">09 / 12</span>
+
+      <div class="impact-head">
+        <p class="eyebrow">06 · Impacto</p>
+        <h2>Responder a tiempo<br><span class="hl">también es parte del cuidado</span>.</h2>
+      </div>
+
+      <div class="impact-body">
+        <div class="chart-panel">
+          <p class="panel-title">Qué pasa cuando las citas se confirman de forma automatizada</p>
+          <div class="bars">
+            <div class="bar-row">
+              <span class="bar-label">Asistencia a la cita con notificaciones automatizadas</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:67%"><span class="bar-val">67%</span></div></div>
+            </div>
+            <div class="bar-row">
+              <span class="bar-label">Asistencia a la cita sin notificaciones</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:54%"><span class="bar-val">54%</span></div></div>
+            </div>
+          </div>
+          <div class="bar-axis"><span class="scale"><span>0</span><span>25</span><span>50</span><span>75</span><span>100%</span></span></div>
+          <p class="panel-source">Fuente: Robotham et al. &mdash; Using digital notifications to improve attendance in clinic: systematic review and meta-analysis, BMJ Open (2016).</p>
+        </div>
+
+        <div class="gauge-panel">
+          <div class="gauge" style="--pct:33">
+            <div class="gauge-core">
+              <span class="gauge-num">33<span class="pct">%</span></span>
+              <span class="gauge-cap">de las facturas se procesan sin intervención manual en la industria</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="impact-hook">
+        <span class="hook-mark">&#9656;</span>
+        <p class="hook-text">
+          Los pacientes que reciben notificaciones automatizadas de sus citas tienen 23% más probabilidad de asistir y 25% menos probabilidad de faltar (Robotham et al., BMJ Open, 2016): el mismo problema que hoy vive Central de Citas con sus 400 mensajes diarios. Del lado de Administración, solo el 33% de las facturas se procesa hoy sin intervención manual en la industria (Ardent Partners, 2025), la misma brecha detrás de una conciliación que toma 2 días a la semana.
+        </p>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">SOCIEDAD ANTICANCEROSA · DET-023</span>
+      </div>
+    </section>
+
+    <!-- 10 · Propuesta Económica (estándar: Duración + Programa + Notas + Cotización) -->
+    <section class="slide s-price">
+      <span class="counter">10 / 12</span>
+      <h2 class="title">Propuesta Económica</h2>
+
+      <div class="block">
+        <span class="block-eyebrow">Duración</span>
+        <p class="block-value">Fundamentals (2h) + 2 áreas · 4h por área (8h) · 10h totales · modalidad mixta.</p>
+      </div>
+
+      <div class="block block-programa">
+        <span class="block-eyebrow">Programa</span>
+      </div>
+      <div class="multi-box programa-box" data-field="Programa"></div>
+
+      <div class="block block-cotizacion">
+        <span class="block-eyebrow">Cotización</span>
+      </div>
+
+      <span class="cot-label cot-label-base">Propuesta + Inversión</span>
+      <div class="cot-frame base-frame"></div>
+
+      <span class="cot-label cot-label-discount">Descuento</span>
+      <div class="cot-frame discount-frame"></div>
+
+      <span class="cot-label cot-label-total">TOTAL</span>
+      <div class="cot-frame total-frame"></div>
+
+      <p class="cot-validity">Cotización válida por 30 días.</p>
+      <div class="cot-terms-box">
+        <span class="cot-terms-label">Importante</span>
+        <p class="cot-terms-text">Este servicio se presta bajo nuestros <a href="https://drive.google.com/file/d/1PA-ZSt4KnyY5dpxXzgkIk6-yfGlV2eF8/view?usp=drive_link" target="_blank" rel="noopener">términos y condiciones</a>. Al avanzar con esta propuesta, ambas partes los aceptan.</p>
+      </div>
+
+      <div class="block block-notes-container">
+        <span class="block-eyebrow">Notas</span>
+      </div>
+      <div class="multi-box notas-box" data-field="Notas"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">SOCIEDAD ANTICANCEROSA · DET-023</span>
+      </div>
+    </section>
+
+    <!-- 11 · Próximos pasos -->
+    <section class="slide s-steps">
+      <span class="counter">11 / 12</span>
+      <p class="eyebrow">07 · Próximos pasos</p>
+      <h2>Cómo arrancamos.</h2>
+      <div class="step-cards">
+        <div class="step-card">
+          <span class="ghost">01</span>
+        </div>
+        <div class="step-card">
+          <span class="ghost">02</span>
+        </div>
+        <div class="step-card">
+          <span class="ghost">03</span>
+        </div>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-01-titulo" data-field="Paso01Titulo">
+        <span class="acro-default-text">Confirmamos fechas</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-01-body" data-field="Paso01Body">
+        <span class="acro-default-text">Definimos con Lino el calendario de Fundamentals y las 2 sesiones de área.</span>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-02-titulo" data-field="Paso02Titulo">
+        <span class="acro-default-text">Acceso y logística</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-02-body" data-field="Paso02Body">
+        <span class="acro-default-text">Coordinamos la modalidad, el acceso y la participación de Administración y Central de Citas.</span>
+      </div>
+
+      <div class="acro-area acro-title acro-paso-03-titulo" data-field="Paso03Titulo">
+        <span class="acro-default-text">Reunión de arranque</span>
+      </div>
+      <div class="acro-area acro-body acro-paso-03-body" data-field="Paso03Body">
+        <span class="acro-default-text">Sesión de unos 30 minutos con Lino para alinear el alcance y el orden de las 2 áreas.</span>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">SOCIEDAD ANTICANCEROSA · DET-023</span>
+      </div>
+    </section>
+
+    <!-- 12 · Cierre (ruta/escalera editable) -->
+    <section class="slide s-end">
+      <span class="counter">12 / 12</span>
+
+      <div class="end-logo">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia">
+      </div>
+
+      <div class="end-summit" data-field="CierreResultado">
+        <span class="acro-default-text">La Clínica, con sus 2 áreas auditadas y un mapa de oportunidades priorizado para decidir qué automatizar primero.</span>
+      </div>
+
+      <div class="end-stairs">
+        <div class="stair-step stair-1">
+          <span class="stair-label">Paso 1</span>
+          <div class="stair-field" data-field="CierrePaso1">
+            <span class="acro-default-text">Fundamentals y trabajo por área</span>
+          </div>
+        </div>
+        <div class="stair-step stair-2">
+          <span class="stair-label">Paso 2</span>
+          <div class="stair-field" data-field="CierrePaso2">
+            <span class="acro-default-text">Mapa de oportunidades priorizado</span>
+          </div>
+        </div>
+        <div class="stair-step stair-3">
+          <span class="stair-label">Paso 3</span>
+          <div class="stair-field" data-field="CierrePaso3">
+            <span class="acro-default-text">Reporte Final + recomendación de IA</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cta-wrap">
+        <span class="cta">Esperamos tu respuesta</span>
+      </div>
+
+      <div class="end-contact">
+        <p class="contact-line">
+          <span class="contact-label">Asesora de ventas:</span>
+          Verónica Rubio <span class="dot">·</span> +58 422 3355505 <span class="dot">·</span> vrubio01@intezia.com
+        </p>
+        <p class="contact-line">
+          <span class="contact-label">Empresa:</span>
+          Intezia C.A J-505657950 <span class="dot">·</span> servicio@intezia.com
+        </p>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

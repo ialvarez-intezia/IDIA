@@ -1,4 +1,40 @@
-# Brief — IOED · Plan de Digitalización con IA (CAP-098)
+# Brief — IOED · CAP-098
+
+## Actualización 2026-10-08 — Fase 1 de Detección en la plantilla compacta v2 (8 slides) · VIGENTE
+
+**Pedido de la asesora (08/10/2026):** una propuesta **solo con la Fase 1 (Diagnóstico)** de la CAP-098, con la nivelación y los fundamentos de IA incluidos; que se vea el camino (construcción e implementación) **sin cotizarlo**; un apartado corto de **confidencialidad** (primera preocupación del cliente, validado con Tecnología); trabajar dentro de **Microsoft 365 E3** (hoy una sola licencia de Copilot Studio, no hace falta comprar nada de entrada); y, si IOED decide adquirir e integrar **Claude**, la nivelación se hace sobre esa herramienta (en la reunión se habló de lo hecho con Pago Tronic y Claude, y el cliente se interesó por el riesgo de datos). Extra: **resumen de una página** (qué hacemos, qué entregamos en los primeros 30 días, cómo cuidamos su información) para que la contraparte (Liliam) lo presente a su jefe. El usuario pidió el resumen como PDF.
+
+**Servicio y código:** Detección (Fase 1 del plan de la CAP-098), división Educación, alianza no. Se conserva el código **CAP-098** (la instrucción fue «ajustar la CAP-098»); si se prefiere un código DET-, es un solo cambio en `cliente.codigo` de `datos.json`.
+
+| Parte | Horas | Detalle |
+|---|---|---|
+| Fundamentals | 2 h | Un solo grupo online (máx. 25), sobre las herramientas que IOED ya tiene; si incorpora Claude, sobre Claude |
+| Servicios Navales | 4 h | Dos mesas de 2 h: procesos y trazabilidad (semana 2) · accesos y datos (semana 3) |
+| Operaciones de Buques | 4 h | Igual: procesos e informes (semana 2) · accesos y datos (semana 3) |
+| **Total** | **10 h** | 5 sesiones online en 4 semanas (los primeros 30 días); kick-off aparte, sin horas |
+
+El informe de diagnóstico (semana 4), la evaluación del control de acceso y la viabilidad de integraciones son trabajo del consultor: entregables transversales, sin horas inventadas.
+
+**Qué cambió respecto de la CAP-098 de agosto (17 slides, 3 fases cotizadas):** solo la Fase 1 con valor; las fases 2 y 3 aparecen como camino (ruta, retorno, límites del alcance, notas de la inversión) sin horas ni valor; la hoja de inversión pasa de «Inversión por fases» (7 campos) a la hoja estándar de un solo proyecto (7 campos del compacto); se retiran Quiénes somos con los clientes de referencia, los 3 estudios de Impacto y la Metodología de retos (el compacto no los lleva); se agrega «Cómo trabajamos» con el apartado de datos y la slide de próximos pasos con la asesora. Se mantienen los criterios del cliente del 14/08: sin flota, sin detalle de contratos ni procesos internos y sin nombrar la plataforma con la que se evaluaría una integración.
+
+**Confidencialidad (slide 4 y hoja resumen), pendiente de validar con Tecnología antes de enviar:**
+- Acuerdo de confidencialidad firmado antes de iniciar (dato de la asesora).
+- En las mesas no se carga información real de IOED a herramientas de IA (criterio del sistema, igual que G-MAX, Conserval, la clínica y Acua-e).
+- Dónde se procesa: dentro del entorno Microsoft 365 de IOED; otra herramienta (p. ej. Claude) se valida antes con IOED y su área de tecnología.
+- Sin entrenar modelos: licencias empresariales. Respaldo público consultado el 08/10/2026: Microsoft, protección de datos empresariales de Copilot (los avisos, respuestas y datos de Microsoft Graph no entrenan modelos fundamentales y permanecen en el límite del servicio de Microsoft 365; learn.microsoft.com/copilot/microsoft-365/enterprise-data-protection) y Anthropic, términos comerciales de Claude Team y Enterprise (no se entrena con el contenido del cliente por defecto; anthropic.com/legal/commercial-terms). Los planes personales o gratuitos no tienen esas garantías.
+- Cómo se protege: accede solo quien IOED autorice; el informe evalúa el control de acceso por área.
+
+**Decisiones de contenido (todas del sistema, por confirmar):** 2 áreas (los agrupadores de la CAP-098) con 4 h cada una en 2 mesas de 2 h por la consigna de «sesiones de 2 horas»; temas de las mesas tomados de la Fase 1 de la CAP-098; calendario de 4 semanas propuesto por el sistema para que el informe llegue en 30 días; retorno en modo método (sin cifras del cliente); sin facilidad de pago (se omitió por el criterio de las últimas propuestas); asesora Flavia Martínez, la de la CAP-098. Claude se presenta como condición que decide IOED, sin afirmar que migra ni que adoptará (CLAUDE.md §4.11). Los casos de Pago Tronic y Claude de la reunión no se citan (sin fuente documentada). La contraparte (Liliam) y su jefe no se nombran en el deck.
+
+**Archivos:** `datos.json` (fuente), `index.html` (generado), PDF «CAP-098 Diagnóstico de procesos con IA y nivelación del equipo en 2 áreas de IOED.pdf» (8 páginas, 7 campos), PDF complementario «CAP-098 Resumen de una página.pdf» con su fuente `resumen-una-pagina.html` (si cambia el deck, actualizar sus cifras e imprimirlo con Chrome; **sacarlo de la carpeta antes de correr `pdf-habilidades-compacto.sh`**, que aparta todo `*.pdf`), y `_anterior-17-slides/` (deck de agosto, su versión Resumen de 8 slides del 14/08, `styles.css` local, acroforms, programa y PDF).
+
+**Pendientes:** validación de Tecnología; valor, descuento y total de la Fase 1; confirmar 2 áreas, 10 h, 2 mesas por área, calendario, fechas y plataforma; quién de IOED asiste a Fundamentals y quién firma el acuerdo; contacto referente (apellido y cargo de Liliam); teléfono, correo y cargo de la asesora; facilidad de pago; reenviar avisando que reemplaza a la CAP-098 de 17 slides (10/08) y a su Resumen (14/08).
+
+---
+
+## Brief anterior (2026-08-10 a 2026-08-14) · SUPERADO por la actualización de arriba
+
+> Plan de digitalización en 3 fases cotizadas, deck de 17 slides y versión Resumen de 8 slides. Se conserva como contexto: diagnóstico, estructura de las fases, criterios del cliente y trazabilidad. Los archivos de ese deck están en `_anterior-17-slides/`.
 
 ## Datos administrativos
 

@@ -1,0 +1,422 @@
+{
+ "version": 2,
+ "cliente": {
+  "nombre": "Laboratorios Farma",
+  "slug": "laboratorios-farma-gestion-humana",
+  "codigo": "CAI-032",
+  "nombre_pie": "Laboratorios Farma"
+ },
+ "division": "educacion",
+ "alianza": false,
+ "eje": "Incorporación de IA con Microsoft Copilot en Gestión Humana regional: Detección de las 6 subáreas, entrenamiento de todo el equipo y los dos primeros asistentes (Ausentismo y Selección)",
+ "origen": "Ficha de Levantamiento de Gestión Humana de Laboratorios Farma, 29/09/2026 (asesora comercial) e instrucciones directas del usuario, 01/10/2026, 05/10/2026 y 08/10/2026 (devolución del cliente)",
+ "fuente_insumo": "Ficha de Levantamiento de Laboratorios Farma (Gestión Humana regional)",
+ "vocabulario": {
+  "proceso_base": [
+   "etapa previa",
+   "etapas previas"
+  ]
+ },
+ "omitir": [
+  "pago"
+ ],
+ "portada": {
+  "titulo_lineas": [
+   "Incorporación de IA",
+   "con Microsoft Copilot"
+  ],
+  "titulo_destacado": "en 6 subáreas de Gestión Humana",
+  "eyebrow": "Propuesta de proyecto · Servicio de Detección y Habilidades",
+  "lead": "La Detección levanta cómo trabaja hoy cada subárea. Este proyecto entrena a todo el equipo en **Microsoft Copilot**, construye y deja en uso los dos primeros asistentes con la licencia que ya tienen, y mide su efecto.",
+  "hechos": [
+   {
+    "num": "6",
+    "texto": "subáreas, en 4 países, usan la IA por su cuenta y sin un criterio compartido.",
+    "resuelto_por": [
+     "DET-1",
+     "MOD-1"
+    ]
+   },
+   {
+    "num": "Uno a uno",
+    "texto": "los currículos del portal de selección se revisan y descargan, sin filtro por perfil.",
+    "resuelto_por": [
+     "SEL-1"
+    ]
+   },
+   {
+    "num": "Cada día",
+    "texto": "Nómina cruza a mano el control de acceso contra una macro de Excel.",
+    "resuelto_por": [
+     "NOM-1"
+    ]
+   },
+   {
+    "num": "5 al día",
+    "texto": "es el tope de solicitudes de Copilot básico, que limita los procesos de mayor volumen.",
+    "resuelto_por": [
+     "DET-1"
+    ]
+   }
+  ],
+  "fuente": "Fuente: Ficha de Levantamiento de Gestión Humana de Laboratorios Farma (29/09/2026)."
+ },
+ "carriles": [
+  {
+   "id": "copilot",
+   "nombre": "Microsoft Copilot",
+   "nombre_corto": "Copilot",
+   "color": "amarillo"
+  }
+ ],
+ "areas": [
+  {
+   "id": "DET",
+   "nombre": "Detección de las 6 subáreas",
+   "para_que": "Saber cómo trabaja cada subárea y qué licencia de Copilot necesita cada proceso",
+   "carril": "copilot",
+   "frente": "A",
+   "proceso_base": true,
+   "nombre_catalogo": "Detección",
+   "soluciones": [
+    {
+     "id": "DET-1",
+     "entregable": "Diagnóstico de las 6 subáreas y mapa de licencias de Copilot por proceso",
+     "h": 4,
+     "fase": "F1",
+     "detalle": "Detección de 4 h con los líderes de las 6 subáreas (Selección, Desarrollo, Nómina, Seguros, Bienestar y Seguridad y Salud Laboral) y el tema transversal de indicadores de gestión: procesos, herramientas (Microsoft 365, SAP, Excel, portal de selección, control de acceso) y permisos. Entrega el diagnóstico real y, proceso por proceso, qué licencia de Copilot necesita cada subárea y por qué (insumo para que Gestión Humana gestione Copilot Business ante la Gerencia Corporativa de TI). Registra la línea base del tiempo actual de Ausentismo y Selección."
+    }
+   ]
+  },
+  {
+   "id": "MOD",
+   "nombre": "Entrenamiento para todo el equipo",
+   "para_que": "Que las 20 personas usen Copilot con un mismo lenguaje y criterio",
+   "carril": "copilot",
+   "frente": "A",
+   "nombre_catalogo": "Entrenamiento del equipo",
+   "soluciones": [
+    {
+     "id": "MOD-1",
+     "entregable": "Sesión 1: ecosistema Microsoft y Copilot",
+     "h": 2,
+     "fase": "F2",
+     "detalle": "Sesión de 2 h para las 20 personas de Gestión Humana: el ecosistema Microsoft (Outlook, Teams, Excel y Word), qué es Copilot, qué puede hacer y cuáles son los límites de la licencia básica (5 solicitudes diarias). Se calibra con los hallazgos de la Detección."
+    },
+    {
+     "id": "MOD-2",
+     "entregable": "Sesión 2: asistentes y agentes de IA, qué son y para qué sirven",
+     "h": 2,
+     "fase": "F2",
+     "detalle": "Sesión de 2 h: qué es un asistente y qué es un agente de IA, para qué sirve cada uno y cómo se usan en el trabajo de Gestión Humana. Prepara a todo el equipo para las prácticas de Nómina y Selección."
+    },
+    {
+     "id": "MOD-3",
+     "entregable": "Sesión 3: Copilot en Outlook y Teams",
+     "h": 2,
+     "fase": "F2",
+     "detalle": "Sesión de 2 h: uso de Copilot en Outlook y en Teams con casos del trabajo diario de Gestión Humana."
+    },
+    {
+     "id": "MOD-4",
+     "entregable": "Sesión 4: Copilot en Excel y Word",
+     "h": 2,
+     "fase": "F2",
+     "detalle": "Sesión de 2 h: uso de Copilot en Excel y en Word con casos de Gestión Humana (reportes, indicadores y documentos). Cierra el entrenamiento y entrega el workbook digital del módulo."
+    }
+   ]
+  },
+  {
+   "id": "NOM",
+   "nombre": "Nómina",
+   "para_que": "Cruzar a diario el control de acceso con la macro de Excel, sin hacerlo a mano",
+   "carril": "copilot",
+   "frente": "A",
+   "soluciones": [
+    {
+     "id": "NOM-1",
+     "entregable": "Asistente de ausentismo, probado con un caso real anonimizado",
+     "h": 4,
+     "fase": "F3",
+     "detalle": "Práctica de 4 h sobre el cruce diario del reporte de control de acceso contra la macro de Excel, por hora, puerta y día de la semana. Se trabaja con un caso real anonimizado: el equipo de Nómina prepara el reporte sin nombres ni documentos de identidad (códigos en lugar de personas), de modo que Copilot no recibe datos que identifiquen a nadie. Se construye en una versión acotada al límite de 5 solicitudes diarias de Copilot básico; la versión a pleno volumen pasa a la Etapa 2."
+    }
+   ]
+  },
+  {
+   "id": "SEL",
+   "nombre": "Selección",
+   "para_que": "Filtrar por perfil los currículos del portal, que hoy se revisan uno a uno",
+   "carril": "copilot",
+   "frente": "A",
+   "soluciones": [
+    {
+     "id": "SEL-1",
+     "entregable": "Asistente de filtro de currículos, probado con casos reales anonimizados",
+     "h": 4,
+     "fase": "F3",
+     "detalle": "Práctica de 4 h sobre la revisión de los currículos que llegan por el portal web, uno por uno. Copilot no tiene conexión con el portal: Selección descarga los currículos como lo hace hoy, los anonimiza (sin nombre, documento ni datos de contacto) y los carga en lote a Copilot. Con el límite de 5 solicitudes diarias, una solicitud carga el lote y aplica el perfil buscado y las demás se reservan para afinar el filtro y redactar. Cuántos archivos admite cada solicitud se confirma en la Detección con Tecnología. La versión a pleno volumen pasa a la Etapa 2."
+    }
+   ]
+  }
+ ],
+ "alcance": {
+  "titulo": "Diagnóstico, entrenamiento y 2 asistentes en uso.",
+  "subtitulo": "Levantamos cómo trabaja cada subárea, entrenamos al equipo y construimos **2 asistentes de IA** en Copilot.",
+  "fuera_alcance": [
+   "La conexión directa de Copilot con SAP o con el portal de selección: requiere permisos de Tecnología.",
+   "La Etapa 2, sin cotizar: depende de que Tecnología active Copilot Business.",
+   "Las licencias de Copilot: la Etapa 1 se hace con la básica que el equipo ya tiene."
+  ]
+ },
+ "metodo": {
+  "quien_construye": "Intezia construye cada asistente en vivo, con los equipos de Nómina y Selección, dentro de Copilot y de los archivos que ya manejan.",
+  "practica": [
+   {
+    "titulo": "Límite de 5 solicitudes al día",
+    "texto": "Copilot básico admite 5 solicitudes diarias: una carga el lote y aplica el perfil buscado, y las demás se reservan para afinar el filtro."
+   },
+   {
+    "titulo": "Currículos sin conexión al portal",
+    "texto": "Selección los descarga del portal, como lo hace hoy, y los carga en lote a Copilot. Cuántos por lote se define en la Detección."
+   },
+   {
+    "titulo": "Ausentismo con reporte anonimizado",
+    "texto": "Nómina practica con el reporte de control de acceso sin nombres ni documentos, con códigos en lugar de personas."
+   }
+  ],
+  "datos": "Las dos prácticas se trabajan con **casos reales anonimizados**: sin nombres, documentos de identidad ni datos de contacto de candidatos o del personal. El equipo prepara los casos antes de cada práctica.",
+  "pasos": [
+   {
+    "titulo": "Construimos",
+    "texto": "Junto a Nómina y Selección, con sus casos reales anonimizados."
+   },
+   {
+    "titulo": "Probamos",
+    "texto": "Con el equipo y dentro del límite de Copilot básico."
+   },
+   {
+    "titulo": "Adoptamos",
+    "texto": "El equipo usa cada asistente en su trabajo diario."
+   },
+   {
+    "titulo": "Medimos",
+    "texto": "El tiempo recuperado contra la línea base, a 30, 60 y 90 días."
+   }
+  ],
+  "por_que_orden": "Primero se levanta cómo trabaja cada subárea; después todo el equipo se entrena con un mismo lenguaje en Copilot; al final se construyen los 2 asistentes con casos reales."
+ },
+ "fases": [
+  {
+   "id": "F1",
+   "titulo": "Detección",
+   "rango": "Semana 1",
+   "descripcion": "levantar antes de construir"
+  },
+  {
+   "id": "F2",
+   "titulo": "Equipo",
+   "rango": "Semanas 2 y 3",
+   "descripcion": "entrenamiento común en Copilot",
+   "destacada": true
+  },
+  {
+   "id": "F3",
+   "titulo": "Casos",
+   "rango": "Semana 4",
+   "descripcion": "dos asistentes construidos en vivo"
+  }
+ ],
+ "frentes": [
+  {
+   "id": "A",
+   "carril": "copilot",
+   "nombre": "Gestión Humana regional",
+   "semanas": "1 a 4",
+   "celdas": {
+    "F1": "Con los líderes de las 6 subáreas: diagnóstico, mapa de licencias y línea base.",
+    "F2": "4 sesiones: ecosistema Microsoft, asistentes y agentes, Outlook, Teams, Excel y Word.",
+    "F3": "Ausentismo y Selección, 4 h cada una, con Copilot básico y casos reales anonimizados."
+   }
+  }
+ ],
+ "ruta": {
+  "semanas_total": 4,
+  "tope_h_semana": 20,
+  "titulo": "De la Detección a 2 asistentes en 4 semanas.",
+  "nota": "Las {h_total} h son una proyección de sesión: {h_f1}, {h_f2} y {h_f3} h en las fases 1, 2 y 3. Las semanas se cuentan desde el arranque del proyecto.",
+  "hitos": [
+   {
+    "titulo": "Semana 1 · Detección",
+    "texto": "4 h con los líderes: diagnóstico, mapa de licencias y línea base de tiempos."
+   },
+   {
+    "titulo": "Semanas 2 y 3 · Equipo",
+    "texto": "8 h con las 20 personas, 2 sesiones por semana: todos con un mismo lenguaje en Copilot."
+   },
+   {
+    "titulo": "Semana 4 · Prácticas",
+    "texto": "Ausentismo y Selección, 4 h cada una: 2 asistentes funcionando con casos reales."
+   },
+   {
+    "titulo": "30 · 60 · 90 días",
+    "texto": "Seguimiento: uso, nuevas construcciones y tiempo recuperado contra la línea base."
+   }
+  ],
+  "siguiente_etapa": {
+   "titulo": "Etapa 2 · Sin fecha",
+   "texto": "5 procesos más: Desarrollo, Seguros, Bienestar, Seguridad y Salud Laboral e Indicadores de Gestión."
+  }
+ },
+ "logistica": {
+  "modalidad": "100 % virtual por Teams.",
+  "participantes": "20 personas de Gestión Humana, en 4 países: Venezuela, Ecuador, Perú y Colombia.",
+  "arranque": "La fecha se acuerda con Laboratorios Farma y la ejecución termina antes del 11 de diciembre.",
+  "ritmo": "Sesiones de 2 h, 2 por semana en el entrenamiento y sin dos días seguidos para Nómina."
+ },
+ "seguimiento": {
+  "rango": "30, 60 y 90 días",
+  "texto": "Desde el cierre de las prácticas",
+  "items": [
+   {
+    "dias": "30 días",
+    "texto": "Uso de los asistentes"
+   },
+   {
+    "dias": "60 días",
+    "texto": "Nuevas construcciones por proceso"
+   },
+   {
+    "dias": "90 días",
+    "texto": "Tiempo recuperado contra la línea base"
+   }
+  ]
+ },
+ "entregables": {
+  "titulo": "Lo que recibe el equipo.",
+  "transversales": [
+   "Línea base del tiempo actual de Ausentismo y Selección.",
+   "Workbook digital del entrenamiento para todo el equipo.",
+   "Seguimiento a 30, 60 y 90 días con medición del tiempo."
+  ],
+  "valor_inmediato": [
+   "Semana 1: diagnóstico y mapa de licencias por proceso.",
+   "Semanas 2 y 3: el equipo entrenado en Copilot.",
+   "Semana 4: 2 asistentes funcionando con casos reales."
+  ]
+ },
+ "retorno": {
+  "modo": "metodo",
+  "posiciones": false,
+  "destino": [
+   {
+    "rotulo": "Mismo equipo, más volumen",
+    "texto": "Si el tiempo se libera, Nómina y Selección pueden procesar **más cruces de asistencia y más currículos** con el mismo equipo."
+   },
+   {
+    "rotulo": "Trabajo reenfocado",
+    "texto": "Con el tiempo liberado, Nómina puede dedicarse a revisar las excepciones de asistencia y Selección a atender a los candidatos que filtra el asistente."
+   },
+   {
+    "rotulo": "Los otros 5 procesos",
+    "texto": "Con el retorno medido, {cliente_corto} decide si lleva este mismo ciclo de construir, probar y adoptar a los **otros 5 procesos** de la Etapa 2."
+   }
+  ],
+  "pasos": [
+   {
+    "titulo": "Volumen semanal",
+    "texto": "Cuántos cruces de asistencia hace Nómina y cuántos currículos revisa Selección cada semana."
+   },
+   {
+    "titulo": "Tiempo actual por ejecución",
+    "texto": "Se mide en la Detección con los líderes de cada proceso y es la **línea base**."
+   },
+   {
+    "titulo": "Tiempo con el asistente",
+    "texto": "Lo que toma el mismo trabajo con Copilot, una vez que el asistente está en uso."
+   },
+   {
+    "titulo": "Horas recuperadas a la semana",
+    "texto": "Volumen semanal multiplicado por la diferencia entre el tiempo actual y el tiempo con el asistente."
+   },
+   {
+    "titulo": "Valor en dinero",
+    "texto": "Horas recuperadas multiplicadas por el valor hora de referencia que {cliente_corto} valide."
+   }
+  ],
+  "metas": [
+   {
+    "dias": "30 días",
+    "texto": "Los 2 asistentes en uso real en Nómina y Selección, dentro del límite de Copilot básico."
+   },
+   {
+    "dias": "60 días",
+    "texto": "Nuevas construcciones del equipo y horas recuperadas medidas contra la línea base."
+   },
+   {
+    "dias": "90 días",
+    "texto": "Medición del retorno en dinero, con el valor de las horas recuperadas de cada proceso."
+   }
+  ]
+ },
+ "inversion": {
+  "partes": [
+   {
+    "nombre": "Detección"
+   },
+   {
+    "nombre": "Habilidades"
+   }
+  ],
+  "etiqueta_suma": "Suma de ambas partes",
+  "programa": [
+   "Detección y Habilidades para Gestión Humana de Laboratorios Farma (CAI-032) · Etapa 1.",
+   "Diagnóstico de las 6 subáreas, 4 sesiones de entrenamiento para todo el equipo y 2 asistentes (Ausentismo y Selección). 20h de trabajo.",
+   "Los otros 5 procesos pasan a la Etapa 2, fuera de esta cotización."
+  ],
+  "notas": [
+   "Licencias aparte: la Etapa 1 usa la licencia básica de Copilot que el equipo ya tiene; Copilot Business (Etapa 2) lo gestiona Tecnología.",
+   "Garantía 30-60-90: seguimiento a 30, 60 y 90 días desde el cierre de cada área, con las soluciones en uso.",
+   "Términos y condiciones: los del enlace de «Importante», que ambas partes aceptan al avanzar con esta propuesta."
+  ]
+ },
+ "proximos_pasos": {
+  "asesora": {
+   "nombre": "María Iribarren",
+   "cargo": "Asesora comercial",
+   "correo": "miribarren@intezia.com",
+   "telefono": "+58 414 0570056"
+  }
+ },
+ "siglas_ok": [
+  "SAP",
+  "TI",
+  "IA"
+ ],
+ "supuestos": [
+  "Horas de la Etapa 1 (instrucción del usuario, 2026-10-08): Detección 4 h, entrenamiento para todo el equipo 8 h (4 sesiones de 2 h, antes un módulo de 3 h) y prácticas 4 h cada una: 20 h en total (antes 15 h). El valor del proyecto debe recalcularse con ventas. «4 h para prácticas» (2026-10-05) sigue interpretado como 4 h CADA una; si son 4 h en total, cambiar h de NOM-1 y SEL-1 a 2 y regenerar (16 h).",
+  "Semanas: 4 semanas (Detección en la 1, entrenamiento en la 2 y la 3 con 2 sesiones por semana, prácticas en la 4) es una proyección de Intezia; confirmar con servicio y con el cliente. Las 4 sesiones del entrenamiento (ecosistema Microsoft y Copilot · asistentes y agentes · Outlook y Teams · Excel y Word) y sus nombres son propuesta del sistema a partir del temario que pidió el cliente.",
+  "Logística (instrucción del usuario, 2026-10-08): 100 % virtual por Teams, 20 personas en 4 países (Venezuela, Ecuador, Perú y Colombia, según la Ficha) y ejecución antes del 11 de diciembre. El plazo es una fecha calendario: el generador avisa y es deliberado; la ruta sigue en semanas.",
+  "Datos sensibles: las prácticas de Selección y Nómina se trabajan con casos reales anonimizados, preparados por el equipo del cliente antes de cada práctica (sin nombres, documentos de identidad ni datos de contacto; códigos en lugar de personas). Quién anonimiza y con qué criterio lo confirma servicio con Tecnología en la Detección.",
+  "Currículos y límite de 5 solicitudes (decisión del usuario, 2026-10-08): carga manual en lote, sin conexión con el portal; una solicitud carga el lote y aplica el perfil y las demás afinan. NO verificado: cuántos archivos o cuántos currículos admite una solicitud de Copilot básico; el deck dice que se define en la Detección. Confirmarlo con Tecnología antes de comprometer un volumen.",
+  "Copilot dentro de Outlook, Teams, Excel y Word (temario pedido por el cliente) frente a la licencia básica de la Etapa 1: confirmar con Tecnología qué parte de Copilot en esas aplicaciones cubre la licencia que ya tienen, porque el deck dice que la Etapa 1 se hace con la básica.",
+  "Copilot básico es la licencia que el cliente ya tiene (indicación del usuario del 2026-10-01); no confirmada con Tecnología.",
+  "Etapa 2 sin cotizar y sin fecha, condicionada a que Tecnología active Copilot Business. Los 5 procesos nombrados en la ruta son Desarrollo, Seguros, Bienestar, Seguridad y Salud Laboral e Indicadores de Gestión (instrucción del 2026-10-08); Selección y Nómina siguen en la Etapa 2 solo como versión a pleno volumen de sus prácticas. Incoherencia heredada sin resolver: la clasificación marca Desarrollo y Bienestar como Copilot básico, pero la propuesta condiciona toda la Etapa 2 a Business; confirmar la intención con el usuario.",
+  "Sin facilidad de pago (instrucción del usuario, 2026-10-08, «no la agregues»): la slide se omite con omitir: [\"pago\"]. Ventas comunica el plan de pago por otro medio. El generador avisa que Ventas la pide en toda propuesta.",
+  "Asesora (slide de próximos pasos): María Iribarren, con el teléfono y el correo que figuran en sus otras propuestas; el cargo «Asesora comercial» es supuesto. Confirmar con ella antes de enviar.",
+  "La línea base del tiempo actual de Ausentismo y Selección se levanta dentro de las 4 h de la Detección: confirmar con servicio que cabe.",
+  "Retorno en modo método: la ficha no trae volúmenes, tiempos ni valor hora del cliente. Pasar a modo 'cifras' cuando se completen (hoja retorno-captura.xlsx). Sin casos ya logrados con el cliente y sin contratación evitada: no hay fuente documentada.",
+  "«Hacia la semana N» del retorno es aritmética (semanas de construcción + 13): confirmar con el equipo de servicio.",
+  "Lenguaje de inversión (instrucción del usuario, 2026-10-08): el proyecto se cobra por proyecto, no por hora. La plantilla v2 ya titula la slide «Inversión del proyecto» y verifica que el deck diga «valor», no «precio» ni «costo». Los nombres internos de los campos del PDF (PrecioBase, PrecioTotal) y sus descripciones emergentes no se tocaron: son del sistema.",
+  "Migración a la plantilla v2 (2026-10-08): versión 1 a 2 según la spec §13. «Módulo conjunto» deja de ser etapa previa y pasa a área con 4 entregables; «Detección» se muestra como «etapa previa» (vocabulario). Fuera de esta versión, por el formato compacto: slide de Impacto con estudio (§4.9 no aplica), Cierre, calendario con fechas, certificado de participación y el detalle de 7 procesos de la slide de licencias (queda en el mapa que entrega la Detección y en programa.md/brief.md).",
+  "Cotización por partes (instrucción del usuario, 2026-10-08): la hoja de inversión lleva 2 cajas de valor a la izquierda, «Detección» y «Habilidades», sin más texto (el usuario pidió «solo 2 cuadros, uno que diga detección y otro habilidades, más nada»), y la suma automática en la caja de la derecha, con Descuento y TOTAL como antes. Habilidades agrupa el entrenamiento del equipo (8 h) y los 2 asistentes (8 h): 16 h; Detección son 4 h. Las tarjetas de licenciamiento salieron de esta slide (comparten zona con las partes): su contenido pasó a Notas (Copilot básico en la Etapa 1, Copilot Business a cargo de Tecnología en la Etapa 2) y el mapa de licencias sigue en el entregable de la Detección."
+ ],
+ "pendientes": [
+  "Definir el valor de Detección (4 h) y de Habilidades (16 h), el descuento y el total: ventas llena las cajas, que van vacías (el alcance pasó de 15 h a 20 h). En Adobe Reader la suma sale sola; Preview no calcula.",
+  "Confirmar con María Iribarren las fechas y horas de las sesiones (el deck solo lleva semanas), su cargo en la última slide y cómo se comunica el plan de pago (la slide se omitió).",
+  "Confirmar si «4 h para prácticas» es por práctica (20 h en total) o en total (16 h).",
+  "Confirmar con Tecnología cuántos currículos admite una solicitud y qué cubre la licencia básica dentro de las aplicaciones de Microsoft 365."
+ ],
+ "servicio_rotulo": "Servicio de Detección y Habilidades",
+ "meta_servicio": "deteccion",
+ "meta_tipo": "Detección + Habilidades · Gestión Humana regional · Etapa 1: Detección (4h) + entrenamiento del equipo (8h, 4 sesiones) + 2 prácticas de 4h (Ausentismo y Selección) · 20h totales · Copilot básico · formato compacto v2. Etapa 2 (5 procesos más la versión a pleno volumen) sin cotizar"
+}

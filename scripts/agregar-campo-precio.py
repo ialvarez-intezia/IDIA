@@ -117,14 +117,22 @@ def make_fase_subtotal_js(fase_count: int) -> str:
     lines.append('event.value=isNaN(t)?"":t.toFixed(0);')
     return "".join(lines)
 
-# JS de suma genérico: un campo que se autocalcula como la suma de <prefijo>1..N (variante «Valor por parte»: PrecioBase =
-# PrecioParte1 + … + PrecioParteN). PrecioTotal sigue usando make_calc_js (PrecioBase − Descuento); el /CO ordena los
-# cálculos en el orden de los campos (PrecioBase va antes que PrecioTotal).
-def make_suma_js(prefijo: str, n: int) -> str:
-    lineas = [f'var p{i}=parseFloat(String(this.getField("{prefijo}{i}").value).replace(/[^0-9.\\-]/g,""))||0;' for i in range(1, n + 1)]
-    lineas.append("var t=" + "+".join(f"p{i}" for i in range(1, n + 1)) + ";")
-    lineas.append('event.value=isNaN(t)?"":t.toFixed(0);')
-    return "".join(lineas)
+# JS de subtotal para la variante «cotización por partes» (inversion.partes del deck compacto de Habilidades):
+# PrecioBase suma las N cajas PrecioParteN de la izquierda. Si la suma es 0 (ventas aún no llenó las partes) NO escribe
+# nada, así que un monto tecleado a mano directamente en PrecioBase sobrevive (override).
+def make_partes_subtotal_js(n_partes: int) -> str:
+    # Lee «1.200», «1.200,50», «1200» y «2.250 REF»: punto de miles (3 dígitos) y coma decimal; sin esto «1.200» se leería como 1,2.
+    parse = (
+        'function nv(v){var s=String(v).replace(/[^0-9.,\\-]/g,"");'
+        'if(/^-?\\d{1,3}(\\.\\d{3})+(,\\d+)?$/.test(s)){s=s.replace(/\\./g,"").replace(",",".");}'
+        'else{s=s.replace(",",".");}return parseFloat(s)||0;}'
+    )
+    lines = [parse]
+    for i in range(1, n_partes + 1):
+        lines.append(f'var p{i}=nv(this.getField("PrecioParte{i}").value);')
+    lines.append("var t=" + "+".join(f"p{i}" for i in range(1, n_partes + 1)) + ";")
+    lines.append('if(t>0){event.value=t.toFixed(0);}')
+    return "".join(lines)
 
 # Defaults canónicos.
 # - ENTREGABLES y ACREDITACIONES traen contenido institucional FIJO
@@ -245,55 +253,6 @@ PRECIO_FIELDS = [
         **_multibox("Notas", NOTAS_DEFAULT, (42, 219, 402, 301), font_size=11),
     },
 ]
-
-# Variante «Valor por parte» de la hoja compacta (CAI-040 Marcelo Restrepo, 2026-10-08): bajo las Notas, una tarjeta por
-# parte del proyecto con su caja de monto (PrecioParte1..N, editables y vacías), y PrecioBase pasa a ser la suma de las
-# partes. Se detecta en la misma página de «Propuesta Económica» por los rótulos «Parte 1…N» (sin espacios: llevan
-# letter-spacing). Geometría = scripts/generar-habilidades-compacto.py → geometria_partes(n): tarjetas en 480 px desde
-# left 56 con 12 px de separación; la caja va 12 px adentro y su top es 512 + 22 + 130 − 12 − 34 = 618 px, alto 34 px
-# (px × 0,75 = pt: y1 = 595 − 652·0,75 = 106, y2 = 595 − 618·0,75 = 131,5).
-def n_partes(page) -> int:
-    try:
-        texto = re.sub(r"\s+", "", (page.extract_text() or "")).casefold()
-    except Exception:
-        texto = ""
-    if "valorporparte" not in texto and "valorporpartes" not in texto:
-        return 0
-    nums = [int(x) for x in re.findall(r"parte(\d+)", texto)]
-    return max(nums) if nums else 0
-
-
-def precio_fields(page):
-    """Campos de la hoja «Propuesta Económica». Con «valor por parte», PrecioBase se autocalcula como la suma de las partes y
-    se agregan las cajas PrecioParte1..N; sin partes, son los PRECIO_FIELDS de siempre."""
-    n = n_partes(page)
-    if not n:
-        return PRECIO_FIELDS
-    campos = []
-    for c in PRECIO_FIELDS:
-        c = dict(c)
-        if c["name"] == "PrecioBase":
-            c.update(calc_action=True, calc_js=make_suma_js("PrecioParte", n),
-                     tooltip="Suma de las partes. Autocalculado al cambiar el valor de cada parte; editable a mano.")
-        campos.append(c)
-    gap = 12.0
-    w = (480.0 - gap * (n - 1)) / n
-    for i in range(n):
-        left = 56.0 + i * (w + gap) + 12.0
-        campos.append({
-            "name": f"PrecioParte{i + 1}",
-            "tooltip": f"Valor de la parte {i + 1} (editable).",
-            "rect": (round(left * 0.75, 3), 106, round((left + w - 24.0) * 0.75, 3), 131.5),
-            "font_size": 13,
-            "font_color": "0.898 0.518 0.137 rg",
-            "quadding": 1,
-            "multiline": False,
-            "readonly": False,
-            "default": "",
-            "calc_action": False,
-        })
-    return campos
-
 
 # Variante "Inversión por fases": cotización por fase (N cajas PrecioFaseN)
 # + subtotal auto-calculado (PrecioBase) + Descuento + Total. Solo se activa
@@ -556,8 +515,64 @@ STEPS_FIELDS = [
 ]
 
 
+# Variante «cotización por partes» (CAI-040 Marcelo Restrepo, 2026-10-08): la slide de inversión lleva N cajas de valor
+# (PrecioParte1..N, una por parte de la propuesta) en la zona inferior izquierda y PrecioBase pasa a ser la SUMA
+# autocalculada de ellas (Descuento y PrecioTotal quedan como en la hoja estándar). Se activa cuando la página trae las
+# etiquetas «Parte 1», «Parte 2»… (scripts/generar-habilidades-compacto.py → inversion.partes). Geometría sincronizada con
+# habilidades-compacto.css (.partes-wrap top=512, left=56, w=480, gap=12; tarjeta top=534, 116 px; caja a 13 px del borde
+# lateral, 69 px del borde superior y de 36 px de alto; px × 0,75 = pt):
+#   y2 = 595 − (534 + 69)·0,75 = 142,75   ·   y1 = 595 − (534 + 69 + 36)·0,75 = 115,75
+# build_field() escribe /Rect como enteros (NumberObject): se redondea al entero más cercano (error máx. 0,25 pt) en vez de truncar.
+def _partes_field(n, x1, x2):
+    return {
+        "name": f"PrecioParte{n}",
+        "tooltip": f"Valor de la parte {n} (editable). La suma de las partes se calcula en la caja de la derecha.",
+        "rect": (x1, 116, x2, 143),
+        "font_size": 14,
+        "font_color": "0 g",
+        "quadding": 1,
+        "multiline": False,
+        "readonly": False,
+        "default": "",
+        "calc_action": False,
+    }
+
+
+def partes_cantidad(page) -> int:
+    """Cantidad de partes de la cotización, leída de las etiquetas «Parte N» de la página (se ignoran los espacios porque
+    el rótulo lleva letter-spacing). 0 = hoja estándar."""
+    try:
+        texto = re.sub(r"\s+", "", (page.extract_text() or "")).casefold()
+    except Exception:
+        texto = ""
+    nums = [int(x) for x in re.findall(r"parte(\d+)", texto)]
+    return max(nums) if nums and max(nums) in (2, 3) else 0
+
+
+def precio_fields(page):
+    """Hoja estándar (PRECIO_FIELDS) o, si la página trae partes, las cajas PrecioParteN + PrecioBase como suma. El orden
+    importa: /CO calcula PrecioBase (suma) antes que PrecioTotal (base − descuento)."""
+    n = partes_cantidad(page)
+    if not n:
+        return PRECIO_FIELDS
+    gap = 12.0
+    w = (480.0 - gap * (n - 1)) / n
+    partes = []
+    for i in range(n):
+        left = 56.0 + i * (w + gap)
+        partes.append(_partes_field(i + 1, round((left + 13) * 0.75), round((left + w - 13) * 0.75)))
+    resto = []
+    for spec in PRECIO_FIELDS:
+        if spec["name"] == "PrecioBase":
+            spec = {**spec,
+                    "tooltip": "Suma de las partes (autocalculada). Si no hay valores por parte, puede escribirse a mano.",
+                    "calc_action": True, "calc_js": make_partes_subtotal_js(n)}
+        resto.append(spec)
+    return partes + resto
+
+
 PAGE_GROUPS = [
-    {"marker": "Propuesta Económica", "fields_fn": precio_fields},   # con «Valor por parte» suma PrecioParte1..N
+    {"marker": "Propuesta Económica", "fields_fn": precio_fields},
     {"marker": "Inversión por fases", "fields": FASE_PRICE_FIELDS},
     {"marker": "Inversión por Permanencia", "fields": CICLO_PRICE_FIELDS},
     {"marker": "Facilidad de pago", "fields_fn": plan_pago_fields},

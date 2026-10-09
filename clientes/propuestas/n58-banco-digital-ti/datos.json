@@ -1,5 +1,5 @@
 {
- "version": 1,
+ "version": 2,
  "cliente": {
   "nombre": "N58 Banco Digital",
   "slug": "n58-banco-digital-ti",
@@ -19,7 +19,7 @@
   ]
  },
  "eje": "Uso profesional de Claude Code y Codex en el equipo de TI de N58: fundamentos y uso seguro, construcción con código, revisión y pruebas, e implementación de un estándar de equipo",
- "origen": "Instrucción directa del usuario (06/10/2026) y antecedentes de N58 en la propuesta CAI-034 (Mercadeo con Claude) y su documento de soberanía de datos para Tecnología",
+ "origen": "Instrucción directa del usuario (06/10/2026) y antecedentes de N58 en la propuesta CAI-034 (Mercadeo con Claude) y su documento de soberanía de datos para Tecnología y ajuste al formato v2 del 08/10/2026",
  "fuente_insumo": "Ficha de Levantamiento de N58 (01/10/2026) y documento de soberanía de datos para Tecnología (CAI-034)",
  "portada": {
   "titulo_lineas": [
@@ -59,7 +59,7 @@
   {
    "id": "ia",
    "nombre": "Claude Code y Codex",
-   "nombre_corto": "Claude Code y Codex",
+   "nombre_corto": "IA en código",
    "color": "amarillo"
   }
  ],
@@ -79,7 +79,8 @@
      "detalle": "Sesión grupal de 2 h con el equipo de TI. Cómo trabaja un asistente de código (contexto, permisos y revisión de lo que propone), qué hace Claude Code y qué hace Codex, y qué código y datos del banco pueden entrar a cada herramienta y cuáles no. La guía descargable resume esas reglas. Registra la línea base del tiempo que toma hoy revisar y probar código."
     }
    ],
-   "composicion": "Cómo trabajan las herramientas y qué código y datos pueden usar."
+   "composicion": "Cómo trabajan las herramientas y qué código y datos pueden usar.",
+   "para_que": "Que el equipo de TI entienda cómo trabajan las herramientas y qué código y datos pueden usar"
   },
   {
    "id": "CO",
@@ -109,7 +110,8 @@
      "detalle": "Sesión práctica de 2 h para generar, ejecutar y corregir pruebas automatizadas con ayuda de IA sobre el repositorio de práctica. Entrega las pruebas construidas y el criterio del equipo para aceptarlas."
     }
    ],
-   "composicion": "Escribir y refactorizar, revisar código y escribir pruebas con IA."
+   "composicion": "Tres sesiones prácticas: código, revisión y pruebas.",
+   "para_que": "Construir con el equipo un flujo de código, revisión y pruebas asistido por IA"
   },
   {
    "id": "IM",
@@ -132,43 +134,36 @@
      "detalle": "Sesión de 2 h para cerrar el estándar del equipo: qué código y datos se pueden usar, permisos de cada herramienta, qué se revisa siempre antes de aceptar y cómo se registra el uso. Deja el documento listo para que TI lo adopte."
     }
    ],
-   "composicion": "Instrucciones del repositorio y estándar de uso del equipo."
+   "composicion": "Reglas de cada herramienta y estándar para el equipo.",
+   "para_que": "Dejar las instrucciones del repositorio y un estándar de uso que el equipo adopte"
   }
  ],
  "alcance": {
   "titulo": "Un estándar de equipo para usar IA al programar.",
   "subtitulo": "Nivelamos al equipo de TI, construimos el flujo de **código, revisión y pruebas** y dejamos el estándar de uso.",
-  "pasos": [
-   "Nivelamos al equipo en Claude Code, Codex y su uso seguro.",
-   "Trabajamos con ambas herramientas sobre un repositorio de práctica.",
-   "Construimos el flujo para escribir, revisar y probar código con IA.",
-   "Dejamos el estándar del equipo y medimos a 30, 60 y 90 días."
-  ],
-  "quien_construye": "Intezia dicta las sesiones y construye cada flujo con el equipo de TI, sobre un repositorio de práctica.",
   "fuera_alcance": [
    "Código de producción y datos de clientes: las sesiones usan material de práctica.",
    "La decisión de soberanía de datos del banco, que se trata aparte con Tecnología.",
    "Contratar las licencias de Claude Code y Codex."
-  ],
-  "etiqueta_pasos": "Cómo trabajamos"
+  ]
  },
  "fases": [
   {
    "id": "F1",
-   "titulo": "Fundamentals",
+   "titulo": "Bases",
    "rango": "Semana 1",
    "descripcion": "criterio y reglas de uso seguro"
   },
   {
    "id": "F2",
-   "titulo": "Construcción",
+   "titulo": "Código",
    "rango": "Semanas 2 a 4",
    "descripcion": "código, revisión y pruebas",
    "destacada": true
   },
   {
    "id": "F3",
-   "titulo": "Implementación",
+   "titulo": "Norma",
    "rango": "Semanas 5 y 6",
    "descripcion": "el estándar queda en el equipo"
   }
@@ -177,21 +172,20 @@
   {
    "id": "A",
    "carril": "ia",
-   "semanas": "S1-S6",
-   "etiqueta": "Equipo de TI",
-   "areas_html": "Equipo de TI de N58",
+   "semanas": "1 a 6",
    "celdas": {
     "F1": "Sesión de 2 h: cómo trabajan Claude Code y Codex y qué código y datos pueden usar.",
     "F2": "3 sesiones de 2 h: escribir y refactorizar, revisar código y escribir pruebas con IA.",
     "F3": "2 sesiones de 2 h: instrucciones del repositorio y estándar de uso del equipo."
-   }
+   },
+   "nombre": "Equipo de TI"
   }
  ],
  "ruta": {
   "semanas_total": 6,
   "tope_h_semana": 20,
   "titulo": "Del uso suelto a un estándar, en 6 semanas.",
-  "nota": "S = semana de trabajo desde el arranque, cuya fecha se acuerda con {cliente}. Las {h_total} h son una proyección de sesión: {h_f1}, {h_f2} y {h_f3} h en las fases 1, 2 y 3. El kick-off de 1 h es aparte y no suma horas.",
+  "nota": "Las {h_total} h son una proyección de sesión: {h_f1}, {h_f2} y {h_f3} h en las fases 1, 2 y 3. El kick-off de 1 h es aparte y no suma horas. La fecha de arranque se acuerda con {cliente}.",
   "hitos": [
    {
     "titulo": "Kick-off · aparte",
@@ -237,7 +231,8 @@
  "inversion": {
   "notas": [
    "Las licencias de Claude Code y Codex van aparte: qué cuenta se usa y quién la contrata se define con Tecnología antes de la primera sesión.",
-   "Las sesiones usan un repositorio de práctica, sin código de producción ni datos de clientes."
+   "Las sesiones usan un repositorio de práctica, sin código de producción ni datos de clientes.",
+   "Términos y condiciones: los del enlace de «Importante», que ambas partes aceptan al avanzar con esta propuesta."
   ],
   "licencias": {
    "titulo": "Licenciamiento · aparte de esta inversión",
@@ -253,13 +248,14 @@
      "texto": "Se usa con una cuenta de ChatGPT o con acceso por API. **Qué cuenta se contrata** y quién la gestiona se define con Tecnología."
     }
    ],
-   "nota": "Esta propuesta no incluye precios de lista: el costo de cada licencia lo confirma el banco con cada proveedor. Pueden variar."
+   "nota": "Esta propuesta no incluye valores de lista: el valor de cada licencia lo confirma el banco con cada proveedor. Pueden variar."
   },
   "programa": [
    "Uso profesional de Claude Code y Codex para el equipo de TI de N58 (CAI-037).",
-   "Fundamentals (2h) + Construcción (3 sesiones de 2h) + Implementación (2 sesiones de 2h).",
-   "12h totales de sesión, más 1h de kick-off aparte. Licencias de Claude Code y Codex aparte."
-  ]
+   "Fundamentals, Construcción (3 sesiones) e Implementación (2 sesiones): 6 sesiones de trabajo.",
+   "Fundamentals (2 h), Construcción (6 h) e Implementación (4 h): 12 h, más 1 h de kick-off aparte."
+  ],
+  "duracion": "Proyecto de 6 sesiones en 6 semanas, con seguimiento a 30, 60 y 90 días. 12 horas de trabajo, más 1 h de kick-off aparte."
  },
  "entregables": {
   "titulo": "Lo que recibe el equipo.",
@@ -310,7 +306,7 @@
    },
    {
     "titulo": "Valor en dinero",
-    "texto": "Horas recuperadas multiplicadas por el costo hora de referencia que {cliente_corto} valide."
+    "texto": "Horas recuperadas multiplicadas por el valor hora de referencia que {cliente_corto} valide."
    }
   ],
   "metas": [
@@ -347,13 +343,90 @@
   "La línea base del tiempo de revisar y probar código se levanta dentro de la sesión de Fundamentals (2 h): confirmar con servicio que cabe.",
   "Retorno en modo método: no hay volúmenes, tiempos ni costo hora del equipo de TI. «Hacia la semana N» es aritmética (semanas de ejecución + 13): confirmar con servicio.",
   "Sin certificado de participación por defecto (§4.21). Modalidad omitida: en CAI-034 Mercadeo pidió presencial, pero no se sabe para TI.",
-  "Portada: los 3 datos describen el contenido del proyecto (horas de Fundamentals, Construcción e Implementación), no al cliente. No hay una Ficha de Levantamiento propia de Tecnología, así que no se afirma nada sobre cómo usa hoy la IA el equipo de TI. Primera versión: «cada uno paga su herramienta» y «regulado por Sudeban» salían de la ficha de Mercadeo de CAI-034; el usuario los retiró (06/10/2026) porque no se saben para TI."
+  "Portada: los 3 datos describen el contenido del proyecto (horas de Fundamentals, Construcción e Implementación), no al cliente. No hay una Ficha de Levantamiento propia de Tecnología, así que no se afirma nada sobre cómo usa hoy la IA el equipo de TI. Primera versión: «cada uno paga su herramienta» y «regulado por Sudeban» salían de la ficha de Mercadeo de CAI-034; el usuario los retiró (06/10/2026) porque no se saben para TI.",
+  "Migración a la plantilla v2 (2026-10-08, instrucción del usuario: «ajustar las CAI-034 y CAI-037 al nuevo formato, cada una por separado»). Versión 1 a 2 según la spec §13. Contenido de fondo sin cambios: 12 h, 6 entregables en 3 módulos, 6 semanas, kick-off de 1 h aparte, seguimiento 30-60-90. Lo que se agregó por la v2: «Cómo trabajamos» (método, práctica, datos y logística), el para qué de cada módulo y la slide de próximos pasos con la asesora. Los 4 pasos pasaron de «Alcance» a «Cómo trabajamos». «Costo» pasó a «valor».",
+  "Fases con nombre corto por límite de la v2 (cabecera de ≤ ~7 caracteres con «N entregables» al lado): «Bases», «Código» y «Norma» (antes Fundamentals, Construcción e Implementación). Los módulos de la slide 2 siguen con sus nombres.",
+  "Modalidad: la v2 exige una ficha de logística y no se sabe la modalidad para TI (en CAI-034 Mercadeo pidió presencial): dice «a acordar con Tecnología». Participantes: «el equipo de TI», sin cifra, hasta confirmarla con Flavia.",
+  "Sin facilidad de pago: no se preguntó. El usuario la omitió en las últimas propuestas migradas, así que se aplicó el mismo criterio con omitir: [\"pago\"]. Si Ventas la quiere, se agrega con cuotas ligadas a los hitos de la ruta.",
+  "Asesora (slide de próximos pasos): Flavia Martínez, la misma de CAI-034, con su teléfono y correo del brief; el cargo «Asesora comercial» es supuesto. El deck de 6 slides no mostraba contacto: ahora la última slide sí lo hace."
  ],
  "pendientes": [
   "Definir inversión, descuento y total (campos vacíos para ventas).",
   "Confirmar con Flavia: cuántas personas de TI participan, quién es el contacto de Tecnología, modalidad, fecha y horario.",
   "Confirmar con Tecnología qué cuenta de Claude Code y de Codex se usará y quién la contrata, y que el repositorio de práctica no contiene datos de clientes.",
   "Confirmar los 6 entregables y el reparto de las 12 h con servicio.",
-  "Confirmar cómo se relaciona con CAI-034 (Mercadeo) y con el documento de soberanía de datos: paralelo, o condicionado a que Tecnología resuelva la arquitectura."
+  "Confirmar cómo se relaciona con CAI-034 (Mercadeo) y con el documento de soberanía de datos: paralelo, o condicionado a que Tecnología resuelva la arquitectura.",
+  "Confirmar con el usuario o Ventas si la propuesta lleva facilidad de pago (se omitió por el criterio de las últimas propuestas) y cómo se comunica el plan de pago.",
+  "Reenviar el PDF nuevo y avisar al cliente que reemplaza al del 06/10."
+ ],
+ "metodo": {
+  "titulo": "Así trabajamos con el equipo de TI.",
+  "subtitulo": "Sesiones prácticas con las dos herramientas, sobre un repositorio de práctica y con las reglas del banco.",
+  "quien_construye": "Intezia dicta las sesiones y construye cada flujo con el equipo de TI, sobre un repositorio de práctica.",
+  "por_que_orden": "Primero se nivela al equipo y se fijan las reglas de uso seguro; después se construye el flujo de código, revisión y pruebas; al final queda el estándar.",
+  "pasos": [
+   {
+    "titulo": "Nivelamos",
+    "texto": "Al equipo en Claude Code, Codex y su uso seguro."
+   },
+   {
+    "titulo": "Practicamos",
+    "texto": "Con ambas herramientas, sobre un repositorio de práctica."
+   },
+   {
+    "titulo": "Construimos",
+    "texto": "El flujo del equipo para el código, la revisión y las pruebas."
+   },
+   {
+    "titulo": "Dejamos listo",
+    "texto": "El estándar del equipo y la medición a 30, 60 y 90 días."
+   }
+  ],
+  "practica": [
+   {
+    "titulo": "Repositorio de práctica",
+    "texto": "Todas las sesiones usan un repositorio acordado en el kick-off, sin código de producción."
+   },
+   {
+    "titulo": "Dos herramientas",
+    "texto": "Se trabaja con Claude Code y con Codex sobre las mismas tareas, para ver qué hace cada una."
+   },
+   {
+    "titulo": "Una persona revisa",
+    "texto": "Todo cambio que propone la IA lo revisa una persona antes de aceptarlo."
+   }
+  ],
+  "datos": "Las sesiones usan material de práctica, sin código de producción ni datos de clientes. Qué código y datos puede usar cada herramienta lo fija el estándar del equipo."
+ },
+ "logistica": {
+  "modalidad": "A acordar con Tecnología; la fecha y el horario, con el equipo de TI.",
+  "participantes": "El equipo de TI de {cliente_corto}; cuántas personas participan se acuerda con Tecnología.",
+  "arranque": "El kick-off de 1 h, aparte, elige el repositorio de práctica y acuerda las reglas del banco.",
+  "ritmo": "Una sesión de 2 h por semana, durante 6 semanas."
+ },
+ "proximos_pasos": {
+  "asesora": {
+   "nombre": "Flavia Martínez",
+   "cargo": "Asesora comercial",
+   "correo": "fmartinez@intezia.com",
+   "telefono": "+58 414 5756615"
+  },
+  "pasos": [
+   {
+    "titulo": "Fecha de arranque",
+    "texto": "Confirmamos con Tecnología la fecha del kick-off y quiénes participan."
+   },
+   {
+    "titulo": "Accesos y agenda",
+    "texto": "Coordinamos el repositorio, las cuentas de las herramientas y el horario de cada sesión."
+   },
+   {
+    "titulo": "Kick-off de 1 hora",
+    "texto": "Reunión inicial con Tecnología, antes de la primera sesión, para dejar acordado cómo se trabaja."
+   }
+  ]
+ },
+ "omitir": [
+  "pago"
  ]
 }

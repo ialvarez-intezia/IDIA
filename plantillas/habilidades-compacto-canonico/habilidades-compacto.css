@@ -958,20 +958,25 @@
   color: rgba(0, 0, 0, 0.55);
 }
 
-/* «Valor por parte» (opcional, inversion.partes; CAI-040, 2026-10-08): un monto editable por parte, bajo las Notas.
-   Las tarjetas miden 130 px y las cajas .parte-frame las ubica el generador (geometria_partes); los campos PrecioParte1..N
-   de agregar-campo-precio.py → partes_fields() usan la misma geometría. No mover sin recalcular allí. */
+/* ---------------------------------------------------------------------------
+   Cotización por partes (opcional, inversion.partes): una caja de valor por parte en la zona inferior izquierda
+   (donde va el licenciamiento) y la suma en la caja base de la derecha. Los rects de AcroForm (PrecioParte1..N)
+   son los de scripts/agregar-campo-precio.py → partes_fields(): tarjetas de 480 px con 12 px de separación; la caja
+   va 13 px adentro de cada tarjeta (1 px de borde + 12 px de relleno), a 69 px de su borde superior y de 36 px de alto.
+   Tarjeta: top 534 px (512 + 14 de rótulo + 8 de margen), 116 px de alto (border-box).
+   --------------------------------------------------------------------------- */
 .s-price .partes-wrap {
   position: absolute;
   top: 512px;
   left: 56px;
   width: 480px;
-  height: 152px;
   z-index: 2;
 }
 .s-price .partes-eyebrow {
   display: block;
   height: 14px;
+  line-height: 14px;
+  margin-bottom: 8px;
   font-family: var(--font-display);
   font-weight: 700;
   font-size: 10px;
@@ -979,57 +984,52 @@
   text-transform: uppercase;
   color: var(--orange);
 }
-.s-price .partes-cards {
-  position: absolute;
-  top: 22px;
-  left: 0;
-  width: 480px;
-  height: 130px;
-  display: flex;
-  gap: 12px;
-}
+.s-price .partes-cards { display: flex; gap: 12px; }
 .s-price .parte-card {
-  --c: var(--yellow);
+  --c: var(--orange);
+  position: relative;
+  box-sizing: border-box;
   flex: 1 1 0;
   min-width: 0;
-  height: 130px;
-  box-sizing: border-box;
+  height: 116px;
   border: 1px solid rgba(0, 0, 0, 0.14);
   border-top: 4px solid var(--c);
   border-radius: 10px;
-  padding: 8px 12px 0;
+  padding: 7px 12px 0;
   background: var(--white);
 }
-.s-price .parte-card.acc-o { --c: var(--orange); }
+.s-price .parte-card.acc-y { --c: var(--yellow); }
 .s-price .parte-tag {
   display: block;
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: 9.5px;
-  letter-spacing: 0.18em;
+  font-size: 8.5px;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: rgba(0, 0, 0, 0.55);
-  margin-bottom: 3px;
+  color: rgba(0, 0, 0, 0.45);
 }
 .s-price .parte-name {
   display: block;
+  margin-top: 2px;
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: 12.5px;
+  font-size: 13.5px;
   line-height: 1.2;
-  margin-bottom: 3px;
 }
-.s-price .parte-card p {
+.s-price .parte-det {
+  margin-top: 2px;
   font-family: var(--font-body);
-  font-size: 10.5px;
-  line-height: 1.32;
-  color: rgba(0, 0, 0, 0.75);
+  font-size: 10px;
+  line-height: 1.3;
+  color: rgba(0, 0, 0, 0.7);
 }
 .s-price .parte-frame {
   position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 10px;
+  height: 36px;
   background: rgba(244, 186, 26, 0.22);
-  border-radius: 4px;
-  z-index: 3;
 }
 
 /* ===========================================================================

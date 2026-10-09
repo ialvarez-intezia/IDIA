@@ -1,0 +1,45 @@
+/* Ajustes propios de esta propuesta (se enlaza después de habilidades-compacto.css). */
+
+/* ===========================================================================
+   CAI-040 Marcelo Restrepo (plantilla v2): 9 soluciones en 6 bloques y una sola línea de trabajo. La plantilla
+   está pensada para 40+ entregables: se escala la tipografía de las slides 3, 4 y 5 para que no queden vacías,
+   sin inventar contenido. La cotización por partes (slide 7) usa el CSS genérico de la plantilla.
+   =========================================================================== */
+
+/* Slide 3 · Ruta: una sola línea de trabajo, 2 fases + garantía */
+.s-route .route-grid { --rowh: 270px !important; }
+.s-route .rg-cell { padding: 14px 16px; }
+.s-route .rg-h { font-size: 15px; margin-bottom: 8px; }
+.s-route .rg-h b { font-size: 36px; }
+.s-route .rg-h i { font-size: 11.5px; }
+.s-route .rg-cell p { font-size: 15px; line-height: 1.38; }
+.s-route .rg-front-h { font-size: 24px; }
+.s-route .route-miles { margin-top: 26px; }
+.s-route .mile b { font-size: 15px; margin-bottom: 5px; }
+.s-route .mile p { font-size: 13.5px; line-height: 1.36; }
+.s-route .route-note { margin-top: 16px; font-size: 12px; }
+
+/* Slide 4 · Cómo trabajamos */
+.s-method .mt-steps { gap: 16px; margin-bottom: 18px; }
+.s-method .mt-steps li { min-height: 104px; padding: 14px 16px 14px 62px; }
+.s-method .mt-steps li::before { left: 16px; top: 15px; width: 32px; height: 32px; line-height: 32px; font-size: 16px; }
+.s-method .mt-steps b { font-size: 17px; margin-bottom: 5px; }
+.s-method .mt-steps span { font-size: 13px; }
+.s-method .mt-strips { gap: 16px; margin-bottom: 18px; }
+.s-method .mt-why, .s-method .mt-who { padding: 13px 18px; font-size: 13px; }
+.s-method .mt-why b, .s-method .mt-who b { font-size: 13px; }
+.s-method .mt-info { gap: 16px; margin-bottom: 18px; }
+.s-method .mt-card { padding: 15px 20px 13px; }
+.s-method .mt-card-label { margin-bottom: 9px; font-size: 11.5px; }
+.s-method .mt-card p, .s-method .mt-card li { font-size: 13px; }
+.s-method .mt-card li { padding-bottom: 6px; }
+.s-method .mt-tile { padding: 13px 16px 14px; }
+.s-method .mt-tile span { font-size: 10px; margin-bottom: 6px; }
+.s-method .mt-tile b { font-size: 13px; }
+
+/* Slide 5 · Entregables */
+.s-deliv.roomy .deliv-col { padding: 20px 22px 16px; min-height: 380px; }
+.s-deliv.roomy .da-name { font-size: 17px; margin-bottom: 8px; }
+.s-deliv.roomy .da li { font-size: 14.5px; line-height: 1.34; padding: 4px 0 4px 16px; }
+.s-deliv.roomy .da li::before { top: 12px; width: 7px; height: 7px; }
+.s-deliv.roomy .da + .da { margin-top: 14px; padding-top: 14px; }

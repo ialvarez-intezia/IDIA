@@ -76,6 +76,8 @@ def migrar(d):
     for i, f in enumerate(d.get("fases") or []):
         if isinstance(f, dict) and "rango" in f:
             hechos.append("fases[%d].rango: quitado (era %r)" % (i, f.pop("rango")))
+    if "anunciar_duracion" in d:   # v2.1 (Ivana, 2026-10-08): en la v3 ninguna propuesta anuncia semanas ni sesiones
+        hechos.append("anunciar_duracion: quitado (era %r)" % d.pop("anunciar_duracion"))
     ret = d.get("retorno") if isinstance(d.get("retorno"), dict) else {}
     if "semana_medicion" in ret:
         hechos.append("retorno.semana_medicion: quitado (era %r)" % ret.pop("semana_medicion"))

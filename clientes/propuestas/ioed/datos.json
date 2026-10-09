@@ -1,0 +1,435 @@
+{
+ "version": 2,
+ "cliente": {
+  "nombre": "IOED",
+  "slug": "ioed",
+  "codigo": "CAP-098",
+  "nombre_pie": "IOED"
+ },
+ "division": "educacion",
+ "alianza": false,
+ "servicio_rotulo": "Servicio de Detección",
+ "meta_servicio": "deteccion",
+ "meta_tipo": "Detección · Fase 1 de 3 (Diagnóstico) del plan de digitalización con IA · Fundamentals (2h grupal) + auditoría de 2 áreas (Servicios Navales y Operaciones de Buques), 4h por área en mesas de 2h, 10h totales, modalidad online síncrono · construcción e implementación sin cotizar · formato compacto v2",
+ "vocabulario": {
+  "solucion": [
+   "entregable",
+   "entregables"
+  ],
+  "proceso_base": [
+   "etapa previa",
+   "etapas previas"
+  ]
+ },
+ "eje": "Diagnóstico con IA de los procesos administrativos y operativos de Servicios Navales y Operaciones de Buques de IOED, con nivelación del equipo y la confidencialidad de la información como criterio principal",
+ "origen": "CAP-098 enviada el 10/08/2026 (brief, programa y deck de 17 slides) e instrucción de la asesora del 08/10/2026: propuesta solo con la Fase 1 de Diagnóstico, con nivelación y apartado de confidencialidad",
+ "fuente_insumo": "CAP-098 enviada el 10/08/2026 e indicaciones de la asesora del 08/10/2026",
+ "portada": {
+  "titulo_lineas": [
+   "Diagnóstico de procesos con IA",
+   "y nivelación del equipo"
+  ],
+  "titulo_destacado": "en {n_areas} áreas de {cliente_corto}",
+  "lead": "Esta primera fase nivela al equipo, levanta en mesas de trabajo los procesos de **Servicios Navales** y **Operaciones de Buques** y entrega un informe de diagnóstico priorizado, con la confidencialidad de la información como primer criterio.",
+  "hechos": [
+   {
+    "num": "Manual",
+    "texto": "es la gestión de varios procesos operativos, y cuesta generar reportes ejecutivos.",
+    "resuelto_por": [
+     "SNA-1",
+     "BUQ-1"
+    ]
+   },
+   {
+    "num": "Parcial",
+    "texto": "es la trazabilidad de fechas, estados y pagos de la documentación administrativa.",
+    "resuelto_por": [
+     "SNA-1"
+    ]
+   },
+   {
+    "num": "Aparte",
+    "texto": "se generan los informes y registros de la operación, sin integración con otras plataformas.",
+    "resuelto_por": [
+     "BUQ-1",
+     "BUQ-2"
+    ]
+   },
+   {
+    "num": "Primero",
+    "texto": "es la confidencialidad: cualquier automatización debe partir de un control de acceso robusto.",
+    "resuelto_por": [
+     "SNA-2",
+     "BUQ-2"
+    ]
+   }
+  ],
+  "fuente": "Fuente: requerimiento de IOED y propuesta CAP-098 del 10/08/2026.",
+  "eyebrow": "Propuesta de proyecto · Servicio de Detección"
+ },
+ "carriles": [
+  {
+   "id": "det",
+   "nombre": "Detección",
+   "nombre_corto": "Detección",
+   "color": "amarillo"
+  }
+ ],
+ "areas": [
+  {
+   "id": "FUN",
+   "nombre": "Fundamentals",
+   "carril": "det",
+   "frente": "A",
+   "proceso_base": true,
+   "nombre_catalogo": "Fundamentals",
+   "composicion": "Responsables de ambas áreas, en un solo grupo online (máximo 25 personas).",
+   "soluciones": [
+    {
+     "id": "FUN-1",
+     "entregable": "Equipo nivelado en IA y uso seguro de datos",
+     "h": 2,
+     "fase": "F1",
+     "detalle": "Fundamentals online de 2 h para los responsables de Servicios Navales y de Operaciones de Buques, en un solo grupo (bajo el máximo de 25 por sesión). Temas: qué es y qué no es la IA, uso seguro de la información en herramientas de IA, ejemplos aplicados a su operación, la ruta del diagnóstico, preguntas y expectativas. Se dicta sobre las herramientas que IOED ya tiene en su entorno Microsoft 365 E3; si IOED decide incorporar Claude, se dicta sobre esa herramienta. El kick-off de arranque se hace aparte y no suma horas."
+    }
+   ],
+   "para_que": "Que el equipo hable un lenguaje común de IA, sobre las herramientas que IOED ya tiene"
+  },
+  {
+   "id": "SNA",
+   "nombre": "Servicios Navales",
+   "carril": "det",
+   "frente": "A",
+   "composicion": "Responsables de sus procesos administrativos y documentales.",
+   "soluciones": [
+    {
+     "id": "SNA-1",
+     "entregable": "Mapa de procesos y trazabilidad de Servicios Navales",
+     "h": 2,
+     "fase": "F2",
+     "detalle": "Mesa de trabajo online de 2 h con los responsables del área: procesos documentales, estados, aprobaciones y pagos, y los puntos donde se pierde la trazabilidad. Cubre los temas de mapeo de procesos y de trazabilidad y pagos de la Fase 1 de la CAP-098."
+    },
+    {
+     "id": "SNA-2",
+     "entregable": "Mapa de accesos y datos de Servicios Navales",
+     "h": 2,
+     "fase": "F3",
+     "detalle": "Mesa de trabajo online de 2 h: quién accede a qué información, qué datos son sensibles y qué controles existen hoy. Es el insumo para evaluar el control de acceso y la protección de datos en el informe de diagnóstico."
+    }
+   ],
+   "para_que": "Ordenar cómo se documentan, aprueban y pagan sus procesos, y qué información debe protegerse"
+  },
+  {
+   "id": "BUQ",
+   "nombre": "Operaciones de Buques",
+   "carril": "det",
+   "frente": "A",
+   "composicion": "Responsables de la operación, sus informes y sus registros.",
+   "soluciones": [
+    {
+     "id": "BUQ-1",
+     "entregable": "Mapa de procesos e informes de Operaciones de Buques",
+     "h": 2,
+     "fase": "F2",
+     "detalle": "Mesa de trabajo online de 2 h con los responsables del área: procesos operativos, informes y registros, y cómo se generan hoy por separado."
+    },
+    {
+     "id": "BUQ-2",
+     "entregable": "Mapa de accesos y datos de Operaciones de Buques",
+     "h": 2,
+     "fase": "F3",
+     "detalle": "Mesa de trabajo online de 2 h: quién accede a qué información, qué datos son sensibles y con qué otras plataformas del cliente se conectaría la operación. Es el insumo para evaluar la viabilidad de esas integraciones en el informe."
+    }
+   ],
+   "para_que": "Ordenar cómo se generan sus informes y registros, y con qué otras plataformas se conectan"
+  }
+ ],
+ "alcance": {
+  "titulo": "Un diagnóstico priorizado de las 2 áreas de IOED.",
+  "subtitulo": "Nivelamos al equipo y auditamos **{n_areas_txt}** de {cliente_corto} en mesas de trabajo online de 2 h.",
+  "fuera_alcance": [
+   "Construcción e implementación (fases 2 y 3): se definen con el informe y no forman parte de esta propuesta.",
+   "Conexión técnica con otras plataformas de IOED: el informe evalúa su viabilidad, no la construye.",
+   "Licencias de IA: no hace falta comprar ninguna. Si IOED decide incorporar Claude, la nivelación se hace con esa herramienta."
+  ]
+ },
+ "fases": [
+  {
+   "id": "F1",
+   "titulo": "Nivel",
+   "rango": "Semana 1",
+   "descripcion": "Fundamentals online"
+  },
+  {
+   "id": "F2",
+   "titulo": "Mapeo",
+   "rango": "Semana 2",
+   "descripcion": "Mesas de procesos"
+  },
+  {
+   "id": "F3",
+   "titulo": "Acceso",
+   "rango": "Semanas 3 y 4",
+   "descripcion": "Mesas de accesos e informe",
+   "destacada": true
+  }
+ ],
+ "frentes": [
+  {
+   "id": "A",
+   "carril": "det",
+   "nombre": "Diagnóstico online",
+   "semanas": "1 a 4",
+   "celdas": {
+    "F1": "Fundamentals online de 2 h para los responsables de ambas áreas, en un solo grupo.",
+    "F2": "Una mesa de 2 h por área: procesos y trazabilidad de Servicios Navales y de Buques.",
+    "F3": "Una mesa de 2 h por área sobre accesos y datos, y el informe de diagnóstico."
+   }
+  }
+ ],
+ "ruta": {
+  "semanas_total": 4,
+  "tope_h_semana": 20,
+  "titulo": "Del kick-off al informe en 4 semanas.",
+  "subtitulo": "Semanas de trabajo desde el arranque, en modalidad online. El **informe de diagnóstico** se entrega en la semana 4.",
+  "nota": "Las {h_total} h son una proyección de sesión: {h_f1} h en la semana 1, {h_f2} h en la semana 2 y {h_f3} h en la semana 3. El kick-off de arranque no suma horas. La fecha de arranque se acuerda con {cliente}; el horario de cada mesa, con cada responsable.",
+  "hitos": [
+   {
+    "titulo": "Semana 1 · Nivelación",
+    "texto": "Kick-off y Fundamentals de 2 h para los responsables de ambas áreas."
+   },
+   {
+    "titulo": "Semana 2 · Procesos",
+    "texto": "Una mesa de 2 h en Servicios Navales y otra en Operaciones de Buques."
+   },
+   {
+    "titulo": "Semana 3 · Accesos y datos",
+    "texto": "Una mesa de 2 h por área sobre quién accede a qué información."
+   },
+   {
+    "titulo": "Semana 4 · Informe",
+    "texto": "Informe de diagnóstico priorizado y ruta de las fases siguientes."
+   }
+  ],
+  "siguiente_etapa": {
+   "titulo": "Después del informe:",
+   "texto": "construcción (fase 2) e implementación (fase 3), que se definen con lo que arroje el diagnóstico y quedan fuera de esta propuesta."
+  }
+ },
+ "seguimiento": {
+  "tipo": "cierre",
+  "etiqueta": "Cierre",
+  "rango": "Informe",
+  "texto": "Trabajo del equipo consultor",
+  "items": [
+   {
+    "dias": "Priorizar",
+    "texto": "Hallazgos por impacto y riesgo."
+   },
+   {
+    "dias": "Informar",
+    "texto": "Diagnóstico por área."
+   },
+   {
+    "dias": "Proyectar",
+    "texto": "Ruta de las fases siguientes."
+   }
+  ]
+ },
+ "inversion": {
+  "sin_garantia": true,
+  "duracion": "Proyecto de 5 sesiones online en 4 semanas. 10 horas de trabajo.",
+  "programa": [
+   "Fase 1 · Diagnóstico para IOED (CAP-098): nivelación del equipo y auditoría de 2 áreas.",
+   "Servicios Navales y Operaciones de Buques, con la confidencialidad de la información como criterio.",
+   "Fundamentals (2 h) y, por área, una mesa de procesos y otra de accesos y datos (2 h cada una)."
+  ],
+  "notas": [
+   "El acuerdo de confidencialidad se firma antes de iniciar.",
+   "No incluye licencias ni las fases de construcción e implementación, que se definen con el informe.",
+   "Términos y condiciones: los del enlace de «Importante», que ambas partes aceptan al avanzar con esta propuesta."
+  ]
+ },
+ "entregables": {
+  "titulo": "Lo que recibe IOED.",
+  "subtitulo": "Lo que se llevan: **{n_entregables_txt}** por sesión, más el informe de diagnóstico y la ruta de las fases siguientes.",
+  "etiqueta_transversales": "Para todo el proyecto",
+  "transversales": [
+   "Informe de diagnóstico priorizado por área.",
+   "Evaluación del control de acceso y protección de datos.",
+   "Viabilidad de integrar otras plataformas de IOED.",
+   "Ruta de construcción e implementación."
+  ],
+  "valor_inmediato": [
+   "Semana 1: equipo con un lenguaje común de IA.",
+   "Semanas 2 y 3: procesos y accesos de cada área mapeados.",
+   "Semana 4: informe priorizado y ruta de las fases siguientes."
+  ],
+  "columnas_por_carril": [
+   3
+  ]
+ },
+ "retorno": {
+  "modo": "metodo",
+  "posiciones": false,
+  "titulo": "Retorno esperado: decidir con datos.",
+  "subtitulo": "El informe estima el retorno de cada oportunidad con los datos que cada área entrega en sus mesas de trabajo.",
+  "etiqueta_pasos": "Cómo se estima el retorno de cada oportunidad",
+  "pasos": [
+   {
+    "titulo": "Volumen",
+    "texto": "Cuántas veces al mes se ejecuta cada proceso, levantado con el área."
+   },
+   {
+    "titulo": "Tiempo actual",
+    "texto": "Lo que toma hoy cada ejecución, medido en la mesa de trabajo."
+   },
+   {
+    "titulo": "Tiempo con la solución",
+    "texto": "Estimación del equipo consultor para cada oportunidad."
+   },
+   {
+    "titulo": "Horas recuperables",
+    "texto": "Volumen por la diferencia de tiempos: una estimación referencial, sin compromiso de resultado."
+   },
+   {
+    "titulo": "Riesgo de la información",
+    "texto": "Qué tan sensible es lo que toca cada proceso y qué control de acceso exige."
+   },
+   {
+    "titulo": "Prioridad",
+    "texto": "Cada oportunidad se ordena por impacto, esfuerzo y riesgo."
+   }
+  ],
+  "etiqueta_metas": "Qué decide IOED con el informe",
+  "metas": [
+   {
+    "dias": "Camino",
+    "texto": "Qué construir: capacitación por área, asistentes de IA a medida o ambas."
+   },
+   {
+    "dias": "Prioridades",
+    "texto": "Qué automatizar primero, según impacto, esfuerzo y sensibilidad de la información."
+   },
+   {
+    "dias": "Herramientas",
+    "texto": "Con qué herramientas hacerlo, según los datos de sus propias áreas."
+   }
+  ],
+  "etiqueta_destino": "Hacia dónde sigue la ruta",
+  "destino": [
+   {
+    "rotulo": "Ahora · Diagnóstico",
+    "texto": "Equipo nivelado e **informe priorizado** por área, con la información protegida."
+   },
+   {
+    "rotulo": "Después · Construcción",
+    "texto": "Diseño y validación de la solución de cada área, según lo que arroje el informe."
+   },
+   {
+    "rotulo": "Más adelante · Implementación",
+    "texto": "Activación en cada área y manual de lineamientos de seguridad y uso responsable de la IA."
+   }
+  ],
+  "gancho": "Con el informe, {cliente_corto} decide con datos qué construir primero y cómo proteger su información, en lugar de avanzar a ciegas."
+ },
+ "siglas_ok": [
+  "IA",
+  "IOED",
+  "E3"
+ ],
+ "supuestos": [
+  "Servicio Detección (la Fase 1 de la CAP-098) y división Educación (la del brief de agosto). Alianza: no. Código CAP-098 conservado porque la instrucción fue «ajustar la CAP-098»; si se prefiere un código DET-, es un solo cambio en cliente.codigo.",
+  "Horas por el lineamiento de Detección: Fundamentals de 2 h en un solo grupo (bajo el máximo de 25) y 4 h por área en 2 áreas (Servicios Navales y Operaciones de Buques, los agrupadores de la CAP-098) = 10 h. La consigna dice «sesiones de 2 horas»: 4 h por área se reparten en 2 mesas de 2 h. La CAP-098 no fijaba cantidad de sesiones. El kick-off de arranque va aparte y no suma horas.",
+  "Cada área tiene dos mesas por tema, tomados de la Fase 1 de la CAP-098: procesos y trazabilidad (mapeo de procesos, trazabilidad y pagos) y accesos y datos (control de acceso y datos, viabilidad de integraciones). El informe de diagnóstico, la evaluación del control de acceso y la viabilidad de integraciones son trabajo del equipo consultor, sin sesión con el cliente ni horas propias: van como entregables transversales.",
+  "Calendario propuesto por el sistema, no dictado por la CAP-098 ni por la consigna: 4 semanas, para que el informe llegue en los primeros 30 días (semana 1 kick-off y Fundamentals, semana 2 mesas de procesos de ambas áreas, semana 3 mesas de accesos y datos, semana 4 informe). Hay que confirmarlo con servicio.",
+  "Nombres de área como agrupadores, igual que en la CAP-098: a pedido del cliente (14/08/2026) no se expone la flota, el detalle de contratos o procesos internos ni el nombre de la plataforma con la que se evaluaría una integración (se habla de «otras plataformas»).",
+  "Herramienta: IOED cuenta con Microsoft 365 E3 y una licencia de Copilot Studio (dato de la asesora en la reunión), así que no necesita comprar nada de entrada. La nivelación se dicta sobre lo que ya tiene. La asesora indicó que, si IOED decide adquirir e integrar Claude, la nivelación se hace sobre esa herramienta: se presenta como una condición que decide IOED (CLAUDE.md §4.11), sin afirmar que migra ni que adoptará. Los casos de Pago Tronic y Claude de la reunión no se citan: no hay fuente documentada para el deck.",
+  "Confidencialidad (slide 4 y hoja resumen): redactada con lo que dijo la asesora (acuerdo firmado antes de iniciar, trabajo dentro de lo que IOED ya tiene) y con respaldo público de las licencias empresariales (Microsoft 365 Copilot: protección de datos empresariales; Claude Team y Enterprise: términos comerciales, sin entrenar con contenido del cliente). Si IOED incorpora Claude, el procesamiento de esa herramienta ya no queda dentro de Microsoft 365: por eso el texto dice que cualquier otra herramienta se valida antes con IOED. El criterio de que las mesas no cargan información real de IOED a herramientas de IA es el mismo de G-MAX, Conserval, la clínica y Acua-e. Falta la validación de Tecnología.",
+  "Las fases siguientes (construcción e implementación) aparecen como camino en la ruta, el retorno y los límites del alcance, sin horas ni valor: en la CAP-098 no tenían horas impuestas y esta propuesta no las cotiza.",
+  "Se retiran del formato anterior (17 slides): Quiénes somos con los clientes de referencia, los estudios de Impacto y la Metodología de retos. El compacto no lleva estudios ni cierre (CLAUDE.md §4.9, §4.10a y §4.21).",
+  "Retorno en modo método: no hay volúmenes ni tiempos por proceso; el informe los estima con lo que cada área entregue en su mesa (estimación referencial, sin compromiso de resultado).",
+  "Reglas de Detección que se conservan: sin certificado, sin garantía 30-60-90, sin recomendar una herramienta en esta propuesta, sin nombres de personas del cliente (la persona de contacto no aparece en el deck).",
+  "Sin facilidad de pago: no se preguntó. El usuario la omitió en las últimas propuestas migradas, así que se aplicó omitir: [\"pago\"]. Si Ventas la quiere, se agrega con cuotas ligadas a los hitos de la ruta.",
+  "Asesora (última slide): Flavia Martínez, la de la CAP-098, con el teléfono y el correo de su brief; el cargo «Asesora comercial» es supuesto."
+ ],
+ "pendientes": [
+  "Validar con Tecnología el apartado de confidencialidad de la slide 4 y de la hoja resumen (dónde se procesa, que no se usa para entrenar modelos, cómo se protege) antes de enviar.",
+  "Definir inversión, descuento y total de la Fase 1 (campos vacíos para ventas).",
+  "Confirmar con la asesora el alcance de 2 áreas y 4 h por área en 2 mesas de 2 h (Servicios Navales agrupa varias líneas), el calendario de 4 semanas, las fechas, los horarios y la plataforma online.",
+  "Confirmar con la asesora quién del equipo de IOED asiste a Fundamentals (el deck dice «responsables de ambas áreas», máximo 25) y quién firma el acuerdo de confidencialidad.",
+  "Confirmar con la asesora su teléfono, su correo y su cargo en la última slide, y que alianza es «no».",
+  "Confirmar con el usuario o Ventas si la propuesta lleva facilidad de pago y cómo se comunica el plan de pago.",
+  "Reenviar el PDF nuevo y avisar al cliente que reemplaza a la CAP-098 de 17 slides (10/08/2026) y a su versión Resumen (14/08/2026)."
+ ],
+ "metodo": {
+  "titulo": "Así trabajamos, cuidando su información.",
+  "subtitulo": "Mesas de trabajo online con los responsables de cada área, dentro de lo que IOED ya tiene.",
+  "quien_construye": "Intezia conduce las mesas y redacta el informe; los responsables de cada área aportan cómo se trabaja hoy.",
+  "por_que_orden": "Primero se nivela al equipo; después se mapean los procesos y, con ellos claros, los accesos y datos; el informe cierra el diagnóstico.",
+  "pasos": [
+   {
+    "titulo": "Nivelamos",
+    "texto": "Al equipo, con un lenguaje común de IA y de uso seguro de datos."
+   },
+   {
+    "titulo": "Mapeamos",
+    "texto": "Los procesos de cada área y dónde falta trazabilidad."
+   },
+   {
+    "titulo": "Evaluamos",
+    "texto": "Quién accede a qué información y qué controles hacen falta."
+   },
+   {
+    "titulo": "Informamos",
+    "texto": "Con un informe priorizado por área y la ruta siguiente."
+   }
+  ],
+  "practica": [
+   {
+    "titulo": "Dentro de su entorno",
+    "texto": "Trabajamos con Microsoft 365 E3 y la licencia de Copilot Studio que IOED ya tiene: no hace falta comprar nada."
+   },
+   {
+    "titulo": "Mesas online de 2 h",
+    "texto": "Una mesa de procesos y otra de accesos y datos por área, con los responsables de cada proceso."
+   },
+   {
+    "titulo": "Su herramienta",
+    "texto": "Fundamentals se dicta sobre lo que IOED ya usa. Si decide incorporar Claude, se dicta sobre esa herramienta."
+   }
+  ],
+  "datos": "El acuerdo de confidencialidad se firma antes de iniciar. En las mesas no se carga información real de IOED a herramientas de IA. Lo que se use queda en su entorno Microsoft 365, sin entrenar modelos; otra herramienta se valida antes con IOED."
+ },
+ "logistica": {
+  "modalidad": "Online síncrono, por videollamada, a coordinar con {cliente_corto}.",
+  "participantes": "Responsables de Servicios Navales y de Operaciones de Buques; Fundamentals, hasta 25 por grupo.",
+  "arranque": "El kick-off, aparte, abre el proyecto; su fecha se confirma con {cliente_corto}.",
+  "ritmo": "Fundamentals en la semana 1, mesas de procesos en la 2, de accesos en la 3 e informe en la 4."
+ },
+ "proximos_pasos": {
+  "asesora": {
+   "nombre": "Flavia Martínez",
+   "cargo": "Asesora comercial",
+   "correo": "fmartinez@intezia.com",
+   "telefono": "+58 414 5756615"
+  },
+  "pasos": [
+   {
+    "titulo": "Fecha de arranque",
+    "texto": "Confirmamos con IOED la fecha del kick-off y las fechas de cada mesa de trabajo."
+   },
+   {
+    "titulo": "Accesos y agenda",
+    "texto": "Coordinamos los participantes de cada área y la plataforma online de las sesiones."
+   },
+   {
+    "titulo": "Kick-off de arranque",
+    "texto": "Reunión inicial para alinear alcance, calendario y responsables de cada área."
+   }
+  ]
+ },
+ "omitir": [
+  "pago"
+ ]
+}

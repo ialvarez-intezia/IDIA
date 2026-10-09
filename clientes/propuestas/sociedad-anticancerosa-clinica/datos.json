@@ -1,0 +1,492 @@
+{
+ "version": 2,
+ "cliente": {
+  "nombre": "Sociedad Anticancerosa de Venezuela (Clínica)",
+  "slug": "sociedad-anticancerosa-clinica",
+  "codigo": "DET-023",
+  "nombre_pie": "Sociedad Anticancerosa"
+ },
+ "division": "educacion",
+ "alianza": false,
+ "servicio_rotulo": "Servicio de Detección y Habilidades",
+ "meta_servicio": "deteccion",
+ "meta_tipo": "Detección + Habilidades · 2 áreas (Administración operativa y Central de Citas) divididas en 4 subáreas · Detección: Fundamentals (2h grupal) + 4 subáreas de 4h = 18h · Habilidades: 4 subáreas de 8h = 32h · 50h totales · modalidad mixta · seguimiento 30-60-90 · formato compacto v2",
+ "vocabulario": {
+  "solucion": [
+   "entregable",
+   "entregables"
+  ],
+  "proceso_base": [
+   "etapa previa",
+   "etapas previas"
+  ],
+  "area": [
+   "subárea",
+   "subáreas"
+  ]
+ },
+ "eje": "Auditar Administración operativa y Central de Citas, divididas en 4 subáreas, con un logro inmediato en cada una, y construir con el equipo la solución prioritaria de cada subárea, hasta dejarla en uso, con medición del tiempo recuperado a 30, 60 y 90 días",
+ "origen": "Ficha de Levantamiento de la Sociedad Anticancerosa de Venezuela (Clínica), versión con Detección y Habilidades (archivo del 05/10/2026, registrada el 24/09/2026 por la asesora comercial) e instrucciones directas del usuario del 08/10/2026 (Habilidades a 8 h por subárea; 2 áreas divididas en 4 subáreas; 50 h en total)",
+ "fuente_insumo": "Ficha de Levantamiento de la Sociedad Anticancerosa de Venezuela (Clínica)",
+ "omitir": [
+  "pago"
+ ],
+ "portada": {
+  "eyebrow": "Propuesta de proyecto · Servicio de Detección y Habilidades",
+  "titulo_lineas": [
+   "Detección y soluciones de IA",
+   "en Administración operativa"
+  ],
+  "titulo_destacado": "y Central de Citas",
+  "lead": "Este proyecto nivela al equipo, levanta los procesos de las **2 áreas** y de sus **4 subáreas**, deja un logro inmediato en cada una y construye con cada subárea su **solución prioritaria**, hasta dejarla en uso.",
+  "hechos": [
+   {
+    "num": "400",
+    "texto": "mensajes al día llegan a Central de Citas, y algunos quedan sin responder o mal respondidos.",
+    "resuelto_por": [
+     "PAC-1",
+     "PAC-2"
+    ]
+   },
+   {
+    "num": "2 días",
+    "texto": "a la semana dedica un analista a conciliar el caché, factura por factura.",
+    "resuelto_por": [
+     "CON-1",
+     "CON-2"
+    ]
+   },
+   {
+    "num": "Sin uso",
+    "texto": "el bot de conciliación ya comprado y la licencia de Copilot casi no se usan en la organización.",
+    "resuelto_por": [
+     "NIV-1",
+     "CON-2"
+    ]
+   },
+   {
+    "num": "Sin guía",
+    "texto": "es como el equipo usa hoy la IA: cada persona por su cuenta, sin un criterio común.",
+    "resuelto_por": [
+     "NIV-1"
+    ]
+   }
+  ],
+  "fuente": "Fuente: Ficha de Levantamiento de la Sociedad Anticancerosa de Venezuela (24/09/2026)."
+ },
+ "carriles": [
+  {
+   "id": "dh",
+   "nombre": "Detección y Habilidades",
+   "nombre_corto": "Proyecto",
+   "color": "amarillo"
+  }
+ ],
+ "areas": [
+  {
+   "id": "NIV",
+   "nombre": "Nivelación del equipo",
+   "carril": "dh",
+   "frente": "A",
+   "proceso_base": true,
+   "nombre_catalogo": "Fundamentals",
+   "composicion": "Un solo grupo: ambas áreas y la sede administrativa.",
+   "para_que": "Que el equipo use la IA con un mismo criterio antes de auditar las 4 subáreas",
+   "soluciones": [
+    {
+     "id": "NIV-1",
+     "entregable": "Equipo nivelado en IA con un lenguaje común",
+     "h": 2,
+     "fase": "F1",
+     "detalle": "Fundamentals de 2 h para el equipo de la Sociedad, en un solo grupo (bajo el máximo de 25 por sesión). Temas: qué es y qué no es la IA, cómo preguntarle con criterio, ejemplos aplicados a la atención de citas y a la administración, y la ruta de las 4 subáreas. Responde a una adopción hoy dispersa: una licencia de Copilot genérica que casi no se usa, el uso personal de ChatGPT y un bot de conciliación comprado que el equipo no usa. El kick-off de arranque se hace aparte y no suma horas."
+    }
+   ]
+  },
+  {
+   "id": "COM",
+   "nombre": "Compras y pagos",
+   "carril": "dh",
+   "frente": "A",
+   "composicion": "Administración operativa.",
+   "para_que": "Ordenar el flujo de compras y pagos y dejar en uso la solución que más tiempo recupere",
+   "soluciones": [
+    {
+     "id": "COM-1",
+     "entregable": "Diagnóstico y logro inmediato de Compras y pagos",
+     "h": 4,
+     "fase": "F2",
+     "detalle": "Sesión de 4 h con las personas de Administración operativa que gestionan las compras y los pagos. Se levantan los procesos reales y sus cuellos de botella, y se construye en la misma sesión un logro inmediato aplicable a la subárea. El inventario de procesos alimenta el Mapa de Calor."
+    },
+    {
+     "id": "COM-2",
+     "entregable": "Solución de Compras y pagos, construida y en uso",
+     "h": 8,
+     "fase": "F3",
+     "detalle": "Sesión de 8 h con las mismas personas. Se construye la solución que la Detección priorizó para Compras y pagos, se prueba con ejemplos armados y el equipo la deja funcionando en su trabajo diario. Cuál es la solución se define con el Reporte Final."
+    }
+   ]
+  },
+  {
+   "id": "CON",
+   "nombre": "Conciliación",
+   "carril": "dh",
+   "frente": "A",
+   "composicion": "Administración operativa.",
+   "para_que": "Reducir los 2 días semanales de conciliación y revisar el bot comprado",
+   "soluciones": [
+    {
+     "id": "CON-1",
+     "entregable": "Diagnóstico y logro inmediato de Conciliación",
+     "h": 4,
+     "fase": "F2",
+     "detalle": "Sesión de 4 h con la persona que concilia (un analista dedica 2 días a la semana a conciliar el caché, factura por factura) y el coordinador de administración. Candidato a logro inmediato identificado en la ficha: revisar la continuidad del bot de conciliación ya comprado, que el equipo no usa."
+    },
+    {
+     "id": "CON-2",
+     "entregable": "Solución de Conciliación, construida y en uso",
+     "h": 8,
+     "fase": "F3",
+     "detalle": "Sesión de 8 h con el equipo de Administración. Se construye la solución que la Detección priorizó para la conciliación bancaria y de caché, se prueba con ejemplos armados y se acompaña su adopción: que el analista y el equipo la usen en su trabajo diario."
+    }
+   ]
+  },
+  {
+   "id": "PAC",
+   "nombre": "Confirmación de pacientes",
+   "carril": "dh",
+   "frente": "A",
+   "composicion": "Central de Citas.",
+   "para_que": "Ordenar los 400 mensajes diarios y automatizar las respuestas repetitivas",
+   "soluciones": [
+    {
+     "id": "PAC-1",
+     "entregable": "Diagnóstico y logro inmediato de Confirmación de pacientes",
+     "h": 4,
+     "fase": "F2",
+     "detalle": "Sesión de 4 h con las personas de Central de Citas. Proceso a levantar: la confirmación de citas con los pacientes, unos 400 mensajes al día, con preguntas repetitivas que se atienden a mano y mensajes que quedan sin responder o mal respondidos. Candidato a logro inmediato identificado en la ficha: automatizar las respuestas repetitivas."
+    },
+    {
+     "id": "PAC-2",
+     "entregable": "Solución de Confirmación de pacientes, construida y en uso",
+     "h": 8,
+     "fase": "F3",
+     "detalle": "Sesión de 8 h con Central de Citas. Se construye la solución que la Detección priorizó para atender los mensajes repetitivos de los pacientes, se prueba con mensajes de ejemplo armados para la sesión, sin datos de pacientes, y el equipo la deja en uso. La conexión técnica con el sistema de citas queda fuera de esta propuesta."
+    }
+   ]
+  },
+  {
+   "id": "MED",
+   "nombre": "Médicos y procedimientos",
+   "carril": "dh",
+   "frente": "A",
+   "composicion": "Central de Citas: confirmación con médicos y de procedimientos.",
+   "para_que": "Ordenar la confirmación con médicos y de procedimientos y automatizar lo repetitivo",
+   "soluciones": [
+    {
+     "id": "MED-1",
+     "entregable": "Diagnóstico y logro inmediato de Médicos y procedimientos",
+     "h": 4,
+     "fase": "F2",
+     "detalle": "Sesión de 4 h con las personas de Central de Citas que confirman la agenda con los médicos y los procedimientos. Se levantan los procesos reales y sus cuellos de botella, y se construye en la misma sesión un logro inmediato aplicable a la subárea."
+    },
+    {
+     "id": "MED-2",
+     "entregable": "Solución de Médicos y procedimientos, construida y en uso",
+     "h": 8,
+     "fase": "F3",
+     "detalle": "Sesión de 8 h con las mismas personas. Se construye la solución que la Detección priorizó para la confirmación con médicos y de procedimientos, se prueba con ejemplos armados y el equipo la deja funcionando en su trabajo diario."
+    }
+   ]
+  }
+ ],
+ "alcance": {
+  "titulo": "Una solución en uso en cada una de las 4 subáreas.",
+  "subtitulo": "Nivelamos al equipo, auditamos las **2 áreas** en sus **4 subáreas** y construimos con cada una su **solución de IA**.",
+  "fuera_alcance": [
+   "La conexión técnica con el sistema de citas: requiere permisos de quien lo administra.",
+   "Soluciones adicionales por subárea: cada una recibe 8 h de construcción, lo demás va en otra etapa.",
+   "Licencias de IA: la herramienta se define con el Reporte Final y su licencia va aparte."
+  ]
+ },
+ "metodo": {
+  "titulo": "Así trabajamos cada subárea.",
+  "subtitulo": "Primero se levanta cómo trabaja cada subárea y después se construye, con quienes hacen el trabajo.",
+  "quien_construye": "Intezia levanta y construye con las personas de cada subárea, en sesión, sobre su forma de trabajo actual.",
+  "por_que_orden": "Primero se nivela al equipo; después se audita cada subárea y se prioriza con el Reporte Final; al final se construye en cada una la solución que el diagnóstico respalda.",
+  "pasos": [
+   {
+    "titulo": "Levantamos",
+    "texto": "Los procesos reales de cada subárea y su cuello de botella."
+   },
+   {
+    "titulo": "Construimos",
+    "texto": "Un logro inmediato en la Detección y, después, la solución prioritaria."
+   },
+   {
+    "titulo": "Adoptamos",
+    "texto": "El equipo usa la solución en su trabajo diario, con acompañamiento."
+   },
+   {
+    "titulo": "Medimos",
+    "texto": "El tiempo recuperado contra la línea base, a 30, 60 y 90 días."
+   }
+  ],
+  "practica": [
+   {
+    "titulo": "Sesiones por subárea",
+    "texto": "4 h por subárea en la Detección y 8 h en Habilidades, con las personas que hacen el trabajo, en modalidad mixta."
+   },
+   {
+    "titulo": "Lo prioriza el diagnóstico",
+    "texto": "Las soluciones nacen de los hallazgos de la Detección: el equipo construye lo que el propio diagnóstico señala."
+   },
+   {
+    "titulo": "Hecho con quien lo usa",
+    "texto": "Cada solución se construye con las personas que la van a usar, para que el equipo la adopte."
+   }
+  ],
+  "datos": "En las sesiones se trabaja con procesos y ejemplos armados para la sesión: no se carga a ninguna herramienta de IA información que identifique a pacientes ni historias clínicas de la Sociedad."
+ },
+ "fases": [
+  {
+   "id": "F1",
+   "titulo": "Nivel",
+   "rango": "Semana 1",
+   "descripcion": "fundamentos para todo el equipo"
+  },
+  {
+   "id": "F2",
+   "titulo": "Mapa",
+   "rango": "Semanas 2 a 4",
+   "descripcion": "auditar las 4 subáreas y priorizar"
+  },
+  {
+   "id": "F3",
+   "titulo": "Uso",
+   "rango": "Semanas 5 y 6",
+   "descripcion": "4 soluciones construidas y en uso",
+   "destacada": true
+  }
+ ],
+ "frentes": [
+  {
+   "id": "A",
+   "carril": "dh",
+   "nombre": "2 áreas, 4 subáreas",
+   "semanas": "1 a 6",
+   "celdas": {
+    "F1": "2 h de nivelación para todo el equipo, en un solo grupo.",
+    "F2": "4 subáreas, 4 h cada una, dos por semana: diagnóstico, logro inmediato y Reporte Final.",
+    "F3": "4 subáreas, 8 h cada una, dos por semana: la solución prioritaria de cada una, en uso."
+   }
+  }
+ ],
+ "ruta": {
+  "semanas_total": 6,
+  "tope_h_semana": 16,
+  "titulo": "De la Detección a 4 soluciones en 6 semanas.",
+  "subtitulo": "Semanas de trabajo desde el arranque, en modalidad mixta. El **Reporte Final** se entrega en la semana 4.",
+  "nota": "Las {h_total} h son una proyección de sesión: {h_f1}, {h_f2} y {h_f3} h en las fases 1, 2 y 3. La semana 4 es trabajo de Intezia, sin sesiones. El kick-off de arranque no suma horas.",
+  "hitos": [
+   {
+    "titulo": "Semana 1 · Nivelación",
+    "texto": "Kick-off y Fundamentals de 2 h para todo el equipo, en un solo grupo."
+   },
+   {
+    "titulo": "Semanas 2 y 3 · Detección",
+    "texto": "4 subáreas, 4 h cada una, dos por semana: diagnóstico y un logro inmediato por subárea."
+   },
+   {
+    "titulo": "Semana 4 · Reporte Final",
+    "texto": "Mapa de Calor, Índice de Madurez y recomendación de ecosistema de IA."
+   },
+   {
+    "titulo": "Semanas 5 y 6 · Soluciones",
+    "texto": "4 subáreas, 8 h cada una, dos por semana: la solución de cada subárea, en uso."
+   },
+   {
+    "titulo": "30 · 60 · 90 días",
+    "texto": "Seguimiento: uso, nuevas construcciones y tiempo recuperado contra la línea base."
+   }
+  ]
+ },
+ "logistica": {
+  "modalidad": "Mixta: la modalidad de cada sesión se acuerda con la Sociedad.",
+  "participantes": "Unas 15 personas de Administración, Central de Citas y la sede administrativa.",
+  "arranque": "La fecha de arranque y el horario de cada sesión se acuerdan con la Sociedad.",
+  "ritmo": "Dos subáreas por semana: 4 h por subárea en la Detección y 8 h en Habilidades."
+ },
+ "seguimiento": {
+  "rango": "30, 60 y 90 días",
+  "texto": "Desde el cierre de cada subárea",
+  "items": [
+   {
+    "dias": "30 días",
+    "texto": "Uso de las soluciones"
+   },
+   {
+    "dias": "60 días",
+    "texto": "Nuevas construcciones por subárea"
+   },
+   {
+    "dias": "90 días",
+    "texto": "Tiempo recuperado contra la línea base"
+   }
+  ]
+ },
+ "entregables": {
+  "titulo": "Lo que recibe la Sociedad.",
+  "subtitulo": "Lo que se llevan: **{n_entregables_txt}**, dos por subárea (diagnóstico y solución) y uno de nivelación, más el Reporte Final.",
+  "transversales": [
+   "Mapa de Calor e Índice de Madurez de las 2 áreas.",
+   "Reporte Final y recomendación de ecosistema de IA.",
+   "Seguimiento a 30, 60 y 90 días con medición del tiempo."
+  ],
+  "valor_inmediato": [
+   "Semana 1: el equipo con un lenguaje común de IA.",
+   "Semanas 2 y 3: un logro inmediato en cada subárea.",
+   "Semanas 5 y 6: la solución de cada subárea, en uso."
+  ],
+  "columnas_por_carril": [
+   2
+  ],
+  "etiqueta_transversales": "Para todo el proyecto"
+ },
+ "retorno": {
+  "modo": "metodo",
+  "posiciones": false,
+  "titulo": "Retorno esperado: tiempo recuperado, medido.",
+  "subtitulo": "El retorno se mide contra la línea base que cada subárea entrega en su sesión de la Detección.",
+  "etiqueta_pasos": "Cómo se calcula el retorno de cada solución",
+  "pasos": [
+   {
+    "titulo": "Volumen",
+    "texto": "Cuántos mensajes atiende Central de Citas al día y cuántas conciliaciones hace Administración cada semana."
+   },
+   {
+    "titulo": "Tiempo actual",
+    "texto": "Lo que toma hoy cada tarea, medido en la Detección con cada subárea: es la **línea base**."
+   },
+   {
+    "titulo": "Tiempo con la solución",
+    "texto": "Lo que toma el mismo trabajo una vez que la solución está en uso."
+   },
+   {
+    "titulo": "Horas recuperadas",
+    "texto": "Volumen por la diferencia de tiempos: una estimación referencial, sin compromiso de resultado."
+   },
+   {
+    "titulo": "Valor en dinero",
+    "texto": "Horas recuperadas por el valor hora de referencia que la Sociedad valide."
+   }
+  ],
+  "etiqueta_destino": "Hacia dónde va el proyecto",
+  "destino": [
+   {
+    "rotulo": "Mismo equipo, más volumen",
+    "texto": "Si el tiempo se libera, el equipo puede atender **más mensajes y más conciliaciones** sin ampliar su tamaño."
+   },
+   {
+    "rotulo": "Trabajo reenfocado",
+    "texto": "Con el tiempo liberado, las personas pasan de las tareas repetitivas a las que requieren su criterio."
+   },
+   {
+    "rotulo": "Más áreas",
+    "texto": "Con el retorno medido, la Sociedad decide si lleva el mismo ciclo de construir, probar y adoptar a **otras áreas**."
+   }
+  ],
+  "gancho": "Hacia la semana {semana_medicion} ({semanas_txt} de construcción más 90 días de seguimiento), la Sociedad contará con el tiempo recuperado medido y su valor en dinero, subárea por subárea.",
+  "etiqueta_metas": "Calendario de garantía y cálculo del retorno",
+  "metas": [
+   {
+    "dias": "30 días",
+    "texto": "Desde el cierre de cada subárea: soluciones en uso real y línea base validada con su líder."
+   },
+   {
+    "dias": "60 días",
+    "texto": "Horas recuperadas medidas contra la línea base, por subárea y por proceso."
+   },
+   {
+    "dias": "90 días",
+    "texto": "Medición del retorno en dinero, con el valor de las horas recuperadas de cada subárea."
+   }
+  ]
+ },
+ "inversion": {
+  "partes": [
+   {
+    "nombre": "Detección",
+    "detalle": "Fundamentals y auditoría de 4 subáreas · 18 h"
+   },
+   {
+    "nombre": "Habilidades",
+    "detalle": "Una solución en uso por subárea, en 4 subáreas · 32 h"
+   }
+  ],
+  "etiqueta_suma": "Suma de ambas partes",
+  "duracion": "Proyecto de {n_entregables_txt} en {semanas_txt}, con seguimiento a 30, 60 y 90 días, en modalidad mixta. {h_total} horas de trabajo.",
+  "programa": [
+   "Servicio de Detección y Habilidades para la Sociedad Anticancerosa de Venezuela (DET-023): 2 áreas, Administración operativa y Central de Citas, en 4 subáreas.",
+   "Detección: Fundamentals (2 h) y 4 subáreas de 4 h. Habilidades: una solución en uso por subárea, de 8 h cada una.",
+   "50 h de trabajo en 6 semanas, más el kick-off aparte. Modalidad mixta."
+  ],
+  "notas": [
+   "Licencias aparte: la herramienta de IA se define con el Reporte Final y la Sociedad confirma su valor con el proveedor.",
+   "Garantía 30-60-90 en Habilidades: seguimiento a 30, 60 y 90 días desde el cierre de cada subárea.",
+   "Términos y condiciones: los del enlace de «Importante», que ambas partes aceptan al avanzar con esta propuesta."
+  ]
+ },
+ "proximos_pasos": {
+  "asesora": {
+   "nombre": "Verónica Rubio",
+   "cargo": "Asesora comercial",
+   "correo": "vrubio01@intezia.com",
+   "telefono": "+58 422 3355505"
+  },
+  "pasos": [
+   {
+    "titulo": "Fecha de arranque",
+    "texto": "Confirmamos con la Dirección la fecha del kick-off y el orden de las 4 subáreas."
+   },
+   {
+    "titulo": "Accesos y agenda",
+    "texto": "Coordinamos los participantes de cada subárea y el horario de cada sesión, presencial o virtual."
+   },
+   {
+    "titulo": "Kick-off de arranque",
+    "texto": "Reunión inicial para acordar alcance, calendario y un responsable de logística."
+   }
+  ],
+  "subtitulo": "Esto es lo que sigue cuando la Sociedad confirme la propuesta."
+ },
+ "siglas_ok": [
+  "IA"
+ ],
+ "supuestos": [
+  "Alcance nuevo (instrucción del usuario, 2026-10-08, con la ficha del 05/10): la DET-023 enviada el 25/09 era solo Detección de 2 áreas (10 h). La ficha actualizada marca Detección y Habilidades, habla de 6 sub-áreas de auditoría y el cliente pide ver el panorama combinado porque, al ser ONG, necesita la cifra total para gestionar financiamiento por proyecto. El deck pasa a un combo Detección + Habilidades (servicio_rotulo «Servicio de Detección y Habilidades»; meta.json sigue en `deteccion`, como los combos).",
+  "2 áreas, 4 subáreas (instrucción del usuario, 2026-10-08, segunda indicación): son solo 2 áreas, Administración operativa y Central de Citas, que se dividen en las subáreas que tienen dentro. El deck lo dice así (portada, alcance, ruta y entregables) y usa «subárea» como vocabulario. Cuenta 4 subáreas: Detección a 4 h cada una (16 h) y Habilidades a 8 h cada una (32 h), más Fundamentals de 2 h: 50 h en total.",
+  "Nombres de las 4 subáreas: propuesta del sistema, a confirmar con la asesora y el cliente. La ficha dice que Administración operativa (compras, pagos, conciliación) y Central de Citas (confirmación de pacientes, médicos y procedimientos) suman 6 sub-áreas y que sus nombres NO están confirmados; el usuario habla de 4. Se agruparon las 6 de la ficha: Compras y pagos, Conciliación, Confirmación de pacientes, y Médicos y procedimientos. Si los grupos son otros, se cambian los nombres en datos.json y se regenera.",
+  "Horas: Fundamentals 2 h grupal (lineamiento de Detección) + 4 subáreas × 4 h de Detección = 18 h; Habilidades 4 subáreas × 8 h = 32 h (instrucción del usuario, «8 h por área en este caso particular»). Total 50 h. El kick-off va aparte y no suma horas.",
+  "Qué se construye en Habilidades: la ficha pide continuar los logros inmediatos de la Detección y que Administración y Central de Citas apliquen en el día a día las herramientas identificadas. Solo identifica dos candidatos (respuestas repetitivas y agendamiento en Central de Citas; continuidad del bot de conciliación ya comprado). Para no inventar soluciones, cada subárea recibe «la solución prioritaria que la Detección señale» (8 h) y su nombre se confirma con el Reporte Final; las C/T/A no se desglosan (solo h por solución).",
+  "Calendario propuesto por el sistema, no dictado por la ficha: 6 semanas (semana 1 kick-off y Fundamentals; semanas 2 y 3 Detección, dos subáreas por semana; semana 4 consolidación, Mapa de Calor y Reporte Final sin sesiones; semanas 5 y 6 Habilidades, dos subáreas por semana). Sesiones de 8 h por subárea: confirmar con la asesora si se parten en dos de 4 h. Confirmar con servicio.",
+  "Habilidades se construye después del Reporte Final porque este recomienda el ecosistema de IA («aún no lo saben, esperan la recomendación»): el deck no nombra ni pre-recomienda ninguna herramienta (Intezia no recomienda antes de auditar). Copilot ya está contratado pero casi no se usa; el Reporte Final dirá si se aprovecha. El licenciamiento va aparte y su valor lo confirma el cliente con el proveedor.",
+  "Modalidad mixta: es la de la propuesta enviada (la ficha anterior la traía en el bloque de Habilidades); la ficha del 05/10 no la repite. El deck dice «se acuerda con la Sociedad». Confirmar con la asesora.",
+  "Participantes: «unas 15 personas» sale del universo de la ficha (~4 en Administración operativa, 5 en Central de Citas y ~6 en la sede administrativa). La ficha no dice quiénes asisten a Fundamentals ni a cada sesión de subárea: se deja a coordinar. No se nombra a ninguna persona del cliente.",
+  "Datos de pacientes: la ficha no tiene certeza de una política formal de datos y se trata de salud (oncología). El deck dice que no se carga a ninguna herramienta información que identifique a pacientes ni historias clínicas, y que se prueba con ejemplos armados (mismo criterio que DET-027). Propuesta del sistema: confirmar con la Sociedad. Limita la solución de Central de Citas: la conexión con el sistema de citas queda fuera de alcance (la ficha la pide como expectativa).",
+  "Fuera del deck a propósito: los equipos médicos con IA embebida (endoscopio y ultrasonidos) no son parte de Administración ni de Central de Citas; el patrocinio ejecutivo no asegurado, la apertura al cambio «media» y quién firma (el Director no confirmó que firme) son contexto interno; la resistencia al cambio se trata en Fundamentals y en la adopción, sin nombrar a nadie. Quedan en brief.md.",
+  "Retorno en modo método: la ficha declara volúmenes (400 mensajes al día, 2 días a la semana de un analista) pero no tiempos por proceso ni valor hora. Esos dos datos van en la portada con su fuente; el retorno no usa cifras ni posiciones. «Sin compromiso de resultado». Sin casos ya logrados con el cliente ni contratación evitada.",
+  "«Hacia la semana N» del retorno es aritmética (6 semanas + 13): confirmar con el equipo de servicio.",
+  "Sin facilidad de pago (criterio de las últimas migraciones, 2026-10-08): la slide se omite con omitir: [\"pago\"]. El cliente necesita el total combinado para gestionar financiamiento: la hoja de inversión trae una caja de valor por parte (Detección 18 h y Habilidades 32 h) y la suma automática (inversion.partes). Ventas comunica el plan de pago por otro medio; el generador avisa que Ventas la pide en toda propuesta.",
+  "Asesora (slide de próximos pasos): Verónica Rubio, con el teléfono y el correo de la Ficha de Levantamiento de otras propuestas; el cargo «Asesora comercial» sale del brief.",
+  "Ajuste al formato compacto v2 (2026-10-08): el deck de 12 slides del 25/09 pasa a 8 slides (sin Impacto con estudios, Cierre, calendario con fechas ni certificado). Los dos estudios del deck anterior (BMJ Open 2016 y Ardent Partners 2025) no aplican en este formato (§4.21). El deck anterior, su programa.md y su brief.md quedan en _anterior-12-slides/."
+ ],
+ "pendientes": [
+  "Definir inversión, descuento y total (campos vacíos para ventas): el alcance pasó de 10 h a 50 h, y el cliente necesita el total combinado de Detección (18 h) y Habilidades (32 h).",
+  "Confirmar con la asesora y con el cliente los nombres de las 4 subáreas (propuesta del sistema a partir de las 6 de la ficha).",
+  "Confirmar las fechas, el horario y el orden de las subáreas, y si las sesiones de 8 h se parten en dos de 4 h.",
+  "Confirmar la modalidad (mixta, heredada de la propuesta enviada), quiénes asisten a Fundamentals y cuántas personas tiene cada subárea.",
+  "Confirmar con el cliente que las soluciones se prueben con ejemplos armados y sin datos de pacientes, y que la conexión con el sistema de citas quede fuera.",
+  "Confirmar quién firma y aprueba (ONG con financiamiento por proyecto) y cómo se comunica el plan de pago (la slide se omitió).",
+  "Reenviar el PDF nuevo avisando que reemplaza al del 25/09/2026."
+ ]
+}

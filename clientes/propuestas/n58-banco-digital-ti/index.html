@@ -2,14 +2,14 @@
 <!--
   Propuesta · N58 Banco Digital · Servicio de Habilidades (CAI-037)
   División: Educación · Servicio: Habilidades (§4.1a) · Alianza: no
-  GENERADO por scripts/generar-habilidades-compacto.py (plantilla 1.3 (2026-10-05)) desde datos.json.
+  GENERADO por scripts/generar-habilidades-compacto.py (plantilla 2.0 (2026-10-07)) desde datos.json.
   No editar a mano: editar datos.json y regenerar. Estilos propios del deck: overrides.css.
   Fuente del insumo: Ficha de Levantamiento de N58 (01/10/2026) y documento de soberanía de datos para Tecnología (CAI-034)
 
-  Formato compacto de 6 slides (distinto del deck canónico de ~13):
-    1 Portada con punto de dolor · 2 Alcance · 3 Ruta · 4 Inversión · 5 Entregables · 6 Retorno esperado
-  Marcadores de detección de AcroForms (agregar-campo-precio.py), por página: «Propuesta Económica»
-  solo en la slide de inversión; «Lo que se llevan» y «Entregables» solo en la de entregables.
+  Formato compacto de 8 slides, en el orden de las preguntas del cliente (Ventas, 2026-10-07):
+    1 Portada · 2 Alcance · 3 Ruta · 4 Cómo trabajamos · 5 Entregables · 6 Retorno · 7 Inversión · 8 Próximos pasos
+  Marcadores de detección de AcroForms (agregar-campo-precio.py), por página: «Propuesta Económica» solo en la slide de
+  inversión; «Lo que se llevan» y «Entregables» solo en la de entregables; «Facilidad de pago» solo en la de pago.
   Campos AcroForm: Programa, Notas, PrecioBase, Descuento, PrecioTotal (inversión) y Entregables, Acreditacion (entregables). Se reposicionan con scripts/customize-habilidades-compacto.py.
 -->
 <html lang="es">
@@ -25,9 +25,9 @@
 
   <main class="deck">
 
-    <!-- 1 · Portada con punto de dolor -->
+    <!-- 1 · Portada: ¿cuál es mi problema? -->
     <section class="slide s-cover">
-      <span class="counter">01 / 06</span>
+      <span class="counter">01 / 08</span>
       <div class="logo-big">
         <img src="../../../logos/educacion/BLANCO.png" alt="Intezia Educación">
       </div>
@@ -62,53 +62,34 @@
       </div>
     </section>
 
-    <!-- 2 · Alcance -->
-    <section class="slide s-scope">
-      <span class="counter">02 / 06</span>
+    <!-- 2 · Alcance: qué vamos a hacer y para qué -->
+    <section class="slide s-scope roomy">
+      <span class="counter">02 / 08</span>
       <p class="eyebrow">02 · Alcance</p>
       <h2>Un estándar de equipo para usar IA al programar.</h2>
       <p class="sub">Nivelamos al equipo de TI, construimos el flujo de <strong>código, revisión y pruebas</strong> y dejamos el estándar de uso.</p>
 
-      <div class="scope-body">
-        <div class="scope-left">
-
-          <div class="scope-panel acc-y">
-            <div class="scope-head">
-              <span class="scope-tag">Claude Code y Codex</span>
-              <span class="scope-total"><b>6</b> entregables · 3 módulos</span>
-            </div>
-            <ul class="scope-rows">
-              <li><span class="area">Fundamentals y uso seguro <small class="comp">Cómo trabajan las herramientas y qué código y datos pueden usar.</small></span><span class="units" style="--n:1"></span><span class="n">1</span></li>
-              <li><span class="area">Construcción <small class="comp">Escribir y refactorizar, revisar código y escribir pruebas con IA.</small></span><span class="units" style="--n:3"></span><span class="n">3</span></li>
-              <li><span class="area">Implementación <small class="comp">Instrucciones del repositorio y estándar de uso del equipo.</small></span><span class="units" style="--n:2"></span><span class="n">2</span></li>
-            </ul>
+      <div class="scope-panels one" style="--np:1">
+        <div class="scope-panel acc-y">
+          <div class="scope-head">
+            <span class="scope-tag">Claude Code y Codex</span>
+            <span class="scope-total"><b>6</b> entregables · 3 módulos</span>
           </div>
-
+          <ul class="scope-rows">
+              <li><span class="area">Fundamentals y uso seguro <small class="comp">Cómo trabajan las herramientas y qué código y datos pueden usar.</small></span><span class="n">1 entregable</span><span class="para">Que el equipo de TI entienda cómo trabajan las herramientas y qué código y datos pueden usar</span></li>
+              <li><span class="area">Construcción <small class="comp">Tres sesiones prácticas: código, revisión y pruebas.</small></span><span class="n">3 entregables</span><span class="para">Construir con el equipo un flujo de código, revisión y pruebas asistido por IA</span></li>
+              <li><span class="area">Implementación <small class="comp">Reglas de cada herramienta y estándar para el equipo.</small></span><span class="n">2 entregables</span><span class="para">Dejar las instrucciones del repositorio y un estándar de uso que el equipo adopte</span></li>
+          </ul>
         </div>
+      </div>
 
-        <div class="scope-right">
-          <div class="scope-card">
-            <p class="scope-card-label">Cómo trabajamos</p>
-            <ol class="scope-steps">
-              <li>Nivelamos al equipo en Claude Code, Codex y su uso seguro.</li>
-              <li>Trabajamos con ambas herramientas sobre un repositorio de práctica.</li>
-              <li>Construimos el flujo para escribir, revisar y probar código con IA.</li>
-              <li>Dejamos el estándar del equipo y medimos a 30, 60 y 90 días.</li>
-            </ol>
-          </div>
-          <div class="scope-card">
-            <p class="scope-card-label">Quién construye</p>
-            <p>Intezia dicta las sesiones y construye cada flujo con el equipo de TI, sobre un repositorio de práctica.</p>
-          </div>
-          <div class="scope-card scope-out">
-            <p class="scope-card-label">Fuera de este alcance</p>
-            <ul>
-              <li>Código de producción y datos de clientes: las sesiones usan material de práctica.</li>
-              <li>La decisión de soberanía de datos del banco, que se trata aparte con Tecnología.</li>
-              <li>Contratar las licencias de Claude Code y Codex.</li>
-            </ul>
-          </div>
-        </div>
+      <div class="scope-out">
+        <p class="scope-card-label">Fuera de este alcance</p>
+        <ul>
+          <li>Código de producción y datos de clientes: las sesiones usan material de práctica.</li>
+          <li>La decisión de soberanía de datos del banco, que se trata aparte con Tecnología.</li>
+          <li>Contratar las licencias de Claude Code y Codex.</li>
+        </ul>
       </div>
 
       <div class="foot">
@@ -117,45 +98,45 @@
       </div>
     </section>
 
-    <!-- 3 · Ruta -->
+    <!-- 3 · Ruta: qué pasa en cada fase -->
     <section class="slide s-route">
-      <span class="counter">03 / 06</span>
+      <span class="counter">03 / 08</span>
       <p class="eyebrow">03 · Ruta</p>
       <h2>Del uso suelto a un estándar, en 6 semanas.</h2>
       <p class="sub">Semanas de trabajo desde el arranque, con <strong>seguimiento a 30, 60 y 90 días</strong> desde el cierre de la implementación.</p>
 
-      <div class="route-grid" style="--cols:3; --rows:1; --rowh:214px">
+      <div class="route-grid n1" style="--cols:3; --rows:1; --rowh:214px">
 
         <div class="rg-corner"></div>
         <div class="rg-phase rg-ph-1">
-          <span class="rg-phase-tag">Fundamentals</span>
+          <span class="rg-phase-top"><span class="rg-phase-tag">Bases</span><b class="rg-phase-n">1 entregable</b></span>
           <span class="rg-phase-date">Semana 1</span>
-          <span class="rg-phase-txt"><b>2 h</b> · criterio y reglas de uso seguro</span>
+          <span class="rg-phase-txt">Criterio y reglas de uso seguro</span>
         </div>
         <div class="rg-phase rg-ph-2 hi">
-          <span class="rg-phase-tag">Construcción</span>
+          <span class="rg-phase-top"><span class="rg-phase-tag">Código</span><b class="rg-phase-n">3 entregables</b></span>
           <span class="rg-phase-date">Semanas 2 a 4</span>
-          <span class="rg-phase-txt"><b>6 de 12 h</b> · código, revisión y pruebas</span>
+          <span class="rg-phase-txt">Código, revisión y pruebas</span>
         </div>
         <div class="rg-phase rg-ph-3">
-          <span class="rg-phase-tag">Implementación</span>
+          <span class="rg-phase-top"><span class="rg-phase-tag">Norma</span><b class="rg-phase-n">2 entregables</b></span>
           <span class="rg-phase-date">Semanas 5 y 6</span>
-          <span class="rg-phase-txt"><b>4 h</b> · el estándar queda en el equipo</span>
+          <span class="rg-phase-txt">El estándar queda en el equipo</span>
         </div>
         <div class="rg-phase rg-fu">
-          <span class="rg-phase-tag">Seguimiento</span>
+          <span class="rg-phase-top"><span class="rg-phase-tag">Garantía</span></span>
           <span class="rg-phase-date">30, 60 y 90 días</span>
           <span class="rg-phase-txt">Desde el cierre de la implementación</span>
         </div>
 
         <div class="rg-front acc-y">
-          <span class="rg-front-tag">Equipo de TI</span>
-          <span class="rg-front-h"><b>12 h</b> · Claude Code y Codex</span>
-          <span class="rg-front-areas">Equipo de TI de N58</span>
+          <span class="rg-front-h">Equipo de TI</span>
+          <span class="rg-front-row"><span class="rg-front-tool">IA en código</span><b class="rg-front-n">6 entregables</b></span>
+          <span class="rg-front-meta">semanas 1 a 6 · 12 h</span>
         </div>
-        <div class="rg-cell"><span class="rg-h"><b>2</b> h <i>1 entregable</i></span><p>Sesión de 2 h: cómo trabajan Claude Code y Codex y qué código y datos pueden usar.</p></div>
-        <div class="rg-cell hi"><span class="rg-h"><b>6</b> h <i>3 entregables</i></span><p>3 sesiones de 2 h: escribir y refactorizar, revisar código y escribir pruebas con IA.</p></div>
-        <div class="rg-cell"><span class="rg-h"><b>4</b> h <i>2 entregables</i></span><p>2 sesiones de 2 h: instrucciones del repositorio y estándar de uso del equipo.</p></div>
+        <div class="rg-cell"><span class="rg-h"><b>1</b> entregable <i>2 h</i></span><p>Sesión de 2 h: cómo trabajan Claude Code y Codex y qué código y datos pueden usar.</p></div>
+        <div class="rg-cell hi"><span class="rg-h"><b>3</b> entregables <i>6 h</i></span><p>3 sesiones de 2 h: escribir y refactorizar, revisar código y escribir pruebas con IA.</p></div>
+        <div class="rg-cell"><span class="rg-h"><b>2</b> entregables <i>4 h</i></span><p>2 sesiones de 2 h: instrucciones del repositorio y estándar de uso del equipo.</p></div>
 
         <div class="rg-follow" style="grid-column:5; grid-row:2 / span 1">
           <ul>
@@ -173,7 +154,7 @@
         <div class="mile"><span class="mile-d"></span><b>Semanas 5 y 6 · Implementación</b><p>2 sesiones de 2 h: quedan las instrucciones del repositorio y el estándar del equipo.</p></div>
         <div class="mile"><span class="mile-d"></span><b>30 · 60 · 90 días</b><p>Seguimiento: uso, nuevas construcciones y tiempo recuperado contra la línea base.</p></div>
       </div>
-      <p class="route-note">S = semana de trabajo desde el arranque, cuya fecha se acuerda con N58 Banco Digital. Las 12 h son una proyección de sesión: 2, 6 y 4 h en las fases 1, 2 y 3. El kick-off de 1 h es aparte y no suma horas.</p>
+      <p class="route-note">Las 12 h son una proyección de sesión: 2, 6 y 4 h en las fases 1, 2 y 3. El kick-off de 1 h es aparte y no suma horas. La fecha de arranque se acuerda con N58 Banco Digital.</p>
 
       <div class="foot">
         <img src="../../../logos/educacion/BLANCO.png" alt="">
@@ -181,15 +162,175 @@
       </div>
     </section>
 
-    <!-- 4 · Inversión (hoja de cotización estándar, por horas) -->
+    <!-- 4 · Cómo trabajamos: pasos, por qué en ese orden, casos reales, práctica, datos y logística -->
+    <section class="slide s-method roomy">
+      <span class="counter">04 / 08</span>
+      <p class="eyebrow">04 · Cómo trabajamos</p>
+      <h2>Así trabajamos con el equipo de TI.</h2>
+      <p class="sub">Sesiones prácticas con las dos herramientas, sobre un repositorio de práctica y con las reglas del banco.</p>
+
+      <ol class="mt-steps" style="--n:4">
+          <li><b>Nivelamos</b><span>Al equipo en Claude Code, Codex y su uso seguro.</span></li>
+          <li><b>Practicamos</b><span>Con ambas herramientas, sobre un repositorio de práctica.</span></li>
+          <li><b>Construimos</b><span>El flujo del equipo para el código, la revisión y las pruebas.</span></li>
+          <li><b>Dejamos listo</b><span>El estándar del equipo y la medición a 30, 60 y 90 días.</span></li>
+      </ol>
+      <div class="mt-strips">
+        <p class="mt-why"><b>Por qué en este orden</b> Primero se nivela al equipo y se fijan las reglas de uso seguro; después se construye el flujo de código, revisión y pruebas; al final queda el estándar.</p>
+        <p class="mt-who"><b>Quién construye</b> Intezia dicta las sesiones y construye cada flujo con el equipo de TI, sobre un repositorio de práctica.</p>
+      </div>
+
+      <div class="mt-info">
+        <div class="mt-card">
+          <p class="mt-card-label">Cómo funciona en la práctica</p>
+          <ul><li><b>Repositorio de práctica.</b> Todas las sesiones usan un repositorio acordado en el kick-off, sin código de producción.</li><li><b>Dos herramientas.</b> Se trabaja con Claude Code y con Codex sobre las mismas tareas, para ver qué hace cada una.</li><li><b>Una persona revisa.</b> Todo cambio que propone la IA lo revisa una persona antes de aceptarlo.</li></ul>
+        </div>
+        <div class="mt-card">
+          <p class="mt-card-label">Cómo cuidamos sus datos</p>
+          <p>Las sesiones usan material de práctica, sin código de producción ni datos de clientes. Qué código y datos puede usar cada herramienta lo fija el estándar del equipo.</p>
+        </div>
+      </div>
+
+      <div class="mt-logi">
+        <div class="mt-tile"><span>Modalidad</span><b>A acordar con Tecnología; la fecha y el horario, con el equipo de TI.</b></div>
+        <div class="mt-tile"><span>Participantes</span><b>El equipo de TI de N58; cuántas personas participan se acuerda con Tecnología.</b></div>
+        <div class="mt-tile"><span>Ritmo de trabajo</span><b>Una sesión de 2 h por semana, durante 6 semanas.</b></div>
+        <div class="mt-tile"><span>Arranque</span><b>El kick-off de 1 h, aparte, elige el repositorio de práctica y acuerda las reglas del banco.</b></div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">N58 · CAI-037</span>
+      </div>
+    </section>
+
+    <!-- 5 · Entregables: ¿con qué me quedo? (catálogo + piezas transversales) -->
+    <section class="slide s-deliv roomy">
+      <span class="counter">05 / 08</span>
+      <p class="eyebrow">05 · Entregables</p>
+      <div class="deliv-head">
+        <h2>Lo que recibe el equipo.</h2>
+        <p class="deliv-sub"><span class="nw">Lo que se llevan</span>: <strong>6 entregables</strong> trabajados con el equipo de TI, más el seguimiento a 30, 60 y 90 días que mide su efecto.</p>
+      </div>
+
+      <div class="deliv-carriles" style="--ncols:3">
+        <span class="dc acc-y" style="grid-column: span 3">Claude Code y Codex · 6 entregables</span>
+      </div>
+
+      <div class="deliv-cols" style="--ncols:3">
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">Fundamentals</p>
+            <ul>
+              <li>Guía de uso seguro de Claude Code y Codex</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">Construcción</p>
+            <ul>
+              <li>Flujo para escribir y refactorizar con IA</li>
+              <li>Lista y flujo de revisión de código con IA</li>
+              <li>Pruebas automatizadas con IA, probadas en el repositorio de práctica</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">Implementación</p>
+            <ul>
+              <li>Instrucciones del repositorio para Claude Code y Codex</li>
+              <li>Estándar de uso de IA del equipo de TI</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="deliv-band">
+        <div class="db-card db-1">
+          <span class="db-label">Para todas las áreas</span>
+        </div>
+        <div class="db-card db-2">
+          <span class="db-label">Valor inmediato</span>
+        </div>
+      </div>
+      <!-- Cajas multiline editables (vacías en HTML: el contenido vive dentro del AcroForm /V). -->
+      <div class="multi-box db-box db-box-1" data-field="Entregables"></div>
+      <div class="multi-box db-box db-box-2" data-field="Acreditacion"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">N58 · CAI-037</span>
+      </div>
+    </section>
+
+    <!-- 6 · Retorno: ¿qué gano? (método de cálculo). Sin estudios ni citas externas. -->
+    <section class="slide s-roi">
+      <span class="counter">06 / 08</span>
+      <p class="eyebrow">06 · Retorno</p>
+      <h2>Retorno esperado: tiempo y dinero.</h2>
+      <p class="sub">Se calcula con los datos del equipo de TI, se confirma con la línea base de la semana 1 y se mide a 30, 60 y 90 días.</p>
+
+      <div class="roi-body">
+        <div class="roi-panel">
+          <p class="roi-panel-title">Cómo se calcula, por tarea</p>
+          <ol class="roi-steps">
+            <li><b>Volumen semanal</b><span>Cuántos cambios de código se revisan y cuántas pruebas se escriben cada semana.</span></li>
+            <li><b>Tiempo actual por tarea</b><span>Se mide con el equipo en la primera sesión y es la <strong>línea base</strong>.</span></li>
+            <li><b>Tiempo con la IA</b><span>Lo que toma el mismo trabajo con Claude Code o Codex, ya en uso.</span></li>
+            <li><b>Horas recuperadas a la semana</b><span>Volumen semanal multiplicado por la diferencia entre el tiempo actual y el tiempo con IA.</span></li>
+            <li><b>Valor en dinero</b><span>Horas recuperadas multiplicadas por el valor hora de referencia que N58 valide.</span></li>
+          </ol>
+        </div>
+
+        <div class="roi-right">
+          <p class="roi-right-title">Metas, desde el cierre de la implementación</p>
+          <div class="roi-card">
+            <b>30 días</b>
+            <p>El flujo y el estándar en uso real en el equipo de TI.</p>
+          </div>
+          <div class="roi-card">
+            <b>60 días</b>
+            <p>Nuevas construcciones del equipo con IA y horas recuperadas medidas contra la línea base.</p>
+          </div>
+          <div class="roi-card">
+            <b>90 días</b>
+            <p>Medición del retorno en tiempo y calidad, con el valor de las horas recuperadas.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="roi-dest-wrap">
+        <p class="roi-dest-title">Hacia dónde va el proyecto</p>
+        <div class="roi-dest">
+          <div class="rd-item"><b>Mismo equipo, más entregas</b><p>Si el tiempo se libera, TI puede atender <strong>más solicitudes</strong> del banco con el mismo equipo.</p></div>
+          <div class="rd-item"><b>Trabajo reenfocado</b><p>Con el tiempo liberado, el equipo puede dedicarse a las tareas de mayor criterio técnico.</p></div>
+          <div class="rd-item"><b>Otros equipos</b><p>Con el retorno medido, N58 decide si lleva este mismo estándar a <strong>otros equipos</strong> del banco.</p></div>
+        </div>
+      </div>
+
+      <div class="roi-hook"><p>Hacia la semana 19 (6 semanas de trabajo más 90 días de seguimiento), N58 contará con el tiempo recuperado por TI medido y su valor en dinero.</p></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">N58 · CAI-037</span>
+      </div>
+    </section>
+
+    <!-- 7 · Inversión (hoja de cotización estándar; antepenúltima slide) -->
     <section class="slide s-price">
-      <span class="counter">04 / 06</span>
-      <h2 class="title">Inversión por horas de sesión.</h2>
+      <span class="counter">07 / 08</span>
+      <h2 class="title">Inversión del proyecto.</h2>
       <p class="price-intro">Propuesta Económica · Servicio de Habilidades</p>
 
       <div class="block">
         <span class="block-eyebrow">Duración</span>
-        <p class="block-value">Proyección de 12 h de sesión en 6 semanas de trabajo desde el arranque, más seguimiento a 30, 60 y 90 días.</p>
+        <p class="block-value">Proyecto de 6 sesiones en 6 semanas, con seguimiento a 30, 60 y 90 días. 12 horas de trabajo, más 1 h de kick-off aparte.</p>
       </div>
 
       <div class="block block-programa">
@@ -240,7 +381,7 @@
             <p>Se usa con una cuenta de ChatGPT o con acceso por API. <strong>Qué cuenta se contrata</strong> y quién la gestiona se define con Tecnología.</p>
           </div>
         </div>
-        <p class="lic-note">Esta propuesta no incluye precios de lista: el costo de cada licencia lo confirma el banco con cada proveedor. Pueden variar.</p>
+        <p class="lic-note">Esta propuesta no incluye valores de lista: el valor de cada licencia lo confirma el banco con cada proveedor. Pueden variar.</p>
       </div>
 
       <div class="foot">
@@ -249,120 +390,48 @@
       </div>
     </section>
 
-    <!-- 5 · Entregables (catálogo + piezas transversales) -->
-    <section class="slide s-deliv">
-      <span class="counter">05 / 06</span>
-      <p class="eyebrow">05 · Entregables</p>
-      <div class="deliv-head">
-        <h2>Lo que recibe el equipo.</h2>
-        <p class="deliv-sub"><span class="nw">Lo que se llevan</span>: <strong>6 entregables</strong> trabajados con el equipo de TI, más el seguimiento a 30, 60 y 90 días que mide su efecto.</p>
-      </div>
+    <!-- 9 · Próximos pasos: qué hacer y a quién escribir (última slide) -->
+    <section class="slide s-next">
+      <span class="counter">08 / 08</span>
+      <p class="eyebrow">08 · Próximos pasos</p>
+      <h2>Tres pasos para arrancar.</h2>
+      <p class="sub">Esto es lo que sigue cuando N58 confirme la propuesta.</p>
 
-      <div class="deliv-carriles" style="--ncols:3">
-        <span class="dc acc-y" style="grid-column: span 3">Claude Code y Codex · 6 entregables</span>
-      </div>
-
-      <div class="deliv-cols" style="--ncols:3">
-
-        <div class="deliv-col acc-y">
-          <div class="da">
-            <p class="da-name">Fundamentals <i>1</i></p>
-            <ul>
-              <li>Guía de uso seguro de Claude Code y Codex</li>
-            </ul>
-          </div>
+      <div class="nx-steps">
+        <div class="nx-step acc-y">
+          <span class="nx-num">1</span>
+          <b>Fecha de arranque</b>
+          <p>Confirmamos con Tecnología la fecha del kick-off y quiénes participan.</p>
         </div>
-
-        <div class="deliv-col acc-y">
-          <div class="da">
-            <p class="da-name">Construcción <i>3</i></p>
-            <ul>
-              <li>Flujo para escribir y refactorizar con IA</li>
-              <li>Lista y flujo de revisión de código con IA</li>
-              <li>Pruebas automatizadas con IA, probadas en el repositorio de práctica</li>
-            </ul>
-          </div>
+        <div class="nx-step acc-o">
+          <span class="nx-num">2</span>
+          <b>Accesos y agenda</b>
+          <p>Coordinamos el repositorio, las cuentas de las herramientas y el horario de cada sesión.</p>
         </div>
-
-        <div class="deliv-col acc-y">
-          <div class="da">
-            <p class="da-name">Implementación <i>2</i></p>
-            <ul>
-              <li>Instrucciones del repositorio para Claude Code y Codex</li>
-              <li>Estándar de uso de IA del equipo de TI</li>
-            </ul>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="deliv-band">
-        <div class="db-card db-1">
-          <span class="db-label">Entregables transversales</span>
-        </div>
-        <div class="db-card db-2">
-          <span class="db-label">Valor inmediato</span>
+        <div class="nx-step acc-w">
+          <span class="nx-num">3</span>
+          <b>Kick-off de 1 hora</b>
+          <p>Reunión inicial con Tecnología, antes de la primera sesión, para dejar acordado cómo se trabaja.</p>
         </div>
       </div>
-      <!-- Cajas multiline editables (vacías en HTML: el contenido vive dentro del AcroForm /V). -->
-      <div class="multi-box db-box db-box-1" data-field="Entregables"></div>
-      <div class="multi-box db-box db-box-2" data-field="Acreditacion"></div>
+
+      <div class="nx-contact">
+        <div class="nx-card nx-ase">
+          <span class="nx-label">¿Dudas? Escribe a tu asesora comercial</span>
+          <b class="nx-name">Flavia Martínez</b>
+          <span class="nx-role">Asesora comercial</span>
+          <p class="nx-line"><a href="mailto:fmartinez@intezia.com">fmartinez@intezia.com</a></p>
+          <p class="nx-line">+58 414 5756615</p>
+        </div>
+        <div class="nx-card nx-emp">
+          <span class="nx-label">Intezia</span>
+          <p class="nx-line">Intezia C.A J-505657950</p>
+          <p class="nx-line"><a href="mailto:servicio@intezia.com">servicio@intezia.com</a></p>
+        </div>
+      </div>
 
       <div class="foot">
         <img src="../../../logos/educacion/BLANCO.png" alt="">
-        <span class="meta">N58 · CAI-037</span>
-      </div>
-    </section>
-
-    <!-- 6 · Retorno esperado (método de cálculo). Sin estudios ni citas externas. -->
-    <section class="slide s-roi">
-      <span class="counter">06 / 06</span>
-      <p class="eyebrow">06 · Retorno</p>
-      <h2>Retorno esperado: tiempo y dinero.</h2>
-      <p class="sub">Se calcula con los datos del equipo de TI, se confirma con la línea base de la semana 1 y se mide a 30, 60 y 90 días.</p>
-
-      <div class="roi-body">
-        <div class="roi-panel">
-          <p class="roi-panel-title">Cómo se calcula, por tarea</p>
-          <ol class="roi-steps">
-            <li><b>Volumen semanal</b><span>Cuántos cambios de código se revisan y cuántas pruebas se escriben cada semana.</span></li>
-            <li><b>Tiempo actual por tarea</b><span>Se mide con el equipo en la primera sesión y es la <strong>línea base</strong>.</span></li>
-            <li><b>Tiempo con la IA</b><span>Lo que toma el mismo trabajo con Claude Code o Codex, ya en uso.</span></li>
-            <li><b>Horas recuperadas a la semana</b><span>Volumen semanal multiplicado por la diferencia entre el tiempo actual y el tiempo con IA.</span></li>
-            <li><b>Valor en dinero</b><span>Horas recuperadas multiplicadas por el costo hora de referencia que N58 valide.</span></li>
-          </ol>
-        </div>
-
-        <div class="roi-right">
-          <p class="roi-right-title">Metas, desde el cierre de la implementación</p>
-          <div class="roi-card">
-            <b>30 días</b>
-            <p>El flujo y el estándar en uso real en el equipo de TI.</p>
-          </div>
-          <div class="roi-card">
-            <b>60 días</b>
-            <p>Nuevas construcciones del equipo con IA y horas recuperadas medidas contra la línea base.</p>
-          </div>
-          <div class="roi-card">
-            <b>90 días</b>
-            <p>Medición del retorno en tiempo y calidad, con el valor de las horas recuperadas.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="roi-dest-wrap">
-        <p class="roi-dest-title">Hacia dónde va el tiempo recuperado</p>
-        <div class="roi-dest">
-          <div class="rd-item"><b>Mismo equipo, más entregas</b><p>Si el tiempo se libera, TI puede atender <strong>más solicitudes</strong> del banco con el mismo equipo.</p></div>
-          <div class="rd-item"><b>Trabajo reenfocado</b><p>Con el tiempo liberado, el equipo puede dedicarse a las tareas de mayor criterio técnico.</p></div>
-          <div class="rd-item"><b>Otros equipos</b><p>Con el retorno medido, N58 decide si lleva este mismo estándar a <strong>otros equipos</strong> del banco.</p></div>
-        </div>
-      </div>
-
-      <div class="roi-hook"><p>Hacia la semana 19 (6 semanas de trabajo más 90 días de seguimiento), N58 contará con el tiempo recuperado por TI medido y su valor en dinero.</p></div>
-
-      <div class="foot">
-        <img src="../../../logos/educacion/NEGRO.png" alt="">
         <span class="meta">N58 · CAI-037</span>
       </div>
     </section>

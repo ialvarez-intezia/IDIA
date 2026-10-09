@@ -1,0 +1,1529 @@
+/* ============================================================================
+   Habilidades compacto · CSS genérico (v2.0, 2026-10-07) · deck en el orden de las preguntas del cliente
+   Origen: clientes/propuestas/dusa-cai035 (CAI-035) + feedback consolidado de Ventas (2026-10-07). Se copia a cada
+   propuesta como `habilidades-compacto.css` (copia congelada) con scripts/generar-habilidades-compacto.py.
+   Va DESPUÉS de ../_base/styles.css y ANTES del overrides.css del deck.
+
+   Paleta de marca únicamente: #000000 / #F4BA1A / #E58423 / #FFFFFF (§4.1) + la excepción acotada
+   del descuento urgente (definida en _base). Tipografía: variables de _base (Graphit/Inter).
+
+   Orden de las slides (Educación; Fundación omite Inversión y Pago):
+   .s-cover  1 Portada: ¿cuál es mi problema? (titular-objetivo; el tamaño del h1 lo fija el generador en línea)
+   .s-scope  2 Alcance: qué vamos a hacer y para qué (cada área dice qué resuelve) + fuera de alcance
+   .s-route  3 Ruta: qué pasa en cada fase (líneas de trabajo × fases, soluciones primero, horas en pequeño)
+   .s-method 4 Cómo trabajamos: metodología, casos reales, práctica, datos y logística
+   .s-deliv  5 Entregables: ¿con qué me quedo? + 2 cajas AcroForm (.db-box-1/2); columnas variables (--ncols 1..4)
+   .s-roi    6 Retorno: ¿qué gano? (método de cálculo o cifras del cliente); sin campos AcroForm
+   .s-price  7 Inversión (antepenúltima): hoja de cotización estándar (rects AcroForm = los de _base: NO moverlos)
+   .s-pay    8 Facilidad de pago (penúltima): N cuotas ligadas a hitos; los marcos .pay-frame son los campos PagoCuota1..N
+   .s-next   9 Próximos pasos (última): llamado a la acción y a quién escribir
+
+   Acentos: clases .acc-y (amarillo), .acc-o (naranja) y .acc-w (blanco) fijan --c en cada componente.
+   Geometría que NO se debe tocar sin recalcular scripts/customize-habilidades-compacto.py y
+   scripts/agregar-campo-precio.py (plan_pago_fields): .deliv-band, .db-card, .db-box-1/2 y .s-pay (px × 0.75 = pt).
+   ============================================================================ */
+
+.nw { white-space: nowrap; }
+
+/* ===========================================================================
+   Slide 1 · Portada con punto de dolor
+   =========================================================================== */
+.s-cover .counter { color: var(--black); }
+.s-cover h1 .hl { padding: 0 12px 9px; margin: 4px 0 0; }
+.s-cover .logo-big img { height: 120px; }
+.s-cover .body { margin-top: 20px; }
+.s-cover h1 {
+  font-size: 64px;          /* base; el generador fija el tamaño en línea según el largo del titular (64/54/46/42 px) */
+  line-height: 1.12;
+  max-width: 900px;
+  margin-bottom: 18px;
+}
+.s-cover .lead {
+  font-size: 17px;
+  max-width: 730px;
+  margin-bottom: 20px;
+}
+.s-cover .pain-strip {
+  display: flex;
+  max-width: 900px;
+  border-top: 1px solid rgba(255, 255, 255, 0.22);
+}
+.s-cover .pain-item {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 14px 22px 0 0;
+}
+.s-cover .pain-item + .pain-item {
+  padding-left: 22px;
+  border-left: 1px solid rgba(255, 255, 255, 0.22);
+}
+.s-cover .pain-num {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 1;
+  color: var(--yellow);
+}
+.s-cover .pain-lbl {
+  font-family: var(--font-body);
+  font-size: 12.5px;
+  line-height: 1.35;
+  color: rgba(255, 255, 255, 0.85);
+}
+/* Dato de contratación (opcional): «≈10 posiciones ... es alta la probabilidad de no tener que contratarlas» */
+.s-cover .hire-note {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  max-width: 900px;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.22);
+}
+.s-cover .hire-num {
+  flex: 0 0 auto;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 1;
+  color: var(--yellow);
+}
+.s-cover .hire-note p {
+  font-family: var(--font-body);
+  font-size: 12.5px;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.85);
+}
+.s-cover .hire-note p strong { color: var(--white); font-weight: 700; }
+.s-cover .pain-src {
+  margin-top: 12px;
+  font-family: var(--font-body);
+  font-size: 10.5px;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+/* ===========================================================================
+   Slide 2 · Alcance: qué vamos a hacer y para qué
+   Un panel por herramienta (1 o 2). Cada fila: área + «N soluciones» + una frase de para qué (--np = paneles).
+   =========================================================================== */
+.s-scope {
+  background: var(--white);
+  color: var(--black);
+  padding: 44px 56px 0;
+}
+.s-scope .counter { color: var(--black); }
+.s-scope .eyebrow { color: var(--orange); margin-bottom: 6px; }
+.s-scope h2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.05;
+  margin-bottom: 8px;
+}
+.s-scope .sub {
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.4;
+  max-width: 900px;
+  margin-bottom: 16px;
+  color: rgba(0, 0, 0, 0.78);
+}
+.s-scope .sub strong { color: var(--black); font-weight: 700; }
+
+.s-scope .scope-panels {
+  display: grid;
+  grid-template-columns: repeat(var(--np, 2), 1fr);
+  gap: 16px;
+  align-items: start;
+}
+.s-scope .scope-panel {
+  --c: var(--yellow);
+  border: 1px solid rgba(0, 0, 0, 0.14);
+  border-top: 4px solid var(--c);
+  border-radius: 13px;
+  padding: 12px 18px 6px;
+  background: var(--white);
+}
+.s-scope .scope-panel.acc-o { --c: var(--orange); }
+.s-scope .scope-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+.s-scope .scope-tag {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  background: var(--c);
+  color: var(--black);
+  padding: 6px 14px;
+  border-radius: 999px;
+}
+.s-scope .scope-total {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 13px;
+  color: rgba(0, 0, 0, 0.7);
+}
+.s-scope .scope-total b {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--black);
+  margin-right: 3px;
+}
+.s-scope .scope-rows { list-style: none; }
+.s-scope .scope-rows li {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-areas: "area n" "para para";
+  column-gap: 12px;
+  align-items: center;
+  padding: 7px 0 8px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+.s-scope .scope-rows li:last-child { border-bottom: 0; }
+.s-scope .scope-rows .area {
+  grid-area: area;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 13.5px;
+  line-height: 1.2;
+}
+.s-scope .scope-rows .area em {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 11.5px;
+  color: rgba(0, 0, 0, 0.6);
+}
+.s-scope .scope-rows .area .comp {
+  display: block;
+  margin-top: 2px;
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 1.3;
+  color: rgba(0, 0, 0, 0.62);
+}
+.s-scope .scope-rows .n {
+  grid-area: n;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 10.5px;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  background: var(--c);
+  color: var(--black);
+  padding: 2px 10px;
+  border-radius: 999px;
+}
+.s-scope .scope-rows .para {
+  grid-area: para;
+  margin-top: 2px;
+  font-family: var(--font-body);
+  font-size: 11.5px;
+  line-height: 1.35;
+  color: rgba(0, 0, 0, 0.72);
+}
+/* Un solo panel (una herramienta): nombre, para qué y soluciones en una línea */
+.s-scope .scope-panels.one .scope-rows li {
+  grid-template-columns: 300px 1fr auto;
+  grid-template-areas: "area para n";
+  column-gap: 16px;
+  padding: 6px 0;
+}
+.s-scope .scope-panels.one .scope-rows .para { margin-top: 0; }
+/* Modo compacto: hasta ~13 filas de área en total */
+.s-scope.compact .scope-rows li { padding: 4px 0 5px; }
+.s-scope.compact .scope-panel { padding: 10px 18px 3px; }
+
+/* Pocas filas de área: más aire y letra más grande (lo decide el generador) */
+.s-scope.roomy .scope-panel { padding: 16px 24px 8px; }
+.s-scope.roomy .scope-head { margin-bottom: 8px; }
+.s-scope.roomy .scope-rows li { padding: 12px 0 13px; }
+.s-scope.roomy .scope-rows .area { font-size: 16px; }
+.s-scope.roomy .scope-rows .area em { font-size: 12.5px; }
+.s-scope.roomy .scope-rows .para { font-size: 13.5px; }
+.s-scope.roomy .scope-rows .n { font-size: 11.5px; padding: 3px 12px; }
+.s-scope.roomy .scope-panels.one .scope-rows li { grid-template-columns: 340px 1fr auto; padding: 11px 0 12px; }
+.s-scope.roomy .scope-out { margin-top: 20px; padding: 16px 22px; }
+.s-scope.roomy .scope-out li { font-size: 13px; }
+.s-scope.roomy .scope-out li::before { top: 10px; }
+
+.s-scope .scope-card-label {
+  align-self: flex-start;
+  display: inline-block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 10.5px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--orange);
+  background: rgba(229, 132, 35, 0.12);
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+.s-scope .scope-out {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 14px;
+  align-items: start;
+  margin-top: 14px;
+  padding: 12px 18px;
+  background: rgba(229, 132, 35, 0.07);
+  border: 1px solid rgba(229, 132, 35, 0.4);
+  border-radius: 13px;
+}
+.s-scope .scope-out ul { list-style: none; column-count: 2; column-gap: 28px; }
+.s-scope .scope-out li {
+  position: relative;
+  break-inside: avoid;
+  padding: 2.5px 0 2.5px 14px;
+  font-family: var(--font-body);
+  font-size: 12px;
+  line-height: 1.4;
+}
+.s-scope .scope-out li::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 9px;
+  width: 6px; height: 6px;
+  background: var(--orange);
+}
+.s-scope .foot .meta { color: var(--black); }
+
+/* ===========================================================================
+   Slide 3 · Ruta (frentes × fases + seguimiento + hitos)
+   Variables inline en .route-grid: --cols (fases), --rows (frentes), --rowh (alto de fila).
+   =========================================================================== */
+.s-route {
+  background: var(--black);
+  color: var(--white);
+  padding: 44px 56px 0;
+}
+.s-route::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 8px; height: 100%;
+  background: var(--gradient-warm);
+  z-index: 4;
+}
+.s-route .counter { color: var(--yellow); }
+.s-route .eyebrow { color: var(--orange); margin-bottom: 6px; }
+.s-route h2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.05;
+  margin-bottom: 8px;
+}
+.s-route .sub {
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.4;
+  max-width: 1011px;
+  margin-bottom: 14px;
+  color: rgba(255, 255, 255, 0.82);
+}
+.s-route .sub strong { color: var(--yellow); font-weight: 700; }
+
+.s-route .route-grid {
+  --cols: 3;
+  --rows: 3;
+  --rowh: 104px;
+  display: grid;
+  grid-template-columns: 226px repeat(var(--cols), 1fr) 176px;
+  grid-template-rows: 90px repeat(var(--rows), var(--rowh));
+  gap: 10px;
+}
+.s-route .rg-phase,
+.s-route .rg-front,
+.s-route .rg-cell,
+.s-route .rg-follow {
+  background: rgba(255, 255, 255, 0.045);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: 13px;
+  min-width: 0;
+}
+.s-route .rg-phase {
+  padding: 9px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  border-top: 4px solid var(--white);
+}
+.s-route .rg-phase.hi {
+  background: rgba(244, 186, 26, 0.13);
+  border-color: rgba(244, 186, 26, 0.5);
+  border-top-color: var(--yellow);
+}
+.s-route .rg-ph-2 { border-top-color: var(--orange); }
+.s-route .rg-ph-3 { border-top-color: var(--white); }
+.s-route .rg-fu { border-top-color: var(--orange); background: rgba(229, 132, 35, 0.12); }
+.s-route .rg-phase-tag,
+.s-route .rg-front-tag {
+  align-self: flex-start;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 3px 9px;
+  border-radius: 999px;
+  color: var(--yellow);
+  background: rgba(244, 186, 26, 0.14);
+}
+.s-route .rg-ph-2 .rg-phase-tag { color: var(--orange); background: rgba(229, 132, 35, 0.15); }
+.s-route .rg-ph-3 .rg-phase-tag,
+.s-route .rg-ph-4 .rg-phase-tag { color: var(--white); background: rgba(255, 255, 255, 0.14); }
+.s-route .rg-fu .rg-phase-tag { color: var(--orange); background: rgba(229, 132, 35, 0.18); }
+.s-route .rg-phase-date {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 1.15;
+}
+.s-route .rg-fu .rg-phase-date { font-size: 13px; }
+.s-route .rg-phase-txt {
+  font-family: var(--font-body);
+  font-size: 10.5px;
+  line-height: 1.3;
+  color: rgba(255, 255, 255, 0.8);
+}
+.s-route .rg-phase-txt b { color: var(--white); font-weight: 700; }
+
+/* Línea de trabajo: nombre que entiende el cliente, herramienta y soluciones (semanas y horas, en pequeño) */
+.s-route .rg-front {
+  --c: var(--orange);
+  padding: 8px 12px 8px 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  border-left: 4px solid var(--c);
+}
+.s-route .rg-front.acc-y { --c: var(--yellow); }
+.s-route .rg-front-h {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 1.12;
+  color: var(--white);
+  text-wrap: balance;
+}
+.s-route .route-grid.n2 .rg-front-h { font-size: 16.5px; }
+.s-route .route-grid.n3 .rg-front-h { font-size: 15px; }
+.s-route .rg-front-row { display: flex; align-items: center; gap: 8px; }
+.s-route .rg-front-tool {
+  flex: none;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 9.5px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 3px 9px;
+  border-radius: 999px;
+  color: var(--c);
+  background: rgba(229, 132, 35, 0.15);
+}
+.s-route .rg-front.acc-y .rg-front-tool { background: rgba(244, 186, 26, 0.14); }
+.s-route .rg-front-n {
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--white);
+  white-space: nowrap;
+}
+.s-route .rg-front-meta {
+  font-family: var(--font-display);
+  font-size: 10.5px;
+  color: rgba(255, 255, 255, 0.62);
+}
+.s-route .rg-phase-top { display: flex; align-items: center; justify-content: space-between; gap: 6px; }
+.s-route .rg-phase-n {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 12px;
+  color: var(--white);
+  white-space: nowrap;
+}
+
+.s-route .rg-cell p, .s-route .mile p, .s-route .route-note { text-wrap: balance; }
+
+.s-route .rg-cell { padding: 10px 14px; }
+.s-route .rg-cell.empty p { color: rgba(255, 255, 255, 0.4); font-style: italic; }
+.s-route .rg-h {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  font-family: var(--font-display);
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 4px;
+}
+.s-route .rg-h b { font-size: 26px; line-height: 1; color: var(--white); }
+.s-route .rg-h i {
+  margin-left: auto;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.6);
+}
+.s-route .rg-cell p {
+  font-family: var(--font-body);
+  font-size: 11px;
+  line-height: 1.32;
+  color: rgba(255, 255, 255, 0.82);
+}
+/* Columna de la fase destacada (la que concentra más horas) */
+.s-route .rg-cell.hi {
+  background: rgba(244, 186, 26, 0.07);
+  border-color: rgba(244, 186, 26, 0.35);
+}
+
+.s-route .rg-follow {
+  display: flex;
+  padding: 14px 14px;
+  background: rgba(229, 132, 35, 0.07);
+  border-color: rgba(229, 132, 35, 0.3);
+}
+.s-route .rg-follow ul { list-style: none; flex: 1; display: flex; flex-direction: column; }
+.s-route .rg-follow li {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.s-route .rg-follow li:last-child { border-bottom: 0; }
+.s-route .rg-follow li b {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 22px;
+  line-height: 1;
+  color: var(--orange);
+  margin-bottom: 5px;
+}
+.s-route .rg-follow li span {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 13px;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.s-route .route-miles {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  margin-top: 14px;
+  padding-top: 16px;
+}
+.s-route .route-miles::before {
+  content: "";
+  position: absolute;
+  top: 5px; left: 0; right: 0;
+  height: 2px;
+  background: var(--gradient-warm);
+  opacity: 0.55;
+}
+.s-route .mile { position: relative; }
+.s-route .mile-d {
+  position: absolute;
+  top: -16px; left: 0;
+  width: 12px; height: 12px;
+  background: var(--yellow);
+  transform: rotate(45deg);
+}
+.s-route .mile b {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 12.5px;
+  color: var(--white);
+  margin-bottom: 3px;
+}
+.s-route .mile p {
+  font-family: var(--font-body);
+  font-size: 11px;
+  line-height: 1.32;
+  color: rgba(255, 255, 255, 0.75);
+}
+.s-route .route-note {
+  margin-top: 8px;
+  font-family: var(--font-body);
+  font-size: 10.5px;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.6);
+  max-width: 940px;
+}
+.s-route .route-next {
+  margin-top: 6px;
+  font-family: var(--font-body);
+  font-size: 11.5px;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 1011px;
+}
+.s-route .route-next b { color: var(--yellow); }
+.s-route .foot .meta { color: rgba(255, 255, 255, 0.65); }
+
+/* ===========================================================================
+   Slide 4 · Cómo trabajamos: metodología (y por qué en ese orden), casos reales, práctica, datos y logística
+   =========================================================================== */
+.s-method {
+  background: var(--white);
+  color: var(--black);
+  padding: 44px 56px 0;
+}
+.s-method .counter { color: var(--black); }
+.s-method .eyebrow { color: var(--orange); margin-bottom: 6px; }
+.s-method h2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.05;
+  margin-bottom: 8px;
+}
+.s-method .sub {
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.4;
+  max-width: 940px;
+  margin-bottom: 16px;
+  color: rgba(0, 0, 0, 0.78);
+}
+.s-method .sub strong { color: var(--black); font-weight: 700; }
+.s-method .mt-steps {
+  list-style: none;
+  counter-reset: ms;
+  display: grid;
+  grid-template-columns: repeat(var(--n, 4), 1fr);
+  gap: 12px;
+  margin-bottom: 10px;
+}
+.s-method .mt-steps li {
+  counter-increment: ms;
+  position: relative;
+  min-height: 72px;
+  padding: 9px 12px 9px 52px;
+  background: var(--white);
+  border: 1px solid rgba(0, 0, 0, 0.14);
+  border-top: 4px solid var(--yellow);
+  border-radius: 13px;
+}
+.s-method .mt-steps li:nth-child(even) { border-top-color: var(--orange); }
+.s-method .mt-steps li::before {
+  content: counter(ms);
+  position: absolute;
+  left: 14px; top: 10px;
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  background: var(--yellow);
+  color: var(--black);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 28px;
+  text-align: center;
+}
+.s-method .mt-steps li:nth-child(even)::before { background: var(--orange); color: var(--white); }
+.s-method .mt-steps b {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 1.2;
+  margin-bottom: 3px;
+}
+.s-method .mt-steps span {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 11.5px;
+  line-height: 1.36;
+  color: rgba(0, 0, 0, 0.76);
+}
+.s-method .mt-strips { display: grid; grid-template-columns: 1.25fr 1fr; gap: 12px; margin-bottom: 10px; align-items: stretch; }
+.s-method .mt-strips.one { grid-template-columns: 1fr; }
+.s-method .mt-why,
+.s-method .mt-who {
+  padding: 8px 14px;
+  background: rgba(244, 186, 26, 0.10);
+  border-left: 4px solid var(--yellow);
+  border-radius: 4px 10px 10px 4px;
+  font-family: var(--font-body);
+  font-size: 11.5px;
+  line-height: 1.4;
+}
+.s-method .mt-who { background: rgba(229, 132, 35, 0.08); border-left-color: var(--orange); }
+.s-method .mt-why b,
+.s-method .mt-who b { margin-right: 6px; font-family: var(--font-display); font-size: 11.5px; }
+.s-method .mt-proof {
+  display: grid;
+  grid-template-columns: 214px 1fr;
+  gap: 14px;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 9px 14px 10px;
+  background: rgba(244, 186, 26, 0.10);
+  border: 1px solid rgba(244, 186, 26, 0.45);
+  border-top: 4px solid var(--yellow);
+  border-radius: 13px;
+}
+.s-method .mp-head { display: flex; flex-direction: column; gap: 6px; }
+.s-method .mp-tag {
+  align-self: flex-start;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 10.5px;
+  line-height: 1.3;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  background: var(--yellow);
+  color: var(--black);
+  padding: 5px 12px;
+  border-radius: 12px;
+}
+.s-method .mp-head p {
+  font-family: var(--font-body);
+  font-size: 10.5px;
+  line-height: 1.36;
+  color: rgba(0, 0, 0, 0.78);
+}
+.s-method .mp-cases { display: grid; grid-template-columns: repeat(var(--n, 3), 1fr); gap: 10px; }
+.s-method .mt-case {
+  background: var(--white);
+  border: 1px solid rgba(0, 0, 0, 0.14);
+  border-radius: 10px;
+  padding: 8px 12px 9px;
+}
+.s-method .mc-area {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 9px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--orange);
+  margin-bottom: 2px;
+}
+.s-method .mt-case b {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 1.2;
+  margin-bottom: 3px;
+}
+.s-method .mc-ba { display: flex; align-items: center; gap: 6px; margin: 0 0 3px; font-family: var(--font-display); }
+.s-method .mc-ba i { font-style: normal; font-weight: 700; font-size: 12px; color: rgba(0, 0, 0, 0.5); }
+.s-method .mc-ba i.ok { color: var(--black); background: rgba(244, 186, 26, 0.45); padding: 0 6px; border-radius: 4px; }
+.s-method .mc-ba u { text-decoration: none; font-size: 12px; color: var(--orange); }
+.s-method .mt-case p {
+  font-family: var(--font-body);
+  font-size: 11px;
+  line-height: 1.36;
+  color: rgba(0, 0, 0, 0.82);
+}
+.s-method .mt-case p strong { font-weight: 700; color: var(--black); }
+.s-method .mt-info { display: grid; grid-template-columns: 1.5fr 1fr; gap: 12px; margin-bottom: 10px; }
+.s-method .mt-card {
+  padding: 9px 14px 8px;
+  background: var(--white);
+  border: 1px solid rgba(0, 0, 0, 0.14);
+  border-radius: 13px;
+}
+.s-method .mt-card-label {
+  display: inline-block;
+  margin-bottom: 5px;
+  padding: 4px 10px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 10.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--orange);
+  background: rgba(229, 132, 35, 0.12);
+  border-radius: 999px;
+}
+.s-method .mt-card p,
+.s-method .mt-card li {
+  font-family: var(--font-body);
+  font-size: 11.5px;
+  line-height: 1.4;
+}
+.s-method .mt-card ul { list-style: none; }
+.s-method .mt-card li { position: relative; padding: 0 0 3px 12px; }
+.s-method .mt-card li::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 6px;
+  width: 5px; height: 5px;
+  background: var(--orange);
+}
+.s-method .mt-card strong { font-weight: 700; }
+.s-method .mt-logi { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+.s-method .mt-tile {
+  padding: 8px 12px 9px;
+  background: var(--black);
+  color: var(--white);
+  border-radius: 10px;
+}
+.s-method .mt-tile span {
+  display: block;
+  margin-bottom: 4px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 9px;
+  line-height: 1;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--yellow);
+}
+.s-method .mt-tile b {
+  display: block;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 1.32;
+}
+/* Sin casos ya logrados y con textos cortos: más aire y letra más grande (lo decide el generador) */
+.s-method.roomy .mt-steps { gap: 16px; margin-bottom: 18px; }
+.s-method.roomy .mt-steps li { min-height: 104px; padding: 14px 16px 14px 62px; }
+.s-method.roomy .mt-steps li::before { left: 16px; top: 15px; width: 32px; height: 32px; line-height: 32px; font-size: 16px; }
+.s-method.roomy .mt-steps b { font-size: 17px; margin-bottom: 5px; }
+.s-method.roomy .mt-steps span { font-size: 13px; }
+.s-method.roomy .mt-strips { gap: 16px; margin-bottom: 18px; }
+.s-method.roomy .mt-why,
+.s-method.roomy .mt-who { padding: 13px 18px; font-size: 13px; }
+.s-method.roomy .mt-why b,
+.s-method.roomy .mt-who b { font-size: 13px; }
+.s-method.roomy .mt-info { gap: 16px; margin-bottom: 18px; }
+.s-method.roomy .mt-card { padding: 15px 20px 13px; }
+.s-method.roomy .mt-card-label { margin-bottom: 9px; font-size: 11.5px; }
+.s-method.roomy .mt-card p,
+.s-method.roomy .mt-card li { font-size: 13px; }
+.s-method.roomy .mt-card li { padding-bottom: 6px; }
+.s-method.roomy .mt-tile { padding: 13px 16px 14px; }
+.s-method.roomy .mt-tile span { font-size: 10px; margin-bottom: 6px; }
+.s-method.roomy .mt-tile b { font-size: 13px; }
+.s-method .foot .meta { color: var(--black); }
+
+/* ===========================================================================
+   Slide 7 · Inversión (antepenúltima) · Hoja de cotización estándar (base: _base/styles.css → .s-price)
+   Los rects de AcroForm (Programa, Notas, PrecioBase, Descuento, PrecioTotal) son los de
+   scripts/agregar-campo-precio.py → PRECIO_FIELDS. NO mover .programa-box, .notas-box ni los
+   .cot-frame (están definidos en _base con las mismas coordenadas).
+   =========================================================================== */
+.s-price .price-intro {
+  position: absolute;
+  top: 66px;
+  right: 56px;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  color: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+}
+.s-price .cot-garantia-badge { top: 632px; left: 580px; width: 487px; }
+.s-price .cot-urgent-note { top: 287px; }
+.s-price .cot-terms-text a { color: var(--black); text-decoration: underline; text-decoration-color: var(--orange); text-decoration-thickness: 2px; text-underline-offset: 3px; }
+.s-price > .block:not(.block-programa):not(.block-cotizacion):not(.block-notes-container) { border-bottom: 0; }
+.s-price .title { text-transform: none; margin-bottom: 8px; }
+.s-price .block-value { font-size: 15px; line-height: 1.3; text-wrap: balance; }
+.s-price .block-programa { top: 206px; }
+
+.s-price .lic-wrap {
+  position: absolute;
+  top: 512px;
+  left: 56px;
+  width: 480px;
+  z-index: 2;
+}
+.s-price .lic-eyebrow {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--orange);
+  margin-bottom: 8px;
+}
+.s-price .lic-cards { display: flex; gap: 12px; }
+.s-price .lic-card {
+  --c: var(--orange);
+  flex: 1 1 0;
+  min-width: 0;
+  border: 1px solid rgba(0, 0, 0, 0.14);
+  border-top: 4px solid var(--c);
+  border-radius: 10px;
+  padding: 10px 12px 11px;
+  background: var(--white);
+}
+.s-price .lic-card.acc-y { --c: var(--yellow); }
+.s-price .lic-name {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 1.25;
+  margin-bottom: 6px;
+}
+.s-price .lic-card p {
+  font-family: var(--font-body);
+  font-size: 11.5px;
+  line-height: 1.38;
+  color: rgba(0, 0, 0, 0.85);
+  text-wrap: pretty;
+}
+.s-price .lic-card strong { font-weight: 700; color: var(--black); }
+.s-price .lic-note {
+  margin-top: 7px;
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: 10.5px;
+  color: rgba(0, 0, 0, 0.55);
+}
+
+/* ===========================================================================
+   Slide 5 · Entregables: ¿con qué me quedo? Catálogo de entregables
+   .deliv-cols tiene 4 columnas fijas; cada carril abarca k columnas (.dc style="grid-column: span k").
+   Las 2 cajas AcroForm (.db-box-1/2) se reposicionan en scripts/customize-habilidades-compacto.py:
+   si se mueven aquí, recalcular allí (px × 0.75 → pt).
+   =========================================================================== */
+.s-deliv {
+  background: var(--black);
+  color: var(--white);
+  padding: 44px 56px 0;
+}
+.s-deliv::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 8px; height: 100%;
+  background: var(--gradient-warm);
+  z-index: 4;
+}
+.s-deliv .counter { color: var(--yellow); }
+.s-deliv .eyebrow { color: var(--orange); margin-bottom: 6px; }
+.s-deliv .deliv-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 28px;
+  margin-bottom: 10px;
+}
+.s-deliv h2 {
+  flex: 0 1 auto;
+  min-width: 0;
+  max-width: 560px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.05;
+}
+.s-deliv .deliv-sub {
+  flex: 1 0 300px;
+  max-width: 520px;
+  font-family: var(--font-body);
+  font-size: 13px;
+  line-height: 1.38;
+  color: rgba(255, 255, 255, 0.82);
+}
+.s-deliv .deliv-sub strong { color: var(--yellow); font-weight: 700; font-family: var(--font-display); font-size: 17px; line-height: 1; }
+
+.s-deliv .deliv-carriles {
+  display: grid;
+  grid-template-columns: repeat(var(--ncols, 4), 1fr);
+  gap: 16px;
+  margin-bottom: 6px;
+}
+.s-deliv .dc {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 999px;
+}
+.s-deliv .dc.acc-y { color: var(--yellow); background: rgba(244, 186, 26, 0.14); }
+.s-deliv .dc.acc-o { color: var(--orange); background: rgba(229, 132, 35, 0.16); }
+
+.s-deliv .deliv-cols {
+  display: grid;
+  grid-template-columns: repeat(var(--ncols, 4), 1fr);
+  gap: 16px;
+}
+.s-deliv .deliv-col {
+  --c: var(--yellow);
+  background: rgba(255, 255, 255, 0.045);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-top: 4px solid var(--c);
+  border-radius: 13px;
+  padding: 8px 14px 4px;
+  min-width: 0;
+}
+.s-deliv .deliv-col.acc-o { --c: var(--orange); }
+.s-deliv .da + .da {
+  margin-top: 6px;
+  padding-top: 6px;
+  border-top: 1px solid rgba(255, 255, 255, 0.10);
+}
+.s-deliv .da-name {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 12.5px;
+  line-height: 1.2;
+  color: var(--white);
+  margin-bottom: 3px;
+}
+.s-deliv .da ul { list-style: none; }
+.s-deliv .da li, .s-deliv .da-name { text-wrap: balance; }
+.s-deliv .da li {
+  position: relative;
+  padding: 2px 0 2px 12px;
+  font-family: var(--font-body);
+  font-size: 11px;
+  line-height: 1.3;
+  color: rgba(255, 255, 255, 0.86);
+}
+.s-deliv .da li::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 7px;
+  width: 5px; height: 5px;
+  background: var(--c);
+}
+/* Modo compacto: más de ~46 entregables o nombres largos */
+.s-deliv.compact .da li { font-size: 10.5px; line-height: 1.26; padding: 1.5px 0 1.5px 12px; }
+.s-deliv.compact .da-name { font-size: 12px; }
+.s-deliv.compact .da + .da { margin-top: 4px; padding-top: 4px; }
+
+/* Pocas áreas: letra más grande (el estimador lo decide, ver generar-habilidades-compacto.py → R.deliv_roomy) */
+.s-deliv.roomy .deliv-col { padding: 14px 20px 12px; }
+.s-deliv.roomy .da-name { font-size: 16px; margin-bottom: 6px; }
+.s-deliv.roomy .da li { font-size: 13.5px; line-height: 1.36; padding: 4px 0 4px 15px; }
+.s-deliv.roomy .da li::before { top: 10px; width: 6px; height: 6px; }
+.s-deliv.roomy .da + .da { margin-top: 12px; padding-top: 12px; }
+
+.s-deliv .deliv-band {
+  position: absolute;
+  top: 610px;
+  left: 56px;
+  width: 1011px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.s-deliv .db-card {
+  height: 120px;
+  background: rgba(244, 186, 26, 0.06);
+  border: 1px solid rgba(244, 186, 26, 0.28);
+  border-top: 4px solid var(--yellow);
+  border-radius: 13px;
+  padding: 11px 24px;
+}
+.s-deliv .db-label {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  border-radius: 999px;
+  color: var(--yellow);
+  background: rgba(244, 186, 26, 0.14);
+}
+.s-deliv .db-box { background: transparent; z-index: 5; }
+.s-deliv .db-box-1 { top: 659px; left: 80px;    width: 449.5px; height: 68px; }
+.s-deliv .db-box-2 { top: 659px; left: 593.5px; width: 449.5px; height: 68px; }
+.s-deliv .foot .meta { color: rgba(255, 255, 255, 0.65); }
+
+/* ===========================================================================
+   Slide 6 · Retorno: ¿qué gano? (método de cálculo, calendario de garantía y hacia dónde va el proyecto)
+   Fondo blanco (alterna con la slide 5, oscura). Sin cifras ni citas externas: solo método y datos del cliente.
+   Sin campos AcroForm: no repetir en esta slide las frases «Propuesta Económica», «Lo que se llevan» ni
+   «Cómo arrancamos» (agregar-campo-precio.py ubica los campos por texto de página).
+   =========================================================================== */
+.s-roi {
+  background: var(--white);
+  color: var(--black);
+  padding: 44px 56px 0;
+}
+.s-roi .counter { color: var(--black); }
+.s-roi .eyebrow { color: var(--orange); margin-bottom: 6px; }
+.s-roi h2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.05;
+  margin-bottom: 8px;
+}
+.s-roi .sub {
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.4;
+  max-width: 1011px;
+  margin-bottom: 16px;
+  color: rgba(0, 0, 0, 0.78);
+}
+.s-roi .sub strong,
+.s-roi p strong,
+.s-roi li strong { color: var(--black); font-weight: 700; }
+
+.s-roi .roi-body {
+  display: grid;
+  grid-template-columns: 1fr 352px;
+  gap: 24px;
+  align-items: stretch;
+}
+
+/* Panel izquierdo: cómo se calcula (6 pasos numerados) */
+.s-roi .roi-panel {
+  border: 1px solid rgba(0, 0, 0, 0.14);
+  border-top: 4px solid var(--yellow);
+  border-radius: 13px;
+  padding: 13px 22px 6px;
+  background: var(--white);
+}
+.s-roi .roi-panel-title,
+.s-roi .roi-right-title,
+.s-roi .roi-dest-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--orange);
+}
+.s-roi .roi-right-title { text-wrap: balance; }
+.s-roi .roi-right-title small {
+  display: block;
+  margin-top: 3px;
+  font-weight: 400;
+  font-size: 11px;
+  letter-spacing: 0;
+  text-transform: none;
+  color: rgba(0, 0, 0, 0.6);
+}
+.s-roi .roi-steps { list-style: none; counter-reset: rs; margin-top: 4px; }
+.s-roi .roi-steps li {
+  counter-increment: rs;
+  position: relative;
+  padding: 5px 0 5px 38px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+.s-roi .roi-steps li:last-child { border-bottom: 0; }
+.s-roi .roi-steps li::before {
+  content: counter(rs);
+  position: absolute;
+  left: 0; top: 6px;
+  width: 24px; height: 24px;
+  border-radius: 50%;
+  background: var(--yellow);
+  color: var(--black);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 24px;
+  text-align: center;
+}
+.s-roi .roi-steps li:nth-child(n+5)::before { background: var(--orange); color: var(--white); }
+.s-roi .roi-steps b {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 1.2;
+  margin-bottom: 1px;
+}
+.s-roi .roi-steps span {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 11.5px;
+  line-height: 1.36;
+  color: rgba(0, 0, 0, 0.74);
+}
+
+/* Panel derecho: metas a 30, 60 y 90 días */
+.s-roi .roi-right { display: flex; flex-direction: column; gap: 10px; }
+.s-roi .roi-card {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid rgba(0, 0, 0, 0.14);
+  border-radius: 13px;
+  padding: 11px 16px;
+  background: var(--white);
+}
+.s-roi .roi-card:nth-of-type(1) {
+  background: var(--black);
+  border-color: var(--black);
+  color: var(--white);
+}
+.s-roi .roi-card b {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.1;
+  margin-bottom: 3px;
+  color: var(--orange);
+}
+.s-roi .roi-card:nth-of-type(1) b { color: var(--yellow); }
+.s-roi .roi-card p {
+  font-family: var(--font-body);
+  font-size: 12px;
+  line-height: 1.38;
+}
+
+/* Franja inferior: hacia dónde va el tiempo recuperado */
+.s-roi .roi-dest-wrap { margin-top: 18px; }
+.s-roi .roi-dest-title { margin-bottom: 7px; }
+.s-roi .roi-dest {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+.s-roi .rd-item {
+  border-top: 4px solid var(--yellow);
+  border-radius: 4px 4px 10px 10px;
+  background: rgba(244, 186, 26, 0.10);
+  padding: 8px 14px 9px;
+}
+.s-roi .rd-item:nth-child(2) { border-top-color: var(--orange); background: rgba(229, 132, 35, 0.10); }
+.s-roi .rd-item:nth-child(3) { background: var(--black); color: var(--white); }
+.s-roi .rd-item:nth-child(3) p strong { color: var(--white); }
+.s-roi .rd-item b {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 1.15;
+  margin-bottom: 3px;
+}
+.s-roi .rd-item:nth-child(3) b { color: var(--yellow); }
+.s-roi .rd-item p {
+  font-family: var(--font-body);
+  font-size: 11.5px;
+  line-height: 1.36;
+}
+
+/* Gancho: banda cálida a todo el ancho, sobre el pie */
+.s-roi .roi-hook {
+  position: absolute;
+  left: 0; right: 0;
+  bottom: 62px;
+  padding: 14px 56px;
+  background: var(--gradient-warm);
+  color: var(--black);
+}
+.s-roi .roi-hook p {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+}
+.s-roi .foot .meta { color: var(--black); }
+
+/* Modo «cifras»: tabla por área en lugar de los 6 pasos; sin franja de destino */
+.s-roi.roi-cifras .roi-body { grid-template-columns: 1fr 300px; }
+.s-roi .roi-tabla {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  margin-top: 6px;
+  font-family: var(--font-body);
+  font-size: 11.5px;
+  font-variant-numeric: tabular-nums;
+}
+.s-roi .roi-tabla th {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 9.5px;
+  line-height: 1.2;
+  text-align: right;
+  color: rgba(0, 0, 0, 0.62);
+  padding: 4px 6px 5px;
+  border-bottom: 2px solid var(--yellow);
+  vertical-align: bottom;
+}
+.s-roi .roi-tabla td {
+  text-align: right;
+  padding: 3.5px 6px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+.s-roi .roi-tabla th:first-child,
+.s-roi .roi-tabla td:first-child { text-align: left; width: 31%; }
+.s-roi .roi-tabla td:first-child {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 12px;
+}
+.s-roi .roi-tabla td em { font-style: normal; font-weight: 400; font-size: 10px; color: rgba(0, 0, 0, 0.6); }
+.s-roi .roi-tabla tr.tot td {
+  font-family: var(--font-display);
+  font-weight: 700;
+  background: rgba(244, 186, 26, 0.16);
+  border-top: 2px solid var(--black);
+  border-bottom: 0;
+}
+.s-roi .roi-nota-datos {
+  margin-top: 8px;
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: 10px;
+  line-height: 1.35;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+
+/* ===========================================================================
+   Slide 8 · Facilidad de pago (penúltima): N cuotas ligadas a hitos (2 a 6)
+   Las tarjetas y los marcos .pay-frame se posicionan en línea (left/width) con la misma fórmula que
+   scripts/agregar-campo-precio.py → plan_pago_fields(n): gap 14, w = (1011 - 14·(n-1)) / n, marco = (left+16, w-32),
+   top 498 px, alto 50 px. Montos vacíos a propósito: los escribe ventas en Adobe Reader (campos PagoCuota1..N).
+   Marcador de detección de página: «Facilidad de pago» (el h2; no repetirlo en otras slides).
+   =========================================================================== */
+.s-pay {
+  background: var(--black);
+  color: var(--white);
+  padding: 44px 56px 0;
+}
+.s-pay::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 8px; height: 100%;
+  background: var(--gradient-warm);
+  z-index: 4;
+}
+.s-pay .counter { color: var(--yellow); }
+.s-pay .eyebrow { color: var(--orange); margin-bottom: 6px; }
+.s-pay h2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.05;
+  margin-bottom: 8px;
+}
+.s-pay .sub {
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.4;
+  max-width: 900px;
+  color: rgba(255, 255, 255, 0.82);
+}
+.s-pay .sub strong { color: var(--yellow); font-weight: 700; }
+.s-pay .pay-line {
+  position: absolute;
+  top: 211px; left: 56px;
+  width: 1011px; height: 2px;
+  background: var(--gradient-warm);
+  opacity: 0.55;
+}
+.s-pay .pay-step {
+  --c: var(--yellow);
+  position: absolute;
+  top: 228px;
+  height: 336px;
+  padding: 16px 16px 0;
+  background: rgba(255, 255, 255, 0.045);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-top: 4px solid var(--c);
+  border-radius: 13px;
+}
+.s-pay .pay-step.acc-o { --c: var(--orange); }
+.s-pay .pay-step.acc-w { --c: var(--white); }
+.s-pay .pay-step.first { background: rgba(244, 186, 26, 0.09); border-color: rgba(244, 186, 26, 0.45); border-top-color: var(--c); }
+.s-pay .ps-d {
+  position: absolute;
+  top: -26px; left: 16px;
+  width: 12px; height: 12px;
+  background: var(--yellow);
+  transform: rotate(45deg);
+}
+.s-pay .ps-tag {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 999px;
+  color: var(--c);
+  background: rgba(255, 255, 255, 0.08);
+}
+.s-pay .ps-when {
+  display: block;
+  margin-top: 12px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.1;
+  color: var(--white);
+}
+.s-pay .ps-hito {
+  margin-top: 6px;
+  font-family: var(--font-body);
+  font-size: 12.5px;
+  line-height: 1.38;
+  color: rgba(255, 255, 255, 0.82);
+}
+.s-pay .ps-pct {
+  position: absolute;
+  left: 16px; top: 170px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 62px;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--c);
+}
+.s-pay .ps-lbl {
+  position: absolute;
+  left: 16px; top: 246px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 10px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--orange);
+}
+.s-pay .pay-frame {
+  position: absolute;
+  top: 498px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.94);
+  border-radius: 6px;
+  z-index: 2;
+}
+.s-pay .pay-note {
+  position: absolute;
+  top: 594px; left: 56px;
+  width: 1011px;
+}
+.s-pay .pn-main {
+  max-width: 900px;
+  padding-left: 16px;
+  border-left: 4px solid var(--yellow);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.35;
+}
+.s-pay .pn-sub {
+  max-width: 900px;
+  margin-top: 10px;
+  padding-left: 20px;
+  font-family: var(--font-body);
+  font-size: 12.5px;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.7);
+}
+.s-pay .foot .meta { color: rgba(255, 255, 255, 0.65); }
+
+/* ===========================================================================
+   Slide 9 · Próximos pasos (última): qué hacer y a quién escribir (la asesora comercial)
+   Solo logística: nada de acuerdos económicos aquí (CLAUDE.md §4.15). No usar la frase «Cómo arrancamos»
+   (marcador de otro grupo de campos de agregar-campo-precio.py).
+   =========================================================================== */
+.s-next {
+  background: var(--black);
+  color: var(--white);
+  padding: 44px 56px 0;
+}
+.s-next::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 8px; height: 100%;
+  background: var(--gradient-warm);
+  z-index: 4;
+}
+.s-next .counter { color: var(--yellow); }
+.s-next .eyebrow { color: var(--orange); margin-bottom: 6px; }
+.s-next h2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.05;
+  margin-bottom: 8px;
+}
+.s-next .sub {
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.4;
+  max-width: 900px;
+  color: rgba(255, 255, 255, 0.82);
+}
+.s-next .nx-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 36px; }
+.s-next .nx-step {
+  --c: var(--yellow);
+  min-height: 262px;
+  padding: 26px 26px 26px;
+  background: rgba(255, 255, 255, 0.045);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-top: 4px solid var(--c);
+  border-radius: 13px;
+}
+.s-next .nx-step.acc-o { --c: var(--orange); }
+.s-next .nx-step.acc-w { --c: var(--white); }
+.s-next .nx-num {
+  display: block;
+  margin-bottom: 12px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 1;
+  color: var(--c);
+}
+.s-next .nx-step b {
+  display: block;
+  margin-bottom: 9px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.2;
+}
+.s-next .nx-step p {
+  font-family: var(--font-body);
+  font-size: 15.5px;
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.85);
+}
+.s-next .nx-contact { display: grid; grid-template-columns: 1.5fr 1fr; gap: 16px; margin-top: 28px; }
+.s-next .nx-card { padding: 26px 30px 28px; border-radius: 13px; }
+.s-next .nx-ase { background: var(--gradient-warm); color: var(--black); }
+.s-next .nx-emp { background: rgba(255, 255, 255, 0.045); border: 1px solid rgba(255, 255, 255, 0.14); }
+.s-next .nx-label {
+  display: block;
+  margin-bottom: 12px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+.s-next .nx-ase .nx-label { color: rgba(0, 0, 0, 0.72); }
+.s-next .nx-emp .nx-label { color: var(--orange); }
+.s-next .nx-name { display: block; font-family: var(--font-display); font-weight: 700; font-size: 34px; line-height: 1.1; }
+.s-next .nx-role { display: block; margin: 4px 0 12px; font-family: var(--font-body); font-size: 15px; opacity: 0.85; }
+.s-next .nx-line { font-family: var(--font-body); font-size: 17px; line-height: 1.6; }
+.s-next .nx-line a { color: inherit; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 3px; }
+.s-next .foot .meta { color: rgba(255, 255, 255, 0.65); }

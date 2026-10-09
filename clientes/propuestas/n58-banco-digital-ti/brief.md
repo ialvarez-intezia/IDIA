@@ -1,5 +1,51 @@
 # Brief · N58 Banco Digital · Servicio de Habilidades (CAI-037)
 
+## Actualización 2026-10-08 · migrada a la plantilla v2 (8 slides) · VIGENTE
+
+Instrucción directa del usuario: «ajustar las CAI-034 y CAI-037 al nuevo formato, cada una por separado, sin unirlas».
+«Formato nuevo» = **plantilla compacta v2.0** (commit `93e0b67`, 2026-10-07): el `datos.json` v1.4 se migró según la
+spec §13 y se regeneró con `--actualizar-css --forzar-overrides`. Orden del deck: Portada · Alcance · Ruta · Cómo
+trabajamos · Entregables · Retorno · Inversión · Próximos pasos. El PDF de 6 slides (v1.4) queda en `_pdf-anteriores/`.
+Sin cambios de contenido de fondo: 12 h, 6 entregables en 3 módulos, 6 semanas, kick-off de 1 h aparte, seguimiento
+30-60-90, retorno en modo método, licencias aparte (tarjetas de Claude Code y Codex).
+
+### Decisiones
+
+- **Sin «Facilidad de pago»**: no se preguntó; el usuario la omitió en las últimas propuestas migradas, así que se aplicó
+  el mismo criterio (`omitir: ["pago"]`). Si Ventas la quiere, se agrega con cuotas ligadas a los hitos de la ruta.
+- **Datos:** se conserva el criterio ya decidido (repositorio de práctica, sin código de producción ni datos de
+  clientes); «cómo se cuidan los datos» lo dice textualmente y agrega que qué código y datos puede usar cada herramienta
+  lo fija el estándar del equipo.
+- **Modalidad:** no se sabe para TI y la v2 exige una ficha de logística: dice «a acordar con Tecnología». Participantes:
+  «el equipo de TI», sin cifra.
+- **Asesora:** Flavia Martínez (la misma de la CAI-034), con su teléfono y correo; el cargo «Asesora comercial» es supuesto.
+
+### Qué cambió respecto de la v1.4 (en el lenguaje de la v2)
+
+| v1.4 | v2 |
+|---|---|
+| `alcance.pasos` y `quien_construye` | `metodo` (4 pasos: nivelamos, practicamos, construimos, dejamos listo) y `metodo.quien_construye` |
+| (sin método, logística ni asesora) | `metodo.practica` (repositorio de práctica, dos herramientas, una persona revisa), `metodo.datos`, `por_que_orden`, `logistica` y `proximos_pasos.asesora` |
+| (sin «para qué» por módulo) | `areas[].para_que` en los 3 módulos |
+| Fases «Fundamentals», «Construcción», «Implementación» | «Bases», «Código», «Norma» (cabeceras de ≤ ~7 caracteres con «N entregables» al lado; los módulos de la slide 2 conservan sus nombres) |
+| Carril «Claude Code y Codex» en la tarjeta de la ruta | `nombre_corto` «IA en código» (el nombre completo no cabía junto a «6 entregables»); la slide 2 sigue con el nombre completo |
+| «Precios de lista», «costo» | «Valores de lista», «valor» |
+| Inversión «por horas de sesión»; sin términos y condiciones en Notas | «Inversión del proyecto»; «Proyecto de 6 sesiones en 6 semanas…»; Notas con licencias, repositorio y términos y condiciones |
+| Sin asesora ni contacto | Slide 8 con Flavia Martínez |
+
+`overrides.css` nuevo, copiado de la CAI-038 (padding de la slide 2 ajustado a 30/31).
+
+### Pendientes (a confirmar antes de reenviar)
+
+- Los de la versión anterior siguen vigentes (valores, personas de TI y contacto de Tecnología, modalidad, fecha y
+  horario, qué cuenta de Claude Code y Codex se usa y quién la contrata, los 6 entregables y el reparto de las 12 h, y
+  cómo se relaciona con la CAI-034 y con el documento de soberanía de datos).
+- Facilidad de pago (se omitió) y cómo se comunica el plan.
+- Reenviar el PDF nuevo y avisar que reemplaza al anterior. Estado: `Enviada` → `En corrección` → `Enviada` al regenerar
+  (la `fecha_entrega` 2026-10-06 se respeta).
+
+> Lo que sigue es el brief original del 2026-10-06 (formato v1.4); las decisiones de arriba prevalecen.
+
 > Generado por `scripts/generar-habilidades-compacto.py` la primera vez (no se sobrescribe después). Completar a mano lo que falte; los datos del deck viven en `datos.json`.
 
 ## Datos administrativos
@@ -13,6 +59,8 @@
 - **Eje temático**: Uso profesional de Claude Code y Codex en el equipo de TI de N58: fundamentos y uso seguro, construcción con código, revisión y pruebas, e implementación de un estándar de equipo
 <!--auto:inicio-->
 - **Alcance**: 6 entregables en 3 módulos · 12 h de sesión · 6 semanas de trabajo desde el arranque · seguimiento a 30, 60 y 90 días
+- **Orden de las slides**: 1 Portada · 2 Alcance · 3 Ruta · 4 Cómo trabajamos · 5 Entregables · 6 Retorno · 7 Inversión · 8 Próximos pasos
+- **Asesora comercial que ve el cliente (última slide)**: Flavia Martínez, Asesora comercial · fmartinez@intezia.com · +58 414 5756615
 <!--auto:fin-->
 - **Estado**: `Enviada` (meta.json; fecha_entrega 2026-10-06, por convención «terminado = enviado»)
 - **Asesora comercial**: Flavia Martínez · +58 414-5756615 · fmartinez@intezia.com (la misma de CAI-034). El deck compacto no lleva slide de cierre ni contacto.

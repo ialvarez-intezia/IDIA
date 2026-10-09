@@ -124,25 +124,27 @@ const MEDIR = `(async () => {
         if (notas) add(n, 'inversión: licenciamiento vs caja Notas', top(s, lic) - bot(s, notas), 4);
         overflowEls(n, s, '.lic-card', 'tarjeta de licencia');
       }
+      const partes = s.querySelector('.partes-wrap');
+      if (partes) {
+        add(n, 'inversión: valor por parte vs pie', footTop - bot(s, partes), 8);
+        const notas = s.querySelector('.notas-box');
+        if (notas) add(n, 'inversión: valor por parte vs caja Notas', top(s, partes) - bot(s, notas), 4);
+        overflowEls(n, s, '.parte-card', 'tarjeta de parte');
+        // las cajas de monto deben caer donde scripts/agregar-campo-precio.py → precio_fields() pone PrecioParte1..N (tolerancia 1 px)
+        const marcos = [...s.querySelectorAll('.parte-frame')]; const k = marcos.length; const gap = 12, w = (480 - gap * (k - 1)) / k;
+        const sr = s.getBoundingClientRect();
+        marcos.forEach((m, i) => {
+          const r = m.getBoundingClientRect(); const left = 56 + i * (w + gap);
+          const dif = Math.max(Math.abs(r.left - sr.left - (left + 13)), Math.abs(r.right - sr.left - (left + w - 13)), Math.abs(r.top - sr.top - 603), Math.abs(r.bottom - sr.top - 639));
+          add(n, 'inversión: caja de la parte ' + (i + 1) + ' coincide con su campo del PDF', 1 - dif, 0, 'desfase de ' + dif.toFixed(1) + ' px: sincronizar habilidades-compacto.css (.parte-frame) con agregar-campo-precio.py → precio_fields()');
+          // el detalle de la parte no debe tocar su caja de monto (inversion.partes[].detalle: máx. 2 líneas)
+          const det = m.parentElement && m.parentElement.querySelector('.parte-det');
+          if (det) add(n, 'inversión: detalle de la parte ' + (i + 1) + ' vs su caja de monto', r.top - det.getBoundingClientRect().bottom, 2, 'acortar inversion.partes[].detalle (máx. 2 líneas)');
+        });
+      }
       const terms = s.querySelector('.cot-terms-box'); const gar = s.querySelector('.cot-garantia-badge');
       if (terms && gar) add(n, 'inversión: términos vs garantía', top(s, gar) - bot(s, terms), 6);
       if (gar) add(n, 'inversión: garantía vs pie', footTop - bot(s, gar), 8);
-      const pw = s.querySelector('.partes-wrap');
-      if (pw) {
-        add(n, 'inversión: valor por parte vs pie', footTop - bot(s, pw), 8);
-        const nb = s.querySelector('.notas-box');
-        if (nb) add(n, 'inversión: valor por parte vs caja Notas', top(s, pw) - bot(s, nb), 4);
-        const cards = [...s.querySelectorAll('.parte-card')], frames = [...s.querySelectorAll('.parte-frame')];
-        add(n, 'inversión: una caja de monto por parte', Math.min(cards.length, frames.length) - Math.max(cards.length, frames.length), 0, cards.length + ' partes y ' + frames.length + ' cajas de monto', '');
-        cards.forEach((c, i) => {
-          const f = frames[i]; if (!f) return;
-          const cr = c.getBoundingClientRect(), fr = f.getBoundingClientRect();
-          add(n, 'inversión: caja de monto de la parte ' + (i + 1) + ' dentro de su tarjeta', Math.min(fr.left - cr.left, cr.right - fr.right, cr.bottom - fr.bottom), 6, 'las cajas deben coincidir con agregar-campo-precio.py → precio_fields()');
-          const ult = c.querySelector('p');
-          if (ult) add(n, 'inversión: texto de la parte ' + (i + 1) + ' vs su caja de monto', fr.top - ult.getBoundingClientRect().bottom, 4, 'acortar inversion.partes[].texto (máx. 2 líneas)');
-        });
-        overflowEls(n, s, '.parte-card', 'tarjeta de parte');
-      }
     }
     if (s.classList.contains('s-deliv')) {
       const band = s.querySelector('.deliv-band');

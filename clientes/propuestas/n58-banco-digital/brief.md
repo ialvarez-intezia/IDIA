@@ -1,5 +1,50 @@
 # Brief — N58 Banco Digital · Mercadeo con Claude (CAI-034)
 
+## Actualización 2026-10-08 · migrada a la plantilla v2 (8 slides) · VIGENTE
+
+Instrucción directa del usuario: «ajustar las CAI-034 y CAI-037 al nuevo formato, cada una por separado, sin unirlas».
+«Formato nuevo» = **plantilla compacta v2.0** (commit `93e0b67`, 2026-10-07): el `datos.json` v1.4 se migró según la
+spec §13 y se regeneró con `--actualizar-css --forzar-overrides`. Orden del deck: Portada · Alcance · Ruta · Cómo
+trabajamos · Entregables · Retorno · Inversión · Próximos pasos. Los dos PDF de 6 slides (v1.4) quedan en
+`_pdf-anteriores/`. Sin cambios de contenido de fondo: 12 h, 6 entregables en 3 etapas, 6 semanas, presencial, kick-off
+de 1 h aparte, seguimiento 30-60-90, retorno en modo método. El documento de soberanía de datos (`soberania-datos.html` y
+su PDF) no se tocó: el PDF se apartó antes de correr el wrapper y se devolvió idéntico (`cmp`).
+
+### Decisiones
+
+- **Sin «Facilidad de pago»**: no se preguntó; el usuario la omitió en las últimas propuestas migradas, así que se aplicó
+  el mismo criterio (`omitir: ["pago"]`). Si Ventas la quiere, se agrega con cuotas ligadas a los hitos de la ruta.
+- **Datos** (propuesta del sistema, sin preguntar): «En las sesiones se trabaja con la marca y los materiales del
+  lanzamiento: no se carga a Claude información de clientes del banco». Mismo criterio de repositorio de práctica de la
+  CAI-037. Confirmar con el banco.
+- **Asesora:** Flavia Martínez, con su teléfono y correo de este brief; el cargo «Asesora comercial» es supuesto.
+
+### Qué cambió respecto de la v1.4 (en el lenguaje de la v2)
+
+| v1.4 | v2 |
+|---|---|
+| `alcance.pasos` y `quien_construye` | `metodo` (4 pasos: levantamos, nivelamos, producimos, dejamos listo) y `metodo.quien_construye` |
+| (sin método, logística ni asesora) | `metodo.practica` (sesiones presenciales, entre sesiones, qué es una Skill), `metodo.datos`, `por_que_orden`, `logistica` y `proximos_pasos.asesora` |
+| (sin «para qué» por etapa) | `areas[].para_que` en las 3 etapas |
+| `frentes[].etiqueta`, `areas_html`, «S1-S6», hitos «S1 · …» | `frentes[].nombre` = «Equipo de Mercadeo», «1 a 6» y hitos «Semana 1 · …» |
+| Notas con «modalidad presencial» | Notas con calendario de lanzamiento, licencias y términos y condiciones; la modalidad está en «Cómo trabajamos» y en la Duración |
+| «Costo hora de referencia» | «Valor hora de referencia» |
+| Inversión «por horas de sesión»; Duración con horas al frente | «Inversión del proyecto»; «Proyecto de 6 sesiones presenciales en 6 semanas, con seguimiento a 30, 60 y 90 días. 12 horas de trabajo, más 1 h de kick-off aparte.» |
+| Sin asesora ni contacto | Slide 8 con Flavia Martínez |
+
+`overrides.css` nuevo, copiado de la CAI-038 (3 filas, 6 entregables, 3 columnas, 1 línea de trabajo): la columna de la
+slide 5 no pasa de ~450 px o se mete debajo de las cajas del PDF.
+
+### Pendientes (a confirmar antes de reenviar)
+
+- Los de la versión anterior siguen vigentes (valores, fecha de arranque y calendario de lanzamiento, persona a formar,
+  quién publica los 4 artículos, quién contrata la cuenta de Claude, certificado y workbook, dotación de Mercadeo).
+- Facilidad de pago (se omitió) y cómo se comunica el plan.
+- Reenviar el PDF nuevo y avisar que reemplaza al anterior. Estado: `Enviada` → `En corrección` → `Enviada` al regenerar
+  (la `fecha_entrega` 2026-10-01 se respeta).
+
+---
+
 ## Actualización 2026-10-06 — reexpresada en el formato compacto de Habilidades (6 slides) · VIGENTE
 
 Instrucción directa del usuario: «ajustar la CAI-034 hacia el nuevo formato». El deck canónico de 15
@@ -78,6 +123,8 @@ con servicio · línea base dentro de Fundamentals y «Hacia la semana 19» (ari
 - **Tipo de documento**: Capacitación In-Company (`CAI-034`), presentada al cliente como **propuesta de proyecto**; formato compacto de 6 slides (con hoja de inversión, campos de precio vacíos para ventas).
 <!--auto:inicio-->
 - **Alcance**: 6 entregables en 3 etapas · 12 h de sesión · 6 semanas de trabajo desde el arranque · seguimiento a 30, 60 y 90 días
+- **Orden de las slides**: 1 Portada · 2 Alcance · 3 Ruta · 4 Cómo trabajamos · 5 Entregables · 6 Retorno · 7 Inversión · 8 Próximos pasos
+- **Asesora comercial que ve el cliente (última slide)**: Flavia Martínez, Asesora comercial · fmartinez@intezia.com · +58 414 5756615
 <!--auto:fin-->
 - **Fuente**: Ficha de Levantamiento N58 (Flavia Martínez, 2026-10-01) — primer contacto,
   sin servicio previo de Intezia, sin propuesta previa.

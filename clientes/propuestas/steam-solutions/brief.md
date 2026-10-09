@@ -1,5 +1,49 @@
 # Brief · Steam Solutions · Servicio de Habilidades (CAI-038)
 
+## Actualización 2026-10-08 · migrada a la plantilla v2 (8 slides) · VIGENTE
+
+Instrucción directa del usuario: «ajustar la CAI-038 al nuevo formato». «Formato nuevo» = **plantilla compacta v2.0**
+(commit `93e0b67`, 2026-10-07): el `datos.json` v1.4 se migró según la spec §13 y se regeneró con
+`--actualizar-css --forzar-overrides`. Orden del deck: Portada · Alcance · Ruta · Cómo trabajamos · Entregables ·
+Retorno · Inversión · Próximos pasos. El deck de 6 slides v1.4 y su PDF quedan en `_pdf-anteriores/`. Sin cambios de
+contenido de fondo: 18 h, 6 entregables en 3 módulos, 6 semanas, kick-off de 1 h aparte, seguimiento 30-60-90, retorno
+en modo método, herramienta de IA a definir en el kick-off.
+
+### Decisiones
+
+- **Sin «Facilidad de pago»**: no se preguntó; el usuario la omitió en la CAI-032, la DET-024, la CAI-040 y la
+  DET-026, así que se aplicó el mismo criterio (`omitir: ["pago"]`). Si Ventas la quiere, se agrega con cuotas
+  ligadas a los hitos de la ruta.
+- Se conservan las reglas de la ronda anterior: Intezia **guía** y el equipo **construye**; sin nombrar herramientas
+  de IA; ambiente de desarrollo con datos sintéticos.
+
+### Qué cambió respecto de la v1.4 (en el lenguaje de la v2)
+
+| v1.4 | v2 |
+|---|---|
+| `alcance.pasos` y `quien_construye` (la regla «guiamos, el equipo construye») | `metodo` (4 pasos: nivelamos, instalamos, guiamos, dejamos listo) y `metodo.quien_construye` con la regla en negrita |
+| (sin método, logística ni asesora) | `metodo.practica` (tareas reales, herramienta, probado de verdad), `metodo.datos`, `por_que_orden`, `logistica` y `proximos_pasos.asesora` |
+| (sin «para qué» por módulo) | `areas[].para_que` en los 3 módulos |
+| `frentes[].etiqueta`, `areas_html`, «S1-S6», «S = semana» | `frentes[].nombre` = «Equipo de desarrollo», «1 a 6» y nota sin códigos |
+| Fase «Implementación», carril «Desarrollo con IA» en la tarjeta de la ruta | Fase «Flujo» (≤ 6 caracteres con «1 entregable» al lado) y `nombre_corto` «Desarrollo» (la tarjeta de la línea de trabajo no cabía) |
+| «Precios de lista», «costo hora de referencia» | «Valores de lista», «valor hora de referencia» |
+| Inversión «por horas de sesión», sin términos y condiciones en Notas | «Inversión del proyecto»; Duración con soluciones y semanas primero; Notas con los términos y condiciones |
+| Sin asesora ni contacto | Slide 8 con Verónica Rubio (teléfono y correo de la Ficha; el cargo «Asesora comercial» sale de este brief) |
+
+La slide 7 conserva la tarjeta de licenciamiento («Herramienta de IA · a definir») y la garantía 30-60-90.
+`overrides.css` nuevo: escala de las slides 2, 3, 4 y 5.
+
+### Pendientes (a confirmar antes de reenviar)
+
+- Inversión, descuento y total (campos vacíos para ventas), cómo se comunica el plan de pago (no hay slide) y, como
+  antes, sede y viáticos (tema comercial, fuera del deck).
+- Sede, fechas, horarios, quién asiste a cada sesión de agentes y si cada agente va en 1 sesión de 4 h o en 2 de 2 h.
+- «Hacia la semana 19» (6 semanas más 90 días) es aritmética: confirmarla con servicio.
+- La propuesta ya salió el 2026-10-06: confirmar si se reenvía el PDF nuevo y avisar que reemplaza al anterior. Estado:
+  `Enviada` → `En corrección` → `Enviada` al regenerar (la `fecha_entrega` 2026-10-06 se respeta).
+
+> Lo que sigue es el brief original del 2026-10-06 (formato v1.4); las decisiones de arriba prevalecen.
+
 > Generado por `scripts/generar-habilidades-compacto.py` la primera vez (no se sobrescribe después). Completar a mano lo que falte; los datos del deck viven en `datos.json`.
 
 ## Datos administrativos
@@ -13,9 +57,11 @@
 - **Eje temático**: Desarrollo guiado por especificaciones con agentes de IA en el equipo de desarrollo de Steam Solutions: método común, agentes de desarrollo, pruebas y despliegue, y un flujo común adoptado por el equipo
 <!--auto:inicio-->
 - **Alcance**: 6 entregables en 3 módulos · 18 h de sesión · 6 semanas de trabajo desde el arranque · seguimiento a 30, 60 y 90 días
+- **Orden de las slides**: 1 Portada · 2 Alcance · 3 Ruta · 4 Cómo trabajamos · 5 Entregables · 6 Retorno · 7 Inversión · 8 Próximos pasos
+- **Asesora comercial que ve el cliente (última slide)**: Verónica Rubio, Asesora comercial · vrubio01@intezia.com · +58 422 3355505
 <!--auto:fin-->
 - **Estado**: `Enviada` (meta.json; fecha_entrega 2026-10-06, por convención «terminado = enviado»)
-- **Asesora comercial**: Verónica Rubio · +58 422 3355505 · vrubio01@intezia.com. El deck compacto no lleva slide de cierre ni contacto.
+- **Asesora comercial**: Verónica Rubio · +58 422 3355505 · vrubio01@intezia.com. Desde la v2 (2026-10-08) la slide 8 de próximos pasos la muestra.
 - **Contacto del cliente**: Juan Cisneros, probable líder técnico del equipo de desarrollo (cargo sin confirmar); es también el responsable interno de logística durante el servicio. Su nombre no aparece en el deck.
 - **Ficha Comercial Intezia**: `Levantamiento_Steam_Solutions_2026-10-05.pdf` (Ficha de Levantamiento, registrada 2026-09-30, elaborada por Verónica Rubio). Es la fuente primaria; qué se tomó y qué no está en la sección siguiente.
 - **fecha_arranque_deseada**: no declarada. La disponibilidad semanal exacta se define en el kick-off. El formato compacto no lleva Calendario de inicio.

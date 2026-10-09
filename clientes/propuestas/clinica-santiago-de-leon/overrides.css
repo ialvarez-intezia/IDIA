@@ -1,57 +1,59 @@
 /* Ajustes propios de esta propuesta (se enlaza después de habilidades-compacto.css). */
 
 /* ===========================================================================
-   DET-027 (Detección): cada área muestra su composición bajo el nombre.
-   Con 4 entregables (la plantilla está pensada para 40+) se amplía la escala de las slides 2 y 5.
+   DET-027 Clínica Santiago de León (plantilla v2, Detección): 7 entregables en 5 filas y una sola línea de
+   trabajo. La plantilla está pensada para 40+ entregables y los modos de aire (roomy) no alcanzan: se escala la
+   tipografía de las slides 2, 3, 4 y 5 para que no queden vacías, sin inventar contenido.
    =========================================================================== */
-.s-scope .scope-panel { flex: 1; display: flex; flex-direction: column; padding: 18px 28px 6px; }
-.s-scope .scope-head { margin-bottom: 4px; }
-.s-scope .scope-rows { flex: 1; display: flex; flex-direction: column; }
-.s-scope .scope-rows li { flex: 1; padding: 0; }
-.s-scope .scope-rows .area { flex: 1 1 auto; padding-right: 22px; font-size: 20px; line-height: 1.2; }
-.s-scope .scope-rows .area em { font-size: 13px; }
-.s-scope .scope-rows .area .comp {
-  display: block;
-  margin-top: 5px;
-  font-family: var(--font-body);
-  font-weight: 400;
-  font-size: 13.5px;
-  line-height: 1.35;
-  color: rgba(0, 0, 0, 0.62);
-}
-.s-scope .scope-rows .units { --uw: 30px; --ug: 6px; height: 30px; }
-.s-scope .scope-rows .n { font-size: 30px; }
 
-.s-deliv .deliv-carriles { margin-top: 24px; margin-bottom: 10px; }
-.s-deliv .dc { font-size: 13px; padding: 8px 18px; }
-.s-deliv .deliv-col { padding: 18px 22px 14px; min-height: 0; }
-.s-deliv .da-name { font-size: 19px; line-height: 1.2; margin-bottom: 8px; }
-.s-deliv .da-name i { min-width: 28px; height: 28px; line-height: 28px; font-size: 13px; }
-.s-deliv .da li { font-size: 17.5px; line-height: 1.32; padding: 3px 0 3px 18px; }
-.s-deliv .da li::before { top: 12px; width: 8px; height: 8px; }
-.s-deliv .da + .da { margin-top: 12px; padding-top: 12px; }
+/* Slide 2 · Alcance: 5 filas (Fundamentals y 4 áreas) */
+.s-scope.roomy .scope-panel { padding: 18px 28px 8px; }
+.s-scope.roomy .scope-rows li { padding: 14px 0 15px; }
+.s-scope.roomy .scope-rows .area { font-size: 19px; }
+.s-scope.roomy .scope-rows .area em { font-size: 13px; }
+.s-scope.roomy .scope-rows .area .comp { font-size: 13px; }
+.s-scope.roomy .scope-rows .para { font-size: 15px; }
+.s-scope.roomy .scope-rows .n { font-size: 12.5px; padding: 4px 14px; }
+.s-scope.roomy .scope-panels.one .scope-rows li { grid-template-columns: 400px 1fr auto; padding: 14px 0 15px; }
+.s-scope.roomy .scope-out { margin-top: 22px; padding: 20px 26px; }
+.s-scope.roomy .scope-out li { font-size: 15px; }
+.s-scope.roomy .scope-out li::before { top: 11px; }
 
-/* ===========================================================================
-   Slide 3 · Ruta (formato 2026-10-06: protagonistas = entregables, horas pequeñas): con una sola fila
-   (1 frente) y 3 fases, las celdas y los hitos quedaban pequeños y dejaban media slide vacía. Se amplía
-   la escala tipográfica sobre las clases nuevas (mismo patrón que Fivenca).
-   =========================================================================== */
-.s-route .rg-front { padding: 14px 16px 12px 18px; }
-.s-route .rg-front-name { font-size: 20px; }
-.s-route .rg-front .rg-front-tag { font-size: 10px; padding: 3px 9px; }
-.s-route .rg-front-h { font-size: 12px; margin-top: 8px; }
-.s-route .rg-front-h b { font-size: 16px; }
-.s-route .rg-front-areas { font-size: 13px; margin-top: 8px; }
+/* Slide 3 · Ruta: una sola línea de trabajo, 3 fases + cierre */
+.s-route .route-grid { --rowh: 270px !important; }
 .s-route .rg-cell { padding: 14px 16px; }
 .s-route .rg-h { font-size: 15px; margin-bottom: 8px; }
 .s-route .rg-h b { font-size: 36px; }
-.s-route .rg-h i { font-size: 11px; }
+.s-route .rg-h i { font-size: 11.5px; }
 .s-route .rg-cell p { font-size: 15px; line-height: 1.38; }
+.s-route .rg-front-h { font-size: 24px; }
 .s-route .route-miles { margin-top: 26px; }
 .s-route .mile b { font-size: 15px; margin-bottom: 5px; }
 .s-route .mile p { font-size: 13.5px; line-height: 1.36; }
-.s-route .route-note { margin-top: 16px; font-size: 12px; max-width: 1020px; }
+.s-route .route-note { margin-top: 16px; font-size: 12px; }
 
-/* Slide 5 · Entregables: con 2 columnas y 1 entregable por área, se iguala la altura del primer bloque
-   para que las líneas divisorias de las dos columnas queden alineadas. */
+/* Slide 4 · Cómo trabajamos */
+.s-method .mt-steps { gap: 16px; margin-bottom: 18px; }
+.s-method .mt-steps li { min-height: 104px; padding: 14px 16px 14px 62px; }
+.s-method .mt-steps li::before { left: 16px; top: 15px; width: 32px; height: 32px; line-height: 32px; font-size: 16px; }
+.s-method .mt-steps b { font-size: 17px; margin-bottom: 5px; }
+.s-method .mt-steps span { font-size: 13px; }
+.s-method .mt-strips { gap: 16px; margin-bottom: 18px; }
+.s-method .mt-why, .s-method .mt-who { padding: 13px 18px; font-size: 13px; }
+.s-method .mt-why b, .s-method .mt-who b { font-size: 13px; }
+.s-method .mt-info { gap: 16px; margin-bottom: 18px; }
+.s-method .mt-card { padding: 15px 20px 13px; }
+.s-method .mt-card-label { margin-bottom: 9px; font-size: 11.5px; }
+.s-method .mt-card p, .s-method .mt-card li { font-size: 13px; }
+.s-method .mt-card li { padding-bottom: 6px; }
+.s-method .mt-tile { padding: 13px 16px 14px; }
+.s-method .mt-tile span { font-size: 10px; margin-bottom: 6px; }
+.s-method .mt-tile b { font-size: 13px; }
 
+/* Slide 5 · Entregables: 2 columnas. Las cajas de abajo son campos del PDF: la columna no debe pasar de
+   ~450 px de alto o se mete debajo de ellas. */
+.s-deliv.roomy .deliv-col { padding: 22px 22px 18px; min-height: 440px; }
+.s-deliv.roomy .da-name { font-size: 19px; margin-bottom: 10px; }
+.s-deliv.roomy .da li { font-size: 16.5px; line-height: 1.38; padding: 5px 0 5px 17px; }
+.s-deliv.roomy .da li::before { top: 14px; width: 7px; height: 7px; }
+.s-deliv.roomy .da + .da { margin-top: 16px; padding-top: 16px; }

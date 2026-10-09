@@ -1,0 +1,472 @@
+{
+ "version": 2,
+ "cliente": {
+  "nombre": "Metalurgia Metalblanc",
+  "slug": "metalblanc",
+  "codigo": "DET-028",
+  "nombre_pie": "Metalblanc"
+ },
+ "division": "educacion",
+ "alianza": false,
+ "servicio_rotulo": "Servicio de Detección",
+ "meta_servicio": "deteccion",
+ "meta_tipo": "Detección · Fundamentals (2h grupal, 11 personas) + auditoría de 5 áreas (Estructura de costos, Producción, Administración, Ventas y Marketing), 4h por área (20h), 22h totales, modalidad a coordinar · formato compacto v2",
+ "vocabulario": {
+  "solucion": [
+   "entregable",
+   "entregables"
+  ],
+  "proceso_base": [
+   "etapa previa",
+   "etapas previas"
+  ]
+ },
+ "eje": "Auditar Estructura de costos, Producción, Administración, Ventas y Marketing de Metalblanc, con un logro inmediato en cada área (empezando por agilizar los presupuestos), para llegar a un mapa de oportunidades de IA priorizado y a las bases para ordenar sus procesos",
+ "origen": "Ficha de Levantamiento de Metalblanc (registrada el 08/10/2026, asesora Flavia Martínez), resumen de la reunión pegado por el usuario e instrucción directa del usuario del 08/10/2026: código DET-028",
+ "fuente_insumo": "Ficha de Levantamiento de Metalblanc (08/10/2026) y resumen de la reunión de la asesora",
+ "portada": {
+  "titulo_lineas": [
+   "Presupuestos ágiles y mapa de",
+   "oportunidades de IA"
+  ],
+  "titulo_destacado": "en {n_areas} áreas de {cliente_corto}",
+  "lead": "Este proyecto nivela al equipo de 11 personas, arma con IA la **estructura de costos** y un primer presupuesto ágil, y levanta los procesos de {n_areas_txt} para decidir con datos qué automatizar primero.",
+  "hechos": [
+   {
+    "num": "A mano",
+    "texto": "se arma cada presupuesto desde cero, sin estructura de costos para ninguna de sus líneas.",
+    "resuelto_por": [
+     "COS-1"
+    ]
+   },
+   {
+    "num": "Clientes",
+    "texto": "que se van con la competencia cuando el presupuesto tarda demasiado.",
+    "resuelto_por": [
+     "COS-1",
+     "VEN-1"
+    ]
+   },
+   {
+    "num": "Hojas",
+    "texto": "de cálculo guardan hoy la información del negocio, sin un sistema que la ordene.",
+    "resuelto_por": [
+     "COS-1",
+     "PRO-1",
+     "ADM-1"
+    ]
+   },
+   {
+    "num": "Sin guía",
+    "texto": "para usar la IA: el equipo la usa suelta y sin formación previa.",
+    "resuelto_por": [
+     "FUN-1"
+    ]
+   }
+  ],
+  "fuente": "Fuente: Ficha de Levantamiento de {cliente_corto} (08/10/2026, 11 personas).",
+  "eyebrow": "Propuesta de proyecto · Servicio de Detección"
+ },
+ "carriles": [
+  {
+   "id": "det",
+   "nombre": "Detección",
+   "nombre_corto": "Detección",
+   "color": "amarillo"
+  }
+ ],
+ "areas": [
+  {
+   "id": "FUN",
+   "nombre": "Fundamentals",
+   "carril": "det",
+   "frente": "A",
+   "proceso_base": true,
+   "nombre_catalogo": "Fundamentals",
+   "composicion": "Un solo grupo con las 11 personas de {cliente_corto}.",
+   "soluciones": [
+    {
+     "id": "FUN-1",
+     "entregable": "Equipo de 11 personas nivelado en IA",
+     "h": 2,
+     "fase": "F1",
+     "detalle": "Fundamentals de 2 h para las 11 personas de Metalblanc, en un solo grupo (bajo el máximo de 25 por sesión): equipo operativo y administrativo de Ventas, Marketing, Producción y Administración. Temas: qué es y qué no es la IA, uso seguro de la información, ejemplos aplicados a una metalmecánica, la ruta de las 5 áreas, preguntas y expectativas. Se dicta sobre la herramienta que se acuerde en el kick-off: Claude, si su acceso es viable desde la ubicación de la empresa, o Gemini, que ya usan. El kick-off de arranque se hace aparte y no suma horas."
+    }
+   ],
+   "para_que": "Que las 11 personas hablen un lenguaje común de IA antes de auditar las 5 áreas"
+  },
+  {
+   "id": "COS",
+   "nombre": "Estructura de costos",
+   "carril": "det",
+   "frente": "A",
+   "composicion": "Entre Producción y Administración. Su prioridad, con productos estándar y personalizados.",
+   "soluciones": [
+    {
+     "id": "COS-1",
+     "entregable": "Estructura de costos base y primer presupuesto ágil",
+     "h": 4,
+     "fase": "F2",
+     "detalle": "Sesión de 4 h con las personas de Producción y Administración que arman los presupuestos. Levanta cómo se elabora hoy un presupuesto de un producto estándar y de uno personalizado, y qué costos intervienen. Con IA y con los costos que Metalblanc decide compartir, se arma una primera versión de la estructura de costos y se prueba un presupuesto con ella. Es el logro inmediato que la ficha identifica: agilizar los presupuestos a partir de una estructura de costos. No es una app terminada ni un sistema: es la base ordenada y un primer presupuesto más rápido."
+    }
+   ],
+   "para_que": "Armar la estructura de costos y acelerar los presupuestos, su prioridad y primer logro"
+  },
+  {
+   "id": "PRO",
+   "nombre": "Producción",
+   "carril": "det",
+   "frente": "A",
+   "composicion": "Manufactura: cortes CNC, plasma y láser, y su línea estándar y personalizada.",
+   "soluciones": [
+    {
+     "id": "PRO-1",
+     "entregable": "Inventario de procesos y logro inmediato de Producción",
+     "h": 4,
+     "fase": "F2",
+     "detalle": "Sesión de 4 h con las personas de manufactura. Levanta cómo se planifica y se registra la producción y qué información comparte con Administración para los costos. Se identifica el cuello de botella más relevante y se construye en la misma sesión un logro inmediato aplicable al área. Entrega el inventario de procesos, que alimenta el Mapa de Calor."
+    }
+   ],
+   "para_que": "Ordenar cómo se produce y se registra, y dejar un logro inmediato en manufactura"
+  },
+  {
+   "id": "ADM",
+   "nombre": "Administración",
+   "carril": "det",
+   "frente": "A",
+   "composicion": "Procesos administrativos que hoy viven en hojas de cálculo.",
+   "soluciones": [
+    {
+     "id": "ADM-1",
+     "entregable": "Inventario de procesos y logro inmediato de Administración",
+     "h": 4,
+     "fase": "F3",
+     "detalle": "Sesión de 4 h con las personas de Administración. Levanta los procesos que hoy se sostienen en hojas de cálculo y cómo se coordinan con Producción. Se identifica el cuello de botella más relevante y se construye en la misma sesión un logro inmediato aplicable al área. Entrega el inventario de procesos, que alimenta el Mapa de Calor."
+    }
+   ],
+   "para_que": "Ordenar los procesos administrativos de las hojas de cálculo, con un logro inmediato"
+  },
+  {
+   "id": "VEN",
+   "nombre": "Ventas",
+   "carril": "det",
+   "frente": "A",
+   "composicion": "Atención de clientes y camino hasta el presupuesto.",
+   "soluciones": [
+    {
+     "id": "VEN-1",
+     "entregable": "Inventario de procesos y logro inmediato de Ventas",
+     "h": 4,
+     "fase": "F3",
+     "detalle": "Sesión de 4 h con las personas de Ventas. Levanta cómo llega una solicitud de un cliente y qué pasa hasta que recibe su presupuesto, y dónde se pierde tiempo. Se construye en la misma sesión un logro inmediato aplicable al área. Entrega el inventario de procesos, que alimenta el Mapa de Calor."
+    }
+   ],
+   "para_que": "Ordenar el camino entre la solicitud del cliente y el presupuesto, con un logro inmediato"
+  },
+  {
+   "id": "MKT",
+   "nombre": "Marketing",
+   "carril": "det",
+   "frente": "A",
+   "composicion": "Contenido gráfico y de marketing, hoy con Gemini.",
+   "soluciones": [
+    {
+     "id": "MKT-1",
+     "entregable": "Inventario de procesos y logro inmediato de Marketing",
+     "h": 4,
+     "fase": "F3",
+     "detalle": "Sesión de 4 h con las personas de Marketing. Levanta cómo se crea hoy el contenido gráfico y de marketing y cómo se apoyan en Gemini. Se construye en la misma sesión un logro inmediato aplicable al área. Entrega el inventario de procesos, que alimenta el Mapa de Calor."
+    }
+   ],
+   "para_que": "Ordenar cómo se crea el contenido gráfico y de marketing, con un logro inmediato"
+  }
+ ],
+ "alcance": {
+  "compacto": true,
+  "titulo": "Un logro inmediato en cada una de las 5 áreas.",
+  "subtitulo": "Nivelamos a las **11 personas** y auditamos **{n_areas_txt}** de {cliente_corto}, con la **estructura de costos** primero.",
+  "fuera_alcance": [
+   "Desarrollar una app de presupuestos o implementar un ERP: la Detección entrega el mapa y las bases, eso viene después.",
+   "Construir y poner en uso las soluciones de cada área: son el horizonte que sigue a la Detección (Habilidades).",
+   "Licencias de IA: no se incluyen. El valor de lista de Claude Team se envía en un documento aparte."
+  ]
+ },
+ "fases": [
+  {
+   "id": "F1",
+   "titulo": "Nivel",
+   "rango": "Semana 1",
+   "descripcion": "Fundamentals en 1 grupo"
+  },
+  {
+   "id": "F2",
+   "titulo": "Costos",
+   "rango": "Semana 2",
+   "descripcion": "Estructura de costos y Producción",
+   "destacada": true
+  },
+  {
+   "id": "F3",
+   "titulo": "Mapa",
+   "rango": "Semanas 3 y 4",
+   "descripcion": "Tres áreas y Reporte Final"
+  }
+ ],
+ "frentes": [
+  {
+   "id": "A",
+   "carril": "det",
+   "nombre": "Auditoría de 5 áreas",
+   "semanas": "1 a 4",
+   "celdas": {
+    "F1": "Fundamentals de 2 h para las 11 personas, en un solo grupo.",
+    "F2": "Estructura de costos y Producción, 4 h cada una: el primer logro, presupuestos ágiles.",
+    "F3": "Administración, Ventas y Marketing, 4 h cada una, y el Reporte Final."
+   }
+  }
+ ],
+ "ruta": {
+  "semanas_total": 4,
+  "tope_h_semana": 20,
+  "titulo": "Del kick-off al Reporte Final en 4 semanas.",
+  "subtitulo": "Semanas de trabajo desde el arranque. El **Reporte Final** se entrega en la semana 4.",
+  "nota": "Las {h_total} h son una proyección de sesión: {h_f1}, {h_f2} y {h_f3} h de las fases 1, 2 y 3. El kick-off de arranque no suma horas. La fecha de arranque se acuerda con {cliente}; el horario de cada sesión, con cada responsable.",
+  "hitos": [
+   {
+    "titulo": "Semana 1 · Nivelación",
+    "texto": "Kick-off y Fundamentals de 2 h para las 11 personas, en un solo grupo."
+   },
+   {
+    "titulo": "Semana 2 · Presupuestos",
+    "texto": "Estructura de costos y Producción, 4 h cada una, con el presupuesto ágil como primer logro."
+   },
+   {
+    "titulo": "Semana 3 · Procesos",
+    "texto": "Administración y Ventas, 4 h cada una, con un logro inmediato por área."
+   },
+   {
+    "titulo": "Semana 4 · Reporte Final",
+    "texto": "Marketing (4 h) y el Reporte Final: Mapa de Calor, Índice de Madurez y hoja de ruta."
+   }
+  ]
+ },
+ "seguimiento": {
+  "tipo": "cierre",
+  "etiqueta": "Cierre",
+  "rango": "Reporte Final",
+  "texto": "Trabajo del equipo consultor",
+  "items": [
+   {
+    "dias": "Priorizar",
+    "texto": "Hallazgos por impacto y riesgo."
+   },
+   {
+    "dias": "Reportar",
+    "texto": "Diagnóstico y mapa de oportunidades."
+   },
+   {
+    "dias": "Proyectar",
+    "texto": "Hoja de ruta hacia las soluciones."
+   }
+  ]
+ },
+ "inversion": {
+  "sin_garantia": true,
+  "duracion": "Proyecto de 6 sesiones en 4 semanas. 22 horas de trabajo.",
+  "programa": [
+   "Servicio de Detección para Metalurgia Metalblanc (DET-028): Fundamentals y auditoría de 5 áreas.",
+   "Estructura de costos, Producción, Administración, Ventas y Marketing, con los presupuestos como primer logro.",
+   "Fundamentals (2 h) y 4 h por área, en 6 sesiones. Modalidad a coordinar."
+  ],
+  "notas": [
+   "No incluye licencias: el valor de lista de Claude Team va en un documento aparte.",
+   "Habilidades y las soluciones que siguen no forman parte de esta inversión.",
+   "Términos y condiciones: los del enlace de «Importante», que ambas partes aceptan al avanzar con esta propuesta."
+  ]
+ },
+ "entregables": {
+  "titulo": "Lo que recibe Metalblanc.",
+  "subtitulo": "Lo que se llevan: **{n_entregables_txt}** por sesión, más el Mapa de Calor y el Reporte Final con la hoja de ruta.",
+  "transversales": [
+   "Mapa de Calor e Índice de Madurez de las 5 áreas.",
+   "Reporte Final: mapa priorizado y hoja de ruta.",
+   "Recomendación de ecosistema de IA y de licencias.",
+   "Procesos ordenados como base del siguiente paso."
+  ],
+  "valor_inmediato": [
+   "Semana 1: equipo de 11 personas con un lenguaje común de IA.",
+   "Semana 2: primera estructura de costos y presupuesto ágil.",
+   "Semana 4: logro inmediato en cada área y Reporte Final."
+  ],
+  "columnas_por_carril": [
+   3
+  ]
+ },
+ "retorno": {
+  "modo": "metodo",
+  "posiciones": false,
+  "titulo": "Retorno esperado: decidir con datos.",
+  "subtitulo": "El Reporte Final estima el retorno de cada oportunidad con los datos que cada área entrega en su sesión.",
+  "etiqueta_pasos": "Cómo se estima el retorno de cada oportunidad",
+  "pasos": [
+   {
+    "titulo": "Volumen",
+    "texto": "Cuántos presupuestos y otras tareas se hacen al mes, por línea de producto, levantado con el área."
+   },
+   {
+    "titulo": "Tiempo actual",
+    "texto": "Lo que toma hoy cada ejecución, como armar un presupuesto, medido en la sesión del área."
+   },
+   {
+    "titulo": "Tiempo con la solución",
+    "texto": "Estimación del equipo consultor para cada oportunidad del Mapa de Calor."
+   },
+   {
+    "titulo": "Horas recuperables",
+    "texto": "Volumen por la diferencia de tiempos: una estimación referencial, sin compromiso de resultado."
+   },
+   {
+    "titulo": "Presupuestos perdidos",
+    "texto": "Cuántos clientes se van por la demora, contados con Ventas, para medir el efecto en ingresos."
+   },
+   {
+    "titulo": "Prioridad",
+    "texto": "Cada oportunidad se ordena por impacto, esfuerzo y riesgo."
+   }
+  ],
+  "etiqueta_metas": "Qué decide Metalblanc con el Reporte Final",
+  "metas": [
+   {
+    "dias": "Herramientas",
+    "texto": "Qué herramientas y licencias usar, con datos de sus propias áreas."
+   },
+   {
+    "dias": "Prioridades",
+    "texto": "Qué procesos mejorar primero, según impacto, esfuerzo y riesgo."
+   },
+   {
+    "dias": "Orden",
+    "texto": "Qué procesos ordenar antes de dar el siguiente paso."
+   }
+  ],
+  "etiqueta_destino": "Hacia dónde sigue la ruta",
+  "destino": [
+   {
+    "rotulo": "Ahora · Detección",
+    "texto": "Mapa priorizado, bases de sus procesos y un **logro inmediato** en cada área."
+   },
+   {
+    "rotulo": "Después · Habilidades",
+    "texto": "El equipo construye y pone en uso las soluciones priorizadas, empezando por los presupuestos."
+   },
+   {
+    "rotulo": "Más adelante · Su siguiente paso",
+    "texto": "Con los procesos ordenados, {cliente_corto} decide cómo seguir, por ejemplo con un sistema de gestión (ERP)."
+   }
+  ],
+  "gancho": "Con el Reporte Final, {cliente_corto} decide con datos qué automatizar primero y cómo ordenar sus procesos, y no a ciegas."
+ },
+ "frases_ok": [
+  "estructura de costos",
+  "Estructura de costos",
+  "Costos",
+  "costos"
+ ],
+ "siglas_ok": [
+  "IA",
+  "ERP",
+  "CNC",
+  "VPN"
+ ],
+ "supuestos": [
+  "División Educación inferida: pyme manufacturera, cliente corporativo privado. Alianza: no (primer contacto, sin servicio ni propuesta previos). Código DET-028 por instrucción del usuario. Servicio Detección (el de la Ficha y el que recomendó la asesora). Asesora: Flavia Martínez.",
+  "Horas por el lineamiento de Detección: Fundamentals de 2 h (un solo grupo, 11 personas, bajo el máximo de 25) y 4 h por área en 5 áreas (Estructura de costos, Producción, Administración, Ventas y Marketing, las 5 que lista la Ficha) = 22 h. El kick-off de arranque va aparte y no suma horas (convención general). La Ficha dice 11 personas por área a entrevistar: en una empresa de 11 personas son las mismas personas repartidas en las áreas, así que cada sesión es con quienes conocen el área.",
+  "Calendario propuesto por el sistema, no dictado por la Ficha: 4 semanas (semana 1 kick-off y Fundamentals, semana 2 Estructura de costos y Producción, semana 3 Administración y Ventas, semana 4 Marketing y Reporte Final). La Estructura de costos va en la primera semana de auditoría porque es la prioridad y la urgencia de la cliente. El orden y el Reporte Final en la semana 4 hay que confirmarlos con servicio y con Flavia.",
+  "Anclaje en la prioridad (pedido del resumen de la asesora): la estructura de costos y los presupuestos son el eje visible (titular, lead, hechos, primera sesión, fase destacada y metas), y su sesión de 4 h es el logro inmediato que identifica la Ficha. Las otras 4 áreas se mantienen: la asesora pidió no quedarse solo con los procesos que la cliente nombró, y el Reporte Final debe dar una ruta de prioridades.",
+  "Alcance honesto del logro de presupuestos: en 4 h se arma una primera versión de la estructura de costos y un presupuesto de prueba más rápido, sobre los costos que Metalblanc decide compartir. No es una app terminada, ni un ERP, ni la estructura completa de todos sus productos. La cliente imagina una app de presupuestos y luego un ERP: el deck deja ambos como posteriores (fuera de alcance y «Más adelante»).",
+  "ERP (CLAUDE.md §4.11): la cliente quiere a largo plazo implementar un ERP (Odoo) y ve la IA como paso previo. El deck no afirma que migra ni nombra el producto: dice que, con los procesos ordenados, decide cómo seguir «por ejemplo con un sistema de gestión (ERP)». La asesora sugirió presentar la Detección como el paso que deja la empresa lista para Odoo; se mantiene la idea sin afirmarlo como plan.",
+  "Acceso a Claude desde Venezuela (la objeción principal de la cliente): Anthropic no incluye a Venezuela en su lista oficial de países soportados (anthropic.com/supported-countries, consultada el 08/10/2026) y su política prohíbe el uso estando físicamente en una región no soportada; usar una VPN para saltarla puede llevar al bloqueo de la cuenta, que es justo el miedo de la cliente. Por eso el deck NO promete «usar Claude con seguridad con VPN». Dice que el acceso depende del país, que se define antes de arrancar cómo usarlo dentro de las condiciones del proveedor y que, si no es viable, la nivelación y los logros se hacen con Gemini (que ya usan). El Reporte Final recomienda la herramienta con ese criterio. Pendiente de decisión de la dirección y de servicio.",
+  "Instrucción del usuario (08/10/2026): decir en la propuesta que Claude se usa con VPN en Venezuela, que es seguro y que los datos están protegidos. NO se escribió la parte de VPN ni «es seguro»: la página oficial de Anthropic no lista a Venezuela como país soportado y su política prohíbe el uso desde una región no soportada; afirmar lo contrario a un cliente que teme el bloqueo de su cuenta sería inexacto. Sí se escribió lo que tiene respaldo: con Claude Team el contenido no se usa para entrenar modelos por defecto (términos comerciales y claude.com/pricing, 08/10/2026). El acceso queda como verificación previa con Gemini de respaldo. Si Intezia tiene una confirmación escrita del proveedor que lo contradiga, se actualiza.",
+  "Herramienta: no se pre-recomienda. La Ficha dice que la cliente prefiere Claude y combinarlo con Gemini (marketing y gráfico, plan de 20); el deck nombra Claude y Gemini solo por esa razón y por la verificación de acceso. La asesora prometió a la cliente un comparativo de licencias de Claude con una recomendación: va aparte de la propuesta y debe tratar el mismo punto de acceso.",
+  "Reglas de Detección que se conservan: sin certificado, sin garantía 30-60-90, sin dolor dramatizado ni citas textuales (se omiten «manual, pero manual mal» y «desesperada») y sin nombres de personas del cliente (la CEO no aparece en el deck).",
+  "Facilidad de pago INCLUIDA: a diferencia de las últimas propuestas, la cliente preguntó expresamente si hay formas de pago o cuotas. Sin plan propio de Ventas se usa el estándar (50 % al aprobar, 50 % al cierre) con aviso del generador; los montos son campos editables y vacíos. Ventas debe decidir si ofrece más cuotas, dada la sensibilidad al valor de una pyme de 11 personas.",
+  "Sensibilidad al valor: la asesora pidió un alcance acotado y fácil de decidir. Se respetaron las 5 áreas de la Ficha (22 h). Si se quiere acotar, la opción natural es quitar Marketing (usan Gemini y no es el dolor) para 18 h, pero eso lo decide Ventas con la cliente.",
+  "Retorno en modo método: la Ficha no trae volúmenes ni tiempos por proceso; el Reporte Final los estima con lo que cada área entregue en su sesión (estimación referencial, sin compromiso de resultado)."
+ ],
+ "pendientes": [
+  "Decidir cómo se trata el acceso a Claude desde Venezuela: el deck propone verificarlo antes de arrancar y usar Gemini como respaldo. Confirmar con la dirección de Intezia y con servicio antes de enviar, y que el comparativo de licencias prometido a la cliente diga lo mismo.",
+  "Definir inversión, descuento y total (campos vacíos para Ventas) y confirmar el plan de pago: se usó el estándar 50/50 porque la cliente preguntó por cuotas, con un valor que calce con una pyme de 11 personas.",
+  "Confirmar con Flavia las fechas, los horarios y el orden de las áreas; el deck solo lleva semanas. La Ficha pide corto plazo (0 a 3 meses).",
+  "Confirmar con la asesora la modalidad (presencial, remota o mixta), que la Ficha no indica, y dónde está la empresa.",
+  "Confirmar si el Reporte Final se entrega en la semana 4 (misma semana de la última sesión) o en la 5.",
+  "Confirmar con Flavia que las 5 áreas se mantienen (22 h) o si se acota (por ejemplo sin Marketing, 18 h).",
+  "Confirmar con Flavia su teléfono, su correo y su cargo en la última slide. Confirmar si el kick-off se cuenta aparte (criterio por defecto) o dentro de las horas."
+ ],
+ "metodo": {
+  "titulo": "Así trabajamos cada área.",
+  "subtitulo": "Trabajamos en sesión con las personas de cada área y dejamos todo listo para el Reporte Final.",
+  "quien_construye": "Intezia levanta y construye cada logro en sesión, con las personas de cada área, sobre su forma de trabajo actual y sus hojas de cálculo.",
+  "por_que_orden": "Primero se nivela al equipo; después Estructura de costos y Producción, donde está la urgencia; al final Administración, Ventas y Marketing.",
+  "pasos": [
+   {
+    "titulo": "Entrevistamos",
+    "texto": "A las personas de cada área, sobre sus procesos reales."
+   },
+   {
+    "titulo": "Identificamos",
+    "texto": "El cuello de botella más relevante de cada área."
+   },
+   {
+    "titulo": "Construimos",
+    "texto": "En la misma sesión, un logro inmediato aplicable al área."
+   },
+   {
+    "titulo": "Dejamos listo",
+    "texto": "El inventario de procesos, que alimenta el Mapa de Calor."
+   }
+  ],
+  "practica": [
+   {
+    "titulo": "Sesiones por área",
+    "texto": "Fundamentals de 2 h para las 11 personas y una sesión de 4 h por área, con quienes la conocen."
+   },
+   {
+    "titulo": "Desde sus hojas de cálculo",
+    "texto": "El logro de cada área parte de cómo trabaja hoy el equipo en Drive y Sheets, sin exigirle un sistema nuevo."
+   },
+   {
+    "titulo": "Acceso a la herramienta",
+    "texto": "El acceso a Claude depende del país desde donde se use. Antes de arrancar se define cómo hacerlo dentro de las condiciones del proveedor; si no es viable, se usa Gemini."
+   }
+  ],
+  "datos": "Solo se carga a la herramienta de IA lo que {cliente_corto} decide compartir, sin datos personales de sus clientes. Con Claude Team, el contenido de la empresa no se usa para entrenar los modelos (términos comerciales del proveedor)."
+ },
+ "logistica": {
+  "modalidad": "A coordinar con la dirección de {cliente_corto}, según lo que convenga a su operación.",
+  "participantes": "Las 11 personas de {cliente_corto} en Fundamentals; en cada área, quienes la conocen.",
+  "arranque": "El kick-off, aparte, abre el proyecto; su fecha se confirma con la dirección.",
+  "ritmo": "Fundamentals en la semana 1, dos áreas en las semanas 2 y 3 y una en la 4."
+ },
+ "proximos_pasos": {
+  "asesora": {
+   "nombre": "Flavia Martínez",
+   "cargo": "Asesora comercial",
+   "correo": "fmartinez@intezia.com",
+   "telefono": "+58 414 5756615"
+  },
+  "pasos": [
+   {
+    "titulo": "Fecha de arranque",
+    "texto": "Confirmamos con la dirección la fecha del kick-off y el orden de las áreas."
+   },
+   {
+    "titulo": "Accesos y agenda",
+    "texto": "Coordinamos los participantes, el horario de cada sesión y el acceso a la herramienta de IA."
+   },
+   {
+    "titulo": "Kick-off de arranque",
+    "texto": "Reunión inicial para acordar alcance, calendario y responsables de cada área."
+   }
+  ]
+ }
+}
