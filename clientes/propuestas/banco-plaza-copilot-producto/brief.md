@@ -1,4 +1,6 @@
-# Brief — Banco Plaza · Copilot para Producto, Alexis (CAI-026)
+# Brief — Banco Plaza · Copilot para Producto (CAI-026)
+
+> **Corrección del 2026-10-19 (Ivana):** el nombre de la persona del área de Producto se quitó de toda la propuesta; el deck, los campos del PDF y los documentos hablan del área de Producto.
 
 ## Datos administrativos
 
@@ -21,14 +23,14 @@
 
 - **Asesora comercial Intezia**: Flavia Martínez · +58 414-5756615 · fmartinez@intezia.com
   (misma asesora que CAI-024/CAI-025, mismo cliente).
-- **Contacto / participante cliente**: **Alexis**, del área de **Producto** de Banco Plaza.
-  **1 solo participante** — a diferencia de CAI-025 (5 personas), aquí se nombra
-  explícitamente en el deck (mismo criterio que `dhl-cerebro-digital/` con Miguel): el
-  producto es personalizado para él como individuo.
+- **Contacto / participante cliente**: una persona del área de **Producto** de Banco Plaza.
+  **1 solo participante** — a diferencia de CAI-025 (5 personas). Desde el 2026-10-19 el
+  deck no la nombra: se refiere al área de Producto, y el producto sigue siendo
+  personalizado para esa área.
 
 ## Qué pide el cliente (mensaje directo del usuario, 2026-09-23)
 
-- Tercera propuesta para Banco Plaza el mismo día. Una sola persona, **Alexis**, del área de
+- Tercera propuesta para Banco Plaza el mismo día. Una sola persona del área de
   **Producto**. Se le quiere enseñar **Microsoft Copilot** — las licencias que **toda la
   organización ya maneja** (mismo ecosistema Microsoft mencionado en CAI-024/CAI-025) — para
   que le saque el máximo provecho en sus procesos y tareas del día a día.
@@ -39,14 +41,14 @@
 - **Instrucción de Jean** (interno, transmitida por el usuario): investigar qué hace un
   departamento de Producto en un banco, y en base a eso construir una **idea preliminar** del
   temario y las prácticas de Habilidades — **dejando explícito que esto puede variar** después
-  de las horas de Detección (el levantamiento real con Alexis manda sobre cualquier hipótesis
+  de las horas de Detección (el levantamiento real con el área manda sobre cualquier hipótesis
   previa).
 - **Horas — confirmadas explícitamente por el usuario** (mensaje de seguimiento): *"esta
   propuesta serian 4h de deteccion y 8h en sesiones de habilidades para un total de 12h en la
   propuesta"* → **Detección 4h (levantamiento) + Habilidades 8h (sesiones prácticas) = 12h de
   propuesta**. Coincide con el dimensionamiento estándar de Detección por área
   (`empresa/politicas-comerciales.md` / memoria `lineamientos-horas-deteccion-habilidades`:
-  4h/área) — aquí Alexis/Producto hace las veces de esa "área".
+  4h/área) — aquí Producto hace las veces de esa "área".
 - **Calendario — confirmado explícitamente por el usuario**: *"coloca el kick off para el 1
   de cotubre de 10 a 11 y las sesiones lunes y miercoles a partir del 5 de 2 a 4"* → Kick-off
   jueves 1 de octubre, 10:00-11:00 (1h, aparte, no cuenta en las 12h). Sesiones lunes y
@@ -58,9 +60,9 @@
 
 1. **Detección individual, no organizacional**: a diferencia del patrón habitual de Detección
    por múltiples áreas (`pilotes-perforados/`, mapa de calor), aquí la "unidad de auditoría"
-   es 1 sola persona (Alexis) representando el área de Producto — coherente con el
+   es 1 sola persona representando el área de Producto — coherente con el
    dimensionamiento de 4h/área ya documentado, aplicado a este caso puntual. La Detección
-   levanta las tareas reales de Alexis (qué documentos redacta, qué análisis hace, con quién
+   levanta las tareas reales del área de Producto (qué documentos redacta, qué análisis hace, con quién
    se reúne, qué fricciones tiene hoy con Copilot) y de ahí sale el temario definitivo de la
    fase de Habilidades.
 2. **Temario de Habilidades — preliminar, sujeto a ajuste**: siguiendo la instrucción de Jean,
@@ -92,7 +94,7 @@
    certificado — memoria `deteccion-sin-certificado`).
 6. **Sin afirmar migración de Microsoft/Copilot (§4.11)**: no aplica aquí en el sentido
    estricto (Copilot YA es la herramienta nativa de Banco Plaza, no una nueva que reemplaza
-   algo) — pero se mantiene la misma cautela de no prometer que Alexis "ya adoptó" Copilot
+   algo) — pero se mantiene la misma cautela de no prometer que el área de Producto "ya adoptó" Copilot
    antes de la capacitación.
 7. **Modalidad**: no especificada por el usuario para esta propuesta — se deja "a definir",
    mismo criterio que CAI-025.
@@ -107,7 +109,7 @@ veces más rápido.
 
 ## Entregables
 
-- Diagnóstico de tareas y fricciones reales de Alexis con Copilot en Producto (Detección).
+- Diagnóstico de tareas y fricciones reales del área de Producto con Copilot (Detección).
 - Temario de Habilidades confirmado y calibrado a esos hallazgos.
 - Prácticas y prompts reutilizables para documentos, análisis y presentaciones de Producto.
 - Workbook digital y certificado de participación INTEZIA.
@@ -123,7 +125,7 @@ de describir el proceso.
 ## Notas internas
 
 - **Pendiente de confirmar con Flavia antes de enviar**: modalidad de las sesiones, y
-  validación con Alexis/Producto de que el temario preliminar (basado en investigación
+  validación con el área de Producto de que el temario preliminar (basado en investigación
   general de áreas de Producto bancarias, no en un levantamiento real todavía) resuena antes
   de la Detección.
 - El temario de Habilidades es una **hipótesis de trabajo**, no un compromiso cerrado — la

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 customize-banco-plaza-copilot-producto.py — Ajuste especial CAI-026 Banco Plaza ·
-Copilot para Producto, Alexis (combo Detección + Habilidades, 1 solo track, cotización
+Copilot para Producto (combo Detección + Habilidades, 1 solo track, cotización
 única, 2 etapas en 1 sola página de roadmap).
 
 Clonado de scripts/customize-banco-plaza-mercadeo.py (CAI-024) — mismo mecanismo, solo
@@ -55,7 +55,7 @@ CIERRE_FIELDS = [
         "rect": (193.5, 391.0, 649.5, 421.0),
         "font_size": 14,
         "font_color": "0 g",
-        "default": "Alexis, con Copilot calibrado a sus tareas reales de Producto.",
+        "default": "El área de Producto, con Copilot calibrado a sus tareas reales.",
     },
     {
         "name": "CierrePaso1",

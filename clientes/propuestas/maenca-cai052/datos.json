@@ -1,0 +1,503 @@
+{
+ "version": 3,
+ "cliente": {
+  "nombre": "Maenca",
+  "slug": "maenca-cai052",
+  "codigo": "CAI-052",
+  "nombre_pie": "Maenca"
+ },
+ "division": "educacion",
+ "alianza": false,
+ "omitir": [
+  "pago"
+ ],
+ "meta_tipo": "Capacitación In-Company · 2 Cerebros Digitales · 8 h por cerebro · 16 h · seguimiento 30-60-90 · formato compacto v3",
+ "vocabulario": {
+  "solucion": [
+   "entregable",
+   "entregables"
+  ],
+  "area": [
+   "Cerebro Digital",
+   "Cerebros Digitales"
+  ]
+ },
+ "eje": "Construcción guiada de 2 Cerebros Digitales (asistentes personales) con Claude y Obsidian para presupuestar con criterio propio: solución, estructura de trabajo, precios unitarios e informe, para los dos socios de Maenca",
+ "origen": "Ficha de Levantamiento de Maenca (Verónica Rubio, 13/10/2026), transcripción de la reunión por Google Meet del 13/10/2026 e instrucción de Ivana del 14/10/2026: CAI-052, 2 Cerebros Digitales de 8 h cada uno, asesora Verónica Rubio",
+ "fuente_insumo": "Ficha de Levantamiento y transcripción de la reunión (13/10/2026) e instrucción del usuario",
+ "portada": {
+  "titulo_lineas": [
+   "Dos Cerebros Digitales para",
+   "presupuestar con criterio propio"
+  ],
+  "titulo_destacado": "en {cliente_corto}",
+  "lead": "Este proyecto acompaña a los dos socios de {cliente_corto} para que cada uno construya su **Cerebro Digital**: un asistente en **Claude** con memoria propia, que conoce su rol, su criterio y su base de precios, y lo ayuda a armar presupuestos e informes y a ahorrar tiempo.",
+  "hechos": [
+   {
+    "num": "2 socios",
+    "texto": "llevan todo el ciclo de un trabajo: visita, estructura, presupuesto e informe.",
+    "resuelto_por": [
+     "CD1-3",
+     "CD1-4",
+     "CD2-3",
+     "CD2-4"
+    ]
+   },
+   {
+    "num": "Dispersa",
+    "texto": "es la información de precios: vive en la memoria, en hojas de cálculo y en consultas por WhatsApp.",
+    "resuelto_por": [
+     "CD1-2",
+     "CD2-2",
+     "CD2-4"
+    ]
+   },
+   {
+    "num": "Chat",
+    "texto": "es hoy el uso de la IA: dudas y mensajes simples, sin criterio ni proceso definido.",
+    "resuelto_por": [
+     "CD1-1",
+     "CD2-1"
+    ]
+   }
+  ],
+  "fuente": "Fuente: datos declarados por Maenca en el levantamiento con Intezia."
+ },
+ "carriles": [
+  {
+   "id": "claude",
+   "nombre": "Claude y Obsidian",
+   "nombre_corto": "Claude",
+   "color": "amarillo"
+  }
+ ],
+ "areas": [
+  {
+   "id": "CD1",
+   "nombre": "Cerebro Digital 1",
+   "para_que": "Armar la solución, la estructura de trabajo, el presupuesto y el informe con su criterio",
+   "carril": "claude",
+   "frente": "A",
+   "composicion": "8 h de trabajo individual con Intezia.",
+   "soluciones": [
+    {
+     "id": "CD1-1",
+     "entregable": "Claude explicado y propósito del cerebro",
+     "h": 2,
+     "fase": "F1",
+     "detalle": "Referencia interna (2 h, individual para esta persona). Qué es Claude y cómo se usa: conversar, Projects, Skills y Artifacts, qué hace cada pieza y cuándo conviene automatizar un proceso y cuándo no. Anatomía del prompt (rol, contexto, tarea y formato), iteración y verificación, sobre un caso real de su rol: visita al cliente, investigación de la solución, estructura de trabajo y presupuesto. Define el propósito de su Cerebro Digital. Entrega el propósito definido, sus prompts base y claridad sobre qué hace cada pieza de Claude.",
+     "incluye": [
+      "Qué es Claude y qué hace cada pieza: Projects, Skills y Artifacts",
+      "Cuándo conviene automatizar un proceso y cuándo no",
+      "El propósito del cerebro y sus primeros prompts"
+     ]
+    },
+    {
+     "id": "CD1-2",
+     "entregable": "Criterio de cotización y estructuras tipo en Obsidian",
+     "h": 2,
+     "fase": "F2",
+     "detalle": "Referencia interna (2 h, individual para esta persona). Project de Claude (memoria y contexto) con el rol, la voz y el criterio de quien visita, diseña la solución y arma el presupuesto; su conocimiento organizado como grafo relacional en Obsidian (gratuito, se instala al trabajar): criterio de cotización, estructuras desglosadas de trabajo tipo, partidas de medición y formato del informe, visible en su Vista de Grafo. Entrega el Project configurado y su grafo con el criterio de cotización.",
+     "incluye": [
+      "Project de Claude con su rol, su voz y su criterio",
+      "Su criterio de cotización y estructuras de trabajo tipo, en un grafo",
+      "Las partidas de medición y el formato del informe"
+     ]
+    },
+    {
+     "id": "CD1-3",
+     "entregable": "Skill de la estructura desglosada de trabajo",
+     "h": 2,
+     "fase": "F3",
+     "detalle": "Referencia interna (2 h, individual para esta persona). Qué es una Skill (instrucción reutilizable) y construcción de la suya para la estructura desglosada de trabajo: a partir de la visita y la investigación de la solución, el cerebro propone la estructura con su criterio y las partidas con que se mide y se cobra el trabajo. Se prueba con un trabajo real. Entrega una Skill funcional de estructura de trabajo.",
+     "incluye": [
+      "Una instrucción reutilizable con su criterio de estructura",
+      "De la visita y la investigación a la estructura propuesta",
+      "Probada con un trabajo real de {cliente_corto}"
+     ]
+    },
+    {
+     "id": "CD1-4",
+     "entregable": "Skill del informe y el presupuesto, conectada",
+     "h": 2,
+     "fase": "F3",
+     "detalle": "Referencia interna (2 h, individual para esta persona). Skill del informe y el presupuesto: reúne el diagnóstico, la solución y las mediciones, y toma los precios de la base de precios de su socio. Conexión del cerebro a sus hojas de cálculo y archivos con Conectores; privacidad y datos según los protocolos de Claude. Entrega una Skill funcional, una automatización conectada a una herramienta real y su criterio de uso seguro.",
+     "incluye": [
+      "Reúne el diagnóstico, la solución y las mediciones en un informe",
+      "Toma los precios de la base de precios de su socio",
+      "Conectada a sus hojas de cálculo y archivos, con uso seguro"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "CD2",
+   "nombre": "Cerebro Digital 2",
+   "para_que": "Calcular precios unitarios, cómputos y costos desde una base de precios propia",
+   "carril": "claude",
+   "frente": "A",
+   "composicion": "8 h de trabajo individual con Intezia.",
+   "soluciones": [
+    {
+     "id": "CD2-1",
+     "entregable": "Claude explicado y propósito del cerebro",
+     "h": 2,
+     "fase": "F1",
+     "detalle": "Referencia interna (2 h, individual para esta persona). Qué es Claude y cómo se usa: conversar, Projects, Skills y Artifacts, qué hace cada pieza y cuándo conviene automatizar un proceso y cuándo no. Anatomía del prompt (rol, contexto, tarea y formato), iteración y verificación, sobre un caso real de su rol: precios unitarios, cómputos de materiales y equipos y costos. Define el propósito de su Cerebro Digital. Entrega el propósito definido, sus prompts base y claridad sobre qué hace cada pieza de Claude.",
+     "incluye": [
+      "Qué es Claude y qué hace cada pieza: Projects, Skills y Artifacts",
+      "Cuándo conviene automatizar un proceso y cuándo no",
+      "El propósito del cerebro y sus primeros prompts"
+     ]
+    },
+    {
+     "id": "CD2-2",
+     "entregable": "Base de precios y proveedores en Obsidian",
+     "h": 2,
+     "fase": "F2",
+     "detalle": "Referencia interna (2 h, individual para esta persona). Project de Claude (memoria y contexto) con el rol y el criterio de quien calcula precios unitarios y costos; su base de precios organizada como grafo relacional en Obsidian (gratuito, se instala al trabajar): materiales, equipos, mano de obra y proveedores, partiendo de lo que hoy vive en su memoria, sus hojas de cálculo y las consultas a proveedores. Entrega el Project configurado y su base de precios en el grafo.",
+     "incluye": [
+      "Project de Claude con el criterio de quien calcula los precios unitarios",
+      "Materiales, equipos, mano de obra y proveedores, en un grafo",
+      "Lo que hoy vive en la memoria y en hojas de cálculo, ordenado"
+     ]
+    },
+    {
+     "id": "CD2-3",
+     "entregable": "Skill de precios unitarios y cómputos",
+     "h": 2,
+     "fase": "F3",
+     "detalle": "Referencia interna (2 h, individual para esta persona). Skill (instrucción reutilizable) de precios unitarios y cómputos: a partir de la estructura de trabajo, calcula materiales, equipos y mano de obra con su base de precios y su criterio de cálculo, y convierte las cantidades en unidades de compra. Se prueba con un trabajo real. Entrega una Skill funcional de precios unitarios y cómputos.",
+     "incluye": [
+      "Materiales, equipos y mano de obra desde la estructura de trabajo",
+      "Cantidades convertidas en unidades de compra",
+      "Probada con un trabajo real de {cliente_corto}"
+     ]
+    },
+    {
+     "id": "CD2-4",
+     "entregable": "Skill de consulta de precios, conectada",
+     "h": 2,
+     "fase": "F3",
+     "detalle": "Referencia interna (2 h, individual para esta persona). Skill de consulta de precios a proveedores: conecta el cerebro a su hoja de precios y a las páginas de proveedores que ya consulta; lo que los proveedores responden por WhatsApp se incorpora a la base con una instrucción, sin automatizar la conversación. Conectores, privacidad y datos según los protocolos de Claude. Entrega una Skill funcional, una automatización conectada a una herramienta real y su criterio de uso seguro.",
+     "incluye": [
+      "Conectada a su hoja de precios y a las páginas de proveedores",
+      "Lo que responden los proveedores por WhatsApp entra a la base",
+      "Criterios de uso seguro de la información"
+     ]
+    }
+   ]
+  }
+ ],
+ "alcance": {
+  "compacto": false,
+  "titulo": "Dos Cerebros Digitales, uno por socio.",
+  "subtitulo": "Cada socio construye su **asistente personal en Claude**, con memoria y criterio propios.",
+  "fuera_alcance": [
+   "Más de 2 cerebros o más horas por persona: cada cerebro recibe 8 h, lo demás va en otra etapa.",
+   "Un software propio de cotización o desarrollos a medida: el cerebro opera con herramientas que ya existen.",
+   "La conversación con los proveedores por WhatsApp: sigue en manos de cada socio, el cerebro ordena lo que llega.",
+   "Las licencias de Claude, que van aparte (detalle en la inversión)."
+  ]
+ },
+ "metodo": {
+  "titulo": "Así trabajamos el proyecto.",
+  "subtitulo": "Trabajo individual con cada socio, sobre sus propios trabajos, hasta que cada uno usa su cerebro con autonomía.",
+  "quien_construye": "Cada socio construye su propio cerebro; **Intezia guía** cada paso, sobre trabajos reales de {cliente_corto}.",
+  "pasos": [
+   {
+    "titulo": "Construimos",
+    "texto": "Con cada socio, en vivo y sobre un trabajo real."
+   },
+   {
+    "titulo": "Probamos",
+    "texto": "Con su información y sus presupuestos, hasta que funcione."
+   },
+   {
+    "titulo": "Adoptamos",
+    "texto": "Cada socio usa su cerebro en sus trabajos del día a día."
+   },
+   {
+    "titulo": "Medimos",
+    "texto": "El tiempo recuperado contra la línea base, a 30, 60 y 90 días."
+   }
+  ],
+  "por_que_orden": "Primero se entiende Claude y se define el propósito del cerebro; después se ordena el conocimiento y los precios; al final se construyen las Skills y se conectan a las herramientas.",
+  "practica": [
+   {
+    "titulo": "Un cerebro por socio",
+    "texto": "Cada cerebro se construye sobre el rol de su socio: uno para la solución y el presupuesto, otro para los precios y los costos."
+   },
+   {
+    "titulo": "Desde cero, en vivo",
+    "texto": "Claude se explica desde lo básico, en vivo y sin conocimiento técnico previo."
+   },
+   {
+    "titulo": "Cuenta de Claude",
+    "texto": "Cada socio necesita su cuenta de Claude con un plan de pago: se deja lista al arrancar."
+   }
+  ],
+  "datos": "Solo se carga en cada cerebro lo que su socio decide compartir: no se suben datos de clientes ni de terceros sin autorización. Los criterios de uso seguro se acuerdan al empezar y se repasan al cerrar."
+ },
+ "fases": [
+  {
+   "id": "F1",
+   "titulo": "Base",
+   "descripcion": "Claude y propósito"
+  },
+  {
+   "id": "F2",
+   "titulo": "Grafo",
+   "descripcion": "conocimiento y precios"
+  },
+  {
+   "id": "F3",
+   "titulo": "Uso",
+   "descripcion": "Skills y conexión",
+   "destacada": true
+  }
+ ],
+ "frentes": [
+  {
+   "id": "A",
+   "carril": "claude",
+   "nombre": "Los 2 socios de {cliente_corto}",
+   "celdas": {
+    "F1": "Fundamentos de Claude y el propósito del cerebro de cada socio.",
+    "F2": "Conocimiento en Obsidian: criterio de cotización, estructuras tipo y precios.",
+    "F3": "Skills de estructura de trabajo, presupuesto y precios, conectadas."
+   }
+  }
+ ],
+ "ruta": {
+  "titulo": "Dos cerebros en uso, en tres fases.",
+  "subtitulo": "El calendario de cada socio se acuerda en la reunión de arranque. La **garantía y el seguimiento** a 30, 60 y 90 días corren desde el cierre del proyecto.",
+  "nota": "Las {h_total} horas de trabajo son una proyección: cada Cerebro Digital lleva 8 h, con 2 h de base, 2 h de grafo y 4 h de uso. La reunión de arranque (1 h) va aparte y no suma horas.",
+  "hitos": [
+   {
+    "titulo": "Arranque · aparte",
+    "texto": "1 h para acordar los trabajos reales de cada socio y el calendario."
+   },
+   {
+    "titulo": "Base",
+    "texto": "Claude explicado y el propósito del cerebro de cada socio."
+   },
+   {
+    "titulo": "Grafo",
+    "texto": "El criterio de cotización y los precios de cada socio, ordenados en Obsidian."
+   },
+   {
+    "titulo": "Uso",
+    "texto": "Skills conectadas a sus hojas: estructura de trabajo, presupuesto, informe y precios."
+   },
+   {
+    "titulo": "30 · 60 · 90 días",
+    "texto": "Seguimiento: uso de los cerebros, ajustes y tiempo recuperado."
+   }
+  ]
+ },
+ "logistica": {
+  "modalidad": "Mixta: remota o presencial, según se acuerde en la reunión de arranque.",
+  "participantes": "Los dos socios de {cliente_corto}, cada uno con su propio acompañamiento.",
+  "ritmo": "Según la agenda de cada socio, sin frenar su trabajo diario.",
+  "arranque": "La fecha la fija {cliente_corto}; una reunión de arranque de 1 h, aparte, acuerda el calendario."
+ },
+ "seguimiento": {
+  "rango": "30, 60 y 90 días",
+  "texto": "Seguimiento desde el cierre del proyecto",
+  "items": [
+   {
+    "dias": "30 días",
+    "texto": "Uso real de cada cerebro"
+   },
+   {
+    "dias": "60 días",
+    "texto": "Ajustes y nuevas construcciones"
+   },
+   {
+    "dias": "90 días",
+    "texto": "Tiempo recuperado contra la línea base"
+   }
+  ]
+ },
+ "entregables": {
+  "titulo": "Lo que recibe cada socio.",
+  "subtitulo": "Lo que se llevan: **{n_entregables_txt}** en {n_areas_txt}, más el seguimiento a {rango_seguimiento} que mide su efecto.",
+  "etiqueta_transversales": "Para todo el proyecto",
+  "transversales": [
+   "Línea base del tiempo en sus tareas repetitivas.",
+   "Criterios de uso seguro de la información.",
+   "Seguimiento a 30, 60 y 90 días con medición del tiempo."
+  ],
+  "etiqueta_valor": "Valor inmediato",
+  "valor_inmediato": [
+   "Con la base: Claude explicado y un primer caso resuelto.",
+   "Con el grafo: su criterio y sus precios, conectados.",
+   "Al cerrar: Skills de estructura, presupuesto y precios."
+  ],
+  "columnas_por_carril": [
+   2
+  ]
+ },
+ "retorno": {
+  "modo": "metodo",
+  "posiciones": false,
+  "titulo": "Retorno esperado: tiempo recuperado, medido.",
+  "subtitulo": "Se mide contra la línea base que cada socio deja al empezar y se sigue a 30, 60 y 90 días.",
+  "etiqueta_pasos": "Cómo se calcula",
+  "pasos": [
+   {
+    "titulo": "Volumen",
+    "texto": "Cuántos presupuestos e informes arma cada socio en un periodo."
+   },
+   {
+    "titulo": "Tiempo actual",
+    "texto": "Cuánto le toma hoy cada tarea. Es la **línea base**."
+   },
+   {
+    "titulo": "Tiempo con el cerebro",
+    "texto": "Lo que toma el mismo trabajo con su Skill ya en uso."
+   },
+   {
+    "titulo": "Horas recuperadas",
+    "texto": "Diferencia entre ambos tiempos, por socio y por periodo: una estimación referencial, sin compromiso de resultado."
+   },
+   {
+    "titulo": "Valor en dinero",
+    "texto": "Horas recuperadas por el valor hora de referencia que {cliente_corto} valide."
+   }
+  ],
+  "etiqueta_metas": "Calendario de garantía y cálculo del retorno",
+  "metas": [
+   {
+    "dias": "30 días",
+    "texto": "Cada cerebro en uso real y su línea base validada con su socio."
+   },
+   {
+    "dias": "60 días",
+    "texto": "Ajustes del cerebro y horas recuperadas medidas contra la línea base."
+   },
+   {
+    "dias": "90 días",
+    "texto": "Medición del tiempo recuperado y de su valor en dinero, por socio."
+   }
+  ],
+  "etiqueta_destino": "Hacia dónde va el proyecto",
+  "destino": [
+   {
+    "rotulo": "Más clientes atendidos",
+    "texto": "Si el tiempo se libera, cada socio puede dedicarlo a **más visitas** y a responder antes."
+   },
+   {
+    "rotulo": "Criterio ordenado",
+    "texto": "El criterio de cotización y los precios dejan de depender de la memoria: quedan en el grafo de cada cerebro."
+   },
+   {
+    "rotulo": "Más tareas al cerebro",
+    "texto": "Con el resultado medido, {cliente_corto} decide qué otras tareas lleva a sus **cerebros**."
+   }
+  ],
+  "gancho": "A los 90 días del cierre, {cliente_corto} contará con el tiempo recuperado de cada cerebro, medido contra su línea base."
+ },
+ "inversion": {
+  "licencias": {
+   "titulo": "Licenciamiento · aparte de esta inversión",
+   "tarjetas": [
+    {
+     "nombre": "Claude · una cuenta por socio",
+     "color": "amarillo",
+     "texto": "Una cuenta de **Claude** por socio, en un plan que permita construir su cerebro. Lo confirma {cliente_corto} con el proveedor."
+    },
+    {
+     "nombre": "Obsidian · gratuito",
+     "color": "naranja",
+     "texto": "Aplicación de notas donde cada socio organiza su conocimiento como grafo. Se instala al trabajar el **grafo**."
+    }
+   ],
+   "nota": "Esta propuesta no incluye valores de lista: dependen del plan que se elija y el cliente los confirma con el proveedor. Pueden variar."
+  },
+  "programa": [
+   "Construcción de 2 Cerebros Digitales con Claude y Obsidian para Maenca (CAI-052).",
+   "2 cerebros de 8 h cada uno, con trabajo individual guiado por Intezia. Modalidad a coordinar.",
+   "{h_total} h de trabajo en total, más 1 h de reunión de arranque aparte. Licencias aparte."
+  ],
+  "notas": [
+   "Las licencias van aparte: cada uno de los 2 socios necesita su cuenta de Claude. Obsidian es gratuito.",
+   "Garantía 30-60-90: seguimiento a 30, 60 y 90 días desde el cierre del proyecto, con los cerebros en uso."
+  ]
+ },
+ "proximos_pasos": {
+  "asesora": {
+   "nombre": "Verónica Rubio",
+   "cargo": "Asesora comercial",
+   "correo": "vrubio01@intezia.com",
+   "telefono": "+58 422 3355505"
+  },
+  "pasos": [
+   {
+    "titulo": "Fecha de arranque",
+    "texto": "Confirmamos con {cliente_corto} la fecha de arranque y el horario de trabajo de cada socio."
+   },
+   {
+    "titulo": "Cuenta y material",
+    "texto": "Cada socio deja lista su cuenta de Claude y reúne el material de su trabajo que decida compartir."
+   },
+   {
+    "titulo": "Reunión de arranque",
+    "texto": "Una hora para alinear objetivos, elegir los trabajos reales de cada socio y acordar el calendario."
+   }
+  ]
+ },
+ "siglas_ok": [
+  "IA"
+ ],
+ "frases_ok": [
+  "su base de precios",
+  "base de precios",
+  "Base de precios y proveedores",
+  "información de precios",
+  "los precios",
+  "sus precios",
+  "y precios",
+  "precios unitarios",
+  "Skill de precios unitarios y cómputos",
+  "Skill de consulta de precios",
+  "consulta de precios",
+  "de precios",
+  "precios y los costos",
+  "precios y costos",
+  "costos desde",
+  "y costos",
+  "de estructura, presupuesto y precios",
+  "Skills de estructura de trabajo, presupuesto y precios",
+  "presupuesto, informe y precios",
+  "presupuesto y precios",
+  "criterio y sus precios",
+  "precios de cada socio",
+  "precios de su socio",
+  "precios, conectados"
+ ],
+ "supuestos": [
+  "Instrucción de Ivana (14/10/2026): propuesta CAI-052 para Maenca, 2 Cerebros Digitales con 8 h cada uno, asesora Verónica Rubio, con la Ficha de Levantamiento (13/10/2026) y la transcripción de la reunión por Google Meet (13/10/2026). Cuando se contradicen manda la transcripción (§4.23); no hubo contradicciones.",
+  "Horas: 8 h por Cerebro Digital, por instrucción de Ivana «en este caso» (la referencia de «Excepción — Cerebros Digitales» de empresa/politicas-comerciales.md es 6 h; mismo criterio de CAI-039 y CAI-048): 2 × 8 h = 16 h. La reunión de arranque (1 h) va aparte y no suma horas.",
+  "Estructura: 4 entregables de 2 h por cerebro (Base, Grafo y dos de Uso). Frente a CAI-027 (3 entregables de 2 h), las 2 h adicionales se usan en una segunda Skill por socio, ligada a los procesos que describe la ficha.",
+  "Reparto de los dos cerebros (Contexto del equipo de la Ficha): el Cerebro Digital 1 es para quien visita al cliente, investiga la solución, arma la estructura desglosada de trabajo y el informe y presupuesto; el Cerebro Digital 2, para quien analiza precios unitarios, cómputos de materiales y equipos y costos. Los nombres de las dos personas no van al deck.",
+  "El cliente pidió entender Claude antes de decidir («qué es Claude, skills y artifacts»): el primer entregable de cada cerebro lo explica desde lo básico y cuándo conviene automatizar. La confusión del cliente con esos conceptos es contexto interno y no va al deck.",
+  "Herramienta: Claude, que la asesora recomendó en la reunión. El cliente usa Gemini «por practicidad» y en una ocasión agotó los tokens de Claude; no se nombran Gemini ni Word en el deck ni se afirma que cambie de herramientas (CLAUDE.md §4.11): el cerebro se conecta a sus hojas de cálculo y archivos. La licencia de Claude (plan de pago por persona) va aparte, sin valor de lista ni quién la contrata.",
+  "Claude Code: la asesora mostró el Cerebro Digital corriendo en Claude Code y la Ficha dice «Claude/Claude Code». El deck nombra Claude, Projects, Skills y Obsidian (como CAI-027 y CAI-039) y no promete la terminal; dónde corre cada cerebro se define en el kickoff. Por confirmar con Ivana.",
+  "Claude sobre un cliente que opera desde Venezuela: no se menciona el acceso ni el riesgo de bloqueo ni se promete VPN (criterio de Ivana en Simple TV, Go Pharma y Banco Activo).",
+  "Portada: tres hechos de la Ficha y la reunión (dos socios llevan todo el ciclo, información de precios dispersa, IA solo como chat). No van: nombres de las personas, cómo conocieron a Intezia, la cita del cliente, el nivel de patrocinio ni la disponibilidad presupuestaria.",
+  "Alcance honesto: la conversación con los proveedores por WhatsApp sigue siendo manual (el cerebro incorpora lo que responden); un software de cotización o desarrollos a medida quedan fuera.",
+  "Retorno en modo método: el cliente no declaró volúmenes ni tiempos (la frecuencia de sus presupuestos es «puntual / por demanda»). Sin casos de éxito con el cliente (primer contacto), sin contratación evitada y sin certificado.",
+  "Sin facilidad de pago (`omitir: [\"pago\"]`, criterio de Ivana en las propuestas recientes): la disponibilidad presupuestaria del cliente no está definida; para agregarla, cuotas ligadas a los hitos de la ruta.",
+  "División Educación y sin alianza (supuesto: empresa privada, no se preguntó). Modalidad mixta (supuesto del sistema). Sin semanas, sesiones ni fechas (§4.23)."
+ ],
+ "pendientes": [
+  "Definir inversión, descuento y total: ventas llena las tres cajas, que van vacías (16 h en total). Decidir si lleva facilidad de pago.",
+  "Confirmar con el cliente quién de los dos socios es el Cerebro Digital 1 y cuál el 2. El segundo socio no participó en la reunión: falta su validación.",
+  "Confirmar si cada cerebro corre en Claude Code (como en la demostración) o en Claude con Projects, y cómo se explica al cliente.",
+  "Confirmar quién contrata la cuenta de Claude (plan de pago por persona) y el valor de lista con su fecha.",
+  "Verónica prometió enviar la propuesta con el video del CEO mostrando su Cerebro Digital y agendar una llamada de cierre de dudas antes del fin de semana.",
+  "Confirmar modalidad (remota o presencial) y el calendario de las dos personas en el kickoff."
+ ]
+}

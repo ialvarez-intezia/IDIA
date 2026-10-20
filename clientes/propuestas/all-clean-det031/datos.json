@@ -1,0 +1,165 @@
+{
+ "version": 3,
+ "formato": "deteccion",
+ "cliente": {
+  "nombre": "All Clean",
+  "slug": "all-clean-det031",
+  "codigo": "DET-031",
+  "nombre_pie": "All Clean"
+ },
+ "division": "educacion",
+ "alianza": false,
+ "omitir": [
+  "pago"
+ ],
+ "eje": "Mapear los procesos de ventas, almacén y conciliación de All Clean, dejar logros inmediatos construidos con el equipo y llegar a Habilidades con claridad sobre qué automatizar",
+ "origen": "Ficha de Levantamiento de All Clean (Verónica Rubio, 08/10/2026). No hay transcripción de la reunión: si la transcripción contradice la Ficha, manda la transcripción",
+ "fuente_insumo": "Ficha de Levantamiento de All Clean (sin transcripción de la reunión)",
+ "portada": {
+  "titulo_lineas": [
+   "Mapa de procesos para automatizar",
+   "con IA y logros inmediatos"
+  ],
+  "titulo_destacado": "en All Clean",
+  "lead": "Auditamos ventas, almacén y conciliación de {cliente_corto}, proceso por proceso y con quien hace el trabajo. Construimos **logros inmediatos** en el camino y dejamos mapeado qué conviene automatizar primero.",
+  "hechos": [
+   {
+    "num": "4",
+    "texto": "personas atienden a diario conversaciones repetitivas con los clientes."
+   },
+   {
+    "num": "Un bot",
+    "texto": "limita las conversaciones y frustra al cliente en lugar de atenderlo."
+   },
+   {
+    "num": "Cada día",
+    "texto": "se pide a la IA restar ventas y facturación del inventario; almacén despacha sin trazabilidad."
+   },
+   {
+    "num": "Ninguna",
+    "texto": "formación ni regla de datos guía el uso de ChatGPT y Gemini en el equipo."
+   }
+  ],
+  "fuente": "Fuente: reunión de levantamiento con la dirección de All Clean."
+ },
+ "deteccion": {
+  "areas": [
+   "Ventas",
+   "Almacén",
+   "Conciliación"
+  ],
+  "horas": {
+   "levantamiento": 12,
+   "arranque": 0,
+   "nivelacion": 2
+  },
+  "foco": "El levantamiento sigue el **recorrido de un pedido** entre ventas, almacén y conciliación, para ver dónde se pierde tiempo y trazabilidad.",
+  "logros_minimos": 3,
+  "para_que": [
+   {
+    "titulo": "Ver la operación real",
+    "texto": "Cómo trabaja hoy cada departamento y dónde se pierde tiempo."
+   },
+   {
+    "titulo": "Mejorar desde ya",
+    "texto": "Logros inmediatos que el equipo usa mientras avanza el levantamiento."
+   },
+   {
+    "titulo": "Invertir con criterio",
+    "texto": "Elegir herramientas y licencias de IA sobre una base cierta."
+   },
+   {
+    "titulo": "Cuidar la información",
+    "texto": "Saber qué datos maneja cada puesto y dónde hace falta control."
+   }
+  ],
+  "ruta_completa": [
+   {
+    "cuando": "Ahora",
+    "servicio": "Detección",
+    "texto": "Esta propuesta."
+   },
+   {
+    "cuando": "Después",
+    "servicio": "Habilidades",
+    "texto": "Construir con el equipo, proceso por proceso, las soluciones que el Mapa de Calor priorice."
+   }
+  ]
+ },
+ "alcance": {
+  "fuera_alcance": [
+   "Licencias y herramientas de IA: se eligen con el Informe Final.",
+   "Implementar sistemas nuevos, como un CRM (gestión de clientes): corresponde al equipo de tecnología de {cliente_corto}.",
+   "Desarrollos a la medida o integraciones: si el Informe Final los recomienda, se cotizan aparte."
+  ]
+ },
+ "metodo": {
+  "datos": "Trabajamos con ejemplos reales sin sacar datos de clientes ni información de facturación e inventario de {cliente_corto}. Los logros usan solo las cuentas autorizadas, y sus sistemas no se modifican."
+ },
+ "retorno": {
+  "pasos": [
+   {
+    "titulo": "Volumen",
+    "texto": "Cuántas veces al mes se repite cada tarea, por ejemplo, responder las mismas consultas de los clientes."
+   },
+   {
+    "titulo": "Tiempo actual",
+    "texto": "Lo que toma hoy cada vez, según quien hace el trabajo en cada área."
+   },
+   {
+    "titulo": "Tiempo con la solución",
+    "texto": "La estimación de Intezia para cada oportunidad del Mapa de Calor."
+   },
+   {
+    "titulo": "Horas recuperables",
+    "texto": "Volumen por la diferencia de tiempos: una estimación de referencia, no un compromiso de resultado."
+   },
+   {
+    "titulo": "Prioridad",
+    "texto": "Impacto, esfuerzo y riesgo de cada oportunidad, para decidir por dónde empezar."
+   }
+  ]
+ },
+ "inversion": {
+  "notas": [
+   "Esta inversión no incluye licencias de IA.",
+   "Habilidades, la etapa que sigue, se cotiza aparte."
+  ]
+ },
+ "logistica": {
+  "modalidad": "Mixta: presencial o virtual, según lo acuerde cada responsable."
+ },
+ "proximos_pasos": {
+  "asesora": {
+   "nombre": "Verónica Rubio",
+   "cargo": "Asesora comercial",
+   "correo": "vrubio01@intezia.com",
+   "telefono": "+58 422 3355505"
+  }
+ },
+ "siglas_ok": [
+  "IA",
+  "CRM"
+ ],
+ "supuestos": [
+  "División y alianza inferidas: Educación y sin alianza (empresa privada, primer contacto, la Ficha no menciona aliado). Confirmar con Ivana.",
+  "Fuente: solo la Ficha de Levantamiento del 08/10/2026; no hay transcripción de la reunión (CLAUDE.md §4.23). Si la transcripción contradice la Ficha, manda la transcripción.",
+  "Áreas: las 3 de la Ficha, con el nombre normalizado (ventas, almacén, «conciliacon» → Conciliación). No hay lista de personal (10 analistas), por eso no se muestran departamentos.",
+  "Horas (lineamiento de Detección): 4 h por área x 3 = 12 h de levantamiento, que es lo único que se muestra, más 2 h de nivelación en IA para las 10 personas en un solo grupo (la Ficha dice 10). El arranque va aparte, sin horas. Total interno: 14 h.",
+  "Logros inmediatos: al menos 3 en el proyecto, no uno por área, para cumplir el pedido de construir algunos durante el levantamiento. Lo que el cliente mencionó (conversaciones repetitivas de atención, trazabilidad entre ventas y almacén, cotizaciones en su sistema de gestión, un cerebro digital de ventas) guía la conversación del arranque, pero no se promete ni se prioriza: los focos salen del levantamiento.",
+  "Ruta: Detección ahora y Habilidades después, como pidió Ivana; sin «Más adelante: Políticas» (si se quiere mostrar, se agrega como tercera tarjeta de ruta_completa).",
+  "Entrevistados: la Ficha pide 1 persona por área; el estándar de Detección es el líder y su mano derecha. Ajustar si All Clean no tiene ese segundo perfil.",
+  "Modalidad mixta y calendario a mutuo acuerdo (Ficha); sin sedes distintas. Las «sesiones de 2 h» de la Ficha son para Habilidades: se definen en el arranque y no van en el deck (§4.23).",
+  "Sin facilidad de pago: Ivana pidió quitar esa slide (2026-10-09), así que la propuesta queda en 8 slides y ventas comunica el plan de pago por otro medio. Si se vuelve a pedir, el estándar de Detección es 50 % al aprobar y 50 % con el Informe Final (quitar «pago» de omitir).",
+  "Sin pre-recomendar herramienta de IA: el cliente usa ChatGPT y Gemini y le interesa Claude, pero la recomendación la hace el Informe Final. El CRM aparece solo como ejemplo de sistema nuevo fuera de alcance (no se afirma que lo adopten, §4.11).",
+  "No va al deck: nombres de personas del cliente, que el dueño paga ChatGPT de forma personal, las automatizaciones en n8n que ya armó su equipo de tecnología, los productos de CRM que evalúan, el patrocinio «presente pero tibio» ni el presupuesto «en evaluación»."
+ ],
+ "pendientes": [
+  "Pedir la transcripción de la reunión con All Clean y revisar la propuesta contra ella.",
+  "Definir inversión, descuento y total (campos vacíos para ventas); línea de facturación (moneda y tasa) por confirmar con ventas.",
+  "Confirmar las 14 h (12 de levantamiento y 2 de nivelación) con ventas; la Ficha da «sesiones de 2 h» solo para Habilidades.",
+  "Presentación al cliente: Verónica pide que Servicios participe para mostrar de forma visual cómo quedaría un proceso automatizado (el cliente necesita verlo). No es parte del PDF: definir si se prepara una pieza visual aparte.",
+  "Levantar en el arranque qué automatizaciones en n8n ya existen, para distinguir lo que se puede crecer de lo que ya funciona.",
+  "Confirmar el nombre del área «conciliación» y quién es su responsable."
+ ]
+}

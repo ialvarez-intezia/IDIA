@@ -1,0 +1,9 @@
+
+/* Ajustes propios de esta propuesta (se enlaza después de habilidades-compacto.css). */
+
+/* Cotización por componentes con 4 tarjetas (inversion.partes con 4 partes): cada tarjeta mide ~111 px, así que el nombre
+   baja a 11 px en dos líneas y el detalle a una línea. Las cajas de monto (.parte-frame) no cambian: siguen coincidiendo con
+   los campos PrecioParte1..4 de scripts/agregar-campo-precio.py. */
+.s-price .partes-cards:has(> .parte-card:nth-child(4)) .parte-card { padding: 7px 8px 0; }
+.s-price .partes-cards:has(> .parte-card:nth-child(4)) .parte-name { font-size: 11px; line-height: 1.2; }
+.s-price .partes-cards:has(> .parte-card:nth-child(4)) .parte-det { font-size: 9.5px; line-height: 1.3; }

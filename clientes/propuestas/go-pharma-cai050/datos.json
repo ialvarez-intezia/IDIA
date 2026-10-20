@@ -1,0 +1,592 @@
+{
+ "version": 3,
+ "cliente": {
+  "nombre": "Go Pharma",
+  "slug": "go-pharma-cai050",
+  "codigo": "CAI-050",
+  "nombre_pie": "Go Pharma"
+ },
+ "division": "educacion",
+ "alianza": false,
+ "servicio_rotulo": "Servicio de Detección y Habilidades",
+ "meta_servicio": "deteccion",
+ "meta_tipo": "Capacitación In-Company · Detección + Habilidades por etapas · Etapa 1 charla (2 h) + Etapa 2 Comercialización, Operaciones y Administración (50 h) + Etapa 3 dos clones digitales (12 h) · 64 h · Claude sobre Google Workspace · compacto v3",
+ "eje": "Alineación del equipo de Go Pharma en IA, levantamiento y construcción en Comercialización (con el CRM GoHighLevel), Operaciones y Administración, y clones digitales con Claude para los dos decisores, sobre Google Workspace y en tres etapas con valor propio",
+ "origen": "Indicaciones de la asesora María Iribarren y minuta de la reunión con Go Pharma (13/10/2026). Go Pharma no aprobó el monto global anterior por flujo de caja, así que la propuesta se presenta por etapas, con valor propio cada una",
+ "fuente_insumo": "Minuta de la reunión con Go Pharma e indicaciones de la asesora: charla de 2 h, levantamiento y construcción por área (Comercialización primero, con GoHighLevel) y clones digitales para los dos decisores",
+ "por_fases": true,
+ "metodo_antes_de_ruta": true,
+ "vocabulario": {
+  "area": [
+   "bloque",
+   "bloques"
+  ],
+  "solucion": [
+   "entregable",
+   "entregables"
+  ]
+ },
+ "portada": {
+  "titulo_lineas": [
+   "Procesos comerciales, operativos",
+   "y financieros con IA, por etapas"
+  ],
+  "titulo_destacado": "en Go Pharma",
+  "lead": "Una **charla** alinea al equipo; después se levantan y se construyen con él los procesos de **Comercialización**, Operaciones y Administración, y dos **clones digitales** acompañan a los decisores.",
+  "hechos": [
+   {
+    "num": "Libreta",
+    "texto": "y Excel por correo: así gestiona hoy sus leads la gerencia comercial, sin un CRM.",
+    "resuelto_por": [
+     "COM-2",
+     "COM-3"
+    ]
+   },
+   {
+    "num": "Sin guía",
+    "texto": "para las farmacias aliadas: no hay onboarding estructurado y todo se hace a mano.",
+    "resuelto_por": [
+     "COM-6"
+    ]
+   },
+   {
+    "num": "A mano",
+    "texto": "los informes diarios de operación, las conciliaciones bancarias y el cobro mensual.",
+    "resuelto_por": [
+     "OPE-2",
+     "ADM-2",
+     "ADM-3"
+    ]
+   },
+   {
+    "num": "Sin uso",
+    "texto": "las herramientas anteriores: un CRM que no se adoptó y un agente de IA caído por meses.",
+    "resuelto_por": [
+     "CHA-1",
+     "COM-3"
+    ]
+   }
+  ],
+  "fuente": "Fuente: minuta de la reunión con Go Pharma."
+ },
+ "carriles": [
+  {
+   "id": "claude",
+   "nombre": "Claude y Google Workspace",
+   "nombre_corto": "Claude",
+   "color": "amarillo"
+  }
+ ],
+ "fases": [
+  {
+   "id": "F1",
+   "titulo": "Etapa 1",
+   "descripcion": "charla de fundamentos para todo el equipo"
+  },
+  {
+   "id": "F2",
+   "titulo": "Etapa 2",
+   "descripcion": "levantamiento y construcción en tres áreas",
+   "destacada": true
+  },
+  {
+   "id": "F3",
+   "titulo": "Etapa 3",
+   "descripcion": "un clon digital para cada decisor"
+  }
+ ],
+ "frentes": [
+  {
+   "id": "A",
+   "carril": "claude",
+   "nombre": "Tres etapas",
+   "celdas": {
+    "F1": "Todo el equipo se alinea en IA, con un ejercicio práctico.",
+    "F2": "Cada área levanta su proceso real y construye en vivo; Comercialización va primero.",
+    "F3": "Cada decisor tiene un clon digital conectado a su trabajo."
+   }
+  }
+ ],
+ "areas": [
+  {
+   "id": "CHA",
+   "nombre": "Charla para todo el equipo",
+   "composicion": "Con un ejercicio práctico",
+   "carril": "claude",
+   "frente": "A",
+   "para_que": "Alinear a todo el equipo en el uso de la IA y prepararlo para los levantamientos.",
+   "soluciones": [
+    {
+     "id": "CHA-1",
+     "entregable": "Charla de fundamentos, mindset y concientización",
+     "h": 2,
+     "fase": "F1",
+     "detalle": "Charla de 2 h para todo el equipo de Go Pharma, con un ejercicio práctico. Es la entrada del proyecto: alinea al equipo y lo prepara para los levantamientos por área. Go Pharma define la fecha y el lugar. Contenido propuesto desde la minuta (se afina con María): por qué el momento es distinto, los tres niveles de automatización (autónoma, asistida y con supervisión total) y qué se puede y qué no se debe automatizar.",
+     "incluye": [
+      "Fundamentos de la IA y mentalidad para trabajar con ella",
+      "Tres niveles de automatización: autónoma, asistida y con supervisión",
+      "Ejercicio práctico con tareas del propio equipo"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "COM",
+   "nombre": "Comercialización",
+   "composicion": "Con el CRM GoHighLevel",
+   "carril": "claude",
+   "frente": "A",
+   "para_que": "Centralizar los leads, dar seguimiento y ordenar la entrada de las farmacias aliadas.",
+   "soluciones": [
+    {
+     "id": "COM-1",
+     "entregable": "Proceso comercial levantado, de lead a cierre",
+     "h": 4,
+     "fase": "F2",
+     "detalle": "Detección de Comercialización (4 h): levantamiento del proceso real de la gerencia comercial y las vendedoras, con la participación de la gerencia general. Es la primera área en levantarse (la de mayor prioridad). Hoy los leads llegan por Instagram, WhatsApp y formularios sin centralizar y el seguimiento está en libretas y Excel enviado por correo."
+    },
+    {
+     "id": "COM-2",
+     "entregable": "GoHighLevel configurado con sus etapas",
+     "h": 4,
+     "fase": "F2",
+     "detalle": "Acompañamiento en la configuración del CRM recomendado (GoHighLevel): entrada automática de los leads de todos los canales, etapas del pipeline, asignación a las vendedoras y condiciones de entrada (para que una reacción en Instagram no genere un lead falso). Kommo fue descartado por no haberse adoptado. La licencia de GoHighLevel no está en esta inversión."
+    },
+    {
+     "id": "COM-3",
+     "entregable": "Adopción del CRM en vivo con el equipo",
+     "h": 4,
+     "fase": "F2",
+     "detalle": "Acompañamiento en la adopción en vivo: el equipo comercial trabaja sus leads reales en el CRM, con revisión de reuniones y toques por vendedora. La adopción es el punto crítico: la experiencia previa con Kommo no prosperó."
+    },
+    {
+     "id": "COM-4",
+     "entregable": "Seguimiento de oportunidades con Claude",
+     "h": 4,
+     "fase": "F2",
+     "detalle": "Claude conectado al CRM propone recomendaciones de seguimiento y borradores de respuesta (nivel asistido: la IA propone y la persona aprueba)."
+    },
+    {
+     "id": "COM-5",
+     "entregable": "Reportes automáticos de lunes y viernes",
+     "h": 4,
+     "fase": "F2",
+     "detalle": "Reportes de reuniones, propuestas enviadas y métricas por vendedora, generados de forma automática desde el CRM los lunes y los viernes (skill programado de Claude)."
+    },
+    {
+     "id": "COM-6",
+     "entregable": "Onboarding de farmacias aliadas en Claude y Drive",
+     "h": 4,
+     "fase": "F2",
+     "detalle": "Flujo provisional de onboarding para las farmacias aliadas con Claude y Drive: historial, manuales y contactos asignados. El portal definitivo depende del sistema administrativo propio que Go Pharma desarrolla (unos 6 meses): no se invierte en una solución temporal que se descartaría."
+    }
+   ]
+  },
+  {
+   "id": "OPE",
+   "nombre": "Operaciones y Atención al cliente",
+   "carril": "claude",
+   "frente": "A",
+   "para_que": "Vigilar pedidos, farmacias y entregas sin tanto trabajo manual, con informes automáticos.",
+   "soluciones": [
+    {
+     "id": "OPE-1",
+     "entregable": "Procesos de operaciones levantados",
+     "h": 4,
+     "fase": "F2",
+     "detalle": "Detección de Operaciones y Atención al cliente (4 h): hoy el equipo vigila pedidos, farmacias activas y entregas de forma manual, con el directorio de farmacias y motorizados en papel o Excel abierto y los informes diarios armados a mano."
+    },
+    {
+     "id": "OPE-2",
+     "entregable": "Informe diario de operación, automatizado",
+     "h": 4,
+     "fase": "F2",
+     "detalle": "Informe diario generado de forma automática (hoy se arma a mano y se pasa por IA sin automatización real)."
+    },
+    {
+     "id": "OPE-3",
+     "entregable": "Seguimiento de pedidos y entregas con alertas",
+     "h": 4,
+     "fase": "F2",
+     "detalle": "Seguimiento de pedidos, farmacias activas y entregas, con alertas cuando algo se sale de lo esperado. No incluye la integración con el inventario de las farmacias (es desarrollo y va como oportunidad en el informe)."
+    },
+    {
+     "id": "OPE-4",
+     "entregable": "Directorio de farmacias y motorizados centralizado",
+     "h": 2,
+     "fase": "F2",
+     "detalle": "Directorio único de farmacias y motorizados, que hoy está en papel o en Excel abierto."
+    }
+   ]
+  },
+  {
+   "id": "ADM",
+   "nombre": "Administración y Finanzas",
+   "carril": "claude",
+   "frente": "A",
+   "para_que": "Conciliar y cobrar con menos trabajo manual, con una persona que aprueba cada paso.",
+   "soluciones": [
+    {
+     "id": "ADM-1",
+     "entregable": "Procesos de administración levantados",
+     "h": 4,
+     "fase": "F2",
+     "detalle": "Detección de Administración y Finanzas (4 h): conciliaciones bancarias y cobranzas hechas a mano (7 cuentas de correo y formatos copiados) y cobro mensual a las farmacias aliadas en los primeros 5 días del mes, sin flujo de recordatorios o incentivos."
+    },
+    {
+     "id": "ADM-2",
+     "entregable": "Conciliación bancaria asistida, con alertas",
+     "h": 4,
+     "fase": "F2",
+     "detalle": "Conciliación mensual en nivel asistido (la IA propone y la persona aprueba), con alertas de variaciones inusuales."
+    },
+    {
+     "id": "ADM-3",
+     "entregable": "Recordatorios del cobro mensual a las farmacias",
+     "h": 4,
+     "fase": "F2",
+     "detalle": "Flujo de recordatorios (y, si se define en el levantamiento, incentivos) para el cobro de los primeros 5 días de cada mes, en nivel autónomo para los recordatorios y asistido para lo financiero."
+    }
+   ]
+  },
+  {
+   "id": "CL1",
+   "nombre": "Clon digital 1",
+   "composicion": "Para el primer decisor",
+   "carril": "claude",
+   "frente": "A",
+   "para_que": "Que el decisor consulte y automatice su trabajo con Claude, conectado a su información.",
+   "soluciones": [
+    {
+     "id": "CL1-1",
+     "entregable": "Clon digital con sus procesos y clientes",
+     "h": 3,
+     "fase": "F3",
+     "detalle": "Primer clon digital (6 h en total, tarifa de Cerebro Digital): Claude entrenado con los procesos, los clientes, las propuestas y las reglas de cotización del decisor, y conectado a su información en Drive. Sirve también para que el decisor vea el valor por sí mismo.",
+     "incluye": [
+      "Procesos, clientes y propuestas cargados y conectados",
+      "Claude conectado a Drive y a sus fuentes de información",
+      "Reglas de cotización y de respuesta definidas con el decisor"
+     ]
+    },
+    {
+     "id": "CL1-2",
+     "entregable": "Reuniones y primeras automatizaciones del clon",
+     "h": 3,
+     "fase": "F3",
+     "detalle": "Las minutas de las reuniones se exportan al clon para dejar traza de cada cliente (se recomienda Granola; la minuta también mencionó Fathom). Primeras automatizaciones demostradas en la reunión: reporte de CRM de lunes y viernes, cotizaciones con reglas de cotización, borradores de correo y seguimiento de oportunidades sin entrar al CRM. Todo con aprobación humana antes de enviar.",
+     "incluye": [
+      "Minutas de reuniones conectadas al clon",
+      "Primeras tareas automáticas: reportes, borradores y seguimientos",
+      "La persona aprueba antes de que algo salga"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "CL2",
+   "nombre": "Clon digital 2",
+   "composicion": "Para el segundo decisor",
+   "carril": "claude",
+   "frente": "A",
+   "para_que": "Que el decisor consulte y automatice su trabajo con Claude, conectado a su información.",
+   "soluciones": [
+    {
+     "id": "CL2-1",
+     "entregable": "Clon digital con sus procesos y clientes",
+     "h": 3,
+     "fase": "F3",
+     "detalle": "Segundo clon digital (6 h en total, tarifa de Cerebro Digital): misma estructura que el primero, con los procesos, los clientes y las propuestas propios del segundo decisor."
+    },
+    {
+     "id": "CL2-2",
+     "entregable": "Reuniones y primeras automatizaciones del clon",
+     "h": 3,
+     "fase": "F3",
+     "detalle": "Misma estructura que el primer clon: minutas de reuniones conectadas y primeras tareas automáticas, con aprobación humana. Las automatizaciones se definen con el decisor."
+    }
+   ]
+  }
+ ],
+ "alcance": {
+  "compacto": true,
+  "sin_conteo_por_fila": true,
+  "titulo": "Tres etapas, con valor desde la primera.",
+  "subtitulo": "Alineamos al equipo, construimos en **tres áreas**, con Comercialización primero, y damos un **clon digital** a cada decisor.",
+  "fuera_alcance": [
+   "La integración con el sistema de inventario de las farmacias: es desarrollo y se deja como oportunidad en el informe.",
+   "El portal definitivo de farmacias aliadas: depende del sistema administrativo propio en desarrollo; aquí va un flujo provisional.",
+   "Las licencias de Claude y de GoHighLevel: no forman parte de esta inversión y se suman de forma progresiva, por perfil."
+  ]
+ },
+ "metodo": {
+  "titulo": "Así trabajamos, del levantamiento a la solución.",
+  "pasos": [
+   {
+    "titulo": "Levantamos",
+    "texto": "El proceso real de cada área, con su equipo y la gerencia general."
+   },
+   {
+    "titulo": "Construimos",
+    "texto": "En vivo con el equipo, la solución que ese proceso necesita."
+   },
+   {
+    "titulo": "Documentamos",
+    "texto": "Todo queda por escrito, útil también para el personal nuevo."
+   },
+   {
+    "titulo": "Medimos",
+    "texto": "Con la línea base del arranque, medimos el uso real y el tiempo recuperado."
+   }
+  ],
+  "por_que_orden": "Primero se alinea al equipo; después se levanta y se construye por área, con Comercialización primero por su impacto. Los clones digitales pueden arrancar en paralelo.",
+  "quien_construye": "Intezia levanta y construye en vivo con el equipo de cada área; en la Etapa 2 participa la gerencia general.",
+  "practica": [
+   {
+    "titulo": "Workspace como base",
+    "texto": "Go Pharma ya usa Drive, Sheets, Meet y el correo: la información vive ahí, y Claude se suma donde se justifica."
+   },
+   {
+    "titulo": "Licencias progresivas",
+    "texto": "Se empieza por los pocos perfiles que se definan y se amplía solo si el uso lo justifica, sin sumar licencias antes de tiempo."
+   }
+  ],
+  "datos": "Solo se carga a la IA lo que Go Pharma decide compartir. La información queda en su Drive y lo construido, documentado.",
+  "sin_subtitulo": true
+ },
+ "logistica": {
+  "modalidad": "En vivo con el equipo; Go Pharma define el lugar de la charla.",
+  "participantes": "Todo el equipo en la charla; en cada área, su equipo y, en la Etapa 2, la gerencia general.",
+  "arranque": "La charla de la Etapa 1 abre el proyecto; Go Pharma elige cuándo y dónde.",
+  "ritmo": "La Etapa 3 puede arrancar en paralelo a las otras."
+ },
+ "seguimiento": {
+  "rango": "30, 60 y 90 días",
+  "texto": "Etapas 2 y 3",
+  "items": [
+   {
+    "dias": "30 días",
+    "texto": "Uso real"
+   },
+   {
+    "dias": "60 días",
+    "texto": "Nuevas automatizaciones"
+   },
+   {
+    "dias": "90 días",
+    "texto": "Tiempo recuperado"
+   }
+  ]
+ },
+ "ruta": {
+  "titulo": "De la charla a los clones digitales.",
+  "subtitulo": "El calendario se acuerda en la reunión de arranque. Cada etapa tiene su propio valor y la **garantía y el seguimiento** corren desde el cierre de las Etapas 2 y 3.",
+  "nota": "Las {h_total} horas de trabajo son una proyección: {h_f1} h de la charla, {h_f2} h de levantamiento y construcción (4 h de levantamiento por área) y {h_f3} h de los dos clones digitales (6 h cada uno).",
+  "hitos": [
+   {
+    "titulo": "Charla",
+    "texto": "Todo el equipo alineado y listo para los levantamientos."
+   },
+   {
+    "titulo": "Levantamientos",
+    "texto": "El proceso real de cada área, con Comercialización primero."
+   },
+   {
+    "titulo": "Construcción en vivo",
+    "texto": "Cada solución, construida con el equipo y documentada."
+   },
+   {
+    "titulo": "Clones digitales",
+    "texto": "Un clon para cada decisor, conectado a su trabajo."
+   },
+   {
+    "titulo": "30 · 60 · 90 días",
+    "texto": "Seguimiento de uso real y de tiempo recuperado."
+   }
+  ],
+  "siguiente_etapa": {
+   "titulo": "Etapa posterior",
+   "texto": "**Tecnología, Recursos Humanos y Mercadeo**, con una conversación de escucha aparte con Tecnología."
+  }
+ },
+ "entregables": {
+  "titulo": "Lo que deja cada etapa.",
+  "subtitulo": "Lo que se llevan: **{n_entregables_txt}** en tres etapas, más el seguimiento a {rango_seguimiento}.",
+  "etiqueta_transversales": "Para todo el proyecto",
+  "transversales": [
+   "Todo documentado, útil también para el personal nuevo.",
+   "Línea base de horas por proceso, al arrancar la Etapa 2.",
+   "Seguimiento a 30, 60 y 90 días con medición."
+  ],
+  "etiqueta_valor": "Valor inmediato",
+  "valor_inmediato": [
+   "Con la charla: el equipo alineado en IA.",
+   "Con cada levantamiento: el proceso real del área, documentado.",
+   "Con cada solución: construida con el equipo y funcionando."
+  ]
+ },
+ "retorno": {
+  "modo": "metodo",
+  "posiciones": false,
+  "titulo": "Retorno esperado: horas liberadas por área.",
+  "subtitulo": "Se estima en cada levantamiento, con los tiempos que Go Pharma valide, y se mide a 30, 60 y 90 días.",
+  "etiqueta_pasos": "Cómo se estima, área por área",
+  "pasos": [
+   {
+    "titulo": "Procesos elegidos",
+    "texto": "En el levantamiento, cada área nombra los procesos que más tiempo le consumen."
+   },
+   {
+    "titulo": "Tiempo actual",
+    "texto": "Cuánto toma hoy cada uno y cuántas veces al mes se repite: es la **línea base**."
+   },
+   {
+    "titulo": "Tiempo con IA",
+    "texto": "Lo que toma el mismo trabajo ya construido en vivo con el equipo."
+   },
+   {
+    "titulo": "Horas liberadas",
+    "texto": "Diferencia entre ambos tiempos por las veces al mes: un valor **estimado**."
+   },
+   {
+    "titulo": "Valor del tiempo",
+    "texto": "Horas liberadas por el valor hora que {cliente_corto} valide."
+   }
+  ],
+  "etiqueta_metas": "Calendario de garantía, tras cada etapa de construcción",
+  "metas": [
+   {
+    "dias": "30 días",
+    "texto": "Las soluciones construidas, en uso real por cada área."
+   },
+   {
+    "dias": "60 días",
+    "texto": "Nuevas automatizaciones y horas liberadas, antes y después."
+   },
+   {
+    "dias": "90 días",
+    "texto": "Tiempo recuperado medido, con el resultado de cada área."
+   }
+  ],
+  "destino": [
+   {
+    "rotulo": "Equipo alineado",
+    "texto": "Todo el equipo usa la IA con el **mismo criterio**, sin las frustraciones anteriores."
+   },
+   {
+    "rotulo": "Mismo equipo, más volumen",
+    "texto": "Si el tiempo se libera, el equipo puede atender más trabajo con las mismas personas."
+   },
+   {
+    "rotulo": "Decisión con datos",
+    "texto": "Con el tiempo medido, {cliente_corto} decide dónde seguir: otras áreas y herramientas."
+   }
+  ],
+  "gancho": "Al cierre, {cliente_corto} sabrá cuántas horas libera cada área y por qué."
+ },
+ "inversion": {
+  "etapas": [
+   {
+    "titulo": "Inversión de la Etapa 1.",
+    "rotulo": "Charla de fundamentos para todo el equipo",
+    "duracion": "Charla de fundamentos para todo el equipo, con un ejercicio práctico. {h_f1} horas de trabajo.",
+    "programa": [
+     "Etapa 1 de Go Pharma (CAI-050): charla de fundamentos.",
+     "Charla para todo el equipo, con un ejercicio práctico: {h_area_cha} h.",
+     "Total: {h_f1} h de trabajo. Se aprueba por separado."
+    ],
+    "notas": [
+     "Esta etapa no lleva seguimiento a 30, 60 y 90 días: eso corresponde a las Etapas 2 y 3.",
+     "Términos y condiciones: los del enlace de «Importante», que ambas partes aceptan."
+    ],
+    "sin_garantia": true
+   },
+   {
+    "titulo": "Inversión de la Etapa 2.",
+    "rotulo": "Comercialización, Operaciones y Administración",
+    "duracion": "Levantamiento y construcción en tres áreas, con garantía a {rango_seguimiento}. {h_f2} horas de trabajo.",
+    "programa": [
+     "Etapa 2 (CAI-050): levantamiento y construcción en tres áreas.",
+     "Comercialización, con el CRM GoHighLevel: {h_area_com} h.",
+     "Operaciones y Atención al cliente: {h_area_ope} h.",
+     "Administración y Finanzas: {h_area_adm} h.",
+     "Cada área parte de 4 h de levantamiento. Total: {h_f2} h. Se aprueba por separado."
+    ],
+    "notas": [
+     "Licencias aparte: las de Claude y GoHighLevel se suman por perfil, de forma progresiva.",
+     "Garantía 30-60-90: seguimiento a 30, 60 y 90 días desde el cierre de la etapa.",
+     "Términos y condiciones: los del enlace de «Importante», que ambas partes aceptan."
+    ],
+    "garantia_texto": "Estamos contigo hasta que lo construido quede en uso."
+   },
+   {
+    "titulo": "Inversión de la Etapa 3.",
+    "rotulo": "Un clon digital para cada decisor",
+    "duracion": "Dos clones digitales con Claude, con seguimiento y garantía a {rango_seguimiento}. {h_f3} horas de trabajo.",
+    "programa": [
+     "Etapa 3 (CAI-050): un clon digital para cada decisor.",
+     "Clon digital 1: {h_area_cl1} h. Clon digital 2: {h_area_cl2} h.",
+     "Cada clon conecta Claude con procesos, clientes, propuestas y reuniones.",
+     "Total: {h_f3} h de trabajo. Se aprueba por separado."
+    ],
+    "notas": [
+     "Licencia de Claude aparte: se suma por perfil, de forma progresiva.",
+     "Garantía 30-60-90: seguimiento a 30, 60 y 90 días desde el cierre de la etapa.",
+     "Términos y condiciones: los del enlace de «Importante», que ambas partes aceptan."
+    ],
+    "garantia_texto": "Estamos contigo hasta que el clon quede instalado en su trabajo."
+   }
+  ]
+ },
+ "proximos_pasos": {
+  "asesora": {
+   "nombre": "María Iribarren",
+   "cargo": "Asesora comercial",
+   "correo": "miribarren@intezia.com",
+   "telefono": "+58 414 0570056"
+  },
+  "pasos": [
+   {
+    "titulo": "Fecha y lugar",
+    "texto": "Confirmamos con Go Pharma cuándo y dónde se hace la charla de la Etapa 1."
+   },
+   {
+    "titulo": "Levantamientos",
+    "texto": "Agendamos los levantamientos por área, con Comercialización primero, y los accesos necesarios."
+   },
+   {
+    "titulo": "Reunión de arranque",
+    "texto": "Una reunión de unos 30 minutos para acordar el calendario y el orden de las etapas."
+   }
+  ]
+ },
+ "siglas_ok": [
+  "IA",
+  "CRM"
+ ],
+ "supuestos": [
+  "Fuentes: indicaciones de la asesora María Iribarren y minuta de la reunión con Go Pharma (13/10/2026). División Educación, servicio Habilidades en formato compacto, combo Detección + Habilidades en la Etapa 2 (`servicio_rotulo` y `meta_servicio: deteccion`, como CAI-032 y CAI-026), sin alianza, código CAI-050 por instrucción del usuario. La propuesta no lleva fechas (§4.23): la charla de la Etapa 1 se busca para el viernes 16/10/2026, pero eso va al kickoff, no al deck.",
+  "Por etapas porque Go Pharma no pudo aprobar el monto global anterior por flujo de caja y Marco, quien aprueba el presupuesto, no estuvo en la reunión: cada etapa lleva su propia hoja de cotización (`inversion.etapas`: una hoja por etapa, con sus horas, sus áreas, su valor, su descuento y su total; Ivana, 13/10/2026, reemplazó el recuadro de valor por etapa en una sola hoja). El generador solo soportaba 2 hojas y se extendió a 3.",
+  "Horas propuestas por el sistema con los lineamientos de `empresa/politicas-comerciales.md`, porque María no las dio: Etapa 1 = 2 h (charla). Etapa 2 = 4 h de levantamiento por área (Detección) más Habilidades de 8 a 12 h por área hasta 5 procesos: Comercialización 24 h (4 + 12 + 8 por el CRM GoHighLevel, configuración y adopción), Operaciones y Atención al cliente 14 h (4 + 10) y Administración y Finanzas 12 h (4 + 8), total 50 h. Etapa 3 = 6 h por Cerebro Digital × 2 = 12 h. Total 64 h y 18 entregables. María ajusta.",
+  "Áreas de la Etapa 2 según la minuta: Comercialización (prioridad), Operaciones y Atención al cliente, y Administración y Finanzas. Quedan para una etapa posterior Tecnología, Recursos Humanos y Mercadeo, con una escucha aparte con Tecnología.",
+  "Plataforma: Google Workspace como base (ya lo usan) y Claude donde se justifica; licencias progresivas por perfil. El riesgo de bloqueo de cuentas de Claude en Venezuela NO se menciona en el deck (indicación de Ivana, 13/10/2026: «eso no se dice»; antes se había escrito de frente por pedido de María). Interno: Anthropic no incluye a Venezuela entre los países y regiones soportados (anthropic.com/supported-countries, consultada el 13/10/2026), nunca se promete VPN y el respaldo, si hiciera falta, es Gemini en Workspace.",
+  "Clones digitales: las áreas se llaman «Clon digital 1» y «Clon digital 2» porque no se exponen nombres de personas del cliente (como en CAI-039) y no se sabe el cargo de cada decisor. Contenido tomado de la minuta (procesos, clientes, propuestas, precios y reuniones) y de las indicaciones de María (conecta Claude con procesos, clientes, propuestas y reuniones). La minuta recomienda Granola para las reuniones (y menciona Fathom); no se nombra en el deck para no sumar otra herramienta. El rollout de la minuta (empezar con la directora comercial sola y luego un asiento compartido para las vendedoras) queda como parte de las licencias progresivas, no como entregable.",
+  "Los tres niveles de automatización de la minuta (autónoma, asistida y con supervisión total) se usan en el contenido de la charla y en el método («la IA propone y una persona aprueba» en lo financiero). La mayoría de los procesos de Go Pharma caen en el nivel asistido.",
+  "Retorno en modo método: la minuta no trae tiempos ni volúmenes (solo frecuencias: informe diario, cobro en los primeros 5 días del mes), así que no se calculan horas liberadas por mes. Con los tiempos del cliente se pasa a modo cifras, marcado como estimado y sin cifras externas (`retorno-captura.xlsx`).",
+  "Sin hoja de facilidad de pago (omitir: pago): Ivana (13/10/2026) pidió quitarla («quitar la hoja de plan de pago»). Antes se incluía porque Carolina dijo que las condiciones de pago ayudan: 4 cuotas atadas a hitos de las etapas (30 % al aprobar, 25 % con Comercialización construida y el CRM en uso, 25 % con Operaciones y Administración construidas, 20 % con los dos clones digitales entregados), provisional. Las condiciones de pago las negocia ventas. En la slide «Cómo trabajamos» se retiró también el subtítulo («El equipo participa en cada construcción; en lo financiero, la IA propone y una persona aprueba»): metodo.sin_subtitulo: true.",
+  "Contenido de la charla (fundamentos, tres niveles de automatización, ejercicio práctico) propuesto desde la minuta, sin temario de María. Las soluciones de cada área salen de los dolores de la minuta; sus nombres y horas se ajustan en cada levantamiento.",
+  "Asesora: María Iribarren, con los datos de la CAI-045 y la CAI-049."
+ ],
+ "pendientes": [
+  "Definir el valor de cada etapa, el descuento y el total (campos vacíos para ventas).",
+  "Confirmar las horas por etapa y por área (64 h en total) con María: son una propuesta con los lineamientos del sistema.",
+  "Confirmar con María los datos para el retorno en horas liberadas por mes (tiempo por tarea, veces al mes y personas por área): sin ellos el retorno queda en modo método.",
+  "Confirmar que el plan de Google Workspace de Go Pharma incluye Gemini (respaldo interno, el deck ya no lo nombra) y qué perfiles llevan Claude primero.",
+  "Confirmar cargos de Carolina y Marco: si se pueden nombrar, «Clon digital 1» y «Clon digital 2» pasan a decir para quién son.",
+  "Fecha y lugar de la charla (Go Pharma define; Carolina busca un lugar para el viernes 16/10/2026) y del informe de diagnóstico: van al kickoff y al correo de envío, no al deck.",
+  "Dejar meta.json en Borrador hasta que ventas llene los valores y envíe."
+ ],
+ "omitir": [
+  "pago"
+ ]
+}

@@ -1,0 +1,386 @@
+{
+ "version": 3,
+ "cliente": {
+  "nombre": "Stilogres",
+  "slug": "stilogres-cai047",
+  "codigo": "CAI-047",
+  "nombre_pie": "Stilogres"
+ },
+ "division": "educacion",
+ "alianza": false,
+ "eje": "Cerebro Digital con Claude y Obsidian para la dirección de Stilogres: un asistente con memoria propia que conoce su rol, su voz y su criterio, y la ayuda a decidir y a ahorrar tiempo",
+ "origen": "Ficha de Levantamiento de Stilogres (Verónica Rubio, 09/10/2026) e instrucción de Ivana del 09/10/2026: Cerebro Digital de 6 h, para la dirección de Stilogres, sin mencionar los procesos ni nada de la DET-032",
+ "fuente_insumo": "Ficha de Levantamiento de Stilogres (sin transcripción de la reunión) e instrucción del usuario",
+ "omitir": [
+  "pago"
+ ],
+ "vocabulario": {
+  "solucion": [
+   "entregable",
+   "entregables"
+  ],
+  "area": [
+   "bloque",
+   "bloques"
+  ]
+ },
+ "portada": {
+  "titulo_lineas": [
+   "Cerebro Digital con Claude",
+   "y Obsidian para la dirección"
+  ],
+  "titulo_destacado": "de Stilogres",
+  "lead": "Este proyecto construye con la dirección de {cliente_corto} su **Cerebro Digital**: un asistente en Claude con memoria propia, que conoce su rol, su voz y su criterio, y la ayuda a decidir y a ahorrar tiempo en tareas repetitivas.",
+  "hechos": [
+   {
+    "num": "Dispar",
+    "texto": "es el uso de la IA en el equipo: algunos la usan bien y otros no la usan.",
+    "resuelto_por": [
+     "ME-1"
+    ]
+   },
+   {
+    "num": "Ninguna",
+    "texto": "formación ni política de datos guía el uso de la IA en la empresa.",
+    "resuelto_por": [
+     "ME-1",
+     "US-1"
+    ]
+   },
+   {
+    "num": "Tiempos",
+    "texto": "de respuesta es lo que busca mejorar la empresa, para crecer y expandirse.",
+    "resuelto_por": [
+     "GR-1",
+     "US-1"
+    ]
+   }
+  ],
+  "fuente": "Fuente: datos declarados por la dirección de Stilogres en la conversación comercial con Intezia."
+ },
+ "carriles": [
+  {
+   "id": "claude",
+   "nombre": "Claude y Obsidian",
+   "nombre_corto": "Claude",
+   "color": "amarillo"
+  }
+ ],
+ "areas": [
+  {
+   "id": "ME",
+   "nombre": "Memoria",
+   "para_que": "Dejar el contexto, la voz y el criterio de la dirección guardados en Claude",
+   "carril": "claude",
+   "frente": "A",
+   "composicion": "Contexto, voz y criterio de su rol.",
+   "soluciones": [
+    {
+     "id": "ME-1",
+     "entregable": "Project de Claude con la memoria de su rol",
+     "h": 2,
+     "fase": "F1",
+     "detalle": "Referencia interna (2 h, individual con la dirección). Qué es un Cerebro Digital y fundamentos de Claude: anatomía del prompt, contexto, rol y voz, iteración y verificación, sobre un caso real de su rol. Define el propósito de su cerebro y levanta la línea base: qué tareas repetitivas tiene y cuánto tiempo semanal le toman. Projects de Claude (memoria y contexto): carga el contexto de su rol, su voz y su criterio, y se verifica con un caso real que Claude responde con ese contexto. Criterios de uso seguro: solo se carga lo que la dirección decide compartir. Entrega el Project de Claude con la memoria de su rol, funcionando."
+    }
+   ]
+  },
+  {
+   "id": "GR",
+   "nombre": "Conocimiento",
+   "para_que": "Organizar lo que sabe la dirección como notas conectadas que el cerebro recorre",
+   "carril": "claude",
+   "frente": "A",
+   "composicion": "Notas conectadas por tema de su rol.",
+   "soluciones": [
+    {
+     "id": "GR-1",
+     "entregable": "Grafo de notas de su conocimiento en Obsidian",
+     "h": 2,
+     "fase": "F2",
+     "detalle": "Referencia interna (2 h, individual con la dirección). Su conocimiento se organiza como un grafo de notas conectadas en Obsidian (gratuito, se instala en el trabajo): un conjunto de notas por tema de su rol y las conexiones entre ellas, para que el cerebro entienda cómo se relacionan. Se conecta el grafo al cerebro y se visualiza. Entrega el grafo de su rol, enlazado a su Project."
+    }
+   ]
+  },
+  {
+   "id": "US",
+   "nombre": "Uso diario",
+   "para_que": "Convertir una tarea repetitiva real en una instrucción reutilizable y un plan de uso",
+   "carril": "claude",
+   "frente": "A",
+   "composicion": "Una tarea repetitiva real, en uso semanal.",
+   "soluciones": [
+    {
+     "id": "US-1",
+     "entregable": "Instrucción reutilizable (Skill) y plan de uso",
+     "h": 2,
+     "fase": "F3",
+     "detalle": "Referencia interna (2 h, individual con la dirección). Qué es una Skill (instrucción reutilizable) y cómo se construye. Se elige con la dirección una tarea repetitiva real de su línea base y se construye su Skill; se prueba con un caso real y se ajusta. Criterios de privacidad y uso seguro de la información, ajuste final del cerebro y plan para usarlo cada semana. Entrega la Skill funcionando y el plan de uso semanal."
+    }
+   ]
+  }
+ ],
+ "alcance": {
+  "sin_conteo_por_fila": true,
+  "titulo": "Un Cerebro Digital para la dirección.",
+  "subtitulo": "Se construye con la dirección su **asistente personal en Claude**, con memoria y criterio propios.",
+  "fuera_alcance": [
+   "Más de un cerebro o más horas de trabajo: este cerebro recibe 6 h, lo demás va en otra etapa.",
+   "Desarrollos e integraciones a medida con los sistemas internos de {cliente_corto}.",
+   "Las licencias de Claude, que van aparte (detalle en la inversión)."
+  ]
+ },
+ "metodo": {
+  "titulo": "Así trabajamos el proyecto.",
+  "subtitulo": "Trabajo individual con la dirección, sobre casos reales de su rol, hasta que usa su cerebro por sí misma.",
+  "quien_construye": "La dirección construye su propio cerebro; **Intezia guía** cada paso, sobre casos reales de su rol.",
+  "pasos": [
+   {
+    "titulo": "Construimos",
+    "texto": "Con la dirección, en vivo y sobre un caso real de su rol."
+   },
+   {
+    "titulo": "Probamos",
+    "texto": "Con su información y sus tareas, hasta que funcione."
+   },
+   {
+    "titulo": "Adoptamos",
+    "texto": "La dirección usa su cerebro por sí misma, cada semana."
+   },
+   {
+    "titulo": "Medimos",
+    "texto": "El tiempo recuperado contra la línea base, a 30, 60 y 90 días."
+   }
+  ],
+  "por_que_orden": "Primero se aprende Claude y se deja el contexto del rol; después se conecta todo en un grafo de notas; al final se construye una instrucción reutilizable para una tarea real.",
+  "practica": [
+   {
+    "titulo": "Su rol, sus casos",
+    "texto": "El cerebro se construye sobre el rol y los casos reales de la dirección, sin partir de plantillas ajenas."
+   },
+   {
+    "titulo": "Desde cero, en vivo",
+    "texto": "Se trabaja en vivo con Intezia; no hace falta conocimiento técnico previo."
+   },
+   {
+    "titulo": "Cuenta y acceso a Claude",
+    "texto": "Se necesita una cuenta de Claude con plan de pago. El acceso depende del país desde donde se use: se confirma en la reunión de arranque, con el proveedor."
+   }
+  ],
+  "datos": "Solo se carga en el cerebro lo que la dirección decide compartir: no se suben datos confidenciales ni de terceros sin autorización. Los criterios de uso seguro se acuerdan al empezar y se repasan al cerrar."
+ },
+ "fases": [
+  {
+   "id": "F1",
+   "titulo": "Base",
+   "descripcion": "Claude y contexto del rol"
+  },
+  {
+   "id": "F2",
+   "titulo": "Grafo",
+   "descripcion": "conocimiento conectado"
+  },
+  {
+   "id": "F3",
+   "titulo": "Uso",
+   "descripcion": "Skill y plan de uso",
+   "destacada": true
+  }
+ ],
+ "frentes": [
+  {
+   "id": "A",
+   "carril": "claude",
+   "nombre": "La dirección de {cliente_corto}",
+   "celdas": {
+    "F1": "Claude más allá del chat y su Project con el contexto de su rol.",
+    "F2": "Su conocimiento como grafo de notas conectadas en Obsidian.",
+    "F3": "Una instrucción reutilizable para una tarea real y su plan de uso."
+   }
+  }
+ ],
+ "ruta": {
+  "titulo": "Un cerebro en uso, en tres fases.",
+  "subtitulo": "El calendario se acuerda en la reunión de arranque. La **garantía y el seguimiento** a 30, 60 y 90 días corren desde el cierre del proyecto.",
+  "nota": "Las {h_total} horas de trabajo son una proyección: {h_f1} h de base, {h_f2} h de grafo y {h_f3} h de uso. La reunión de arranque (1 h) va aparte y no suma horas.",
+  "hitos": [
+   {
+    "titulo": "Arranque · aparte",
+    "texto": "1 h para dejar lista la cuenta de Claude, acordar casos reales y el calendario."
+   },
+   {
+    "titulo": "Base",
+    "texto": "Claude más allá del chat y el Project con el contexto de su rol."
+   },
+   {
+    "titulo": "Grafo",
+    "texto": "Su conocimiento en un grafo de notas conectadas en Obsidian."
+   },
+   {
+    "titulo": "Uso",
+    "texto": "Una instrucción reutilizable para una tarea real y su plan de uso."
+   },
+   {
+    "titulo": "30 · 60 · 90 días",
+    "texto": "Seguimiento: uso del cerebro, ajustes y tiempo recuperado."
+   }
+  ]
+ },
+ "logistica": {
+  "modalidad": "Presencial, en las oficinas de {cliente_corto}, según se acuerde en la reunión de arranque.",
+  "participantes": "Una sola persona de la dirección de {cliente_corto}, acompañada por Intezia en todo el proyecto.",
+  "ritmo": "En el horario que acuerde la dirección, sin frenar su agenda.",
+  "arranque": "La fecha la fija {cliente_corto}; una reunión de arranque de 1 h, aparte, deja lista su cuenta de Claude."
+ },
+ "seguimiento": {
+  "rango": "30, 60 y 90 días",
+  "texto": "Seguimiento desde el cierre del proyecto",
+  "items": [
+   {
+    "dias": "30 días",
+    "texto": "Uso semanal del cerebro"
+   },
+   {
+    "dias": "60 días",
+    "texto": "Ajustes y nuevas construcciones"
+   },
+   {
+    "dias": "90 días",
+    "texto": "Tiempo recuperado contra la línea base"
+   }
+  ]
+ },
+ "entregables": {
+  "titulo": "Lo que recibe {cliente_corto}.",
+  "subtitulo": "Lo que se llevan: **{n_entregables_txt}** en {n_areas_txt}, más el seguimiento a {rango_seguimiento} que mide su efecto.",
+  "etiqueta_transversales": "Para todo el proyecto",
+  "etiqueta_valor": "Valor inmediato",
+  "transversales": [
+   "Línea base del tiempo en sus tareas repetitivas.",
+   "Criterios de uso seguro de la información.",
+   "Seguimiento a 30, 60 y 90 días con medición del tiempo."
+  ],
+  "valor_inmediato": [
+   "Con la base: Claude usado más allá del chat, sobre un caso real.",
+   "Con el grafo: su conocimiento conectado en un solo lugar.",
+   "Al cerrar: una Skill funcionando y su plan de uso."
+  ],
+  "columnas_por_carril": [
+   3
+  ]
+ },
+ "retorno": {
+  "modo": "metodo",
+  "posiciones": false,
+  "titulo": "Retorno esperado: tiempo recuperado, medido.",
+  "subtitulo": "Se mide contra la línea base que la dirección deja al empezar y se sigue a 30, 60 y 90 días.",
+  "etiqueta_pasos": "Cómo se calcula",
+  "pasos": [
+   {
+    "titulo": "Volumen semanal",
+    "texto": "Cuántas veces repite la dirección la tarea que automatiza su cerebro."
+   },
+   {
+    "titulo": "Tiempo actual",
+    "texto": "Cuánto le toma hoy cada tarea. Es la **línea base**."
+   },
+   {
+    "titulo": "Tiempo con el cerebro",
+    "texto": "Lo que toma el mismo trabajo con su Skill ya en uso."
+   },
+   {
+    "titulo": "Horas recuperadas",
+    "texto": "Diferencia entre ambos tiempos, por semana: una estimación referencial, sin compromiso de resultado."
+   },
+   {
+    "titulo": "Valor en dinero",
+    "texto": "Horas recuperadas por el valor hora de referencia que {cliente_corto} valide."
+   }
+  ],
+  "etiqueta_metas": "Calendario de garantía y cálculo del retorno",
+  "metas": [
+   {
+    "dias": "30 días",
+    "texto": "El cerebro en uso real y su línea base validada con la dirección."
+   },
+   {
+    "dias": "60 días",
+    "texto": "Ajustes del cerebro y horas recuperadas medidas contra la línea base."
+   },
+   {
+    "dias": "90 días",
+    "texto": "Medición del tiempo recuperado y de su valor en dinero."
+   }
+  ],
+  "etiqueta_destino": "Hacia dónde va el proyecto",
+  "destino": [
+   {
+    "rotulo": "Más tiempo para lo importante",
+    "texto": "Si el tiempo se libera, la dirección puede dedicarlo a **trabajo de más valor** sin trabajar más horas."
+   },
+   {
+    "rotulo": "Conocimiento ordenado",
+    "texto": "El rol de la dirección queda organizado en su grafo: una memoria propia que su cerebro recorre."
+   },
+   {
+    "rotulo": "Más cerebros",
+    "texto": "Con el resultado medido, {cliente_corto} decide si lleva el mismo ciclo a **más personas**."
+   }
+  ],
+  "gancho": "A los 90 días del cierre, {cliente_corto} contará con el tiempo recuperado de su cerebro, medido contra su línea base."
+ },
+ "inversion": {
+  "programa": [
+   "Cerebro Digital con Claude y Obsidian para la dirección de Stilogres (CAI-047).",
+   "1 cerebro de 6 h de trabajo guiado por Intezia. Modalidad a coordinar.",
+   "6 h de trabajo, más 1 h de reunión de arranque aparte. Licencias aparte."
+  ],
+  "notas": [
+   "Licencias, aparte: hace falta una cuenta de Claude con plan de pago (Pro, USD 20 al mes de lista, sujeto al proveedor). Obsidian es gratuito.",
+   "Garantía 30-60-90: seguimiento a 30, 60 y 90 días desde el cierre del proyecto, con el cerebro en uso."
+  ]
+ },
+ "proximos_pasos": {
+  "asesora": {
+   "nombre": "Verónica Rubio",
+   "cargo": "Asesora comercial",
+   "correo": "vrubio01@intezia.com",
+   "telefono": "+58 422 3355505"
+  },
+  "pasos": [
+   {
+    "titulo": "Fecha de arranque",
+    "texto": "Confirmamos con {cliente_corto} la fecha de arranque y el horario de trabajo."
+   },
+   {
+    "titulo": "Cuenta y material",
+    "texto": "Dejamos lista la cuenta de Claude con el plan que corresponda y reunimos el material del rol que la dirección decida compartir."
+   },
+   {
+    "titulo": "Reunión de arranque",
+    "texto": "Una hora para alinear objetivos, ver casos reales y acordar el calendario."
+   }
+  ]
+ },
+ "siglas_ok": [
+  "IA"
+ ],
+ "supuestos": [
+  "Código CAI-047 (indicado por Ivana). División Educación y sin alianza, como la DET-032. Asesora Verónica Rubio, con el contacto de la DET-032. El pedido decía «Stilpogres»: se tomó «Stilogres», como figura en la Ficha.",
+  "Pedido de Ivana (2026-10-09): «igual que la anterior», es decir, como la CAI-046 de All Clean: Cerebro Digital de 6 h, separado de la Detección, sin mencionar los procesos ni nada de la DET-032. El deck no nombra procesos, áreas, sistemas del cliente, herramientas de IA que usan hoy ni la Detección. Un solo cerebro y una sola persona de la dirección.",
+  "Para quién: la Ficha dice «una propuesta de cerebro digital para él», el dueño y socio que firma junto con su socio. Se escribió «la dirección» y «una sola persona de la dirección» (sin género ni nombre). Confirmar que es solo para esa persona.",
+  "Qué hace el cerebro: al no mencionar procesos, queda como el cerebro del rol de dirección con la receta estándar de 6 h de la CAI-043 (Project de Claude, grafo en Obsidian, Skill y plan de uso). La tarea de la Skill se elige en el arranque con la dirección, de su línea base.",
+  "Horas: 6 h por Cerebro Digital (tarifa de referencia, empresa/politicas-comerciales.md), 3 entregables de 2 h; la reunión de arranque (1 h) va aparte. La Ficha dice «sesiones de 2 h»: cómo se reparten las horas se acuerda en el arranque y no va en el deck (§4.23).",
+  "Portada: 3 datos de la Ficha que no son procesos (uso desigual de la IA en el equipo, sin formación ni política de datos, y que busca mejorar tiempos de respuesta para crecer y expandirse).",
+  "Claude: lo pidió el cliente en la Ficha. Se dice desde el inicio que la licencia va aparte con plan de pago (Pro, USD 20 al mes de lista, consultado el 08/10/2026 en claude.com/pricing para la CAI-040; volver a consultar antes de enviar). El acceso se confirma en la reunión de arranque, sin nombrar países ni prometer VPN (claude-no-soportado-en-venezuela-no-prometer-vpn). Obsidian entra por ser el estándar del patrón de Cerebro Digital.",
+  "Sin facilidad de pago: criterio de Ivana en la DET-031, la CAI-046 y los Cerebros Digitales anteriores (`omitir: [\"pago\"]`); ventas comunica el plan por otro medio.",
+  "No va al deck: nombre y correo del cliente, las herramientas de IA que usan hoy, el sistema de gestión, el uso de IA de las asesoras comerciales, el patrocinio «presente pero tibio» y el presupuesto «en evaluación»."
+ ],
+ "pendientes": [
+  "Confirmar que el cerebro es para una sola persona de la dirección (el dueño y socio de la Ficha) y qué quiere que haga.",
+  "Definir inversión, descuento y total (campos vacíos para ventas); línea de facturación (moneda y tasa) por confirmar con ventas.",
+  "Confirmar con el cliente el plan de Claude y quién lo paga; volver a consultar el valor de lista antes de enviar.",
+  "Confirmar si va Obsidian (estándar del patrón) y el acceso a Claude desde donde trabaja la dirección.",
+  "Coordinar con la DET-032: es el mismo cliente. Ninguna propuesta menciona a la otra; decidir cuál se presenta primero y cómo.",
+  "Transcripción de la reunión con Stilogres: no la hay; si contradice la Ficha, manda la transcripción."
+ ]
+}

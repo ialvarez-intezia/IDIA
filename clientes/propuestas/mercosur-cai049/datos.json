@@ -1,0 +1,525 @@
+{
+  "version": 3,
+  "cliente": {
+    "nombre": "Mercosur",
+    "slug": "mercosur-cai049",
+    "codigo": "CAI-049",
+    "nombre_pie": "Mercosur"
+  },
+  "division": "educacion",
+  "alianza": false,
+  "eje": "Nivelación en inteligencia artificial con Microsoft 365 Copilot para las 50 personas de una casa de bolsa digital, en cinco grupos por área, con ética y uso seguro de la información y un proyecto final por participante",
+  "origen": "Minuta de la reunión con Mercosur, indicaciones de la asesora María Iribarren y respuestas del usuario del 13/10/2026 (grupos de María, 8 h por grupo, Microsoft 365 Copilot, sin facilidad de pago, sin nómina ni políticas)",
+  "fuente_insumo": "Minuta de la reunión e indicaciones de la asesora: casa de bolsa de 50 personas en 8 unidades, nivelación en Copilot en 5 grupos por área de máximo 12 personas, 8 h por grupo, presencial y fuera del horario de mercado",
+  "meta_tipo": "Capacitación In-Company · Servicio de Habilidades · Nivelación en IA con Copilot para 50 personas en 5 grupos (8 h por grupo) · 40 h · compacto v3",
+  "omitir": [
+    "pago"
+  ],
+  "vocabulario": {
+    "area": [
+      "grupo",
+      "grupos"
+    ],
+    "solucion": [
+      "entregable",
+      "entregables"
+    ]
+  },
+  "portada": {
+    "titulo_lineas": [
+      "Nivelación en IA con Copilot",
+      "para las 50 personas"
+    ],
+    "titulo_destacado": "de Mercosur",
+    "lead": "Cinco grupos, uno por área, aprenden qué es y qué no es la IA, cómo cuidar la información y la practican en **Copilot** con tareas reales. Cada participante cierra con un proyecto final.",
+    "hechos": [
+      {
+        "num": "Desigual",
+        "texto": "el uso de la IA: unas áreas la usan a nivel avanzado y otras, casi como un buscador.",
+        "resuelto_por": [
+          "ATE-2",
+          "TEC-2",
+          "ADM-2",
+          "OPE-2",
+          "NEG-2"
+        ]
+      },
+      {
+        "num": "Sin guía",
+        "texto": "común sobre qué información se puede subir a la IA y cuál debe quedarse fuera.",
+        "resuelto_por": [
+          "ATE-1",
+          "TEC-1",
+          "ADM-1",
+          "OPE-1",
+          "NEG-1"
+        ]
+      },
+      {
+        "num": "Miedo",
+        "texto": "a la IA en parte del equipo, que la ve como un asunto solo de tecnología.",
+        "resuelto_por": [
+          "ATE-1",
+          "TEC-1",
+          "ADM-1",
+          "OPE-1",
+          "NEG-1"
+        ]
+      }
+    ],
+    "fuente": "Fuente: minuta de la reunión con Mercosur."
+  },
+  "carriles": [
+    {
+      "id": "copilot",
+      "nombre": "Microsoft 365 Copilot",
+      "nombre_corto": "Copilot",
+      "color": "amarillo"
+    }
+  ],
+  "fases": [
+    {
+      "id": "F1",
+      "titulo": "Bases",
+      "descripcion": "qué es la IA y uso seguro de la información"
+    },
+    {
+      "id": "F2",
+      "titulo": "Taller",
+      "descripcion": "Copilot con tareas reales de cada grupo",
+      "destacada": true
+    },
+    {
+      "id": "F3",
+      "titulo": "Cierre",
+      "descripcion": "proyecto final de cada participante"
+    }
+  ],
+  "frentes": [
+    {
+      "id": "A",
+      "carril": "copilot",
+      "nombre": "Nivelación en IA por grupos",
+      "celdas": {
+        "F1": "Qué es y qué no es la IA, y ética y uso seguro de la información.",
+        "F2": "Práctica en Copilot con tareas reales, adaptada a cada grupo.",
+        "F3": "Cada participante presenta su proyecto final."
+      }
+    }
+  ],
+  "areas": [
+    {
+      "id": "ATE",
+      "nombre": "Atención al cliente",
+      "carril": "copilot",
+      "frente": "A",
+      "para_que": "Responder a los clientes con más rapidez y consistencia, usando Copilot con criterio.",
+      "soluciones": [
+        {
+          "id": "ATE-1",
+          "entregable": "IA sin miedo y uso seguro de datos",
+          "h": 2,
+          "fase": "F1",
+          "detalle": "Qué es la IA y qué no es, para quitar el miedo; ética y uso seguro de la información (qué se puede subir a Copilot y cómo hacerlo sin poner datos en riesgo)."
+        },
+        {
+          "id": "ATE-2",
+          "entregable": "Práctica con Copilot en su trabajo",
+          "h": 4,
+          "fase": "F2",
+          "detalle": "Prácticas sugeridas para atención al cliente: respuestas a consultas frecuentes, resumen de casos largos y mensajes de seguimiento. Se ajustan en el kickoff con el grupo.",
+          "incluye": [
+            "Respuestas claras y consistentes a consultas frecuentes",
+            "Resumir un caso largo antes de pasarlo a otra área",
+            "Mensajes de seguimiento al cliente en Outlook y Teams"
+          ]
+        },
+        {
+          "id": "ATE-3",
+          "entregable": "Proyecto final de cada participante",
+          "h": 2,
+          "fase": "F3",
+          "detalle": "Cada participante entrega un proyecto final que aplica Copilot a una tarea real de su trabajo, como evidencia de que entendió y aplica lo aprendido."
+        }
+      ]
+    },
+    {
+      "id": "TEC",
+      "nombre": "Tecnología",
+      "carril": "copilot",
+      "frente": "A",
+      "para_que": "Documentar, analizar y resolver mejor su trabajo técnico con Copilot.",
+      "soluciones": [
+        {
+          "id": "TEC-1",
+          "entregable": "IA sin miedo y uso seguro de datos",
+          "h": 2,
+          "fase": "F1",
+          "detalle": "Qué es la IA y qué no es, para quitar el miedo; ética y uso seguro de la información (qué se puede subir a Copilot y cómo hacerlo sin poner datos en riesgo). Con lenguaje técnico."
+        },
+        {
+          "id": "TEC-2",
+          "entregable": "Práctica con Copilot en su trabajo",
+          "h": 4,
+          "fase": "F2",
+          "detalle": "Prácticas sugeridas para el grupo de Tecnología, con lenguaje técnico: documentación, análisis de incidentes, comunicación a otras áreas y tareas con datos. Se ajustan en el kickoff con el grupo.",
+          "incluye": [
+            "Documentar sistemas y procedimientos técnicos en Word",
+            "Analizar y resumir reportes de incidentes con criterio",
+            "Explicar un tema técnico a otras áreas, en lenguaje claro",
+            "Tareas repetidas con datos en Excel, con Copilot"
+          ]
+        },
+        {
+          "id": "TEC-3",
+          "entregable": "Proyecto final de cada participante",
+          "h": 2,
+          "fase": "F3",
+          "detalle": "Cada participante entrega un proyecto final que aplica Copilot a una tarea real de su trabajo, como evidencia de que entendió y aplica lo aprendido."
+        }
+      ],
+      "composicion": "Con lenguaje técnico, aparte de los demás grupos"
+    },
+    {
+      "id": "ADM",
+      "nombre": "Mercadeo y áreas administrativas",
+      "carril": "copilot",
+      "frente": "A",
+      "para_que": "Ahorrar tiempo en reportes, comunicaciones y documentos de cada área con Copilot.",
+      "soluciones": [
+        {
+          "id": "ADM-1",
+          "entregable": "IA sin miedo y uso seguro de datos",
+          "h": 2,
+          "fase": "F1",
+          "detalle": "Qué es la IA y qué no es, para quitar el miedo; ética y uso seguro de la información (qué se puede subir a Copilot y cómo hacerlo sin poner datos en riesgo)."
+        },
+        {
+          "id": "ADM-2",
+          "entregable": "Práctica con Copilot en su trabajo",
+          "h": 4,
+          "fase": "F2",
+          "detalle": "Prácticas sugeridas para Mercadeo, Contabilidad, Administración y Talento Humano: análisis en Excel, borradores en Word y Outlook, y resúmenes de reuniones. Se ajustan en el kickoff con el grupo.",
+          "incluye": [
+            "Revisar y analizar hojas de cálculo en Excel",
+            "Borradores de contenidos y comunicaciones en Word y Outlook",
+            "Resúmenes de reuniones y seguimiento de acuerdos en Teams"
+          ]
+        },
+        {
+          "id": "ADM-3",
+          "entregable": "Proyecto final de cada participante",
+          "h": 2,
+          "fase": "F3",
+          "detalle": "Cada participante entrega un proyecto final que aplica Copilot a una tarea real de su trabajo, como evidencia de que entendió y aplica lo aprendido."
+        }
+      ],
+      "composicion": "Mercadeo, Contabilidad, Administración y Talento Humano"
+    },
+    {
+      "id": "OPE",
+      "nombre": "Operaciones y Cumplimiento",
+      "carril": "copilot",
+      "frente": "A",
+      "para_que": "Agilizar el seguimiento de procesos, reportes y controles con Copilot.",
+      "soluciones": [
+        {
+          "id": "OPE-1",
+          "entregable": "IA sin miedo y uso seguro de datos",
+          "h": 2,
+          "fase": "F1",
+          "detalle": "Qué es la IA y qué no es, para quitar el miedo; ética y uso seguro de la información (qué se puede subir a Copilot y cómo hacerlo sin poner datos en riesgo)."
+        },
+        {
+          "id": "OPE-2",
+          "entregable": "Práctica con Copilot en su trabajo",
+          "h": 4,
+          "fase": "F2",
+          "detalle": "Prácticas sugeridas para Operaciones y Cumplimiento: resumen de documentos extensos, reportes de seguimiento y procedimientos. Se ajustan en el kickoff con el grupo.",
+          "incluye": [
+            "Resumir normativas y documentos extensos para consulta rápida",
+            "Reportes de seguimiento de operaciones en Excel y Word",
+            "Listas de verificación y procedimientos paso a paso"
+          ]
+        },
+        {
+          "id": "OPE-3",
+          "entregable": "Proyecto final de cada participante",
+          "h": 2,
+          "fase": "F3",
+          "detalle": "Cada participante entrega un proyecto final que aplica Copilot a una tarea real de su trabajo, como evidencia de que entendió y aplica lo aprendido."
+        }
+      ]
+    },
+    {
+      "id": "NEG",
+      "nombre": "Negocios",
+      "carril": "copilot",
+      "frente": "A",
+      "para_que": "Profundizar en Copilot para analizar información y preparar propuestas con criterio.",
+      "soluciones": [
+        {
+          "id": "NEG-1",
+          "entregable": "IA sin miedo y uso seguro de datos",
+          "h": 2,
+          "fase": "F1",
+          "detalle": "Qué es la IA y qué no es, para quitar el miedo; ética y uso seguro de la información (qué se puede subir a Copilot y cómo hacerlo sin poner datos en riesgo)."
+        },
+        {
+          "id": "NEG-2",
+          "entregable": "Práctica con Copilot en su trabajo",
+          "h": 4,
+          "fase": "F2",
+          "detalle": "Prácticas sugeridas para Negocios, con un uso más avanzado: análisis de datos, informes y presentaciones, y preparación de reuniones. Se ajustan en el kickoff con el grupo.",
+          "incluye": [
+            "Analizar datos y escenarios en Excel con más profundidad",
+            "Informes y presentaciones de resultados para la gerencia",
+            "Preparar reuniones y resumir lo acordado en Teams"
+          ]
+        },
+        {
+          "id": "NEG-3",
+          "entregable": "Proyecto final de cada participante",
+          "h": 2,
+          "fase": "F3",
+          "detalle": "Cada participante entrega un proyecto final que aplica Copilot a una tarea real de su trabajo, como evidencia de que entendió y aplica lo aprendido."
+        }
+      ]
+    }
+  ],
+  "alcance": {
+    "subtitulo": "Nivelamos a las **50 personas** en cinco grupos por área, con práctica en **Copilot** sobre sus tareas reales.",
+    "fuera_alcance": [
+      "Grupos de más de 12 personas: es la capacidad de la sala y, si hay más, se añaden horas a la propuesta.",
+      "Las licencias de Microsoft 365 Copilot: ya las tiene Mercosur y no forman parte de esta inversión.",
+      "La redacción de una política de uso de IA: aquí se enseña el uso seguro y la política se trabaja aparte."
+    ]
+  },
+  "metodo": {
+    "titulo": "Así trabajamos, del kickoff a la medición.",
+    "subtitulo": "La base de contenido es común y las prácticas se ajustan con cada grupo antes de empezar.",
+    "pasos": [
+      {
+        "titulo": "Ajustamos",
+        "texto": "En el kickoff con cada grupo se adaptan las prácticas a sus tareas reales."
+      },
+      {
+        "titulo": "Aprendemos",
+        "texto": "Qué es la IA y qué no es, y cómo usar la información de forma segura."
+      },
+      {
+        "titulo": "Practicamos",
+        "texto": "Con Copilot, en Word, Excel, Outlook y Teams, sobre tareas reales del grupo."
+      },
+      {
+        "titulo": "Medimos",
+        "texto": "Cada participante entrega su proyecto final y medimos el efecto a 30, 60 y 90 días."
+      }
+    ],
+    "por_que_orden": "Primero se quita el miedo y se fijan las reglas de uso seguro; después se practica con tareas reales de cada grupo; al final cada persona demuestra lo aprendido.",
+    "practica": [
+      {
+        "titulo": "Un grupo por área",
+        "texto": "No se mezclan áreas: cada grupo practica con tareas de su trabajo. Tecnología usa lenguaje técnico."
+      },
+      {
+        "titulo": "Prácticas sugeridas",
+        "texto": "Las de esta propuesta muestran el tipo de trabajo. Se ajustan con cada grupo en el kickoff."
+      },
+      {
+        "titulo": "Workbook para quedarse",
+        "texto": "Lo visto en vivo queda en un workbook, útil también para el personal nuevo."
+      }
+    ],
+    "datos": "Los grupos aprenden qué información puede subirse a Copilot y cuál no. Los casos de práctica usan tareas reales que cada área elige, con la información que Mercosur autorice."
+  },
+  "logistica": {
+    "modalidad": "Presencial, en las oficinas de Mercosur.",
+    "participantes": "50 personas en 5 grupos de máximo 12; con más personas por grupo, se añaden horas a la propuesta.",
+    "arranque": "El kickoff con cada grupo adapta las prácticas a sus tareas reales.",
+    "ritmo": "Fuera del horario de mercado, en una franja que se confirma con Mercosur."
+  },
+  "seguimiento": {
+    "rango": "30, 60 y 90 días",
+    "texto": "Desde el cierre de la nivelación",
+    "items": [
+      {
+        "dias": "30 días",
+        "texto": "Uso real de Copilot"
+      },
+      {
+        "dias": "60 días",
+        "texto": "Nuevas prácticas por grupo"
+      },
+      {
+        "dias": "90 días",
+        "texto": "Tiempo recuperado"
+      }
+    ]
+  },
+  "ruta": {
+    "titulo": "De las bases al proyecto final.",
+    "subtitulo": "El calendario y los grupos se acuerdan en la reunión de arranque. El **seguimiento** corre desde el cierre de la nivelación.",
+    "nota": "Las {h_total} horas de trabajo son una proyección: 8 h por cada uno de los 5 grupos, es decir, {h_f1} h de bases, {h_f2} h de práctica y {h_f3} h de proyecto final.",
+    "hitos": [
+      {
+        "titulo": "Kickoff con cada grupo",
+        "texto": "Las prácticas se ajustan a las tareas reales de cada área."
+      },
+      {
+        "titulo": "IA y uso seguro",
+        "texto": "Cada grupo entiende qué es la IA y qué información puede subir."
+      },
+      {
+        "titulo": "Práctica con Copilot",
+        "texto": "Cada grupo resuelve tareas reales de su trabajo en Copilot."
+      },
+      {
+        "titulo": "Proyecto final",
+        "texto": "Cada participante entrega su proyecto como evidencia de lo aprendido."
+      },
+      {
+        "titulo": "30 · 60 · 90 días",
+        "texto": "Seguimiento del uso real y del tiempo recuperado."
+      }
+    ]
+  },
+  "entregables": {
+    "titulo": "Lo que recibe Mercosur.",
+    "columnas_por_carril": [
+      2
+    ],
+    "subtitulo": "Lo que se llevan: **{n_entregables_txt}**, más el seguimiento a {rango_seguimiento} que mide su efecto.",
+    "etiqueta_transversales": "Para todos los grupos",
+    "transversales": [
+      "Workbook de lo visto, útil también para personal nuevo.",
+      "Seguimiento a 30, 60 y 90 días con medición de resultados.",
+      "Prácticas sugeridas, ajustadas con cada grupo en el kickoff."
+    ],
+    "etiqueta_valor": "Valor inmediato",
+    "valor_inmediato": [
+      "Sin miedo: cada persona entiende qué es la IA y qué no.",
+      "Reglas claras sobre qué información subir a Copilot.",
+      "Un proyecto final por persona que demuestra lo aprendido."
+    ]
+  },
+  "retorno": {
+    "modo": "metodo",
+    "posiciones": false,
+    "titulo": "Retorno esperado: tiempo recuperado.",
+    "subtitulo": "Se calcula con las tareas reales de cada grupo y se mide a 30, 60 y 90 días.",
+    "etiqueta_pasos": "Cómo se calcula, por grupo",
+    "pasos": [
+      {
+        "titulo": "Tareas elegidas",
+        "texto": "En el kickoff, cada grupo elige las tareas que más tiempo le consumen."
+      },
+      {
+        "titulo": "Tiempo antes",
+        "texto": "Cuánto toma hoy cada tarea: es la **línea base** de cada grupo."
+      },
+      {
+        "titulo": "Tiempo después",
+        "texto": "Lo que toma la misma tarea con Copilot, ya nivelado el grupo."
+      },
+      {
+        "titulo": "Horas recuperadas",
+        "texto": "Diferencia entre ambos tiempos, por persona y por grupo."
+      },
+      {
+        "titulo": "Valor del tiempo",
+        "texto": "Horas recuperadas por el valor hora que {cliente_corto} valide."
+      }
+    ],
+    "etiqueta_metas": "Calendario de garantía, desde el cierre de la nivelación",
+    "metas": [
+      {
+        "dias": "30 días",
+        "texto": "Uso real de Copilot en las tareas elegidas por cada grupo."
+      },
+      {
+        "dias": "60 días",
+        "texto": "Nuevas prácticas de cada grupo y horas recuperadas, antes y después."
+      },
+      {
+        "dias": "90 días",
+        "texto": "Tiempo recuperado medido, con el resultado de cada grupo."
+      }
+    ],
+    "destino": [
+      {
+        "rotulo": "Un criterio común",
+        "texto": "Todo el equipo usa la IA con el **mismo criterio** y sabe qué información cuidar."
+      },
+      {
+        "rotulo": "Menos brecha",
+        "texto": "Las áreas que apenas la usan se acercan al nivel de las más avanzadas."
+      },
+      {
+        "rotulo": "Dónde profundizar",
+        "texto": "Con la medición, {cliente_corto} ve lo que construyó cada grupo y decide **dónde profundizar**."
+      }
+    ],
+    "gancho": "A los 90 días del cierre de la nivelación, {cliente_corto} contará con el uso real y el tiempo recuperado de cada grupo."
+  },
+  "inversion": {
+    "notas": [
+      "Licencias aparte: Mercosur ya tiene Microsoft 365 Copilot.",
+      "Grupos de máximo 12 personas: con más, se suman horas.",
+      "Garantía 30-60-90: seguimiento desde el cierre de la nivelación.",
+      "Términos y condiciones: los del enlace de «Importante», que ambas partes aceptan."
+    ],
+    "duracion": "Nivelación en IA con Copilot en 5 grupos por área, con seguimiento y garantía a {rango_seguimiento}. {h_total} horas de trabajo: 8 h por grupo.",
+    "programa": [
+      "Nivelación en IA con Copilot para Mercosur (CAI-049), en 5 grupos por área.",
+      "Cada grupo: IA y uso seguro (2 h), práctica con Copilot (4 h) y proyecto final (2 h).",
+      "Total: {h_total} h de trabajo, con seguimiento a {rango_seguimiento}."
+    ]
+  },
+  "proximos_pasos": {
+    "asesora": {
+      "nombre": "María Iribarren",
+      "cargo": "Asesora comercial",
+      "correo": "miribarren@intezia.com",
+      "telefono": "+58 414 0570056"
+    },
+    "pasos": [
+      {
+        "titulo": "Fecha de arranque",
+        "texto": "Confirmamos con Mercosur la fecha de arranque y el horario de los grupos, fuera del horario de mercado."
+      },
+      {
+        "titulo": "Grupos y accesos",
+        "texto": "Definimos quién forma cada grupo y coordinamos la sala y los equipos para la práctica."
+      },
+      {
+        "titulo": "Kickoff con cada grupo",
+        "texto": "Una reunión con cada grupo para adaptar las prácticas a sus tareas reales."
+      }
+    ]
+  },
+  "siglas_ok": [
+    "IA"
+  ],
+  "supuestos": [
+    "Fuentes: minuta de la reunión con Mercosur, indicaciones de la asesora (María) y respuestas del usuario del 13/10/2026. División Educación, servicio Habilidades, sin alianza, código CAI-049. Por indicación del usuario, la propuesta no lleva fecha de la reunión ni de nada.",
+    "Composición de los 5 grupos según María (confirmada por el usuario): Atención al cliente; Tecnología; Mercadeo, Contabilidad, Administración y Talento Humano; Operaciones y Cumplimiento; Negocios. La minuta traía otra (Cumplimiento solo; Clientes personales con Operaciones y Negocios) y Talento Humano no aparecía: manda la de María.",
+    "8 h por grupo para los 5 (decisión del usuario; María hablaba de 6 a 8 h): 2 h de IA y uso seguro, 4 h de práctica con Copilot y 2 h de proyecto final, 40 h en total. Interno para el kickoff: sesiones presenciales de 2 h (4 por grupo), horario sugerido de 5:00 a 7:00 pm por confirmar, fuera del horario de mercado (9:00 am a 1:00 pm). Nada de esto va en el deck (§4.23).",
+    "Máximo 12 personas por grupo (capacidad de la sala; no hay computadoras para todos). Si un grupo pasa de 12, se añaden horas: el deck lo aclara en el alcance, la logística y la inversión. No se conoce el número de personas por grupo; Atención al cliente es el más grande y podría superar las 12. Tecnología son 5 personas y un equipo externo pequeño: por confirmar si participa.",
+    "Herramienta: Microsoft 365 Copilot en los 5 grupos (el usuario confirmó que tienen la licencia), incluido Negocios, que ya usa Claude a nivel avanzado (no se menciona). No hay licencias adicionales: el cliente no puede pagar una suscripción extra.",
+    "Fuera de la propuesta por indicación del usuario: la automatización de la nómina de RRHH (la minuta pedía incluirla, con licencia de Claude y conector de Excel), el borrador de políticas de uso de IA y los valores. El kit de onboarding de la minuta se cubre con los workbooks. En el deck solo se aclara que la política de uso se trabaja aparte.",
+    "Sin facilidad de pago (omitir: pago), por indicación del usuario. El seguimiento a 30, 60 y 90 días va incluido; se dejó la garantía 30-60-90 estándar de Habilidades porque el usuario dijo «sí coloca el seguimiento»: confirmar si va como garantía o solo como medición.",
+    "Los tres datos de la portada salen de la minuta y de María, sin la fecha de la reunión y sin los incidentes con pasantes que suben documentos (indicación del usuario). La cita del líder de Tecnología no se usa.",
+    "Las prácticas sugeridas de cada grupo las propuso el sistema para mostrar el tipo de trabajo (Word, Excel, Outlook y Teams con Copilot): no salen de tareas confirmadas por el cliente y se ajustan en el kickoff con cada grupo.",
+    "Retorno en modo método: no hay datos del cliente (volúmenes, tiempos ni valor de la hora). La cifra de la nómina de RRHH (un día frente a unas 3 horas) no se usa.",
+    "Asesora: María Iribarren, con los datos de la CAI-045 (confirmados por el usuario)."
+  ],
+  "pendientes": [
+    "Definir la inversión, el descuento y el total (campos vacíos para ventas).",
+    "Confirmar cuántas personas hay en cada grupo, sobre todo en Atención al cliente (si pasa de 12 se añaden horas), y si el equipo externo de Tecnología participa.",
+    "Confirmar el horario (sugerido de 5:00 a 7:00 pm) y las computadoras disponibles por grupo.",
+    "Confirmar si el seguimiento a 30, 60 y 90 días va como garantía o solo como medición.",
+    "La minuta acordó enviar también una propuesta de automatización de la nómina de RRHH: el usuario la dejó fuera de la CAI-049. Decidir si va como propuesta aparte.",
+    "La propuesta lleva los campos de monto vacíos: dejar meta.json en Borrador hasta que ventas los llene y la envíe."
+  ]
+}

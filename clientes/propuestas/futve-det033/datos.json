@@ -1,0 +1,231 @@
+{
+ "version": 3,
+ "formato": "deteccion",
+ "cliente": {
+  "nombre": "FUTVE",
+  "slug": "futve-det033",
+  "codigo": "DET-033"
+ },
+ "division": "educacion",
+ "alianza": false,
+ "omitir": [
+  "pago"
+ ],
+ "eje": "Mapear los procesos de las seis áreas de la FUTVE (presidencia, dirección general, dirección corporativa, dirección comercial, talento humano y finanzas), dejar logros inmediatos construidos con sus equipos y saber por dónde empezar con IA",
+ "origen": "Ficha de Levantamiento de la FUTVE (Verónica Rubio, 13/10/2026) y transcripción de la reunión por Google Meet con la Presidencia del 13/10/2026. Si se contradicen, manda la transcripción; versión 2 del 15/10/2026 (Ivana, con la lista de áreas de la propuesta): seis áreas en lugar de cuatro, sin Comunicaciones y Marketing, y Talento Humano como área que aún no existe",
+ "fuente_insumo": "Ficha de Levantamiento (13/10/2026) y transcripción de la reunión por Google Meet (13/10/2026) y versión 2 del 15/10/2026 (lista de áreas de Ivana)",
+ "portada": {
+  "titulo_lineas": [
+   "Mapa de oportunidades de IA",
+   "y logros inmediatos"
+  ],
+  "titulo_destacado": "en FUTVE",
+  "lead": "Auditamos seis áreas de {cliente_corto}, proceso por proceso y con quien hace el trabajo. Construimos **logros inmediatos** en el camino y dejamos claro por dónde empezar con IA.",
+  "hechos": [
+   {
+    "num": "Dispersa",
+    "texto": "es la IA hoy: cada jefe la usa por su cuenta y el nivel de partida varía mucho entre áreas."
+   },
+   {
+    "num": "Falta",
+    "texto": "tiempo para analizar: el equipo trabaja contra reloj."
+   },
+   {
+    "num": "Reuniones",
+    "texto": "para saber cómo van las finanzas: la información se consulta persona a persona."
+   },
+   {
+    "num": "Ninguna",
+    "texto": "política de datos interna guía hoy qué información se puede usar con IA."
+   }
+  ],
+  "fuente": "Fuente: reunión de levantamiento con la dirección de FUTVE."
+ },
+ "deteccion": {
+  "areas": [
+   "Presidencia",
+   "Dirección General",
+   "Dirección Corporativa",
+   "Dirección Comercial",
+   "Talento Humano",
+   "Finanzas"
+  ],
+  "horas": {
+   "levantamiento": 24,
+   "arranque": 0,
+   "nivelacion": 2
+  },
+  "foco": "El levantamiento sigue **el camino de la información hacia las decisiones de la dirección**. En **Talento Humano**, que aún no existe como área, separa sus procesos para poder automatizarlos.",
+  "logros_minimos": 3,
+  "para_que": [
+   {
+    "titulo": "Ver la operación real",
+    "texto": "Cómo trabaja hoy cada área y dónde se pierde tiempo o falta análisis."
+   },
+   {
+    "titulo": "Mejorar desde ya",
+    "texto": "Logros inmediatos que el equipo usa mientras avanza el levantamiento."
+   },
+   {
+    "titulo": "Saber por dónde empezar",
+    "texto": "Qué automatizar primero y con qué licencias, sin abrumar al equipo con todo a la vez."
+   },
+   {
+    "titulo": "Cuidar la información",
+    "texto": "Saber qué datos maneja cada puesto y dónde hace falta una regla de uso."
+   }
+  ],
+  "ruta_completa": [
+   {
+    "cuando": "Ahora",
+    "servicio": "Detección",
+    "texto": "Esta propuesta."
+   },
+   {
+    "cuando": "Después",
+    "servicio": "Habilidades",
+    "texto": "Construir con cada equipo, proceso por proceso, lo que el Mapa de Calor priorice."
+   }
+  ],
+  "etapas": [
+   {
+    "titulo": "Arranque",
+    "texto": "Reunión con la dirección: alcance, responsable de cada área y calendario."
+   },
+   {
+    "titulo": "Nivelación",
+    "texto": "Fundamentos de IA para los jefes de área, con ejemplos de su propio trabajo."
+   },
+   {
+    "titulo": "Levantamiento",
+    "texto": "Área por área, con su líder y su mano derecha.",
+    "horas": true
+   },
+   {
+    "titulo": "Priorización",
+    "texto": "Intezia cruza lo levantado en todas las áreas y ordena las oportunidades."
+   },
+   {
+    "titulo": "Informe Final",
+    "texto": "Diagnóstico y hoja de ruta, presentados a la dirección."
+   }
+  ],
+  "entregables": [
+   {
+    "cuando": "Al arrancar",
+    "titulo": "Alcance y calendario",
+    "texto": "Acordados con la dirección: responsable de cada área y orden del levantamiento."
+   },
+   {
+    "cuando": "Al arrancar",
+    "titulo": "Jefes nivelados en IA",
+    "texto": "Un lenguaje común sobre IA y su uso responsable, con ejemplos de su propio trabajo."
+   },
+   {
+    "cuando": "En el levantamiento",
+    "titulo": "Logros inmediatos",
+    "texto": "**Al menos {logros_minimos_palabra}** soluciones construidas con el equipo, en uso desde el primer día."
+   },
+   {
+    "cuando": "Al cierre",
+    "titulo": "Mapa de Calor",
+    "texto": "Todas las oportunidades de {cliente_corto} en un solo mapa, con su Índice de Madurez en IA, para ver por dónde empezar."
+   },
+   {
+    "cuando": "Al cierre",
+    "titulo": "Informe Final y hoja de ruta",
+    "texto": "Diagnóstico por área y ruta de adopción de IA, con los pasos para que {cliente_corto} sostenga lo que automatice con su propio equipo."
+   },
+   {
+    "cuando": "Al cierre",
+    "titulo": "Inversión inteligente en licencias",
+    "texto": "Qué ecosistema de IA adquirir y para qué puestos, con la **inversión estimada**."
+   }
+  ],
+  "texto_horas": "**{h_levantamiento} horas** de levantamiento, repartidas según lo que necesite cada área."
+ },
+ "metodo": {
+  "por_que_orden": "Primero nivelamos a los jefes de área, para que todos hablen el mismo idioma sobre IA. Después levantamos cada área por separado, para que cada líder hable de sus procesos sin esperar a otros. Al final priorizamos con la foto completa de {cliente_corto}.",
+  "quien_construye": "Intezia levanta y construye junto a cada líder. Los accesos y las herramientas con las que se trabaja los autoriza {cliente_corto}.",
+  "datos": "Trabajamos con ejemplos reales y solo con las cuentas y la información que {cliente_corto} autoriza. No sacamos datos de la federación y sus sistemas no se modifican."
+ },
+ "retorno": {
+  "pasos": [
+   {
+    "titulo": "Volumen",
+    "texto": "Cuántas veces al mes se repite cada tarea, por ejemplo, un reporte de finanzas."
+   },
+   {
+    "titulo": "Tiempo actual",
+    "texto": "Lo que toma hoy cada vez, según el líder del área y su mano derecha."
+   },
+   {
+    "titulo": "Tiempo con la solución",
+    "texto": "La estimación de Intezia para cada oportunidad del Mapa de Calor."
+   },
+   {
+    "titulo": "Horas recuperables",
+    "texto": "Volumen por la diferencia de tiempos: una estimación de referencia, no un compromiso de resultado."
+   },
+   {
+    "titulo": "Prioridad",
+    "texto": "Impacto, esfuerzo y riesgo de cada oportunidad, para decidir por dónde empezar."
+   }
+  ]
+ },
+ "inversion": {
+  "duracion": "Reunión de arranque, nivelación en IA de los jefes de área y **{h_levantamiento} horas de levantamiento**, repartidas según cada área.",
+  "programa": [
+   "Servicio de Detección para {cliente_corto} ({codigo}).",
+   "Arranque con la dirección y nivelación en IA de los jefes de área.",
+   "Levantamiento por área, con su líder y su mano derecha.",
+   "Al menos {logros_minimos} logros inmediatos, Mapa de Calor e Informe Final.",
+   "{h_levantamiento} horas de levantamiento."
+  ],
+  "notas": [
+   "Esta inversión no incluye licencias de IA.",
+   "Habilidades, la etapa que sigue, se cotiza aparte."
+  ]
+ },
+ "logistica": {
+  "modalidad": "Presencial, en las oficinas de {cliente_corto}, en Caracas.",
+  "participantes": "Los jefes de área en la nivelación; el líder de cada área y su mano derecha en el levantamiento."
+ },
+ "proximos_pasos": {
+  "asesora": {
+   "nombre": "Verónica Rubio",
+   "cargo": "Asesora comercial",
+   "correo": "vrubio01@intezia.com",
+   "telefono": "+58 422 3355505"
+  }
+ },
+ "siglas_ok": [
+  "IA",
+  "FUTVE"
+ ],
+ "supuestos": [
+  "Versión 2 (Ivana, 15/10/2026, con la lista de áreas de la propuesta): seis áreas en este orden: Presidencia, Dirección General, Dirección Corporativa, Dirección Comercial, Talento Humano y Finanzas (antes cuatro: Finanzas, Presidencia, Comunicaciones y Marketing, Talento Humano). Comunicaciones y Marketing sale del deck (respuesta de Ivana, opción recomendada) y ya no se nombran redes ni contenido: se quitó la frase de la estrategia de contenido del hecho «Falta» de la portada y el ejemplo de las métricas de redes del retorno. Horas: 4 h por área, 24 h de levantamiento (antes 16 h) y 2 h de nivelación; total interno 26 h. Talento Humano aún no existe: el deck lo dice en el foco de la slide 2; quién lleva hoy esos procesos no cabe en la caja de participantes y queda cubierto por «responsable de cada área» de la etapa de arranque (a confirmar; no se nombra a ninguna persona). Las áreas se escriben en título (Dirección Corporativa, Dirección Comercial) como el resto del deck. Sin lista de personal ni organigrama, no se muestran departamentos. Las demás reglas (nivelación en un solo grupo, al menos 3 logros inmediatos, sin facilidad de pago, Habilidades como segunda fase) no cambian.",
+  "División y alianza inferidas: Educación y sin alianza (federación deportiva con su propia organización; la Ficha no menciona aliado). Confirmar con Ivana. Nombre del cliente: «FUTVE», como figura en la Ficha («FUTVE (Federación Venezolana de Fútbol)»); en el deck se escribe «FUTVE» sin artículo, como nombre propio, para que el pie y los textos automáticos lean bien.",
+  "Fuente: Ficha de Levantamiento y transcripción de la reunión por Google Meet, ambas del 13/10/2026. La transcripción recibida se corta a los ~53 de los 59 minutos (cuando la asesora explicaba el kick-off del Cerebro Digital): no afecta lo dicho sobre la Detección, pero conviene revisar el tramo final. No hubo contradicciones entre ambas en lo que se usó.",
+  "Áreas: las 4 de la Ficha, como las nombra el cliente (Finanzas, Presidencia (con la Dirección General), Comunicaciones y Marketing con las redes sociales y el contenido, Talento Humano). No hay lista de personal ni organigrama, por eso no se muestran departamentos. Administración y contabilidad, Competiciones, delegados y el soporte de tecnología quedan fuera por pedido del cliente: «prefiero buscar primero la emergencia».",
+  "El cliente quiere empezar por los jefes de área (6 a 8 personas de unas 20): eso define quién recibe la nivelación (un solo grupo) y a quién se entrevista (1 o 2 personas por área, líder y mano derecha). No convierte a ningún área en prioritaria (Keiber, 08/10/2026).",
+  "Horas (lineamiento de Detección): 4 h por área x 6 = 24 h de levantamiento (versión 2 del 15/10/2026, opción recomendada elegida por Ivana; antes 4 x 4 = 16 h), que es lo único que se muestra, más 2 h de nivelación en IA para los 6 a 8 jefes de área en un solo grupo (el nivel de partida es muy desigual entre áreas). El arranque va aparte, sin horas. Total interno: 26 h (antes 18 h).",
+  "Talento Humano (versión 2: el área aún no existe y quieren separar sus procesos y armar automatizaciones para tener esa función sin necesidad de que una persona esté allí; el deck solo promete separar y mapear sus procesos, y las automatizaciones quedan como candidatas a logro inmediato o a Habilidades, porque las reglas de Keiber no permiten asignar logros por área ni decidir antes de detectar qué se hará en cada una). Antes: la FUTVE no tiene hoy un proceso formal (los candidatos llegan «por conocidos» y se revisan currículos) y la Ficha no nombra responsable. Se levanta como área con quien lo lleve hoy; falta confirmar quién.",
+  "Sin facilidad de pago (criterio de Ivana en las Detecciones recientes; el estándar sería 50 % al aprobar y 50 % con el Informe Final): la propuesta queda en 8 slides y ventas comunica el plan por otro medio.",
+  "Logros inmediatos: al menos 3 en el proyecto, no uno por área. La Ficha identifica dos expectativas (resumir y responder consultas de finanzas sin reuniones manuales; escanear los comentarios y las métricas de las redes): no se prometen ni se nombran en el deck, porque se deciden en el levantamiento y un proceso de mucho esfuerzo pasa al Mapa de Calor.",
+  "El mayor reto del cliente, llenar los estadios de Caracas, no es alcance de la Detección y no se promete: el levantamiento solo ve dónde la IA ayuda a analizar datos para decidir. No va en el deck.",
+  "Sin pre-recomendar herramienta de IA: el cliente ya trabaja con Claude (Claude Code) y el Informe Final recomienda el ecosistema. No se menciona el acceso a Claude desde Venezuela ni se promete VPN.",
+  "Ruta completa: Detección ahora y Habilidades después (la Ficha marca esos dos servicios). Sin Políticas aunque no tienen política de datos (criterio de la DET-031 y la DET-032): se cubre con el levantamiento de qué datos maneja cada puesto. El Cerebro Digital de la Presidencia es otra propuesta y esta no lo menciona.",
+  "No va al deck: nombres de personas (presidente, directores, supervisor de tecnología), el cerebro digital personal del presidente y sus automatizaciones, su proyecto de radioaficionado, la dependencia de aliados externos de desarrollo y que la FUTVE fue cliente de Intezia hace aproximadamente un año.",
+  "Sin semanas, sesiones ni fechas (§4.23): el calendario se acuerda en el arranque. El cliente vuelve de viaje el 29/10/2026 y pidió agilizar el inicio: se resuelve en el kick-off, no en el deck."
+ ],
+ "pendientes": [
+  "Versión 2: confirmar con Verónica si el cliente ya recibió la versión del 14/10/2026 (esta la reemplaza), qué hace cada una de las seis áreas, quién es el líder y la mano derecha de Presidencia, Dirección General, Dirección Corporativa, Dirección Comercial y Finanzas, y cuántos jefes de área son en total para la nivelación (6 a 8, un grupo).",
+  "Definir inversión, descuento y total (campos vacíos para ventas); línea de facturación (moneda y tasa) por confirmar con ventas. Decidir si lleva facilidad de pago.",
+  "Confirmar las 26 h internas (24 de levantamiento, 4 h por cada una de las 6 áreas, y 2 de nivelación) y que la nivelación es un solo grupo de 6 a 8 jefes de área.",
+  "Confirmar quién lleva hoy los procesos de Talento Humano (no hay líder: se levanta con quien los lleve, a confirmar en el arranque) y, en cada área, quiénes son el líder y su mano derecha.",
+  "Confirmar con Ivana si el servicio previo de Intezia con la FUTVE se menciona o no (hoy no va).",
+  "Verónica prometió enviar la propuesta por correo el 14 o el 15/10/2026 y agendar una reunión de revisión (virtual o en Caracas); el cliente regresa el 29/10/2026.",
+  "Coordinar con la propuesta del Cerebro Digital de la Presidencia, si se hace: son separadas y ninguna menciona a la otra."
+ ]
+}

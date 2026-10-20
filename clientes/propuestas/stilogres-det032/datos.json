@@ -1,0 +1,222 @@
+{
+ "version": 3,
+ "formato": "deteccion",
+ "cliente": {
+  "nombre": "Stilogres",
+  "slug": "stilogres-det032",
+  "codigo": "DET-032",
+  "nombre_pie": "Stilogres"
+ },
+ "division": "educacion",
+ "alianza": false,
+ "omitir": [
+  "pago"
+ ],
+ "eje": "Mapear los procesos de administración, ventas, compras y logística de Stilogres, dejar logros inmediatos construidos con el equipo y llegar a Habilidades con claridad sobre qué automatizar",
+ "origen": "Ficha de Levantamiento de Stilogres (Verónica Rubio, 09/10/2026). No hay transcripción de la reunión: si la transcripción contradice la Ficha, manda la transcripción",
+ "fuente_insumo": "Ficha de Levantamiento de Stilogres (sin transcripción de la reunión)",
+ "portada": {
+  "titulo_lineas": [
+   "Mapa de procesos para automatizar",
+   "con IA y logros inmediatos"
+  ],
+  "titulo_destacado": "en Stilogres",
+  "lead": "Auditamos administración, ventas, compras y logística de {cliente_corto}, proceso por proceso y con quien hace el trabajo. Construimos **logros inmediatos** en el camino y dejamos mapeado qué conviene automatizar primero.",
+  "hechos": [
+   {
+    "num": "5",
+    "texto": "personas intervienen cada día en las cotizaciones y las órdenes de compra."
+   },
+   {
+    "num": "Tardan",
+    "texto": "mucho las cotizaciones y las órdenes de compra, con correcciones cuando compras rectifica."
+   },
+   {
+    "num": "A mano",
+    "texto": "se concilia todo, y las cotizaciones se arman en su sistema de gestión."
+   },
+   {
+    "num": "Ninguna",
+    "texto": "formación ni regla de datos guía el uso de la IA, que algunos usan bien y otros no."
+   }
+  ],
+  "fuente": "Fuente: reunión de levantamiento con la dirección de Stilogres."
+ },
+ "deteccion": {
+  "areas": [
+   "Administración",
+   "Ventas",
+   "Compras",
+   "Logística"
+  ],
+  "horas": {
+   "levantamiento": 16,
+   "arranque": 0,
+   "nivelacion": 2
+  },
+  "foco": "El levantamiento sigue el **recorrido de una cotización y su orden de compra** entre las cuatro áreas, para ver dónde se pierde tiempo y se corrige.",
+  "logros_minimos": 3,
+  "para_que": [
+   {
+    "titulo": "Ver la operación real",
+    "texto": "Cómo trabaja hoy cada departamento y dónde se pierde tiempo."
+   },
+   {
+    "titulo": "Mejorar desde ya",
+    "texto": "Logros inmediatos que el equipo usa mientras avanza el levantamiento."
+   },
+   {
+    "titulo": "Invertir con criterio",
+    "texto": "Elegir herramientas y licencias de IA sobre una base cierta."
+   },
+   {
+    "titulo": "Cuidar la información",
+    "texto": "Saber qué datos maneja cada puesto y dónde hace falta control."
+   }
+  ],
+  "ruta_completa": [
+   {
+    "cuando": "Ahora",
+    "servicio": "Detección",
+    "texto": "Esta propuesta."
+   },
+   {
+    "cuando": "Después",
+    "servicio": "Habilidades",
+    "texto": "Construir con el equipo, proceso por proceso, las soluciones que el Mapa de Calor priorice."
+   }
+  ],
+  "etapas": [
+   {
+    "titulo": "Arranque",
+    "texto": "Reunión con la dirección: alcance, encargado de cada área y calendario."
+   },
+   {
+    "titulo": "Nivelación",
+    "texto": "Fundamentos de IA para todo el equipo, con ejemplos de su propio trabajo."
+   },
+   {
+    "titulo": "Levantamiento",
+    "texto": "Área por área, con su encargado y quien hace el trabajo.",
+    "horas": true
+   },
+   {
+    "titulo": "Priorización",
+    "texto": "Intezia cruza lo levantado en todas las áreas y ordena las oportunidades."
+   },
+   {
+    "titulo": "Informe Final",
+    "texto": "Diagnóstico y hoja de ruta, presentados a la dirección."
+   }
+  ]
+ },
+ "metodo": {
+  "pasos": [
+   {
+    "titulo": "Entrevistamos",
+    "texto": "Al encargado de cada área, con quien hace el trabajo."
+   },
+   {
+    "titulo": "Mapeamos",
+    "texto": "Procesos, tiempos, herramientas y cuellos de botella del día a día."
+   },
+   {
+    "titulo": "Construimos",
+    "texto": "Un logro inmediato en el momento, cuando el proceso lo permite."
+   },
+   {
+    "titulo": "Priorizamos",
+    "texto": "Cada oportunidad por impacto, esfuerzo y riesgo."
+   }
+  ],
+  "por_que_orden": "Primero nivelamos al equipo, para que todos hablen el mismo idioma sobre IA. Después levantamos cada área por separado, para que cada encargado hable de sus procesos sin esperar a otros. Al final priorizamos con la foto completa de {cliente_corto}.",
+  "quien_construye": "Intezia levanta y construye junto al encargado de cada área. {cliente_corto} autoriza los accesos y las herramientas con las que se trabaja.",
+  "practica": [
+   {
+    "titulo": "Sin tarea previa",
+    "texto": "Los encargados no preparan nada antes: todo se levanta en la conversación."
+   },
+   {
+    "titulo": "Un espacio por área",
+    "texto": "Nadie espera mientras otra área expone sus procesos."
+   },
+   {
+    "titulo": "Sin forzar soluciones",
+    "texto": "Si un proceso exige mucho esfuerzo, no se resuelve en el momento: pasa al Mapa de Calor con su prioridad."
+   }
+  ],
+  "datos": "Trabajamos con ejemplos reales sin sacar datos de clientes ni información de compras y facturación de {cliente_corto}. Los logros usan solo las cuentas autorizadas, y sus sistemas no se modifican."
+ },
+ "retorno": {
+  "pasos": [
+   {
+    "titulo": "Volumen",
+    "texto": "Cuántas veces al mes se repite cada tarea, por ejemplo, armar una cotización o una orden de compra."
+   },
+   {
+    "titulo": "Tiempo actual",
+    "texto": "Lo que toma hoy cada vez, según quien hace el trabajo en cada área."
+   },
+   {
+    "titulo": "Tiempo con la solución",
+    "texto": "La estimación de Intezia para cada oportunidad del Mapa de Calor."
+   },
+   {
+    "titulo": "Horas recuperables",
+    "texto": "Volumen por la diferencia de tiempos: una estimación de referencia, no un compromiso de resultado."
+   },
+   {
+    "titulo": "Prioridad",
+    "texto": "Impacto, esfuerzo y riesgo de cada oportunidad, para decidir por dónde empezar."
+   }
+  ]
+ },
+ "inversion": {
+  "programa": [
+   "Servicio de Detección · {cliente_corto} ({codigo}).",
+   "Arranque con la dirección y nivelación en IA de todo el equipo.",
+   "Levantamiento por área, con el encargado de cada una.",
+   "Al menos {logros_minimos} logros inmediatos, Mapa de Calor e Informe Final.",
+   "{h_levantamiento} horas de levantamiento."
+  ],
+  "notas": [
+   "Esta inversión no incluye licencias de IA.",
+   "Habilidades, la etapa que sigue, se cotiza aparte."
+  ]
+ },
+ "logistica": {
+  "modalidad": "Presencial, en las oficinas de {cliente_corto}, en sus dos sedes.",
+  "participantes": "Todo el equipo en la nivelación; el encargado de cada área en el levantamiento."
+ },
+ "proximos_pasos": {
+  "asesora": {
+   "nombre": "Verónica Rubio",
+   "cargo": "Asesora comercial",
+   "correo": "vrubio01@intezia.com",
+   "telefono": "+58 422 3355505"
+  }
+ },
+ "siglas_ok": [
+  "IA"
+ ],
+ "supuestos": [
+  "División y alianza inferidas: Educación y sin alianza (micro/pyme privada, primer contacto, la Ficha no menciona aliado). El pedido decía «Stilpogres»: se tomó «Stilogres», como figura en la Ficha. Confirmar con Ivana.",
+  "«Igual que la anterior»: se hizo como quedó la DET-031 de All Clean: solo Detección, Habilidades como segunda fase (sin «Más adelante: Políticas»), sin facilidad de pago y sin hoja aparte del proceso (no se pidió).",
+  "Fuente: solo la Ficha de Levantamiento del 09/10/2026; no hay transcripción de la reunión (CLAUDE.md §4.23). Si la transcripción contradice la Ficha, manda la transcripción.",
+  "Áreas: las 4 de la Ficha, con el nombre normalizado (Administración, Ventas, Compras, Logística). No hay lista de personal (8 personas, perfil «especialistas»), por eso no se muestran departamentos.",
+  "Horas (lineamiento de Detección): 4 h por área x 4 = 16 h de levantamiento, que es lo único que se muestra, más 2 h de nivelación en IA para las 8 personas en un solo grupo. La Ficha pide presencial y tiene 2 sedes: si logística pide un grupo por sede, la nivelación pasa a 4 h y el total interno a 20 h. El arranque va aparte, sin horas. Total interno: 18 h.",
+  "Sin líderes: la Ficha dice que en todas las áreas hay los mismos roles operativos, solo encargados u operativos. Por eso los textos hablan del «encargado de cada área» y no del «líder y su mano derecha» del estándar; se entrevista a 1 persona por área.",
+  "Logros inmediatos: al menos 3 en el proyecto, no uno por área. La Ficha pide como logro inmediato «que se automaticen los procesos mencionados de las áreas»: es una expectativa, no una promesa. Los focos salen del levantamiento y un proceso de mucho esfuerzo pasa al Mapa de Calor.",
+  "Modalidad presencial en sus oficinas (2 sedes: las 4 asesoras comerciales en una y el resto en la otra) y calendario a mutuo acuerdo. Las «sesiones de 2 h» de la Ficha son para Habilidades: se definen en el arranque y no van en el deck (§4.23).",
+  "Sin facilidad de pago (criterio de Ivana en la DET-031): la propuesta queda en 8 slides y ventas comunica el plan por otro medio.",
+  "Sin pre-recomendar herramienta de IA: usan Gemini y ChatGPT y les interesa Claude, pero la recomendación la hace el Informe Final. El sistema de gestión se nombra solo así, sin su marca.",
+  "No va al deck: nombre y correo del cliente, el uso actual de IA de las asesoras comerciales (mostrar el producto en una foto), el patrocinio «presente pero tibio» y el presupuesto «en evaluación»."
+ ],
+ "pendientes": [
+  "Pedir la transcripción de la reunión con Stilogres y revisar la propuesta contra ella.",
+  "Definir inversión, descuento y total (campos vacíos para ventas); línea de facturación (moneda y tasa) por confirmar con ventas.",
+  "Confirmar las 18 h (16 de levantamiento y 2 de nivelación) y si la nivelación es un grupo o uno por sede.",
+  "Confirmar el nombre «Stilogres» y quién es el encargado de cada una de las 4 áreas.",
+  "Coordinar con la CAI-047: es el mismo cliente y propuestas separadas. La del Cerebro Digital no menciona esta."
+ ]
+}

@@ -1,0 +1,545 @@
+<!doctype html>
+<!--
+  Propuesta · ESTEI · Servicio de Habilidades (CAI-058)
+  División: Educación · Servicio: Habilidades (§4.1a) · Alianza: no
+  GENERADO por scripts/generar-habilidades-compacto.py (plantilla 3.0 (2026-10-08), formato habilidades) desde datos.json.
+  No editar a mano: editar datos.json y regenerar. Estilos propios del deck: overrides.css.
+  Fuente del insumo: Contexto pegado por Ivana (sin Ficha Comercial ni transcripción de la reunión); propuesta anterior de ESTEI CAP-044 solo como referencia de cuenta
+
+  Formato compacto de 10 slides, en el orden de las preguntas del cliente (Ventas, 2026-10-07), sin semanas, sesiones
+  ni fechas (Keiber, 2026-10-08):
+    1 Portada · 2 Alcance · 3 Ruta · 4 Calendario · 5 Cómo trabajamos · 6 Entregables · 7 Retorno · 8 Inversión · 9 Facilidad de pago · 10 Próximos pasos
+  Marcadores de detección de AcroForms (agregar-campo-precio.py), por página: «Propuesta Económica» solo en la slide de
+  inversión; «Lo que se llevan» y «Entregables» solo en la de entregables; «Facilidad de pago» solo en la de pago.
+  Campos AcroForm: Programa, Notas, PrecioBase, Descuento, PrecioTotal (inversión), PagoCuota1..3 (pago) y Entregables, Acreditacion (entregables). Se reposicionan con scripts/customize-habilidades-compacto.py.
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Propuesta · ESTEI · Intezia Educación</title>
+  <link rel="stylesheet" href="../_base/styles.css">
+  <link rel="stylesheet" href="habilidades-compacto.css">
+  <link rel="stylesheet" href="overrides.css">
+</head>
+<body>
+
+  <main class="deck">
+
+    <!-- 1 · Portada: ¿cuál es mi problema? -->
+    <section class="slide s-cover">
+      <span class="counter">01 / 10</span>
+      <div class="logo-big">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia Educación">
+      </div>
+      <div class="body">
+        <p class="eyebrow">Propuesta de proyecto · Servicio de Habilidades</p>
+        <h1 style="font-size:46px">
+          Del CEO al equipo directivo,<br>
+          con clon digital y skills de Claude<br>
+          <span class="hl">en ESTEI</span>
+        </h1>
+        <p class="lead">
+          Este proyecto pone a <strong>Claude</strong> al centro de la dirección de ESTEI: primero el <strong>clon digital del CEO</strong> y sus skills, y después el <strong>clon y una skill</strong> para cada uno de sus cuatro directores.
+        </p>
+        <div class="pain-strip">
+          <div class="pain-item">
+            <span class="pain-num">6 h</span>
+            <span class="pain-lbl">para crear el clon digital del CEO, con Claude configurado y el contexto de ESTEI cargado.</span>
+          </div>
+          <div class="pain-item">
+            <span class="pain-num">6</span>
+            <span class="pain-lbl">skills del CEO: procesos, video, diseño, marketing y redes, CRM y consejo ejecutivo.</span>
+          </div>
+          <div class="pain-item">
+            <span class="pain-num">4</span>
+            <span class="pain-lbl">directores con clon digital y skill propia: Finanzas, Tecnología, Ventas y Atención, y Marketing.</span>
+          </div>
+        </div>
+        <p class="pain-src">Contenido del proyecto; no son mediciones de ESTEI.</p>
+      </div>
+      <div class="id-line">
+        <span class="codigo">Código: CAI-058</span>
+        <span class="cliente">ESTEI</span>
+      </div>
+    </section>
+
+    <!-- 2 · Alcance: qué vamos a hacer y para qué -->
+    <section class="slide s-scope roomy">
+      <span class="counter">02 / 10</span>
+      <p class="eyebrow">02 · Alcance</p>
+      <h2>Clon y skills, del CEO a cuatro directores.</h2>
+      <p class="sub"><strong>6 horas</strong> de clon, <strong>12 horas</strong> de skills del CEO y <strong>32 horas</strong> con el equipo directivo.</p>
+
+      <div class="scope-panels one" style="--np:1">
+        <div class="scope-panel acc-y">
+          <div class="scope-head">
+            <span class="scope-tag">Claude</span>
+            <span class="scope-total"><b>15</b> entregables · 6 bloques</span>
+          </div>
+          <ul class="scope-rows">
+              <li><span class="area">Clon Digital del CEO</span><span class="para">Claude configurado con el contexto de ESTEI y su clon digital.</span></li>
+              <li><span class="area">Skills del CEO</span><span class="para">Seis skills para procesos, video, diseño, marketing, CRM y consejo ejecutivo.</span></li>
+              <li><span class="area">Director de Finanzas</span><span class="para">Su clon digital y una skill propia para su área, con medición del impacto.</span></li>
+              <li><span class="area">Director de Tecnología</span><span class="para">Su clon digital y una skill propia para su área, con medición del impacto.</span></li>
+              <li><span class="area">Director de Ventas y Atención</span><span class="para">Su clon digital y una skill propia para su área, con medición del impacto.</span></li>
+              <li><span class="area">Director de Marketing</span><span class="para">Su clon digital y una skill propia para su área, con medición del impacto.</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="scope-out">
+        <p class="scope-card-label">Fuera de este alcance</p>
+        <ul>
+          <li>Licencias de Claude y de GoHighLevel y sus accesos: no forman parte de esta propuesta y los autoriza ESTEI.</li>
+          <li>Skills adicionales a las del CEO y a la de cada director: se acuerdan aparte, según lo que el equipo necesite.</li>
+          <li>Datos confidenciales o de personas: no se cargan sin autorización de ESTEI, y decidir sobre personas es humano.</li>
+        </ul>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">ESTEI · CAI-058</span>
+      </div>
+    </section>
+
+    <!-- 3 · Ruta: qué pasa en cada fase -->
+    <section class="slide s-route">
+      <span class="counter">03 / 10</span>
+      <p class="eyebrow">03 · Ruta</p>
+      <h2>Clon, skills y directivos, en tres fases.</h2>
+      <p class="sub">Las fechas pautadas de cada encuentro están en la página siguiente. La garantía y el seguimiento a 30, 60 y 90 días corren desde el cierre del proyecto.</p>
+
+      <div class="route-grid n1" style="--cols:3; --rows:1; --rowh:214px">
+
+        <div class="rg-corner"></div>
+        <div class="rg-phase rg-ph-1">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Clon</span><b class="rg-phase-n">1 entregable</b></span>
+          <span class="rg-phase-name"><strong>CEO con IA y clon digital</strong></span>
+        </div>
+        <div class="rg-phase rg-ph-2">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Skills</span><b class="rg-phase-n">6 entregables</b></span>
+          <span class="rg-phase-name"><strong>Skills del CEO</strong></span>
+        </div>
+        <div class="rg-phase rg-ph-3 hi">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Equipo</span><b class="rg-phase-n">8 entregables</b></span>
+          <span class="rg-phase-name"><strong>Extensión al equipo directivo</strong></span>
+        </div>
+        <div class="rg-phase rg-fu">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Garantía</span></span>
+          <span class="rg-phase-date">30, 60 y 90 días</span>
+          <span class="rg-phase-txt">Seguimiento desde el cierre del proyecto</span>
+        </div>
+
+        <div class="rg-front acc-y">
+          <span class="rg-front-h">CEO y equipo directivo</span>
+          <span class="rg-front-row"><span class="rg-front-tool">Claude</span><b class="rg-front-n">15 entregables</b></span>
+          <span class="rg-front-meta">50 h de trabajo</span>
+        </div>
+        <div class="rg-cell"><span class="rg-h"><b>1</b> entregable <i>6 h</i></span><p>Claude configurado con el contexto de la empresa y el clon digital del CEO.</p></div>
+        <div class="rg-cell"><span class="rg-h"><b>6</b> entregables <i>12 h</i></span><p>Seis skills del CEO: procesos, video, diseño, marketing, CRM y consejo ejecutivo.</p></div>
+        <div class="rg-cell hi"><span class="rg-h"><b>8</b> entregables <i>32 h</i></span><p>Clon digital y una skill para cada uno de los cuatro directores, con medición.</p></div>
+
+        <div class="rg-follow" style="grid-column:5; grid-row:2 / span 1">
+          <ul>
+            <li><b>30 días</b><span>Uso diario del clon y las skills</span></li>
+            <li><b>60 días</b><span>Nuevas construcciones de cada persona</span></li>
+            <li><b>90 días</b><span>Tiempo recuperado contra la línea base</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="route-miles" style="grid-template-columns:repeat(5,1fr)">
+        <div class="mile"><span class="mile-d"></span><b>Arranque</b><p>Lunes 26 de octubre. Se acuerdan los horarios, las personas y la skill de cada director.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Clon del CEO</b><p>Claude instalado, contexto de ESTEI cargado y clon digital creado.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Skills del CEO</b><p>Seis skills listas, desde procesos con IA hasta el consejo ejecutivo.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Equipo directivo</b><p>Cuatro directores con clon y skill propia, y su impacto medido.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>30 · 60 · 90 días</b><p>Seguimiento: uso, nuevas construcciones y tiempo recuperado.</p></div>
+      </div>
+      <p class="route-note">Las 50 h de trabajo son una proyección: 6 h de clon, 12 h de skills del CEO y 32 h con los cuatro directores.</p>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">ESTEI · CAI-058</span>
+      </div>
+    </section>
+
+    <!-- Calendario de inicio (opcional): fechas pautadas que cubren el total de horas -->
+    <section class="slide s-cal">
+      <span class="counter">04 / 10</span>
+      <p class="eyebrow">04 · Calendario</p>
+      <h2>Calendario de inicio.</h2>
+      <p class="sub">25 encuentros de 2 horas, los lunes, miércoles y viernes, que suman las 50 horas del proyecto.</p>
+
+      <div class="cal-box">
+        <p class="cal-label">Calendario de inicio · primera fecha: lunes 26 de octubre</p>
+        <p class="cal-intro">Por las mañanas, de 9 a 11. Cada encuentro trabaja un entregable de la propuesta; el horario se ajusta en la reunión de arranque.</p>
+        <div class="cal-cols" style="--cal-rowh:33px">
+          <ul class="cal-col">
+            <li><span class="cal-d">Lun 26 oct</span><span class="cal-h">9-11</span><span class="cal-t">Clon digital del CEO · encuentro 1</span></li>
+            <li><span class="cal-d">Mié 28 oct</span><span class="cal-h">9-11</span><span class="cal-t">Clon digital del CEO · encuentro 2</span></li>
+            <li><span class="cal-d">Vie 30 oct</span><span class="cal-h">9-11</span><span class="cal-t">Clon digital del CEO · encuentro 3</span></li>
+            <li><span class="cal-d">Lun 2 nov</span><span class="cal-h">9-11</span><span class="cal-t">Skill de Procesos con IA</span></li>
+            <li><span class="cal-d">Mié 4 nov</span><span class="cal-h">9-11</span><span class="cal-t">Skill de Edición de Video</span></li>
+            <li><span class="cal-d">Vie 6 nov</span><span class="cal-h">9-11</span><span class="cal-t">Skill de Diseño</span></li>
+            <li><span class="cal-d">Lun 9 nov</span><span class="cal-h">9-11</span><span class="cal-t">Skills de Marketing y Redes</span></li>
+            <li><span class="cal-d">Mié 11 nov</span><span class="cal-h">9-11</span><span class="cal-t">Skill de integración con el CRM</span></li>
+            <li><span class="cal-d">Vie 13 nov</span><span class="cal-h">9-11</span><span class="cal-t">Skill de Consejo Ejecutivo</span></li>
+            <li><span class="cal-d">Lun 16 nov</span><span class="cal-h">9-11</span><span class="cal-t">Clon digital de Finanzas · encuentro 1</span></li>
+            <li><span class="cal-d">Mié 18 nov</span><span class="cal-h">9-11</span><span class="cal-t">Clon digital de Finanzas · encuentro 2</span></li>
+            <li><span class="cal-d">Vie 20 nov</span><span class="cal-h">9-11</span><span class="cal-t">Clon digital de Finanzas · encuentro 3</span></li>
+            <li><span class="cal-d">Lun 23 nov</span><span class="cal-h">9-11</span><span class="cal-t">Skill de Finanzas</span></li>
+          </ul>
+          <ul class="cal-col">
+            <li><span class="cal-d">Mié 25 nov</span><span class="cal-h">9-11</span><span class="cal-t">Clon digital de Tecnología · encuentro 1</span></li>
+            <li><span class="cal-d">Vie 27 nov</span><span class="cal-h">9-11</span><span class="cal-t">Clon digital de Tecnología · encuentro 2</span></li>
+            <li><span class="cal-d">Lun 30 nov</span><span class="cal-h">9-11</span><span class="cal-t">Clon digital de Tecnología · encuentro 3</span></li>
+            <li><span class="cal-d">Mié 2 dic</span><span class="cal-h">9-11</span><span class="cal-t">Skill de Tecnología</span></li>
+            <li><span class="cal-d">Vie 4 dic</span><span class="cal-h">9-11</span><span class="cal-t">Clon digital de Ventas y Atención · encuentro 1</span></li>
+            <li><span class="cal-d">Lun 7 dic</span><span class="cal-h">9-11</span><span class="cal-t">Clon digital de Ventas y Atención · encuentro 2</span></li>
+            <li><span class="cal-d">Mié 9 dic</span><span class="cal-h">9-11</span><span class="cal-t">Clon digital de Ventas y Atención · encuentro 3</span></li>
+            <li><span class="cal-d">Vie 11 dic</span><span class="cal-h">9-11</span><span class="cal-t">Skill de Ventas y Atención</span></li>
+            <li><span class="cal-d">Lun 14 dic</span><span class="cal-h">9-11</span><span class="cal-t">Clon digital de Marketing · encuentro 1</span></li>
+            <li><span class="cal-d">Mié 16 dic</span><span class="cal-h">9-11</span><span class="cal-t">Clon digital de Marketing · encuentro 2</span></li>
+            <li><span class="cal-d">Vie 18 dic</span><span class="cal-h">9-11</span><span class="cal-t">Clon digital de Marketing · encuentro 3</span></li>
+            <li><span class="cal-d">Lun 21 dic</span><span class="cal-h">9-11</span><span class="cal-t">Skill de Marketing</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">ESTEI · CAI-058</span>
+      </div>
+    </section>
+
+    <!-- 4 · Cómo trabajamos: pasos, por qué en ese orden, casos reales, práctica, datos y logística -->
+    <section class="slide s-method roomy">
+      <span class="counter">05 / 10</span>
+      <p class="eyebrow">05 · Cómo trabajamos</p>
+      <h2>Así trabajamos con el CEO y sus directores.</h2>
+      <p class="sub">Cada clon y cada skill se construyen con casos reales de quien los va a usar.</p>
+
+      <ol class="mt-steps" style="--n:4">
+          <li><b>Construimos</b><span>Junto a cada persona, con sus casos reales.</span></li>
+          <li><b>Probamos</b><span>Con quien lo usa, sobre tareas reales de su trabajo.</span></li>
+          <li><b>Adoptamos</b><span>Cada persona lo usa en su trabajo diario.</span></li>
+          <li><b>Medimos</b><span>El tiempo recuperado contra la línea base.</span></li>
+      </ol>
+      <div class="mt-strips">
+        <p class="mt-why"><b>Por qué en este orden</b> Primero el clon del CEO, que reúne el contexto de ESTEI; luego sus skills, que lo usan; al final cada director repite el método con su propio clon.</p>
+        <p class="mt-who"><b>Quién construye</b> <strong>Intezia guía</strong> y cada persona construye su <strong>clon y sus skills</strong> con su propio contexto.</p>
+      </div>
+
+      <div class="mt-info">
+        <div class="mt-card">
+          <p class="mt-card-label">Cómo funciona en la práctica</p>
+          <ul><li><b>Contexto real.</b> El clon se alimenta del contexto y la información clave de ESTEI, que cada persona aporta.</li><li><b>Skills a la medida.</b> Cada skill se construye sobre una tarea real de quien la usa, con Intezia como guía.</li><li><b>Decisión humana.</b> El clon y las skills apoyan, pero la decisión final sigue siendo del CEO y de cada director.</li></ul>
+        </div>
+        <div class="mt-card">
+          <p class="mt-card-label">Cómo cuidamos sus datos</p>
+          <p>Solo se carga la información que ESTEI autoriza: ningún dato confidencial o personal entra sin su permiso.</p>
+        </div>
+      </div>
+
+      <div class="mt-logi">
+        <div class="mt-tile"><span>Modalidad</span><b>Presencial u online, según se acuerde en la reunión de arranque.</b></div>
+        <div class="mt-tile"><span>Participantes</span><b>El CEO de ESTEI y sus cuatro directores: Finanzas, Tecnología, Ventas y Atención, y Marketing.</b></div>
+        <div class="mt-tile"><span>Ritmo de trabajo</span><b>Por las mañanas, sin frenar la operación diaria del CEO y de cada director.</b></div>
+        <div class="mt-tile"><span>Arranque</span><b>ESTEI confirma el arranque del lunes 26 de octubre; los horarios se ajustan en la reunión de arranque.</b></div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">ESTEI · CAI-058</span>
+      </div>
+    </section>
+
+    <!-- 5 · Entregables: ¿con qué me quedo? (catálogo + piezas transversales) -->
+    <section class="slide s-deliv">
+      <span class="counter">06 / 10</span>
+      <p class="eyebrow">06 · Entregables</p>
+      <div class="deliv-head">
+        <h2>Todo lo que ESTEI recibe.</h2>
+        <p class="deliv-sub"><span class="nw">Lo que se llevan</span>: <strong>clon y skills de cada persona</strong>, más el seguimiento a 30, 60 y 90 días que mide su efecto.</p>
+      </div>
+
+      <div class="deliv-carriles" style="--ncols:3">
+        <span class="dc acc-y" style="grid-column: span 3">Claude · 15 entregables</span>
+      </div>
+
+      <div class="deliv-cols" style="--ncols:3">
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">Clon Digital del CEO</p>
+            <ul>
+              <li>Clon digital del CEO<ul class="inc"><li>Configuración e instalación de Claude</li><li>Carga completa del contexto y la información clave de ESTEI</li><li>Creación del clon digital del CEO</li></ul></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">Skills del CEO</p>
+            <ul>
+              <li>Skill de Procesos con IA<ul class="inc"><li>Contexto del proceso trabajado con el consultor</li><li>Documentado en PDF o en su plataforma actual</li><li>Medición de procesos y conexión entre departamentos</li></ul></li>
+              <li>Skill de Edición de Video<ul class="inc"><li>Práctica de edición de videos con IA</li><li>Edición conjunta con el consultor</li></ul></li>
+              <li>Skill de Diseño<ul class="inc"><li>Creación y diseño de piezas completas con IA</li></ul></li>
+              <li>Skills de Marketing y Redes<ul class="inc"><li>Ideación de contenido</li><li>Análisis de videos externos para replicarlos</li><li>Creación de comerciales</li></ul></li>
+              <li>Skill de integración con el CRM<ul class="inc"><li>Publicación con IA a través de GoHighLevel, su CRM</li></ul></li>
+              <li>Skill de Consejo Ejecutivo<ul class="inc"><li>Varios agentes con distintas personalidades</li><li>Debaten los temas que el CEO les plantea</li></ul></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">Director de Finanzas</p>
+            <ul>
+              <li>Clon digital de Finanzas</li>
+              <li>Skill de Finanzas</li>
+            </ul>
+          </div>
+          <div class="da">
+            <p class="da-name">Director de Tecnología</p>
+            <ul>
+              <li>Clon digital de Tecnología</li>
+              <li>Skill de Tecnología</li>
+            </ul>
+          </div>
+          <div class="da">
+            <p class="da-name">Director de Ventas y Atención</p>
+            <ul>
+              <li>Clon digital de Ventas y Atención</li>
+              <li>Skill de Ventas y Atención</li>
+            </ul>
+          </div>
+          <div class="da">
+            <p class="da-name">Director de Marketing</p>
+            <ul>
+              <li>Clon digital de Marketing</li>
+              <li>Skill de Marketing</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="deliv-band">
+        <div class="db-card db-1">
+          <span class="db-label">Para todas las áreas</span>
+        </div>
+        <div class="db-card db-2">
+          <span class="db-label">Valor inmediato</span>
+        </div>
+      </div>
+      <!-- Cajas multiline editables (vacías en HTML: el contenido vive dentro del AcroForm /V). -->
+      <div class="multi-box db-box db-box-1" data-field="Entregables"></div>
+      <div class="multi-box db-box db-box-2" data-field="Acreditacion"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">ESTEI · CAI-058</span>
+      </div>
+    </section>
+
+    <!-- 7 · Retorno: ¿qué gano? (método de cálculo). Sin estudios ni citas externas. -->
+    <section class="slide s-roi">
+      <span class="counter">07 / 10</span>
+      <p class="eyebrow">07 · Retorno</p>
+      <h2>Retorno esperado: tiempo y dinero.</h2>
+      <p class="sub">Se calcula con los datos de cada persona, se confirma con la línea base inicial y se mide a 30, 60 y 90 días.</p>
+
+      <div class="roi-body">
+        <div class="roi-panel">
+          <p class="roi-panel-title">Cómo se calcula, por tarea</p>
+          <ol class="roi-steps">
+            <li><b>Repeticiones de la tarea</b><span>Cuántas veces repite cada persona las tareas que su clon o su skill va a asumir.</span></li>
+            <li><b>Tiempo actual por tarea</b><span>Se mide al empezar y es la <strong>línea base</strong>.</span></li>
+            <li><b>Tiempo con Claude</b><span>Lo que toma la misma tarea con el clon o la skill ya en uso.</span></li>
+            <li><b>Horas recuperadas</b><span>Repeticiones por la diferencia entre el tiempo actual y el tiempo con Claude.</span></li>
+            <li><b>Valor en dinero</b><span>Horas recuperadas por el valor hora de referencia que ESTEI valide.</span></li>
+          </ol>
+        </div>
+
+        <div class="roi-right">
+          <p class="roi-right-title">Calendario de garantía y cálculo del retorno</p>
+          <div class="roi-card">
+            <b>30 días</b>
+            <p>El clon y las skills en uso real en el trabajo diario de cada persona.</p>
+          </div>
+          <div class="roi-card">
+            <b>60 días</b>
+            <p>Nuevas construcciones y horas recuperadas medidas contra la línea base.</p>
+          </div>
+          <div class="roi-card">
+            <b>90 días</b>
+            <p>Medición del tiempo recuperado y de su valor en dinero.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="roi-dest-wrap">
+        <p class="roi-dest-title">Hacia dónde va el proyecto</p>
+        <div class="roi-dest">
+          <div class="rd-item"><b>Tiempo para decidir</b><p>Si el tiempo se libera, la dirección puede dedicarlo a <strong>decisiones</strong> y a trabajo de mayor valor.</p></div>
+          <div class="rd-item"><b>Clones que crecen</b><p>Cada persona puede seguir sumando skills a su clon por su cuenta.</p></div>
+          <div class="rd-item"><b>Más equipos</b><p>Con el retorno medido, ESTEI decide si lleva el método a <strong>más personas</strong>.</p></div>
+        </div>
+      </div>
+
+      <div class="roi-hook"><p>A los 90 días del cierre, cada persona contará con su tiempo recuperado medido y su valor en dinero.</p></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">ESTEI · CAI-058</span>
+      </div>
+    </section>
+
+    <!-- 7 · Inversión (hoja de cotización estándar; antepenúltima slide) -->
+    <section class="slide s-price">
+      <span class="counter">08 / 10</span>
+      <h2 class="title">Inversión del proyecto.</h2>
+      <p class="price-intro">Propuesta Económica · Servicio de Habilidades</p>
+
+      <div class="block">
+        <span class="block-eyebrow">Duración</span>
+        <p class="block-value">Proyecto en tres fases, con seguimiento y garantía a 30, 60 y 90 días. 50 horas de trabajo.</p>
+      </div>
+
+      <div class="block block-programa">
+        <span class="block-eyebrow">Programa</span>
+      </div>
+      <div class="multi-box programa-box" data-field="Programa"></div>
+
+      <div class="block block-cotizacion">
+        <span class="block-eyebrow">Cotización</span>
+      </div>
+
+      <span class="cot-label cot-label-base">Propuesta + Inversión</span>
+      <div class="cot-frame base-frame"></div>
+
+      <span class="cot-label cot-label-discount">Descuento</span>
+      <span class="cot-sign-minus">&minus;$</span>
+      <div class="cot-frame discount-frame"></div>
+      <span class="cot-urgent-note">Descuento válido por 15 días</span>
+
+      <span class="cot-label cot-label-total">TOTAL</span>
+      <div class="cot-frame total-frame"></div>
+
+      <p class="cot-validity">Cotización válida por 30 días.</p>
+      <div class="cot-terms-box">
+        <span class="cot-terms-label">Importante</span>
+        <p class="cot-terms-text">Este servicio se presta bajo nuestros <a href="https://drive.google.com/file/d/1PA-ZSt4KnyY5dpxXzgkIk6-yfGlV2eF8/view?usp=drive_link" target="_blank" rel="noopener">términos y condiciones</a>. Al avanzar con esta propuesta, ambas partes los aceptan.</p>
+      </div>
+
+      <div class="cot-garantia-badge">
+        <span class="cot-garantia-tag">Garantía 30-60-90</span>
+        <p class="cot-garantia-text">Estamos contigo hasta que la habilidad quede instalada.</p>
+      </div>
+
+      <div class="block block-notes-container">
+        <span class="block-eyebrow">Notas</span>
+      </div>
+      <div class="multi-box notas-box" data-field="Notas"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">ESTEI · CAI-058</span>
+      </div>
+    </section>
+
+    <!-- 8 · Facilidad de pago: cuotas ligadas a hitos (penúltima slide). Montos vacíos y editables (AcroForm PagoCuota1..N). -->
+    <section class="slide s-pay">
+      <span class="counter">09 / 10</span>
+      <p class="eyebrow">09 · Pago</p>
+      <h2>Facilidad de pago: tres cuotas ligadas a hitos.</h2>
+      <p class="sub">Cada cuota se paga al cumplirse un hito del proyecto.</p>
+
+      <div class="pay-line"></div>
+      <div class="pay-route">
+        <div class="pay-step acc-y first" style="left:56.00px; width:327.67px">
+          <span class="ps-d"></span>
+          <span class="ps-tag">Cuota 1</span>
+          <b class="ps-when" style="font-size:26px">Al aprobar</b>
+          <p class="ps-hito">Aprobación de la propuesta, para iniciar la fase 1 (clon digital del CEO).</p>
+          <span class="ps-pct">40%</span>
+          <span class="ps-lbl">Monto</span>
+        </div>
+        <div class="pay-step acc-o" style="left:397.67px; width:327.67px">
+          <span class="ps-d"></span>
+          <span class="ps-tag">Cuota 2</span>
+          <b class="ps-when" style="font-size:26px">Cierre fase 2</b>
+          <p class="ps-hito">Cierre de la fase 2: seis skills del CEO listas.</p>
+          <span class="ps-pct">30%</span>
+          <span class="ps-lbl">Monto</span>
+        </div>
+        <div class="pay-step acc-y" style="left:739.33px; width:327.67px">
+          <span class="ps-d"></span>
+          <span class="ps-tag">Cuota 3</span>
+          <b class="ps-when" style="font-size:26px">Cierre fase 3</b>
+          <p class="ps-hito">Cierre de la fase 3: clones y skills del equipo directivo y medición.</p>
+          <span class="ps-pct">30%</span>
+          <span class="ps-lbl">Monto</span>
+        </div>
+      </div>
+      <div class="pay-frame" style="left:72.00px; width:295.67px"></div>
+      <div class="pay-frame" style="left:413.67px; width:295.67px"></div>
+      <div class="pay-frame" style="left:755.33px; width:295.67px"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">ESTEI · CAI-058</span>
+      </div>
+    </section>
+
+    <!-- 9 · Próximos pasos: qué hacer y a quién escribir (última slide) -->
+    <section class="slide s-next">
+      <span class="counter">10 / 10</span>
+      <p class="eyebrow">10 · Próximos pasos</p>
+      <h2>Tres pasos para arrancar.</h2>
+      <p class="sub">Esto es lo que sigue cuando ESTEI confirme la propuesta.</p>
+
+      <div class="nx-steps">
+        <div class="nx-step acc-y">
+          <span class="nx-num">1</span>
+          <b>Fecha de arranque</b>
+          <p>Confirmamos con ESTEI el arranque del lunes 26 de octubre y la disponibilidad del CEO y los directores.</p>
+        </div>
+        <div class="nx-step acc-o">
+          <span class="nx-num">2</span>
+          <b>Acceso y material</b>
+          <p>Cada persona deja lista su cuenta de Claude y reúne la información clave que decida compartir.</p>
+        </div>
+        <div class="nx-step acc-w">
+          <span class="nx-num">3</span>
+          <b>Reunión de arranque</b>
+          <p>Una reunión de ~30 min para ajustar los horarios y acordar la skill de cada director.</p>
+        </div>
+      </div>
+
+      <div class="nx-contact">
+        <div class="nx-card nx-ase">
+          <span class="nx-label">¿Dudas? Escribe al CEO de Intezia</span>
+          <b class="nx-name">Jean Iovino</b>
+          <span class="nx-role">CEO de Intezia</span>
+          <p class="nx-line"><a href="mailto:jean@intezia.com">jean@intezia.com</a></p>
+          <p class="nx-line">+58 424 1911819</p>
+        </div>
+        <div class="nx-card nx-emp">
+          <span class="nx-label">Intezia</span>
+          <p class="nx-line">Intezia C.A J-505657950</p>
+          <p class="nx-line"><a href="mailto:servicio@intezia.com">servicio@intezia.com</a></p>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">ESTEI · CAI-058</span>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

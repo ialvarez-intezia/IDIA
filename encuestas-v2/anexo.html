@@ -1,0 +1,824 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<title>Rediseño de EduPulse y EduTrace</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+@page { size: A4 portrait; margin: 13mm 14mm 16mm 14mm;
+  @bottom-left { content: "Intezia · Rediseño de EduPulse y EduTrace · Borrador v0.1 · Documento interno"; font: 400 7pt 'Poppins', 'Helvetica Neue', Arial, sans-serif; color: #000; }
+  @bottom-right { content: counter(page); font: 600 7.5pt 'Poppins', 'Helvetica Neue', Arial, sans-serif; color: #000; } }
+:root { --k:#000; --g:#F4BA1A; --o:#E58423; --w:#fff; --soft:rgba(0,0,0,.62); --line:rgba(0,0,0,.14); }
+* { box-sizing: border-box; }
+html, body { margin:0; padding:0; background:#fff; color:#000; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+body { font-family: 'Poppins', 'Helvetica Neue', Arial, sans-serif; font-size: 9pt; line-height: 1.42; }
+.page { break-before: page; }
+.page.first { break-before: auto; }
+.band { background:#000; color:#fff; margin:0 0 7mm 0; padding:6mm 7mm; display:flex; justify-content:space-between; align-items:center; border-bottom:3px solid var(--g); }
+.logo { height: 13mm; }
+.band-r { font-size:7.5pt; text-align:right; line-height:1.5; }
+h1 { font-size: 24pt; line-height:1.1; margin: 0 0 3mm; font-weight:800; letter-spacing:-.3px; }
+.hl { background: var(--g); padding: 0 4px; }
+.lead { font-size: 10.5pt; margin: 0 0 5mm; color: var(--soft); }
+h2 { font-size: 10pt; text-transform: uppercase; letter-spacing:.8px; margin: 5mm 0 2mm; border-bottom: 2px solid var(--g); padding-bottom: 1mm; display:inline-block; }
+p { margin: 0 0 2mm; }
+.small { font-size: 8pt; color: var(--soft); }
+ol.chg, ul.pri { margin: 0; padding-left: 5mm; }
+ol.chg li, ul.pri li { margin-bottom: 1.4mm; }
+.legend { margin: 1mm 0 2mm; font-size: 8.5pt; }
+.tag { display:inline-block; font-size:6.5pt; font-weight:700; letter-spacing:.5px; padding:1px 6px; border-radius:20px; white-space:nowrap; }
+.t-new { background: var(--g); color:#000; }
+.t-adj { background: var(--o); color:#000; }
+.t-same { background:#fff; color:#000; border:1px solid rgba(0,0,0,.35); }
+table.map { width:100%; border-collapse: collapse; font-size: 8pt; }
+table.map th { background:#000; color:#fff; text-align:left; padding:1.6mm 2.2mm; font-size:7.5pt; letter-spacing:.4px; }
+table.map td { padding:1.5mm 2.2mm; border-bottom:1px solid var(--line); vertical-align: top; }
+
+.fhead { background:#000; color:#fff; margin:0 0 3mm 0; padding:3.5mm 7mm 3mm; display:flex; justify-content:space-between; align-items:flex-end; border-bottom:3px solid var(--g); }
+.kick { font-size:7.5pt; letter-spacing:1px; text-transform:uppercase; color:var(--g); font-weight:600; }
+.ftitle { font-size:13pt; font-weight:800; margin-top:1mm; }
+.fcount { font-size:8pt; font-weight:600; color:var(--g); }
+.prog { border-left:3px solid var(--g); padding:1mm 3mm; margin-bottom:1.5mm; font-size:8.3pt; background:rgba(244,186,26,.12); }
+.cab { border-left:3px solid #000; padding:1mm 3mm; margin-bottom:2mm; font-size:8.3pt; background:rgba(0,0,0,.05); }
+
+.common { border:1.5px solid #000; padding:2.5mm 3.5mm; margin-bottom:3.5mm; break-inside: avoid; }
+.common-t { font-weight:800; text-transform:uppercase; font-size:8pt; letter-spacing:.7px; margin-bottom:1.2mm; }
+.common ul { margin:0; padding-left:4.5mm; font-size:8.3pt; }
+.common li { margin-bottom:1mm; }
+
+.sec.pb { break-before: page; margin-top:0; }
+.sec { break-inside: avoid; margin: 3mm 0 1mm; break-after: avoid; background:#000; color:#fff; padding:1.8mm 3mm; border-left:5px solid var(--g); }
+.sec-t { font-weight:700; font-size:9pt; }
+.sec-s { font-size:7.8pt; margin-top:.4mm; opacity:.92; }
+
+.q { display:grid; grid-template-columns: 9mm 1fr 18mm; gap:2mm; padding:1.3mm 0; border-bottom:1px solid var(--line); break-inside: avoid; }
+.n { font-weight:800; font-size:9.5pt; background:#000; color:var(--g); text-align:center; height:6mm; line-height:6mm; border-radius:2px; align-self:start; font-size:8.5pt; }
+.qt { font-weight:600; font-size:9pt; line-height:1.32; }
+.resp { font-size:7.4pt; color:var(--soft); margin-top:.4mm; line-height:1.35; }
+.resp .mk { color:#000; } .resp .mv { color:#000; }
+.cond { font-size:7.6pt; font-weight:700; color:#000; background:rgba(229,132,35,.22); display:inline-block; padding:.4mm 2mm; margin-bottom:1mm; border-radius:2px; }
+.mide { font-size:7.8pt; margin-top:.8mm; }
+.nota { font-size:7.6pt; color:var(--soft); font-style: italic; margin-top:.6mm; }
+.tag-col, .q .tag { align-self:start; justify-self:end; text-align:center; }
+ul.opts { margin:.6mm 0 0; padding-left:4.5mm; font-size:8.3pt; column-count:2; column-gap:6mm; }
+ul.opts li { margin-bottom:.5mm; break-inside: avoid; }
+.gname { font-size:7.5pt; font-weight:800; text-transform:uppercase; letter-spacing:.6px; margin-top:1.5mm; padding-left:2.5mm; border-left:4px solid var(--g); }
+.gname.g-bad { border-left-color: var(--o); }
+
+.removed { margin-top:3mm; border:1px dashed rgba(0,0,0,.5); padding:2mm 3.5mm; break-inside: avoid; }
+.removed-t { font-weight:800; text-transform:uppercase; font-size:7.8pt; letter-spacing:.6px; margin-bottom:1mm; }
+.removed ul { margin:0; padding-left:4.5mm; font-size:8.2pt; }
+.removed li { margin-bottom:.8mm; }
+
+.aviso { border:1.5px solid #000; padding:3mm 4mm; margin-bottom:2mm; break-inside: avoid; font-size:8.6pt; }
+.aviso-t { font-weight:800; margin-bottom:1.5mm; text-transform:uppercase; font-size:8pt; letter-spacing:.6px; }
+.aviso-n { font-weight:600; font-size:7.4pt; margin-left:3px; text-transform:none; letter-spacing:0; color: var(--soft); }
+.aviso-d { font-size:7.6pt; color:var(--soft); font-style:italic; }
+.rules { border-left:4px solid var(--g); background:rgba(244,186,26,.12); padding:2.5mm 4mm; margin:2.5mm 0; break-inside: avoid; font-size:8.4pt; }
+.rules-t { font-weight:800; text-transform:uppercase; font-size:7.8pt; letter-spacing:.6px; margin-bottom:1mm; }
+.rules ol { margin:0; padding-left:4.5mm; }
+.rules li { margin-bottom:.8mm; }
+.ex { border:1.5px solid #000; padding:3mm 4mm; margin:2.5mm 0 1mm; break-inside: avoid; font-size:8.4pt; }
+.ex-t { font-weight:800; text-transform:uppercase; font-size:7.8pt; letter-spacing:.6px; margin-bottom:1.2mm; }
+.ex-n { font-weight:400; text-transform:none; letter-spacing:0; color:var(--soft); font-size:7.5pt; }
+.ex-q { font-weight:600; margin-bottom:1.2mm; }
+.ex-o { margin:0; padding-left:5mm; list-style: lower-alpha; }
+.ex-o li { margin-bottom:.7mm; }
+.ex-o li.ok { font-weight:700; }
+.okt { background: var(--g); font-size:6.5pt; padding:0 5px; border-radius:20px; font-weight:700; margin-left:3px; }
+.ex-d { font-size:7.6pt; color:var(--soft); font-style:italic; margin-top:1.2mm; }
+ol.dec, ol.steps { padding-left:5mm; margin:0; }
+ol.dec li { margin-bottom:2.4mm; }
+ol.steps li { margin-bottom:1.4mm; }
+.mono { font-family: Menlo, Consolas, monospace; font-size:8pt; }
+</style></head><body>
+
+<section class="page first">
+  <div class="band">
+    <img class="logo" src="../logos/intezia/BLANCO.png" alt="Intezia">
+    <div class="band-r">Documento interno · Borrador v0.1 para evaluación<br>13 de octubre de 2026</div>
+  </div>
+  <h1>Rediseño de <span class="hl">EduPulse</span> y <span class="hl">EduTrace</span></h1>
+  <p class="lead">Cómo quedarían las preguntas de los 4 EduPulse (uno por servicio) y del EduTrace, para que el equipo las evalúe y se itere sobre este texto.</p>
+
+  <h2>Para qué sirve</h2>
+  <p>Medir resultados reales de cada formación: el progreso del grupo sesión a sesión con sus razones, el tiempo ahorrado, la adopción y la relevancia. Esos datos alimentan el dashboard de impacto y el banco de casos de éxito.</p>
+
+  <h2>Qué cambia</h2>
+  <ol class="chg">
+    <li><b>EduPulse sigue anónimo</b> (sin nombre ni correo) y mide el progreso del grupo en cada sesión, con las razones del avance o del freno. Comparte un núcleo de ítems entre los 4 servicios.</li>
+    <li><b>Todo en escala 1-5.</b> Hoy Detección, Políticas e Innovación mezclan 0-5 con 1-5.</li>
+    <li><b>EduTrace sigue personal</b> (certificado y menciones) y suma una sección fija, «Aplicación real», que mide uso y tiempo por tarea sin depender de cada cliente.</li>
+    <li><b>El bloque de conocimientos</b> (lo único que varía por formación) pasa de 3 a 5 preguntas, con opciones barajadas y del mismo largo para que no se acierte por la forma de la respuesta.</li>
+    <li><b>Se corrigen rótulos</b> que no coincidían con lo que preguntaban («Claridad Expositiva» preguntaba por relevancia).</li>
+    <li><b>Se quita lo repetido:</b> la calidad del consultor se preguntaba en ambos formularios.</li>
+  </ol>
+
+  <h2>Principios</h2>
+  <ul class="pri">
+    <li><b>Anonimato real en EduPulse.</b> En Google Forms hay que desactivar «Recopilar correos» y «Limitar a 1 respuesta», porque registran la cuenta de Google.</li>
+    <li><b>Honestidad de medición.</b> Lo declarado se etiqueta como declarado. El tiempo ahorrado se reporta con la mediana y sin extrapolarlo a toda la jornada. Solo el bloque de conocimientos es «medido».</li>
+    <li><b>Un dato, un lugar.</b> Si EduPulse ya lo mide en cada sesión, EduTrace no lo repite.</li>
+  </ul>
+
+  <h2>Cómo leer este documento</h2>
+  <div class="legend">
+    <span class="tag t-new">NUEVA</span> pregunta que no existe hoy &nbsp;
+    <span class="tag t-adj">AJUSTADA</span> existe, con cambio (se indica cuál) &nbsp;
+    <span class="tag t-same">IGUAL</span> sin cambios
+  </div>
+  <p class="small">Todas las preguntas son obligatorias salvo las marcadas «Opcional». «Mide» indica qué lee el dashboard o el banco de casos de esa pregunta.</p>
+
+</section>
+<section class="page">
+  <div class="fhead"><div><div class="kick">Cómo se conecta todo</div><div class="ftitle">Qué alimenta qué y reglas comunes</div></div></div>
+  <h2>Qué alimenta qué</h2>
+  <table class="map">
+    <tr><th>Métrica</th><th>De dónde sale</th><th>Se usa en</th></tr>
+    <tr><td>Progreso del grupo por sesión, con sus razones</td><td>EduPulse: ítem 2 + «¿Qué hizo la diferencia hoy?»</td><td>Dashboard · banco</td></tr>
+    <tr><td>Relevancia</td><td>EduPulse ítem 1 · EduTrace 21</td><td>Dashboard</td></tr>
+    <tr><td>¿Lo hizo solo, con ayuda o no pudo? (Habilidades)</td><td>EduPulse Habilidades ítem 3</td><td>Dashboard</td></tr>
+    <tr><td>Retención objetiva (único dato «medido»)</td><td>EduTrace 9-13</td><td>Dashboard · banco</td></tr>
+    <tr><td>Adopción y frenos</td><td>EduTrace 14-15</td><td>Dashboard · banco · ventas</td></tr>
+    <tr><td>Tiempo ahorrado por tarea (declarado, mediana)</td><td>EduTrace 16-19</td><td>Dashboard · banco</td></tr>
+    <tr><td>Calidad del consultor</td><td>EduPulse en cada sesión · EduTrace 22-23</td><td>Dashboard</td></tr>
+    <tr><td>Recomendación y permiso de cita</td><td>EduTrace 30-32</td><td>Banco de casos</td></tr>
+    <tr><td>Cuellos de botella, herramienta y prioridades</td><td>EduTrace 24-29</td><td>Banco · ventas</td></tr>
+  </table>
+  
+<div class="common"><div class="common-t">Reglas comunes a los 4 EduPulse</div>
+<ul>
+<li><b>Anónimo:</b> no piden nombre ni correo.</li>
+<li><b>Enlace prellenado por grupo:</b> empresa, grupo y sesión llegan ya puestos (opción «Obtener enlace prellenado» de Forms), así nadie escribe texto libre y no se rompen las agrupaciones.</li>
+<li><b>Duración objetivo:</b> alrededor de 1 minuto.</li>
+<li><b>Mínimo de respuestas:</b> el dashboard no muestra una sesión con menos de 4 respuestas, para que nadie sea identificable.</li>
+<li><b>Aviso de anonimato <span class="tag t-new">NUEVO</span>:</b> «Esta encuesta es anónima: no te pedimos nombre ni correo. Tus respuestas ayudan a mejorar las próximas sesiones y solo se muestran agrupadas. Toma cerca de 1 minuto.»</li>
+<li><b>El progreso ocupa el ítem 2 en los 4 formularios</b> y se grafica igual, pero cada servicio lo redacta a su manera: una sesión de Detección no tiene ejercicio práctico, así que allí el progreso es claridad y no capacidad de repetir.</li>
+</ul></div>
+
+</section>
+<section class="page">
+<div class="fhead"><div><div class="kick">EduPulse · Servicio de Habilidades</div><div class="ftitle">Formulario por sesión</div></div><div class="fcount">10 ítems</div></div>
+<div class="prog"><b>Cómo se lee el progreso en este servicio:</b> ítem 2, «Me siento capaz de repetir lo que practicamos hoy sin ayuda». Se complementa con el ítem 3 (solo, con ayuda o no pudo).</div>
+<div class="cab"><b>Cabecera común:</b> Empresa y grupo (prellenados) · Sesión (lista 1 a 12) · Aviso de anonimato (texto en la página 2)</div>
+<div class="q">
+<div class="n">1</div>
+<div class="body">
+<div class="qt">Lo que trabajamos hoy fue sobre una tarea real de mi trabajo, no un ejemplo genérico.</div>
+<div class="resp">Escala 1-5 · 1 = No, para nada · 5 = Sí, completamente &nbsp;·&nbsp; <b class="mk">Mide:</b> <span class="mv">Relevancia</span></div>
+</div>
+<div class="tag t-same">IGUAL</div>
+</div>
+<div class="q">
+<div class="n">2</div>
+<div class="body">
+<div class="qt">Me siento capaz de repetir lo que practicamos hoy sin ayuda.</div>
+<div class="resp">Escala 1-5 · 1 = No, para nada · 5 = Sí, completamente &nbsp;·&nbsp; <b class="mk">Mide:</b> <span class="mv">Progreso del grupo: es la curva por sesión</span></div>
+<div class="nota">Antes iba casi al final; pasa al lugar 2 en todos los servicios.</div>
+</div>
+<div class="tag t-same">IGUAL</div>
+</div>
+<div class="q">
+<div class="n">3</div>
+<div class="body">
+<div class="qt">En el ejercicio práctico de hoy:</div>
+<div class="resp">Selección única</div>
+<ul class="opts"><li>Lo hice solo(a)</li><li>Lo hice con ayuda</li><li>No pude completarlo</li></ul>
+<div class="mide"><b>Mide:</b> Conducta: % que lo hizo solo, con ayuda o no pudo</div>
+</div>
+<div class="tag t-new">NUEVA</div>
+</div>
+<div class="q">
+<div class="n">4</div>
+<div class="body">
+<div class="qt">Tuve tiempo suficiente para practicar con mis propias manos, no solo ver una demostración.</div>
+<div class="resp">Escala 1-5 · 1 = No, para nada · 5 = Sí, completamente &nbsp;·&nbsp; <b class="mk">Mide:</b> <span class="mv">Práctica real</span></div>
+</div>
+<div class="tag t-same">IGUAL</div>
+</div>
+<div class="q">
+<div class="n">5</div>
+<div class="body">
+<div class="qt">El material que me llevo (workbook o recursos) me va a servir cuando trabaje solo(a).</div>
+<div class="resp">Escala 1-5 · 1 = No, para nada · 5 = Sí, completamente &nbsp;·&nbsp; <b class="mk">Mide:</b> <span class="mv">Autonomía después de la sesión</span></div>
+</div>
+<div class="tag t-same">IGUAL</div>
+</div>
+<div class="q">
+<div class="n">6</div>
+<div class="body">
+<div class="qt">¿Qué tarea concreta de tu trabajo vas a hacer con esto esta semana?</div>
+<div class="resp">Texto corto · Opcional &nbsp;·&nbsp; <b class="mk">Mide:</b> <span class="mv">Intención de uso; las respuestas se agrupan por tema</span></div>
+</div>
+<div class="tag t-new">NUEVA</div>
+</div>
+<div class="q">
+<div class="n">7</div>
+<div class="body">
+<div class="qt">En general, la sesión fue un buen uso de mi tiempo.</div>
+<div class="resp">Escala 1-5 · 1 = No, para nada · 5 = Sí, completamente &nbsp;·&nbsp; <b class="mk">Mide:</b> <span class="mv">Valor percibido</span></div>
+<div class="nota">Antes: «¿Quedé satisfecho(a) con la sesión?». Se unifica con los otros 3 servicios.</div>
+</div>
+<div class="tag t-adj">AJUSTADA</div>
+</div>
+<div class="q">
+<div class="n">8</div>
+<div class="body">
+<div class="qt">¿Cómo evalúas el nivel de dominio técnico y la experiencia demostrada por el consultor de Intezia?</div>
+<div class="resp">Escala 1-5 · 1 = Deficiente · 5 = Excelente &nbsp;·&nbsp; <b class="mk">Mide:</b> <span class="mv">Calidad del consultor</span></div>
+</div>
+<div class="tag t-same">IGUAL</div>
+</div>
+<div class="q">
+<div class="n">9</div>
+<div class="body">
+<div class="qt">¿Qué hizo la diferencia hoy? Marca todas las que apliquen.</div>
+<div class="resp">Selección múltiple</div>
+<div class="gname g-ok">Ayudó</div>
+<ul class="opts"><li>Practicar con mis propios datos o casos</li><li>El ejemplo del consultor</li><li>El material de apoyo</li><li>El ritmo de la sesión</li><li>Trabajar junto a mis compañeros(as)</li></ul>
+<div class="gname g-bad">Frenó</div>
+<ul class="opts"><li>Faltó tiempo para practicar</li><li>El nivel fue muy alto para mí</li><li>El nivel fue muy básico para mí</li><li>Problemas de acceso o con la herramienta</li><li>Los ejemplos no eran de mi trabajo</li><li>Otro: ______</li></ul>
+<div class="mide"><b>Mide:</b> Las razones del avance o del freno</div>
+<div class="nota">Las opciones son fijas, así que el dashboard sabe cuáles son de ayuda y cuáles de freno. Esto responde el «por qué» detrás de cada subida o bajada de la curva.</div>
+</div>
+<div class="tag t-new">NUEVA</div>
+</div>
+<div class="q">
+<div class="n">10</div>
+<div class="body">
+<div class="qt">Déjanos tus comentarios.</div>
+<div class="resp">Texto largo · Opcional</div>
+</div>
+<div class="tag t-same">IGUAL</div>
+</div>
+<div class="removed"><div class="removed-t">Se elimina o se mueve</div><ul><li>«¿El ritmo de la sesión fue el adecuado para mí?»: pasa a ser una opción de la pregunta 9.</li><li>«¿Quedé satisfecho(a) con la sesión?»: se reemplaza por «buen uso de mi tiempo» (pregunta 7).</li></ul></div>
+</section><section class="page">
+<div class="fhead"><div><div class="kick">EduPulse · Servicio de Detección</div><div class="ftitle">Formulario por sesión</div></div><div class="fcount">11 ítems</div></div>
+<div class="prog"><b>Cómo se lee el progreso en este servicio:</b> ítem 2, claridad sobre dónde se va el tiempo en tareas repetitivas.</div>
+<div class="cab"><b>Cabecera común:</b> Empresa y grupo (prellenados) · Sesión (lista 1 a 12) · Aviso de anonimato (texto en la página 2)</div>
+<div class="q">
+<div class="n">1</div>
+<div class="body">
+<div class="qt">Las preguntas de la sesión fueron relevantes para mi día a día, no genéricas.</div>
+<div class="resp">Escala 1-5 · 1 = No, para nada · 5 = Sí, completamente &nbsp;·&nbsp; <b class="mk">Mide:</b> <span class="mv">Relevancia</span></div>
+</div>
+<div class="tag t-same">IGUAL</div>
+</div>
+<div class="q">
+<div class="n">2</div>
+<div class="body">
+<div class="qt">La sesión me ayudó a ver con más claridad dónde se me va el tiempo en tareas repetitivas.</div>
+<div class="resp">Escala 1-5 · 1 = No, para nada · 5 = Sí, completamente &nbsp;·&nbsp; <b class="mk">Mide:</b> <span class="mv">Progreso del grupo: claridad sobre dónde se va el tiempo</span></div>
+</div>
+<div class="tag t-same">IGUAL</div>
+</div>
+<div class="q">
+<div class="n">3</div>
+<div class="body">
+<div class="qt">El consultor entendió bien la forma en la que trabaja mi área.</div>
+<div class="resp">Escala 1-5 · 1 = No, para nada · 5 = Sí, completamente &nbsp;·&nbsp; <b class="mk">Mide:</b> <span class="mv">Calidad de la escucha</span></div>
+</div>
+<div class="tag t-same">IGUAL</div>
+</div>
+<div class="q">
+<div class="n">4</div>
+<div class="body">
+<div class="qt">Me sentí cómodo(a) compartiendo información sobre cómo trabajamos realmente.</div>
+<div class="resp">Escala 1-5 · 1 = No, para nada · 5 = Sí, completamente &nbsp;·&nbsp; <b class="mk">Mide:</b> <span class="mv">Confianza: de ella depende la calidad de lo que se levanta</span></div>
+</div>
+<div class="tag t-same">IGUAL</div>
+</div>
+<div class="q">
+<div class="n">5</div>
+<div class="body">
+<div class="qt">El consultor explicó con claridad el hallazgo que identificamos hoy.</div>
+<div class="resp">Escala 1-5 · 1 = No, para nada · 5 = Sí, completamente &nbsp;·&nbsp; <b class="mk">Mide:</b> <span class="mv">Claridad de los hallazgos</span></div>
+<div class="nota">Antes: escala 0-5 (6 puntos).</div>
+</div>
+<div class="tag t-adj">AJUSTADA</div>
+</div>
+<div class="q">
+<div class="n">6</div>
+<div class="body">
+<div class="qt">¿Quedó algo importante de mi trabajo que no alcanzamos a contar hoy?</div>
+<div class="resp">Selección única</div>
+<ul class="opts"><li>No, conté todo lo importante</li><li>Sí</li></ul>
+<div class="mide"><b>Mide:</b> Procesos que se escaparon, para completar el levantamiento</div>
+</div>
+<div class="tag t-new">NUEVA</div>
+</div>
+<div class="q">
+<div class="n">7</div>
+<div class="body">
+<div class="cond">Solo si respondió «Sí» en la pregunta 6</div>
+<div class="qt">¿Qué quedó pendiente?</div>
+<div class="resp">Texto corto · Opcional</div>
+</div>
+<div class="tag t-new">NUEVA</div>
+</div>
+<div class="q">
+<div class="n">8</div>
+<div class="body">
+<div class="qt">En general, la sesión fue un buen uso de mi tiempo.</div>
+<div class="resp">Escala 1-5 · 1 = No, para nada · 5 = Sí, completamente &nbsp;·&nbsp; <b class="mk">Mide:</b> <span class="mv">Valor percibido</span></div>
+</div>
+<div class="tag t-same">IGUAL</div>
+</div>
+<div class="q">
+<div class="n">9</div>
+<div class="body">
+<div class="qt">¿Cómo evalúas el nivel de dominio técnico y la experiencia demostrada por el consultor de Intezia?</div>
+<div class="resp">Escala 1-5 · 1 = Deficiente · 5 = Excelente &nbsp;·&nbsp; <b class="mk">Mide:</b> <span class="mv">Calidad del consultor</span></div>
+</div>
+<div class="tag t-same">IGUAL</div>
+</div>
+<div class="q">
+<div class="n">10</div>
+<div class="body">
+<div class="qt">¿Qué hizo la diferencia hoy? Marca todas las que apliquen.</div>
+<div class="resp">Selección múltiple</div>
+<div class="gname g-ok">Ayudó</div>
+<ul class="opts"><li>Las preguntas estaban bien dirigidas a mi trabajo</li><li>Hubo tiempo suficiente para explicar mi proceso</li><li>Los ejemplos de otras áreas me ayudaron a recordar tareas</li><li>El consultor confirmó lo que entendió de mi explicación</li></ul>
+<div class="gname g-bad">Frenó</div>
+<ul class="opts"><li>Las preguntas fueron demasiado generales</li><li>Faltó tiempo para explicar mi proceso</li><li>No era la persona indicada para responder algunas preguntas</li><li>Dudé sobre para qué se usaría mi información</li><li>Otro: ______</li></ul>
+<div class="mide"><b>Mide:</b> Las razones del avance o del freno</div>
+</div>
+<div class="tag t-new">NUEVA</div>
+</div>
+<div class="q">
+<div class="n">11</div>
+<div class="body">
+<div class="qt">Déjanos tus comentarios.</div>
+<div class="resp">Texto largo · Opcional</div>
+</div>
+<div class="tag t-same">IGUAL</div>
+</div>
+<div class="removed"><div class="removed-t">Se elimina o se mueve</div><ul><li>Ninguna pregunta se elimina. Se reordenan para que la relevancia y el progreso queden en los lugares 1 y 2.</li></ul></div>
+</section><section class="page">
+<div class="fhead"><div><div class="kick">EduPulse · Servicio de Políticas</div><div class="ftitle">Formulario por sesión</div></div><div class="fcount">9 ítems</div></div>
+<div class="prog"><b>Cómo se lee el progreso en este servicio:</b> ítem 2, comprensión de las reglas que necesita el equipo.</div>
+<div class="cab"><b>Cabecera común:</b> Empresa y grupo (prellenados) · Sesión (lista 1 a 12) · Aviso de anonimato (texto en la página 2)</div>
+<div class="q">
+<div class="n">1</div>
+<div class="body">
+<div class="qt">Las preguntas de hoy reflejaron los riesgos y dudas reales de mi área sobre el uso de IA.</div>
+<div class="resp">Escala 1-5 · 1 = No, para nada · 5 = Sí, completamente &nbsp;·&nbsp; <b class="mk">Mide:</b> <span class="mv">Relevancia</span></div>
+<div class="nota">Antes: escala 0-5.</div>
+</div>
+<div class="tag t-adj">AJUSTADA</div>
+</div>
+<div class="q">
+<div class="n">2</div>
+<div class="body">
+<div class="qt">La sesión me ayudó a entender mejor qué reglas necesitamos como equipo.</div>
+<div class="resp">Escala 1-5 · 1 = No, para nada · 5 = Sí, completamente &nbsp;·&nbsp; <b class="mk">Mide:</b> <span class="mv">Progreso del grupo: comprensión de las reglas</span></div>
+<div class="nota">Antes: escala 0-5.</div>
+</div>
+<div class="tag t-adj">AJUSTADA</div>
+</div>
+<div class="q">
+<div class="n">3</div>
+<div class="body">
+<div class="qt">El consultor explicó con claridad para qué se usará la información que compartí.</div>
+<div class="resp">Escala 1-5 · 1 = No, para nada · 5 = Sí, completamente &nbsp;·&nbsp; <b class="mk">Mide:</b> <span class="mv">Transparencia del proceso</span></div>
+</div>
+<div class="tag t-same">IGUAL</div>
+</div>
+<div class="q">
+<div class="n">4</div>
+<div class="body">
+<div class="qt">Confío en que mis aportes quedarán reflejados en la política final.</div>
+<div class="resp">Escala 1-5 · 1 = No, para nada · 5 = Sí, completamente &nbsp;·&nbsp; <b class="mk">Mide:</b> <span class="mv">Confianza en el proceso</span></div>
+<div class="nota">Antes: opcional y escala 0-5.</div>
+</div>
+<div class="tag t-adj">AJUSTADA</div>
+</div>
+<div class="q">
+<div class="n">5</div>
+<div class="body">
+<div class="qt">Las reglas que discutimos hoy son realistas para cumplirlas en mi trabajo diario.</div>
+<div class="resp">Escala 1-5 · 1 = No, para nada · 5 = Sí, completamente &nbsp;·&nbsp; <b class="mk">Mide:</b> <span class="mv">Viabilidad de cumplimiento de la política</span></div>
+</div>
+<div class="tag t-new">NUEVA</div>
+</div>
+<div class="q">
+<div class="n">6</div>
+<div class="body">
+<div class="qt">En general, la sesión fue un buen uso de mi tiempo.</div>
+<div class="resp">Escala 1-5 · 1 = No, para nada · 5 = Sí, completamente &nbsp;·&nbsp; <b class="mk">Mide:</b> <span class="mv">Valor percibido</span></div>
+<div class="nota">Antes: opcional y escala 0-5.</div>
+</div>
+<div class="tag t-adj">AJUSTADA</div>
+</div>
+<div class="q">
+<div class="n">7</div>
+<div class="body">
+<div class="qt">¿Cómo evalúas el nivel de dominio técnico y la experiencia demostrada por el consultor de Intezia durante la sesión?</div>
+<div class="resp">Escala 1-5 · 1 = Deficiente · 5 = Excelente &nbsp;·&nbsp; <b class="mk">Mide:</b> <span class="mv">Calidad del consultor</span></div>
+</div>
+<div class="tag t-same">IGUAL</div>
+</div>
+<div class="q">
+<div class="n">8</div>
+<div class="body">
+<div class="qt">¿Qué hizo la diferencia hoy? Marca todas las que apliquen.</div>
+<div class="resp">Selección múltiple</div>
+<div class="gname g-ok">Ayudó</div>
+<ul class="opts"><li>Los ejemplos de situaciones reales</li><li>Poder expresar mis dudas y riesgos</li><li>Que se explicara para qué se usa la información</li><li>Escuchar las posturas de otras personas del equipo</li></ul>
+<div class="gname g-bad">Frenó</div>
+<ul class="opts"><li>Las reglas discutidas son difíciles de cumplir en mi día a día</li><li>No tengo claro quién decide la política final</li><li>Dudo de que mi opinión cuente</li><li>Faltó tiempo</li><li>Otro: ______</li></ul>
+<div class="mide"><b>Mide:</b> Las razones del avance o del freno</div>
+</div>
+<div class="tag t-new">NUEVA</div>
+</div>
+<div class="q">
+<div class="n">9</div>
+<div class="body">
+<div class="qt">Déjanos tus comentarios.</div>
+<div class="resp">Texto largo · Opcional</div>
+</div>
+<div class="tag t-same">IGUAL</div>
+</div>
+<div class="removed"><div class="removed-t">Se elimina o se mueve</div><ul><li>Ninguna pregunta se elimina. Todas pasan a obligatorias y a escala 1-5.</li></ul></div>
+</section><section class="page">
+<div class="fhead"><div><div class="kick">EduPulse · Servicio de Innovación</div><div class="ftitle">Formulario por sesión</div></div><div class="fcount">10 ítems</div></div>
+<div class="prog"><b>Cómo se lee el progreso en este servicio:</b> ítem 2, capacidad de aplicar lo trabajado sin ayuda.</div>
+<div class="cab"><b>Cabecera común:</b> Empresa y grupo (prellenados) · Sesión (lista 1 a 12) · Aviso de anonimato (texto en la página 2)</div>
+<div class="q">
+<div class="n">1</div>
+<div class="body">
+<div class="qt">El tema de hoy fue relevante para lo que necesito en este momento.</div>
+<div class="resp">Escala 1-5 · 1 = No, para nada · 5 = Sí, completamente &nbsp;·&nbsp; <b class="mk">Mide:</b> <span class="mv">Relevancia</span></div>
+<div class="nota">Antes: escala 0-5.</div>
+</div>
+<div class="tag t-adj">AJUSTADA</div>
+</div>
+<div class="q">
+<div class="n">2</div>
+<div class="body">
+<div class="qt">Me siento capaz de aplicar lo trabajado hoy sin ayuda.</div>
+<div class="resp">Escala 1-5 · 1 = No, para nada · 5 = Sí, completamente &nbsp;·&nbsp; <b class="mk">Mide:</b> <span class="mv">Progreso del grupo: capacidad de aplicar sin ayuda</span></div>
+</div>
+<div class="tag t-new">NUEVA</div>
+</div>
+<div class="q">
+<div class="n">3</div>
+<div class="body">
+<div class="qt">Aprendí algo que puedo aplicar esta semana.</div>
+<div class="resp">Escala 1-5 · 1 = No, para nada · 5 = Sí, completamente &nbsp;·&nbsp; <b class="mk">Mide:</b> <span class="mv">Aplicabilidad</span></div>
+</div>
+<div class="tag t-same">IGUAL</div>
+</div>
+<div class="q">
+<div class="n">4</div>
+<div class="body">
+<div class="qt">La sesión mantuvo mi interés de principio a fin.</div>
+<div class="resp">Escala 1-5 · 1 = No, para nada · 5 = Sí, completamente &nbsp;·&nbsp; <b class="mk">Mide:</b> <span class="mv">Interés sostenido</span></div>
+</div>
+<div class="tag t-same">IGUAL</div>
+</div>
+<div class="q">
+<div class="n">5</div>
+<div class="body">
+<div class="qt">Después de esta sesión, tengo más ganas de seguir usando IA en mi trabajo.</div>
+<div class="resp">Escala 1-5 · 1 = No, para nada · 5 = Sí, completamente &nbsp;·&nbsp; <b class="mk">Mide:</b> <span class="mv">Motivación para seguir adoptando</span></div>
+</div>
+<div class="tag t-same">IGUAL</div>
+</div>
+<div class="q">
+<div class="n">6</div>
+<div class="body">
+<div class="qt">¿Qué idea o prueba concreta sale de esta sesión?</div>
+<div class="resp">Texto corto · Opcional &nbsp;·&nbsp; <b class="mk">Mide:</b> <span class="mv">Resultado concreto de cada sesión; se agrupa por tema</span></div>
+</div>
+<div class="tag t-new">NUEVA</div>
+</div>
+<div class="q">
+<div class="n">7</div>
+<div class="body">
+<div class="qt">En general, la sesión fue un buen uso de mi tiempo.</div>
+<div class="resp">Escala 1-5 · 1 = No, para nada · 5 = Sí, completamente &nbsp;·&nbsp; <b class="mk">Mide:</b> <span class="mv">Valor percibido</span></div>
+<div class="nota">Antes: «¿En general, quedé satisfecho(a) con la sesión?».</div>
+</div>
+<div class="tag t-adj">AJUSTADA</div>
+</div>
+<div class="q">
+<div class="n">8</div>
+<div class="body">
+<div class="qt">¿Cómo evalúas el nivel de dominio técnico y la experiencia demostrada por el consultor de Intezia?</div>
+<div class="resp">Escala 1-5 · 1 = Deficiente · 5 = Excelente &nbsp;·&nbsp; <b class="mk">Mide:</b> <span class="mv">Calidad del consultor</span></div>
+<div class="nota">Este formulario no tenía la pregunta; los otros 3 sí.</div>
+</div>
+<div class="tag t-new">NUEVA</div>
+</div>
+<div class="q">
+<div class="n">9</div>
+<div class="body">
+<div class="qt">¿Qué hizo la diferencia hoy? Marca todas las que apliquen.</div>
+<div class="resp">Selección múltiple</div>
+<div class="gname g-ok">Ayudó</div>
+<ul class="opts"><li>Ver ejemplos de otras empresas o casos</li><li>Probar la idea durante la sesión</li><li>Que el tema conectara con un problema que tengo</li><li>El ritmo de la sesión</li></ul>
+<div class="gname g-bad">Frenó</div>
+<ul class="opts"><li>El tema estaba lejos de mi trabajo</li><li>El nivel fue muy alto para mí</li><li>El nivel fue muy básico para mí</li><li>Faltó tiempo para probar</li><li>Otro: ______</li></ul>
+<div class="mide"><b>Mide:</b> Las razones del avance o del freno</div>
+</div>
+<div class="tag t-new">NUEVA</div>
+</div>
+<div class="q">
+<div class="n">10</div>
+<div class="body">
+<div class="qt">Déjanos tus comentarios.</div>
+<div class="resp">Texto largo · Opcional</div>
+</div>
+<div class="tag t-same">IGUAL</div>
+</div>
+<div class="removed"><div class="removed-t">Se elimina o se mueve</div><ul><li>«¿El nivel de la sesión fue el adecuado para mí?»: pasa a ser una opción de la pregunta 9.</li><li>«¿En general, quedé satisfecho(a) con la sesión?»: se reemplaza por «buen uso de mi tiempo» (pregunta 7).</li></ul></div>
+</section><section class="page">
+<div class="fhead"><div><div class="kick">EduTrace · Cierre de la formación</div><div class="ftitle">Formulario personal, uno por formación</div></div><div class="fcount">32 preguntas</div></div>
+<div class="prog"><b>Cómo se lee:</b> las secciones 1, 2, 5, 6 y 7 son fijas; la sección 3 cambia por formación; las secciones 4 y 8 son nuevas y fijas. De las 32 preguntas, 6 aparecen solo según la respuesta a la pregunta 14 (1 en una rama y 5 en la otra).</div>
+<div class="aviso"><div class="aviso-t">Aviso inicial <span class="tag t-adj">AJUSTADO</span> <span class="aviso-n">Texto a validar con dirección</span></div><p><b>EduTrace: Análisis de Impacto.</b> Esta encuesta cierra tu formación. Completarla es requisito para emitir tu certificado de participación, sujeto a la validación de asistencia por sesión.</p><p>Es personal e intransferible: respóndela tú.</p><p>Tus respuestas individuales no se comparten con tu empresa. Tu organización recibe resultados agrupados del equipo y la lista de participantes (nombre y área), sin puntajes. Solo citaremos un comentario tuyo si lo autorizas en la última pregunta.</p><div class="aviso-d">Antes el aviso hablaba de «consecuencias administrativas directas con su organización». Ese tono frena la sinceridad en las preguntas abiertas.</div></div>
+<div class="sec"><div class="sec-t">Sección 1 · Datos de identificación (curaduría de asistencia)</div><div class="sec-s">Igual que hoy. Se usa para el certificado y las menciones.</div></div>
+<div class="q">
+<div class="n">1</div>
+<div class="body">
+<div class="qt">Nombre completo</div>
+<div class="resp">Texto corto &nbsp;·&nbsp; <b class="mk">Mide:</b> <span class="mv">Certificado, lista de participación y menciones</span></div>
+</div>
+<div class="tag t-same">IGUAL</div>
+</div>
+<div class="q">
+<div class="n">2</div>
+<div class="body">
+<div class="qt">Cédula de identidad</div>
+<div class="resp">Texto corto &nbsp;·&nbsp; <b class="mk">Mide:</b> <span class="mv">Cruce con asistencia. Nunca aparece en el dashboard</span></div>
+</div>
+<div class="tag t-same">IGUAL</div>
+</div>
+<div class="q">
+<div class="n">3</div>
+<div class="body">
+<div class="qt">Correo electrónico corporativo</div>
+<div class="resp">Texto corto · Opcional &nbsp;·&nbsp; <b class="mk">Mide:</b> <span class="mv">Clave interna para evitar duplicados</span></div>
+</div>
+<div class="tag t-same">IGUAL</div>
+</div>
+<div class="q">
+<div class="n">4</div>
+<div class="body">
+<div class="qt">Departamento o Área</div>
+<div class="resp">Texto corto &nbsp;·&nbsp; <b class="mk">Mide:</b> <span class="mv">Segmentación del dashboard por área</span></div>
+</div>
+<div class="tag t-same">IGUAL</div>
+</div>
+<div class="sec"><div class="sec-t">Sección 2 · Medición del perfil de egreso</div><div class="sec-s">Evalúa las siguientes afirmaciones del 1 al 5, donde 1 es «Totalmente en desacuerdo» y 5 es «Totalmente de acuerdo».</div></div>
+<div class="q">
+<div class="n">5</div>
+<div class="body">
+<div class="qt">Punto de partida: «Antes de esta formación, mi nivel de dominio sobre las herramientas abordadas era alto.»</div>
+<div class="resp">Escala 1-5 · 1 = Totalmente en desacuerdo · 5 = Totalmente de acuerdo &nbsp;·&nbsp; <b class="mk">Mide:</b> <span class="mv">Punto de partida declarado (retrospectivo). No se presenta como mejora medida</span></div>
+<div class="nota">Solo cambia el rótulo: antes «Brecha de Conocimiento». La frase mide el nivel de partida, no una brecha.</div>
+</div>
+<div class="tag t-adj">AJUSTADA</div>
+</div>
+<div class="q">
+<div class="n">6</div>
+<div class="body">
+<div class="qt">Competencia adquirida: «Tras finalizar la formación, me siento capaz de operar las herramientas aprendidas sin supervisión.»</div>
+<div class="resp">Escala 1-5 · 1 = Totalmente en desacuerdo · 5 = Totalmente de acuerdo &nbsp;·&nbsp; <b class="mk">Mide:</b> <span class="mv">Competencia percibida</span></div>
+</div>
+<div class="tag t-same">IGUAL</div>
+</div>
+<div class="q">
+<div class="n">7</div>
+<div class="body">
+<div class="qt">Aplicabilidad operativa: «Los conceptos abordados resuelven problemas diarios específicos de mi rol actual.»</div>
+<div class="resp">Escala 1-5 · 1 = Totalmente en desacuerdo · 5 = Totalmente de acuerdo &nbsp;·&nbsp; <b class="mk">Mide:</b> <span class="mv">Aplicabilidad percibida</span></div>
+</div>
+<div class="tag t-same">IGUAL</div>
+</div>
+<div class="q">
+<div class="n">8</div>
+<div class="body">
+<div class="qt">Impacto en productividad: «Lo aprendido ya me permite hacer mis tareas en menos tiempo.»</div>
+<div class="resp">Escala 1-5 · 1 = Totalmente en desacuerdo · 5 = Totalmente de acuerdo &nbsp;·&nbsp; <b class="mk">Mide:</b> <span class="mv">Impacto percibido, ya en presente</span></div>
+<div class="nota">Antes: «La aplicación de estas metodologías reducirá significativamente mi tiempo de ejecución.» Estaba en futuro, así que medía expectativa.</div>
+</div>
+<div class="tag t-adj">AJUSTADA</div>
+</div>
+<div class="sec pb"><div class="sec-t">Sección 3 · Evaluación de conocimientos</div><div class="sec-s">Es la única sección que cambia en cada formación. Evaluación técnica de retención: selecciona la respuesta que consideres correcta.</div></div>
+<div class="q">
+<div class="n">9-13</div>
+<div class="body">
+<div class="qt">Cinco preguntas técnicas de situación, redactadas a la medida de la formación</div>
+<div class="resp">Selección única · 4 opciones barajadas &nbsp;·&nbsp; <b class="mk">Mide:</b> <span class="mv">Retención objetiva: el único dato «medido» del dashboard</span></div>
+<div class="nota">Antes: 3 preguntas, opciones en orden fijo, y la correcta era la más larga. Con 3 preguntas cada persona solo podía sacar 0, 33, 67 o 100 %.</div>
+</div>
+<div class="tag t-adj">AJUSTADA</div>
+</div>
+<div class="rules"><div class="rules-t">Reglas de redacción del bloque de conocimientos</div><ol><li>5 preguntas, cada una con 4 opciones y una sola correcta, definida antes de enviar.</li><li>Activar <b>«Barajar el orden de las opciones»</b> en Google Forms. En el formulario de Zoom Mercadeo las 3 correctas estaban en la «b».</li><li>Las 4 opciones del mismo largo y con la misma estructura. La correcta no puede ser la más larga ni la más detallada.</li><li>Distractores plausibles: errores reales de uso, no disparates.</li><li>Situaciones del día a día del participante, no definiciones.</li><li>Al menos 2 de las 5 piden criterio («qué haces ante este caso») y no solo recuerdo.</li></ol></div>
+<div class="ex"><div class="ex-t">Ejemplo de redacción <span class="ex-n">Pregunta 1 de Zoom Mercadeo, reformulada. Las preguntas cambian en cada formación.</span></div><div class="ex-q">Cada semana revisas los reportes de Meta Ads y Google Ads línea por línea para detectar por qué subió el CPC de una campaña. ¿Qué instrucción a Gemini reemplaza mejor esa revisión manual?</div><ul class="ex-o"><li>Pedirle que resuma el reporte de cada campaña y destaque las cifras que más llaman la atención.</li><li class="ok">Pedirle que compare cada campaña con su historial, marque anomalías y plantee una causa probable. <span class="okt">Correcta</span></li><li>Pedirle que recomiende subir o bajar el presupuesto de cada campaña según su CPC del mes.</li><li>Pedirle que explique qué es el CPC y cómo suele comportarse en campañas de otras empresas.</li></ul><div class="ex-d">Las 4 opciones miden entre 88 y 96 caracteres. En Forms se barajan, así que la correcta no tiene lugar fijo.</div></div>
+<div class="sec"><div class="sec-t">Sección 4 · Aplicación real</div><div class="sec-s">Nueva y fija: es igual para cualquier cliente. Sustituye la pregunta de horas ahorradas por bandas.</div></div>
+<div class="q">
+<div class="n">14</div>
+<div class="body">
+<div class="qt">¿Ya aplicaste lo aprendido en tu trabajo?</div>
+<div class="resp">Selección única</div>
+<ul class="opts"><li>Sí, varias veces</li><li>Sí, una vez</li><li>Todavía no</li></ul>
+<div class="mide"><b>Mide:</b> Adopción: % que ya aplicó. Es el dato que vende la siguiente fase</div>
+<div class="nota">Ramas: «Sí…» pasa a la pregunta 16. «Todavía no» pasa a la pregunta 15.</div>
+</div>
+<div class="tag t-new">NUEVA</div>
+</div>
+<div class="q">
+<div class="n">15</div>
+<div class="body">
+<div class="cond">Solo si respondió «Todavía no» en la pregunta 14. Después salta a la pregunta 21.</div>
+<div class="qt">¿Qué te lo ha impedido? Marca todas las que apliquen.</div>
+<div class="resp">Selección múltiple</div>
+<ul class="opts"><li>No he tenido tiempo</li><li>No tengo acceso o licencia de la herramienta</li><li>No sé cómo aplicarlo a mis tareas</li><li>Mi equipo o mi jefe no lo respalda</li><li>Otro: ______</li></ul>
+<div class="mide"><b>Mide:</b> Frenos a la adopción: dicen dónde actuar</div>
+</div>
+<div class="tag t-new">NUEVA</div>
+</div>
+<div class="q">
+<div class="n">16</div>
+<div class="body">
+<div class="cond">Solo si respondió «Sí» en la pregunta 14</div>
+<div class="qt">Piensa en la tarea de tu trabajo en la que más has usado lo aprendido. ¿Cuál es?</div>
+<div class="resp">Texto corto &nbsp;·&nbsp; <b class="mk">Mide:</b> <span class="mv">Qué tareas cambian; se agrupan por tema</span></div>
+</div>
+<div class="tag t-new">NUEVA</div>
+</div>
+<div class="q">
+<div class="n">17</div>
+<div class="body">
+<div class="cond">Solo si respondió «Sí» en la pregunta 14</div>
+<div class="qt">Antes, ¿cuántos minutos te tomaba hacerla?</div>
+<div class="resp">Número (minutos) &nbsp;·&nbsp; <b class="mk">Mide:</b> <span class="mv">Tiempo antes, declarado</span></div>
+</div>
+<div class="tag t-new">NUEVA</div>
+</div>
+<div class="q">
+<div class="n">18</div>
+<div class="body">
+<div class="cond">Solo si respondió «Sí» en la pregunta 14</div>
+<div class="qt">Ahora, ¿cuántos minutos te toma?</div>
+<div class="resp">Número (minutos) &nbsp;·&nbsp; <b class="mk">Mide:</b> <span class="mv">Tiempo ahora, declarado</span></div>
+</div>
+<div class="tag t-new">NUEVA</div>
+</div>
+<div class="q">
+<div class="n">19</div>
+<div class="body">
+<div class="cond">Solo si respondió «Sí» en la pregunta 14</div>
+<div class="qt">¿Cuántas veces por semana la haces?</div>
+<div class="resp">Número &nbsp;·&nbsp; <b class="mk">Mide:</b> <span class="mv">Horas por semana = (antes − ahora) × veces ÷ 60. Declarado: se reporta la mediana, no el promedio</span></div>
+<div class="nota">Pregunta por la tarea más usada, no por la que más cambió, para no elegir el mejor caso de cada persona. El dashboard convierte los minutos a las 4 bandas de horas de siempre, para comparar con los casos del banco.</div>
+</div>
+<div class="tag t-new">NUEVA</div>
+</div>
+<div class="q">
+<div class="n">20</div>
+<div class="body">
+<div class="cond">Solo si respondió «Sí» en la pregunta 14</div>
+<div class="qt">Lo que produzco con IA lo uso casi siempre sin rehacerlo.</div>
+<div class="resp">Escala 1-5 · 1 = Totalmente en desacuerdo · 5 = Totalmente de acuerdo &nbsp;·&nbsp; <b class="mk">Mide:</b> <span class="mv">Calidad del uso real</span></div>
+</div>
+<div class="tag t-new">NUEVA</div>
+</div>
+<div class="sec"><div class="sec-t">Sección 5 · Calidad del consultor y tutoría</div><div class="sec-s">Escala de 1 a 5 (1: Totalmente en desacuerdo / 5: Totalmente de acuerdo).</div></div>
+<div class="q">
+<div class="n">21</div>
+<div class="body">
+<div class="qt">Relevancia: ¿Los casos prácticos presentados reflejan situaciones reales de mi empresa?</div>
+<div class="resp">Escala 1-5 · 1 = Totalmente en desacuerdo · 5 = Totalmente de acuerdo &nbsp;·&nbsp; <b class="mk">Mide:</b> <span class="mv">Relevancia</span></div>
+<div class="nota">Antes se llamaba «Claridad Expositiva», pero la pregunta es sobre relevancia.</div>
+</div>
+<div class="tag t-adj">AJUSTADA</div>
+</div>
+<div class="q">
+<div class="n">22</div>
+<div class="body">
+<div class="qt">Gestión del tiempo: ¿El ritmo de la sesión permitió asimilar los conceptos técnicos adecuadamente?</div>
+<div class="resp">Escala 1-5 · 1 = Totalmente en desacuerdo · 5 = Totalmente de acuerdo &nbsp;·&nbsp; <b class="mk">Mide:</b> <span class="mv">Ritmo</span></div>
+</div>
+<div class="tag t-same">IGUAL</div>
+</div>
+<div class="q">
+<div class="n">23</div>
+<div class="body">
+<div class="qt">Dominio técnico: ¿Las soluciones propuestas por el tutor demostraron profundidad técnica?</div>
+<div class="resp">Escala 1-5 · 1 = Totalmente en desacuerdo · 5 = Totalmente de acuerdo &nbsp;·&nbsp; <b class="mk">Mide:</b> <span class="mv">Calidad del consultor</span></div>
+</div>
+<div class="tag t-same">IGUAL</div>
+</div>
+<div class="sec"><div class="sec-t">Sección 6 · Radar de necesidades</div><div class="sec-s">Información estratégica para el diseño de nuevas propuestas.</div></div>
+<div class="q">
+<div class="n">24</div>
+<div class="body">
+<div class="qt">Detección de cuellos de botella: ¿Qué área de su trabajo aún requiere mayor automatización?</div>
+<div class="resp">Selección única</div>
+<ul class="opts"><li>Reportes</li><li>Datos y análisis</li><li>CRM y seguimiento de clientes</li><li>Contenido y comunicación</li><li>Atención al cliente y soporte</li><li>Administración y finanzas</li><li>Tecnología y seguridad</li><li>Otros: ______</li></ul>
+<div class="mide"><b>Mide:</b> Dónde está la próxima venta</div>
+<div class="nota">Antes: Reportes, Datos, CRM, Contenido y Otros. La lista estándar permite comparar entre clientes; se pueden sumar 1 o 2 opciones propias del área.</div>
+</div>
+<div class="tag t-adj">AJUSTADA</div>
+</div>
+<div class="q">
+<div class="n">25</div>
+<div class="body">
+<div class="qt">Expansión de capacidades: ¿Qué nueva habilidad tecnológica desearía dominar en el próximo trimestre?</div>
+<div class="resp">Texto corto &nbsp;·&nbsp; <b class="mk">Mide:</b> <span class="mv">Próxima formación</span></div>
+</div>
+<div class="tag t-same">IGUAL</div>
+</div>
+<div class="q">
+<div class="n">26</div>
+<div class="body">
+<div class="qt">Adopción a nivel equipo: ¿Qué otros departamentos de su organización se beneficiarían de una formación similar?</div>
+<div class="resp">Texto corto &nbsp;·&nbsp; <b class="mk">Mide:</b> <span class="mv">Departamentos a quienes ofrecer</span></div>
+</div>
+<div class="tag t-same">IGUAL</div>
+</div>
+<div class="sec"><div class="sec-t">Sección 7 · Barómetro Intezia</div><div class="sec-s">Panorama de adopción de IA a nivel corporativo.</div></div>
+<div class="q">
+<div class="n">27</div>
+<div class="body">
+<div class="qt">¿Cuál es la herramienta de Inteligencia Artificial de mayor uso y adopción corporativa dentro de su equipo actualmente?</div>
+<div class="resp">Selección única</div>
+<ul class="opts"><li>Claude (Anthropic)</li><li>Gemini (Google)</li><li>ChatGPT (OpenAI)</li><li>Microsoft Copilot</li><li>Herramientas nativas/internas</li><li>Ninguna</li></ul>
+<div class="mide"><b>Mide:</b> Herramienta predominante</div>
+</div>
+<div class="tag t-same">IGUAL</div>
+</div>
+<div class="q">
+<div class="n">28</div>
+<div class="body">
+<div class="qt">En la actualidad, ¿hacia dónde considera que está orientada la principal aplicación de la IA en la organización?</div>
+<div class="resp">Selección única</div>
+<ul class="opts"><li>Asistencia en tareas básicas (redacción de correos, resúmenes, minutas)</li><li>Análisis de datos, finanzas y reportes complejos</li><li>Automatización de procesos y flujos de trabajo operativos</li><li>Desarrollo avanzado (clones digitales, agentes autónomos, integraciones API)</li></ul>
+<div class="mide"><b>Mide:</b> Uso principal</div>
+</div>
+<div class="tag t-same">IGUAL</div>
+</div>
+<div class="q">
+<div class="n">29</div>
+<div class="body">
+<div class="qt">De cara a los próximos 6 meses, ¿Cuál considera usted que debe ser la prioridad estratégica de inversión en IA para la organización?</div>
+<div class="resp">Selección única</div>
+<ul class="opts"><li>Capacitación y adopción cultural del talento humano</li><li>Adquisición de licencias corporativas (Software/SaaS)</li><li>Desarrollo de infraestructura propia o modelos a medida</li></ul>
+<div class="mide"><b>Mide:</b> Prioridad de inversión</div>
+</div>
+<div class="tag t-same">IGUAL</div>
+</div>
+<div class="sec"><div class="sec-t">Sección 8 · Cierre</div><div class="sec-s">Nueva. Alimenta el banco de casos.</div></div>
+<div class="q">
+<div class="n">30</div>
+<div class="body">
+<div class="qt">Recomendaría esta formación a un colega.</div>
+<div class="resp">Escala 1-5 · 1 = Totalmente en desacuerdo · 5 = Totalmente de acuerdo &nbsp;·&nbsp; <b class="mk">Mide:</b> <span class="mv">Recomendación. Se reporta el % que marca 4 o 5</span></div>
+</div>
+<div class="tag t-new">NUEVA</div>
+</div>
+<div class="q">
+<div class="n">31</div>
+<div class="body">
+<div class="qt">En una frase, ¿qué fue lo más valioso de esta formación?</div>
+<div class="resp">Texto corto · Opcional &nbsp;·&nbsp; <b class="mk">Mide:</b> <span class="mv">Testimonio para el banco de casos</span></div>
+</div>
+<div class="tag t-new">NUEVA</div>
+</div>
+<div class="q">
+<div class="n">32</div>
+<div class="body">
+<div class="qt">¿Podemos citar tu comentario?</div>
+<div class="resp">Selección única</div>
+<ul class="opts"><li>Sí, con mi nombre</li><li>Sí, sin mi nombre</li><li>No</li></ul>
+<div class="mide"><b>Mide:</b> Permiso de cita. Si no escribió comentario, se ignora</div>
+</div>
+<div class="tag t-new">NUEVA</div>
+</div>
+<div class="removed"><div class="removed-t">Se elimina o se mueve</div><ul><li>«Acompañamiento: ¿Durante los ejercicios, sus dudas fueron resueltas con inmediatez y precisión?»: el EduPulse de Habilidades lo cubre en cada sesión («lo hice solo, con ayuda o no pude»).</li><li>«En promedio, ¿cuántas horas semanales estima ahorra en sus tareas rutinarias gracias al uso de IA?» (bandas de horas): se reemplaza por las preguntas 16 a 19, que se calculan en horas y se suman.</li></ul></div>
+</section>
+<section class="page">
+  <div class="fhead"><div><div class="kick">Para iterar</div><div class="ftitle">Decisiones abiertas</div></div></div>
+  <ol class="dec">
+    <li><b>Largo del EduTrace.</b> Pasa de 22 preguntas a entre 27 y 31, según la rama de la pregunta 14. ¿Se recorta? Candidatas: 25 (habilidad a dominar), 28 (uso principal), 29 (prioridad de inversión) y 31 (frase).</li>
+    <li><b>Tuteo.</b> El EduTrace mezcla tú (conocimientos y preguntas nuevas) con usted (calidad, radar y barómetro, en las preguntas marcadas IGUAL). El EduPulse usa tú. ¿Se unifica todo a tú?</li>
+    <li><b>Aviso del EduTrace.</b> El texto propuesto promete que la empresa solo recibe resultados agrupados y la lista de participantes sin puntajes. Hay que validarlo con dirección antes de publicarlo.</li>
+    <li><b>Razones del EduPulse.</b> Las opciones de «¿Qué hizo la diferencia hoy?» son una primera propuesta. ¿Falta alguna que escuchen seguido en las sesiones?</li>
+    <li><b>Tarea de la sección 4.</b> Hoy pregunta por una sola tarea. Pedir dos da más dato pero alarga el formulario.</li>
+    <li><b>Lista de cuellos de botella (24).</b> ¿La lista estándar cubre a los clientes que atienden?</li>
+    <li><b>Progreso en Detección y Políticas.</b> Sin práctica, el ítem 2 mide claridad y comprensión. ¿Es suficiente para mostrar progreso en esos servicios?</li>
+    <li><b>Mínimo de respuestas.</b> Se propone 4 por sesión para mostrar datos. ¿Se mantiene con grupos muy pequeños?</li>
+    <li><b>Sesiones.</b> La lista desplegable va de 1 a 12. ¿Es suficiente para los programas más largos?</li>
+  </ol>
+  <h2>Qué sigue</h2>
+  <ol class="steps">
+    <li>El equipo evalúa este documento y se ajustan los textos.</li>
+    <li>Se actualizan los 4 EduPulse y el EduTrace en Google Forms.</li>
+    <li>Se adapta el procesamiento (<span class="mono">mapeo.json</span> y <span class="mono">edutrace-procesar.py</span>) y el dashboard a las preguntas nuevas. Los dashboards ya entregados no cambian.</li>
+    <li>Se documenta EduPulse en el sistema: hoy no tiene plantilla ni procesamiento.</li>
+  </ol>
+</section>
+
+</body></html>

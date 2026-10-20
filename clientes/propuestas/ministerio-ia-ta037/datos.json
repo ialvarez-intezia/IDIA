@@ -1,0 +1,368 @@
+{
+ "version": 3,
+ "cliente": {
+  "nombre": "Hidrocarburos",
+  "slug": "ministerio-ia-ta037",
+  "codigo": "TA-037",
+  "nombre_pie": "Hidrocarburos"
+ },
+ "division": "educacion",
+ "alianza": false,
+ "eje": "IA responsable y modelos locales para funcionarios, técnicos y docentes del sector hidrocarburos",
+ "origen": "Documento de trabajo «Propuestas de IA responsable para el sector público» (Intezia, 14/10/2026), Propuesta 1 de 2, adaptado al sector hidrocarburos; instrucciones de Ivana del 14/10/2026: TA-037, sin tiempo (solo «sesiones de 2 h») ni parte económica, sin asesora; versión 2 del 15/10/2026 (Ivana): cliente «Hidrocarburos», sin la frase de «sin ley» ni lo que hable de política, sin entregables y sin networking",
+ "fuente_insumo": "Documento de trabajo de Intezia del 14/10/2026 (sin Ficha de Levantamiento ni transcripción de reunión)",
+ "meta_tipo": "Taller · Programa universitario de IA responsable y modelos locales · 5 módulos · formato compacto v3 sin tiempo ni inversión",
+ "sin_hoja_cotizacion": true,
+ "vocabulario": {
+  "solucion": [
+   "tema",
+   "temas"
+  ],
+  "area": [
+   "módulo",
+   "módulos"
+  ]
+ },
+ "siglas_ok": [
+  "IA"
+ ],
+ "supuestos": [
+  "Versión 2 (Ivana, 15/10/2026): (1) se quitó la frase de «sin ley» (hecho de la portada, ahora «Marco: legal y ético: lo que ya aplica al uso de la IA en el sector») y el «Proyecto de ley en curso» del módulo 1, para que el deck no hable de política ni deje al gobierno mal parado; (2) el cliente es «Hidrocarburos» (respuesta de Ivana: tal cual lo escribió) en el pie de página y donde decía «el ministerio»; (3) sin entregables: se omite la slide 5 (`omitir: [\"proximos\",\"entregables\"]`, sin sección `entregables`) y la palabra pasa a «tema(s)» en todo el deck (vocabulario). Queda fuera, solo como referencia para el kickoff: el material de cada módulo en formato digital, la plantilla de evaluación de riesgos de proyectos de IA y el certificado de participación de la universidad, que aparecían en «Qué recibe el participante»; (4) sin networking: el hito «Encuentro de cierre» pasa a «Cierre del programa con los casos de uso diseñados» (redacción de Intezia a partir del laboratorio) y se quitó que el encuentro de cierre sea el espacio de networking. Sigue en el deck la tarjeta «Aliados» del retorno («se suman aliados en la universidad»): promesa parecida que Ivana no pidió quitar.",
+  "Insumo único: el documento de trabajo de Intezia del 14/10/2026 (Propuesta 1 de 2). No hubo Ficha de Levantamiento ni transcripción de la reunión: los datos de la portada son de contenido del programa y de contexto normativo que el propio documento declara, no mediciones del ministerio.",
+  "Instrucciones de Ivana (14/10/2026): (a) omitir la parte del tiempo y la económica; (b) poner que son «sesiones de 2 h» y solamente eso, sin cantidad de sesiones; (c) adaptar el contenido al sector hidrocarburos y decirlo en el título; (d) no hay asesora: se omite ese campo. Por (a), el deck no lleva el laboratorio de medio día o día completo, la jornada completa del encuentro de cierre ni la estructura de inversión; no tiene hoja de inversión ni de pago (`sin_hoja_cotizacion`). El documento original indica cuatro sesiones conceptuales, el laboratorio y el encuentro de cierre: queda como referencia interna para el kickoff.",
+  "«Sesiones de 2 h» es una excepción pedida por Ivana a CLAUDE.md §4.23 (que bloquea la palabra «sesiones»): se dice solo la duración de cada sesión, nunca la cantidad, la agenda ni las fechas. El generador la acepta por `frases_ok` y `verificar-propuesta.sh` ahora respeta `frases_ok`. El calendario y el número de sesiones se acuerdan en el kickoff.",
+  "Las horas de `datos.json` (1 por entregable) son marcadores técnicos que exige el generador: no representan duración y no se muestran en el deck (`overrides.css`). La duración que sí se dice es la de las sesiones, 2 h.",
+  "Adaptación a hidrocarburos: el documento mezcla sectores (sísmica, drones y sensores agrícolas, emisiones, atención ciudadana). Se conservan imágenes sísmicas, control de emisiones y atención ciudadana; los drones y sensores agrícolas pasan a «drones y sensores en instalaciones» (adaptación de Intezia, a confirmar con casos reales). «Participantes por sector» pasa a «por institución». El cliente se llama «Hidrocarburos» desde la versión 2 del 15/10/2026 (antes «Ministerio de Inteligencia Artificial y Eficiencia Productiva»); si el destinatario es otro ministerio o empresa del sector, cambiar el nombre.",
+  "Educación y sin alianza (Ivana lo confirmó para las dos propuestas). La universidad aparece como aliada en el reparto de roles, sin bandera de alianza.",
+  "Reexpresión como curso por módulos (spec §1b): cada módulo del documento es un módulo y su contenido, el detalle de un entregable. El encuentro de cierre va como hito. Sin seguimiento a 30, 60 y 90 días (el documento no lo trae): los indicadores de éxito del documento son el retorno.",
+  "El certificado de participación va porque el documento lo lista como entregable (lo emite la universidad).",
+  "Los riesgos del documento (cambio de prioridades, temas sensibles en los casos, baja asistencia) se traducen en lo que el deck sí puede decir: casos acordados de antemano y anonimizados, convocatoria por canales oficiales. El convenio o la carta de intención queda en pendientes: no va en los pasos de arranque (CLAUDE.md §4.15).",
+  "Sin asesora (Ivana): la slide de próximos pasos se omite (`omitir: [\"proximos\"]`), porque el generador exige la asesora para esa slide. Si más adelante hay una, se agrega `proximos_pasos.asesora`, se quita el omitir y se regenera."
+ ],
+ "pendientes": [
+  "Confirmar con el ministerio los casos reales de hidrocarburos para el módulo 4 (casos) y el módulo 5 (laboratorio), y si «drones y sensores en instalaciones» corresponde.",
+  "¿Qué universidad y facultad lideran la propuesta? ¿Existe partida presupuestaria y en qué plazo? ¿Quién firma el convenio y quién valida los contenidos? (preguntas del documento para la siguiente reunión).",
+  "Referencias normativas: el documento advierte que deben verificarse con el área legal antes de su uso formal.",
+  "Orden de presentación: el documento recomienda presentar primero la guía de gobierno (TA-038) y después este programa para socializarla y sumar aliados en la universidad.",
+  "Valor, descuento, total y plan de pago no se arman: Ivana pidió omitir la parte económica."
+ ],
+ "omitir": [
+  "proximos",
+  "entregables"
+ ],
+ "portada": {
+  "titulo_lineas": [
+   "IA responsable y modelos locales",
+   "para decidir con criterio"
+  ],
+  "titulo_destacado": "en hidrocarburos",
+  "lead": "Un **programa universitario** que acompaña a funcionarios, técnicos y docentes del sector hidrocarburos para decidir con criterio qué IA usar, con qué datos y dónde alojarlos.",
+  "hechos": [
+   {
+    "num": "Marco",
+    "texto": "legal y ético: lo que ya aplica al uso de la IA en el sector.",
+    "resuelto_por": [
+     "M1-1"
+    ]
+   },
+   {
+    "num": "Dónde",
+    "texto": "correr un modelo depende de los datos, el cómputo y la energía disponibles.",
+    "resuelto_por": [
+     "M2-1"
+    ]
+   },
+   {
+    "num": "3 niveles",
+    "texto": "Los datos del sector se clasifican en públicos, internos y sensibles o estratégicos.",
+    "resuelto_por": [
+     "M3-1"
+    ]
+   }
+  ],
+  "fuente": "Contenido del programa; no son mediciones de Hidrocarburos."
+ },
+ "carriles": [
+  {
+   "id": "prog",
+   "nombre": "Programa universitario de IA responsable",
+   "nombre_corto": "Programa",
+   "color": "amarillo"
+  }
+ ],
+ "areas": [
+  {
+   "id": "M1",
+   "nombre": "Módulo 1 · Marco legal y ético",
+   "carril": "prog",
+   "frente": "A",
+   "para_que": "Saber qué regula hoy la IA y qué compromisos aplican",
+   "soluciones": [
+    {
+     "id": "M1-1",
+     "entregable": "Mapa del marco legal y ético de la IA",
+     "h": 1,
+     "fase": "F1",
+     "incluye": [
+      "Estado de la regulación",
+      "Código de ética",
+      "Compromisos internacionales firmados"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "M2",
+   "nombre": "Módulo 2 · Modelos locales",
+   "carril": "prog",
+   "frente": "A",
+   "para_que": "Decidir cuándo conviene un modelo local frente a la nube",
+   "soluciones": [
+    {
+     "id": "M2-1",
+     "entregable": "Criterios para elegir modelos locales",
+     "h": 1,
+     "fase": "F1",
+     "incluye": [
+      "Qué son los modelos locales",
+      "Cuándo convienen frente a la nube",
+      "Requisitos de cómputo y energía",
+      "Lo que realmente cuesta operarlos"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "M3",
+   "nombre": "Módulo 3 · Datos y soberanía",
+   "carril": "prog",
+   "frente": "A",
+   "para_que": "Clasificar los datos y saber quién puede acceder a cada uno",
+   "soluciones": [
+    {
+     "id": "M3-1",
+     "entregable": "Guía de clasificación y acceso a los datos",
+     "h": 1,
+     "fase": "F1",
+     "incluye": [
+      "Propiedad del dato en el sector",
+      "Clasificación: pública, interna y sensible",
+      "Autorización de acceso",
+      "Riesgos de fuga"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "M4",
+   "nombre": "Módulo 4 · Casos de hidrocarburos",
+   "carril": "prog",
+   "frente": "A",
+   "para_que": "Ver cómo se aplica la IA en el sector hidrocarburos",
+   "soluciones": [
+    {
+     "id": "M4-1",
+     "entregable": "Casos de uso de hidrocarburos",
+     "h": 1,
+     "fase": "F2",
+     "incluye": [
+      "Interpretación de imágenes sísmicas",
+      "Drones y sensores en instalaciones",
+      "Control de emisiones",
+      "Atención ciudadana"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "M5",
+   "nombre": "Módulo 5 · Laboratorio práctico",
+   "carril": "prog",
+   "frente": "A",
+   "para_que": "Diseñar un caso de uso real sobre un modelo local",
+   "soluciones": [
+    {
+     "id": "M5-1",
+     "entregable": "Caso de uso con evaluación de riesgos",
+     "h": 1,
+     "fase": "F3",
+     "incluye": [
+      "Caso real de hidrocarburos, acotado",
+      "Diseño sobre un modelo local",
+      "Evaluación de riesgos del caso"
+     ]
+    }
+   ]
+  }
+ ],
+ "alcance": {
+  "titulo": "Cinco módulos para decidir con criterio.",
+  "subtitulo": "Del marco legal al caso práctico: **cada módulo** lo aplica el participante en su institución.",
+  "fuera_alcance": [
+   "Certificación y gestión académica: las asume la universidad, que también convoca, inscribe y acredita.",
+   "Validación de los contenidos y convocatoria a funcionarios y a empresas públicas de hidrocarburos: las hace Hidrocarburos.",
+   "Datos sin anonimizar: los casos del laboratorio se acuerdan de antemano y se anonimizan antes de trabajarlos.",
+   "Asesoría jurídica: las referencias normativas se verifican con el área legal de Hidrocarburos."
+  ]
+ },
+ "metodo": {
+  "titulo": "Así trabajamos el programa.",
+  "subtitulo": "Intezia diseña los contenidos y facilita; la universidad y Hidrocarburos ponen la sede, la convocatoria y la validación.",
+  "quien_construye": "**Intezia** diseña el currículo, los contenidos y los casos prácticos; la **universidad** aporta la sede y la acreditación; **Hidrocarburos** valida los contenidos.",
+  "pasos": [
+   {
+    "titulo": "Entendemos",
+    "texto": "El marco legal, los modelos locales y los datos."
+   },
+   {
+    "titulo": "Vemos casos",
+    "texto": "Aplicaciones reales de la IA en el sector hidrocarburos."
+   },
+   {
+    "titulo": "Practicamos",
+    "texto": "Un caso real de Hidrocarburos, diseñado en el laboratorio."
+   },
+   {
+    "titulo": "Medimos",
+    "texto": "Conocimientos antes y después del programa."
+   }
+  ],
+  "por_que_orden": "Primero se entiende el marco y los datos; después se ven casos de hidrocarburos; al final cada participante diseña un caso propio con evaluación de riesgos.",
+  "practica": [
+   {
+    "titulo": "Presencial o híbrido",
+    "texto": "Sesiones de 2 h, en sala o en modalidad híbrida, según acuerden la universidad y Hidrocarburos."
+   },
+   {
+    "titulo": "Casos reales, acotados",
+    "texto": "El laboratorio parte de un caso real de hidrocarburos, acotado, que se acuerda de antemano con Hidrocarburos."
+   },
+   {
+    "titulo": "Convocatoria oficial",
+    "texto": "La universidad y Hidrocarburos convocan por sus canales y con antelación, para asegurar la asistencia."
+   }
+  ],
+  "datos": "Los casos del laboratorio se acuerdan de antemano con Hidrocarburos y sus datos se anonimizan antes de trabajarlos."
+ },
+ "logistica": {
+  "modalidad": "Sesiones de 2 h, presenciales o híbridas, según se acuerde con la universidad.",
+  "participantes": "Funcionarios de Hidrocarburos y de sus empresas públicas, equipos de datos y docentes.",
+  "arranque": "La universidad convoca y Hidrocarburos valida los contenidos antes de empezar."
+ },
+ "fases": [
+  {
+   "id": "F1",
+   "titulo": "Marco",
+   "descripcion": "**marco, modelos y datos**",
+   "destacada": true
+  },
+  {
+   "id": "F2",
+   "titulo": "Casos",
+   "descripcion": "**casos de hidrocarburos**"
+  },
+  {
+   "id": "F3",
+   "titulo": "Práctica",
+   "descripcion": "**laboratorio práctico**"
+  }
+ ],
+ "frentes": [
+  {
+   "id": "A",
+   "carril": "prog",
+   "nombre": "Funcionarios y docentes",
+   "celdas": {
+    "F1": "Marco legal y ético, modelos locales y soberanía de los datos.",
+    "F2": "Casos de hidrocarburos: sísmica, instalaciones, emisiones y atención ciudadana.",
+    "F3": "Un caso de uso real de hidrocarburos, con evaluación de riesgos."
+   }
+  }
+ ],
+ "seguimiento": {
+  "tipo": "ninguno"
+ },
+ "ruta": {
+  "titulo": "Un programa en tres fases.",
+  "subtitulo": "Del marco legal al laboratorio. El calendario se acuerda en la reunión de arranque.",
+  "nota": "Los módulos conceptuales preparan el laboratorio: ahí cada participante diseña un caso propio.",
+  "hitos": [
+   {
+    "titulo": "Arranque",
+    "texto": "Hidrocarburos valida los contenidos y la universidad convoca."
+   },
+   {
+    "titulo": "Marco y datos",
+    "texto": "Marco legal, modelos locales y soberanía de los datos."
+   },
+   {
+    "titulo": "Casos y laboratorio",
+    "texto": "Casos de hidrocarburos y un caso propio diseñado."
+   },
+   {
+    "titulo": "Encuentro de cierre",
+    "texto": "Cierre del programa con los casos de uso diseñados."
+   }
+  ]
+ },
+ "retorno": {
+  "modo": "metodo",
+  "posiciones": false,
+  "titulo": "Retorno esperado: decisiones con criterio.",
+  "subtitulo": "Cuatro indicadores del programa, no cifras de ahorro: los que Hidrocarburos y la universidad revisan al cerrar.",
+  "etiqueta_pasos": "Cómo se mide el éxito del programa",
+  "pasos": [
+   {
+    "titulo": "Participación",
+    "texto": "Cuántos participantes hay por institución y qué porcentaje completa la asistencia."
+   },
+   {
+    "titulo": "Conocimientos",
+    "texto": "Evaluación de conocimientos antes y después del programa."
+   },
+   {
+    "titulo": "Casos de uso",
+    "texto": "Cuántos casos propone cada grupo en el laboratorio práctico."
+   },
+   {
+    "titulo": "Seguimiento",
+    "texto": "Cuántas solicitudes de piloto o de adopción de la guía llegan tras el programa."
+   }
+  ],
+  "etiqueta_metas": "Qué queda medido al cerrar",
+  "metas": [
+   {
+    "dias": "Asistencia",
+    "texto": "Participantes por institución y porcentaje de asistencia completa."
+   },
+   {
+    "dias": "Aprendizaje",
+    "texto": "Conocimientos antes y después del programa."
+   },
+   {
+    "dias": "Aplicación",
+    "texto": "Casos de uso propuestos y solicitudes de seguimiento."
+   }
+  ],
+  "etiqueta_destino": "Hacia dónde va el programa",
+  "destino": [
+   {
+    "rotulo": "Criterio compartido",
+    "texto": "Cada institución elige **modelo y alojamiento** según el nivel de sus datos."
+   },
+   {
+    "rotulo": "Casos propios",
+    "texto": "Los casos del laboratorio quedan registrados como insumo para una **guía de gobierno de IA y datos**."
+   },
+   {
+    "rotulo": "Aliados",
+    "texto": "Se suman aliados en la universidad, e Hidrocarburos invita a empresas del sector."
+   }
+  ],
+  "gancho": "Al cerrar, Hidrocarburos contará con participantes formados por institución, casos de uso propios y una medición de lo aprendido."
+ },
+ "_comentario": "Taller TA-037, Propuesta 1 de 2 del documento de trabajo del 14/10/2026, adaptado a hidrocarburos. Receta de curso por módulos (spec §1b). Solo «sesiones de 2 h» como tiempo y sin inversión por instrucción de Ivana; sin slide de próximos pasos (sin asesora). Versión 2 del 15/10/2026: cliente Hidrocarburos, sin entregables, sin networking y sin lo que hable de ley o política.",
+ "frases_ok": [
+  "sesiones de 2 h"
+ ]
+}

@@ -1,6 +1,17 @@
 # Brief — Sociedad Anticancerosa de Venezuela (Clínica)
 
-## Actualización 2026-10-08 — ahora Detección + Habilidades, 2 áreas en 4 subáreas, plantilla compacta v2 (8 slides) · VIGENTE
+## Actualización 2026-10-09 — llevada a la plantilla compacta v3 (sin semanas ni sesiones) · VIGENTE
+
+Pedido de Ivana: «llevar la DET-023 al nuevo formato». Como el combo Detección + Habilidades no tiene soluciones de Habilidades
+conocidas (las prioriza la Detección), se le preguntó si seguía en el formato de Habilidades o pasaba al de Detección: **se queda en el de
+Habilidades v3** (`servicio_rotulo` «Servicio de Detección y Habilidades»), porque el cliente (una ONG) necesita el total combinado y el formato
+de Detección no cotiza por partes. Alcance, 50 h (Detección 18 h + Habilidades 32 h), 2 áreas en 4 subáreas, cajas de valor por parte y
+ausencia de facilidad de pago **no cambian**. Cambia solo la forma: sin semanas, sesiones ni fechas (CLAUDE.md §4.23), ruta por fases e hitos por
+evento (Nivelación, Detección, Reporte Final, Soluciones, 30-60-90), «reunión de arranque» en vez de «kick-off» y horas por subárea sin repartirlas
+en encuentros. **La tabla «Horas y semanas» de abajo y su calendario de 6 semanas ya no van en la propuesta**: son una referencia interna que se
+acuerda en la reunión de arranque (pasa al Brief de Kickoff, §12). Copia del `datos.json` v2: `datos.json.v2.20261009-175328.bak`.
+
+## Actualización 2026-10-08 — ahora Detección + Habilidades, 2 áreas en 4 subáreas, plantilla compacta v2 (8 slides) · SUPERADA EN FORMA POR LA v3
 
 Instrucción directa del usuario: «reajustar la DET-023 porque ahora se le incluye Habilidades» con la **ficha comercial nueva**
 (`Levantamiento_Sociedad_Anticancerosa_de_Venezuela_Clinica_2026-10-05.pdf`, registrada el 2026-09-24, asesora Verónica Rubio):

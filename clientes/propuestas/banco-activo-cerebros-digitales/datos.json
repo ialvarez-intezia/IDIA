@@ -1,0 +1,667 @@
+{
+ "version": 3,
+ "cliente": {
+  "nombre": "Banco Activo",
+  "slug": "banco-activo-cerebros-digitales",
+  "codigo": "CAI-027",
+  "nombre_pie": "Banco Activo"
+ },
+ "division": "educacion",
+ "alianza": false,
+ "omitir": [
+  "pago"
+ ],
+ "meta_tipo": "Capacitación In-Company · 9 Cerebros Digitales · 6 h por cerebro · 54 h · seguimiento 30-60-90 · formato compacto v3",
+ "vocabulario": {
+  "solucion": [
+   "entregable",
+   "entregables"
+  ],
+  "area": [
+   "Cerebro Digital",
+   "Cerebros Digitales"
+  ]
+ },
+ "eje": "Construcción guiada de 9 Cerebros Digitales (asistentes personales) con Claude (Projects, Skills, Conectores y Plugins) y el conocimiento de cada persona organizado como grafo en Obsidian, para la línea directiva de Banco Activo",
+ "origen": "CAI-027 enviada el 24/09/2026 en el formato canónico de 14 slides (corregida el 01/10/2026 a 5 Cerebros Digitales) e instrucción de Ivana del 13/10/2026: ajustarla al formato nuevo y subirla a 9 Cerebros Digitales. Contenido: los 3 módulos de su programa.md anterior (archivado en _anterior-14-slides/) y la Ficha de Levantamiento de Banco Activo (Verónica Rubio, 22/09/2026)",
+ "fuente_insumo": "programa.md y brief.md de la CAI-027 anterior, Ficha de Levantamiento (sin transcripción de la reunión) e instrucción del usuario",
+ "portada": {
+  "titulo_lineas": [
+   "Construcción de 9 Cerebros",
+   "Digitales con Claude y Obsidian"
+  ],
+  "titulo_destacado": "en {cliente_corto}",
+  "lead": "Este proyecto acompaña a nueve líderes de {cliente_corto} para que cada uno construya su **Cerebro Digital**: un asistente en Claude con memoria propia, que conoce su rol, su voz y su criterio, y lo ayuda a decidir y a ahorrar tiempo.",
+  "hechos": [
+   {
+    "num": "Desigual",
+    "texto": "es el uso de IA entre los líderes: unos piden estrategias, la mayoría la usa de forma básica.",
+    "resuelto_por": [
+     "CD1-1",
+     "CD2-1",
+     "CD3-1",
+     "CD4-1",
+     "CD5-1",
+     "CD6-1",
+     "CD7-1",
+     "CD8-1",
+     "CD9-1"
+    ]
+   },
+   {
+    "num": "Disperso",
+    "texto": "es el conocimiento de cada líder: vive en notas y archivos sueltos, sin conexión entre sí.",
+    "resuelto_por": [
+     "CD1-2",
+     "CD2-2",
+     "CD3-2",
+     "CD4-2",
+     "CD5-2",
+     "CD6-2",
+     "CD7-2",
+     "CD8-2",
+     "CD9-2"
+    ]
+   },
+   {
+    "num": "Horas",
+    "texto": "se van en tareas repetitivas del día a día ejecutivo: redactar, resumir, responder y analizar.",
+    "resuelto_por": [
+     "CD1-2",
+     "CD2-2",
+     "CD3-2",
+     "CD4-2",
+     "CD5-2",
+     "CD6-2",
+     "CD7-2",
+     "CD8-2",
+     "CD9-2",
+     "CD1-3",
+     "CD2-3",
+     "CD3-3",
+     "CD4-3",
+     "CD5-3",
+     "CD6-3",
+     "CD7-3",
+     "CD8-3",
+     "CD9-3"
+    ]
+   }
+  ],
+  "fuente": "Fuente: datos declarados por Banco Activo en el levantamiento con Intezia."
+ },
+ "carriles": [
+  {
+   "id": "claude",
+   "nombre": "Claude y Obsidian",
+   "nombre_corto": "Claude",
+   "color": "amarillo"
+  }
+ ],
+ "areas": [
+  {
+   "id": "CD1",
+   "nombre": "Cerebro Digital 1",
+   "para_que": "Su asistente personal en Claude, con memoria propia",
+   "carril": "claude",
+   "frente": "A",
+   "composicion": "6 h de trabajo individual con Intezia.",
+   "soluciones": [
+    {
+     "id": "CD1-1",
+     "entregable": "Propósito del cerebro y prompts base",
+     "h": 2,
+     "fase": "F1",
+     "detalle": "Referencia interna (2 h, individual para esta persona). Qué es un Cerebro Digital y fundamentos de Claude: anatomía del prompt, contexto, rol y voz, iteración y verificación, sobre un caso real de su rol. Define el propósito de su Cerebro Digital y resuelve un caso con prompting estructurado. Entrega el propósito definido y sus prompts base, listos para cargarlos en el Project."
+    },
+    {
+     "id": "CD1-2",
+     "entregable": "Project, grafo en Obsidian y Skill",
+     "h": 2,
+     "fase": "F2",
+     "detalle": "Referencia interna (2 h, individual para esta persona). Projects de Claude (memoria y contexto) con el contexto, la voz y el criterio de su rol; su conocimiento organizado como grafo relacional en Obsidian (gratuito, se instala al trabajar), visible en su Vista de Grafo; qué es una Skill (instrucción reutilizable) y construcción de la suya, probada con un caso real. Entrega el Project configurado, su grafo y una Skill funcional."
+    },
+    {
+     "id": "CD1-3",
+     "entregable": "Cerebro conectado y proceso automatizado",
+     "h": 2,
+     "fase": "F3",
+     "detalle": "Referencia interna (2 h, individual para esta persona). Conectores y Plugins; conexión de Obsidian al Cerebro Digital mediante MCP (Model Context Protocol); Cowork; automatización de un proceso real con una herramienta propia; privacidad y datos según los protocolos de Claude. Entrega una automatización conectada a una herramienta real, su criterio de uso seguro y el Cerebro Digital listo para usar."
+    }
+   ]
+  },
+  {
+   "id": "CD2",
+   "nombre": "Cerebro Digital 2",
+   "para_que": "Su asistente personal en Claude, con memoria propia",
+   "carril": "claude",
+   "frente": "A",
+   "composicion": "6 h de trabajo individual con Intezia.",
+   "soluciones": [
+    {
+     "id": "CD2-1",
+     "entregable": "Propósito del cerebro y prompts base",
+     "h": 2,
+     "fase": "F1",
+     "detalle": "Referencia interna (2 h, individual para esta persona). Qué es un Cerebro Digital y fundamentos de Claude: anatomía del prompt, contexto, rol y voz, iteración y verificación, sobre un caso real de su rol. Define el propósito de su Cerebro Digital y resuelve un caso con prompting estructurado. Entrega el propósito definido y sus prompts base, listos para cargarlos en el Project."
+    },
+    {
+     "id": "CD2-2",
+     "entregable": "Project, grafo en Obsidian y Skill",
+     "h": 2,
+     "fase": "F2",
+     "detalle": "Referencia interna (2 h, individual para esta persona). Projects de Claude (memoria y contexto) con el contexto, la voz y el criterio de su rol; su conocimiento organizado como grafo relacional en Obsidian (gratuito, se instala al trabajar), visible en su Vista de Grafo; qué es una Skill (instrucción reutilizable) y construcción de la suya, probada con un caso real. Entrega el Project configurado, su grafo y una Skill funcional."
+    },
+    {
+     "id": "CD2-3",
+     "entregable": "Cerebro conectado y proceso automatizado",
+     "h": 2,
+     "fase": "F3",
+     "detalle": "Referencia interna (2 h, individual para esta persona). Conectores y Plugins; conexión de Obsidian al Cerebro Digital mediante MCP (Model Context Protocol); Cowork; automatización de un proceso real con una herramienta propia; privacidad y datos según los protocolos de Claude. Entrega una automatización conectada a una herramienta real, su criterio de uso seguro y el Cerebro Digital listo para usar."
+    }
+   ]
+  },
+  {
+   "id": "CD3",
+   "nombre": "Cerebro Digital 3",
+   "para_que": "Su asistente personal en Claude, con memoria propia",
+   "carril": "claude",
+   "frente": "A",
+   "composicion": "6 h de trabajo individual con Intezia.",
+   "soluciones": [
+    {
+     "id": "CD3-1",
+     "entregable": "Propósito del cerebro y prompts base",
+     "h": 2,
+     "fase": "F1",
+     "detalle": "Referencia interna (2 h, individual para esta persona). Qué es un Cerebro Digital y fundamentos de Claude: anatomía del prompt, contexto, rol y voz, iteración y verificación, sobre un caso real de su rol. Define el propósito de su Cerebro Digital y resuelve un caso con prompting estructurado. Entrega el propósito definido y sus prompts base, listos para cargarlos en el Project."
+    },
+    {
+     "id": "CD3-2",
+     "entregable": "Project, grafo en Obsidian y Skill",
+     "h": 2,
+     "fase": "F2",
+     "detalle": "Referencia interna (2 h, individual para esta persona). Projects de Claude (memoria y contexto) con el contexto, la voz y el criterio de su rol; su conocimiento organizado como grafo relacional en Obsidian (gratuito, se instala al trabajar), visible en su Vista de Grafo; qué es una Skill (instrucción reutilizable) y construcción de la suya, probada con un caso real. Entrega el Project configurado, su grafo y una Skill funcional."
+    },
+    {
+     "id": "CD3-3",
+     "entregable": "Cerebro conectado y proceso automatizado",
+     "h": 2,
+     "fase": "F3",
+     "detalle": "Referencia interna (2 h, individual para esta persona). Conectores y Plugins; conexión de Obsidian al Cerebro Digital mediante MCP (Model Context Protocol); Cowork; automatización de un proceso real con una herramienta propia; privacidad y datos según los protocolos de Claude. Entrega una automatización conectada a una herramienta real, su criterio de uso seguro y el Cerebro Digital listo para usar."
+    }
+   ]
+  },
+  {
+   "id": "CD4",
+   "nombre": "Cerebro Digital 4",
+   "para_que": "Su asistente personal en Claude, con memoria propia",
+   "carril": "claude",
+   "frente": "A",
+   "composicion": "6 h de trabajo individual con Intezia.",
+   "soluciones": [
+    {
+     "id": "CD4-1",
+     "entregable": "Propósito del cerebro y prompts base",
+     "h": 2,
+     "fase": "F1",
+     "detalle": "Referencia interna (2 h, individual para esta persona). Qué es un Cerebro Digital y fundamentos de Claude: anatomía del prompt, contexto, rol y voz, iteración y verificación, sobre un caso real de su rol. Define el propósito de su Cerebro Digital y resuelve un caso con prompting estructurado. Entrega el propósito definido y sus prompts base, listos para cargarlos en el Project."
+    },
+    {
+     "id": "CD4-2",
+     "entregable": "Project, grafo en Obsidian y Skill",
+     "h": 2,
+     "fase": "F2",
+     "detalle": "Referencia interna (2 h, individual para esta persona). Projects de Claude (memoria y contexto) con el contexto, la voz y el criterio de su rol; su conocimiento organizado como grafo relacional en Obsidian (gratuito, se instala al trabajar), visible en su Vista de Grafo; qué es una Skill (instrucción reutilizable) y construcción de la suya, probada con un caso real. Entrega el Project configurado, su grafo y una Skill funcional."
+    },
+    {
+     "id": "CD4-3",
+     "entregable": "Cerebro conectado y proceso automatizado",
+     "h": 2,
+     "fase": "F3",
+     "detalle": "Referencia interna (2 h, individual para esta persona). Conectores y Plugins; conexión de Obsidian al Cerebro Digital mediante MCP (Model Context Protocol); Cowork; automatización de un proceso real con una herramienta propia; privacidad y datos según los protocolos de Claude. Entrega una automatización conectada a una herramienta real, su criterio de uso seguro y el Cerebro Digital listo para usar."
+    }
+   ]
+  },
+  {
+   "id": "CD5",
+   "nombre": "Cerebro Digital 5",
+   "para_que": "Su asistente personal en Claude, con memoria propia",
+   "carril": "claude",
+   "frente": "A",
+   "composicion": "6 h de trabajo individual con Intezia.",
+   "soluciones": [
+    {
+     "id": "CD5-1",
+     "entregable": "Propósito del cerebro y prompts base",
+     "h": 2,
+     "fase": "F1",
+     "detalle": "Referencia interna (2 h, individual para esta persona). Qué es un Cerebro Digital y fundamentos de Claude: anatomía del prompt, contexto, rol y voz, iteración y verificación, sobre un caso real de su rol. Define el propósito de su Cerebro Digital y resuelve un caso con prompting estructurado. Entrega el propósito definido y sus prompts base, listos para cargarlos en el Project."
+    },
+    {
+     "id": "CD5-2",
+     "entregable": "Project, grafo en Obsidian y Skill",
+     "h": 2,
+     "fase": "F2",
+     "detalle": "Referencia interna (2 h, individual para esta persona). Projects de Claude (memoria y contexto) con el contexto, la voz y el criterio de su rol; su conocimiento organizado como grafo relacional en Obsidian (gratuito, se instala al trabajar), visible en su Vista de Grafo; qué es una Skill (instrucción reutilizable) y construcción de la suya, probada con un caso real. Entrega el Project configurado, su grafo y una Skill funcional."
+    },
+    {
+     "id": "CD5-3",
+     "entregable": "Cerebro conectado y proceso automatizado",
+     "h": 2,
+     "fase": "F3",
+     "detalle": "Referencia interna (2 h, individual para esta persona). Conectores y Plugins; conexión de Obsidian al Cerebro Digital mediante MCP (Model Context Protocol); Cowork; automatización de un proceso real con una herramienta propia; privacidad y datos según los protocolos de Claude. Entrega una automatización conectada a una herramienta real, su criterio de uso seguro y el Cerebro Digital listo para usar."
+    }
+   ]
+  },
+  {
+   "id": "CD6",
+   "nombre": "Cerebro Digital 6",
+   "para_que": "Su asistente personal en Claude, con memoria propia",
+   "carril": "claude",
+   "frente": "A",
+   "composicion": "6 h de trabajo individual con Intezia.",
+   "soluciones": [
+    {
+     "id": "CD6-1",
+     "entregable": "Propósito del cerebro y prompts base",
+     "h": 2,
+     "fase": "F1",
+     "detalle": "Referencia interna (2 h, individual para esta persona). Qué es un Cerebro Digital y fundamentos de Claude: anatomía del prompt, contexto, rol y voz, iteración y verificación, sobre un caso real de su rol. Define el propósito de su Cerebro Digital y resuelve un caso con prompting estructurado. Entrega el propósito definido y sus prompts base, listos para cargarlos en el Project."
+    },
+    {
+     "id": "CD6-2",
+     "entregable": "Project, grafo en Obsidian y Skill",
+     "h": 2,
+     "fase": "F2",
+     "detalle": "Referencia interna (2 h, individual para esta persona). Projects de Claude (memoria y contexto) con el contexto, la voz y el criterio de su rol; su conocimiento organizado como grafo relacional en Obsidian (gratuito, se instala al trabajar), visible en su Vista de Grafo; qué es una Skill (instrucción reutilizable) y construcción de la suya, probada con un caso real. Entrega el Project configurado, su grafo y una Skill funcional."
+    },
+    {
+     "id": "CD6-3",
+     "entregable": "Cerebro conectado y proceso automatizado",
+     "h": 2,
+     "fase": "F3",
+     "detalle": "Referencia interna (2 h, individual para esta persona). Conectores y Plugins; conexión de Obsidian al Cerebro Digital mediante MCP (Model Context Protocol); Cowork; automatización de un proceso real con una herramienta propia; privacidad y datos según los protocolos de Claude. Entrega una automatización conectada a una herramienta real, su criterio de uso seguro y el Cerebro Digital listo para usar."
+    }
+   ]
+  },
+  {
+   "id": "CD7",
+   "nombre": "Cerebro Digital 7",
+   "para_que": "Su asistente personal en Claude, con memoria propia",
+   "carril": "claude",
+   "frente": "A",
+   "composicion": "6 h de trabajo individual con Intezia.",
+   "soluciones": [
+    {
+     "id": "CD7-1",
+     "entregable": "Propósito del cerebro y prompts base",
+     "h": 2,
+     "fase": "F1",
+     "detalle": "Referencia interna (2 h, individual para esta persona). Qué es un Cerebro Digital y fundamentos de Claude: anatomía del prompt, contexto, rol y voz, iteración y verificación, sobre un caso real de su rol. Define el propósito de su Cerebro Digital y resuelve un caso con prompting estructurado. Entrega el propósito definido y sus prompts base, listos para cargarlos en el Project."
+    },
+    {
+     "id": "CD7-2",
+     "entregable": "Project, grafo en Obsidian y Skill",
+     "h": 2,
+     "fase": "F2",
+     "detalle": "Referencia interna (2 h, individual para esta persona). Projects de Claude (memoria y contexto) con el contexto, la voz y el criterio de su rol; su conocimiento organizado como grafo relacional en Obsidian (gratuito, se instala al trabajar), visible en su Vista de Grafo; qué es una Skill (instrucción reutilizable) y construcción de la suya, probada con un caso real. Entrega el Project configurado, su grafo y una Skill funcional."
+    },
+    {
+     "id": "CD7-3",
+     "entregable": "Cerebro conectado y proceso automatizado",
+     "h": 2,
+     "fase": "F3",
+     "detalle": "Referencia interna (2 h, individual para esta persona). Conectores y Plugins; conexión de Obsidian al Cerebro Digital mediante MCP (Model Context Protocol); Cowork; automatización de un proceso real con una herramienta propia; privacidad y datos según los protocolos de Claude. Entrega una automatización conectada a una herramienta real, su criterio de uso seguro y el Cerebro Digital listo para usar."
+    }
+   ]
+  },
+  {
+   "id": "CD8",
+   "nombre": "Cerebro Digital 8",
+   "para_que": "Su asistente personal en Claude, con memoria propia",
+   "carril": "claude",
+   "frente": "A",
+   "composicion": "6 h de trabajo individual con Intezia.",
+   "soluciones": [
+    {
+     "id": "CD8-1",
+     "entregable": "Propósito del cerebro y prompts base",
+     "h": 2,
+     "fase": "F1",
+     "detalle": "Referencia interna (2 h, individual para esta persona). Qué es un Cerebro Digital y fundamentos de Claude: anatomía del prompt, contexto, rol y voz, iteración y verificación, sobre un caso real de su rol. Define el propósito de su Cerebro Digital y resuelve un caso con prompting estructurado. Entrega el propósito definido y sus prompts base, listos para cargarlos en el Project."
+    },
+    {
+     "id": "CD8-2",
+     "entregable": "Project, grafo en Obsidian y Skill",
+     "h": 2,
+     "fase": "F2",
+     "detalle": "Referencia interna (2 h, individual para esta persona). Projects de Claude (memoria y contexto) con el contexto, la voz y el criterio de su rol; su conocimiento organizado como grafo relacional en Obsidian (gratuito, se instala al trabajar), visible en su Vista de Grafo; qué es una Skill (instrucción reutilizable) y construcción de la suya, probada con un caso real. Entrega el Project configurado, su grafo y una Skill funcional."
+    },
+    {
+     "id": "CD8-3",
+     "entregable": "Cerebro conectado y proceso automatizado",
+     "h": 2,
+     "fase": "F3",
+     "detalle": "Referencia interna (2 h, individual para esta persona). Conectores y Plugins; conexión de Obsidian al Cerebro Digital mediante MCP (Model Context Protocol); Cowork; automatización de un proceso real con una herramienta propia; privacidad y datos según los protocolos de Claude. Entrega una automatización conectada a una herramienta real, su criterio de uso seguro y el Cerebro Digital listo para usar."
+    }
+   ]
+  },
+  {
+   "id": "CD9",
+   "nombre": "Cerebro Digital 9",
+   "para_que": "Su asistente personal en Claude, con memoria propia",
+   "carril": "claude",
+   "frente": "A",
+   "composicion": "6 h de trabajo individual con Intezia.",
+   "soluciones": [
+    {
+     "id": "CD9-1",
+     "entregable": "Propósito del cerebro y prompts base",
+     "h": 2,
+     "fase": "F1",
+     "detalle": "Referencia interna (2 h, individual para esta persona). Qué es un Cerebro Digital y fundamentos de Claude: anatomía del prompt, contexto, rol y voz, iteración y verificación, sobre un caso real de su rol. Define el propósito de su Cerebro Digital y resuelve un caso con prompting estructurado. Entrega el propósito definido y sus prompts base, listos para cargarlos en el Project."
+    },
+    {
+     "id": "CD9-2",
+     "entregable": "Project, grafo en Obsidian y Skill",
+     "h": 2,
+     "fase": "F2",
+     "detalle": "Referencia interna (2 h, individual para esta persona). Projects de Claude (memoria y contexto) con el contexto, la voz y el criterio de su rol; su conocimiento organizado como grafo relacional en Obsidian (gratuito, se instala al trabajar), visible en su Vista de Grafo; qué es una Skill (instrucción reutilizable) y construcción de la suya, probada con un caso real. Entrega el Project configurado, su grafo y una Skill funcional."
+    },
+    {
+     "id": "CD9-3",
+     "entregable": "Cerebro conectado y proceso automatizado",
+     "h": 2,
+     "fase": "F3",
+     "detalle": "Referencia interna (2 h, individual para esta persona). Conectores y Plugins; conexión de Obsidian al Cerebro Digital mediante MCP (Model Context Protocol); Cowork; automatización de un proceso real con una herramienta propia; privacidad y datos según los protocolos de Claude. Entrega una automatización conectada a una herramienta real, su criterio de uso seguro y el Cerebro Digital listo para usar."
+    }
+   ]
+  }
+ ],
+ "alcance": {
+  "compacto": true,
+  "titulo": "Nueve Cerebros Digitales, uno por persona.",
+  "subtitulo": "Cada persona construye su **asistente personal en Claude**, con memoria y criterio propios.",
+  "fuera_alcance": [
+   "Más de 9 cerebros o más horas por persona: cada cerebro recibe 6 h, lo demás va en otra etapa.",
+   "Desarrollos e integraciones a medida con los sistemas internos de {cliente_corto}.",
+   "Las licencias de Claude y de otras herramientas, que van aparte (detalle en la inversión)."
+  ]
+ },
+ "metodo": {
+  "titulo": "Así trabajamos el proyecto.",
+  "subtitulo": "Trabajo individual con cada persona, sobre sus casos reales, hasta que usa su cerebro por sí misma.",
+  "quien_construye": "Cada persona construye su propio cerebro; **Intezia guía** cada paso, sobre casos reales de su rol.",
+  "pasos": [
+   {
+    "titulo": "Construimos",
+    "texto": "Con cada persona, en vivo y sobre un caso real de su rol."
+   },
+   {
+    "titulo": "Probamos",
+    "texto": "Con su información y sus tareas, hasta que funcione."
+   },
+   {
+    "titulo": "Adoptamos",
+    "texto": "Cada persona usa su cerebro por sí misma, cada semana."
+   },
+   {
+    "titulo": "Medimos",
+    "texto": "El tiempo recuperado contra la línea base, a 30, 60 y 90 días."
+   }
+  ],
+  "por_que_orden": "Primero se aprende Claude y se define el propósito del cerebro; después se le da memoria y conocimiento propio; al final se conecta a las herramientas y se automatiza un proceso real.",
+  "practica": [
+   {
+    "titulo": "Un cerebro por persona",
+    "texto": "Cada cerebro se construye sobre el rol y los casos reales de su persona, sin copiar el de otra."
+   },
+   {
+    "titulo": "Desde cero, en vivo",
+    "texto": "Cada persona trabaja en vivo con Intezia; no hace falta conocimiento técnico previo."
+   },
+   {
+    "titulo": "Cuenta de Claude",
+    "texto": "Cada persona necesita su cuenta de Claude con un plan de pago: se deja lista en la reunión de arranque."
+   }
+  ],
+  "datos": "Solo se carga en cada cerebro lo que su persona decide compartir: no se suben datos confidenciales ni de terceros sin autorización. Los criterios de uso seguro se acuerdan al empezar y se repasan al cerrar."
+ },
+ "fases": [
+  {
+   "id": "F1",
+   "titulo": "Base",
+   "descripcion": "Claude y prompting"
+  },
+  {
+   "id": "F2",
+   "titulo": "Grafo",
+   "descripcion": "conocimiento y Skill"
+  },
+  {
+   "id": "F3",
+   "titulo": "Uso",
+   "descripcion": "conexión y automatización",
+   "destacada": true
+  }
+ ],
+ "frentes": [
+  {
+   "id": "A",
+   "carril": "claude",
+   "nombre": "Los 9 líderes de {cliente_corto}",
+   "celdas": {
+    "F1": "Fundamentos de Claude, prompting y el propósito del cerebro de cada persona.",
+    "F2": "Project, conocimiento en grafo de Obsidian y una Skill (instrucción reutilizable).",
+    "F3": "Conexión a herramientas propias, un proceso automatizado y criterios de uso seguro."
+   }
+  }
+ ],
+ "ruta": {
+  "titulo": "Nueve cerebros en uso, en tres fases.",
+  "subtitulo": "El calendario de cada persona se acuerda en la reunión de arranque. La **garantía y el seguimiento** a 30, 60 y 90 días corren desde el cierre del proyecto.",
+  "nota": "Las {h_total} horas de trabajo son una proyección: cada Cerebro Digital lleva 6 h, con 2 h de base, 2 h de grafo y 2 h de uso. La reunión de arranque (1 h) va aparte y no suma horas.",
+  "hitos": [
+   {
+    "titulo": "Arranque · aparte",
+    "texto": "1 h para acordar las 9 personas, sus casos reales y el calendario de cada una."
+   },
+   {
+    "titulo": "Base",
+    "texto": "Claude y prompting, y el propósito del cerebro de cada persona."
+   },
+   {
+    "titulo": "Grafo",
+    "texto": "El Project de cada persona, su conocimiento en grafo y una Skill propia."
+   },
+   {
+    "titulo": "Uso",
+    "texto": "Cerebros conectados a sus herramientas, un proceso automatizado y uso seguro."
+   },
+   {
+    "titulo": "30 · 60 · 90 días",
+    "texto": "Seguimiento: uso de los cerebros, ajustes y tiempo recuperado."
+   }
+  ]
+ },
+ "logistica": {
+  "modalidad": "Mixta: remota o presencial, según se acuerde en la reunión de arranque.",
+  "participantes": "Nueve personas de la línea directiva de {cliente_corto}, cada una con su propio acompañamiento.",
+  "ritmo": "Según la agenda de cada persona, sin frenar su trabajo diario.",
+  "arranque": "La fecha la fija {cliente_corto}; una reunión de arranque de 1 h, aparte, acuerda el calendario."
+ },
+ "seguimiento": {
+  "rango": "30, 60 y 90 días",
+  "texto": "Seguimiento desde el cierre del proyecto",
+  "items": [
+   {
+    "dias": "30 días",
+    "texto": "Uso real de cada cerebro"
+   },
+   {
+    "dias": "60 días",
+    "texto": "Ajustes y nuevas construcciones"
+   },
+   {
+    "dias": "90 días",
+    "texto": "Tiempo recuperado contra la línea base"
+   }
+  ]
+ },
+ "entregables": {
+  "titulo": "Lo que recibe cada persona.",
+  "subtitulo": "Lo que se llevan: **{n_entregables_txt}** en {n_areas_txt}, más el seguimiento a {rango_seguimiento} que mide su efecto.",
+  "etiqueta_transversales": "Para todo el proyecto",
+  "transversales": [
+   "Línea base del tiempo en sus tareas repetitivas.",
+   "Criterios de uso seguro de la información.",
+   "Seguimiento a 30, 60 y 90 días con medición del tiempo."
+  ],
+  "etiqueta_valor": "Valor inmediato",
+  "valor_inmediato": [
+   "Con la base: prompts simplificados, desde el inicio.",
+   "Con el grafo: su conocimiento conectado y una Skill.",
+   "Al cerrar: una automatización en una herramienta que ya usa."
+  ],
+  "columnas_por_carril": [
+   3
+  ]
+ },
+ "retorno": {
+  "modo": "metodo",
+  "posiciones": false,
+  "titulo": "Retorno esperado: tiempo recuperado, medido.",
+  "subtitulo": "Se mide contra la línea base que cada persona deja al empezar y se sigue a 30, 60 y 90 días.",
+  "etiqueta_pasos": "Cómo se calcula",
+  "pasos": [
+   {
+    "titulo": "Volumen semanal",
+    "texto": "Cuántas veces repite cada persona la tarea que automatiza su cerebro."
+   },
+   {
+    "titulo": "Tiempo actual",
+    "texto": "Cuánto le toma hoy cada tarea. Es la **línea base**."
+   },
+   {
+    "titulo": "Tiempo con el cerebro",
+    "texto": "Lo que toma el mismo trabajo con su Skill ya en uso."
+   },
+   {
+    "titulo": "Horas recuperadas",
+    "texto": "Diferencia entre ambos tiempos, por persona y por semana: una estimación referencial, sin compromiso de resultado."
+   },
+   {
+    "titulo": "Valor en dinero",
+    "texto": "Horas recuperadas por el valor hora de referencia que {cliente_corto} valide."
+   }
+  ],
+  "etiqueta_metas": "Calendario de garantía y cálculo del retorno",
+  "metas": [
+   {
+    "dias": "30 días",
+    "texto": "Cada cerebro en uso real y su línea base validada con su persona."
+   },
+   {
+    "dias": "60 días",
+    "texto": "Ajustes del cerebro y horas recuperadas medidas contra la línea base."
+   },
+   {
+    "dias": "90 días",
+    "texto": "Medición del tiempo recuperado y de su valor en dinero, por persona."
+   }
+  ],
+  "etiqueta_destino": "Hacia dónde va el proyecto",
+  "destino": [
+   {
+    "rotulo": "Decisiones con criterio",
+    "texto": "Si el tiempo se libera, cada líder puede dedicarlo a las decisiones que más dependen de **su criterio**."
+   },
+   {
+    "rotulo": "Conocimiento ordenado",
+    "texto": "El rol de cada persona queda organizado en su grafo: una memoria propia que su cerebro recorre."
+   },
+   {
+    "rotulo": "Más cerebros",
+    "texto": "Con el resultado medido, {cliente_corto} decide si lleva el mismo ciclo a **más personas**."
+   }
+  ],
+  "gancho": "A los 90 días del cierre, {cliente_corto} contará con el tiempo recuperado de cada cerebro, medido contra su línea base."
+ },
+ "inversion": {
+  "licencias": {
+   "titulo": "Licenciamiento · aparte de esta inversión",
+   "tarjetas": [
+    {
+     "nombre": "Claude · una cuenta por persona",
+     "color": "amarillo",
+     "texto": "Cada participante necesita su cuenta de **Claude**, con un plan que permita construir su cerebro. Lo confirma {cliente_corto} con el proveedor."
+    },
+    {
+     "nombre": "Obsidian · gratuito",
+     "color": "naranja",
+     "texto": "Aplicación de notas donde cada persona organiza su conocimiento como grafo. Se instala al trabajar el **grafo**."
+    }
+   ],
+   "nota": "Esta propuesta no incluye valores de lista: dependen del plan que se elija y el cliente los confirma con el proveedor. Pueden variar."
+  },
+  "programa": [
+   "Construcción de 9 Cerebros Digitales con Claude y Obsidian para Banco Activo (CAI-027).",
+   "9 cerebros de 6 h cada uno, con trabajo individual guiado por Intezia. Modalidad a coordinar.",
+   "54 h de trabajo en total, más 1 h de reunión de arranque aparte. Licencias aparte."
+  ],
+  "notas": [
+   "Las licencias van aparte: cada una de las 9 personas necesita su cuenta de Claude. Obsidian es gratuito.",
+   "Garantía 30-60-90: seguimiento a 30, 60 y 90 días desde el cierre del proyecto, con los cerebros en uso.",
+   "Como muestra de nuestro compromiso con Banco Activo, el Cerebro Digital de la Presidencia va por cuenta de Intezia."
+  ]
+ },
+ "proximos_pasos": {
+  "asesora": {
+   "nombre": "Verónica Rubio",
+   "cargo": "Asesora comercial",
+   "correo": "vrubio01@intezia.com",
+   "telefono": "+58 422 3355505"
+  },
+  "pasos": [
+   {
+    "titulo": "Fecha de arranque",
+    "texto": "Confirmamos con {cliente_corto} la fecha de arranque y el horario de trabajo de cada persona."
+   },
+   {
+    "titulo": "Cuenta y material",
+    "texto": "Cada persona deja lista su cuenta de Claude y reúne el material de su rol que decida compartir."
+   },
+   {
+    "titulo": "Reunión de arranque",
+    "texto": "Una hora para alinear objetivos, elegir los casos reales de cada persona y acordar el calendario."
+   }
+  ]
+ },
+ "siglas_ok": [
+  "IA"
+ ],
+ "supuestos": [
+  "Instrucción de Ivana (13/10/2026): «ajustar la CAI-027 al nuevo formato y ahora son 9 cerebros digitales». Se rehízo en la plantilla compacta v3 (el deck canónico de 14 slides, con 5 cerebros, queda archivado en _anterior-14-slides/). Todo lo demás se conservó de la versión enviada: contenido de los 3 módulos, 6 h por cerebro, trabajo individual por persona, línea directiva, asesora, obsequio y sin facilidad de pago.",
+  "Horas: 6 h por Cerebro Digital (tarifa de referencia, «Excepción — Cerebros Digitales» de empresa/politicas-comerciales.md): 9 × 6 h = 54 h (antes 5 × 6 h = 30 h). La reunión de arranque (1 h) va aparte, como en la versión anterior (kick-off de 1 h).",
+  "Contenido: se conserva el de los 3 módulos del programa.md anterior, uno por entregable de 2 h: (1) fundamentos de Claude y prompting con el propósito del cerebro; (2) Project, conocimiento en grafo de Obsidian y Skill; (3) conexión (Conectores, Plugins, MCP, Cowork), automatización de un proceso y uso seguro. Los temas por módulo viven en programa.md (generado), no en el deck.",
+  "Sin semanas, sesiones ni fechas (CLAUDE.md §4.23): el calendario anterior (kick-off del 08/10/2026 y 15 sesiones de 2 h, martes y jueves del 13/10 al 01/12/2026, tres por cada una de las 5 personas) se quita del deck. Con 9 cerebros serían 27 sesiones de 2 h, una por entregable y persona; el calendario de cada persona se acuerda en la reunión de arranque y vive en el Brief de Kickoff.",
+  "Se quitó la slide de Impacto (el formato nuevo no la lleva, §4.9) y con ella la referencia anónima al caso del sector financiero (índice 86/100 y 91,8 % de retención de otro cliente): el retorno va en modo método, sin cifras ni estudios.",
+  "Se quitó el certificado de participación INTEZIA: el formato nuevo no lo incluye salvo que el cliente lo pida (§6 «Entregables»). La versión enviada lo llevaba; si se quiere conservar, es una viñeta más en «Para todo el proyecto».",
+  "Se conserva el obsequio de la versión enviada («el Cerebro Digital de la Presidencia va por cuenta de Intezia»), ahora como tercera nota de la inversión (campo Notas). La hoja del formato nuevo trae fija la etiqueta «Descuento» y el aviso «Descuento válido por 15 días»; la versión enviada los había cambiado por «Obsequio de Intezia» y quitado el aviso. Si se quiere volver a eso hace falta una opción del generador (no se editó el index.html, que es generado).",
+  "Grupo: la versión enviada hablaba de la «línea directiva», sin nombres ni cargos (decisión del 24/09/2026). Con 9 personas puede que ya no sean todas de la línea directiva (la Ficha registraba 4 Vicepresidentes y el Presidente, y el usuario había confirmado 6), así que el lead y la línea de trabajo dicen «líderes de Banco Activo»; «línea directiva» solo queda en la logística y en el eje. Confirmar quiénes son antes de enviar.",
+  "Los 3 datos de la portada son los del diagnóstico de la versión enviada (Ficha de Levantamiento): uso desigual de la IA, conocimiento disperso y tareas repetitivas. La Ficha no está en el repositorio: verificarlos contra ella.",
+  "Claude sobre un cliente venezolano: no se menciona el acceso ni el riesgo de bloqueo en el deck (criterio de Ivana en Simple TV y Go Pharma, 09 y 13/10/2026) ni se promete VPN. La cuenta de Claude con plan de pago va como licencia aparte; no se afirma quién la contrata ni se escribe un valor de lista.",
+  "Banco Activo opera Google Workspace con licencias de Copilot y Gemini (contexto interno, CLAUDE.md §4.11): el deck no afirma que migre de stack ni nombra esas herramientas.",
+  "Sin facilidad de pago (`omitir: [\"pago\"]`): criterio repetido de Ivana en las migraciones a v2 y v3; ventas comunica el plan por otro medio. Para agregarla, cuotas ligadas a los hitos de la ruta (Arranque, Base, Uso, Cierre)."
+ ],
+ "pendientes": [
+  "Confirmar si el obsequio del Cerebro Digital de la Presidencia sigue con 9 cerebros (la Presidencia debe estar entre las 9 personas) y si se mantiene como nota.",
+  "Confirmar quiénes son las 9 personas y si todas son línea directiva; si no, cambiar «línea directiva» de la logística (slide 4) y del eje (meta.json).",
+  "Confirmar si el certificado de participación sigue (la versión enviada lo llevaba).",
+  "Verificar los 3 datos de la portada contra la Ficha de Levantamiento de Banco Activo y la transcripción de la reunión (§4.23: si se contradicen, manda la transcripción).",
+  "Definir inversión, descuento y total: ventas llena las tres cajas, que van vacías (54 h en total, antes 30 h). Decidir si lleva facilidad de pago.",
+  "Confirmar con el cliente el plan de Claude y quién lo contrata (Banco Activo ya tiene licencias de Copilot y Gemini) y si ya hay cuentas.",
+  "Acordar en el kickoff el calendario de las 9 personas (27 sesiones de 2 h en total) y la modalidad."
+ ]
+}

@@ -1,0 +1,518 @@
+{
+ "version": 3,
+ "cliente": {
+  "nombre": "COD Salud Visual",
+  "slug": "cod-salud-visual-cai057",
+  "codigo": "CAI-057",
+  "nombre_pie": "COD"
+ },
+ "division": "educacion",
+ "alianza": false,
+ "meta_servicio": "habilidades",
+ "meta_tipo": "Habilidades · web nueva construida en vivo, herramientas del día a día y autonomía del equipo, con Claude · 18 h totales · facilidad de pago · seguimiento 30-60-90 · formato compacto v3",
+ "vocabulario": {
+  "area": [
+   "bloque",
+   "bloques"
+  ],
+  "solucion": [
+   "entregable",
+   "entregables"
+  ]
+ },
+ "frases_ok": [],
+ "eje": "Una web nueva construida en vivo con el equipo de COD Salud Visual, herramientas sencillas para su día a día y la capacidad de mantenerlas, con Claude",
+ "origen": "Resumen de la minuta de la reunión con la dirección de COD Salud Visual (clínica de oftalmología de Barquisimeto) y contexto de la asesora María Iribarren, más instrucciones de Ivana del 16/10/2026: CAI-057, Habilidades con Claude de unas 16 h, web construida desde cero y alojada fuera del sitio actual, herramienta de citas por evaluar o por reemplazar, licencias de Claude Team incluidas. Sin Ficha de Levantamiento ni transcripción",
+ "fuente_insumo": "Resumen de la minuta de la reunión con COD Salud Visual y contexto de la asesora; sin Ficha de Levantamiento ni transcripción",
+ "siglas_ok": [
+  "IA",
+  "COD"
+ ],
+ "supuestos": [
+  "Pedido de Ivana (16/10/2026): CAI-057 para COD Salud Visual, asesora María Iribarren (Asesora comercial, con los datos de Simple TV; Ivana confirmó «si es esa»). Educación y alianza «no» (no se dijo; las alianzas de la minuta, OpenAI, n8n y Lovable, son de Intezia, no de COD). Habilidades puro. Sin Ficha ni transcripción: la portada usa hechos de la minuta; si contradicen a la transcripción, manda la transcripción.",
+  "Estructura: una sola propuesta, con la estructura de 16 h de la asesora más 2 h de información de la web (Ivana, 16/10/2026: 18 h en total). La minuta dice «enviar propuesta con varias opciones o fases para que el cliente elija»; la plantilla compacta no soporta cotización por fases ni por opciones. Ivana no respondió si prefería dos documentos: se hizo uno y la ruta que sigue va como «siguiente etapa», sin cotizar.",
+  "Horas (18 h exactas, horas enteras): arranque y diagnóstico 1 + fundamentos con Claude 2 + web 8 (información de la web 2 + construcción y publicación 6) + herramientas del día a día 4 + autonomía y seguimiento 3 (cambio a la web hecho por el equipo 1 + tres revisiones de seguimiento 2). Las 2 h de información de la web las pidió Ivana el 16/10/2026 sobre las 16 h de la asesora; el contenido de la web dejó de acordarse en el kick-off y pasó a ese entregable, que va dentro del bloque de la web (fase de arranque) para no sumar otra fila a la slide de alcance. La asesora tiene el seguimiento en 1,5 h; la plantilla exige horas enteras, así que pasa a 2 h. El kick-off cuenta como trabajo (incluye el mini diagnóstico). Ivana no confirmó el redondeo del seguimiento; por confirmar.",
+  "Camino técnico de la web (Ivana: «hay que subirlo a otro dominio porque se construye de 0; se puede evaluar la herramienta o bien ver otra que se adecue»): la web se construye desde cero, no sobre el Squarespace actual, y se publica en un alojamiento nuevo, en un dominio que se define en el arranque. La herramienta de citas actual se evalúa; si no se adecua, se elige otra. El deck no nombra la plataforma de alojamiento, ni Squarespace, ni el agendador. Hechos revisados el 16/10/2026 en fuentes secundarias: Squarespace funciona como sistema de gestión de contenidos y no admite subir un sitio HTML completo; un dominio puede apuntarse a otro alojamiento con registros DNS (A y CNAME), con propagación de minutos a 48 h; Acuity Scheduling (Squarespace Scheduling) puede incrustarse en casi cualquier sitio, según su ayuda oficial. Falta saber dónde está registrado el dominio y qué extensión de citas es.",
+  "Herramientas del día a día: las tres de la asesora (cédula del paciente a una hoja compartida, recordatorios de compras e inventario, control simple de facturas y documentos recibidos) van como ejemplos de un solo entregable de 4 h, que se elige en el arranque, porque la asesora pidió evaluar con más profundidad antes de prometer. Fuera de alcance: conciliación bancaria y otras tareas complejas, e integraciones con el sistema administrativo (Valery) y la facturación digital (HKA); no se nombran los sistemas en el deck.",
+  "Licencias (Ivana: «sí, diga las licencias»): tarjeta de Claude Team estándar a valor de lista con fecha, verificado el 16/10/2026 en support.claude.com: mínimo de dos puestos, USD 25 por puesto al mes pagando mensual o USD 20 pagando por año, con Claude Code incluido. Se muestra el ejemplo de tres puestos (la persona que lidera la clínica y hasta dos más): USD 75 al mes. La minuta dice «~USD 100/mes por 4 asientos» (4 por 25): Ivana no dijo cuántos puestos; el número lo decide COD. Segunda tarjeta: alojamiento, dominio y citas, sin valores porque no hay fuente; se informa el valor de lista antes de construir.",
+  "CRM: la minuta pide enviar referencias de costos de licencias de CRM, pero no dice cuál ni trae valores, y no está en las 16 h de la asesora. Queda fuera de alcance y en la ruta que sigue. Pendiente: qué CRM y sus valores de lista, como entrega aparte a la dirección de COD.",
+  "Google: el contexto dice «conectar su Google Workspace»; la minuta dice que solo tiene una licencia personal Pro y ninguna empresarial. Ivana no respondió. El deck dice «conectado a las herramientas de Google» sin nombrar Workspace.",
+  "Facilidad de pago (la dirección necesita cuotas; la minuta menciona un inicial de unos USD 2.000 y mensualidades de USD 1.000 a 1.500, que no son de esta propuesta de 16 h): 3 cuotas ligadas a hitos, 40 % al aprobar, 40 % con la web publicada y 20 % al cierre. Los porcentajes los propuso el sistema y Ivana no los confirmó. Los montos son campos vacíos para ventas. Los montos de la minuta no se escriben en el repositorio.",
+  "Seguimiento 30-60-90 sí (la asesora lo incluye; la minuta menciona un informe de retorno). Retorno en modo método, sin cifras: no hay datos del cliente. No se usa el caso DUSA de la minuta (no hay fuente documentada del cliente aquí).",
+  "Participantes: la persona que lidera la clínica y hasta dos personas de su equipo que ella elija, sin nombres. La asesora recomienda incluir a su socia y a una persona de apoyo interno; eso queda solo en el brief. El hijo que ya usa Claude, los médicos socios (se suman después) y la doctora con 40 pacientes al día no se nombran.",
+  "Modalidad remota, con presencial en Barquisimeto solo si COD cubre los viáticos (asesora y minuta).",
+  "Posicionamiento (la asesora): se construye con ellos y la capacidad queda instalada. La historia de agencias que cobraron y no entregaron no se menciona; el deck dice que nada se entrega hecho.",
+  "Datos sensibles: la cédula del paciente es un dato personal. El deck dice que las herramientas con datos de pacientes se construyen con datos de ejemplo y autorización de la clínica, y que no incluyen historias clínicas. Es una decisión del sistema; por confirmar.",
+  "Acceso a Claude desde Venezuela: no se menciona (criterio de Simple TV y Go Pharma) ni se promete VPN.",
+  "Visión a futuro (la asesora): Detección de la clínica, el resto del equipo, compras y administración. Va en `siguiente_etapa` sin cotizar, comprometer ni fechar; los médicos socios se mencionan como parte del resto del equipo.",
+  "Contexto interno que no va en el deck: precios de Detección y del proyecto global de la minuta; el cliente compara con nada más que su propio presupuesto; la regla de plazos (meta de arrancar antes de fin de año y lo grande en enero); la dependencia del sistema contable de las normas del SENIAT; los nombres de las personas.",
+  "Sin semanas, sesiones ni fechas (CLAUDE.md §4.23): la asesora habla de sesiones (la web son 3); eso queda para el kick-off. La duración va en horas."
+ ],
+ "pendientes": [
+  "Confirmar con Ivana o María la división (Educación), la alianza (no) y que una sola propuesta basta (la minuta pide varias opciones).",
+  "Confirmar con María que las 18 h cuadran: seguimiento de 2 h (la asesora lo tenía en 1,5 h), kick-off contado como trabajo y las 2 h nuevas de información de la web, que cambian el total de su estructura de 16 h.",
+  "Confirmar los porcentajes de las cuotas (40/40/20) y que Ventas llene los montos.",
+  "Equipo técnico: decidir el alojamiento de la web nueva, dónde está registrado el dominio, y qué herramienta de citas conviene (la actual por evaluar, o la que se adecue).",
+  "Confirmar cuántos puestos de Claude Team (3 o 4) y si COD tiene Google Workspace empresarial o cuentas personales.",
+  "Elegir qué CRM citar con referencias de costo (entrega aparte) y conseguir sus valores de lista.",
+  "Conseguir transcripción de la reunión y datos del cliente (volúmenes, tiempos) si se quiere pasar el retorno a cifras.",
+  "Valor, descuento, total y montos de cada cuota: campos vacíos para ventas. Moneda e impuestos de la facturación siguen pendientes en la política comercial: confirmar con ventas."
+ ],
+ "portada": {
+  "titulo_lineas": [
+   "Web nueva y herramientas de IA",
+   "que el equipo sabe mantener"
+  ],
+  "titulo_destacado": "en {cliente_corto}",
+  "lead": "Este proyecto **construye con** el equipo de {cliente_corto} su web nueva y las herramientas de su día a día, hasta dejarlas en uso y que el equipo pueda **mantenerlas**.",
+  "hechos": [
+   {
+    "num": "Dispersa",
+    "texto": "es la operativa: llegan facturas y nadie sabe quién las recibió.",
+    "resuelto_por": [
+     "HER-1"
+    ]
+   },
+   {
+    "num": "A mano",
+    "texto": "se transcribe la cédula del paciente, y salen nombres mal escritos.",
+    "resuelto_por": [
+     "HER-1"
+    ]
+   },
+   {
+    "num": "Citas",
+    "texto": "que dependen de quien atiende: una doctora llega a atender hasta 40 pacientes en un día.",
+    "resuelto_por": [
+     "WEB-2"
+    ]
+   },
+   {
+    "num": "Compras",
+    "texto": "que dependen de una sola persona, sin recordatorios ni control del inventario.",
+    "resuelto_por": [
+     "HER-1"
+    ]
+   }
+  ],
+  "fuente": "Fuente: reunión con la dirección de {cliente_corto}."
+ },
+ "carriles": [
+  {
+   "id": "cl",
+   "nombre": "Claude Team",
+   "nombre_corto": "Claude",
+   "color": "amarillo"
+  }
+ ],
+ "areas": [
+  {
+   "id": "ARR",
+   "nombre": "Arranque y diagnóstico",
+   "para_que": "Entender los dolores de la clínica y acordar las licencias de las herramientas",
+   "carril": "cl",
+   "frente": "A",
+   "soluciones": [
+    {
+     "id": "ARR-1",
+     "entregable": "Mini diagnóstico y licencias definidas",
+     "incluye": [
+      "Los dolores de la clínica, priorizados",
+      "Las licencias definidas",
+      "Las herramientas del día a día, elegidas"
+     ],
+     "h": 1,
+     "fase": "F1",
+     "detalle": "Kick-off de 1 h con la dirección. Mini diagnóstico de los dolores de la clínica (operativa dispersa, registro manual de pacientes, citas, compras e inventario), definición de las licencias y elección de las herramientas del día a día. También se evalúan con más profundidad las tareas complejas (conciliación bancaria) y las integraciones con el sistema administrativo y la facturación digital, que no se prometen. Entrega el diagnóstico y los acuerdos."
+    }
+   ]
+  },
+  {
+   "id": "FUN",
+   "nombre": "Fundamentos con Claude",
+   "para_que": "Dejar a Claude con el contexto de la clínica y conectado a las herramientas de Google",
+   "carril": "cl",
+   "frente": "A",
+   "soluciones": [
+    {
+     "id": "FUN-1",
+     "entregable": "Claude configurado con el contexto de COD",
+     "incluye": [
+      "Marca, servicios, médicos y procesos de la clínica",
+      "Conectado a las herramientas de Google"
+     ],
+     "h": 2,
+     "fase": "F1",
+     "detalle": "Trabajo de 2 h con las personas que participan. Se configura Claude con el contexto de COD (marca, servicios, médicos y procesos) y se conecta a las herramientas de Google. Qué cuentas de Google tiene COD (empresariales o personales) se confirma en el arranque. Entrega Claude listo para trabajar con el equipo."
+    }
+   ]
+  },
+  {
+   "id": "WEB",
+   "nombre": "Página web",
+   "para_que": "Una web actual que el equipo actualice por su cuenta y que sirva para agendar citas",
+   "carril": "cl",
+   "frente": "A",
+   "soluciones": [
+    {
+     "id": "WEB-1",
+     "entregable": "Información de la web reunida y ordenada",
+     "incluye": [
+      "Servicios, médicos, textos y fotos de la clínica",
+      "Su manual de marca y su web actual, revisados",
+      "Las páginas que tendrá la web nueva"
+     ],
+     "h": 2,
+     "fase": "F1",
+     "detalle": "Trabajo de 2 h con el equipo. Se reúne y ordena la información para construir la web: servicios, médicos, textos y fotos de la clínica, junto con el manual de marca y la web actual. Se define qué páginas tendrá la web nueva. Entrega la información lista para construir."
+    },
+    {
+     "id": "WEB-2",
+     "entregable": "Web nueva de COD, publicada y con citas activas",
+     "incluye": [
+      "Se construye con la información reunida",
+      "Se construye en vivo, con el equipo",
+      "Se publica en un dominio de COD con las citas activas"
+     ],
+     "h": 6,
+     "fase": "F2",
+     "detalle": "Trabajo de 6 h con el equipo. Se construye desde cero, en vivo, una web nueva a partir de la información reunida, y se publica en un alojamiento nuevo, en un dominio que se define en el arranque. Se dejan las citas activas: la herramienta de citas actual se evalúa y, si no se adecua, se elige otra. Entrega la web publicada con las citas funcionando. La publicación depende de tener acceso al dominio y a la herramienta de citas."
+    }
+   ]
+  },
+  {
+   "id": "HER",
+   "nombre": "Herramientas del día a día",
+   "para_que": "Quitar trabajo manual: cédulas, compras e inventario, y facturas y documentos recibidos",
+   "carril": "cl",
+   "frente": "A",
+   "soluciones": [
+    {
+     "id": "HER-1",
+     "entregable": "Herramientas sencillas del día a día, elegidas en el arranque",
+     "incluye": [
+      "Cédula del paciente a una hoja compartida",
+      "Recordatorios de compras e inventario",
+      "Control simple de facturas y documentos recibidos"
+     ],
+     "h": 4,
+     "fase": "F2",
+     "detalle": "Trabajo de 4 h con el equipo. Se construyen en vivo herramientas simples que se eligen en el arranque; ejemplos: pasar los datos de la cédula del paciente a una hoja compartida, recordatorios de compras e inventario, y un control simple de facturas y documentos recibidos. Las tareas complejas (conciliación bancaria) y las integraciones con el sistema administrativo y la facturación digital quedan fuera. Entrega las herramientas en uso."
+    }
+   ]
+  },
+  {
+   "id": "AUT",
+   "nombre": "Autonomía y seguimiento",
+   "para_que": "Que el equipo cambie la web por su cuenta y siga con revisiones a 30, 60 y 90 días",
+   "carril": "cl",
+   "frente": "A",
+   "soluciones": [
+    {
+     "id": "AUT-1",
+     "entregable": "Cambio a la web hecho por el equipo, con guía corta",
+     "incluye": [
+      "El equipo hace el cambio, con nosotros acompañando",
+      "Guía corta para actualizar la web"
+     ],
+     "h": 1,
+     "fase": "F2",
+     "detalle": "Trabajo de 1 h. Una persona del equipo le hace un cambio a la web por su cuenta, con Intezia acompañando, y se queda con una guía corta de cómo actualizarla. Entrega el cambio hecho y la guía."
+    },
+    {
+     "id": "AUT-2",
+     "entregable": "Tres revisiones de seguimiento a 30, 60 y 90 días",
+     "incluye": [
+      "Uso de lo construido",
+      "Nuevas construcciones del equipo",
+      "Tiempo recuperado"
+     ],
+     "h": 2,
+     "fase": "F2",
+     "detalle": "Trabajo de 2 h en tres revisiones cortas, a 30, 60 y 90 días desde el cierre: uso de lo construido, nuevas construcciones del equipo y tiempo recuperado. Entrega el estado de cada revisión."
+    }
+   ]
+  }
+ ],
+ "alcance": {
+  "sin_conteo_por_fila": true,
+  "titulo": "Una web nueva y herramientas, construidas juntos.",
+  "subtitulo": "Construimos **con el equipo** su web nueva y herramientas sencillas, y le enseñamos a mantenerlas con Claude.",
+  "fuera_alcance": [
+   "Conciliación bancaria y otras tareas complejas: se evalúan con más profundidad en el arranque, no están en esta inversión.",
+   "Integraciones con el sistema administrativo y la facturación digital: se evalúan en el arranque y no se prometen antes.",
+   "Un sistema central de contactos de pacientes (CRM): queda para la ruta que sigue, con las necesidades de la clínica definidas.",
+   "Licencias y servicios de terceros: van aparte de esta inversión, con su valor de lista en la hoja de inversión."
+  ]
+ },
+ "metodo": {
+  "titulo": "Así construimos con el equipo.",
+  "subtitulo": "Lo hacemos en vivo con quienes usarán lo construido, para que la capacidad se quede en la clínica.",
+  "quien_construye": "Intezia construye junto al equipo, en vivo y sobre el trabajo real de la clínica: no se entrega una web hecha ni un producto empaquetado.",
+  "por_que_orden": "Primero se entiende la clínica, se configura Claude con su contexto y se reúne la información de la web; después se construye en vivo; al final el equipo hace sus propios cambios, que es lo que deja la capacidad instalada.",
+  "pasos": [
+   {
+    "titulo": "Entendemos",
+    "texto": "Los dolores de la clínica y qué conviene construir primero."
+   },
+   {
+    "titulo": "Construimos",
+    "texto": "En vivo con el equipo, la web y las herramientas, una por una."
+   },
+   {
+    "titulo": "Adoptamos",
+    "texto": "El equipo las usa y cambia la web por su cuenta, con guía."
+   },
+   {
+    "titulo": "Medimos",
+    "texto": "El tiempo recuperado, a 30, 60 y 90 días."
+   }
+  ],
+  "practica": [
+   {
+    "titulo": "En vivo, con el equipo",
+    "texto": "Nada se entrega hecho: el equipo ve y hace cada paso junto a Intezia."
+   },
+   {
+    "titulo": "Sencillo primero",
+    "texto": "Las herramientas son simples; lo complejo se evalúa antes de prometerlo."
+   },
+   {
+    "titulo": "Sitio desde cero",
+    "texto": "La web se publica en un alojamiento nuevo, en un dominio que se define en el arranque. La herramienta de citas actual se evalúa; si no se adecua, se elige otra."
+   }
+  ],
+  "datos": "Las herramientas con datos de pacientes se construyen con datos de ejemplo y con autorización de la clínica; no incluyen historias clínicas. Los criterios de uso seguro se acuerdan al empezar."
+ },
+ "fases": [
+  {
+   "id": "F1",
+   "titulo": "Arranque",
+   "descripcion": "diagnóstico, Claude e información de la web"
+  },
+  {
+   "id": "F2",
+   "titulo": "Construcción",
+   "descripcion": "web, herramientas y autonomía, en vivo",
+   "destacada": true
+  }
+ ],
+ "frentes": [
+  {
+   "id": "A",
+   "carril": "cl",
+   "nombre": "Web, herramientas y autonomía",
+   "celdas": {
+    "F1": "Kick-off, Claude con el contexto de la clínica e información de la web reunida.",
+    "F2": "Web publicada con citas, herramientas sencillas y el primer cambio del equipo."
+   }
+  }
+ ],
+ "ruta": {
+  "titulo": "Del arranque a una web y un equipo autónomo.",
+  "subtitulo": "El calendario se acuerda en la **reunión de arranque**. El camino técnico de la web se confirma ahí.",
+  "nota": "Las {h_total} h de trabajo son una proyección: {h_f1} h de arranque, Claude e información de la web y {h_f2} h de construcción, autonomía y seguimiento. El kick-off es la primera hora.",
+  "hitos": [
+   {
+    "titulo": "Arranque",
+    "texto": "Kick-off de 1 h: mini diagnóstico, licencias y herramientas elegidas."
+   },
+   {
+    "titulo": "Listo para construir",
+    "texto": "Claude con el contexto de COD y la información de la web reunida."
+   },
+   {
+    "titulo": "Web publicada",
+    "texto": "Construida con el equipo, en su dominio y con las citas activas."
+   },
+   {
+    "titulo": "Primer cambio",
+    "texto": "El equipo cambia la web por su cuenta y se queda con una guía corta."
+   },
+   {
+    "titulo": "30 · 60 · 90 días",
+    "texto": "Seguimiento: uso de lo construido, nuevas construcciones y tiempo recuperado."
+   }
+  ],
+  "siguiente_etapa": {
+   "titulo": "Más adelante",
+   "texto": "Detección de la clínica, el resto del equipo, compras y administración."
+  }
+ },
+ "logistica": {
+  "modalidad": "Remota; presencial en Barquisimeto solo si COD cubre los viáticos del equipo.",
+  "participantes": "La persona que lidera la clínica y hasta dos personas de su equipo, que ella elige.",
+  "ritmo": "Encuentros cortos, en el horario de la clínica y sin frenar la atención.",
+  "arranque": "La fecha la fija {cliente_corto}; el kick-off acuerda el calendario y los accesos."
+ },
+ "seguimiento": {
+  "rango": "30, 60 y 90 días",
+  "texto": "Desde el cierre del proyecto",
+  "items": [
+   {
+    "dias": "30 días",
+    "texto": "Uso de lo construido"
+   },
+   {
+    "dias": "60 días",
+    "texto": "Nuevas construcciones del equipo"
+   },
+   {
+    "dias": "90 días",
+    "texto": "Tiempo recuperado"
+   }
+  ]
+ },
+ "entregables": {
+  "titulo": "Lo que recibe {cliente_corto}.",
+  "subtitulo": "Lo que se llevan: **{n_entregables_txt}**, la web, las herramientas y la autonomía, más el seguimiento a {rango_seguimiento}.",
+  "etiqueta_transversales": "Para todo el proyecto",
+  "transversales": [
+   "Línea base del tiempo de cada tarea.",
+   "Guía corta para actualizar la web.",
+   "Seguimiento a 30, 60 y 90 días."
+  ],
+  "etiqueta_valor": "Valor inmediato",
+  "valor_inmediato": [
+   "Con el arranque: licencias e información de la web listas.",
+   "Con la web: citas activas en un sitio nuevo.",
+   "Al cerrar: el equipo cambia la web por su cuenta."
+  ],
+  "columnas_por_carril": [
+   3
+  ]
+ },
+ "retorno": {
+  "modo": "metodo",
+  "posiciones": false,
+  "titulo": "Retorno esperado: tiempo recuperado, medido.",
+  "subtitulo": "El retorno se mide contra la línea base de cada tarea, que se toma en el arranque.",
+  "etiqueta_pasos": "Cómo se calcula el retorno de cada herramienta",
+  "pasos": [
+   {
+    "titulo": "Volumen",
+    "texto": "Cuántas facturas, cédulas, compras y citas se manejan cada mes."
+   },
+   {
+    "titulo": "Tiempo actual",
+    "texto": "Lo que toma hoy cada tarea: es la **línea base**."
+   },
+   {
+    "titulo": "Tiempo con la herramienta",
+    "texto": "Lo que toma el mismo trabajo una vez que la herramienta está en uso."
+   },
+   {
+    "titulo": "Horas recuperadas",
+    "texto": "Volumen por la diferencia de tiempos: una estimación referencial, sin compromiso de resultado."
+   },
+   {
+    "titulo": "Gasto de operar",
+    "texto": "Licencias y alojamiento, contra el trabajo manual que hoy resuelve cada tarea."
+   }
+  ],
+  "etiqueta_metas": "Calendario de garantía y cálculo del retorno",
+  "metas": [
+   {
+    "dias": "30 días",
+    "texto": "Desde el cierre: herramientas en uso real y línea base validada con el equipo."
+   },
+   {
+    "dias": "60 días",
+    "texto": "Horas recuperadas medidas contra la línea base, por herramienta."
+   },
+   {
+    "dias": "90 días",
+    "texto": "Medición del retorno: horas recuperadas contra el gasto de operar lo construido."
+   }
+  ],
+  "etiqueta_destino": "Hacia dónde va el proyecto",
+  "destino": [
+   {
+    "rotulo": "Un equipo que se conoce",
+    "texto": "Facturas, citas y compras en un mismo lugar, que **todo el equipo** ve."
+   },
+   {
+    "rotulo": "Capacidad en la clínica",
+    "texto": "El equipo construye y ajusta sus herramientas **sin depender** de un proveedor externo."
+   },
+   {
+    "rotulo": "Más adelante",
+    "texto": "Con el retorno medido, {cliente_corto} decide qué sigue: el resto del equipo, compras y administración."
+   }
+  ],
+  "gancho": "A los 90 días del cierre, {cliente_corto} contará con el tiempo recuperado medido y el gasto de operar sus herramientas."
+ },
+ "inversion": {
+  "duracion": "Proyecto de 5 bloques con la web publicada y herramientas en uso, con seguimiento a 30, 60 y 90 días. {h_total} horas de trabajo.",
+  "programa": [
+   "Servicio de Habilidades para COD Salud Visual (CAI-057): web nueva y herramientas del día a día.",
+   "Web publicada con citas activas, herramientas sencillas y autonomía del equipo.",
+   "{h_total} h de trabajo en vivo con el equipo. Modalidad remota."
+  ],
+  "licencias": {
+   "titulo": "Licenciamiento · aparte de esta inversión",
+   "tarjetas": [
+    {
+     "nombre": "Claude Team · puesto estándar",
+     "color": "amarillo",
+     "texto": "El plan exige un mínimo de dos puestos. Valor de lista: **USD 25** por puesto al mes, o USD 20 pagando por año, al 16/10/2026. Con tres puestos: USD 75 al mes. Incluye Claude Code."
+    },
+    {
+     "nombre": "Alojamiento, dominio y citas",
+     "color": "naranja",
+     "texto": "La web nueva se aloja fuera del sitio actual y la herramienta de citas se evalúa o se cambia por otra. Su valor de lista se informa antes de construir."
+    }
+   ],
+   "nota": "Valores de lista del proveedor al 16/10/2026; pueden variar. Los confirma {cliente_corto} con el proveedor."
+  },
+  "notas": [
+   "Si hace falta otra herramienta de terceros, se informa su valor de lista antes de construir.",
+   "Garantía 30-60-90 en Habilidades: seguimiento a 30, 60 y 90 días desde el cierre del proyecto.",
+   "Términos y condiciones: los del enlace de «Importante», que ambas partes aceptan al avanzar con esta propuesta."
+  ]
+ },
+ "pago": {
+  "titulo": "Facilidad de pago: tres cuotas atadas a resultados.",
+  "subtitulo": "El pago avanza a medida que {cliente_corto} recibe resultados, y las {n_cuotas_palabra} suman el **100%** de la inversión.",
+  "cuotas": [
+   {
+    "cuando": "Al aprobar",
+    "hito": "Para arrancar el proyecto.",
+    "pct": 40
+   },
+   {
+    "cuando": "Web publicada",
+    "hito": "Con la web nueva publicada y las citas activas.",
+    "pct": 40
+   },
+   {
+    "cuando": "Cierre",
+    "hito": "Con el primer cambio hecho por el equipo y la guía corta entregada.",
+    "pct": 20
+   }
+  ]
+ },
+ "proximos_pasos": {
+  "subtitulo": "Esto es lo que sigue cuando {cliente_corto} confirme la propuesta.",
+  "asesora": {
+   "nombre": "María Iribarren",
+   "cargo": "Asesora comercial",
+   "correo": "miribarren@intezia.com",
+   "telefono": "+58 414 0570056"
+  },
+  "pasos": [
+   {
+    "titulo": "Fecha y participantes",
+    "texto": "Confirmamos con {cliente_corto} la fecha de arranque y quiénes participan, hasta tres personas."
+   },
+   {
+    "titulo": "Accesos",
+    "texto": "El equipo comparte los accesos que autorice: su web actual, su dominio y su herramienta de citas."
+   },
+   {
+    "titulo": "Kick-off",
+    "texto": "Una hora para el mini diagnóstico, las licencias y las herramientas a construir."
+   }
+  ]
+ }
+}

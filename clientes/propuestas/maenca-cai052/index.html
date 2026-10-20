@@ -1,0 +1,434 @@
+<!doctype html>
+<!--
+  Propuesta · Maenca · Servicio de Habilidades (CAI-052)
+  División: Educación · Servicio: Habilidades (§4.1a) · Alianza: no
+  GENERADO por scripts/generar-habilidades-compacto.py (plantilla 3.0 (2026-10-08), formato habilidades) desde datos.json.
+  No editar a mano: editar datos.json y regenerar. Estilos propios del deck: overrides.css.
+  Fuente del insumo: Ficha de Levantamiento y transcripción de la reunión (13/10/2026) e instrucción del usuario
+
+  Formato compacto de 8 slides, en el orden de las preguntas del cliente (Ventas, 2026-10-07), sin semanas, sesiones
+  ni fechas (Keiber, 2026-10-08):
+    1 Portada · 2 Alcance · 3 Ruta · 4 Cómo trabajamos · 5 Entregables · 6 Retorno · 7 Inversión · 8 Próximos pasos
+  Marcadores de detección de AcroForms (agregar-campo-precio.py), por página: «Propuesta Económica» solo en la slide de
+  inversión; «Lo que se llevan» y «Entregables» solo en la de entregables; «Facilidad de pago» solo en la de pago.
+  Campos AcroForm: Programa, Notas, PrecioBase, Descuento, PrecioTotal (inversión) y Entregables, Acreditacion (entregables). Se reposicionan con scripts/customize-habilidades-compacto.py.
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Propuesta · Maenca · Intezia Educación</title>
+  <link rel="stylesheet" href="../_base/styles.css">
+  <link rel="stylesheet" href="habilidades-compacto.css">
+  <link rel="stylesheet" href="overrides.css">
+</head>
+<body>
+
+  <main class="deck">
+
+    <!-- 1 · Portada: ¿cuál es mi problema? -->
+    <section class="slide s-cover">
+      <span class="counter">01 / 08</span>
+      <div class="logo-big">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia Educación">
+      </div>
+      <div class="body">
+        <p class="eyebrow">Propuesta de proyecto · Servicio de Habilidades</p>
+        <h1 style="font-size:46px">
+          Dos Cerebros Digitales para<br>
+          presupuestar con criterio propio<br>
+          <span class="hl">en Maenca</span>
+        </h1>
+        <p class="lead">
+          Este proyecto acompaña a los dos socios de Maenca para que cada uno construya su <strong>Cerebro Digital</strong>: un asistente en <strong>Claude</strong> con memoria propia, que conoce su rol, su criterio y su base de precios, y lo ayuda a armar presupuestos e informes y a ahorrar tiempo.
+        </p>
+        <div class="pain-strip">
+          <div class="pain-item">
+            <span class="pain-num">2 socios</span>
+            <span class="pain-lbl">llevan todo el ciclo de un trabajo: visita, estructura, presupuesto e informe.</span>
+          </div>
+          <div class="pain-item">
+            <span class="pain-num">Dispersa</span>
+            <span class="pain-lbl">es la información de precios: vive en la memoria, en hojas de cálculo y en consultas por WhatsApp.</span>
+          </div>
+          <div class="pain-item">
+            <span class="pain-num">Chat</span>
+            <span class="pain-lbl">es hoy el uso de la IA: dudas y mensajes simples, sin criterio ni proceso definido.</span>
+          </div>
+        </div>
+        <p class="pain-src">Fuente: datos declarados por Maenca en el levantamiento con Intezia.</p>
+      </div>
+      <div class="id-line">
+        <span class="codigo">Código: CAI-052</span>
+        <span class="cliente">Maenca</span>
+      </div>
+    </section>
+
+    <!-- 2 · Alcance: qué vamos a hacer y para qué -->
+    <section class="slide s-scope roomy">
+      <span class="counter">02 / 08</span>
+      <p class="eyebrow">02 · Alcance</p>
+      <h2>Dos Cerebros Digitales, uno por socio.</h2>
+      <p class="sub">Cada socio construye su <strong>asistente personal en Claude</strong>, con memoria y criterio propios.</p>
+
+      <div class="scope-panels one" style="--np:1">
+        <div class="scope-panel acc-y">
+          <div class="scope-head">
+            <span class="scope-tag">Claude y Obsidian</span>
+            <span class="scope-total"><b>8</b> entregables · 2 Cerebros Digitales</span>
+          </div>
+          <ul class="scope-rows">
+              <li><span class="area">Cerebro Digital 1 <small class="comp">8 h de trabajo individual con Intezia.</small></span><span class="n">4 entregables</span><span class="para">Armar la solución, la estructura de trabajo, el presupuesto y el informe con su criterio</span></li>
+              <li><span class="area">Cerebro Digital 2 <small class="comp">8 h de trabajo individual con Intezia.</small></span><span class="n">4 entregables</span><span class="para">Calcular precios unitarios, cómputos y costos desde una base de precios propia</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="scope-out">
+        <p class="scope-card-label">Fuera de este alcance</p>
+        <ul>
+          <li>Más de 2 cerebros o más horas por persona: cada cerebro recibe 8 h, lo demás va en otra etapa.</li>
+          <li>Un software propio de cotización o desarrollos a medida: el cerebro opera con herramientas que ya existen.</li>
+          <li>La conversación con los proveedores por WhatsApp: sigue en manos de cada socio, el cerebro ordena lo que llega.</li>
+          <li>Las licencias de Claude, que van aparte (detalle en la inversión).</li>
+        </ul>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Maenca · CAI-052</span>
+      </div>
+    </section>
+
+    <!-- 3 · Ruta: qué pasa en cada fase -->
+    <section class="slide s-route">
+      <span class="counter">03 / 08</span>
+      <p class="eyebrow">03 · Ruta</p>
+      <h2>Dos cerebros en uso, en tres fases.</h2>
+      <p class="sub">El calendario de cada socio se acuerda en la reunión de arranque. La <strong>garantía y el seguimiento</strong> a 30, 60 y 90 días corren desde el cierre del proyecto.</p>
+
+      <div class="route-grid n1" style="--cols:3; --rows:1; --rowh:214px">
+
+        <div class="rg-corner"></div>
+        <div class="rg-phase rg-ph-1">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Base</span><b class="rg-phase-n">2 entregables</b></span>
+          <span class="rg-phase-name">Claude y propósito</span>
+        </div>
+        <div class="rg-phase rg-ph-2">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Grafo</span><b class="rg-phase-n">2 entregables</b></span>
+          <span class="rg-phase-name">Conocimiento y precios</span>
+        </div>
+        <div class="rg-phase rg-ph-3 hi">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Uso</span><b class="rg-phase-n">4 entregables</b></span>
+          <span class="rg-phase-name">Skills y conexión</span>
+        </div>
+        <div class="rg-phase rg-fu">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Garantía</span></span>
+          <span class="rg-phase-date">30, 60 y 90 días</span>
+          <span class="rg-phase-txt">Seguimiento desde el cierre del proyecto</span>
+        </div>
+
+        <div class="rg-front acc-y">
+          <span class="rg-front-h">Los 2 socios de Maenca</span>
+          <span class="rg-front-row"><span class="rg-front-tool">Claude</span><b class="rg-front-n">8 entregables</b></span>
+          <span class="rg-front-meta">16 h de trabajo</span>
+        </div>
+        <div class="rg-cell"><span class="rg-h"><b>2</b> entregables <i>4 h</i></span><p>Fundamentos de Claude y el propósito del cerebro de cada socio.</p></div>
+        <div class="rg-cell"><span class="rg-h"><b>2</b> entregables <i>4 h</i></span><p>Conocimiento en Obsidian: criterio de cotización, estructuras tipo y precios.</p></div>
+        <div class="rg-cell hi"><span class="rg-h"><b>4</b> entregables <i>8 h</i></span><p>Skills de estructura de trabajo, presupuesto y precios, conectadas.</p></div>
+
+        <div class="rg-follow" style="grid-column:5; grid-row:2 / span 1">
+          <ul>
+            <li><b>30 días</b><span>Uso real de cada cerebro</span></li>
+            <li><b>60 días</b><span>Ajustes y nuevas construcciones</span></li>
+            <li><b>90 días</b><span>Tiempo recuperado contra la línea base</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="route-miles" style="grid-template-columns:repeat(5,1fr)">
+        <div class="mile"><span class="mile-d"></span><b>Arranque · aparte</b><p>1 h para acordar los trabajos reales de cada socio y el calendario.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Base</b><p>Claude explicado y el propósito del cerebro de cada socio.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Grafo</b><p>El criterio de cotización y los precios de cada socio, ordenados en Obsidian.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Uso</b><p>Skills conectadas a sus hojas: estructura de trabajo, presupuesto, informe y precios.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>30 · 60 · 90 días</b><p>Seguimiento: uso de los cerebros, ajustes y tiempo recuperado.</p></div>
+      </div>
+      <p class="route-note">Las 16 horas de trabajo son una proyección: cada Cerebro Digital lleva 8 h, con 2 h de base, 2 h de grafo y 4 h de uso. La reunión de arranque (1 h) va aparte y no suma horas.</p>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Maenca · CAI-052</span>
+      </div>
+    </section>
+
+    <!-- 4 · Cómo trabajamos: pasos, por qué en ese orden, casos reales, práctica, datos y logística -->
+    <section class="slide s-method">
+      <span class="counter">04 / 08</span>
+      <p class="eyebrow">04 · Cómo trabajamos</p>
+      <h2>Así trabajamos el proyecto.</h2>
+      <p class="sub">Trabajo individual con cada socio, sobre sus propios trabajos, hasta que cada uno usa su cerebro con autonomía.</p>
+
+      <ol class="mt-steps" style="--n:4">
+          <li><b>Construimos</b><span>Con cada socio, en vivo y sobre un trabajo real.</span></li>
+          <li><b>Probamos</b><span>Con su información y sus presupuestos, hasta que funcione.</span></li>
+          <li><b>Adoptamos</b><span>Cada socio usa su cerebro en sus trabajos del día a día.</span></li>
+          <li><b>Medimos</b><span>El tiempo recuperado contra la línea base, a 30, 60 y 90 días.</span></li>
+      </ol>
+      <div class="mt-strips">
+        <p class="mt-why"><b>Por qué en este orden</b> Primero se entiende Claude y se define el propósito del cerebro; después se ordena el conocimiento y los precios; al final se construyen las Skills y se conectan a las herramientas.</p>
+        <p class="mt-who"><b>Quién construye</b> Cada socio construye su propio cerebro; <strong>Intezia guía</strong> cada paso, sobre trabajos reales de Maenca.</p>
+      </div>
+
+      <div class="mt-info">
+        <div class="mt-card">
+          <p class="mt-card-label">Cómo funciona en la práctica</p>
+          <ul><li><b>Un cerebro por socio.</b> Cada cerebro se construye sobre el rol de su socio: uno para la solución y el presupuesto, otro para los precios y los costos.</li><li><b>Desde cero, en vivo.</b> Claude se explica desde lo básico, en vivo y sin conocimiento técnico previo.</li><li><b>Cuenta de Claude.</b> Cada socio necesita su cuenta de Claude con un plan de pago: se deja lista al arrancar.</li></ul>
+        </div>
+        <div class="mt-card">
+          <p class="mt-card-label">Cómo cuidamos sus datos</p>
+          <p>Solo se carga en cada cerebro lo que su socio decide compartir: no se suben datos de clientes ni de terceros sin autorización. Los criterios de uso seguro se acuerdan al empezar y se repasan al cerrar.</p>
+        </div>
+      </div>
+
+      <div class="mt-logi">
+        <div class="mt-tile"><span>Modalidad</span><b>Mixta: remota o presencial, según se acuerde en la reunión de arranque.</b></div>
+        <div class="mt-tile"><span>Participantes</span><b>Los dos socios de Maenca, cada uno con su propio acompañamiento.</b></div>
+        <div class="mt-tile"><span>Ritmo de trabajo</span><b>Según la agenda de cada socio, sin frenar su trabajo diario.</b></div>
+        <div class="mt-tile"><span>Arranque</span><b>La fecha la fija Maenca; una reunión de arranque de 1 h, aparte, acuerda el calendario.</b></div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Maenca · CAI-052</span>
+      </div>
+    </section>
+
+    <!-- 5 · Entregables: ¿con qué me quedo? (catálogo + piezas transversales) -->
+    <section class="slide s-deliv">
+      <span class="counter">05 / 08</span>
+      <p class="eyebrow">05 · Entregables</p>
+      <div class="deliv-head">
+        <h2>Lo que recibe cada socio.</h2>
+        <p class="deliv-sub"><span class="nw">Lo que se llevan</span>: <strong>8 entregables</strong> en 2 Cerebros Digitales, más el seguimiento a 30, 60 y 90 días que mide su efecto.</p>
+      </div>
+
+      <div class="deliv-carriles" style="--ncols:2">
+        <span class="dc acc-y" style="grid-column: span 2">Claude y Obsidian · 8 entregables</span>
+      </div>
+
+      <div class="deliv-cols" style="--ncols:2">
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">Cerebro Digital 1</p>
+            <ul>
+              <li>Claude explicado y propósito del cerebro<ul class="inc"><li>Qué es Claude y qué hace cada pieza: Projects, Skills y Artifacts</li><li>Cuándo conviene automatizar un proceso y cuándo no</li><li>El propósito del cerebro y sus primeros prompts</li></ul></li>
+              <li>Criterio de cotización y estructuras tipo en Obsidian<ul class="inc"><li>Project de Claude con su rol, su voz y su criterio</li><li>Su criterio de cotización y estructuras de trabajo tipo, en un grafo</li><li>Las partidas de medición y el formato del informe</li></ul></li>
+              <li>Skill de la estructura desglosada de trabajo<ul class="inc"><li>Una instrucción reutilizable con su criterio de estructura</li><li>De la visita y la investigación a la estructura propuesta</li><li>Probada con un trabajo real de Maenca</li></ul></li>
+              <li>Skill del informe y el presupuesto, conectada<ul class="inc"><li>Reúne el diagnóstico, la solución y las mediciones en un informe</li><li>Toma los precios de la base de precios de su socio</li><li>Conectada a sus hojas de cálculo y archivos, con uso seguro</li></ul></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">Cerebro Digital 2</p>
+            <ul>
+              <li>Claude explicado y propósito del cerebro<ul class="inc"><li>Qué es Claude y qué hace cada pieza: Projects, Skills y Artifacts</li><li>Cuándo conviene automatizar un proceso y cuándo no</li><li>El propósito del cerebro y sus primeros prompts</li></ul></li>
+              <li>Base de precios y proveedores en Obsidian<ul class="inc"><li>Project de Claude con el criterio de quien calcula los precios unitarios</li><li>Materiales, equipos, mano de obra y proveedores, en un grafo</li><li>Lo que hoy vive en la memoria y en hojas de cálculo, ordenado</li></ul></li>
+              <li>Skill de precios unitarios y cómputos<ul class="inc"><li>Materiales, equipos y mano de obra desde la estructura de trabajo</li><li>Cantidades convertidas en unidades de compra</li><li>Probada con un trabajo real de Maenca</li></ul></li>
+              <li>Skill de consulta de precios, conectada<ul class="inc"><li>Conectada a su hoja de precios y a las páginas de proveedores</li><li>Lo que responden los proveedores por WhatsApp entra a la base</li><li>Criterios de uso seguro de la información</li></ul></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="deliv-band">
+        <div class="db-card db-1">
+          <span class="db-label">Para todo el proyecto</span>
+        </div>
+        <div class="db-card db-2">
+          <span class="db-label">Valor inmediato</span>
+        </div>
+      </div>
+      <!-- Cajas multiline editables (vacías en HTML: el contenido vive dentro del AcroForm /V). -->
+      <div class="multi-box db-box db-box-1" data-field="Entregables"></div>
+      <div class="multi-box db-box db-box-2" data-field="Acreditacion"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Maenca · CAI-052</span>
+      </div>
+    </section>
+
+    <!-- 6 · Retorno: ¿qué gano? (método de cálculo). Sin estudios ni citas externas. -->
+    <section class="slide s-roi">
+      <span class="counter">06 / 08</span>
+      <p class="eyebrow">06 · Retorno</p>
+      <h2>Retorno esperado: tiempo recuperado, medido.</h2>
+      <p class="sub">Se mide contra la línea base que cada socio deja al empezar y se sigue a 30, 60 y 90 días.</p>
+
+      <div class="roi-body">
+        <div class="roi-panel">
+          <p class="roi-panel-title">Cómo se calcula</p>
+          <ol class="roi-steps">
+            <li><b>Volumen</b><span>Cuántos presupuestos e informes arma cada socio en un periodo.</span></li>
+            <li><b>Tiempo actual</b><span>Cuánto le toma hoy cada tarea. Es la <strong>línea base</strong>.</span></li>
+            <li><b>Tiempo con el cerebro</b><span>Lo que toma el mismo trabajo con su Skill ya en uso.</span></li>
+            <li><b>Horas recuperadas</b><span>Diferencia entre ambos tiempos, por socio y por periodo: una estimación referencial, sin compromiso de resultado.</span></li>
+            <li><b>Valor en dinero</b><span>Horas recuperadas por el valor hora de referencia que Maenca valide.</span></li>
+          </ol>
+        </div>
+
+        <div class="roi-right">
+          <p class="roi-right-title">Calendario de garantía y cálculo del retorno</p>
+          <div class="roi-card">
+            <b>30 días</b>
+            <p>Cada cerebro en uso real y su línea base validada con su socio.</p>
+          </div>
+          <div class="roi-card">
+            <b>60 días</b>
+            <p>Ajustes del cerebro y horas recuperadas medidas contra la línea base.</p>
+          </div>
+          <div class="roi-card">
+            <b>90 días</b>
+            <p>Medición del tiempo recuperado y de su valor en dinero, por socio.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="roi-dest-wrap">
+        <p class="roi-dest-title">Hacia dónde va el proyecto</p>
+        <div class="roi-dest">
+          <div class="rd-item"><b>Más clientes atendidos</b><p>Si el tiempo se libera, cada socio puede dedicarlo a <strong>más visitas</strong> y a responder antes.</p></div>
+          <div class="rd-item"><b>Criterio ordenado</b><p>El criterio de cotización y los precios dejan de depender de la memoria: quedan en el grafo de cada cerebro.</p></div>
+          <div class="rd-item"><b>Más tareas al cerebro</b><p>Con el resultado medido, Maenca decide qué otras tareas lleva a sus <strong>cerebros</strong>.</p></div>
+        </div>
+      </div>
+
+      <div class="roi-hook"><p>A los 90 días del cierre, Maenca contará con el tiempo recuperado de cada cerebro, medido contra su línea base.</p></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Maenca · CAI-052</span>
+      </div>
+    </section>
+
+    <!-- 7 · Inversión (hoja de cotización estándar; antepenúltima slide) -->
+    <section class="slide s-price">
+      <span class="counter">07 / 08</span>
+      <h2 class="title">Inversión del proyecto.</h2>
+      <p class="price-intro">Propuesta Económica · Servicio de Habilidades</p>
+
+      <div class="block">
+        <span class="block-eyebrow">Duración</span>
+        <p class="block-value">Proyecto de 8 entregables en tres fases, con seguimiento y garantía a 30, 60 y 90 días. 16 horas de trabajo.</p>
+      </div>
+
+      <div class="block block-programa">
+        <span class="block-eyebrow">Programa</span>
+      </div>
+      <div class="multi-box programa-box" data-field="Programa"></div>
+
+      <div class="block block-cotizacion">
+        <span class="block-eyebrow">Cotización</span>
+      </div>
+
+      <span class="cot-label cot-label-base">Propuesta + Inversión</span>
+      <div class="cot-frame base-frame"></div>
+
+      <span class="cot-label cot-label-discount">Descuento</span>
+      <span class="cot-sign-minus">&minus;$</span>
+      <div class="cot-frame discount-frame"></div>
+      <span class="cot-urgent-note">Descuento válido por 15 días</span>
+
+      <span class="cot-label cot-label-total">TOTAL</span>
+      <div class="cot-frame total-frame"></div>
+
+      <p class="cot-validity">Cotización válida por 30 días.</p>
+      <div class="cot-terms-box">
+        <span class="cot-terms-label">Importante</span>
+        <p class="cot-terms-text">Este servicio se presta bajo nuestros <a href="https://drive.google.com/file/d/1PA-ZSt4KnyY5dpxXzgkIk6-yfGlV2eF8/view?usp=drive_link" target="_blank" rel="noopener">términos y condiciones</a>. Al avanzar con esta propuesta, ambas partes los aceptan.</p>
+      </div>
+
+      <div class="cot-garantia-badge">
+        <span class="cot-garantia-tag">Garantía 30-60-90</span>
+        <p class="cot-garantia-text">Estamos contigo hasta que la habilidad quede instalada.</p>
+      </div>
+
+      <div class="block block-notes-container">
+        <span class="block-eyebrow">Notas</span>
+      </div>
+      <div class="multi-box notas-box" data-field="Notas"></div>
+
+      <div class="lic-wrap">
+        <span class="lic-eyebrow">Licenciamiento · aparte de esta inversión</span>
+        <div class="lic-cards">
+          <div class="lic-card acc-y">
+            <span class="lic-name">Claude · una cuenta por socio</span>
+            <p>Una cuenta de <strong>Claude</strong> por socio, en un plan que permita construir su cerebro. Lo confirma Maenca con el proveedor.</p>
+          </div>
+          <div class="lic-card acc-o">
+            <span class="lic-name">Obsidian · gratuito</span>
+            <p>Aplicación de notas donde cada socio organiza su conocimiento como grafo. Se instala al trabajar el <strong>grafo</strong>.</p>
+          </div>
+        </div>
+        <p class="lic-note">Esta propuesta no incluye valores de lista: dependen del plan que se elija y el cliente los confirma con el proveedor. Pueden variar.</p>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Maenca · CAI-052</span>
+      </div>
+    </section>
+
+    <!-- 9 · Próximos pasos: qué hacer y a quién escribir (última slide) -->
+    <section class="slide s-next">
+      <span class="counter">08 / 08</span>
+      <p class="eyebrow">08 · Próximos pasos</p>
+      <h2>Tres pasos para arrancar.</h2>
+      <p class="sub">Esto es lo que sigue cuando Maenca confirme la propuesta.</p>
+
+      <div class="nx-steps">
+        <div class="nx-step acc-y">
+          <span class="nx-num">1</span>
+          <b>Fecha de arranque</b>
+          <p>Confirmamos con Maenca la fecha de arranque y el horario de trabajo de cada socio.</p>
+        </div>
+        <div class="nx-step acc-o">
+          <span class="nx-num">2</span>
+          <b>Cuenta y material</b>
+          <p>Cada socio deja lista su cuenta de Claude y reúne el material de su trabajo que decida compartir.</p>
+        </div>
+        <div class="nx-step acc-w">
+          <span class="nx-num">3</span>
+          <b>Reunión de arranque</b>
+          <p>Una hora para alinear objetivos, elegir los trabajos reales de cada socio y acordar el calendario.</p>
+        </div>
+      </div>
+
+      <div class="nx-contact">
+        <div class="nx-card nx-ase">
+          <span class="nx-label">¿Dudas? Escribe a tu asesora comercial</span>
+          <b class="nx-name">Verónica Rubio</b>
+          <span class="nx-role">Asesora comercial</span>
+          <p class="nx-line"><a href="mailto:vrubio01@intezia.com">vrubio01@intezia.com</a></p>
+          <p class="nx-line">+58 422 3355505</p>
+        </div>
+        <div class="nx-card nx-emp">
+          <span class="nx-label">Intezia</span>
+          <p class="nx-line">Intezia C.A J-505657950</p>
+          <p class="nx-line"><a href="mailto:servicio@intezia.com">servicio@intezia.com</a></p>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Maenca · CAI-052</span>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

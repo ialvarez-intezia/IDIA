@@ -2,14 +2,15 @@
 <!--
   Propuesta · Fivenca · Servicio de Habilidades (CAI-039)
   División: Educación · Servicio: Habilidades (§4.1a) · Alianza: no
-  GENERADO por scripts/generar-habilidades-compacto.py (plantilla 1.3 (2026-10-05)) desde datos.json.
+  GENERADO por scripts/generar-habilidades-compacto.py (plantilla 3.0 (2026-10-08), formato habilidades) desde datos.json.
   No editar a mano: editar datos.json y regenerar. Estilos propios del deck: overrides.css.
   Fuente del insumo: Instrucción directa del usuario; contenido de CAP-060
 
-  Formato compacto de 6 slides (distinto del deck canónico de ~13):
-    1 Portada con punto de dolor · 2 Alcance · 3 Ruta · 4 Inversión · 5 Entregables · 6 Retorno esperado
-  Marcadores de detección de AcroForms (agregar-campo-precio.py), por página: «Propuesta Económica»
-  solo en la slide de inversión; «Lo que se llevan» y «Entregables» solo en la de entregables.
+  Formato compacto de 10 slides, en el orden de las preguntas del cliente (Ventas, 2026-10-07), sin semanas, sesiones
+  ni fechas (Keiber, 2026-10-08):
+    1 Portada · 2 Alcance · 3 Ruta · 4 Cómo trabajamos · 5 Entregables · 6 Retorno · 7 Inversión · 8 Inversión (etapa 2) · 9 Inversión (etapa 3) · 10 Próximos pasos
+  Marcadores de detección de AcroForms (agregar-campo-precio.py), por página: «Propuesta Económica» solo en la slide de
+  inversión; «Lo que se llevan» y «Entregables» solo en la de entregables; «Facilidad de pago» solo en la de pago.
   Campos AcroForm: Programa, Notas, PrecioBase, Descuento, PrecioTotal (inversión) y Entregables, Acreditacion (entregables). Se reposicionan con scripts/customize-habilidades-compacto.py.
 -->
 <html lang="es">
@@ -25,36 +26,37 @@
 
   <main class="deck">
 
-    <!-- 1 · Portada con punto de dolor -->
+    <!-- 1 · Portada: ¿cuál es mi problema? -->
     <section class="slide s-cover">
-      <span class="counter">01 / 06</span>
+      <span class="counter">01 / 10</span>
       <div class="logo-big">
         <img src="../../../logos/educacion/BLANCO.png" alt="Intezia Educación">
       </div>
       <div class="body">
         <p class="eyebrow">Propuesta de proyecto · Servicio de Habilidades</p>
         <h1 style="font-size:46px">
-          Construcción de 5 Cerebros<br>
+          Construcción de Cerebros<br>
           Digitales con Claude y Obsidian<br>
           <span class="hl">en Fivenca</span>
         </h1>
         <p class="lead">
-          Este proyecto acompaña a cinco personas, a designar por Fivenca, para que cada una construya su <strong>Cerebro Digital</strong>: un asistente en Claude con memoria propia, que conoce su rol, su voz y su criterio, y la ayuda a decidir y a automatizar tareas repetitivas.
+          Este proyecto acompaña a hasta cinco personas, a designar por Fivenca, para que cada una construya su <strong>Cerebro Digital</strong>: un asistente en Claude con memoria propia, que conoce su rol, su voz y su criterio, y la ayuda a decidir y a automatizar tareas repetitivas.
         </p>
         <div class="pain-strip">
           <div class="pain-item">
-            <span class="pain-num">5</span>
-            <span class="pain-lbl">Cerebros Digitales: uno por persona, con su conocimiento y casos reales.</span>
+            <span class="pain-num">1, 3 o 5</span>
+            <span class="pain-lbl">Cerebros Digitales a elegir: uno por persona, con su conocimiento y casos reales.</span>
           </div>
           <div class="pain-item">
             <span class="pain-num">8 h</span>
-            <span class="pain-lbl">por cerebro, en 4 sesiones de 2 h guiadas por Intezia.</span>
+            <span class="pain-lbl">por cerebro, con trabajo individual guiado por Intezia sobre casos reales de cada rol.</span>
           </div>
           <div class="pain-item">
             <span class="pain-num">Grafo</span>
             <span class="pain-lbl">de notas conectadas en Obsidian (gratuito): la memoria propia que el cerebro recorre.</span>
           </div>
         </div>
+        <p class="pain-src">Contenido del proyecto; no son mediciones de Fivenca.</p>
       </div>
       <div class="id-line">
         <span class="codigo">Código: CAI-039</span>
@@ -62,54 +64,35 @@
       </div>
     </section>
 
-    <!-- 2 · Alcance -->
-    <section class="slide s-scope">
-      <span class="counter">02 / 06</span>
+    <!-- 2 · Alcance: qué vamos a hacer y para qué -->
+    <section class="slide s-scope roomy">
+      <span class="counter">02 / 10</span>
       <p class="eyebrow">02 · Alcance</p>
-      <h2>Cinco Cerebros Digitales, uno por persona.</h2>
+      <h2>Hasta cinco Cerebros Digitales, uno por persona.</h2>
       <p class="sub">Cada persona construye su <strong>asistente personal en Claude</strong>, con memoria y criterio propios, con la guía de Intezia.</p>
 
-      <div class="scope-body">
-        <div class="scope-left">
-
-          <div class="scope-panel acc-y">
-            <div class="scope-head">
-              <span class="scope-tag">Claude y Obsidian</span>
-              <span class="scope-total"><b>10</b> entregables · 5 Cerebros Digitales</span>
-            </div>
-            <ul class="scope-rows">
-              <li><span class="area">Cerebro Digital 1 <small class="comp">8 h en 4 sesiones de 2 h.</small></span><span class="units" style="--n:2"></span><span class="n">2</span></li>
-              <li><span class="area">Cerebro Digital 2 <small class="comp">8 h en 4 sesiones de 2 h.</small></span><span class="units" style="--n:2"></span><span class="n">2</span></li>
-              <li><span class="area">Cerebro Digital 3 <small class="comp">8 h en 4 sesiones de 2 h.</small></span><span class="units" style="--n:2"></span><span class="n">2</span></li>
-              <li><span class="area">Cerebro Digital 4 <small class="comp">8 h en 4 sesiones de 2 h.</small></span><span class="units" style="--n:2"></span><span class="n">2</span></li>
-              <li><span class="area">Cerebro Digital 5 <small class="comp">8 h en 4 sesiones de 2 h.</small></span><span class="units" style="--n:2"></span><span class="n">2</span></li>
-            </ul>
+      <div class="scope-panels one" style="--np:1">
+        <div class="scope-panel acc-y">
+          <div class="scope-head">
+            <span class="scope-tag">Claude y Obsidian</span>
+            <span class="scope-total"><b>10</b> entregables · 5 Cerebros Digitales</span>
           </div>
-
+          <ul class="scope-rows">
+              <li><span class="area">Cerebro Digital 1 <small class="comp">8 h de trabajo individual con Intezia.</small></span><span class="n">2 entregables</span><span class="para">Su asistente personal en Claude, con memoria propia</span></li>
+              <li><span class="area">Cerebro Digital 2 <small class="comp">8 h de trabajo individual con Intezia.</small></span><span class="n">2 entregables</span><span class="para">Su asistente personal en Claude, con memoria propia</span></li>
+              <li><span class="area">Cerebro Digital 3 <small class="comp">8 h de trabajo individual con Intezia.</small></span><span class="n">2 entregables</span><span class="para">Su asistente personal en Claude, con memoria propia</span></li>
+              <li><span class="area">Cerebro Digital 4 <small class="comp">8 h de trabajo individual con Intezia.</small></span><span class="n">2 entregables</span><span class="para">Su asistente personal en Claude, con memoria propia</span></li>
+              <li><span class="area">Cerebro Digital 5 <small class="comp">8 h de trabajo individual con Intezia.</small></span><span class="n">2 entregables</span><span class="para">Su asistente personal en Claude, con memoria propia</span></li>
+          </ul>
         </div>
+      </div>
 
-        <div class="scope-right">
-          <div class="scope-card">
-            <p class="scope-card-label">Cómo trabajamos</p>
-            <ol class="scope-steps">
-              <li>Fundamentos de Claude y propósito de cada cerebro, sobre un caso real.</li>
-              <li>Ordena su conocimiento como <strong>grafo</strong> de notas conectadas en Obsidian.</li>
-              <li>Suma una Skill (instrucción reutilizable) y conecta sus herramientas.</li>
-              <li>Automatiza un proceso real y fija criterios de uso seguro.</li>
-            </ol>
-          </div>
-          <div class="scope-card">
-            <p class="scope-card-label">Quién construye</p>
-            <p>Cada participante construye su propio cerebro; <strong>Intezia guía</strong> cada sesión para que funcione, sobre casos reales de su rol.</p>
-          </div>
-          <div class="scope-card scope-out">
-            <p class="scope-card-label">Fuera de este alcance</p>
-            <ul>
-              <li>Licencias de Claude y de otras herramientas, que van aparte.</li>
-              <li>Desarrollos e integraciones a medida con sistemas internos de Fivenca.</li>
-            </ul>
-          </div>
-        </div>
+      <div class="scope-out">
+        <p class="scope-card-label">Fuera de este alcance</p>
+        <ul>
+          <li>Licencias de Claude y de otras herramientas, que van aparte (detalle en cada hoja de inversión).</li>
+          <li>Desarrollos e integraciones a medida con sistemas internos de Fivenca.</li>
+        </ul>
       </div>
 
       <div class="foot">
@@ -118,39 +101,37 @@
       </div>
     </section>
 
-    <!-- 3 · Ruta -->
+    <!-- 3 · Ruta: qué pasa en cada fase -->
     <section class="slide s-route">
-      <span class="counter">03 / 06</span>
+      <span class="counter">03 / 10</span>
       <p class="eyebrow">03 · Ruta</p>
-      <h2>Del kick-off a cinco cerebros en 4 semanas.</h2>
-      <p class="sub">Semanas desde el arranque, con <strong>seguimiento y garantía a 30, 60 y 90 días</strong> tras el cierre de las sesiones.</p>
+      <h2>Cerebros en uso, en dos fases.</h2>
+      <p class="sub">El calendario de cada persona se acuerda en la reunión de arranque. La <strong>garantía y el seguimiento</strong> a 30, 60 y 90 días corren desde el cierre del proyecto.</p>
 
-      <div class="route-grid" style="--cols:2; --rows:1; --rowh:214px">
+      <div class="route-grid n1" style="--cols:2; --rows:1; --rowh:214px">
 
         <div class="rg-corner"></div>
         <div class="rg-phase rg-ph-1">
           <span class="rg-phase-top"><span class="rg-phase-tag">El cerebro</span><b class="rg-phase-n">5 entregables</b></span>
-          <span class="rg-phase-date">Semanas 1 y 2</span>
-          <span class="rg-phase-txt">Fundamentos y conocimiento</span>
+          <span class="rg-phase-name"><strong>Fundamentos y conocimiento</strong></span>
         </div>
         <div class="rg-phase rg-ph-2 hi">
           <span class="rg-phase-top"><span class="rg-phase-tag">En acción</span><b class="rg-phase-n">5 entregables</b></span>
-          <span class="rg-phase-date">Semanas 3 y 4</span>
-          <span class="rg-phase-txt">Conexiones y automatización</span>
+          <span class="rg-phase-name"><strong>Conexiones y automatización</strong></span>
         </div>
         <div class="rg-phase rg-fu">
           <span class="rg-phase-top"><span class="rg-phase-tag">Garantía</span></span>
           <span class="rg-phase-date">30, 60 y 90 días</span>
-          <span class="rg-phase-txt">Seguimiento desde el cierre de las sesiones</span>
+          <span class="rg-phase-txt">Seguimiento desde el cierre del proyecto</span>
         </div>
 
         <div class="rg-front acc-y">
-          <span class="rg-front-top"><b class="rg-front-name">Claude y Obsidian</b><span class="rg-front-tag">Las cinco personas</span></span>
-          <span class="rg-front-h"><b>10 entregables</b> · <span class="nw">40 h</span> · <span class="nw">S1-S4</span></span>
-          <span class="rg-front-areas">Las 5 personas que Fivenca designe</span>
+          <span class="rg-front-h">Las personas designadas</span>
+          <span class="rg-front-row"><span class="rg-front-tool">Claude</span><b class="rg-front-n">10 entregables</b></span>
+          <span class="rg-front-meta">40 h de trabajo</span>
         </div>
-        <div class="rg-cell"><span class="rg-h"><b>5</b> entregables <i>20 h</i></span><p>Sesiones 1 y 2 de 2 h por persona: fundamentos de Claude y su conocimiento organizado.</p></div>
-        <div class="rg-cell hi"><span class="rg-h"><b>5</b> entregables <i>20 h</i></span><p>Sesiones 3 y 4 de 2 h: instrucciones reutilizables, conexiones y una automatización.</p></div>
+        <div class="rg-cell"><span class="rg-h"><b>5</b> entregables <i>20 h</i></span><p>Fundamentos de Claude, propósito del cerebro y su conocimiento ordenado como grafo.</p></div>
+        <div class="rg-cell hi"><span class="rg-h"><b>5</b> entregables <i>20 h</i></span><p>Instrucciones reutilizables, conexiones a sus herramientas y una automatización.</p></div>
 
         <div class="rg-follow" style="grid-column:4; grid-row:2 / span 1">
           <ul>
@@ -162,13 +143,13 @@
       </div>
 
       <div class="route-miles" style="grid-template-columns:repeat(5,1fr)">
-        <div class="mile"><span class="mile-d"></span><b>Kick-off · aparte</b><p>1 h para acordar las 5 personas, sus casos reales y la agenda de sesiones.</p></div>
-        <div class="mile"><span class="mile-d"></span><b>Semanas 1 y 2 · El cerebro</b><p>Fundamentos, propósito y conocimiento propio ordenado: la base de cada cerebro.</p></div>
-        <div class="mile"><span class="mile-d"></span><b>Semanas 3 y 4 · Acción</b><p>Instrucciones reutilizables, conexiones y una automatización con uso seguro.</p></div>
-        <div class="mile"><span class="mile-d"></span><b>Semana 4 · Cierre</b><p>Cada persona cierra con su cerebro funcionando y un plan para usarlo.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Arranque · aparte</b><p>1 h para elegir cuántos cerebros, acordar las personas, sus casos reales y el calendario.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>El cerebro</b><p>Fundamentos, propósito y conocimiento propio ordenado: la base de cada cerebro.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>En acción</b><p>Instrucciones reutilizables, conexiones y una automatización con uso seguro.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Cierre</b><p>Cada persona cierra con su cerebro funcionando y un plan para usarlo.</p></div>
         <div class="mile"><span class="mile-d"></span><b>30 · 60 · 90 días</b><p>Seguimiento: uso, nuevas construcciones y tiempo recuperado.</p></div>
       </div>
-      <p class="route-note">S = semana de trabajo desde el arranque, cuya fecha se acuerda con Fivenca. Las 40 h son una proyección de sesión: una sesión de 2 h por persona y por semana (20 h en las semanas 1 y 2, 20 h en las 3 y 4). El kick-off de 1 h es aparte y no suma horas.</p>
+      <p class="route-note">Las 40 h de trabajo son una proyección para los cinco cerebros: 8 h por persona, con 20 h en el cerebro y 20 h en acción. Con uno o tres cerebros, cada uno conserva sus 8 h. La reunión de arranque (1 h) va aparte y no suma horas.</p>
 
       <div class="foot">
         <img src="../../../logos/educacion/BLANCO.png" alt="">
@@ -176,15 +157,186 @@
       </div>
     </section>
 
-    <!-- 4 · Inversión (hoja de cotización estándar, por horas) -->
+    <!-- 4 · Cómo trabajamos: pasos, por qué en ese orden, casos reales, práctica, datos y logística -->
+    <section class="slide s-method">
+      <span class="counter">04 / 10</span>
+      <p class="eyebrow">04 · Cómo trabajamos</p>
+      <h2>Así trabajamos el proyecto.</h2>
+      <p class="sub">Trabajo individual con cada persona, sobre sus casos reales, hasta que usa su cerebro por sí misma.</p>
+
+      <ol class="mt-steps" style="--n:4">
+          <li><b>Construimos</b><span>Con cada persona, en vivo y sobre un caso real de su rol.</span></li>
+          <li><b>Probamos</b><span>Con su información y sus tareas, hasta que funcione.</span></li>
+          <li><b>Adoptamos</b><span>Cada persona usa su cerebro por sí misma, cada semana.</span></li>
+          <li><b>Medimos</b><span>El tiempo recuperado contra la línea base, a 30, 60 y 90 días.</span></li>
+      </ol>
+      <div class="mt-strips">
+        <p class="mt-why"><b>Por qué en este orden</b> Primero se aprende Claude y se ordena el conocimiento de la persona; después se suman una Skill (instrucción reutilizable) y las conexiones a sus herramientas; al final se automatiza un proceso real.</p>
+        <p class="mt-who"><b>Quién construye</b> Cada persona construye su propio cerebro; <strong>Intezia guía</strong> cada paso, sobre casos reales de su rol.</p>
+      </div>
+
+      <div class="mt-info">
+        <div class="mt-card">
+          <p class="mt-card-label">Cómo funciona en la práctica</p>
+          <ul><li><b>Un cerebro por persona.</b> Cada cerebro se construye sobre el rol y los casos reales de su persona, sin copiar el de otra.</li><li><b>Desde cero, en vivo.</b> Cada persona trabaja en vivo con Intezia; no hace falta conocimiento técnico previo.</li><li><b>Cuenta de Claude.</b> Cada persona necesita su cuenta de Claude con un plan de pago: se deja lista en la reunión de arranque.</li></ul>
+        </div>
+        <div class="mt-card">
+          <p class="mt-card-label">Cómo cuidamos sus datos</p>
+          <p>Solo se carga en cada cerebro lo que su persona decide compartir: no se suben datos confidenciales, de clientes ni de terceros sin autorización de Fivenca. Los criterios de uso seguro se acuerdan al empezar y se repasan al cerrar.</p>
+        </div>
+      </div>
+
+      <div class="mt-logi">
+        <div class="mt-tile"><span>Modalidad</span><b>Mixta: remota o presencial, según se acuerde en la reunión de arranque.</b></div>
+        <div class="mt-tile"><span>Participantes</span><b>Hasta cinco personas que Fivenca designe, cada una con su propio acompañamiento.</b></div>
+        <div class="mt-tile"><span>Ritmo de trabajo</span><b>Según la agenda de cada persona, sin frenar su trabajo diario.</b></div>
+        <div class="mt-tile"><span>Arranque</span><b>La fecha la fija Fivenca; una reunión de arranque de 1 h, aparte, acuerda el calendario.</b></div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Fivenca · CAI-039</span>
+      </div>
+    </section>
+
+    <!-- 5 · Entregables: ¿con qué me quedo? (catálogo + piezas transversales) -->
+    <section class="slide s-deliv roomy">
+      <span class="counter">05 / 10</span>
+      <p class="eyebrow">05 · Entregables</p>
+      <div class="deliv-head">
+        <h2>Lo que recibe cada persona.</h2>
+        <p class="deliv-sub"><span class="nw">Lo que se llevan</span>: <strong>10 entregables</strong> en 5 Cerebros Digitales, más el seguimiento a 30, 60 y 90 días que mide su efecto.</p>
+      </div>
+
+      <div class="deliv-carriles" style="--ncols:2">
+        <span class="dc acc-y" style="grid-column: span 2">Claude y Obsidian · 10 entregables</span>
+      </div>
+
+      <div class="deliv-cols" style="--ncols:2">
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">Cerebro Digital 1</p>
+            <ul>
+              <li>Project de Claude (memoria propia) y grafo de notas en Obsidian</li>
+              <li>Skill (instrucción reutilizable) y automatización conectada</li>
+            </ul>
+          </div>
+          <div class="da">
+            <p class="da-name">Cerebro Digital 2</p>
+            <ul>
+              <li>Project de Claude (memoria propia) y grafo de notas en Obsidian</li>
+              <li>Skill (instrucción reutilizable) y automatización conectada</li>
+            </ul>
+          </div>
+          <div class="da">
+            <p class="da-name">Cerebro Digital 3</p>
+            <ul>
+              <li>Project de Claude (memoria propia) y grafo de notas en Obsidian</li>
+              <li>Skill (instrucción reutilizable) y automatización conectada</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">Cerebro Digital 4</p>
+            <ul>
+              <li>Project de Claude (memoria propia) y grafo de notas en Obsidian</li>
+              <li>Skill (instrucción reutilizable) y automatización conectada</li>
+            </ul>
+          </div>
+          <div class="da">
+            <p class="da-name">Cerebro Digital 5</p>
+            <ul>
+              <li>Project de Claude (memoria propia) y grafo de notas en Obsidian</li>
+              <li>Skill (instrucción reutilizable) y automatización conectada</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="deliv-band">
+        <div class="db-card db-1">
+          <span class="db-label">Para todo el proyecto</span>
+        </div>
+        <div class="db-card db-2">
+          <span class="db-label">Valor inmediato</span>
+        </div>
+      </div>
+      <!-- Cajas multiline editables (vacías en HTML: el contenido vive dentro del AcroForm /V). -->
+      <div class="multi-box db-box db-box-1" data-field="Entregables"></div>
+      <div class="multi-box db-box db-box-2" data-field="Acreditacion"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Fivenca · CAI-039</span>
+      </div>
+    </section>
+
+    <!-- 6 · Retorno: ¿qué gano? (método de cálculo). Sin estudios ni citas externas. -->
+    <section class="slide s-roi">
+      <span class="counter">06 / 10</span>
+      <p class="eyebrow">06 · Retorno</p>
+      <h2>Retorno esperado: tiempo y dinero.</h2>
+      <p class="sub">Se calcula con los datos de cada persona, se confirma con la línea base inicial y se mide a 30, 60 y 90 días.</p>
+
+      <div class="roi-body">
+        <div class="roi-panel">
+          <p class="roi-panel-title">Cómo se calcula, por tarea</p>
+          <ol class="roi-steps">
+            <li><b>Repeticiones por semana</b><span>Cuántas veces repite cada persona las tareas que su cerebro va a asumir.</span></li>
+            <li><b>Tiempo actual por tarea</b><span>Se mide al empezar y es la <strong>línea base</strong>.</span></li>
+            <li><b>Tiempo con el cerebro</b><span>Lo que toma la misma tarea con el cerebro ya en uso.</span></li>
+            <li><b>Horas recuperadas a la semana</b><span>Repeticiones por la diferencia entre el tiempo actual y el tiempo con el cerebro.</span></li>
+            <li><b>Valor en dinero</b><span>Horas recuperadas por el valor hora de referencia que Fivenca valide.</span></li>
+          </ol>
+        </div>
+
+        <div class="roi-right">
+          <p class="roi-right-title">Calendario de garantía y cálculo del retorno</p>
+          <div class="roi-card">
+            <b>30 días</b>
+            <p>Los cerebros en uso real en el trabajo diario de cada persona.</p>
+          </div>
+          <div class="roi-card">
+            <b>60 días</b>
+            <p>Nuevas construcciones del cerebro y horas recuperadas medidas contra la línea base.</p>
+          </div>
+          <div class="roi-card">
+            <b>90 días</b>
+            <p>Medición del tiempo recuperado y de su valor en dinero.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="roi-dest-wrap">
+        <p class="roi-dest-title">Hacia dónde va el proyecto</p>
+        <div class="roi-dest">
+          <div class="rd-item"><b>Tiempo para decidir</b><p>Si el tiempo se libera, cada persona puede dedicarlo a <strong>decisiones</strong> y a trabajo de mayor valor.</p></div>
+          <div class="rd-item"><b>Cerebros que crecen</b><p>Cada persona puede seguir sumando instrucciones y automatizaciones a su cerebro por su cuenta.</p></div>
+          <div class="rd-item"><b>Más cerebros</b><p>Con el retorno medido, Fivenca decide si lleva el Cerebro Digital a <strong>más personas</strong>.</p></div>
+        </div>
+      </div>
+
+      <div class="roi-hook"><p>A los 90 días del cierre, cada persona contará con su tiempo recuperado medido y su valor en dinero.</p></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Fivenca · CAI-039</span>
+      </div>
+    </section>
+
+    <!-- 7 · Inversión (hoja de cotización estándar; antepenúltima slide) -->
     <section class="slide s-price">
-      <span class="counter">04 / 06</span>
-      <h2 class="title">Inversión por horas de sesión.</h2>
-      <p class="price-intro">Propuesta Económica · Servicio de Habilidades</p>
+      <span class="counter">07 / 10</span>
+      <h2 class="title">Inversión para 1 cerebro.</h2>
+      <p class="price-intro">Propuesta Económica · Opción 1 · Un Cerebro Digital</p>
 
       <div class="block">
         <span class="block-eyebrow">Duración</span>
-        <p class="block-value">Proyección de 40 h de sesión en 4 semanas de trabajo desde el arranque, más seguimiento a 30, 60 y 90 días.</p>
+        <p class="block-value">Un solo Cerebro Digital, para una persona, con seguimiento y garantía a 30, 60 y 90 días. 8 horas de trabajo.</p>
       </div>
 
       <div class="block block-programa">
@@ -215,7 +367,7 @@
 
       <div class="cot-garantia-badge">
         <span class="cot-garantia-tag">Garantía 30-60-90</span>
-        <p class="cot-garantia-text">Estamos contigo hasta que la habilidad quede instalada.</p>
+        <p class="cot-garantia-text">Estamos contigo hasta que tu cerebro quede en uso.</p>
       </div>
 
       <div class="block block-notes-container">
@@ -223,20 +375,58 @@
       </div>
       <div class="multi-box notas-box" data-field="Notas"></div>
 
-      <div class="lic-wrap">
-        <span class="lic-eyebrow">Licenciamiento · aparte de esta inversión</span>
-        <div class="lic-cards">
-          <div class="lic-card acc-y">
-            <span class="lic-name">Claude · una cuenta por persona</span>
-            <p>Cada participante necesita su cuenta de <strong>Claude</strong>, con un plan que permita construir su cerebro. Lo confirma Fivenca con el proveedor.</p>
-          </div>
-          <div class="lic-card acc-o">
-            <span class="lic-name">Obsidian · gratuito</span>
-            <p>Aplicación de notas donde cada persona organiza su conocimiento como grafo. Se instala en la <strong>primera sesión</strong>.</p>
-          </div>
-        </div>
-        <p class="lic-note">Esta propuesta no incluye precios de lista: dependen del plan que se elija y el cliente los confirma con el proveedor. Pueden variar.</p>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Fivenca · CAI-039</span>
       </div>
+    </section>
+
+    <!-- 7 · Inversión (hoja de cotización estándar; antepenúltima slide) -->
+    <section class="slide s-price">
+      <span class="counter">08 / 10</span>
+      <h2 class="title">Inversión para 3 cerebros.</h2>
+      <p class="price-intro">Propuesta Económica · Opción 2 · Tres Cerebros Digitales</p>
+
+      <div class="block">
+        <span class="block-eyebrow">Duración</span>
+        <p class="block-value">Tres personas, un Cerebro Digital cada una, con garantía a 30, 60 y 90 días. 24 horas de trabajo.</p>
+      </div>
+
+      <div class="block block-programa">
+        <span class="block-eyebrow">Programa</span>
+      </div>
+      <div class="multi-box programa-box" data-field="Programa"></div>
+
+      <div class="block block-cotizacion">
+        <span class="block-eyebrow">Cotización</span>
+      </div>
+
+      <span class="cot-label cot-label-base">Propuesta + Inversión</span>
+      <div class="cot-frame base-frame"></div>
+
+      <span class="cot-label cot-label-discount">Descuento</span>
+      <span class="cot-sign-minus">&minus;$</span>
+      <div class="cot-frame discount-frame"></div>
+      <span class="cot-urgent-note">Descuento válido por 15 días</span>
+
+      <span class="cot-label cot-label-total">TOTAL</span>
+      <div class="cot-frame total-frame"></div>
+
+      <p class="cot-validity">Cotización válida por 30 días.</p>
+      <div class="cot-terms-box">
+        <span class="cot-terms-label">Importante</span>
+        <p class="cot-terms-text">Este servicio se presta bajo nuestros <a href="https://drive.google.com/file/d/1PA-ZSt4KnyY5dpxXzgkIk6-yfGlV2eF8/view?usp=drive_link" target="_blank" rel="noopener">términos y condiciones</a>. Al avanzar con esta propuesta, ambas partes los aceptan.</p>
+      </div>
+
+      <div class="cot-garantia-badge">
+        <span class="cot-garantia-tag">Garantía 30-60-90</span>
+        <p class="cot-garantia-text">Seguimos a tu lado hasta que los tres cerebros estén en uso.</p>
+      </div>
+
+      <div class="block block-notes-container">
+        <span class="block-eyebrow">Notas</span>
+      </div>
+      <div class="multi-box notas-box" data-field="Notas"></div>
 
       <div class="foot">
         <img src="../../../logos/educacion/NEGRO.png" alt="">
@@ -244,131 +434,101 @@
       </div>
     </section>
 
-    <!-- 5 · Entregables (catálogo + piezas transversales) -->
-    <section class="slide s-deliv">
-      <span class="counter">05 / 06</span>
-      <p class="eyebrow">05 · Entregables</p>
-      <div class="deliv-head">
-        <h2>Lo que recibe cada persona.</h2>
-        <p class="deliv-sub"><span class="nw">Lo que se llevan</span>: <strong>10 entregables</strong> en 5 Cerebros Digitales, más el seguimiento a 30, 60 y 90 días que mide su efecto.</p>
+    <!-- 7 · Inversión (hoja de cotización estándar; antepenúltima slide) -->
+    <section class="slide s-price">
+      <span class="counter">09 / 10</span>
+      <h2 class="title">Inversión para 5 cerebros.</h2>
+      <p class="price-intro">Propuesta Económica · Opción 3 · Los cinco Cerebros Digitales</p>
+
+      <div class="block">
+        <span class="block-eyebrow">Duración</span>
+        <p class="block-value">Las cinco personas, un Cerebro Digital cada una, con garantía y seguimiento a 30, 60 y 90 días. 40 horas de trabajo.</p>
       </div>
 
-      <div class="deliv-carriles" style="--ncols:2">
-        <span class="dc acc-y" style="grid-column: span 2">Claude y Obsidian · 10 entregables</span>
+      <div class="block block-programa">
+        <span class="block-eyebrow">Programa</span>
+      </div>
+      <div class="multi-box programa-box" data-field="Programa"></div>
+
+      <div class="block block-cotizacion">
+        <span class="block-eyebrow">Cotización</span>
       </div>
 
-      <div class="deliv-cols" style="--ncols:2">
+      <span class="cot-label cot-label-base">Propuesta + Inversión</span>
+      <div class="cot-frame base-frame"></div>
 
-        <div class="deliv-col acc-y">
-          <div class="da">
-            <p class="da-name">Cerebro Digital 1 <i>2</i></p>
-            <ul>
-              <li>Project de Claude (memoria propia) y grafo de notas en Obsidian</li>
-              <li>Skill (instrucción reutilizable) y automatización conectada</li>
-            </ul>
-          </div>
-          <div class="da">
-            <p class="da-name">Cerebro Digital 2 <i>2</i></p>
-            <ul>
-              <li>Project de Claude (memoria propia) y grafo de notas en Obsidian</li>
-              <li>Skill (instrucción reutilizable) y automatización conectada</li>
-            </ul>
-          </div>
-          <div class="da">
-            <p class="da-name">Cerebro Digital 3 <i>2</i></p>
-            <ul>
-              <li>Project de Claude (memoria propia) y grafo de notas en Obsidian</li>
-              <li>Skill (instrucción reutilizable) y automatización conectada</li>
-            </ul>
-          </div>
-        </div>
+      <span class="cot-label cot-label-discount">Descuento</span>
+      <span class="cot-sign-minus">&minus;$</span>
+      <div class="cot-frame discount-frame"></div>
+      <span class="cot-urgent-note">Descuento válido por 15 días</span>
 
-        <div class="deliv-col acc-y">
-          <div class="da">
-            <p class="da-name">Cerebro Digital 4 <i>2</i></p>
-            <ul>
-              <li>Project de Claude (memoria propia) y grafo de notas en Obsidian</li>
-              <li>Skill (instrucción reutilizable) y automatización conectada</li>
-            </ul>
-          </div>
-          <div class="da">
-            <p class="da-name">Cerebro Digital 5 <i>2</i></p>
-            <ul>
-              <li>Project de Claude (memoria propia) y grafo de notas en Obsidian</li>
-              <li>Skill (instrucción reutilizable) y automatización conectada</li>
-            </ul>
-          </div>
-        </div>
+      <span class="cot-label cot-label-total">TOTAL</span>
+      <div class="cot-frame total-frame"></div>
 
+      <p class="cot-validity">Cotización válida por 30 días.</p>
+      <div class="cot-terms-box">
+        <span class="cot-terms-label">Importante</span>
+        <p class="cot-terms-text">Este servicio se presta bajo nuestros <a href="https://drive.google.com/file/d/1PA-ZSt4KnyY5dpxXzgkIk6-yfGlV2eF8/view?usp=drive_link" target="_blank" rel="noopener">términos y condiciones</a>. Al avanzar con esta propuesta, ambas partes los aceptan.</p>
       </div>
 
-      <div class="deliv-band">
-        <div class="db-card db-1">
-          <span class="db-label">Entregables transversales</span>
+      <div class="cot-garantia-badge">
+        <span class="cot-garantia-tag">Garantía 30-60-90</span>
+        <p class="cot-garantia-text">Acompañamos a las cinco personas hasta que cada cerebro esté en uso.</p>
+      </div>
+
+      <div class="block block-notes-container">
+        <span class="block-eyebrow">Notas</span>
+      </div>
+      <div class="multi-box notas-box" data-field="Notas"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Fivenca · CAI-039</span>
+      </div>
+    </section>
+
+    <!-- 9 · Próximos pasos: qué hacer y a quién escribir (última slide) -->
+    <section class="slide s-next">
+      <span class="counter">10 / 10</span>
+      <p class="eyebrow">10 · Próximos pasos</p>
+      <h2>Tres pasos para arrancar.</h2>
+      <p class="sub">Esto es lo que sigue cuando Fivenca confirme la propuesta.</p>
+
+      <div class="nx-steps">
+        <div class="nx-step acc-y">
+          <span class="nx-num">1</span>
+          <b>Opción y fecha</b>
+          <p>Fivenca elige 1, 3 o 5 cerebros y confirmamos la fecha de arranque y el horario de cada persona.</p>
         </div>
-        <div class="db-card db-2">
-          <span class="db-label">Valor inmediato</span>
+        <div class="nx-step acc-o">
+          <span class="nx-num">2</span>
+          <b>Cuenta y material</b>
+          <p>Cada persona deja lista su cuenta de Claude y reúne el material de su rol que decida compartir.</p>
+        </div>
+        <div class="nx-step acc-w">
+          <span class="nx-num">3</span>
+          <b>Reunión de arranque</b>
+          <p>Una hora para alinear objetivos, elegir los casos reales de cada persona y acordar el calendario.</p>
         </div>
       </div>
-      <!-- Cajas multiline editables (vacías en HTML: el contenido vive dentro del AcroForm /V). -->
-      <div class="multi-box db-box db-box-1" data-field="Entregables"></div>
-      <div class="multi-box db-box db-box-2" data-field="Acreditacion"></div>
+
+      <div class="nx-contact">
+        <div class="nx-card nx-ase">
+          <span class="nx-label">¿Dudas? Escribe a tu asesora comercial</span>
+          <b class="nx-name">María Iribarren</b>
+          <span class="nx-role">Asesora comercial</span>
+          <p class="nx-line"><a href="mailto:miribarren@intezia.com">miribarren@intezia.com</a></p>
+          <p class="nx-line">+58 414 0570056</p>
+        </div>
+        <div class="nx-card nx-emp">
+          <span class="nx-label">Intezia</span>
+          <p class="nx-line">Intezia C.A J-505657950</p>
+          <p class="nx-line"><a href="mailto:servicio@intezia.com">servicio@intezia.com</a></p>
+        </div>
+      </div>
 
       <div class="foot">
         <img src="../../../logos/educacion/BLANCO.png" alt="">
-        <span class="meta">Fivenca · CAI-039</span>
-      </div>
-    </section>
-
-    <!-- 6 · Retorno esperado (método de cálculo). Sin estudios ni citas externas. -->
-    <section class="slide s-roi">
-      <span class="counter">06 / 06</span>
-      <p class="eyebrow">06 · Retorno</p>
-      <h2>Retorno esperado: tiempo y dinero.</h2>
-      <p class="sub">Se calcula con los datos de cada persona, se confirma con la línea base de la primera sesión y se mide a 30, 60 y 90 días.</p>
-
-      <div class="roi-body">
-        <div class="roi-panel">
-          <p class="roi-panel-title">Cómo se calcula, por tarea</p>
-          <ol class="roi-steps">
-            <li><b>Repeticiones por semana</b><span>Cuántas veces repite cada persona las tareas que su cerebro va a asumir.</span></li>
-            <li><b>Tiempo actual por tarea</b><span>Se mide en la primera sesión y es la <strong>línea base</strong>.</span></li>
-            <li><b>Tiempo con el cerebro</b><span>Lo que toma la misma tarea con el cerebro ya en uso.</span></li>
-            <li><b>Horas recuperadas a la semana</b><span>Repeticiones multiplicadas por la diferencia entre el tiempo actual y el tiempo con el cerebro.</span></li>
-            <li><b>Valor en dinero</b><span>Horas recuperadas multiplicadas por el costo hora de referencia que Fivenca valide.</span></li>
-          </ol>
-        </div>
-
-        <div class="roi-right">
-          <p class="roi-right-title">Metas, desde el cierre de las sesiones</p>
-          <div class="roi-card">
-            <b>30 días</b>
-            <p>Los 5 cerebros en uso real en el trabajo diario de cada persona.</p>
-          </div>
-          <div class="roi-card">
-            <b>60 días</b>
-            <p>Nuevas construcciones del cerebro y horas recuperadas medidas contra la línea base.</p>
-          </div>
-          <div class="roi-card">
-            <b>90 días</b>
-            <p>Medición del tiempo recuperado y de su valor en dinero.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="roi-dest-wrap">
-        <p class="roi-dest-title">Hacia dónde va el tiempo recuperado</p>
-        <div class="roi-dest">
-          <div class="rd-item"><b>Tiempo para decidir</b><p>Si el tiempo se libera, cada persona puede dedicarlo a <strong>decisiones</strong> y a trabajo de mayor valor.</p></div>
-          <div class="rd-item"><b>Cerebros que crecen</b><p>Cada persona puede seguir sumando instrucciones y automatizaciones a su cerebro por su cuenta.</p></div>
-          <div class="rd-item"><b>Más cerebros</b><p>Con el retorno medido, Fivenca decide si lleva el Cerebro Digital a <strong>más personas</strong>.</p></div>
-        </div>
-      </div>
-
-      <div class="roi-hook"><p>Hacia la semana 17 (4 semanas de trabajo más 90 días de seguimiento), cada persona contará con su tiempo recuperado medido y su valor en dinero.</p></div>
-
-      <div class="foot">
-        <img src="../../../logos/educacion/NEGRO.png" alt="">
         <span class="meta">Fivenca · CAI-039</span>
       </div>
     </section>

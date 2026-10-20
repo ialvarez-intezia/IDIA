@@ -1,0 +1,311 @@
+{
+ "version": 3,
+ "formato": "deteccion",
+ "cliente": {
+  "nombre": "Supermercados Viva",
+  "slug": "supermercados-viva-det036",
+  "codigo": "DET-036",
+  "nombre_pie": "Viva"
+ },
+ "division": "educacion",
+ "alianza": false,
+ "omitir": [
+  "pago"
+ ],
+ "eje": "Mapear los procesos del departamento de Tecnología de Supermercados Viva, dejar logros inmediatos y una ruta de IA con agentes, skills, licencias y políticas de uso, para que Tecnología lidere la adopción en la empresa",
+ "origen": "Ficha de Levantamiento de Supermercados Viva (Flavia Martínez, registrada el 13/10/2026; PDF del 15/10/2026), resumen de la reunión con la gerencia de Tecnología aportado por la asesora e instrucciones de Ivana del 16/10/2026: Propuesta 1 de las dos que pidió la gerencia (solo Tecnología, 12 personas), 8 h de levantamiento y 2 h de nivelación con el temario visible, sin facilidad de pago. Sin transcripción de la reunión. Código DET-036: Ivana indicó DET-035, que ya es de Cinex",
+ "fuente_insumo": "Ficha de Levantamiento de Supermercados Viva (Flavia Martínez, 13/10/2026) y resumen de la reunión de la asesora; sin transcripción de la reunión",
+ "siglas_ok": [
+  "IA",
+  "IP",
+  "SAP",
+  "BI"
+ ],
+ "supuestos": [
+  "Pedido de Ivana (16/10/2026): Propuesta 1 de las dos que pidió la gerencia de Tecnología de Supermercados Viva. Esta cubre solo el departamento de Tecnología (12 personas). La Propuesta 2 (varias áreas con Tecnología, 25 personas) es otra propuesta independiente, con su propia ficha y su propio código. Asesora: Flavia Martínez.",
+  "Código DET-036: Ivana pidió DET-035, que ya es de Cinex (enviada el 15/10/2026). Se le preguntó y no respondió; se usó el siguiente libre. Si prefiere otro código, se cambia en `cliente.codigo` y se regenera.",
+  "Servicio Detección, división Educación y alianza «no»: la ficha dice «Servicios de interés: Detección, Habilidades» y no menciona división ni alianza. Se infieren de un cliente corporativo nuevo y de las demás propuestas de Flavia; por confirmar. Habilidades va solo como la fase que sigue, sin cotizarla.",
+  "Horas (Ivana, 16/10/2026): 8 h de levantamiento y 2 h de nivelación para las mismas doce personas; el arranque no suma horas. Las 2 h de nivelación se muestran en el deck (etapa, entregable y hoja de inversión) porque la gerencia pidió ver el contenido. Es la misma desviación de la spec de Detección que ya se aplicó en Cinex (plantillas/deteccion-compacto.md §2).",
+  "Temario de la nivelación (Ivana: visible, a nivel técnico y no básico, y «se evalúa durante el servicio»): agentes y skills, Claude Code, uso seguro de la información e instrucciones para tareas de Tecnología. La gerencia hizo antes un programa largo de IA que no le sirvió: sin introducción histórica ni conceptos básicos. El deck dice que los temas se confirman tras medir la madurez del equipo. Los temas los redactó el sistema a partir de la ficha (Claude Code como palanca para un equipo sin área de desarrollo); no hay temario base de Intezia.",
+  "Licencias (Ivana): se menciona Claude Team como punto de partida, porque es lo que el cliente quiere incorporar y lo que ya se le sugirió, pero se dice que se evalúa durante el servicio y que la recomendación final llega en el Informe Final. No se dice cuántos puestos ni se dan precios. Verificado (support.claude.com, 16/10/2026): desde enero de 2026 el puesto estándar de Claude Team incluye Claude Code, con menos límite de uso que el premium; por eso el deck habla de «tipo de puesto» a evaluar.",
+  "SAP (Ivana: «ok con SAP»): integraciones no se prometen. Va explícito en el fuera de alcance: primero se analizan los procesos y su uso, y de ahí se define la implementación. SAP Business One, Profit (nómina) y Power BI aparecen como el contexto que el cliente ya usa, sin afirmar ninguna migración (CLAUDE.md §4.11).",
+  "Regla de datos de Tecnología: toda la información debe salir de SAP Business One y Profit, no de Excel, y la gerencia pregunta si es viable. Va en el Informe Final: las políticas de uso la recogen y se evalúa si es viable. No se afirma que lo sea ni que no.",
+  "Agentes: es lo que más interesa a la gerencia. El deck dice explícitamente que el mapa indica dónde hace falta un agente y dónde basta una skill, con un glosario corto de cada término. Se menciona el canal de atención por WhatsApp que el cliente prepara, como ejemplo; no se dice para qué lo usa porque la ficha no lo aclara.",
+  "Logros inmediatos: se mantiene el mínimo de 3. De la ficha, la gerencia mencionó revisar qué IP y equipos están activos (va como ejemplo de logro) y la depuración de las hojas de Excel informales para pasarlas a SAP (va como proceso a mirar en el levantamiento, no como logro: es un proceso de más esfuerzo y, si lo es, pasa al Mapa de Calor).",
+  "Un solo departamento: Tecnología, 12 personas (gerentes y coordinadores de TI) a entrevistar y a nivelar, presencial en las oficinas, una sola sede. No hay lista de personal ni organigrama, así que las píldoras de la slide 2 dicen qué se mira en cada proceso y no son subáreas. La gerencia aparece por su cargo, sin nombre.",
+  "Contexto interno que no va en el deck: el dueño es quien decide y quiere avanzar muy rápido; la gerencia compara con otros dos proveedores; patrocinio ejecutivo aún no asegurado; presupuesto en evaluación; la propuesta debe poder leerse sin que la gerencia esté presente para explicarla.",
+  "Los dolores de la portada salen de la ficha: IA usada de forma suelta y sin licencias corporativas, falta de un orden claro para implementarla, un departamento sin área de desarrollo propia que soporta la operación de las sucursales, y hojas de Excel informales que se cargan a mano a SAP. Son hechos de la ficha, sin cifras ni citas. Corrección del 16/10/2026 (Ivana): no se menciona la cantidad de sucursales en ninguna de las dos propuestas. La ficha de la Propuesta 2 dice «instalando su 7ª sucursal», así que «7 sucursales» no era exacto.",
+  "Sin facilidad de pago (Ivana): 8 slides. Sin semanas, sesiones ni fechas (CLAUDE.md §4.23).",
+  "Corrección del 16/10/2026 (Ivana): Intezia no desarrolla las skills, acompaña al equipo a realizarlas. La ruta completa dice «formar al equipo en skills, o que Intezia lo acompañe a realizarlas»."
+ ],
+ "pendientes": [
+  "Confirmar con Ivana o Flavia el código (DET-036), la división (Educación), la alianza (no) y el servicio.",
+  "Conseguir la transcripción de la reunión: solo hay Ficha y el resumen de la asesora (CLAUDE.md §4.23). Si contradice la ficha, manda la transcripción.",
+  "Departamentos y personas que la gerencia de Tecnología ya envió: no llegaron al repositorio. Con la lista se decide si el deck lleva departamentos reales.",
+  "Validar el temario de la nivelación con quien la imparte: lo redactó el sistema desde la ficha.",
+  "Cómo se mide la madurez en IA antes de nivelar y quién la aplica.",
+  "Valor, descuento y total: campos vacíos para ventas (presupuesto «en evaluación»).",
+  "Propuesta 2 (varias áreas con Tecnología, 25 personas): otra propuesta con su propia ficha y su propio código."
+ ],
+ "portada": {
+  "titulo_lineas": [
+   "Ruta clara de IA para que",
+   "Tecnología lidere la adopción"
+  ],
+  "titulo_destacado": "en {cliente_corto}",
+  "lead": "Auditamos los procesos del departamento de Tecnología de {cliente_corto}, con quien hace el trabajo, y dejamos **logros inmediatos** desde el primer día, con una ruta clara para liderar la IA en toda la empresa.",
+  "hechos": [
+   {
+    "num": "Suelta",
+    "texto": "es la IA hoy en Tecnología: se usa sin criterio común y sin licencias corporativas."
+   },
+   {
+    "num": "Sin ruta",
+    "texto": "definida: falta un orden claro para implementar la IA en toda la empresa."
+   },
+   {
+    "num": "Sin área",
+    "texto": "de desarrollo propia en Tecnología, que soporta la operación de las sucursales."
+   },
+   {
+    "num": "Muchas",
+    "texto": "hojas de Excel informales se cargan a mano en SAP Business One."
+   }
+  ],
+  "fuente": "Fuente: ficha de levantamiento de Intezia con el departamento de Tecnología de {cliente_corto}."
+ },
+ "deteccion": {
+  "areas": [
+   "Tecnología"
+  ],
+  "etiqueta_departamentos": "Qué miramos en cada proceso",
+  "departamentos": [
+   "Pasos del proceso",
+   "Datos que usa",
+   "Sistemas que usa hoy",
+   "Volumen y frecuencia",
+   "Seguridad y riesgo",
+   "Quién lo hace"
+  ],
+  "horas": {
+   "levantamiento": 8,
+   "arranque": 0,
+   "nivelacion": 2
+  },
+  "foco": "Recorremos **los procesos de Tecnología**, persona por persona, como la depuración de las hojas de Excel informales antes de cargarlas a SAP Business One. Profit (nómina) y Power BI son el contexto.",
+  "logros_minimos": 3,
+  "texto_horas": "**{h_levantamiento} horas** de levantamiento con los gerentes y coordinadores de Tecnología.",
+  "para_que": [
+   {
+    "titulo": "Ver la operación real",
+    "texto": "Cómo trabaja hoy Tecnología, proceso por proceso, y qué ya resuelven SAP y Profit."
+   },
+   {
+    "titulo": "Agente o skill",
+    "texto": "Dónde va un **agente** (tareas de varios pasos) y dónde una **skill** (instrucción reutilizable)."
+   },
+   {
+    "titulo": "Mejorar desde ya",
+    "texto": "Logros inmediatos que Tecnología usa mientras avanza el levantamiento."
+   },
+   {
+    "titulo": "Reglas y licencias",
+    "texto": "Qué licencias conviene tener y qué reglas de uso protegen la información."
+   }
+  ],
+  "ruta_completa": [
+   {
+    "cuando": "Ahora",
+    "servicio": "Detección",
+    "texto": "Esta propuesta."
+   },
+   {
+    "cuando": "El año que viene",
+    "servicio": "Habilidades",
+    "texto": "Con los resultados: formar al equipo en skills, o que Intezia lo acompañe a realizarlas."
+   }
+  ],
+  "etapas": [
+   {
+    "titulo": "Arranque",
+    "texto": "Reunión con la gerencia de Tecnología: alcance, personas a entrevistar y calendario."
+   },
+   {
+    "titulo": "Nivelación",
+    "texto": "**{h_nivelacion} horas** aplicadas a los procesos de Tecnología, a nivel técnico, tras medir la madurez del equipo."
+   },
+   {
+    "titulo": "Levantamiento",
+    "texto": "Una conversación con cada persona de Tecnología, en sus oficinas.",
+    "horas": true
+   },
+   {
+    "titulo": "Priorización",
+    "texto": "Intezia cruza lo levantado y ordena las oportunidades por impacto y esfuerzo."
+   },
+   {
+    "titulo": "Informe Final",
+    "texto": "Diagnóstico, hoja de ruta, políticas de uso y licencias, presentados a la gerencia y a la dirección."
+   }
+  ],
+  "entregables": [
+   {
+    "cuando": "Al arrancar",
+    "titulo": "Alcance y calendario",
+    "texto": "Acordados con la gerencia de Tecnología: personas a entrevistar y orden del levantamiento."
+   },
+   {
+    "cuando": "Al arrancar",
+    "titulo": "Equipo nivelado en IA",
+    "texto": "Medición de madurez y {h_nivelacion} h técnicas: agentes y skills, Claude Code, uso seguro de datos. Temas a evaluar en el servicio."
+   },
+   {
+    "cuando": "En el levantamiento",
+    "titulo": "Logros inmediatos",
+    "texto": "**Al menos {logros_minimos_palabra}** soluciones en uso desde el primer día; por ejemplo, revisar qué IP y equipos están activos."
+   },
+   {
+    "cuando": "Al cierre",
+    "titulo": "Mapa de Calor",
+    "texto": "Los procesos de Tecnología en un mapa: qué requiere un agente (como el canal de WhatsApp de {cliente_corto}) y qué basta con una skill."
+   },
+   {
+    "cuando": "Al cierre",
+    "titulo": "Informe Final y hoja de ruta",
+    "texto": "Diagnóstico, hoja de ruta y políticas de uso; se evalúa si es viable su regla de que la información salga de SAP y Profit."
+   },
+   {
+    "cuando": "Al cierre",
+    "titulo": "Inversión inteligente en licencias",
+    "texto": "Se evalúan durante el servicio partiendo de Claude Team y su tipo de puesto; la recomendación final llega en el Informe Final."
+   }
+  ]
+ },
+ "alcance": {
+  "titulo": "Auditamos Tecnología y dejamos logros inmediatos.",
+  "subtitulo": "Revisamos proceso por proceso cómo trabaja el departamento y qué puede potenciar la IA, con quien hace el trabajo.",
+  "fuera_alcance": [
+   "Licencias de IA: la recomendación va en el Informe Final y no están en la inversión.",
+   "Integraciones con SAP Business One o Profit: no se prometen antes de analizar los procesos y su uso.",
+   "Otras áreas de {cliente_corto}: esta propuesta cubre solo Tecnología."
+  ]
+ },
+ "ruta": {
+  "subtitulo": "El calendario y el orden de las conversaciones se acuerdan en la **reunión de arranque**."
+ },
+ "metodo": {
+  "titulo": "Así trabajamos con Tecnología.",
+  "subtitulo": "Nos sentamos con cada persona y salimos de cada conversación con algo concreto.",
+  "pasos": [
+   {
+    "titulo": "Entrevistamos",
+    "texto": "A cada persona del departamento de Tecnología, una por una."
+   },
+   {
+    "titulo": "Mapeamos",
+    "texto": "Sus procesos, los datos, los sistemas y los cuellos de botella."
+   },
+   {
+    "titulo": "Construimos",
+    "texto": "Un logro inmediato en el momento, cuando el proceso lo permite."
+   },
+   {
+    "titulo": "Priorizamos",
+    "texto": "Cada oportunidad en el Mapa de Calor, con su impacto y esfuerzo."
+   }
+  ],
+  "por_que_orden": "Primero se mide la madurez del equipo y se nivela, para que todos hablen el mismo idioma técnico sobre IA. Después se levanta persona por persona. Al final se prioriza con la foto completa de Tecnología.",
+  "quien_construye": "Intezia levanta y construye junto a cada persona. Los accesos y las herramientas con las que se trabaja los autoriza {cliente_corto}; sus sistemas no se modifican.",
+  "practica": [
+   {
+    "titulo": "Sin tarea previa",
+    "texto": "Nadie prepara nada antes de su turno: todo se levanta en la conversación."
+   },
+   {
+    "titulo": "Persona por persona",
+    "texto": "Cada integrante cuenta cómo trabaja, sin esperar a los demás."
+   },
+   {
+    "titulo": "Sin forzar soluciones",
+    "texto": "Si un proceso exige mucho esfuerzo, no se resuelve en el momento: pasa al Mapa de Calor con su prioridad."
+   }
+  ],
+  "datos": "Trabajamos con ejemplos reales y solo con las cuentas y la información que {cliente_corto} autoriza: nada confidencial entra a la IA sin su visto bueno."
+ },
+ "logistica": {
+  "modalidad": "Presencial, en las oficinas de {cliente_corto}.",
+  "participantes": "La gerencia en el arranque; las doce personas de Tecnología en la nivelación y el levantamiento."
+ },
+ "entregables": {
+  "transversales": [
+   "Ficha de levantamiento de cada proceso",
+   "Presentación del Informe Final a la dirección"
+  ],
+  "valor_inmediato": [
+   "Logros inmediatos en uso antes de cerrar",
+   "Datos para decidir licencias y reglas de uso"
+  ]
+ },
+ "retorno": {
+  "subtitulo": "El Informe Final estima el retorno de cada oportunidad con lo que cuenta cada persona de Tecnología.",
+  "pasos": [
+   {
+    "titulo": "Volumen",
+    "texto": "Cuántas veces al mes se repite cada tarea del equipo."
+   },
+   {
+    "titulo": "Tiempo actual",
+    "texto": "Lo que toma hoy cada vez, según quien hace el trabajo."
+   },
+   {
+    "titulo": "Tiempo con la solución",
+    "texto": "La estimación de Intezia para cada oportunidad del Mapa de Calor."
+   },
+   {
+    "titulo": "Horas recuperables",
+    "texto": "Volumen por la diferencia de tiempos: una estimación de referencia, no un compromiso de resultado."
+   },
+   {
+    "titulo": "Prioridad",
+    "texto": "Impacto, esfuerzo y riesgo de cada oportunidad, para decidir por dónde empezar."
+   }
+  ],
+  "gancho": "Con el Informe Final, {cliente_corto} decide qué automatizar, qué licencias tener y qué reglas de uso fijar, con datos propios y no a ciegas."
+ },
+ "inversion": {
+  "duracion": "Reunión de arranque, **{h_nivelacion} horas de nivelación** y **{h_levantamiento} horas de levantamiento** con las doce personas de Tecnología.",
+  "programa": [
+   "Servicio de Detección para {cliente_corto} ({codigo}).",
+   "Arranque con la gerencia de Tecnología y {h_nivelacion} horas de nivelación en IA del equipo.",
+   "Levantamiento persona por persona, en las oficinas de {cliente_corto}.",
+   "Al menos {logros_minimos} logros inmediatos, Mapa de Calor e Informe Final.",
+   "{h_nivelacion} horas de nivelación y {h_levantamiento} horas de levantamiento."
+  ],
+  "notas": [
+   "Esta inversión no incluye licencias de IA.",
+   "Habilidades, la fase que viene después, se estructura con los resultados y se cotiza aparte."
+  ]
+ },
+ "proximos_pasos": {
+  "asesora": {
+   "nombre": "Flavia Martínez",
+   "cargo": "Asesora comercial",
+   "correo": "fmartinez@intezia.com",
+   "telefono": "+58 414 5756615"
+  },
+  "pasos": [
+   {
+    "titulo": "Fecha de arranque",
+    "texto": "Acordamos la fecha de la reunión de arranque y el horario de los encuentros con el equipo."
+   },
+   {
+    "titulo": "Lista del equipo",
+    "texto": "{cliente_corto} nos comparte quiénes son las doce personas de Tecnología y su rol; con eso armamos la agenda."
+   },
+   {
+    "titulo": "Reunión de arranque",
+    "texto": "Una hora para cerrar el alcance, el orden de las conversaciones y el calendario."
+   }
+  ]
+ }
+}

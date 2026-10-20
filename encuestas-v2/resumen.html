@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<title>Rediseño de EduPulse y EduTrace · Resumen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+@page { size: A4 portrait; margin: 12mm 13mm 15mm 13mm;
+  @bottom-left { content: "Intezia · Rediseño de EduPulse y EduTrace · Resumen · Borrador v0.2 · Documento interno"; font: 400 7pt 'Poppins','Helvetica Neue',Arial,sans-serif; color:#000; }
+  @bottom-right { content: counter(page) " / 3"; font: 600 7.5pt 'Poppins','Helvetica Neue',Arial,sans-serif; color:#000; } }
+:root { --g:#F4BA1A; --o:#E58423; --soft:rgba(0,0,0,.62); --line:rgba(0,0,0,.16); }
+* { box-sizing:border-box; }
+html, body { margin:0; padding:0; background:#fff; color:#000; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+body { font-family:'Poppins','Helvetica Neue',Arial,sans-serif; font-size:8.6pt; line-height:1.38; }
+.page { break-after:page; }
+.page:last-child { break-after:auto; }
+.band { background:#000; color:#fff; padding:4.5mm 6mm; display:flex; justify-content:space-between; align-items:center; border-bottom:3px solid var(--g); margin-bottom:4mm; }
+.band img { height:11mm; }
+.band .r { font-size:7.2pt; text-align:right; line-height:1.45; }
+.hd { background:#000; color:#fff; padding:3.2mm 6mm 2.6mm; border-bottom:3px solid var(--g); margin-bottom:3.5mm; display:flex; justify-content:space-between; align-items:flex-end; }
+.hd .k { font-size:7pt; letter-spacing:1px; text-transform:uppercase; color:var(--g); font-weight:600; }
+.hd .t { font-size:13pt; font-weight:800; margin-top:.6mm; }
+.hd .m { font-size:7.4pt; color:var(--g); font-weight:600; text-align:right; }
+h1 { font-size:21pt; line-height:1.1; margin:0 0 2mm; font-weight:800; letter-spacing:-.3px; }
+.hl { background:var(--g); padding:0 4px; }
+.lead { font-size:9.4pt; margin:0 0 3mm; color:var(--soft); }
+h2 { font-size:8.8pt; text-transform:uppercase; letter-spacing:.8px; margin:3.6mm 0 1.6mm; border-bottom:2px solid var(--g); padding-bottom:.8mm; display:inline-block; }
+p { margin:0 0 1.6mm; }
+.chips { display:flex; gap:2mm; margin:0 0 2mm; }
+.chip { flex:1; border:1.5px solid #000; padding:1.6mm 2.4mm; font-size:7.8pt; }
+.chip b { display:block; font-size:7pt; text-transform:uppercase; letter-spacing:.6px; margin-bottom:.4mm; }
+.tg { display:inline-block; font-size:5.8pt; font-weight:700; letter-spacing:.4px; padding:.2px 5px; border-radius:20px; white-space:nowrap; vertical-align:1px; margin-left:2px; }
+.tg.n { background:var(--g); color:#000; }
+.tg.a { background:var(--o); color:#000; }
+.tg.m { background:#000; color:var(--g); }
+.tg.d { background:var(--o); color:#000; }
+.tg.p { background:#fff; color:#000; border:1px solid rgba(0,0,0,.4); }
+
+table { width:100%; border-collapse:collapse; }
+table.mx { font-size:7.7pt; table-layout:fixed; }
+table.mx th { background:#000; color:#fff; text-align:left; padding:1.5mm 2mm; font-size:7.4pt; letter-spacing:.3px; border-right:1px solid #333; }
+table.mx th.s { background:#000; color:var(--g); }
+table.mx td { padding:1.4mm 2mm; border-bottom:1px solid var(--line); vertical-align:top; border-right:1px solid var(--line); }
+table.mx td.l { background:rgba(244,186,26,.16); font-weight:700; width:19mm; font-size:7.4pt; }
+table.mx td:last-child, table.mx th:last-child { border-right:none; }
+table.mx ul { margin:0; padding-left:3.2mm; }
+table.mx li { margin-bottom:.7mm; }
+table.mx td.com { background:rgba(0,0,0,.05); }
+
+table.hp { font-size:7.9pt; table-layout:fixed; }
+table.hp th { background:#000; color:#fff; text-align:left; padding:1.4mm 2.2mm; font-size:7.3pt; letter-spacing:.3px; }
+table.hp td { padding:1.15mm 2.2mm; border-bottom:1px solid var(--line); vertical-align:top; }
+table.hp td.f { font-weight:700; width:50mm; }
+table.hp td.hl2 { background:rgba(244,186,26,.12); }
+
+table.et { font-size:7.9pt; table-layout:fixed; }
+table.et th { background:#000; color:#fff; text-align:left; padding:1.4mm 2.2mm; font-size:7.3pt; letter-spacing:.3px; }
+table.et td { padding:1.2mm 2.2mm; border-bottom:1px solid var(--line); vertical-align:top; }
+table.et td.s { width:36mm; font-weight:700; background:rgba(0,0,0,.05); }
+table.et td.c { width:46mm; color:var(--soft); }
+table.et tr.key td { background:rgba(244,186,26,.15); }
+table.et tr.key td.s { background:rgba(244,186,26,.35); }
+table.et ul { margin:0; padding-left:3.2mm; }
+table.et li { margin-bottom:.5mm; }
+
+.note { border-left:3px solid var(--g); background:rgba(244,186,26,.12); padding:1.3mm 3mm; font-size:7.8pt; margin:1.8mm 0; }
+.warn { border-left:3px solid var(--o); background:rgba(229,132,35,.14); padding:1.3mm 3mm; font-size:7.8pt; margin:1.8mm 0; }
+
+.ficha { border:2px solid #000; margin:1.5mm 0 2mm; }
+.ficha .fh { background:#000; color:#fff; padding:1.8mm 3mm; font-size:8.2pt; font-weight:700; display:flex; justify-content:space-between; }
+.ficha .fh span { color:var(--g); font-weight:600; font-size:7.2pt; }
+.fg { display:grid; grid-template-columns:1fr 1fr; }
+.fi { padding:1.5mm 3mm; border-bottom:1px solid var(--line); border-right:1px solid var(--line); font-size:7.8pt; }
+.fi:nth-child(2n) { border-right:none; }
+.fi b { display:block; font-size:7pt; text-transform:uppercase; letter-spacing:.5px; }
+.fi .v { font-weight:700; font-size:9pt; }
+.fi .src { color:var(--soft); font-size:7pt; }
+
+.ev { display:flex; gap:2mm; margin:1mm 0 2mm; }
+.ev div { flex:1; border:1.5px solid #000; padding:1.6mm 2.6mm; font-size:7.7pt; }
+.ev b { display:block; margin-bottom:.4mm; }
+
+ol.dec { margin:0; padding-left:4.5mm; font-size:8.3pt; }
+ol.dec li { margin-bottom:1.5mm; }
+.foot { margin-top:2.5mm; font-size:7.8pt; color:var(--soft); }
+</style></head><body>
+
+<section class="page">
+  <div class="band"><img src="../logos/intezia/BLANCO.png" alt="Intezia"><div class="r">Documento interno · Borrador v0.2 para evaluación<br>13 de octubre de 2026</div></div>
+  <h1>Medir resultados reales de cada <span class="hl">formación</span></h1>
+  <p class="lead">Cuatro EduPulse (uno por servicio) siguen al grupo sesión a sesión. El EduTrace cierra con conocimiento, uso y tiempo ahorrado. Juntos alimentan el dashboard y el banco de casos de éxito.</p>
+  <div class="chips">
+    <div class="chip"><b>EduPulse · en cada sesión</b>Anónimo, sin nombre ni correo. Cerca de 1 minuto. Mide el progreso del <u>grupo</u> y por qué.</div>
+    <div class="chip"><b>EduTrace · al cierre</b>Personal (certificado y menciones). Mide conocimiento, uso real y tiempo ahorrado.</div>
+    <div class="chip"><b>Todo en escala 1-5</b>Hoy Detección, Políticas e Innovación mezclan 0-5 con 1-5.</div>
+  </div>
+
+  <h2>Cómo queda cada EduPulse</h2>
+  <table class="mx">
+    <tr><th style="width:19mm"></th><th class="s">Habilidades</th><th class="s">Detección</th><th class="s">Políticas</th><th class="s">Innovación</th></tr>
+    <tr><td class="l">1 · Relevancia</td>
+      <td>«Lo que trabajamos fue sobre una tarea real de mi trabajo»</td>
+      <td>«Las preguntas fueron relevantes para mi día a día»</td>
+      <td>«Las preguntas reflejaron los riesgos y dudas reales de mi área»</td>
+      <td>«El tema fue relevante para lo que necesito ahora»</td></tr>
+    <tr><td class="l">2 · Progreso del grupo</td>
+      <td>«Me siento capaz de repetir lo practicado sin ayuda»</td>
+      <td>«Veo con más claridad dónde se me va el tiempo»</td>
+      <td>«Entiendo mejor qué reglas necesitamos como equipo»</td>
+      <td>«Me siento capaz de aplicar lo trabajado sin ayuda» <span class="tg n">NUEVA</span></td></tr>
+    <tr><td class="l">3 · Propias del servicio</td>
+      <td><ul><li>«En el ejercicio de hoy: lo hice solo(a) / con ayuda / no pude»<span class="tg n">NUEVA</span></li><li>«Tuve tiempo para practicar con mis manos»</li><li>«El material me servirá cuando trabaje solo(a)»</li><li>«¿Qué tarea haré con esto esta semana?»<span class="tg n">NUEVA</span></li></ul></td>
+      <td><ul><li>«El consultor entendió cómo trabaja mi área»</li><li>«Me sentí cómodo(a) compartiendo cómo trabajamos»</li><li>«Explicó con claridad el hallazgo de hoy»</li><li>«¿Quedó algo importante sin contar?»<span class="tg n">NUEVA</span></li></ul></td>
+      <td><ul><li>«Se explicó para qué se usará mi información»</li><li>«Confío en que mis aportes se reflejarán en la política»</li><li>«Las reglas discutidas son realistas para cumplirlas»<span class="tg n">NUEVA</span></li></ul></td>
+      <td><ul><li>«Aprendí algo que aplico esta semana»</li><li>«La sesión mantuvo mi interés»</li><li>«Tengo más ganas de seguir usando IA»</li><li>«¿Qué idea o prueba sale de esta sesión?»<span class="tg n">NUEVA</span></li></ul></td></tr>
+    <tr><td class="l">4 · Comunes a los 4</td>
+      <td class="com" colspan="4">«Fue un buen uso de mi tiempo» · «Dominio técnico del consultor» (Innovación no la tenía) <span class="tg n">NUEVA</span> · <b>«¿Qué hizo la diferencia hoy?»</b>: razones de avance y de freno, con opciones fijas <span class="tg n">NUEVA</span> · Comentarios (opcional)</td></tr>
+  </table>
+  <div class="note"><b>Anónimo de verdad:</b> empresa, grupo y sesión llegan prellenados por enlace; en Forms se desactivan «Recopilar correos» y «Limitar a 1 respuesta». El dashboard no muestra una sesión con menos de 4 respuestas.</div>
+
+  <h2>Qué miden y cómo ayudan</h2>
+  <table class="hp">
+    <tr><th>Qué mide</th><th>En el dashboard</th><th>En el banco de casos</th></tr>
+    <tr><td class="f">Progreso del grupo por sesión (pregunta 2) y sus razones</td><td class="hl2">Curva por sesión, con lo que más ayudó y lo que más frenó</td><td class="hl2">«El grupo pasó de X a Y en N sesiones; lo que más ayudó fue Z»</td></tr>
+    <tr><td class="f">Conducta en el ejercicio (Habilidades)</td><td>% que lo hace solo, con ayuda o no puede, por sesión</td><td>% que ya trabaja sin ayuda al final del programa</td></tr>
+    <tr><td class="f">Relevancia y buen uso del tiempo</td><td>Alerta temprana: si baja en una sesión, se corrige en la siguiente</td><td>Argumento de calidad del servicio</td></tr>
+    <tr><td class="f">Confianza y vacíos (Detección y Políticas)</td><td>Procesos que se escaparon; viabilidad de cumplir las reglas</td><td>Completitud del levantamiento y del marco de reglas</td></tr>
+  </table>
+</section>
+
+<section class="page">
+  <div class="hd"><div><div class="k">EduTrace · cierre de la formación</div><div class="t">Cómo queda el EduTrace</div></div><div class="m">Personal: certificado y menciones<br>32 preguntas (27 a 31 por persona)</div></div>
+  <table class="et">
+    <tr><th>Sección</th><th>Preguntas</th><th>Qué cambia</th></tr>
+    <tr><td class="s">1 · Identificación</td><td>Nombre, cédula, correo y área</td><td>Igual</td></tr>
+    <tr><td class="s">2 · Perfil de egreso (1-5)</td><td>Punto de partida · competencia adquirida · aplicabilidad · «Lo aprendido ya me permite hacer mis tareas en menos tiempo»</td><td><span class="tg a">AJUSTADA</span> el rótulo del punto de partida y el tiempo verbal de productividad (antes en futuro)</td></tr>
+    <tr><td class="s">3 · Conocimientos</td><td>5 preguntas técnicas de situación, a la medida de la formación</td><td><span class="tg a">AJUSTADA</span> antes 3. Opciones barajadas y del mismo largo: hoy la correcta es siempre la «b» y la más larga</td></tr>
+    <tr class="key"><td class="s">4 · Aplicación real <span class="tg n">NUEVA</span></td><td><ul>
+      <li><b>14.</b> ¿Ya aplicaste lo aprendido en tu trabajo? <i>(Sí, varias veces · Sí, una vez · Todavía no)</i></li>
+      <li><b>15.</b> Si «Todavía no»: ¿qué te lo ha impedido? <i>(sin tiempo · sin acceso o licencia · no sé cómo aplicarlo · mi equipo no lo respalda · otro)</i></li>
+      <li><b>16-19.</b> Si «Sí»: la tarea en la que más lo usas, minutos antes, minutos ahora y veces por semana</li>
+      <li><b>20.</b> «Lo que produzco con IA lo uso casi siempre sin rehacerlo» (1-5)</li></ul></td>
+      <td>Reemplaza la pregunta de horas ahorradas por bandas. Horas por semana = (antes − ahora) × veces ÷ 60</td></tr>
+    <tr><td class="s">5 · Calidad del consultor</td><td>Relevancia de los casos · ritmo · dominio técnico</td><td>«Claridad Expositiva» pasa a llamarse Relevancia. Sale Acompañamiento (EduPulse lo cubre)</td></tr>
+    <tr><td class="s">6 · Radar de necesidades</td><td>Cuellos de botella · habilidad a dominar · otros departamentos</td><td><span class="tg a">AJUSTADA</span> lista estándar de cuellos de botella, comparable entre clientes</td></tr>
+    <tr><td class="s">7 · Barómetro</td><td>Herramienta de IA · uso principal · prioridad de inversión</td><td>Igual</td></tr>
+    <tr class="key"><td class="s">8 · Cierre <span class="tg n">NUEVA</span></td><td>«Recomendaría esta formación a un colega» (1-5) · lo más valioso en una frase · ¿podemos citar tu comentario? <i>(con nombre · sin nombre · no)</i></td><td>Testimonios con permiso para el banco</td></tr>
+  </table>
+  <div class="note"><b>Aviso inicial <span class="tg a">AJUSTADA</span>:</b> sin tono de amenaza («consecuencias administrativas») y con una promesa clara: la empresa recibe resultados agrupados y la lista de participantes sin puntajes. <b>Hay que validarlo con dirección.</b></div>
+
+  <h2>Qué miden y cómo ayudan</h2>
+  <table class="hp">
+    <tr><th>Qué mide</th><th>En el dashboard</th><th>En el banco de casos</th></tr>
+    <tr><td class="f">Retención objetiva (sección 3) <span class="tg m">MEDIDO</span></td><td class="hl2">% de aciertos, el único dato medido, ya sin el sesgo de la respuesta larga</td><td class="hl2">«Retención X %», con una cifra más confiable</td></tr>
+    <tr><td class="f">Adopción y frenos (14-15) <span class="tg d">DECLARADO</span></td><td>% que ya aplica y qué se lo impide</td><td>% de adopción; ventas ve dónde ayudar</td></tr>
+    <tr><td class="f">Tiempo ahorrado por tarea (16-19) <span class="tg d">DECLARADO</span></td><td>Horas por semana, con la mediana, sin extrapolar a toda la jornada</td><td>Horas por semana por persona. Se convierten a las 4 bandas de hoy para comparar con los 61 casos</td></tr>
+    <tr><td class="f">Competencia y aplicabilidad (6-8) <span class="tg p">PERCIBIDO</span></td><td>Índice de impacto y salto percibido</td><td>Contexto del caso</td></tr>
+    <tr><td class="f">Recomendación y cita (30-32)</td><td>% que recomienda (marca 4 o 5)</td><td>Testimonio con permiso, con o sin nombre</td></tr>
+    <tr><td class="f">Radar y barómetro (24-29)</td><td>Cuellos de botella, herramienta y prioridad</td><td>Próxima venta y sector</td></tr>
+  </table>
+</section>
+
+<section class="page">
+  <div class="hd"><div><div class="k">Banco de casos y dashboard</div><div class="t">Qué se obtiene al final</div></div><div class="m">Una ficha por cliente,<br>con la evidencia de cada cifra</div></div>
+  <p>Cada caso del banco se completaría con estas encuestas. Hoy lleva personas, bandas de horas autopercibidas, cuellos de botella y el índice. Con el rediseño suma la curva del grupo, la adopción y horas que sí se pueden sumar.</p>
+
+  <div class="ficha">
+    <div class="fh">Ficha de caso <span>Los valores son un ejemplo de formato, no datos reales</span></div>
+    <div class="fg">
+      <div class="fi"><b>Personas capacitadas</b><div class="v">N</div><div class="src">EduTrace · participantes</div></div>
+      <div class="fi"><b>Adopción</b><div class="v">X % ya aplica lo aprendido <span class="tg d">DECLARADO</span></div><div class="src">EduTrace 14</div></div>
+      <div class="fi"><b>Tiempo ahorrado</b><div class="v">X h por semana por persona (mediana) <span class="tg d">DECLARADO</span></div><div class="src">EduTrace 16-19</div></div>
+      <div class="fi"><b>Progreso del grupo</b><div class="v">De X a Y en N sesiones <span class="tg p">PERCIBIDO</span></div><div class="src">EduPulse, pregunta 2</div></div>
+      <div class="fi"><b>Qué ayudó y qué frenó</b><div class="v">Lo que más ayudó: Z</div><div class="src">EduPulse, «¿Qué hizo la diferencia hoy?»</div></div>
+      <div class="fi"><b>Retención</b><div class="v">X % de aciertos <span class="tg m">MEDIDO</span></div><div class="src">EduTrace, conocimientos</div></div>
+      <div class="fi"><b>Recomendación</b><div class="v">X % lo recomienda</div><div class="src">EduTrace 30</div></div>
+      <div class="fi"><b>Cuellos de botella y herramienta</b><div class="v">Principal: Z · herramienta: W</div><div class="src">EduTrace 24 y 27</div></div>
+      <div class="fi" style="grid-column:1 / span 2; border-right:none;"><b>Testimonio</b><div class="v">«…» (con o sin nombre, solo si autorizó)</div><div class="src">EduTrace 31-32</div></div>
+    </div>
+  </div>
+
+  <h2>Cómo leer la evidencia</h2>
+  <div class="ev">
+    <div><b><span class="tg m">MEDIDO</span></b>Solo el bloque de conocimientos: se califica como correcto o incorrecto.</div>
+    <div><b><span class="tg d">DECLARADO</span></b>Tiempo ahorrado y adopción: lo dice la persona. Se reporta la mediana y no se extrapola.</div>
+    <div><b><span class="tg p">PERCIBIDO</span></b>Competencia, progreso y calidad: opinión del participante, nunca «mejoró X %».</div>
+  </div>
+
+  <h2>Qué podrá mostrar el dashboard</h2>
+  <table class="hp">
+    <tr><th>Visual</th><th>Estado</th><th>De dónde sale</th></tr>
+    <tr><td class="f">Curva de progreso del grupo por sesión, con razones</td><td><span class="tg n">NUEVA</span></td><td>EduPulse</td></tr>
+    <tr><td class="f">Adopción y frenos</td><td><span class="tg n">NUEVA</span></td><td>EduTrace 14-15</td></tr>
+    <tr><td class="f">Ahorro de tiempo en horas por semana</td><td><span class="tg a">AJUSTADA</span> hoy usa bandas</td><td>EduTrace 16-19</td></tr>
+    <tr><td class="f">Retención con 5 preguntas</td><td><span class="tg a">AJUSTADA</span> hoy usa 3</td><td>EduTrace, conocimientos</td></tr>
+    <tr><td class="f">Calidad del consultor con tendencia por sesión</td><td><span class="tg a">AJUSTADA</span> hoy solo al cierre</td><td>EduPulse y EduTrace 21-23</td></tr>
+  </table>
+
+  <h2>Para decidir antes de publicar</h2>
+  <ol class="dec">
+    <li><b>Largo del EduTrace:</b> pasa de 22 a entre 27 y 31 preguntas. ¿Recortamos? Candidatas: habilidad a dominar (25), uso principal (28), prioridad de inversión (29) y la frase (31).</li>
+    <li><b>Tuteo:</b> el EduTrace mezcla tú y usted. El EduPulse usa tú. ¿Unificamos a tú?</li>
+    <li><b>Aviso del EduTrace:</b> validar la promesa de resultados agrupados con dirección.</li>
+    <li><b>Razones del EduPulse:</b> las opciones son una primera propuesta. ¿Falta alguna que escuchen seguido en las sesiones?</li>
+    <li><b>Mínimo de 4 respuestas</b> por sesión para mostrar datos: ¿se mantiene con grupos pequeños?</li>
+  </ol>
+  <div class="foot">El texto completo de las 32 preguntas del EduTrace y de los 4 EduPulse, con su justificación, está en el anexo para quien arme los formularios.</div>
+</section>
+
+</body></html>

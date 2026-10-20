@@ -92,6 +92,16 @@ def rebake_dark(writer: PdfWriter, layout: dict) -> int:
     return count
 
 
+def omite_entregables(pdf_path: Path) -> bool:
+    """True si el datos.json de la carpeta del PDF omite la slide de entregables (omitir: ["entregables"])."""
+    try:
+        import json
+        d = json.loads((pdf_path.parent / "datos.json").read_text(encoding="utf-8"))
+        return "entregables" in (d.get("omitir") or [])
+    except (OSError, ValueError, AttributeError):
+        return False
+
+
 def main() -> None:
     if len(sys.argv) != 2:
         sys.exit("Uso: python3 customize-habilidades-compacto.py <ruta-al-pdf>")
@@ -107,13 +117,18 @@ def main() -> None:
     # Entregables / Acreditacion con la versión oscura y el nuevo /Rect.
     rebake_bold_fields(writer)
     n = rebake_dark(writer, DELIV_LAYOUT)
-    if n != 2:
+    if omite_entregables(pdf_path):
+        if n:
+            sys.exit(f"ERROR: datos.json omite la slide de entregables pero el PDF trae {n} caja(s) Entregables/Acreditacion: regenerar el PDF con pdf-habilidades-compacto.sh.")
+        print("✓ Sin slide de entregables (omitir): no hay cajas que reposicionar.")
+    elif n != 2:
         sys.exit(f"ERROR: se esperaban 2 campos (Entregables, Acreditacion) y se encontraron {n}. Causas probables: "
                  "(1) no se corrió generar-pdf.sh antes (los campos los crea agregar-campo-precio.py); "
                  "(2) la frase «Lo que se llevan» o la palabra «Entregables» no quedó en UNA línea en la slide de entregables "
                  "(título o nombre de cliente demasiado largo: correr verificar-habilidades-compacto.js); "
                  "(3) el PDF no es el de este deck.")
-    print(f"✓ Slide de entregables: {n} caja(s) reposicionada(s) y re-horneada(s) con fondo oscuro.")
+    else:
+        print(f"✓ Slide de entregables: {n} caja(s) reposicionada(s) y re-horneada(s) con fondo oscuro.")
 
     acro = writer._root_object["/AcroForm"]
     acro[NameObject("/NeedAppearances")] = BooleanObject(False)

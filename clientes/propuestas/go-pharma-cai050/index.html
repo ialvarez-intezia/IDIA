@@ -1,0 +1,575 @@
+<!doctype html>
+<!--
+  Propuesta · Go Pharma · Servicio de Detección y Habilidades (CAI-050)
+  División: Educación · Servicio: Detección y Habilidades (§4.1a) · Alianza: no
+  GENERADO por scripts/generar-habilidades-compacto.py (plantilla 3.0 (2026-10-08), formato habilidades) desde datos.json.
+  No editar a mano: editar datos.json y regenerar. Estilos propios del deck: overrides.css.
+  Fuente del insumo: Minuta de la reunión con Go Pharma e indicaciones de la asesora: charla de 2 h, levantamiento y construcción por área (Comercialización primero, con GoHighLevel) y clones digitales para los dos decisores
+
+  Formato compacto de 10 slides, en el orden de las preguntas del cliente (Ventas, 2026-10-07), sin semanas, sesiones
+  ni fechas (Keiber, 2026-10-08):
+    1 Portada · 2 Alcance · 3 Cómo trabajamos · 4 Ruta · 5 Entregables · 6 Retorno · 7 Inversión · 8 Inversión (etapa 2) · 9 Inversión (etapa 3) · 10 Próximos pasos
+  Marcadores de detección de AcroForms (agregar-campo-precio.py), por página: «Propuesta Económica» solo en la slide de
+  inversión; «Lo que se llevan» y «Entregables» solo en la de entregables; «Facilidad de pago» solo en la de pago.
+  Campos AcroForm: Programa, Notas, PrecioBase, Descuento, PrecioTotal (inversión) y Entregables, Acreditacion (entregables). Se reposicionan con scripts/customize-habilidades-compacto.py.
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Propuesta · Go Pharma · Intezia Educación</title>
+  <link rel="stylesheet" href="../_base/styles.css">
+  <link rel="stylesheet" href="habilidades-compacto.css">
+  <link rel="stylesheet" href="overrides.css">
+</head>
+<body>
+
+  <main class="deck">
+
+    <!-- 1 · Portada: ¿cuál es mi problema? -->
+    <section class="slide s-cover">
+      <span class="counter">01 / 10</span>
+      <div class="logo-big">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia Educación">
+      </div>
+      <div class="body">
+        <p class="eyebrow">Propuesta de proyecto · Servicio de Detección y Habilidades</p>
+        <h1 style="font-size:46px">
+          Procesos comerciales, operativos<br>
+          y financieros con IA, por etapas<br>
+          <span class="hl">en Go Pharma</span>
+        </h1>
+        <p class="lead">
+          Una <strong>charla</strong> alinea al equipo; después se levantan y se construyen con él los procesos de <strong>Comercialización</strong>, Operaciones y Administración, y dos <strong>clones digitales</strong> acompañan a los decisores.
+        </p>
+        <div class="pain-strip">
+          <div class="pain-item">
+            <span class="pain-num">Libreta</span>
+            <span class="pain-lbl">y Excel por correo: así gestiona hoy sus leads la gerencia comercial, sin un CRM.</span>
+          </div>
+          <div class="pain-item">
+            <span class="pain-num">Sin guía</span>
+            <span class="pain-lbl">para las farmacias aliadas: no hay onboarding estructurado y todo se hace a mano.</span>
+          </div>
+          <div class="pain-item">
+            <span class="pain-num">A mano</span>
+            <span class="pain-lbl">los informes diarios de operación, las conciliaciones bancarias y el cobro mensual.</span>
+          </div>
+          <div class="pain-item">
+            <span class="pain-num">Sin uso</span>
+            <span class="pain-lbl">las herramientas anteriores: un CRM que no se adoptó y un agente de IA caído por meses.</span>
+          </div>
+        </div>
+        <p class="pain-src">Fuente: minuta de la reunión con Go Pharma.</p>
+      </div>
+      <div class="id-line">
+        <span class="codigo">Código: CAI-050</span>
+        <span class="cliente">Go Pharma</span>
+      </div>
+    </section>
+
+    <!-- 2 · Alcance por fases: qué vamos a hacer, en qué orden y para qué -->
+    <section class="slide s-scope fases compact">
+      <span class="counter">02 / 10</span>
+      <p class="eyebrow">02 · Alcance</p>
+      <h2>Tres etapas, con valor desde la primera.</h2>
+      <p class="sub">Alineamos al equipo, construimos en <strong>tres áreas</strong>, con Comercialización primero, y damos un <strong>clon digital</strong> a cada decisor.</p>
+
+      <div class="scope-panels one" style="--np:1">
+        <div class="scope-panel acc-y">
+          <div class="scope-head">
+            <span class="scope-tag">Claude y Google Workspace</span>
+            <span class="scope-total"><b>18</b> entregables · 6 bloques</span>
+          </div>
+          <div class="scope-step">
+            <p class="step-h"><span class="step-n">1</span><b>Etapa 1</b><span class="step-d">Charla de fundamentos para todo el equipo</span></p>
+            <ul class="scope-rows">
+              <li><span class="area">Charla para todo el equipo <small class="comp">Con un ejercicio práctico</small></span><span class="para">Alinear a todo el equipo en el uso de la IA y prepararlo para los levantamientos.</span></li>
+            </ul>
+          </div>
+          <div class="scope-step hi">
+            <p class="step-h"><span class="step-n">2</span><b>Etapa 2</b><span class="step-d">Levantamiento y construcción en tres áreas</span></p>
+            <ul class="scope-rows">
+              <li><span class="area">Comercialización <small class="comp">Con el CRM GoHighLevel</small></span><span class="para">Centralizar los leads, dar seguimiento y ordenar la entrada de las farmacias aliadas.</span></li>
+              <li><span class="area">Operaciones y Atención al cliente</span><span class="para">Vigilar pedidos, farmacias y entregas sin tanto trabajo manual, con informes automáticos.</span></li>
+              <li><span class="area">Administración y Finanzas</span><span class="para">Conciliar y cobrar con menos trabajo manual, con una persona que aprueba cada paso.</span></li>
+            </ul>
+          </div>
+          <div class="scope-step">
+            <p class="step-h"><span class="step-n">3</span><b>Etapa 3</b><span class="step-d">Un clon digital para cada decisor</span></p>
+            <ul class="scope-rows">
+              <li><span class="area">Clon digital 1 <small class="comp">Para el primer decisor</small></span><span class="para">Que el decisor consulte y automatice su trabajo con Claude, conectado a su información.</span></li>
+              <li><span class="area">Clon digital 2 <small class="comp">Para el segundo decisor</small></span><span class="para">Que el decisor consulte y automatice su trabajo con Claude, conectado a su información.</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="scope-out">
+        <p class="scope-card-label">Fuera de este alcance</p>
+        <ul>
+          <li>La integración con el sistema de inventario de las farmacias: es desarrollo y se deja como oportunidad en el informe.</li>
+          <li>El portal definitivo de farmacias aliadas: depende del sistema administrativo propio en desarrollo; aquí va un flujo provisional.</li>
+          <li>Las licencias de Claude y de GoHighLevel: no forman parte de esta inversión y se suman de forma progresiva, por perfil.</li>
+        </ul>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Go Pharma · CAI-050</span>
+      </div>
+    </section>
+
+    <!-- 4 · Cómo trabajamos: pasos, por qué en ese orden, casos reales, práctica, datos y logística -->
+    <section class="slide s-method roomy">
+      <span class="counter">03 / 10</span>
+      <p class="eyebrow">03 · Cómo trabajamos</p>
+      <h2>Así trabajamos, del levantamiento a la solución.</h2>
+
+      <ol class="mt-steps" style="--n:4">
+          <li><b>Levantamos</b><span>El proceso real de cada área, con su equipo y la gerencia general.</span></li>
+          <li><b>Construimos</b><span>En vivo con el equipo, la solución que ese proceso necesita.</span></li>
+          <li><b>Documentamos</b><span>Todo queda por escrito, útil también para el personal nuevo.</span></li>
+          <li><b>Medimos</b><span>Con la línea base del arranque, medimos el uso real y el tiempo recuperado.</span></li>
+      </ol>
+      <div class="mt-strips">
+        <p class="mt-why"><b>Por qué en este orden</b> Primero se alinea al equipo; después se levanta y se construye por área, con Comercialización primero por su impacto. Los clones digitales pueden arrancar en paralelo.</p>
+        <p class="mt-who"><b>Quién construye</b> Intezia levanta y construye en vivo con el equipo de cada área; en la Etapa 2 participa la gerencia general.</p>
+      </div>
+
+      <div class="mt-info">
+        <div class="mt-card">
+          <p class="mt-card-label">Cómo funciona en la práctica</p>
+          <ul><li><b>Workspace como base.</b> Go Pharma ya usa Drive, Sheets, Meet y el correo: la información vive ahí, y Claude se suma donde se justifica.</li><li><b>Licencias progresivas.</b> Se empieza por los pocos perfiles que se definan y se amplía solo si el uso lo justifica, sin sumar licencias antes de tiempo.</li></ul>
+        </div>
+        <div class="mt-card">
+          <p class="mt-card-label">Cómo cuidamos sus datos</p>
+          <p>Solo se carga a la IA lo que Go Pharma decide compartir. La información queda en su Drive y lo construido, documentado.</p>
+        </div>
+      </div>
+
+      <div class="mt-logi">
+        <div class="mt-tile"><span>Modalidad</span><b>En vivo con el equipo; Go Pharma define el lugar de la charla.</b></div>
+        <div class="mt-tile"><span>Participantes</span><b>Todo el equipo en la charla; en cada área, su equipo y, en la Etapa 2, la gerencia general.</b></div>
+        <div class="mt-tile"><span>Ritmo de trabajo</span><b>La Etapa 3 puede arrancar en paralelo a las otras.</b></div>
+        <div class="mt-tile"><span>Arranque</span><b>La charla de la Etapa 1 abre el proyecto; Go Pharma elige cuándo y dónde.</b></div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Go Pharma · CAI-050</span>
+      </div>
+    </section>
+
+    <!-- 3 · Ruta: qué pasa en cada fase -->
+    <section class="slide s-route">
+      <span class="counter">04 / 10</span>
+      <p class="eyebrow">04 · Ruta</p>
+      <h2>De la charla a los clones digitales.</h2>
+      <p class="sub">El calendario se acuerda en la reunión de arranque. Cada etapa tiene su propio valor y la <strong>garantía y el seguimiento</strong> corren desde el cierre de las Etapas 2 y 3.</p>
+
+      <div class="route-grid n1" style="--cols:3; --rows:1; --rowh:214px">
+
+        <div class="rg-corner"></div>
+        <div class="rg-phase rg-ph-1">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Etapa 1</span></span>
+          <span class="rg-phase-name">Charla de fundamentos para todo el equipo</span>
+        </div>
+        <div class="rg-phase rg-ph-2 hi">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Etapa 2</span></span>
+          <span class="rg-phase-name">Levantamiento y construcción en tres áreas</span>
+        </div>
+        <div class="rg-phase rg-ph-3">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Etapa 3</span></span>
+          <span class="rg-phase-name">Un clon digital para cada decisor</span>
+        </div>
+        <div class="rg-phase rg-fu">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Garantía</span></span>
+          <span class="rg-phase-date">30, 60 y 90 días</span>
+          <span class="rg-phase-txt">Etapas 2 y 3</span>
+        </div>
+
+        <div class="rg-front acc-y">
+          <span class="rg-front-h">Tres etapas</span>
+          <span class="rg-front-row"><span class="rg-front-tool">Claude</span><b class="rg-front-n">18 entregables</b></span>
+          <span class="rg-front-meta">64 h de trabajo</span>
+        </div>
+        <div class="rg-cell"><span class="rg-h"><b>1</b> entregable <i>2 h</i></span><p>Todo el equipo se alinea en IA, con un ejercicio práctico.</p></div>
+        <div class="rg-cell hi"><span class="rg-h"><b>13</b> entregables <i>50 h</i></span><p>Cada área levanta su proceso real y construye en vivo; Comercialización va primero.</p></div>
+        <div class="rg-cell"><span class="rg-h"><b>4</b> entregables <i>12 h</i></span><p>Cada decisor tiene un clon digital conectado a su trabajo.</p></div>
+
+        <div class="rg-follow" style="grid-column:5; grid-row:2 / span 1">
+          <ul>
+            <li><b>30 días</b><span>Uso real</span></li>
+            <li><b>60 días</b><span>Nuevas automatizaciones</span></li>
+            <li><b>90 días</b><span>Tiempo recuperado</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="route-miles" style="grid-template-columns:repeat(5,1fr)">
+        <div class="mile"><span class="mile-d"></span><b>Charla</b><p>Todo el equipo alineado y listo para los levantamientos.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Levantamientos</b><p>El proceso real de cada área, con Comercialización primero.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Construcción en vivo</b><p>Cada solución, construida con el equipo y documentada.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Clones digitales</b><p>Un clon para cada decisor, conectado a su trabajo.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>30 · 60 · 90 días</b><p>Seguimiento de uso real y de tiempo recuperado.</p></div>
+      </div>
+      <p class="route-note">Las 64 horas de trabajo son una proyección: 2 h de la charla, 50 h de levantamiento y construcción (4 h de levantamiento por área) y 12 h de los dos clones digitales (6 h cada uno).</p>
+      <p class="route-next"><b>Etapa posterior</b> <strong>Tecnología, Recursos Humanos y Mercadeo</strong>, con una conversación de escucha aparte con Tecnología.</p>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Go Pharma · CAI-050</span>
+      </div>
+    </section>
+
+    <!-- 5 · Entregables: ¿con qué me quedo? (catálogo + piezas transversales) -->
+    <section class="slide s-deliv">
+      <span class="counter">05 / 10</span>
+      <p class="eyebrow">05 · Entregables</p>
+      <div class="deliv-head">
+        <h2>Lo que deja cada etapa.</h2>
+        <p class="deliv-sub"><span class="nw">Lo que se llevan</span>: <strong>18 entregables</strong> en tres etapas, más el seguimiento a 30, 60 y 90 días.</p>
+      </div>
+
+      <div class="deliv-carriles" style="--ncols:3">
+        <span class="dc acc-y fase" style="grid-column: span 1">Etapa 1 · 1 entregable</span>
+        <span class="dc acc-y fase hi" style="grid-column: span 1">Etapa 2 · 13 entregables</span>
+        <span class="dc acc-y fase" style="grid-column: span 1">Etapa 3 · 4 entregables</span>
+      </div>
+
+      <div class="deliv-cols" style="--ncols:3">
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">Charla para todo el equipo</p>
+            <ul>
+              <li>Charla de fundamentos, mindset y concientización<ul class="inc"><li>Fundamentos de la IA y mentalidad para trabajar con ella</li><li>Tres niveles de automatización: autónoma, asistida y con supervisión</li><li>Ejercicio práctico con tareas del propio equipo</li></ul></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">Comercialización</p>
+            <ul>
+              <li>Proceso comercial levantado, de lead a cierre</li>
+              <li>GoHighLevel configurado con sus etapas</li>
+              <li>Adopción del CRM en vivo con el equipo</li>
+              <li>Seguimiento de oportunidades con Claude</li>
+              <li>Reportes automáticos de lunes y viernes</li>
+              <li>Onboarding de farmacias aliadas en Claude y Drive</li>
+            </ul>
+          </div>
+          <div class="da">
+            <p class="da-name">Operaciones y Atención al cliente</p>
+            <ul>
+              <li>Procesos de operaciones levantados</li>
+              <li>Informe diario de operación, automatizado</li>
+              <li>Seguimiento de pedidos y entregas con alertas</li>
+              <li>Directorio de farmacias y motorizados centralizado</li>
+            </ul>
+          </div>
+          <div class="da">
+            <p class="da-name">Administración y Finanzas</p>
+            <ul>
+              <li>Procesos de administración levantados</li>
+              <li>Conciliación bancaria asistida, con alertas</li>
+              <li>Recordatorios del cobro mensual a las farmacias</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">Clon digital 1</p>
+            <ul>
+              <li>Clon digital con sus procesos y clientes<ul class="inc"><li>Procesos, clientes y propuestas cargados y conectados</li><li>Claude conectado a Drive y a sus fuentes de información</li><li>Reglas de cotización y de respuesta definidas con el decisor</li></ul></li>
+              <li>Reuniones y primeras automatizaciones del clon<ul class="inc"><li>Minutas de reuniones conectadas al clon</li><li>Primeras tareas automáticas: reportes, borradores y seguimientos</li><li>La persona aprueba antes de que algo salga</li></ul></li>
+            </ul>
+          </div>
+          <div class="da">
+            <p class="da-name">Clon digital 2</p>
+            <ul>
+              <li>Clon digital con sus procesos y clientes</li>
+              <li>Reuniones y primeras automatizaciones del clon</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="deliv-band">
+        <div class="db-card db-1">
+          <span class="db-label">Para todo el proyecto</span>
+        </div>
+        <div class="db-card db-2">
+          <span class="db-label">Valor inmediato</span>
+        </div>
+      </div>
+      <!-- Cajas multiline editables (vacías en HTML: el contenido vive dentro del AcroForm /V). -->
+      <div class="multi-box db-box db-box-1" data-field="Entregables"></div>
+      <div class="multi-box db-box db-box-2" data-field="Acreditacion"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Go Pharma · CAI-050</span>
+      </div>
+    </section>
+
+    <!-- 6 · Retorno: ¿qué gano? (método de cálculo). Sin estudios ni citas externas. -->
+    <section class="slide s-roi">
+      <span class="counter">06 / 10</span>
+      <p class="eyebrow">06 · Retorno</p>
+      <h2>Retorno esperado: horas liberadas por área.</h2>
+      <p class="sub">Se estima en cada levantamiento, con los tiempos que Go Pharma valide, y se mide a 30, 60 y 90 días.</p>
+
+      <div class="roi-body">
+        <div class="roi-panel">
+          <p class="roi-panel-title">Cómo se estima, área por área</p>
+          <ol class="roi-steps">
+            <li><b>Procesos elegidos</b><span>En el levantamiento, cada área nombra los procesos que más tiempo le consumen.</span></li>
+            <li><b>Tiempo actual</b><span>Cuánto toma hoy cada uno y cuántas veces al mes se repite: es la <strong>línea base</strong>.</span></li>
+            <li><b>Tiempo con IA</b><span>Lo que toma el mismo trabajo ya construido en vivo con el equipo.</span></li>
+            <li><b>Horas liberadas</b><span>Diferencia entre ambos tiempos por las veces al mes: un valor <strong>estimado</strong>.</span></li>
+            <li><b>Valor del tiempo</b><span>Horas liberadas por el valor hora que Go Pharma valide.</span></li>
+          </ol>
+        </div>
+
+        <div class="roi-right">
+          <p class="roi-right-title">Calendario de garantía, tras cada etapa de construcción</p>
+          <div class="roi-card">
+            <b>30 días</b>
+            <p>Las soluciones construidas, en uso real por cada área.</p>
+          </div>
+          <div class="roi-card">
+            <b>60 días</b>
+            <p>Nuevas automatizaciones y horas liberadas, antes y después.</p>
+          </div>
+          <div class="roi-card">
+            <b>90 días</b>
+            <p>Tiempo recuperado medido, con el resultado de cada área.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="roi-dest-wrap">
+        <p class="roi-dest-title">Hacia dónde va el proyecto</p>
+        <div class="roi-dest">
+          <div class="rd-item"><b>Equipo alineado</b><p>Todo el equipo usa la IA con el <strong>mismo criterio</strong>, sin las frustraciones anteriores.</p></div>
+          <div class="rd-item"><b>Mismo equipo, más volumen</b><p>Si el tiempo se libera, el equipo puede atender más trabajo con las mismas personas.</p></div>
+          <div class="rd-item"><b>Decisión con datos</b><p>Con el tiempo medido, Go Pharma decide dónde seguir: otras áreas y herramientas.</p></div>
+        </div>
+      </div>
+
+      <div class="roi-hook"><p>Al cierre, Go Pharma sabrá cuántas horas libera cada área y por qué.</p></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Go Pharma · CAI-050</span>
+      </div>
+    </section>
+
+    <!-- 7 · Inversión (hoja de cotización estándar; antepenúltima slide) -->
+    <section class="slide s-price">
+      <span class="counter">07 / 10</span>
+      <h2 class="title">Inversión de la Etapa 1.</h2>
+      <p class="price-intro">Propuesta Económica · Charla de fundamentos para todo el equipo</p>
+
+      <div class="block">
+        <span class="block-eyebrow">Duración</span>
+        <p class="block-value">Charla de fundamentos para todo el equipo, con un ejercicio práctico. 2 horas de trabajo.</p>
+      </div>
+
+      <div class="block block-programa">
+        <span class="block-eyebrow">Programa</span>
+      </div>
+      <div class="multi-box programa-box" data-field="Programa"></div>
+
+      <div class="block block-cotizacion">
+        <span class="block-eyebrow">Cotización</span>
+      </div>
+
+      <span class="cot-label cot-label-base">Propuesta + Inversión</span>
+      <div class="cot-frame base-frame"></div>
+
+      <span class="cot-label cot-label-discount">Descuento</span>
+      <span class="cot-sign-minus">&minus;$</span>
+      <div class="cot-frame discount-frame"></div>
+      <span class="cot-urgent-note">Descuento válido por 15 días</span>
+
+      <span class="cot-label cot-label-total">TOTAL</span>
+      <div class="cot-frame total-frame"></div>
+
+      <p class="cot-validity">Cotización válida por 30 días.</p>
+      <div class="cot-terms-box">
+        <span class="cot-terms-label">Importante</span>
+        <p class="cot-terms-text">Este servicio se presta bajo nuestros <a href="https://drive.google.com/file/d/1PA-ZSt4KnyY5dpxXzgkIk6-yfGlV2eF8/view?usp=drive_link" target="_blank" rel="noopener">términos y condiciones</a>. Al avanzar con esta propuesta, ambas partes los aceptan.</p>
+      </div>
+
+      <div class="block block-notes-container">
+        <span class="block-eyebrow">Notas</span>
+      </div>
+      <div class="multi-box notas-box" data-field="Notas"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Go Pharma · CAI-050</span>
+      </div>
+    </section>
+
+    <!-- 7 · Inversión (hoja de cotización estándar; antepenúltima slide) -->
+    <section class="slide s-price">
+      <span class="counter">08 / 10</span>
+      <h2 class="title">Inversión de la Etapa 2.</h2>
+      <p class="price-intro">Propuesta Económica · Comercialización, Operaciones y Administración</p>
+
+      <div class="block">
+        <span class="block-eyebrow">Duración</span>
+        <p class="block-value">Levantamiento y construcción en tres áreas, con garantía a 30, 60 y 90 días. 50 horas de trabajo.</p>
+      </div>
+
+      <div class="block block-programa">
+        <span class="block-eyebrow">Programa</span>
+      </div>
+      <div class="multi-box programa-box" data-field="Programa"></div>
+
+      <div class="block block-cotizacion">
+        <span class="block-eyebrow">Cotización</span>
+      </div>
+
+      <span class="cot-label cot-label-base">Propuesta + Inversión</span>
+      <div class="cot-frame base-frame"></div>
+
+      <span class="cot-label cot-label-discount">Descuento</span>
+      <span class="cot-sign-minus">&minus;$</span>
+      <div class="cot-frame discount-frame"></div>
+      <span class="cot-urgent-note">Descuento válido por 15 días</span>
+
+      <span class="cot-label cot-label-total">TOTAL</span>
+      <div class="cot-frame total-frame"></div>
+
+      <p class="cot-validity">Cotización válida por 30 días.</p>
+      <div class="cot-terms-box">
+        <span class="cot-terms-label">Importante</span>
+        <p class="cot-terms-text">Este servicio se presta bajo nuestros <a href="https://drive.google.com/file/d/1PA-ZSt4KnyY5dpxXzgkIk6-yfGlV2eF8/view?usp=drive_link" target="_blank" rel="noopener">términos y condiciones</a>. Al avanzar con esta propuesta, ambas partes los aceptan.</p>
+      </div>
+
+      <div class="cot-garantia-badge">
+        <span class="cot-garantia-tag">Garantía 30-60-90</span>
+        <p class="cot-garantia-text">Estamos contigo hasta que lo construido quede en uso.</p>
+      </div>
+
+      <div class="block block-notes-container">
+        <span class="block-eyebrow">Notas</span>
+      </div>
+      <div class="multi-box notas-box" data-field="Notas"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Go Pharma · CAI-050</span>
+      </div>
+    </section>
+
+    <!-- 7 · Inversión (hoja de cotización estándar; antepenúltima slide) -->
+    <section class="slide s-price">
+      <span class="counter">09 / 10</span>
+      <h2 class="title">Inversión de la Etapa 3.</h2>
+      <p class="price-intro">Propuesta Económica · Un clon digital para cada decisor</p>
+
+      <div class="block">
+        <span class="block-eyebrow">Duración</span>
+        <p class="block-value">Dos clones digitales con Claude, con seguimiento y garantía a 30, 60 y 90 días. 12 horas de trabajo.</p>
+      </div>
+
+      <div class="block block-programa">
+        <span class="block-eyebrow">Programa</span>
+      </div>
+      <div class="multi-box programa-box" data-field="Programa"></div>
+
+      <div class="block block-cotizacion">
+        <span class="block-eyebrow">Cotización</span>
+      </div>
+
+      <span class="cot-label cot-label-base">Propuesta + Inversión</span>
+      <div class="cot-frame base-frame"></div>
+
+      <span class="cot-label cot-label-discount">Descuento</span>
+      <span class="cot-sign-minus">&minus;$</span>
+      <div class="cot-frame discount-frame"></div>
+      <span class="cot-urgent-note">Descuento válido por 15 días</span>
+
+      <span class="cot-label cot-label-total">TOTAL</span>
+      <div class="cot-frame total-frame"></div>
+
+      <p class="cot-validity">Cotización válida por 30 días.</p>
+      <div class="cot-terms-box">
+        <span class="cot-terms-label">Importante</span>
+        <p class="cot-terms-text">Este servicio se presta bajo nuestros <a href="https://drive.google.com/file/d/1PA-ZSt4KnyY5dpxXzgkIk6-yfGlV2eF8/view?usp=drive_link" target="_blank" rel="noopener">términos y condiciones</a>. Al avanzar con esta propuesta, ambas partes los aceptan.</p>
+      </div>
+
+      <div class="cot-garantia-badge">
+        <span class="cot-garantia-tag">Garantía 30-60-90</span>
+        <p class="cot-garantia-text">Estamos contigo hasta que el clon quede instalado en su trabajo.</p>
+      </div>
+
+      <div class="block block-notes-container">
+        <span class="block-eyebrow">Notas</span>
+      </div>
+      <div class="multi-box notas-box" data-field="Notas"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Go Pharma · CAI-050</span>
+      </div>
+    </section>
+
+    <!-- 9 · Próximos pasos: qué hacer y a quién escribir (última slide) -->
+    <section class="slide s-next">
+      <span class="counter">10 / 10</span>
+      <p class="eyebrow">10 · Próximos pasos</p>
+      <h2>Tres pasos para arrancar.</h2>
+      <p class="sub">Esto es lo que sigue cuando Go Pharma confirme la propuesta.</p>
+
+      <div class="nx-steps">
+        <div class="nx-step acc-y">
+          <span class="nx-num">1</span>
+          <b>Fecha y lugar</b>
+          <p>Confirmamos con Go Pharma cuándo y dónde se hace la charla de la Etapa 1.</p>
+        </div>
+        <div class="nx-step acc-o">
+          <span class="nx-num">2</span>
+          <b>Levantamientos</b>
+          <p>Agendamos los levantamientos por área, con Comercialización primero, y los accesos necesarios.</p>
+        </div>
+        <div class="nx-step acc-w">
+          <span class="nx-num">3</span>
+          <b>Reunión de arranque</b>
+          <p>Una reunión de unos 30 minutos para acordar el calendario y el orden de las etapas.</p>
+        </div>
+      </div>
+
+      <div class="nx-contact">
+        <div class="nx-card nx-ase">
+          <span class="nx-label">¿Dudas? Escribe a tu asesora comercial</span>
+          <b class="nx-name">María Iribarren</b>
+          <span class="nx-role">Asesora comercial</span>
+          <p class="nx-line"><a href="mailto:miribarren@intezia.com">miribarren@intezia.com</a></p>
+          <p class="nx-line">+58 414 0570056</p>
+        </div>
+        <div class="nx-card nx-emp">
+          <span class="nx-label">Intezia</span>
+          <p class="nx-line">Intezia C.A J-505657950</p>
+          <p class="nx-line"><a href="mailto:servicio@intezia.com">servicio@intezia.com</a></p>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Go Pharma · CAI-050</span>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

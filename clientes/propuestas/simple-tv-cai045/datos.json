@@ -1,0 +1,499 @@
+{
+ "version": 3,
+ "cliente": {
+  "nombre": "Simple TV",
+  "slug": "simple-tv-cai045",
+  "codigo": "CAI-045",
+  "nombre_pie": "Simple TV"
+ },
+ "division": "educacion",
+ "alianza": false,
+ "eje": "Formación en IA como competencia transversal, no atada a una herramienta: webinar de lanzamiento para toda la organización, Habilidades con Copilot para 70 personas (grupo de TI avanzado y grupo corporativo, con levantamiento de información en cada área) y entrenamiento de Claude para los 10 directivos",
+ "origen": "Minuta de la reunión con Simple TV (Talento Humano), instrucciones de Ivana (09/10/2026) con el grupo final de 70 personas y las propuestas CAI-014 (base de los temarios de Habilidades) y CAI-015 (base del entrenamiento de Claude), ambas del 07/09/2026",
+ "fuente_insumo": "Minuta de la reunión e instrucciones de Ivana (09/10/2026); horas según su dimensionamiento: grupos de hasta 25 personas y cada temario contado por grupo",
+ "meta_tipo": "Capacitación In-Company · Servicio de Habilidades · Webinar de lanzamiento (2 h) + Habilidades con Copilot para 70 personas (levantamiento 12 h, temario de TI 24 h, temario corporativo 16 h) + entrenamiento de Claude para 10 directivos (3 h) · 57 h · compacto v3. Segunda ola sin cotizar",
+ "metodo_antes_de_ruta": true,
+ "omitir": [
+  "pago"
+ ],
+ "vocabulario": {
+  "area": [
+   "bloque",
+   "bloques"
+  ],
+  "solucion": [
+   "entregable",
+   "entregables"
+  ]
+ },
+ "portada": {
+  "titulo_lineas": [
+   "Tiempo para lo estratégico",
+   "con inteligencia artificial"
+  ],
+  "titulo_destacado": "en Simple TV",
+  "lead": "Un webinar muestra en vivo cuánto tiempo libera la IA. Después, 70 personas aprenden fundamentos de IA válidos en cualquier plataforma, con práctica en **Copilot**, y 10 directivos entrenan **Claude** con un caso real.",
+  "hechos": [
+   {
+    "num": "70",
+    "texto": "personas con licencia de Copilot son el punto de partida de esta primera etapa.",
+    "resuelto_por": [
+     "LEV-1",
+     "TI-1",
+     "CORP-1"
+    ]
+   },
+   {
+    "num": "Sin atar",
+    "texto": "la formación a una sola herramienta: hoy es Copilot, pero la suite puede cambiar.",
+    "resuelto_por": [
+     "TI-1",
+     "CORP-1"
+    ]
+   },
+   {
+    "num": "2 grupos",
+    "texto": "con perfiles distintos: TI, más técnico, y el corporativo, con fundamentos aplicados.",
+    "resuelto_por": [
+     "TI-1",
+     "CORP-1"
+    ]
+   }
+  ],
+  "fuente": "Fuente: minuta de la reunión con Simple TV."
+ },
+ "carriles": [
+  {
+   "id": "formacion",
+   "nombre": "Formación en IA",
+   "nombre_corto": "Formación",
+   "color": "amarillo"
+  }
+ ],
+ "fases": [
+  {
+   "id": "F1",
+   "titulo": "Lanzamiento",
+   "descripcion": "webinar y levantamiento en cada área"
+  },
+  {
+   "id": "F2",
+   "titulo": "Formación",
+   "descripcion": "dos temarios y Claude para directivos",
+   "destacada": true
+  }
+ ],
+ "frentes": [
+  {
+   "id": "A",
+   "carril": "formacion",
+   "nombre": "Webinar de lanzamiento",
+   "celdas": {
+    "F1": "Webinar para toda la organización, con demostraciones en vivo.",
+    "F2": ""
+   }
+  },
+  {
+   "id": "B",
+   "carril": "formacion",
+   "nombre": "Habilidades con Copilot",
+   "celdas": {
+    "F1": "Un levantamiento con el director de cada área y su mano derecha operativa.",
+    "F2": "Temario avanzado para TI y temario corporativo, con práctica en Copilot."
+   }
+  },
+  {
+   "id": "C",
+   "carril": "formacion",
+   "nombre": "Claude para directivos",
+   "celdas": {
+    "F1": "",
+    "F2": "Un caso real de cada directivo, resuelto en vivo con Claude."
+   }
+  }
+ ],
+ "areas": [
+  {
+   "id": "WEB",
+   "nombre": "Toda la organización",
+   "nombre_catalogo": "Toda la organización",
+   "composicion": "Webinar abierto a todos los colaboradores, directivos incluidos",
+   "carril": "formacion",
+   "frente": "A",
+   "para_que": "Mostrar en vivo cuánto tiempo puede liberar la IA en el trabajo diario.",
+   "soluciones": [
+    {
+     "id": "WEB-1",
+     "entregable": "Webinar de lanzamiento con demostraciones en vivo",
+     "h": 2,
+     "fase": "F1",
+     "detalle": "Webinar de 2 h para toda la organización, enfocado en productividad con IA y no atado a una herramienta. Título propuesto: «Tu tiempo, de vuelta: la IA en el trabajo diario de Simple TV». Enfoque: demostrar en vivo, más que explicar; el mensaje es liberar tiempo para el trabajo estratégico; efecto «wow» con ejemplos del negocio. Esquema: apertura y por qué ahora; la IA en tu día a día; demostración con un caso de producción deportiva (guion de transmisión y coordinación, ejemplo armado por Intezia); demostración en vivo de análisis de métricas de visualizaciones; buenas prácticas de ética y seguridad; preguntas y cierre. Detalle completo en la hoja de temarios.",
+     "incluye": [
+      "Productividad con IA para el trabajo diario de cualquier área",
+      "Demostración con un caso de producción deportiva",
+      "Demostración en vivo: análisis de métricas de visualizaciones",
+      "Buenas prácticas de ética y seguridad de datos, en pocas palabras"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "LEV",
+   "nombre": "Líderes de área",
+   "nombre_catalogo": "Líderes de área",
+   "composicion": "El director de cada una de las 12 áreas y su mano derecha operativa",
+   "carril": "formacion",
+   "frente": "B",
+   "para_que": "Curar cada temario con tareas reales y detectar prácticas comunes entre las áreas.",
+   "soluciones": [
+    {
+     "id": "LEV-1",
+     "entregable": "Temarios curados con cada área y tareas comunes detectadas",
+     "h": 12,
+     "fase": "F1",
+     "detalle": "Levantamiento de información con cada líder de área (en la minuta y en el brief interno se llama kickoff): el director y su «plus one», el mando medio que conoce la operativa, durante ~1 h por área, 12 áreas (IT, Ingeniería, Customer Experience, Nuevos Negocios y Planificación Financiera, Marketing/Comunicaciones/Producto, PMO, Talento, Dirección Ejecutiva/Auditoría/Riesgo/Compliance, Legal, Comercial, Finanzas y Programación y Curaduría) = 12 h. Sirve para curar cada temario, encontrar prácticas reales que impacten, detectar tareas comunes entre áreas y tomar la medición previa (antes) del seguimiento. Puede ser presencial o virtual (no se menciona en el deck: lo negocia ventas).",
+     "incluye": [
+      "Un levantamiento con cada director y su mano derecha operativa",
+      "Prácticas reales que impactan, por área",
+      "Tareas comunes entre áreas",
+      "Medición previa: el punto de partida de cada área"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "TI",
+   "nombre": "Grupo TI (avanzado)",
+   "nombre_catalogo": "Grupo TI (avanzado)",
+   "composicion": "28 personas: IT (17) e Ingeniería (11)",
+   "carril": "formacion",
+   "frente": "B",
+   "para_que": "Optimizar su trabajo técnico con Copilot y las herramientas que ya tienen.",
+   "soluciones": [
+    {
+     "id": "TI-1",
+     "entregable": "Temario de 12 h para IT e Ingeniería: Copilot a nivel avanzado",
+     "h": 24,
+     "fase": "F2",
+     "detalle": "Temario avanzado de 12 h para las 28 personas de IT (17) e Ingeniería (11). Grupos de hasta 25 personas: 2 grupos x 12 h = 24 h. Base: CAI-014 re-curada con este contexto (ver hoja de temarios). Las herramientas técnicas específicas que ya tienen no constan en el repositorio: el módulo 5 se define en el levantamiento.",
+     "incluye": [
+      "Copilot a nivel avanzado, aplicado a tareas técnicas reales",
+      "Prompts y contexto para tareas técnicas",
+      "Documentación, diagnóstico y automatización de tareas repetitivas",
+      "Buenas prácticas con ética y seguridad de datos"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "CORP",
+   "nombre": "Grupo corporativo",
+   "nombre_catalogo": "Grupo corporativo",
+   "composicion": "42 personas de 10 áreas, entre ellas Customer Experience, Talento y Legal",
+   "carril": "formacion",
+   "frente": "B",
+   "para_que": "Usar la IA para ser más productivos y efectivos, con práctica real en Copilot.",
+   "soluciones": [
+    {
+     "id": "CORP-1",
+     "entregable": "Temario de 8 h de fundamentos de IA, con práctica en Copilot",
+     "h": 16,
+     "fase": "F2",
+     "detalle": "Temario de 8 h para las 42 personas del grupo corporativo: Customer Experience (10), Nuevos Negocios y Planificación Financiera (8), Marketing, Comunicaciones y Producto (5), PMO (5), Talento (5), Dirección Ejecutiva, Auditoría, Riesgo y Compliance (4), Legal (2), Comercial (1), Finanzas (1) y Programación y Curaduría (1). Grupos de hasta 25 personas: 2 grupos x 8 h = 16 h. Base: CAI-014 re-curada (ver hoja de temarios).",
+     "incluye": [
+      "Fundamentos de IA para la productividad y la efectividad",
+      "Práctica en Copilot con tareas reales de cada área",
+      "Ejemplos de uso acordes a la función de cada área",
+      "Buenas prácticas con ética y seguridad de datos"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "CLA",
+   "nombre": "Directivos",
+   "nombre_catalogo": "Directivos",
+   "composicion": "10 directivos del comité ejecutivo, en un solo grupo y presencial",
+   "carril": "formacion",
+   "frente": "C",
+   "para_que": "Llevar la IA a la decisión y a la comunicación ejecutivas, con un caso real por directivo.",
+   "soluciones": [
+    {
+     "id": "CLA-1",
+     "entregable": "Entrenamiento de Claude con un caso real por directivo",
+     "h": 3,
+     "fase": "F2",
+     "detalle": "Entrenamiento presencial de 3 h para los 10 directivos del comité ejecutivo, en un solo grupo (base: CAI-015, que era para 12 directores). Va aparte de Habilidades: en Habilidades se ve Copilot y aquí se ve Claude. Los 10 directivos también participan en Habilidades con el grupo de su área.",
+     "incluye": [
+      "Claude aplicado a la decisión y a la comunicación ejecutiva",
+      "Un caso real propio de cada directivo, resuelto en vivo",
+      "Guía de referencia para seguir aplicando Claude",
+      "Presencial, en un solo grupo de 10 directivos"
+     ]
+    }
+   ]
+  }
+ ],
+ "alcance": {
+  "sin_conteo_por_fila": true,
+  "titulo": "Tres componentes de formación en IA.",
+  "subtitulo": "Lanzamos con un webinar, formamos en **Copilot** a 70 personas y entrenamos en **Claude** a 10 directivos.",
+  "fuera_alcance": [
+   "La segunda ola: se define y se cotiza después de esta etapa.",
+   "La política interna de uso de IA: no se redacta aquí; ética y seguridad se alinean con la que Simple TV defina.",
+   "Las licencias de Copilot y de Claude: ya las tiene Simple TV y no forman parte de esta inversión."
+  ]
+ },
+ "metodo": {
+  "titulo": "Así trabajamos, del webinar a la medición.",
+  "subtitulo": "Cada temario se cura con cada área y se mide antes y después.",
+  "pasos": [
+   {
+    "titulo": "Lanzamos",
+    "texto": "Un webinar para toda la organización muestra en vivo qué libera la IA."
+   },
+   {
+    "titulo": "Levantamos",
+    "texto": "Con cada director y su mano derecha curamos el temario y hallamos tareas reales."
+   },
+   {
+    "titulo": "Formamos",
+    "texto": "Dos temarios con práctica en Copilot y un entrenamiento de Claude para directivos."
+   },
+   {
+    "titulo": "Medimos",
+    "texto": "Medición antes y después, y seguimiento a 30, 60 y 90 días."
+   }
+  ],
+  "por_que_orden": "Primero el webinar muestra en vivo qué es posible; después el levantamiento cura cada temario con tareas reales de cada área; al final se forma por grupos y se mide el cambio.",
+  "practica": [
+   {
+    "titulo": "Fundamentos que sirven en cualquier suite",
+    "texto": "Se enseñan criterios y prácticas de uso de la IA; se practica en Copilot y lo aprendido aplica si Simple TV cambia de herramienta."
+   },
+   {
+    "titulo": "Ética y seguridad en las buenas prácticas",
+    "texto": "Se alinean con el borrador de política interna de Simple TV, que aún no tenemos y se incorpora cuando lo compartan."
+   },
+   {
+    "titulo": "Grupos de hasta 25 personas",
+    "texto": "TI y corporativo se dividen en grupos pequeños para practicar; los directivos trabajan juntos, con un caso real cada uno."
+   }
+  ],
+  "datos": "Los casos de práctica salen de tareas reales de cada área. Simple TV decide qué información se usa en cada ejercicio, y la ética y la seguridad de datos se enseñan desde el primer día."
+ },
+ "logistica": {
+  "modalidad": "Se define con Simple TV para cada componente.",
+  "participantes": "70 personas: 28 en TI y 42 en el grupo corporativo, directivos incluidos.",
+  "arranque": "La fecha se acuerda con Simple TV en la reunión de arranque."
+ },
+ "seguimiento": {
+  "rango": "30, 60 y 90 días",
+  "texto": "Desde el cierre de Habilidades",
+  "items": [
+   {
+    "dias": "30 días",
+    "texto": "Adopción y uso real de Copilot"
+   },
+   {
+    "dias": "60 días",
+    "texto": "Tiempo liberado, antes y después"
+   },
+   {
+    "dias": "90 días",
+    "texto": "Métricas de adopción para el comité"
+   }
+  ]
+ },
+ "ruta": {
+  "titulo": "Del webinar al tiempo liberado.",
+  "subtitulo": "El calendario y los grupos se acuerdan en la reunión de arranque. La **garantía y el seguimiento** corren desde el cierre de Habilidades.",
+  "nota": "Las {h_total} horas de trabajo son una proyección: {h_f1} h de lanzamiento y levantamiento y {h_f2} h de formación. Cada temario se cuenta una vez por grupo de hasta 25 personas.",
+  "hitos": [
+   {
+    "titulo": "Webinar de lanzamiento",
+    "texto": "Toda la organización ve cuánto tiempo puede liberar la IA."
+   },
+   {
+    "titulo": "Levantamiento",
+    "texto": "Cada área deja curado su temario con tareas reales."
+   },
+   {
+    "titulo": "Formación en Copilot",
+    "texto": "TI y el grupo corporativo practican con tareas de su día a día."
+   },
+   {
+    "titulo": "Entrenamiento de Claude",
+    "texto": "Cada directivo resuelve un caso real propio."
+   },
+   {
+    "titulo": "30 · 60 · 90 días",
+    "texto": "Seguimiento de la adopción y del tiempo liberado, antes y después."
+   }
+  ],
+  "siguiente_etapa": {
+   "titulo": "Segunda ola",
+   "texto": "Después de esta etapa, Simple TV evaluará extender la formación a más personas, hacia su meta del **80 % de la organización**. Se define y se cotiza más adelante."
+  }
+ },
+ "entregables": {
+  "titulo": "Lo que recibe Simple TV.",
+  "subtitulo": "Lo que se llevan: **{n_entregables_txt}**, más el seguimiento a {rango_seguimiento} que mide su efecto.",
+  "etiqueta_transversales": "Para todo el proyecto",
+  "transversales": [
+   "Contenido de valor para llevar y seguir aplicando.",
+   "Medición antes y después, y seguimiento a 30, 60 y 90 días."
+  ],
+  "etiqueta_valor": "Valor inmediato",
+  "valor_inmediato": [
+   "Con el webinar: ven en vivo cuánto tiempo libera la IA.",
+   "Con el levantamiento: temarios con tareas reales de cada área.",
+   "Con la formación: práctica real y un caso por directivo."
+  ]
+ },
+ "retorno": {
+  "modo": "metodo",
+  "posiciones": false,
+  "titulo": "Retorno esperado: tiempo liberado.",
+  "subtitulo": "Se mide antes y después con las tareas reales de cada área y se sigue a 30, 60 y 90 días.",
+  "etiqueta_pasos": "Cómo se calcula, área por área",
+  "pasos": [
+   {
+    "titulo": "Tareas elegidas",
+    "texto": "En el levantamiento, cada área elige las tareas que más tiempo le consumen."
+   },
+   {
+    "titulo": "Tiempo antes",
+    "texto": "Cuánto toma hoy cada tarea: es la **medición previa** de cada área."
+   },
+   {
+    "titulo": "Tiempo después",
+    "texto": "Lo que toma la misma tarea con Copilot, ya formado el equipo."
+   },
+   {
+    "titulo": "Horas liberadas",
+    "texto": "Diferencia entre ambos tiempos, por persona y por área."
+   },
+   {
+    "titulo": "Valor del tiempo",
+    "texto": "Horas liberadas multiplicadas por el valor hora que {cliente_corto} valide."
+   }
+  ],
+  "etiqueta_metas": "Calendario de garantía, desde el cierre de Habilidades",
+  "metas": [
+   {
+    "dias": "30 días",
+    "texto": "Adopción: uso real de Copilot en las tareas elegidas por cada área."
+   },
+   {
+    "dias": "60 días",
+    "texto": "Nuevas prácticas y horas liberadas, medidas antes y después."
+   },
+   {
+    "dias": "90 días",
+    "texto": "Métricas de adopción y de tiempo liberado para presentar al comité."
+   }
+  ],
+  "destino": [
+   {
+    "rotulo": "Tiempo para lo estratégico",
+    "texto": "Con el tiempo liberado, las personas dedican **más horas al trabajo estratégico**."
+   },
+   {
+    "rotulo": "Sirve en cualquier suite",
+    "texto": "Los fundamentos aplican aunque {cliente_corto} cambie de plataforma."
+   },
+   {
+    "rotulo": "Hacia la segunda ola",
+    "texto": "Con las métricas, {cliente_corto} decide cómo llevar la formación a **más personas**."
+   }
+  ],
+  "gancho": "A los 90 días del cierre de Habilidades, {cliente_corto} contará con métricas de adopción y de tiempo liberado."
+ },
+ "inversion": {
+  "notas": [
+   "Licencias aparte: el proyecto usa las licencias de Microsoft 365 Copilot y de Claude que Simple TV ya tiene.",
+   "Garantía 30-60-90: seguimiento a 30, 60 y 90 días desde el cierre de Habilidades, con lo aprendido en uso.",
+   "Términos y condiciones: los del enlace de «Importante», que ambas partes aceptan al avanzar con esta propuesta."
+  ],
+  "duracion": "Webinar de lanzamiento, Habilidades con Copilot (levantamiento y dos temarios) y entrenamiento de Claude para directivos, con seguimiento y garantía a {rango_seguimiento}. {h_total} horas de trabajo.",
+  "programa": [
+   "Formación en IA para Simple TV (CAI-045): tres componentes.",
+   "Webinar de lanzamiento para toda la organización: {h_frente_a} h.",
+   "Habilidades con Copilot, por grupos de hasta 25: levantamiento, {h_area_lev} h, y dos temarios, {h_area_ti+corp} h.",
+   "Entrenamiento de Claude para 10 directivos, un solo grupo: {h_frente_c} h.",
+   "Total: {h_total} h de trabajo. La segunda ola queda fuera."
+  ],
+  "partes": [
+   {
+    "nombre": "Webinar",
+    "detalle": "Toda la organización"
+   },
+   {
+    "nombre": "TI",
+    "detalle": "28 personas"
+   },
+   {
+    "nombre": "Corporativo, resto de áreas",
+    "detalle": "42 personas"
+   },
+   {
+    "nombre": "Claude",
+    "detalle": "10 directivos"
+   }
+  ],
+  "etiqueta_partes": "Valor por componente",
+  "etiqueta_suma": "Suma de los componentes"
+ },
+ "proximos_pasos": {
+  "asesora": {
+   "nombre": "María Iribarren",
+   "cargo": "Asesora comercial",
+   "correo": "miribarren@intezia.com",
+   "telefono": "+58 414 0570056"
+  },
+  "pasos": [
+   {
+    "titulo": "Fecha de arranque",
+    "texto": "Confirmamos con Simple TV la fecha del webinar y la de arranque de cada componente."
+   },
+   {
+    "titulo": "Levantamientos y accesos",
+    "texto": "Agendamos el levantamiento con cada director y su mano derecha, y coordinamos los accesos."
+   },
+   {
+    "titulo": "Reunión de arranque",
+    "texto": "Una reunión de unos 30 minutos para acordar el calendario y los grupos, y alinear lo que viene."
+   }
+  ]
+ },
+ "siglas_ok": [
+  "IA",
+  "TI",
+  "IT"
+ ],
+ "supuestos": [
+  "Una sola propuesta con tres componentes (webinar, Habilidades con Copilot y entrenamiento de Claude para directivos). La hoja de cotización lleva 4 casillas de valor a la izquierda (inversion.partes), con el nombre que dio Ivana el 13/10/2026: Webinar, TI, Corporativo (resto de áreas) y Claude. El levantamiento de información (12 h, 12 áreas x ~1 h) no tiene casilla propia: queda incluido en el valor de TI (IT e Ingeniería, 2 áreas) y de Corporativo (las otras 10 áreas); por eso las casillas no muestran horas (sumarían 45 h, no 57 h). Confirmar con Ivana o ventas cómo se reparte su valor. Historia: el 09/10/2026 hubo 3 casillas (webinar, Habilidades con Copilot y Claude) y se quitaron; el 13/10/2026 se pidieron 4 y se armaron como Webinar, Levantamiento, Dos temarios de Copilot y Claude; ese mismo día Ivana las redefinió con los nombres de arriba. Es nueva: CAI-014 y CAI-015 (07/09/2026) quedan como base y no se tocan. Código CAI-045, Educación, sin alianza (respuesta de Ivana, 09/10/2026).",
+  "Horas con el dimensionamiento de Ivana: grupos de hasta 25 personas y cada temario contado por grupo. TI: 28 personas = 2 grupos x 12 h = 24 h. Corporativo: 42 personas = 2 grupos x 8 h = 16 h. Levantamiento: 12 áreas x ~1 h = 12 h. Webinar: 2 h. Claude: un solo grupo de 10 directivos, 3 h. Total 57 h. Ivana dijo «usa ese estándar para las horas»: se entendió 12 h para TI (avanzado) y 8 h para el corporativo, como se propuso; confirmar si era otra cosa.",
+  "Ni fechas, ni semanas, ni sesiones en la propuesta (§4.23). Interno: webinar la semana del 26 de octubre; ejecución desde el 26 de octubre hasta la primera o segunda semana de diciembre; retoman el 20 de enero; segunda ola a fines de enero o febrero de 2027.",
+  "Facilidad de pago omitida (omitir: pago) y modalidad de Habilidades sin mencionar: Ivana dijo «no lo menciones, ventas lo negocia». Neliana prefiere dejar pagado en diciembre lo que pueda, incluso prepagando enero de 2027, con cuotas escalonadas durante la ejecución (minuta).",
+  "El levantamiento es lo que la minuta llama kickoff por área (director + «plus one», ~1 h); por indicación de Ivana se llama levantamiento de información. La reunión de arranque de ~30 min se mantiene aparte, como tercer paso de logística.",
+  "Herramientas de TI: las propuestas anteriores de la cuenta solo registran Microsoft 365 / Copilot (con segmentación Premium y básica) y Claude (directivos); no hay herramientas técnicas concretas. El temario de TI no las inventa: su módulo 5 se define en el levantamiento.",
+  "Política interna: no se tiene su borrador (indicación de Ivana). Ética y seguridad van dentro de las buenas prácticas, alineadas con ese borrador cuando lo compartan; redactar la política queda fuera de alcance.",
+  "Demostraciones del webinar: producción deportiva (caso aplicado que mencionó Neliana; ejemplo armado por Intezia, no un caso logrado) y análisis de métricas de visualizaciones en vivo. Se menciona sin nombrar a quien la desarrolla. Confirmar que esté lista antes del webinar.",
+  "Los 10 directivos (comité ejecutivo) están entre los 70 y participan en Habilidades con el grupo de su área; además tienen aparte el entrenamiento de Claude. Se asume que los 10 tienen licencia de Claude (la tenían los 12 directores de la CAI-015). Sin mención al acceso a Claude desde Venezuela (indicación de Ivana: «eso se resuelve»).",
+  "Ejemplos por área del temario corporativo: parten de los de la CAI-014 (ilustrativos, por analogía; Marketing y Talento los dio el usuario) y se afinan en el levantamiento.",
+  "El «Certificado de participación» no va (la CAI-014 y la CAI-015 lo tenían): solo si el cliente lo pide.",
+  "Retorno en modo método: no hay cifras del cliente. Meta del 80 % de la organización: dicha por el cliente en la reunión, se cita sin año en la etapa siguiente. El presupuesto de referencia de la propuesta anterior (~USD 50.000) y el trámite de proveedor y NDA son internos y no van en el deck.",
+  "Asesora: María Iribarren (la de toda la cuenta; la minuta dice que coordina el trámite de proveedor). Ivana no la confirmó explícitamente.",
+  "Ivana (09/10/2026) pidió quitar de toda la propuesta, incluida la hoja de temarios, cualquier mención a que la gente pida formarse (demanda interna, invitación abierta, «sin obligar a nadie», «ganas de más»): el webinar se plantea como una demostración de cuánto tiempo libera la IA."
+ ],
+ "pendientes": [
+  "Definir el valor de cada una de las 4 casillas (Webinar, TI, Corporativo y Claude, con el levantamiento repartido entre TI y Corporativo), el descuento y el total (campos vacíos para ventas).",
+  "Confirmar con Neliana el desglose exacto de personas por área (la minuta hablaba de 40 a 50; el grupo final es de 70).",
+  "Confirmar que la demostración de métricas de visualizaciones está lista para el webinar.",
+  "Confirmar si el NDA incluye a los consultores que ejecutan (María coordina con el área administrativa).",
+  "Pedir a Simple TV el borrador de su política interna de uso de IA cuando lo tengan.",
+  "La propuesta pasa por el equipo de servicio antes de enviarse: dejar meta.json en Borrador hasta entonces."
+ ]
+}

@@ -1,0 +1,560 @@
+{
+ "version": 3,
+ "cliente": {
+  "nombre": "ESTEI",
+  "slug": "estei-ceo-clon-digital",
+  "codigo": "CAI-058",
+  "nombre_pie": "ESTEI"
+ },
+ "division": "educacion",
+ "alianza": false,
+ "eje": "Clon digital y skills con Claude para el CEO de ESTEI y extensión a sus cuatro directores (Finanzas, Tecnología, Ventas y Atención al Cliente, y Marketing)",
+ "origen": "Contexto pegado por Ivana el 20/10/2026 (tres fases: CEO con IA y clon digital, skills del CEO y extensión al equipo directivo) y sus respuestas: Habilidades compacto v3, clon de 6 h, 2 h por skill, directores con clon de 6 h y una skill de 2 h, hoja de inversión única y facilidad de pago aparte en 3 cuotas por fase, contacto Jean Iovino",
+ "fuente_insumo": "Contexto pegado por Ivana (sin Ficha Comercial ni transcripción de la reunión); propuesta anterior de ESTEI CAP-044 solo como referencia de cuenta",
+ "meta_tipo": "Capacitación In-Company · Clon digital y skills del CEO y de 4 directores (50 h) · hoja de inversión única y facilidad de pago en 3 cuotas · formato compacto v3",
+ "siglas_ok": [
+  "IA",
+  "CEO",
+  "CRM"
+ ],
+ "vocabulario": {
+  "solucion": [
+   "entregable",
+   "entregables"
+  ],
+  "area": [
+   "bloque",
+   "bloques"
+  ]
+ },
+ "supuestos": [
+  "Servicio y formato (Ivana, 20/10/2026): Habilidades, plantilla compacta v3, código CAI-058 (el último registrado era CAI-057), Educación y sin alianza. El contacto que ve ESTEI en la última slide es Jean Iovino, CEO de Intezia (Ivana: «coloca como contacto a Jean»), no una asesora comercial; correo y teléfono dados por Ivana.",
+  "Estructura (contexto de Ivana): tres fases. 1) CEO con IA y clon digital (instalación de Claude, carga del contexto, clon de 6 h). 2) Skills del CEO: procesos con IA, edición de video, diseño, marketing y redes, integración con el CRM (GoHighLevel) y consejo ejecutivo. 3) Extensión a cuatro directores (Finanzas, Tecnología, Ventas y Atención al Cliente, y Marketing) con clon y skills, medición del impacto y temario optimizado.",
+  "Horas (respuesta de Ivana a mi propuesta): clon de 6 h; cada skill de 2 h; cada director, clon de 6 h y una skill de 2 h. Total 50 h: fase 1 = 6 h, fase 2 = 12 h (6 skills), fase 3 = 32 h (4 directores). **La instalación de Claude y la carga del contexto van dentro de las 6 h del clon** (la fuente solo da horas para el clon); si necesitan horas propias, el total cambia.",
+  "«Sugerencia de 1 o 2 skills por sesión según el tiempo» (contexto de Ivana): el número de sesiones y su duración no van en la propuesta (§4.23) y se acuerdan en el kickoff; queda solo como referencia interna.",
+  "Skills de los directores: la fuente dice «desarrollo de skills» sin nombrarlas; se dejó una skill de 2 h por director, a definir con cada uno en el arranque. Si son más, cambian las horas.",
+  "«Medición del impacto y entrega del temario optimizado para cada una de estas áreas» (fase 3): sin horas propias; va como entregable transversal y en el cierre de la ruta.",
+  "Sin Ficha ni transcripción: los hechos de portada son de contenido (6 h de clon, 6 skills, 4 directores), no del cliente; no se afirman dolores ni cifras de ESTEI. El retorno va en modo método.",
+  "ESTEI tuvo una propuesta anterior (CAP-044, Claude de los fundamentos al Co-working, 20 colaboradores); el deck no la menciona ni afirma que ya usen Claude (§4.11). Los nombres de personas de ESTEI no van en el deck.",
+  "GoHighLevel es el CRM actual de ESTEI: el deck lo nombra como entorno que ya usan, no afirma migración (§4.11). Las licencias de Claude y de GoHighLevel quedan fuera de la propuesta; no se afirma un plan ni un valor de lista de Claude.",
+  "Facilidad de pago (Ivana): 3 cuotas ligadas a los hitos de las fases, 40 % al aprobar, 30 % al cerrar la fase 2 y 30 % al cerrar la fase 3 (propuesta mía, aceptada). Los montos quedan como campos vacíos para ventas.",
+  "**Calendario (Ivana, 20/10/2026, 5.ª ronda):** slide propia con fechas pautadas (`calendario` en `datos.json`, opción del generador): arranque el lunes 26 de octubre de 2026, **lunes, miércoles y viernes por la mañana**, encuentros de 2 h, y plazo **máximo de 2 meses**. Ivana escribió «2 sesiones por semana lunes, miércoles y viernes»: se leyó como **encuentros de 2 horas** los tres días, porque con solo dos por semana los 25 encuentros (50 h) tomarían 12 a 13 semanas y pasarían de los 2 meses; con tres por semana terminan el lunes 21 de diciembre. Un encuentro por cada 2 h de cada entregable en el orden del programa: clon del CEO (3), seis skills del CEO (6) y, por cada director (Finanzas, Tecnología, Ventas y Atención, Marketing), clon (3) y skill (1). **Es una excepción pedida por Ivana a la regla de Keiber (§4.23: ni semanas, ni sesiones, ni fechas en la propuesta);** en el deck se escribe «encuentro». El horario **9-11 es mío** («por las mañanas»); el orden y que cada director trabaje por separado también son supuestos míos. Los días sin actividad se agregan a `calendario.omitir_fechas` y el calendario se recorre solo (cada día omitido alarga el plazo)."
+ ],
+ "pendientes": [
+  "Confirmar quién es el CEO que recibe la propuesta en ESTEI y el sector de ESTEI (sin eso los hechos de portada son de contenido).",
+  "Confirmar las skills de cada director y si el CEO quiere más de las seis.",
+  "Confirmar si la instalación de Claude y la carga del contexto necesitan horas aparte de las 6 h del clon.",
+  "Confirmar que el correo de Jean y su teléfono pueden aparecer en la propuesta, y su cargo de contacto.",
+  "Confirmar quién contrata las licencias o el plan de Claude para el CEO y los cuatro directores y si ESTEI ya tiene GoHighLevel con acceso para la integración.",
+  "Ventas llena inversión, descuento, total y los montos de las 3 cuotas antes de enviar.",
+  "Confirmar que son 3 encuentros de 2 h por semana (lunes, miércoles y viernes) para cumplir el máximo de 2 meses, el horario exacto (se puso 9-11), el orden de los encuentros y los días sin actividad; y con Ivana o Keiber que el calendario con fechas se queda en la propuesta (excepción a §4.23)."
+ ],
+ "portada": {
+  "titulo_lineas": [
+   "Del CEO al equipo directivo,",
+   "con clon digital y skills de Claude"
+  ],
+  "titulo_destacado": "en {cliente_corto}",
+  "lead": "Este proyecto pone a **Claude** al centro de la dirección de {cliente_corto}: primero el **clon digital del CEO** y sus skills, y después el **clon y una skill** para cada uno de sus cuatro directores.",
+  "hechos": [
+   {
+    "num": "6 h",
+    "texto": "para crear el clon digital del CEO, con Claude configurado y el contexto de {cliente_corto} cargado.",
+    "resuelto_por": [
+     "CLO-1"
+    ]
+   },
+   {
+    "num": "6",
+    "texto": "skills del CEO: procesos, video, diseño, marketing y redes, CRM y consejo ejecutivo.",
+    "resuelto_por": [
+     "SKL-1",
+     "SKL-2",
+     "SKL-3",
+     "SKL-4",
+     "SKL-5",
+     "SKL-6"
+    ]
+   },
+   {
+    "num": "4",
+    "texto": "directores con clon digital y skill propia: Finanzas, Tecnología, Ventas y Atención, y Marketing.",
+    "resuelto_por": [
+     "DFI-1",
+     "DFI-2",
+     "DTE-1",
+     "DTE-2",
+     "DVE-1",
+     "DVE-2",
+     "DMA-1",
+     "DMA-2"
+    ]
+   }
+  ],
+  "fuente": "Contenido del proyecto; no son mediciones de {cliente_corto}."
+ },
+ "carriles": [
+  {
+   "id": "claude",
+   "nombre": "Claude",
+   "nombre_corto": "Claude",
+   "color": "amarillo"
+  }
+ ],
+ "areas": [
+  {
+   "id": "CLO",
+   "nombre": "Clon Digital del CEO",
+   "para_que": "Claude configurado con el contexto de ESTEI y su clon digital.",
+   "carril": "claude",
+   "frente": "A",
+   "soluciones": [
+    {
+     "id": "CLO-1",
+     "entregable": "Clon digital del CEO",
+     "h": 6,
+     "fase": "F1",
+     "detalle": "Referencia interna: configuración e instalación de Claude, carga completa del contexto y la información clave de ESTEI, y creación del clon digital del CEO (estimado inicial de 6 h).",
+     "incluye": [
+      "Configuración e instalación de Claude",
+      "Carga completa del contexto y la información clave de ESTEI",
+      "Creación del clon digital del CEO"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "SKL",
+   "nombre": "Skills del CEO",
+   "para_que": "Seis skills para procesos, video, diseño, marketing, CRM y consejo ejecutivo.",
+   "carril": "claude",
+   "frente": "A",
+   "soluciones": [
+    {
+     "id": "SKL-1",
+     "entregable": "Skill de Procesos con IA",
+     "h": 2,
+     "fase": "F2",
+     "detalle": "Referencia interna: se baja con el consultor el contexto de un proceso y se documenta en PDF o se sube a la plataforma actual de ESTEI; permite medir la cantidad de procesos y mapear la conexión entre departamentos.",
+     "incluye": [
+      "Contexto del proceso trabajado con el consultor",
+      "Documentado en PDF o en su plataforma actual",
+      "Medición de procesos y conexión entre departamentos"
+     ]
+    },
+    {
+     "id": "SKL-2",
+     "entregable": "Skill de Edición de Video",
+     "h": 2,
+     "fase": "F2",
+     "detalle": "Referencia interna: práctica de edición conjunta de videos con IA.",
+     "incluye": [
+      "Práctica de edición de videos con IA",
+      "Edición conjunta con el consultor"
+     ]
+    },
+    {
+     "id": "SKL-3",
+     "entregable": "Skill de Diseño",
+     "h": 2,
+     "fase": "F2",
+     "detalle": "Referencia interna: capacitación para crear y diseñar piezas completas con IA.",
+     "incluye": [
+      "Creación y diseño de piezas completas con IA"
+     ]
+    },
+    {
+     "id": "SKL-4",
+     "entregable": "Skills de Marketing y Redes",
+     "h": 2,
+     "fase": "F2",
+     "detalle": "Referencia interna: ideación de contenido, análisis de videos externos para replicarlos y creación de comerciales.",
+     "incluye": [
+      "Ideación de contenido",
+      "Análisis de videos externos para replicarlos",
+      "Creación de comerciales"
+     ]
+    },
+    {
+     "id": "SKL-5",
+     "entregable": "Skill de integración con el CRM",
+     "h": 2,
+     "fase": "F2",
+     "detalle": "Referencia interna: publicación con IA a través del CRM de ESTEI (GoHighLevel).",
+     "incluye": [
+      "Publicación con IA a través de GoHighLevel, su CRM"
+     ]
+    },
+    {
+     "id": "SKL-6",
+     "entregable": "Skill de Consejo Ejecutivo",
+     "h": 2,
+     "fase": "F2",
+     "detalle": "Referencia interna: varios agentes o skills con distintas personalidades que debaten los temas específicos que plantea el CEO.",
+     "incluye": [
+      "Varios agentes con distintas personalidades",
+      "Debaten los temas que el CEO les plantea"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "DFI",
+   "nombre": "Director de Finanzas",
+   "para_que": "Su clon digital y una skill propia para su área, con medición del impacto.",
+   "carril": "claude",
+   "frente": "A",
+   "soluciones": [
+    {
+     "id": "DFI-1",
+     "entregable": "Clon digital de Finanzas",
+     "h": 6,
+     "fase": "F3",
+     "detalle": "Referencia interna: creación del clon digital del director de finanzas (Finanzas), con la misma receta del clon del CEO."
+    },
+    {
+     "id": "DFI-2",
+     "entregable": "Skill de Finanzas",
+     "h": 2,
+     "fase": "F3",
+     "detalle": "Referencia interna: skill para el área de Finanzas; la fuente no dice cuál, se define con cada director en el arranque."
+    }
+   ]
+  },
+  {
+   "id": "DTE",
+   "nombre": "Director de Tecnología",
+   "para_que": "Su clon digital y una skill propia para su área, con medición del impacto.",
+   "carril": "claude",
+   "frente": "A",
+   "soluciones": [
+    {
+     "id": "DTE-1",
+     "entregable": "Clon digital de Tecnología",
+     "h": 6,
+     "fase": "F3",
+     "detalle": "Referencia interna: creación del clon digital del director de tecnología (Tecnología), con la misma receta del clon del CEO."
+    },
+    {
+     "id": "DTE-2",
+     "entregable": "Skill de Tecnología",
+     "h": 2,
+     "fase": "F3",
+     "detalle": "Referencia interna: skill para el área de Tecnología; la fuente no dice cuál, se define con cada director en el arranque."
+    }
+   ]
+  },
+  {
+   "id": "DVE",
+   "nombre": "Director de Ventas y Atención",
+   "para_que": "Su clon digital y una skill propia para su área, con medición del impacto.",
+   "carril": "claude",
+   "frente": "A",
+   "soluciones": [
+    {
+     "id": "DVE-1",
+     "entregable": "Clon digital de Ventas y Atención",
+     "h": 6,
+     "fase": "F3",
+     "detalle": "Referencia interna: creación del clon digital del director de ventas y atención (Ventas y Atención al Cliente), con la misma receta del clon del CEO."
+    },
+    {
+     "id": "DVE-2",
+     "entregable": "Skill de Ventas y Atención",
+     "h": 2,
+     "fase": "F3",
+     "detalle": "Referencia interna: skill para el área de Ventas y Atención al Cliente; la fuente no dice cuál, se define con cada director en el arranque."
+    }
+   ]
+  },
+  {
+   "id": "DMA",
+   "nombre": "Director de Marketing",
+   "para_que": "Su clon digital y una skill propia para su área, con medición del impacto.",
+   "carril": "claude",
+   "frente": "A",
+   "soluciones": [
+    {
+     "id": "DMA-1",
+     "entregable": "Clon digital de Marketing",
+     "h": 6,
+     "fase": "F3",
+     "detalle": "Referencia interna: creación del clon digital del director de marketing (Marketing), con la misma receta del clon del CEO."
+    },
+    {
+     "id": "DMA-2",
+     "entregable": "Skill de Marketing",
+     "h": 2,
+     "fase": "F3",
+     "detalle": "Referencia interna: skill para el área de Marketing; la fuente no dice cuál, se define con cada director en el arranque."
+    }
+   ]
+  }
+ ],
+ "alcance": {
+  "titulo": "Clon y skills, del CEO a cuatro directores.",
+  "subtitulo": "**{h_f1} horas** de clon, **{h_f2} horas** de skills del CEO y **{h_f3} horas** con el equipo directivo.",
+  "fuera_alcance": [
+   "Licencias de Claude y de GoHighLevel y sus accesos: no forman parte de esta propuesta y los autoriza {cliente_corto}.",
+   "Skills adicionales a las del CEO y a la de cada director: se acuerdan aparte, según lo que el equipo necesite.",
+   "Datos confidenciales o de personas: no se cargan sin autorización de {cliente_corto}, y decidir sobre personas es humano."
+  ],
+  "sin_conteo_por_fila": true
+ },
+ "metodo": {
+  "titulo": "Así trabajamos con el CEO y sus directores.",
+  "subtitulo": "Cada clon y cada skill se construyen con casos reales de quien los va a usar.",
+  "quien_construye": "**Intezia guía** y cada persona construye su **clon y sus skills** con su propio contexto.",
+  "por_que_orden": "Primero el clon del CEO, que reúne el contexto de {cliente_corto}; luego sus skills, que lo usan; al final cada director repite el método con su propio clon.",
+  "practica": [
+   {
+    "titulo": "Contexto real",
+    "texto": "El clon se alimenta del contexto y la información clave de {cliente_corto}, que cada persona aporta."
+   },
+   {
+    "titulo": "Skills a la medida",
+    "texto": "Cada skill se construye sobre una tarea real de quien la usa, con Intezia como guía."
+   },
+   {
+    "titulo": "Decisión humana",
+    "texto": "El clon y las skills apoyan, pero la decisión final sigue siendo del CEO y de cada director."
+   }
+  ],
+  "datos": "Solo se carga la información que {cliente_corto} autoriza: ningún dato confidencial o personal entra sin su permiso.",
+  "pasos": [
+   {
+    "titulo": "Construimos",
+    "texto": "Junto a cada persona, con sus casos reales."
+   },
+   {
+    "titulo": "Probamos",
+    "texto": "Con quien lo usa, sobre tareas reales de su trabajo."
+   },
+   {
+    "titulo": "Adoptamos",
+    "texto": "Cada persona lo usa en su trabajo diario."
+   },
+   {
+    "titulo": "Medimos",
+    "texto": "El tiempo recuperado contra la línea base."
+   }
+  ]
+ },
+ "logistica": {
+  "modalidad": "Presencial u online, según se acuerde en la reunión de arranque.",
+  "participantes": "El CEO de {cliente_corto} y sus cuatro directores: Finanzas, Tecnología, Ventas y Atención, y Marketing.",
+  "arranque": "{cliente_corto} confirma el arranque del lunes 26 de octubre; los horarios se ajustan en la reunión de arranque.",
+  "ritmo": "Por las mañanas, sin frenar la operación diaria del CEO y de cada director."
+ },
+ "fases": [
+  {
+   "id": "F1",
+   "titulo": "Clon",
+   "descripcion": "**CEO con IA y clon digital**"
+  },
+  {
+   "id": "F2",
+   "titulo": "Skills",
+   "descripcion": "**skills del CEO**"
+  },
+  {
+   "id": "F3",
+   "titulo": "Equipo",
+   "descripcion": "**extensión al equipo directivo**",
+   "destacada": true
+  }
+ ],
+ "frentes": [
+  {
+   "id": "A",
+   "carril": "claude",
+   "nombre": "CEO y equipo directivo",
+   "celdas": {
+    "F1": "Claude configurado con el contexto de la empresa y el clon digital del CEO.",
+    "F2": "Seis skills del CEO: procesos, video, diseño, marketing, CRM y consejo ejecutivo.",
+    "F3": "Clon digital y una skill para cada uno de los cuatro directores, con medición."
+   }
+  }
+ ],
+ "entregables": {
+  "transversales": [
+   "Línea base del tiempo de cada tarea a medir",
+   "Medición del impacto y temario optimizado por área"
+  ],
+  "valor_inmediato": [
+   "Claude instalado con el contexto de {cliente_corto}",
+   "Clon digital del CEO funcionando"
+  ],
+  "subtitulo": "Lo que se llevan: **clon y skills de cada persona**, más el seguimiento a {rango_seguimiento} que mide su efecto."
+ },
+ "pago": {
+  "cuotas": [
+   {
+    "cuando": "Al aprobar",
+    "hito": "Aprobación de la propuesta, para iniciar la fase 1 (clon digital del CEO).",
+    "pct": 40
+   },
+   {
+    "cuando": "Cierre fase 2",
+    "hito": "Cierre de la fase 2: seis skills del CEO listas.",
+    "pct": 30
+   },
+   {
+    "cuando": "Cierre fase 3",
+    "hito": "Cierre de la fase 3: clones y skills del equipo directivo y medición.",
+    "pct": 30
+   }
+  ],
+  "subtitulo": "Cada cuota se paga al cumplirse un hito del proyecto."
+ },
+ "proximos_pasos": {
+  "etiqueta_contacto": "¿Dudas? Escribe al CEO de Intezia",
+  "asesora": {
+   "nombre": "Jean Iovino",
+   "cargo": "CEO de Intezia",
+   "correo": "jean@intezia.com",
+   "telefono": "+58 424 1911819"
+  },
+  "pasos": [
+   {
+    "titulo": "Fecha de arranque",
+    "texto": "Confirmamos con {cliente_corto} el arranque del lunes 26 de octubre y la disponibilidad del CEO y los directores."
+   },
+   {
+    "titulo": "Acceso y material",
+    "texto": "Cada persona deja lista su cuenta de Claude y reúne la información clave que decida compartir."
+   },
+   {
+    "titulo": "Reunión de arranque",
+    "texto": "Una reunión de ~30 min para ajustar los horarios y acordar la skill de cada director."
+   }
+  ]
+ },
+ "seguimiento": {
+  "rango": "30, 60 y 90 días",
+  "texto": "Seguimiento desde el cierre del proyecto",
+  "items": [
+   {
+    "dias": "30 días",
+    "texto": "Uso diario del clon y las skills"
+   },
+   {
+    "dias": "60 días",
+    "texto": "Nuevas construcciones de cada persona"
+   },
+   {
+    "dias": "90 días",
+    "texto": "Tiempo recuperado contra la línea base"
+   }
+  ]
+ },
+ "ruta": {
+  "titulo": "Clon, skills y directivos, en tres fases.",
+  "subtitulo": "Las fechas pautadas de cada encuentro están en la página siguiente. La garantía y el seguimiento a 30, 60 y 90 días corren desde el cierre del proyecto.",
+  "nota": "Las {h_total} h de trabajo son una proyección: {h_f1} h de clon, {h_f2} h de skills del CEO y {h_f3} h con los cuatro directores.",
+  "hitos": [
+   {
+    "titulo": "Arranque",
+    "texto": "Lunes 26 de octubre. Se acuerdan los horarios, las personas y la skill de cada director."
+   },
+   {
+    "titulo": "Clon del CEO",
+    "texto": "Claude instalado, contexto de {cliente_corto} cargado y clon digital creado."
+   },
+   {
+    "titulo": "Skills del CEO",
+    "texto": "Seis skills listas, desde procesos con IA hasta el consejo ejecutivo."
+   },
+   {
+    "titulo": "Equipo directivo",
+    "texto": "Cuatro directores con clon y skill propia, y su impacto medido."
+   },
+   {
+    "titulo": "30 · 60 · 90 días",
+    "texto": "Seguimiento: uso, nuevas construcciones y tiempo recuperado."
+   }
+  ]
+ },
+ "retorno": {
+  "modo": "metodo",
+  "posiciones": false,
+  "subtitulo": "Se calcula con los datos de cada persona, se confirma con la línea base inicial y se mide a 30, 60 y 90 días.",
+  "etiqueta_pasos": "Cómo se calcula, por tarea",
+  "pasos": [
+   {
+    "titulo": "Repeticiones de la tarea",
+    "texto": "Cuántas veces repite cada persona las tareas que su clon o su skill va a asumir."
+   },
+   {
+    "titulo": "Tiempo actual por tarea",
+    "texto": "Se mide al empezar y es la **línea base**."
+   },
+   {
+    "titulo": "Tiempo con Claude",
+    "texto": "Lo que toma la misma tarea con el clon o la skill ya en uso."
+   },
+   {
+    "titulo": "Horas recuperadas",
+    "texto": "Repeticiones por la diferencia entre el tiempo actual y el tiempo con Claude."
+   },
+   {
+    "titulo": "Valor en dinero",
+    "texto": "Horas recuperadas por el valor hora de referencia que {cliente_corto} valide."
+   }
+  ],
+  "etiqueta_metas": "Calendario de garantía y cálculo del retorno",
+  "metas": [
+   {
+    "dias": "30 días",
+    "texto": "El clon y las skills en uso real en el trabajo diario de cada persona."
+   },
+   {
+    "dias": "60 días",
+    "texto": "Nuevas construcciones y horas recuperadas medidas contra la línea base."
+   },
+   {
+    "dias": "90 días",
+    "texto": "Medición del tiempo recuperado y de su valor en dinero."
+   }
+  ],
+  "etiqueta_destino": "Hacia dónde va el proyecto",
+  "destino": [
+   {
+    "rotulo": "Tiempo para decidir",
+    "texto": "Si el tiempo se libera, la dirección puede dedicarlo a **decisiones** y a trabajo de mayor valor."
+   },
+   {
+    "rotulo": "Clones que crecen",
+    "texto": "Cada persona puede seguir sumando skills a su clon por su cuenta."
+   },
+   {
+    "rotulo": "Más equipos",
+    "texto": "Con el retorno medido, {cliente_corto} decide si lleva el método a **más personas**."
+   }
+  ],
+  "gancho": "A los 90 días del cierre, cada persona contará con su tiempo recuperado medido y su valor en dinero."
+ },
+ "inversion": {
+  "notas": [
+   "Las licencias de Claude y de GoHighLevel van aparte.",
+   "Garantía 30-60-90: seguimiento a 30, 60 y 90 días desde el cierre del proyecto."
+  ],
+  "programa": [
+   "Servicio de Habilidades · {cliente_corto} (CAI-058).",
+   "Fase 1: {h_f1} h. Fase 2: {h_f2} h. Fase 3: {h_f3} h.",
+   "Clon digital y skills del CEO y de cuatro directores."
+  ],
+  "duracion": "Proyecto en tres fases, con seguimiento y garantía a {rango_seguimiento}. {h_total} horas de trabajo."
+ },
+ "calendario": {
+  "inicio": "2026-10-26",
+  "dias": [
+   "lun",
+   "mie",
+   "vie"
+  ],
+  "hora": "9-11",
+  "horas_por_encuentro": 2,
+  "intro": "Por las mañanas, de 9 a 11. Cada encuentro trabaja un entregable de la propuesta; el horario se ajusta en la reunión de arranque."
+ }
+}

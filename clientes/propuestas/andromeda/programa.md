@@ -1,166 +1,89 @@
-# Documento Oficial de Diseño Curricular e Instruccional
+# Programa interno · Andrómeda · Servicio de Detección y Políticas (DET-016)
 
-**[LOGO INTEZIA — `logos/educacion/NEGRO.png`]**  /  **[LOGO Andrómeda]**
+> Documento interno (no se muestra al cliente). **Generado** por `scripts/generar-habilidades-compacto.py` desde `datos.json` (formato de Detección, `plantillas/deteccion-compacto.md`): no editar a mano.
+> Fuente del insumo: Ficha de Levantamiento y notas de la reunión con Andrómeda.
 
-# Servicio de Detección + Políticas
-## De una gobernanza escueta a un criterio de IA gobernado, en Finanzas, Legal y Mercadeo
+## 1. Horas (internas: el deck solo dice las de levantamiento, en global)
 
-**Código**: DET-016
-**Versión**: Fundamentals (2h grupal) + auditoría de 3 áreas (Finanzas, Legal, Mercadeo) · 4h por
-área (14h totales de Detección) + Políticas transversal (por entregable)
-**Elaborado por**: Equipo INTEZIA Education
-**Aprobado por**: Dirección Académica Intezia
-**Fecha de Aprobación**: 2026-09-20
+| Etapa | Horas | En el deck |
+|---|---|---|
+| Arranque | 0 | sin horas |
+| Nivelación | 8 | sin horas ni grupos |
+| Levantamiento | 32 | «32 horas», sin reparto por área |
+| **Total de referencia para cotizar** | **40** | no se muestra |
 
----
+Sin semanas ni sesiones en la propuesta (Keiber, 2026-10-08): el número de sesiones, su duración, los grupos de la nivelación y el calendario se acuerdan en la reunión de arranque (Brief de Kickoff, CLAUDE.md §12). Las horas de levantamiento se reparten según lo que necesite cada departamento.
 
-## 1. Información general del programa
+## 2. Qué se audita
 
-- **Nombre**: Detección + Políticas de IA para Andrómeda
-- **Empresa**: Andrómeda (holding multisectorial: fábrica/manufactura, tecnología con software
-  factory propia, varias líneas de negocio)
-- **Modalidad**: a coordinar con la asesora comercial (no especificada en la ficha de
-  levantamiento).
-- **Estructura**: 1 sesión grupal de Fundamentals (2h) + 3 áreas (Finanzas, Legal, Mercadeo) con
-  una sesión de 4 horas cada una (12h) = 14 horas totales de Detección, más el servicio de
-  Políticas transversal a la organización, cotizado por entregable.
-- **Acreditación**: sin certificado — la Detección (incluido Fundamentals) es una auditoría y
-  Políticas es un servicio de gobernanza, no un curso.
-- **Alcance de personas**: ~15-20 personas en Finanzas y ~15-20 en Mercadeo; Legal sin headcount
-  confirmado en la ficha. Andrómeda Tech y Transformación Digital quedan fuera de esta fase de
-  Detección por ser ya las áreas más avanzadas en IA de la organización.
-- **Alcance de sesiones**: la sesión de Fundamentals nivela a las 3 áreas antes de la auditoría,
-  dado que el nivel de partida con IA es "muy desigual entre áreas". Cada una de las 3 áreas
-  tiene su propia sesión de 4 horas de **auditoría y diagnóstico real** — sin la promesa de
-  construir un logro inmediato dentro de la misma sesión, a pedido explícito del cliente de no
-  quedarse en "automatizar procesos triviales que no valen la pena".
+- **Áreas (como las nombra el cliente)**: Legal, Talento Humano, Finanzas, Tecnología, Publicidad Digital, Transformación Digital, Conectium, Spinmovil.
+- **Para qué**: Ver la operación real (Cómo trabaja hoy cada área y cada línea, y dónde la IA aporta valor más allá de lo trivial.); Mejorar desde ya (Logros inmediatos que el equipo usa mientras avanza el levantamiento.); Invertir con criterio (Elegir herramientas y licencias de IA sobre una base cierta.); Gobernar el uso de IA (Reglas claras de uso y de cuándo cada línea escala al equipo transversal de tecnología.).
+- **Logros inmediatos mínimos del proyecto**: 3 (no uno por área: un proceso de mucho esfuerzo pasa al mapa).
 
-> **Restricción de diseño (ficha de levantamiento + Metodología ABR):** Intezia no recomienda
-> herramienta antes de auditar. Andrómeda ya opera con un estándar corporativo mínimo
-> obligatorio (licencia de Claude), pero el Reporte Final entrega su propia **recomendación de
-> ecosistema de IA** por área, a confirmar con los hallazgos reales de Finanzas, Legal y
-> Mercadeo — no se asume de antemano.
+## 3. Ruta por etapas (slide 3)
 
----
+1. **Arranque**: Reunión con la dirección: alcance, responsable de cada área y línea, y calendario.
+2. **Nivelación**: 8 horas de Fundamentals en 4 grupos: 3 de áreas y 1 de las líneas de negocio.
+3. **Levantamiento**: Área por área y línea por línea, con su responsable y quien hace el trabajo. · 32 horas de levantamiento, repartidas según lo que necesite cada departamento.
+4. **Priorización**: Intezia cruza lo levantado y ordena las oportunidades de áreas y líneas.
+5. **Políticas**: Diagnóstico de madurez y redacción del marco, sobre el estándar ISO/IEC 42001.
+6. **Informe Final**: Diagnóstico, mapa de oportunidades y marco de gobernanza, presentados a la dirección.
 
-## 2. Fundamentación y justificación pedagógica
+Ruta completa: Ahora, Detección y Políticas: Esta propuesta.
 
-### 2.1 Planteamiento de la necesidad
+## 4. Entregables (slide 5)
 
-Andrómeda es un holding con una cultura de IA que ya existe y no hay que "vender": Andrómeda
-Tech y Transformación Digital ya trabajan con agentes, MCP y cerebros digitales propios, con un
-mandato top-down explícito del CEO. Pero esa madurez no llegó parejo a toda la organización — el
-nivel de partida es "muy desigual entre áreas", y Finanzas, Legal y Mercadeo nunca han tenido un
-diagnóstico formal. En paralelo, el propio liderazgo reconoce una brecha real: su gobernanza de
-IA es "escueta o deficiente", una tarea que llevan más de un año y medio queriendo resolver sin
-poder cerrarla por cuenta propia, por falta de tiempo, no de interés. Por eso el programa
-combina una auditoría real de las 3 áreas menos maduras con la construcción del marco de
-gobernanza que la organización necesita para escalar su cultura de IA con reglas claras.
+- Al arrancar · **Alcance y calendario**: Acordados con la dirección: responsable de cada área y línea de negocio, y orden de las auditorías.
+- Al arrancar · **Equipo nivelado en IA**: Áreas y líneas de negocio con un lenguaje común sobre IA y su uso responsable.
+- En el levantamiento · **Logros inmediatos**: Al menos tres soluciones construidas con el equipo, en uso desde el primer día.
+- Al cierre · **Mapa de Calor**: Las oportunidades de áreas y líneas en un solo mapa, con su Índice de Madurez en IA, para ver por dónde empezar.
+- Al cierre · **Marco de gobernanza de IA**: Manual de políticas, Matriz de riesgos y Brújula IA, con roles, permisos y reglas de escalamiento.
+- Al cierre · **Informe Final y hoja de ruta**: Diagnóstico por área y línea, recomendación de ecosistema de IA y resumen ejecutivo de una página.
+- Caja editable «Para todo el proyecto»: Ficha de levantamiento de cada área y línea; Presentación del Informe Final a la dirección.
+- Caja editable «Valor inmediato»: Mejoras en uso antes de cerrar el proyecto; Datos para decidir antes de comprar licencias; Roles y responsables de aprobación de IA definidos.
 
-### 2.2 Enfoque pedagógico (Modelo INTEZIA)
+## 5. Fuera de alcance
 
-Aprendizaje Basado en Retos (ABR) — tres pilares:
+- Licencias y herramientas de IA: se eligen con el Informe Final.
+- Cambios en los sistemas de Andrómeda: el levantamiento no los modifica.
+- Desarrollos a la medida o integraciones: si el Informe Final los recomienda, se cotizan aparte.
 
-- **Tutoría activa**: el consultor nivela a las 3 áreas en Fundamentals y luego audita cada una
-  en vivo, sobre sus procesos reales, sin asumir soluciones de antemano.
-- **Transferibilidad inmediata**: el marco de gobernanza que se construye en Políticas queda
-  redactado, validado y listo para difundir, no como un documento teórico de referencia.
-- **Curaduría de contenidos**: el Mapa de Calor, el Manual de políticas y la Brújula IA se
-  construyen desde hallazgos reales de las 3 áreas, no desde supuestos.
+## 6. Supuestos a confirmar
 
----
+- Fuente: Ficha de Levantamiento (18/09/2026) y notas de la reunión de la asesora; no se dispone de la transcripción. Si existe, manda sobre la ficha (CLAUDE.md §4.23).
+- Horas (instrucción del usuario, 13/10/2026): **8 h de Fundamentals + 4 h de levantamiento por cada una de las 6 áreas (24 h) + 4 h por cada línea de negocio (2 × 4 = 8 h) = 40 h en total** (32 h de levantamiento). Los Fundamentals van en 4 grupos de 2 h (8 h totales): 1) Tecnología, Publicidad Digital y Transformación Digital; 2) Finanzas; 3) Legal y Talento Humano; 4) línea de negocio (Conectium y Spinmovil). Antes: 4 h de Fundamentals (2 + 2), 32 h de levantamiento y 36 h en total. Una versión intermedia del mismo día había quedado en 36 h de levantamiento y 44 h en total (y una sola línea de negocio): la reemplazó esta instrucción. En el deck se muestran las horas de Fundamentals (a pedido del usuario; la plantilla las deja internas), el levantamiento y el total, y el número de grupos de Fundamentals; el levantamiento va en global, sin reparto por área (regla de la plantilla), y la composición de los grupos solo queda aquí y en el kickoff.
+- Áreas: las 6 transversales que dio el usuario el 30/09 (Legal, Talento Humano, Finanzas, Tecnología, Publicidad Digital, Transformación Digital) más **2 líneas de negocio, Conectium y Spinmovil, cada una por separado** (13/10/2026: «son las 6 áreas más 2 líneas de negocio, así es que debe reflejarse»; «míralo como si fuesen áreas aparte»), como unidades propias de auditoría. El deck ya no dice que las 6 áreas se auditen «dentro de» las líneas (se quitó el texto de foco del alcance): las líneas se auditan como unidades aparte, igual que las áreas. **Ekiipago y Neoplata ya no están en la propuesta** (13/10/2026). No hay lista de personal, así que no se muestran departamentos.
+- Logros inmediatos: al menos 3 en el proyecto, no uno por área (valor por defecto del servicio); el cliente pidió evitar automatizaciones triviales, así que los logros se eligen en el levantamiento.
+- Políticas: se representa como una etapa de la ruta y un entregable (Manual de políticas, Matriz de riesgos y Brújula IA), con su valor propio en la inversión (`inversion.partes`: Detección y Políticas). El contenido sale de la especificación del servicio y de la ficha; la plantilla de Detección no tiene un formato propio para Políticas.
+- Habilidades: queda fuera por indicación del usuario; la ruta completa solo muestra «Ahora». Se puede añadir una línea «Después» si se quiere mencionar.
+- Los Fundamentals y el levantamiento de las 2 líneas de negocio usan la misma estructura que los de área (propuesta del sistema: el usuario fijó solo las horas y los grupos).
+- Facilidad de pago omitida (la versión anterior no la tenía y se omite por defecto al migrar); se añade quitando `omitir`.
+- Modalidad no especificada en la ficha: «a coordinar». Sin pre-recomendar herramienta de IA (la recomienda el Informe Final), sin nombrar personas del cliente.
 
-## 3. Perfiles académicos
+## 7. Cómo trabajamos (slide 4)
 
-> **Detección + Políticas**: no incluye Perfil de ingreso. Andrómeda designa a los equipos de
-> Finanzas, Legal y Mercadeo para Fundamentals y sus respectivas sesiones de área, y a los
-> responsables de gobernanza/ciberseguridad para el proceso de Políticas.
+**Por qué en este orden:** Primero nivelamos a las áreas y a las líneas de negocio, para que todos hablen el mismo idioma sobre IA. Después levantamos cada una por separado, con su responsable. Al final priorizamos con la foto completa y construimos el marco de gobernanza sobre lo encontrado.
 
-### Perfil de egreso
+- **Entrevistamos**: Al líder de cada departamento y a su mano derecha.
+- **Mapeamos**: Procesos, tiempos, herramientas y cuellos de botella del día a día.
+- **Construimos**: Un logro inmediato en el momento, cuando el proceso lo permite.
+- **Priorizamos**: Cada oportunidad por impacto, esfuerzo y riesgo.
 
-- **Saber (Cognitivo)**: el liderazgo entiende con evidencia, no de forma "kinestésica", en qué
-  estado real están Finanzas, Legal y Mercadeo frente al uso de IA.
-- **Saber hacer (Procedimental)**: Andrómeda cuenta con un Manual de políticas de uso responsable
-  de IA, una Matriz de riesgos y una Brújula IA listos para difundir y aplicar.
-- **Saber ser (Actitudinal)**: la organización pasa de operar de forma empírica y experimental a
-  decidir su siguiente fase de IA con criterio y con reglas claras de gobernanza.
+- En la práctica, **Sin tarea previa**: Los líderes no preparan nada antes: todo se levanta en la conversación.
+- En la práctica, **Un espacio por departamento**: Nadie espera mientras otra área expone sus procesos.
+- En la práctica, **Sin forzar soluciones**: Si un proceso exige mucho esfuerzo, no se resuelve en el momento: pasa al Mapa de Calor con su prioridad.
+- Datos: Trabajamos con ejemplos reales sin sacar información financiera ni legal de los equipos de Andrómeda. Los logros usan solo las cuentas autorizadas, y sus sistemas internos no se modifican.
+- Quién construye: Intezia levanta y construye junto a cada responsable. El equipo de tecnología de Andrómeda autoriza los accesos y las herramientas con las que se trabaja.
 
----
+**Logística:** modalidad: A coordinar con cada responsable en la reunión de arranque. · participantes: Todo el equipo en la nivelación; cada líder y su mano derecha en el levantamiento. · ritmo: Jornadas en el horario que acuerde cada responsable. · arranque: La fecha la fija Andrómeda al confirmar la propuesta..
 
-## 4. Objetivos estratégicos
+## 8. Retorno esperado (slide 6)
 
-### 4.1 Objetivo general
+Modo **metodo**. La slide no cita estudios ni referencias de la web ni promete retorno.
 
-Auditar las 3 áreas menos maduras de Andrómeda (Finanzas, Legal y Mercadeo) con una sesión
-grupal de Fundamentals y 4 horas dedicadas a cada área, y construir en paralelo el marco de
-gobernanza de IA que la organización lleva más de un año y medio sin poder completar, para
-consolidar la autonomía que ya tiene cada línea de negocio con reglas claras de uso y de
-escalamiento.
+Pasos del método: Volumen; Tiempo actual; Tiempo con la solución; Horas recuperables; Prioridad.
 
-### 4.2 Objetivos específicos
+## 9. Próximos pasos (slide 8)
 
-1. Nivelar a Finanzas, Legal y Mercadeo con una sesión de Fundamentals (2h) antes de auditar,
-   dado el nivel de partida desigual entre áreas.
-2. Auditar las 3 áreas con 4 horas dedicadas a cada una, con foco en procesos reales y sin
-   automatizaciones triviales.
-3. Diagnosticar la madurez de gobernanza de IA de la organización y construir el Manual de
-   políticas, la Matriz de riesgos y la Brújula IA, basados en ISO/IEC 42001 (Sistema de Gestión
-   de Inteligencia Artificial) y en el marco regulatorio europeo de IA y datos.
-4. Entregar un Reporte Final que integre el mapa de oportunidades de las 3 áreas con el marco de
-   gobernanza, y una recomendación de ecosistema de IA por área.
+Asesora comercial que ve el cliente: Verónica Rubio, Asesora comercial · vrubio01@intezia.com · +58 422 3355505.
 
-> Cada específico responde al objetivo general → al perfil de egreso → al planteamiento de la
-> necesidad.
-
----
-
-## 5. Estructura curricular y diseño instruccional
-
-### 5.1 Estructura modular (4 módulos)
-
-| Módulo | Objetivo Instructivo | Temas | Elaboración (Práctica del participante) |
-|---|---|---|---|
-| **I: Fundamentals** | Nivela a Finanzas, Legal y Mercadeo en fundamentos de IA antes de auditar. | 1.1 Qué es y qué no es la IA<br>1.2 Uso responsable en un holding multisectorial<br>1.3 Ruta de las 3 sesiones de auditoría | El equipo llega a sus sesiones de área con un lenguaje común. |
-| **II: Detección por Área** | Audita cada una de las 3 áreas (Finanzas, Legal, Mercadeo) con 4 horas dedicadas, sin construir soluciones. | 2.1 Procesos reales del área<br>2.2 Cuellos de botella y uso actual de IA<br>2.3 Evidencia para el Índice de Madurez | Cada área deja un inventario real de procesos y su nivel de madurez frente a la IA. |
-| **III: Políticas** | Diagnostica la madurez de gobernanza y construye el marco de uso responsable de IA, transversal a la organización. | 3.1 Diagnóstico de madurez de gobernanza<br>3.2 Cuestionario dirigido por hallazgos<br>3.3 Redacción y validación del Manual + Brújula IA | Andrómeda valida el borrador del Manual de políticas con los responsables de cada área. |
-| **IV: Reporte Final** | Entrega el diagnóstico consolidado, el mapa de oportunidades priorizado y el marco de gobernanza. | 4.1 Mapa de Calor de las 3 áreas<br>4.2 Manual de políticas + Matriz de riesgos<br>4.3 Recomendación de ecosistema de IA por área | Andrómeda recibe el Reporte Final, el Manual de políticas y la Brújula IA. |
-
-### 5.2 Desglose instructivo (cronograma y ruta de aprendizaje)
-
-| Módulo | Sesión | Temas y subtemas | Tiempo de ejecución | Estrategias de enseñanza (facilitador) | Estrategias de aprendizaje (participante) | Recursos y entornos |
-|---|---|---|---|---|---|---|
-| I | 1 sesión grupal | Tema 1: Fundamentals<br>1.1–1.3 | Total 2 h (dentro del máximo de 25 personas por sesión; más sesiones de 2h si el universo lo supera) | Encuadre de qué es y qué no es la IA, casos reales de un holding multisectorial | El equipo alinea expectativas antes de las sesiones de área | Sesión grupal, Finanzas/Legal/Mercadeo, sin herramientas técnicas todavía |
-| II | 3 sesiones (1 por área) | Tema 2: Detección por área<br>2.1–2.3 | Total 4 h por área (contexto y objetivos / levantamiento de procesos e indicadores / evidencia para el Índice de Madurez / cierre y siguientes pasos) | Entrevista guiada sobre procesos reales, sin construir soluciones en la misma sesión | Cada área deja un inventario real de procesos y de uso actual de IA | Guion de auditoría Intezia, sin tocar los sistemas internos de Andrómeda |
-| III | Kick-off + diagnóstico + cuestionario + redacción | Tema 3: Políticas<br>3.1–3.3 | 3 a 5 semanas, en paralelo a la Detección (por entregable, no por horas) | Cuestionario de levantamiento (Bloque Genérico + Bloque Específico), checklist de las nueve dimensiones de gobernanza de IA | Los responsables de cada área validan el borrador del Manual de políticas | Herramientas del servicio de Políticas: cuestionario, matriz de riesgos, plantilla de política |
-| IV | Entrega | Tema 4: Reporte Final<br>4.1–4.3 | Reunión de entrega con Carlos Alonso | Presentación del diagnóstico consolidado, el Manual de políticas y la recomendación de ecosistema de IA | Andrómeda recibe el Reporte Final, el Manual de políticas y la Brújula IA | Mapa de Calor + Manual de políticas + Brújula IA consolidados |
-
----
-
-## 6. Garantía de calidad y mejora continua
-
-- **Construcción curricular**: cada una de las 3 sesiones de área se adapta a los procesos
-  reales de Finanzas, Legal y Mercadeo; Políticas se construye desde el cuestionario dirigido
-  por los hallazgos reales de la organización, no desde una plantilla genérica.
-- **Encuesta de satisfacción**: monitoreo de la experiencia al cierre de cada sesión.
-- **Entregables**: equipo nivelado con Fundamentals, inventario de procesos por área, Índice de
-  Madurez, Mapa de Calor priorizado, Manual de políticas de uso responsable de IA, Matriz de
-  riesgos y plan de acción, Brújula IA, Reporte Final con recomendación de ecosistema de IA por
-  área. **Sin certificado de participación** — Detección y Políticas son auditoría y gobernanza,
-  no un curso.
-- **Beneficio del programa**: al finalizar, Andrómeda pasa de una gobernanza de IA "escueta o
-  deficiente" y un conocimiento indirecto de sus 3 áreas menos maduras, a un mapa de
-  oportunidades priorizado y un marco de gobernanza real, listo para difundir y aplicar.
-
----
-
-## 7. Perfil del equipo facilitador
-
-- **Detección (3 áreas + Fundamentals)**: facilitada por el **Equipo INTEZIA Education**, con
-  dominio de nivelación en fundamentos de IA, levantamiento de procesos y diagnóstico de madurez
-  de IA.
-- **Políticas**: facilitado por el **Consultor líder de Políticas**, con dominio del cuestionario
-  de gobernanza, las nueve dimensiones de gobernanza de IA y la redacción de políticas de uso
-  responsable de IA.
-- **Asesora comercial**: Verónica Rubio.
-- **Competencias pedagógicas**: facilitación grupal (Fundamentals), entrevista guiada de
-  auditoría, cuestionario dirigido por hallazgos, consolidación con lista de cotejo.

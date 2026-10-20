@@ -1,0 +1,452 @@
+{
+ "version": 3,
+ "cliente": {
+  "nombre": "Decamino Market",
+  "slug": "decamino-market-cai051",
+  "codigo": "CAI-051",
+  "nombre_pie": "Decamino Market"
+ },
+ "division": "educacion",
+ "alianza": false,
+ "meta_servicio": "habilidades",
+ "meta_tipo": "Habilidades · 3 áreas (precios de proveedores, costos por orden e inventario diario) · Levantamiento de información: 3 áreas de 4 h = 12 h · Construcción: 3 áreas de 8 h = 24 h · 36 h totales · seguimiento 30-60-90 · formato compacto v3",
+ "vocabulario": {
+  "solucion": [
+   "entregable",
+   "entregables"
+  ]
+ },
+ "omitir": [
+  "pago"
+ ],
+ "frases_ok": [
+  "Precios de proveedores",
+  "precios de los 4 o 5 proveedores",
+  "listas de precios",
+  "al mejor precio",
+  "mejor precio",
+  "costo real",
+  "costo por orden",
+  "Costos por orden",
+  "compras, costos e inventario",
+  "Costos e inventario"
+ ],
+ "eje": "Soluciones de IA en compras, costos e inventario de Decamino Market (supermercado en línea): precios de proveedores, costo real y ganancia bruta por orden, e inventario diario",
+ "origen": "Ficha de Levantamiento de Decamino Market (Verónica Rubio, 12/10/2026), resumen de la reunión por Google Meet del 12/10/2026 y material del cliente (orden de compra consolidada de 5 órdenes, hoja de costos del 10/10 y pedido #2459 del 09/10), más la instrucción de Ivana del 13/10/2026: CAI-051, 2 encuentros de levantamiento por área más la construcción, 10 h por área; después, 8 h de construcción en cada área (36 h)",
+ "fuente_insumo": "Ficha de Levantamiento y resumen de la reunión (sin transcripción) e instrucción del usuario",
+ "portada": {
+  "titulo_lineas": [
+   "Soluciones de IA",
+   "en compras, costos e inventario"
+  ],
+  "titulo_destacado": "de Decamino Market",
+  "lead": "Este proyecto levanta cómo Decamino Market compra, costea y controla su inventario, y construye en cada una de sus **3 áreas** su **solución**, hasta dejarla en uso.",
+  "hechos": [
+   {
+    "num": "7",
+    "texto": "personas del equipo compran, arman, despachan y reportan inventario entre Excel y WhatsApp.",
+    "resuelto_por": [
+     "PRE-1",
+     "PRE-2",
+     "COS-1",
+     "COS-2",
+     "INV-1",
+     "INV-2"
+    ]
+   },
+   {
+    "num": "4 a 5",
+    "texto": "proveedores cercanos al almacén, y sus listas de precios no se comparan de forma automática.",
+    "resuelto_por": [
+     "PRE-1",
+     "PRE-2"
+    ]
+   },
+   {
+    "num": "Facturas",
+    "texto": "en foto, que se leen a mano una por una para sacar el costo real de cada orden.",
+    "resuelto_por": [
+     "COS-1",
+     "COS-2"
+    ]
+   }
+  ],
+  "fuente": "Fuente: Ficha de Levantamiento de Decamino Market (12/10/2026) y reunión con la dueña del negocio."
+ },
+ "carriles": [
+  {
+   "id": "dh",
+   "nombre": "Habilidades",
+   "nombre_corto": "Proyecto",
+   "color": "amarillo"
+  }
+ ],
+ "areas": [
+  {
+   "id": "PRE",
+   "nombre": "Precios de proveedores",
+   "para_que": "Comparar los precios de los 4 o 5 proveedores y saber dónde comprar cada producto",
+   "carril": "dh",
+   "frente": "A",
+   "composicion": "Equipo de compras.",
+   "soluciones": [
+    {
+     "id": "PRE-1",
+     "entregable": "Levantamiento de Precios de proveedores",
+     "incluye": [
+      "Cómo se decide hoy dónde comprar y con qué datos",
+      "Qué se escapa hoy en esa decisión"
+     ],
+     "h": 4,
+     "fase": "F1",
+     "detalle": "Trabajo de 4 h con el equipo de compras. Proceso a levantar: el mapeo de precios de los 4 o 5 proveedores cercanos al almacén para la compra diaria de víveres (el corte de órdenes es a medianoche; un proveedor, Polar, publica su lista en Excel o por WhatsApp y los demás tienen página web). Se mapea cómo se decide hoy dónde comprar, con qué datos y qué se escapa. Entrega el diagnóstico del proceso."
+    },
+    {
+     "id": "PRE-2",
+     "entregable": "Solución de Precios de proveedores, construida y en uso",
+     "incluye": [
+      "Apoya la decisión de dónde comprar cada producto",
+      "Parte de los listados de los 4 o 5 proveedores"
+     ],
+     "h": 8,
+     "fase": "F2",
+     "detalle": "Trabajo de 8 h con el equipo de compras. Se construye la solución que el levantamiento priorizó para decidir dónde comprar cada producto al mejor precio, con base en las páginas de los proveedores y en la lista que el equipo sube a medianoche. Referencia del cliente: saber desde las 6 am dónde comprar cada producto y en qué cantidad. Entrega la solución funcionando y en uso por el equipo. La conexión técnica con los sistemas de los proveedores queda fuera de alcance."
+    }
+   ]
+  },
+  {
+   "id": "COS",
+   "nombre": "Costos por orden",
+   "para_que": "Costo real y ganancia bruta de cada orden, separando lo que corresponde a cada supermercado",
+   "carril": "dh",
+   "frente": "A",
+   "composicion": "Equipo de compras y una persona por subárea de inventario.",
+   "soluciones": [
+    {
+     "id": "COS-1",
+     "entregable": "Levantamiento de Costos por orden",
+     "incluye": [
+      "Cómo se concilian hoy las facturas con el inventario",
+      "Cómo se separa lo que corresponde a cada supermercado",
+      "Cuánto tarda hoy y dónde se pierde el dato"
+     ],
+     "h": 4,
+     "fase": "F1",
+     "detalle": "Trabajo de 4 h con el equipo de compras y las personas que reportan el inventario. Proceso a levantar: la conciliación diaria de costos de compra por orden (facturas en JPG frente a inventario) y la separación de lo que corresponde a cada supermercado cuando un mismo proveedor surte a los dos. Se mide cuánto tarda hoy y dónde se pierde el dato (lectura visual de montos, fórmulas de Excel). Entrega el diagnóstico del proceso."
+    },
+    {
+     "id": "COS-2",
+     "entregable": "Solución de Costos por orden, construida y en uso",
+     "incluye": [
+      "Apoya la lectura de las facturas en foto",
+      "Costo real de cada orden frente al valor publicado",
+      "Ganancia bruta de la orden y su porcentaje"
+     ],
+     "h": 8,
+     "fase": "F2",
+     "detalle": "Trabajo de 8 h con las mismas personas. Se construye la solución que el levantamiento priorizó para leer las facturas de compra (JPG), obtener el costo real de cada orden, compararlo con el valor publicado en la página y mostrar la ganancia bruta y su porcentaje. Referencia del cliente: valor de venta en la página, costo según la factura de cada proveedor y ganancia por orden con la tasa del día. Entrega la solución en uso. La conexión técnica con la página web requiere permisos de quien la administra y queda fuera de alcance."
+    }
+   ]
+  },
+  {
+   "id": "INV",
+   "nombre": "Inventario diario",
+   "para_que": "Tener el inventario diario por subárea en un solo lugar, no en mensajes de WhatsApp",
+   "carril": "dh",
+   "frente": "A",
+   "composicion": "Una persona por subárea: cárnicos, víveres y vegetales.",
+   "soluciones": [
+    {
+     "id": "INV-1",
+     "entregable": "Levantamiento de Inventario diario",
+     "incluye": [
+      "Cómo se registra y consulta hoy el inventario por subárea",
+      "Cómo se reporta hoy por WhatsApp el inventario del día"
+     ],
+     "h": 4,
+     "fase": "F1",
+     "detalle": "Trabajo de 4 h con las personas que reportan el inventario por subárea (cárnicos, charcutería y pollo; víveres; vegetales). Proceso a levantar: cómo se registra y se consulta hoy el inventario del día, que se reporta por WhatsApp. Entrega el diagnóstico del proceso."
+    },
+    {
+     "id": "INV-2",
+     "entregable": "Solución de Inventario diario, construida y en uso",
+     "incluye": [
+      "Inventario diario por subárea en un solo lugar",
+      "Alimenta el cálculo del costo por orden"
+     ],
+     "h": 8,
+     "fase": "F2",
+     "detalle": "Trabajo de 8 h con las mismas personas. Se construye la solución que el levantamiento priorizó para registrar y consultar el inventario diario por subárea en un solo lugar, de modo que alimente el cálculo del costo por orden. Entrega la solución en uso."
+    }
+   ]
+  }
+ ],
+ "alcance": {
+  "titulo": "Una solución en uso en cada una de las 3 áreas.",
+  "subtitulo": "Levantamos **3 áreas** de compras, costos e inventario y construimos con cada una su **solución de IA**.",
+  "fuera_alcance": [
+   "La conexión técnica con la página web y con los sistemas de los proveedores: requiere permisos de quienes los administran.",
+   "Más de una solución por área: cada una recibe 8 h de construcción, lo demás va en otra etapa.",
+   "Otras áreas, la réplica en otros estados y el marketing con IA: van en otra etapa, según el resultado.",
+   "Licencias de IA: la herramienta se define con el levantamiento y su licencia va aparte."
+  ]
+ },
+ "metodo": {
+  "titulo": "Así trabajamos cada área.",
+  "subtitulo": "Primero se levanta cómo trabaja cada área y después se construye, con quienes hacen el trabajo.",
+  "quien_construye": "Intezia levanta y construye con las personas de cada área, sobre sus facturas, listas y reportes reales.",
+  "por_que_orden": "Primero se levanta la información de cada área y se prioriza con ella; después se construye en cada una la solución que el levantamiento respalda.",
+  "pasos": [
+   {
+    "titulo": "Levantamos",
+    "texto": "Los procesos reales de cada área y su cuello de botella."
+   },
+   {
+    "titulo": "Construimos",
+    "texto": "Con lo levantado, la solución de cada área, hasta dejarla en uso."
+   },
+   {
+    "titulo": "Adoptamos",
+    "texto": "El equipo usa la solución en su trabajo diario, con acompañamiento."
+   },
+   {
+    "titulo": "Medimos",
+    "texto": "El tiempo recuperado contra la línea base, a 30, 60 y 90 días."
+   }
+  ],
+  "practica": [
+   {
+    "titulo": "Horas por área",
+    "texto": "4 h de levantamiento y 8 h de construcción por área, con las personas que hacen el trabajo."
+   },
+   {
+    "titulo": "Con sus datos reales",
+    "texto": "El levantamiento y las soluciones se trabajan sobre sus facturas, listas de precios y reportes de inventario."
+   },
+   {
+    "titulo": "Lo prioriza el levantamiento",
+    "texto": "La herramienta de IA y la solución de cada área nacen de lo que se encuentra al levantar la información."
+   }
+  ],
+  "datos": "En el trabajo con el equipo no se carga a ninguna herramienta de IA información personal de los clientes de la tienda (nombres, direcciones, teléfonos): solo productos, cantidades y montos. Los criterios de uso seguro se acuerdan al empezar."
+ },
+ "fases": [
+  {
+   "id": "F1",
+   "titulo": "Levantamiento",
+   "descripcion": "levantar las 3 áreas y priorizar"
+  },
+  {
+   "id": "F2",
+   "titulo": "Uso",
+   "descripcion": "3 soluciones construidas y en uso",
+   "destacada": true
+  }
+ ],
+ "frentes": [
+  {
+   "id": "A",
+   "carril": "dh",
+   "nombre": "Compras, costos e inventario",
+   "celdas": {
+    "F1": "3 áreas, 4 h cada una: levantamiento de información de cada proceso.",
+    "F2": "3 áreas, 8 h cada una: la solución prioritaria de cada una, en uso."
+   }
+  }
+ ],
+ "ruta": {
+  "titulo": "Del levantamiento a 3 soluciones en uso.",
+  "subtitulo": "El calendario se acuerda en la **reunión de arranque**. El **levantamiento** orienta las soluciones.",
+  "nota": "Las {h_total} h de trabajo son una proyección: {h_f1} h de levantamiento de información y {h_f2} h de construcción. La reunión de arranque va aparte y tampoco suma.",
+  "hitos": [
+   {
+    "titulo": "Arranque · aparte",
+    "texto": "Reunión de 1 h para acordar el calendario y quién coordina el proyecto por Decamino Market."
+   },
+   {
+    "titulo": "Levantamiento",
+    "texto": "3 áreas, 4 h cada una: cómo se trabaja hoy cada proceso."
+   },
+   {
+    "titulo": "Prioridades",
+    "texto": "La solución de cada área y la recomendación de la herramienta de IA."
+   },
+   {
+    "titulo": "Soluciones",
+    "texto": "3 áreas, 8 h cada una: la solución de cada área, en uso."
+   },
+   {
+    "titulo": "30 · 60 · 90 días",
+    "texto": "Seguimiento: uso de las soluciones, ajustes y tiempo recuperado."
+   }
+  ]
+ },
+ "logistica": {
+  "modalidad": "Mixta: virtual o presencial en el almacén, según se acuerde en la reunión de arranque.",
+  "participantes": "7 personas del equipo operativo: compras, armado, despacho e inventario.",
+  "ritmo": "Dudas por escrito antes que en llamadas; el trabajo se agenda en el horario del equipo.",
+  "arranque": "La fecha la fija {cliente_corto}; una reunión de arranque de 1 h, aparte, acuerda el calendario."
+ },
+ "seguimiento": {
+  "rango": "30, 60 y 90 días",
+  "texto": "Desde el cierre de cada área",
+  "items": [
+   {
+    "dias": "30 días",
+    "texto": "Uso de las soluciones"
+   },
+   {
+    "dias": "60 días",
+    "texto": "Ajustes y nuevas construcciones"
+   },
+   {
+    "dias": "90 días",
+    "texto": "Tiempo recuperado contra la línea base"
+   }
+  ]
+ },
+ "entregables": {
+  "titulo": "Lo que recibe el equipo.",
+  "subtitulo": "Lo que se llevan: **{n_entregables_txt}**, dos por área (levantamiento y solución), más el seguimiento a {rango_seguimiento}.",
+  "etiqueta_transversales": "Para todo el proyecto",
+  "transversales": [
+   "Prioridades de las 3 áreas, definidas con el levantamiento.",
+   "Recomendación de la herramienta de IA.",
+   "Línea base del tiempo y seguimiento a 30, 60 y 90 días."
+  ],
+  "etiqueta_valor": "Valor inmediato",
+  "valor_inmediato": [
+   "Con el levantamiento: cada proceso, claro y priorizado.",
+   "Con las soluciones: compras, costos e inventario en uso.",
+   "Al cerrar: un proceso compartido por todo el equipo."
+  ],
+  "columnas_por_carril": [
+   3
+  ]
+ },
+ "retorno": {
+  "modo": "metodo",
+  "posiciones": false,
+  "titulo": "Retorno esperado: tiempo recuperado, medido.",
+  "subtitulo": "El retorno se mide contra la línea base que cada área entrega en su levantamiento de información.",
+  "etiqueta_pasos": "Cómo se calcula el retorno de cada solución",
+  "pasos": [
+   {
+    "titulo": "Volumen",
+    "texto": "Cuántas órdenes entran al día, cuántos productos se compran y cuántas facturas se leen."
+   },
+   {
+    "titulo": "Tiempo actual",
+    "texto": "Lo que toma hoy decidir dónde comprar, costear cada orden y consultar el inventario: es la **línea base**."
+   },
+   {
+    "titulo": "Tiempo con la solución",
+    "texto": "Lo que toma el mismo trabajo una vez que la solución está en uso."
+   },
+   {
+    "titulo": "Horas recuperadas",
+    "texto": "Volumen por la diferencia de tiempos: una estimación referencial, sin compromiso de resultado."
+   },
+   {
+    "titulo": "Valor en dinero",
+    "texto": "Horas recuperadas por el valor hora que {cliente_corto} valide, y la diferencia entre lo pagado y el mejor precio."
+   }
+  ],
+  "etiqueta_metas": "Calendario de garantía y cálculo del retorno",
+  "metas": [
+   {
+    "dias": "30 días",
+    "texto": "Desde el cierre de cada área: soluciones en uso real y línea base validada con el equipo."
+   },
+   {
+    "dias": "60 días",
+    "texto": "Horas recuperadas medidas contra la línea base, por área y por proceso."
+   },
+   {
+    "dias": "90 días",
+    "texto": "Medición del retorno en dinero, con el valor de las horas recuperadas de cada área."
+   }
+  ],
+  "etiqueta_destino": "Hacia dónde va el proyecto",
+  "destino": [
+   {
+    "rotulo": "Un proceso compartido",
+    "texto": "El conocimiento del proceso queda en las soluciones y en documentos del equipo, no en una sola persona."
+   },
+   {
+    "rotulo": "Mismo equipo, más órdenes",
+    "texto": "Si el tiempo se libera, el mismo equipo puede atender **más órdenes** en temporada alta sin ampliar su tamaño."
+   },
+   {
+    "rotulo": "Más frentes",
+    "texto": "Con el retorno medido, {cliente_corto} decide si lleva el mismo ciclo a **otras áreas y a otros estados**."
+   }
+  ],
+  "gancho": "A los 90 días del cierre de las soluciones, {cliente_corto} contará con el tiempo recuperado medido y su valor en dinero, área por área."
+ },
+ "inversion": {
+  "duracion": "Proyecto de 3 áreas con una solución en uso en cada una, con seguimiento a 30, 60 y 90 días. {h_total} horas de trabajo.",
+  "programa": [
+   "Servicio de Habilidades para Decamino Market (CAI-051): 3 áreas de compras, costos e inventario.",
+   "Una solución en uso en cada área: precios de proveedores, costos por orden e inventario diario.",
+   "{h_total} h de trabajo, más la reunión de arranque aparte. Modalidad mixta."
+  ],
+  "notas": [
+   "Licencias aparte: la herramienta de IA se define con el levantamiento y {cliente_corto} confirma su valor con el proveedor.",
+   "Garantía 30-60-90 en Habilidades: seguimiento a 30, 60 y 90 días desde el cierre de cada área.",
+   "Términos y condiciones: los del enlace de «Importante», que ambas partes aceptan al avanzar con esta propuesta."
+  ]
+ },
+ "proximos_pasos": {
+  "asesora": {
+   "nombre": "Verónica Rubio",
+   "cargo": "Asesora comercial",
+   "correo": "vrubio01@intezia.com",
+   "telefono": "+58 422 3355505"
+  },
+  "pasos": [
+   {
+    "titulo": "Responsable y arranque",
+    "texto": "Confirmamos con {cliente_corto} la fecha de arranque y quién coordina el proyecto desde su equipo."
+   },
+   {
+    "titulo": "Material del proceso",
+    "texto": "El equipo comparte la minuta del proceso de compras y ejemplos de sus documentos del día, sin datos de clientes."
+   },
+   {
+    "titulo": "Reunión de arranque",
+    "texto": "Una hora para acordar el calendario de las 3 áreas, el orden del trabajo y los accesos."
+   }
+  ],
+  "subtitulo": "Esto es lo que sigue cuando {cliente_corto} confirme la propuesta."
+ },
+ "siglas_ok": [
+  "IA"
+ ],
+ "supuestos": [
+  "Pedido de Ivana (13/10/2026): propuesta CAI-051 para Decamino Market, asesora Verónica Rubio, «2 sesiones de levantamiento por área más las de construcción, 10 h por área». Ivana confirmó la lectura: **3 áreas y 10 h en total por área** = 4 h de levantamiento de información (los dos encuentros) + 6 h de construcción: 30 h. Después subió Costos por orden a 8 h de construcción (32 h) y, por último, pidió **estandarizar todas las áreas a 8 h de construcción**: cada área suma 12 h (4 h de levantamiento + 8 h de construcción) y el proyecto, **36 h** (12 h de levantamiento y 24 h de construcción). Las 12 h por área caen dentro de la pauta de Habilidades (8 a 12 h por área). El deck no muestra sesiones ni semanas (CLAUDE.md §4.23): solo horas.",
+  "Servicio (instrucción de Ivana, 13/10/2026): es un servicio de **Habilidades únicamente**. Lo que antes se nombraba como otro servicio es, para el cliente y para el sistema, el **levantamiento de información**: la primera parte del proyecto, de 4 h por área. Por eso `datos.json` y `meta.json` dicen `habilidades`, el eyebrow dice «Servicio de Habilidades» y el deck no usa el nombre de ese otro servicio ni el de sus productos. Decisión del sistema por confirmar: la recomendación de la herramienta de IA que espera el cliente se entrega como resultado del levantamiento («Prioridades»), en vez de un reporte aparte.",
+  "Las 3 áreas son una decisión de Ivana: el primer bloque de la ficha define una sola área («Compras, inventario y costeo», 7 personas). Se partió en precios de proveedores (Proceso 1 de la ficha), costos por orden (Proceso 2) e inventario diario por subárea (tercera tarea real del bloque de Habilidades). Los nombres los propuso el sistema.",
+  "Estructura: formato de Habilidades v3. Cada área tiene un levantamiento de información (4 h) y una solución en uso (8 h). Instrucción de Ivana (14/10/2026): la hoja de inversión **no se divide por etapas** (una sola caja de valor, sin «Parte 1» ni «Parte 2» y sin fases en la duración) y **no hay logros inmediatos**: solo se abordan los procesos mencionados y descritos en la ficha y la minuta (precios de proveedores, costos por orden e inventario diario); el levantamiento no abre procesos nuevos.",
+  "Qué se construye: la ficha y la minuta dan el objetivo (dónde comprar cada día, costo real por orden con facturas en foto, ganancia bruta por orden, inventario diario). Con 8 h por área no se promete todo: cada área recibe «la solución prioritaria que el levantamiento señale» y el alcance acota lo que queda fuera (conexión técnica con la página web y con los proveedores, otras áreas, otros estados, marketing). Riesgo comercial: la dueña espera una automatización completa y lo que se financia es un primer ciclo; conviene reforzarlo en la reunión de revisión.",
+  "Sin nivelación grupal (Fundamentals): no se incluyó porque la instrucción no la menciona y el presupuesto es ajustado (con 2 h para los 7 serían 38 h). El equipo usa la IA «de forma suelta y sin criterio» (un empleado consulta Gemini de manera informal), de modo que una nivelación corta ayudaría.",
+  "Herramienta de IA: no está definida («aún no lo saben, esperan la recomendación»). El deck no nombra ni pre-recomienda ninguna: el levantamiento la recomienda y la licencia va aparte (Intezia no recomienda antes de levantar). No va al deck el uso informal de Gemini.",
+  "Datos: el pedido #2459 trae nombre, dirección y teléfono de un cliente final. La ficha declara que no hay política de datos. El deck dice que no se carga información personal de los clientes de la tienda a ninguna herramienta (solo productos, cantidades, precios y montos). Propuesta del sistema: confirmar con la dueña.",
+  "Portada: 3 hechos de la ficha y la minuta (7 personas entre Excel y WhatsApp; 4 a 5 proveedores sin comparación automática de precios; facturas en foto que se leen a mano). No van, a propósito: la salida del líder que conocía el proceso (dato sensible, está en brief.md), la temporada alta (contexto), los montos de los ejemplos del cliente ni la cita textual de la dueña, ni nombres de personas ni de proveedores.",
+  "Retorno en modo método: no hay horas por proceso ni valor hora. El material del cliente (orden de compra con 5 órdenes, 103 productos y 170 unidades; hoja de costos a 876,80 Bs por dólar; pedido #2459) sirve de ejemplo para el levantamiento y no se cita en el deck. Sin casos logrados con el cliente (primer contacto) ni contratación evitada.",
+  "Sin facilidad de pago (`omitir: [\"pago\"]`, criterio de Ivana en las propuestas recientes). El presupuesto del cliente es ajustado y sale de las ganancias del supermercado: un plan por hitos (levantamiento y cierre) le calza, pero no se agregó sin que lo pidiera.",
+  "División Educación y sin alianza (supuesto: empresa privada, no se preguntó). Asesora Verónica Rubio, con su contacto de otras propuestas.",
+  "Modalidad mixta (virtual o presencial en el almacén de Caracas): supuesto del sistema. La ficha dice que la dueña viaja y prefiere resolver dudas por escrito antes que en llamadas: el deck lo recoge en la logística y el trabajo se agenda en el horario del equipo.",
+  "Nombre del cliente: «Decamino Market» (ficha, logo y facturas); la minuta de Meet dice «De Camino Market». Contexto interno: la propuesta debe salir antes del miércoles 14/10/2026 a las 3 PM, con reunión de revisión ese día; la dueña enviará una minuta propia del proceso."
+ ],
+ "pendientes": [
+  "Definir inversión, descuento y total (campos vacíos para ventas): 36 h en total (una sola caja de valor, sin división por etapas). Decidir si lleva facilidad de pago dado el presupuesto del cliente.",
+  "Confirmar con Ivana que la recomendación de la herramienta de IA va como resultado del levantamiento («Prioridades»), ya que el cliente la esperaba en un reporte final.",
+  "Confirmar con Verónica y con la dueña los nombres de las 3 áreas y que el inventario diario va como área propia.",
+  "Decidir si se agregan 2 h de nivelación para los 7 (38 h en total).",
+  "Confirmar modalidad, quiénes son las 7 personas y quién coordina el proyecto (no hay responsable designado; el líder anterior ya no está).",
+  "Cuando llegue la minuta de la dueña sobre el proceso, contrastarla con la ficha y con este deck: si se contradicen, manda la transcripción o la minuta (§4.23). Solo hay el resumen automático de la reunión, no la transcripción.",
+  "Confirmar con la dueña que las soluciones se prueben sin datos personales de clientes y que la conexión con la página web y con los proveedores quede fuera.",
+  "Enviar la propuesta antes del miércoles 14/10/2026 a las 3 PM y agendar la reunión de revisión."
+ ]
+}

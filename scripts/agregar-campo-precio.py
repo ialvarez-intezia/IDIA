@@ -546,7 +546,7 @@ def partes_cantidad(page) -> int:
     except Exception:
         texto = ""
     nums = [int(x) for x in re.findall(r"parte(\d+)", texto)]
-    return max(nums) if nums and max(nums) in (2, 3) else 0
+    return max(nums) if nums and max(nums) in (2, 3, 4) else 0
 
 
 def precio_fields(page):

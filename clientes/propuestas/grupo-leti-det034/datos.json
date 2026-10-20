@@ -1,0 +1,308 @@
+{
+ "version": 3,
+ "formato": "deteccion",
+ "cliente": {
+  "nombre": "Grupo Leti",
+  "slug": "grupo-leti-det034",
+  "codigo": "DET-034",
+  "nombre_pie": "Grupo Leti"
+ },
+ "division": "educacion",
+ "alianza": false,
+ "omitir": [
+  "pago"
+ ],
+ "meta_tipo": "Detección · 12 h de levantamiento en global sobre los casos de uso, sin nivelación · formato compacto v3",
+ "eje": "Clasificar los casos de uso de IA de Grupo Leti según la solución que necesita cada uno (Copilot o automatización), con arquitectura sugerida, prioridades y logros inmediatos",
+ "origen": "Resumen de la asesora (Flavia Martínez) de su reunión con el responsable técnico de Grupo Leti y la ruta de Detección técnica que ella propone, compartidos el 14/10/2026. Sin Ficha de Levantamiento ni transcripción",
+ "fuente_insumo": "Resumen de la reunión con el responsable técnico, de la asesora (14/10/2026)",
+ "portada": {
+  "titulo_lineas": [
+   "Casos de uso de IA",
+   "clasificados y priorizados"
+  ],
+  "titulo_destacado": "en Grupo Leti",
+  "lead": "Clasificamos los casos de uso de IA de {cliente_corto} en **dos vías**: Copilot o automatización. Cada caso sale con su arquitectura sugerida y su prioridad, y dejamos **logros inmediatos** en uso.",
+  "hechos": [
+   {
+    "num": "Unas 5",
+    "texto": "soluciones ya entregadas por el equipo técnico, que no crece mientras las áreas piden más."
+   },
+   {
+    "num": "Agentes",
+    "texto": "se fuerzan donde bastaba una automatización, y lo determinista no se resuelve con IA generativa."
+   },
+   {
+    "num": "Microsoft",
+    "texto": "y SAP son la base: la IA debe sumarse a ese entorno y respetar la seguridad de la información."
+   }
+  ],
+  "fuente": "Fuente: reunión con el responsable técnico de Grupo Leti."
+ },
+ "deteccion": {
+  "areas": [
+   "Casos de uso de Grupo Leti"
+  ],
+  "etiqueta_departamentos": "Qué miramos en cada caso",
+  "departamentos": [
+   "Pasos del proceso",
+   "Datos que usa",
+   "Sistemas involucrados",
+   "Volumen y frecuencia",
+   "Seguridad y riesgo",
+   "Políticas de IA vigentes",
+   "Quién lo usa"
+  ],
+  "foco": "El levantamiento parte de los casos que las áreas ya piden al equipo técnico y de las soluciones que **ya se entregaron**.",
+  "horas": {
+   "levantamiento": 12,
+   "arranque": 0,
+   "nivelacion": 0
+  },
+  "logros_minimos": 3,
+  "texto_horas": "**{h_levantamiento} horas** de levantamiento, repartidas según lo que necesite cada caso.",
+  "para_que": [
+   {
+    "titulo": "Ordenar los casos",
+    "texto": "Qué piden las áreas hoy y qué ya resolvió el equipo técnico."
+   },
+   {
+    "titulo": "Elegir la solución",
+    "texto": "Qué resuelve cada usuario con Copilot y qué se automatiza con n8n."
+   },
+   {
+    "titulo": "Mejorar desde ya",
+    "texto": "Logros inmediatos en uso mientras avanza el levantamiento."
+   },
+   {
+    "titulo": "Cuidar la información",
+    "texto": "Arquitecturas que respetan la seguridad de {cliente_corto} y sus datos."
+   }
+  ],
+  "ruta_completa": [],
+  "etapas": [
+   {
+    "titulo": "Arranque",
+    "texto": "Reunión para cerrar el alcance, la lista de casos de uso y el calendario."
+   },
+   {
+    "titulo": "Levantamiento",
+    "texto": "Un caso a la vez, con el equipo técnico y el área que lo pidió.",
+    "horas": true
+   },
+   {
+    "titulo": "Clasificación",
+    "texto": "Cada caso se asigna a la vía que necesita, según lo que se levantó."
+   },
+   {
+    "titulo": "Priorización",
+    "texto": "Intezia ordena los casos por impacto, esfuerzo y riesgo, con su arquitectura sugerida."
+   },
+   {
+    "titulo": "Informe Final",
+    "texto": "Clasificación, arquitectura y hoja de ruta, presentados a la dirección."
+   }
+  ],
+  "entregables": [
+   {
+    "cuando": "Al arrancar",
+    "titulo": "Alcance y calendario",
+    "texto": "Acordados en el arranque: los casos de uso que entran y el orden del levantamiento."
+   },
+   {
+    "cuando": "En el levantamiento",
+    "titulo": "Logros inmediatos",
+    "texto": "**Al menos {logros_minimos_palabra}** mejoras en uso desde el primer día, identificadas con el equipo en el levantamiento."
+   },
+   {
+    "cuando": "Al cierre",
+    "titulo": "Casos clasificados",
+    "texto": "Cada caso en su vía: lo que resuelve el usuario con Copilot y lo que se automatiza con n8n."
+   },
+   {
+    "cuando": "Al cierre",
+    "titulo": "Arquitectura sugerida",
+    "texto": "Para cada caso, la solución recomendada y con qué piezas, dentro de las reglas de seguridad de {cliente_corto}."
+   },
+   {
+    "cuando": "Al cierre",
+    "titulo": "Mapa de Calor",
+    "texto": "Todos los casos de {cliente_corto} en un solo mapa, ordenados por impacto, esfuerzo y riesgo, para ver por dónde empezar."
+   },
+   {
+    "cuando": "Al cierre",
+    "titulo": "Informe Final y hoja de ruta",
+    "texto": "Diagnóstico de los casos con las políticas de IA vigentes mapeadas, hoja de ruta y resumen ejecutivo de una página."
+   }
+  ]
+ },
+ "alcance": {
+  "titulo": "Auditamos los casos y dejamos logros inmediatos.",
+  "subtitulo": "Revisamos **caso por caso** lo que {cliente_corto} necesita resolver con IA, con el equipo técnico y con quien lo pidió.",
+  "fuera_alcance": [
+   "Licencias y herramientas de IA: no están en la inversión de esta propuesta.",
+   "Cambios en SAP y en los sistemas de {cliente_corto}: el levantamiento no los modifica.",
+   "Integraciones con SAP y orquestación compleja de agentes: quedan fuera de esta propuesta."
+  ]
+ },
+ "ruta": {
+  "titulo": "Del arranque al Informe Final, en cinco etapas.",
+  "subtitulo": "El calendario y el orden de los casos se acuerdan en la **reunión de arranque**."
+ },
+ "metodo": {
+  "titulo": "Así trabajamos en cada caso de uso.",
+  "subtitulo": "Nos sentamos con el equipo técnico y con quien pidió el caso, y salimos de cada levantamiento con algo concreto.",
+  "pasos": [
+   {
+    "titulo": "Entrevistamos",
+    "texto": "Al equipo técnico y a quien pidió cada caso de uso."
+   },
+   {
+    "titulo": "Mapeamos",
+    "texto": "El proceso, los datos, los sistemas involucrados y los cuellos de botella."
+   },
+   {
+    "titulo": "Mejoramos",
+    "texto": "Un logro inmediato en el momento, cuando el caso lo permite."
+   },
+   {
+    "titulo": "Clasificamos",
+    "texto": "Cada caso en su vía, con su arquitectura sugerida y su prioridad."
+   }
+  ],
+  "por_que_orden": "Primero levantamos cada caso con quien lo conoce. Después lo clasificamos, para que reciba la solución que necesita y no se fuerce un agente donde basta una automatización. Al final priorizamos con la foto completa de {cliente_corto}.",
+  "practica": [
+   {
+    "titulo": "Sin tarea previa",
+    "texto": "Quien pidió el caso no prepara nada antes: todo se levanta en la conversación."
+   },
+   {
+    "titulo": "Sin forzar soluciones",
+    "texto": "Si un caso exige mucho esfuerzo, no se resuelve en el momento: pasa al Mapa de Calor con su prioridad."
+   },
+   {
+    "titulo": "Revisión humana",
+    "texto": "Cada logro lo revisa una persona de {cliente_corto} antes de usarse."
+   }
+  ],
+  "datos": "Trabajamos con ejemplos reales y solo con las cuentas y la información que {cliente_corto} autoriza. Los logros respetan sus reglas de seguridad, y sus sistemas no se modifican.",
+  "quien_construye": ""
+ },
+ "logistica": {
+  "modalidad": "Presencial o virtual: se acuerda con {cliente_corto} en la reunión de arranque.",
+  "participantes": "El equipo técnico y quienes pidieron cada caso de uso.",
+  "ritmo": "Encuentros en el horario que acuerde cada responsable."
+ },
+ "entregables": {
+  "transversales": [
+   "Ficha de levantamiento de cada caso de uso",
+   "Presentación del Informe Final a la dirección"
+  ],
+  "valor_inmediato": [
+   "Logros inmediatos en uso antes de cerrar el proyecto",
+   "Datos para decidir por dónde empezar"
+  ]
+ },
+ "retorno": {
+  "subtitulo": "El Informe Final estima el retorno de cada caso con lo que cuentan el equipo técnico y quien lo pidió.",
+  "pasos": [
+   {
+    "titulo": "Volumen",
+    "texto": "Cuántas veces al mes se repite la tarea que resuelve el caso."
+   },
+   {
+    "titulo": "Tiempo actual",
+    "texto": "Lo que toma hoy cada vez, según quien hace el trabajo."
+   },
+   {
+    "titulo": "Tiempo con la solución",
+    "texto": "La estimación de Intezia para cada caso del Mapa de Calor."
+   },
+   {
+    "titulo": "Horas recuperables",
+    "texto": "Volumen por la diferencia de tiempos: una estimación de referencia, no un compromiso de resultado."
+   },
+   {
+    "titulo": "Prioridad",
+    "texto": "Impacto, esfuerzo y riesgo de cada caso, para decidir por dónde empezar."
+   }
+  ],
+  "metas": [
+   {
+    "dias": "Solución",
+    "texto": "Qué casos resuelve el usuario con Copilot y cuáles se automatizan."
+   },
+   {
+    "dias": "Prioridades",
+    "texto": "Qué casos atender primero y con qué arquitectura."
+   },
+   {
+    "dias": "Control",
+    "texto": "Qué datos toca cada solución y quién verifica su resultado."
+   }
+  ],
+  "gancho": "Con el Informe Final, {cliente_corto} decide qué resolver con Copilot, qué automatizar y qué atender primero, con datos de sus propios casos y no a ciegas."
+ },
+ "inversion": {
+  "duracion": "Reunión de arranque y **{h_levantamiento} horas de levantamiento**, repartidas según cada caso de uso.",
+  "programa": [
+   "Servicio de Detección · {cliente_corto} ({codigo}).",
+   "Arranque y levantamiento de los casos de uso, con el equipo técnico.",
+   "Clasificación, arquitectura y políticas de IA vigentes por caso.",
+   "Al menos {logros_minimos} logros inmediatos, Mapa de Calor e Informe Final.",
+   "{h_levantamiento} horas de levantamiento."
+  ],
+  "notas": [
+   "Esta inversión no incluye licencias de IA.",
+   "La modalidad se acuerda en la reunión de arranque."
+  ]
+ },
+ "proximos_pasos": {
+  "asesora": {
+   "nombre": "Flavia Martínez",
+   "cargo": "Asesora comercial",
+   "correo": "fmartinez@intezia.com",
+   "telefono": "+58 414 5756615"
+  },
+  "pasos": [
+   {
+    "titulo": "Fecha de arranque",
+    "texto": "Acordamos la fecha de la reunión de arranque y el horario de los encuentros."
+   },
+   {
+    "titulo": "Lista de casos de uso",
+    "texto": "{cliente_corto} nos comparte los casos que ya tiene y quién los pidió; con eso armamos la agenda."
+   },
+   {
+    "titulo": "Reunión de arranque",
+    "texto": "Una hora para cerrar el alcance, el orden de los casos y el calendario."
+   }
+  ]
+ },
+ "siglas_ok": [
+  "IA",
+  "SAP"
+ ],
+ "supuestos": [
+  "Alcance pedido por Ivana (14/10/2026): solo una propuesta de Detección. No se incluyen la propuesta de Políticas (va aparte y esta no la menciona), ni Habilidades ni Innovación, ni la ruta completa de servicios; el deck termina en el Informe Final. Sin facilidad de pago (criterio de Ivana en las Detecciones recientes; el estándar sería 50 % al aprobar y 50 % con el Informe Final).",
+  "Insumo: el resumen de Flavia de su reunión con el responsable técnico de Grupo Leti. No hubo Ficha de Levantamiento ni transcripción (CLAUDE.md §4.23): los tres dolores de la portada son lo que ella cuenta que dijo el cliente, sin nombres de personas.",
+  "Estructura: Detección técnica acotada a los casos de uso de Grupo Leti, no por áreas (la ruta que propone Flavia). Por eso hay un solo «área» a auditar, «Casos de uso de Grupo Leti», sin departamentos ni nombre de la unidad (Ivana: «habla como Grupo Leti»). Las reglas de Keiber siguen: horas en global, al menos 3 logros inmediatos, entregables sin conteos, sin frentes prioritarios.",
+  "En la slide 2, las píldoras que en otras Detecciones son los departamentos se usan aquí para «Qué miramos en cada caso» (proceso, datos, sistemas, volumen, seguridad y usuarios), porque la propuesta no es por departamentos y la tarjeta quedaba vacía. En programa.md aparecen rotuladas como «Departamentos».",
+  "Horas (elegidas por Ivana entre 8, 12 y 16): 12 h de levantamiento en global, sin nivelación (el equipo ya maneja prompts y usa Copilot, y la formación básica no es su prioridad) y arranque sin horas. Total interno: 12 h.",
+  "Dos vías: lo que el usuario resuelve con Copilot y lo que se automatiza. Flavia proponía una tercera vía (lo que no resuelven ni Copilot ni la automatización); Ivana pidió quitarla de toda la propuesta y no nombrar ninguna otra («deja Copilot o automatización», 14/10). «Copilot» se nombra porque es la plataforma del cliente (su estrategia se monta sobre Microsoft por seguridad de la información). **n8n** se nombra a pedido de Ivana, solo junto a «automatización» (slide 2: «qué se automatiza con n8n»; slide 5: tarjeta «Casos clasificados»); no se dice que Intezia sea partner de n8n ni que forme o acompañe. No se nombran Copilot Studio, skills de Claude ni el caso de La Mundial, y no se pre-recomienda otra herramienta: la arquitectura sugerida sale del Informe Final.",
+  "Intezia no construye (Ivana, 14/10: «nosotros no construimos, nada de construir»). Se quitó del deck todo lo que dijera lo contrario: la tercera vía, la caja «Quién construye» de la slide 4 (`metodo.quien_construye` vacío; sin ella, «Por qué en este orden» ocupa todo el ancho), el paso «Construimos» (ahora «Mejoramos»), «cómo construirlo» en la arquitectura y «qué construir primero» (ahora «por dónde empezar» y «qué atender primero»). Lo que dijo Flavia sobre lo que Intezia construye (agentes en Copilot Studio, skills de Claude, asistentes sobre documentos; n8n lo construye el cliente) queda fuera. n8n sí se nombra (ver el supuesto de las dos vías).",
+  "Fuera de alcance: integraciones con SAP y orquestación compleja de agentes (Flavia, a la espera de la lectura de David), más licencias y cambios en SAP. El deck dice que quedan fuera de esta propuesta.",
+  "Políticas de IA vigentes: Flavia propone que la Detección las mapee, porque el cliente ya las tiene. Entra como píldora de la slide 2 («Políticas de IA vigentes») y en el Informe Final (slide 5, sin conteos). El deck no menciona la propuesta de Políticas ni que el mapeo la alimente (instrucción de Ivana: solo Detección).",
+  "Logros inmediatos: son una regla de la Detección (al menos 3, CLAUDE.md §4.22) y el generador no deja ponerlos en cero. Como Intezia no construye, el deck los redacta sin construir: «mejoras en uso desde el primer día, identificadas con el equipo en el levantamiento». Decisión mía por confirmar con Ivana: si los logros inmediatos tampoco van, hay que cambiar el generador o quitar esa promesa del deck.",
+  "«Revisión humana» en el método viene de lo que el cliente busca (que una persona verifique el resultado). El método sigue las prácticas de Keiber (sin tarea previa, sin forzar soluciones).",
+  "No va al deck: el nombre del contacto, que lleva poco tiempo en la empresa, que la formación no es su prioridad, que sus políticas de IA las hizo Ciberseguridad sin experto en IA y obligan a usar solo Copilot (es el ángulo de la propuesta de Políticas), y su visión de que el funcional dibuje el proceso y su unidad lo ejecute (es otra etapa, fuera de esta propuesta)."
+ ],
+ "pendientes": [
+  "Definir inversión, descuento y total (campos vacíos para ventas); línea de facturación (moneda y tasa) por confirmar con ventas. Decidir si lleva facilidad de pago.",
+  "Confirmar la modalidad (presencial o virtual) y dónde: hoy el deck dice que se acuerda en el arranque.",
+  "Lectura de David sobre lo que queda fuera de la propuesta: integraciones con SAP y orquestación compleja de agentes.",
+  "Confirmar con Ivana qué son los logros inmediatos si Intezia no construye: hoy el deck dice «mejoras en uso desde el primer día, identificadas con el equipo en el levantamiento».",
+  "Flavia pidió una sesión esta semana con el responsable técnico y alguien del equipo técnico de Intezia, antes de enviar.",
+  "Si se quiere nombrar la unidad con su nombre oficial, hay que pedirlo: hoy el deck habla de Grupo Leti."
+ ]
+}

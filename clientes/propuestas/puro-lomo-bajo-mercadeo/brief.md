@@ -212,3 +212,17 @@ verlo en el calendario de `servicio@intezia.com`) — el cambio es solo visual, 
 en pantalla y en el PDF impreso. Se corrigió también `filaSesiones()` (la función que arma el
 PDF), que antes leía el nombre desde el `<h4>` ya eliminado — ahora arma la etiqueta como
 "Sesión " + el número.
+
+## Actualización — Nuevo enfoque de tres procesos (2026-10-20)
+
+Instrucción directa de Ivana: *«ajustar la CAP-101 al nuevo formato y señalar estos procesos»* y, luego, *«es cambiar el enfoque de la propuesta hacia esto»*. La propuesta ya estaba **aprobada** (camino 1, fases 1 y 2); se rehace en la plantilla compacta v3 (`datos.json` es la fuente; el deck anterior de 17 slides, con su `styles.css`, `programa.md` y `acroforms.json`, está en `_anterior-17-slides/`, junto con una copia de este brief).
+
+- **Nuevo enfoque (lo que pidió la gerente de mercadeo):** ser más práctica y enfocar el proyecto en **tres procesos clave que queden formalmente automatizados**, para poder decir «esta actividad de mi área ya está automatizada». No busca un curso: quiere salir de cada encuentro con algo funcionando. Es el mismo punto del feedback del kick-off: menos procesos, pero con entregable real.
+  1. **Generación y estrategia de contenidos:** a mitad de mes ya mapeado el mes siguiente (qué contenido sale y qué le toca a cada persona: diseño, video, publicación). El brief y el diseño de campañas salen de aquí, no son proyectos aparte.
+  2. **Asistente del departamento** para el día a día.
+  3. **Seguimiento y gestión de proyectos:** quién está esperando por quién. Hoy hay que ir detrás de todos y las herramientas tipo Trello se descargan y nadie las termina usando.
+- **Horas: 20 h.** Ivana dijo primero «quedan 14 h» y luego pidió sumar «esas 6 horas restantes que correspondían al clon digital» al asistente y al seguimiento. Reparto de IDIA, por confirmar: contenidos 6 h (mapa 3 h, brief y diseño de campañas 3 h), asistente 6 h, seguimiento 8 h (tablero 5 h, rutina 3 h).
+- **Sale la fase 3 (clon digital de la gerente) como fase propia:** la reemplaza el asistente del departamento y sus 6 h se sumaron al asistente y al seguimiento.
+- **Sin mencionar lo ya dado** (kick-off y 2 sesiones de contenidos): el deck es una propuesta completa nueva; lo ya dado queda solo aquí.
+- **Sin cambios de condiciones:** sin seguimiento 30-60-90 ni garantía, sin facilidad de pago (la aprobada no los tenía); hoja de inversión única con valores vacíos para ventas; sin workbook ni certificado. Contacto: Flavia Martínez, asesora comercial.
+- **Pendientes:** confirmar el reparto de las 20 h (las 6 h del clon se repartieron 3 y 3); el nombre de la gerente (este brief dice «Adriana», el texto de Ivana «Andreina»); si es una nueva versión para reenviar al cliente (`meta.json` sigue en «Aprobada»); rehacer `kickoff.html`, que conserva la ruta anterior.

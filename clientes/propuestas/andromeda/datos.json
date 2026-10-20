@@ -1,0 +1,229 @@
+{
+ "version": 3,
+ "formato": "deteccion",
+ "cliente": {
+  "nombre": "Andrómeda",
+  "slug": "andromeda",
+  "codigo": "DET-016",
+  "nombre_pie": "Andrómeda"
+ },
+ "division": "educacion",
+ "alianza": false,
+ "servicio_rotulo": "Servicio de Detección y Políticas",
+ "meta_servicio": "deteccion",
+ "meta_tipo": "Detección y Políticas: Fundamentals en 4 grupos (8 h), auditoría de 6 áreas transversales y 2 líneas de negocio, Conectium y Spinmovil (32 h), 40 h en total, y marco de gobernanza de IA, en formato compacto de Detección",
+ "omitir": [
+  "pago"
+ ],
+ "eje": "Auditar la operación real de las 6 áreas transversales y las 2 líneas de negocio de Andrómeda, y construir el marco de gobernanza de IA que la organización lleva más de un año y medio sin poder completar",
+ "origen": "Ficha de Levantamiento de Andrómeda (18/09/2026, asesora Verónica Rubio), notas de la reunión aportadas por la asesora e instrucciones del usuario del 30/09/2026 (6 áreas transversales, acotadas a 2 líneas de negocio) del 13/10/2026 (+10 h: Fundamentals y Detección de las 2 líneas) y del 13/10/2026, segunda instrucción (Fundamentals en 4 grupos de 8 h; líneas de negocio Conectium y Spinmovil por separado, sin Ekiipago/Neoplata; 4 h por cada área y por cada línea: 40 h en total) y, ese día, la indicación de quitar que las áreas se auditen «dentro de» las líneas y de reflejar «las 6 áreas más 2 líneas de negocio»",
+ "fuente_insumo": "Ficha de Levantamiento y notas de la reunión con Andrómeda",
+ "portada": {
+  "titulo_lineas": [
+   "Diagnóstico de IA y gobernanza",
+   "en 6 áreas y 2 líneas"
+  ],
+  "titulo_destacado": "de Andrómeda",
+  "lead": "Auditamos las 6 áreas transversales y las 2 líneas de negocio de {cliente_corto}, proceso por proceso, con quien hace el trabajo. Dejamos **logros inmediatos** en el camino y construimos el **marco de gobernanza de IA** que llevan más de un año y medio sin poder completar.",
+  "hechos": [
+   {
+    "num": "+1,5 años",
+    "texto": "sin cerrar su gobernanza de IA por cuenta propia: falta de tiempo, no de interés."
+   },
+   {
+    "num": "Desigual",
+    "texto": "es el nivel de IA entre áreas, sin formación externa formal."
+   },
+   {
+    "num": "Nunca",
+    "texto": "hubo un diagnóstico formal de IA en las áreas transversales ni en las líneas de negocio."
+   },
+   {
+    "num": "Alta",
+    "texto": "autonomía en cada línea, sin reglas claras de cuándo escalar a tecnología por seguridad."
+   }
+  ],
+  "fuente": "Fuente: ficha de levantamiento y reunión con Andrómeda."
+ },
+ "deteccion": {
+  "areas": [
+   "Legal",
+   "Talento Humano",
+   "Finanzas",
+   "Tecnología",
+   "Publicidad Digital",
+   "Transformación Digital",
+   "Conectium",
+   "Spinmovil"
+  ],
+  "horas": {
+   "levantamiento": 32,
+   "arranque": 0,
+   "nivelacion": 8
+  },
+  "logros_minimos": 3,
+  "para_que": [
+   {
+    "titulo": "Ver la operación real",
+    "texto": "Cómo trabaja hoy cada área y cada línea, y dónde la IA aporta valor más allá de lo trivial."
+   },
+   {
+    "titulo": "Mejorar desde ya",
+    "texto": "Logros inmediatos que el equipo usa mientras avanza el levantamiento."
+   },
+   {
+    "titulo": "Invertir con criterio",
+    "texto": "Elegir herramientas y licencias de IA sobre una base cierta."
+   },
+   {
+    "titulo": "Gobernar el uso de IA",
+    "texto": "Reglas claras de uso y de cuándo cada línea escala al equipo transversal de tecnología."
+   }
+  ],
+  "etapas": [
+   {
+    "titulo": "Arranque",
+    "texto": "Reunión con la dirección: alcance, responsable de cada área y línea, y calendario."
+   },
+   {
+    "titulo": "Nivelación",
+    "texto": "**{h_nivelacion} horas** de Fundamentals en 4 grupos: 3 de áreas y 1 de las líneas de negocio."
+   },
+   {
+    "titulo": "Levantamiento",
+    "texto": "Área por área y línea por línea, con su responsable y quien hace el trabajo.",
+    "horas": true
+   },
+   {
+    "titulo": "Priorización",
+    "texto": "Intezia cruza lo levantado y ordena las oportunidades de áreas y líneas."
+   },
+   {
+    "titulo": "Políticas",
+    "texto": "Diagnóstico de madurez y redacción del marco, sobre el estándar ISO/IEC 42001."
+   },
+   {
+    "titulo": "Informe Final",
+    "texto": "Diagnóstico, mapa de oportunidades y marco de gobernanza, presentados a la dirección."
+   }
+  ],
+  "ruta_completa": [
+   {
+    "cuando": "Ahora",
+    "servicio": "Detección y Políticas",
+    "texto": "Esta propuesta."
+   }
+  ],
+  "entregables": [
+   {
+    "cuando": "Al arrancar",
+    "titulo": "Alcance y calendario",
+    "texto": "Acordados con la dirección: responsable de cada área y línea de negocio, y orden de las auditorías."
+   },
+   {
+    "cuando": "Al arrancar",
+    "titulo": "Equipo nivelado en IA",
+    "texto": "Áreas y líneas de negocio con un lenguaje común sobre IA y su uso responsable."
+   },
+   {
+    "cuando": "En el levantamiento",
+    "titulo": "Logros inmediatos",
+    "texto": "**Al menos {logros_minimos_palabra}** soluciones construidas con el equipo, en uso desde el primer día."
+   },
+   {
+    "cuando": "Al cierre",
+    "titulo": "Mapa de Calor",
+    "texto": "Las oportunidades de áreas y líneas en un solo mapa, con su Índice de Madurez en IA, para ver por dónde empezar."
+   },
+   {
+    "cuando": "Al cierre",
+    "titulo": "Marco de gobernanza de IA",
+    "texto": "Manual de políticas, Matriz de riesgos y Brújula IA, con roles, permisos y reglas de escalamiento."
+   },
+   {
+    "cuando": "Al cierre",
+    "titulo": "Informe Final y hoja de ruta",
+    "texto": "Diagnóstico por área y línea, recomendación de ecosistema de IA y resumen ejecutivo de una página."
+   }
+  ]
+ },
+ "metodo": {
+  "por_que_orden": "Primero nivelamos a las áreas y a las líneas de negocio, para que todos hablen el mismo idioma sobre IA. Después levantamos cada una por separado, con su responsable. Al final priorizamos con la foto completa y construimos el marco de gobernanza sobre lo encontrado.",
+  "quien_construye": "Intezia levanta y construye junto a cada responsable. El equipo de tecnología de {cliente_corto} autoriza los accesos y las herramientas con las que se trabaja.",
+  "datos": "Trabajamos con ejemplos reales sin sacar información financiera ni legal de los equipos de {cliente_corto}. Los logros usan solo las cuentas autorizadas, y sus sistemas internos no se modifican."
+ },
+ "logistica": {
+  "modalidad": "A coordinar con cada responsable en la reunión de arranque."
+ },
+ "inversion": {
+  "partes": [
+   {
+    "nombre": "Detección",
+    "detalle": "Fundamentals y auditoría · {h_total} h"
+   },
+   {
+    "nombre": "Políticas",
+    "detalle": "Marco de gobernanza de IA"
+   }
+  ],
+  "etiqueta_partes": "Valor por servicio",
+  "etiqueta_suma": "Inversión total del proyecto",
+  "duracion": "**{h_total} horas** en total: {h_nivelacion} de Fundamentals y {h_levantamiento} de levantamiento, más el marco de gobernanza de IA.",
+  "programa": [
+   "Servicio de Detección y Políticas · {cliente_corto} ({codigo}).",
+   "{h_nivelacion} horas de Fundamentals en 4 grupos, para las 6 áreas y las 2 líneas.",
+   "Levantamiento por área y por línea, con su responsable.",
+   "Al menos {logros_minimos} logros inmediatos, Mapa de Calor e Informe Final.",
+   "Marco de gobernanza de IA: manual, matriz de riesgos y brújula.",
+   "{h_levantamiento} horas de levantamiento."
+  ],
+  "notas": [
+   "Modalidad a coordinar en la reunión de arranque.",
+   "Esta inversión no incluye licencias de IA."
+  ]
+ },
+ "proximos_pasos": {
+  "asesora": {
+   "nombre": "Verónica Rubio",
+   "cargo": "Asesora comercial",
+   "correo": "vrubio01@intezia.com",
+   "telefono": "+58 422 3355505"
+  }
+ },
+ "siglas_ok": [
+  "IA",
+  "ISO",
+  "IEC"
+ ],
+ "supuestos": [
+  "Fuente: Ficha de Levantamiento (18/09/2026) y notas de la reunión de la asesora; no se dispone de la transcripción. Si existe, manda sobre la ficha (CLAUDE.md §4.23).",
+  "Horas (instrucción del usuario, 13/10/2026): **8 h de Fundamentals + 4 h de levantamiento por cada una de las 6 áreas (24 h) + 4 h por cada línea de negocio (2 × 4 = 8 h) = 40 h en total** (32 h de levantamiento). Los Fundamentals van en 4 grupos de 2 h (8 h totales): 1) Tecnología, Publicidad Digital y Transformación Digital; 2) Finanzas; 3) Legal y Talento Humano; 4) línea de negocio (Conectium y Spinmovil). Antes: 4 h de Fundamentals (2 + 2), 32 h de levantamiento y 36 h en total. Una versión intermedia del mismo día había quedado en 36 h de levantamiento y 44 h en total (y una sola línea de negocio): la reemplazó esta instrucción. En el deck se muestran las horas de Fundamentals (a pedido del usuario; la plantilla las deja internas), el levantamiento y el total, y el número de grupos de Fundamentals; el levantamiento va en global, sin reparto por área (regla de la plantilla), y la composición de los grupos solo queda aquí y en el kickoff.",
+  "Áreas: las 6 transversales que dio el usuario el 30/09 (Legal, Talento Humano, Finanzas, Tecnología, Publicidad Digital, Transformación Digital) más **2 líneas de negocio, Conectium y Spinmovil, cada una por separado** (13/10/2026: «son las 6 áreas más 2 líneas de negocio, así es que debe reflejarse»; «míralo como si fuesen áreas aparte»), como unidades propias de auditoría. El deck ya no dice que las 6 áreas se auditen «dentro de» las líneas (se quitó el texto de foco del alcance): las líneas se auditan como unidades aparte, igual que las áreas. **Ekiipago y Neoplata ya no están en la propuesta** (13/10/2026). No hay lista de personal, así que no se muestran departamentos.",
+  "Logros inmediatos: al menos 3 en el proyecto, no uno por área (valor por defecto del servicio); el cliente pidió evitar automatizaciones triviales, así que los logros se eligen en el levantamiento.",
+  "Políticas: se representa como una etapa de la ruta y un entregable (Manual de políticas, Matriz de riesgos y Brújula IA), con su valor propio en la inversión (`inversion.partes`: Detección y Políticas). El contenido sale de la especificación del servicio y de la ficha; la plantilla de Detección no tiene un formato propio para Políticas.",
+  "Habilidades: queda fuera por indicación del usuario; la ruta completa solo muestra «Ahora». Se puede añadir una línea «Después» si se quiere mencionar.",
+  "Los Fundamentals y el levantamiento de las 2 líneas de negocio usan la misma estructura que los de área (propuesta del sistema: el usuario fijó solo las horas y los grupos).",
+  "Facilidad de pago omitida (la versión anterior no la tenía y se omite por defecto al migrar); se añade quitando `omitir`.",
+  "Modalidad no especificada en la ficha: «a coordinar». Sin pre-recomendar herramienta de IA (la recomienda el Informe Final), sin nombrar personas del cliente."
+ ],
+ "pendientes": [
+  "Recalcular y llenar el valor de Detección (40 h: 8 de Fundamentals y 32 de levantamiento) y de Políticas, el descuento y el total (campos vacíos para ventas).",
+  "Confirmar con la asesora el foco de la auditoría de Conectium y de Spinmovil y quién asiste a cada grupo de Fundamentals (máximo 25 personas por grupo).",
+  "Confirmar modalidad (presencial, virtual o mixta) y si se quiere facilidad de pago.",
+  "Sin transcripción de la reunión: contrastar con ella antes de enviar."
+ ],
+ "alcance": {
+  "subtitulo": "Revisamos **proceso por proceso** cada área transversal y cada línea de negocio, con quien hace el trabajo."
+ },
+ "entregables": {
+  "transversales": [
+   "Ficha de levantamiento de cada área y línea",
+   "Presentación del Informe Final a la dirección"
+  ],
+  "valor_inmediato": [
+   "Mejoras en uso antes de cerrar el proyecto",
+   "Datos para decidir antes de comprar licencias",
+   "Roles y responsables de aprobación de IA definidos"
+  ]
+ }
+}

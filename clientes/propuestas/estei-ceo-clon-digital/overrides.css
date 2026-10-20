@@ -1,0 +1,45 @@
+/* Ajustes propios de esta propuesta (se enlaza después de habilidades-compacto.css). */
+
+/* ===========================================================================
+   ESTEI · sin conteo de entregables (páginas 2, 3 y 5) y sin porcentaje en las cuotas (página 8), a pedido de Ivana (20/10/2026).
+   El conteo se oculta por CSS (precedente: zoom-innovacion-skills/overrides.css); las horas se conservan.
+   =========================================================================== */
+
+/* Slide 2 · Alcance: sin «15 entregables · 6 bloques» (las píldoras por fila salen con alcance.sin_conteo_por_fila) */
+.s-scope .scope-total { display: none; }
+
+/* Slide 3 · Ruta: sin «N entregables» en las fases ni en la línea de trabajo; en cada celda queda solo la hora */
+.s-route .rg-phase-n, .s-route .rg-front-n { display: none; }
+.s-route .rg-h { font-size: 0; }
+.s-route .rg-h b { display: none; }
+
+/* Slide 5 · Entregables: la barra del carril dice solo «Claude» */
+.s-deliv .dc { font-size: 0; padding: 0; background: none; }
+.s-deliv .dc::before {
+  content: "Claude"; display: inline-block; font-size: 12px; padding: 6px 14px; border-radius: 999px;
+  color: var(--yellow); background: rgba(244, 186, 26, 0.14);
+}
+
+/* Slide 8 · Facilidad de pago: sin el porcentaje de cada cuota */
+.s-pay .ps-pct { visibility: hidden; }
+
+/* ===========================================================================
+   Slide de calendario (s-cal): opción del generador pedida por Ivana (20/10/2026). Slide oscura con fechas pautadas en dos columnas.
+   Pendiente de pasar al CSS canónico (plantillas/habilidades-compacto-canonico/) cuando se confirme la excepción a §4.23.
+   =========================================================================== */
+.s-cal { background: var(--black); color: var(--white); padding: 44px 56px 0; }
+.s-cal .counter { color: var(--yellow); }
+.s-cal .eyebrow { color: var(--orange); margin-bottom: 6px; }
+.s-cal h2 { font-family: var(--font-display); font-weight: 700; font-size: 36px; line-height: 1.05; margin-bottom: 8px; }
+.s-cal .sub { font-family: var(--font-body); font-size: 15px; line-height: 1.4; max-width: 940px; color: rgba(255, 255, 255, 0.82); }
+.s-cal .foot .meta { color: rgba(255, 255, 255, 0.65); }
+.s-cal .cal-box { margin-top: 22px; padding: 20px 30px 14px; border-left: 6px solid var(--yellow); background: rgba(255, 255, 255, 0.04); border-radius: 0 10px 10px 0; }
+.s-cal .cal-label { font-family: var(--font-display); font-weight: 700; font-size: 14px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--yellow); margin-bottom: 8px; }
+.s-cal .cal-intro { font-family: var(--font-body); font-size: 14px; line-height: 1.4; color: rgba(255, 255, 255, 0.85); margin-bottom: 8px; }
+.s-cal .cal-cols { display: grid; grid-template-columns: 1fr 1fr; column-gap: 28px; margin-top: 6px; }
+.s-cal .cal-col { list-style: none; margin: 0; padding: 0; }
+.s-cal .cal-col li { display: grid; grid-template-columns: 84px 40px 1fr; align-items: center; column-gap: 10px; height: var(--cal-rowh); border-bottom: 1px solid rgba(255, 255, 255, 0.14); }
+.s-cal .cal-col li:last-child { border-bottom: none; }
+.s-cal .cal-d { font-family: var(--font-display); font-weight: 700; font-size: 15px; color: var(--yellow); white-space: nowrap; }
+.s-cal .cal-h { font-family: var(--font-body); font-size: 12.5px; color: rgba(255, 255, 255, 0.6); white-space: nowrap; }
+.s-cal .cal-t { font-family: var(--font-display); font-weight: 700; font-size: 13px; line-height: 1.2; color: var(--white); }

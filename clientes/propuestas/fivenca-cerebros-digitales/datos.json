@@ -1,5 +1,5 @@
 {
- "version": 1,
+ "version": 3,
  "cliente": {
   "nombre": "Fivenca",
   "slug": "fivenca-cerebros-digitales",
@@ -8,7 +8,13 @@
  },
  "division": "educacion",
  "alianza": false,
- "meta_tipo": "Capacitación In-Company · 5 Cerebros Digitales · 4 sesiones de 2 h por persona · 40 h",
+ "eje": "Construcción guiada de Cerebros Digitales (asistentes personales) con Claude (Projects, Skills y conectores) y el conocimiento de cada persona organizado como grafo en Obsidian, para 1, 3 o 5 personas que Fivenca designe",
+ "origen": "Instrucción directa del usuario del 06/10/2026 (5 Cerebros Digitales de 8 h cada uno, asesora María); base de contenido CAP-060 (Crea tu Clon Digital con Claude) y referencias de estructura CAI-027 y CAI-025. Versión 2 del 15/10/2026 (Ivana): tres hojas de cotización, para 1, 3 y los 5 cerebros (clones); pasada del formato compacto v1 al v3. Sin Ficha Comercial",
+ "fuente_insumo": "Instrucción directa del usuario; contenido de CAP-060",
+ "meta_tipo": "Capacitación In-Company · Cerebros Digitales de 8 h · 3 hojas de cotización (1, 3 o 5 cerebros) · hasta 40 h · formato compacto v3",
+ "omitir": [
+  "pago"
+ ],
  "vocabulario": {
   "solucion": [
    "entregable",
@@ -19,31 +25,58 @@
    "Cerebros Digitales"
   ]
  },
- "eje": "Construcción guiada de 5 Cerebros Digitales (asistentes personales) con Claude (Projects, Skills y conectores) y el conocimiento de cada persona organizado como grafo en Obsidian, para 5 personas que Fivenca designe",
- "origen": "Instrucción directa del usuario del 06/10/2026 (5 Cerebros Digitales de 8 h cada uno, asesora María). Base de contenido: CAP-060 (Crea tu Clon Digital con Claude). Referencias de estructura: CAI-027 (Banco Activo) y CAI-025 (Banco Plaza). Sin Ficha Comercial",
- "fuente_insumo": "Instrucción directa del usuario; contenido de CAP-060",
+ "siglas_ok": [
+  "IA"
+ ],
+ "supuestos": [
+  "Versión 2 (Ivana, 15/10/2026): «ajustar la CAI-039 colocando 3 hojas de cotización para hacerlo para 1 clon, 3 clones y los 5». Son tres opciones alternativas, una hoja de inversión por opción (valor, descuento y total propios, campos vacíos para ventas), con `inversion.etapas`. «Clon» se leyó como Cerebro Digital (el nombre que usa el deck). El alcance, la ruta y los entregables muestran los cinco cerebros, que es el máximo; con 1 o 3 cada uno conserva sus 8 h.",
+  "El deck enviado el 06/10/2026 era un compacto v1 (6 slides, con semanas y sesiones), formato que el generador ya no produce. Se rehízo en la plantilla v3 (CLAUDE.md §4.21 punto 6) y los archivos de la v1 quedaron en `_anterior-6-slides/`. Cambios por la v3: sin semanas ni sesiones (el calendario de 4 semanas y las 4 sesiones de 2 h por persona pasan al kickoff, CLAUDE.md §4.23); slides nuevas «Cómo trabajamos» y «Próximos pasos» con la asesora; «Facilidad de pago» omitida (`omitir: [\"pago\"]`); el retorno cambia «Hacia la semana N» por «a los 90 días del cierre». Se conserva todo lo demás: 8 h por cerebro, dos entregables de 4 h, seguimiento a 30, 60 y 90 días, retorno en modo método y la reunión de arranque de 1 h aparte.",
+  "Horas por opción: 8 h con 1 cerebro, 24 h con 3 y 40 h con los 5, siempre 8 h por cerebro (excede en 2 h por cerebro la tarifa de referencia de 6 h, `empresa/politicas-comerciales.md`, caso CAI-025 y CAI-027; decisión del usuario del 06/10/2026). Las horas de cada hoja se escriben en su programa; cada una lleva su descuento y su total.",
+  "Contenido (base CAP-060): cada Cerebro Digital es un «área» de 8 h con 2 entregables de 4 h: (1) Project de Claude y grafo en Obsidian (fundamentos, propósito, Project y grafo) y (2) Skill y automatización conectada. El reparto de las 8 h en los dos entregables es propuesta del sistema, por confirmar con servicio. Los antiguos «4 sesiones de 2 h» solo quedan como referencia interna para el kickoff.",
+  "Tracks individuales (como CAI-025 y CAI-027): cada persona trabaja su cerebro por separado, no en grupo. Si Fivenca prefiere trabajo en conjunto, cambian las horas y el reparto.",
+  "Sin facilidad de pago: el deck enviado no la llevaba y el usuario la omite por defecto. Con tres hojas, si se quiere, hay que definir cuotas por opción.",
+  "Se quitó el certificado de participación (no va por defecto). CAP-060 y CAI-027 lo incluían: confirmar si Fivenca lo quiere.",
+  "Sin Ficha Comercial: los hechos de portada son de contenido (cuántos cerebros, las 8 h, el grafo), no del cliente. Fivenca opera sobre Microsoft 365 y no usa Copilot: es contexto interno (CLAUDE.md §4.11) y el deck no afirma que adopte Claude ni que cambie de stack. Tampoco se menciona el acceso a Claude ni se promete VPN.",
+  "Licenciamiento: cada persona necesita su cuenta de Claude con un plan que permita construir su cerebro. El deck no afirma un plan ni un valor de lista (no hay uno verificado) ni quién paga; va en las notas de cada hoja. Las hojas no llevan la tarjeta de licenciamiento porque `inversion.etapas` no convive con ella.",
+  "Asesora: María Iribarren, la misma de CAP-062 y CAP-105 y de las otras propuestas de Fivenca; confirmar que es ella.",
+  "Fivenca es un grupo financiero (servicios financieros y mercado de capitales): el deck pide autorización antes de cargar datos confidenciales o de clientes en un cerebro; la regla concreta la fija Fivenca."
+ ],
+ "pendientes": [
+  "Definir inversión, descuento y total de cada una de las tres hojas (campos vacíos para ventas). La opción de 5 son 40 h, 10 h sobre la referencia de 6 h por cerebro (30 h).",
+  "Confirmar la lectura de «clones» como Cerebros Digitales y que las tres opciones son alternativas (se elige una).",
+  "Quiénes son las personas (1, 3 o 5) y si ya tienen cuenta de Claude. Si algunas vienen del grupo selecto de CAP-062 o de la directiva de CAP-105, ajustar los fundamentos.",
+  "Fechas, modalidad y disponibilidad de cada persona: se acuerdan en la reunión de arranque (no van en el deck).",
+  "Confirmar con servicio el reparto de las 8 h en los dos entregables y que la línea base del tiempo cabe en las primeras 4 h.",
+  "Confirmar con Fivenca qué información de su trabajo puede cargarse en un cerebro, y si quieren certificado de participación.",
+  "Si se quiere facilidad de pago, definir las cuotas por opción."
+ ],
  "portada": {
   "titulo_lineas": [
-   "Construcción de 5 Cerebros",
+   "Construcción de Cerebros",
    "Digitales con Claude y Obsidian"
   ],
   "titulo_destacado": "en {cliente_corto}",
-  "lead": "Este proyecto acompaña a cinco personas, a designar por {cliente_corto}, para que cada una construya su **Cerebro Digital**: un asistente en Claude con memoria propia, que conoce su rol, su voz y su criterio, y la ayuda a decidir y a automatizar tareas repetitivas.",
+  "lead": "Este proyecto acompaña a hasta cinco personas, a designar por {cliente_corto}, para que cada una construya su **Cerebro Digital**: un asistente en Claude con memoria propia, que conoce su rol, su voz y su criterio, y la ayuda a decidir y a automatizar tareas repetitivas.",
   "hechos": [
    {
-    "num": "5",
-    "texto": "Cerebros Digitales: uno por persona, con su conocimiento y casos reales.",
+    "num": "1, 3 o 5",
+    "texto": "Cerebros Digitales a elegir: uno por persona, con su conocimiento y casos reales.",
     "resuelto_por": [
      "CD1-1",
      "CD2-1",
      "CD3-1",
      "CD4-1",
-     "CD5-1"
+     "CD5-1",
+     "CD1-2",
+     "CD2-2",
+     "CD3-2",
+     "CD4-2",
+     "CD5-2"
     ]
    },
    {
     "num": "8 h",
-    "texto": "por cerebro, en 4 sesiones de 2 h guiadas por Intezia.",
+    "texto": "por cerebro, con trabajo individual guiado por Intezia sobre casos reales de cada rol.",
     "resuelto_por": [
      "CD1-1",
      "CD2-1",
@@ -68,13 +101,14 @@
      "CD5-1"
     ]
    }
-  ]
+  ],
+  "fuente": "Contenido del proyecto; no son mediciones de {cliente_corto}."
  },
  "carriles": [
   {
    "id": "claude",
    "nombre": "Claude y Obsidian",
-   "nombre_corto": "Claude y Obsidian",
+   "nombre_corto": "Claude",
    "color": "amarillo"
   }
  ],
@@ -82,147 +116,187 @@
   {
    "id": "CD1",
    "nombre": "Cerebro Digital 1",
+   "para_que": "Su asistente personal en Claude, con memoria propia",
    "carril": "claude",
    "frente": "A",
-   "composicion": "8 h en 4 sesiones de 2 h.",
+   "composicion": "8 h de trabajo individual con Intezia.",
    "soluciones": [
     {
      "id": "CD1-1",
      "entregable": "Project de Claude (memoria propia) y grafo de notas en Obsidian",
      "h": 4,
      "fase": "F1",
-     "detalle": "Sesiones 1 y 2 de 2 h, individuales para esta persona. Sesión 1: qué es un Cerebro Digital, fundamentos de Claude, anatomía del prompt, contexto, rol y voz, iteración y verificación; define el propósito de su cerebro y resuelve un caso real de su rol con prompting estructurado. Sesión 2: Projects (memoria y contexto de Claude), su conocimiento organizado en Obsidian como un grafo de notas conectadas, voz y criterio propio; configura su Project y visualiza su grafo. Entrega el Project de Claude con su conocimiento y su grafo en Obsidian. Se trabaja sobre casos reales de su rol; Obsidian es gratuito y se instala en la sesión."
+     "detalle": "Referencia interna (4 h, individual para esta persona). Qué es un Cerebro Digital, fundamentos de Claude, anatomía del prompt, contexto, rol y voz, iteración y verificación; define el propósito de su cerebro y resuelve un caso real de su rol con prompting estructurado. Projects (memoria y contexto de Claude), su conocimiento organizado en Obsidian como un grafo de notas conectadas, voz y criterio propio; configura su Project y visualiza su grafo. Entrega el Project de Claude con su conocimiento y su grafo en Obsidian. Se trabaja sobre casos reales de su rol; Obsidian es gratuito y se instala al empezar."
     },
     {
      "id": "CD1-2",
      "entregable": "Skill (instrucción reutilizable) y automatización conectada",
      "h": 4,
      "fase": "F2",
-     "detalle": "Sesiones 3 y 4 de 2 h, individuales para esta persona. Sesión 3: qué es una Skill (instrucción reutilizable) y cómo se construye; conectores, plugins y Cowork para conectar el cerebro a las herramientas que la persona ya usa; conexión de Obsidian al cerebro mediante MCP (Model Context Protocol). Sesión 4: automatiza un proceso real, criterios de privacidad y uso seguro de la información, ajuste final del cerebro y plan de puesta en marcha. Entrega una Skill funcional y una automatización conectada a una herramienta real."
+     "detalle": "Referencia interna (4 h, individual para esta persona). Qué es una Skill (instrucción reutilizable) y cómo se construye; conectores, plugins y Cowork para conectar el cerebro a las herramientas que la persona ya usa; conexión de Obsidian al cerebro mediante MCP (Model Context Protocol). Automatiza un proceso real, criterios de privacidad y uso seguro de la información, ajuste final del cerebro y plan de puesta en marcha. Entrega una Skill funcional y una automatización conectada a una herramienta real."
     }
    ]
   },
   {
    "id": "CD2",
    "nombre": "Cerebro Digital 2",
+   "para_que": "Su asistente personal en Claude, con memoria propia",
    "carril": "claude",
    "frente": "A",
-   "composicion": "8 h en 4 sesiones de 2 h.",
+   "composicion": "8 h de trabajo individual con Intezia.",
    "soluciones": [
     {
      "id": "CD2-1",
      "entregable": "Project de Claude (memoria propia) y grafo de notas en Obsidian",
      "h": 4,
      "fase": "F1",
-     "detalle": "Sesiones 1 y 2 de 2 h, individuales para esta persona. Sesión 1: qué es un Cerebro Digital, fundamentos de Claude, anatomía del prompt, contexto, rol y voz, iteración y verificación; define el propósito de su cerebro y resuelve un caso real de su rol con prompting estructurado. Sesión 2: Projects (memoria y contexto de Claude), su conocimiento organizado en Obsidian como un grafo de notas conectadas, voz y criterio propio; configura su Project y visualiza su grafo. Entrega el Project de Claude con su conocimiento y su grafo en Obsidian. Se trabaja sobre casos reales de su rol; Obsidian es gratuito y se instala en la sesión."
+     "detalle": "Referencia interna (4 h, individual para esta persona). Qué es un Cerebro Digital, fundamentos de Claude, anatomía del prompt, contexto, rol y voz, iteración y verificación; define el propósito de su cerebro y resuelve un caso real de su rol con prompting estructurado. Projects (memoria y contexto de Claude), su conocimiento organizado en Obsidian como un grafo de notas conectadas, voz y criterio propio; configura su Project y visualiza su grafo. Entrega el Project de Claude con su conocimiento y su grafo en Obsidian. Se trabaja sobre casos reales de su rol; Obsidian es gratuito y se instala al empezar."
     },
     {
      "id": "CD2-2",
      "entregable": "Skill (instrucción reutilizable) y automatización conectada",
      "h": 4,
      "fase": "F2",
-     "detalle": "Sesiones 3 y 4 de 2 h, individuales para esta persona. Sesión 3: qué es una Skill (instrucción reutilizable) y cómo se construye; conectores, plugins y Cowork para conectar el cerebro a las herramientas que la persona ya usa; conexión de Obsidian al cerebro mediante MCP (Model Context Protocol). Sesión 4: automatiza un proceso real, criterios de privacidad y uso seguro de la información, ajuste final del cerebro y plan de puesta en marcha. Entrega una Skill funcional y una automatización conectada a una herramienta real."
+     "detalle": "Referencia interna (4 h, individual para esta persona). Qué es una Skill (instrucción reutilizable) y cómo se construye; conectores, plugins y Cowork para conectar el cerebro a las herramientas que la persona ya usa; conexión de Obsidian al cerebro mediante MCP (Model Context Protocol). Automatiza un proceso real, criterios de privacidad y uso seguro de la información, ajuste final del cerebro y plan de puesta en marcha. Entrega una Skill funcional y una automatización conectada a una herramienta real."
     }
    ]
   },
   {
    "id": "CD3",
    "nombre": "Cerebro Digital 3",
+   "para_que": "Su asistente personal en Claude, con memoria propia",
    "carril": "claude",
    "frente": "A",
-   "composicion": "8 h en 4 sesiones de 2 h.",
+   "composicion": "8 h de trabajo individual con Intezia.",
    "soluciones": [
     {
      "id": "CD3-1",
      "entregable": "Project de Claude (memoria propia) y grafo de notas en Obsidian",
      "h": 4,
      "fase": "F1",
-     "detalle": "Sesiones 1 y 2 de 2 h, individuales para esta persona. Sesión 1: qué es un Cerebro Digital, fundamentos de Claude, anatomía del prompt, contexto, rol y voz, iteración y verificación; define el propósito de su cerebro y resuelve un caso real de su rol con prompting estructurado. Sesión 2: Projects (memoria y contexto de Claude), su conocimiento organizado en Obsidian como un grafo de notas conectadas, voz y criterio propio; configura su Project y visualiza su grafo. Entrega el Project de Claude con su conocimiento y su grafo en Obsidian. Se trabaja sobre casos reales de su rol; Obsidian es gratuito y se instala en la sesión."
+     "detalle": "Referencia interna (4 h, individual para esta persona). Qué es un Cerebro Digital, fundamentos de Claude, anatomía del prompt, contexto, rol y voz, iteración y verificación; define el propósito de su cerebro y resuelve un caso real de su rol con prompting estructurado. Projects (memoria y contexto de Claude), su conocimiento organizado en Obsidian como un grafo de notas conectadas, voz y criterio propio; configura su Project y visualiza su grafo. Entrega el Project de Claude con su conocimiento y su grafo en Obsidian. Se trabaja sobre casos reales de su rol; Obsidian es gratuito y se instala al empezar."
     },
     {
      "id": "CD3-2",
      "entregable": "Skill (instrucción reutilizable) y automatización conectada",
      "h": 4,
      "fase": "F2",
-     "detalle": "Sesiones 3 y 4 de 2 h, individuales para esta persona. Sesión 3: qué es una Skill (instrucción reutilizable) y cómo se construye; conectores, plugins y Cowork para conectar el cerebro a las herramientas que la persona ya usa; conexión de Obsidian al cerebro mediante MCP (Model Context Protocol). Sesión 4: automatiza un proceso real, criterios de privacidad y uso seguro de la información, ajuste final del cerebro y plan de puesta en marcha. Entrega una Skill funcional y una automatización conectada a una herramienta real."
+     "detalle": "Referencia interna (4 h, individual para esta persona). Qué es una Skill (instrucción reutilizable) y cómo se construye; conectores, plugins y Cowork para conectar el cerebro a las herramientas que la persona ya usa; conexión de Obsidian al cerebro mediante MCP (Model Context Protocol). Automatiza un proceso real, criterios de privacidad y uso seguro de la información, ajuste final del cerebro y plan de puesta en marcha. Entrega una Skill funcional y una automatización conectada a una herramienta real."
     }
    ]
   },
   {
    "id": "CD4",
    "nombre": "Cerebro Digital 4",
+   "para_que": "Su asistente personal en Claude, con memoria propia",
    "carril": "claude",
    "frente": "A",
-   "composicion": "8 h en 4 sesiones de 2 h.",
+   "composicion": "8 h de trabajo individual con Intezia.",
    "soluciones": [
     {
      "id": "CD4-1",
      "entregable": "Project de Claude (memoria propia) y grafo de notas en Obsidian",
      "h": 4,
      "fase": "F1",
-     "detalle": "Sesiones 1 y 2 de 2 h, individuales para esta persona. Sesión 1: qué es un Cerebro Digital, fundamentos de Claude, anatomía del prompt, contexto, rol y voz, iteración y verificación; define el propósito de su cerebro y resuelve un caso real de su rol con prompting estructurado. Sesión 2: Projects (memoria y contexto de Claude), su conocimiento organizado en Obsidian como un grafo de notas conectadas, voz y criterio propio; configura su Project y visualiza su grafo. Entrega el Project de Claude con su conocimiento y su grafo en Obsidian. Se trabaja sobre casos reales de su rol; Obsidian es gratuito y se instala en la sesión."
+     "detalle": "Referencia interna (4 h, individual para esta persona). Qué es un Cerebro Digital, fundamentos de Claude, anatomía del prompt, contexto, rol y voz, iteración y verificación; define el propósito de su cerebro y resuelve un caso real de su rol con prompting estructurado. Projects (memoria y contexto de Claude), su conocimiento organizado en Obsidian como un grafo de notas conectadas, voz y criterio propio; configura su Project y visualiza su grafo. Entrega el Project de Claude con su conocimiento y su grafo en Obsidian. Se trabaja sobre casos reales de su rol; Obsidian es gratuito y se instala al empezar."
     },
     {
      "id": "CD4-2",
      "entregable": "Skill (instrucción reutilizable) y automatización conectada",
      "h": 4,
      "fase": "F2",
-     "detalle": "Sesiones 3 y 4 de 2 h, individuales para esta persona. Sesión 3: qué es una Skill (instrucción reutilizable) y cómo se construye; conectores, plugins y Cowork para conectar el cerebro a las herramientas que la persona ya usa; conexión de Obsidian al cerebro mediante MCP (Model Context Protocol). Sesión 4: automatiza un proceso real, criterios de privacidad y uso seguro de la información, ajuste final del cerebro y plan de puesta en marcha. Entrega una Skill funcional y una automatización conectada a una herramienta real."
+     "detalle": "Referencia interna (4 h, individual para esta persona). Qué es una Skill (instrucción reutilizable) y cómo se construye; conectores, plugins y Cowork para conectar el cerebro a las herramientas que la persona ya usa; conexión de Obsidian al cerebro mediante MCP (Model Context Protocol). Automatiza un proceso real, criterios de privacidad y uso seguro de la información, ajuste final del cerebro y plan de puesta en marcha. Entrega una Skill funcional y una automatización conectada a una herramienta real."
     }
    ]
   },
   {
    "id": "CD5",
    "nombre": "Cerebro Digital 5",
+   "para_que": "Su asistente personal en Claude, con memoria propia",
    "carril": "claude",
    "frente": "A",
-   "composicion": "8 h en 4 sesiones de 2 h.",
+   "composicion": "8 h de trabajo individual con Intezia.",
    "soluciones": [
     {
      "id": "CD5-1",
      "entregable": "Project de Claude (memoria propia) y grafo de notas en Obsidian",
      "h": 4,
      "fase": "F1",
-     "detalle": "Sesiones 1 y 2 de 2 h, individuales para esta persona. Sesión 1: qué es un Cerebro Digital, fundamentos de Claude, anatomía del prompt, contexto, rol y voz, iteración y verificación; define el propósito de su cerebro y resuelve un caso real de su rol con prompting estructurado. Sesión 2: Projects (memoria y contexto de Claude), su conocimiento organizado en Obsidian como un grafo de notas conectadas, voz y criterio propio; configura su Project y visualiza su grafo. Entrega el Project de Claude con su conocimiento y su grafo en Obsidian. Se trabaja sobre casos reales de su rol; Obsidian es gratuito y se instala en la sesión."
+     "detalle": "Referencia interna (4 h, individual para esta persona). Qué es un Cerebro Digital, fundamentos de Claude, anatomía del prompt, contexto, rol y voz, iteración y verificación; define el propósito de su cerebro y resuelve un caso real de su rol con prompting estructurado. Projects (memoria y contexto de Claude), su conocimiento organizado en Obsidian como un grafo de notas conectadas, voz y criterio propio; configura su Project y visualiza su grafo. Entrega el Project de Claude con su conocimiento y su grafo en Obsidian. Se trabaja sobre casos reales de su rol; Obsidian es gratuito y se instala al empezar."
     },
     {
      "id": "CD5-2",
      "entregable": "Skill (instrucción reutilizable) y automatización conectada",
      "h": 4,
      "fase": "F2",
-     "detalle": "Sesiones 3 y 4 de 2 h, individuales para esta persona. Sesión 3: qué es una Skill (instrucción reutilizable) y cómo se construye; conectores, plugins y Cowork para conectar el cerebro a las herramientas que la persona ya usa; conexión de Obsidian al cerebro mediante MCP (Model Context Protocol). Sesión 4: automatiza un proceso real, criterios de privacidad y uso seguro de la información, ajuste final del cerebro y plan de puesta en marcha. Entrega una Skill funcional y una automatización conectada a una herramienta real."
+     "detalle": "Referencia interna (4 h, individual para esta persona). Qué es una Skill (instrucción reutilizable) y cómo se construye; conectores, plugins y Cowork para conectar el cerebro a las herramientas que la persona ya usa; conexión de Obsidian al cerebro mediante MCP (Model Context Protocol). Automatiza un proceso real, criterios de privacidad y uso seguro de la información, ajuste final del cerebro y plan de puesta en marcha. Entrega una Skill funcional y una automatización conectada a una herramienta real."
     }
    ]
   }
  ],
  "alcance": {
-  "titulo": "Cinco Cerebros Digitales, uno por persona.",
+  "titulo": "Hasta cinco Cerebros Digitales, uno por persona.",
   "subtitulo": "Cada persona construye su **asistente personal en Claude**, con memoria y criterio propios, con la guía de Intezia.",
-  "etiqueta_pasos": "Cómo trabajamos",
-  "pasos": [
-   "Fundamentos de Claude y propósito de cada cerebro, sobre un caso real.",
-   "Ordena su conocimiento como **grafo** de notas conectadas en Obsidian.",
-   "Suma una Skill (instrucción reutilizable) y conecta sus herramientas.",
-   "Automatiza un proceso real y fija criterios de uso seguro."
-  ],
-  "quien_construye": "Cada participante construye su propio cerebro; **Intezia guía** cada sesión para que funcione, sobre casos reales de su rol.",
   "fuera_alcance": [
-   "Licencias de Claude y de otras herramientas, que van aparte.",
+   "Licencias de Claude y de otras herramientas, que van aparte (detalle en cada hoja de inversión).",
    "Desarrollos e integraciones a medida con sistemas internos de {cliente_corto}."
   ]
+ },
+ "metodo": {
+  "titulo": "Así trabajamos el proyecto.",
+  "subtitulo": "Trabajo individual con cada persona, sobre sus casos reales, hasta que usa su cerebro por sí misma.",
+  "quien_construye": "Cada persona construye su propio cerebro; **Intezia guía** cada paso, sobre casos reales de su rol.",
+  "pasos": [
+   {
+    "titulo": "Construimos",
+    "texto": "Con cada persona, en vivo y sobre un caso real de su rol."
+   },
+   {
+    "titulo": "Probamos",
+    "texto": "Con su información y sus tareas, hasta que funcione."
+   },
+   {
+    "titulo": "Adoptamos",
+    "texto": "Cada persona usa su cerebro por sí misma, cada semana."
+   },
+   {
+    "titulo": "Medimos",
+    "texto": "El tiempo recuperado contra la línea base, a 30, 60 y 90 días."
+   }
+  ],
+  "por_que_orden": "Primero se aprende Claude y se ordena el conocimiento de la persona; después se suman una Skill (instrucción reutilizable) y las conexiones a sus herramientas; al final se automatiza un proceso real.",
+  "practica": [
+   {
+    "titulo": "Un cerebro por persona",
+    "texto": "Cada cerebro se construye sobre el rol y los casos reales de su persona, sin copiar el de otra."
+   },
+   {
+    "titulo": "Desde cero, en vivo",
+    "texto": "Cada persona trabaja en vivo con Intezia; no hace falta conocimiento técnico previo."
+   },
+   {
+    "titulo": "Cuenta de Claude",
+    "texto": "Cada persona necesita su cuenta de Claude con un plan de pago: se deja lista en la reunión de arranque."
+   }
+  ],
+  "datos": "Solo se carga en cada cerebro lo que su persona decide compartir: no se suben datos confidenciales, de clientes ni de terceros sin autorización de {cliente_corto}. Los criterios de uso seguro se acuerdan al empezar y se repasan al cerrar."
+ },
+ "logistica": {
+  "modalidad": "Mixta: remota o presencial, según se acuerde en la reunión de arranque.",
+  "participantes": "Hasta cinco personas que {cliente_corto} designe, cada una con su propio acompañamiento.",
+  "arranque": "La fecha la fija {cliente_corto}; una reunión de arranque de 1 h, aparte, acuerda el calendario.",
+  "ritmo": "Según la agenda de cada persona, sin frenar su trabajo diario."
  },
  "fases": [
   {
    "id": "F1",
    "titulo": "El cerebro",
-   "rango": "Semanas 1 y 2",
-   "descripcion": "fundamentos y conocimiento"
+   "descripcion": "**fundamentos y conocimiento**"
   },
   {
    "id": "F2",
    "titulo": "En acción",
-   "rango": "Semanas 3 y 4",
-   "descripcion": "conexiones y automatización",
+   "descripcion": "**conexiones y automatización**",
    "destacada": true
   }
  ],
@@ -230,47 +304,16 @@
   {
    "id": "A",
    "carril": "claude",
-   "semanas": "S1-S4",
-   "etiqueta": "Las cinco personas",
-   "areas_html": "Las 5 personas que Fivenca designe",
+   "nombre": "Las personas designadas",
    "celdas": {
-    "F1": "Sesiones 1 y 2 de 2 h por persona: fundamentos de Claude y su conocimiento organizado.",
-    "F2": "Sesiones 3 y 4 de 2 h: instrucciones reutilizables, conexiones y una automatización."
+    "F1": "Fundamentos de Claude, propósito del cerebro y su conocimiento ordenado como grafo.",
+    "F2": "Instrucciones reutilizables, conexiones a sus herramientas y una automatización."
    }
   }
  ],
- "ruta": {
-  "semanas_total": 4,
-  "tope_h_semana": 20,
-  "titulo": "Del kick-off a cinco cerebros en 4 semanas.",
-  "subtitulo": "Semanas desde el arranque, con **seguimiento y garantía a 30, 60 y 90 días** tras el cierre de las sesiones.",
-  "nota": "S = semana de trabajo desde el arranque, cuya fecha se acuerda con {cliente}. Las {h_total} h son una proyección de sesión: una sesión de 2 h por persona y por semana ({h_f1} h en las semanas 1 y 2, {h_f2} h en las 3 y 4). El kick-off de 1 h es aparte y no suma horas.",
-  "hitos": [
-   {
-    "titulo": "Kick-off · aparte",
-    "texto": "1 h para acordar las 5 personas, sus casos reales y la agenda de sesiones."
-   },
-   {
-    "titulo": "Semanas 1 y 2 · El cerebro",
-    "texto": "Fundamentos, propósito y conocimiento propio ordenado: la base de cada cerebro."
-   },
-   {
-    "titulo": "Semanas 3 y 4 · Acción",
-    "texto": "Instrucciones reutilizables, conexiones y una automatización con uso seguro."
-   },
-   {
-    "titulo": "Semana 4 · Cierre",
-    "texto": "Cada persona cierra con su cerebro funcionando y un plan para usarlo."
-   },
-   {
-    "titulo": "30 · 60 · 90 días",
-    "texto": "Seguimiento: uso, nuevas construcciones y tiempo recuperado."
-   }
-  ]
- },
  "seguimiento": {
   "rango": "30, 60 y 90 días",
-  "texto": "Seguimiento desde el cierre de las sesiones",
+  "texto": "Seguimiento desde el cierre del proyecto",
   "items": [
    {
     "dias": "30 días",
@@ -286,34 +329,35 @@
    }
   ]
  },
- "inversion": {
-  "notas": [
-   "Cada una de las 5 personas necesita su cuenta de Claude. Las licencias van aparte de esta inversión.",
-   "Las sesiones se trabajan sobre casos reales de cada rol; Obsidian es gratuito y se instala en la primera sesión."
-  ],
-  "licencias": {
-   "titulo": "Licenciamiento · aparte de esta inversión",
-   "tarjetas": [
-    {
-     "nombre": "Claude · una cuenta por persona",
-     "color": "amarillo",
-     "texto": "Cada participante necesita su cuenta de **Claude**, con un plan que permita construir su cerebro. Lo confirma {cliente_corto} con el proveedor."
-    },
-    {
-     "nombre": "Obsidian · gratuito",
-     "color": "naranja",
-     "texto": "Aplicación de notas donde cada persona organiza su conocimiento como grafo. Se instala en la **primera sesión**."
-    }
-   ],
-   "nota": "Esta propuesta no incluye precios de lista: dependen del plan que se elija y el cliente los confirma con el proveedor. Pueden variar."
-  },
-  "programa": [
-   "Construcción de 5 Cerebros Digitales con Claude y Obsidian para Fivenca (CAI-039).",
-   "5 cerebros de 8h cada uno: 4 sesiones de 2h por persona. Modalidad a coordinar.",
-   "40h totales de sesión, más 1h de kick-off aparte. Licencias aparte."
+ "ruta": {
+  "titulo": "Cerebros en uso, en dos fases.",
+  "subtitulo": "El calendario de cada persona se acuerda en la reunión de arranque. La **garantía y el seguimiento** a 30, 60 y 90 días corren desde el cierre del proyecto.",
+  "nota": "Las {h_total} h de trabajo son una proyección para los cinco cerebros: 8 h por persona, con {h_f1} h en el cerebro y {h_f2} h en acción. Con uno o tres cerebros, cada uno conserva sus 8 h. La reunión de arranque (1 h) va aparte y no suma horas.",
+  "hitos": [
+   {
+    "titulo": "Arranque · aparte",
+    "texto": "1 h para elegir cuántos cerebros, acordar las personas, sus casos reales y el calendario."
+   },
+   {
+    "titulo": "El cerebro",
+    "texto": "Fundamentos, propósito y conocimiento propio ordenado: la base de cada cerebro."
+   },
+   {
+    "titulo": "En acción",
+    "texto": "Instrucciones reutilizables, conexiones y una automatización con uso seguro."
+   },
+   {
+    "titulo": "Cierre",
+    "texto": "Cada persona cierra con su cerebro funcionando y un plan para usarlo."
+   },
+   {
+    "titulo": "30 · 60 · 90 días",
+    "texto": "Seguimiento: uso, nuevas construcciones y tiempo recuperado."
+   }
   ]
  },
  "entregables": {
+  "etiqueta_transversales": "Para todo el proyecto",
   "titulo": "Lo que recibe cada persona.",
   "subtitulo": "Lo que se llevan: **{n_entregables_txt}** en {n_areas_txt}, más el seguimiento a {rango_seguimiento} que mide su efecto.",
   "transversales": [
@@ -322,9 +366,9 @@
    "Seguimiento a 30, 60 y 90 días con medición del tiempo."
   ],
   "valor_inmediato": [
-   "Semana 1: propósito de cada cerebro y un primer caso resuelto.",
-   "Semana 2: cada cerebro con su conocimiento cargado.",
-   "Semana 4: 5 cerebros con su Skill y una automatización."
+   "Con la base: propósito del cerebro y un primer caso resuelto.",
+   "Con el grafo: su conocimiento cargado y conectado.",
+   "Al cerrar: una Skill y una automatización conectada."
   ],
   "columnas_por_carril": [
    2
@@ -333,9 +377,46 @@
  "retorno": {
   "modo": "metodo",
   "posiciones": false,
-  "subtitulo": "Se calcula con los datos de cada persona, se confirma con la línea base de la primera sesión y se mide a 30, 60 y 90 días.",
+  "subtitulo": "Se calcula con los datos de cada persona, se confirma con la línea base inicial y se mide a 30, 60 y 90 días.",
   "etiqueta_pasos": "Cómo se calcula, por tarea",
-  "etiqueta_metas": "Metas, desde el cierre de las sesiones",
+  "pasos": [
+   {
+    "titulo": "Repeticiones por semana",
+    "texto": "Cuántas veces repite cada persona las tareas que su cerebro va a asumir."
+   },
+   {
+    "titulo": "Tiempo actual por tarea",
+    "texto": "Se mide al empezar y es la **línea base**."
+   },
+   {
+    "titulo": "Tiempo con el cerebro",
+    "texto": "Lo que toma la misma tarea con el cerebro ya en uso."
+   },
+   {
+    "titulo": "Horas recuperadas a la semana",
+    "texto": "Repeticiones por la diferencia entre el tiempo actual y el tiempo con el cerebro."
+   },
+   {
+    "titulo": "Valor en dinero",
+    "texto": "Horas recuperadas por el valor hora de referencia que {cliente_corto} valide."
+   }
+  ],
+  "etiqueta_metas": "Calendario de garantía y cálculo del retorno",
+  "metas": [
+   {
+    "dias": "30 días",
+    "texto": "Los cerebros en uso real en el trabajo diario de cada persona."
+   },
+   {
+    "dias": "60 días",
+    "texto": "Nuevas construcciones del cerebro y horas recuperadas medidas contra la línea base."
+   },
+   {
+    "dias": "90 días",
+    "texto": "Medición del tiempo recuperado y de su valor en dinero."
+   }
+  ],
+  "etiqueta_destino": "Hacia dónde va el proyecto",
   "destino": [
    {
     "rotulo": "Tiempo para decidir",
@@ -350,68 +431,80 @@
     "texto": "Con el retorno medido, {cliente_corto} decide si lleva el Cerebro Digital a **más personas**."
    }
   ],
+  "gancho": "A los 90 días del cierre, cada persona contará con su tiempo recuperado medido y su valor en dinero."
+ },
+ "inversion": {
+  "etapas": [
+   {
+    "titulo": "Inversión para 1 cerebro.",
+    "rotulo": "Opción 1 · Un Cerebro Digital",
+    "duracion": "Un solo Cerebro Digital, para una persona, con seguimiento y garantía a {rango_seguimiento}. {h_area_cd1} horas de trabajo.",
+    "programa": [
+     "Construcción de 1 Cerebro Digital con Claude y Obsidian para Fivenca (CAI-039).",
+     "1 cerebro de {h_area_cd1} h, con trabajo individual guiado por Intezia. Modalidad a coordinar.",
+     "{h_area_cd1} h de trabajo en total, más 1 h de reunión de arranque aparte. Licencias aparte."
+    ],
+    "garantia_texto": "Estamos contigo hasta que tu cerebro quede en uso.",
+    "notas": [
+     "Las licencias van aparte: la persona necesita su cuenta de Claude. Obsidian es gratuito.",
+     "Garantía 30-60-90: seguimiento a 30, 60 y 90 días desde el cierre del proyecto, con el cerebro en uso.",
+     "Esta hoja es una de tres opciones (1, 3 o 5 cerebros): se elige una sola."
+    ]
+   },
+   {
+    "titulo": "Inversión para 3 cerebros.",
+    "rotulo": "Opción 2 · Tres Cerebros Digitales",
+    "duracion": "Tres personas, un Cerebro Digital cada una, con garantía a {rango_seguimiento}. 24 horas de trabajo.",
+    "programa": [
+     "Construcción de 3 Cerebros Digitales con Claude y Obsidian para Fivenca (CAI-039).",
+     "3 cerebros de {h_area_cd1} h cada uno, con trabajo individual guiado por Intezia. Modalidad a coordinar.",
+     "24 h de trabajo en total, más 1 h de reunión de arranque aparte. Licencias aparte."
+    ],
+    "garantia_texto": "Seguimos a tu lado hasta que los tres cerebros estén en uso.",
+    "notas": [
+     "Las licencias van aparte: cada una de las 3 personas necesita su cuenta de Claude. Obsidian es gratuito.",
+     "Garantía 30-60-90: seguimiento a 30, 60 y 90 días desde el cierre del proyecto, con los cerebros en uso.",
+     "Esta hoja es una de tres opciones (1, 3 o 5 cerebros): se elige una sola."
+    ]
+   },
+   {
+    "titulo": "Inversión para 5 cerebros.",
+    "rotulo": "Opción 3 · Los cinco Cerebros Digitales",
+    "duracion": "Las cinco personas, un Cerebro Digital cada una, con garantía y seguimiento a {rango_seguimiento}. {h_total} horas de trabajo.",
+    "programa": [
+     "Construcción de 5 Cerebros Digitales con Claude y Obsidian para Fivenca (CAI-039).",
+     "5 cerebros de {h_area_cd1} h cada uno, con trabajo individual guiado por Intezia. Modalidad a coordinar.",
+     "{h_total} h de trabajo en total, más 1 h de reunión de arranque aparte. Licencias aparte."
+    ],
+    "garantia_texto": "Acompañamos a las cinco personas hasta que cada cerebro esté en uso.",
+    "notas": [
+     "Las licencias van aparte: cada una de las 5 personas necesita su cuenta de Claude. Obsidian es gratuito.",
+     "Garantía 30-60-90: seguimiento a 30, 60 y 90 días desde el cierre del proyecto, con los cerebros en uso.",
+     "Esta hoja es una de tres opciones (1, 3 o 5 cerebros): se elige una sola."
+    ]
+   }
+  ]
+ },
+ "proximos_pasos": {
+  "asesora": {
+   "nombre": "María Iribarren",
+   "cargo": "Asesora comercial",
+   "correo": "miribarren@intezia.com",
+   "telefono": "+58 414 0570056"
+  },
   "pasos": [
    {
-    "titulo": "Repeticiones por semana",
-    "texto": "Cuántas veces repite cada persona las tareas que su cerebro va a asumir."
+    "titulo": "Opción y fecha",
+    "texto": "{cliente_corto} elige 1, 3 o 5 cerebros y confirmamos la fecha de arranque y el horario de cada persona."
    },
    {
-    "titulo": "Tiempo actual por tarea",
-    "texto": "Se mide en la primera sesión y es la **línea base**."
+    "titulo": "Cuenta y material",
+    "texto": "Cada persona deja lista su cuenta de Claude y reúne el material de su rol que decida compartir."
    },
    {
-    "titulo": "Tiempo con el cerebro",
-    "texto": "Lo que toma la misma tarea con el cerebro ya en uso."
-   },
-   {
-    "titulo": "Horas recuperadas a la semana",
-    "texto": "Repeticiones multiplicadas por la diferencia entre el tiempo actual y el tiempo con el cerebro."
-   },
-   {
-    "titulo": "Valor en dinero",
-    "texto": "Horas recuperadas multiplicadas por el costo hora de referencia que {cliente_corto} valide."
+    "titulo": "Reunión de arranque",
+    "texto": "Una hora para alinear objetivos, elegir los casos reales de cada persona y acordar el calendario."
    }
-  ],
-  "metas": [
-   {
-    "dias": "30 días",
-    "texto": "Los 5 cerebros en uso real en el trabajo diario de cada persona."
-   },
-   {
-    "dias": "60 días",
-    "texto": "Nuevas construcciones del cerebro y horas recuperadas medidas contra la línea base."
-   },
-   {
-    "dias": "90 días",
-    "texto": "Medición del tiempo recuperado y de su valor en dinero."
-   }
-  ],
-  "gancho": "Hacia la semana {semana_medicion} ({semanas} semanas de trabajo más 90 días de seguimiento), cada persona contará con su tiempo recuperado medido y su valor en dinero."
- },
- "siglas_ok": [
-  "IA"
- ],
- "supuestos": [
-  "Código CAI-039: siguiente libre (el usuario no dio código; se buscó en todo el repositorio y no aparece). División Educación y alianza «no» inferidas de las 5 propuestas anteriores de Fivenca (CAP-039, CAP-061, CAP-062, CAP-105 y el express: todas Educación, sin alianza). Asesora María Iribarren, la misma de CAP-062 y CAP-105: confirmar que es ella.",
-  "Pedido del usuario (06/10/2026): 5 Cerebros Digitales de 8 h cada uno, 40 h en total. Excede en 2 h por cerebro la tarifa de «Excepción — Cerebros Digitales» (6 h por cerebro, `empresa/politicas-comerciales.md`, caso CAI-025 y CAI-027) y queda dentro del rango de la regla general (8 a 12 h por área). Decisión del usuario; no se mezclan ambas reglas.",
-  "Respuestas del usuario (06/10/2026): un cerebro por persona, personas a designar por Fivenca; 4 sesiones de 2 h por persona; versión sin terminal (Claude con Projects, Skills y Obsidian, sin Claude Code). Base de contenido CAP-060 (Crea tu Clon Digital con Claude) y CAI-027 como referencia de grupo ×N; formato compacto elegido por el usuario al preguntarle la guardia de §4.21 punto 5.",
-  "Reexpresión al compacto (guardia §4.21 punto 5): cada Cerebro Digital es un «área» de 8 h con 2 entregables de 4 h: (1) Project de Claude y grafo en Obsidian (sesiones 1 y 2: fundamentos, propósito, Project y grafo) y (2) Skill y automatización conectada (sesiones 3 y 4). Las 2 h extra respecto de CAP-060 reparten su 3.ª sesión (conectores, MCP, automatización y uso seguro) en dos. Es un reparto propuesto por el sistema: confirmar con servicio.",
-  "Tracks individuales (como CAI-025 y CAI-027): cada persona tiene sus 4 sesiones, no un grupo de 5. Si Fivenca prefiere sesiones en conjunto, cambian las horas de sesión y el reparto.",
-  "Calendario propuesto por el sistema: 4 semanas, una sesión por persona y por semana (5 sesiones y 10 h a la semana, bajo el tope de 20). Fase 1 en las semanas 1 y 2, fase 2 en las 3 y 4. CAI-027 corrió los tracks de forma secuencial en unas 9 semanas; aquí van en paralelo. Confirmar disponibilidad con Fivenca.",
-  "Kick-off de 1 h aparte, sin horas (como CAI-034, CAI-037 y CAI-038): el usuario no lo pidió, es la convención del sistema. Sirve para acordar las 5 personas y sus casos reales.",
-  "Sin Ficha Comercial: los 3 hechos de portada son de contenido (5 cerebros, 8 h, el grafo), no del cliente. Ningún dato de las otras propuestas de Fivenca se afirma en el deck: su entorno Microsoft 365 y que no use Copilot son contexto interno (§4.11); no se afirma que adopte Claude ni que cambie de stack.",
-  "«Project», «Skill» y «grafo» van glosados en cada slide donde aparecen (§4.12). MCP no aparece en el deck, solo en programa.md con su expansión. Los nombres de los entregables llevan la glosa corta entre paréntesis.",
-  "Línea base del tiempo de las tareas repetitivas: se levanta en la sesión 1 de cada persona. Confirmar con servicio que cabe en 2 h.",
-  "Retorno en modo método: sin datos del cliente no hay cifras. «Hacia la semana N» es aritmética (4 semanas de trabajo + 13): confirmar con servicio.",
-  "Sin certificado de participación por defecto (§4.21). CAP-060 y CAI-027 lo incluían (constancia por participante): confirmar si Fivenca lo quiere.",
-  "Licenciamiento: cada persona necesita su cuenta de Claude, con un plan que permita construir su cerebro (el deck no afirma un plan ni un precio: no hay precio de lista verificado). Quién paga las licencias queda para ventas y Fivenca."
- ],
- "pendientes": [
-  "Definir inversión, descuento y total (campos vacíos para ventas). 40 h de sesión: 10 h por encima de la referencia de 6 h por cerebro (30 h) de CAI-025.",
-  "Quiénes son las 5 personas y si ya tienen cuenta de Claude. Si algunas pertenecen al grupo selecto de CAP-062 o a la directiva de CAP-105, ajustar los fundamentos de la sesión 1.",
-  "Fechas, modalidad y disponibilidad semanal de las 5 personas (no están en el deck); confirmar el kick-off.",
-  "Confirmar con servicio el reparto de las 8 h en 4 sesiones y que la línea base cabe en la sesión 1.",
-  "Fivenca es un grupo financiero: confirmar con ellos qué información de su trabajo puede cargarse en un cerebro (la sesión 4 trata el uso seguro, pero la regla la fija Fivenca).",
-  "Confirmar si Fivenca quiere certificado de participación."
- ]
+  ]
+ }
 }

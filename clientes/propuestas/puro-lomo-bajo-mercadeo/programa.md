@@ -1,144 +1,100 @@
-# Documento Oficial de Diseño Curricular e Instruccional
+# Programa interno · Puro Lomo · Servicio de Habilidades (CAP-101)
 
-**[LOGO INTEZIA — `logos/educacion/NEGRO.png`]**  /  **[LOGO Puro Lomo]**
+> Documento interno (no se muestra al cliente). **Generado** por `scripts/generar-habilidades-compacto.py` desde `datos.json`: no editar a mano.
+> Fuente del insumo: Contexto pegado por Ivana (resumen de la reunión, sin transcripción literal); brief.md y programa.md de la CAP-101 anterior (archivados en _anterior-17-slides/).
 
-# Capacitación In-Company
-## Mercadeo con Claude — Puro Lomo
+## 1. Resumen
 
-**Código**: CAP-101
-**Versión**: Propuesta inicial
-**Elaborado por**: Coordinación INTEZIA Education
-**Aprobado por**: Coordinación INTEZIA Education
-**Fecha de Aprobación**: 2026-08-11
+- **5 entregables en 3 procesos**, **20 h** de trabajo.
+- Herramienta **Claude**: 5 entregables, 20 h.
+- Horas por fase: F1 6 h (2 sol.) · F2 6 h (1 sol.) · F3 8 h (2 sol.).
 
----
+## 2. Líneas de trabajo y ruta
 
-## 1. Información general del programa
+| Línea de trabajo | Herramienta | Áreas | Horas | Soluciones |
+|---|---|---|---|---|
+| Equipo de mercadeo | Claude | Generación y estrategia de contenidos, Asistente del departamento, Seguimiento y gestión de proyectos | 20 | 5 |
 
-- **Nombre del programa**: Mercadeo con Claude — Puro Lomo
-- **Empresa**: Puro Lomo
-- **Modalidad**: a definir con Adriana (Presencial / Online Síncrono / Híbrido)
-- **Duración**: 3 fases · Fase 1 · kick-off (1h) + 5 sesiones de 2h con el equipo (11h) ·
-  Fase 2 · 3 sesiones de 2h (6h) · Fase 3 · sin horas impuestas, alcance a definir. Fechas
-  exactas a confirmar en el kick-off.
-- **Acreditación**: INTEZIA Education
+Sin semanas ni sesiones en la propuesta: el calendario se acuerda en la reunión de arranque (Brief de Kickoff, CLAUDE.md §12).
 
----
-
-## 2. Fundamentación y justificación pedagógica
-
-### 2.1 Planteamiento de la necesidad
-
-El equipo de mercadeo de Puro Lomo, de máximo 3 personas, depende hoy de Adriana (Gerente
-de Mercadeo) para resolver lo que no alcanza a completar por su cuenta. Adriana ya usa IA a
-diario y ve con claridad la brecha de ritmo entre ella y su equipo en tareas que hoy podrían
-resolverse en minutos. No busca contratar más personal: busca que el equipo actual produzca
-con autonomía. El programa responde con una capacitación de **aprender haciendo** sobre
-Claude, sin teoría de más, donde cada sesión cierra con un entregable de mercadeo terminado
-por persona.
-
-### 2.2 Enfoque pedagógico (Modelo INTEZIA)
-
-El programa se fundamenta en un modelo de **Aprendizaje Basado en Retos (ABR)** priorizando:
-
-- **Tutoría activa**: el facilitador acompaña la práctica en vivo con Claude, con
-  introducciones breves y feedback en el momento, no exposiciones teóricas.
-- **Transferibilidad inmediata**: cada sesión resuelve una tarea real de mercadeo de Puro
-  Lomo, definida desde el kick-off con Adriana, y cierra con un producto terminado.
-- **Curaduría de contenidos**: el equipo ya sabe usar herramientas de IA en general, así que
-  el foco no es nivelar conceptos básicos, sino aplicar Claude al temario más robusto posible
-  de mercadeo: guías, calendarios de contenido, estrategias, imágenes y video.
-
----
-
-## 3. Perfiles académicos
-
-### [Solo Capacitación] Perfil de ingreso
-
-No aplica — Puro Lomo define quiénes de su equipo de mercadeo participan (máximo 3
-personas). El equipo ya tiene experiencia previa usando herramientas de IA en general.
-
-### Perfil de egreso
-
-- **Saber (Cognitivo)**: entiende qué tareas de mercadeo puede resolver con Claude sin
-  depender de Adriana para cada decisión.
-- **Saber hacer (Procedimental)**: crea guías, calendarios de contenido, estrategias de
-  campaña, imágenes y video con Claude, y mantiene Skills reutilizables por proceso.
-- **Saber ser (Actitudinal)**: decide con criterio propio qué automatizar y qué revisar,
-  liberando tiempo del equipo sin necesidad de sumar personal.
-
----
-
-## 4. Objetivos estratégicos
-
-### 4.1 Objetivo general
-
-Que el equipo de mercadeo de Puro Lomo (máximo 3 personas) aprenda, haciendo, a producir con
-Claude el temario más robusto posible de mercadeo (guías, calendarios de contenido,
-estrategias, imágenes y video), saliendo de cada sesión con un entregable terminado, sin
-necesidad de sumar personal.
-
-### 4.2 Objetivos específicos
-
-1. **Personalizar** la práctica desde un kick-off con Adriana, que conoce los procesos y los
-   cuellos de botella reales del equipo.
-2. **Producir**, sesión a sesión, un entregable terminado por persona (guías, calendarios de
-   contenido, estrategias de campaña, imágenes y video), con una introducción breve y el
-   resto en práctica.
-3. **Sistematizar** en Skills de Claude los procesos de mercadeo que se repiten, para que el
-   equipo los mantenga sin depender de Adriana.
-
-> Cada específico responde al objetivo general → al perfil de egreso → al planteamiento de
-> la necesidad. Los 3 específicos mapean 1 a 1 con las 3 fases del programa.
-
----
-
-## 5. Estructura curricular y diseño instruccional
-
-### 5.1 Estructura modular
-
-| Módulo | Objetivo Instructivo | Temas | Elaboración (Trabajo del participante) |
+| Línea de trabajo | Plan (generación y estrategia de contenidos) | Apoyo (asistente del departamento) | Orden (seguimiento de proyectos) |
 |---|---|---|---|
-| **I: Implementación con el equipo** (Etapa 1 Kick-off + Etapa 2 Sesiones) | Personaliza la práctica sobre los cuellos de botella reales de Puro Lomo y produce, sesión a sesión, un entregable de mercadeo terminado por persona. | 1.1 Kick-off · diagnóstico personalizado con Adriana<br>1.2 Guías de marca y tono<br>1.3 Calendario de contenido<br>1.4 Estrategias de campaña<br>1.5 Imágenes con Claude<br>1.6 Video con Claude | Cada participante produce un entregable terminado por sesión: guía, calendario, brief de estrategia, set de imágenes y pieza de video. |
-| **II: Skills por proceso** (Etapa 3) | Sistematiza en Skills de Claude los procesos de mercadeo que se repiten, para sostenerlos sin depender de Adriana. | 2.1 Qué es una Skill de Claude y cuándo conviene crear una<br>2.2 Construcción de Skills sobre procesos reales del equipo<br>2.3 Mantenimiento y ajuste de Skills | El equipo construye y deja operativas 2-3 Skills sobre procesos propios de mercadeo. |
-| **III: Clon digital de Adriana** (Etapa 4 · contemplada) | Formaliza un asistente entrenado con el criterio y la voz de Adriana, consultable por el equipo sin pasar por ella en cada decisión. Alcance y duración a definir. | 3.1 Alcance a definir con Adriana | A definir una vez cerrado el alcance de la Fase 3. |
+| Equipo de mercadeo | 6 h · 2 sol. | 6 h · 1 sol. | 8 h · 2 sol. |
 
-> Numeración de etapas, fija en todo el documento: **Etapa 1** Kick-off · **Etapa 2**
-> Sesiones con el equipo · **Etapa 3** Skills por proceso · **Etapa 4** Clon digital de
-> Adriana.
+- **Arranque**: Se acuerdan el calendario y los casos reales de cada proceso.
+- **Contenidos**: El mes siguiente queda mapeado, con la tarea de cada persona.
+- **Asistente**: El departamento cuenta con su asistente para el día a día.
+- **Seguimiento**: Se ve quién espera por quién, sin ir detrás de cada persona.
 
-### 5.2 Desglose instructivo (cronograma y ruta por fase)
+## 3. Soluciones y horas (C = construcción, T = pruebas, A = adopción)
 
-| M | Fase | Temas y subtemas | Tiempo de ejecución | Qué se hace | Qué se logra | Recursos y entornos |
-|---|---|---|---|---|---|---|
-| I | Fase 1 · Etapa 1 Kick-off + Etapa 2 Sesiones con el equipo | Diagnóstico personalizado; guías de marca y tono; calendario de contenido; estrategias de campaña; imágenes y video con Claude | Kick-off 1h + 5 sesiones de 2h (11h totales) | El kick-off con Adriana levanta los cuellos de botella reales; cada sesión abre con una introducción breve y el resto es práctica en vivo sobre casos reales de Puro Lomo | Diagnóstico personalizado y 5 entregables terminados por persona (uno por sesión) | Cuentas de Claude para el equipo, casos reales de Puro Lomo, modalidad a definir |
-| II | Fase 2 · Etapa 3 Skills por proceso | Qué es una Skill de Claude, construcción y mantenimiento de Skills sobre procesos propios | 3 sesiones de 2h (6h totales) | El equipo identifica procesos de mercadeo repetitivos y construye Skills de Claude para sostenerlos | 2-3 Skills operativas, listas para mantener sin depender de Adriana | Cuentas de Claude para el equipo, procesos ya practicados en la Fase 1, modalidad a definir |
-| III | Fase 3 · Etapa 4 Clon digital de Adriana | Alcance a definir con Adriana | Sin horas impuestas, a definir | Se define junto con Adriana el criterio, los procesos y el alcance del asistente | Clon digital de Adriana disponible para consulta del equipo (alcance a confirmar) | A definir una vez cerrado el alcance |
+### Generación y estrategia de contenidos · 2 entregables · 6 h · Claude · línea A
 
-> El equipo de mercadeo avanza junto por las 3 fases. Fase 1 y Fase 2 tienen horas
-> definidas; Fase 3 no tiene horas impuestas, su alcance se termina de definir con Adriana.
-> El roadmap se presenta en **3 páginas independientes** (slides 08-10), una por fase.
+Para qué (lo que ve el cliente): Tener el mes siguiente mapeado a mitad de mes, con la tarea de cada persona.
 
----
+| ID | Entregable (nombre en el deck) | Detalle de la fuente | C | T | A | Total | Fase |
+|---|---|---|---|---|---|---|---|
+| CON-1 | Mapa del mes siguiente, con tarea por persona (incluye: Qué contenido sale en el mes siguiente; Qué le toca a cada persona: diseño, video y publicación) | Referencia interna: a mitad de mes ya está mapeado el mes siguiente: qué contenido sale y qué le toca a cada persona (diseño, video, publicación). | - | - | - | 3 | F1 |
+| CON-2 | Brief y diseño de campañas desde el mapa (incluye: Brief de cada campaña a partir del mapa; Diseño de campañas dentro del mismo proceso) | Referencia interna: el brief y el diseño de campañas salen de este proceso, no son proyectos aparte. | - | - | - | 3 | F1 |
 
-## 6. Garantía de calidad y mejora continua
+### Asistente del departamento · 1 entregable · 6 h · Claude · línea A
 
-- **Construcción curricular**: cada práctica se personaliza sobre los cuellos de botella
-  reales levantados en el kick-off con Adriana, no sobre un temario genérico.
-- **Encuesta de satisfacción**: monitoreo de la experiencia al cierre de la Fase 1.
-- **Entregables**: un entregable terminado por persona en cada sesión, 2-3 Skills operativas,
-  workbook digital y certificado de participación INTEZIA.
-- **Beneficio del programa formativo**: al finalizar, Puro Lomo pasa de un equipo de
-  mercadeo que depende de Adriana para todo, a un equipo de hasta 3 personas que produce
-  contenido de forma autónoma con Claude, sin necesidad de contratar más personal.
+Para qué (lo que ve el cliente): Un asistente de Claude para el día a día del equipo de mercadeo.
 
----
+| ID | Entregable (nombre en el deck) | Detalle de la fuente | C | T | A | Total | Fase |
+|---|---|---|---|---|---|---|---|
+| ASI-1 | Asistente del departamento para el día a día | Referencia interna: un asistente del departamento para las consultas y tareas diarias del equipo; su contenido se define con el equipo en el arranque. | - | - | - | 6 | F2 |
 
-## 7. Perfil del equipo facilitador
+### Seguimiento y gestión de proyectos · 2 entregables · 8 h · Claude · línea A
 
-- **Formación académica**: certificación experta demostrable en IA generativa aplicada a
-  mercadeo y creación de contenido.
-- **Experiencia profesional**: ≥ 2 años facilitando adopción de IA en equipos de mercadeo o
-  contenido.
-- **Competencias pedagógicas**: facilitación de sesiones prácticas orientadas a entregable,
-  diseño de Skills reutilizables, dominio de Claude para texto, imagen y video.
+Para qué (lo que ve el cliente): Ver quién está esperando por quién, sin ir detrás de cada persona.
+
+| ID | Entregable (nombre en el deck) | Detalle de la fuente | C | T | A | Total | Fase |
+|---|---|---|---|---|---|---|---|
+| SEG-1 | Tablero de proyectos: quién espera por quién | Referencia interna: hoy hay que ir detrás de todos y las herramientas de seguimiento tipo Trello se descargan y nadie las termina usando; el tablero muestra quién espera por quién. | - | - | - | 5 | F3 |
+| SEG-2 | Rutina de seguimiento que el equipo mantiene | Referencia interna: la rutina que hace que el equipo mantenga el seguimiento al día, para que la herramienta se termine usando. | - | - | - | 3 | F3 |
+
+## 4. Fuera de alcance
+
+- Otros procesos del área distintos de estos tres: se acuerdan aparte, según lo que el equipo necesite.
+- Licencias de Claude y accesos: no forman parte de esta propuesta y los autoriza Puro Lomo.
+- Datos confidenciales o de clientes: no se cargan sin autorización de Puro Lomo.
+
+## 5. Supuestos a confirmar (antes del método)
+
+- CAP-101 ya estaba **aprobada** (camino 1, fases 1 y 2, 2026-08-11) y se rehace con el nuevo enfoque que pidió Ivana (20/10/2026): tres procesos clave que queden formalmente automatizados, para que la gerente de mercadeo pueda decir «esta actividad de mi área ya está automatizada». Menos procesos, pero con entregable real, y de cada encuentro sale algo funcionando. El deck anterior (17 slides canónico) está en `_anterior-17-slides/`; `kickoff.html` no se tocó y conserva la ruta anterior.
+- Tres procesos (contexto de Ivana): 1) generación y estrategia de contenidos (a mitad de mes ya mapeado el mes siguiente, con la tarea de cada persona; el brief y el diseño de campañas salen de aquí); 2) un asistente del departamento para el día a día; 3) seguimiento y gestión de proyectos (quién espera por quién; las herramientas tipo Trello se descargan y nadie las termina usando).
+- **Horas (Ivana, 20/10/2026):** primero «quedan 14 h» (reparto 6/3/5) y después pidió sumar «esas 6 horas restantes que correspondían al clon digital» al asistente y al seguimiento de proyectos: **total 20 h**. El reparto de esas 6 h (3 y 3) es mío: contenidos 6 h (mapa 3 h y brief y diseño de campañas 3 h), asistente 6 h y seguimiento 8 h (tablero 5 h y rutina 3 h). Antes eran 17 h de fases 1 y 2 más 1 h de kick-off; no se descontaron horas dadas a mano (Ivana: propuesta completa nueva, sin mencionar lo ya dado).
+- Fase 3 (clon digital de la gerente) **sale** como fase propia: la reemplaza el asistente del departamento, y sus 6 h se sumaron al asistente y al seguimiento (Ivana). El kick-off de 1 h y los entregables del programa anterior (workbook digital, certificado de participación) no pasan a esta versión.
+- Sin Ficha ni transcripción literal: los hechos de portada salen del resumen de la reunión que pegó Ivana (mapa del mes a mitad de mes y herramientas de seguimiento que nadie termina usando). El deck no nombra personas del cliente. El brief interno dice «Adriana» y el texto de Ivana «Andreina»: confirmar el nombre, aunque no aparece en el deck.
+- Sin seguimiento 30-60-90 ni garantía y sin facilidad de pago, como la propuesta aprobada (que no los tenía): no se agregan compromisos nuevos. Con hoja de inversión única (valores vacíos para ventas), sin las dos hojas de caminos de la versión anterior.
+- §4.11: el deck no afirma que Puro Lomo migre ni adopte herramientas; las de seguimiento que ya tenga se mencionan solo como contexto. Licencias de Claude fuera de la propuesta; no se afirma plan ni valor.
+- Asesora: Flavia Martínez, la misma de CAP-090, CAP-091 y CAP-101 (Ivana, 20/10/2026); su teléfono y correo vienen del brief anterior.
+
+## 6. Cómo trabajamos (slide 4)
+
+**Por qué en este orden:** Primero se ordena qué contenido sale y quién lo hace; después el asistente apoya el día a día; al final el seguimiento muestra quién espera por quién.
+
+- **Construimos**: Junto al equipo, sobre su trabajo real.
+- **Probamos**: Con casos reales del mes en curso.
+- **Adoptamos**: El equipo lo usa en su día a día.
+- **Medimos**: El tiempo que deja de ir en perseguir y rehacer.
+
+- En la práctica, **Algo funcionando**: Cada encuentro termina con una pieza del proceso funcionando, no con un ejercicio.
+- En la práctica, **Casos reales**: Se trabaja con el contenido y los proyectos reales del equipo, no con ejemplos de manual.
+- En la práctica, **Equipo autónomo**: Al cerrar, el equipo sostiene cada proceso sin depender de una sola persona.
+- Datos: Solo se usa la información que Puro Lomo autoriza compartir: ningún dato confidencial entra sin su permiso.
+- Quién construye: Intezia guía y el equipo de mercadeo construye cada proceso con su propio trabajo.
+
+**Logística:** modalidad: A acordar con Puro Lomo en la reunión de arranque. · participantes: El equipo de mercadeo de Puro Lomo, de hasta 3 personas. · ritmo: Según la disponibilidad del equipo, sin frenar su operación diaria. · arranque: Puro Lomo confirma la fecha; el calendario se acuerda en el arranque..
+
+## 7. Retorno esperado (slide 6)
+
+Modo **metodo**. La slide no cita estudios ni referencias de la web ni promete retorno.
+
+Pasos del método: Actividad real; Tiempo actual; Con el proceso; Diferencia.
+
+## 8. Próximos pasos (slide 8)
+
+Asesora comercial que ve el cliente: Flavia Martínez, Asesora comercial · fmartinez@intezia.com · +58 414 5756615.
+

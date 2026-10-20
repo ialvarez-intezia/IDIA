@@ -1,0 +1,39 @@
+/* Ajustes propios de esta propuesta (se enlaza después de habilidades-compacto.css). */
+
+/* ===========================================================================
+   Zoom · Innovación, sin entregables y con horas en rango: Claude Fundamentals dura «de 8 a 10 horas» y el generador solo calcula
+   con horas enteras (8 h). Por eso se ocultan los totales y las horas calculadas (cabecera del alcance, chips de la ruta y
+   «N h de trabajo»): las cifras van escritas en los textos (Ivana, 19/10/2026). Base: somos-corpos-cai048/overrides.css.
+   =========================================================================== */
+
+.s-scope .scope-total { display: none; }
+.s-route .rg-phase-n, .s-route .rg-front-n, .s-route .rg-front-meta { display: none; }
+.s-route .rg-h { display: none; }
+
+/* Slide 3 · Ruta: una sola línea de trabajo y dos fases */
+.s-route .route-grid { --rowh: 190px !important; }
+.s-route .rg-cell { padding: 22px 24px; }
+.s-route .rg-cell p { font-size: 19px; line-height: 1.42; }
+.s-route .rg-front-h { font-size: 22px; }
+.s-route .route-miles { margin-top: 30px; }
+.s-route .mile b { font-size: 16px; margin-bottom: 6px; }
+.s-route .mile p { font-size: 14px; line-height: 1.4; }
+.s-route .route-note { margin-top: 18px; font-size: 12.5px; }
+
+/* Slide 4 · Cómo trabajamos */
+.s-method .mt-steps { gap: 16px; margin-bottom: 14px; }
+.s-method .mt-steps li { min-height: 104px; padding: 14px 16px 14px 62px; }
+.s-method .mt-steps li::before { left: 16px; top: 15px; width: 32px; height: 32px; line-height: 32px; font-size: 16px; }
+.s-method .mt-steps b { font-size: 17px; margin-bottom: 5px; }
+.s-method .mt-steps span { font-size: 13px; }
+.s-method .mt-strips { gap: 16px; margin-bottom: 14px; }
+.s-method .mt-why, .s-method .mt-who { padding: 13px 18px; font-size: 13px; }
+.s-method .mt-why b, .s-method .mt-who b { font-size: 13px; }
+.s-method .mt-info { gap: 16px; margin-bottom: 14px; }
+.s-method .mt-card { padding: 17px 22px 15px; }
+.s-method .mt-card-label { margin-bottom: 10px; font-size: 11.5px; }
+.s-method .mt-card p, .s-method .mt-card li { font-size: 14.5px; line-height: 1.42; }
+.s-method .mt-card li { padding-bottom: 8px; }
+.s-method .mt-tile { padding: 13px 16px 14px; }
+.s-method .mt-tile span { font-size: 10px; margin-bottom: 6px; }
+.s-method .mt-tile b { font-size: 13px; }

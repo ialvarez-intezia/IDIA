@@ -256,15 +256,24 @@ fi
 # (los v1/v2 ya entregados no se revisan por esto). Las fuentes citadas (pain-src, mp-src, lic-note) y los comentarios
 # no cuentan; las tasas del cliente («12 h por semana», «cada semana») sí se permiten.
 if [[ -f "$DIR/habilidades-compacto.css" ]] && grep -q 'CSS genérico (v[3-9]' "$DIR/habilidades-compacto.css" 2>/dev/null; then
-  CAL_HITS=$(python3 - "$HTML" <<'PYEOF'
-import html, re, sys
+  CAL_HITS=$(python3 - "$HTML" "$DIR/datos.json" <<'PYEOF'
+import html, json, os, re, sys
 t = open(sys.argv[1], encoding="utf-8").read()
+# frases_ok de datos.json (igual que en el generador): frases declaradas a propósito, p. ej. «sesiones de 2 h» sin conteos (Ivana, 2026-10-14)
+frases_ok = []
+if os.path.exists(sys.argv[2]):
+    try:
+        frases_ok = [x for x in (json.load(open(sys.argv[2], encoding="utf-8")).get("frases_ok") or []) if isinstance(x, str) and x.strip()]
+    except Exception:
+        frases_ok = []
 t = re.sub(r"<!--.*?-->", " ", t, flags=re.S)
 t = re.sub(r'<(p|span) class="(?:pain-src|mp-src|lic-note)">.*?</\1>', " ", t, flags=re.S)
 rx = re.compile(r"(?<!por )(?<!cada )(?<!a la )\bsemanas?\b|\bsesi[oó]n(?:es)?\b", re.I)
 out = []
 for cls, cuerpo in re.findall(r'<section class="slide ([^"]*)">(.*?)</section>', t, re.S):
     txt = html.unescape(re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", cuerpo)))
+    for fr_ok in sorted(frases_ok, key=len, reverse=True):
+        txt = re.sub(re.escape(fr_ok), " ", txt, flags=re.I)
     for m in rx.finditer(txt):
         out.append("  %s: «…%s…»" % (cls.split()[0], txt[max(0, m.start() - 35):m.end() + 25].strip()))
 print("\n".join(out[:10]))

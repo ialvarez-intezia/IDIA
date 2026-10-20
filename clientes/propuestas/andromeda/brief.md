@@ -2,6 +2,89 @@
 
 ---
 
+## Actualización 2026-10-13 (segunda) — Fundamentals en 4 grupos, sin Ekiipago/Neoplata, Conectium y Spinmovil por separado: 8 h + 32 h = 40 h
+
+Instrucción directa del usuario (mensaje del equipo de servicio): *«Los fundamentos se darán en 4 grupos. 8 horas totales. Grupos: 1. Tecnología, publicidad, transformación digital. 2. Finanzas. 3. Legal, talento humano. 4. línea de negocio (Conectium y Spinmovil). Sacas la otra línea de negocio y estas las separas en 2. Quedaría 8 horas de fundamentos, 36 de detección»*. Como el mensaje admitía varias lecturas, se fue confirmando con el usuario durante el día (hubo versiones intermedias de 44 h con dos líneas separadas y de 44 h con una sola línea; **ambas quedaron reemplazadas**). **Versión final**, dicha por el usuario: *«Son las seis áreas y se suman las líneas de negocio. [...] van a seguir siendo dos porque vas a separar Conectium y Spinmovil: una línea de negocio y Spinmovil otra. 8 h en fundamentos según las áreas que ya te di, más 4 h de detección por las 6 áreas, más 4 h por línea de negocio, que están en 2: son 40 h en total»*.
+
+- **Líneas de negocio**: salen **Ekiipago y Neoplata**; **Conectium y Spinmovil** son **dos líneas de negocio separadas** (antes una sola, «Conectium/Spinmovil»). El deck sigue diciendo «2 líneas de negocio» y la lista de «áreas» queda en 8: las 6 transversales, Conectium y Spinmovil. El nombre del PDF no cambia («…en 6 áreas y 2 líneas de Andrómeda»).
+- **Cómo se refleja (indicación final del usuario, 13/10/2026)**: «son las 6 áreas más 2 líneas de negocio, así es que debe reflejarse». Las 2 líneas se auditan como unidades aparte, igual que las áreas, así que se **quitó el texto de foco** del alcance («las 6 áreas se auditan dentro de las dos líneas de negocio, y cada línea tiene además su propia auditoría»). En el hecho de portada ahora dice «en las áreas transversales ni en las líneas de negocio». Hubo un intento intermedio de hablar solo de «8 áreas» sin mencionar líneas: se descartó.
+- **Fundamentals**: de 4 h (2 + 2) a **8 h en 4 grupos de 2 h**: 1) Tecnología, Publicidad Digital y Transformación Digital; 2) Finanzas; 3) Legal y Talento Humano; 4) línea de negocio (Conectium y Spinmovil). El deck dice solo «8 horas de Fundamentals en 4 grupos: 3 de áreas y 1 de las líneas de negocio» (la composición de los grupos no va en el deck: se confirma en el kickoff, §4.23).
+- **Levantamiento**: **32 h en global** = 4 h × 6 áreas (24 h) + 4 h × 2 líneas (8 h); sin reparto por área en el deck (regla de la plantilla). **Total 40 h** (antes 36 h).
+- **Valor**: los campos de inversión siguen vacíos para ventas, pero hay que **recalcular el valor de Detección con las 40 h** antes de reenviar (la propuesta ya se había enviado el 20/09/2026; `meta.json` sigue en «Enviada»). Los PDF de las versiones anteriores (36 h, y las intermedias del mismo día) quedaron en `_pdf-anteriores/`.
+- **Pendientes**: confirmar con la asesora el foco de la auditoría de Conectium y de Spinmovil y quién asiste a cada grupo de Fundamentals (máx. 25 por grupo); confirmar que Ekiipago y Neoplata no reciben Fundamentals ni levantamiento en esta fase.
+- Fuente vigente: `datos.json`; `programa.md` es generado.
+
+## Actualización 2026-10-13 (formato nuevo) — rehecha en la plantilla compacta de Detección
+
+Instrucción directa del usuario: *«hazla en el formato nuevo»* (tras la ampliación de 26 h a 36 h de
+más abajo). La propuesta pasa del deck canónico de 12 slides a la **plantilla compacta de Detección**
+(`plantillas/deteccion-compacto.md`, CLAUDE.md §4.22): 8 slides (sin facilidad de pago), dirigida por
+`datos.json` (`"formato": "deteccion"`) y generada con `scripts/generar-habilidades-compacto.py`. El
+deck de 12 slides (con su PDF, `overrides.css`, `acroforms.json`, `programa.md` y el
+`customize-andromeda.py`, que se retiró de `scripts/`) quedó en `_anterior-12-slides/`; los PDF
+enviados, en `_pdf-anteriores/`. **Esta sección y las de abajo son historia: la fuente vigente es
+`datos.json`** (el `programa.md` ahora es generado: no se edita a mano).
+
+Cómo se tradujo el combo Detección + Políticas (la plantilla no tiene un formato propio para Políticas):
+- `servicio_rotulo` «Servicio de Detección y Políticas», `meta_servicio: deteccion`.
+- **8 «áreas» a auditar**: las 6 transversales (Legal, Talento Humano, Finanzas, Tecnología,
+  Publicidad Digital, Transformación Digital) y las 2 líneas de negocio (Conectium/Spinmovil y
+  Ekiipago/Neoplata). El texto de foco aclara que las 6 áreas se auditan dentro de las líneas y que
+  cada línea tiene además su propia auditoría. Sin departamentos (no hay lista de personal).
+- **Horas en global (regla de Keiber)**: a la vista, 4 h de Fundamentals (2 para las áreas y 2 para
+  las líneas, a pedido del usuario: la plantilla las deja internas por defecto), 32 h de
+  levantamiento (8 × 4 h) y **36 h en total** (ruta, Duración y valor de Detección). El «4 h por
+  área» de la versión anterior ya no se muestra en el deck.
+- **Políticas** = una etapa de la ruta (6 etapas: Arranque, Nivelación, Levantamiento, Priorización,
+  Políticas, Informe Final), un entregable («Marco de gobernanza de IA»: Manual de políticas, Matriz
+  de riesgos y Brújula IA) y su propia caja de valor en la inversión (`inversion.partes`: Detección y
+  Políticas, con «Inversión total del proyecto» como suma).
+- **Habilidades fuera**: la ruta completa solo dice «Ahora». Se mantiene la decisión del usuario del
+  2026-09-20 («solo es para deteccion y politicas»).
+- **Lo que no tiene lugar en el formato nuevo y salió**: la cita de la portada, la slide de Impacto
+  (estudios), el cuadro de ROI de la hoja de cotización (ahora hay una slide de Retorno, en modo
+  método), la Metodología ABR del roadmap y el nombre del sponsor del cliente. El descuento sigue
+  como campo vacío con su aviso de 15 días.
+  La referencia a ISO/IEC 42001 se conserva en la etapa de Políticas.
+- **Sin facilidad de pago**: la versión anterior no la tenía y se omite por defecto al migrar
+  (`omitir: ["pago"]`); si se quiere, se quita esa clave.
+- **Pendientes**: sin transcripción de la reunión (la fuente es la ficha y las notas de la asesora);
+  valores de Detección (36 h) y de Políticas, descuento y total (campos vacíos para ventas); foco y
+  asistentes de las sesiones de las 2 líneas; modalidad. `meta.json` sigue en «Enviada» (2026-09-20).
+
+## Actualización 2026-10-13 — +10h de Detección: Fundamentals y sesiones de las 2 líneas de negocio
+
+Instrucción directa del usuario: *"agregarle otras 2h de fundamentals para las lineas de negocios
+mas 4h de deteccion por cada una de estas 2 lineas de negocio dando un total de 10h adicionales"*.
+
+- **Qué cambia**: las 2 líneas de negocio (Conectium/Spinmovil y Ekiipago/Neoplata) dejan de ser
+  solo el universo que acotaba las 6 áreas y pasan a tener Detección propia: **+2h de
+  Fundamentals** (una sesión grupal aparte de la de las 6 áreas) **+ 4h de Detección por línea**
+  (2 × 4h = 8h) = **+10h**.
+- **Dimensionamiento nuevo**: 6 áreas × 4h (24h) + 2 líneas × 4h (8h) + 2 Fundamentals × 2h (4h) =
+  **36h de Detección** (antes 26h). Políticas no cambia (por entregable).
+- **Formato**: el deck sigue en el formato canónico de 12 slides (no se convirtió a la plantilla
+  de Detección de §4.22: el usuario pidió modificar, no rehacer). Sin slide nueva: la slide 6
+  (Fundamentals) cubre las 2 sesiones y la slide 7 (estructura de las 4 horas) las 8. Aplicado a
+  portada, objetivos, programa, roadmap, ambos cronogramas, beneficios, hoja de inversión
+  (descripción de la Fase 1), próximos pasos, cierre y campos editables (Entregables,
+  Acreditacion, Notas, Paso01-03, CierreResultado, CierrePaso1). El PDF anterior (26h, enviado el
+  2026-09-20) quedó en `_pdf-anteriores/`.
+- **Contenido de las sesiones de línea: propuesta del sistema.** El usuario solo fijó las horas;
+  se usó la misma estructura de 4h que las de área (contexto y objetivos / levantamiento de
+  procesos reales / evidencia para el Índice de Madurez / cierre) y la misma sesión de Fundamentals
+  de 2h. Confirmar con Verónica si las sesiones de línea deben tener otro foco (p. ej. estrategia
+  y autonomía de la línea, cuándo escala al equipo transversal de tecnología).
+- **Se corrigió de paso** un resto de la versión de 3 áreas en el roadmap («diagnóstico de las 3
+  áreas») y `programa.md`, que seguía en 3 áreas y 14h (no se había actualizado el 2026-09-30):
+  ahora refleja las 6 áreas, las 2 líneas y las 36h.
+- **Sin tocar**: Políticas (alcance y entregables), la slide de Impacto, el ROI y los valores. Los
+  campos de inversión siguen vacíos (los llena ventas): **el valor de la Fase 1 hay que
+  recalcularlo con las 36h** antes de reenviar.
+- **Pendientes**: Fundamentals (máx. 25 personas por sesión) para las líneas: confirmar quiénes
+  asisten por línea; modalidad y fechas, como antes; confirmar si las sesiones de línea van con
+  los mismos participantes que las de área.
+
 ## Actualización 2026-09-30 — 6 áreas transversales, acotadas a 2 líneas de negocio
 
 Instrucción directa del usuario: *"Las áreas transversales que debemos cubrir son: Legal,

@@ -1,5 +1,54 @@
 # Brief — Banco Activo · Cerebros Digitales para la línea directiva (CAI-027)
 
+## Corrección 2026-10-13: ajustada al formato nuevo (v3) y a 9 Cerebros Digitales
+
+Instrucción directa de Ivana: «ajustar la CAI-027 al nuevo formato y ahora son 9 cerebros digitales». La propuesta
+dejó el formato canónico de 14 slides (archivado en `_anterior-14-slides/`, con su `index.html`, `overrides.css`,
+`acroforms.json`, `programa.md`, el PDF enviado y `customize-banco-activo-cerebros-digitales.py`) y pasó a la
+**plantilla compacta de Habilidades v3** (CLAUDE.md §4.21): `datos.json` es la fuente; `index.html`, `acroforms.json` y
+`programa.md` se generan. **Lo vigente es esta sección y `datos.json`**; el resto de este archivo es el historial de la
+versión canónica (6 → 4 → 5 personas, calendario con fechas, slide de Impacto, obsequio, scripts propios) y ya no
+describe el deck.
+
+- **Alcance:** 9 Cerebros Digitales, 6 h cada uno = **54 h** (antes 5 × 6 h = 30 h), tres entregables de 2 h por persona
+  (los 3 módulos de la versión anterior), 8 slides, sin facilidad de pago.
+- **Estado:** `En corrección`; vuelve a `Enviada` al generar el PDF con `pdf-habilidades-compacto.sh`.
+
+<!--auto:inicio-->
+- **Alcance**: 27 entregables en 9 Cerebros Digitales · 54 h de trabajo · seguimiento a 30, 60 y 90 días
+- **Orden de las slides**: 1 Portada · 2 Alcance · 3 Ruta · 4 Cómo trabajamos · 5 Entregables · 6 Retorno · 7 Inversión · 8 Próximos pasos
+- **Asesora comercial que ve el cliente (última slide)**: Verónica Rubio, Asesora comercial · vrubio01@intezia.com · +58 422 3355505
+<!--auto:fin-->
+
+## Decisiones y supuestos (confirmar con el usuario)
+
+- Instrucción de Ivana (13/10/2026): «ajustar la CAI-027 al nuevo formato y ahora son 9 cerebros digitales». Se rehízo en la plantilla compacta v3 (el deck canónico de 14 slides, con 5 cerebros, queda archivado en _anterior-14-slides/). Todo lo demás se conservó de la versión enviada: contenido de los 3 módulos, 6 h por cerebro, trabajo individual por persona, línea directiva, asesora, obsequio y sin facilidad de pago.
+- Horas: 6 h por Cerebro Digital (tarifa de referencia, «Excepción — Cerebros Digitales» de empresa/politicas-comerciales.md): 9 × 6 h = 54 h (antes 5 × 6 h = 30 h). La reunión de arranque (1 h) va aparte, como en la versión anterior (kick-off de 1 h).
+- Contenido: se conserva el de los 3 módulos del programa.md anterior, uno por entregable de 2 h: (1) fundamentos de Claude y prompting con el propósito del cerebro; (2) Project, conocimiento en grafo de Obsidian y Skill; (3) conexión (Conectores, Plugins, MCP, Cowork), automatización de un proceso y uso seguro. Los temas por módulo viven en programa.md (generado), no en el deck.
+- Sin semanas, sesiones ni fechas (CLAUDE.md §4.23): el calendario anterior (kick-off del 08/10/2026 y 15 sesiones de 2 h, martes y jueves del 13/10 al 01/12/2026, tres por cada una de las 5 personas) se quita del deck. Con 9 cerebros serían 27 sesiones de 2 h, una por entregable y persona; el calendario de cada persona se acuerda en la reunión de arranque y vive en el Brief de Kickoff.
+- Se quitó la slide de Impacto (el formato nuevo no la lleva, §4.9) y con ella la referencia anónima al caso del sector financiero (índice 86/100 y 91,8 % de retención de otro cliente): el retorno va en modo método, sin cifras ni estudios.
+- Se quitó el certificado de participación INTEZIA: el formato nuevo no lo incluye salvo que el cliente lo pida (§6 «Entregables»). La versión enviada lo llevaba; si se quiere conservar, es una viñeta más en «Para todo el proyecto».
+- Se conserva el obsequio de la versión enviada («el Cerebro Digital de la Presidencia va por cuenta de Intezia»), ahora como tercera nota de la inversión (campo Notas). La hoja del formato nuevo trae fija la etiqueta «Descuento» y el aviso «Descuento válido por 15 días»; la versión enviada los había cambiado por «Obsequio de Intezia» y quitado el aviso. Si se quiere volver a eso hace falta una opción del generador (no se editó el index.html, que es generado).
+- Grupo: la versión enviada hablaba de la «línea directiva», sin nombres ni cargos (decisión del 24/09/2026). Con 9 personas puede que ya no sean todas de la línea directiva (la Ficha registraba 4 Vicepresidentes y el Presidente, y el usuario había confirmado 6), así que el lead y la línea de trabajo dicen «líderes de Banco Activo»; «línea directiva» solo queda en la logística y en el eje. Confirmar quiénes son antes de enviar.
+- Los 3 datos de la portada son los del diagnóstico de la versión enviada (Ficha de Levantamiento): uso desigual de la IA, conocimiento disperso y tareas repetitivas. La Ficha no está en el repositorio: verificarlos contra ella.
+- Claude sobre un cliente venezolano: no se menciona el acceso ni el riesgo de bloqueo en el deck (criterio de Ivana en Simple TV y Go Pharma, 09 y 13/10/2026) ni se promete VPN. La cuenta de Claude con plan de pago va como licencia aparte; no se afirma quién la contrata ni se escribe un valor de lista.
+- Banco Activo opera Google Workspace con licencias de Copilot y Gemini (contexto interno, CLAUDE.md §4.11): el deck no afirma que migre de stack ni nombra esas herramientas.
+- Sin facilidad de pago (`omitir: ["pago"]`): criterio repetido de Ivana en las migraciones a v2 y v3; ventas comunica el plan por otro medio. Para agregarla, cuotas ligadas a los hitos de la ruta (Arranque, Base, Uso, Cierre).
+
+## Pendientes
+
+- Confirmar si el obsequio del Cerebro Digital de la Presidencia sigue con 9 cerebros (la Presidencia debe estar entre las 9 personas) y si se mantiene como nota.
+- Confirmar quiénes son las 9 personas y si todas son línea directiva; si no, cambiar «línea directiva» de la logística (slide 4) y del eje (meta.json).
+- Confirmar si el certificado de participación sigue (la versión enviada lo llevaba).
+- Verificar los 3 datos de la portada contra la Ficha de Levantamiento de Banco Activo y la transcripción de la reunión (§4.23: si se contradicen, manda la transcripción).
+- Definir inversión, descuento y total: ventas llena las tres cajas, que van vacías (54 h en total, antes 30 h). Decidir si lleva facilidad de pago.
+- Confirmar con el cliente el plan de Claude y quién lo contrata (Banco Activo ya tiene licencias de Copilot y Gemini) y si ya hay cuentas.
+- Acordar en el kickoff el calendario de las 9 personas (27 sesiones de 2 h en total) y la modalidad.
+
+---
+
+## Historial de la versión canónica de 14 slides (ya no vigente)
+
 ## Corrección 2026-10-01 (3ra vuelta) — "TOTAL" sin autocálculo
 
 Instrucción directa del usuario: al escribir el monto de "Obsequio de Intezia" en Adobe, el

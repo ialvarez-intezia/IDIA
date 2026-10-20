@@ -1,0 +1,325 @@
+<!doctype html>
+<!--
+  EJEMPLO · Dashboard de Impacto con el formulario nuevo (EduPulse + EduTrace v0.2), versión corta: 6 slides.
+  TODOS LOS DATOS SON SIMULADOS para mostrar el formato. No es un cliente real.
+  Todo en escala 1-5, la misma de EduPulse y EduTrace. El Índice de Impacto mantiene la fórmula
+  (30% competencia, 35% retención, 20% aplicabilidad, 15% calidad) expresada en 1-5; la retención
+  entra al índice como 1 + 4 x % de aciertos. Aciertos y adopción se muestran como % de personas.
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard de Impacto · Ejemplo de formato · Intezia Educación</title>
+  <link rel="stylesheet" href="../../clientes/propuestas/_base/styles.css">
+  <link rel="stylesheet" href="overrides.css">
+</head>
+<body>
+  <main class="deck">
+
+    <!-- 01 · Portada -->
+    <section class="slide s-cover">
+      <span class="ejemplo-tag">EJEMPLO · DATOS SIMULADOS PARA MOSTRAR EL FORMATO</span><span class="counter">01 / 06</span>
+      <div class="logo-big">
+        <img src="../../logos/educacion/BLANCO.png" alt="Intezia Educación">
+      </div>
+      <div class="body">
+        <p class="eyebrow">Dashboard de Impacto · EduPulse y EduTrace</p>
+        <h1>
+          IA aplicada<br>
+          <span class="hl">al área comercial</span>
+        </h1>
+        <p class="lead">
+          Resultados de la formación con <strong>EduPulse</strong> (progreso del grupo en cada sesión) y <strong>EduTrace</strong> de cierre (conocimiento, uso real y tiempo). 18 participantes del área comercial de una empresa de ejemplo.
+        </p>
+      </div>
+      <div class="id-line">
+        <span class="codigo">EJEMPLO · Datos simulados</span>
+        <span class="cliente">Empresa Ejemplo</span>
+      </div>
+    </section>
+
+    <!-- 02 · Resultado global -->
+    <section class="slide s-impact">
+      <span class="ejemplo-tag">EJEMPLO · DATOS SIMULADOS PARA MOSTRAR EL FORMATO</span><span class="counter">02 / 06</span>
+      <div class="impact-head">
+        <p class="eyebrow">01 · Resultado global</p>
+        <h2>Índice de Impacto<br><span class="hl">Edu-Trace</span>.</h2>
+      </div>
+      <div class="impact-body">
+        <div class="chart-panel">
+          <p class="panel-title">Los cuatro ejes que componen el índice (escala 1-5)</p>
+          <div class="bars">
+            <div class="bar-row">
+              <span class="bar-label">Competencia percibida</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:77.5%"><span class="bar-val">4.1</span></div></div>
+            </div>
+            <div class="bar-row">
+              <span class="bar-label">Retención objetiva · medido</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:84.4%"><span class="bar-val">4.4</span></div></div>
+            </div>
+            <div class="bar-row">
+              <span class="bar-label">Aplicabilidad e impacto</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:80%"><span class="bar-val">4.2</span></div></div>
+            </div>
+            <div class="bar-row">
+              <span class="bar-label">Calidad de la experiencia</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:85.8%"><span class="bar-val">4.4</span></div></div>
+            </div>
+          </div>
+          <div class="bar-axis"><span class="scale"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span></span></div>
+          <p class="panel-source">Ponderación: Retención objetiva 35% · Competencia 30% · Aplicabilidad 20% · Calidad 15%. La retención es el único eje medido (84% de aciertos, que equivale a 4.4 en esta escala); el resto es autopercibido.</p>
+        </div>
+        <div class="gauge-panel">
+          <div class="gauge" style="--pct:82">
+            <div class="gauge-core">
+              <span class="gauge-num">4.3</span>
+              <span class="gauge-cap idx">Índice · de 5</span>
+            </div>
+          </div>
+          <div class="kpis">
+            <div class="kpi"><span class="k-num">83%</span><span class="k-lbl">ya aplica lo aprendido</span></div>
+            <div class="kpi"><span class="k-num">2.5 h</span><span class="k-lbl">por semana por persona (mediana)</span></div>
+            <div class="kpi"><span class="k-num">89%</span><span class="k-lbl">lo recomienda a un colega</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="impact-hook">
+        <span class="hook-mark">&#9656;</span>
+        <p class="hook-text">
+          El equipo <strong>respondió bien el 84%</strong> de la evaluación y el <strong>83% ya aplica lo aprendido</strong> en su trabajo. Quienes lo aplican declaran ahorrar una mediana de 2.5 horas por semana.
+        </p>
+      </div>
+      <div class="foot">
+        <img src="../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Empresa Ejemplo · Dashboard de Impacto</span>
+      </div>
+    </section>
+
+    <!-- 03 · Resultados reales -->
+    <section class="slide s-data s-real">
+      <span class="ejemplo-tag">EJEMPLO · DATOS SIMULADOS PARA MOSTRAR EL FORMATO</span><span class="counter">03 / 06</span>
+      <p class="eyebrow">02 · Resultados reales <span class="tag-declarado">declarado</span></p>
+      <h2>Lo que ya cambió en el trabajo.</h2>
+      <div class="stats3">
+        <div class="stat-card">
+          <span class="big">83%</span>
+          <span class="lbl">ya aplica lo aprendido en su trabajo</span>
+          <span class="sub">15 de 18 · 11 lo han hecho varias veces y 4 una vez</span>
+        </div>
+        <div class="stat-card">
+          <span class="big">2.5 <small>h por semana</small></span>
+          <span class="lbl">ahorra cada persona que lo aplica (mediana)</span>
+          <span class="sub">La mitad declara entre 1 y 4 horas por semana</span>
+        </div>
+        <div class="stat-card">
+          <span class="big">≈ 38 <small>h por semana</small></span>
+          <span class="lbl">entre las 15 personas que ya aplican</span>
+          <span class="sub">Estimación conservadora: mediana por número de personas</span>
+        </div>
+      </div>
+      <div class="body2">
+        <div>
+          <p class="mini-title">Cuánto tardaban antes y cuánto tardan ahora (mediana, en minutos)</p>
+          <div class="legend"><span><i class="a"></i>Antes</span><span><i class="b"></i>Ahora</span></div>
+          <div class="trow">
+            <div class="tn">Reporte semanal de campañas<small>5 personas</small></div>
+            <div class="tb">
+              <div class="line"><div class="trk"><div class="fl a" style="--w:100%"></div></div><span class="mv">120 min</span></div>
+              <div class="line"><div class="trk"><div class="fl b" style="--w:33%"></div></div><span class="mv">40 min</span></div>
+            </div>
+          </div>
+          <div class="trow">
+            <div class="tn">Análisis de datos de campañas<small>3 personas</small></div>
+            <div class="tb">
+              <div class="line"><div class="trk"><div class="fl a" style="--w:75%"></div></div><span class="mv">90 min</span></div>
+              <div class="line"><div class="trk"><div class="fl b" style="--w:29%"></div></div><span class="mv">35 min</span></div>
+            </div>
+          </div>
+          <div class="trow">
+            <div class="tn">Resúmenes de reuniones y minutas<small>3 personas</small></div>
+            <div class="tb">
+              <div class="line"><div class="trk"><div class="fl a" style="--w:33%"></div></div><span class="mv">40 min</span></div>
+              <div class="line"><div class="trk"><div class="fl b" style="--w:7%"></div></div><span class="mv">8 min</span></div>
+            </div>
+          </div>
+          <div class="trow">
+            <div class="tn">Redacción de correos y comunicados<small>4 personas</small></div>
+            <div class="tb">
+              <div class="line"><div class="trk"><div class="fl a" style="--w:21%"></div></div><span class="mv">25 min</span></div>
+              <div class="line"><div class="trk"><div class="fl b" style="--w:8%"></div></div><span class="mv">10 min</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="frenos">
+          <p class="mini-title">Qué frena a las 3 personas que aún no aplican</p>
+          <div class="f">Falta de tiempo <b>2</b></div>
+          <div class="f">Sin acceso o licencia <b>1</b></div>
+          <div class="f">No sabe cómo aplicarlo a su tarea <b>1</b></div>
+          <p>Cada persona podía marcar más de un freno.</p>
+        </div>
+      </div>
+      <p class="note-honest">Datos <strong>declarados</strong> por cada participante sobre la tarea en la que más usó lo aprendido: no son una medición de uso real. Se reporta la mediana y no se extrapola a toda la jornada.</p>
+      <div class="foot">
+        <img src="../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Empresa Ejemplo · Dashboard de Impacto</span>
+      </div>
+    </section>
+
+    <!-- 04 · Progreso del grupo por sesión (escala 1-5) -->
+    <section class="slide s-data s-prog">
+      <span class="ejemplo-tag">EJEMPLO · DATOS SIMULADOS PARA MOSTRAR EL FORMATO</span><span class="counter">04 / 06</span>
+      <p class="eyebrow">03 · Progreso del grupo <span class="tag-percibido">percibido</span></p>
+      <h2>De 2.9 a 4.4 en cinco sesiones.</h2>
+      <p class="sub">«Me siento capaz de repetir lo practicado sin ayuda», promedio del grupo en cada sesión (escala 1-5). Respuestas anónimas.</p>
+      <svg viewBox="0 0 1000 218" preserveAspectRatio="none" style="font-family:var(--font-display)">
+        <defs>
+          <linearGradient id="gA" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#F4BA1A" stop-opacity="0.42"/>
+            <stop offset="1" stop-color="#F4BA1A" stop-opacity="0.02"/>
+          </linearGradient>
+        </defs>
+        <g stroke="#000" stroke-opacity="0.12" stroke-width="1">
+          <line x1="44" y1="30" x2="980" y2="30"/><line x1="44" y1="70" x2="980" y2="70"/>
+          <line x1="44" y1="110" x2="980" y2="110"/><line x1="44" y1="150" x2="980" y2="150"/>
+          <line x1="44" y1="190" x2="980" y2="190"/>
+        </g>
+        <g font-size="13" fill="#000" fill-opacity="0.5" text-anchor="end">
+          <text x="38" y="35">5</text><text x="38" y="75">4</text><text x="38" y="115">3</text>
+          <text x="38" y="155">2</text><text x="38" y="195">1</text>
+        </g>
+        <polygon points="100,190 100,114 300,98 500,74 700,62 900,54 900,190" fill="url(#gA)"/>
+        <polyline points="100,114 300,98 500,74 700,62 900,54" fill="none" stroke="#E58423" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+        <g fill="#000" stroke="#F4BA1A" stroke-width="4">
+          <circle cx="100" cy="114" r="9"/><circle cx="300" cy="98" r="9"/><circle cx="500" cy="74" r="9"/>
+          <circle cx="700" cy="62" r="9"/><circle cx="900" cy="54" r="9"/>
+        </g>
+        <g font-size="24" font-weight="700" fill="#000" text-anchor="middle">
+          <text x="100" y="94">2.9</text><text x="300" y="78">3.3</text><text x="500" y="54">3.9</text>
+          <text x="700" y="42">4.2</text><text x="900" y="34">4.4</text>
+        </g>
+        <g>
+          <rect x="368" y="104" width="64" height="26" fill="#000"/>
+          <text x="400" y="122" font-size="16" font-weight="700" fill="#F4BA1A" text-anchor="middle">+0.6</text>
+        </g>
+      </svg>
+      <div class="lg">
+        <span class="ttl">En el ejercicio de cada sesión</span>
+        <span><i class="solo"></i>Lo hizo solo(a)</span>
+        <span><i class="ayuda"></i>Con ayuda</span>
+        <span><i class="no"></i>No pudo completarlo</span>
+      </div>
+      <div class="cols5">
+        <div class="sc">
+          <div class="sn">Sesión 1<small>17 respuestas</small></div>
+          <div class="stack"><span class="solo" style="width:18%">18</span><span class="ayuda" style="width:53%">53</span><span class="no" style="width:29%">29</span></div>
+          <div class="chip up"><b>Ayudó · 59%</b>El ejemplo del consultor</div>
+          <div class="chip dn"><b>Frenó · 35%</b>El nivel fue muy alto</div>
+        </div>
+        <div class="sc">
+          <div class="sn">Sesión 2<small>17 respuestas</small></div>
+          <div class="stack"><span class="solo" style="width:29%">29</span><span class="ayuda" style="width:59%">59</span><span class="no" style="width:12%">12</span></div>
+          <div class="chip up"><b>Ayudó · 53%</b>El ejemplo del consultor</div>
+          <div class="chip dn"><b>Frenó · 29%</b>Problemas de acceso o con la herramienta</div>
+        </div>
+        <div class="sc">
+          <div class="sn">Sesión 3<small>17 respuestas</small></div>
+          <div class="stack"><span class="solo" style="width:47%">47</span><span class="ayuda" style="width:47%">47</span><span class="no" style="width:6%"></span></div>
+          <div class="chip up"><b>Ayudó · 71%</b>Practicar con mis propios datos</div>
+          <div class="chip dn"><b>Frenó · 24%</b>Faltó tiempo para practicar</div>
+        </div>
+        <div class="sc">
+          <div class="sn">Sesión 4<small>16 respuestas</small></div>
+          <div class="stack"><span class="solo" style="width:65%">65</span><span class="ayuda" style="width:35%">35</span></div>
+          <div class="chip up"><b>Ayudó · 50%</b>Trabajar junto a mis compañeros</div>
+          <div class="chip dn"><b>Frenó · 33%</b>Faltó tiempo para practicar</div>
+        </div>
+        <div class="sc">
+          <div class="sn">Sesión 5<small>17 respuestas</small></div>
+          <div class="stack"><span class="solo" style="width:82%">82</span><span class="ayuda" style="width:18%">18</span></div>
+          <div class="chip up"><b>Ayudó · 76%</b>Practicar con mis propios datos</div>
+          <div class="chip dn"><b>Frenó · 18%</b>Faltó tiempo para practicar</div>
+        </div>
+      </div>
+      <div class="hook-bar">El mayor salto (+0.6) llegó en la sesión 3, cuando el <strong>71% señaló como lo que más ayudó practicar con sus propios datos</strong>. Al cierre, el <strong>82% hace el ejercicio sin ayuda</strong>. La curva parte de lo que sintió el grupo al terminar la primera sesión, no de cero.</div>
+    </section>
+
+    <!-- 05 · Conocimiento y experiencia -->
+    <section class="slide s-data s-know">
+      <span class="ejemplo-tag">EJEMPLO · DATOS SIMULADOS PARA MOSTRAR EL FORMATO</span><span class="counter">05 / 06</span>
+      <p class="eyebrow">04 · Conocimiento y experiencia</p>
+      <h2>Lo que quedó y cómo lo vivieron.</h2>
+      <div class="two">
+        <div>
+          <p class="coltitle">Conocimiento <span class="tag-medido">medido</span></p>
+          <div class="gl"><span class="pct">84%</span><span class="txt">de aciertos en 5 preguntas de situación con respuesta correcta</span></div>
+          <div class="kq"><div class="top"><span class="nm">Instrucciones claras y verificables</span><span class="sc">94% <small>17 de 18</small></span></div><div class="trk"><div class="fl" style="--w:94%"></div></div></div>
+          <div class="kq"><div class="top"><span class="nm">Contexto persistente</span><span class="sc">83% <small>15 de 18</small></span></div><div class="trk"><div class="fl" style="--w:83%"></div></div></div>
+          <div class="kq"><div class="top"><span class="nm">Procedimiento reutilizable por el equipo</span><span class="sc">89% <small>16 de 18</small></span></div><div class="trk"><div class="fl" style="--w:89%"></div></div></div>
+          <div class="kq"><div class="top"><span class="nm">Verificar antes de decidir</span><span class="sc">78% <small>14 de 18</small></span></div><div class="trk"><div class="fl" style="--w:78%"></div></div></div>
+          <div class="kq"><div class="top"><span class="nm">Qué información no se comparte</span><span class="sc">78% <small>14 de 18</small></span></div><div class="trk"><div class="fl" style="--w:78%"></div></div></div>
+        </div>
+        <div>
+          <p class="coltitle">Experiencia <span class="tag-percibido">percibido · escala 1-5</span></p>
+          <div class="eb"><div class="top"><span class="nm">Dominio técnico<small>profundidad de las soluciones</small></span><span class="v">4.7</span></div><div class="trk"><div class="fl" style="--w:92.5%"></div></div></div>
+          <div class="eb"><div class="top"><span class="nm">Relevancia<small>los casos reflejan situaciones reales</small></span><span class="v">4.5</span></div><div class="trk"><div class="fl" style="--w:87.5%"></div></div></div>
+          <div class="eb"><div class="top"><span class="nm">Ritmo<small>tiempo para asimilar</small></span><span class="v">4.1</span></div><div class="trk"><div class="fl" style="--w:77.5%"></div></div></div>
+          <div class="rec"><b>89%</b><span>recomendaría esta formación a un colega<small>16 de 18 marcaron 4 o 5</small></span></div>
+          <p class="trend">Por sesión, la relevancia pasó de <strong>3.7 a 4.5</strong> y el buen uso del tiempo de <strong>3.8 a 4.6</strong>. El ritmo es el punto más bajo: conviene dar más espacio de práctica.</p>
+        </div>
+      </div>
+      <p class="note-honest">El conocimiento se mide con preguntas que tienen respuesta correcta. La experiencia es la opinión de cada participante.</p>
+      <div class="foot">
+        <img src="../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Empresa Ejemplo · Dashboard de Impacto</span>
+      </div>
+    </section>
+
+    <!-- 06 · Próximos pasos y cierre -->
+    <section class="slide s-reco final">
+      <span class="ejemplo-tag">EJEMPLO · DATOS SIMULADOS PARA MOSTRAR EL FORMATO</span><span class="counter">06 / 06</span>
+      <p class="eyebrow">05 · Próximos pasos</p>
+      <h2>El equipo aprendió. Llevémoslo más lejos.</h2>
+      <div class="cols">
+        <div class="card">
+          <span class="label">Áreas que piden formación</span>
+          <ul class="rank">
+            <li><span class="n">1</span> Atención al cliente <span class="c">6</span></li>
+            <li><span class="n">2</span> Administración <span class="c">4</span></li>
+            <li><span class="n">3</span> Toda la organización <span class="c">3</span></li>
+          </ul>
+        </div>
+        <div class="card">
+          <span class="label">Habilidades más deseadas</span>
+          <ul class="rank">
+            <li><span class="n">1</span> Automatizar reportes <span class="c">5</span></li>
+            <li><span class="n">2</span> Crear asistentes propios <span class="c">4</span></li>
+            <li><span class="n">3</span> Análisis de datos <span class="c">3</span></li>
+          </ul>
+        </div>
+        <div class="card">
+          <span class="label">Procesos a automatizar</span>
+          <ul class="rank">
+            <li><span class="n">1</span> Reportes <span class="c">8</span></li>
+            <li><span class="n">2</span> Datos y análisis <span class="c">4</span></li>
+            <li><span class="n">3</span> Atención al cliente <span class="c">3</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="quote">«Antes armaba el reporte semanal en dos horas. Ahora lo reviso en cuarenta minutos y me queda tiempo para analizarlo.»<small>Nombre Apellido · Ventas · publicado con su autorización</small></div>
+      <div class="hook">
+        Los reportes son el proceso que más piden automatizar y el que ya muestra el mayor ahorro. Antes de ampliar a otras áreas conviene resolver lo que frenó a 3 personas: <strong>tiempo para practicar y acceso a las herramientas</strong>.
+      </div>
+      <div class="contact-mini">
+        <span><b>Asesora:</b> Nombre de la asesora comercial · teléfono · correo</span>
+        <span><b>Empresa:</b> Intezia C.A J-505657950 · servicio@intezia.com</span>
+      </div>
+      <div class="foot">
+        <img src="../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Empresa Ejemplo · Dashboard de Impacto</span>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>
