@@ -1,0 +1,13 @@
+/* Ajustes propios de esta propuesta (se enlaza después de habilidades-compacto.css). */
+
+/* ===========================================================================
+   DUSA CAI-059 · Facilidad de pago en dos páginas (Ivana, 20/10/2026): la 1.ª con un plan por eje (seis tarjetas, tres por eje, con el
+   rótulo del eje encima) y la 2.ª con los dos ejes juntos. Los rótulos .pay-group los pinta el generador (pago.grupos).
+   =========================================================================== */
+.s-pay .pay-group { position: absolute; top: 160px; height: 30px; display: flex; align-items: center;
+  border-bottom: 2px solid var(--yellow); }
+.s-pay .pay-group span { font-family: var(--font-display); font-weight: 700; font-size: 15px; color: var(--yellow); letter-spacing: 0.02em; }
+.s-pay .ps-when { font-size: 20px; }
+
+/* Slide 2 · Alcance: sin los totales por panel («28 soluciones · 6 áreas» sumaría los cerebros de los directores como un área más; el titular ya dice 44 soluciones en 10 áreas, más 12 cerebros) */
+.s-scope .scope-total { display: none; }

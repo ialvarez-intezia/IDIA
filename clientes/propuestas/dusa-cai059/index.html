@@ -1,0 +1,827 @@
+<!doctype html>
+<!--
+  Propuesta · DUSA · Servicio de Habilidades (CAI-059)
+  División: Educación · Servicio: Habilidades (§4.1a) · Alianza: no
+  GENERADO por scripts/generar-habilidades-compacto.py (plantilla 3.0 (2026-10-08), formato habilidades) desde datos.json.
+  No editar a mano: editar datos.json y regenerar. Estilos propios del deck: overrides.css.
+  Fuente del insumo: DUSA_Habilidades_Procesos_Ruta_y_Horas_6.docx (Intezia C.A., Dirección de Productos y Servicios, 02/10/2026), vía datos.ejemplo-dusa.json (CAI-035 en la plantilla v3); instrucciones de Ivana del 20/10/2026
+
+  Formato compacto de 12 slides, en el orden de las preguntas del cliente (Ventas, 2026-10-07), sin semanas, sesiones
+  ni fechas (Keiber, 2026-10-08):
+    1 Portada · 2 Alcance · 3 Ruta · 4 Cómo trabajamos · 5 Entregables · 6 Retorno · 7 Inversión · 8 Inversión (etapa 2) · 9 Inversión (etapa 3) · 10 Facilidad de pago · 11 Facilidad de pago (2) · 12 Próximos pasos
+  Marcadores de detección de AcroForms (agregar-campo-precio.py), por página: «Propuesta Económica» solo en la slide de
+  inversión; «Lo que se llevan» y «Entregables» solo en la de entregables; «Facilidad de pago» solo en la de pago.
+  Campos AcroForm: Programa, Notas, PrecioBase, Descuento, PrecioTotal (inversión), PagoCuota1..6 (pago) y Entregables, Acreditacion (entregables). Se reposicionan con scripts/customize-habilidades-compacto.py.
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Propuesta · DUSA · Intezia Educación</title>
+  <link rel="stylesheet" href="../_base/styles.css">
+  <link rel="stylesheet" href="habilidades-compacto.css">
+  <link rel="stylesheet" href="overrides.css">
+</head>
+<body>
+
+  <main class="deck">
+
+    <!-- 1 · Portada: ¿cuál es mi problema? -->
+    <section class="slide s-cover">
+      <span class="counter">01 / 12</span>
+      <div class="logo-big">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia Educación">
+      </div>
+      <div class="body">
+        <p class="eyebrow">Propuesta de proyecto · Servicio de Habilidades</p>
+        <h1 style="font-size:46px">
+          Finanzas, Comercial y RRHH<br>
+          con inteligencia artificial<br>
+          <span class="hl">en 10 áreas de DUSA</span>
+        </h1>
+        <p class="lead">
+          La Detección identificó estos problemas en DUSA. Este proyecto ordena procesos y datos y construye las soluciones, <strong>área por área</strong>, en dos ejes que se aprueban por separado, más un Cerebro Digital de cortesía por director.
+        </p>
+        <div class="pain-strip">
+          <div class="pain-item">
+            <span class="pain-num">10 a 15</span>
+            <span class="pain-lbl">empresas con pagos de parafiscales que Nómina gestiona cada mes</span>
+          </div>
+          <div class="pain-item">
+            <span class="pain-num">5</span>
+            <span class="pain-lbl">fuentes sin un dato común para un mismo trabajador, en Recursos Humanos</span>
+          </div>
+          <div class="pain-item">
+            <span class="pain-num">+20</span>
+            <span class="pain-lbl">archivos de Excel encadenados, con toda la lógica en una sola persona, en Finanzas</span>
+          </div>
+        </div>
+        <div class="hire-note">
+          <span class="hire-num">≈10</span>
+          <p>posiciones a tiempo completo harían falta para sostener a mano este mismo volumen de trabajo. Con los procesos optimizados, es <strong>alta la probabilidad</strong> de no tener que contratarlas.</p>
+        </div>
+        <p class="pain-src">Fuente: informes de Detección y fichas de levantamiento de DUSA (04/09/2026 y 02/10/2026).</p>
+      </div>
+      <div class="id-line">
+        <span class="codigo">Código: CAI-059</span>
+        <span class="cliente">DUSA</span>
+      </div>
+    </section>
+
+    <!-- 2 · Alcance: qué vamos a hacer y para qué -->
+    <section class="slide s-scope compact">
+      <span class="counter">02 / 12</span>
+      <p class="eyebrow">02 · Alcance</p>
+      <h2>44 soluciones en 10 áreas, más 12 cerebros.</h2>
+      <p class="sub">Ordenamos procesos y datos, y construimos asistentes de IA, validadores y tableros <strong>con el equipo de cada área</strong>.</p>
+
+      <div class="scope-panels" style="--np:2">
+        <div class="scope-panel acc-y">
+          <div class="scope-head">
+            <span class="scope-tag">Microsoft 365 Copilot</span>
+            <span class="scope-total"><b>5</b> áreas</span>
+          </div>
+          <ul class="scope-rows">
+              <li><span class="area">Contabilidad y Cuentas por Pagar</span><span class="para">Pagos asignados con criterio, reportes limpios y cierres más rápidos</span></li>
+              <li><span class="area">Tesorería</span><span class="para">Solicitudes de pago ordenadas y tareas con seguimiento automático</span></li>
+              <li><span class="area">Cuentas por Cobrar</span><span class="para">Descuentos conciliados y notas de crédito propuestas, sin cruzar a mano</span></li>
+              <li><span class="area">Finanzas</span><span class="para">Plan financiero consolidado, sin depender de más de 20 archivos encadenados</span></li>
+              <li><span class="area">Comercial Región Centro-Sur</span><span class="para">Activaciones, descuentos y exhibición listos desde el teléfono</span></li>
+          </ul>
+        </div>
+        <div class="scope-panel acc-o">
+          <div class="scope-head">
+            <span class="scope-tag">Claude Team</span>
+            <span class="scope-total"><b>6</b> áreas</span>
+          </div>
+          <ul class="scope-rows">
+              <li><span class="area">Base de datos de empleados <em>(paso previo)</em></span><span class="para">Una sola base por trabajador, con la cédula como llave</span></li>
+              <li><span class="area">Nómina</span><span class="para">Parafiscales, vacaciones y préstamos validados sin revisar a mano</span></li>
+              <li><span class="area">Servicio Médico</span><span class="para">Crónicos, órdenes y coberturas con seguimiento y validación previa</span></li>
+              <li><span class="area">Gestión Contable RRHH</span><span class="para">Facturas de salud y gastos registrados y controlados por muestreo</span></li>
+              <li><span class="area">Gestión de Gente</span><span class="para">Ingreso, contratos y capacitación en un solo flujo, con alertas</span></li>
+              <li><span class="area">Beneficios y Recepción</span><span class="para">Consumo telefónico, comunicados y beneficios sin cruzar a mano</span></li>
+              <li><span class="area">Cerebros de los directores <small class="comp">Cortesía de Intezia; los asientos de Claude los paga DUSA.</small></span><span class="para">Un Cerebro Digital para cada uno de los 12 directores, como cortesía.</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="scope-out">
+        <p class="scope-card-label">Fuera de este alcance</p>
+        <ul>
+          <li>Lo que Sistemas de DUSA asume con sus propios desarrollos: autopago, Tesote, Bitácora, reporte de gasto e intranet.</li>
+          <li>Todo proceso que requiera un aplicativo, como el portal de peticiones o el de proveedores.</li>
+          <li>Todo Comercial Región Caracas, que Sistemas cubre con autopago, Bitácora y pago directo.</li>
+          <li>La banca en línea, que la IA no opera, y las historias clínicas, que no entran a la plataforma.</li>
+        </ul>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">DUSA · CAI-059</span>
+      </div>
+    </section>
+
+    <!-- 3 · Ruta: qué pasa en cada fase -->
+    <section class="slide s-route">
+      <span class="counter">03 / 12</span>
+      <p class="eyebrow">03 · Ruta</p>
+      <h2>Tres líneas de trabajo en paralelo, en tres fases.</h2>
+      <p class="sub">El calendario se acuerda en la reunión de arranque. La <strong>garantía y el seguimiento</strong> a 30, 60 y 90 días corren desde el cierre de cada área.</p>
+
+      <div class="route-grid n3" style="--cols:3; --rows:3; --rowh:104px">
+
+        <div class="rg-corner"></div>
+        <div class="rg-phase rg-ph-1 hi">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Fase 1</span><b class="rg-phase-n">224 h</b></span>
+          <span class="rg-phase-name">Prioridad de cada área, sin dependencias</span>
+        </div>
+        <div class="rg-phase rg-ph-2">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Fase 2</span><b class="rg-phase-n">148 h</b></span>
+          <span class="rg-phase-name">Necesita un acuerdo, un dato o una solución previa</span>
+        </div>
+        <div class="rg-phase rg-ph-3">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Fase 3</span><b class="rg-phase-n">188 h</b></span>
+          <span class="rg-phase-name">Extensiones, cruces y tableros</span>
+        </div>
+        <div class="rg-phase rg-fu">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Garantía</span></span>
+          <span class="rg-phase-date">30, 60 y 90 días</span>
+          <span class="rg-phase-txt">Desde el cierre de cada área</span>
+        </div>
+
+        <div class="rg-front acc-y">
+          <span class="rg-front-h">Eje de Finanzas y Comercial</span>
+          <span class="rg-front-row"><span class="rg-front-tool">Copilot</span><b class="rg-front-n">173 h</b></span>
+          <span class="rg-front-meta">de trabajo</span>
+        </div>
+        <div class="rg-cell hi"><span class="rg-h solo-h"><b>72</b> horas</span><p>Pagos, depurador, bandeja y tareas de tesorería, descuentos, premisas, creativos</p></div>
+        <div class="rg-cell"><span class="rg-h solo-h"><b>49</b> horas</span><p>Estados financieros, planes de ventas, costos y administración, descuentos</p></div>
+        <div class="rg-cell"><span class="rg-h solo-h"><b>40</b> horas</span><p>Costeo de manufactura, plan de nómina, consolidación del plan y exhibición</p></div>
+        <div class="rg-front acc-o">
+          <span class="rg-front-h">Eje de RRHH</span>
+          <span class="rg-front-row"><span class="rg-front-tool">Claude Team</span><b class="rg-front-n">327 h</b></span>
+          <span class="rg-front-meta">de trabajo</span>
+        </div>
+        <div class="rg-cell hi"><span class="rg-h solo-h"><b>152</b> horas</span><p>Base de empleados, parafiscales, vacaciones, Servicio Médico, ingreso y comunicados</p></div>
+        <div class="rg-cell"><span class="rg-h solo-h"><b>99</b> horas</span><p>Notificaciones, órdenes médicas, gastos, contratos con alertas e inducción</p></div>
+        <div class="rg-cell"><span class="rg-h solo-h"><b>76</b> horas</span><p>Préstamos, plan de nómina, coberturas, factura HCM, tablero y constancias</p></div>
+        <div class="rg-front acc-o">
+          <span class="rg-front-h">Cerebros de los 12 directores</span>
+          <span class="rg-front-row"><span class="rg-front-tool">Claude Team</span><b class="rg-front-n">72 h</b></span>
+          <span class="rg-front-meta">de trabajo</span>
+        </div>
+        <div class="rg-cell empty hi"><p>Sin entregas en esta fase.</p></div>
+        <div class="rg-cell empty"><p>Sin entregas en esta fase.</p></div>
+        <div class="rg-cell"><span class="rg-h solo-h"><b>72</b> horas</span><p>Un Cerebro Digital por director, de cortesía; DUSA paga sus asientos de Claude</p></div>
+
+        <div class="rg-follow" style="grid-column:5; grid-row:2 / span 3">
+          <ul>
+            <li><b>30 días</b><span>Uso real y ajustes</span></li>
+            <li><b>60 días</b><span>Ahorro medido contra la línea base</span></li>
+            <li><b>90 días</b><span>Retorno en tiempo ahorrado y habilidades instaladas</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="route-miles" style="grid-template-columns:repeat(5,1fr)">
+        <div class="mile"><span class="mile-d"></span><b>Arranque</b><p>Línea base de horas por proceso y mapeo de microprocesos de Finanzas (12 h).</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Primeros accesos</b><p>Primeros asientos y licencias activos.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Evidencia de capacitación</b><p>Control de capacitación del personal de DUSA, con evidencia lista para la certificación.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Antes de la fase 2</b><p>Sistemas y Nómina acuerdan el criterio de correlativo de la base de empleados.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Cierre</b><p>Cierre de la construcción.</p></div>
+      </div>
+      <p class="route-note">Las 572 horas de trabajo son una proyección: 12 h de arranque (el mapeo de Finanzas) más 224, 148 y 188 h de las fases 1, 2 y 3. Los parafiscales se prueban en una ventana real de cinco días hábiles. Las fases se traslapan: cada línea pasa a la siguiente cuando quien ejecuta el proceso ya opera lo anterior.</p>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">DUSA · CAI-059</span>
+      </div>
+    </section>
+
+    <!-- 4 · Cómo trabajamos: pasos, por qué en ese orden, casos reales, práctica, datos y logística -->
+    <section class="slide s-method">
+      <span class="counter">04 / 12</span>
+      <p class="eyebrow">04 · Cómo trabajamos</p>
+      <h2>Así trabajamos cada solución.</h2>
+      <p class="sub">Trabajamos junto a quien ejecuta cada proceso, con sus casos reales, y dejamos medido el resultado.</p>
+
+      <ol class="mt-steps" style="--n:4">
+          <li><b>Construimos</b><span>Junto a quien ejecuta el proceso, con sus casos reales.</span></li>
+          <li><b>Probamos</b><span>Con ese equipo y con el equipo de tecnología de DUSA.</span></li>
+          <li><b>Adoptamos</b><span>El equipo la usa en su trabajo diario.</span></li>
+          <li><b>Medimos</b><span>El retorno en tiempo y las oportunidades de optimización para la empresa.</span></li>
+      </ol>
+      <div class="mt-strips">
+        <p class="mt-why auto"><b>Por qué en este orden</b> Primero la fase 1 (prioridad de cada área, sin dependencias); después la fase 2 (necesita un acuerdo, un dato o una solución previa); al final la fase 3 (extensiones, cruces y tableros).</p>
+        <p class="mt-who"><b>Quién construye</b> Intezia construye con quien ejecuta cada proceso. Sistemas de DUSA gobierna los accesos, la seguridad y las licencias, y participa en las pruebas.</p>
+      </div>
+
+      <div class="mt-proof">
+        <div class="mp-head">
+          <span class="mp-tag">Ya lo hicimos con los equipos de DUSA</span>
+          <p>Agentes que los equipos construyeron con Intezia durante la Detección: el punto de partida del proyecto. <span class="mp-src">Fuente: Informe Final de Auditoría IA de DUSA (04/09/2026).</span></p>
+        </div>
+        <div class="mp-cases" style="--n:3">
+          <div class="mt-case">
+            <span class="mc-area">Contabilidad y Cuentas por Pagar</span>
+            <b>Agente de estados financieros</b>
+            <span class="mc-ba"><i>30 a 40 min</i><u>→</u><i class="ok">3 a 4 min</i></span>
+            <p>Armar un estado a mano toma de 2 a 3 h y analizarlo, de 30 a 40 min. Con el agente, el análisis se resolvió en <strong>3 a 4 min</strong>.</p>
+          </div>
+          <div class="mt-case">
+            <span class="mc-area">Cuentas por Cobrar</span>
+            <b>Validador de cobros</b>
+            <p>Contrasta los cobros con la base corporativa y devuelve las inconsistencias. A mano, la líder estimó que harían falta <strong>unas 8 personas</strong>.</p>
+          </div>
+          <div class="mt-case">
+            <span class="mc-area">Comercial Región Centro-Sur</span>
+            <b>Generador de creativos</b>
+            <p>Produce el póster, el texto y los hashtags de una degustación. Antes no existía: no había tiempo ni formación en diseño.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-info">
+        <div class="mt-card">
+          <p class="mt-card-label">Cómo funciona en la práctica</p>
+          <ul><li><b>Herramientas.</b> Recursos Humanos trabaja en Claude Team; las demás áreas, en Microsoft 365 Copilot y Power Automate, que DUSA ya opera.</li><li><b>Dónde corre cada cosa.</b> Lo repetitivo, como limpiar un reporte o enviar un aviso, va a Power Automate; Copilot queda para lo que exige leer y razonar.</li><li><b>Un asiento por persona.</b> En Claude Team cada persona trabaja en su propio asiento. Los asientos de los 12 directores los paga DUSA, y Sistemas revisa el uso cada mes.</li></ul>
+        </div>
+        <div class="mt-card">
+          <p class="mt-card-label">Cómo cuidamos sus datos</p>
+          <p>Los archivos que se suben quedan en la cuenta de DUSA, y Sistemas evalúa y autoriza cada acceso a un sistema, como el de SPI. Con los datos de Nómina se trabaja con el líder del área.</p>
+        </div>
+      </div>
+
+      <div class="mt-logi">
+        <div class="mt-tile"><span>Modalidad</span><b>Trabajo del consultor con cada ejecutor, en su propia cuenta y con sus casos reales.</b></div>
+        <div class="mt-tile"><span>Participantes</span><b>Quien ejecuta cada proceso en las 10 áreas, con su líder, y los 12 directores.</b></div>
+        <div class="mt-tile"><span>Ritmo de trabajo</span><b>Según la disponibilidad de cada área, sin frenar su operación diaria.</b></div>
+        <div class="mt-tile"><span>Arranque</span><b>La fecha la fija DUSA al confirmar la propuesta.</b></div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">DUSA · CAI-059</span>
+      </div>
+    </section>
+
+    <!-- 5 · Entregables: ¿con qué me quedo? (catálogo + piezas transversales) -->
+    <section class="slide s-deliv compact">
+      <span class="counter">05 / 12</span>
+      <p class="eyebrow">05 · Entregables</p>
+      <div class="deliv-head">
+        <h2>Todo lo que DUSA recibe.</h2>
+        <p class="deliv-sub"><span class="nw">Lo que se llevan</span>: <strong>cada solución construida, probada y adoptada</strong>, más el seguimiento a 30, 60 y 90 días que mide su efecto.</p>
+      </div>
+
+      <div class="deliv-carriles" style="--ncols:4">
+        <span class="dc acc-y" style="grid-column: span 2">Microsoft 365 Copilot</span>
+        <span class="dc acc-o" style="grid-column: span 2">Claude Team</span>
+      </div>
+
+      <div class="deliv-cols" style="--ncols:4">
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">Contabilidad y Cuentas por Pagar</p>
+            <ul>
+              <li>Asistente de asignación y aprobación de pagos</li>
+              <li>Depurador de reportes de JD Edwards</li>
+              <li>Agente de estados financieros y cierre multimoneda</li>
+            </ul>
+          </div>
+          <div class="da">
+            <p class="da-name">Tesorería</p>
+            <ul>
+              <li>Clasificador de la bandeja de correo del tesorero</li>
+              <li>Asistente de seguimiento de tareas con recordatorios</li>
+            </ul>
+          </div>
+          <div class="da">
+            <p class="da-name">Cuentas por Cobrar</p>
+            <ul>
+              <li>Cuadro de descuentos comerciales y propuesta de notas de crédito</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name" style="min-height:2.4em">Finanzas</p>
+            <ul>
+              <li>Mapeo de microprocesos y entrega de datos por área</li>
+              <li>Agente de premisas al comité</li>
+              <li>Validación del plan de ventas por producto</li>
+              <li>Costos de materiales y tablas de precios</li>
+              <li>Plan administrativo</li>
+              <li>Costeo de manufactura por línea y cuadrilla</li>
+              <li>Integración del plan de nómina</li>
+              <li>Consolidación: costo por producto, ingresos, gastos y balances</li>
+            </ul>
+          </div>
+          <div class="da">
+            <p class="da-name">Comercial Región Centro-Sur</p>
+            <ul>
+              <li>Generador de creativos de activación y degustación</li>
+              <li>Gestor de descuentos por cliente, desde el celular</li>
+              <li>Diseñador de cabezal y exhibición en punto de venta</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="deliv-col acc-o">
+          <div class="da">
+            <p class="da-name">Base de empleados (paso previo)</p>
+            <ul>
+              <li>Archivo maestro por cédula, con diccionario y rutina mensual</li>
+            </ul>
+          </div>
+          <div class="da">
+            <p class="da-name">Nómina</p>
+            <ul>
+              <li>Solicitudes de pago de parafiscales y Humanitas</li>
+              <li>Validador de vacaciones</li>
+              <li>Notificaciones y archivo de pago</li>
+              <li>Expediente mensual de parafiscales</li>
+              <li>Validador de préstamos</li>
+              <li>Plan y presupuesto de nómina</li>
+            </ul>
+          </div>
+          <div class="da">
+            <p class="da-name">Servicio Médico</p>
+            <ul>
+              <li>Agentes de morbilidad y certificados de salud, trasladados a Claude</li>
+              <li>Informe y pedido de tratamiento crónico</li>
+              <li>Trazabilidad de órdenes de referencia</li>
+              <li>Prevalidación documental</li>
+              <li>Coberturas y costo por beneficiario</li>
+            </ul>
+          </div>
+          <div class="da">
+            <p class="da-name">Gestión Contable RRHH</p>
+            <ul>
+              <li>Registro de facturas de salud y cuadro Humanitas</li>
+              <li>Revisión por muestreo de gastos</li>
+              <li>Distribución de la factura HCM</li>
+              <li>Tablero presupuestario</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="deliv-col acc-o">
+          <div class="da">
+            <p class="da-name" style="min-height:2.4em">Gestión de Gente</p>
+            <ul>
+              <li>Formulario único de ingreso</li>
+              <li>Contratos con alertas</li>
+              <li>Filtrado de CV y orden de candidatos</li>
+              <li>Ficha de entrevista y ejecutiva</li>
+              <li>Control de capacitación y evidencia</li>
+              <li>CV del talento interno</li>
+              <li>Inducción y avisos de ingreso</li>
+            </ul>
+          </div>
+          <div class="da">
+            <p class="da-name">Beneficios y Recepción</p>
+            <ul>
+              <li>Cruce del consumo telefónico</li>
+              <li>Asistente de correo y comunicados</li>
+              <li>Pedido sugerido de obsequios de cumpleaños</li>
+              <li>Lectura de constancias de útiles y becas</li>
+            </ul>
+          </div>
+          <div class="da">
+            <p class="da-name">Cerebros de los directores</p>
+            <ul>
+              <li>Cerebros Digitales de los 12 directores<ul class="inc"><li>Un cerebro por director, con su contexto y su criterio</li><li>6 h de trabajo guiado con cada director</li></ul></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="deliv-band">
+        <div class="db-card db-1">
+          <span class="db-label">Para todas las áreas</span>
+        </div>
+        <div class="db-card db-2">
+          <span class="db-label">Valor inmediato</span>
+        </div>
+      </div>
+      <!-- Cajas multiline editables (vacías en HTML: el contenido vive dentro del AcroForm /V). -->
+      <div class="multi-box db-box db-box-1" data-field="Entregables"></div>
+      <div class="multi-box db-box db-box-2" data-field="Acreditacion"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">DUSA · CAI-059</span>
+      </div>
+    </section>
+
+    <!-- 6 · Retorno: ¿qué gano? (método de cálculo). Sin estudios ni citas externas. -->
+    <section class="slide s-roi">
+      <span class="counter">06 / 12</span>
+      <p class="eyebrow">06 · Retorno</p>
+      <h2>Retorno esperado: tiempo, posiciones y dinero.</h2>
+      <p class="sub">Se calcula con los datos de cada área, se confirma con la línea base del arranque y se mide a 30, 60 y 90 días.</p>
+
+      <div class="roi-body">
+        <div class="roi-panel">
+          <p class="roi-panel-title">Cómo se calcula, por área y por proceso</p>
+          <ol class="roi-steps">
+            <li><b>Volumen mensual</b><span>Cuántas veces se ejecuta el proceso al mes, por ejemplo solicitudes, registros o reportes.</span></li>
+            <li><b>Tiempo actual por ejecución</b><span>Se mide al arrancar, con el líder de cada área, y es la <strong>línea base</strong>.</span></li>
+            <li><b>Tiempo con la solución</b><span>Horas por ejecución una vez que la solución está adoptada.</span></li>
+            <li><b>Horas recuperadas al mes</b><span>Volumen mensual multiplicado por la diferencia entre el tiempo actual y el tiempo con la solución.</span></li>
+            <li><b>Valor en dinero</b><span>Horas recuperadas multiplicadas por el valor de la hora de referencia, más el valor del retrabajo, de los errores y de los pagos o cobros tardíos, cuando exista el dato.</span></li>
+            <li><b>Posiciones y valor anual</b><span>Horas recuperadas divididas entre las horas productivas de una posición: cuántas se reducen o no será necesario contratar, con su valor anual según las escalas de DUSA.</span></li>
+          </ol>
+        </div>
+
+        <div class="roi-right">
+          <p class="roi-right-title">Calendario de garantía y cálculo del retorno<small>Desde el cierre de cada área</small></p>
+          <div class="roi-card">
+            <b>30 días</b>
+            <p>Soluciones en uso real y línea base validada con el líder de cada área.</p>
+          </div>
+          <div class="roi-card">
+            <b>60 días</b>
+            <p>Horas recuperadas medidas contra la línea base, por área y por proceso.</p>
+          </div>
+          <div class="roi-card">
+            <b>90 días</b>
+            <p>Medición del retorno en dinero y en posiciones, con el valor anual de cada una.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="roi-dest-wrap">
+        <p class="roi-dest-title">Hacia dónde va el proyecto</p>
+        <div class="roi-dest">
+          <div class="rd-item"><b>Mismo equipo, más volumen</b><p>Si el tiempo se libera, el mismo equipo puede procesar más solicitudes, expedientes y estados financieros <strong>sin contratar más personal</strong>.</p></div>
+          <div class="rd-item"><b>Trabajo reenfocado</b><p>Con el tiempo liberado, las personas de cada área dejan de armar y consolidar a mano para validar resultados, analizar y decidir, y sus posiciones se reenfocan hacia trabajo más estratégico.</p></div>
+          <div class="rd-item"><b>Otras áreas y líneas de negocio</b><p>Con el retorno medido, DUSA decide si lleva este mismo ciclo a <strong>otras áreas y líneas de negocio</strong> y avanza hacia una empresa inteligente, con la inteligencia artificial en el centro de su operación.</p></div>
+        </div>
+      </div>
+
+      <div class="roi-hook"><p>A los 90 días del cierre de cada área, DUSA contará con el tiempo recuperado medido, su valor en dinero y las posiciones equivalentes, área por área.</p></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">DUSA · CAI-059</span>
+      </div>
+    </section>
+
+    <!-- 7 · Inversión (hoja de cotización estándar; antepenúltima slide) -->
+    <section class="slide s-price">
+      <span class="counter">07 / 12</span>
+      <h2 class="title">Eje de Finanzas y Comercial.</h2>
+      <p class="price-intro">Propuesta Económica · Opción 1 · Eje de Finanzas y Comercial</p>
+
+      <div class="block">
+        <span class="block-eyebrow">Duración</span>
+        <p class="block-value">Cinco áreas, 173 horas de trabajo, con seguimiento y garantía a 30, 60 y 90 días.</p>
+      </div>
+
+      <div class="block block-programa">
+        <span class="block-eyebrow">Programa</span>
+      </div>
+      <div class="multi-box programa-box" data-field="Programa"></div>
+
+      <div class="block block-cotizacion">
+        <span class="block-eyebrow">Cotización</span>
+      </div>
+
+      <span class="cot-label cot-label-base">Propuesta + Inversión</span>
+      <div class="cot-frame base-frame"></div>
+
+      <span class="cot-label cot-label-discount">Descuento</span>
+      <span class="cot-sign-minus">&minus;$</span>
+      <div class="cot-frame discount-frame"></div>
+      <span class="cot-urgent-note">Descuento válido por 15 días</span>
+
+      <span class="cot-label cot-label-total">TOTAL</span>
+      <div class="cot-frame total-frame"></div>
+
+      <p class="cot-validity">Cotización válida por 30 días.</p>
+      <div class="cot-terms-box">
+        <span class="cot-terms-label">Importante</span>
+        <p class="cot-terms-text">Este servicio se presta bajo nuestros <a href="https://drive.google.com/file/d/1PA-ZSt4KnyY5dpxXzgkIk6-yfGlV2eF8/view?usp=drive_link" target="_blank" rel="noopener">términos y condiciones</a>. Al avanzar con esta propuesta, ambas partes los aceptan.</p>
+      </div>
+
+      <div class="cot-garantia-badge">
+        <span class="cot-garantia-tag">Garantía 30-60-90</span>
+        <p class="cot-garantia-text">Estamos contigo hasta que cada solución quede en uso.</p>
+      </div>
+
+      <div class="block block-notes-container">
+        <span class="block-eyebrow">Notas</span>
+      </div>
+      <div class="multi-box notas-box" data-field="Notas"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">DUSA · CAI-059</span>
+      </div>
+    </section>
+
+    <!-- 7 · Inversión (hoja de cotización estándar; antepenúltima slide) -->
+    <section class="slide s-price">
+      <span class="counter">08 / 12</span>
+      <h2 class="title">Eje de RRHH.</h2>
+      <p class="price-intro">Propuesta Económica · Opción 2 · Eje de RRHH</p>
+
+      <div class="block">
+        <span class="block-eyebrow">Duración</span>
+        <p class="block-value">Seis áreas, con el mismo seguimiento y garantía. 327 horas de trabajo.</p>
+      </div>
+
+      <div class="block block-programa">
+        <span class="block-eyebrow">Programa</span>
+      </div>
+      <div class="multi-box programa-box" data-field="Programa"></div>
+
+      <div class="block block-cotizacion">
+        <span class="block-eyebrow">Cotización</span>
+      </div>
+
+      <span class="cot-label cot-label-base">Propuesta + Inversión</span>
+      <div class="cot-frame base-frame"></div>
+
+      <span class="cot-label cot-label-discount">Descuento</span>
+      <span class="cot-sign-minus">&minus;$</span>
+      <div class="cot-frame discount-frame"></div>
+      <span class="cot-urgent-note">Descuento válido por 15 días</span>
+
+      <span class="cot-label cot-label-total">TOTAL</span>
+      <div class="cot-frame total-frame"></div>
+
+      <p class="cot-validity">Cotización válida por 30 días.</p>
+      <div class="cot-terms-box">
+        <span class="cot-terms-label">Importante</span>
+        <p class="cot-terms-text">Este servicio se presta bajo nuestros <a href="https://drive.google.com/file/d/1PA-ZSt4KnyY5dpxXzgkIk6-yfGlV2eF8/view?usp=drive_link" target="_blank" rel="noopener">términos y condiciones</a>. Al avanzar con esta propuesta, ambas partes los aceptan.</p>
+      </div>
+
+      <div class="cot-garantia-badge">
+        <span class="cot-garantia-tag">Garantía 30-60-90</span>
+        <p class="cot-garantia-text">Acompañamos a cada área hasta verla en uso.</p>
+      </div>
+
+      <div class="block block-notes-container">
+        <span class="block-eyebrow">Notas</span>
+      </div>
+      <div class="multi-box notas-box" data-field="Notas"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">DUSA · CAI-059</span>
+      </div>
+    </section>
+
+    <!-- 7 · Inversión (hoja de cotización estándar; antepenúltima slide) -->
+    <section class="slide s-price">
+      <span class="counter">09 / 12</span>
+      <h2 class="title">Los dos ejes juntos.</h2>
+      <p class="price-intro">Propuesta Económica · Opción 3 · Los dos ejes juntos</p>
+
+      <div class="block">
+        <span class="block-eyebrow">Duración</span>
+        <p class="block-value">Once áreas, 500 horas de trabajo, con seguimiento y garantía a 30, 60 y 90 días.</p>
+      </div>
+
+      <div class="block block-programa">
+        <span class="block-eyebrow">Programa</span>
+      </div>
+      <div class="multi-box programa-box" data-field="Programa"></div>
+
+      <div class="block block-cotizacion">
+        <span class="block-eyebrow">Cotización</span>
+      </div>
+
+      <span class="cot-label cot-label-base">Propuesta + Inversión</span>
+      <div class="cot-frame base-frame"></div>
+
+      <span class="cot-label cot-label-discount">Descuento</span>
+      <span class="cot-sign-minus">&minus;$</span>
+      <div class="cot-frame discount-frame"></div>
+      <span class="cot-urgent-note">Descuento válido por 15 días</span>
+
+      <span class="cot-label cot-label-total">TOTAL</span>
+      <div class="cot-frame total-frame"></div>
+
+      <p class="cot-validity">Cotización válida por 30 días.</p>
+      <div class="cot-terms-box">
+        <span class="cot-terms-label">Importante</span>
+        <p class="cot-terms-text">Este servicio se presta bajo nuestros <a href="https://drive.google.com/file/d/1PA-ZSt4KnyY5dpxXzgkIk6-yfGlV2eF8/view?usp=drive_link" target="_blank" rel="noopener">términos y condiciones</a>. Al avanzar con esta propuesta, ambas partes los aceptan.</p>
+      </div>
+
+      <div class="cot-garantia-badge">
+        <span class="cot-garantia-tag">Garantía 30-60-90</span>
+        <p class="cot-garantia-text">Estamos contigo hasta que cada solución quede en uso.</p>
+      </div>
+
+      <div class="block block-notes-container">
+        <span class="block-eyebrow">Notas</span>
+      </div>
+      <div class="multi-box notas-box" data-field="Notas"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">DUSA · CAI-059</span>
+      </div>
+    </section>
+
+    <!-- 8 · Facilidad de pago: cuotas ligadas a hitos (penúltima slide). Montos vacíos y editables (AcroForm PagoCuota1..N). -->
+    <section class="slide s-pay">
+      <span class="counter">10 / 12</span>
+      <p class="eyebrow">10 · Pago</p>
+      <h2>Facilidad de pago: cada eje por separado</h2>
+      <p class="sub">Cada eje se aprueba por sí solo y se paga en tres cuotas ligadas a hitos: <strong>30%</strong> al aprobarlo, <strong>40%</strong> al quedar adoptadas sus soluciones prioritarias y <strong>30%</strong> al cierre.</p>
+
+      <div class="pay-line"></div>
+      <div class="pay-group" style="left:56.00px; width:498.50px"><span>Eje de Finanzas y Comercial</span></div>
+      <div class="pay-group" style="left:568.50px; width:498.50px"><span>Eje de RRHH</span></div>
+      <div class="pay-route">
+        <div class="pay-step acc-y first" style="left:56.00px; width:156.83px">
+          <span class="ps-d"></span>
+          <span class="ps-tag">Cuota 1</span>
+          <b class="ps-when" style="font-size:20px">Al aprobar</b>
+          <p class="ps-hito">Aprobar el eje</p>
+          <span class="ps-pct">30%</span>
+          <span class="ps-lbl">Monto</span>
+        </div>
+        <div class="pay-step acc-o" style="left:226.83px; width:156.83px">
+          <span class="ps-d"></span>
+          <span class="ps-tag">Cuota 2</span>
+          <b class="ps-when" style="font-size:20px">Fase 1</b>
+          <p class="ps-hito">Soluciones prioritarias del eje adoptadas (fase 1)</p>
+          <span class="ps-pct">40%</span>
+          <span class="ps-lbl">Monto</span>
+        </div>
+        <div class="pay-step acc-y" style="left:397.67px; width:156.83px">
+          <span class="ps-d"></span>
+          <span class="ps-tag">Cuota 3</span>
+          <b class="ps-when" style="font-size:20px">Cierre</b>
+          <p class="ps-hito">Cierre del eje</p>
+          <span class="ps-pct">30%</span>
+          <span class="ps-lbl">Monto</span>
+        </div>
+        <div class="pay-step acc-o first" style="left:568.50px; width:156.83px">
+          <span class="ps-d"></span>
+          <span class="ps-tag">Cuota 1</span>
+          <b class="ps-when" style="font-size:20px">Al aprobar</b>
+          <p class="ps-hito">Aprobar el eje</p>
+          <span class="ps-pct">30%</span>
+          <span class="ps-lbl">Monto</span>
+        </div>
+        <div class="pay-step acc-w" style="left:739.33px; width:156.83px">
+          <span class="ps-d"></span>
+          <span class="ps-tag">Cuota 2</span>
+          <b class="ps-when" style="font-size:20px">Fase 1</b>
+          <p class="ps-hito">Soluciones prioritarias del eje adoptadas (fase 1)</p>
+          <span class="ps-pct">40%</span>
+          <span class="ps-lbl">Monto</span>
+        </div>
+        <div class="pay-step acc-y" style="left:910.17px; width:156.83px">
+          <span class="ps-d"></span>
+          <span class="ps-tag">Cuota 3</span>
+          <b class="ps-when" style="font-size:20px">Cierre</b>
+          <p class="ps-hito">Cierre del eje</p>
+          <span class="ps-pct">30%</span>
+          <span class="ps-lbl">Monto</span>
+        </div>
+      </div>
+      <div class="pay-frame" style="left:72.00px; width:124.83px"></div>
+      <div class="pay-frame" style="left:242.83px; width:124.83px"></div>
+      <div class="pay-frame" style="left:413.67px; width:124.83px"></div>
+      <div class="pay-frame" style="left:584.50px; width:124.83px"></div>
+      <div class="pay-frame" style="left:755.33px; width:124.83px"></div>
+      <div class="pay-frame" style="left:926.17px; width:124.83px"></div>
+
+      <div class="pay-note">
+        <p class="pn-sub">Cada factura se emite en divisas o en bolívares (Bs) a la tasa BCV Euro, y se liquida a la tasa del día de pago.</p>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">DUSA · CAI-059</span>
+      </div>
+    </section>
+
+    <!-- 8 · Facilidad de pago: cuotas ligadas a hitos (penúltima slide). Montos vacíos y editables (AcroForm PagoCuota1..N). -->
+    <section class="slide s-pay">
+      <span class="counter">11 / 12</span>
+      <p class="eyebrow">11 · Pago</p>
+      <h2>Facilidad de pago: los dos ejes juntos</h2>
+      <p class="sub">Si DUSA aprueba los dos ejes, el pago es en cinco cuotas ligadas a hitos, y las cinco suman el <strong>100%</strong> de la inversión.</p>
+
+      <div class="pay-line"></div>
+      <div class="pay-route">
+        <div class="pay-step acc-y first" style="left:56.00px; width:191.00px">
+          <span class="ps-d"></span>
+          <span class="ps-tag">Cuota 1</span>
+          <b class="ps-when" style="font-size:24px">Arranque</b>
+          <p class="ps-hito">Arranque</p>
+          <span class="ps-pct">30%</span>
+          <span class="ps-lbl">Monto</span>
+        </div>
+        <div class="pay-step acc-o" style="left:261.00px; width:191.00px">
+          <span class="ps-d"></span>
+          <span class="ps-tag">Cuota 2</span>
+          <b class="ps-when" style="font-size:24px">Fase 1</b>
+          <p class="ps-hito">19 soluciones prioritarias adoptadas</p>
+          <span class="ps-pct">25%</span>
+          <span class="ps-lbl">Monto</span>
+        </div>
+        <div class="pay-step acc-y" style="left:466.00px; width:191.00px">
+          <span class="ps-d"></span>
+          <span class="ps-tag">Cuota 3</span>
+          <b class="ps-when" style="font-size:24px">Cierre fase 2</b>
+          <p class="ps-hito">Cierre de la fase 2</p>
+          <span class="ps-pct">25%</span>
+          <span class="ps-lbl">Monto</span>
+        </div>
+        <div class="pay-step acc-o" style="left:671.00px; width:191.00px">
+          <span class="ps-d"></span>
+          <span class="ps-tag">Cuota 4</span>
+          <b class="ps-when" style="font-size:24px">Cierre</b>
+          <p class="ps-hito">Cierre de la construcción</p>
+          <span class="ps-pct">10%</span>
+          <span class="ps-lbl">Monto</span>
+        </div>
+        <div class="pay-step acc-w" style="left:876.00px; width:191.00px">
+          <span class="ps-d"></span>
+          <span class="ps-tag">Cuota 5</span>
+          <b class="ps-when" style="font-size:24px">+30 días</b>
+          <p class="ps-hito">30 días después del cierre, con las soluciones ya en uso y dentro de la garantía 30-60-90</p>
+          <span class="ps-pct">10%</span>
+          <span class="ps-lbl">Monto</span>
+        </div>
+      </div>
+      <div class="pay-frame" style="left:72.00px; width:159.00px"></div>
+      <div class="pay-frame" style="left:277.00px; width:159.00px"></div>
+      <div class="pay-frame" style="left:482.00px; width:159.00px"></div>
+      <div class="pay-frame" style="left:687.00px; width:159.00px"></div>
+      <div class="pay-frame" style="left:892.00px; width:159.00px"></div>
+
+      <div class="pay-note">
+        <p class="pn-main">Le damos a DUSA la comodidad de pagar la última cuota una vez cerrado el proyecto, cuando las soluciones ya están en uso y Intezia sigue acompañando dentro de la garantía.</p>
+        <p class="pn-sub">Cada factura se emite en divisas o en bolívares (Bs) a la tasa BCV Euro, y se liquida a la tasa del día de pago.</p>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">DUSA · CAI-059</span>
+      </div>
+    </section>
+
+    <!-- 9 · Próximos pasos: qué hacer y a quién escribir (última slide) -->
+    <section class="slide s-next">
+      <span class="counter">12 / 12</span>
+      <p class="eyebrow">12 · Próximos pasos</p>
+      <h2>Tres pasos para arrancar.</h2>
+      <p class="sub">Esto es lo que sigue cuando DUSA confirme la propuesta.</p>
+
+      <div class="nx-steps">
+        <div class="nx-step acc-y">
+          <span class="nx-num">1</span>
+          <b>Fecha de arranque</b>
+          <p>Confirmamos la fecha de la reunión de arranque y la zona horaria.</p>
+        </div>
+        <div class="nx-step acc-o">
+          <span class="nx-num">2</span>
+          <b>Accesos y participantes</b>
+          <p>Coordinamos los accesos y quién participa en cada área.</p>
+        </div>
+        <div class="nx-step acc-w">
+          <span class="nx-num">3</span>
+          <b>Reunión de arranque</b>
+          <p>Una reunión de unos 30 minutos para acordar el calendario, alinear los casos reales y medir la línea base.</p>
+        </div>
+      </div>
+
+      <div class="nx-contact">
+        <div class="nx-card nx-ase">
+          <span class="nx-label">¿Dudas? Escribe a tu directora comercial</span>
+          <b class="nx-name">María Iribarren</b>
+          <span class="nx-role">Directora comercial</span>
+          <p class="nx-line"><a href="mailto:miribarren@intezia.com">miribarren@intezia.com</a></p>
+          <p class="nx-line">+58 414 0570056</p>
+        </div>
+        <div class="nx-card nx-emp">
+          <span class="nx-label">Intezia</span>
+          <p class="nx-line">Intezia C.A J-505657950</p>
+          <p class="nx-line"><a href="mailto:servicio@intezia.com">servicio@intezia.com</a></p>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">DUSA · CAI-059</span>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

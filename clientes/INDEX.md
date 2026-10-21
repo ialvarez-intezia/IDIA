@@ -2,10 +2,10 @@
 
 > Generado por `scripts/indexar.py` el **2026-10-20**. No editar a mano: se regenera. Fuente fechada = los `meta.json` (§4.19).
 
-**237 propuestas** · 193 registradas · 44 pendientes de backfill · 24 dashboards
+**240 propuestas** · 196 registradas · 44 pendientes de backfill · 24 dashboards
 
-**Pipeline:** Aprobada: 3 · Borrador: 16 · En corrección: 2 · Enviada: 172  
-**División:** educacion: 192 · fundacion: 1
+**Pipeline:** Aprobada: 3 · Borrador: 19 · En corrección: 2 · Enviada: 172  
+**División:** educacion: 195 · fundacion: 1
 
 ## 🔧 En corrección (reenvío pendiente)
 
@@ -208,7 +208,7 @@
 | CAI-053 | FUTVE | Capacitación In-Company · 1 Cerebro Digital · 6 h · seguimiento 30-60-90 · formato compacto v3 | Enviada | 2026-10-14 | educacion | ✓ |
 | CAI-052 | Maenca | Capacitación In-Company · 2 Cerebros Digitales · 8 h por cerebro · 16 h · seguimiento 30-60-90 · formato compacto v3 | Enviada | 2026-10-14 | educacion | ✓ |
 | CAI-051 | Decamino Market | Habilidades · 3 áreas (precios de proveedores, costos por orden e inventario diario) · Levantamiento de información: 3 áreas de 4 h = 12 h · Construcción: 3 áreas de 8 h = 24 h · 36 h totales · seguimiento 30-60-90 · formato compacto v3 | Enviada | 2026-10-13 | educacion | ✓ |
-| DET-030 | Universal de Seguros | Detección + Habilidades · 4 áreas priorizadas · Detección: 4 áreas de 4h = 16h · Habilidades: 4 áreas de 12h = 48h · 64h totales · equipo de 50 personas · seguimiento 30-60-90 · formato compacto v2 | Enviada | 2026-10-08 | educacion | ✓ |
+| DET-030 | Universal de Seguros | Detección + Habilidades · 4 áreas priorizadas · Detección: 4 áreas de 2h = 8h · Habilidades: 4 áreas de 8h = 32h · 40h máximo · equipo de 50 personas · seguimiento 30-60-90 · formato compacto v2 | Enviada | 2026-10-08 | educacion | ✓ |
 | DET-028 | Metalurgia Metalblanc | Detección · Fundamentals (2h grupal, 11 personas) + auditoría de 5 áreas (Estructura de costos, Producción, Administración, Ventas y Marketing), 4h por área (20h), 22h totales, modalidad a coordinar · formato compacto v2 | Enviada | 2026-10-08 | educacion | ✓ |
 | CAI-043 | Ridery | Capacitación In-Company · 5 Cerebros Digitales · 3 sesiones de 2 h por persona · 6 h por cerebro · 30 h · seguimiento 30-60-90 · formato compacto v2 | Enviada | 2026-10-08 | educacion | ✓ |
 | CAI-042 | Hernán | Capacitación In-Company · Cerebro Digital individual con Claude y Obsidian, transversal a 4 actividades · 5 sesiones de 2 h · 10 h · 5 semanas · 1 persona · formato compacto v2 | Enviada | 2026-10-08 | educacion | ✓ |
@@ -378,6 +378,9 @@
 | CU-005 | Val-U (alianza de co-facilitación) | Curso · Alianza Val-U x Intezia · 4 mód / 8 sábados en 2 meses (documento curricular, sin deck) | Borrador | — | educacion | ✓ |
 | CAP-077 | Zoom | Capacitación In-Company · 6 mód / 12h | Borrador | — | educacion | — |
 | CAP-074 | Equipos y Sistemas Hidrocaven | Capacitación In-Company · 5 mód / 15h | Borrador | — | educacion | — |
+| CAI-061 | IDEA | Capacitación In-Company · IA para Gerentes y gobernabilidad de datos · 4 módulos de 2 h = 8 h · formato compacto v3 | Borrador | — | educacion | ✓ |
+| CAI-060 | Ridery | Capacitación In-Company · IA para Gerentes y gobernabilidad de datos · 4 módulos de 2 h = 8 h · alianza por canje de beneficios · formato compacto v3 | Borrador | — | educacion | ✓ |
+| CAI-059 | DUSA | Capacitación In-Company · Servicio de Habilidades · soluciones en 10 áreas en dos ejes aprobables (Finanzas y Comercial; RRHH) y Cerebros Digitales de 12 directores de cortesía · formato compacto v3 | Borrador | — | educacion | ✓ |
 | CAI-058 | ESTEI | Capacitación In-Company · Clon digital y skills del CEO y de 4 directores (50 h) · hoja de inversión única y facilidad de pago en 3 cuotas · formato compacto v3 | Borrador | — | educacion | ✓ |
 | CAI-050 | Go Pharma | Capacitación In-Company · Detección + Habilidades por etapas · Etapa 1 charla (2 h) + Etapa 2 Comercialización, Operaciones y Administración (50 h) + Etapa 3 dos clones digitales (12 h) · 64 h · Claude sobre Google Workspace · compacto v3 | Borrador | — | educacion | ✓ |
 | CAI-049 | Mercosur | Capacitación In-Company · Servicio de Habilidades · Nivelación en IA con Copilot para 50 personas en 5 grupos (8 h por grupo) · 40 h · compacto v3 | Borrador | — | educacion | ✓ |
@@ -391,8 +394,8 @@
 
 - **Simple TV** (9): ALL-001, ALL-002, CAI-002, CAI-003, CAI-013, CAI-014, CAI-015, CAI-045, DET-002
 - **Zoom** (9): CAP-058, INN-001, INN-002, INN-003, INN-004, CAP-077, CAP-059, CAI-017, CAP-050
+- **DUSA** (7): CH-007, CAI-012, CAI-035, CAI-059, CAP-087, CAP-088, CH-010
 - **IESA** (7): (sin código), (sin código), (sin código), (sin código), (sin código), (sin código), (sin código)
-- **DUSA** (6): CH-007, CAI-012, CAI-035, CAP-087, CAP-088, CH-010
 - **Fivenca** (5): CAP-062, CAP-105, CAI-039, (sin código), CAP-061
 - **Maurel & Prom Venezuela** (4): ALL-003, CAI-021, CAI-021, ALL-003
 - **Aerocentro** (3): CAP-082, CAI-008, CAP-083
@@ -415,6 +418,7 @@
 - **La Tienda del Blumer** (2): DET-020, CAI-054
 - **Laboratorios Farma** (2): CAP-049, CAI-032
 - **N58 Banco Digital** (2): CAI-034, CAI-037
+- **Ridery** (2): CAI-043, CAI-060
 - **Robin Agency** (2): CAP-080, DET-015
 - **Stilogres** (2): CAI-047, DET-032
 - **Venezolano de Crédito** (2): CAI-018, CAI-020

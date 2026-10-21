@@ -1,0 +1,358 @@
+<!doctype html>
+<!--
+  Propuesta · IDEA · Servicio de Habilidades (CAI-061)
+  División: Educación · Servicio: Habilidades (§4.1a) · Alianza: no
+  GENERADO por scripts/generar-habilidades-compacto.py (plantilla 3.0 (2026-10-08), formato habilidades) desde datos.json.
+  No editar a mano: editar datos.json y regenerar. Estilos propios del deck: overrides.css.
+  Fuente del insumo: Propuesta CAI-060 de Ridery como base (instrucción directa, sin Ficha Comercial)
+
+  Formato compacto de 7 slides, en el orden de las preguntas del cliente (Ventas, 2026-10-07), sin semanas, sesiones
+  ni fechas (Keiber, 2026-10-08):
+    1 Portada · 2 Alcance · 3 Ruta · 4 Cómo trabajamos · 5 Entregables · 6 Retorno · 7 Próximos pasos
+  Marcadores de detección de AcroForms (agregar-campo-precio.py), por página: «Propuesta Económica» solo en la slide de
+  inversión; «Lo que se llevan» y «Entregables» solo en la de entregables; «Facilidad de pago» solo en la de pago.
+  Campos AcroForm: Entregables, Acreditacion (entregables); sin hoja de inversión ni de pago (sin_hoja_cotizacion / omitir). Se reposicionan con scripts/customize-habilidades-compacto.py.
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Propuesta · IDEA · Intezia Educación</title>
+  <link rel="stylesheet" href="../_base/styles.css">
+  <link rel="stylesheet" href="habilidades-compacto.css">
+  <link rel="stylesheet" href="overrides.css">
+</head>
+<body>
+
+  <main class="deck">
+
+    <!-- 1 · Portada: ¿cuál es mi problema? -->
+    <section class="slide s-cover">
+      <span class="counter">01 / 07</span>
+      <div class="logo-big">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia Educación">
+      </div>
+      <div class="body">
+        <p class="eyebrow">Propuesta de proyecto · Servicio de Habilidades</p>
+        <h1 style="font-size:54px">
+          IA para Gerentes con<br>
+          gobernabilidad de datos<br>
+          <span class="hl">en IDEA</span>
+        </h1>
+        <p class="lead">
+          Un programa práctico para que cada gerente use la <strong>IA en su trabajo diario</strong>, con casos reales de su gerencia y reglas claras de <strong>gobernabilidad de datos</strong>.
+        </p>
+        <div class="pain-strip">
+          <div class="pain-item">
+            <span class="pain-num">4</span>
+            <span class="pain-lbl">módulos prácticos: fundamentos, datos, reportes y comunicación con IA.</span>
+          </div>
+          <div class="pain-item">
+            <span class="pain-num">8 h</span>
+            <span class="pain-lbl">de formación práctica, en 4 módulos de 2 h, con casos reales de cada gerencia.</span>
+          </div>
+          <div class="pain-item">
+            <span class="pain-num">1 caso</span>
+            <span class="pain-lbl">real por gerente, resuelto durante el programa, con las reglas de datos de su gerencia.</span>
+          </div>
+        </div>
+        <p class="pain-src">Contenido del programa; no son datos de IDEA.</p>
+      </div>
+      <div class="id-line">
+        <span class="codigo">Código: CAI-061</span>
+        <span class="cliente">IDEA</span>
+      </div>
+    </section>
+
+    <!-- 2 · Alcance: qué vamos a hacer y para qué -->
+    <section class="slide s-scope roomy">
+      <span class="counter">02 / 07</span>
+      <p class="eyebrow">02 · Alcance</p>
+      <h2>4 módulos, de la IA diaria a los datos gobernados.</h2>
+      <p class="sub">Cuatro módulos prácticos de <strong>2 h</strong>, con casos reales de la gerencia de cada participante.</p>
+
+      <div class="scope-panels one" style="--np:1">
+        <div class="scope-panel acc-y">
+          <div class="scope-head">
+            <span class="scope-tag">IA para Gerentes</span>
+            <span class="scope-total"><b>4</b> módulos</span>
+          </div>
+          <ul class="scope-rows">
+              <li><span class="area">Módulo 1 · Fundamentos de IA</span><span class="para">Qué puede y qué no puede hacer la IA, y cómo usarla para decidir mejor</span></li>
+              <li><span class="area">Módulo 2 · Gobernabilidad de datos</span><span class="para">Qué datos de cada gerencia se usan con IA y quién los autoriza</span></li>
+              <li><span class="area">Módulo 3 · Datos y reportes</span><span class="para">Analizar indicadores y preparar reportes y presentaciones con IA, bajo esas reglas</span></li>
+              <li><span class="area">Módulo 4 · Comunicación y seguimiento</span><span class="para">Correos, minutas, seguimiento y delegación con IA, y una biblioteca de instrucciones</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="scope-out">
+        <p class="scope-card-label">Fuera de este alcance</p>
+        <ul>
+          <li>Instalar o configurar plataformas de gestión de datos: el programa define reglas y criterios de uso.</li>
+          <li>Licencias de la herramienta de IA: se confirman en el arranque y su valor va aparte.</li>
+          <li>Información que identifique a personas o clientes: no se carga a ninguna herramienta de IA.</li>
+        </ul>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">IDEA · CAI-061</span>
+      </div>
+    </section>
+
+    <!-- 3 · Ruta: qué pasa en cada fase -->
+    <section class="slide s-route">
+      <span class="counter">03 / 07</span>
+      <p class="eyebrow">03 · Ruta</p>
+      <h2>De los fundamentos a los datos gobernados.</h2>
+      <p class="sub">Cuatro módulos de 2 h, de lo básico a un caso real resuelto con las reglas de datos de cada gerencia.</p>
+
+      <div class="route-grid n1" style="--cols:2; --rows:1; --rowh:214px; grid-template-columns:226px repeat(2,1fr)">
+
+        <div class="rg-corner"></div>
+        <div class="rg-phase rg-ph-1">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Base</span><b class="rg-phase-n">4 h</b></span>
+          <span class="rg-phase-name"><strong>Fundamentos y datos</strong></span>
+        </div>
+        <div class="rg-phase rg-ph-2 hi">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Casos</span><b class="rg-phase-n">4 h</b></span>
+          <span class="rg-phase-name"><strong>Reportes y comunicación</strong></span>
+        </div>
+
+        <div class="rg-front acc-y">
+          <span class="rg-front-h">IA para Gerentes</span>
+          <span class="rg-front-row"><span class="rg-front-tool">Gerentes</span><b class="rg-front-n">8 h</b></span>
+          <span class="rg-front-meta">de trabajo</span>
+        </div>
+        <div class="rg-cell"><span class="rg-h solo-h"><b>4</b> horas</span><p>Fundamentos de IA, uso responsable y la gobernabilidad de los datos de cada gerencia.</p></div>
+        <div class="rg-cell hi"><span class="rg-h solo-h"><b>4</b> horas</span><p>Datos, reportes y decisiones, comunicación y seguimiento, con las reglas ya acordadas.</p></div>
+
+      </div>
+
+      <div class="route-miles" style="grid-template-columns:repeat(4,1fr)">
+        <div class="mile"><span class="mile-d"></span><b>Arranque</b><p>Se confirman fechas, modalidad y accesos, y se elige el caso real de cada gerente.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Reglas de datos</b><p>Cada gerencia cuenta con su mapa de datos y sus reglas de uso con IA.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Caso resuelto</b><p>El caso real de cada gerente queda resuelto, con reporte y presentación.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Cierre</b><p>El kit y la biblioteca de cada gerente, listos para usar.</p></div>
+      </div>
+      <p class="route-note">Las 8 h son una proyección: 4 h de base y 4 h de casos. La reunión de arranque no suma horas.</p>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">IDEA · CAI-061</span>
+      </div>
+    </section>
+
+    <!-- 4 · Cómo trabajamos: pasos, por qué en ese orden, casos reales, práctica, datos y logística -->
+    <section class="slide s-method roomy">
+      <span class="counter">04 / 07</span>
+      <p class="eyebrow">04 · Cómo trabajamos</p>
+      <h2>Así trabajamos con cada gerente.</h2>
+      <p class="sub">Cada módulo parte de un caso real de la gerencia y termina con algo que el gerente usa al día siguiente.</p>
+
+      <ol class="mt-steps" style="--n:4">
+          <li><b>Aprendemos</b><span>Qué hace la IA y cómo pedirle bien.</span></li>
+          <li><b>Ordenamos</b><span>Qué datos tiene cada gerencia y qué reglas los cuidan.</span></li>
+          <li><b>Aplicamos</b><span>El gerente usa la IA en su trabajo diario.</span></li>
+          <li><b>Revisamos</b><span>El caso real de cada gerente, con las reglas acordadas.</span></li>
+      </ol>
+      <div class="mt-strips">
+        <p class="mt-why"><b>Por qué en este orden</b> Primero los fundamentos y la gobernabilidad de datos, que fijan las reglas; luego los reportes y la comunicación, que las aplican.</p>
+        <p class="mt-who"><b>Quién construye</b> <strong>Intezia guía</strong> y cada gerente construye las <strong>reglas de datos</strong> y sus casos con el contexto de su gerencia.</p>
+      </div>
+
+      <div class="mt-info">
+        <div class="mt-card">
+          <p class="mt-card-label">Cómo funciona en la práctica</p>
+          <ul><li><b>Casos reales.</b> Cada gerente trabaja un caso real de su gerencia, que se elige en la reunión de arranque.</li><li><b>Herramienta.</b> Se usa la herramienta de IA que tenga IDEA: se confirma en el arranque, junto con los accesos.</li><li><b>Datos con reglas.</b> Antes de usar la IA con información de la gerencia, se acuerda qué se puede usar y quién lo autoriza.</li></ul>
+        </div>
+        <div class="mt-card">
+          <p class="mt-card-label">Cómo cuidamos sus datos</p>
+          <p>Los ejercicios usan casos reales de cada gerencia, pero no se carga a la herramienta de IA información que identifique a clientes o a empleados de IDEA.</p>
+        </div>
+      </div>
+
+      <div class="mt-logi">
+        <div class="mt-tile"><span>Modalidad</span><b>Encuentros en vivo, presenciales o virtuales: se confirma en el arranque.</b></div>
+        <div class="mt-tile"><span>Participantes</span><b>Los gerentes de IDEA; quiénes participan se confirma en el arranque.</b></div>
+        <div class="mt-tile"><span>Ritmo de trabajo</span><b>Módulos de 2 h, sin frenar la operación diaria de cada gerencia.</b></div>
+        <div class="mt-tile"><span>Arranque</span><b>Fechas y horario de cada módulo, a acordar con IDEA en el arranque.</b></div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">IDEA · CAI-061</span>
+      </div>
+    </section>
+
+    <!-- 5 · Entregables: ¿con qué me quedo? (catálogo + piezas transversales) -->
+    <section class="slide s-deliv roomy">
+      <span class="counter">05 / 07</span>
+      <p class="eyebrow">05 · Entregables</p>
+      <div class="deliv-head">
+        <h2>Lo que recibe IDEA.</h2>
+        <p class="deliv-sub"><span class="nw">Lo que se llevan</span> los gerentes: <strong>todo lo trabajado en los módulos</strong>, de los fundamentos a las reglas de datos y su caso real.</p>
+      </div>
+
+      <div class="deliv-carriles" style="--ncols:2">
+        <span class="dc acc-y" style="grid-column: span 2">IA para Gerentes</span>
+      </div>
+
+      <div class="deliv-cols" style="--ncols:2">
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">Módulo 1 · Fundamentos de IA</p>
+            <ul>
+              <li>Guía de instrucciones para decidir con IA</li>
+              <li>Criterios de uso responsable de la IA</li>
+            </ul>
+          </div>
+          <div class="da">
+            <p class="da-name">Módulo 2 · Gobernabilidad de datos</p>
+            <ul>
+              <li>Mapa de datos de la gerencia</li>
+              <li>Reglas de uso de datos con IA</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">Módulo 3 · Datos y reportes</p>
+            <ul>
+              <li>Reporte ejecutivo y presentación con IA</li>
+              <li>Caso real de cada gerente, resuelto</li>
+            </ul>
+          </div>
+          <div class="da">
+            <p class="da-name">Módulo 4 · Comunicación y seguimiento</p>
+            <ul>
+              <li>Kit de comunicación y seguimiento</li>
+              <li>Biblioteca de instrucciones gerenciales</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="deliv-band">
+        <div class="db-card db-1">
+          <span class="db-label">Para todo el programa</span>
+        </div>
+        <div class="db-card db-2">
+          <span class="db-label">Valor inmediato</span>
+        </div>
+      </div>
+      <!-- Cajas multiline editables (vacías en HTML: el contenido vive dentro del AcroForm /V). -->
+      <div class="multi-box db-box db-box-1" data-field="Entregables"></div>
+      <div class="multi-box db-box db-box-2" data-field="Acreditacion"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">IDEA · CAI-061</span>
+      </div>
+    </section>
+
+    <!-- 6 · Retorno: ¿qué gano? (método de cálculo). Sin estudios ni citas externas. -->
+    <section class="slide s-roi">
+      <span class="counter">06 / 07</span>
+      <p class="eyebrow">06 · Retorno</p>
+      <h2>Retorno esperado: tiempo y dinero.</h2>
+      <p class="sub">Se calcula con las tareas de cada gerente, partiendo del tiempo que hoy toman.</p>
+
+      <div class="roi-body">
+        <div class="roi-panel">
+          <p class="roi-panel-title">Cómo se calcula, por gerente y por tarea</p>
+          <ol class="roi-steps">
+            <li><b>Tareas del gerente</b><span>Qué reportes, correos y seguimientos se apoyan en lo aprendido y cuántas veces al mes se hacen.</span></li>
+            <li><b>Tiempo actual por tarea</b><span>Se mide al arrancar, con cada gerente, y es la <strong>línea base</strong>.</span></li>
+            <li><b>Tiempo con la IA</b><span>Lo que toma la misma tarea con la IA y las instrucciones ya en uso.</span></li>
+            <li><b>Horas recuperadas al mes</b><span>Número de tareas por la diferencia entre el tiempo actual y el tiempo con la IA.</span></li>
+            <li><b>Valor en dinero</b><span>Horas recuperadas por el valor hora de referencia que IDEA valide.</span></li>
+          </ol>
+        </div>
+
+        <div class="roi-right">
+          <p class="roi-right-title">Qué queda listo al cerrar</p>
+          <div class="roi-card">
+            <b>Módulo 2</b>
+            <p>Mapa de datos y reglas de uso con IA de cada gerencia, acordados.</p>
+          </div>
+          <div class="roi-card">
+            <b>Módulo 3</b>
+            <p>Cada gerente resolvió su caso real, con reporte ejecutivo y presentación.</p>
+          </div>
+          <div class="roi-card">
+            <b>Cierre</b>
+            <p>Kit de comunicación y biblioteca de instrucciones en uso por cada gerente.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="roi-dest-wrap">
+        <p class="roi-dest-title">Hacia dónde va el proyecto</p>
+        <div class="roi-dest">
+          <div class="rd-item"><b>Tiempo para decidir</b><p>Si el tiempo se libera, cada gerente puede dedicarlo a <strong>decisiones</strong> y a trabajo de mayor valor.</p></div>
+          <div class="rd-item"><b>Datos bajo control</b><p>Cada gerencia sabe qué información usa con IA y cómo se cuida.</p></div>
+          <div class="rd-item"><b>Más gerencias</b><p>Con las reglas acordadas, IDEA decide si lleva el mismo método a <strong>otras gerencias</strong>.</p></div>
+        </div>
+      </div>
+
+      <div class="roi-hook"><p>Al cerrar el programa, cada gerente de IDEA usará la IA con reglas claras sobre sus datos y tendrá un caso real resuelto.</p></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">IDEA · CAI-061</span>
+      </div>
+    </section>
+
+    <!-- 9 · Próximos pasos: qué hacer y a quién escribir (última slide) -->
+    <section class="slide s-next">
+      <span class="counter">07 / 07</span>
+      <p class="eyebrow">07 · Próximos pasos</p>
+      <h2>Tres pasos para arrancar.</h2>
+      <p class="sub">Esto es lo que sigue cuando IDEA confirme la propuesta.</p>
+
+      <div class="nx-steps">
+        <div class="nx-step acc-y">
+          <span class="nx-num">1</span>
+          <b>Confirmar fechas</b>
+          <p>Validamos las fechas de los 4 módulos, la modalidad y los participantes.</p>
+        </div>
+        <div class="nx-step acc-o">
+          <span class="nx-num">2</span>
+          <b>Acceso y logística</b>
+          <p>Coordinamos los accesos a la herramienta de IA y el horario de los módulos.</p>
+        </div>
+        <div class="nx-step acc-w">
+          <span class="nx-num">3</span>
+          <b>Reunión de arranque</b>
+          <p>Reunión de unos 30 minutos para elegir el caso real que trabajará cada gerente.</p>
+        </div>
+      </div>
+
+      <div class="nx-contact">
+        <div class="nx-card nx-ase">
+          <span class="nx-label">¿Dudas? Escribe a tu contacto en Intezia</span>
+          <b class="nx-name">Carolain Fernandez</b>
+          <span class="nx-role">Directora de PR &amp; Partnerships · COO de Intezia Foundation</span>
+          <p class="nx-line">+58 424 2536174</p>
+        </div>
+        <div class="nx-card nx-emp">
+          <span class="nx-label">Intezia</span>
+          <p class="nx-line">Intezia C.A J-505657950</p>
+          <p class="nx-line"><a href="mailto:servicio@intezia.com">servicio@intezia.com</a></p>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">IDEA · CAI-061</span>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

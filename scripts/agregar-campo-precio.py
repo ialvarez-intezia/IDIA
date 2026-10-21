@@ -434,7 +434,9 @@ def plan_pago_fields(page):
     except Exception:
         texto = ""
     nums = [int(x) for x in re.findall(r"cuota(\d+)", texto)]
-    n = max(nums) if nums else 5
+    # Una tarjeta por cada «Cuota N» de la página (no el N mayor): una página con varios planes (p. ej. un plan por eje, CAI-059 DUSA,
+    # 2026-10-20) numera 1, 2, 3 dos veces y lleva seis campos, PagoCuota1..6.
+    n = len(nums) if nums else 5
     gap = 14.0
     w = (1011.0 - gap * (n - 1)) / n
     campos = []

@@ -199,16 +199,22 @@ PAGO_ESTANDAR = [
 # datos.json → vocabulario = {solucion, area, proceso_base}: [singular, plural]. «Proceso base» es jerga interna: el cliente ve «paso previo».
 VOC_DEF = {"solucion": ("solución", "soluciones"), "area": ("área", "áreas"), "proceso_base": ("paso previo", "pasos previos")}
 VOC = dict(VOC_DEF)
+CONTEO = {"on": False}   # datos.json → conteo_entregables: true muestra «N entregables» en las láminas; por defecto NINGUNA lámina lleva la cantidad de entregables (Ivana, 2026-10-20)
+TOKENS_CONTEO = re.compile(r"^(n_total|n_total_txt|n_entregables_txt|n_sol|n_sol_txt|n_f[0-3]|n_frente_.+|n_carril_.+|n_area_.+)$")
 OMITIBLES = ("metodo", "entregables", "retorno", "proximos", "inversion", "pago")   # slides que datos.json → omitir puede quitar (el resto es el núcleo)
 PALABRA_N = {1: "una", 2: "dos", 3: "tres", 4: "cuatro", 5: "cinco", 6: "seis", 7: "siete", 8: "ocho", 9: "nueve", 10: "diez"}
 NOMBRES_SLIDE = {"portada": "Portada", "alcance": "Alcance", "ruta": "Ruta", "metodo": "Cómo trabajamos", "entregables": "Entregables",
-                 "retorno": "Retorno", "inversion": "Inversión", "inversion2": "Inversión (etapa 2)", "inversion3": "Inversión (etapa 3)", "pago": "Facilidad de pago", "proximos": "Próximos pasos", "calendario": "Calendario"}
-ORDEN_EDUCACION = ["portada", "alcance", "ruta", "calendario", "metodo", "entregables", "retorno", "inversion", "inversion2", "inversion3", "pago", "proximos"]
+                 "retorno": "Retorno", "inversion": "Inversión", "inversion2": "Inversión (etapa 2)", "inversion3": "Inversión (etapa 3)", "pago": "Facilidad de pago", "pago2": "Facilidad de pago (2)", "proximos": "Próximos pasos", "calendario": "Calendario"}
+ORDEN_EDUCACION = ["portada", "alcance", "ruta", "calendario", "metodo", "entregables", "retorno", "inversion", "inversion2", "inversion3", "pago", "pago2", "proximos"]
 
-SUB_ENTREGABLES = "Lo que se llevan: **{n_entregables_txt}**, uno por cada solución construida, probada y adoptada, más el seguimiento a {rango_seguimiento} que mide su efecto."
-SUB_ENTREGABLES_SIN_SEG = "Lo que se llevan: **{n_entregables_txt}**, uno por cada solución construida, probada y adoptada."
-SUB_ENTREGABLES_VOC = "Lo que se llevan: **{n_entregables_txt}**, todos los del programa, más el seguimiento a {rango_seguimiento} que mide su efecto."
-SUB_ENTREGABLES_VOC_SIN_SEG = "Lo que se llevan: **{n_entregables_txt}**, todos los del programa."
+SUB_ENTREGABLES = "Lo que se llevan: **cada solución construida, probada y adoptada**, más el seguimiento a {rango_seguimiento} que mide su efecto."
+SUB_ENTREGABLES_SIN_SEG = "Lo que se llevan: **cada solución construida, probada y adoptada**."
+SUB_ENTREGABLES_VOC = "Lo que se llevan: **todos los entregables del programa**, más el seguimiento a {rango_seguimiento} que mide su efecto."
+SUB_ENTREGABLES_VOC_SIN_SEG = "Lo que se llevan: **todos los entregables del programa**."
+SUB_ENTREGABLES_CONTEO = "Lo que se llevan: **{n_entregables_txt}**, uno por cada solución construida, probada y adoptada, más el seguimiento a {rango_seguimiento} que mide su efecto."
+SUB_ENTREGABLES_CONTEO_SIN_SEG = "Lo que se llevan: **{n_entregables_txt}**, uno por cada solución construida, probada y adoptada."
+SUB_ENTREGABLES_CONTEO_VOC = "Lo que se llevan: **{n_entregables_txt}**, todos los del programa, más el seguimiento a {rango_seguimiento} que mide su efecto."
+SUB_ENTREGABLES_CONTEO_VOC_SIN_SEG = "Lo que se llevan: **{n_entregables_txt}**, todos los del programa."
 
 # ----------------------------------------------------------------------------------------------
 # Formato de Detección (datos.json → "formato": "deteccion"). Valores por defecto del servicio, tomados de G-MAX DET-024
@@ -347,11 +353,11 @@ DET_DEFAULTS = {
 # Esquema de tipos (valida antes de calcular: evita tracebacks por datos mal formados)
 # ----------------------------------------------------------------------------------------------
 ESQUEMAS = {
-    "raiz": {"version": "int", "cliente": "dict:cliente", "division": "str", "alianza": "bool", "eje": "str", "origen": "str",
+    "raiz": {"conteo_entregables": "bool", "version": "int", "cliente": "dict:cliente", "division": "str", "alianza": "bool", "eje": "str", "origen": "str",
              "fuente_insumo": "str", "portada": "dict:portada", "carriles": "list:dict:carril", "areas": "list:dict:area",
              "alcance": "dict:alcance", "metodo": "dict:metodo", "fases": "list:dict:fase", "frentes": "list:dict:frente",
              "ruta": "dict:ruta", "logistica": "dict:logistica", "seguimiento": "dict:seguimiento", "inversion": "dict:inversion",
-             "pago": "dict:pago", "entregables": "dict:entregables", "retorno": "dict:retorno",
+             "pago": "dict:pago", "pago2": "dict:pago", "entregables": "dict:entregables", "retorno": "dict:retorno",
              "proximos_pasos": "dict:proximos_pasos", "siglas_ok": "list:str", "frases_ok": "list:str", "supuestos": "list:str", "pendientes": "list:str",
              "servicio_rotulo": "str", "meta_servicio": "str", "meta_tipo": "str", "vocabulario": "dict:vocabulario", "sin_hoja_cotizacion": "bool",
              "omitir": "list:str", "formato": "str", "deteccion": "dict:deteccion", "por_fases": "bool", "metodo_antes_de_ruta": "bool",
@@ -400,7 +406,8 @@ ESQUEMAS = {
     "etapa_inversion": {"titulo": "str", "rotulo": "str", "duracion": "str", "programa": "list:str", "notas": "list:str", "garantia_texto": "str", "sin_garantia": "bool"},
     "licencias": {"titulo": "str", "tarjetas": "list:dict:tarjeta", "nota": "str"},
     "tarjeta": {"nombre": "str", "color": "str", "texto": "str"},
-    "pago": {"titulo": "str", "subtitulo": "str", "cuotas": "list:dict:cuota", "mensaje": "str", "facturacion": "str"},
+    "pago": {"titulo": "str", "subtitulo": "str", "cuotas": "list:dict:cuota", "mensaje": "str", "facturacion": "str", "grupos": "list:dict:grupo_pago"},
+    "grupo_pago": {"rotulo": "str", "n": "int"},
     "cuota": {"cuando": "str", "hito": "str", "pct": "num"},
     "proximos_pasos": {"titulo": "str", "subtitulo": "str", "pasos": "list:dict:paso", "asesora": "dict:asesora", "etiqueta_contacto": "str"},
     "asesora": {"nombre": "str", "cargo": "str", "correo": "str", "telefono": "str"},
@@ -500,6 +507,11 @@ class Tokens:
 
         def r(m):
             k = m.group(1)
+            if not CONTEO["on"] and TOKENS_CONTEO.match(k):
+                if (donde, k) not in self.vistos:
+                    self.vistos.add((donde, k))
+                    self.rep.err(donde, "token {%s}: las láminas no llevan la cantidad de entregables (Ivana, 2026-10-20); reescribir sin conteo (las horas y las áreas sí pueden ir) o declarar conteo_entregables: true" % k)
+                return m.group(0)
             if k in self.ctx:
                 return str(self.ctx[k])
             if "+" in k:   # suma de varias áreas (o frentes, fases...): {h_area_ti+corp} = {h_area_ti} + {h_area_corp}
@@ -937,9 +949,9 @@ def cap1(t):
     return t[:m.start(2)] + m.group(2).upper() + t[m.end(2):] if m else t
 
 
-def cuotas_pago(d):
+def cuotas_pago(d, clave="pago"):
     """Cuotas del plan de pago: las del datos.json o el plan estándar de la política comercial."""
-    c = (d.get("pago") or {}).get("cuotas")
+    c = (d.get(clave) or {}).get("cuotas")
     return c if isinstance(c, list) and c else PAGO_ESTANDAR
 
 
@@ -1324,36 +1336,47 @@ def validar_semantica(d, ctx, agg, rep, silent):
                     rep.aviso("inversion.etapas[%d].rotulo" % i, "%d caracteres: máx. ~60 (una línea junto a «Propuesta Económica»)" % len(rs(e_["rotulo"])))
             if 2 <= len(et_) <= 3 and all(e_.get("sin_garantia") for e_ in et_) and seg_es_seguimiento(d):
                 rep.aviso("inversion.etapas", "ninguna hoja lleva la garantía 30-60-90 pero el deck anuncia seguimiento: definir en qué etapa aplica (lo habitual es la que construye)")
-    if "pago" in orden:
-        pg = d.get("pago") or {}
-        cuotas = pg.get("cuotas")
-        if cuotas is None:
-            rep.aviso("pago", "sin plan de pago propio: se usa el estándar de empresa/politicas-comerciales.md (anticipo 50 % al aprobar y saldo 50 % al cierre). Confirmar con ventas si hay una facilidad distinta (cuotas ligadas a hitos)")
-        else:
-            if not (2 <= len(cuotas) <= 6):
-                rep.err("pago.cuotas", "se necesitan 2 a 6 cuotas; hay %d" % len(cuotas))
-            total = 0.0
-            for i, c in enumerate(cuotas):
-                donde = "pago.cuotas[%d]" % i
-                if not c.get("cuando") or not c.get("hito"):
-                    rep.err(donde, "faltan cuando/hito")
-                if not es_num(c.get("pct")) or c.get("pct") <= 0:
-                    rep.err(donde + ".pct", "debe ser un porcentaje > 0 (recibido %r)" % (c.get("pct"),))
-                else:
-                    total += c["pct"]
-                if len(rs(c.get("cuando"))) > 16:
-                    rep.aviso(donde + ".cuando", "%d caracteres: máx. ~16 (una línea en la tarjeta)" % len(rs(c["cuando"])))
-                if cuotas and lineas_wrap(rs(c.get("hito")), ((1011.0 - 14.0 * (len(cuotas) - 1)) / len(cuotas) - 38) / 6.3) > 4:
-                    rep.aviso(donde + ".hito", "%d caracteres: ocupa más de 4 líneas en la tarjeta (con %d cuotas caben ~%d caracteres); acortar el hito" % (
-                        len(rs(c["hito"])), len(cuotas), int(4 * ((1011.0 - 14.0 * (len(cuotas) - 1)) / len(cuotas) - 38) / 6.3 * 0.9)))
-            if cuotas and abs(total - 100) > 0.01:
-                rep.err("pago.cuotas", "los porcentajes suman %s %% y deben sumar 100" % fmt_es(total))
-        if not pg.get("facturacion"):
-            rep.aviso("pago.facturacion", "sin «facturacion»: el cliente no verá en qué moneda ni a qué tasa se factura (moneda e impuestos siguen pendientes en empresa/politicas-comerciales.md): confirmar con ventas")
-        if len(rs(pg.get("mensaje"))) > 230:
-            rep.aviso("pago.mensaje", "%d caracteres: máx. ~220 (2 líneas)" % len(rs(pg["mensaje"])))
-        if len(rs(pg.get("facturacion"))) > 200:
-            rep.aviso("pago.facturacion", "%d caracteres: máx. ~190" % len(rs(pg["facturacion"])))
+    for clave_pg in [k_ for k_ in ("pago", "pago2") if k_ in orden]:
+            pg = d.get(clave_pg) or {}
+            cuotas = pg.get("cuotas")
+            if cuotas is None:
+                rep.aviso(clave_pg, "sin plan de pago propio: se usa el estándar de empresa/politicas-comerciales.md (anticipo 50 % al aprobar y saldo 50 % al cierre). Confirmar con ventas si hay una facilidad distinta (cuotas ligadas a hitos)")
+            else:
+                if not (2 <= len(cuotas) <= 6):
+                    rep.err(clave_pg + ".cuotas", "se necesitan 2 a 6 cuotas; hay %d" % len(cuotas))
+                total = 0.0
+                for i, c in enumerate(cuotas):
+                    donde = clave_pg + ".cuotas[%d]" % i
+                    if not c.get("cuando") or not c.get("hito"):
+                        rep.err(donde, "faltan cuando/hito")
+                    if not es_num(c.get("pct")) or c.get("pct") <= 0:
+                        rep.err(donde + ".pct", "debe ser un porcentaje > 0 (recibido %r)" % (c.get("pct"),))
+                    else:
+                        total += c["pct"]
+                    if len(rs(c.get("cuando"))) > 16:
+                        rep.aviso(donde + ".cuando", "%d caracteres: máx. ~16 (una línea en la tarjeta)" % len(rs(c["cuando"])))
+                    if cuotas and lineas_wrap(rs(c.get("hito")), ((1011.0 - 14.0 * (len(cuotas) - 1)) / len(cuotas) - 38) / 6.3) > 4:
+                        rep.aviso(donde + ".hito", "%d caracteres: ocupa más de 4 líneas en la tarjeta (con %d cuotas caben ~%d caracteres); acortar el hito" % (
+                            len(rs(c["hito"])), len(cuotas), int(4 * ((1011.0 - 14.0 * (len(cuotas) - 1)) / len(cuotas) - 38) / 6.3 * 0.9)))
+                grupos_pg = pg.get("grupos")
+                if cuotas and grupos_pg:   # varios planes en una página (p. ej. un plan por eje): cada grupo suma 100 %
+                    if not all(isinstance(g_, dict) and isinstance(g_.get("n"), int) and g_["n"] >= 2 and g_.get("rotulo") for g_ in grupos_pg) or sum(g_["n"] for g_ in grupos_pg if isinstance(g_.get("n"), int)) != len(cuotas):
+                        rep.err(clave_pg + ".grupos", "cada grupo necesita rotulo y n >= 2 cuotas, y los n deben sumar las %d cuotas de la página" % len(cuotas))
+                    else:
+                        k_ = 0
+                        for g_ in grupos_pg:
+                            sub_ = sum(c_["pct"] for c_ in cuotas[k_:k_ + g_["n"]] if es_num(c_.get("pct")))
+                            k_ += g_["n"]
+                            if abs(sub_ - 100) > 0.01:
+                                rep.err(clave_pg + ".cuotas", "los porcentajes del grupo «%s» suman %s %% y deben sumar 100" % (g_["rotulo"], fmt_es(sub_)))
+                elif cuotas and abs(total - 100) > 0.01:
+                    rep.err(clave_pg + ".cuotas", "los porcentajes suman %s %% y deben sumar 100" % fmt_es(total))
+            if not pg.get("facturacion"):
+                rep.aviso(clave_pg + ".facturacion", "sin «facturacion»: el cliente no verá en qué moneda ni a qué tasa se factura (moneda e impuestos siguen pendientes en empresa/politicas-comerciales.md): confirmar con ventas")
+            if len(rs(pg.get("mensaje"))) > 230:
+                rep.aviso(clave_pg + ".mensaje", "%d caracteres: máx. ~220 (2 líneas)" % len(rs(pg["mensaje"])))
+            if len(rs(pg.get("facturacion"))) > 200:
+                rep.aviso(clave_pg + ".facturacion", "%d caracteres: máx. ~190" % len(rs(pg["facturacion"])))
     _por = ("en Fundación" if d.get("division") == "fundacion" else ("porque sin_hoja_cotizacion = true" if d.get("sin_hoja_cotizacion") else "porque está en omitir"))
     if "inversion" not in orden and inv:
         rep.aviso("inversion", "se ignora %s (no hay slide de inversión); llevar licencias y notas a otra parte si hacen falta" % _por)
@@ -1505,9 +1528,11 @@ def vocab_por_defecto():
 def sub_entregables_defecto(d):
     """Subtítulo por defecto de la slide de entregables. Con otro vocabulario (curso, charla, Detección…) no se habla de «soluciones
     construidas, probadas y adoptadas» y con tipo de seguimiento distinto de «seguimiento» no se promete el seguimiento 30-60-90."""
+    c = "_CONTEO" if CONTEO["on"] else ""
+    g = globals()
     if vocab_por_defecto():
-        return SUB_ENTREGABLES if seg_es_seguimiento(d) else SUB_ENTREGABLES_SIN_SEG
-    return SUB_ENTREGABLES_VOC if seg_es_seguimiento(d) else SUB_ENTREGABLES_VOC_SIN_SEG
+        return g["SUB_ENTREGABLES" + c] if seg_es_seguimiento(d) else g["SUB_ENTREGABLES" + c + "_SIN_SEG"]
+    return g["SUB_ENTREGABLES" + c + "_VOC"] if seg_es_seguimiento(d) else g["SUB_ENTREGABLES" + c + "_VOC_SIN_SEG"]
 
 
 def seg_tipo(d):
@@ -1583,6 +1608,8 @@ def orden_slides(d):
     for k_, n_min in (("inversion2", 2), ("inversion3", 3)):   # la 2.ª y la 3.ª hoja de inversión solo existen con inversion.etapas (2 o 3 etapas) y con hoja de inversión
         if k_ in orden and not (len(etapas_inversion(d)) >= n_min and "inversion" in orden):
             orden.remove(k_)
+    if "pago2" in orden and not (isinstance(d.get("pago2"), dict) and "pago" in orden):
+        orden.remove("pago2")   # 2.ª página de pago: solo existe con datos.json → pago2 (otro plan, p. ej. todos los ejes juntos) y con pago (Ivana, DUSA CAI-059, 2026-10-20)
     if d.get("metodo_antes_de_ruta") is True and "metodo" in orden and "ruta" in orden:
         orden.remove("metodo")
         orden.insert(orden.index("ruta"), "metodo")
@@ -1823,7 +1850,16 @@ def titulo_portada(p, tok):
 
 
 def titulo_alcance_defecto(R):
+    if not CONTEO["on"]:
+        return "%s en %s de {cliente_corto}." % (cap1(VOC["solucion"][1]), R.ctx["n_areas_txt"])
     return "%s en %s de {cliente_corto}." % (R.ctx["n_total_txt"], R.ctx["n_areas_txt"])
+
+
+def total_alcance(n_sol, n_ar):
+    """Cabecera del panel de alcance: sin la cantidad de entregables salvo conteo_entregables: true (solo las áreas o módulos)."""
+    if CONTEO["on"]:
+        return "<b>%d</b> %s · <b>%d</b> %s" % (n_sol, plural(n_sol, *VOC["solucion"]), n_ar, plural(n_ar, *VOC["area"]))
+    return "<b>%d</b> %s" % (n_ar, plural(n_ar, *VOC["area"]))
 
 
 def alcance_roomy(d):
@@ -1883,7 +1919,7 @@ def s_alcance(d, R):
             em = (" <em>(%s)</em>" % etq_base) if a.get("proceso_base") else ""
             comp = (' <small class="comp">%s</small>' % T(a["composicion"], "areas.composicion")) if a.get("composicion") else ""
             # alcance.sin_conteo_por_fila: sin la píldora «N entregables» de cada fila (el conteo sigue en la cabecera del panel)
-            pill = "" if al.get("sin_conteo_por_fila") else '<span class="n">%d %s</span>' % (n, plural(n, *VOC["solucion"]))
+            pill = "" if (al.get("sin_conteo_por_fila") or not CONTEO["on"]) else '<span class="n">%d %s</span>' % (n, plural(n, *VOC["solucion"]))
             filas += (
                 '              <li><span class="area">%s%s%s</span>%s<span class="para">%s</span></li>\n'
                 % (T(a["nombre"], "areas.nombre"), em, comp, pill, T(a["para_que"], "areas.para_que"))
@@ -1892,12 +1928,11 @@ def s_alcance(d, R):
             '        <div class="scope-panel %s">\n'
             '          <div class="scope-head">\n'
             '            <span class="scope-tag">%s</span>\n'
-            '            <span class="scope-total"><b>%d</b> %s · %d %s</span>\n'
+            '            <span class="scope-total">%s</span>\n'
             "          </div>\n"
             '          <ul class="scope-rows">\n%s          </ul>\n'
             "        </div>\n"
-            % (COLORES[c["color"]], T(c["nombre"], "carriles.nombre"), ca["n"], plural(ca["n"], *VOC["solucion"]),
-               ca["areas"], plural(ca["areas"], *VOC["area"]), filas)
+            % (COLORES[c["color"]], T(c["nombre"], "carriles.nombre"), total_alcance(ca["n"], ca["areas"]), filas)
         )
     roomy = alcance_roomy(d)  # pocas filas: más aire y letra más grande
     fuera = ""
@@ -1939,7 +1974,7 @@ def s_alcance_fases(d, R):
             comp = (' <small class="comp">%s</small>' % T(a["composicion"], "areas.composicion")) if a.get("composicion") else ""
             n = R.agg["area"][a["id"]][0]
             # alcance.sin_conteo_por_fila: también sin la píldora «N entregables» de cada fila en el agrupado por fase
-            pill = "" if (a.get("proceso_base") or al.get("sin_conteo_por_fila")) else '<span class="n">%d %s</span>' % (n, plural(n, *VOC["solucion"]))
+            pill = "" if (a.get("proceso_base") or al.get("sin_conteo_por_fila") or not CONTEO["on"]) else '<span class="n">%d %s</span>' % (n, plural(n, *VOC["solucion"]))
             filas += (
                 '              <li%s><span class="area">%s%s</span>%s<span class="para">%s</span></li>\n'
                 % (' class="base"' if a.get("proceso_base") else "", T(a["nombre"], "areas.nombre"), comp, pill, T(a["para_que"], "areas.para_que"))
@@ -1955,10 +1990,10 @@ def s_alcance_fases(d, R):
         '        <div class="scope-panel %s">\n'
         '          <div class="scope-head">\n'
         '            <span class="scope-tag">%s</span>\n'
-        '            <span class="scope-total"><b>%d</b> %s · %d %s</span>\n'
+        '            <span class="scope-total">%s</span>\n'
         "          </div>\n%s"
         "        </div>\n"
-        % (COLORES[c["color"]], T(c["nombre"], "carriles.nombre"), n_sol, plural(n_sol, *VOC["solucion"]), n_ar, plural(n_ar, *VOC["area"]), grupos)
+        % (COLORES[c["color"]], T(c["nombre"], "carriles.nombre"), total_alcance(n_sol, n_ar), grupos)
     )
     roomy = alcance_roomy(d)
     return (
@@ -2000,7 +2035,7 @@ def s_ruta(d, R):
         n, h = R.agg["fase"].get(f["id"], [0, 0])
         if pf:
             n = R.agg["fase_sol"].get(f["id"], 0)
-        cuenta = ("%d %s" % (n, plural(n, *VOC["solucion"]))) if (n or not pf) else "%d h" % h
+        cuenta = ("%d %s" % (n, plural(n, *VOC["solucion"]))) if ((n or not pf) and CONTEO["on"]) else "%d h" % h
         cuenta_html = "" if (pf and nf == 1) else '<b class="rg-phase-n">%s</b>' % cuenta
         hi = bool(f.get("destacada"))
         hdr += (
@@ -2029,17 +2064,18 @@ def s_ruta(d, R):
         cuerpo += (
             '        <div class="rg-front %s">\n'
             '          <span class="rg-front-h">%s</span>\n'
-            '          <span class="rg-front-row"><span class="rg-front-tool">%s</span><b class="rg-front-n">%d %s</b></span>\n'
-            '          <span class="rg-front-meta">%d h de trabajo</span>\n'
+            '          <span class="rg-front-row"><span class="rg-front-tool">%s</span><b class="rg-front-n">%s</b></span>\n'
+            '          <span class="rg-front-meta">%s</span>\n'
             "        </div>\n" % (COLORES[car["color"]], T(fr["nombre"], "frentes.nombre"), T(car["nombre_corto"], "carriles.nombre_corto"),
-                                 n, plural(n, *VOC["solucion"]), h)
+                                 ("%d %s" % (n, plural(n, *VOC["solucion"]))) if CONTEO["on"] else ("%d h" % h),
+                                 ("%d h de trabajo" % h) if CONTEO["on"] else "de trabajo")
         )
         for f in fases_cols:
             nn, hh = R.agg["celda"].get((fr["id"], f["id"]), [0, 0])
             hi = " hi" if f.get("destacada") else ""
             txt = (fr.get("celdas") or {}).get(f["id"], "")
             ns = R.agg["celda_sol"].get((fr["id"], f["id"]), 0) if pf else nn
-            if nn and not ns:
+            if nn and (not ns or not CONTEO["on"]):
                 cuerpo += (
                     '        <div class="rg-cell%s"><span class="rg-h solo-h"><b>%d</b> %s</span><p>%s</p></div>\n'
                     % (hi, hh, plural(hh, "hora", "horas"), M(txt, "frentes.celdas"))
@@ -2235,13 +2271,14 @@ def programa_auto(d, R):
         for f, areas in grupos_por_fase(d):
             n = sum(R.agg["area"][a["id"]][0] for a in areas if not a.get("proceso_base"))
             h = sum(R.agg["area"][a["id"]][1] for a in areas)
-            por_frente.append("%s: %s%d h" % (sin_marcado(t(f["titulo"], "fases.titulo")), ("%d %s, " % (n, plural(n, *VOC["solucion"]))) if n else "", h))
-        resumen = "{n_fases_txt} y {n_sol_txt}, {h_total} h de trabajo."
+            por_frente.append("%s: %s%d h" % (sin_marcado(t(f["titulo"], "fases.titulo")), ("%d %s, " % (n, plural(n, *VOC["solucion"]))) if (n and CONTEO["on"]) else "", h))
+        resumen = "{n_fases_txt} y {n_sol_txt}, {h_total} h de trabajo." if CONTEO["on"] else "{n_fases_txt}, {h_total} h de trabajo."
     else:
         for fr in d["frentes"]:
             n, h = R.agg["frente"].get(fr["id"], [0, 0])
-            por_frente.append("%s: %d %s, %d h" % (sin_marcado(t(fr["nombre"], "frentes.nombre")), n, plural(n, *VOC["solucion"]), h))
-        resumen = "{n_total_txt} en {n_frentes_txt}, {h_total} h de trabajo."
+            por_frente.append(("%s: %d %s, %d h" % (sin_marcado(t(fr["nombre"], "frentes.nombre")), n, plural(n, *VOC["solucion"]), h)) if CONTEO["on"]
+                              else ("%s: %d h" % (sin_marcado(t(fr["nombre"], "frentes.nombre")), h)))
+        resumen = "{n_total_txt} en {n_frentes_txt}, {h_total} h de trabajo." if CONTEO["on"] else "{n_frentes_txt}, {h_total} h de trabajo."
     cierre = "Horas de trabajo con quien ejecuta cada proceso."
     maxl = CAJAS_PDF["Programa"][3]
     for cand in ([cab] + por_frente + [cierre], [cab] + por_frente, [cab, resumen]):
@@ -2263,7 +2300,7 @@ def s_inversion(d, R, et=None):
         fc = [sin_marcado(f["titulo"]) for f in d["fases"] if f.get("id") != "F0"]
         base = "Proyecto en {n_fases_txt} (%s y %s)" % (", ".join(fc[:-1]), fc[-1])
     else:
-        base = "Proyecto de {n_total_txt} en {n_fases_txt}"
+        base = ("Proyecto de {n_total_txt} en {n_fases_txt}") if CONTEO["on"] else "Proyecto en {n_fases_txt}"
     if gar_h:
         dur_def = base + ", con seguimiento y garantía a {rango_seguimiento}. {h_total} horas de trabajo."
     elif seg_es_seguimiento(d):
@@ -2379,13 +2416,15 @@ def s_entregables(d, R, columnas, ncols):
         for col in columnas:
             f = col["fase"]
             n = sum(R.agg["area"][a["id"]][0] for a in col["areas"])
-            barras += '        <span class="dc %s fase%s" style="grid-column: span 1">%s · %d %s</span>\n' % (
-                COLORES[col["carril"]["color"]], " hi" if f.get("destacada") else "", T(f["titulo"], "fases.titulo"), n, plural(n, "entregable", "entregables"))
+            barras += '        <span class="dc %s fase%s" style="grid-column: span 1">%s%s</span>\n' % (
+                COLORES[col["carril"]["color"]], " hi" if f.get("destacada") else "", T(f["titulo"], "fases.titulo"),
+                (" · %d %s" % (n, plural(n, "entregable", "entregables"))) if CONTEO["on"] else "")
     for cid in ([] if por_fases(d) else orden):
         c, k = por_car[cid]
         n = R.agg["carril"][cid]["n"]
-        barras += '        <span class="dc %s" style="grid-column: span %d">%s · %d %s</span>\n' % (
-            COLORES[c["color"]], k, T(c["nombre"], "carriles.nombre"), n, plural(n, "entregable", "entregables"))
+        barras += '        <span class="dc %s" style="grid-column: span %d">%s%s</span>\n' % (
+            COLORES[c["color"]], k, T(c["nombre"], "carriles.nombre"),
+            (" · %d %s" % (n, plural(n, "entregable", "entregables"))) if CONTEO["on"] else "")
     min_first = {}
     idx_cols = {}
     for i, col in enumerate(columnas):
@@ -2448,14 +2487,25 @@ def geometria_pago(n):
     w = (1011.0 - gap * (n - 1)) / n
     return [(56.0 + i * (w + gap), w) for i in range(n)]
 
-def s_pago(d, R):
-    """8 · Facilidad de pago (penúltima): cuotas ligadas a hitos. Los montos son campos vacíos y editables (PagoCuota1..N)."""
+def s_pago(d, R, clave="pago"):
+    """8 · Facilidad de pago (penúltima): cuotas ligadas a hitos. Los montos son campos vacíos y editables (PagoCuota1..N; la 2.ª página
+    de pago, datos.json → pago2, lleva PagoCuota1_2..N_2). Con pago.grupos, la página reúne varios planes (p. ej. uno por eje) en la
+    misma fila de tarjetas, cada uno con su rótulo y su numeración de cuotas (DUSA CAI-059, 2026-10-20)."""
     T, M = R.T, R.M
-    pg = d.get("pago") or {}
-    cuotas = cuotas_pago(d)
+    pg = d.get(clave) or {}
+    cuotas = cuotas_pago(d, clave)
     n = len(cuotas)
     titulo = pg.get("titulo") or "Facilidad de pago: {n_cuotas_palabra} cuotas ligadas a hitos."
     sub = pg.get("subtitulo") or "Cada cuota se paga al cumplirse un hito del proyecto, y las {n_cuotas_palabra} suman el **100%** de la inversión."
+    grupos = [g_ for g_ in (pg.get("grupos") or []) if isinstance(g_, dict)]
+    num_cuota, grupo_html, k_ = {}, "", 0
+    geo = geometria_pago(n)
+    for g_ in grupos:
+        for j_ in range(g_["n"]):
+            num_cuota[k_ + j_] = j_ + 1
+        left_g, w_g = geo[k_][0], geo[k_ + g_["n"] - 1][0] + geo[k_ + g_["n"] - 1][1] - geo[k_][0]
+        grupo_html += '      <div class="pay-group" style="left:%.2fpx; width:%.2fpx"><span>%s</span></div>\n' % (left_g, w_g, T(g_["rotulo"], clave + ".grupos.rotulo"))
+        k_ += g_["n"]
     colores = ["acc-y", "acc-o", "acc-y", "acc-o", "acc-w", "acc-y"]
     fs_cuando = {2: 28, 3: 26, 4: 24, 5: 24, 6: 20}.get(n, 24)
     cards = frames = ""
@@ -2469,16 +2519,16 @@ def s_pago(d, R):
             '          <p class="ps-hito">%s</p>\n'
             '          <span class="ps-pct">%s</span>\n'
             '          <span class="ps-lbl">Monto</span>\n'
-            "        </div>\n" % (colores[(i - 1) % len(colores)], " first" if i == 1 else "", left, w, i, fs_cuando,
-                                 T(c["cuando"], "pago.cuotas.cuando"), T(c["hito"], "pago.cuotas.hito"), pct)
+            "        </div>\n" % (colores[(i - 1) % len(colores)], " first" if num_cuota.get(i - 1, i) == 1 else "", left, w, num_cuota.get(i - 1, i), fs_cuando,
+                                 T(c["cuando"], clave + ".cuotas.cuando"), T(c["hito"], clave + ".cuotas.hito"), pct)
         )
         frames += '      <div class="pay-frame" style="left:%.2fpx; width:%.2fpx"></div>\n' % (left + 16, w - 32)
     nota = ""
     if pg.get("mensaje") or pg.get("facturacion"):
         nota = (
             '      <div class="pay-note">\n'
-            + ('        <p class="pn-main">%s</p>\n' % M(pg["mensaje"], "pago.mensaje") if pg.get("mensaje") else "")
-            + ('        <p class="pn-sub">%s</p>\n' % M(pg["facturacion"], "pago.facturacion") if pg.get("facturacion") else "")
+            + ('        <p class="pn-main">%s</p>\n' % M(pg["mensaje"], clave + ".mensaje") if pg.get("mensaje") else "")
+            + ('        <p class="pn-sub">%s</p>\n' % M(pg["facturacion"], clave + ".facturacion") if pg.get("facturacion") else "")
             + "      </div>\n\n"
         )
     return (
@@ -2488,10 +2538,10 @@ def s_pago(d, R):
         '      <p class="eyebrow">%02d · Pago</p>\n'
         "      <h2>%s</h2>\n"
         '      <p class="sub">%s</p>\n\n'
-        '      <div class="pay-line"></div>\n'
+        '      <div class="pay-line"></div>\n%s'
         '      <div class="pay-route">\n%s      </div>\n%s\n%s%s'
         "    </section>\n"
-        % (R.contador("pago"), R.idx["pago"], T(titulo, "pago.titulo"), M(sub, "pago.subtitulo"), cards, frames, nota, foot(R, "oscuro"))
+        % (R.contador(clave), R.idx[clave], T(titulo, clave + ".titulo"), M(sub, clave + ".subtitulo"), grupo_html, cards, frames, nota, foot(R, "oscuro"))
     )
 
 # ----------------------------------------------------------------------------------------------
@@ -3232,7 +3282,7 @@ def render_html(d, R, columnas, ncols):
         "portada": lambda: s_portada(d, R), "alcance": lambda: s_alcance(d, R), "ruta": lambda: s_ruta(d, R),
         "metodo": lambda: s_metodo(d, R), "entregables": lambda: s_entregables(d, R, columnas, ncols), "retorno": lambda: s_retorno(d, R),
         "inversion": lambda: s_inversion(d, R, 0 if etapas_inversion(d) else None), "inversion2": lambda: s_inversion(d, R, 1), "inversion3": lambda: s_inversion(d, R, 2),
-        "pago": lambda: s_pago(d, R), "proximos": lambda: s_proximos(d, R), "calendario": lambda: s_calendario(d, R),
+        "pago": lambda: s_pago(d, R), "pago2": lambda: s_pago(d, R, "pago2"), "proximos": lambda: s_proximos(d, R), "calendario": lambda: s_calendario(d, R),
     }
     if es_deteccion(d):
         fns.update({"alcance": lambda: s_alcance_det(d, R), "ruta": lambda: s_ruta_det(d, R), "entregables": lambda: s_entregables_det(d, R)})
@@ -3400,6 +3450,15 @@ def programa_md_comun(d, R, L, n0):
         L.append("Los montos van vacíos en el PDF (campos `PagoCuota1..%d`): los escribe ventas y deben sumar el total de la slide de inversión. No se anotan en este repositorio." % len(cuotas_pago(d)))
         if not (d.get("pago") or {}).get("cuotas") or "pago.cuotas" in (d.get("_defaults") or []):
             L.append("Plan estándar de `empresa/politicas-comerciales.md` (anticipo 50 %, saldo 50 %): confirmar con ventas si hay una facilidad distinta.")
+        L.append("")
+    if "pago2" in R.orden:
+        L.append("## %d. Facilidad de pago, 2.ª página (slide %d)\n" % (n, R.idx["pago2"]))
+        n += 1
+        L.append("| Cuota | Cuándo | Hito | %% |\n|---|---|---|---|")
+        for i, c in enumerate(cuotas_pago(d, "pago2"), 1):
+            L.append("| %d | %s | %s | %s |" % (i, cel(c["cuando"]), cel(c["hito"]), fmt_es(c["pct"])))
+        L.append("")
+        L.append("Los montos van vacíos en el PDF (campos `PagoCuota1_2..%d_2`): los escribe ventas. No se anotan en este repositorio." % len(cuotas_pago(d, "pago2")))
         L.append("")
     if "proximos" in R.orden:
         a_ = (d.get("proximos_pasos") or {}).get("asesora") or {}
@@ -3841,6 +3900,7 @@ def ejecutar(args):
 
     try:
         d = json.loads(datos_path.read_text(encoding="utf-8-sig"), object_pairs_hook=sin_duplicados)
+        CONTEO["on"] = bool(isinstance(d, dict) and d.get("conteo_entregables") is True)
     except UnicodeDecodeError:
         sys.exit("ERROR: datos.json no está en UTF-8 (re-guardarlo como UTF-8 desde el editor)")
     except ValueError as e:

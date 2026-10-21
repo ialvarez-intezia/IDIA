@@ -12,7 +12,7 @@
 - **Tipo de documento**: Detección + Habilidades · 4 áreas priorizadas · Detección: 4 áreas de 4h = 16h · Habilidades: 4 áreas de 12h = 48h · 64h totales · equipo de 50 personas · seguimiento 30-60-90 · formato compacto v2 (`DET-030`); formato compacto de 8 slides (con hoja de inversión (campos de monto vacíos para ventas))
 - **Eje temático**: Auditar 4 áreas priorizadas de Universal de Seguros, con un logro inmediato en cada una, y construir con el equipo la solución prioritaria de cada área, hasta dejarla en uso, con medición del tiempo recuperado a 30, 60 y 90 días
 <!--auto:inicio-->
-- **Alcance**: 8 entregables en 4 áreas · 64 h de sesión · 7 semanas de trabajo desde el arranque · seguimiento a 30, 60 y 90 días
+- **Alcance**: {{ALCANCE_TXT}}
 - **Orden de las slides**: 1 Portada · 2 Alcance · 3 Ruta · 4 Cómo trabajamos · 5 Entregables · 6 Retorno · 7 Inversión · 8 Próximos pasos
 - **Asesora comercial que ve el cliente (última slide)**: Carolain Fernandez, Directora de PR & Partnerships · COO de Intezia Foundation · +58 424 2536174
 <!--auto:fin-->

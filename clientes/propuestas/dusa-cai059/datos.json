@@ -1,0 +1,954 @@
+{
+ "version": 3,
+ "cliente": {
+  "nombre": "DUSA",
+  "slug": "dusa-cai059",
+  "codigo": "CAI-059",
+  "nombre_pie": "DUSA"
+ },
+ "division": "educacion",
+ "alianza": false,
+ "eje": "Construcción, pruebas y adopción de soluciones con Microsoft Copilot (Eje de Finanzas y Comercial) y Claude Team (Eje de RRHH), más Cerebros Digitales de cortesía para los 12 directores, a partir del informe final del servicio de Detección",
+ "origen": "Informe Final de Auditoría IA de DUSA (Detección, 04/09/2026 y 02/10/2026); propuesta CAI-035 como base; ajustes de Ivana del 20/10/2026 (dos ejes aprobables, Cerebros de 12 directores)",
+ "fuente_insumo": "DUSA_Habilidades_Procesos_Ruta_y_Horas_6.docx (Intezia C.A., Dirección de Productos y Servicios, 02/10/2026), vía datos.ejemplo-dusa.json (CAI-035 en la plantilla v3); instrucciones de Ivana del 20/10/2026",
+ "portada": {
+  "titulo_lineas": [
+   "Finanzas, Comercial y RRHH",
+   "con inteligencia artificial"
+  ],
+  "titulo_destacado": "en 10 áreas de {cliente_corto}",
+  "lead": "La Detección identificó estos problemas en {cliente}. Este proyecto ordena procesos y datos y construye las soluciones, **área por área**, en dos ejes que se aprueban por separado, más un Cerebro Digital de cortesía por director.",
+  "hechos": [
+   {
+    "num": "10 a 15",
+    "texto": "empresas con pagos de parafiscales que Nómina gestiona cada mes",
+    "resuelto_por": [
+     "NM-1",
+     "NM-4"
+    ]
+   },
+   {
+    "num": "5",
+    "texto": "fuentes sin un dato común para un mismo trabajador, en Recursos Humanos",
+    "resuelto_por": [
+     "RH-0"
+    ]
+   },
+   {
+    "num": "+20",
+    "texto": "archivos de Excel encadenados, con toda la lógica en una sola persona, en Finanzas",
+    "resuelto_por": [
+     "FN-0",
+     "FN-7"
+    ]
+   }
+  ],
+  "fuente": "Fuente: informes de Detección y fichas de levantamiento de DUSA (04/09/2026 y 02/10/2026).",
+  "contratacion": {
+   "num": "≈10",
+   "texto": "posiciones a tiempo completo harían falta para sostener a mano este mismo volumen de trabajo. Con los procesos optimizados, es **alta la probabilidad** de no tener que contratarlas.",
+   "fuente": "Informe Final de Auditoría IA de DUSA (04/09/2026), tabla «Contra qué se compara esta inversión»: 5 a 6 en Cuentas por Cobrar, 3 de brecha en Tesorería, 1,5 en Contabilidad y 1 de diseño en Comercial."
+  }
+ },
+ "carriles": [
+  {
+   "id": "copilot",
+   "nombre": "Microsoft 365 Copilot",
+   "nombre_corto": "Copilot",
+   "color": "amarillo"
+  },
+  {
+   "id": "claude",
+   "nombre": "Claude Team",
+   "nombre_corto": "Claude Team",
+   "color": "naranja"
+  }
+ ],
+ "areas": [
+  {
+   "id": "CP",
+   "nombre": "Contabilidad y Cuentas por Pagar",
+   "carril": "copilot",
+   "frente": "A",
+   "soluciones": [
+    {
+     "id": "CP-1",
+     "entregable": "Asistente de asignación y aprobación de pagos",
+     "C": 7,
+     "T": 4,
+     "A": 3,
+     "fase": "F1",
+     "detalle": "Asistente de asignación y aprobación de pagos: con el proveedor y el monto que asigna Tesorería, propone las facturas a pagar por antigüedad y vencimiento, con banda de tolerancia; el analista ajusta y aprueba"
+    },
+    {
+     "id": "CP-2",
+     "entregable": "Depurador de reportes de JD Edwards",
+     "C": 4,
+     "T": 2,
+     "A": 3,
+     "fase": "F1",
+     "detalle": "Depurador de reportes exportados de JD Edwards: quita columnas y filas vacías, espacios y dispersión; una plantilla por formato. Sirve también a Finanzas, Tesorería y Procura"
+    },
+    {
+     "id": "CP-3",
+     "entregable": "Agente de estados financieros y cierre multimoneda",
+     "C": 6,
+     "T": 3,
+     "A": 3,
+     "fase": "F2",
+     "detalle": "Agente de estados financieros pulido y estandarizado para todo el equipo y extendido al ciclo de cierre: 10 estados por ciclo, desviaciones contra plan, multimoneda"
+    }
+   ],
+   "para_que": "Pagos asignados con criterio, reportes limpios y cierres más rápidos"
+  },
+  {
+   "id": "TS",
+   "nombre": "Tesorería",
+   "carril": "copilot",
+   "frente": "A",
+   "soluciones": [
+    {
+     "id": "TS-1",
+     "entregable": "Clasificador de la bandeja de correo del tesorero",
+     "C": 7,
+     "T": 4,
+     "A": 3,
+     "fase": "F1",
+     "detalle": "Clasificador de la bandeja del tesorero: reglas y carpetas de Outlook más un agente que separa las solicitudes de pago (nómina, procura, impuestos) y entrega un resumen diario con solicitante, área, monto y fecha"
+    },
+    {
+     "id": "TS-2",
+     "entregable": "Asistente de seguimiento de tareas con recordatorios",
+     "C": 4,
+     "T": 2,
+     "A": 2,
+     "fase": "F1",
+     "detalle": "Seguimiento de tareas del equipo y de las áreas que entregan insumos, sobre la herramienta de Microsoft que el tesorero ya usa, con recordatorios automáticos en lugar de WhatsApp"
+    }
+   ],
+   "para_que": "Solicitudes de pago ordenadas y tareas con seguimiento automático"
+  },
+  {
+   "id": "CC",
+   "nombre": "Cuentas por Cobrar",
+   "carril": "copilot",
+   "frente": "A",
+   "soluciones": [
+    {
+     "id": "CC-1",
+     "entregable": "Cuadro de descuentos comerciales y propuesta de notas de crédito",
+     "C": 8,
+     "T": 4,
+     "A": 3,
+     "fase": "F1",
+     "detalle": "Cuadro nacional de descuentos comerciales normalizado por marca y conciliado contra pedido, factura, línea e ítem, con la propuesta de notas de crédito. Es la solución puente hasta la fase 2 del autopago"
+    }
+   ],
+   "para_que": "Descuentos conciliados y notas de crédito propuestas, sin cruzar a mano"
+  },
+  {
+   "id": "FN",
+   "nombre": "Finanzas",
+   "carril": "copilot",
+   "frente": "A",
+   "soluciones": [
+    {
+     "id": "FN-0",
+     "entregable": "Mapeo de microprocesos y entrega de datos por área",
+     "h": 12,
+     "fase": "F0",
+     "detalle": "Mapeo de microprocesos con las cinco áreas proveedoras y contrato de datos por área: plantilla, fecha de entrega y responsable"
+    },
+    {
+     "id": "FN-1",
+     "entregable": "Agente de premisas al comité",
+     "C": 3,
+     "T": 2,
+     "A": 2,
+     "fase": "F1",
+     "detalle": "Agente de presentación de premisas al comité, sin dependencia de terceros"
+    },
+    {
+     "id": "FN-2",
+     "entregable": "Validación del plan de ventas por producto",
+     "C": 4,
+     "T": 3,
+     "A": 2,
+     "fase": "F2",
+     "detalle": "Plan de ventas (plan de licores) mensualizado por producto: validación y normalización del archivo del área proveedora"
+    },
+    {
+     "id": "FN-3",
+     "entregable": "Costos de materiales y tablas de precios",
+     "C": 5,
+     "T": 3,
+     "A": 2,
+     "fase": "F2",
+     "detalle": "Costos de materiales y precios: costos de reposición, cotizaciones y tablas de precios de JD Edwards"
+    },
+    {
+     "id": "FN-4",
+     "entregable": "Plan administrativo",
+     "C": 3,
+     "T": 2,
+     "A": 2,
+     "fase": "F2",
+     "detalle": "Plan administrativo"
+    },
+    {
+     "id": "FN-5",
+     "entregable": "Costeo de manufactura por línea y cuadrilla",
+     "C": 7,
+     "T": 4,
+     "A": 3,
+     "fase": "F3",
+     "detalle": "Costeo de manufactura: factores de alcohol, envejecimiento (2,7 años promedio) y envasado por línea y cuadrilla"
+    },
+    {
+     "id": "FN-6",
+     "entregable": "Integración del plan de nómina",
+     "C": 3,
+     "T": 2,
+     "A": 2,
+     "fase": "F3",
+     "detalle": "Integración del plan de nómina, construido por Nómina en NM-6, al modelo financiero"
+    },
+    {
+     "id": "FN-7",
+     "entregable": "Consolidación: costo por producto, ingresos, gastos y balances",
+     "C": 8,
+     "T": 4,
+     "A": 2,
+     "fase": "F3",
+     "detalle": "Consolidación: costo por producto terminado, ingresos y gastos (impuestos, descuentos, mercadeo al 3 %, regalías) y balances"
+    }
+   ],
+   "para_que": "Plan financiero consolidado, sin depender de más de 20 archivos encadenados"
+  },
+  {
+   "id": "CM",
+   "nombre": "Comercial Región Centro-Sur",
+   "carril": "copilot",
+   "frente": "A",
+   "soluciones": [
+    {
+     "id": "CM-1",
+     "entregable": "Generador de creativos de activación y degustación",
+     "C": 2,
+     "T": 1,
+     "A": 2,
+     "fase": "F1",
+     "detalle": "Generador de creativos extendido al ciclo completo de activación y degustación"
+    },
+    {
+     "id": "CM-2",
+     "entregable": "Gestor de descuentos por cliente, desde el celular",
+     "C": 6,
+     "T": 3,
+     "A": 2,
+     "fase": "F2",
+     "detalle": "Gestor de descuentos por cliente con la tasa del día, operable desde el teléfono"
+    },
+    {
+     "id": "CM-3",
+     "entregable": "Diseñador de cabezal y exhibición en punto de venta",
+     "C": 2,
+     "T": 1,
+     "A": 2,
+     "fase": "F3",
+     "detalle": "Diseñador de cabezal y exhibición en punto de venta; requiere el inventario de material POP digitalizado"
+    }
+   ],
+   "para_que": "Activaciones, descuentos y exhibición listos desde el teléfono"
+  },
+  {
+   "id": "RH",
+   "nombre": "Base de datos de empleados",
+   "carril": "claude",
+   "frente": "B",
+   "proceso_base": true,
+   "nombre_catalogo": "Base de empleados",
+   "soluciones": [
+    {
+     "id": "RH-0",
+     "entregable": "Archivo maestro por cédula, con diccionario y rutina mensual",
+     "C": 10,
+     "T": 6,
+     "A": 3,
+     "fase": "F1",
+     "detalle": "Orden de la base de datos de empleados y su carga familiar, con la cédula como llave única para las 18 compañías: diccionario de datos y reglas de calidad; archivo maestro conciliado de las cinco fuentes, con duplicados, fichas repetidas, correlativos y estatus contradictorios señalados; casos dudosos validados con cada área; archivo listo para la carga masiva que defina Sistemas; rutina mensual de altas, bajas y nuevos ingresos"
+    }
+   ],
+   "para_que": "Una sola base por trabajador, con la cédula como llave"
+  },
+  {
+   "id": "NM",
+   "nombre": "Nómina",
+   "carril": "claude",
+   "frente": "B",
+   "soluciones": [
+    {
+     "id": "NM-1",
+     "entregable": "Solicitudes de pago de parafiscales y Humanitas",
+     "C": 9,
+     "T": 5,
+     "A": 3,
+     "fase": "F1",
+     "detalle": "Solicitudes de pago parafiscales (Seguro Social, FAOV, INCES, sindicato y pensiones) para 10 a 15 empresas, y Seguro Humanitas con el mismo patrón. Se prueba dentro de una ventana real de cinco días hábiles"
+    },
+    {
+     "id": "NM-2",
+     "entregable": "Validador de vacaciones",
+     "C": 5,
+     "T": 3,
+     "A": 2,
+     "fase": "F1",
+     "detalle": "Validador de vacaciones sobre la exportación semanal del control de SPI, primer contacto del equipo con la IA"
+    },
+    {
+     "id": "NM-3",
+     "entregable": "Notificaciones y archivo de pago",
+     "C": 8,
+     "T": 4,
+     "A": 3,
+     "fase": "F2",
+     "detalle": "Notificaciones: resultado del retiro de fideicomiso a cada trabajador, y archivo de pago desde el reporte 337 con cuadro resumen y correos a Tesorería"
+    },
+    {
+     "id": "NM-4",
+     "entregable": "Expediente mensual de parafiscales",
+     "C": 7,
+     "T": 3,
+     "A": 3,
+     "fase": "F2",
+     "detalle": "Flujo completo de parafiscales con Registro y Tesorería: expediente mensual por empresa con solicitud, factura y soporte, listo para inspección"
+    },
+    {
+     "id": "NM-5",
+     "entregable": "Validador de préstamos",
+     "C": 6,
+     "T": 4,
+     "A": 2,
+     "fase": "F3",
+     "detalle": "Validador de préstamos: préstamo activo, disponibilidad del fondo y cierre semanal de la nómina diaria"
+    },
+    {
+     "id": "NM-6",
+     "entregable": "Plan y presupuesto de nómina",
+     "C": 8,
+     "T": 4,
+     "A": 3,
+     "fase": "F3",
+     "detalle": "Plan y presupuesto de nómina sobre la base de conocimiento laboral del líder (ley, convención, retroactividad); alimenta a Finanzas en FN-6"
+    }
+   ],
+   "para_que": "Parafiscales, vacaciones y préstamos validados sin revisar a mano"
+  },
+  {
+   "id": "SM",
+   "nombre": "Servicio Médico",
+   "carril": "claude",
+   "frente": "B",
+   "soluciones": [
+    {
+     "id": "SM-1",
+     "entregable": "Agentes de morbilidad y certificados de salud, trasladados a Claude",
+     "C": 6,
+     "T": 3,
+     "A": 2,
+     "fase": "F1",
+     "detalle": "Adopción por el equipo de los agentes de morbilidad (con familiares) y certificados de salud, trasladados a Claude"
+    },
+    {
+     "id": "SM-2",
+     "entregable": "Informe y pedido de tratamiento crónico",
+     "C": 8,
+     "T": 4,
+     "A": 3,
+     "fase": "F1",
+     "detalle": "Tratamiento crónico: informe para Wilmer, pedido contra existencias con faltantes y archivo estructurado del pedido para el descuento masivo cuando Sistemas lo habilite"
+    },
+    {
+     "id": "SM-3",
+     "entregable": "Trazabilidad de órdenes de referencia",
+     "C": 6,
+     "T": 4,
+     "A": 2,
+     "fase": "F2",
+     "detalle": "Trazabilidad de órdenes de referencia: alerta a 30 días sin resultado, efectividad por proveedor y consultas de familiares"
+    },
+    {
+     "id": "SM-4",
+     "entregable": "Prevalidación documental",
+     "C": 8,
+     "T": 4,
+     "A": 2,
+     "fase": "F2",
+     "detalle": "Prevalidación documental: afiliación contra la contratación colectiva, completitud de expedientes HCM y facturas, e imputación de cada orden a su centro de costo"
+    },
+    {
+     "id": "SM-5",
+     "entregable": "Coberturas y costo por beneficiario",
+     "C": 6,
+     "T": 3,
+     "A": 2,
+     "fase": "F3",
+     "detalle": "Coberturas y costo consolidado por beneficiario (servicio médico y HCM), con alerta de cobertura disponible"
+    }
+   ],
+   "para_que": "Crónicos, órdenes y coberturas con seguimiento y validación previa"
+  },
+  {
+   "id": "GC",
+   "nombre": "Gestión Contable RRHH",
+   "carril": "claude",
+   "frente": "B",
+   "soluciones": [
+    {
+     "id": "GC-1",
+     "entregable": "Registro de facturas de salud y cuadro Humanitas",
+     "C": 8,
+     "T": 4,
+     "A": 3,
+     "fase": "F1",
+     "detalle": "Registro completo de facturas de salud: lectura de facturas en PDF, cuenta y centro de costo por regla, cuadro para Humanitas sin doble copia, alerta de diferencias contra la factura y relación mensual de consultas"
+    },
+    {
+     "id": "GC-2",
+     "entregable": "Revisión por muestreo de gastos",
+     "C": 5,
+     "T": 3,
+     "A": 2,
+     "fase": "F2",
+     "detalle": "Revisión por muestreo de gastos de representación y de vehículos, con conciliación de saldos; requiere acuerdo con Cuentas por Pagar"
+    },
+    {
+     "id": "GC-3",
+     "entregable": "Distribución de la factura HCM",
+     "C": 5,
+     "T": 3,
+     "A": 2,
+     "fase": "F3",
+     "detalle": "Distribución de la factura HCM por beneficiario, plan y centro de costo, sobre la base única"
+    },
+    {
+     "id": "GC-4",
+     "entregable": "Tablero presupuestario",
+     "C": 5,
+     "T": 2,
+     "A": 2,
+     "fase": "F3",
+     "detalle": "Tablero de ejecución presupuestaria de Recursos Humanos: indicadores, premisas y análisis de pólizas"
+    }
+   ],
+   "para_que": "Facturas de salud y gastos registrados y controlados por muestreo"
+  },
+  {
+   "id": "GG",
+   "nombre": "Gestión de Gente",
+   "carril": "claude",
+   "frente": "B",
+   "soluciones": [
+    {
+     "id": "GG-1",
+     "entregable": "Formulario único de ingreso",
+     "C": 7,
+     "T": 4,
+     "A": 3,
+     "fase": "F1",
+     "detalle": "Formulario único de ingreso que llena los formatos de cada empresa, arma el expediente y entrega a Nómina los datos para SPI; requiere el nuevo formato con su código ISO"
+    },
+    {
+     "id": "GG-2",
+     "entregable": "Contratos con alertas",
+     "C": 7,
+     "T": 4,
+     "A": 2,
+     "fase": "F2",
+     "detalle": "Contratos desde la ficha y base de seguimiento con alertas: período de prueba, contratos, pasantes, becarios, cédula y pólizas del personal internacional"
+    },
+    {
+     "id": "GG-3",
+     "entregable": "Filtrado de CV y orden de candidatos",
+     "C": 6,
+     "T": 3,
+     "A": 3,
+     "fase": "F1",
+     "detalle": "Filtrado de CV por vacante, resumen frente al perfil, ranking y acuse; borrador de perfil de cargo cuando no existe"
+    },
+    {
+     "id": "GG-4",
+     "entregable": "Ficha de entrevista y ejecutiva",
+     "C": 5,
+     "T": 3,
+     "A": 2,
+     "fase": "F1",
+     "detalle": "Ficha de entrevista llenada desde la transcripción y ficha ejecutiva para el líder; con consentimiento del candidato"
+    },
+    {
+     "id": "GG-5",
+     "entregable": "Control de capacitación y evidencia",
+     "C": 8,
+     "T": 4,
+     "A": 3,
+     "fase": "F1",
+     "detalle": "Capacitación: convocados, asistencia, base, indicadores por área, certificados y repositorio, con evidencia lista para la certificación de enero"
+    },
+    {
+     "id": "GG-6",
+     "entregable": "CV del talento interno",
+     "C": 5,
+     "T": 2,
+     "A": 2,
+     "fase": "F3",
+     "detalle": "CV del talento interno, consultable por competencias para el plan de sucesión"
+    },
+    {
+     "id": "GG-7",
+     "entregable": "Inducción y avisos de ingreso",
+     "C": 7,
+     "T": 3,
+     "A": 4,
+     "fase": "F2",
+     "detalle": "Onboarding y comunicación del ingreso: plantilla y cronograma llenados, asistente de preguntas, video de bienvenida y avisos a cada involucrado"
+    }
+   ],
+   "para_que": "Ingreso, contratos y capacitación en un solo flujo, con alertas"
+  },
+  {
+   "id": "BR",
+   "nombre": "Beneficios y Recepción",
+   "carril": "claude",
+   "frente": "B",
+   "soluciones": [
+    {
+     "id": "BR-1",
+     "entregable": "Cruce del consumo telefónico",
+     "C": 4,
+     "T": 3,
+     "A": 2,
+     "fase": "F1",
+     "detalle": "Consumo telefónico: cruce de la factura del operador con el Excel de números, por número, responsable y área"
+    },
+    {
+     "id": "BR-2",
+     "entregable": "Asistente de correo y comunicados",
+     "C": 2,
+     "T": 1,
+     "A": 2,
+     "fase": "F1",
+     "detalle": "Asistente de correo y comunicados: borradores, resúmenes y respuestas repetitivas con los parámetros de Comunicaciones"
+    },
+    {
+     "id": "BR-3",
+     "entregable": "Pedido sugerido de obsequios de cumpleaños",
+     "C": 4,
+     "T": 2,
+     "A": 2,
+     "fase": "F2",
+     "detalle": "Obsequios de cumpleaños: cajas y pedido sugerido a partir del reporte mensual del intranet"
+    },
+    {
+     "id": "BR-4",
+     "entregable": "Lectura de constancias de útiles y becas",
+     "C": 5,
+     "T": 3,
+     "A": 2,
+     "fase": "F3",
+     "detalle": "Útiles y becas: lectura de constancias (año, sello, nombre, cédula) y confirmación por cortes contra la base, lista antes de la campaña 2027"
+    }
+   ],
+   "para_que": "Consumo telefónico, comunicados y beneficios sin cruzar a mano"
+  },
+  {
+   "id": "CD",
+   "nombre": "Cerebros de los directores",
+   "para_que": "Un Cerebro Digital para cada uno de los 12 directores, como cortesía.",
+   "carril": "claude",
+   "frente": "C",
+   "composicion": "Cortesía de Intezia; los asientos de Claude los paga DUSA.",
+   "soluciones": [
+    {
+     "id": "CD-1",
+     "entregable": "Cerebros Digitales de los 12 directores",
+     "h": 72,
+     "fase": "F3",
+     "detalle": "Referencia interna: 12 Cerebros Digitales, uno por director, de 6 h de trabajo guiado cada uno (72 h en total, la referencia de Intezia para un cerebro sin horas). Cortesía de Intezia, sin valor en la cotización; los asientos de Claude de los directores los paga DUSA. Cuáles son los 12 directores y cuándo trabaja cada uno se acuerda en el arranque.",
+     "incluye": [
+      "Un cerebro por director, con su contexto y su criterio",
+      "6 h de trabajo guiado con cada director"
+     ]
+    }
+   ]
+  }
+ ],
+ "alcance": {
+  "subtitulo": "Ordenamos procesos y datos, y construimos asistentes de IA, validadores y tableros **con el equipo de cada área**.",
+  "fuera_alcance": [
+   "Lo que Sistemas de DUSA asume con sus propios desarrollos: autopago, Tesote, Bitácora, reporte de gasto e intranet.",
+   "Todo proceso que requiera un aplicativo, como el portal de peticiones o el de proveedores.",
+   "Todo Comercial Región Caracas, que Sistemas cubre con autopago, Bitácora y pago directo.",
+   "La banca en línea, que la IA no opera, y las historias clínicas, que no entran a la plataforma."
+  ],
+  "compacto": true,
+  "titulo": "44 soluciones en 10 áreas, más 12 cerebros."
+ },
+ "metodo": {
+  "quien_construye": "Intezia construye con quien ejecuta cada proceso. Sistemas de DUSA gobierna los accesos, la seguridad y las licencias, y participa en las pruebas.",
+  "practica": [
+   {
+    "titulo": "Herramientas",
+    "texto": "Recursos Humanos trabaja en Claude Team; las demás áreas, en Microsoft 365 Copilot y Power Automate, que DUSA ya opera."
+   },
+   {
+    "titulo": "Dónde corre cada cosa",
+    "texto": "Lo repetitivo, como limpiar un reporte o enviar un aviso, va a Power Automate; Copilot queda para lo que exige leer y razonar."
+   },
+   {
+    "titulo": "Un asiento por persona",
+    "texto": "En Claude Team cada persona trabaja en su propio asiento. Los asientos de los 12 directores los paga DUSA, y Sistemas revisa el uso cada mes."
+   }
+  ],
+  "datos": "Los archivos que se suben quedan en la cuenta de DUSA, y Sistemas evalúa y autoriza cada acceso a un sistema, como el de SPI. Con los datos de Nómina se trabaja con el líder del área.",
+  "etiqueta_ejemplos": "Ya lo hicimos con los equipos de DUSA",
+  "nota_ejemplos": "Agentes que los equipos construyeron con Intezia durante la Detección: el punto de partida del proyecto.",
+  "ejemplos": [
+   {
+    "area": "Contabilidad y Cuentas por Pagar",
+    "titulo": "Agente de estados financieros",
+    "antes": "30 a 40 min",
+    "despues": "3 a 4 min",
+    "texto": "Armar un estado a mano toma de 2 a 3 h y analizarlo, de 30 a 40 min. Con el agente, el análisis se resolvió en **3 a 4 min**.",
+    "fuente": "Informe Final de Auditoría IA de DUSA (04/09/2026)"
+   },
+   {
+    "area": "Cuentas por Cobrar",
+    "titulo": "Validador de cobros",
+    "texto": "Contrasta los cobros con la base corporativa y devuelve las inconsistencias. A mano, la líder estimó que harían falta **unas 8 personas**.",
+    "fuente": "Informe Final de Auditoría IA de DUSA (04/09/2026)"
+   },
+   {
+    "area": "Comercial Región Centro-Sur",
+    "titulo": "Generador de creativos",
+    "texto": "Produce el póster, el texto y los hashtags de una degustación. Antes no existía: no había tiempo ni formación en diseño.",
+    "fuente": "Informe Final de Auditoría IA de DUSA (04/09/2026)"
+   }
+  ]
+ },
+ "fases": [
+  {
+   "id": "F0",
+   "descripcion": "Arranque: línea base de horas por proceso y mapeo de microprocesos de Finanzas"
+  },
+  {
+   "id": "F1",
+   "titulo": "Fase 1",
+   "descripcion": "prioridad de cada área, sin dependencias",
+   "destacada": true
+  },
+  {
+   "id": "F2",
+   "titulo": "Fase 2",
+   "descripcion": "necesita un acuerdo, un dato o una solución previa"
+  },
+  {
+   "id": "F3",
+   "titulo": "Fase 3",
+   "descripcion": "extensiones, cruces y tableros"
+  }
+ ],
+ "frentes": [
+  {
+   "id": "A",
+   "carril": "copilot",
+   "nombre": "Eje de Finanzas y Comercial",
+   "celdas": {
+    "F1": "Pagos, depurador, bandeja y tareas de tesorería, descuentos, premisas, creativos",
+    "F2": "Estados financieros, planes de ventas, costos y administración, descuentos",
+    "F3": "Costeo de manufactura, plan de nómina, consolidación del plan y exhibición"
+   }
+  },
+  {
+   "id": "B",
+   "carril": "claude",
+   "nombre": "Eje de RRHH",
+   "celdas": {
+    "F1": "Base de empleados, parafiscales, vacaciones, Servicio Médico, ingreso y comunicados",
+    "F2": "Notificaciones, órdenes médicas, gastos, contratos con alertas e inducción",
+    "F3": "Préstamos, plan de nómina, coberturas, factura HCM, tablero y constancias"
+   }
+  },
+  {
+   "id": "C",
+   "carril": "claude",
+   "nombre": "Cerebros de los 12 directores",
+   "celdas": {
+    "F3": "Un Cerebro Digital por director, de cortesía; DUSA paga sus asientos de Claude"
+   }
+  }
+ ],
+ "ruta": {
+  "nota": "Las {h_total} horas de trabajo son una proyección: {h_f0} h de arranque (el mapeo de Finanzas) más {h_f1}, {h_f2} y {h_f3} h de las fases 1, 2 y 3. Los parafiscales se prueban en una ventana real de cinco días hábiles. Las fases se traslapan: cada línea pasa a la siguiente cuando quien ejecuta el proceso ya opera lo anterior.",
+  "hitos": [
+   {
+    "titulo": "Arranque",
+    "texto": "Línea base de horas por proceso y mapeo de microprocesos de Finanzas ({h_f0} h)."
+   },
+   {
+    "titulo": "Primeros accesos",
+    "texto": "Primeros asientos y licencias activos."
+   },
+   {
+    "titulo": "Evidencia de capacitación",
+    "texto": "Control de capacitación del personal de {cliente_corto}, con evidencia lista para la certificación."
+   },
+   {
+    "titulo": "Antes de la fase 2",
+    "texto": "Sistemas y Nómina acuerdan el criterio de correlativo de la base de empleados."
+   },
+   {
+    "titulo": "Cierre",
+    "texto": "Cierre de la construcción."
+   }
+  ]
+ },
+ "logistica": {
+  "modalidad": "Trabajo del consultor con cada ejecutor, en su propia cuenta y con sus casos reales.",
+  "participantes": "Quien ejecuta cada proceso en las 10 áreas, con su líder, y los 12 directores.",
+  "arranque": "La fecha la fija DUSA al confirmar la propuesta."
+ },
+ "seguimiento": {
+  "rango": "30, 60 y 90 días",
+  "texto": "Desde el cierre de cada área",
+  "items": [
+   {
+    "dias": "30 días",
+    "texto": "Uso real y ajustes"
+   },
+   {
+    "dias": "60 días",
+    "texto": "Ahorro medido contra la línea base"
+   },
+   {
+    "dias": "90 días",
+    "texto": "Retorno en tiempo ahorrado y habilidades instaladas"
+   }
+  ]
+ },
+ "entregables": {
+  "transversales": [
+   "Línea base de horas por proceso, al arrancar.",
+   "Seguimiento a 30, 60 y 90 días con medición del ahorro.",
+   "Certificado de participación INTEZIA."
+  ],
+  "valor_inmediato": [
+   "Evidencia de capacitación lista en la fase 1.",
+   "Fase 1: soluciones prioritarias adoptadas.",
+   "Cuadro de descuentos: puente hasta la fase 2 del autopago."
+  ],
+  "compacto": true
+ },
+ "retorno": {
+  "modo": "metodo",
+  "posiciones": true,
+  "destino": [
+   {
+    "rotulo": "Mismo equipo, más volumen",
+    "texto": "Si el tiempo se libera, el mismo equipo puede procesar más solicitudes, expedientes y estados financieros **sin contratar más personal**."
+   },
+   {
+    "rotulo": "Trabajo reenfocado",
+    "texto": "Con el tiempo liberado, las personas de cada área dejan de armar y consolidar a mano para validar resultados, analizar y decidir, y sus posiciones se reenfocan hacia trabajo más estratégico."
+   },
+   {
+    "rotulo": "Otras áreas y líneas de negocio",
+    "texto": "Con el retorno medido, {cliente_corto} decide si lleva este mismo ciclo a **otras áreas y líneas de negocio** y avanza hacia una empresa inteligente, con la inteligencia artificial en el centro de su operación."
+   }
+  ],
+  "aval_posiciones": {
+   "quien": "Wilmer (DUSA), según la dirección de Intezia",
+   "fecha": "2026-10-05",
+   "medio": "mensaje de revisión interno"
+  }
+ },
+ "inversion": {
+  "etapas": [
+   {
+    "titulo": "Eje de Finanzas y Comercial.",
+    "rotulo": "Opción 1 · Eje de Finanzas y Comercial",
+    "duracion": "Cinco áreas, {h_frente_a} horas de trabajo, con seguimiento y garantía a {rango_seguimiento}.",
+    "programa": [
+     "Contabilidad y Cuentas por Pagar: {h_area_cp} h",
+     "Tesorería: {h_area_ts} h",
+     "Cuentas por Cobrar: {h_area_cc} h",
+     "Finanzas: {h_area_fn} h",
+     "Comercial Centro-Sur: {h_area_cm} h"
+    ],
+    "garantia_texto": "Estamos contigo hasta que cada solución quede en uso.",
+    "notas": [
+     "Licenciamiento aparte: Microsoft 365 Copilot, USD 30 por usuario al mes con compromiso anual (referencia del informe de Detección del 04/09/2026).",
+     "Los Cerebros Digitales de los 12 directores son cortesía y no entran en el valor de esta hoja."
+    ]
+   },
+   {
+    "titulo": "Eje de RRHH.",
+    "rotulo": "Opción 2 · Eje de RRHH",
+    "duracion": "Seis áreas, con el mismo seguimiento y garantía. {h_frente_b} horas de trabajo.",
+    "programa": [
+     "Base de empleados: {h_area_rh} h",
+     "Nómina: {h_area_nm} h",
+     "Servicio Médico: {h_area_sm} h",
+     "Gestión Contable RRHH: {h_area_gc} h",
+     "Gestión de Gente: {h_area_gg} h",
+     "Beneficios y Recepción: {h_area_br} h"
+    ],
+    "garantia_texto": "Acompañamos a cada área hasta verla en uso.",
+    "notas": [
+     "Licenciamiento aparte: Claude Team, USD 20 por asiento al mes con pago anual (USD 25 mensual); valor de lista del 02/10/2026.",
+     "Los Cerebros Digitales de los 12 directores (72 h) son cortesía y no entran en el valor; DUSA paga sus asientos de Claude."
+    ]
+   },
+   {
+    "titulo": "Los dos ejes juntos.",
+    "rotulo": "Opción 3 · Los dos ejes juntos",
+    "duracion": "Once áreas, {h_frente_a+b} horas de trabajo, con seguimiento y garantía a {rango_seguimiento}.",
+    "programa": [
+     "Eje de Finanzas y Comercial: {h_frente_a} h",
+     "Eje de RRHH: {h_frente_b} h",
+     "Los dos ejes: {h_frente_a+b} h de trabajo",
+     "Cerebros de los 12 directores: {h_frente_c} h, de cortesía"
+    ],
+    "garantia_texto": "Estamos contigo hasta que cada solución quede en uso.",
+    "notas": [
+     "Licenciamiento aparte: Microsoft 365 Copilot (USD 30 por usuario al mes, con compromiso anual) para Finanzas y Comercial, y Claude Team (USD 20 por asiento al mes con pago anual, USD 25 mensual) para RRHH.",
+     "Los Cerebros Digitales de los 12 directores son cortesía y no entran en el valor; DUSA paga sus asientos de Claude."
+    ]
+   }
+  ]
+ },
+ "pago": {
+  "titulo": "Facilidad de pago: cada eje por separado",
+  "subtitulo": "Cada eje se aprueba por sí solo y se paga en tres cuotas ligadas a hitos: **30%** al aprobarlo, **40%** al quedar adoptadas sus soluciones prioritarias y **30%** al cierre.",
+  "grupos": [
+   {
+    "rotulo": "Eje de Finanzas y Comercial",
+    "n": 3
+   },
+   {
+    "rotulo": "Eje de RRHH",
+    "n": 3
+   }
+  ],
+  "cuotas": [
+   {
+    "cuando": "Al aprobar",
+    "hito": "Aprobar el eje",
+    "pct": 30
+   },
+   {
+    "cuando": "Fase 1",
+    "hito": "Soluciones prioritarias del eje adoptadas (fase 1)",
+    "pct": 40
+   },
+   {
+    "cuando": "Cierre",
+    "hito": "Cierre del eje",
+    "pct": 30
+   },
+   {
+    "cuando": "Al aprobar",
+    "hito": "Aprobar el eje",
+    "pct": 30
+   },
+   {
+    "cuando": "Fase 1",
+    "hito": "Soluciones prioritarias del eje adoptadas (fase 1)",
+    "pct": 40
+   },
+   {
+    "cuando": "Cierre",
+    "hito": "Cierre del eje",
+    "pct": 30
+   }
+  ],
+  "facturacion": "Cada factura se emite en divisas o en bolívares (Bs) a la tasa BCV Euro, y se liquida a la tasa del día de pago."
+ },
+ "proximos_pasos": {
+  "etiqueta_contacto": "¿Dudas? Escribe a tu directora comercial",
+  "asesora": {
+   "nombre": "María Iribarren",
+   "cargo": "Directora comercial",
+   "correo": "miribarren@intezia.com",
+   "telefono": "+58 414 0570056"
+  }
+ },
+ "siglas_ok": [
+  "HCM",
+  "JD",
+  "TOTAL",
+  "BCV",
+  "SPI"
+ ],
+ "frases_ok": [
+  "tablas de precios",
+  "Costos de materiales",
+  "costos y administración",
+  "costo por producto",
+  "costo por beneficiario"
+ ],
+ "supuestos": [
+  "Propuesta nueva (CAI-059, Ivana, 20/10/2026) con base en la CAI-035: mismas 11 áreas y 44 soluciones del informe de Detección (500 h), sin cambios de contenido. La CAI-035 queda como estaba (Enviada, 04/10/2026).",
+  "**Presupuesto por área, en dos bloques aprobables (Ivana):** Eje de Finanzas y Comercial (Contabilidad y CxP, Tesorería, Cuentas por Cobrar, Finanzas, Comercial Centro-Sur) y Eje de RRHH (Base de empleados, Nómina, Servicio Médico, Gestión Contable RRHH, Gestión de Gente, Beneficios). Dos hojas de inversión (`inversion.etapas`), una por eje, que muestran las horas de cada área; cada hoja tiene su valor, descuento y total para que ventas los llene. No hay una caja de valor por cada una de las 11 áreas.",
+  "**Cerebros de los 12 directores (Ivana):** 72 h (6 h por director, la referencia de Intezia; Ivana eligió esa opción). **Son cortesía de Intezia, sin valor en las hojas, y los asientos de Claude de los directores los paga DUSA.** Van como un solo entregable (12 cerebros) en una tercera línea de trabajo, en la fase 3 (mi decisión; la fuente no dice cuándo). Quiénes son los 12 directores y cuándo trabaja cada uno se acuerda en el arranque.",
+  "**Vigencia:** el arranque del 19/10 ya no es posible (Ivana). El deck no lleva fechas (§4.23); el servicio arranca cuando DUSA confirme y la cotización vale 30 días desde el envío. La cotización anterior (CAI-035) tenía esa fecha en versiones previas.",
+  "**Pago (propuesta mía, por confirmar):** Ivana pidió un plan de pago por eje. Se dejaron 2 cuotas por eje (la mitad al aprobar el eje y la otra al cerrarlo, la política de 50 % de anticipo) en vez de las 5 cuotas de la CAI-035 (30, 25, 25, 10 y 10 %). Los porcentajes de las tarjetas no se muestran (cada eje se paga por separado): quedan en 25 internos y los montos son campos vacíos para ventas.",
+  "El licenciamiento va aparte y en las notas de cada hoja (con `inversion.etapas` no convive la tarjeta de licencias): Microsoft 365 Copilot USD 30 por usuario al mes (referencia del informe de Detección del 04/09/2026) y Claude Team USD 20 por asiento al mes con pago anual o USD 25 mensual (valor de lista del 02/10/2026, mínimo de 2 puestos). Los asientos de los 12 directores los paga DUSA.",
+  "El certificado de participación INTEZIA es el institucional estándar (no figura en el insumo).",
+  "Retorno en modo método y con posiciones: las fichas dicen «No declarado» en volumen y horas por ejecución. **El aval de posiciones** (Wilmer, de DUSA, según la dirección de Intezia, 05/10/2026, mensaje interno) **debe reconfirmarse por escrito con DUSA antes de enviar y antes de circular el documento entre líderes.**",
+  "Calendario: la v3 no muestra semanas ni sesiones (se acuerdan en la reunión de arranque); el insumo hablaba de 11 semanas de construcción.",
+  "Modalidad del trabajo: el insumo no dice si son presenciales o virtuales; confirmar con servicio. Asesora: María Iribarren, directora comercial (Ivana, 20/10/2026).",
+  "Facilidad de pago en dos páginas (Ivana, 20/10/2026, sustituye las 4 cuotas de 25 % por eje): página 1, cada eje por separado en tres cuotas (30 % al aprobar, 40 % con las soluciones prioritarias del eje adoptadas, 30 % al cierre); página 2, los dos ejes juntos en las cinco cuotas de la CAI-035 (30, 25, 25, 10 y 10 %). Los hitos y porcentajes son los dados por Ivana; los montos no se escriben (campos vacíos para ventas; en el PDF PagoCuota1..6 y PagoCuota1_2..5_2). El texto «19 soluciones prioritarias adoptadas» es literal de la CAI-035 y no se calcula.",
+  "Hojas de inversión en tres opciones (Ivana, 20/10/2026): opción 1 eje de Finanzas y Comercial, opción 2 eje de RRHH y opción 3 los dos ejes juntos, cada una con sus campos de valor, descuento y total vacíos (PrecioBase, PrecioBase_2, PrecioBase_3…). Las páginas de pago corresponden así: la 1.ª a las opciones 1 y 2, la 2.ª a la opción 3."
+ ],
+ "pendientes": [
+  "Definir inversión, descuento y total de las dos hojas y los montos de las 4 cuotas (campos vacíos para ventas); confirmar la moneda de facturación y el sentido de la frase de facturación heredada de la CAI-035.",
+  "Confirmar la fase de los cerebros de los directores (F3, mía), quiénes son los 12 directores y que DUSA paga los 12 asientos de Claude (cortesía de las 72 h).",
+  "Reconfirmar por escrito con DUSA el aval de posiciones antes de enviar.",
+  "Confirmar quién contrata los licenciamientos de Copilot y de Claude Team (la fuente no lo dice).",
+  "Confirmar con ventas los montos de las dos páginas de pago (el eje de Finanzas y Comercial y el de RRHH por separado, y el total de los dos ejes) y que cuadren con las hojas de inversión."
+ ],
+ "meta_tipo": "Capacitación In-Company · Servicio de Habilidades · soluciones en 10 áreas en dos ejes aprobables (Finanzas y Comercial; RRHH) y Cerebros Digitales de 12 directores de cortesía · formato compacto v3",
+ "pago2": {
+  "titulo": "Facilidad de pago: los dos ejes juntos",
+  "subtitulo": "Si {cliente_corto} aprueba los dos ejes, el pago es en cinco cuotas ligadas a hitos, y las cinco suman el **100%** de la inversión.",
+  "cuotas": [
+   {
+    "cuando": "Arranque",
+    "hito": "Arranque",
+    "pct": 30
+   },
+   {
+    "cuando": "Fase 1",
+    "hito": "19 soluciones prioritarias adoptadas",
+    "pct": 25
+   },
+   {
+    "cuando": "Cierre fase 2",
+    "hito": "Cierre de la fase 2",
+    "pct": 25
+   },
+   {
+    "cuando": "Cierre",
+    "hito": "Cierre de la construcción",
+    "pct": 10
+   },
+   {
+    "cuando": "+30 días",
+    "hito": "30 días después del cierre, con las soluciones ya en uso y dentro de la garantía 30-60-90",
+    "pct": 10
+   }
+  ],
+  "mensaje": "Le damos a {cliente_corto} la comodidad de pagar la última cuota una vez cerrado el proyecto, cuando las soluciones ya están en uso y Intezia sigue acompañando dentro de la garantía.",
+  "facturacion": "Cada factura se emite en divisas o en bolívares (Bs) a la tasa BCV Euro, y se liquida a la tasa del día de pago."
+ }
+}
