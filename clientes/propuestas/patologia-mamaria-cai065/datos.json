@@ -1,0 +1,416 @@
+{
+ "version": 3,
+ "cliente": {
+  "nombre": "Unidad de Patología Mamaria",
+  "slug": "patologia-mamaria-cai065",
+  "codigo": "CAI-065",
+  "nombre_pie": "Patología Mamaria"
+ },
+ "division": "educacion",
+ "alianza": false,
+ "meta_tipo": "Habilidades · IA con criterio en historia clínica, imágenes, datos y citas · 12 h (levantamiento 2 h, historia clínica 4 h, imágenes 2 h, datos y documentos 2 h, citas 2 h) más un kick-off de hasta 1 h aparte · herramienta sin nombrar · seguimiento 30-60-90 · sin facilidad de pago · formato compacto v3",
+ "omitir": [
+  "pago"
+ ],
+ "vocabulario": {
+  "area": [
+   "bloque",
+   "bloques"
+  ],
+  "solucion": [
+   "entregable",
+   "entregables"
+  ]
+ },
+ "eje": "Que el equipo de la Unidad de Patología Mamaria del Instituto Médico La Floresta pase de un uso suelto de la IA a un uso con criterio común, sobre sus tareas reales (historia clínica, imágenes, datos y documentos, citas) y desde antes de abrir la unidad, con lineamientos de uso de la información de pacientes",
+ "origen": "Ficha de Levantamiento de la Unidad de Patología Mamaria (Verónica Rubio, registrada el 22/10/2026), transcripción de la reunión del 22/10/2026 con los dos médicos co-líderes (Google Meet, 45 min) e instrucciones de Ivana del 23/10/2026: código CAI-065, Educación sin alianza, Habilidades puro, herramienta sin nombrar, 12 h (4 h de historia clínica, 2 h de citas), kick-off aparte, participantes como los dice la transcripción, sin facilidad de pago",
+ "fuente_insumo": "Ficha de Levantamiento (22/10/2026) y transcripción de la reunión del 22/10/2026",
+ "siglas_ok": [
+  "IA"
+ ],
+ "portada": {
+  "titulo_lineas": [
+   "IA con criterio en la historia",
+   "clínica, las imágenes y las citas"
+  ],
+  "titulo_destacado": "de la unidad",
+  "lead": "El equipo de la unidad pasa de usar la IA cada uno por su lado a usarla **con criterio común**, sobre sus tareas reales y desde antes de abrir.",
+  "hechos": [
+   {
+    "num": "A mano",
+    "texto": "se escribe la historia clínica durante la consulta, y resta atención al paciente.",
+    "resuelto_por": [
+     "HIS-1"
+    ]
+   },
+   {
+    "num": "Suelto",
+    "texto": "es el uso de la IA hoy: cada persona la usa por su lado, sin criterio común.",
+    "resuelto_por": [
+     "LEV-1",
+     "IMG-1",
+     "DAT-1"
+    ]
+   },
+   {
+    "num": "Día uno",
+    "texto": "es cuando quieren tener digitalizados el historial, las imágenes y las citas.",
+    "resuelto_por": [
+     "HIS-1",
+     "CIT-1"
+    ]
+   }
+  ],
+  "fuente": "Fuente: ficha de levantamiento de Intezia y reunión con la unidad (22/10/2026)."
+ },
+ "carriles": [
+  {
+   "id": "ia",
+   "nombre": "Herramienta de IA",
+   "nombre_corto": "Herramienta de IA",
+   "color": "amarillo"
+  }
+ ],
+ "fases": [
+  {
+   "id": "F1",
+   "titulo": "Arranque",
+   "descripcion": "**levantamiento** de tareas y reglas"
+  },
+  {
+   "id": "F2",
+   "titulo": "Construcción",
+   "descripcion": "**en vivo**, tarea por tarea",
+   "destacada": true
+  }
+ ],
+ "frentes": [
+  {
+   "id": "A",
+   "carril": "ia",
+   "nombre": "Historia, imágenes y citas",
+   "celdas": {
+    "F1": "Tareas reales y reglas de uso de la información, levantadas con el equipo.",
+    "F2": "Historia clínica asistida, imágenes con criterio, datos y documentos, y citas."
+   }
+  }
+ ],
+ "areas": [
+  {
+   "id": "LEV",
+   "nombre": "Levantamiento y lineamientos",
+   "para_que": "Definir con el equipo las tareas reales y las reglas de uso de la información de pacientes",
+   "carril": "ia",
+   "frente": "A",
+   "soluciones": [
+    {
+     "id": "LEV-1",
+     "entregable": "Tareas levantadas y lineamientos de uso",
+     "h": 2,
+     "fase": "F1",
+     "detalle": "Trabajo de 2 h con el equipo. Se levanta cómo trabaja cada persona hoy, se valida si las imágenes se pueden usar con IA antes de prometerlo, se evalúa cuáles de las demás ideas propuestas (historia clínica asistida, citas, hojas de cálculo y documentos) se pueden construir con la herramienta y con la información que la unidad autorice, y se acuerdan los lineamientos de uso de la información de pacientes. Entrega las tareas, la validación y los lineamientos.",
+     "incluye": [
+      "Qué se construye y qué se evalúa antes",
+      "Imágenes validadas antes de prometer su uso",
+      "Reglas de uso de los datos de pacientes"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "HIS",
+   "nombre": "Historia clínica asistida",
+   "para_que": "Que el médico dedique su atención al paciente y revise un borrador en vez de escribir",
+   "carril": "ia",
+   "frente": "A",
+   "soluciones": [
+    {
+     "id": "HIS-1",
+     "entregable": "Borrador de historia clínica que el médico revisa",
+     "h": 4,
+     "fase": "F2",
+     "detalle": "Trabajo de 4 h con el equipo, a evaluar en el levantamiento. Se construye con datos de ejemplo una forma de que la IA arme el borrador de la historia clínica a partir de la consulta, para que el médico solo lo revise y lo valide, y de organizar y buscar historias e imágenes. Que se pueda hacer con la herramienta y con la información autorizada se evalúa antes de construir. Entrega el flujo probado.",
+     "incluye": [
+      "Borrador que el médico revisa y valida",
+      "Historias e imágenes ordenadas y buscables, a evaluar"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "IMG",
+   "nombre": "Imágenes médicas",
+   "para_que": "Validar las imágenes y, si se puede, usar la IA con un método común y no por tanteo",
+   "carril": "ia",
+   "frente": "A",
+   "soluciones": [
+    {
+     "id": "IMG-1",
+     "entregable": "Apoyo con imágenes, validado antes de prometerlo",
+     "h": 2,
+     "fase": "F2",
+     "detalle": "Trabajo de 2 h con el equipo. Primero se validan las imágenes (mamografía, ecografía y fotos pre-cirugía): si la herramienta las puede leer, con qué calidad y con la autorización de la unidad. Solo si la validación resulta, se acuerda un método común de apoyo según las guías de lectura; la IA orienta y el médico valida y decide. Entrega la validación y, si procede, el método probado con ejemplos."
+    }
+   ]
+  },
+  {
+   "id": "DAT",
+   "nombre": "Datos y documentos",
+   "para_que": "Resolver con IA el manejo de datos y la redacción que hoy toman tiempo",
+   "carril": "ia",
+   "frente": "A",
+   "soluciones": [
+    {
+     "id": "DAT-1",
+     "entregable": "Hojas de cálculo y documentos clínicos y académicos",
+     "h": 2,
+     "fase": "F2",
+     "detalle": "Trabajo de 2 h con el equipo. Se resuelven con IA el manejo de hojas de cálculo (cargar y extraer datos) y la redacción de documentos clínicos y académicos, sobre tareas reales del equipo. Entrega las tareas resueltas y la forma de repetirlas."
+    }
+   ]
+  },
+  {
+   "id": "CIT",
+   "nombre": "Agendamiento de citas",
+   "para_que": "Montar el agendamiento digital desde el día uno, antes de abrir la unidad",
+   "carril": "ia",
+   "frente": "A",
+   "soluciones": [
+    {
+     "id": "CIT-1",
+     "entregable": "Agendamiento de citas digital desde el inicio",
+     "h": 2,
+     "fase": "F2",
+     "detalle": "Trabajo de 2 h con el equipo, a evaluar en el levantamiento. Se diseña y se prueba cómo agendar y manejar las citas de forma digital desde el arranque de la unidad, con la herramienta que se defina. Es la segunda prioridad, después de la historia clínica. Entrega el agendamiento probado."
+    }
+   ]
+  }
+ ],
+ "alcance": {
+  "subtitulo": "Sobre las tareas reales de la unidad; lo que dependa de la herramienta se evalúa antes.",
+  "fuera_alcance": [
+   "Un sistema de resguardo (repositorio único de historias e imágenes): se evalúa en el levantamiento y no se promete antes.",
+   "Uso de imágenes médicas con IA: no se promete hasta validar las imágenes en el levantamiento.",
+   "Licencias de herramientas de IA: se definen con la unidad tras el levantamiento y no están en esta inversión.",
+   "Diagnóstico médico: la IA apoya con borradores y orientación, y el médico valida y decide siempre."
+  ],
+  "titulo": "Cinco bloques para usar la IA con criterio."
+ },
+ "metodo": {
+  "titulo": "Así trabajamos con el equipo.",
+  "subtitulo": "Primero se evalúa qué se puede hacer, y después se construye en vivo con quienes lo usarán.",
+  "quien_construye": "Intezia construye junto al equipo, en vivo y sobre sus tareas reales: no se entrega nada hecho.",
+  "por_que_orden": "Primero se levantan las tareas y las reglas de uso; después se construye, de la historia clínica a las citas, y al final se mide el uso.",
+  "pasos": [
+   {
+    "titulo": "Levantamos",
+    "texto": "Las tareas reales del equipo y las reglas de uso de la información."
+   },
+   {
+    "titulo": "Evaluamos",
+    "texto": "Qué se puede hacer en cada tarea, antes de prometerlo."
+   },
+   {
+    "titulo": "Construimos",
+    "texto": "En vivo con el equipo, una tarea por vez."
+   },
+   {
+    "titulo": "Medimos",
+    "texto": "El uso y el tiempo recuperado, a 30, 60 y 90 días."
+   }
+  ],
+  "practica": [
+   {
+    "titulo": "Primero se valida",
+    "texto": "Las imágenes se validan antes de prometer su uso; la historia asistida y las citas se evalúan antes de construirlas."
+   },
+   {
+    "titulo": "El médico decide",
+    "texto": "La IA propone borradores y apoyos; el médico revisa, valida y decide."
+   },
+   {
+    "titulo": "Con ejemplos",
+    "texto": "Se construye con datos de ejemplo mientras no haya autorización para usar información real."
+   }
+  ],
+  "datos": "Se trabaja solo con lo que la unidad autoriza: nada de pacientes entra a una herramienta de IA sin su visto bueno, y los lineamientos de uso se acuerdan desde el arranque."
+ },
+ "logistica": {
+  "modalidad": "Mixta: presencial en la unidad y virtual para quien viva lejos.",
+  "participantes": "Cuatro personas en el equipo; hoy, dos en la clínica.",
+  "arranque": "La fecha la fija la unidad; el kick-off, de hasta 1 h y aparte, acuerda calendario y accesos."
+ },
+ "ruta": {
+  "titulo": "De las tareas reales al uso con criterio.",
+  "subtitulo": "El calendario se acuerda en el kick-off. La **garantía y el seguimiento** a 30, 60 y 90 días corren desde el cierre del proyecto.",
+  "nota": "Las {h_total} horas de trabajo son una proyección: {h_f1} h de levantamiento y {h_f2} h de construcción. El kick-off, de hasta 1 h, va aparte.",
+  "hitos": [
+   {
+    "titulo": "Kick-off",
+    "texto": "Hasta 1 h para alinear al equipo, aparte de las horas."
+   },
+   {
+    "titulo": "Levantamiento",
+    "texto": "Tareas, reglas de uso e imágenes validadas."
+   },
+   {
+    "titulo": "Construcción",
+    "texto": "Historia clínica, imágenes, datos y citas, en vivo."
+   },
+   {
+    "titulo": "30 · 60 · 90 días",
+    "texto": "Seguimiento del uso y del tiempo recuperado."
+   }
+  ]
+ },
+ "seguimiento": {
+  "rango": "30, 60 y 90 días",
+  "texto": "Desde el cierre del proyecto",
+  "items": [
+   {
+    "dias": "30 días",
+    "texto": "Uso de lo construido"
+   },
+   {
+    "dias": "60 días",
+    "texto": "Nuevas tareas del equipo"
+   },
+   {
+    "dias": "90 días",
+    "texto": "Tiempo recuperado"
+   }
+  ]
+ },
+ "entregables": {
+  "titulo": "Lo que recibe el equipo.",
+  "subtitulo": "Lo que se llevan: criterio común con la IA y lo construido para su trabajo, más el seguimiento.",
+  "etiqueta_transversales": "Para todo el proyecto",
+  "transversales": [
+   "Línea base del tiempo de cada tarea.",
+   "Lineamientos de uso de la información de pacientes.",
+   "Seguimiento a 30, 60 y 90 días."
+  ],
+  "etiqueta_valor": "Valor inmediato",
+  "valor_inmediato": [
+   "Con el levantamiento: tareas y reglas de uso definidas.",
+   "Con cada bloque: lo construido, en uso con el equipo.",
+   "Al cerrar: criterio común de uso en todo el equipo."
+  ]
+ },
+ "retorno": {
+  "modo": "metodo",
+  "posiciones": false,
+  "titulo": "Retorno esperado: tiempo recuperado, medido.",
+  "subtitulo": "Se mide contra la línea base de cada tarea, que se toma en el levantamiento, a 30, 60 y 90 días.",
+  "pasos": [
+   {
+    "titulo": "Volumen",
+    "texto": "Cuántas historias, exámenes, documentos y citas maneja el equipo cada mes."
+   },
+   {
+    "titulo": "Tiempo de partida",
+    "texto": "Lo que toma cada tarea al empezar, medido con el equipo: es la **línea base**."
+   },
+   {
+    "titulo": "Tiempo con la herramienta",
+    "texto": "Lo que toma la misma tarea cuando lo construido ya está en uso."
+   },
+   {
+    "titulo": "Horas recuperadas",
+    "texto": "Volumen por la diferencia de tiempos: una estimación de referencia, sin compromiso de resultado."
+   }
+  ],
+  "gancho": "A los 90 días, la unidad sabrá cuánto tiempo recuperó su equipo y qué más conviene construir.",
+  "etiqueta_destino": "Hacia dónde puede ir el equipo",
+  "destino": [
+   {
+    "rotulo": "Atención al paciente",
+    "texto": "Más tiempo para el **paciente** y menos para escribir y registrar."
+   },
+   {
+    "rotulo": "Criterio común",
+    "texto": "Un equipo que usa la IA con las mismas reglas desde el primer día."
+   },
+   {
+    "rotulo": "Capacidad propia",
+    "texto": "El equipo ajusta sus herramientas **sin depender** de un proveedor externo."
+   }
+  ],
+  "etiqueta_metas": "Calendario de garantía, desde el cierre del proyecto",
+  "metas": [
+   {
+    "dias": "30 días",
+    "texto": "El equipo usa lo construido en tareas reales."
+   },
+   {
+    "dias": "60 días",
+    "texto": "Nuevas tareas que el equipo resuelve por su cuenta y horas recuperadas."
+   },
+   {
+    "dias": "90 días",
+    "texto": "Medición del retorno: horas recuperadas contra la línea base."
+   }
+  ]
+ },
+ "inversion": {
+  "duracion": "Trabajo en vivo sobre las tareas reales de la unidad, con seguimiento y garantía a {rango_seguimiento}. {h_total} horas de trabajo.",
+  "programa": [
+   "Servicio de Habilidades para la Unidad de Patología Mamaria ({codigo}).",
+   "Levantamiento, historia clínica asistida, imágenes, datos y documentos, y citas.",
+   "{h_total} h de trabajo en vivo con el equipo. El kick-off, de hasta 1 h, va aparte."
+  ],
+  "notas": [
+   "Licencias de herramientas de IA: se definen con la unidad tras el levantamiento y no se incluyen en esta inversión.",
+   "Garantía 30-60-90: seguimiento a 30, 60 y 90 días desde el cierre del proyecto, con lo construido en uso.",
+   "Términos y condiciones: los del enlace de «Importante», que ambas partes aceptan al avanzar con esta propuesta."
+  ]
+ },
+ "proximos_pasos": {
+  "asesora": {
+   "nombre": "Verónica Rubio",
+   "cargo": "Asesora comercial",
+   "correo": "vrubio01@intezia.com",
+   "telefono": "+58 422 3355505"
+  },
+  "pasos": [
+   {
+    "titulo": "Fecha y participantes",
+    "texto": "Confirmamos con la unidad la fecha de arranque y quiénes participan."
+   },
+   {
+    "titulo": "Información autorizada",
+    "texto": "Acordamos qué información y qué herramientas autoriza la unidad."
+   },
+   {
+    "titulo": "Kick-off",
+    "texto": "Hasta una hora para alinear al equipo antes del levantamiento."
+   }
+  ],
+  "subtitulo": "Esto es lo que sigue cuando la unidad confirme la propuesta."
+ },
+ "supuestos": [
+  "Pedido de Ivana (23/10/2026): propuesta de Habilidades para la Unidad de Patología Mamaria del Instituto Médico La Floresta, código CAI-065, asesora Verónica Rubio. Educación, sin alianza, Habilidades puro (sin nombrar Detección) y contacto de Verónica confirmados por Ivana.",
+  "Insumo: Ficha de Levantamiento y transcripción de la reunión del 22/10/2026 (45 min, con la Dra. Maybell Nieves y el Dr. Andrés Calles). La observación interna de la ficha pide «un Habilidades enfocado a sus roles» porque la unidad aún no opera y una Detección clásica no tiene procesos que auditar. Sin nombres de personas en el deck.",
+  "Horas (Ivana): levantamiento 2 h, historia clínica 4 h, imágenes 2 h, datos y documentos 2 h y citas 2 h: 12 h de trabajo. Propuse 10 h; Ivana subió la historia clínica a 4 h y las citas a 2 h y dejó el resto. El kick-off, de hasta 1 h, va aparte y no suma (criterio de Ivana del 23/10/2026).",
+  "Herramienta sin nombrar (Ivana): hoy usan Copilot con licencias personales de Microsoft 365, Gemini de pago para imágenes y Perplexity, y esperan la recomendación; en la reunión Verónica mostró Claude. La unidad está en Caracas y Claude no tiene soporte en Venezuela (nunca se promete VPN). La herramienta se define en el levantamiento; las licencias no están en la inversión y no hay valores en el deck.",
+  "Lo que se construye depende de la evaluación: historia clínica asistida (que una IA escuche la consulta y arme el borrador), imágenes con criterio unificado y agendamiento de citas se presentan como propuestas a evaluar en el levantamiento, no como compromisos (Ivana).",
+  "Repositorio único por paciente (exámenes, cirugías, imágenes y fotos pre-cirugía): es una de las dos prioridades de Maybell, pero es un sistema de resguardo y no una capacitación. Va en «Fuera de este alcance» como algo que se evalúa, y Ivana lo evaluará con el resto del equipo; dentro de la historia clínica solo se prueba organizar y buscar historias e imágenes, a evaluar.",
+  "Participantes: tal como lo dice la transcripción (25:19), «en la clínica seríamos nosotros dos nada más y en el equipo seríamos cuatro». El deck dice «Cuatro personas en el equipo; hoy, dos en la clínica» y no precisa quién va a cada bloque.",
+  "Datos de pacientes: manejarán historias clínicas con imágenes y fotos y la reunión no tocó regulación, resguardo ni confidencialidad. El deck habla solo de lo que la unidad autorice, datos de ejemplo y lineamientos de uso desde el arranque; no afirma cumplimiento de ninguna norma ni que la IA diagnostique.",
+  "Seguimiento 30-60-90 con garantía: Verónica lo explicó en la reunión y Ivana no lo cambió (no respondió esa pregunta); queda como en el estándar de Habilidades. Sin facilidad de pago (Ivana): 8 slides con hoja de inversión de valores vacíos, sin casillas por parte ni tarjetas de licencias. El programa de posgrado de mastología se dejó fuera, como pidió Ivana.",
+  "Retorno en modo método: no hay datos de la unidad y aún no opera, así que la línea base se toma al empezar (levantamiento), no «hoy».",
+  "Contexto interno que no va en el deck: presupuesto no definido y alerta de costos («nosotros no podemos costear costos tan altos»); para montos altos decide el Instituto Médico La Floresta, interlocutor no identificado; patrocinio no asegurado; apertura al cambio alta; reunión de revisión la semana del 27/10/2026 y propuesta comprometida por correo el 23/10/2026; Andrés vive lejos y prefiere lo virtual; correo y teléfono del Dr. Calles por confirmar.",
+  "Imágenes (Ivana, 23/10/2026): el deck dice que las imágenes (mamografía, ecografía y fotos pre-cirugía) se validan en el levantamiento antes de prometer que se puede hacer cualquier uso con IA; el bloque de imágenes queda condicionado a esa validación y su entregable es la validación y, si procede, el método."
+ ],
+ "pendientes": [
+  "Confirmar con Verónica quién decide en la presentación (el Instituto Médico La Floresta para montos altos) y tenerlo en la reunión de revisión.",
+  "Confirmar con Ivana el seguimiento 30-60-90 con garantía (no respondió esa pregunta).",
+  "Cerrar el hueco de confidencialidad antes del levantamiento: qué información de pacientes autoriza la unidad y qué lineamientos de uso aplican.",
+  "Evaluar con Ivana y el resto del equipo si el repositorio único de historias e imágenes se ofrece como etapa posterior.",
+  "Definir la herramienta de IA en el levantamiento (disponibilidad en Venezuela, licencias, ecosistema Microsoft ya usado).",
+  "Confirmar el teléfono y el correo de Verónica Rubio (tomados de la DET-031) y el contacto del Dr. Calles.",
+  "Valor, descuento y total: campos vacíos para ventas; el presupuesto de la unidad es bajo y moneda y orden de compra se desconocen.",
+  "Reconfirmar con la unidad la modalidad (mixta; Andrés prefiere virtual) y la zona horaria.",
+  "Validar las imágenes en el levantamiento (formato, calidad, autorización y si la herramienta puede leerlas) antes de comprometer el bloque de imágenes."
+ ]
+}

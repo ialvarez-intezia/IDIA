@@ -13,7 +13,7 @@
 - **Eje temático**: Agentes de IA con Claude para atención por WhatsApp, mercadeo, reclutamiento y un Consejo Ejecutivo, construidos con el equipo de Aqua Vista para que aprenda a ajustarlos y mantenerlos
 <!--auto:inicio-->
 - **Alcance**: 10 entregables en 4 áreas · 40 h de trabajo · seguimiento a 30, 60 y 90 días
-- **Orden de las slides**: 1 Portada · 2 Alcance · 3 Ruta · 4 Cómo trabajamos · 5 Entregables · 6 Retorno · 7 Inversión · 8 Próximos pasos
+- **Orden de las slides**: 1 Portada · 2 Alcance · 3 Ruta · 4 Cómo trabajamos · 5 Entregables · 6 Retorno · 7 Inversión · 8 Inversión (etapa 2) · 9 Inversión (etapa 3) · 10 Inversión (etapa 4) · 11 Próximos pasos
 - **Asesora comercial que ve el cliente (última slide)**: Flavia Martínez, Asesora comercial · fmartinez@intezia.com · +58 414 5756615
 <!--auto:fin-->
 - **Estado**: `Borrador`

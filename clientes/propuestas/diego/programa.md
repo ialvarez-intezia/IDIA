@@ -1,109 +1,108 @@
-# Documento Oficial de Diseño Curricular e Instruccional
+# Programa interno · Diego · Servicio de Habilidades (CAP-109)
 
-**[LOGO INTEZIA — `logos/educacion/NEGRO.png`]**  /  **[Capacitación personalizada — Diego]**
+> Documento interno (no se muestra al cliente). **Generado** por `scripts/generar-habilidades-compacto.py` desde `datos.json`: no editar a mano.
+> Fuente del insumo: Resumen de la reunión del 21/10/2026 con la madre del participante (instrucción directa, sin Ficha Comercial).
 
-# Capacitación In-Company personalizada
-## Claude: de cero a experto
+## 1. Resumen
 
-**Código**: CAP-109
-**Versión**: Propuesta inicial
-**Aprobado por**: PM Educación
-**Fecha de Aprobación**: 2026-08-19
+- **5 entregables en 4 módulos**, **8 h** de trabajo.
+- Herramienta **Claude como tutor**: 5 entregables, 8 h.
+- Horas por fase: F1 1 h (1 sol.) · F2 3 h (2 sol.) · F3 4 h (2 sol.).
 
----
+## 2. Líneas de trabajo y ruta
 
-## 1. Información general del programa
+| Línea de trabajo | Herramienta | Áreas | Horas | Soluciones |
+|---|---|---|---|---|
+| Claude como tutor universitario | Claude como tutor | Módulo 1 · Punto de partida, Módulo 2 · Un tutor por materia, Módulo 3 · Refuerzo con el feedback, Módulo 4 · Seguimiento del rendimiento | 8 | 5 |
 
-- **Nombre**: Claude: de cero a experto
-- **Cliente**: Diego (capacitación personalizada, 1 participante)
-- **Modalidad**: Presencial
-- **Duración**: 6 sesiones de 2 horas / 12 horas académicas totales (6 módulos)
-- **Audiencia**: 1 participante
-- **Acreditación**: INTEZIA
+Sin semanas ni sesiones en la propuesta: el calendario se acuerda en la reunión de arranque (Brief de Kickoff, CLAUDE.md §12).
 
----
-
-## 2. Fundamentación y justificación pedagógica
-
-### 2.1 Planteamiento de la necesidad
-
-Diego ya conversa con Claude, pero eso es apenas una fracción de lo que la herramienta puede hacer. La instrucción es explícita: no detenerse en las bases (se repasan rápido, sin profundizar) y enfocar el grueso del programa en el uso experto del ecosistema completo de **Claude**: **Projects**, **Artifacts**, **Cowork**, **Skills** y **Claude Code**. La capacitación abre con un repaso ágil de fundamentos y prompting estructurado, y a partir de ahí dedica una sesión completa a cada capacidad avanzada, para cerrar con un **proyecto final integrador** que aplica todo lo aprendido a su trabajo real.
-
-### 2.2 Enfoque pedagógico (Modelo INTEZIA)
-
-Aprendizaje Basado en Retos (ABR), con prioridad en:
-
-- **Tutoría activa**: acompañamiento cercano con feedback en tiempo real sobre las propias tareas del participante.
-- **Transferibilidad inmediata**: cada ejercicio sale de una tarea real de su día. Lo que se practica se aplica al día siguiente.
-- **Curaduría de contenidos**: solo lo que sirve para dominar el ecosistema de Claude, actualizado y validado con casos reales. Sin teoría desconectada.
-
----
-
-## 3. Perfiles académicos
-
-> Capacitación: sin Perfil de ingreso (el participante define su entrada).
-
-### Perfil de egreso
-
-- **Saber**: entiende qué es cada pieza del ecosistema de Claude (Projects, Artifacts, Cowork, Skills, Claude Code) y cuándo usar cada una.
-- **Saber hacer**: aplica prompting con método, trabaja con Projects y Artifacts, colabora con Cowork, construye Skills propias y usa Claude Code para tareas técnicas.
-- **Saber ser**: usa la IA con criterio, verificando los resultados antes de confiar en ellos.
-
----
-
-## 4. Objetivos estratégicos
-
-### 4.1 Objetivo general
-
-Lograr que Diego domine el ecosistema completo de Claude con soltura y método: de los fundamentos y el prompting con criterio, al uso experto de Projects, Artifacts, Cowork, Skills y Claude Code, para cerrar construyendo un proyecto final propio.
-
-### 4.2 Objetivos específicos
-
-1. **Perder** el miedo a las bases y aplicar un método de prompting simple y verificable desde la primera sesión.
-2. **Convertir** Projects y Artifacts en su espacio de trabajo diario: contexto persistente y creación en vivo.
-3. **Incorporar** Cowork y Skills para colaborar y automatizar las tareas que hoy repite a mano.
-4. **Cerrar** con un proyecto final que integre Claude Code y todo lo aprendido, aplicado a su trabajo real.
-
----
-
-## 5. Estructura curricular y diseño instruccional
-
-### 5.1 Estructura modular (6 módulos · 6 sesiones de 2 h)
-
-| Módulo | Objetivo Instructivo | Temas | Elaboración (Práctica del participante) |
+| Línea de trabajo | Nivel (test de nivel) | Tutor (un Claude por materia) | Mejora (refuerzo y seguimiento) |
 |---|---|---|---|
-| **I: Claude desde cero** | Repasa lo esencial de Claude y aplica un método de prompting simple que da resultados verificables desde el primer día. | 1.1 Qué es Claude · 1.2 La interfaz sin misterio · 1.3 Primera conversación · 1.4 Prompting estructurado · 1.5 Verificar resultados | Primeras conversaciones propias, prompts con método propio, bitácora de aprendizaje |
-| **II: Projects** | Convierte Claude en el espacio de trabajo que recuerda su contexto y sus documentos entre sesiones. | 2.1 Qué es un Project · 2.2 Subir y organizar archivos · 2.3 Instrucciones de proyecto · 2.4 Contexto que persiste · 2.5 Tu carpeta de trabajo | Montar su primer Project, subir y organizar sus archivos reales |
-| **III: Artifacts** | Produce documentos, presentaciones y prototipos que puede ver, editar y refinar en vivo, no solo leer en el chat. | 3.1 Qué es un Artifact · 3.2 Documentos y presentaciones · 3.3 Visualizaciones de datos · 3.4 Prototipos y código simple · 3.5 Iterar sobre un Artifact | Crear un documento y una visualización propios, iterar sobre un Artifact en vivo |
-| **IV: Claude Cowork** | Lleva a Claude del uso individual a ejecutar procesos junto a otras personas, no solo responder preguntas sueltas. | 4.1 Qué es Cowork · 4.2 Espacios compartidos · 4.3 Colaborar sobre un hilo · 4.4 Buenas prácticas de equipo · 4.5 Un proceso compartido | Configurar un espacio compartido y colaborar sobre un caso propio |
-| **V: Claude Skills** | Empaqueta sus tareas repetidas en Skills reutilizables, en vez de reescribir el mismo prompt cada vez. | 5.1 Qué es una Skill · 5.2 Skills ya disponibles · 5.3 Construye tu primera Skill · 5.4 Cuándo conviene una Skill · 5.5 Tu biblioteca de Skills | Construir su primera Skill y probarla sobre una tarea real |
-| **VI: Claude Code y tu proyecto final** | Da el salto a tareas técnicas con Claude Code y cierra integrando todo en un proyecto propio. | 6.1 Qué es Claude Code · 6.2 Primeros pasos en terminal · 6.3 Automatizar tareas técnicas · 6.4 Buenas prácticas y límites · 6.5 Tu proyecto final | Primeros pasos con Claude Code, construcción del proyecto final integrador |
+| Claude como tutor universitario | 1 h · 1 sol. | 3 h · 2 sol. | 4 h · 2 sol. |
 
-### 5.2 Desglose instructivo (cronograma y ruta de aprendizaje)
+- **Test de nivel**: Se mide el punto de partida y se acuerda qué reforzar primero.
+- **Tutores listos**: Cada materia queda organizada en su propio Claude.
+- **Plan de refuerzo**: El feedback de un profesor se convierte en un plan de mejora.
+- **Seguimiento**: El avance de cada materia queda registrado y se revisa.
 
-> Cada sesión es **presencial y en vivo**, de 2 horas. El espacio para las sesiones se coordina al arranque.
+## 3. Soluciones y horas (C = construcción, T = pruebas, A = adopción)
 
-| M | Sesión | Temas | Tiempo (120') | Estrategias de enseñanza | Estrategias de aprendizaje | Recursos y entornos |
-|---|---|---|---|---|---|---|
-| I | Sesión 1 | Claude desde cero (1.1–1.5) | 30' qué es Claude y su interfaz / 45' primera conversación y prompting estructurado / 45' verificar resultados y primeros casos | Demostración guiada en vivo, acompañamiento cercano, preguntas socráticas | Primeras conversaciones propias, prompts con método propio, bitácora de aprendizaje | Claude (aplicación web), sesión presencial en vivo, workbook digital |
-| II | Sesión 2 | Projects (2.1–2.5) | 35' qué es un Project y para qué sirve / 50' subir, organizar e instruir tu Project / 35' tu carpeta de trabajo en vivo | Demostración en vivo, plantillas de instrucciones guiadas, acompañamiento cercano | Montar su primer Project, subir y organizar sus archivos, bitácora de aprendizaje | Claude (Projects), sus documentos reales, workbook digital |
-| III | Sesión 3 | Artifacts (3.1–3.5) | 30' qué es un Artifact / 50' documentos, presentaciones y datos / 40' prototipos e iteración en vivo | Demostración en vivo, acompañamiento cercano, curaduría de casos | Crear un documento con Artifacts, una visualización de datos propia, iterar sobre su Artifact | Claude (Artifacts), sus documentos reales, workbook digital |
-| IV | Sesión 4 | Claude Cowork (4.1–4.5) | 30' qué es Cowork y espacios compartidos / 50' colaborar sobre un hilo de trabajo / 40' un proceso compartido en vivo | Demostración en vivo, casos de trabajo en equipo, acompañamiento cercano | Configurar un espacio compartido, colaborar sobre un caso propio, bitácora de aprendizaje | Claude (Cowork), casos reales de equipo, workbook digital |
-| V | Sesión 5 | Claude Skills (5.1–5.5) | 30' qué es una Skill y cuáles ya existen / 55' construye tu primera Skill / 35' prueba, itera y guarda tu Skill | Demostración guiada en vivo, taller práctico de construcción, acompañamiento cercano | Construir su primera Skill, probarla sobre una tarea real, bitácora de aprendizaje | Claude (Skills), una tarea repetida propia, workbook digital |
-| VI | Sesión 6 | Claude Code y tu proyecto final (6.1–6.5) | 30' qué es Claude Code y primeros pasos / 45' automatizar una tarea técnica / 45' construcción del proyecto final | Demostración guiada en vivo, coaching cercano, curaduría de casos | Primeros pasos con Claude Code, construcción del proyecto final, plan para seguir creciendo | Claude Code (terminal), todo lo aprendido, workbook digital |
+### Módulo 1 · Punto de partida · 1 entregable · 1 h · Claude como tutor · línea A
 
----
+Para qué (lo que ve el cliente): Medir en qué punto está con Claude y qué reforzar, en vez de empezar de cero
 
-## 6. Garantía de calidad y mejora continua
+| ID | Entregable (nombre en el deck) | Detalle de la fuente | C | T | A | Total | Fase |
+|---|---|---|---|---|---|---|---|
+| M1-1 | Test de nivel y plan de refuerzo | Un test para ver cuánto domina hoy de Claude (proyectos, instrucciones, archivos, herramientas) y un plan con lo que conviene reforzar primero. | - | - | - | 1 | F1 |
 
-- **Construcción curricular**: contenido adaptado a las tareas reales de Diego (eje: dominar el ecosistema de Claude, de cero a experto).
-- **Encuesta de satisfacción**: al cierre de cada sesión.
-- **Entregables**: tu Project montado y organizado, un documento y una visualización creados con Artifacts, un espacio de Cowork configurado, tu primera Skill construida y probada, proyecto final integrador con Claude Code, workbook digital, certificado de participación INTEZIA.
-- **Beneficio del programa formativo**: al finalizar, Diego domina el ecosistema completo de Claude con soltura y se lleva un proyecto final propio, construido en vivo, que aplica lo aprendido a su trabajo real.
+### Módulo 2 · Un tutor por materia · 2 entregables · 3 h · Claude como tutor · línea A
 
----
+Para qué (lo que ve el cliente): Cada materia organizada en su propio Claude, con sus apuntes y su seguimiento
 
-## 7. Perfil del equipo facilitador
+| ID | Entregable (nombre en el deck) | Detalle de la fuente | C | T | A | Total | Fase |
+|---|---|---|---|---|---|---|---|
+| M2-1 | Un Claude tutor por cada materia | Una carpeta de trabajo (un Project) por materia con el programa, los apuntes, las guías y las instrucciones de cómo debe tutorarlo. | - | - | - | 2 | F2 |
+| M2-2 | Rutina de estudio con su tutor | Cómo estudiar con el tutor: resumir, explicar con ejemplos, preguntar y practicar antes de una evaluación. | - | - | - | 1 | F2 |
 
-- **Facilitador**: por confirmar — Equipo INTEZIA Educación designa al facilitador antes del arranque.
-- **Asesora comercial**: Flavia Martínez (fmartinez@intezia.com), punto único de contacto durante la propuesta y el arranque.
+### Módulo 3 · Refuerzo con el feedback · 1 entregable · 2 h · Claude como tutor · línea A
+
+Para qué (lo que ve el cliente): Convertir la retroalimentación de los profesores en un plan para mejorar
+
+| ID | Entregable (nombre en el deck) | Detalle de la fuente | C | T | A | Total | Fase |
+|---|---|---|---|---|---|---|---|
+| M3-1 | Plan de refuerzo a partir del feedback | Se toma la retroalimentación de un profesor sobre una práctica (por ejemplo, convertir un artículo en noticia) y se arma un plan de refuerzo para la siguiente evaluación. | - | - | - | 2 | F3 |
+
+### Módulo 4 · Seguimiento del rendimiento · 1 entregable · 2 h · Claude como tutor · línea A
+
+Para qué (lo que ve el cliente): Ver cómo avanza en cada materia y ajustar el estudio con el tutor
+
+| ID | Entregable (nombre en el deck) | Detalle de la fuente | C | T | A | Total | Fase |
+|---|---|---|---|---|---|---|---|
+| M4-1 | Seguimiento del avance por materia | Un registro de evaluaciones, notas y lo reforzado en cada materia, con una revisión periódica junto al tutor. | - | - | - | 2 | F3 |
+
+## 4. Fuera de alcance
+
+- Hacer las tareas o las evaluaciones: Claude es un tutor para estudiar y reforzar, y el trabajo entregado es de Diego.
+- La suscripción a Claude: se confirma antes de empezar y su valor va aparte.
+- Contenido de las materias: lo aportan Diego y sus profesores; el programa enseña a estudiarlo con Claude.
+
+## 5. Supuestos a confirmar (antes del método)
+
+- Reajuste pedido en la reunión del 21/10/2026 con la madre del participante: un encuentro de 1 h por semana (sin cargar los fines de semana), test de nivel al inicio (ya hizo un introductorio de Claude y lo usa) y Claude como tutor universitario por materia (estudia Comunicación Social, ejemplo: tomar el feedback de una práctica de convertir un artículo en noticia y armar un plan de refuerzo). Reemplaza la CAP-109 anterior de 12 h («De cero a experto en Claude», 17 slides, archivada en _anterior-17-slides/).
+- Horas (elegidas por Ivana, 21/10/2026): 8 h en encuentros de 1 h. El reparto por módulo es mío: test de nivel 1 h, tutor por materia 3 h, refuerzo con el feedback 2 h y seguimiento 2 h. El deck dice «un encuentro de 1 h por semana» como tasa (§4.23) y no lleva semanas, sesiones ni fechas: el calendario se acuerda antes de empezar.
+- El grado académico y la nota de la práctica (12) no van en el deck; el ejemplo solo aparece como caso en el detalle del plan de refuerzo. No se nombra ni a la madre ni a la profesora.
+- Código CAP-109 conservado (es el de la propuesta anterior de Diego). Existe otra CAP-109, la de Good Latam, sin relación: la colisión de códigos sigue sin resolverse.
+- Cliente normal sin alianza. Hoja de inversión con valor vacío para ventas (campos para Adobe Reader) y sin facilidad de pago, como la versión anterior. Sin garantía ni seguimiento 30-60-90.
+- Todavía no se define si arranca ya o al terminar el proyecto de Mercadeo de la madre (dato interno): el deck no pone fecha y solo dice «ya o más adelante».
+- Modalidad: la versión anterior era presencial; con un encuentro de 1 h por semana se deja «presencial o virtual» a elegir. Facilitador sin asignar.
+- Contacto de la última slide: Flavia Martínez, asesora de la CAP-109 anterior y de Puro Lomo (elegida por Ivana, 21/10/2026).
+- Sin cantidad de entregables en las láminas (regla de Ivana, 20/10/2026). Certificado de participación y cuaderno de trabajo digital se mantienen de la versión anterior.
+
+## 6. Cómo trabajamos (slide 4)
+
+**Por qué en este orden:** Primero el test de nivel, que dice qué reforzar; luego un tutor por materia; al final, el refuerzo con el feedback y el seguimiento del rendimiento.
+
+- **Medimos**: El nivel de partida, con un test.
+- **Organizamos**: Cada materia en su propio Claude.
+- **Reforzamos**: Con el feedback de los profesores.
+- **Seguimos**: El rendimiento en cada materia.
+
+- En la práctica, **Un encuentro de 1 h por semana**: Un solo espacio, sin recargar los sábados ni los domingos, para trabajar y dejar tareas cortas entre encuentros.
+- En la práctica, **Un tutor por materia**: Cada materia tiene su propio Claude, con su programa y sus apuntes, para estudiar y hacer seguimiento por separado.
+- En la práctica, **Con sus evaluaciones reales**: El refuerzo parte del feedback que Diego recibe de sus profesores, para mejorar en la siguiente evaluación.
+- Datos: Se trabaja con los apuntes, guías y trabajos que Diego decida compartir; no se carga información personal de otras personas.
+- Quién construye: Intezia guía y Diego construye el Claude de cada materia con su propio material.
+
+**Logística:** modalidad: Presencial o virtual, según lo que más le convenga a Diego. · participantes: Diego, estudiante de Comunicación Social. · ritmo: Un encuentro de 1 h por semana, sin cargar los sábados ni los domingos. · arranque: La fecha de arranque y el día y la hora del encuentro se acuerdan antes de empezar..
+
+## 7. Retorno esperado (slide 6)
+
+Modo **metodo**. La slide no cita estudios ni referencias de la web ni promete retorno.
+
+Pasos del método: Punto de partida; Feedback recibido; Plan de refuerzo; Siguiente evaluación; Avance observado.
+
+## 8. Próximos pasos (slide 8)
+
+Asesora comercial que ve el cliente: Flavia Martínez, Asesora comercial · fmartinez@intezia.com · +58 414 5756615.
+

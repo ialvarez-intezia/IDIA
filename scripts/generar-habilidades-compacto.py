@@ -204,8 +204,8 @@ TOKENS_CONTEO = re.compile(r"^(n_total|n_total_txt|n_entregables_txt|n_sol|n_sol
 OMITIBLES = ("metodo", "entregables", "retorno", "proximos", "inversion", "pago")   # slides que datos.json → omitir puede quitar (el resto es el núcleo)
 PALABRA_N = {1: "una", 2: "dos", 3: "tres", 4: "cuatro", 5: "cinco", 6: "seis", 7: "siete", 8: "ocho", 9: "nueve", 10: "diez"}
 NOMBRES_SLIDE = {"portada": "Portada", "alcance": "Alcance", "ruta": "Ruta", "metodo": "Cómo trabajamos", "entregables": "Entregables",
-                 "retorno": "Retorno", "inversion": "Inversión", "inversion2": "Inversión (etapa 2)", "inversion3": "Inversión (etapa 3)", "pago": "Facilidad de pago", "pago2": "Facilidad de pago (2)", "proximos": "Próximos pasos", "calendario": "Calendario"}
-ORDEN_EDUCACION = ["portada", "alcance", "ruta", "calendario", "metodo", "entregables", "retorno", "inversion", "inversion2", "inversion3", "pago", "pago2", "proximos"]
+                 "retorno": "Retorno", "inversion": "Inversión", "inversion2": "Inversión (etapa 2)", "inversion3": "Inversión (etapa 3)", "inversion4": "Inversión (etapa 4)", "pago": "Facilidad de pago", "pago2": "Facilidad de pago (2)", "proximos": "Próximos pasos", "calendario": "Calendario", "cambios": "Qué está cambiando"}
+ORDEN_EDUCACION = ["portada", "cambios", "alcance", "ruta", "calendario", "metodo", "entregables", "retorno", "inversion", "inversion2", "inversion3", "inversion4", "pago", "pago2", "proximos"]
 
 SUB_ENTREGABLES = "Lo que se llevan: **cada solución construida, probada y adoptada**, más el seguimiento a {rango_seguimiento} que mide su efecto."
 SUB_ENTREGABLES_SIN_SEG = "Lo que se llevan: **cada solución construida, probada y adoptada**."
@@ -361,7 +361,11 @@ ESQUEMAS = {
              "proximos_pasos": "dict:proximos_pasos", "siglas_ok": "list:str", "frases_ok": "list:str", "supuestos": "list:str", "pendientes": "list:str",
              "servicio_rotulo": "str", "meta_servicio": "str", "meta_tipo": "str", "vocabulario": "dict:vocabulario", "sin_hoja_cotizacion": "bool",
              "omitir": "list:str", "formato": "str", "deteccion": "dict:deteccion", "por_fases": "bool", "metodo_antes_de_ruta": "bool",
-             "calendario": "dict:calendario"},
+             "calendario": "dict:calendario", "cambios": "dict:cambios"},
+    "cambios": {"titulo": "str", "subtitulo": "str", "etiqueta_fechas": "str", "fechas": "list:dict:cambio_fecha", "etiqueta_riesgo": "str",
+                "riesgo": "list:dict:cambio_item", "etiqueta_porque": "str", "porque": "list:dict:cambio_item", "fuente": "str"},
+    "cambio_fecha": {"cuando": "str", "texto": "str"},
+    "cambio_item": {"titulo": "str", "texto": "str"},
     "calendario": {"inicio": "str", "dias": "list:str", "hora": "str", "horas_por_encuentro": "num", "omitir_fechas": "list:str", "titulo": "str",
                    "subtitulo": "str", "etiqueta": "str", "intro": "str", "encuentro": "str"},
     "vocabulario": {"solucion": "list:str", "area": "list:str", "proceso_base": "list:str"},
@@ -384,7 +388,8 @@ ESQUEMAS = {
     "solucion": {"id": "str", "entregable": "str", "incluye": "list:str", "C": "num", "T": "num", "A": "num", "h": "num", "fase": "str",
                  "detalle": "str", "_revisar": "bool"},
     "alcance": {"titulo": "str", "subtitulo": "str", "fuera_alcance": "list:str", "compacto": "bool",
-                "etiqueta_proceso_base": "str", "etiqueta_fuera": "str", "sin_conteo_por_fila": "bool"},
+                "etiqueta_proceso_base": "str", "etiqueta_fuera": "str", "sin_conteo_por_fila": "bool",
+                "etiqueta_destacados": "str", "destacados": "list:dict:cambio_item"},
     "metodo": {"titulo": "str", "subtitulo": "str", "sin_subtitulo": "bool", "pasos": "list:dict:paso", "por_que_orden": "str", "quien_construye": "str",
                "practica": "list:dict:practica", "datos": "str", "ejemplos": "list:dict:ejemplo", "etiqueta_ejemplos": "str",
                "nota_ejemplos": "str"},
@@ -990,7 +995,7 @@ def validar_semantica(d, ctx, agg, rep, silent):
             rep.err("cliente.%s" % k, "falta")
     if cl.get("slug") and not re.match(r"^[a-z0-9][a-z0-9-]*$", cl["slug"]):
         rep.err("cliente.slug", "usar solo minúsculas, números y guiones, sin tildes ni espacios (carpeta clientes/propuestas/<slug>); recibido %r" % cl["slug"])
-    if cl.get("codigo") and not re.match(r"^[A-Z]{2,4}-\d{1,4}$", cl["codigo"]):
+    if cl.get("codigo") and not re.match(r"^[A-Z]{2,4}-\d{1,4}(-[A-Z])?$", cl["codigo"]):
         rep.aviso("cliente.codigo", "formato inusual %r (esperado p. ej. CAI-035)" % cl["codigo"])
     all_ids = set()
     revisar = []
@@ -1322,8 +1327,8 @@ def validar_semantica(d, ctx, agg, rep, silent):
         # Una hoja de inversión por etapa (opcional): valor, descuento y total por separado, cada una con su garantía.
         if isinstance(inv.get("etapas"), list):
             et_ = etapas_inversion(d)
-            if not (2 <= len(et_) <= 3):
-                rep.err("inversion.etapas", "se necesitan 2 o 3 etapas (una hoja de inversión cada una); hay %d" % len(et_))
+            if not (2 <= len(et_) <= 4):
+                rep.err("inversion.etapas", "se necesitan de 2 a 4 etapas (una hoja de inversión cada una); hay %d" % len(et_))
             if partes or tars:
                 rep.err("inversion.etapas", "no convive con inversion.partes ni con inversion.licencias (cada hoja ya es una etapa): el licenciamiento va en las notas de cada hoja")
             for i, e_ in enumerate(et_):
@@ -1334,7 +1339,7 @@ def validar_semantica(d, ctx, agg, rep, silent):
                     rep.aviso("inversion.etapas[%d].notas" % i, "sin notas: se usan las de garantía y términos por defecto")
                 if len(rs(e_.get("rotulo"))) > 60:
                     rep.aviso("inversion.etapas[%d].rotulo" % i, "%d caracteres: máx. ~60 (una línea junto a «Propuesta Económica»)" % len(rs(e_["rotulo"])))
-            if 2 <= len(et_) <= 3 and all(e_.get("sin_garantia") for e_ in et_) and seg_es_seguimiento(d):
+            if 2 <= len(et_) <= 4 and all(e_.get("sin_garantia") for e_ in et_) and seg_es_seguimiento(d):
                 rep.aviso("inversion.etapas", "ninguna hoja lleva la garantía 30-60-90 pero el deck anuncia seguimiento: definir en qué etapa aplica (lo habitual es la que construye)")
     for clave_pg in [k_ for k_ in ("pago", "pago2") if k_ in orden]:
             pg = d.get(clave_pg) or {}
@@ -1603,9 +1608,11 @@ def orden_slides(d):
     if sin_inversion(d):
         omitir |= {"inversion", "pago"}
     orden = [k for k in ORDEN_EDUCACION if k not in omitir]
+    if not isinstance(d.get("cambios"), dict) and "cambios" in orden:
+        orden.remove("cambios")   # slide opcional: solo existe con datos.json → cambios («Qué está cambiando y cómo les afecta», Zoom INN-006, 2026-10-26)
     if not isinstance(d.get("calendario"), dict) and "calendario" in orden:
         orden.remove("calendario")   # slide opcional: solo existe con datos.json → calendario (Ivana, ESTEI CAI-058, 2026-10-20)
-    for k_, n_min in (("inversion2", 2), ("inversion3", 3)):   # la 2.ª y la 3.ª hoja de inversión solo existen con inversion.etapas (2 o 3 etapas) y con hoja de inversión
+    for k_, n_min in (("inversion2", 2), ("inversion3", 3), ("inversion4", 4)):   # la 2.ª y la 3.ª hoja de inversión solo existen con inversion.etapas (2 o 3 etapas) y con hoja de inversión
         if k_ in orden and not (len(etapas_inversion(d)) >= n_min and "inversion" in orden):
             orden.remove(k_)
     if "pago2" in orden and not (isinstance(d.get("pago2"), dict) and "pago" in orden):
@@ -1944,6 +1951,16 @@ def s_alcance(d, R):
             "        <ul>\n%s        </ul>\n"
             "      </div>\n\n" % (T(al.get("etiqueta_fuera") or "Fuera de este alcance", "alcance.etiqueta_fuera"), li)
         )
+    destac = ""
+    if al.get("destacados"):  # datos de interés opcionales (Zoom INN-006): tarjetas que llenan el alcance cuando hay pocas filas
+        li = "".join("          <li><b>%s</b><span>%s</span></li>\n" % (T(x["titulo"], "alcance.destacados.titulo"), M(x["texto"], "alcance.destacados.texto"))
+                     for x in al["destacados"])
+        destac = (
+            '      <div class="scope-facts">\n'
+            '        <p class="scope-card-label">%s</p>\n'
+            "        <ul>\n%s        </ul>\n"
+            "      </div>\n\n" % (T(al.get("etiqueta_destacados") or "Datos de interés", "alcance.etiqueta_destacados"), li)
+        )
     return (
         '    <!-- 2 · Alcance: qué vamos a hacer y para qué -->\n'
         '    <section class="slide s-scope%s%s">\n'
@@ -1951,10 +1968,10 @@ def s_alcance(d, R):
         '      <p class="eyebrow">%02d · Alcance</p>\n'
         "      <h2>%s</h2>\n"
         '      <p class="sub">%s</p>\n\n'
-        '      <div class="scope-panels%s" style="--np:%d">\n%s      </div>\n\n%s%s'
+        '      <div class="scope-panels%s" style="--np:%d">\n%s      </div>\n\n%s%s%s'
         "    </section>\n"
         % (" compact" if al.get("compacto") else "", " roomy" if roomy else "", R.contador("alcance"), R.idx["alcance"], T(titulo, "alcance.titulo"),
-           M(al["subtitulo"], "alcance.subtitulo"), " one" if len(carr) == 1 else "", len(carr), paneles, fuera, foot(R, "claro"))
+           M(al["subtitulo"], "alcance.subtitulo"), " one" if len(carr) == 1 else "", len(carr), paneles, destac, fuera, foot(R, "claro"))
     )
 
 
@@ -2293,7 +2310,7 @@ def s_inversion(d, R, et=None):
     Con inversion.etapas se dibuja una hoja por etapa (et = 0, 1 o 2), cada una con su valor, descuento, total y garantía."""
     T, M = R.T, R.M
     inv = hoja_inversion(d, et)
-    clave = ("inversion", "inversion2", "inversion3")[et or 0]
+    clave = ("inversion", "inversion2", "inversion3", "inversion4")[et or 0]
     gar_h = garantia_hoja(d, inv)
     titulo = inv.get("titulo") or "Inversión del proyecto."
     if por_fases(d):  # los pasos previos no son soluciones: la duración nombra las fases
@@ -2660,6 +2677,70 @@ def s_calendario(d, R):
            T(etiqueta, "calendario.etiqueta"), ('        <p class="cal-intro">%s</p>\n' % M(intro, "calendario.intro")) if intro else "",
            alto, col(filas[:mitad]), col(filas[mitad:]), foot(R, "oscuro"))
     )
+
+
+def s_cambios(d, R):
+    """«Qué está cambiando y cómo les afecta» (opcional): fechas del proveedor con su fuente, qué pasa si no se hace nada y por qué con Intezia.
+    Pedida por Zoom (Emma, vía Ivana) para INN-006; corta y clara. Con datos.json → cambios."""
+    T, M = R.T, R.M
+    c = d["cambios"]
+    titulo = c.get("titulo") or "Qué está cambiando y cómo les afecta."
+    sub = c.get("subtitulo") or ""
+    fechas = "".join(
+        '          <li><b class="chg-d">%s</b><span class="chg-t">%s</span></li>\n' % (T(x["cuando"], "cambios.fechas.cuando"), M(x["texto"], "cambios.fechas.texto"))
+        for x in c["fechas"])
+    def lista(items, clave):
+        return "".join('          <li><b>%s</b> %s</li>\n' % (T(x["titulo"], clave + ".titulo"), M(x["texto"], clave + ".texto")) for x in items)
+    return (
+        '    <!-- Qué está cambiando (opcional): fechas del proveedor, qué pasa si no se hace nada y por qué con Intezia -->\n'
+        '    <section class="slide s-chg">\n'
+        '      <span class="counter">%s</span>\n'
+        '      <p class="eyebrow">%02d · Qué está cambiando</p>\n'
+        "      <h2>%s</h2>\n"
+        '%s'
+        '      <div class="chg-tl">\n'
+        '        <p class="chg-label">%s</p>\n'
+        '        <ol class="chg-events" style="--chg-n:%d">\n%s        </ol>\n'
+        "      </div>\n\n"
+        '      <div class="chg-cols">\n'
+        '        <div class="chg-box chg-risk">\n'
+        '          <p class="chg-label">%s</p>\n'
+        "        <ul>\n%s        </ul>\n"
+        "        </div>\n"
+        '        <div class="chg-box chg-why">\n'
+        '          <p class="chg-label">%s</p>\n'
+        "        <ul>\n%s        </ul>\n"
+        "        </div>\n"
+        "      </div>\n\n"
+        "%s%s"
+        "    </section>\n"
+        % (R.contador("cambios"), R.idx["cambios"], T(titulo, "cambios.titulo"),
+           ('      <p class="sub">%s</p>\n\n' % M(sub, "cambios.subtitulo")) if sub else "\n",
+           T(c.get("etiqueta_fechas") or "Qué cambia en Google", "cambios.etiqueta_fechas"), len(c["fechas"]), fechas,
+           T(c.get("etiqueta_riesgo") or "Si no se hace nada", "cambios.etiqueta_riesgo"), lista(c["riesgo"], "cambios.riesgo"),
+           T(c.get("etiqueta_porque") or "Por qué con Intezia", "cambios.etiqueta_porque"), lista(c["porque"], "cambios.porque"),
+           ('      <p class="chg-src">%s</p>\n\n' % T(c["fuente"], "cambios.fuente")) if c.get("fuente") else "", foot(R, "oscuro"))
+    )
+
+
+def validar_cambios(d, rep):
+    """La slide «cambios» exige fechas (3 a 6), riesgos (2 a 4), razones (2 a 4); la fuente es opcional."""
+    c = d.get("cambios") or {}
+    for clave, lo, hi in (("fechas", 3, 6), ("riesgo", 2, 4), ("porque", 2, 4)):
+        xs = c.get(clave)
+        if not isinstance(xs, list) or not (lo <= len(xs) <= hi):
+            rep.err("cambios.%s" % clave, "se necesitan de %d a %d elementos" % (lo, hi))
+            continue
+        for i, x in enumerate(xs):
+            if not isinstance(x, dict):
+                continue
+            for k in (("cuando", "texto") if clave == "fechas" else ("titulo", "texto")):
+                if not str(x.get(k) or "").strip():
+                    rep.err("cambios.%s[%d].%s" % (clave, i, k), "falta")
+            if clave == "fechas" and len(str(x.get("cuando") or "")) > 16:
+                rep.aviso("cambios.fechas[%d].cuando" % i, "más de 16 caracteres: puede partirse en dos líneas")
+            if len(str(x.get("texto") or "")) > 130:
+                rep.aviso("cambios.%s[%d].texto" % (clave, i), "%d caracteres: máx. ~130 para que quepa" % len(str(x.get("texto"))))
 
 
 def s_proximos(d, R):
@@ -3281,8 +3362,9 @@ def render_html(d, R, columnas, ncols):
     fns = {
         "portada": lambda: s_portada(d, R), "alcance": lambda: s_alcance(d, R), "ruta": lambda: s_ruta(d, R),
         "metodo": lambda: s_metodo(d, R), "entregables": lambda: s_entregables(d, R, columnas, ncols), "retorno": lambda: s_retorno(d, R),
-        "inversion": lambda: s_inversion(d, R, 0 if etapas_inversion(d) else None), "inversion2": lambda: s_inversion(d, R, 1), "inversion3": lambda: s_inversion(d, R, 2),
+        "inversion": lambda: s_inversion(d, R, 0 if etapas_inversion(d) else None), "inversion2": lambda: s_inversion(d, R, 1), "inversion3": lambda: s_inversion(d, R, 2), "inversion4": lambda: s_inversion(d, R, 3),
         "pago": lambda: s_pago(d, R), "pago2": lambda: s_pago(d, R, "pago2"), "proximos": lambda: s_proximos(d, R), "calendario": lambda: s_calendario(d, R),
+        "cambios": lambda: s_cambios(d, R),
     }
     if es_deteccion(d):
         fns.update({"alcance": lambda: s_alcance_det(d, R), "ruta": lambda: s_ruta_det(d, R), "entregables": lambda: s_entregables_det(d, R)})
@@ -3744,7 +3826,7 @@ def chequeos_html(html, d, rep):
     for cls, cuerpo in secciones:
         clave_cls = cls.split()[0]
         if clave_cls == "s-price" and "s-price" in vistas:
-            clave_cls = "s-price2" if "s-price2" not in vistas else "s-price3"   # 2.ª y 3.ª hoja de inversión (inversion.etapas): su propia clave para no mezclarlas con la 1.ª
+            clave_cls = "s-price2" if "s-price2" not in vistas else ("s-price3" if "s-price3" not in vistas else "s-price4")   # 2.ª a 4.ª hoja de inversión (inversion.etapas): su propia clave para no mezclarlas con la 1.ª
         vistas.add(clave_cls)
         cf = re.sub(r'<p class="(?:pain-src|lic-note)">.*?</p>', " ", cuerpo, flags=re.S)
         cf = re.sub(r'<span class="mp-src">.*?</span>', " ", cf, flags=re.S)
@@ -3755,7 +3837,7 @@ def chequeos_html(html, d, rep):
         t = re.sub(r'<span class="cot-sign-minus">.*?</span>', " ", t)  # «−$» de la hoja de cotización no es un guion
         t_rep = re.sub(r'<p class="mt-why auto">.*?</p>', " ", t, flags=re.S)
         t_rep = re.sub(r'<p class="step-h">.*?</p>', " ", t_rep, flags=re.S)  # por_fases: el nombre de cada fase se repite a propósito
-        if clave_cls in ("s-price2", "s-price3"):   # lo fijo de la hoja (rótulos, términos y vigencia) ya está en la 1.ª: solo cuenta lo propio de la etapa
+        if clave_cls in ("s-price2", "s-price3", "s-price4"):   # lo fijo de la hoja (rótulos, términos y vigencia) ya está en la 1.ª: solo cuenta lo propio de la etapa
             t_rep = " ".join(re.findall(r'<(?:h2|p)[^>]*class="(?:title|price-intro|block-value|cot-garantia-text)"[^>]*>(.*?)</(?:h2|p)>', t, flags=re.S))
         if clave_cls != "s-cal":   # el calendario repite a propósito los nombres de los entregables
             textos_rep.append((clave_cls, _html.unescape(re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", t_rep))).strip()))
@@ -3763,7 +3845,7 @@ def chequeos_html(html, d, rep):
         textos.append((clave_cls, _html.unescape(re.sub(r"\s+", " ", t)).strip()))
     for cls, txt in textos:
         low = txt.lower()
-        if MARCA_PRECIO in low and cls not in ("s-price", "s-price2", "s-price3"):
+        if MARCA_PRECIO in low and cls not in ("s-price", "s-price2", "s-price3", "s-price4"):
             rep.err("slide " + cls, "contiene «Propuesta Económica» fuera de la slide de inversión (rompe la detección de AcroForms)")
         if MARCA_PAGO in low and cls != "s-pay":
             rep.err("slide " + cls, "contiene «Facilidad de pago» fuera de la slide de pago (rompe la detección de los campos PagoCuota)")
@@ -3812,7 +3894,7 @@ def chequeos_html(html, d, rep):
         elif "{" in txt or "}" in txt:
             i = min(x for x in (txt.find("{"), txt.find("}")) if x >= 0)
             rep.err("slide " + cls, "llave suelta «{» o «}» cerca de «%s»" % txt[max(0, i - 20):i + 20])
-        if cls != "s-cal" and RE_FECHA.search(textos_fecha.get(cls, txt)):
+        if cls not in ("s-cal", "s-chg") and RE_FECHA.search(textos_fecha.get(cls, txt)):
             rep.aviso("slide " + cls, "contiene una fecha o mes calendario: la propuesta no lleva fechas, semanas ni sesiones (el calendario se acuerda en el kickoff). Si es la fecha de una fuente o de un valor de lista está bien")
     ids_sol = set(x.get("id") for a in d.get("areas") or [] if isinstance(a, dict) for x in a.get("soluciones") or [] if isinstance(x, dict) and x.get("id"))
     for cls, txt in textos:
@@ -3826,9 +3908,9 @@ def chequeos_html(html, d, rep):
         rep.err("slide s-deliv", "falta la palabra «Entregables» (la exige agregar-campo-precio.py)")
     if "s-price" in tds and MARCA_PRECIO not in tds["s-price"].lower():
         rep.err("slide s-price", "falta «Propuesta Económica» (marcador de campos de precio)")
-    for k_p in ("s-price2", "s-price3"):
+    for k_p in ("s-price2", "s-price3", "s-price4"):
         if k_p in tds and MARCA_PRECIO not in tds[k_p].lower():
-            rep.err("slide " + k_p, "falta «Propuesta Económica» (marcador de campos de precio de la %s hoja)" % ("2.ª" if k_p == "s-price2" else "3.ª"))
+            rep.err("slide " + k_p, "falta «Propuesta Económica» (marcador de campos de precio de la %s hoja)" % {"s-price2": "2.ª", "s-price3": "3.ª", "s-price4": "4.ª"}[k_p])
     if "s-pay" in tds and MARCA_PAGO not in tds["s-pay"].lower():
         rep.err("slide s-pay", "falta «Facilidad de pago» en el título (marcador de los campos PagoCuota)")
     if "s-price" in tds and "s-pay" not in tds and "pago" in orden_slides(d):
@@ -3840,7 +3922,7 @@ def chequeos_html(html, d, rep):
             rep.aviso("slide " + cls, "%d resaltados <strong>: la regla §4.8 pide ~2-3 por slide" % n)
     permitidas = SIGLAS_OK | set(d.get("siglas_ok") or []) | set(re.findall(r"[A-Z]{2,}", d["cliente"].get("nombre", "")))
     for cls, txt in textos:
-        sin_codigos = re.sub(r"\b[A-Z]{2,4}-\d+\b", " ", txt)
+        sin_codigos = re.sub(r"\b[A-Z]{2,4}-\d+(?:-[A-Z])?\b", " ", txt)
         encontradas = set(re.findall(r"\b[A-Z]{2,6}\b", sin_codigos)) - permitidas
         encontradas = set(x for x in encontradas if "(%s)" % x not in txt)
         if encontradas:
@@ -3962,6 +4044,11 @@ def ejecutar(args):
     else:
         ctx, agg = calcular(d, rep)
     validar_semantica(d, ctx, agg, rep, Tokens(ctx, Reporte()))
+    if "cambios" in orden:
+        if det:
+            rep.err("cambios", "la slide «Qué está cambiando» no existe en el formato de Detección")
+        else:
+            validar_cambios(d, rep)
     if "calendario" in orden:
         if det:
             rep.err("calendario", "la slide de calendario no existe en el formato de Detección")

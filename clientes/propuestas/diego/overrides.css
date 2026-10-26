@@ -1,9 +1,9 @@
-/* Overrides locales · Diego CAP-109
-   ---------------------------------------------------------------------------
-   Sin overrides propios: 6 módulos repartidos en 2 slides de Programa de 3
-   módulos cada una (patrón cashea/, cards a tamaño completo — no el modo
-   compacto 5-6 de una sola grilla en _base/styles.css) y 6 slides de
-   Cronograma (1 por sesión), ambos ya soportados por el CSS compartido sin
-   tocar nada. Sin slide de Alcance (no hay expectativas del cliente que
-   delimitar). Paleta, tipografía y layout 100% de _base/styles.css.
-   --------------------------------------------------------------------------- */
+/* Ajustes propios de esta propuesta (se enlaza después de habilidades-compacto.css). */
+
+/* CAP-109 Diego: 5 entregables en 4 módulos. La plantilla está pensada para 40+ entregables: se escala la tipografía de la slide 5
+   (2 columnas, módulos 1 y 2 | 3 y 4) para que no quede vacía, sin inventar contenido. */
+.s-deliv.roomy .deliv-col { padding: 26px 26px 20px; min-height: 440px; }
+.s-deliv.roomy .da-name { font-size: 21px; margin-bottom: 12px; }
+.s-deliv.roomy .da li { font-size: 17px; line-height: 1.4; padding: 7px 0 7px 19px; }
+.s-deliv.roomy .da li::before { top: 14px; width: 9px; height: 9px; }
+.s-deliv.roomy .da + .da { margin-top: 26px; padding-top: 26px; }

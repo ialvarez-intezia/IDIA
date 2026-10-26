@@ -1,0 +1,162 @@
+/* Ajustes propios de esta propuesta (se enlaza después de habilidades-compacto.css). */
+
+/* ===========================================================================
+   Marca: Brand Kit Intezia v2.1 (13/10/2026). Amarillo #FFD300, Negro Noche #0A0A0A, Naranja Brasa #E58423 y Poppins (OFL).
+   Sobreescribe los tokens de ../_base/styles.css para este deck. Fuentes en ../_base/fonts/ (fontsource, latin).
+   =========================================================================== */
+@font-face { font-family: 'Poppins'; src: url('../_base/fonts/poppins-400.woff2') format('woff2'); font-weight: 400; font-style: normal; }
+@font-face { font-family: 'Poppins'; src: url('../_base/fonts/poppins-600.woff2') format('woff2'); font-weight: 600; font-style: normal; }
+@font-face { font-family: 'Poppins'; src: url('../_base/fonts/poppins-700.woff2') format('woff2'); font-weight: 700; font-style: normal; }
+@font-face { font-family: 'Poppins'; src: url('../_base/fonts/poppins-800.woff2') format('woff2'); font-weight: 800; font-style: normal; }
+:root {
+  --black: #0A0A0A;
+  --yellow: #FFD300;
+  --orange: #E58423;
+  --font-display: "Poppins", "Inter", system-ui, sans-serif;
+  --font-body: "Poppins", "Inter", system-ui, sans-serif;
+  --gradient-warm: linear-gradient(135deg, #FFD300 0%, #E58423 100%);
+  --gradient-warm-rev: linear-gradient(135deg, #E58423 0%, #FFD300 100%);
+}
+body { background: var(--black); }
+.slide h1, .slide h2 { letter-spacing: -0.015em; }
+
+/* ===========================================================================
+   Zoom · Innovación con encuentros: las horas se calculan por encuentro y no por entregable, así que se ocultan los totales
+   de «entregables» y los conteos de la cabecera. Base: zoom-innovacion-skills/overrides.css (INN-004).
+   =========================================================================== */
+.s-scope .scope-total { display: none; }
+.s-route .rg-phase-n, .s-route .rg-front-n { display: none; }
+
+/* Slide de ruta: una sola línea de trabajo y dos fases */
+.s-route .route-grid { --rowh: 236px !important; }
+.s-route .rg-cell { padding: 28px 30px; }
+.s-route .rg-cell p { font-size: 22px; line-height: 1.42; }
+.s-route .rg-front-h { font-size: 26px; }
+.s-route .route-miles { margin-top: 38px; }
+.s-route .mile b { font-size: 18px; margin-bottom: 8px; }
+.s-route .mile p { font-size: 15px; line-height: 1.45; }
+.s-route .route-note { margin-top: 20px; font-size: 14.5px; }
+
+/* Cómo trabajamos */
+.s-method .mt-steps { gap: 16px; margin-bottom: 14px; }
+.s-method .mt-steps li { min-height: 104px; padding: 14px 16px 14px 62px; }
+.s-method .mt-steps li::before { left: 16px; top: 15px; width: 32px; height: 32px; line-height: 32px; font-size: 16px; }
+.s-method .mt-steps b { font-size: 17px; margin-bottom: 5px; }
+.s-method .mt-steps span { font-size: 13px; }
+.s-method .mt-strips { gap: 16px; margin-bottom: 14px; }
+.s-method .mt-why, .s-method .mt-who { padding: 13px 18px; font-size: 13px; }
+.s-method .mt-why b, .s-method .mt-who b { font-size: 13px; }
+.s-method .mt-info { gap: 16px; margin-bottom: 14px; }
+.s-method .mt-card { padding: 17px 22px 15px; }
+.s-method .mt-card-label { margin-bottom: 10px; font-size: 11.5px; }
+.s-method .mt-card p, .s-method .mt-card li { font-size: 14px; line-height: 1.42; }
+.s-method .mt-card li { padding-bottom: 8px; }
+.s-method .mt-tile { padding: 13px 16px 14px; }
+.s-method .mt-tile span { font-size: 10px; margin-bottom: 6px; }
+.s-method .mt-tile b { font-size: 13px; }
+
+/* Letra más grande y sin espacios en blanco: retorno, pago y próximos pasos (zoom escala texto y espacios juntos) */
+.s-roi .roi-body, .s-roi .roi-dest-wrap { zoom: 1.2; }
+.s-roi .roi-dest-wrap { margin-top: 24px; }
+.s-pay .sub { font-size: 17px; max-width: 980px; }
+.s-pay .ps-tag { font-size: 12px; padding: 4px 12px; }
+.s-pay .ps-when { font-size: 30px; margin-top: 16px; }
+.s-pay .ps-hito { font-size: 15px; line-height: 1.4; margin-top: 8px; }
+.s-pay .ps-lbl { font-size: 12px; }
+.s-pay .pn-main { font-size: 22px; max-width: 1000px; line-height: 1.4; }
+.s-pay .pn-sub { font-size: 14.5px; max-width: 980px; }
+.s-next .nx-steps { margin-top: 44px; }
+.s-next .nx-step { padding-top: 6px; padding-bottom: 12px; }
+.s-next .nx-contact { margin-top: 36px; }
+.s-next .nx-card { padding: 34px 38px 36px; }
+.s-next .nx-line { font-size: 19px; }
+.s-method .mt-card p, .s-method .mt-card li { font-size: 15px; }
+.s-method .mt-steps span { font-size: 14px; }
+.s-method .mt-why, .s-method .mt-who { font-size: 14px; padding: 15px 20px; }
+.s-method .mt-tile b { font-size: 14.5px; }
+.s-method .mt-tile { padding: 15px 18px 16px; }
+.s-method .mt-steps li { min-height: 124px; }
+
+/* Qué está cambiando: letra más grande para llenar la lámina */
+.s-chg .sub { font-size: 18px; }
+.s-chg .chg-tl, .s-chg .chg-cols { zoom: 1.2; }
+.s-chg .chg-tl { margin-top: 22px; }
+
+/* Alcance: datos de interés (alcance.destacados, solo en la opción A) y letra más grande para no dejar espacio en blanco */
+.s-scope .sub { font-size: 18px; max-width: 980px; }
+.s-scope.roomy:has(.scope-facts) .scope-panel { padding: 20px 28px 12px; }
+.s-scope.roomy:has(.scope-facts) .scope-rows .area { font-size: 22px; }
+.s-scope.roomy:has(.scope-facts) .scope-rows .para { font-size: 17px; line-height: 1.4; }
+.s-scope.roomy:has(.scope-facts) .scope-panels.one .scope-rows li { grid-template-columns: 340px 1fr auto; padding: 16px 0 18px; }
+.s-scope .scope-facts { margin-top: 22px; }
+.s-scope .scope-facts .scope-card-label { font-size: 12px; padding: 5px 12px; }
+.s-scope .scope-facts ul { list-style: none; margin: 12px 0 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+.s-scope .scope-facts li { border-top: 4px solid var(--yellow); background: rgba(10, 10, 10, 0.045); border-radius: 0 0 11px 11px; padding: 14px 18px 16px; min-height: 128px; }
+.s-scope .scope-facts li:nth-child(even) { border-top-color: var(--orange); }
+.s-scope .scope-facts b { display: block; font-family: var(--font-display); font-weight: 700; font-size: 17px; line-height: 1.2; margin-bottom: 8px; color: var(--black); }
+.s-scope .scope-facts span { font-family: var(--font-body); font-size: 14px; line-height: 1.45; color: rgba(10, 10, 10, 0.82); }
+.s-scope.roomy:has(.scope-facts) .scope-out { margin-top: 18px; padding: 14px 24px; grid-template-columns: 170px 1fr; }
+.s-scope.roomy:has(.scope-facts) .scope-out li { font-size: 14px; line-height: 1.45; padding: 4px 0 4px 16px; }
+.s-scope.roomy:has(.scope-facts) .scope-out li::before { top: 12px; }
+.s-scope.roomy:not(:has(.scope-facts)) .scope-out li { font-size: 14px; line-height: 1.45; }
+.s-scope.roomy:not(:has(.scope-facts)) .scope-card-label { font-size: 12px; }
+.s-scope.roomy:not(:has(.scope-facts)) .scope-panel { padding: 16px 24px 8px; }
+.s-scope.roomy:not(:has(.scope-facts)) .scope-panels.one .scope-rows li { padding: 11px 0 12px; grid-template-columns: 300px 1fr auto; }
+.s-scope.roomy:not(:has(.scope-facts)) .scope-rows .area { font-size: 18px; }
+.s-scope.roomy:not(:has(.scope-facts)) .scope-rows .para { font-size: 15px; }
+
+/* Calendario con pocas filas (B y C): letra más grande y filas más altas */
+.s-cal:not(:has(.cal-col li:nth-child(8))) .cal-box { padding: 26px 34px 20px; }
+.s-cal:not(:has(.cal-col li:nth-child(8))) .cal-label { font-size: 16px; margin-bottom: 12px; }
+.s-cal:not(:has(.cal-col li:nth-child(8))) .cal-intro { font-size: 16px; line-height: 1.45; margin-bottom: 14px; }
+.s-cal:not(:has(.cal-col li:nth-child(8))) .cal-col li { height: 78px !important; grid-template-columns: 112px 1fr; }
+.s-cal:not(:has(.cal-col li:nth-child(8))) .cal-d { font-size: 18px; }
+.s-cal:not(:has(.cal-col li:nth-child(8))) .cal-t { font-size: 17px; line-height: 1.25; }
+.s-cal:not(:has(.cal-col li:nth-child(5))) .cal-col li { height: 100px !important; }
+.s-cal:not(:has(.cal-col li:nth-child(5))) .cal-box { padding-top: 32px; }
+.s-scope.roomy:not(:has(.scope-facts)):not(:has(.scope-rows li:nth-child(7))) .scope-panels.one .scope-rows li { padding: 14px 0 15px; }
+.s-scope.roomy:not(:has(.scope-facts)):not(:has(.scope-rows li:nth-child(7))) .scope-out { margin-top: 22px; padding: 16px 24px; }
+
+/* ===========================================================================
+   Slide de calendario (s-cal): opción del generador (ESTEI CAI-058, 20/10/2026). Pendiente de pasar al CSS canónico.
+   =========================================================================== */
+.s-cal { background: var(--black); color: var(--white); padding: 44px 56px 0; }
+.s-cal .counter { color: var(--yellow); }
+.s-cal .eyebrow { color: var(--orange); margin-bottom: 6px; }
+.s-cal h2 { font-family: var(--font-display); font-weight: 700; font-size: 36px; line-height: 1.05; margin-bottom: 8px; }
+.s-cal .sub { font-family: var(--font-body); font-size: 15px; line-height: 1.4; max-width: 940px; color: rgba(255, 255, 255, 0.82); }
+.s-cal .foot .meta { color: rgba(255, 255, 255, 0.65); }
+.s-cal .cal-box { margin-top: 22px; padding: 20px 30px 14px; border-left: 6px solid var(--yellow); background: rgba(255, 255, 255, 0.04); border-radius: 0 10px 10px 0; }
+.s-cal .cal-label { font-family: var(--font-display); font-weight: 700; font-size: 14px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--yellow); margin-bottom: 8px; }
+.s-cal .cal-intro { font-family: var(--font-body); font-size: 13.5px; line-height: 1.4; color: rgba(255, 255, 255, 0.85); margin-bottom: 8px; }
+.s-cal .cal-cols { display: grid; grid-template-columns: 1fr 1fr; column-gap: 28px; margin-top: 6px; }
+.s-cal .cal-col { list-style: none; margin: 0; padding: 0; }
+.s-cal .cal-col li { display: grid; grid-template-columns: 84px 1fr; align-items: center; column-gap: 10px; height: var(--cal-rowh); border-bottom: 1px solid rgba(255, 255, 255, 0.14); }
+.s-cal .cal-col li:last-child { border-bottom: none; }
+.s-cal .cal-d { font-family: var(--font-display); font-weight: 700; font-size: 14px; color: var(--yellow); white-space: nowrap; }
+.s-cal .cal-h { display: none; }
+.s-cal .cal-t { font-family: var(--font-display); font-weight: 600; font-size: 12.5px; line-height: 1.2; color: var(--white); }
+
+/* ===========================================================================
+   Slide «Qué está cambiando» (s-chg): opción del generador (Zoom INN-006, 26/10/2026). Slide oscura: fechas del proveedor,
+   qué pasa si no se hace nada y por qué con Intezia. Pendiente de pasar al CSS canónico.
+   =========================================================================== */
+.s-chg { background: var(--black); color: var(--white); padding: 40px 56px 0; }
+.s-chg .counter { color: var(--yellow); }
+.s-chg .eyebrow { color: var(--orange); margin-bottom: 6px; }
+.s-chg h2 { font-family: var(--font-display); font-weight: 700; font-size: 34px; line-height: 1.05; margin-bottom: 8px; }
+.s-chg .sub { font-family: var(--font-body); font-size: 14.5px; line-height: 1.4; max-width: 940px; color: rgba(255, 255, 255, 0.82); }
+.s-chg .foot .meta { color: rgba(255, 255, 255, 0.65); }
+.s-chg .chg-label { font-family: var(--font-display); font-weight: 700; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--yellow); margin-bottom: 8px; }
+.s-chg .chg-tl { margin-top: 18px; }
+.s-chg .chg-events { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(var(--chg-n), 1fr); gap: 12px; }
+.s-chg .chg-events li { border-top: 3px solid var(--yellow); background: rgba(255, 255, 255, 0.05); border-radius: 0 0 8px 8px; padding: 11px 14px 13px; }
+.s-chg .chg-d { display: block; font-family: var(--font-display); font-weight: 800; font-size: 18px; line-height: 1.1; color: var(--yellow); margin-bottom: 6px; }
+.s-chg .chg-t { font-family: var(--font-body); font-size: 12.5px; line-height: 1.4; color: rgba(255, 255, 255, 0.9); }
+.s-chg .chg-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 16px; }
+.s-chg .chg-box { padding: 15px 20px 8px; border-radius: 10px; background: rgba(255, 255, 255, 0.05); border-left: 5px solid var(--orange); }
+.s-chg .chg-why { border-left-color: var(--yellow); }
+.s-chg .chg-box ul { list-style: none; margin: 0; padding: 0; }
+.s-chg .chg-box li { font-family: var(--font-body); font-size: 12.5px; line-height: 1.4; margin-bottom: 9px; color: rgba(255, 255, 255, 0.88); }
+.s-chg .chg-box li b { display: block; font-family: var(--font-display); font-weight: 700; font-size: 13.5px; color: var(--white); margin-bottom: 1px; }
+.s-chg .chg-src { margin-top: 12px; font-family: var(--font-body); font-size: 10.5px; line-height: 1.4; color: rgba(255, 255, 255, 0.6); max-width: 960px; }

@@ -1,0 +1,457 @@
+<!doctype html>
+<!--
+  Propuesta · Decovenezia · Servicio de Habilidades (CAI-063)
+  División: Educación · Servicio: Habilidades (§4.1a) · Alianza: no
+  GENERADO por scripts/generar-habilidades-compacto.py (plantilla 3.0 (2026-10-08), formato habilidades) desde datos.json.
+  No editar a mano: editar datos.json y regenerar. Estilos propios del deck: overrides.css.
+  Fuente del insumo: Ficha de Levantamiento (20/10/2026) y transcripción de la reunión (20/10/2026)
+
+  Formato compacto de 9 slides, en el orden de las preguntas del cliente (Ventas, 2026-10-07), sin semanas, sesiones
+  ni fechas (Keiber, 2026-10-08):
+    1 Portada · 2 Alcance · 3 Ruta · 4 Cómo trabajamos · 5 Entregables · 6 Retorno · 7 Inversión · 8 Facilidad de pago · 9 Próximos pasos
+  Marcadores de detección de AcroForms (agregar-campo-precio.py), por página: «Propuesta Económica» solo en la slide de
+  inversión; «Lo que se llevan» y «Entregables» solo en la de entregables; «Facilidad de pago» solo en la de pago.
+  Campos AcroForm: Programa, Notas, PrecioBase, Descuento, PrecioTotal (inversión), PagoCuota1..2 (pago) y Entregables, Acreditacion (entregables). Se reposicionan con scripts/customize-habilidades-compacto.py.
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Propuesta · Decovenezia · Intezia Educación</title>
+  <link rel="stylesheet" href="../_base/styles.css">
+  <link rel="stylesheet" href="habilidades-compacto.css">
+  <link rel="stylesheet" href="overrides.css">
+</head>
+<body>
+
+  <main class="deck">
+
+    <!-- 1 · Portada: ¿cuál es mi problema? -->
+    <section class="slide s-cover">
+      <span class="counter">01 / 09</span>
+      <div class="logo-big">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia Educación">
+      </div>
+      <div class="body">
+        <p class="eyebrow">Propuesta de proyecto · Servicio de Habilidades</p>
+        <h1 style="font-size:46px">
+          Un Cerebro Digital para cotizar<br>
+          y delegar con criterio propio<br>
+          <span class="hl">en Decovenezia</span>
+        </h1>
+        <p class="lead">
+          Este proyecto acompaña al gerente de Decovenezia a construir su <strong>Cerebro Digital</strong>: un asistente en <strong>Claude</strong> que conoce su lista de precios y su criterio de descuento, arma los presupuestos y le muestra sus visitas en un solo lugar.
+        </p>
+        <div class="pain-strip">
+          <div class="pain-item">
+            <span class="pain-num">A mano</span>
+            <span class="pain-lbl">se calcula cada presupuesto: se suma, se resta y se multiplica contra la lista de precios en Excel.</span>
+          </div>
+          <div class="pain-item">
+            <span class="pain-num">Criterio</span>
+            <span class="pain-lbl">de descuento que vive solo en la cabeza del gerente y por eso no se puede delegar.</span>
+          </div>
+          <div class="pain-item">
+            <span class="pain-num">Visitas</span>
+            <span class="pain-lbl">que llegan por WhatsApp y se agendan a mano, sin ver qué cotizó cada vendedor.</span>
+          </div>
+        </div>
+        <p class="pain-src">Fuente: ficha de levantamiento de Intezia y reunión con Decovenezia (20/10/2026).</p>
+      </div>
+      <div class="id-line">
+        <span class="codigo">Código: CAI-063</span>
+        <span class="cliente">Decovenezia</span>
+      </div>
+    </section>
+
+    <!-- 2 · Alcance: qué vamos a hacer y para qué -->
+    <section class="slide s-scope roomy">
+      <span class="counter">02 / 09</span>
+      <p class="eyebrow">02 · Alcance</p>
+      <h2>Un Cerebro Digital para el gerente.</h2>
+      <p class="sub">El gerente construye su <strong>asistente personal en Claude</strong>, con su lista de precios y su criterio propio.</p>
+
+      <div class="scope-panels one" style="--np:1">
+        <div class="scope-panel acc-y">
+          <div class="scope-head">
+            <span class="scope-tag">Claude y Obsidian</span>
+            <span class="scope-total"><b>1</b> Cerebro Digital</span>
+          </div>
+          <ul class="scope-rows">
+              <li><span class="area">Cerebro Digital del gerente <small class="comp">10 h de trabajo guiado por Intezia, con acceso compartido para su persona de apoyo.</small></span><span class="para">Cotizar desde la lista de precios, aplicar su criterio de descuento y ver sus visitas y órdenes</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="scope-out">
+        <p class="scope-card-label">Fuera de este alcance</p>
+        <ul>
+          <li>Una aplicación para los vendedores o un sistema propio de cotización: el cerebro opera con herramientas que ya existen.</li>
+          <li>Emitir las órdenes de producción y la facturación: siguen siendo manuales por obligación fiscal; el cerebro da la trazabilidad.</li>
+          <li>Los cerebros de los vendedores y el espacio de control del gerente: son la etapa que sigue.</li>
+          <li>Las licencias de Claude, que van aparte (detalle en la inversión).</li>
+        </ul>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Decovenezia · CAI-063</span>
+      </div>
+    </section>
+
+    <!-- 3 · Ruta: qué pasa en cada fase -->
+    <section class="slide s-route">
+      <span class="counter">03 / 09</span>
+      <p class="eyebrow">03 · Ruta</p>
+      <h2>Un cerebro en uso, en tres fases.</h2>
+      <p class="sub">El calendario se acuerda en la reunión de arranque. La <strong>garantía y el seguimiento</strong> a 30, 60 y 90 días corren desde el cierre del proyecto.</p>
+
+      <div class="route-grid n1" style="--cols:3; --rows:1; --rowh:214px">
+
+        <div class="rg-corner"></div>
+        <div class="rg-phase rg-ph-1">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Base</span><b class="rg-phase-n">2 h</b></span>
+          <span class="rg-phase-name">Claude y propósito</span>
+        </div>
+        <div class="rg-phase rg-ph-2">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Grafo</span><b class="rg-phase-n">2 h</b></span>
+          <span class="rg-phase-name">Precios y descuento</span>
+        </div>
+        <div class="rg-phase rg-ph-3 hi">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Uso</span><b class="rg-phase-n">6 h</b></span>
+          <span class="rg-phase-name">Skills y conexión</span>
+        </div>
+        <div class="rg-phase rg-fu">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Garantía</span></span>
+          <span class="rg-phase-date">30, 60 y 90 días</span>
+          <span class="rg-phase-txt">Seguimiento desde el cierre del proyecto</span>
+        </div>
+
+        <div class="rg-front acc-y">
+          <span class="rg-front-h">El Cerebro Digital del gerente</span>
+          <span class="rg-front-row"><span class="rg-front-tool">Claude</span><b class="rg-front-n">10 h</b></span>
+          <span class="rg-front-meta">de trabajo</span>
+        </div>
+        <div class="rg-cell"><span class="rg-h solo-h"><b>2</b> horas</span><p>Fundamentos de Claude, sin términos técnicos, y el propósito del cerebro.</p></div>
+        <div class="rg-cell"><span class="rg-h solo-h"><b>2</b> horas</span><p>Su lista de precios y su descuento, ordenados en un grafo.</p></div>
+        <div class="rg-cell hi"><span class="rg-h solo-h"><b>6</b> horas</span><p>Skills del presupuesto formal y de visitas y órdenes, conectadas.</p></div>
+
+        <div class="rg-follow" style="grid-column:5; grid-row:2 / span 1">
+          <ul>
+            <li><b>30 días</b><span>Uso real del cerebro por el gerente</span></li>
+            <li><b>60 días</b><span>Ajustes y nuevas construcciones</span></li>
+            <li><b>90 días</b><span>Tiempo recuperado y errores</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="route-miles" style="grid-template-columns:repeat(5,1fr)">
+        <div class="mile"><span class="mile-d"></span><b>Arranque · aparte</b><p>1 h para acordar los presupuestos reales y el calendario con el gerente.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Base</b><p>Claude explicado y el propósito del cerebro del gerente.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Grafo</b><p>Su lista de precios y su criterio para descontar, ordenados en un grafo.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Uso</b><p>Skills conectadas: presupuesto formal, visitas y estado de órdenes.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>30 · 60 · 90 días</b><p>Seguimiento: uso del cerebro, ajustes, tiempo recuperado y errores.</p></div>
+      </div>
+      <p class="route-note">Las 10 horas de trabajo son una proyección: 2 h de base, 2 h de grafo y 6 h de uso. La reunión de arranque (1 h) va aparte y no suma horas.</p>
+      <p class="route-next"><b>Etapa siguiente</b> Cerebros para los vendedores, conectados al del gerente, con un espacio donde ver qué cotizó cada uno.</p>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Decovenezia · CAI-063</span>
+      </div>
+    </section>
+
+    <!-- 4 · Cómo trabajamos: pasos, por qué en ese orden, casos reales, práctica, datos y logística -->
+    <section class="slide s-method roomy">
+      <span class="counter">04 / 09</span>
+      <p class="eyebrow">04 · Cómo trabajamos</p>
+      <h2>Así trabajamos el proyecto.</h2>
+      <p class="sub">Trabajo guiado con el gerente, sobre sus propios presupuestos, hasta que usa su cerebro por sí solo.</p>
+
+      <ol class="mt-steps" style="--n:4">
+          <li><b>Construimos</b><span>Con el gerente, en vivo y sobre un presupuesto real.</span></li>
+          <li><b>Probamos</b><span>Con su lista de precios y sus clientes, hasta que funcione.</span></li>
+          <li><b>Adoptamos</b><span>El gerente usa su cerebro cada día, sin ayuda.</span></li>
+          <li><b>Medimos</b><span>El tiempo recuperado y los errores, a 30, 60 y 90 días.</span></li>
+      </ol>
+      <div class="mt-strips">
+        <p class="mt-why"><b>Por qué en este orden</b> Primero se entiende Claude y se define el propósito del cerebro; después se ordena el conocimiento del gerente, como sus descuentos; al final se construyen las Skills y se conectan a sus hojas de cálculo.</p>
+        <p class="mt-who"><b>Quién construye</b> El gerente construye su cerebro; <strong>Intezia guía</strong> cada paso, sobre presupuestos y visitas reales de Decovenezia.</p>
+      </div>
+
+      <div class="mt-info">
+        <div class="mt-card">
+          <p class="mt-card-label">Cómo funciona en la práctica</p>
+          <ul><li><b>Un cerebro, dos accesos.</b> Un solo cerebro para el gerente, con acceso compartido para su persona de apoyo.</li><li><b>Sin términos técnicos.</b> Claude se explica desde lo básico: se le pide lo que se necesita en palabras simples.</li><li><b>Cuenta de Claude.</b> Se necesita una cuenta de Claude con un plan de pago: se deja lista al arrancar.</li></ul>
+        </div>
+        <div class="mt-card">
+          <p class="mt-card-label">Cómo cuidamos sus datos</p>
+          <p>Solo se carga en el cerebro lo que el gerente decide compartir: la lista de precios y el criterio de descuento se tratan como información confidencial, y no se suben datos de clientes sin autorización. Los criterios de uso seguro se acuerdan al empezar.</p>
+        </div>
+      </div>
+
+      <div class="mt-logi">
+        <div class="mt-tile"><span>Modalidad</span><b>Mixta: remota o presencial, según se acuerde en la reunión de arranque.</b></div>
+        <div class="mt-tile"><span>Participantes</span><b>El gerente de Decovenezia, con acceso compartido para su persona de apoyo.</b></div>
+        <div class="mt-tile"><span>Ritmo de trabajo</span><b>Según la agenda del gerente, con preferencia por la tarde y la noche.</b></div>
+        <div class="mt-tile"><span>Arranque</span><b>La fecha la fija Decovenezia; una reunión de arranque de 1 h, aparte, acuerda el calendario.</b></div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Decovenezia · CAI-063</span>
+      </div>
+    </section>
+
+    <!-- 5 · Entregables: ¿con qué me quedo? (catálogo + piezas transversales) -->
+    <section class="slide s-deliv">
+      <span class="counter">05 / 09</span>
+      <p class="eyebrow">05 · Entregables</p>
+      <div class="deliv-head">
+        <h2>Lo que recibe el gerente.</h2>
+        <p class="deliv-sub"><span class="nw">Lo que se llevan</span>: <strong>un cerebro en uso</strong> para presupuestar, ver sus visitas y seguir sus órdenes, más el seguimiento a 30, 60 y 90 días.</p>
+      </div>
+
+      <div class="deliv-carriles" style="--ncols:1">
+        <span class="dc acc-y" style="grid-column: span 1">Claude y Obsidian</span>
+      </div>
+
+      <div class="deliv-cols" style="--ncols:1">
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">Cerebro Digital del gerente</p>
+            <ul>
+              <li>Claude explicado y propósito del cerebro<ul class="inc"><li>Qué es Claude y qué hace cada pieza, sin términos técnicos</li><li>Cuándo conviene automatizar un proceso y cuándo no</li><li>El propósito del cerebro y sus primeros pedidos</li></ul></li>
+              <li>Lista de precios y criterio de descuento en Obsidian<ul class="inc"><li>La lista de precios por tipo de persiana y de tela</li><li>El criterio con el que decide cada descuento, escrito</li><li>Un Project de Claude con su rol y su voz</li></ul></li>
+              <li>Skill del presupuesto formal, lista para enviar<ul class="inc"><li>Calcula desde las medidas, el tipo de persiana y la tela</li><li>Propone el descuento y el gerente solo valida</li><li>Presupuesto formal en PDF, listo para enviar o imprimir</li></ul></li>
+              <li>Skill de visitas y estado de órdenes, conectada<ul class="inc"><li>Visitas del día con cliente, vendedor y lo cotizado</li><li>Estado de cada orden de producción y su fecha</li><li>Conectada a sus hojas de cálculo, con uso seguro</li></ul></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="deliv-band">
+        <div class="db-card db-1">
+          <span class="db-label">Para todo el proyecto</span>
+        </div>
+        <div class="db-card db-2">
+          <span class="db-label">Valor inmediato</span>
+        </div>
+      </div>
+      <!-- Cajas multiline editables (vacías en HTML: el contenido vive dentro del AcroForm /V). -->
+      <div class="multi-box db-box db-box-1" data-field="Entregables"></div>
+      <div class="multi-box db-box db-box-2" data-field="Acreditacion"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Decovenezia · CAI-063</span>
+      </div>
+    </section>
+
+    <!-- 6 · Retorno: ¿qué gano? (método de cálculo). Sin estudios ni citas externas. -->
+    <section class="slide s-roi">
+      <span class="counter">06 / 09</span>
+      <p class="eyebrow">06 · Retorno</p>
+      <h2>Retorno esperado: tiempo recuperado, medido.</h2>
+      <p class="sub">Se mide contra la línea base que el gerente deja al empezar y se sigue a 30, 60 y 90 días.</p>
+
+      <div class="roi-body">
+        <div class="roi-panel">
+          <p class="roi-panel-title">Cómo se calcula</p>
+          <ol class="roi-steps">
+            <li><b>Volumen</b><span>Cuántos presupuestos arma el gerente en un periodo.</span></li>
+            <li><b>Tiempo actual</b><span>Cuánto toma hoy cada presupuesto. Es la <strong>línea base</strong>.</span></li>
+            <li><b>Tiempo con el cerebro</b><span>Lo que toma el mismo presupuesto con su Skill ya en uso.</span></li>
+            <li><b>Horas recuperadas</b><span>Diferencia entre ambos tiempos, por periodo: una estimación referencial, sin compromiso de resultado.</span></li>
+            <li><b>Errores</b><span>Cuántos presupuestos se corrigen hoy y cuántos después, para medir cuánto bajan.</span></li>
+          </ol>
+        </div>
+
+        <div class="roi-right">
+          <p class="roi-right-title">Calendario de garantía y cálculo del retorno</p>
+          <div class="roi-card">
+            <b>30 días</b>
+            <p>El cerebro en uso real y la línea base validada con el gerente.</p>
+          </div>
+          <div class="roi-card">
+            <b>60 días</b>
+            <p>Ajustes del cerebro y horas recuperadas medidas contra la línea base.</p>
+          </div>
+          <div class="roi-card">
+            <b>90 días</b>
+            <p>Medición del tiempo recuperado y de su valor en dinero.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="roi-dest-wrap">
+        <p class="roi-dest-title">Hacia dónde va el proyecto</p>
+        <div class="roi-dest">
+          <div class="rd-item"><b>Tiempo del gerente</b><p>Si el tiempo se libera, el gerente puede dedicarlo a más visitas y a <strong>delegar funciones</strong>.</p></div>
+          <div class="rd-item"><b>Criterio ordenado</b><p>El criterio de descuento y la lista de precios dejan de depender de la memoria: quedan en el grafo del cerebro.</p></div>
+          <div class="rd-item"><b>Más tareas al cerebro</b><p>Con el resultado medido, Decovenezia decide qué más lleva a su cerebro y a los vendedores.</p></div>
+        </div>
+      </div>
+
+      <div class="roi-hook"><p>A los 90 días del cierre, Decovenezia contará con el tiempo recuperado y los errores evitados, medidos contra su línea base.</p></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Decovenezia · CAI-063</span>
+      </div>
+    </section>
+
+    <!-- 7 · Inversión (hoja de cotización estándar; antepenúltima slide) -->
+    <section class="slide s-price">
+      <span class="counter">07 / 09</span>
+      <h2 class="title">Inversión del proyecto.</h2>
+      <p class="price-intro">Propuesta Económica · Servicio de Habilidades</p>
+
+      <div class="block">
+        <span class="block-eyebrow">Duración</span>
+        <p class="block-value">Proyecto en tres fases, con seguimiento y garantía a 30, 60 y 90 días. 10 horas de trabajo.</p>
+      </div>
+
+      <div class="block block-programa">
+        <span class="block-eyebrow">Programa</span>
+      </div>
+      <div class="multi-box programa-box" data-field="Programa"></div>
+
+      <div class="block block-cotizacion">
+        <span class="block-eyebrow">Cotización</span>
+      </div>
+
+      <span class="cot-label cot-label-base">Propuesta + Inversión</span>
+      <div class="cot-frame base-frame"></div>
+
+      <span class="cot-label cot-label-discount">Descuento</span>
+      <span class="cot-sign-minus">&minus;$</span>
+      <div class="cot-frame discount-frame"></div>
+      <span class="cot-urgent-note">Descuento válido por 15 días</span>
+
+      <span class="cot-label cot-label-total">TOTAL</span>
+      <div class="cot-frame total-frame"></div>
+
+      <p class="cot-validity">Cotización válida por 30 días.</p>
+      <div class="cot-terms-box">
+        <span class="cot-terms-label">Importante</span>
+        <p class="cot-terms-text">Este servicio se presta bajo nuestros <a href="https://drive.google.com/file/d/1PA-ZSt4KnyY5dpxXzgkIk6-yfGlV2eF8/view?usp=drive_link" target="_blank" rel="noopener">términos y condiciones</a>. Al avanzar con esta propuesta, ambas partes los aceptan.</p>
+      </div>
+
+      <div class="cot-garantia-badge">
+        <span class="cot-garantia-tag">Garantía 30-60-90</span>
+        <p class="cot-garantia-text">Estamos contigo hasta que la habilidad quede instalada.</p>
+      </div>
+
+      <div class="block block-notes-container">
+        <span class="block-eyebrow">Notas</span>
+      </div>
+      <div class="multi-box notas-box" data-field="Notas"></div>
+
+      <div class="lic-wrap">
+        <span class="lic-eyebrow">Licenciamiento · aparte de esta inversión</span>
+        <div class="lic-cards">
+          <div class="lic-card acc-y">
+            <span class="lic-name">Claude · cuenta del gerente</span>
+            <p>Una cuenta de <strong>Claude</strong> en un plan que permita construir su cerebro y compartir el acceso. Lo confirma Decovenezia con el proveedor.</p>
+          </div>
+          <div class="lic-card acc-o">
+            <span class="lic-name">Obsidian · gratuito</span>
+            <p>Aplicación de notas donde el gerente organiza su conocimiento como grafo. Se instala al trabajar el <strong>grafo</strong>.</p>
+          </div>
+        </div>
+        <p class="lic-note">Esta propuesta no incluye valores de lista: dependen del plan que se elija y el cliente los confirma con el proveedor. Pueden variar.</p>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Decovenezia · CAI-063</span>
+      </div>
+    </section>
+
+    <!-- 8 · Facilidad de pago: cuotas ligadas a hitos (penúltima slide). Montos vacíos y editables (AcroForm PagoCuota1..N). -->
+    <section class="slide s-pay">
+      <span class="counter">08 / 09</span>
+      <p class="eyebrow">08 · Pago</p>
+      <h2>Facilidad de pago: dos cuotas ligadas a hitos.</h2>
+      <p class="sub">Cada cuota se paga al cumplirse un hito del proyecto, y las dos suman el <strong>100%</strong> de la inversión.</p>
+
+      <div class="pay-line"></div>
+      <div class="pay-route">
+        <div class="pay-step acc-y first" style="left:56.00px; width:498.50px">
+          <span class="ps-d"></span>
+          <span class="ps-tag">Cuota 1</span>
+          <b class="ps-when" style="font-size:28px">Al aprobar</b>
+          <p class="ps-hito">Al aprobar la propuesta, para arrancar con la reunión de arranque.</p>
+          <span class="ps-pct">50%</span>
+          <span class="ps-lbl">Monto</span>
+        </div>
+        <div class="pay-step acc-o" style="left:568.50px; width:498.50px">
+          <span class="ps-d"></span>
+          <span class="ps-tag">Cuota 2</span>
+          <b class="ps-when" style="font-size:28px">Cierre</b>
+          <p class="ps-hito">Al cerrar el proyecto, con el cerebro del gerente en uso.</p>
+          <span class="ps-pct">50%</span>
+          <span class="ps-lbl">Monto</span>
+        </div>
+      </div>
+      <div class="pay-frame" style="left:72.00px; width:466.50px"></div>
+      <div class="pay-frame" style="left:584.50px; width:466.50px"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Decovenezia · CAI-063</span>
+      </div>
+    </section>
+
+    <!-- 9 · Próximos pasos: qué hacer y a quién escribir (última slide) -->
+    <section class="slide s-next">
+      <span class="counter">09 / 09</span>
+      <p class="eyebrow">09 · Próximos pasos</p>
+      <h2>Tres pasos para arrancar.</h2>
+      <p class="sub">Esto es lo que sigue cuando Decovenezia confirme la propuesta.</p>
+
+      <div class="nx-steps">
+        <div class="nx-step acc-y">
+          <span class="nx-num">1</span>
+          <b>Fecha de arranque</b>
+          <p>Confirmamos con Decovenezia la fecha de arranque y el horario de trabajo del gerente.</p>
+        </div>
+        <div class="nx-step acc-o">
+          <span class="nx-num">2</span>
+          <b>Cuenta y material</b>
+          <p>Se deja lista la cuenta de Claude y se reúne la lista de precios y el material que el gerente decida compartir.</p>
+        </div>
+        <div class="nx-step acc-w">
+          <span class="nx-num">3</span>
+          <b>Reunión de arranque</b>
+          <p>Una hora para alinear objetivos, elegir los presupuestos reales y acordar el calendario.</p>
+        </div>
+      </div>
+
+      <div class="nx-contact">
+        <div class="nx-card nx-ase">
+          <span class="nx-label">¿Dudas? Escribe a tu asesora comercial</span>
+          <b class="nx-name">Verónica Rubio</b>
+          <span class="nx-role">Asesora comercial</span>
+          <p class="nx-line"><a href="mailto:vrubio01@intezia.com">vrubio01@intezia.com</a></p>
+          <p class="nx-line">+58 422 3355505</p>
+        </div>
+        <div class="nx-card nx-emp">
+          <span class="nx-label">Intezia</span>
+          <p class="nx-line">Intezia C.A J-505657950</p>
+          <p class="nx-line"><a href="mailto:servicio@intezia.com">servicio@intezia.com</a></p>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Decovenezia · CAI-063</span>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

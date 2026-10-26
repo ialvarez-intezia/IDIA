@@ -71,7 +71,7 @@ Para qué (lo que ve el cliente): Un consejo de tres consejeros y un presidente 
 - La plataforma de reservas de Aqua Vista: está en desarrollo, así que esta fase no depende de ella ni se conecta a ella.
 - Conexiones con WhatsApp Business e Instagram: se confirman en el levantamiento de cada agente, sin compromiso previo.
 - Control de egresos, dashboard y el consejo en vivo: van en otra etapa, según el resultado.
-- Licencias y consumo de IA: van aparte de esta inversión, con su valor de lista en la hoja de inversión.
+- Licencias y consumo de IA: van aparte de la inversión de cada proyecto, con su valor de lista en las notas de cada hoja.
 
 ## 5. Supuestos a confirmar (antes del método)
 
@@ -95,6 +95,9 @@ Para qué (lo que ve el cliente): Un consejo de tres consejeros y un presidente 
 - Portada sin datos de contratación evitada (no hay cifra con fuente). Los cuatro hechos son de la ficha, sin cifras ni citas.
 - «Chairman» se escribe «presidente del consejo» (CLAUDE.md §4.4, sin anglicismos).
 - Sin semanas, sesiones ni fechas (CLAUDE.md §4.23): la duración va en horas y el calendario se acuerda en la reunión de arranque. La ficha dice «duración y frecuencia: lo que sugiramos».
+- Cotización por proyecto (reunión del 21/10/2026; pedido del cliente: «cotizar los proyectos por separado para entender la inversión de cada uno»): cuatro hojas de inversión, una por proyecto (Atención 10 h, Mercadeo 12 h con su analista de mercado, Recursos Humanos 8 h y Consejo Ejecutivo 10 h; 40 h en total), cada una con sus campos de valor, descuento y total vacíos (PrecioBase a PrecioBase_4). Cambia la hoja única anterior y la regla de «sin partes»: ahora lo pide el cliente. Sin facilidad de pago (Ivana, 21/10/2026).
+- Licenciamiento: con cuatro hojas de inversión el bloque de tarjetas de licencias no se puede usar (comparte lugar con las etapas), así que el valor de lista de Claude Team (16/10/2026) va en las notas de cada hoja.
+- Analista de mercado dentro de Mercadeo y redes (decisión del 21/10/2026, de la asesora): se descartó unirlo al Consejo Ejecutivo (propuesta del mismo día) porque habla el mismo idioma que el resto de mercadeo y deja el departamento de mercadeo completo (Instagram, analista de mercado y contenido); el Consejo Ejecutivo queda solo. Mercadeo vuelve a 12 h (2 de levantamiento, 3 de Instagram, 3 del analista y 4 de contenido) y el Consejo a 10 h (2 y 8); el total sigue en 40 h. El cliente puede ver Mercadeo como su departamento de mercadeo completo.
 
 ## 6. Cómo trabajamos (slide 4)
 
@@ -119,7 +122,7 @@ Modo **metodo**. La slide no cita estudios ni referencias de la web ni promete r
 
 Pasos del método: Volumen; Tiempo actual; Tiempo con el agente; Horas recuperadas; Gasto de operar.
 
-## 8. Próximos pasos (slide 8)
+## 8. Próximos pasos (slide 11)
 
 Asesora comercial que ve el cliente: Flavia Martínez, Asesora comercial · fmartinez@intezia.com · +58 414 5756615.
 

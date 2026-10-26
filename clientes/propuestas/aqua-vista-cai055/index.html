@@ -6,9 +6,9 @@
   No editar a mano: editar datos.json y regenerar. Estilos propios del deck: overrides.css.
   Fuente del insumo: Ficha de Levantamiento de Aqua Vista (Flavia Martínez, 15/10/2026) y contexto de la asesora; sin transcripción de la reunión
 
-  Formato compacto de 8 slides, en el orden de las preguntas del cliente (Ventas, 2026-10-07), sin semanas, sesiones
+  Formato compacto de 11 slides, en el orden de las preguntas del cliente (Ventas, 2026-10-07), sin semanas, sesiones
   ni fechas (Keiber, 2026-10-08):
-    1 Portada · 2 Alcance · 3 Ruta · 4 Cómo trabajamos · 5 Entregables · 6 Retorno · 7 Inversión · 8 Próximos pasos
+    1 Portada · 2 Alcance · 3 Ruta · 4 Cómo trabajamos · 5 Entregables · 6 Retorno · 7 Inversión · 8 Inversión (etapa 2) · 9 Inversión (etapa 3) · 10 Inversión (etapa 4) · 11 Próximos pasos
   Marcadores de detección de AcroForms (agregar-campo-precio.py), por página: «Propuesta Económica» solo en la slide de
   inversión; «Lo que se llevan» y «Entregables» solo en la de entregables; «Facilidad de pago» solo en la de pago.
   Campos AcroForm: Programa, Notas, PrecioBase, Descuento, PrecioTotal (inversión) y Entregables, Acreditacion (entregables). Se reposicionan con scripts/customize-habilidades-compacto.py.
@@ -28,7 +28,7 @@
 
     <!-- 1 · Portada: ¿cuál es mi problema? -->
     <section class="slide s-cover">
-      <span class="counter">01 / 08</span>
+      <span class="counter">01 / 11</span>
       <div class="logo-big">
         <img src="../../../logos/educacion/BLANCO.png" alt="Intezia Educación">
       </div>
@@ -70,22 +70,22 @@
 
     <!-- 2 · Alcance: qué vamos a hacer y para qué -->
     <section class="slide s-scope roomy">
-      <span class="counter">02 / 08</span>
+      <span class="counter">02 / 11</span>
       <p class="eyebrow">02 · Alcance</p>
-      <h2>Cuatro áreas con sus agentes en uso.</h2>
+      <h2>Cuatro proyectos con sus agentes en uso.</h2>
       <p class="sub">Levantamos <strong>4 áreas</strong> y construimos los <strong>agentes</strong>: asistentes de IA que responden, analizan y filtran.</p>
 
       <div class="scope-panels one" style="--np:1">
         <div class="scope-panel acc-y">
           <div class="scope-head">
             <span class="scope-tag">Claude Team</span>
-            <span class="scope-total"><b>10</b> entregables · 4 áreas</span>
+            <span class="scope-total"><b>4</b> áreas</span>
           </div>
           <ul class="scope-rows">
-              <li><span class="area">Atención al cliente</span><span class="n">2 entregables</span><span class="para">Atender por WhatsApp con tono humano y pasar a un vendedor a quien ya quiere reservar</span></li>
-              <li><span class="area">Mercadeo y redes sociales</span><span class="n">4 entregables</span><span class="para">Responder en Instagram, analizar el mercado y crear contenido, sin una persona dedicada</span></li>
-              <li><span class="area">Recursos Humanos</span><span class="n">2 entregables</span><span class="para">Filtrar los currículos que llegan y devolver los 3 mejores perfiles para entrevistar</span></li>
-              <li><span class="area">Consejo Ejecutivo</span><span class="n">2 entregables</span><span class="para">Un consejo de tres consejeros y un presidente con perfiles definidos por el dueño</span></li>
+              <li><span class="area">Atención al cliente</span><span class="para">Atender por WhatsApp con tono humano y pasar a un vendedor a quien ya quiere reservar</span></li>
+              <li><span class="area">Mercadeo y redes sociales</span><span class="para">Responder en Instagram, analizar el mercado y crear contenido, sin una persona dedicada</span></li>
+              <li><span class="area">Recursos Humanos</span><span class="para">Filtrar los currículos que llegan y devolver los 3 mejores perfiles para entrevistar</span></li>
+              <li><span class="area">Consejo Ejecutivo</span><span class="para">Un consejo de tres consejeros y un presidente con perfiles definidos por el dueño</span></li>
           </ul>
         </div>
       </div>
@@ -96,7 +96,7 @@
           <li>La plataforma de reservas de Aqua Vista: está en desarrollo, así que esta fase no depende de ella ni se conecta a ella.</li>
           <li>Conexiones con WhatsApp Business e Instagram: se confirman en el levantamiento de cada agente, sin compromiso previo.</li>
           <li>Control de egresos, dashboard y el consejo en vivo: van en otra etapa, según el resultado.</li>
-          <li>Licencias y consumo de IA: van aparte de esta inversión, con su valor de lista en la hoja de inversión.</li>
+          <li>Licencias y consumo de IA: van aparte de la inversión de cada proyecto, con su valor de lista en las notas de cada hoja.</li>
         </ul>
       </div>
 
@@ -108,7 +108,7 @@
 
     <!-- 3 · Ruta: qué pasa en cada fase -->
     <section class="slide s-route">
-      <span class="counter">03 / 08</span>
+      <span class="counter">03 / 11</span>
       <p class="eyebrow">03 · Ruta</p>
       <h2>Del levantamiento a los agentes en uso.</h2>
       <p class="sub">El calendario se acuerda en la <strong>reunión de arranque</strong>. El <strong>levantamiento</strong> delimita cada agente.</p>
@@ -117,11 +117,11 @@
 
         <div class="rg-corner"></div>
         <div class="rg-phase rg-ph-1">
-          <span class="rg-phase-top"><span class="rg-phase-tag">Levantamiento</span><b class="rg-phase-n">4 entregables</b></span>
+          <span class="rg-phase-top"><span class="rg-phase-tag">Levantamiento</span><b class="rg-phase-n">8 h</b></span>
           <span class="rg-phase-name">Delimitar el agente de cada área</span>
         </div>
         <div class="rg-phase rg-ph-2 hi">
-          <span class="rg-phase-top"><span class="rg-phase-tag">Uso</span><b class="rg-phase-n">6 entregables</b></span>
+          <span class="rg-phase-top"><span class="rg-phase-tag">Uso</span><b class="rg-phase-n">32 h</b></span>
           <span class="rg-phase-name">Agentes y consejo construidos y en uso</span>
         </div>
         <div class="rg-phase rg-fu">
@@ -132,11 +132,11 @@
 
         <div class="rg-front acc-y">
           <span class="rg-front-h">Agentes y consejo de Aqua Vista</span>
-          <span class="rg-front-row"><span class="rg-front-tool">Claude</span><b class="rg-front-n">10 entregables</b></span>
-          <span class="rg-front-meta">40 h de trabajo</span>
+          <span class="rg-front-row"><span class="rg-front-tool">Claude</span><b class="rg-front-n">40 h</b></span>
+          <span class="rg-front-meta">de trabajo</span>
         </div>
-        <div class="rg-cell"><span class="rg-h"><b>4</b> entregables <i>8 h</i></span><p>4 áreas, 2 h cada una: delimitar cada agente antes de construirlo.</p></div>
-        <div class="rg-cell hi"><span class="rg-h"><b>6</b> entregables <i>32 h</i></span><p>Los agentes de atención, mercadeo y reclutamiento, y el consejo, en uso.</p></div>
+        <div class="rg-cell"><span class="rg-h solo-h"><b>8</b> horas</span><p>4 áreas, 2 h cada una: delimitar cada agente antes de construirlo.</p></div>
+        <div class="rg-cell hi"><span class="rg-h solo-h"><b>32</b> horas</span><p>Los agentes de atención, mercadeo y reclutamiento, y el consejo, en uso.</p></div>
 
         <div class="rg-follow" style="grid-column:4; grid-row:2 / span 1">
           <ul>
@@ -164,7 +164,7 @@
 
     <!-- 4 · Cómo trabajamos: pasos, por qué en ese orden, casos reales, práctica, datos y logística -->
     <section class="slide s-method">
-      <span class="counter">04 / 08</span>
+      <span class="counter">04 / 11</span>
       <p class="eyebrow">04 · Cómo trabajamos</p>
       <h2>Así construimos cada agente.</h2>
       <p class="sub">Primero se levanta cada proceso y después se construye con el equipo, que aprende a mantenerlo.</p>
@@ -206,15 +206,15 @@
 
     <!-- 5 · Entregables: ¿con qué me quedo? (catálogo + piezas transversales) -->
     <section class="slide s-deliv">
-      <span class="counter">05 / 08</span>
+      <span class="counter">05 / 11</span>
       <p class="eyebrow">05 · Entregables</p>
       <div class="deliv-head">
         <h2>Lo que recibe Aqua Vista.</h2>
-        <p class="deliv-sub"><span class="nw">Lo que se llevan</span>: <strong>10 entregables</strong>, un levantamiento por área y los agentes, más el seguimiento a 30, 60 y 90 días.</p>
+        <p class="deliv-sub"><span class="nw">Lo que se llevan</span>: <strong>un levantamiento por proyecto y los agentes</strong>, más el seguimiento a 30, 60 y 90 días.</p>
       </div>
 
       <div class="deliv-carriles" style="--ncols:3">
-        <span class="dc acc-y" style="grid-column: span 3">Claude Team · 10 entregables</span>
+        <span class="dc acc-y" style="grid-column: span 3">Claude Team</span>
       </div>
 
       <div class="deliv-cols" style="--ncols:3">
@@ -280,7 +280,7 @@
 
     <!-- 6 · Retorno: ¿qué gano? (método de cálculo). Sin estudios ni citas externas. -->
     <section class="slide s-roi">
-      <span class="counter">06 / 08</span>
+      <span class="counter">06 / 11</span>
       <p class="eyebrow">06 · Retorno</p>
       <h2>Retorno esperado: tiempo recuperado, medido.</h2>
       <p class="sub">El retorno se mide contra la línea base que cada área entrega en su levantamiento.</p>
@@ -333,13 +333,13 @@
 
     <!-- 7 · Inversión (hoja de cotización estándar; antepenúltima slide) -->
     <section class="slide s-price">
-      <span class="counter">07 / 08</span>
-      <h2 class="title">Inversión del proyecto.</h2>
-      <p class="price-intro">Propuesta Económica · Servicio de Habilidades</p>
+      <span class="counter">07 / 11</span>
+      <h2 class="title">Atención al cliente.</h2>
+      <p class="price-intro">Propuesta Económica · Proyecto 1 · Atención al cliente</p>
 
       <div class="block">
         <span class="block-eyebrow">Duración</span>
-        <p class="block-value">Proyecto de 4 áreas con sus agentes en uso, con seguimiento a 30, 60 y 90 días. 40 horas de trabajo.</p>
+        <p class="block-value">Atención por WhatsApp con traspaso a vendedor: 10 horas de trabajo.</p>
       </div>
 
       <div class="block block-programa">
@@ -370,7 +370,7 @@
 
       <div class="cot-garantia-badge">
         <span class="cot-garantia-tag">Garantía 30-60-90</span>
-        <p class="cot-garantia-text">Estamos contigo hasta que la habilidad quede instalada.</p>
+        <p class="cot-garantia-text">Estamos contigo hasta que el agente de atención quede en uso.</p>
       </div>
 
       <div class="block block-notes-container">
@@ -378,20 +378,164 @@
       </div>
       <div class="multi-box notas-box" data-field="Notas"></div>
 
-      <div class="lic-wrap">
-        <span class="lic-eyebrow">Licenciamiento · aparte de esta inversión</span>
-        <div class="lic-cards">
-          <div class="lic-card acc-y">
-            <span class="lic-name">Claude Team · puesto estándar</span>
-            <p>El plan exige un mínimo de dos puestos. Valor de lista: <strong>USD 25</strong> por puesto al mes, o USD 20 pagando por año, al 16/10/2026. Incluye Claude Code.</p>
-          </div>
-          <div class="lic-card acc-o">
-            <span class="lic-name">Consumo de los agentes</span>
-            <p>Cada puesto estándar trae <strong>USD 20 al mes</strong> en créditos de la Plataforma Claude para conectar agentes. Si se agotan, se compran más; el consumo se estima con el volumen real tras el levantamiento.</p>
-          </div>
-        </div>
-        <p class="lic-note">Valores de lista del proveedor al 16/10/2026; pueden variar. Los confirma Aqua Vista con el proveedor.</p>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Aqua Vista · CAI-055</span>
       </div>
+    </section>
+
+    <!-- 7 · Inversión (hoja de cotización estándar; antepenúltima slide) -->
+    <section class="slide s-price">
+      <span class="counter">08 / 11</span>
+      <h2 class="title">Mercadeo y redes sociales.</h2>
+      <p class="price-intro">Propuesta Económica · Proyecto 2 · Mercadeo y redes sociales</p>
+
+      <div class="block">
+        <span class="block-eyebrow">Duración</span>
+        <p class="block-value">Instagram, analista de mercado y contenido: 12 horas de trabajo.</p>
+      </div>
+
+      <div class="block block-programa">
+        <span class="block-eyebrow">Programa</span>
+      </div>
+      <div class="multi-box programa-box" data-field="Programa"></div>
+
+      <div class="block block-cotizacion">
+        <span class="block-eyebrow">Cotización</span>
+      </div>
+
+      <span class="cot-label cot-label-base">Propuesta + Inversión</span>
+      <div class="cot-frame base-frame"></div>
+
+      <span class="cot-label cot-label-discount">Descuento</span>
+      <span class="cot-sign-minus">&minus;$</span>
+      <div class="cot-frame discount-frame"></div>
+      <span class="cot-urgent-note">Descuento válido por 15 días</span>
+
+      <span class="cot-label cot-label-total">TOTAL</span>
+      <div class="cot-frame total-frame"></div>
+
+      <p class="cot-validity">Cotización válida por 30 días.</p>
+      <div class="cot-terms-box">
+        <span class="cot-terms-label">Importante</span>
+        <p class="cot-terms-text">Este servicio se presta bajo nuestros <a href="https://drive.google.com/file/d/1PA-ZSt4KnyY5dpxXzgkIk6-yfGlV2eF8/view?usp=drive_link" target="_blank" rel="noopener">términos y condiciones</a>. Al avanzar con esta propuesta, ambas partes los aceptan.</p>
+      </div>
+
+      <div class="cot-garantia-badge">
+        <span class="cot-garantia-tag">Garantía 30-60-90</span>
+        <p class="cot-garantia-text">Estamos contigo hasta que cada agente de mercadeo quede en uso.</p>
+      </div>
+
+      <div class="block block-notes-container">
+        <span class="block-eyebrow">Notas</span>
+      </div>
+      <div class="multi-box notas-box" data-field="Notas"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Aqua Vista · CAI-055</span>
+      </div>
+    </section>
+
+    <!-- 7 · Inversión (hoja de cotización estándar; antepenúltima slide) -->
+    <section class="slide s-price">
+      <span class="counter">09 / 11</span>
+      <h2 class="title">Recursos Humanos.</h2>
+      <p class="price-intro">Propuesta Económica · Proyecto 3 · Recursos Humanos</p>
+
+      <div class="block">
+        <span class="block-eyebrow">Duración</span>
+        <p class="block-value">Filtro de currículos con los 3 mejores perfiles: 8 horas de trabajo.</p>
+      </div>
+
+      <div class="block block-programa">
+        <span class="block-eyebrow">Programa</span>
+      </div>
+      <div class="multi-box programa-box" data-field="Programa"></div>
+
+      <div class="block block-cotizacion">
+        <span class="block-eyebrow">Cotización</span>
+      </div>
+
+      <span class="cot-label cot-label-base">Propuesta + Inversión</span>
+      <div class="cot-frame base-frame"></div>
+
+      <span class="cot-label cot-label-discount">Descuento</span>
+      <span class="cot-sign-minus">&minus;$</span>
+      <div class="cot-frame discount-frame"></div>
+      <span class="cot-urgent-note">Descuento válido por 15 días</span>
+
+      <span class="cot-label cot-label-total">TOTAL</span>
+      <div class="cot-frame total-frame"></div>
+
+      <p class="cot-validity">Cotización válida por 30 días.</p>
+      <div class="cot-terms-box">
+        <span class="cot-terms-label">Importante</span>
+        <p class="cot-terms-text">Este servicio se presta bajo nuestros <a href="https://drive.google.com/file/d/1PA-ZSt4KnyY5dpxXzgkIk6-yfGlV2eF8/view?usp=drive_link" target="_blank" rel="noopener">términos y condiciones</a>. Al avanzar con esta propuesta, ambas partes los aceptan.</p>
+      </div>
+
+      <div class="cot-garantia-badge">
+        <span class="cot-garantia-tag">Garantía 30-60-90</span>
+        <p class="cot-garantia-text">Estamos contigo hasta que el filtro de currículos quede en uso.</p>
+      </div>
+
+      <div class="block block-notes-container">
+        <span class="block-eyebrow">Notas</span>
+      </div>
+      <div class="multi-box notas-box" data-field="Notas"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Aqua Vista · CAI-055</span>
+      </div>
+    </section>
+
+    <!-- 7 · Inversión (hoja de cotización estándar; antepenúltima slide) -->
+    <section class="slide s-price">
+      <span class="counter">10 / 11</span>
+      <h2 class="title">Consejo Ejecutivo.</h2>
+      <p class="price-intro">Propuesta Económica · Proyecto 4 · Consejo Ejecutivo</p>
+
+      <div class="block">
+        <span class="block-eyebrow">Duración</span>
+        <p class="block-value">El consejo que asesora al dueño en sus decisiones: 10 horas de trabajo.</p>
+      </div>
+
+      <div class="block block-programa">
+        <span class="block-eyebrow">Programa</span>
+      </div>
+      <div class="multi-box programa-box" data-field="Programa"></div>
+
+      <div class="block block-cotizacion">
+        <span class="block-eyebrow">Cotización</span>
+      </div>
+
+      <span class="cot-label cot-label-base">Propuesta + Inversión</span>
+      <div class="cot-frame base-frame"></div>
+
+      <span class="cot-label cot-label-discount">Descuento</span>
+      <span class="cot-sign-minus">&minus;$</span>
+      <div class="cot-frame discount-frame"></div>
+      <span class="cot-urgent-note">Descuento válido por 15 días</span>
+
+      <span class="cot-label cot-label-total">TOTAL</span>
+      <div class="cot-frame total-frame"></div>
+
+      <p class="cot-validity">Cotización válida por 30 días.</p>
+      <div class="cot-terms-box">
+        <span class="cot-terms-label">Importante</span>
+        <p class="cot-terms-text">Este servicio se presta bajo nuestros <a href="https://drive.google.com/file/d/1PA-ZSt4KnyY5dpxXzgkIk6-yfGlV2eF8/view?usp=drive_link" target="_blank" rel="noopener">términos y condiciones</a>. Al avanzar con esta propuesta, ambas partes los aceptan.</p>
+      </div>
+
+      <div class="cot-garantia-badge">
+        <span class="cot-garantia-tag">Garantía 30-60-90</span>
+        <p class="cot-garantia-text">Estamos contigo hasta que el consejo quede en uso.</p>
+      </div>
+
+      <div class="block block-notes-container">
+        <span class="block-eyebrow">Notas</span>
+      </div>
+      <div class="multi-box notas-box" data-field="Notas"></div>
 
       <div class="foot">
         <img src="../../../logos/educacion/NEGRO.png" alt="">
@@ -401,8 +545,8 @@
 
     <!-- 9 · Próximos pasos: qué hacer y a quién escribir (última slide) -->
     <section class="slide s-next">
-      <span class="counter">08 / 08</span>
-      <p class="eyebrow">08 · Próximos pasos</p>
+      <span class="counter">11 / 11</span>
+      <p class="eyebrow">11 · Próximos pasos</p>
       <h2>Tres pasos para arrancar.</h2>
       <p class="sub">Esto es lo que sigue cuando Aqua Vista confirme la propuesta.</p>
 

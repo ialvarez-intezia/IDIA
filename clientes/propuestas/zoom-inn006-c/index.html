@@ -1,0 +1,462 @@
+<!doctype html>
+<!--
+  Propuesta · Zoom · Servicio de Innovación (INN-006-C)
+  División: Educación · Servicio: Innovación (§4.1a) · Alianza: no
+  GENERADO por scripts/generar-habilidades-compacto.py (plantilla 3.0 (2026-10-08), formato habilidades) desde datos.json.
+  No editar a mano: editar datos.json y regenerar. Estilos propios del deck: overrides.css.
+  Fuente del insumo: Texto de la dirección y respuestas de Ivana (26/10/2026); documentación de Google para administradores (26/10/2026); dashboards y casos de éxito de Zoom
+
+  Formato compacto de 10 slides, en el orden de las preguntas del cliente (Ventas, 2026-10-07), sin semanas, sesiones
+  ni fechas (Keiber, 2026-10-08):
+    1 Portada · 2 Qué está cambiando · 3 Alcance · 4 Ruta · 5 Calendario · 6 Cómo trabajamos · 7 Retorno · 8 Inversión · 9 Facilidad de pago · 10 Próximos pasos
+  Marcadores de detección de AcroForms (agregar-campo-precio.py), por página: «Propuesta Económica» solo en la slide de
+  inversión; «Lo que se llevan» y «Entregables» solo en la de entregables; «Facilidad de pago» solo en la de pago.
+  Campos AcroForm: Programa, Notas, PrecioBase, Descuento, PrecioTotal (inversión), PagoCuota1..3 (pago). Se reposicionan con scripts/customize-habilidades-compacto.py.
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Propuesta · Zoom · Intezia Educación</title>
+  <link rel="stylesheet" href="../_base/styles.css">
+  <link rel="stylesheet" href="habilidades-compacto.css">
+  <link rel="stylesheet" href="overrides.css">
+</head>
+<body>
+
+  <main class="deck">
+
+    <!-- 1 · Portada: ¿cuál es mi problema? -->
+    <section class="slide s-cover">
+      <span class="counter">01 / 10</span>
+      <div class="logo-big">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia Educación">
+      </div>
+      <div class="body">
+        <p class="eyebrow">Propuesta de proyecto · Servicio de Innovación</p>
+        <h1 style="font-size:46px">
+          Gems a Skills por área y un<br>
+          bootcamp para quienes faltaron<br>
+          <span class="hl">en Zoom</span>
+        </h1>
+        <p class="lead">
+          Cada área migra sus <strong>Gems</strong> a <strong>Skills</strong> en su propio encuentro, y un bootcamp abierto recibe a quienes no pudieron asistir, antes de que Google los retire.
+        </p>
+        <div class="pain-strip">
+          <div class="pain-item">
+            <span class="pain-num">Mar 2027</span>
+            <span class="pain-lbl">Google deja de permitir crear, editar y usar Gems, no antes del 1 de marzo de 2027.</span>
+          </div>
+          <div class="pain-item">
+            <span class="pain-num">Inactivos</span>
+            <span class="pain-lbl">es el estado en que quedan los Gems al convertirse en skills: cada creador debe activarlos.</span>
+          </div>
+          <div class="pain-item">
+            <span class="pain-num">Aparte</span>
+            <span class="pain-lbl">van las skills de la app de Gemini y las de Workspace: no se sincronizan entre sí.</span>
+          </div>
+        </div>
+      </div>
+      <div class="id-line">
+        <span class="codigo">Código: INN-006-C</span>
+        <span class="cliente">Zoom</span>
+      </div>
+    </section>
+
+    <!-- Qué está cambiando (opcional): fechas del proveedor, qué pasa si no se hace nada y por qué con Intezia -->
+    <section class="slide s-chg">
+      <span class="counter">02 / 10</span>
+      <p class="eyebrow">02 · Qué está cambiando</p>
+      <h2>Qué está cambiando y cómo les afecta.</h2>
+      <p class="sub">Google reemplaza los Gems por Skills. Esto es lo que cambia y por qué conviene migrar con tiempo.</p>
+
+      <div class="chg-tl">
+        <p class="chg-label">Qué cambia en Google</p>
+        <ol class="chg-events" style="--chg-n:4">
+          <li><b class="chg-d">13 oct 2026</b><span class="chg-t">Las Skills llegan a la app de Gemini y conviven con los Gems hasta mediados de noviembre.</span></li>
+          <li><b class="chg-d">17 nov 2026</b><span class="chg-t">Los Gems pasan a Configuración en la app de Gemini; se pueden seguir usando.</span></li>
+          <li><b class="chg-d">1 mar 2027</b><span class="chg-t">Google no los retira antes de esta fecha: después, nadie podrá crear, editar ni usar Gems.</span></li>
+          <li><b class="chg-d">1 mar 2027</b><span class="chg-t">El mismo día dejan de funcionar los flujos de Workspace Studio con el paso «Ask a Gem».</span></li>
+        </ol>
+      </div>
+
+      <div class="chg-cols">
+        <div class="chg-box chg-risk">
+          <p class="chg-label">Si no se hace nada</p>
+        <ul>
+          <li><b>Gems inactivos</b> Google los convierte en borradores de skills inactivos: cada creador debe revisarlos y activarlos.</li>
+          <li><b>Workspace va aparte</b> Una Skill de la app de Gemini no pasa sola a las apps de Workspace; los Gems que se usan allí se recrean en Workspace Studio.</li>
+          <li><b>Flujos detenidos</b> Los flujos de Studio con «Ask a Gem» siguen hasta el 1 de marzo de 2027 y después se detienen.</li>
+        </ul>
+        </div>
+        <div class="chg-box chg-why">
+          <p class="chg-label">Por qué con Intezia</p>
+        <ul>
+          <li><b>Resultados propios de Zoom</b> Índice de impacto de 87/100 en la encuesta de cierre de seis áreas (83 personas) y 89 % de aciertos en la evaluación técnica.</li>
+          <li><b>Ya trabajan con Gemini</b> El 88 % de esas personas usa Gemini como su herramienta de IA principal (73 de 83): se parte de lo que ya armaron.</li>
+          <li><b>Tecnología ya lo adoptó</b> Al seguimiento a 30 días (16/10/2026), Tecnología usaba a diario lo aprendido con Intezia.</li>
+        </ul>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Zoom · INN-006-C</span>
+      </div>
+    </section>
+
+    <!-- 2 · Alcance: qué vamos a hacer y para qué -->
+    <section class="slide s-scope roomy">
+      <span class="counter">03 / 10</span>
+      <p class="eyebrow">03 · Alcance</p>
+      <h2>Gems a Skills por área y un bootcamp abierto.</h2>
+      <p class="sub">Un encuentro por área y un bootcamp abierto para quienes no estuvieron, de 2 horas cada uno.</p>
+
+      <div class="scope-panels one" style="--np:1">
+        <div class="scope-panel acc-y">
+          <div class="scope-head">
+            <span class="scope-tag">Gemini y Google Workspace</span>
+            <span class="scope-total"><b>7</b> áreas</span>
+          </div>
+          <ul class="scope-rows">
+              <li><span class="area">Operaciones</span><span class="para">40 personas en 2 grupos de hasta 25: migran sus Gems a Skills en vivo.</span></li>
+              <li><span class="area">Comercial</span><span class="para">27 personas en 2 grupos de hasta 25: migran sus Gems a Skills en vivo.</span></li>
+              <li><span class="area">Legal</span><span class="para">8 personas en un grupo de hasta 25: migran sus Gems a Skills en vivo.</span></li>
+              <li><span class="area">Zoom Miami</span><span class="para">11 personas en un grupo de hasta 25: migran sus Gems a Skills en vivo.</span></li>
+              <li><span class="area">Gestión Humana</span><span class="para">17 personas en un grupo de hasta 25: migran sus Gems a Skills en vivo.</span></li>
+              <li><span class="area">Tecnología</span><span class="para">18 personas en un grupo de hasta 25: migran sus Gems a Skills en vivo.</span></li>
+              <li><span class="area">Bootcamp abierto</span><span class="para">Quienes no estuvieron en el encuentro de su área migran sus Gems a Skills en vivo.</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="scope-out">
+        <p class="scope-card-label">Fuera de este alcance</p>
+        <ul>
+          <li>Licencias de Google y activación de las Skills: las gestiona el equipo de TI de Zoom antes del primer encuentro.</li>
+          <li>Construir Skills nuevas: se migran los Gems que ya existen y se acuerdan las reglas; lo nuevo es otra etapa.</li>
+          <li>Rehacer los flujos de Workspace Studio con «Ask a Gem»: se señalan, y los rehace TI con la guía de Google.</li>
+        </ul>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Zoom · INN-006-C</span>
+      </div>
+    </section>
+
+    <!-- 3 · Ruta: qué pasa en cada fase -->
+    <section class="slide s-route">
+      <span class="counter">04 / 10</span>
+      <p class="eyebrow">04 · Ruta</p>
+      <h2>Del arranque con TI a los encuentros por área.</h2>
+      <p class="sub">El horario de cada encuentro se acuerda con Zoom; las fechas están en el calendario.</p>
+
+      <div class="route-grid n1" style="--cols:2; --rows:1; --rowh:214px; grid-template-columns:226px repeat(2,1fr)">
+
+        <div class="rg-corner"></div>
+        <div class="rg-phase rg-ph-1 hi">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Por área</span><b class="rg-phase-n">16 h</b></span>
+          <span class="rg-phase-name"><strong>Un encuentro por área o grupo</strong></span>
+        </div>
+        <div class="rg-phase rg-ph-2">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Bootcamp</span><b class="rg-phase-n">2 h</b></span>
+          <span class="rg-phase-name"><strong>Abierto, para quienes no estuvieron</strong></span>
+        </div>
+
+        <div class="rg-front acc-y">
+          <span class="rg-front-h">Áreas y bootcamp</span>
+          <span class="rg-front-row"><span class="rg-front-tool">Gemini y Workspace</span><b class="rg-front-n">18 h</b></span>
+          <span class="rg-front-meta">de trabajo</span>
+        </div>
+        <div class="rg-cell hi"><span class="rg-h solo-h"><b>16</b> horas</span><p>8 encuentros por área antes de diciembre, en grupos de hasta 25 personas.</p></div>
+        <div class="rg-cell"><span class="rg-h solo-h"><b>2</b> horas</span><p>1 bootcamp abierto en enero: supuesto de ausencia del 15 % (19 personas).</p></div>
+
+      </div>
+
+      <div class="route-miles" style="grid-template-columns:repeat(4,1fr)">
+        <div class="mile"><span class="mile-d"></span><b>TI activa las Skills</b><p>Antes del primer encuentro, en la consola de administración.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Encuentros por área</b><p>Seis áreas, con grupos de hasta 25 personas, antes de diciembre.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Bootcamp abierto</b><p>Para quienes no estuvieron, en enero, antes del tope de Google.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Cierre</b><p>Casos medidos y Skills compartidas, antes del 1 de marzo.</p></div>
+      </div>
+      <p class="route-note">8 encuentros por área (16 horas, 1 facilitador) más 1 bootcamp de 2 horas con 2 facilitadores, para 19 personas que se estima faltarán (15 % de ausencia).</p>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Zoom · INN-006-C</span>
+      </div>
+    </section>
+
+    <!-- Calendario de inicio (opcional): fechas pautadas que cubren el total de horas -->
+    <section class="slide s-cal">
+      <span class="counter">05 / 10</span>
+      <p class="eyebrow">05 · Calendario</p>
+      <h2>Calendario de los encuentros.</h2>
+      <p class="sub">9 encuentros de 2 horas, los lunes, miércoles y viernes: 18 horas de encuentro.</p>
+
+      <div class="cal-box">
+        <p class="cal-label">Calendario de inicio · primera fecha: lunes 2 de noviembre</p>
+        <p class="cal-intro">Las sesiones arrancan la semana del 2 de noviembre, con hasta tres por semana, para abordar a la mayor cantidad de personas antes de diciembre. Diciembre es temporada alta de Zoom: no hay encuentros. Enero y febrero quedan de margen para rezagados, siempre antes del 1 de marzo de 2027. El bootcamp abierto para quienes no estuvieron va en enero.</p>
+        <div class="cal-cols" style="--cal-rowh:44px">
+          <ul class="cal-col">
+            <li><span class="cal-d">Lun 2 nov</span><span class="cal-h">horario por acordar</span><span class="cal-t">Operaciones · 40 personas · grupo 1</span></li>
+            <li><span class="cal-d">Mié 4 nov</span><span class="cal-h">horario por acordar</span><span class="cal-t">Operaciones · 40 personas · grupo 2</span></li>
+            <li><span class="cal-d">Vie 6 nov</span><span class="cal-h">horario por acordar</span><span class="cal-t">Comercial · 27 personas · grupo 1</span></li>
+            <li><span class="cal-d">Lun 9 nov</span><span class="cal-h">horario por acordar</span><span class="cal-t">Comercial · 27 personas · grupo 2</span></li>
+            <li><span class="cal-d">Mié 11 nov</span><span class="cal-h">horario por acordar</span><span class="cal-t">Legal · 8 personas</span></li>
+          </ul>
+          <ul class="cal-col">
+            <li><span class="cal-d">Vie 13 nov</span><span class="cal-h">horario por acordar</span><span class="cal-t">Zoom Miami · 11 personas</span></li>
+            <li><span class="cal-d">Lun 16 nov</span><span class="cal-h">horario por acordar</span><span class="cal-t">Gestión Humana · 17 personas</span></li>
+            <li><span class="cal-d">Mié 18 nov</span><span class="cal-h">horario por acordar</span><span class="cal-t">Tecnología · 18 personas</span></li>
+            <li><span class="cal-d">Lun 11 ene</span><span class="cal-h">horario por acordar</span><span class="cal-t">Bootcamp abierto para quienes no estuvieron</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Zoom · INN-006-C</span>
+      </div>
+    </section>
+
+    <!-- 4 · Cómo trabajamos: pasos, por qué en ese orden, casos reales, práctica, datos y logística -->
+    <section class="slide s-method roomy">
+      <span class="counter">06 / 10</span>
+      <p class="eyebrow">06 · Cómo trabajamos</p>
+      <h2>Qué pasa en cada encuentro de 2 horas.</h2>
+      <p class="sub">La misma agenda en las tres opciones: se llega con el inventario hecho y las 2 horas son de práctica.</p>
+
+      <ol class="mt-steps" style="--n:4">
+          <li><b>Antes</b><span>Cada persona cuenta sus Gems en un formulario corto, para llegar con el dato.</span></li>
+          <li><b>Priorizamos</b><span>Se eligen los Gems que de verdad se usan. 15 minutos.</span></li>
+          <li><b>Migramos</b><span>Esos Gems pasan a Skills, en vivo, con Intezia al lado. 55 minutos.</span></li>
+          <li><b>Medimos</b><span>Un caso: el tiempo de hoy contra el tiempo con la Skill. 20 minutos.</span></li>
+      </ol>
+      <div class="mt-strips">
+        <p class="mt-why"><b>Por qué en este orden</b> Primero se llega con el inventario hecho; después se prioriza y se migra en vivo; al final se acuerdan las reglas y se mide un caso.</p>
+        <p class="mt-who"><b>Quién construye</b> Intezia guía cada encuentro en vivo, con las personas de Zoom aportando sus Gems: no se entrega nada hecho.</p>
+      </div>
+
+      <div class="mt-info">
+        <div class="mt-card">
+          <p class="mt-card-label">Cómo funciona en la práctica</p>
+          <ul><li><b>Reglas comunes.</b> Se acuerda cómo nombrar y compartir las Skills. 15 minutos.</li><li><b>Al día con Google.</b> Qué cambió en Gemini y Workspace estos meses y qué le sirve a Zoom. 15 minutos.</li><li><b>Cabe en 2 horas.</b> El inventario va antes y la medición se completa con la Skill ya en uso: así las 2 horas son práctica.</li></ul>
+        </div>
+        <div class="mt-card">
+          <p class="mt-card-label">Cómo cuidamos sus datos</p>
+          <p>Se migran solo los Gems que cada persona comparte y se respetan los permisos de Drive: nada confidencial se carga sin permiso.</p>
+        </div>
+      </div>
+
+      <div class="mt-logi">
+        <div class="mt-tile"><span>Modalidad</span><b>A acordar con el equipo de TI de Zoom: en línea o presencial.</b></div>
+        <div class="mt-tile"><span>Participantes</span><b>Una sola área por encuentro; el bootcamp abierto, hasta 25 personas de varias áreas.</b></div>
+        <div class="mt-tile"><span>Ritmo de trabajo</span><b>Encuentros de 2 horas, con hasta tres en cada ciclo de cinco días hábiles.</b></div>
+        <div class="mt-tile"><span>Arranque</span><b>TI activa las Skills antes del primer encuentro; Zoom confirma asistentes y horarios.</b></div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Zoom · INN-006-C</span>
+      </div>
+    </section>
+
+    <!-- 7 · Retorno: ¿qué gano? (método de cálculo). Sin estudios ni citas externas. -->
+    <section class="slide s-roi">
+      <span class="counter">07 / 10</span>
+      <p class="eyebrow">07 · Retorno</p>
+      <h2>Retorno esperado: tiempo recuperado con Skills.</h2>
+      <p class="sub">No son cifras de Zoom: es el método con el que cada grupo mide su propio caso.</p>
+
+      <div class="roi-body">
+        <div class="roi-panel">
+          <p class="roi-panel-title">Cómo se calcula el retorno</p>
+          <ol class="roi-steps">
+            <li><b>Caso real</b><span>Cada grupo elige un procedimiento que repite con frecuencia.</span></li>
+            <li><b>Tiempo de hoy</b><span>Se anota cuánto tarda con el Gem actual, con quien lo hace.</span></li>
+            <li><b>Con la Skill</b><span>Se prueba la Skill en el mismo caso y se anota cuánto tarda.</span></li>
+            <li><b>Diferencia</b><span>La diferencia, por las veces que se repite, es el tiempo que se recupera.</span></li>
+          </ol>
+        </div>
+
+        <div class="roi-right">
+          <p class="roi-right-title">Qué queda definido al cerrar</p>
+          <div class="roi-card">
+            <b>Inventario</b>
+            <p>Los Gems de cada persona, contados y priorizados.</p>
+          </div>
+          <div class="roi-card">
+            <b>Reglas</b>
+            <p>Cómo se nombran y se comparten las Skills.</p>
+          </div>
+          <div class="roi-card">
+            <b>Caso</b>
+            <p>La comparación de tiempos, hecha con un caso real del grupo.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="roi-dest-wrap">
+        <p class="roi-dest-title">Hacia dónde va el proyecto</p>
+        <div class="roi-dest">
+          <div class="rd-item"><b>Skills compartidas</b><p>Lo que cada grupo migra se <strong>reutiliza</strong> en otros equipos de Zoom.</p></div>
+          <div class="rd-item"><b>Lo que se usa</b><p>Se priorizan los Gems que <strong>de verdad</strong> se usan, no todos.</p></div>
+          <div class="rd-item"><b>Equipo al día</b><p>Quienes ya trabajaron con Intezia se ponen al día con lo que cambió en Google.</p></div>
+        </div>
+      </div>
+
+      <div class="roi-hook"><p>Al cierre, Zoom tendrá sus Gems más usados como Skills y un caso medido de tiempo recuperado.</p></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Zoom · INN-006-C</span>
+      </div>
+    </section>
+
+    <!-- 7 · Inversión (hoja de cotización estándar; antepenúltima slide) -->
+    <section class="slide s-price">
+      <span class="counter">08 / 10</span>
+      <h2 class="title">Inversión del proyecto.</h2>
+      <p class="price-intro">Propuesta Económica · Servicio de Innovación</p>
+
+      <div class="block">
+        <span class="block-eyebrow">Duración</span>
+        <p class="block-value">8 encuentros por área y 1 bootcamp abierto, de 2 horas cada uno, de noviembre a enero. 18 horas de encuentro.</p>
+      </div>
+
+      <div class="block block-programa">
+        <span class="block-eyebrow">Programa</span>
+      </div>
+      <div class="multi-box programa-box" data-field="Programa"></div>
+
+      <div class="block block-cotizacion">
+        <span class="block-eyebrow">Cotización</span>
+      </div>
+
+      <span class="cot-label cot-label-base">Propuesta + Inversión</span>
+      <div class="cot-frame base-frame"></div>
+
+      <span class="cot-label cot-label-discount">Descuento</span>
+      <span class="cot-sign-minus">&minus;$</span>
+      <div class="cot-frame discount-frame"></div>
+      <span class="cot-urgent-note">Descuento válido por 15 días</span>
+
+      <span class="cot-label cot-label-total">TOTAL</span>
+      <div class="cot-frame total-frame"></div>
+
+      <p class="cot-validity">Cotización válida por 30 días.</p>
+      <div class="cot-terms-box">
+        <span class="cot-terms-label">Importante</span>
+        <p class="cot-terms-text">Este servicio se presta bajo nuestros <a href="https://drive.google.com/file/d/1PA-ZSt4KnyY5dpxXzgkIk6-yfGlV2eF8/view?usp=drive_link" target="_blank" rel="noopener">términos y condiciones</a>. Al avanzar con esta propuesta, ambas partes los aceptan.</p>
+      </div>
+
+      <div class="block block-notes-container">
+        <span class="block-eyebrow">Notas</span>
+      </div>
+      <div class="multi-box notas-box" data-field="Notas"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Zoom · INN-006-C</span>
+      </div>
+    </section>
+
+    <!-- 8 · Facilidad de pago: cuotas ligadas a hitos (penúltima slide). Montos vacíos y editables (AcroForm PagoCuota1..N). -->
+    <section class="slide s-pay">
+      <span class="counter">09 / 10</span>
+      <p class="eyebrow">09 · Pago</p>
+      <h2>Facilidad de pago: tres cuotas ligadas a hitos.</h2>
+      <p class="sub">Cada cuota se paga al cumplirse un hito del proyecto, y las tres suman el <strong>100%</strong> de la inversión.</p>
+
+      <div class="pay-line"></div>
+      <div class="pay-route">
+        <div class="pay-step acc-y first" style="left:56.00px; width:327.67px">
+          <span class="ps-d"></span>
+          <span class="ps-tag">Cuota 1</span>
+          <b class="ps-when" style="font-size:26px">Al aprobar</b>
+          <p class="ps-hito">Reserva del calendario y del equipo de facilitadores.</p>
+          <span class="ps-pct">40%</span>
+          <span class="ps-lbl">Monto</span>
+        </div>
+        <div class="pay-step acc-o" style="left:397.67px; width:327.67px">
+          <span class="ps-d"></span>
+          <span class="ps-tag">Cuota 2</span>
+          <b class="ps-when" style="font-size:26px">Fin de noviembre</b>
+          <p class="ps-hito">Los encuentros por área realizados.</p>
+          <span class="ps-pct">30%</span>
+          <span class="ps-lbl">Monto</span>
+        </div>
+        <div class="pay-step acc-y" style="left:739.33px; width:327.67px">
+          <span class="ps-d"></span>
+          <span class="ps-tag">Cuota 3</span>
+          <b class="ps-when" style="font-size:26px">Cierre</b>
+          <p class="ps-hito">El bootcamp abierto realizado y los casos medidos.</p>
+          <span class="ps-pct">30%</span>
+          <span class="ps-lbl">Monto</span>
+        </div>
+      </div>
+      <div class="pay-frame" style="left:72.00px; width:295.67px"></div>
+      <div class="pay-frame" style="left:413.67px; width:295.67px"></div>
+      <div class="pay-frame" style="left:755.33px; width:295.67px"></div>
+
+      <div class="pay-note">
+        <p class="pn-main">Los montos de cada cuota los acuerda el equipo comercial de Intezia con Zoom antes de arrancar.</p>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Zoom · INN-006-C</span>
+      </div>
+    </section>
+
+    <!-- 9 · Próximos pasos: qué hacer y a quién escribir (última slide) -->
+    <section class="slide s-next">
+      <span class="counter">10 / 10</span>
+      <p class="eyebrow">10 · Próximos pasos</p>
+      <h2>Tres pasos para arrancar.</h2>
+      <p class="sub">Esto es lo que sigue cuando Zoom confirme la propuesta.</p>
+
+      <div class="nx-steps">
+        <div class="nx-step acc-y">
+          <span class="nx-num">1</span>
+          <b>Fecha y asistentes</b>
+          <p>Confirmamos con Zoom el arranque a partir del 2 de noviembre y quiénes asisten a cada encuentro.</p>
+        </div>
+        <div class="nx-step acc-o">
+          <span class="nx-num">2</span>
+          <b>TI activa y revisa</b>
+          <p>Activa las Skills en la consola y revisa edición, canal de lanzamiento, flujos con «Ask a Gem» y permisos de Drive.</p>
+        </div>
+        <div class="nx-step acc-w">
+          <span class="nx-num">3</span>
+          <b>Formulario previo</b>
+          <p>Antes de cada encuentro, cada persona llena el formulario de inventario de sus Gems.</p>
+        </div>
+      </div>
+
+      <div class="nx-contact">
+        <div class="nx-card nx-ase">
+          <span class="nx-label">¿Dudas? Escribe a tu directora comercial</span>
+          <b class="nx-name">María Iribarren</b>
+          <span class="nx-role">Directora comercial</span>
+          <p class="nx-line"><a href="mailto:miribarren@intezia.com">miribarren@intezia.com</a></p>
+          <p class="nx-line">+58 414 0570056</p>
+        </div>
+        <div class="nx-card nx-emp">
+          <span class="nx-label">Intezia</span>
+          <p class="nx-line">Intezia C.A J-505657950</p>
+          <p class="nx-line"><a href="mailto:servicio@intezia.com">servicio@intezia.com</a></p>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Zoom · INN-006-C</span>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

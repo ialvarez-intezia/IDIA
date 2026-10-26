@@ -9,7 +9,7 @@
  "division": "educacion",
  "alianza": false,
  "meta_servicio": "habilidades",
- "meta_tipo": "Habilidades · 4 áreas (atención por WhatsApp, mercadeo, reclutamiento y Consejo Ejecutivo) · levantamiento de cada agente más su construcción · 40 h totales · seguimiento 30-60-90 · formato compacto v3",
+ "meta_tipo": "Habilidades · 4 proyectos cotizados por separado (atención por WhatsApp, mercadeo y redes con su analista de mercado, reclutamiento y Consejo Ejecutivo) · levantamiento de cada agente más su construcción · 40 h totales · seguimiento 30-60-90 · formato compacto v3",
  "vocabulario": {
   "solucion": [
    "entregable",
@@ -45,7 +45,10 @@
   "Retorno en modo método, sin cifras: la ficha no trae volúmenes, tiempos ni valor de la hora. El objetivo del cliente es reducir la operatividad y aumentar la productividad sin contratar más gente; se plantea como posibilidad, nunca como compromiso.",
   "Portada sin datos de contratación evitada (no hay cifra con fuente). Los cuatro hechos son de la ficha, sin cifras ni citas.",
   "«Chairman» se escribe «presidente del consejo» (CLAUDE.md §4.4, sin anglicismos).",
-  "Sin semanas, sesiones ni fechas (CLAUDE.md §4.23): la duración va en horas y el calendario se acuerda en la reunión de arranque. La ficha dice «duración y frecuencia: lo que sugiramos»."
+  "Sin semanas, sesiones ni fechas (CLAUDE.md §4.23): la duración va en horas y el calendario se acuerda en la reunión de arranque. La ficha dice «duración y frecuencia: lo que sugiramos».",
+  "Cotización por proyecto (reunión del 21/10/2026; pedido del cliente: «cotizar los proyectos por separado para entender la inversión de cada uno»): cuatro hojas de inversión, una por proyecto (Atención 10 h, Mercadeo 12 h con su analista de mercado, Recursos Humanos 8 h y Consejo Ejecutivo 10 h; 40 h en total), cada una con sus campos de valor, descuento y total vacíos (PrecioBase a PrecioBase_4). Cambia la hoja única anterior y la regla de «sin partes»: ahora lo pide el cliente. Sin facilidad de pago (Ivana, 21/10/2026).",
+  "Licenciamiento: con cuatro hojas de inversión el bloque de tarjetas de licencias no se puede usar (comparte lugar con las etapas), así que el valor de lista de Claude Team (16/10/2026) va en las notas de cada hoja.",
+  "Analista de mercado dentro de Mercadeo y redes (decisión del 21/10/2026, de la asesora): se descartó unirlo al Consejo Ejecutivo (propuesta del mismo día) porque habla el mismo idioma que el resto de mercadeo y deja el departamento de mercadeo completo (Instagram, analista de mercado y contenido); el Consejo Ejecutivo queda solo. Mercadeo vuelve a 12 h (2 de levantamiento, 3 de Instagram, 3 del analista y 4 de contenido) y el Consejo a 10 h (2 y 8); el total sigue en 40 h. El cliente puede ver Mercadeo como su departamento de mercadeo completo."
  ],
  "pendientes": [
   "Confirmar con Ivana o Flavia la división (Educación), la alianza (no) y el reparto de horas dentro de cada área.",
@@ -55,7 +58,9 @@
   "Validar con fuente oficial de Meta qué se puede hacer sobre WhatsApp Business e Instagram desde Venezuela antes del kickoff.",
   "Confirmar el nombre y el precio de la plataforma de pago que hoy responde los comentarios de Instagram: la regla del proyecto es construir el agente propio solo si cuesta menos.",
   "Definir la ciudad o sede de la modalidad presencial.",
-  "Si el levantamiento requiere otra herramienta de terceros (conexión con WhatsApp Business, automatización), pedir su valor de lista para informarlo antes de construir."
+  "Si el levantamiento requiere otra herramienta de terceros (conexión con WhatsApp Business, automatización), pedir su valor de lista para informarlo antes de construir.",
+  "Valor de cada uno de los cuatro proyectos: ventas llena los cuatro campos; si el cliente aprueba solo algunos, el seguimiento y la reunión de arranque aparte se confirman en el kickoff.",
+  "Confirmar con Flavia que «agente de mercado» es el analista de tarifas, temporadas y feriados, y que el consejo ejecutivo es una skill (si existe la de Jean para reutilizarla)."
  ],
  "portada": {
   "titulo_lineas": [
@@ -260,13 +265,13 @@
   }
  ],
  "alcance": {
-  "titulo": "Cuatro áreas con sus agentes en uso.",
+  "titulo": "Cuatro proyectos con sus agentes en uso.",
   "subtitulo": "Levantamos **4 áreas** y construimos los **agentes**: asistentes de IA que responden, analizan y filtran.",
   "fuera_alcance": [
    "La plataforma de reservas de {cliente_corto}: está en desarrollo, así que esta fase no depende de ella ni se conecta a ella.",
    "Conexiones con WhatsApp Business e Instagram: se confirman en el levantamiento de cada agente, sin compromiso previo.",
    "Control de egresos, dashboard y el consejo en vivo: van en otra etapa, según el resultado.",
-   "Licencias y consumo de IA: van aparte de esta inversión, con su valor de lista en la hoja de inversión."
+   "Licencias y consumo de IA: van aparte de la inversión de cada proyecto, con su valor de lista en las notas de cada hoja."
   ]
  },
  "metodo": {
@@ -385,7 +390,7 @@
  },
  "entregables": {
   "titulo": "Lo que recibe {cliente_corto}.",
-  "subtitulo": "Lo que se llevan: **{n_entregables_txt}**, un levantamiento por área y los agentes, más el seguimiento a {rango_seguimiento}.",
+  "subtitulo": "Lo que se llevan: **un levantamiento por proyecto y los agentes**, más el seguimiento a {rango_seguimiento}.",
   "etiqueta_transversales": "Para todo el proyecto",
   "transversales": [
    "Alcance de cada agente, definido en el levantamiento.",
@@ -463,32 +468,67 @@
   "gancho": "A los 90 días del cierre de cada área, {cliente_corto} contará con el tiempo recuperado medido y el gasto de operar sus agentes."
  },
  "inversion": {
-  "duracion": "Proyecto de 4 áreas con sus agentes en uso, con seguimiento a 30, 60 y 90 días. {h_total} horas de trabajo.",
-  "programa": [
-   "Servicio de Habilidades para Aqua Vista (CAI-055): atención, mercadeo, reclutamiento y consejo.",
-   "Agentes de WhatsApp, Instagram, mercado, contenido y currículos, y el consejo, en uso.",
-   "{h_total} h de trabajo, más la reunión de arranque aparte. Modalidad presencial."
-  ],
-  "licencias": {
-   "titulo": "Licenciamiento · aparte de esta inversión",
-   "tarjetas": [
-    {
-     "nombre": "Claude Team · puesto estándar",
-     "color": "amarillo",
-     "texto": "El plan exige un mínimo de dos puestos. Valor de lista: **USD 25** por puesto al mes, o USD 20 pagando por año, al 16/10/2026. Incluye Claude Code."
-    },
-    {
-     "nombre": "Consumo de los agentes",
-     "color": "naranja",
-     "texto": "Cada puesto estándar trae **USD 20 al mes** en créditos de la Plataforma Claude para conectar agentes. Si se agotan, se compran más; el consumo se estima con el volumen real tras el levantamiento."
-    }
-   ],
-   "nota": "Valores de lista del proveedor al 16/10/2026; pueden variar. Los confirma {cliente_corto} con el proveedor."
-  },
-  "notas": [
-   "Si hace falta otra herramienta de terceros, se informa su valor de lista antes de construir.",
-   "Garantía 30-60-90 en Habilidades: seguimiento a 30, 60 y 90 días desde el cierre de cada área.",
-   "Términos y condiciones: los del enlace de «Importante», que ambas partes aceptan al avanzar con esta propuesta."
+  "etapas": [
+   {
+    "titulo": "Atención al cliente.",
+    "rotulo": "Proyecto 1 · Atención al cliente",
+    "duracion": "Atención por WhatsApp con traspaso a vendedor: {h_area_ate} horas de trabajo.",
+    "programa": [
+     "Atención al cliente (CAI-055, proyecto 1): agente de WhatsApp con traspaso a vendedor.",
+     "Levantamiento previo del agente y su construcción, hasta dejarlo en uso.",
+     "{h_area_ate} h de trabajo, más la reunión de arranque aparte."
+    ],
+    "notas": [
+     "Licenciamiento aparte: Claude Team, USD 25 por puesto al mes (USD 20 pagando por año), con mínimo de dos puestos; cada puesto trae USD 20 al mes en créditos para conectar agentes. Valor de lista del proveedor, que Aqua Vista confirma.",
+     "Si hace falta otra herramienta de terceros, se informa su valor de lista antes de construir."
+    ],
+    "garantia_texto": "Estamos contigo hasta que el agente de atención quede en uso."
+   },
+   {
+    "titulo": "Mercadeo y redes sociales.",
+    "rotulo": "Proyecto 2 · Mercadeo y redes sociales",
+    "duracion": "Instagram, analista de mercado y contenido: {h_area_mer} horas de trabajo.",
+    "programa": [
+     "Mercadeo y redes sociales (CAI-055, proyecto 2): agente de Instagram, analista de mercado y creación de contenido.",
+     "Levantamiento previo de los agentes y su construcción, hasta dejarlos en uso.",
+     "{h_area_mer} h de trabajo, más la reunión de arranque aparte."
+    ],
+    "notas": [
+     "Licenciamiento aparte: Claude Team, USD 25 por puesto al mes (USD 20 pagando por año), con mínimo de dos puestos; cada puesto trae USD 20 al mes en créditos para conectar agentes. Valor de lista del proveedor, que Aqua Vista confirma.",
+     "Si hace falta otra herramienta de terceros, se informa su valor de lista antes de construir."
+    ],
+    "garantia_texto": "Estamos contigo hasta que cada agente de mercadeo quede en uso."
+   },
+   {
+    "titulo": "Recursos Humanos.",
+    "rotulo": "Proyecto 3 · Recursos Humanos",
+    "duracion": "Filtro de currículos con los 3 mejores perfiles: {h_area_rrh} horas de trabajo.",
+    "programa": [
+     "Recursos Humanos (CAI-055, proyecto 3): agente que filtra currículos y devuelve los 3 mejores perfiles.",
+     "Levantamiento previo del agente y su construcción, hasta dejarlo en uso.",
+     "{h_area_rrh} h de trabajo, más la reunión de arranque aparte."
+    ],
+    "notas": [
+     "Licenciamiento aparte: Claude Team, USD 25 por puesto al mes (USD 20 pagando por año), con mínimo de dos puestos; cada puesto trae USD 20 al mes en créditos para conectar agentes. Valor de lista del proveedor, que Aqua Vista confirma.",
+     "Si hace falta otra herramienta de terceros, se informa su valor de lista antes de construir."
+    ],
+    "garantia_texto": "Estamos contigo hasta que el filtro de currículos quede en uso."
+   },
+   {
+    "titulo": "Consejo Ejecutivo.",
+    "rotulo": "Proyecto 4 · Consejo Ejecutivo",
+    "duracion": "El consejo que asesora al dueño en sus decisiones: {h_area_con} horas de trabajo.",
+    "programa": [
+     "Consejo Ejecutivo (CAI-055, proyecto 4): tres consejeros y un presidente con perfiles definidos por el dueño.",
+     "Levantamiento previo del consejo y su construcción, hasta dejarlo en uso.",
+     "{h_area_con} h de trabajo, más la reunión de arranque aparte."
+    ],
+    "notas": [
+     "Licenciamiento aparte: Claude Team, USD 25 por puesto al mes (USD 20 pagando por año), con mínimo de dos puestos; cada puesto trae USD 20 al mes en créditos para conectar agentes. Valor de lista del proveedor, que Aqua Vista confirma.",
+     "Si hace falta otra herramienta de terceros, se informa su valor de lista antes de construir."
+    ],
+    "garantia_texto": "Estamos contigo hasta que el consejo quede en uso."
+   }
   ]
  },
  "proximos_pasos": {

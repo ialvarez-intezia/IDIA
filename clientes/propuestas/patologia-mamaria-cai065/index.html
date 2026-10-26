@@ -1,0 +1,433 @@
+<!doctype html>
+<!--
+  Propuesta · Unidad de Patología Mamaria · Servicio de Habilidades (CAI-065)
+  División: Educación · Servicio: Habilidades (§4.1a) · Alianza: no
+  GENERADO por scripts/generar-habilidades-compacto.py (plantilla 3.0 (2026-10-08), formato habilidades) desde datos.json.
+  No editar a mano: editar datos.json y regenerar. Estilos propios del deck: overrides.css.
+  Fuente del insumo: Ficha de Levantamiento (22/10/2026) y transcripción de la reunión del 22/10/2026
+
+  Formato compacto de 8 slides, en el orden de las preguntas del cliente (Ventas, 2026-10-07), sin semanas, sesiones
+  ni fechas (Keiber, 2026-10-08):
+    1 Portada · 2 Alcance · 3 Ruta · 4 Cómo trabajamos · 5 Entregables · 6 Retorno · 7 Inversión · 8 Próximos pasos
+  Marcadores de detección de AcroForms (agregar-campo-precio.py), por página: «Propuesta Económica» solo en la slide de
+  inversión; «Lo que se llevan» y «Entregables» solo en la de entregables; «Facilidad de pago» solo en la de pago.
+  Campos AcroForm: Programa, Notas, PrecioBase, Descuento, PrecioTotal (inversión) y Entregables, Acreditacion (entregables). Se reposicionan con scripts/customize-habilidades-compacto.py.
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Propuesta · Unidad de Patología Mamaria · Intezia Educación</title>
+  <link rel="stylesheet" href="../_base/styles.css">
+  <link rel="stylesheet" href="habilidades-compacto.css">
+  <link rel="stylesheet" href="overrides.css">
+</head>
+<body>
+
+  <main class="deck">
+
+    <!-- 1 · Portada: ¿cuál es mi problema? -->
+    <section class="slide s-cover">
+      <span class="counter">01 / 08</span>
+      <div class="logo-big">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia Educación">
+      </div>
+      <div class="body">
+        <p class="eyebrow">Propuesta de proyecto · Servicio de Habilidades</p>
+        <h1 style="font-size:46px">
+          IA con criterio en la historia<br>
+          clínica, las imágenes y las citas<br>
+          <span class="hl">de la unidad</span>
+        </h1>
+        <p class="lead">
+          El equipo de la unidad pasa de usar la IA cada uno por su lado a usarla <strong>con criterio común</strong>, sobre sus tareas reales y desde antes de abrir.
+        </p>
+        <div class="pain-strip">
+          <div class="pain-item">
+            <span class="pain-num">A mano</span>
+            <span class="pain-lbl">se escribe la historia clínica durante la consulta, y resta atención al paciente.</span>
+          </div>
+          <div class="pain-item">
+            <span class="pain-num">Suelto</span>
+            <span class="pain-lbl">es el uso de la IA hoy: cada persona la usa por su lado, sin criterio común.</span>
+          </div>
+          <div class="pain-item">
+            <span class="pain-num">Día uno</span>
+            <span class="pain-lbl">es cuando quieren tener digitalizados el historial, las imágenes y las citas.</span>
+          </div>
+        </div>
+        <p class="pain-src">Fuente: ficha de levantamiento de Intezia y reunión con la unidad (22/10/2026).</p>
+      </div>
+      <div class="id-line">
+        <span class="codigo">Código: CAI-065</span>
+        <span class="cliente">Patología Mamaria</span>
+      </div>
+    </section>
+
+    <!-- 2 · Alcance: qué vamos a hacer y para qué -->
+    <section class="slide s-scope roomy">
+      <span class="counter">02 / 08</span>
+      <p class="eyebrow">02 · Alcance</p>
+      <h2>Cinco bloques para usar la IA con criterio.</h2>
+      <p class="sub">Sobre las tareas reales de la unidad; lo que dependa de la herramienta se evalúa antes.</p>
+
+      <div class="scope-panels one" style="--np:1">
+        <div class="scope-panel acc-y">
+          <div class="scope-head">
+            <span class="scope-tag">Herramienta de IA</span>
+            <span class="scope-total"><b>5</b> bloques</span>
+          </div>
+          <ul class="scope-rows">
+              <li><span class="area">Levantamiento y lineamientos</span><span class="para">Definir con el equipo las tareas reales y las reglas de uso de la información de pacientes</span></li>
+              <li><span class="area">Historia clínica asistida</span><span class="para">Que el médico dedique su atención al paciente y revise un borrador en vez de escribir</span></li>
+              <li><span class="area">Imágenes médicas</span><span class="para">Validar las imágenes y, si se puede, usar la IA con un método común y no por tanteo</span></li>
+              <li><span class="area">Datos y documentos</span><span class="para">Resolver con IA el manejo de datos y la redacción que hoy toman tiempo</span></li>
+              <li><span class="area">Agendamiento de citas</span><span class="para">Montar el agendamiento digital desde el día uno, antes de abrir la unidad</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="scope-out">
+        <p class="scope-card-label">Fuera de este alcance</p>
+        <ul>
+          <li>Un sistema de resguardo (repositorio único de historias e imágenes): se evalúa en el levantamiento y no se promete antes.</li>
+          <li>Uso de imágenes médicas con IA: no se promete hasta validar las imágenes en el levantamiento.</li>
+          <li>Licencias de herramientas de IA: se definen con la unidad tras el levantamiento y no están en esta inversión.</li>
+          <li>Diagnóstico médico: la IA apoya con borradores y orientación, y el médico valida y decide siempre.</li>
+        </ul>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Patología Mamaria · CAI-065</span>
+      </div>
+    </section>
+
+    <!-- 3 · Ruta: qué pasa en cada fase -->
+    <section class="slide s-route">
+      <span class="counter">03 / 08</span>
+      <p class="eyebrow">03 · Ruta</p>
+      <h2>De las tareas reales al uso con criterio.</h2>
+      <p class="sub">El calendario se acuerda en el kick-off. La <strong>garantía y el seguimiento</strong> a 30, 60 y 90 días corren desde el cierre del proyecto.</p>
+
+      <div class="route-grid n1" style="--cols:2; --rows:1; --rowh:214px">
+
+        <div class="rg-corner"></div>
+        <div class="rg-phase rg-ph-1">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Arranque</span><b class="rg-phase-n">2 h</b></span>
+          <span class="rg-phase-name"><strong>Levantamiento</strong> de tareas y reglas</span>
+        </div>
+        <div class="rg-phase rg-ph-2 hi">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Construcción</span><b class="rg-phase-n">10 h</b></span>
+          <span class="rg-phase-name"><strong>En vivo</strong>, tarea por tarea</span>
+        </div>
+        <div class="rg-phase rg-fu">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Garantía</span></span>
+          <span class="rg-phase-date">30, 60 y 90 días</span>
+          <span class="rg-phase-txt">Desde el cierre del proyecto</span>
+        </div>
+
+        <div class="rg-front acc-y">
+          <span class="rg-front-h">Historia, imágenes y citas</span>
+          <span class="rg-front-row"><span class="rg-front-tool">Herramienta de IA</span><b class="rg-front-n">12 h</b></span>
+          <span class="rg-front-meta">de trabajo</span>
+        </div>
+        <div class="rg-cell"><span class="rg-h solo-h"><b>2</b> horas</span><p>Tareas reales y reglas de uso de la información, levantadas con el equipo.</p></div>
+        <div class="rg-cell hi"><span class="rg-h solo-h"><b>10</b> horas</span><p>Historia clínica asistida, imágenes con criterio, datos y documentos, y citas.</p></div>
+
+        <div class="rg-follow" style="grid-column:4; grid-row:2 / span 1">
+          <ul>
+            <li><b>30 días</b><span>Uso de lo construido</span></li>
+            <li><b>60 días</b><span>Nuevas tareas del equipo</span></li>
+            <li><b>90 días</b><span>Tiempo recuperado</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="route-miles" style="grid-template-columns:repeat(4,1fr)">
+        <div class="mile"><span class="mile-d"></span><b>Kick-off</b><p>Hasta 1 h para alinear al equipo, aparte de las horas.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Levantamiento</b><p>Tareas, reglas de uso e imágenes validadas.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Construcción</b><p>Historia clínica, imágenes, datos y citas, en vivo.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>30 · 60 · 90 días</b><p>Seguimiento del uso y del tiempo recuperado.</p></div>
+      </div>
+      <p class="route-note">Las 12 horas de trabajo son una proyección: 2 h de levantamiento y 10 h de construcción. El kick-off, de hasta 1 h, va aparte.</p>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Patología Mamaria · CAI-065</span>
+      </div>
+    </section>
+
+    <!-- 4 · Cómo trabajamos: pasos, por qué en ese orden, casos reales, práctica, datos y logística -->
+    <section class="slide s-method roomy">
+      <span class="counter">04 / 08</span>
+      <p class="eyebrow">04 · Cómo trabajamos</p>
+      <h2>Así trabajamos con el equipo.</h2>
+      <p class="sub">Primero se evalúa qué se puede hacer, y después se construye en vivo con quienes lo usarán.</p>
+
+      <ol class="mt-steps" style="--n:4">
+          <li><b>Levantamos</b><span>Las tareas reales del equipo y las reglas de uso de la información.</span></li>
+          <li><b>Evaluamos</b><span>Qué se puede hacer en cada tarea, antes de prometerlo.</span></li>
+          <li><b>Construimos</b><span>En vivo con el equipo, una tarea por vez.</span></li>
+          <li><b>Medimos</b><span>El uso y el tiempo recuperado, a 30, 60 y 90 días.</span></li>
+      </ol>
+      <div class="mt-strips">
+        <p class="mt-why"><b>Por qué en este orden</b> Primero se levantan las tareas y las reglas de uso; después se construye, de la historia clínica a las citas, y al final se mide el uso.</p>
+        <p class="mt-who"><b>Quién construye</b> Intezia construye junto al equipo, en vivo y sobre sus tareas reales: no se entrega nada hecho.</p>
+      </div>
+
+      <div class="mt-info">
+        <div class="mt-card">
+          <p class="mt-card-label">Cómo funciona en la práctica</p>
+          <ul><li><b>Primero se valida.</b> Las imágenes se validan antes de prometer su uso; la historia asistida y las citas se evalúan antes de construirlas.</li><li><b>El médico decide.</b> La IA propone borradores y apoyos; el médico revisa, valida y decide.</li><li><b>Con ejemplos.</b> Se construye con datos de ejemplo mientras no haya autorización para usar información real.</li></ul>
+        </div>
+        <div class="mt-card">
+          <p class="mt-card-label">Cómo cuidamos sus datos</p>
+          <p>Se trabaja solo con lo que la unidad autoriza: nada de pacientes entra a una herramienta de IA sin su visto bueno, y los lineamientos de uso se acuerdan desde el arranque.</p>
+        </div>
+      </div>
+
+      <div class="mt-logi">
+        <div class="mt-tile"><span>Modalidad</span><b>Mixta: presencial en la unidad y virtual para quien viva lejos.</b></div>
+        <div class="mt-tile"><span>Participantes</span><b>Cuatro personas en el equipo; hoy, dos en la clínica.</b></div>
+        <div class="mt-tile"><span>Ritmo de trabajo</span><b>Según la disponibilidad de cada área, sin frenar su operación diaria.</b></div>
+        <div class="mt-tile"><span>Arranque</span><b>La fecha la fija la unidad; el kick-off, de hasta 1 h y aparte, acuerda calendario y accesos.</b></div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Patología Mamaria · CAI-065</span>
+      </div>
+    </section>
+
+    <!-- 5 · Entregables: ¿con qué me quedo? (catálogo + piezas transversales) -->
+    <section class="slide s-deliv roomy">
+      <span class="counter">05 / 08</span>
+      <p class="eyebrow">05 · Entregables</p>
+      <div class="deliv-head">
+        <h2>Lo que recibe el equipo.</h2>
+        <p class="deliv-sub"><span class="nw">Lo que se llevan</span>: criterio común con la IA y lo construido para su trabajo, más el seguimiento.</p>
+      </div>
+
+      <div class="deliv-carriles" style="--ncols:4">
+        <span class="dc acc-y" style="grid-column: span 4">Herramienta de IA</span>
+      </div>
+
+      <div class="deliv-cols" style="--ncols:4">
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">Levantamiento y lineamientos</p>
+            <ul>
+              <li>Tareas levantadas y lineamientos de uso<ul class="inc"><li>Qué se construye y qué se evalúa antes</li><li>Imágenes validadas antes de prometer su uso</li><li>Reglas de uso de los datos de pacientes</li></ul></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name" style="min-height:2.4em">Historia clínica asistida</p>
+            <ul>
+              <li>Borrador de historia clínica que el médico revisa<ul class="inc"><li>Borrador que el médico revisa y valida</li><li>Historias e imágenes ordenadas y buscables, a evaluar</li></ul></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name" style="min-height:2.4em">Imágenes médicas</p>
+            <ul>
+              <li>Apoyo con imágenes, validado antes de prometerlo</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name" style="min-height:2.4em">Datos y documentos</p>
+            <ul>
+              <li>Hojas de cálculo y documentos clínicos y académicos</li>
+            </ul>
+          </div>
+          <div class="da">
+            <p class="da-name">Agendamiento de citas</p>
+            <ul>
+              <li>Agendamiento de citas digital desde el inicio</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="deliv-band">
+        <div class="db-card db-1">
+          <span class="db-label">Para todo el proyecto</span>
+        </div>
+        <div class="db-card db-2">
+          <span class="db-label">Valor inmediato</span>
+        </div>
+      </div>
+      <!-- Cajas multiline editables (vacías en HTML: el contenido vive dentro del AcroForm /V). -->
+      <div class="multi-box db-box db-box-1" data-field="Entregables"></div>
+      <div class="multi-box db-box db-box-2" data-field="Acreditacion"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Patología Mamaria · CAI-065</span>
+      </div>
+    </section>
+
+    <!-- 6 · Retorno: ¿qué gano? (método de cálculo). Sin estudios ni citas externas. -->
+    <section class="slide s-roi">
+      <span class="counter">06 / 08</span>
+      <p class="eyebrow">06 · Retorno</p>
+      <h2>Retorno esperado: tiempo recuperado, medido.</h2>
+      <p class="sub">Se mide contra la línea base de cada tarea, que se toma en el levantamiento, a 30, 60 y 90 días.</p>
+
+      <div class="roi-body">
+        <div class="roi-panel">
+          <p class="roi-panel-title">Cómo se calcula, por área y por proceso</p>
+          <ol class="roi-steps">
+            <li><b>Volumen</b><span>Cuántas historias, exámenes, documentos y citas maneja el equipo cada mes.</span></li>
+            <li><b>Tiempo de partida</b><span>Lo que toma cada tarea al empezar, medido con el equipo: es la <strong>línea base</strong>.</span></li>
+            <li><b>Tiempo con la herramienta</b><span>Lo que toma la misma tarea cuando lo construido ya está en uso.</span></li>
+            <li><b>Horas recuperadas</b><span>Volumen por la diferencia de tiempos: una estimación de referencia, sin compromiso de resultado.</span></li>
+          </ol>
+        </div>
+
+        <div class="roi-right">
+          <p class="roi-right-title">Calendario de garantía, desde el cierre del proyecto</p>
+          <div class="roi-card">
+            <b>30 días</b>
+            <p>El equipo usa lo construido en tareas reales.</p>
+          </div>
+          <div class="roi-card">
+            <b>60 días</b>
+            <p>Nuevas tareas que el equipo resuelve por su cuenta y horas recuperadas.</p>
+          </div>
+          <div class="roi-card">
+            <b>90 días</b>
+            <p>Medición del retorno: horas recuperadas contra la línea base.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="roi-dest-wrap">
+        <p class="roi-dest-title">Hacia dónde puede ir el equipo</p>
+        <div class="roi-dest">
+          <div class="rd-item"><b>Atención al paciente</b><p>Más tiempo para el <strong>paciente</strong> y menos para escribir y registrar.</p></div>
+          <div class="rd-item"><b>Criterio común</b><p>Un equipo que usa la IA con las mismas reglas desde el primer día.</p></div>
+          <div class="rd-item"><b>Capacidad propia</b><p>El equipo ajusta sus herramientas <strong>sin depender</strong> de un proveedor externo.</p></div>
+        </div>
+      </div>
+
+      <div class="roi-hook"><p>A los 90 días, la unidad sabrá cuánto tiempo recuperó su equipo y qué más conviene construir.</p></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Patología Mamaria · CAI-065</span>
+      </div>
+    </section>
+
+    <!-- 7 · Inversión (hoja de cotización estándar; antepenúltima slide) -->
+    <section class="slide s-price">
+      <span class="counter">07 / 08</span>
+      <h2 class="title">Inversión del proyecto.</h2>
+      <p class="price-intro">Propuesta Económica · Servicio de Habilidades</p>
+
+      <div class="block">
+        <span class="block-eyebrow">Duración</span>
+        <p class="block-value">Trabajo en vivo sobre las tareas reales de la unidad, con seguimiento y garantía a 30, 60 y 90 días. 12 horas de trabajo.</p>
+      </div>
+
+      <div class="block block-programa">
+        <span class="block-eyebrow">Programa</span>
+      </div>
+      <div class="multi-box programa-box" data-field="Programa"></div>
+
+      <div class="block block-cotizacion">
+        <span class="block-eyebrow">Cotización</span>
+      </div>
+
+      <span class="cot-label cot-label-base">Propuesta + Inversión</span>
+      <div class="cot-frame base-frame"></div>
+
+      <span class="cot-label cot-label-discount">Descuento</span>
+      <span class="cot-sign-minus">&minus;$</span>
+      <div class="cot-frame discount-frame"></div>
+      <span class="cot-urgent-note">Descuento válido por 15 días</span>
+
+      <span class="cot-label cot-label-total">TOTAL</span>
+      <div class="cot-frame total-frame"></div>
+
+      <p class="cot-validity">Cotización válida por 30 días.</p>
+      <div class="cot-terms-box">
+        <span class="cot-terms-label">Importante</span>
+        <p class="cot-terms-text">Este servicio se presta bajo nuestros <a href="https://drive.google.com/file/d/1PA-ZSt4KnyY5dpxXzgkIk6-yfGlV2eF8/view?usp=drive_link" target="_blank" rel="noopener">términos y condiciones</a>. Al avanzar con esta propuesta, ambas partes los aceptan.</p>
+      </div>
+
+      <div class="cot-garantia-badge">
+        <span class="cot-garantia-tag">Garantía 30-60-90</span>
+        <p class="cot-garantia-text">Estamos contigo hasta que la habilidad quede instalada.</p>
+      </div>
+
+      <div class="block block-notes-container">
+        <span class="block-eyebrow">Notas</span>
+      </div>
+      <div class="multi-box notas-box" data-field="Notas"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Patología Mamaria · CAI-065</span>
+      </div>
+    </section>
+
+    <!-- 9 · Próximos pasos: qué hacer y a quién escribir (última slide) -->
+    <section class="slide s-next">
+      <span class="counter">08 / 08</span>
+      <p class="eyebrow">08 · Próximos pasos</p>
+      <h2>Tres pasos para arrancar.</h2>
+      <p class="sub">Esto es lo que sigue cuando la unidad confirme la propuesta.</p>
+
+      <div class="nx-steps">
+        <div class="nx-step acc-y">
+          <span class="nx-num">1</span>
+          <b>Fecha y participantes</b>
+          <p>Confirmamos con la unidad la fecha de arranque y quiénes participan.</p>
+        </div>
+        <div class="nx-step acc-o">
+          <span class="nx-num">2</span>
+          <b>Información autorizada</b>
+          <p>Acordamos qué información y qué herramientas autoriza la unidad.</p>
+        </div>
+        <div class="nx-step acc-w">
+          <span class="nx-num">3</span>
+          <b>Kick-off</b>
+          <p>Hasta una hora para alinear al equipo antes del levantamiento.</p>
+        </div>
+      </div>
+
+      <div class="nx-contact">
+        <div class="nx-card nx-ase">
+          <span class="nx-label">¿Dudas? Escribe a tu asesora comercial</span>
+          <b class="nx-name">Verónica Rubio</b>
+          <span class="nx-role">Asesora comercial</span>
+          <p class="nx-line"><a href="mailto:vrubio01@intezia.com">vrubio01@intezia.com</a></p>
+          <p class="nx-line">+58 422 3355505</p>
+        </div>
+        <div class="nx-card nx-emp">
+          <span class="nx-label">Intezia</span>
+          <p class="nx-line">Intezia C.A J-505657950</p>
+          <p class="nx-line"><a href="mailto:servicio@intezia.com">servicio@intezia.com</a></p>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Patología Mamaria · CAI-065</span>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

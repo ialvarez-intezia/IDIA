@@ -1,0 +1,450 @@
+{
+ "version": 3,
+ "cliente": {
+  "nombre": "Decovenezia",
+  "slug": "decovenezia-cai063",
+  "codigo": "CAI-063",
+  "nombre_pie": "Decovenezia"
+ },
+ "division": "educacion",
+ "alianza": false,
+ "meta_tipo": "Capacitación In-Company · 1 Cerebro Digital para el gerente · 10 h · seguimiento 30-60-90 · facilidad de pago 50/50 · formato compacto v3",
+ "vocabulario": {
+  "solucion": [
+   "entregable",
+   "entregables"
+  ],
+  "area": [
+   "Cerebro Digital",
+   "Cerebros Digitales"
+  ]
+ },
+ "eje": "Construcción guiada de un Cerebro Digital (asistente personal) con Claude y Obsidian para el gerente de Decovenezia: presupuestos desde la lista de precios, criterio de descuento, agenda de visitas y estado de las órdenes de producción",
+ "origen": "Ficha de Levantamiento de Decovenezia (Verónica Rubio, registrada el 20/10/2026), transcripción de la reunión por Google Meet del 20/10/2026 (57 min) e instrucciones de Ivana del 22/10/2026: CAI-063, nombre «Decovenezia», Educación sin alianza, un Cerebro Digital (8 h y luego 10 h por pedido de Ivana el mismo día), asesora Verónica Rubio, facilidad de pago 50/50 y seguimiento 30-60-90, herramienta Claude",
+ "fuente_insumo": "Ficha de Levantamiento (20/10/2026) y transcripción de la reunión (20/10/2026)",
+ "siglas_ok": [
+  "IA",
+  "PDF"
+ ],
+ "portada": {
+  "titulo_lineas": [
+   "Un Cerebro Digital para cotizar",
+   "y delegar con criterio propio"
+  ],
+  "titulo_destacado": "en {cliente_corto}",
+  "lead": "Este proyecto acompaña al gerente de {cliente_corto} a construir su **Cerebro Digital**: un asistente en **Claude** que conoce su lista de precios y su criterio de descuento, arma los presupuestos y le muestra sus visitas en un solo lugar.",
+  "hechos": [
+   {
+    "num": "A mano",
+    "texto": "se calcula cada presupuesto: se suma, se resta y se multiplica contra la lista de precios en Excel.",
+    "resuelto_por": [
+     "CD-2",
+     "CD-3"
+    ]
+   },
+   {
+    "num": "Criterio",
+    "texto": "de descuento que vive solo en la cabeza del gerente y por eso no se puede delegar.",
+    "resuelto_por": [
+     "CD-2",
+     "CD-3"
+    ]
+   },
+   {
+    "num": "Visitas",
+    "texto": "que llegan por WhatsApp y se agendan a mano, sin ver qué cotizó cada vendedor.",
+    "resuelto_por": [
+     "CD-4"
+    ]
+   }
+  ],
+  "fuente": "Fuente: ficha de levantamiento de Intezia y reunión con {cliente_corto} (20/10/2026)."
+ },
+ "carriles": [
+  {
+   "id": "claude",
+   "nombre": "Claude y Obsidian",
+   "nombre_corto": "Claude",
+   "color": "amarillo"
+  }
+ ],
+ "areas": [
+  {
+   "id": "CD",
+   "nombre": "Cerebro Digital del gerente",
+   "para_que": "Cotizar desde la lista de precios, aplicar su criterio de descuento y ver sus visitas y órdenes",
+   "carril": "claude",
+   "frente": "A",
+   "composicion": "10 h de trabajo guiado por Intezia, con acceso compartido para su persona de apoyo.",
+   "soluciones": [
+    {
+     "id": "CD-1",
+     "entregable": "Claude explicado y propósito del cerebro",
+     "h": 2,
+     "fase": "F1",
+     "detalle": "Referencia interna (2 h, con el gerente y su persona de apoyo). Qué es Claude y cómo se usa, en palabras simples y sin términos técnicos: conversar, Projects, Skills y Artifacts, qué hace cada pieza y cuándo conviene automatizar un proceso y cuándo no. Cómo pedirle algo para que el cerebro lo haga, sobre un caso real: un presupuesto de persianas. Define el propósito del Cerebro Digital. Entrega el propósito definido, sus primeros pedidos y claridad sobre qué hace cada pieza.",
+     "incluye": [
+      "Qué es Claude y qué hace cada pieza, sin términos técnicos",
+      "Cuándo conviene automatizar un proceso y cuándo no",
+      "El propósito del cerebro y sus primeros pedidos"
+     ]
+    },
+    {
+     "id": "CD-2",
+     "entregable": "Lista de precios y criterio de descuento en Obsidian",
+     "h": 2,
+     "fase": "F2",
+     "detalle": "Referencia interna (2 h, con el gerente). Project de Claude (memoria y contexto) con el rol, la voz y el criterio del gerente; su conocimiento organizado como grafo relacional en Obsidian (gratuito, se instala al trabajar): la lista de precios por tipo de persiana y de tela, y el criterio con el que decide cada descuento, que hoy no está escrito. Entrega el Project configurado y su grafo con la lista de precios y el criterio de descuento bajados a papel.",
+     "incluye": [
+      "La lista de precios por tipo de persiana y de tela",
+      "El criterio con el que decide cada descuento, escrito",
+      "Un Project de Claude con su rol y su voz"
+     ]
+    },
+    {
+     "id": "CD-3",
+     "entregable": "Skill del presupuesto formal, lista para enviar",
+     "h": 3,
+     "fase": "F3",
+     "detalle": "Referencia interna (3 h, con el gerente y su persona de apoyo). Qué es una Skill (instrucción reutilizable) y construcción de la suya para el presupuesto: a partir de las medidas, el tipo de persiana y la tela, calcula con la lista de precios, propone el descuento con su criterio para que el gerente solo valide y arma el presupuesto formal (cliente, cantidad, valor, notas, descuento, vendedor y gerencia comercial) en PDF, listo para enviar o imprimir. Se prueba con un presupuesto real. Entrega una Skill funcional del presupuesto.",
+     "incluye": [
+      "Calcula desde las medidas, el tipo de persiana y la tela",
+      "Propone el descuento y el gerente solo valida",
+      "Presupuesto formal en PDF, listo para enviar o imprimir"
+     ]
+    },
+    {
+     "id": "CD-4",
+     "entregable": "Skill de visitas y estado de órdenes, conectada",
+     "h": 3,
+     "fase": "F3",
+     "detalle": "Referencia interna (3 h, con el gerente y su persona de apoyo). Skill de visitas y órdenes: reúne en un solo lugar la agenda del día, de qué cliente y de qué vendedor viene cada visita y qué tipo de persiana y de tela se cotizó, para saber qué muestrario llevar; y el estado de cada orden de producción (pasada, pendiente por enviar, enviada, recibida y despachada, con su fecha). Se conecta a sus hojas de cálculo y archivos con Conectores; privacidad y datos según los protocolos de Claude. Entrega una Skill funcional, una automatización conectada a una herramienta real y su criterio de uso seguro.",
+     "incluye": [
+      "Visitas del día con cliente, vendedor y lo cotizado",
+      "Estado de cada orden de producción y su fecha",
+      "Conectada a sus hojas de cálculo, con uso seguro"
+     ]
+    }
+   ]
+  }
+ ],
+ "alcance": {
+  "compacto": false,
+  "titulo": "Un Cerebro Digital para el gerente.",
+  "subtitulo": "El gerente construye su **asistente personal en Claude**, con su lista de precios y su criterio propio.",
+  "fuera_alcance": [
+   "Una aplicación para los vendedores o un sistema propio de cotización: el cerebro opera con herramientas que ya existen.",
+   "Emitir las órdenes de producción y la facturación: siguen siendo manuales por obligación fiscal; el cerebro da la trazabilidad.",
+   "Los cerebros de los vendedores y el espacio de control del gerente: son la etapa que sigue.",
+   "Las licencias de Claude, que van aparte (detalle en la inversión)."
+  ]
+ },
+ "metodo": {
+  "titulo": "Así trabajamos el proyecto.",
+  "subtitulo": "Trabajo guiado con el gerente, sobre sus propios presupuestos, hasta que usa su cerebro por sí solo.",
+  "quien_construye": "El gerente construye su cerebro; **Intezia guía** cada paso, sobre presupuestos y visitas reales de {cliente_corto}.",
+  "pasos": [
+   {
+    "titulo": "Construimos",
+    "texto": "Con el gerente, en vivo y sobre un presupuesto real."
+   },
+   {
+    "titulo": "Probamos",
+    "texto": "Con su lista de precios y sus clientes, hasta que funcione."
+   },
+   {
+    "titulo": "Adoptamos",
+    "texto": "El gerente usa su cerebro cada día, sin ayuda."
+   },
+   {
+    "titulo": "Medimos",
+    "texto": "El tiempo recuperado y los errores, a 30, 60 y 90 días."
+   }
+  ],
+  "por_que_orden": "Primero se entiende Claude y se define el propósito del cerebro; después se ordena el conocimiento del gerente, como sus descuentos; al final se construyen las Skills y se conectan a sus hojas de cálculo.",
+  "practica": [
+   {
+    "titulo": "Un cerebro, dos accesos",
+    "texto": "Un solo cerebro para el gerente, con acceso compartido para su persona de apoyo."
+   },
+   {
+    "titulo": "Sin términos técnicos",
+    "texto": "Claude se explica desde lo básico: se le pide lo que se necesita en palabras simples."
+   },
+   {
+    "titulo": "Cuenta de Claude",
+    "texto": "Se necesita una cuenta de Claude con un plan de pago: se deja lista al arrancar."
+   }
+  ],
+  "datos": "Solo se carga en el cerebro lo que el gerente decide compartir: la lista de precios y el criterio de descuento se tratan como información confidencial, y no se suben datos de clientes sin autorización. Los criterios de uso seguro se acuerdan al empezar."
+ },
+ "fases": [
+  {
+   "id": "F1",
+   "titulo": "Base",
+   "descripcion": "Claude y propósito"
+  },
+  {
+   "id": "F2",
+   "titulo": "Grafo",
+   "descripcion": "precios y descuento"
+  },
+  {
+   "id": "F3",
+   "titulo": "Uso",
+   "descripcion": "Skills y conexión",
+   "destacada": true
+  }
+ ],
+ "frentes": [
+  {
+   "id": "A",
+   "carril": "claude",
+   "nombre": "El Cerebro Digital del gerente",
+   "celdas": {
+    "F1": "Fundamentos de Claude, sin términos técnicos, y el propósito del cerebro.",
+    "F2": "Su lista de precios y su descuento, ordenados en un grafo.",
+    "F3": "Skills del presupuesto formal y de visitas y órdenes, conectadas."
+   }
+  }
+ ],
+ "ruta": {
+  "titulo": "Un cerebro en uso, en tres fases.",
+  "subtitulo": "El calendario se acuerda en la reunión de arranque. La **garantía y el seguimiento** a 30, 60 y 90 días corren desde el cierre del proyecto.",
+  "nota": "Las {h_total} horas de trabajo son una proyección: 2 h de base, 2 h de grafo y 6 h de uso. La reunión de arranque (1 h) va aparte y no suma horas.",
+  "hitos": [
+   {
+    "titulo": "Arranque · aparte",
+    "texto": "1 h para acordar los presupuestos reales y el calendario con el gerente."
+   },
+   {
+    "titulo": "Base",
+    "texto": "Claude explicado y el propósito del cerebro del gerente."
+   },
+   {
+    "titulo": "Grafo",
+    "texto": "Su lista de precios y su criterio para descontar, ordenados en un grafo."
+   },
+   {
+    "titulo": "Uso",
+    "texto": "Skills conectadas: presupuesto formal, visitas y estado de órdenes."
+   },
+   {
+    "titulo": "30 · 60 · 90 días",
+    "texto": "Seguimiento: uso del cerebro, ajustes, tiempo recuperado y errores."
+   }
+  ],
+  "siguiente_etapa": {
+   "titulo": "Etapa siguiente",
+   "texto": "Cerebros para los vendedores, conectados al del gerente, con un espacio donde ver qué cotizó cada uno."
+  }
+ },
+ "logistica": {
+  "modalidad": "Mixta: remota o presencial, según se acuerde en la reunión de arranque.",
+  "participantes": "El gerente de {cliente_corto}, con acceso compartido para su persona de apoyo.",
+  "ritmo": "Según la agenda del gerente, con preferencia por la tarde y la noche.",
+  "arranque": "La fecha la fija {cliente_corto}; una reunión de arranque de 1 h, aparte, acuerda el calendario."
+ },
+ "seguimiento": {
+  "rango": "30, 60 y 90 días",
+  "texto": "Seguimiento desde el cierre del proyecto",
+  "items": [
+   {
+    "dias": "30 días",
+    "texto": "Uso real del cerebro por el gerente"
+   },
+   {
+    "dias": "60 días",
+    "texto": "Ajustes y nuevas construcciones"
+   },
+   {
+    "dias": "90 días",
+    "texto": "Tiempo recuperado y errores"
+   }
+  ]
+ },
+ "entregables": {
+  "titulo": "Lo que recibe el gerente.",
+  "subtitulo": "Lo que se llevan: **un cerebro en uso** para presupuestar, ver sus visitas y seguir sus órdenes, más el seguimiento a {rango_seguimiento}.",
+  "etiqueta_transversales": "Para todo el proyecto",
+  "transversales": [
+   "Línea base del tiempo y de los errores en cada presupuesto.",
+   "Criterios de uso seguro de la información.",
+   "Seguimiento a 30, 60 y 90 días con medición."
+  ],
+  "etiqueta_valor": "Valor inmediato",
+  "valor_inmediato": [
+   "Con la base: Claude explicado y un presupuesto real resuelto.",
+   "Con el grafo: la lista de precios y el descuento, escritos.",
+   "Al cerrar: presupuesto formal, visitas y órdenes en un lugar."
+  ],
+  "columnas_por_carril": [
+   1
+  ]
+ },
+ "retorno": {
+  "modo": "metodo",
+  "posiciones": false,
+  "titulo": "Retorno esperado: tiempo recuperado, medido.",
+  "subtitulo": "Se mide contra la línea base que el gerente deja al empezar y se sigue a 30, 60 y 90 días.",
+  "etiqueta_pasos": "Cómo se calcula",
+  "pasos": [
+   {
+    "titulo": "Volumen",
+    "texto": "Cuántos presupuestos arma el gerente en un periodo."
+   },
+   {
+    "titulo": "Tiempo actual",
+    "texto": "Cuánto toma hoy cada presupuesto. Es la **línea base**."
+   },
+   {
+    "titulo": "Tiempo con el cerebro",
+    "texto": "Lo que toma el mismo presupuesto con su Skill ya en uso."
+   },
+   {
+    "titulo": "Horas recuperadas",
+    "texto": "Diferencia entre ambos tiempos, por periodo: una estimación referencial, sin compromiso de resultado."
+   },
+   {
+    "titulo": "Errores",
+    "texto": "Cuántos presupuestos se corrigen hoy y cuántos después, para medir cuánto bajan."
+   }
+  ],
+  "etiqueta_metas": "Calendario de garantía y cálculo del retorno",
+  "metas": [
+   {
+    "dias": "30 días",
+    "texto": "El cerebro en uso real y la línea base validada con el gerente."
+   },
+   {
+    "dias": "60 días",
+    "texto": "Ajustes del cerebro y horas recuperadas medidas contra la línea base."
+   },
+   {
+    "dias": "90 días",
+    "texto": "Medición del tiempo recuperado y de su valor en dinero."
+   }
+  ],
+  "etiqueta_destino": "Hacia dónde va el proyecto",
+  "destino": [
+   {
+    "rotulo": "Tiempo del gerente",
+    "texto": "Si el tiempo se libera, el gerente puede dedicarlo a más visitas y a **delegar funciones**."
+   },
+   {
+    "rotulo": "Criterio ordenado",
+    "texto": "El criterio de descuento y la lista de precios dejan de depender de la memoria: quedan en el grafo del cerebro."
+   },
+   {
+    "rotulo": "Más tareas al cerebro",
+    "texto": "Con el resultado medido, {cliente_corto} decide qué más lleva a su cerebro y a los vendedores."
+   }
+  ],
+  "gancho": "A los 90 días del cierre, {cliente_corto} contará con el tiempo recuperado y los errores evitados, medidos contra su línea base."
+ },
+ "inversion": {
+  "licencias": {
+   "titulo": "Licenciamiento · aparte de esta inversión",
+   "tarjetas": [
+    {
+     "nombre": "Claude · cuenta del gerente",
+     "color": "amarillo",
+     "texto": "Una cuenta de **Claude** en un plan que permita construir su cerebro y compartir el acceso. Lo confirma {cliente_corto} con el proveedor."
+    },
+    {
+     "nombre": "Obsidian · gratuito",
+     "color": "naranja",
+     "texto": "Aplicación de notas donde el gerente organiza su conocimiento como grafo. Se instala al trabajar el **grafo**."
+    }
+   ],
+   "nota": "Esta propuesta no incluye valores de lista: dependen del plan que se elija y el cliente los confirma con el proveedor. Pueden variar."
+  },
+  "programa": [
+   "Construcción de 1 Cerebro Digital con Claude y Obsidian para Decovenezia (CAI-063).",
+   "Trabajo guiado por Intezia con el gerente y acceso compartido para su persona de apoyo. Modalidad a coordinar.",
+   "{h_total} h de trabajo, más 1 h de reunión de arranque aparte. Licencias aparte."
+  ],
+  "notas": [
+   "Las licencias van aparte: se necesita una cuenta de Claude con un plan de pago. Obsidian es gratuito.",
+   "Garantía 30-60-90: seguimiento a 30, 60 y 90 días desde el cierre del proyecto, con el cerebro en uso."
+  ]
+ },
+ "pago": {
+  "cuotas": [
+   {
+    "cuando": "Al aprobar",
+    "hito": "Al aprobar la propuesta, para arrancar con la reunión de arranque.",
+    "pct": 50
+   },
+   {
+    "cuando": "Cierre",
+    "hito": "Al cerrar el proyecto, con el cerebro del gerente en uso.",
+    "pct": 50
+   }
+  ]
+ },
+ "proximos_pasos": {
+  "asesora": {
+   "nombre": "Verónica Rubio",
+   "cargo": "Asesora comercial",
+   "correo": "vrubio01@intezia.com",
+   "telefono": "+58 422 3355505"
+  },
+  "pasos": [
+   {
+    "titulo": "Fecha de arranque",
+    "texto": "Confirmamos con {cliente_corto} la fecha de arranque y el horario de trabajo del gerente."
+   },
+   {
+    "titulo": "Cuenta y material",
+    "texto": "Se deja lista la cuenta de Claude y se reúne la lista de precios y el material que el gerente decida compartir."
+   },
+   {
+    "titulo": "Reunión de arranque",
+    "texto": "Una hora para alinear objetivos, elegir los presupuestos reales y acordar el calendario."
+   }
+  ]
+ },
+ "frases_ok": [
+  "lista de precios",
+  "la lista de precios",
+  "su lista de precios",
+  "Su lista de precios",
+  "Lista de precios",
+  "precios y criterio",
+  "lista de precios y criterio",
+  "Lista de precios y criterio de descuento",
+  "precios y descuento",
+  "lista de precios y el criterio",
+  "precios por tipo",
+  "precios por tipo de persiana",
+  "de precios",
+  "los precios",
+  "precios en Excel",
+  "precios y el criterio de descuento"
+ ],
+ "supuestos": [
+  "Instrucción de Ivana (22/10/2026): propuesta CAI-063 para «Decovenezia» (la ficha escribe «Decovenesia» y la reunión suena «Decovenencia»; se usó la escritura de Ivana), Educación sin alianza, un Cerebro Digital de 10 h (primero 8 h y Ivana lo subió a 10 h el mismo día), asesora Verónica Rubio, facilidad de pago 50/50 y seguimiento 30-60-90, herramienta Claude. Ficha de Levantamiento (20/10/2026) y transcripción de la reunión del mismo día; no hubo contradicciones graves.",
+  "Alcance acordado en la llamada (transcripción, 48:38): «enfocaríamos la propuesta del cerebro digital para tu papá». Daniela acotó el alcance («la propuesta va enfocada básicamente en lo que te dije») y no hay Detección: la empresa casi no tiene estructura administrativa. La ficha lo confirma («el caso está tallado para un Cerebro Digital»). Los cerebros de los vendedores van solo como etapa siguiente, sin cotizar.",
+  "Horas: 10 h por instrucción de Ivana (primero pidió 8 h «como Maenca»; la referencia de Cerebro Digital es 6 h). Cuatro entregables: Base y Grafo de 2 h y dos de Uso de 3 h (presupuesto formal; visitas y órdenes), reparto mío por confirmar. La reunión de arranque (1 h) va aparte.",
+  "Los cuatro procesos de la ficha entran así: presupuestos y descuento en CD-2 y CD-3; agenda de visitas y órdenes de producción en CD-4. El descuento no lleva los porcentajes (5, 15 y 30 %): la ficha los marca como información confidencial. Los vendedores son independientes y pagados por comisión: no están en nómina, no se convocan como equipo y su participación queda para la etapa siguiente.",
+  "Órdenes de producción y facturación: siguen siendo manuales por obligación fiscal (la ficha cita al SENIAT, que no va en el deck). El cerebro solo da trazabilidad del estado de cada orden; va explícito en el fuera de alcance.",
+  "Una aplicación móvil de cotización para los vendedores: la cliente la pidió («cada vendedor la tenga en su aplicación»). Verónica explicó que se puede construir con Vibe Coding, pero Intezia no desarrollaría esa plataforma (la haría un equipo de tecnología). Queda fuera del alcance, sin prometerla.",
+  "Herramienta: Claude, como Verónica la presentó (Claude Cowork); el deck nombra Claude, Projects, Skills, Artifacts y Obsidian (como CAI-052 y CAI-027) y no promete la terminal ni Claude Code. Sin mencionar VPN, riesgo de bloqueo ni el acceso desde Venezuela (criterio de Ivana, confirmado en esta propuesta: «nombrar Claude, como Maenca»). La cliente usa ChatGPT y Gemini solo para consultas puntuales; no se nombran.",
+  "Acceso compartido: Daniela (hija del dueño) pidió acceso al mismo cerebro. Se escribe como «persona de apoyo», sin nombres. Claude Team exige un mínimo de 2 puestos: el plan que permita compartir el acceso lo confirma la cliente con el proveedor; el deck no pone valores de lista.",
+  "Lenguaje: la cliente pidió que el padre entienda sin términos técnicos («quiero esto y el cerebro lo hace»). El deck usa palabras simples y lo dice en «Cómo trabajamos»; Outlook cerrado, mezcla de WhatsApp personal y de empresa y baja familiaridad tecnológica del gerente son contexto interno y no van en el deck.",
+  "Contexto interno que no va en el deck: patrocinio «presente pero tibio» (el convencimiento real depende del dueño: «a mí no me tienes que convencer, hay que convencerlo a él»); sensibilidad real al valor («para saber si es rentable»); empresa reducida por la situación país; objetivo de importar directamente persianas, pisos y wall panels a mediano y largo plazo; distribuidores y marcas; el stand renovado con IA que abrió la puerta; nombres de las personas.",
+  "Retorno en modo método: la ficha dice que el volumen no se cuantificó y los procesos son «puntuales / por demanda». Sin casos de éxito con el cliente (primer contacto). Se agregó «Errores» como paso de medición porque es lo que la cliente pidió medir (que bajen los errores de cotización).",
+  "Facilidad de pago 50/50 (Ivana), con montos vacíos para ventas: 50 % al aprobar y 50 % al cerrar el proyecto. La ficha no define moneda ni orden de compra. Seguimiento 30-60-90 con garantía desde el cierre.",
+  "Modalidad mixta (de la ficha); preferencia por la tarde y la noche porque el dueño se desocupa de noche. Una sola sede en Venezuela; Caracas no está confirmada por el cliente. Sin semanas, sesiones ni fechas (§4.23)."
+ ],
+ "pendientes": [
+  "Valor, descuento y total: campos vacíos para ventas, y montos de las dos cuotas. La cliente quiere coordinar «el tema de costos» para saber si es rentable; la presentación debe hablar del tiempo del dueño y de los errores de cotización, no del volumen de funcionalidad.",
+  "Confirmar la escritura del nombre del cliente: Ivana dijo «Decovenezia», la ficha dice «Decovenesia».",
+  "Preparar la reunión de revisión con el dueño y su hija, de tarde-noche: él debe entender sin términos técnicos y es quien decide (Verónica quiere mostrarle ejemplos de su cerebro).",
+  "Confirmar quién contrata la cuenta de Claude, qué plan (acceso compartido, mínimo de 2 puestos) y su valor de lista con fecha.",
+  "Confirmar la ciudad de la sede y la modalidad (remota o presencial) en el kickoff.",
+  "Confirmar con Ivana si la aplicación móvil de cotización para los vendedores (que pidió la cliente) se explica como desarrollo aparte o como parte de la etapa siguiente.",
+  "Confirmar el teléfono y el correo de Verónica Rubio (tomados de la DET-031)."
+ ]
+}
