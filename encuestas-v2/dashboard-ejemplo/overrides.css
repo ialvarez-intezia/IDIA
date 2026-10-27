@@ -826,6 +826,25 @@
 .s-reco.final .contact-mini { margin-top: 14px; display: flex; justify-content: space-between; font-family: var(--font-display); font-size: 12.5px; color: rgba(255, 255, 255, 0.75); }
 .s-reco.final .contact-mini b { color: var(--yellow); letter-spacing: 0.1em; text-transform: uppercase; margin-right: 6px; }
 
+/* Portada: qué evalúa cada instrumento (Edu-Pulse y Edu-Trace) */
+.s-cover .eval2 { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; max-width: 800px; margin-top: 22px; }
+.s-cover .ev { border-left: 4px solid var(--yellow); padding: 2px 0 2px 16px; }
+.s-cover .ev-t { display: block; font-family: var(--font-display); font-weight: 700; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--yellow); margin-bottom: 6px; }
+.s-cover .ev p { font-family: var(--font-display); font-size: 14px; line-height: 1.42; color: rgba(255, 255, 255, 0.88); }
+.s-cover .ev p strong { color: var(--white); }
+
+/* Slide 07: recomendación de Intezia (tres pasos sobre los próximos pasos) */
+.s-reco.final.s-recomendacion .cols { flex: 0 0 auto; }
+.s-reco.final.s-recomendacion .card { padding: 22px 24px; gap: 12px; }
+.s-reco.final.s-recomendacion .rh { display: flex; align-items: center; gap: 12px; }
+.s-reco.final.s-recomendacion .rh .n { flex: 0 0 34px; height: 34px; background: var(--yellow); color: var(--black); display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-weight: 700; font-size: 16px; }
+.s-reco.final.s-recomendacion .card h3 { font-family: var(--font-display); font-weight: 700; font-size: 21px; line-height: 1.15; color: var(--white); }
+.s-reco.final.s-recomendacion .card p { font-size: 14.5px; line-height: 1.45; color: rgba(255, 255, 255, 0.8); }
+.s-reco.final.s-recomendacion .card p strong { color: var(--yellow); }
+
+/* Slide 06 ya no lleva el contacto (pasó a la 07): el cierre naranja baja y deja respirar el bloque de datos */
+.s-reco.final:not(.s-recomendacion) .hook { margin-top: auto; margin-bottom: 40px; }
+
 /* Ajuste de aire en los slides de 6 */
 .s-know .kq { padding: 11px 0; }
 .s-know .eb { margin-bottom: 20px; }
