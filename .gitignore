@@ -58,6 +58,12 @@ clientes/propuestas/**/propuesta.pdf
 # Nunca se versiona. El resultados.json (ya sin PII) sí puede commitearse.
 clientes/dashboards/*/encuesta.csv
 
+# Video del dashboard (plantillas/video-dashboard.md): se versiona el MP4 final y proyecto-9x16/.
+# La voz del narrador y los intermedios de audio y de revisión no.
+clientes/dashboards/*/video/voz/
+clientes/dashboards/*/video/audio/
+clientes/dashboards/*/video/proyecto-9x16/snaps/
+
 # PDFs previos que mueve pdf-habilidades-compacto.sh antes de regenerar (historial local, no se versiona)
 clientes/propuestas/**/_pdf-anteriores/
 

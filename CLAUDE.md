@@ -642,7 +642,8 @@ cuadra en el kickoff» y «que lo entienda alguien que no seamos tú ni yo ni Iv
 | Retorno esperado con cifras del cliente (hoja de captura xlsx) | `plantillas/habilidades-compacto.md` §4 paso 3b + `scripts/habilidades-retorno-xlsx.py` | — |
 | Calendario | `plantillas/calendario.md` | MCP `claude_ai_Google_Calendar` |
 | Generar / entender PDF y AcroForms | `plantillas/generar-pdf.md` | — |
-| **Dashboard de Impacto Edu-Trace** (cliente cerrado, hay `encuesta.csv`) | `plantillas/dashboard-edutrace.md` + `plantillas/generar-dashboard.md` + `empresa/marca-visual.md` | — |
+| **Dashboard de Impacto** (cliente cerrado, con respuestas de Edu-Trace y Edu-Pulse; formato de 7 slides desde 2026-10-26, §11) | `plantillas/dashboard-edutrace.md` + `plantillas/generar-dashboard.md` + `empresa/marca-visual.md` (+ ejemplo `encuestas-v2/dashboard-ejemplo/`) | — |
+| **Video del dashboard** (con el PDF ya verificado, §11 paso 6) | `plantillas/video-dashboard.md` + kit `plantillas/kit-zia/` (`SKILL.md` y manual de Zía) | skill `zia-videos` (el kit es su copia) |
 | **Brief de Kickoff** (propuesta aprobada, arranque del servicio) | `plantillas/brief-kickoff.md` + `empresa/marca-artefactos.md` (+ canónico `plantillas/kickoff-canonico/`) | — |
 | Verificar desborde / acotar contenido | `plantillas/capacidad-cajas.md` (+ `scripts/verificar-overflow.js`) | — |
 | Comparar / validar estructura de un deck | `plantillas/estructura-canonica.md` (no leer el clon completo) | — |
@@ -759,11 +760,11 @@ Slug: minúsculas, sin tildes, espacios → guiones. Ej: "Banco del Pacífico" �
 │   ├── fundacion/{BLANCO,NEGRO}.png
 │   ├── educacion/{BLANCO,NEGRO}.png
 │   └── intezia/{BLANCO,NEGRO}.png    ← genérico sin división, para artefactos comerciales (Brief de Kickoff)
-├── plantillas/                       ← propuesta-comercial, calendario, diseños, generar-pdf, dashboard-edutrace, brief-kickoff, kickoff-canonico/, habilidades-compacto.md + deteccion-compacto.md + habilidades-compacto-canonico/ (§4.21, §4.22)
+├── plantillas/                       ← propuesta-comercial, calendario, diseños, generar-pdf, dashboard-edutrace, brief-kickoff, kickoff-canonico/, habilidades-compacto.md + deteccion-compacto.md + habilidades-compacto-canonico/ (§4.21, §4.22), video-dashboard.md + kit-zia/ (video del dashboard, §11)
 ├── fuentes/formatos-oficiales/       ← PDFs oficiales (referencia inmutable)
 ├── scripts/                          ← generar-pdf.sh, agregar-campo-precio.py, edutrace-procesar.py, generar-dashboard.sh, generar-habilidades-compacto.py + verificar-habilidades-compacto.js + pdf-habilidades-compacto.sh + habilidades-importar-insumo.py + habilidades-retorno-xlsx.py + migrar-datos-v3.py (§4.21, §4.22)
 ├── clientes/propuestas/<slug>/       ← brief.md, programa.md, index.html, overrides.css?, kickoff.html?, "<CÓDIGO> <Título>.pdf"; en Habilidades compacto además datos.json (fuente), retorno-captura.xlsx? (interna), _pdf-anteriores/
-└── clientes/dashboards/<slug>/       ← encuesta.csv (gitignored), mapeo.json, resultados.json, index-cliente.html, overrides.css
+└── clientes/dashboards/<slug>/       ← formato vigente: index-cliente.html, overrides.css, "Dashboard de Impacto · <Cliente>.pdf", video/ (§11); formato anterior además encuesta.csv (gitignored), mapeo.json, resultados.json
 ```
 
 ---
@@ -846,32 +847,46 @@ generar-pdf.sh <slug>   →   customize-acroforms.py <slug>   (siempre juntos, e
 ## 11. Flujo Dashboard de Impacto Edu-Trace (post-cierre)
 
 > Segundo flujo del sistema, **paralelo** al de propuestas (§6). Se dispara cuando termina el
-> proceso de un cliente: ya impartió la capacitación y los participantes respondieron la
-> **Encuesta Edu-Trace** de cierre. Convierte ese feedback en un resultado medible que se
-> **entrega** al cliente. **Salida única: un solo deck de cara al cliente.** No se emite deck
-> interno (regla retirada 2026-06-10 por costo/eficiencia). Reglas: §4.16 (PII), §4.17 (honestidad
-> de medición), §4.18 (clave Bloque C). Diseño: `plantillas/dashboard-edutrace.md`. Mecánica:
-> `plantillas/generar-dashboard.md`.
+> proceso de un cliente: ya impartió la capacitación y los participantes respondieron las
+> evaluaciones **Edu-Pulse** (en cada sesión) y **Edu-Trace** (al cierre). Convierte ese feedback
+> en un resultado medible que se **entrega** al cliente. **Formato único desde 2026-10-26: un deck
+> de 7 slides (el de `encuestas-v2/dashboard-ejemplo/`) más un video vertical hecho con el kit de
+> Zía.** No se emite deck interno (regla retirada 2026-06-10 por costo/eficiencia). Reglas: §4.16
+> (PII), §4.17 (honestidad de medición), §4.18 (clave Bloque C). Diseño:
+> `plantillas/dashboard-edutrace.md`. Mecánica del PDF: `plantillas/generar-dashboard.md`. Video:
+> `plantillas/video-dashboard.md`.
 
-**Disparador (v1):** el usuario sube `encuesta.csv` a `clientes/dashboards/<slug>/`. (v2: web.)
+**Disparador:** el usuario entrega las respuestas de Edu-Trace (cierre) y de Edu-Pulse (por sesión)
+de un cliente cuya formación terminó.
 
-**Pasos:**
+**Pasos (formato vigente):**
 
-1. **Leer (bloqueante):** `clientes/dashboards/<slug>/encuesta.csv` (las preguntas reales) +
-   `plantillas/dashboard-edutrace.md`. Si el cliente ya tiene propuesta, también
-   `clientes/propuestas/<slug>/programa.md` (ayuda a deducir la clave del Bloque C).
-2. **`mapeo.json`:** declara qué columna es de qué bloque + la **clave del Bloque C** como
-   `keywords_correctas` (deducida por lógica; §4.18 — preguntar si hay ambigüedad).
-3. **Procesar:** `python3 scripts/edutrace-procesar.py clientes/dashboards/<slug>/` →
-   `resultados.json` (descarta cédula/correo, calcula el Índice 0-100 y sus 4 ejes).
-4. **Construir el deck:** clona el piloto `apb-group/` (10 slides) → `index-cliente.html`
-   (Bloque E como recomendaciones de expansión de valor). Copy honesto (§4.17), sin overflow (§4.10).
-5. **Generar PDF:** `./scripts/generar-dashboard.sh <slug>` (sin AcroForms; no hay customize).
-6. **Verificar:** `verificar-overflow.js` en el HTML del cliente · grep PII = 0 · revisión visual
+1. **Leer (bloqueante):** las respuestas de Edu-Trace y Edu-Pulse del cliente (las preguntas
+   reales) + `plantillas/dashboard-edutrace.md` (§2b, §3b y §5). Si el cliente ya tiene propuesta,
+   también `clientes/propuestas/<slug>/programa.md` (programa y sesiones).
+2. **Calcular las cifras:** **pendiente un procesador** para Edu-Pulse + Edu-Trace v0.2 (los
+   scripts `edutrace-procesar.py` y `generar-dashboard.sh` son del formato anterior). Mientras no
+   exista, las cifras se calculan y se verifican con el usuario: nunca se estiman ni se rellenan.
+   Cédula y correo no aparecen en ninguna salida (§4.16).
+3. **Construir el deck:** clona `encuestas-v2/dashboard-ejemplo/` en
+   `clientes/dashboards/<slug>/index-cliente.html` (+ `overrides.css`), quita los rótulos y valores
+   de muestra y ajusta las rutas (`plantillas/dashboard-edutrace.md §5`). Portada con el «qué
+   evalúa» (§5.1) y cierre con la recomendación de Intezia (§5.2). Copy honesto (§4.17), sin
+   overflow (§4.10).
+4. **Generar el PDF** con Chrome headless, sin AcroForms ni customize (receta en
+   `plantillas/generar-dashboard.md §4`): `Dashboard de Impacto · <Cliente>.pdf`.
+5. **Verificar:** `verificar-overflow.js` en el HTML del cliente · grep PII = 0 · revisión visual
    slide por slide del PDF.
+6. **Video** (con el PDF ya verificado): `plantillas/video-dashboard.md`, con el kit
+   `plantillas/kit-zia/`. **Zía no entra en el PDF**; voz de narrador; el guion se aprueba antes de
+   animar; y antes del primer envío a un cliente se confirma con Jean (manual de Zía).
 
-> Piloto de referencia: `clientes/dashboards/apb-group/` (Tecnología · n8n/IA · N=11 · Índice
-> 86/100). Clónalo para cada cliente nuevo.
+**Formato anterior** (dashboards ya entregados; solo si se pide regenerar uno): `encuesta.csv` →
+`mapeo.json` → `edutrace-procesar.py` → `generar-dashboard.sh` (`plantillas/generar-dashboard.md`
+§0-§2).
+
+> Ejemplo canónico: `encuestas-v2/dashboard-ejemplo/` (datos simulados, 7 slides). El piloto
+> `clientes/dashboards/apb-group/` es del formato anterior y no se usa para dashboards nuevos.
 
 ---
 

@@ -4,6 +4,11 @@
 > `plantillas/dashboard-edutrace.md`. Análogo a `generar-pdf.md` pero **sin AcroForms**
 > (el dashboard no es editable por ventas).
 
+> **Formato vigente desde 2026-10-26: 7 slides + video** (`plantillas/dashboard-edutrace.md §5`,
+> `plantillas/video-dashboard.md`). El flujo CSV → `resultados.json` → PDF de §1, §2 y §4 (anterior)
+> es el del formato de 10 slides: el procesador del formato vigente está pendiente
+> (`dashboard-edutrace.md §3b`).
+
 ---
 
 ## 0. Estructura de la carpeta
@@ -16,18 +21,19 @@ clientes/dashboards/<slug>/
 ├── mapeo.json            ← declara qué columna es qué bloque + clave del Bloque C
 ├── resultados.json       ← SALIDA del procesador (SIN PII · versionable)
 ├── overrides.css         ← estilos locales (sobre ../../propuestas/_base/styles.css)
-├── index-cliente.html    ← deck entregable (salida única)
-└── Dashboard de Impacto · <Cliente>.pdf
+├── index-cliente.html    ← deck entregable (formato vigente: 7 slides)
+├── Dashboard de Impacto · <Cliente>.pdf
+└── video/                ← video con el kit de Zía (desde 2026-10-26, `plantillas/video-dashboard.md`)
 ```
 
-> **Sin deck interno (desde 2026-06-10).** El dashboard tiene una sola salida: la de cara al
-> cliente. No se generan `index-interno.html`, `_INTERNO · <Cliente>.pdf` ni `siguiente-venta.md`.
+> **Sin deck interno (desde 2026-06-10).** El dashboard no tiene deck interno: sus salidas son el deck de cara al
+> cliente y, desde 2026-10-26, su video. No se generan `index-interno.html`, `_INTERNO · <Cliente>.pdf` ni `siguiente-venta.md`.
 
 `<slug>`: minúsculas, sin tildes, espacios→guiones (igual que propuestas).
 
 ---
 
-## 1. Preparar entradas
+## 1. Preparar entradas (formato anterior)
 
 1. **`encuesta.csv`**: el export crudo del Google Form, una fila por participante. No se
    reordenan columnas; se usa tal cual lo da Forms.
@@ -46,7 +52,7 @@ clientes/dashboards/<slug>/
 
 ---
 
-## 2. Procesar (CSV → resultados.json)
+## 2. Procesar (CSV → resultados.json, formato anterior)
 
 ```bash
 python3 scripts/edutrace-procesar.py clientes/dashboards/<slug>/
@@ -61,13 +67,30 @@ ahí mismo que el N y el Índice sean plausibles.
 
 ## 3. Construir / actualizar el HTML
 
-Claude inyecta los valores de `resultados.json` en `index-cliente.html` (clonando el piloto
-APB Group). 10 slides (ver `dashboard-edutrace.md §5`). Reglas de copy honesto (§4.17) y sin
-overflow (§4.10). El Bloque E se presenta como «recomendaciones de expansión» de valor.
+**Formato vigente (7 slides):** se clona `encuestas-v2/dashboard-ejemplo/` en `index-cliente.html` +
+`overrides.css`, se quitan los rótulos y valores de muestra y se inyectan las cifras reales (ver
+`dashboard-edutrace.md §5`, con la portada en §5.1 y la recomendación de Intezia en §5.2). Reglas de
+copy honesto (§4.17) y sin overflow (§4.10).
+
+**Formato anterior:** Claude inyectaba los valores de `resultados.json` en `index-cliente.html`
+(clonando el piloto APB Group, 10 slides). El Bloque E se presentaba como «recomendaciones de
+expansión» de valor.
 
 ---
 
-## 4. Generar el PDF (par procesar→render)
+## 4. Generar el PDF
+
+**Formato vigente:** sin procesador todavía, `generar-dashboard.sh` no aplica. El PDF se renderiza con
+el mismo Chrome headless, desde la carpeta del cliente (A4 horizontal, sin AcroForms ni customize):
+
+```bash
+cd clientes/dashboards/<slug>
+"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless=new --disable-gpu \
+  --no-pdf-header-footer --print-to-pdf-no-header --virtual-time-budget=15000 \
+  --print-to-pdf="Dashboard de Impacto · <Cliente>.pdf" "file://$PWD/index-cliente.html"
+```
+
+**Formato anterior** (par procesar→render):
 
 ```bash
 ./scripts/generar-dashboard.sh <slug>
@@ -93,3 +116,15 @@ grep -rcE "cédula|c[0-9]{6,9}" clientes/dashboards/<slug>/index-cliente.html
 Y **revisar visualmente cada slide del PDF** (§4.10): el script terminando sin error no
 equivale a PDF correcto. Comprobar: tags medido/percibido correctos, sin afirmaciones de mejora
 medida sobre B/D, departamentos con disclaimer de muestra, participación sin puntajes.
+
+En el formato vigente se comprueba, además: tags medido, declarado y percibido correctos; ningún
+«mejoró» sobre datos declarados o percibidos; ninguna sesión con menos de 4 respuestas; y sin
+rótulos ni valores de muestra (`.ejemplo-tag`, «Empresa Ejemplo», asesora de relleno).
+
+---
+
+## 6. Video del dashboard
+
+Con el PDF ya verificado: `plantillas/video-dashboard.md` (guion, reglas de marca y checklist), con el
+kit `plantillas/kit-zia/`. Carpeta de trabajo: `clientes/dashboards/<slug>/video/`. Zía no entra en
+el PDF.

@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <title>Intezia · Zía se presenta al equipo</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <script src="assets/zia.js"></script>
+    <style>
+      @font-face { font-family: "Poppins"; src: url("assets/fonts/Poppins-Regular.ttf"); font-weight: 400; }
+      @font-face { font-family: "Poppins"; src: url("assets/fonts/Poppins-Medium.ttf"); font-weight: 500; }
+      @font-face { font-family: "Poppins"; src: url("assets/fonts/Poppins-SemiBold.ttf"); font-weight: 600; }
+      @font-face { font-family: "Poppins"; src: url("assets/fonts/Poppins-Bold.ttf"); font-weight: 700; }
+      @font-face { font-family: "Poppins"; src: url("assets/fonts/Poppins-ExtraBold.ttf"); font-weight: 800; }
+      @font-face { font-family: "Serif"; src: url("assets/fonts/InstrumentSerif-Italic.ttf"); font-style: italic; }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #0A0A0A; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; font-family: "Poppins", sans-serif; color: #FFFFFF; }
+      .clip { position: absolute; inset: 0; }
+      .abs { position: absolute; }
+      .c, .w { display: inline-block; white-space: pre; }
+      .ser { font-family: "Serif", serif; font-style: italic; font-weight: 400; }
+      .line { position: absolute; left: 0; right: 0; text-align: center; white-space: nowrap; }
+      .yel { color: #FFD300; }
+      .gradp .w, .gradp .c { background: linear-gradient(180deg, #FFF27E 0%, #FFD300 45%, #F7941D 100%); -webkit-background-clip: text; background-clip: text; color: transparent; padding: 0 0.04em; }
+
+      #bg { background: radial-gradient(ellipse at 50% 40%, #17150C 0%, #0A0A0A 60%, #050505 100%); }
+      .glow { position: absolute; border-radius: 50%; background: radial-gradient(circle, rgba(255,211,0,0.2) 0%, rgba(255,211,0,0) 65%); }
+      #grid { position: absolute; inset: -200px; background-image: linear-gradient(rgba(255,255,255,0.045) 2px, transparent 2px), linear-gradient(90deg, rgba(255,255,255,0.045) 2px, transparent 2px); background-size: 120px 120px; }
+
+      .zia { position: absolute; left: -175px; top: -275px; width: 350px; height: 315px; }
+      .zia .zr, .zia .zs { position: absolute; inset: 0; }
+      .zia svg { display: block; overflow: visible; }
+
+      /* S1 foco */
+      #spot { position: absolute; left: 0; top: 0; }
+      #pool { position: absolute; left: 240px; top: 1520px; width: 600px; height: 130px; border-radius: 50%; background: radial-gradient(ellipse, rgba(255,230,120,0.55) 0%, rgba(255,211,0,0) 70%); }
+      #h1a { top: 430px; font-size: 96px; font-weight: 500; letter-spacing: -0.03em; }
+      #h1b { top: 540px; font-size: 168px; font-weight: 800; letter-spacing: -0.055em; line-height: 1.1; }
+      #caret { display: inline-block; width: 12px; height: 150px; background: #FFD300; vertical-align: -18px; margin-left: 10px; }
+
+      /* S2 carnet */
+      #lan { position: absolute; left: 0; top: 0; }
+      #badge { position: absolute; left: 250px; top: 520px; width: 580px; height: 820px; border-radius: 44px; background: #F5F5F2; color: #0A0A0A; overflow: hidden; box-shadow: 0 50px 120px rgba(0,0,0,0.6); }
+      #bhead { height: 150px; background: #0A0A0A; display: flex; align-items: center; justify-content: center; }
+      #bhead img { width: 300px; display: block; }
+      #bhole { position: absolute; left: 240px; top: 26px; width: 100px; height: 22px; border-radius: 11px; background: #2A2A2E; }
+      #bphoto { position: absolute; left: 140px; top: 200px; width: 300px; height: 300px; border-radius: 50%; background: radial-gradient(circle at 50% 40%, #FFE873, #FFD300 60%, #F2B800); display: flex; align-items: flex-end; justify-content: center; overflow: hidden; }
+      #bname { position: absolute; left: 0; right: 0; top: 525px; text-align: center; font-size: 104px; font-weight: 800; letter-spacing: -0.05em; }
+      #brole { position: absolute; left: 0; right: 0; top: 660px; text-align: center; font-size: 36px; font-weight: 600; color: #4A4A50; }
+      #bbar { position: absolute; left: 70px; right: 70px; top: 735px; height: 18px; border-radius: 9px; background: repeating-linear-gradient(90deg, #0A0A0A 0 6px, transparent 6px 12px, #0A0A0A 12px 15px, transparent 15px 22px); opacity: 0.8; }
+      #stamp { position: absolute; left: 600px; top: 640px; padding: 16px 30px; border: 7px solid #FFD300; border-radius: 18px; color: #FFD300; font-size: 54px; font-weight: 800; letter-spacing: 0.02em; background: rgba(10,10,10,0.85); }
+
+      /* S3 telefono */
+      #s3t { top: 300px; font-size: 76px; font-weight: 600; letter-spacing: -0.035em; }
+      #phone { position: absolute; left: 230px; top: 470px; width: 620px; height: 1180px; border-radius: 86px; background: #121214; border: 10px solid #2C2C30; box-shadow: 0 60px 140px rgba(0,0,0,0.7), 0 0 90px rgba(255,211,0,0.1); overflow: hidden; }
+      #notch { position: absolute; left: 225px; top: 18px; width: 150px; height: 40px; border-radius: 20px; background: #000; }
+      #prof { position: absolute; left: 40px; top: 100px; display: flex; align-items: center; gap: 30px; }
+      #pav { width: 150px; height: 150px; border-radius: 50%; padding: 6px; background: conic-gradient(#FFD300, #F7941D, #FFF27E, #FFD300); }
+      #pav div { width: 100%; height: 100%; border-radius: 50%; background: #0A0A0A; border: 5px solid #121214; display: flex; align-items: center; justify-content: center; }
+      #pav img { width: 108px; display: block; }
+      .stat { text-align: center; }
+      .stat b { display: block; font-size: 36px; font-weight: 700; }
+      .stat span { font-size: 21px; color: #9A9AA2; font-weight: 500; }
+      #pname { position: absolute; left: 40px; top: 280px; font-size: 32px; font-weight: 700; }
+      #pbio { position: absolute; left: 40px; top: 326px; font-size: 24px; color: #B9B9C0; font-weight: 500; }
+      #pfollow { position: absolute; left: 40px; right: 40px; top: 380px; height: 70px; border-radius: 18px; background: #FFD300; color: #0A0A0A; font-size: 28px; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+      #pgrid { position: absolute; left: 0; right: 0; top: 480px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
+      .pt { height: 220px; display: flex; align-items: flex-end; justify-content: center; overflow: hidden; }
+      .pt.y { background: linear-gradient(160deg, #FFE873, #FFD300); }
+      .pt.k { background: #222226; }
+      .pt.o { background: linear-gradient(160deg, #F7941D, #E0621A); }
+
+      /* S4 tarjetas */
+      .fmt { position: absolute; top: 980px; width: 300px; height: 360px; border-radius: 44px; background: #18181B; border: 3px solid #2E2E33; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 26px; box-shadow: 0 40px 90px rgba(0,0,0,0.5); }
+      .fmt .fi { width: 150px; height: 150px; border-radius: 40px; background: #FFD300; display: flex; align-items: center; justify-content: center; }
+      .fmt .fi svg { width: 84px; height: 84px; fill: none; stroke: #0A0A0A; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+      .fmt .fl { font-size: 46px; font-weight: 700; letter-spacing: -0.03em; }
+      #s4t { top: 480px; font-size: 90px; font-weight: 700; letter-spacing: -0.045em; }
+      #s4s { top: 600px; font-size: 54px; font-weight: 500; letter-spacing: -0.02em; color: #C9C9CF; }
+
+      /* S5 megafono */
+      #s5a { top: 430px; font-size: 104px; font-weight: 700; letter-spacing: -0.045em; }
+      #s5b { top: 560px; font-size: 118px; line-height: 1.1; }
+      #mega { position: absolute; left: 0; top: 0; }
+      .arc { position: absolute; border-radius: 50%; border: 10px solid #FFD300; border-left-color: transparent; border-bottom-color: transparent; }
+
+      /* S6 instagram */
+      #igw { position: absolute; left: 340px; top: 620px; width: 400px; height: 400px; }
+      #igglow { position: absolute; left: -160px; top: -160px; width: 720px; height: 720px; border-radius: 50%; background: radial-gradient(circle, rgba(247,148,29,0.45) 0%, rgba(214,41,118,0.22) 40%, rgba(0,0,0,0) 70%); }
+      #ig { position: absolute; inset: 0; filter: brightness(0) invert(1); }
+      #ig img { width: 100%; display: block; }
+      #s6a { top: 1120px; font-size: 80px; font-weight: 600; letter-spacing: -0.035em; }
+      #s6b { top: 1220px; font-size: 132px; font-weight: 800; letter-spacing: -0.05em; }
+
+      /* S7 firma */
+      #logoW { position: absolute; left: 230px; top: 820px; width: 620px; }
+      #logoW img { display: block; width: 100%; }
+      #logoTri { position: absolute; left: 0; top: 0; opacity: 0; }
+      #slog { top: 1010px; font-size: 34px; font-weight: 500; letter-spacing: -0.01em; color: #C9C9CF; }
+      #fglow { position: absolute; left: 140px; top: 580px; width: 800px; height: 600px; border-radius: 50%; background: radial-gradient(ellipse, rgba(255,211,0,0.25) 0%, rgba(255,211,0,0) 65%); }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="18" data-width="1080" data-height="1920">
+      <div id="bg" class="clip" data-start="0" data-duration="18" data-track-index="0">
+        <div id="grid"></div>
+        <div id="gA" class="glow" style="width:1300px;height:1300px"></div>
+        <div id="gB" class="glow" style="width:1000px;height:1000px"></div>
+      </div>
+
+      <!-- S1: foco + Hola, equipo -->
+      <div id="s1" class="clip" data-start="0" data-duration="2.3" data-track-index="1">
+        <svg id="spot" width="1080" height="1920" viewBox="0 0 1080 1920">
+          <defs><linearGradient id="cone" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFF4B0" stop-opacity="0.5" /><stop offset="1" stop-color="#FFD300" stop-opacity="0.05" /></linearGradient></defs>
+          <polygon id="beam" points="470,-20 610,-20 860,1600 220,1600" fill="url(#cone)" />
+        </svg>
+        <div id="pool"></div>
+        <div id="h1a" class="line"><span class="w" data-t="0.4">¡Hola,</span></div>
+        <div id="h1b" class="line"><span id="tw"></span><span id="caret"></span></div>
+        <div id="z1" class="zia"></div>
+      </div>
+
+      <!-- S2: carnet -->
+      <div id="s2" class="clip" data-start="2.2" data-duration="2.4" data-track-index="2">
+        <div id="swing">
+          <svg id="lan" width="1080" height="1920" viewBox="0 0 1080 1920"><path d="M440,-20 L520,545 M640,-20 L560,545" stroke="#FFD300" stroke-width="22" stroke-linecap="round" /></svg>
+          <div id="badge">
+            <div id="bhead"><img src="assets/intezia-white.png" alt="Intezia" /></div>
+            <div id="bhole"></div>
+            <div id="bphoto"></div>
+            <div id="bname">Zía</div>
+            <div id="brole">Nueva en el equipo</div>
+            <div id="bbar"></div>
+          </div>
+        </div>
+        <div id="stamp">¡NUEVA!</div>
+      </div>
+
+      <!-- S3: telefono con el perfil -->
+      <div id="s3" class="clip" data-start="4.55" data-duration="2.75" data-track-index="3">
+        <div id="s3t" class="line"><span class="w" data-t="4.72">Desde </span><span class="w" data-t="4.9">hoy, </span><span class="w yel" data-t="5.94">en </span><span class="w yel" data-t="6.06">las redes</span></div>
+        <div id="phone">
+          <div id="notch"></div>
+          <div id="prof"><div id="pav"><div><img src="assets/intezia-white.png" alt="" /></div></div>
+            <div class="stat"><b>Zía</b><span>se une</span></div>
+            <div class="stat"><b>♥</b><span>comunidad</span></div></div>
+          <div id="pname">Intezia</div>
+          <div id="pbio">Inteligencia artificial que sí funciona.</div>
+          <div id="pfollow">Seguir</div>
+          <div id="pgrid"></div>
+        </div>
+        <div id="z2" class="zia"></div>
+      </div>
+
+      <!-- S4: videos, posts, historias -->
+      <div id="s4" class="clip" data-start="7.2" data-duration="2.95" data-track-index="4">
+        <div id="s4t" class="line"><span class="w" data-t="7.3">Me van a ver en</span></div>
+        <div id="f1" class="fmt" style="left:60px"><div class="fi"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="4"/><path d="m10 9 5 3-5 3z" fill="#0A0A0A"/></svg></div><div class="fl">Videos</div></div>
+        <div id="f2" class="fmt" style="left:390px"><div class="fi"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></div><div class="fl">Posts</div></div>
+        <div id="f3" class="fmt" style="left:720px"><div class="fi"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" stroke-dasharray="4 2.2"/><circle cx="12" cy="12" r="4.5"/></svg></div><div class="fl">Historias</div></div>
+        <div id="z3" class="zia"></div>
+      </div>
+
+      <!-- S5: megafono -->
+      <div id="s5" class="clip" data-start="10.1" data-duration="2.6" data-track-index="5">
+        <div id="s5a" class="line"><span class="w" data-t="10.6">Vamos </span><span class="w" data-t="10.8">a </span><span class="w" data-t="11.02">contar</span></div>
+        <div id="s5b" class="line ser gradp"><span class="w" data-t="11.26">todo </span><span class="w" data-t="11.6">lo </span><span class="w" data-t="11.84">que </span><span class="w" data-t="11.96">hacemos</span></div>
+        <div id="arcs"></div>
+        <div id="z4" class="zia"></div>
+        <svg id="mega" width="1080" height="1920" viewBox="0 0 1080 1920">
+          <g id="megag">
+            <path d="M470,1250 L640,1150 L640,1430 L470,1330 Z" fill="#F5F5F2" stroke="#0A0A0A" stroke-width="6" stroke-linejoin="round" />
+            <rect x="420" y="1245" width="60" height="90" rx="14" fill="#0A0A0A" />
+            <ellipse cx="640" cy="1290" rx="34" ry="142" fill="#FFD300" stroke="#0A0A0A" stroke-width="6" />
+            <rect x="500" y="1330" width="30" height="80" rx="10" fill="#2A2A2E" />
+          </g>
+        </svg>
+      </div>
+
+      <!-- S6: nos vemos en Instagram -->
+      <div id="s6" class="clip" data-start="12.6" data-duration="1.95" data-track-index="6">
+        <div id="igw"><div id="igglow"></div><div id="ig"><img src="assets/instagram.svg" alt="Instagram" /></div></div>
+        <div id="s6a" class="line"><span class="w" data-t="12.82">¡Nos </span><span class="w" data-t="13.02">vemos </span><span class="w" data-t="13.3">en</span></div>
+        <div id="s6b" class="line gradp"><span class="w" data-t="13.6">Instagram!</span></div>
+        <div id="z5" class="zia"></div>
+      </div>
+
+      <!-- S7: firma -->
+      <div id="s7" class="clip" data-start="14.4" data-duration="3.6" data-track-index="7">
+        <div id="fglow"></div>
+        <div id="logoW"><img id="logo" src="assets/intezia-white-sintri.png" alt="Intezia" /><img id="logoTri" src="assets/intezia-tri.png" alt="" /></div>
+        <div id="slog" class="line">Inteligencia artificial que sí funciona en tu empresa.</div>
+        <div id="zF" class="zia"></div>
+      </div>
+
+      <audio id="mix" src="assets/audio/mezcla.wav" data-start="0" data-duration="18" data-track-index="20" data-volume="1"></audio>
+    </div>
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      const X = "expo.out", E = "power3.out", EI = "power2.in", IO = "power3.inOut";
+      const $ = (s) => document.querySelector(s), $$ = (s) => [...document.querySelectorAll(s)];
+      let seed = 23; const rnd = () => ((seed = (seed * 16807) % 2147483647) / 2147483647);
+      const T = 18;
+
+      // palabras: entran con escala desde abajo, sin blur (otra entrada que la del video de directores)
+      function words(sel) {
+        $$(sel + " .w").forEach((w) => {
+          if (!w.dataset.t) return;
+          tl.fromTo(w, { opacity: 0, scale: 0.4, y: 30 }, { opacity: 1, scale: 1, y: 0, duration: 0.3, ease: "back.out(2.2)" }, +w.dataset.t - 0.05);
+        });
+      }
+
+      // ---------- Zia
+      const ZO = "175px 275px", ZC = "175px 160px";
+      const zq = (z, c) => `${z} .${c}`;
+      ["#z1", "#z2", "#z3", "#z4", "#z5", "#zF"].forEach((z) => {
+        $(z).innerHTML = `<div class="zr"><div class="zs">${Zia.svg({ v: "D", shadow: 0 })}</div></div>`;
+        const s = $(z).querySelector("svg"); s.setAttribute("width", "350"); s.setAttribute("height", "315");
+        gsap.set(zq(z, "zaL"), { rotation: 0, scale: 1, svgOrigin: "-78 -92" });
+        gsap.set(zq(z, "zaR"), { rotation: 0, scale: 1, svgOrigin: "78 -92" });
+        gsap.set(zq(z, "zfL"), { scale: 1, svgOrigin: "-56 6" });
+        gsap.set(zq(z, "zfR"), { scale: 1, svgOrigin: "56 6" });
+        gsap.set(z, { x: 540, y: 2450, transformOrigin: ZO });
+      });
+      const eyes = (z, e, at) => { ["normal", "happy", "surp", "wink", "closed", "worried", "tired"].forEach((k) => tl.set(zq(z, "ze-" + k), { opacity: k === e ? 1 : 0 }, at)); };
+      const armTo = (z, side, rot, dur, at, ease) => tl.to(zq(z, side === "L" ? "zaL" : "zaR"), { rotation: rot, svgOrigin: side === "L" ? "-78 -92" : "78 -92", duration: dur, ease: ease || "power2.out" }, at);
+      const squash = (z, at, sx, sy, d) => tl.fromTo(zq(z, "zs"), { scaleX: 1, scaleY: 1, transformOrigin: ZO }, { scaleX: sx, scaleY: sy, duration: d || 0.08, yoyo: true, repeat: 1, ease: "power2.out", immediateRender: false }, at);
+      const mini = (el, w, eyesK) => { el.innerHTML = Zia.svg({ v: "D", shadow: 0, eyes: eyesK || "happy" }); const s = el.querySelector("svg"); s.setAttribute("width", w); s.setAttribute("height", Math.round(w * 0.9)); };
+
+      // ---------- fondo
+      tl.fromTo("#gA", { x: -400, y: 1100 }, { x: 200, y: -200, duration: T, ease: "sine.inOut" }, 0);
+      tl.fromTo("#gB", { x: 500, y: -100 }, { x: -100, y: 1200, duration: T, ease: "sine.inOut" }, 0);
+      tl.fromTo("#grid", { x: 0, y: 0 }, { x: -120, y: -240, duration: T, ease: "none" }, 0);
+
+      // ---------- S1: el foco se enciende con parpadeo, Zia entra derrapando desde la derecha
+      tl.fromTo("#beam", { opacity: 0 }, { opacity: 1, duration: 0.05 }, 0.05);
+      tl.to("#beam", { opacity: 0.2, duration: 0.04 }, 0.12); tl.to("#beam", { opacity: 1, duration: 0.04 }, 0.18);
+      tl.fromTo("#pool", { opacity: 0, scale: 0.4 }, { opacity: 1, scale: 1, duration: 0.3, ease: E }, 0.18);
+      eyes("#z1", "normal", 0);
+      tl.fromTo("#z1", { x: 1350, y: 1600, scale: 1.5, rotation: -16 }, { x: 540, y: 1600, scale: 1.5, rotation: -16, duration: 0.42, ease: "power3.out" }, 0.25);
+      tl.to("#z1", { rotation: 0, duration: 0.3, ease: "back.out(3)" }, 0.62);
+      squash("#z1", 0.66, 1.1, 0.88, 0.08);
+      eyes("#z1", "happy", 0.8);
+      armTo("#z1", "R", -110, 0.16, 0.75, "back.out(2)");
+      tl.fromTo(zq("#z1", "zaR"), { rotation: -110, svgOrigin: "78 -92" }, { rotation: -140, svgOrigin: "78 -92", duration: 0.13, yoyo: true, repeat: 7, ease: "sine.inOut", immediateRender: false }, 0.92);
+      words("#h1a");
+      // maquina de escribir con cursor: "equipo!"
+      const TW = "equipo!", tw = $("#tw"), TWo = { v: 0 };
+      tl.to(TWo, { v: 1, duration: 0.45, ease: "none", onUpdate: () => (tw.textContent = TW.slice(0, Math.round(TWo.v * TW.length))) }, 1.0);
+      tl.set({}, { onUpdate: () => (tw.textContent = TW.slice(0, Math.round(TWo.v * TW.length))) }, 0);
+      tl.fromTo("#caret", { opacity: 0 }, { opacity: 1, duration: 0.12, yoyo: true, repeat: 7, ease: "steps(1)" }, 0.95);
+      tl.fromTo("#h1b", { color: "#FFFFFF" }, { color: "#FFD300", duration: 0.2 }, 1.5);
+      tl.to(["#h1a", "#h1b"], { y: -160, opacity: 0, duration: 0.24, ease: EI }, 2.02);
+      tl.to(["#beam", "#pool"], { opacity: 0, duration: 0.2 }, 2.05);
+      tl.to("#z1", { y: 2450, duration: 0.24, ease: "power2.in" }, 2.04);
+
+      // ---------- S2: el carnet baja colgado, gira y se balancea; sello de NUEVA
+      mini($("#bphoto"), 250, "happy");
+      tl.fromTo("#swing", { y: -1500, rotation: 0, transformOrigin: "540px -20px" }, { y: 0, rotation: 0, duration: 0.5, ease: "back.out(1.3)" }, 2.22);
+      tl.fromTo("#badge", { rotationY: 180, transformPerspective: 1800 }, { rotationY: 0, duration: 0.6, ease: "power2.out" }, 2.25);
+      tl.fromTo("#swing", { rotation: 6 }, { rotation: -4, duration: 0.45, ease: "sine.inOut", yoyo: true, repeat: 3, immediateRender: false }, 2.72);
+      tl.fromTo("#bname", { opacity: 0, scale: 0.4 }, { opacity: 1, scale: 1, duration: 0.3, ease: "back.out(2.6)" }, 2.6);
+      tl.fromTo("#brole", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.3, ease: E }, 3.4);
+      tl.fromTo("#bbar", { scaleX: 0, transformOrigin: "0% 50%" }, { scaleX: 1, duration: 0.4, ease: E }, 3.55);
+      tl.fromTo("#stamp", { opacity: 0, scale: 2.6, rotation: -30 }, { opacity: 1, scale: 1, rotation: -12, duration: 0.22, ease: "power4.in" }, 3.5);
+      tl.fromTo("#swing", { x: 0 }, { x: -12, duration: 0.04, yoyo: true, repeat: 3, ease: "none", immediateRender: false }, 3.72);
+      tl.to(["#swing", "#stamp"], { y: -1600, duration: 0.32, ease: "power3.in" }, 4.3);
+
+      // ---------- S3: el telefono sube con el perfil y la cuadricula se llena de Zias
+      const tiles = ["y", "k", "o", "k", "y", "k", "o", "k", "y"];
+      $("#pgrid").innerHTML = tiles.map((c) => `<div class="pt ${c}"></div>`).join("");
+      $$("#pgrid .pt").forEach((t, i) => { if (i % 2 === 0) mini(t, 150, ["happy", "wink", "normal", "surp", "happy"][i / 2]); });
+      words("#s3t");
+      tl.fromTo("#phone", { y: 1500, rotation: 8, scale: 0.9 }, { y: 0, rotation: 0, scale: 1, duration: 0.55, ease: X }, 4.58);
+      tl.fromTo("#pgrid .pt", { opacity: 0, scale: 0.3 }, { opacity: 1, scale: 1, duration: 0.3, ease: "back.out(2)", stagger: 0.06 }, 5.0);
+      tl.fromTo("#pfollow", { scale: 1 }, { scale: 1.06, duration: 0.12, yoyo: true, repeat: 1, ease: "power2.out", immediateRender: false }, 6.3);
+      eyes("#z2", "happy", 4.55);
+      tl.fromTo("#z2", { x: 930, y: 2450, scale: 0.85, rotation: -10 }, { x: 930, y: 1760, scale: 0.85, rotation: -10, duration: 0.4, ease: "back.out(1.7)" }, 5.2);
+      armTo("#z2", "L", 75, 0.18, 5.45, "back.out(2.6)");
+      squash("#z2", 6.3, 0.92, 1.1, 0.1);
+      tl.to(["#phone", "#s3t", "#z2"], { scale: 0.3, opacity: 0, y: "+=200", duration: 0.28, ease: EI }, 7.0);
+
+      // ---------- S4: tres tarjetas caen y Zia salta de una a otra
+      words("#s4t");
+      [["#f1", 7.6, -6], ["#f2", 8.76, 4], ["#f3", 9.48, -4]].forEach(([f, t, r]) => {
+        tl.fromTo(f, { y: -1700, rotation: r * 4, opacity: 1 }, { y: 0, rotation: r, duration: 0.32, ease: "bounce.out" }, t - 0.2);
+        tl.fromTo(f + " .fi", { scale: 1 }, { scale: 1.15, duration: 0.1, yoyo: true, repeat: 1, ease: "power2.out", immediateRender: false }, t + 0.1);
+      });
+      const CT = 980 - 6; // borde de arriba de las tarjetas
+      eyes("#z3", "happy", 7.2);
+      gsap.set(zq("#z3", "zaL"), { rotation: 60, svgOrigin: "-78 -92" }); gsap.set(zq("#z3", "zaR"), { rotation: -60, svgOrigin: "78 -92" });
+      tl.fromTo("#z3", { x: 210, y: -200, scale: 0.62 }, { x: 210, y: CT, scale: 0.62, duration: 0.3, ease: "power2.in" }, 7.78);
+      squash("#z3", 8.08, 1.16, 0.82, 0.08);
+      [[540, 8.9], [870, 9.62]].forEach(([x, t]) => {
+        tl.to("#z3", { x, duration: 0.36, ease: "power1.inOut" }, t - 0.36);
+        tl.to("#z3", { y: CT - 260, duration: 0.18, ease: "power2.out" }, t - 0.36);
+        tl.to("#z3", { y: CT, duration: 0.18, ease: "power2.in" }, t - 0.18);
+        squash("#z3", t, 1.14, 0.84, 0.08);
+      });
+      tl.fromTo(zq("#z3", "zr"), { rotation: 0, transformOrigin: ZC }, { rotation: 360, duration: 0.36, ease: "power1.inOut", immediateRender: false }, 9.26);
+      tl.to(["#s4t", ".fmt", "#z3"], { x: "-=1200", duration: 0.3, ease: "power3.in", stagger: 0.03 }, 9.85);
+
+      // ---------- S5: megafono con ondas
+      words("#s5a"); words("#s5b");
+      eyes("#z4", "normal", 10.1);
+      gsap.set(zq("#z4", "zaR"), { rotation: -40, svgOrigin: "78 -92" });
+      tl.fromTo("#z4", { x: 280, y: 2450, scale: 1.1 }, { x: 280, y: 1480, scale: 1.1, duration: 0.38, ease: "back.out(1.6)" }, 10.15);
+      tl.fromTo("#megag", { y: 700, rotation: -20, svgOrigin: "470 1290", opacity: 0 }, { y: 0, rotation: -8, svgOrigin: "470 1290", opacity: 1, duration: 0.4, ease: "back.out(1.8)" }, 10.3);
+      eyes("#z4", "happy", 10.6);
+      $("#arcs").innerHTML = [0, 1, 2, 3, 4, 5].map(() => `<div class="arc" style="left:0;top:0;width:200px;height:200px"></div>`).join("");
+      $$(".arc").forEach((a, i) => {
+        tl.fromTo(a, { x: 600, y: 1150, scale: 0.4, opacity: 1, rotation: 45, transformOrigin: "50% 50%" }, { x: 700 + i * 0, y: 1150, scale: 2.4, opacity: 0, rotation: 45, duration: 0.7, ease: "power1.out" }, 10.62 + i * 0.28);
+      });
+      [10.62, 11.02, 11.6, 11.96].forEach((k) => {
+        tl.fromTo("#megag", { scale: 1, svgOrigin: "470 1290" }, { scale: 1.07, svgOrigin: "470 1290", duration: 0.08, yoyo: true, repeat: 1, ease: "power2.out", immediateRender: false }, k);
+        squash("#z4", k, 1.05, 0.94, 0.08);
+      });
+      tl.to(["#s5a", "#s5b", "#megag", "#z4", "#arcs"], { y: "-=1700", duration: 0.3, ease: "power3.in" }, 12.4);
+
+      // ---------- S6: logo de Instagram gira y aterriza; Zia guina
+      tl.fromTo("#ig", { scale: 0, rotation: -200 }, { scale: 1, rotation: 0, duration: 0.55, ease: "back.out(1.6)" }, 12.65);
+      tl.fromTo("#igglow", { opacity: 0, scale: 0.4 }, { opacity: 1, scale: 1, duration: 0.6, ease: E }, 12.7);
+      tl.fromTo("#igglow", { rotation: 0 }, { rotation: 60, duration: 1.8, ease: "none", immediateRender: false }, 12.7);
+      words("#s6a"); words("#s6b");
+      eyes("#z5", "happy", 12.6);
+      tl.fromTo("#z5", { x: 900, y: 2450, scale: 0.9, rotation: -8 }, { x: 900, y: 1760, scale: 0.9, rotation: -8, duration: 0.36, ease: "back.out(1.8)" }, 12.9);
+      eyes("#z5", "wink", 13.62); armTo("#z5", "L", 80, 0.14, 13.6, "back.out(3)");
+      tl.to(["#igw", "#s6a", "#s6b"], { scale: 0.5, opacity: 0, duration: 0.24, ease: EI }, 14.28);
+      tl.to("#z5", { y: 2450, duration: 0.22, ease: "power2.in" }, 14.28);
+
+      // ---------- S7: firma (misma de la serie): Zia se vuelve el triangulo de la A
+      const F = 14.4;
+      tl.fromTo("#fglow", { opacity: 0, scale: 0.5 }, { opacity: 1, scale: 1, duration: 0.8, ease: E }, F + 0.05);
+      tl.fromTo("#logoW", { opacity: 0, scale: 1.3, filter: "blur(18px)" }, { opacity: 1, scale: 1, filter: "blur(0px)", duration: 0.45, ease: X }, F + 0.05);
+      const TX = 793.4, TY = 939.1, TS = 0.168;
+      gsap.set(zq("#zF", "zaL"), { rotation: 80, svgOrigin: "-78 -92" }); gsap.set(zq("#zF", "zaR"), { rotation: -80, svgOrigin: "78 -92" });
+      tl.fromTo("#zF", { x: 540, y: -300, scale: 0.5 }, { x: 540, y: 780, scale: 0.5, duration: 0.34, ease: "power2.in" }, F + 0.4);
+      squash("#zF", F + 0.74, 1.16, 0.8, 0.09);
+      armTo("#zF", "L", 0, 0.18, F + 0.78); armTo("#zF", "R", -100, 0.18, F + 0.8);
+      tl.fromTo(zq("#zF", "zaR"), { rotation: -100, svgOrigin: "78 -92" }, { rotation: -130, svgOrigin: "78 -92", duration: 0.13, yoyo: true, repeat: 3, ease: "sine.inOut", immediateRender: false }, F + 1.0);
+      eyes("#zF", "normal", F + 0.4); eyes("#zF", "happy", F + 1.0); eyes("#zF", "normal", F + 1.55);
+      tl.to(zq("#zF", "zs"), { scaleX: 1.1, scaleY: 0.82, duration: 0.12, ease: "power2.out" }, F + 1.58);
+      tl.to(zq("#zF", "zs"), { scaleX: 1, scaleY: 1, duration: 0.2, ease: "power2.inOut" }, F + 1.72);
+      armTo("#zF", "L", 30, 0.14, F + 1.6, "power2.in"); armTo("#zF", "R", -30, 0.14, F + 1.6, "power2.in");
+      tl.to([zq("#zF", "zaL"), zq("#zF", "zaR")], { scale: 0, duration: 0.14, ease: "power2.in" }, F + 1.6);
+      tl.to([zq("#zF", "zfL"), zq("#zF", "zfR")], { scale: 0, duration: 0.14, ease: "power2.in" }, F + 1.6);
+      tl.to("#zF", { x: TX, duration: 0.6, ease: "power1.inOut" }, F + 1.74);
+      tl.to("#zF", { y: 640, duration: 0.3, ease: "power2.out" }, F + 1.74);
+      tl.to("#zF", { y: TY, duration: 0.3, ease: "power2.in" }, F + 2.04);
+      tl.to("#zF", { scale: TS, duration: 0.45, ease: "power2.in" }, F + 1.89);
+      tl.fromTo(zq("#zF", "zr"), { rotation: 0, transformOrigin: ZC }, { rotation: 360, duration: 0.5, ease: "power2.inOut" }, F + 1.74);
+      tl.to(zq("#zF", "zbody"), { opacity: 0, duration: 0.06 }, F + 2.34);
+      tl.to(zq("#zF", "zeyes"), { opacity: 0, duration: 0.06 }, F + 2.34);
+      tl.to("#logoTri", { opacity: 1, duration: 0.06 }, F + 2.34);
+      tl.fromTo("#logoW", { scale: 1 }, { scale: 1.05, duration: 0.12, yoyo: true, repeat: 1, ease: "power2.out", immediateRender: false }, F + 2.36);
+      tl.fromTo("#slog", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.4, ease: E }, F + 2.5);
+
+      tl.set({}, {}, T);
+      window.__timelines["main"] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>
