@@ -1,0 +1,492 @@
+{
+ "version": 3,
+ "cliente": {
+  "nombre": "Proimca",
+  "slug": "proimca-cai083",
+  "codigo": "CAI-083",
+  "nombre_pie": "Proimca"
+ },
+ "division": "educacion",
+ "alianza": false,
+ "sin_horas_trabajo": true,
+ "meta_servicio": "habilidades",
+ "meta_tipo": "Habilidades · 10 soluciones en 4 áreas (Administración y contabilidad, CDC, Mercadeo y Planificación técnica), 36 h con el equipo · seguimiento 30-60-90 · sin facilidad de pago · formato compacto v3",
+ "omitir": [
+  "pago"
+ ],
+ "eje": "Automatizar con IA los procesos manuales y repetitivos de Administración y contabilidad (con talento humano), CDC, Mercadeo y Planificación técnica de Proimca, con un criterio común de uso de IA y herramientas de la empresa",
+ "origen": "Ficha de Levantamiento de Proimca (Verónica Rubio, registrada el 02/11/2026; contacto Damaris Pérez García, directora que forma parte del grupo que aprueba) y transcripción de la reunión virtual del 02/11/2026, más instrucciones de Ivana del 03/11/2026: propuesta de Habilidades CAI-083 con Verónica Rubio como asesora. División Educación y sin alianza, por confirmar",
+ "fuente_insumo": "Ficha de Levantamiento (02/11/2026) y transcripción de la reunión de Verónica Rubio con Proimca (02/11/2026)",
+ "siglas_ok": [
+  "IA",
+  "CDC",
+  "PQR",
+  "SAE",
+  "API",
+  "CRM"
+ ],
+ "portada": {
+  "titulo_lineas": [
+   "Procesos automatizados con IA",
+   "y un criterio común de uso"
+  ],
+  "titulo_destacado": "en {n_areas} áreas de {cliente_corto}",
+  "lead": "Este proyecto automatiza con el equipo los **procesos manuales y repetitivos** de cuatro áreas de {cliente_corto} y deja **un solo criterio de uso de IA**, con herramientas de la empresa.",
+  "hechos": [
+   {
+    "num": "Miles",
+    "texto": "de pagos al mes se concilian contra el banco, con retrabajo cuando la referencia viene errada.",
+    "resuelto_por": [
+     "AD-1"
+    ]
+   },
+   {
+    "num": "Papel",
+    "texto": "es como llegan las visitas técnicas: cada supervisor las vacía a mano y las cierra en el sistema.",
+    "resuelto_por": [
+     "PT-1"
+    ]
+   },
+   {
+    "num": "Sin cruce",
+    "texto": "entre HiBot y SAE Plus: el ciclo del cliente pasa por dos sistemas que no se hablan.",
+    "resuelto_por": [
+     "CD-2"
+    ]
+   },
+   {
+    "num": "Disperso",
+    "texto": "es lo que entra por Instagram, Facebook y Telegram, sin un resumen que mida qué llega.",
+    "resuelto_por": [
+     "MK-1"
+    ]
+   }
+  ]
+ },
+ "carriles": [
+  {
+   "id": "ia",
+   "nombre": "Gemini en Google Workspace",
+   "nombre_corto": "Gemini y Google",
+   "color": "amarillo"
+  }
+ ],
+ "areas": [
+  {
+   "id": "AD",
+   "nombre": "Administración y contabilidad",
+   "carril": "ia",
+   "frente": "A",
+   "para_que": "Conciliar pagos, cargar la venta a Odoo y revisar libros con menos retrabajo",
+   "composicion": "Con talento humano, bajo una sola gerencia",
+   "soluciones": [
+    {
+     "id": "AD-1",
+     "entregable": "Conciliación de pagos con el banco",
+     "h": 3,
+     "fase": "F1",
+     "detalle": "Tres horas con el equipo de Administración. Cada mes se concilian miles de pagos de clientes contra el estado de cuenta y, cuando la referencia viene errada, hay que revisar el banco uno por uno. Se construye con ellos una herramienta que cruza los pagos con el estado de cuenta y propone con quién coincide cada ingreso, y una persona valida. Entrega la conciliación en uso."
+    },
+    {
+     "id": "AD-2",
+     "entregable": "Carga de la venta diaria a Odoo",
+     "h": 3,
+     "fase": "F2",
+     "detalle": "Tres horas con las contadoras. Hoy SAE Plus y Odoo no se conectan, y cada día se procesa a mano la venta total para montar la contabilidad. Se construye con ellas la preparación del archivo de la venta diaria para cargarlo en Odoo, con una persona que valida antes de cargar. Depende de los datos que entregue SAE Plus. Entrega la carga diaria en uso."
+    },
+    {
+     "id": "AD-3",
+     "entregable": "Revisión de libros de venta y compra",
+     "h": 3,
+     "fase": "F1",
+     "detalle": "Tres horas con las contadoras. Antes del libro mayor y del diario se revisa a mano que cada registro tenga cédula, dirección y número de factura. Se construye una revisión asistida que señala lo que falta o no cuadra, y una persona corrige. Entrega la revisión de libros en uso."
+    },
+    {
+     "id": "AD-4",
+     "entregable": "Recibos, vacaciones y liquidaciones",
+     "h": 3,
+     "fase": "F2",
+     "detalle": "Tres horas con talento humano. Hoy estos procesos son manuales mientras se implementa el módulo de nómina de Odoo. Se construye con el equipo la preparación de recibos, vacaciones y liquidaciones, ajustada a lo que Odoo vaya cubriendo. Entrega los procesos de talento humano en uso."
+    }
+   ]
+  },
+  {
+   "id": "CD",
+   "nombre": "CDC (Centro de Contacto)",
+   "carril": "ia",
+   "frente": "A",
+   "para_que": "Que ningún cliente quede sin respuesta, de la venta a la postventa",
+   "composicion": "Venta, cobranza y soporte",
+   "soluciones": [
+    {
+     "id": "CD-1",
+     "entregable": "Control de clientes sin respuesta",
+     "h": 4,
+     "fase": "F2",
+     "detalle": "Cuatro horas con el equipo del CDC. Todo lo que entra por los canales del cliente, en venta, cobranza y soporte, debe tener respuesta y solución a tiempo. Se construye con el equipo un control que muestra qué contactos siguen sin atender, y una persona decide cómo responder. Depende de los datos que entreguen sus sistemas. Entrega el control en uso."
+    },
+    {
+     "id": "CD-2",
+     "entregable": "Seguimiento de PQR y postventa",
+     "h": 4,
+     "fase": "F2",
+     "detalle": "Cuatro horas con el equipo del CDC. El ciclo del cliente, de la conexión a la postventa, pasa por dos sistemas que no están integrados. Se construye con el equipo el seguimiento de cada PQR (petición, queja o reclamo) y de la postventa, para que ninguno quede abierto sin responsable. Entrega el seguimiento en uso."
+    }
+   ]
+  },
+  {
+   "id": "MK",
+   "nombre": "Mercadeo y redes sociales",
+   "carril": "ia",
+   "frente": "A",
+   "para_que": "Ver en un solo resumen qué entra y qué llega por cada red",
+   "soluciones": [
+    {
+     "id": "MK-1",
+     "entregable": "Resumen de métricas de redes sociales",
+     "h": 4,
+     "fase": "F1",
+     "detalle": "Cuatro horas con los analistas de Mercadeo. Las métricas existen en las herramientas de cada red, pero están dispersas. Se construye con ellos un resumen consolidado que muestra qué entra, qué sale y si el contenido llega a donde se quiere. Entrega el resumen en uso."
+    },
+    {
+     "id": "MK-2",
+     "entregable": "Requerimientos de redes en un solo lugar",
+     "h": 4,
+     "fase": "F1",
+     "detalle": "Cuatro horas con los analistas de Mercadeo. Los requerimientos entran dispersos por Instagram, Facebook y Telegram, sin comunicación entre canales. Se construye con ellos el orden de esos requerimientos en un solo lugar, con su estado. Entrega el seguimiento de requerimientos en uso."
+    }
+   ]
+  },
+  {
+   "id": "PT",
+   "nombre": "Planificación técnica",
+   "carril": "ia",
+   "frente": "A",
+   "para_que": "Cerrar las visitas sin retrabajo y medir si se cumplen los tiempos acordados",
+   "composicion": "Gerencia y supervisión por sucursal",
+   "soluciones": [
+    {
+     "id": "PT-1",
+     "entregable": "Carga y cierre de visitas técnicas",
+     "h": 4,
+     "fase": "F1",
+     "detalle": "Cuatro horas con la gerencia y los supervisores de cada sucursal. Hoy el técnico trae la visita en papel y cada supervisor la vacía a mano y la cierra en el sistema que la generó. Se construye con ellos una forma de pasar cada visita a datos y cerrarla con menos pasos manuales. Entrega la carga y el cierre en uso."
+    },
+    {
+     "id": "PT-2",
+     "entregable": "Cumplimiento de tiempos en calle",
+     "h": 4,
+     "fase": "F2",
+     "detalle": "Cuatro horas con la gerencia de planificación. No hay una estadística confiable de si se cumplen los tiempos acordados de instalación y atención de fallas. Se construye con ellos el tablero de cumplimiento a partir de las visitas ya cargadas. Depende de PT-1. Entrega el tablero en uso."
+    }
+   ]
+  }
+ ],
+ "alcance": {
+  "subtitulo": "Asistentes de IA, validadores y tableros que automatizan lo manual y repetitivo de cada área.",
+  "fuera_alcance": [
+   "Licencias de IA y su consumo: las contrata {cliente_corto}, aparte de esta inversión.",
+   "Conectar SAE Plus con Odoo: los proveedores no han permitido una API; se usa lo que cada sistema exporta.",
+   "Los ajustes al bot de WhatsApp del CRM: es un proyecto aparte, del área de Tecnología.",
+   "El manual de uso y gobernanza de la IA: es el servicio de Políticas, el paso que sigue.",
+   "Traslado del equipo de Intezia a Barquisimeto: los viáticos los asume {cliente_corto} o se cotizan aparte."
+  ]
+ },
+ "metodo": {
+  "titulo": "Así construimos cada herramienta.",
+  "subtitulo": "Primero se mide dónde está cada proceso; después se construye con el equipo, sobre casos reales.",
+  "quien_construye": "Se construye con el equipo: **Intezia guía** y cada persona prueba la herramienta sobre sus propios casos, dentro del entorno Google que ya usan.",
+  "por_que_orden": "Primero se mide el punto de partida; después se construye en dos fases: los procesos que parten de datos que ya tienen y luego los que dependen de sus sistemas.",
+  "pasos": [
+   {
+    "titulo": "Medimos",
+    "texto": "Cuánto toma hoy cada proceso y quién lo hace."
+   },
+   {
+    "titulo": "Construimos",
+    "texto": "Cada herramienta con el equipo, sobre sus casos reales."
+   },
+   {
+    "titulo": "Adoptamos",
+    "texto": "Cada persona la usa en su trabajo hasta sostenerla."
+   },
+   {
+    "titulo": "Seguimos",
+    "texto": "Uso, ajustes y resultados, a 30, 60 y 90 días."
+   }
+  ],
+  "practica": [
+   {
+    "titulo": "Una persona revisa",
+    "texto": "La IA propone conciliaciones, asientos y respuestas; una persona las revisa antes de cargarlas o enviarlas."
+   },
+   {
+    "titulo": "Un criterio común",
+    "texto": "Mismas reglas de uso en todas las áreas, dentro de las cuentas de la empresa."
+   },
+   {
+    "titulo": "Sin tocar sus sistemas",
+    "texto": "SAE Plus, Odoo y el CRM no se modifican: se trabaja con los datos que cada uno entrega."
+   }
+  ],
+  "datos": "Los datos de clientes, pagos y nómina no se cargan a la IA sin la autorización de {cliente_corto}; se trabaja con cuentas de la empresa y los accesos que autoriza su área de Tecnología."
+ },
+ "fases": [
+  {
+   "id": "F1",
+   "titulo": "Inicio",
+   "descripcion": "procesos con los datos que ya tienen"
+  },
+  {
+   "id": "F2",
+   "titulo": "Enlace",
+   "descripcion": "procesos que dependen de sus sistemas",
+   "destacada": true
+  }
+ ],
+ "frentes": [
+  {
+   "id": "A",
+   "carril": "ia",
+   "nombre": "Las cuatro áreas de {cliente_corto}",
+   "medida": "36 horas",
+   "medida_meta": "con el equipo, en cuatro áreas",
+   "celdas": {
+    "F1": "Conciliación, libros, métricas y requerimientos de redes, y carga de visitas.",
+    "F2": "Carga a Odoo, talento humano, CDC y cumplimiento de tiempos."
+   },
+   "celdas_medida": {
+    "F1": "18 horas con el equipo",
+    "F2": "18 horas con el equipo"
+   }
+  }
+ ],
+ "ruta": {
+  "titulo": "Del punto de partida al uso.",
+  "subtitulo": "El calendario se acuerda en la **reunión de arranque**.",
+  "hitos": [
+   {
+    "titulo": "Arranque · aparte",
+    "texto": "Reunión de 1 h para acordar el calendario, quién lidera cada área y el acceso a los datos."
+   },
+   {
+    "titulo": "Punto de partida",
+    "texto": "Se mide cuánto toma hoy cada proceso: el «antes» del retorno."
+   },
+   {
+    "titulo": "Primeras herramientas",
+    "texto": "Conciliación, libros, redes y visitas funcionando."
+   },
+   {
+    "titulo": "Procesos conectados",
+    "texto": "Carga contable, talento humano, CDC y tiempos en calle."
+   }
+  ],
+  "siguiente_etapa": {
+   "titulo": "Siguiente paso · Políticas e Innovación",
+   "texto": "Un manual de uso de IA construido sobre lo implementado y, después, acompañamiento continuo."
+  }
+ },
+ "logistica": {
+  "modalidad": "Virtual; si conviene, algún encuentro presencial en Barquisimeto, con viáticos aparte.",
+  "participantes": "Unas 23 personas de las cuatro áreas, con sus líderes y los supervisores por sucursal.",
+  "ritmo": "Se agenda sin frenar la operación y fuera de los días de corte de cada mes (del 6 al 10).",
+  "arranque": "Apenas se apruebe la propuesta; una reunión de 1 h, aparte, acuerda el calendario."
+ },
+ "seguimiento": {
+  "rango": "30, 60 y 90 días",
+  "texto": "Desde el cierre de cada área",
+  "items": [
+   {
+    "dias": "30 días",
+    "texto": "Uso de las herramientas"
+   },
+   {
+    "dias": "60 días",
+    "texto": "Ajustes y nuevas construcciones"
+   },
+   {
+    "dias": "90 días",
+    "texto": "Procesos y retorno medidos"
+   }
+  ]
+ },
+ "entregables": {
+  "titulo": "Lo que recibe Proimca.",
+  "subtitulo": "Lo que se llevan: **diez herramientas en uso, un criterio común de IA y las licencias que cada área necesita**, más el seguimiento a {rango_seguimiento}.",
+  "etiqueta_transversales": "Para todas las áreas",
+  "transversales": [
+   "Punto de partida de cada proceso, antes de automatizar.",
+   "Criterio común de uso de IA para las cuatro áreas.",
+   "Recomendación de licencias por área.",
+   "Seguimiento a 30, 60 y 90 días."
+  ],
+  "etiqueta_valor": "Valor inmediato",
+  "valor_inmediato": [
+   "Inicio: conciliación, libros, redes y visitas en uso.",
+   "Enlace: carga a Odoo, CDC y tiempos en calle.",
+   "El equipo sabe automatizar una tarea nueva."
+  ]
+ },
+ "retorno": {
+  "modo": "metodo",
+  "posiciones": false,
+  "titulo": "Retorno esperado: tiempo y exactitud, medidos.",
+  "subtitulo": "Cada indicador se mide contra el punto de partida que se registra al arrancar.",
+  "etiqueta_pasos": "Cómo se calcula el retorno de cada herramienta",
+  "pasos": [
+   {
+    "titulo": "Volumen",
+    "texto": "Cuántos pagos se concilian, cuántas visitas se cierran y cuántos contactos se atienden cada mes."
+   },
+   {
+    "titulo": "Punto de partida",
+    "texto": "Lo que toma hoy cada proceso, según quien lo hace: es la línea base."
+   },
+   {
+    "titulo": "Con la herramienta",
+    "texto": "Lo que toma el mismo trabajo una vez que la herramienta está en uso."
+   },
+   {
+    "titulo": "Horas recuperadas",
+    "texto": "Volumen por la diferencia de tiempos: una estimación referencial, sin compromiso de resultado."
+   },
+   {
+    "titulo": "Gasto de operar",
+    "texto": "Licencias y consumo de IA, contra el valor de lo recuperado."
+   }
+  ],
+  "etiqueta_metas": "Calendario de seguimiento y medición",
+  "metas": [
+   {
+    "dias": "30 días",
+    "texto": "Desde el cierre de cada área: herramientas en uso real y punto de partida validado con el equipo."
+   },
+   {
+    "dias": "60 días",
+    "texto": "Tiempo de conciliación, de cierre de visitas y de respuesta medido contra el punto de partida."
+   },
+   {
+    "dias": "90 días",
+    "texto": "Medición del retorno: lo recuperado frente al gasto de operar las herramientas."
+   }
+  ],
+  "etiqueta_destino": "Hacia dónde va el proyecto",
+  "destino": [
+   {
+    "rotulo": "Un criterio común",
+    "texto": "Cuatro áreas con **herramientas de la empresa**, no cuentas personales, y una sola forma de usar la IA."
+   },
+   {
+    "rotulo": "Ningún cliente sin respuesta",
+    "texto": "Con cada solicitud seguida, el CDC puede **responder a todos**, en línea con su meta de retención."
+   },
+   {
+    "rotulo": "Tiempos en calle medibles",
+    "texto": "Con las visitas cargadas, se puede **medir** si se cumple lo acordado."
+   }
+  ],
+  "gancho": "A los 90 días del cierre de cada área, {cliente_corto} contará con el tiempo de sus procesos medido contra el punto de partida y el gasto de operar sus herramientas."
+ },
+ "inversion": {
+  "duracion": "**10 herramientas** en cuatro áreas y dos fases, con seguimiento a {rango_seguimiento}. **36 horas** con el equipo.",
+  "programa": [
+   "Servicio de Habilidades para {cliente_corto} ({codigo}).",
+   "Administración y contabilidad, CDC, Mercadeo y Planificación técnica: 10 herramientas.",
+   "Dos fases, con seguimiento a 30, 60 y 90 días.",
+   "36 horas con el equipo. La reunión de arranque va aparte."
+  ],
+  "notas": [
+   "Licencias de IA y su consumo: las contrata {cliente_corto} y van aparte.",
+   "El traslado a Barquisimeto no está incluido: los viáticos los asume {cliente_corto} o se cotizan aparte."
+  ],
+  "garantia_texto": "Estamos contigo hasta que cada herramienta quede en uso.",
+  "validez_dias": 60,
+  "desglose": {
+   "eyebrow": "Inversión",
+   "titulo": "Inversión del proyecto, por área.",
+   "subtitulo": "Valor en dólares estadounidenses (USD) de cada área.",
+   "encabezados": [
+    "Área",
+    "Qué se construye",
+    "Herramientas",
+    "Horas",
+    "Valor (USD)"
+   ],
+   "filas": [
+    {
+     "fase": "Administración y contabilidad",
+     "concepto": "Conciliación de pagos, carga de la venta a Odoo, libros y talento humano",
+     "area": "4 herramientas",
+     "horas": "12 h"
+    },
+    {
+     "fase": "CDC (Centro de Contacto)",
+     "concepto": "Atención de contactos en venta, cobranza, soporte y postventa",
+     "area": "2 herramientas",
+     "horas": "8 h"
+    },
+    {
+     "fase": "Mercadeo y redes sociales",
+     "concepto": "Resumen de métricas y requerimientos de redes en un solo lugar",
+     "area": "2 herramientas",
+     "horas": "8 h"
+    },
+    {
+     "fase": "Planificación técnica",
+     "concepto": "Carga y cierre de visitas técnicas y cumplimiento de tiempos en calle",
+     "area": "2 herramientas",
+     "horas": "8 h"
+    }
+   ],
+   "descuento_validez_dias": 15,
+   "nota": "Cada área tiene su propio valor: {cliente_corto} puede arrancar con todas o con las que elija y sumar las demás después. Incluye el seguimiento a 30, 60 y 90 días. Licencias de IA y su consumo, y los viáticos a Barquisimeto, van aparte.",
+   "sin_iva": true
+  }
+ },
+ "proximos_pasos": {
+  "subtitulo": "Esto es lo que sigue cuando {cliente_corto} confirme la propuesta.",
+  "asesora": {
+   "nombre": "Verónica Rubio",
+   "cargo": "Asesora comercial",
+   "correo": "vrubio01@intezia.com",
+   "telefono": "+58 422 3355505"
+  },
+  "pasos": [
+   {
+    "titulo": "Revisión conjunta",
+    "texto": "Nos reunimos con quienes deciden para aclarar dudas y dimensionar el alcance."
+   },
+   {
+    "titulo": "Líderes y accesos",
+    "texto": "{cliente_corto} nos indica quién lidera cada área y quién da acceso a los datos de sus sistemas."
+   },
+   {
+    "titulo": "Reunión de arranque",
+    "texto": "Una hora para acordar el calendario de las cuatro áreas y los primeros pasos."
+   }
+  ]
+ },
+ "supuestos": [
+  "Pedido de Ivana (03/11/2026): propuesta de Habilidades CAI-083 para Proimca con Verónica Rubio como asesora, a partir de la Ficha de Levantamiento y la transcripción del 02/11/2026. División Educación y sin alianza: por confirmar con Ivana. Sin facilidad de pago: criterio de Ivana en las últimas propuestas (OCAATVE, Suri Import); no lo dijo para esta, confirmar.",
+  "Insumos: ficha y transcripción coinciden. Primer contacto. Telecomunicaciones (internet y televisión) en Lara; ISO 9001 reciente. Damaris Pérez García es directora y parte del grupo de 2 o 3 directores que aprueba caso por caso, por costo-beneficio; sin partida fija. Descartó Detección («ya hemos avanzado mucho»): va directo a Habilidades y la secuencia Habilidades, Políticas e Innovación («va por paso»).",
+  "Áreas: las cuatro que ella eligió, en una sola fase («primero cuatro áreas»): Administración y contabilidad (con talento humano, una sola gerencia), CDC, Mercadeo y Planificación técnica (unas 23 personas). Ella dijo que quizá no todas al mismo tiempo; la fase 1 y la fase 2 reparten el orden, no los equipos.",
+  "Herramienta (supuesto mío, por confirmar con Verónica o Ivana): Gemini en Google Workspace, que ya usan y la empresa tiene incluido, con NotebookLM. Damaris preguntó en qué áreas hacen falta licencias corporativas (también ha considerado Claude): la «Recomendación de licencias por área» responde esa pregunta y no pre-decide una herramienta. No se menciona Claude ni VPN (Venezuela no es país soportado).",
+  "Horas (lineamiento de empresa/politicas-comerciales.md, 8 a 12 h por área hasta 5 procesos): Administración 12 h (4 procesos × 3 h, la gerencia que más retrabajo tiene), CDC 8 h, Mercadeo 8 h y Planificación técnica 8 h = 36 h con el equipo, mi reparto por solución. Las 10 soluciones salen de las tareas reales de la ficha. Sin Fundamentos ni nivelación aparte: sus cursos internos no prendieron, el método es aprender haciendo sobre sus procesos.",
+  "Fases (mi criterio, por confirmar): fase 1 «Inicio» (18 h) = procesos con datos que ya tienen (conciliación, libros, redes, carga de visitas); fase 2 «Enlace» (18 h) = procesos que dependen de datos de sus sistemas (SAE Plus a Odoo, talento humano mientras llega la nómina de Odoo, CDC entre HiBot y SAE Plus, tiempos en calle sobre las visitas cargadas).",
+  "Fuera de alcance, dicho por Verónica en la reunión: los ajustes al bot de HiBot (proyecto aparte, de Tecnología) y el traslado a Barquisimeto (viáticos de Proimca o cotizados aparte, como con DUSA). La gobernanza que pide Damaris es el servicio de Políticas, siguiente paso; la «política de uso de IA» que ellos mismos redactan queda fuera.",
+  "Retorno en modo método, sin cifras (el volumen de conciliaciones es «miles» y no hay horas). Su indicador duro es la retención (perder como máximo 1 % de la base): en el deck solo aparece como «meta de retención» sin la cifra, porque no está validada con el área.",
+  "Calendario (no va en el deck, §4.23): días de corte del 6 al 10 de cada mes se evitan (dato del cliente en «ritmo»); horario de 8:00 a. m. a 5:00 p. m. de lunes a sábado; Intezia recomendó encuentros de 2 horas y no se fijó la frecuencia. Revisión de la propuesta el jueves 05/11/2026 a las 10:30 a. m.; Verónica prometió enviarla el 03/11 al final de la tarde o el 04/11 por la mañana.",
+  "Del texto de Verónica no se toman los 10 roles delegables de DUSA ni la reubicación de personal. Las citas de la ficha no se usan. Sin semanas, sesiones ni fechas; sin horas de trabajo ni cantidad de consultores (CLAUDE.md §4.23).",
+  "04/11/2026 (Ivana): se quitó el IVA de la hoja de inversión, porque Intezia no lo ofrece; los totales quedan en subtotal, descuento y total (`sin_iva` en `inversion.desglose`)."
+ ],
+ "pendientes": [
+  "Confirmar con Ivana la división Educación, que no hay alianza y que va sin facilidad de pago.",
+  "Confirmar la herramienta (Gemini en Google Workspace) y, con ella, si la recomendación de licencias nombra otras (Claude).",
+  "Confirmar las 36 h y el reparto por solución, y las dos fases.",
+  "Valor, descuento y total: campos vacíos para ventas; moneda de facturación por confirmar con Verónica.",
+  "Conseguir los nombres de la gerente administrativa, el coordinador del CDC y la gerente de planificación, y el nombre del chat corporativo interno (Verónica lo debe pedir).",
+  "Confirmar si la reunión de revisión incluirá a los otros directores (Verónica los invitó).",
+  "Confirmar el teléfono y el correo de Verónica Rubio (tomados de propuestas anteriores)."
+ ]
+}

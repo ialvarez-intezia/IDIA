@@ -1,0 +1,461 @@
+{
+ "version": 3,
+ "cliente": {
+  "nombre": "Optimedical",
+  "slug": "optimedical-cai088",
+  "codigo": "CAI-088",
+  "nombre_pie": "Optimedical"
+ },
+ "division": "educacion",
+ "alianza": false,
+ "sin_horas_trabajo": true,
+ "meta_servicio": "habilidades",
+ "meta_tipo": "Habilidades · 1 Cerebro Digital con Claude para la socia de una óptica (cotización, catálogo de cristales y procesos) · 8 h con la cliente · seguimiento 30-60-90 · sin facilidad de pago · formato compacto v3",
+ "omitir": [
+  "pago"
+ ],
+ "vocabulario": {
+  "solucion": [
+   "entregable",
+   "entregables"
+  ],
+  "area": [
+   "Cerebro Digital",
+   "Cerebros Digitales"
+  ]
+ },
+ "eje": "Construcción guiada de un Cerebro Digital (asistente personal) con Claude y Obsidian para la socia y responsable de la operación de Optimedical: cotización estandarizada con envío y seguimiento, catálogo de cristales de laboratorios externos, manual de procesos vivo y una interfaz interna para el equipo",
+ "origen": "Ficha de Levantamiento de Verónica Rubio (03/11/2026) y transcripción de la reunión del 03/11/2026 con Marling Duc; 8 h y formato dados por Ivana (05/11/2026)",
+ "fuente_insumo": "Ficha de Levantamiento (03/11/2026) y transcripción de la reunión con Marling Duc (03/11/2026)",
+ "siglas_ok": [
+  "IA",
+  "IVA",
+  "FUSPUCA"
+ ],
+ "portada": {
+  "titulo_lineas": [
+   "Procesos que no se olvidan:",
+   "un Cerebro Digital con IA"
+  ],
+  "titulo_destacado": "para Optimedical",
+  "lead": "Este proyecto acompaña a Marling a construir su **Cerebro Digital** en **Claude**: un asistente que conoce el catálogo, los procesos y las cotizaciones de la óptica, para que no dependan de la memoria de las personas.",
+  "hechos": [
+   {
+    "num": "+1.000",
+    "texto": "cristales de laboratorios externos: cada cambio de lista se traduce y se recalcula a mano.",
+    "resuelto_por": [
+     "CD-4"
+    ]
+   },
+   {
+    "num": "A mano",
+    "texto": "se arma cada cotización: cambia según quién la haga y su seguimiento se olvida.",
+    "resuelto_por": [
+     "CD-3"
+    ]
+   },
+   {
+    "num": "Un Word",
+    "texto": "es el manual de procesos que nadie consulta; la práctica vive en un chat cargado a mano.",
+    "resuelto_por": [
+     "CD-2",
+     "CD-5"
+    ]
+   }
+  ]
+ },
+ "carriles": [
+  {
+   "id": "claude",
+   "nombre": "Claude y Obsidian",
+   "nombre_corto": "Claude",
+   "color": "amarillo"
+  }
+ ],
+ "areas": [
+  {
+   "id": "CD",
+   "nombre": "Cerebro Digital de Marling",
+   "carril": "claude",
+   "frente": "A",
+   "para_que": "Cotizar, consultar el catálogo y tener los procesos a la mano, sin depender de la memoria",
+   "composicion": "8 horas con Marling, guiadas por Intezia.",
+   "soluciones": [
+    {
+     "id": "CD-1",
+     "entregable": "Claude explicado y tareas del cerebro delimitadas",
+     "h": 1,
+     "fase": "F1",
+     "incluye": [
+      "Qué es Claude y cómo se usa, sin términos técnicos",
+      "Las tareas que trabajará el cerebro, con su día a día",
+      "El propósito del cerebro y sus primeros pedidos"
+     ],
+     "detalle": "Referencia interna (1 h, con Marling). Qué es Claude y cómo se usa, en palabras simples: conversar, Projects, Skills y Artifacts, y para qué sirve cada pieza. Se mapean las tareas que ella nombró (ingreso administrativo, obligaciones, listas de cristales, cotización, seguimiento post-consulta, manual de procesos, práctica del equipo) y se eligen las que entran en las 8 h. Define el propósito del cerebro. Entrega el propósito, las tareas delimitadas y los primeros pedidos."
+    },
+    {
+     "id": "CD-2",
+     "entregable": "Procesos, protocolos y obligaciones en el cerebro",
+     "h": 2,
+     "fase": "F2",
+     "incluye": [
+      "Manual de procesos y protocolo de jornada, vivos",
+      "Práctica de atención con casos de pacientes",
+      "Orden de pasos de las obligaciones del mes"
+     ],
+     "detalle": "Referencia interna (2 h, con Marling). Project de Claude (memoria y contexto) con su rol y su forma de trabajar; el conocimiento de la óptica organizado como grafo relacional en Obsidian (gratuito): el manual de procesos y el protocolo de la jornada oftalmológica pasan del Word a un documento consultable, los casos para la práctica de atención de la optometrista y el personal, y el orden de pasos de las obligaciones mensuales (IVA, patente, FUSPUCA) como checklist. Entrega el Project configurado y su grafo."
+    },
+    {
+     "id": "CD-3",
+     "entregable": "Cotización estandarizada con envío y seguimiento",
+     "h": 2,
+     "fase": "F3",
+     "incluye": [
+      "Cotización con un mismo formato, la haga quien la haga",
+      "Mensaje de envío y seguimiento que no se olvida",
+      "Seguimiento post-consulta y de entrega, con el enlace de reseña"
+     ],
+     "detalle": "Referencia interna (2 h, con Marling). Skill (instrucción reutilizable) de la cotización: toma los datos del paciente o cliente y arma la cotización con un formato único, redacta el mensaje de envío y el de seguimiento comercial (incluidas las ofertas del servicio de empleo) y los de post-consulta y entrega de lentes con el enlace de reseña. El cerebro redacta cuando se le pide; no envía por sí solo. Se prueba con una cotización real. Entrega la Skill en uso."
+    },
+    {
+     "id": "CD-4",
+     "entregable": "Catálogo de cristales consultable y al día",
+     "h": 2,
+     "fase": "F3",
+     "incluye": [
+      "Listas de cada laboratorio traducidas al lenguaje interno",
+      "Valores de compra y de venta recalculados al cambiar una lista",
+      "Consulta del cristal con el paciente enfrente"
+     ],
+     "detalle": "Referencia interna (2 h, con Marling). Skill de las listas de laboratorios: traduce cómo escribe cada laboratorio su lista al lenguaje interno de la óptica, recalcula costo y valor al cambiar una lista y permite consultar el catálogo (más de 1.000 cristales por tipo, laboratorio y gama) con el paciente enfrente. Se prueba con la lista de un laboratorio real. Entrega la Skill y el catálogo consultable."
+    },
+    {
+     "id": "CD-5",
+     "entregable": "Interfaz para el equipo y cerebro mantenible",
+     "h": 1,
+     "fase": "F3",
+     "incluye": [
+      "Una página interna con procesos, práctica y catálogo",
+      "Cómo actualizar el cerebro si cambia el negocio",
+      "Cómo sumar un rol nuevo cuando entre alguien"
+     ],
+     "detalle": "Referencia interna (1 h, con Marling). Con Claude se arma una página web interna (HTML) donde las 5 personas del equipo acceden a los procesos, la práctica de atención y el catálogo, sin programar. Marling aprende a actualizar el cerebro cuando cambia el modelo de negocio o delega una función en alguien nuevo. Entrega la página en uso y la guía de mantenimiento."
+    }
+   ]
+  }
+ ],
+ "alcance": {
+  "compacto": false,
+  "titulo": "Un Cerebro Digital para la óptica.",
+  "subtitulo": "Marling construye su **asistente en Claude**: cotizaciones, catálogo y procesos en un solo lugar.",
+  "fuera_alcance": [
+   "Recordatorios y envíos que se hacen solos: el cerebro responde cuando se le pide; las tareas que corren solas son la etapa que sigue.",
+   "Ingreso automático de gastos, pagos y cuentas en las hojas de cálculo: se explora al empezar, pero no está incluido.",
+   "Cambiar sus herramientas: Google Workspace y sus hojas siguen igual; el cerebro trabaja con lo que se comparte.",
+   "La licencia de Claude, que va aparte (detalle en la inversión)."
+  ],
+  "etiqueta_destacados": "Otras tareas que se pueden explorar al empezar",
+  "destacados": [
+   {
+    "titulo": "Obligaciones del mes",
+    "texto": "IVA, patente y permisos, a la vista."
+   },
+   {
+    "titulo": "Ingreso administrativo",
+    "texto": "Gastos, pagos y cuentas."
+   },
+   {
+    "titulo": "Reporte para socios",
+    "texto": "Armado con menos trabajo."
+   },
+   {
+    "titulo": "Ofertas de empleo",
+    "texto": "Propuestas y su seguimiento."
+   }
+  ]
+ },
+ "metodo": {
+  "titulo": "Así trabajamos el proyecto.",
+  "subtitulo": "Guiado por Intezia y sobre sus propios procesos, hasta que usa y mantiene su cerebro por sí misma.",
+  "quien_construye": "{cliente_corto} construye su cerebro; **Intezia guía** cada paso, sobre sus cotizaciones, listas y procesos reales.",
+  "pasos": [
+   {
+    "titulo": "Delimitamos",
+    "texto": "Las tareas del cerebro, elegidas con casos de su propio día."
+   },
+   {
+    "titulo": "Construimos",
+    "texto": "En vivo, sobre una cotización y una lista de laboratorio reales."
+   },
+   {
+    "titulo": "Probamos",
+    "texto": "Con casos reales, hasta que el resultado coincide con el suyo."
+   },
+   {
+    "titulo": "Adoptamos",
+    "texto": "Marling lo usa y lo actualiza sola; seguimos a 30, 60 y 90 días."
+   }
+  ],
+  "por_que_orden": "Primero se entiende Claude y se delimitan las tareas; después se ordenan los procesos; al final se construyen la cotización, el catálogo y la interfaz del equipo.",
+  "practica": [
+   {
+    "titulo": "Sin prompts largos",
+    "texto": "Claude se explica desde lo básico: se le pide lo que se necesita en palabras simples."
+   },
+   {
+    "titulo": "Una persona decide",
+    "texto": "El cerebro propone la cotización y la lista; Marling valida antes de enviarla al paciente."
+   },
+   {
+    "titulo": "Lo que hace y lo que no",
+    "texto": "Responde cuando se le pide; no envía mensajes ni recordatorios por sí solo."
+   }
+  ],
+  "datos": "La información financiera, de pacientes y de laboratorios es confidencial: solo se carga en el cerebro lo que {cliente_corto} decide compartir, sin claves bancarias ni historias clínicas. Los criterios de uso seguro se acuerdan al empezar."
+ },
+ "fases": [
+  {
+   "id": "F1",
+   "titulo": "Base",
+   "descripcion": "Claude y tareas",
+   "medida": "1 hora"
+  },
+  {
+   "id": "F2",
+   "titulo": "Grafo",
+   "descripcion": "procesos y obligaciones",
+   "medida": "2 horas"
+  },
+  {
+   "id": "F3",
+   "titulo": "Uso",
+   "descripcion": "cotización, cristales y equipo",
+   "medida": "5 horas",
+   "destacada": true
+  }
+ ],
+ "frentes": [
+  {
+   "id": "A",
+   "carril": "claude",
+   "nombre": "El Cerebro Digital de Marling",
+   "medida": "8 horas",
+   "medida_meta": "con Marling, guiadas",
+   "celdas": {
+    "F1": "Claude explicado y tareas del cerebro delimitadas.",
+    "F2": "Procesos, protocolos y obligaciones ordenados en un grafo.",
+    "F3": "Cotización, catálogo de cristales e interfaz del equipo."
+   },
+   "celdas_medida": {
+    "F1": "1 hora con Marling",
+    "F2": "2 horas con Marling",
+    "F3": "5 horas con Marling"
+   }
+  }
+ ],
+ "ruta": {
+  "titulo": "Un cerebro en uso, en tres fases.",
+  "subtitulo": "El calendario se acuerda en la reunión de arranque. El **seguimiento** a 30, 60 y 90 días corre desde el cierre del proyecto.",
+  "nota": "Son **8 horas** con {cliente_corto}: 1 de base, 2 de grafo y 5 de uso. La reunión de arranque (1 h) va aparte.",
+  "hitos": [
+   {
+    "titulo": "Arranque · aparte",
+    "texto": "1 h para fijar el calendario según su tiempo y traer casos reales."
+   },
+   {
+    "titulo": "Base",
+    "texto": "Claude explicado y las tareas del cerebro delimitadas."
+   },
+   {
+    "titulo": "Grafo",
+    "texto": "Procesos, protocolos y obligaciones ordenados y consultables."
+   },
+   {
+    "titulo": "Uso",
+    "texto": "Cotización con seguimiento, catálogo de cristales e interfaz del equipo."
+   },
+   {
+    "titulo": "30 · 60 · 90 días",
+    "texto": "Seguimiento: uso del cerebro, ajustes, tiempo recuperado y seguimientos hechos."
+   }
+  ],
+  "siguiente_etapa": {
+   "titulo": "Etapa siguiente",
+   "texto": "Tareas que corren solas, como recordatorios y envíos, y el ingreso administrativo automático, a evaluar con los resultados."
+  }
+ },
+ "logistica": {
+  "modalidad": "Presencial o virtual, según lo que más le convenga a Marling.",
+  "participantes": "Marling Duc, socia y responsable de la operación; las 5 personas del equipo usan lo construido.",
+  "ritmo": "Bloques cortos y a su medida, pensados para quien atiende la operación.",
+  "arranque": "La fecha la fija Marling; una reunión de arranque de 1 h, aparte, acuerda el calendario."
+ },
+ "seguimiento": {
+  "rango": "30, 60 y 90 días",
+  "texto": "Seguimiento desde el cierre del proyecto",
+  "items": [
+   {
+    "dias": "30 días",
+    "texto": "Uso del cerebro en el día a día"
+   },
+   {
+    "dias": "60 días",
+    "texto": "Ajustes y nuevas construcciones"
+   },
+   {
+    "dias": "90 días",
+    "texto": "Tiempo recuperado y seguimientos"
+   }
+  ]
+ },
+ "entregables": {
+  "titulo": "Lo que recibe {cliente_corto}.",
+  "subtitulo": "Lo que se llevan: **un cerebro en uso** para cotizar, consultar cristales y tener los procesos a la mano, más el seguimiento a {rango_seguimiento}.",
+  "etiqueta_transversales": "Para todo el proyecto",
+  "transversales": [
+   "Línea base del tiempo de cotizar y de actualizar una lista.",
+   "Criterios de uso seguro de la información.",
+   "Seguimiento a 30, 60 y 90 días con medición."
+  ],
+  "etiqueta_valor": "Valor inmediato",
+  "valor_inmediato": [
+   "Con la base: Claude explicado y tareas delimitadas.",
+   "Con el grafo: procesos y obligaciones a la mano.",
+   "Al cerrar: cotizar, consultar y actualizar el cerebro."
+  ],
+  "columnas_por_carril": [
+   1
+  ]
+ },
+ "retorno": {
+  "modo": "metodo",
+  "posiciones": false,
+  "titulo": "Retorno esperado: tiempo recuperado, medido.",
+  "subtitulo": "Se mide contra la línea base que Marling deja al empezar y se sigue a 30, 60 y 90 días.",
+  "etiqueta_pasos": "Cómo se calcula",
+  "pasos": [
+   {
+    "titulo": "Punto de partida",
+    "texto": "Cuánto toman hoy una cotización y actualizar la lista de un laboratorio. Es la línea base."
+   },
+   {
+    "titulo": "Tiempo con el cerebro",
+    "texto": "Lo que toman las mismas tareas con sus Skills ya en uso."
+   },
+   {
+    "titulo": "Horas recuperadas",
+    "texto": "Diferencia entre ambos tiempos, por tarea: una estimación referencial, sin compromiso de resultado."
+   },
+   {
+    "titulo": "Seguimientos hechos",
+    "texto": "Cuántas cotizaciones y entregas reciben hoy seguimiento, y cuántas después."
+   },
+   {
+    "titulo": "Gasto de operar",
+    "texto": "La licencia de Claude, contra el tiempo recuperado."
+   }
+  ],
+  "etiqueta_metas": "Calendario de seguimiento y medición",
+  "metas": [
+   {
+    "dias": "30 días",
+    "texto": "El cerebro en uso real y la línea base validada con Marling."
+   },
+   {
+    "dias": "60 días",
+    "texto": "Ajustes del cerebro y horas recuperadas medidas contra la línea base."
+   },
+   {
+    "dias": "90 días",
+    "texto": "Tiempo recuperado y seguimientos hechos, medidos; cerebro mantenido por Marling."
+   }
+  ],
+  "etiqueta_destino": "Hacia dónde va el proyecto",
+  "destino": [
+   {
+    "rotulo": "Un solo criterio",
+    "texto": "Cada cotización sale con el **mismo formato**, la haga quien la haga."
+   },
+   {
+    "rotulo": "Seguimiento que no se pierde",
+    "texto": "El envío y el seguimiento dejan de **depender de que alguien se acuerde**."
+   },
+   {
+    "rotulo": "Equipo que sabe qué hacer",
+    "texto": "Quien entre al equipo encuentra los **procesos y el catálogo** a la mano, sin que Marling los explique."
+   }
+  ],
+  "gancho": "A los 90 días del cierre, {cliente_corto} contará con el tiempo recuperado y los seguimientos hechos, medidos contra su línea base."
+ },
+ "inversion": {
+  "duracion": "Un Cerebro Digital en tres fases, **{h_total} horas** con {cliente_corto} y seguimiento a {rango_seguimiento}.",
+  "licencias": {
+   "titulo": "Licenciamiento · aparte de esta inversión",
+   "tarjetas": [
+    {
+     "nombre": "Claude · plan individual",
+     "color": "amarillo",
+     "texto": "**USD 20** al mes para el cerebro de Marling. Si más personas lo usan con Claude, cada una necesita su propio puesto; se define al empezar."
+    },
+    {
+     "nombre": "Obsidian · gratuito",
+     "color": "naranja",
+     "texto": "Aplicación de notas donde se organiza el conocimiento como grafo. Se instala al trabajar el grafo."
+    }
+   ],
+   "nota": "Valor de lista dicho en la reunión del 03/11/2026; puede variar y lo confirma {cliente_corto} con el proveedor. No es un valor de Intezia."
+  },
+  "programa": [
+   "Construcción de 1 Cerebro Digital con Claude y Obsidian para {cliente_corto} ({codigo}).",
+   "Base, grafo y uso, guiados por Intezia: cotización, catálogo de cristales e interfaz del equipo.",
+   "{h_total} horas con {cliente_corto}, más 1 h de reunión de arranque aparte. Licencias aparte."
+  ],
+  "notas": [
+   "La licencia de Claude va aparte; Obsidian es gratuito.",
+   "Garantía 30-60-90: seguimiento a 30, 60 y 90 días desde el cierre del proyecto, con el cerebro en uso."
+  ],
+  "garantia_texto": "Estamos contigo hasta que el cerebro quede en uso."
+ },
+ "proximos_pasos": {
+  "subtitulo": "Esto es lo que sigue cuando {cliente_corto} confirme la propuesta.",
+  "asesora": {
+   "nombre": "Verónica Rubio",
+   "cargo": "Asesora comercial",
+   "correo": "vrubio01@intezia.com",
+   "telefono": "+58 422 3355505"
+  },
+  "pasos": [
+   {
+    "titulo": "Revisión conjunta",
+    "texto": "Revisamos la propuesta con quien decide por {cliente_corto} y respondemos sus dudas."
+   },
+   {
+    "titulo": "Cuenta y material",
+    "texto": "Se deja lista la cuenta de Claude y se reúne el material que se decida compartir: catálogo, procesos y listas."
+   },
+   {
+    "titulo": "Reunión de arranque",
+    "texto": "Una hora para acordar las fechas y elegir las primeras tareas con Marling."
+   }
+  ]
+ },
+ "supuestos": [
+  "Pedido de Ivana (05/11/2026): propuesta de Habilidades CAI-088 para Optimedical (Marling Duc), asesora Verónica Rubio, con la ficha del 03/11/2026 y la transcripción de la reunión. Educación, sin alianza, 8 h y sin facilidad de pago: confirmados con Ivana. Si la transcripción y la ficha se contradicen, manda la transcripción (§4.23).",
+  "Horas: 8 h con Marling (dadas por Ivana); el reparto es mío: base 1 h, grafo 2 h, cotización con envío y seguimiento 2 h, catálogo de cristales 2 h, interfaz del equipo y mantenimiento 1 h. Las horas son de encuentro con la cliente, no horas de trabajo de Intezia (§4.23); las horas de `datos.json` son marcadores técnicos. Sin «sesiones»: el calendario se acuerda en el arranque y, por el tiempo de Marling, en bloques cortos.",
+  "Alcance: de las siete tareas que nombró, en las 8 h entran la cotización con seguimiento y post-consulta, el catálogo y las listas de laboratorios, el manual de procesos y la práctica de atención, el orden de pasos de las obligaciones del mes y la interfaz del equipo. El ingreso administrativo y su reporte para socios, los recordatorios que se envían solos y los envíos automáticos quedan fuera (el cerebro responde cuando se le pide) y se mencionan como tareas a explorar o etapa siguiente.",
+  "Herramientas: Claude y Obsidian se nombran porque Marling los eligió como herramienta a incorporar (ficha) y Verónica se los mostró en la reunión. Marling ya usa Gemini, NotebookLM y ChatGPT gratuito: no se nombran. No se afirma que migre de herramienta (§4.11) ni se promete acceso a Claude desde Venezuela.",
+  "Licencia: plan individual de Claude de USD 20 al mes, dicho por Verónica en la reunión (también mencionó uno de USD 100 para compartir, que no se recomienda aquí porque cada persona necesita su propio puesto). Sin verificación posterior: confirmar el valor vigente.",
+  "Cifras: «más de 1.000 cristales» y «equipo de 5 personas» salen de la ficha y la transcripción; no hay volúmenes, tiempos ni valor de la hora, así que el retorno es por método. El comparativo con el costo de contratar una persona que usó Verónica no va en el deck: es argumento de venta, con cifras de ella.",
+  "Hechos de la portada: salen de la ficha (procesos 3, 4 y 6). «Un Word que nadie consulta» sintetiza la cita de Marling sin ponerla entre comillas.",
+  "El valor, el descuento y el total van vacíos para ventas. En la reunión se habló de 2.300 REF; la ficha indica que el piso del Cerebro Digital individual es 2.500 REF y que la cotización necesita aprobación de la directora comercial antes de enviarse: nada de esto va al deck.",
+  "Marling pidió cuotas y la ficha dice «cuotas por avance del proyecto», pero Ivana decidió no incluir facilidad de pago."
+ ],
+ "pendientes": [
+  "Aprobación de la CCO antes de enviar (ficha, señal 2: valor por debajo del piso).",
+  "Confirmar con Ivana el reparto de las 8 h, sobre todo si 1 h basta para la interfaz del equipo.",
+  "Verificar el valor vigente de la licencia de Claude de USD 20 al mes.",
+  "Confirmar si participan los socios en la decisión y quién estará en la presentación (ficha: por confirmar).",
+  "Valor, descuento y total: campos vacíos para ventas; moneda de facturación por confirmar.",
+  "Verónica enviaba la propuesta el jueves por la mañana (05/11/2026): coordinar la fecha con ella."
+ ]
+}

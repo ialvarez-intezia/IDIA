@@ -1,0 +1,449 @@
+<!doctype html>
+<!--
+  Propuesta · Rodienca · Servicio de Habilidades (CAI-080)
+  División: Educación · Servicio: Habilidades (§4.1a) · Alianza: no
+  GENERADO por scripts/generar-habilidades-compacto.py (plantilla 3.0 (2026-10-08), formato habilidades) desde datos.json.
+  No editar a mano: editar datos.json y regenerar. Estilos propios del deck: overrides.css.
+  Fuente del insumo: Ficha de Levantamiento (registro 02/10/2026, PDF del 02/11/2026) y contexto de Flavia Martínez (sin transcripción de la reunión)
+
+  Formato compacto de 8 slides, en el orden de las preguntas del cliente (Ventas, 2026-10-07), sin semanas, sesiones
+  ni fechas (Keiber, 2026-10-08):
+    1 Portada · 2 Alcance · 3 Ruta · 4 Cómo trabajamos · 5 Entregables · 6 Retorno · 7 Inversión · 8 Próximos pasos
+  Marcadores de detección de AcroForms (agregar-campo-precio.py), por página: «Propuesta Económica» solo en la slide de
+  inversión; «Lo que se llevan» y «Entregables» solo en la de entregables; «Facilidad de pago» solo en la de pago.
+  Campos AcroForm: Programa, Notas, PrecioBase, Descuento, PrecioTotal (inversión) y Entregables, Acreditacion (entregables). Se reposicionan con scripts/customize-habilidades-compacto.py.
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Propuesta · Rodienca · Intezia Educación</title>
+  <link rel="stylesheet" href="../_base/styles.css">
+  <link rel="stylesheet" href="habilidades-compacto.css">
+  <link rel="stylesheet" href="overrides.css">
+</head>
+<body>
+
+  <main class="deck">
+
+    <!-- 1 · Portada: ¿cuál es mi problema? -->
+    <section class="slide s-cover">
+      <span class="counter">01 / 08</span>
+      <div class="logo-big">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia Educación">
+      </div>
+      <div class="body">
+        <p class="eyebrow">Propuesta de proyecto · Servicio de Habilidades</p>
+        <h1 style="font-size:46px">
+          Atención ágil a clientes, reportes<br>
+          de ventas y contenido con IA<br>
+          <span class="hl">en Rodienca</span>
+        </h1>
+        <p class="lead">
+          Este proyecto mide cómo responden hoy y construye con las tres personas de Rodienca, en <strong>Claude</strong>, la respuesta a cotizaciones, el reporte de ventas y el contenido, hasta dejarlos <strong>en uso</strong>.
+        </p>
+        <div class="pain-strip">
+          <div class="pain-item">
+            <span class="pain-num">6 h</span>
+            <span class="pain-lbl">tardó la respuesta a una cotización pedida a las 10 de la mañana.</span>
+          </div>
+          <div class="pain-item">
+            <span class="pain-num">Una</span>
+            <span class="pain-lbl">sola persona confirma los trabajos de construcción, y los correos de cotización no se priorizan.</span>
+          </div>
+          <div class="pain-item">
+            <span class="pain-num">15 días</span>
+            <span class="pain-lbl">es cada cuánto quieren ver qué se vende y qué no, y hoy no tienen esa visión rápida.</span>
+          </div>
+          <div class="pain-item">
+            <span class="pain-num">A mano</span>
+            <span class="pain-lbl">se arman hoy los correos para dar a conocer los nuevos servicios, desde cero.</span>
+          </div>
+        </div>
+      </div>
+      <div class="id-line">
+        <span class="codigo">Código: CAI-080</span>
+        <span class="cliente">Rodienca</span>
+      </div>
+    </section>
+
+    <!-- 2 · Alcance: qué vamos a hacer y para qué -->
+    <section class="slide s-scope roomy">
+      <span class="counter">02 / 08</span>
+      <p class="eyebrow">02 · Alcance</p>
+      <h2>Tres procesos con IA, en uso.</h2>
+      <p class="sub">Medimos cómo se responde hoy y dejamos tres procesos funcionando, con casos reales del equipo.</p>
+
+      <div class="scope-panels one" style="--np:1">
+        <div class="scope-panel acc-y">
+          <div class="scope-head">
+            <span class="scope-tag">Claude Team de Rodienca</span>
+            <span class="scope-total"><b>4</b> líneas de trabajo</span>
+          </div>
+          <ul class="scope-rows">
+              <li><span class="area">Levantamiento y nivelación</span><span class="para">Medir cómo se responde hoy y llevar al equipo a un mismo nivel en Claude</span></li>
+              <li><span class="area">Cotizaciones y atención a clientes</span><span class="para">Responder cotizaciones y consultas rápido, sin que todo dependa de una sola persona</span></li>
+              <li><span class="area">Reportes de ventas</span><span class="para">Ver cada 15 días qué se vende y qué no, para decidir y orientar el contenido</span></li>
+              <li><span class="area">Contenido y correos</span><span class="para">Dar a conocer los nuevos servicios con ideas y correos armados con IA</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="scope-facts">
+        <p class="scope-card-label">Lo que se mide desde el primer día</p>
+        <ul>
+          <li><b>Tiempo de respuesta</b><span>Cuánto tarda cada cotización, contra el punto de partida.</span></li>
+          <li><b>Cotizaciones priorizadas</b><span>Cuáles se atienden primero y en cuánto tiempo.</span></li>
+          <li><b>Reporte cada 15 días</b><span>Si sale a tiempo y se usa para decidir.</span></li>
+          <li><b>Uso del equipo</b><span>Quién usa Claude a los 30, 60 y 90 días.</span></li>
+        </ul>
+      </div>
+
+      <div class="scope-out">
+        <p class="scope-card-label">Fuera de este alcance</p>
+        <ul>
+          <li>Licencias de Claude y de Gemini si se suma: las contrata Rodienca, aparte.</li>
+          <li>Conectar o modificar el sistema administrativo: los reportes parten de lo que se exporte.</li>
+          <li>Herramienta para enviar los correos: la elige y la contrata Rodienca.</li>
+          <li>Tiempos de respuesta y ventas: son metas de Rodienca; se miden, no se garantizan.</li>
+        </ul>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Rodienca · CAI-080</span>
+      </div>
+    </section>
+
+    <!-- 3 · Ruta: qué pasa en cada fase -->
+    <section class="slide s-route">
+      <span class="counter">03 / 08</span>
+      <p class="eyebrow">03 · Ruta</p>
+      <h2>Del levantamiento a las herramientas en uso.</h2>
+      <p class="sub">El calendario se acuerda en la <strong>reunión de arranque</strong>, con resultados pensados para el corto plazo.</p>
+
+      <div class="route-grid n1" style="--cols:2; --rows:1; --rowh:214px">
+
+        <div class="rg-corner"></div>
+        <div class="rg-phase rg-ph-1">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Levantamiento</span></span>
+          <span class="rg-phase-name">Medir la respuesta de hoy y nivelar al equipo en Claude</span>
+        </div>
+        <div class="rg-phase rg-ph-2 hi">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Construcción</span></span>
+          <span class="rg-phase-name">Tres procesos construidos con el equipo y en uso</span>
+        </div>
+        <div class="rg-phase rg-fu">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Garantía</span></span>
+          <span class="rg-phase-date">30, 60 y 90 días</span>
+          <span class="rg-phase-txt">Desde el cierre, con tablero de resultados</span>
+        </div>
+
+        <div class="rg-front acc-y">
+          <span class="rg-front-h">Operación y ventas de Rodienca</span>
+          <span class="rg-front-row"><span class="rg-front-tool">Claude Team</span><b class="rg-front-n">18 horas</b></span>
+          <span class="rg-front-meta">con el equipo</span>
+        </div>
+        <div class="rg-cell"><span class="rg-h solo-h"><b>6 horas con el equipo</b></span><p>Levantamiento presencial con las tres personas y nivelación en Claude.</p></div>
+        <div class="rg-cell hi"><span class="rg-h solo-h"><b>12 horas con el equipo</b></span><p>Cotizaciones y atención, reporte de ventas y contenido, en uso.</p></div>
+
+        <div class="rg-follow" style="grid-column:4; grid-row:2 / span 1">
+          <ul>
+            <li><b>30 días</b><span>Uso de las herramientas</span></li>
+            <li><b>60 días</b><span>Ajustes y nuevas construcciones</span></li>
+            <li><b>90 días</b><span>Tiempo de respuesta medido</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="route-miles" style="grid-template-columns:repeat(4,1fr)">
+        <div class="mile"><span class="mile-d"></span><b>Arranque · aparte</b><p>Reunión de 1 h para acordar el calendario, la modalidad y quién coordina por Rodienca.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Levantamiento y nivelación</b><p>Casos reales, punto de partida y el equipo en Claude.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Tres procesos en uso</b><p>Cotizaciones, reporte de ventas y contenido, construidos con el equipo.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>30 · 60 · 90 días</b><p>Seguimiento: uso, ajustes e indicadores medidos.</p></div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Rodienca · CAI-080</span>
+      </div>
+    </section>
+
+    <!-- 4 · Cómo trabajamos: pasos, por qué en ese orden, casos reales, práctica, datos y logística -->
+    <section class="slide s-method">
+      <span class="counter">04 / 08</span>
+      <p class="eyebrow">04 · Cómo trabajamos</p>
+      <h2>Así construimos cada herramienta.</h2>
+      <p class="sub">Primero se mide dónde está hoy cada proceso; después se construye con el equipo, sobre casos reales.</p>
+
+      <ol class="mt-steps" style="--n:4">
+          <li><b>Medimos</b><span>Cuántas consultas llegan y cuánto tardan en responderse.</span></li>
+          <li><b>Nivelamos</b><span>El equipo aprende Claude y sus skills desde cero.</span></li>
+          <li><b>Construimos</b><span>Cotizaciones, reporte de ventas y contenido, con casos reales.</span></li>
+          <li><b>Seguimos</b><span>Uso, ajustes y resultados, a 30, 60 y 90 días.</span></li>
+      </ol>
+      <div class="mt-strips">
+        <p class="mt-why"><b>Por qué en este orden</b> Primero se mide el punto de partida y se nivela al equipo en Claude; después se construye cada proceso, empezando por el que más urge: responder cotizaciones.</p>
+        <p class="mt-who"><b>Quién construye</b> Se construye con el equipo: <strong>Intezia guía</strong> y las tres personas prueban cada herramienta sobre sus propios casos, hasta sostenerla sin depender de nadie.</p>
+      </div>
+
+      <div class="mt-info">
+        <div class="mt-card">
+          <p class="mt-card-label">Cómo funciona en la práctica</p>
+          <ul><li><b>Una persona revisa.</b> Claude propone borradores y clasificaciones; una persona los revisa antes de enviar una respuesta.</li><li><b>Skills que cuidan el consumo.</b> Cada herramienta se guarda como una skill, para que el equipo la repita sin gastar de más.</li><li><b>Sin prometer cifras.</b> Se mide el punto de partida y cada avance; las metas son de Rodienca y no se garantizan.</li></ul>
+        </div>
+        <div class="mt-card">
+          <p class="mt-card-label">Cómo cuidamos sus datos</p>
+          <p>Los datos de clientes y presupuestos no se cargan a ninguna herramienta de IA sin la autorización de Rodienca; las reglas básicas de uso se acuerdan en la nivelación.</p>
+        </div>
+      </div>
+
+      <div class="mt-logi">
+        <div class="mt-tile"><span>Modalidad</span><b>Levantamiento y revisiones presenciales; formación en línea. Se confirma en el arranque.</b></div>
+        <div class="mt-tile"><span>Participantes</span><b>Las tres personas: dirección general, marketing y operaciones.</b></div>
+        <div class="mt-tile"><span>Ritmo de trabajo</span><b>El trabajo se agenda sin interrumpir la operación diaria de la tienda, la fabricación y las obras.</b></div>
+        <div class="mt-tile"><span>Arranque</span><b>Apenas se apruebe la propuesta; una reunión de 1 h, aparte, acuerda el calendario.</b></div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Rodienca · CAI-080</span>
+      </div>
+    </section>
+
+    <!-- 5 · Entregables: ¿con qué me quedo? (catálogo + piezas transversales) -->
+    <section class="slide s-deliv">
+      <span class="counter">05 / 08</span>
+      <p class="eyebrow">05 · Entregables</p>
+      <div class="deliv-head">
+        <h2>Lo que recibe Rodienca.</h2>
+        <p class="deliv-sub"><span class="nw">Lo que se llevan</span>: <strong>la medición de hoy, tres procesos en uso y un equipo que usa Claude</strong>, más el seguimiento a 30, 60 y 90 días.</p>
+      </div>
+
+      <div class="deliv-carriles" style="--ncols:2">
+        <span class="dc acc-y" style="grid-column: span 2">Claude Team de Rodienca</span>
+      </div>
+
+      <div class="deliv-cols" style="--ncols:2">
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">Levantamiento y nivelación</p>
+            <ul>
+              <li>Levantamiento con las tres personas<ul class="inc"><li>Los tres procesos y sus casos reales</li><li>Consultas y presupuestos recibidos, y cuánto tardan en responderse</li><li>Qué se construye primero</li></ul></li>
+              <li>Nivelación en Claude<ul class="inc"><li>Claude en el trabajo diario del equipo</li><li>Skills: instrucciones guardadas que se reutilizan</li><li>Reglas básicas de uso y de datos</li></ul></li>
+            </ul>
+          </div>
+          <div class="da">
+            <p class="da-name">Cotizaciones y atención a clientes</p>
+            <ul>
+              <li>Respuesta a presupuestos y atención por WhatsApp y correo<ul class="inc"><li>Borradores de respuesta a cotizaciones y consultas</li><li>Clasificación y prioridad de los correos de cotización</li><li>Respuestas listas para WhatsApp</li></ul></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">Reportes de ventas</p>
+            <ul>
+              <li>Reporte de ventas cada 15 días<ul class="inc"><li>Qué se vende más y qué no, y cómo va la tienda</li><li>Promedios y comparación entre quincenas</li><li>Lectura para Dirección, marketing y operaciones</li></ul></li>
+            </ul>
+          </div>
+          <div class="da">
+            <p class="da-name">Contenido y correos</p>
+            <ul>
+              <li>Ideas de contenido y estructura de correos<ul class="inc"><li>Ideas de contenido para cada servicio nuevo</li><li>Estructura y borradores de correos</li><li>El tono de Rodienca, guardado para reutilizarlo</li></ul></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="deliv-band">
+        <div class="db-card db-1">
+          <span class="db-label">Para todo el proyecto</span>
+        </div>
+        <div class="db-card db-2">
+          <span class="db-label">Valor inmediato</span>
+        </div>
+      </div>
+      <!-- Cajas multiline editables (vacías en HTML: el contenido vive dentro del AcroForm /V). -->
+      <div class="multi-box db-box db-box-1" data-field="Entregables"></div>
+      <div class="multi-box db-box db-box-2" data-field="Acreditacion"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Rodienca · CAI-080</span>
+      </div>
+    </section>
+
+    <!-- 6 · Retorno: ¿qué gano? (método de cálculo). Sin estudios ni citas externas. -->
+    <section class="slide s-roi">
+      <span class="counter">06 / 08</span>
+      <p class="eyebrow">06 · Retorno</p>
+      <h2>Retorno esperado: tiempo de respuesta, medido.</h2>
+      <p class="sub">Cada indicador se mide contra el punto de partida que el levantamiento deja registrado.</p>
+
+      <div class="roi-body">
+        <div class="roi-panel">
+          <p class="roi-panel-title">Cómo se calcula el retorno de cada herramienta</p>
+          <ol class="roi-steps">
+            <li><b>Volumen</b><span>Cuántas cotizaciones, consultas y reportes se atienden cada mes.</span></li>
+            <li><b>Punto de partida</b><span>Cuánto tarda hoy cada respuesta y cada reporte: es la línea base.</span></li>
+            <li><b>Con la herramienta</b><span>Lo que toma el mismo trabajo una vez que la herramienta está en uso.</span></li>
+            <li><b>Horas recuperadas</b><span>Volumen por la diferencia de tiempos: una estimación referencial, sin compromiso de resultado.</span></li>
+            <li><b>Gasto de operar</b><span>Licencias y consumo de IA, contra el valor de lo recuperado.</span></li>
+          </ol>
+        </div>
+
+        <div class="roi-right">
+          <p class="roi-right-title">Calendario de seguimiento y medición</p>
+          <div class="roi-card">
+            <b>30 días</b>
+            <p>Desde el cierre: herramientas en uso real y punto de partida validado con el equipo.</p>
+          </div>
+          <div class="roi-card">
+            <b>60 días</b>
+            <p>Tiempo de respuesta a clientes y presupuestos medido contra el punto de partida.</p>
+          </div>
+          <div class="roi-card">
+            <b>90 días</b>
+            <p>Medición del retorno: lo recuperado frente al gasto de operar las herramientas.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="roi-dest-wrap">
+        <p class="roi-dest-title">Hacia dónde va el proyecto</p>
+        <div class="roi-dest">
+          <div class="rd-item"><b>Respuestas más rápidas</b><p>Con los correos de cotización priorizados, el equipo sabe <strong>cuál responder primero</strong>, sin depender de una sola persona.</p></div>
+          <div class="rd-item"><b>Visión cada 15 días</b><p>Con el reporte quincenal, Dirección ve <strong>qué se vende y qué no</strong> para decidir.</p></div>
+          <div class="rd-item"><b>Contenido sin empezar de cero</b><p>Ideas y correos armados con IA para dar a conocer los nuevos servicios.</p></div>
+        </div>
+      </div>
+
+      <div class="roi-hook"><p>A los 90 días del cierre, Rodienca contará con su tiempo de respuesta medido contra el punto de partida y el gasto de operar sus herramientas.</p></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Rodienca · CAI-080</span>
+      </div>
+    </section>
+
+    <!-- 7 · Inversión (hoja de cotización estándar; antepenúltima slide) -->
+    <section class="slide s-price">
+      <span class="counter">07 / 08</span>
+      <h2 class="title">Inversión del proyecto.</h2>
+      <p class="price-intro">Propuesta Económica · Servicio de Habilidades</p>
+
+      <div class="block">
+        <span class="block-eyebrow">Duración</span>
+        <p class="block-value"><strong>18 horas con el equipo</strong> de Rodienca, en levantamiento, nivelación y construcción, con seguimiento a 30, 60 y 90 días.</p>
+      </div>
+
+      <div class="block block-programa">
+        <span class="block-eyebrow">Programa</span>
+      </div>
+      <div class="multi-box programa-box" data-field="Programa"></div>
+
+      <div class="block block-cotizacion">
+        <span class="block-eyebrow">Cotización</span>
+      </div>
+
+      <span class="cot-label cot-label-base">Propuesta + Inversión</span>
+      <div class="cot-frame base-frame"></div>
+
+      <span class="cot-label cot-label-discount">Descuento</span>
+      <span class="cot-sign-minus">&minus;$</span>
+      <div class="cot-frame discount-frame"></div>
+      <span class="cot-urgent-note">Descuento válido por 15 días</span>
+
+      <span class="cot-label cot-label-total">TOTAL</span>
+      <div class="cot-frame total-frame"></div>
+
+      <p class="cot-validity">Cotización válida por 30 días.</p>
+      <div class="cot-terms-box">
+        <span class="cot-terms-label">Importante</span>
+        <p class="cot-terms-text">Este servicio se presta bajo nuestros <a href="https://drive.google.com/file/d/1PA-ZSt4KnyY5dpxXzgkIk6-yfGlV2eF8/view?usp=drive_link" target="_blank" rel="noopener">términos y condiciones</a>. Al avanzar con esta propuesta, ambas partes los aceptan.</p>
+      </div>
+
+      <div class="cot-garantia-badge">
+        <span class="cot-garantia-tag">Garantía 30-60-90</span>
+        <p class="cot-garantia-text">Estamos contigo hasta que cada herramienta quede en uso.</p>
+      </div>
+
+      <div class="block block-notes-container">
+        <span class="block-eyebrow">Notas</span>
+      </div>
+      <div class="multi-box notas-box" data-field="Notas"></div>
+
+      <div class="lic-wrap">
+        <span class="lic-eyebrow">Licenciamiento · aparte de esta inversión</span>
+        <div class="lic-cards">
+          <div class="lic-card acc-y">
+            <span class="lic-name">Claude Team · por persona</span>
+            <p>Se paga <strong>por cada persona</strong>, no es una cuenta única para todos. Valor de lista: USD 25 por puesto al mes, o USD 20 pagando por año, con mínimo de dos puestos, al 02/11/2026. Con tres puestos: USD 75 al mes.</p>
+          </div>
+          <div class="lic-card acc-o">
+            <span class="lic-name">Gemini · opcional por perfil</span>
+            <p>Si algún perfil lo necesita, se puede sumar una licencia de <strong>Gemini</strong>; se define en el levantamiento y su valor de lista se informa antes.</p>
+          </div>
+        </div>
+        <p class="lic-note">Valores de lista del proveedor al 02/11/2026; pueden variar. Los confirma Rodienca con el proveedor.</p>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Rodienca · CAI-080</span>
+      </div>
+    </section>
+
+    <!-- 9 · Próximos pasos: qué hacer y a quién escribir (última slide) -->
+    <section class="slide s-next">
+      <span class="counter">08 / 08</span>
+      <p class="eyebrow">08 · Próximos pasos</p>
+      <h2>Tres pasos para arrancar.</h2>
+      <p class="sub">Esto es lo que sigue cuando Rodienca confirme la propuesta.</p>
+
+      <div class="nx-steps">
+        <div class="nx-step acc-y">
+          <span class="nx-num">1</span>
+          <b>Aprobación</b>
+          <p>Quien decide por Rodienca confirma la propuesta y acordamos la fecha de la reunión de arranque.</p>
+        </div>
+        <div class="nx-step acc-o">
+          <span class="nx-num">2</span>
+          <b>Casos reales</b>
+          <p>El equipo reúne ejemplos reales de cotizaciones y el reporte de ventas que quiera usar, sin datos que no autorice.</p>
+        </div>
+        <div class="nx-step acc-w">
+          <span class="nx-num">3</span>
+          <b>Reunión de arranque</b>
+          <p>Una hora para acordar el calendario, la modalidad presencial o en línea y quién coordina.</p>
+        </div>
+      </div>
+
+      <div class="nx-contact">
+        <div class="nx-card nx-ase">
+          <span class="nx-label">¿Dudas? Escribe a tu asesora comercial</span>
+          <b class="nx-name">Flavia Martínez</b>
+          <span class="nx-role">Asesora comercial</span>
+          <p class="nx-line"><a href="mailto:fmartinez@intezia.com">fmartinez@intezia.com</a></p>
+          <p class="nx-line">+58 414 5756615</p>
+        </div>
+        <div class="nx-card nx-emp">
+          <span class="nx-label">Intezia</span>
+          <p class="nx-line">Intezia C.A J-505657950</p>
+          <p class="nx-line"><a href="mailto:servicio@intezia.com">servicio@intezia.com</a></p>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Rodienca · CAI-080</span>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

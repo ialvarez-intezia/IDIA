@@ -1,0 +1,47 @@
+{
+  "_comentario": "Plantilla anotada de clientes/propuestas/<slug>/kickoff.json. Lo propio del kick-off; todo lo demás (etapas, áreas, horas, contacto comercial) sale del datos.json de la propuesta. Las claves que empiezan con _ se ignoran. Generar: python3 scripts/generar-kickoff.py <slug> --aprobada (solo con la propuesta aprobada, confirmada por el usuario).",
+
+  "kickoff": {
+    "_comentario": "Opcional. Se pueden llenar también en la propia página durante la llamada.",
+    "fecha": "AAAA-MM-DD",
+    "hora": "HH:MM",
+    "consultor": "",
+    "lider": "",
+    "participantes_cliente": ""
+  },
+
+  "contacto_dudas": {"nombre": "", "cargo": "", "correo": "", "telefono": ""},
+  "_contacto_dudas": "Opcional. Quien resuelve las dudas y preguntas del cliente durante el servicio (p. ej. la líder de proyecto), aparte del contacto comercial. Si falta, el cierre dirige las dudas al contacto comercial.",
+
+  "fechas_tentativas": "Texto libre con lo que envió Ventas (ventana de fechas, horarios del cliente). Se muestra en el calendario (solo modo interno) y en el brief para Ventas.",
+
+  "duracion_defecto": 2,
+
+  "_estilo_css": "Opcional. Sin esta clave se usa plantillas/kickoff-canonico/kickoff-estilo.css (Brand Kit v2.1: amarillo #FFD300, negro #0A0A0A, Poppins), el estilo de todos los kick-offs desde 2026-11-03. \"ninguno\" deja la plantilla oscura anterior; un nombre de archivo usa una hoja propia de la carpeta del cliente.",
+
+  "modalidad": "",
+  "_modalidad": "Opcional. Presencial u Online para todas las sesiones propuestas; cada sesión se cambia en la página y también puede llevar su propia clave modalidad dentro de sesiones_propuestas. Vacío: se elige en vivo, sesión por sesión.",
+
+  "horas_a_agendar": null,
+  "_horas_a_agendar": "Opcional. Por defecto: Detección = horas de levantamiento + nivelación; Habilidades = horas totales del proyecto. Es la base de la barra del 50 % y el 60 %. Cámbiala si parte de las horas no son sesiones con el cliente (por ejemplo, producción de videos).",
+
+  "checklist": [
+    {"titulo": "OBLIGATORIO · varía por propuesta: se define con el usuario antes de generar", "detalle": "Qué se valida con el cliente en la llamada (una frase)."}
+  ],
+
+  "sesiones_propuestas": [
+    {"grupo": "lev", "titulo": "Nombre del área o tema", "fecha": "AAAA-MM-DD", "hora": "HH:MM", "duracion": 2}
+  ],
+  "_grupos": "Detección: niv (nivelación), lev (levantamiento por departamento), inf (Informe Final, 1 sesión fija sin horas). Habilidades: el id de cada fase en minúsculas (f0, f1, f2, f3) (el seguimiento no se agenda en el kick-off, solo se menciona en la ruta). Las sesiones se arman sobre la marcha en la página; estas son solo la propuesta de calendario a partir de las fechas tentativas de Ventas.",
+
+  "dudas": ["Lo que hay que validar con Ventas antes de la llamada o confirmar en ella."],
+
+  "se_llevan": null,
+  "_se_llevan": "Opcional. Lista de textos cortos de lo que recibe el cliente. En Detección sale por defecto de los entregables de la propuesta.",
+
+  "cierre_medicion": true,
+  "_cierre_medicion": "Solo Habilidades. false si el servicio no termina con Edu-Trace, certificados y dashboard (por ejemplo, contenido en video asíncrono).",
+
+  "bienvenida": null,
+  "gracias": null
+}

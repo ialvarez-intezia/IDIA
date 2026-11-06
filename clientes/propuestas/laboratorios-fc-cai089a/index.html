@@ -1,0 +1,478 @@
+<!doctype html>
+<!--
+  Propuesta · Laboratorios FC · Servicio de Habilidades (CAI-089A)
+  División: Educación · Servicio: Habilidades (§4.1a) · Alianza: no
+  GENERADO por scripts/generar-habilidades-compacto.py (plantilla 3.0 (2026-10-08), formato habilidades) desde datos.json.
+  No editar a mano: editar datos.json y regenerar. Estilos propios del deck: overrides.css.
+  Fuente del insumo: Ficha de Levantamiento y transcripción de la reunión (05/11/2026)
+
+  Formato compacto de 8 slides, en el orden de las preguntas del cliente (Ventas, 2026-10-07), sin semanas, sesiones
+  ni fechas (Keiber, 2026-10-08):
+    1 Portada · 2 Alcance · 3 Ruta · 4 Cómo trabajamos · 5 Entregables · 6 Retorno · 7 Inversión · 8 Próximos pasos
+  Marcadores de detección de AcroForms (agregar-campo-precio.py), por página: «Propuesta Económica» solo en la slide de
+  inversión; «Lo que se llevan» y «Entregables» solo en la de entregables; «Facilidad de pago» solo en la de pago.
+  Campos AcroForm: Programa, Notas, PrecioBase, Descuento, PrecioTotal (inversión) y Entregables, Acreditacion (entregables). Se reposicionan con scripts/customize-habilidades-compacto.py.
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Propuesta · Laboratorios FC · Intezia Educación</title>
+  <link rel="stylesheet" href="../_base/styles.css">
+  <link rel="stylesheet" href="habilidades-compacto.css">
+  <link rel="stylesheet" href="overrides.css">
+</head>
+<body>
+
+  <main class="deck">
+
+    <!-- 1 · Portada: ¿cuál es mi problema? -->
+    <section class="slide s-cover">
+      <span class="counter">01 / 08</span>
+      <div class="logo-big">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia Educación">
+      </div>
+      <div class="body">
+        <p class="eyebrow">Propuesta de proyecto · Servicio de Habilidades</p>
+        <h1 style="font-size:46px">
+          IA en las 9 áreas, con método<br>
+          y capacidad instalada<br>
+          <span class="hl">en Laboratorios FC</span>
+        </h1>
+        <p class="lead">
+          Este proyecto <strong>levanta cómo trabaja cada una de las 9 áreas</strong> y construye con sus equipos la <strong>solución</strong> que el levantamiento prioriza, hasta dejarla en uso.
+        </p>
+        <div class="pain-strip">
+          <div class="pain-item">
+            <span class="pain-num">Dispersa</span>
+            <span class="pain-lbl">es la IA que se usa hoy: licencias puntuales por grupo, sin método ni formación formal.</span>
+          </div>
+          <div class="pain-item">
+            <span class="pain-num">Desigual</span>
+            <span class="pain-lbl">el nivel de partida: hay grupos que ya automatizan y personas que parten desde cero.</span>
+          </div>
+          <div class="pain-item">
+            <span class="pain-num">9 áreas</span>
+            <span class="pain-lbl">entre procesos clave y de apoyo, con una sola dirección y niveles muy distintos de IA.</span>
+          </div>
+          <div class="pain-item">
+            <span class="pain-num">En papel</span>
+            <span class="pain-lbl">los procesos están documentados, pero no todos completos ni revisados.</span>
+          </div>
+        </div>
+      </div>
+      <div class="id-line">
+        <span class="codigo">Código: CAI-089A</span>
+        <span class="cliente">Laboratorios FC</span>
+      </div>
+    </section>
+
+    <!-- 2 · Alcance: qué vamos a hacer y para qué -->
+    <section class="slide s-scope">
+      <span class="counter">02 / 08</span>
+      <p class="eyebrow">02 · Alcance</p>
+      <h2>Una solución en uso en cada una de las 9 áreas.</h2>
+      <p class="sub">Levantamos <strong>9 áreas</strong>, de procesos clave y de apoyo, y construimos con cada una su <strong>solución de IA</strong>.</p>
+
+      <div class="scope-panels one" style="--np:1">
+        <div class="scope-panel acc-y">
+          <div class="scope-head">
+            <span class="scope-tag">Habilidades</span>
+            <span class="scope-total"><b>9</b> áreas</span>
+          </div>
+          <ul class="scope-rows">
+              <li><span class="area">Compras</span><span class="para">Mejorar la compra de materia prima y de producto terminado importado</span></li>
+              <li><span class="area">Producción y operaciones</span><span class="para">Ordenar el trabajo con los maquiladores, de la orden al producto terminado</span></li>
+              <li><span class="area">Ventas y comercialización</span><span class="para">Apoyar la venta con los grandes distribuidores y a la fuerza de venta</span></li>
+              <li><span class="area">Despacho y logística</span><span class="para">Ordenar el despacho y la distribución hacia las grandes cadenas</span></li>
+              <li><span class="area">Finanzas</span><span class="para">Quitar trabajo manual a finanzas, sobre su sistema contable</span></li>
+              <li><span class="area">Gestión humana</span><span class="para">Agilizar los procesos de gestión humana</span></li>
+              <li><span class="area">Asuntos regulatorios</span><span class="para">Ordenar y agilizar los trámites y documentos regulatorios</span></li>
+              <li><span class="area">Tecnología</span><span class="para">Que tecnología construya y sostenga automatizaciones con autonomía</span></li>
+              <li><span class="area">Mercadeo</span><span class="para">Agilizar la creación de contenido y el análisis de mercadeo</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="scope-out">
+        <p class="scope-card-label">Fuera de este alcance</p>
+        <ul>
+          <li>Licencias de IA: la herramienta se define con el levantamiento y su valor va aparte, a cargo de Laboratorios FC.</li>
+          <li>Cambios en los sistemas: el sistema contable y las demás aplicaciones no se modifican; se usan sus datos.</li>
+          <li>Más de una solución por área: cada una recibe 8 h de construcción, lo demás va en otra etapa.</li>
+          <li>Políticas de uso de IA y gobernanza de datos: se definen en otra etapa.</li>
+        </ul>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Laboratorios FC · CAI-089A</span>
+      </div>
+    </section>
+
+    <!-- 3 · Ruta: qué pasa en cada fase -->
+    <section class="slide s-route">
+      <span class="counter">03 / 08</span>
+      <p class="eyebrow">03 · Ruta</p>
+      <h2>Del levantamiento a la solución en uso.</h2>
+      <p class="sub">El calendario se acuerda en la <strong>reunión de arranque</strong>. El <strong>levantamiento</strong> orienta las soluciones.</p>
+
+      <div class="route-grid n2" style="--cols:2; --rows:2; --rowh:130px">
+
+        <div class="rg-corner"></div>
+        <div class="rg-phase rg-ph-1">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Levantamiento</span><b class="rg-phase-n">18 h en total</b></span>
+          <span class="rg-phase-name">Levantar cada área y priorizar</span>
+        </div>
+        <div class="rg-phase rg-ph-2 hi">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Uso</span><b class="rg-phase-n">72 h en total</b></span>
+          <span class="rg-phase-name">Una solución construida y en uso por área</span>
+        </div>
+        <div class="rg-phase rg-fu">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Garantía</span></span>
+          <span class="rg-phase-date">30, 60 y 90 días</span>
+          <span class="rg-phase-txt">Desde el cierre de cada área</span>
+        </div>
+
+        <div class="rg-front acc-y">
+          <span class="rg-front-h">Procesos clave</span>
+          <span class="rg-front-row"><span class="rg-front-tool">Proyecto</span><b class="rg-front-n">40 horas</b></span>
+          <span class="rg-front-meta">4 áreas, con sus equipos</span>
+        </div>
+        <div class="rg-cell"><span class="rg-h solo-h"><b>8 horas con los equipos</b></span><p>4 áreas, 2 h cada una: levantamiento de cada proceso.</p></div>
+        <div class="rg-cell hi"><span class="rg-h solo-h"><b>32 horas con los equipos</b></span><p>4 áreas, 8 h cada una: la solución de cada área, en uso.</p></div>
+        <div class="rg-front acc-y">
+          <span class="rg-front-h">Procesos de apoyo</span>
+          <span class="rg-front-row"><span class="rg-front-tool">Proyecto</span><b class="rg-front-n">50 horas</b></span>
+          <span class="rg-front-meta">5 áreas, con sus equipos</span>
+        </div>
+        <div class="rg-cell"><span class="rg-h solo-h"><b>10 horas con los equipos</b></span><p>5 áreas, 2 h cada una: levantamiento de cada proceso.</p></div>
+        <div class="rg-cell hi"><span class="rg-h solo-h"><b>40 horas con los equipos</b></span><p>5 áreas, 8 h cada una: la solución de cada área, en uso.</p></div>
+
+        <div class="rg-follow" style="grid-column:4; grid-row:2 / span 2">
+          <ul>
+            <li><b>30 días</b><span>Uso de las soluciones</span></li>
+            <li><b>60 días</b><span>Ajustes y nuevas construcciones</span></li>
+            <li><b>90 días</b><span>Tiempo recuperado contra la línea base</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="route-miles" style="grid-template-columns:repeat(5,1fr)">
+        <div class="mile"><span class="mile-d"></span><b>Arranque · aparte</b><p>Reunión de 1 h para acordar el calendario, quién coordina y los líderes de cada área.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Levantamiento</b><p>9 áreas, 2 h cada una: cómo se trabaja hoy cada proceso.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Prioridades</b><p>La solución de cada área y la recomendación de la herramienta de IA.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Soluciones</b><p>9 áreas, 8 h cada una: la solución de cada área, en uso.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>30 · 60 · 90 días</b><p>Seguimiento: uso de las soluciones, ajustes y tiempo recuperado.</p></div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Laboratorios FC · CAI-089A</span>
+      </div>
+    </section>
+
+    <!-- 4 · Cómo trabajamos: pasos, por qué en ese orden, casos reales, práctica, datos y logística -->
+    <section class="slide s-method">
+      <span class="counter">04 / 08</span>
+      <p class="eyebrow">04 · Cómo trabajamos</p>
+      <h2>Así trabajamos cada área.</h2>
+      <p class="sub">Con la metodología de Habilidades: construimos, testeamos y adoptamos, sobre sus procesos reales.</p>
+
+      <ol class="mt-steps" style="--n:4">
+          <li><b>Levantamos</b><span>Cómo trabaja hoy cada área, su nivel con IA y dónde se pierde tiempo.</span></li>
+          <li><b>Construimos</b><span>Con lo levantado, la solución de cada área, con su equipo y casos reales.</span></li>
+          <li><b>Testeamos</b><span>Probamos cada solución con datos reales hasta que funciona.</span></li>
+          <li><b>Adoptamos</b><span>Cada equipo la usa en su trabajo; seguimos a 30, 60 y 90 días.</span></li>
+      </ol>
+      <div class="mt-strips">
+        <p class="mt-why"><b>Por qué en este orden</b> Primero se levanta cada área y se prioriza con ella; después se construye en cada una la solución que el levantamiento respalda.</p>
+        <p class="mt-who"><b>Quién construye</b> Se construye con las personas de cada área: <strong>Intezia guía</strong> y el equipo queda con la capacidad de sostener y ampliar lo construido, tecnología incluida.</p>
+      </div>
+
+      <div class="mt-info">
+        <div class="mt-card">
+          <p class="mt-card-label">Cómo funciona en la práctica</p>
+          <ul><li><b>Horas por área.</b> 2 h de levantamiento y 8 h de construcción, testeo y adopción por área, con quienes hacen el trabajo.</li><li><b>Nivel a su medida.</b> El levantamiento dice dónde está cada equipo: se avanza con quien ya automatiza y se parte desde cero con quien empieza.</li><li><b>Lo prioriza el levantamiento.</b> La herramienta de IA, entre las que Laboratorios FC puede usar con sus licencias, y la solución de cada área nacen de lo que se encuentra.</li></ul>
+        </div>
+        <div class="mt-card">
+          <p class="mt-card-label">Cómo cuidamos sus datos</p>
+          <p>Se trabaja con casos reales de cada área, con las cuentas y los accesos que autoriza tecnología. La información sensible, como la de pacientes o clientes, no se carga en ninguna herramienta de IA, y los sistemas de la empresa no se modifican.</p>
+        </div>
+      </div>
+
+      <div class="mt-logi">
+        <div class="mt-tile"><span>Modalidad</span><b>Mixta: virtual o presencial, según se acuerde en la reunión de arranque.</b></div>
+        <div class="mt-tile"><span>Participantes</span><b>Los equipos de las 9 áreas: gerentes, líderes, analistas y colaboradores del personal administrativo.</b></div>
+        <div class="mt-tile"><span>Ritmo de trabajo</span><b>Se agenda en el horario de cada equipo, sin frenar la venta en calle.</b></div>
+        <div class="mt-tile"><span>Arranque</span><b>La fecha la fija Laboratorios FC; una reunión de arranque de 1 h, aparte, acuerda el calendario.</b></div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Laboratorios FC · CAI-089A</span>
+      </div>
+    </section>
+
+    <!-- 5 · Entregables: ¿con qué me quedo? (catálogo + piezas transversales) -->
+    <section class="slide s-deliv compact">
+      <span class="counter">05 / 08</span>
+      <p class="eyebrow">05 · Entregables</p>
+      <div class="deliv-head">
+        <h2>Lo que recibe el equipo.</h2>
+        <p class="deliv-sub"><span class="nw">Lo que se llevan</span>: <strong>el levantamiento y la solución en uso de cada área</strong>, más el seguimiento a 30, 60 y 90 días.</p>
+      </div>
+
+      <div class="deliv-carriles" style="--ncols:3">
+        <span class="dc acc-y" style="grid-column: span 3">Habilidades</span>
+      </div>
+
+      <div class="deliv-cols" style="--ncols:3">
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">Compras</p>
+            <ul>
+              <li>Levantamiento de Compras<ul class="inc"><li>Qué se compra hoy, materia prima o producto importado</li><li>Cómo se decide qué y cuánto comprar</li></ul></li>
+              <li>Solución de Compras, construida y en uso<ul class="inc"><li>La que el levantamiento prioriza para el área</li><li>Construida con el equipo y probada con casos reales</li></ul></li>
+            </ul>
+          </div>
+          <div class="da">
+            <p class="da-name">Producción y operaciones</p>
+            <ul>
+              <li>Levantamiento de Producción y operaciones<ul class="inc"><li>Cómo se coordina hoy la producción con los maquiladores</li><li>Qué seguimiento se hace al producto terminado</li></ul></li>
+              <li>Solución de Producción y operaciones, construida y en uso<ul class="inc"><li>La que el levantamiento prioriza para el área</li><li>Construida con el equipo y probada con casos reales</li></ul></li>
+            </ul>
+          </div>
+          <div class="da">
+            <p class="da-name">Ventas y comercialización</p>
+            <ul>
+              <li>Levantamiento de Ventas y comercialización<ul class="inc"><li>Venta con los grandes distribuidores y su seguimiento</li><li>Cómo trabajan la fuerza de venta y el equipo administrativo</li></ul></li>
+              <li>Solución de Ventas y comercialización, construida y en uso<ul class="inc"><li>La que el levantamiento prioriza para el área</li><li>Construida con el equipo y probada con casos reales</li></ul></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">Despacho y logística</p>
+            <ul>
+              <li>Levantamiento de Despacho y logística<ul class="inc"><li>Cómo se prepara y se sigue cada despacho</li><li>Qué se hace a mano hoy en la distribución</li></ul></li>
+              <li>Solución de Despacho y logística, construida y en uso<ul class="inc"><li>La que el levantamiento prioriza para el área</li><li>Construida con el equipo y probada con casos reales</li></ul></li>
+            </ul>
+          </div>
+          <div class="da">
+            <p class="da-name">Finanzas</p>
+            <ul>
+              <li>Levantamiento de Finanzas<ul class="inc"><li>Tareas administrativas y de cierre que hoy se hacen a mano</li><li>Qué datos salen hoy del sistema contable</li></ul></li>
+              <li>Solución de Finanzas, construida y en uso<ul class="inc"><li>La que el levantamiento prioriza para el área</li><li>Construida con el equipo y probada con casos reales</li></ul></li>
+            </ul>
+          </div>
+          <div class="da">
+            <p class="da-name">Gestión humana</p>
+            <ul>
+              <li>Levantamiento de Gestión humana<ul class="inc"><li>Procesos de gestión humana y sus tareas repetitivas</li><li>Qué información se maneja y cómo se resguarda</li></ul></li>
+              <li>Solución de Gestión humana, construida y en uso<ul class="inc"><li>La que el levantamiento prioriza para el área</li><li>Construida con el equipo y probada con casos reales</li></ul></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">Asuntos regulatorios</p>
+            <ul>
+              <li>Levantamiento de Asuntos regulatorios<ul class="inc"><li>Trámites y documentos regulatorios y su seguimiento</li><li>Qué cambió con la homologación reciente</li></ul></li>
+              <li>Solución de Asuntos regulatorios, construida y en uso<ul class="inc"><li>La que el levantamiento prioriza para el área</li><li>Construida con el equipo y probada con casos reales</li></ul></li>
+            </ul>
+          </div>
+          <div class="da">
+            <p class="da-name">Tecnología</p>
+            <ul>
+              <li>Levantamiento de Tecnología<ul class="inc"><li>Qué automatizaciones y aplicaciones internas existen hoy</li><li>Qué necesita tecnología para sostener y ampliar lo construido</li></ul></li>
+              <li>Solución de Tecnología, construida y en uso<ul class="inc"><li>La que el levantamiento prioriza para el área</li><li>Construida con el equipo y probada con casos reales</li></ul></li>
+            </ul>
+          </div>
+          <div class="da">
+            <p class="da-name">Mercadeo</p>
+            <ul>
+              <li>Levantamiento de Mercadeo<ul class="inc"><li>Cómo se prepara hoy el contenido y el análisis de mercadeo</li><li>Qué tareas repetitivas se pueden quitar</li></ul></li>
+              <li>Solución de Mercadeo, construida y en uso<ul class="inc"><li>La que el levantamiento prioriza para el área</li><li>Construida con el equipo y probada con casos reales</li></ul></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="deliv-band">
+        <div class="db-card db-1">
+          <span class="db-label">Para todo el proyecto</span>
+        </div>
+        <div class="db-card db-2">
+          <span class="db-label">Valor inmediato</span>
+        </div>
+      </div>
+      <!-- Cajas multiline editables (vacías en HTML: el contenido vive dentro del AcroForm /V). -->
+      <div class="multi-box db-box db-box-1" data-field="Entregables"></div>
+      <div class="multi-box db-box db-box-2" data-field="Acreditacion"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Laboratorios FC · CAI-089A</span>
+      </div>
+    </section>
+
+    <!-- 6 · Retorno: ¿qué gano? (método de cálculo). Sin estudios ni citas externas. -->
+    <section class="slide s-roi">
+      <span class="counter">06 / 08</span>
+      <p class="eyebrow">06 · Retorno</p>
+      <h2>Retorno esperado: tiempo y dinero.</h2>
+      <p class="sub">El retorno se mide contra la línea base que cada área entrega en su levantamiento.</p>
+
+      <div class="roi-body">
+        <div class="roi-panel">
+          <p class="roi-panel-title">Cómo se calcula, por área y por proceso</p>
+          <ol class="roi-steps">
+            <li><b>Volumen</b><span>Cuántas veces se ejecuta cada proceso al mes: pedidos, despachos, registros o reportes.</span></li>
+            <li><b>Tiempo actual</b><span>Lo que toma hoy cada proceso, medido con el líder del área: es la <strong>línea base</strong>.</span></li>
+            <li><b>Tiempo con la solución</b><span>Lo que toma el mismo proceso una vez que la solución está en uso.</span></li>
+            <li><b>Horas recuperadas</b><span>Volumen por la diferencia de tiempos: una estimación referencial, sin compromiso de resultado.</span></li>
+            <li><b>Valor en dinero</b><span>Horas recuperadas por el valor de la hora que Laboratorios FC valide.</span></li>
+          </ol>
+        </div>
+
+        <div class="roi-right">
+          <p class="roi-right-title">Calendario de garantía y cálculo del retorno<small>Desde el cierre de cada área</small></p>
+          <div class="roi-card">
+            <b>30 días</b>
+            <p>Soluciones en uso real y línea base validada con el líder de cada área.</p>
+          </div>
+          <div class="roi-card">
+            <b>60 días</b>
+            <p>Horas recuperadas medidas contra la línea base, por área y por proceso.</p>
+          </div>
+          <div class="roi-card">
+            <b>90 días</b>
+            <p>Medición del retorno en dinero, con el valor de las horas recuperadas de cada área.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="roi-dest-wrap">
+        <p class="roi-dest-title">Hacia dónde va el proyecto</p>
+        <div class="roi-dest">
+          <div class="rd-item"><b>Un criterio común</b><p>El nivel de partida desigual se nivela: quien ya automatiza avanza y quien empieza parte de una base común.</p></div>
+          <div class="rd-item"><b>Mismo equipo, más trabajo</b><p>Si el tiempo se libera, el mismo equipo puede atender más volumen sin ampliar su tamaño.</p></div>
+          <div class="rd-item"><b>Más procesos, con autonomía</b><p>Con el retorno medido, Laboratorios FC decide si lleva el ciclo a <strong>más procesos</strong>, con tecnología sosteniendo las automatizaciones.</p></div>
+        </div>
+      </div>
+
+      <div class="roi-hook"><p>A los 90 días del cierre de cada área, Laboratorios FC contará con el tiempo recuperado medido y su valor en dinero, área por área.</p></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Laboratorios FC · CAI-089A</span>
+      </div>
+    </section>
+
+    <!-- 7 · Inversión (hoja de cotización estándar; antepenúltima slide) -->
+    <section class="slide s-price">
+      <span class="counter">07 / 08</span>
+      <h2 class="title">Inversión del proyecto.</h2>
+      <p class="price-intro">Propuesta Económica · Servicio de Habilidades</p>
+
+      <div class="block">
+        <span class="block-eyebrow">Duración</span>
+        <p class="block-value"><strong>9 áreas</strong>, cada una con un levantamiento y una solución en uso, y seguimiento a 30, 60 y 90 días. <strong>90 horas</strong> con los equipos de las áreas.</p>
+      </div>
+
+      <div class="block block-programa">
+        <span class="block-eyebrow">Programa</span>
+      </div>
+      <div class="multi-box programa-box" data-field="Programa"></div>
+
+      <div class="block block-cotizacion">
+        <span class="block-eyebrow">Cotización</span>
+      </div>
+
+      <span class="cot-label cot-label-base">Propuesta + Inversión</span>
+      <div class="cot-frame base-frame"></div>
+
+      <span class="cot-label cot-label-discount">Descuento</span>
+      <span class="cot-sign-minus">&minus;$</span>
+      <div class="cot-frame discount-frame"></div>
+      <span class="cot-urgent-note">Descuento válido por 15 días</span>
+
+      <span class="cot-label cot-label-total">TOTAL</span>
+      <div class="cot-frame total-frame"></div>
+
+      <p class="cot-validity">Cotización válida por 30 días.</p>
+      <div class="cot-terms-box">
+        <span class="cot-terms-label">Importante</span>
+        <p class="cot-terms-text">Este servicio se presta bajo nuestros <a href="https://drive.google.com/file/d/1PA-ZSt4KnyY5dpxXzgkIk6-yfGlV2eF8/view?usp=drive_link" target="_blank" rel="noopener">términos y condiciones</a>. Al avanzar con esta propuesta, ambas partes los aceptan.</p>
+      </div>
+
+      <div class="cot-garantia-badge">
+        <span class="cot-garantia-tag">Garantía 30-60-90</span>
+        <p class="cot-garantia-text">Estamos contigo hasta que la capacidad quede instalada en tu equipo.</p>
+      </div>
+
+      <div class="block block-notes-container">
+        <span class="block-eyebrow">Notas</span>
+      </div>
+      <div class="multi-box notas-box" data-field="Notas"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Laboratorios FC · CAI-089A</span>
+      </div>
+    </section>
+
+    <!-- 9 · Próximos pasos: qué hacer y a quién escribir (última slide) -->
+    <section class="slide s-next">
+      <span class="counter">08 / 08</span>
+      <p class="eyebrow">08 · Próximos pasos</p>
+      <h2>Tres pasos para arrancar.</h2>
+      <p class="sub">Esto es lo que sigue cuando Laboratorios FC confirme la propuesta.</p>
+
+      <div class="nx-steps">
+        <div class="nx-step acc-y">
+          <span class="nx-num">1</span>
+          <b>Revisión conjunta</b>
+          <p>Una reunión para revisar la propuesta con quienes deciden, aclarar dudas y ajustarla.</p>
+        </div>
+        <div class="nx-step acc-o">
+          <span class="nx-num">2</span>
+          <b>Líderes y accesos</b>
+          <p>Laboratorios FC nos indica quién coordina el proyecto y quién lidera cada una de las 9 áreas.</p>
+        </div>
+        <div class="nx-step acc-w">
+          <span class="nx-num">3</span>
+          <b>Reunión de arranque</b>
+          <p>Una hora para acordar el calendario y el orden del trabajo.</p>
+        </div>
+      </div>
+
+      <div class="nx-contact">
+        <div class="nx-card nx-ase">
+          <span class="nx-label">¿Dudas? Escribe a tu asesora comercial</span>
+          <b class="nx-name">Verónica Rubio</b>
+          <span class="nx-role">Asesora comercial</span>
+          <p class="nx-line"><a href="mailto:vrubio01@intezia.com">vrubio01@intezia.com</a></p>
+          <p class="nx-line">+58 422 3355505</p>
+        </div>
+        <div class="nx-card nx-emp">
+          <span class="nx-label">Intezia</span>
+          <p class="nx-line">Intezia C.A J-505657950</p>
+          <p class="nx-line"><a href="mailto:servicio@intezia.com">servicio@intezia.com</a></p>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Laboratorios FC · CAI-089A</span>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

@@ -1,0 +1,456 @@
+<!doctype html>
+<!--
+  Propuesta · Distribuidora Blu Foods · Servicio de Detección y Habilidades (DET-045)
+  División: Educación · Servicio: Detección y Habilidades (§4.1a) · Alianza: no
+  GENERADO por scripts/generar-habilidades-compacto.py (plantilla 3.0 (2026-10-08), formato habilidades) desde datos.json.
+  No editar a mano: editar datos.json y regenerar. Estilos propios del deck: overrides.css.
+  Fuente del insumo: Ficha de Levantamiento (30/10/2026) y contexto de Flavia Martínez; sin transcripción de la reunión
+
+  Formato compacto de 8 slides, en el orden de las preguntas del cliente (Ventas, 2026-10-07), sin semanas, sesiones
+  ni fechas (Keiber, 2026-10-08):
+    1 Portada · 2 Alcance · 3 Ruta · 4 Cómo trabajamos · 5 Entregables · 6 Retorno · 7 Inversión · 8 Próximos pasos
+  Marcadores de detección de AcroForms (agregar-campo-precio.py), por página: «Propuesta Económica» solo en la slide de
+  inversión; «Lo que se llevan» y «Entregables» solo en la de entregables; «Facilidad de pago» solo en la de pago.
+  Campos AcroForm: Programa, Notas, PrecioBase, Descuento, PrecioTotal (inversión) y Entregables, Acreditacion (entregables). Se reposicionan con scripts/customize-habilidades-compacto.py.
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Propuesta · Distribuidora Blu Foods · Intezia Educación</title>
+  <link rel="stylesheet" href="../_base/styles.css">
+  <link rel="stylesheet" href="habilidades-compacto.css">
+  <link rel="stylesheet" href="overrides.css">
+</head>
+<body>
+
+  <main class="deck">
+
+    <!-- 1 · Portada: ¿cuál es mi problema? -->
+    <section class="slide s-cover">
+      <span class="counter">01 / 08</span>
+      <div class="logo-big">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia Educación">
+      </div>
+      <div class="body">
+        <p class="eyebrow">Propuesta de proyecto · Servicio de Detección y Habilidades</p>
+        <h1 style="font-size:46px">
+          Profit al alcance con IA:<br>
+          consultas y cobranza al día<br>
+          <span class="hl">en Blu Foods</span>
+        </h1>
+        <p class="lead">
+          Este proyecto levanta cómo trabajan Ventas y Cobranza, construye <strong>con ellos</strong> habilidades con Claude sobre sus tareas reales y deja <strong>Profit al alcance</strong> para consultar desde cualquier lugar.
+        </p>
+        <div class="pain-strip">
+          <div class="pain-item">
+            <span class="pain-num">Llamar</span>
+            <span class="pain-lbl">hay que hacerlo hoy para saber cómo van las ventas desde fuera de la oficina de Oriente.</span>
+          </div>
+          <div class="pain-item">
+            <span class="pain-num">Excel</span>
+            <span class="pain-lbl">y macros arman los reportes que Profit no entrega de forma amigable.</span>
+          </div>
+          <div class="pain-item">
+            <span class="pain-num">A mano</span>
+            <span class="pain-lbl">es el cruce del reporte del banco con las facturas, una de las tareas más tediosas.</span>
+          </div>
+          <div class="pain-item">
+            <span class="pain-num">Suelta</span>
+            <span class="pain-lbl">es como se usa hoy la IA, sin licencias ni criterio común.</span>
+          </div>
+        </div>
+      </div>
+      <div class="id-line">
+        <span class="codigo">Código: DET-045</span>
+        <span class="cliente">Blu Foods</span>
+      </div>
+    </section>
+
+    <!-- 2 · Alcance: qué vamos a hacer y para qué -->
+    <section class="slide s-scope roomy">
+      <span class="counter">02 / 08</span>
+      <p class="eyebrow">02 · Alcance</p>
+      <h2>Levantar, construir y conectar.</h2>
+      <p class="sub">Levantamos Ventas y Cobranza, construimos <strong>con el equipo</strong> sus habilidades con Claude y conectamos Profit.</p>
+
+      <div class="scope-panels one" style="--np:1">
+        <div class="scope-panel acc-y">
+          <div class="scope-head">
+            <span class="scope-tag">Habilidades con Claude</span>
+            <span class="scope-total"><b>5</b> bloques</span>
+          </div>
+          <ul class="scope-rows">
+              <li><span class="area">Fundamentos de IA, ética y gobernanza</span><span class="para">Que los seis usuarios partan del mismo punto y con pautas claras para cuidar los datos</span></li>
+              <li><span class="area">Levantamiento por área</span><span class="para">Ver el punto de partida de Ventas y de Cobranza y qué información entrega hoy Profit</span></li>
+              <li><span class="area">Consultas comerciales e indicadores</span><span class="para">Preguntarle a la información de ventas y obtener indicadores sin armar reportes a mano</span></li>
+              <li><span class="area">Conciliación de la cobranza</span><span class="para">Proponer a qué factura corresponde cada pago, con revisión de una persona</span></li>
+              <li><span class="area">Conexión de Profit con Claude</span><span class="para">Consultar desde cualquier lugar, por conexión o por exportes, según la base de Profit</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="scope-out">
+        <p class="scope-card-label">Fuera de este alcance</p>
+        <ul>
+          <li>Las demás áreas del negocio y la app de pedidos: quedan para una fase 2.</li>
+          <li>Conectar la IA al banco: no se hace; el extracto se sube de forma controlada.</li>
+          <li>Cambios en Profit o un sistema nuevo: se trabaja con la información que Profit ya entrega.</li>
+          <li>Licencias de Claude y servicios de terceros: van aparte, con su valor de lista en la hoja de inversión.</li>
+        </ul>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Blu Foods · DET-045</span>
+      </div>
+    </section>
+
+    <!-- 3 · Ruta: qué pasa en cada fase -->
+    <section class="slide s-route">
+      <span class="counter">03 / 08</span>
+      <p class="eyebrow">03 · Ruta</p>
+      <h2>Del levantamiento a Profit al alcance.</h2>
+      <p class="sub">Fuera de la temporada alta de ventas. El calendario se acuerda en la <strong>reunión de arranque</strong>.</p>
+
+      <div class="route-grid n1" style="--cols:3; --rows:1; --rowh:214px">
+
+        <div class="rg-corner"></div>
+        <div class="rg-phase rg-ph-1">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Bases</span></span>
+          <span class="rg-phase-name">Equipo nivelado y levantamiento</span>
+        </div>
+        <div class="rg-phase rg-ph-2 hi">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Tareas</span></span>
+          <span class="rg-phase-name">Consultas y conciliación, en vivo</span>
+        </div>
+        <div class="rg-phase rg-ph-3">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Profit</span></span>
+          <span class="rg-phase-name">Conexión o exportes</span>
+        </div>
+        <div class="rg-phase rg-fu">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Garantía</span></span>
+          <span class="rg-phase-date">30, 60 y 90 días</span>
+          <span class="rg-phase-txt">Desde el cierre del proyecto</span>
+        </div>
+
+        <div class="rg-front acc-y">
+          <span class="rg-front-h">Ventas y Cobranza de Blu Foods</span>
+          <span class="rg-front-row"><span class="rg-front-tool">Claude</span><b class="rg-front-n">24 horas</b></span>
+          <span class="rg-front-meta">con el equipo</span>
+        </div>
+        <div class="rg-cell"><span class="rg-h solo-h"><b>6 horas con el equipo</b></span><p>Fundamentos de IA, pautas de datos y levantamiento por área.</p></div>
+        <div class="rg-cell hi"><span class="rg-h solo-h"><b>12 horas con el equipo</b></span><p>Consultas comerciales, indicadores y conciliación de la cobranza.</p></div>
+        <div class="rg-cell"><span class="rg-h solo-h"><b>6 horas con el equipo</b></span><p>Vía de conexión de Profit, o exportes, para consultar.</p></div>
+
+        <div class="rg-follow" style="grid-column:5; grid-row:2 / span 1">
+          <ul>
+            <li><b>30 días</b><span>Uso de las habilidades</span></li>
+            <li><b>60 días</b><span>Ajustes y nuevas consultas</span></li>
+            <li><b>90 días</b><span>Tiempo recuperado</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="route-miles" style="grid-template-columns:repeat(5,1fr)">
+        <div class="mile"><span class="mile-d"></span><b>Arranque · aparte</b><p>Calendario, participantes y accesos, a acordar con el equipo.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Equipo y levantamiento</b><p>Fundamentos de IA, pautas de datos y punto de partida de cada área.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Habilidades en uso</b><p>Consultas comerciales, indicadores y conciliación de la cobranza.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Profit al alcance</b><p>Conexión según su base, o la información por exportes.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>30 · 60 · 90 días</b><p>Seguimiento: uso, ajustes y tiempo recuperado.</p></div>
+      </div>
+      <p class="route-next"><b>Siguiente paso · Fase 2</b> Inventario, rutas y camiones, cuentas por pagar, mercadeo y una app de pedidos; luego, otros negocios del grupo.</p>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Blu Foods · DET-045</span>
+      </div>
+    </section>
+
+    <!-- 4 · Cómo trabajamos: pasos, por qué en ese orden, casos reales, práctica, datos y logística -->
+    <section class="slide s-method">
+      <span class="counter">04 / 08</span>
+      <p class="eyebrow">04 · Cómo trabajamos</p>
+      <h2>Así trabajamos con sus datos.</h2>
+      <p class="sub">Lo hacemos en vivo con quienes usarán las habilidades, y con pautas claras de ética y gobernanza.</p>
+
+      <ol class="mt-steps" style="--n:4">
+          <li><b>Nivelamos</b><span>Fundamentos de IA y pautas de datos.</span></li>
+          <li><b>Levantamos</b><span>Cómo trabajan Ventas y Cobranza hoy.</span></li>
+          <li><b>Construimos</b><span>Consultas y conciliación, en vivo.</span></li>
+          <li><b>Conectamos</b><span>Profit o exportes, para consultar.</span></li>
+      </ol>
+      <div class="mt-strips">
+        <p class="mt-why"><b>Por qué en este orden</b> Primero se nivela al equipo y se levanta cómo trabaja cada área; después se construyen las habilidades sobre tareas reales y, al final, se conecta Profit para consultar desde cualquier lugar.</p>
+        <p class="mt-who"><b>Quién construye</b> Intezia <strong>construye junto</strong> a Ventas y Cobranza, en vivo y con sus tareas reales: cada persona se queda con la habilidad.</p>
+      </div>
+
+      <div class="mt-info">
+        <div class="mt-card">
+          <p class="mt-card-label">Cómo funciona en la práctica</p>
+          <ul><li><b>Conexión según su base.</b> La conexión con Profit se evalúa según la estructura de su base; si no es viable, se trabaja con exportes y las habilidades se hacen igual.</li><li><b>Preguntas que se podrán hacer.</b> Se podrá preguntar por clientes top, deudores del día, rentabilidad por producto, rotación y pedidos sugeridos.</li><li><b>Una persona revisa.</b> La IA propone; una persona confirma la conciliación y los reportes antes de darlos por buenos.</li></ul>
+        </div>
+        <div class="mt-card">
+          <p class="mt-card-label">Cómo cuidamos sus datos</p>
+          <p>Ética y gobernanza: se acuerdan pautas de qué datos se cargan. La IA no se conecta al banco, el extracto se sube de forma controlada y solo se carga lo que Blu Foods autoriza.</p>
+        </div>
+      </div>
+
+      <div class="mt-logi">
+        <div class="mt-tile"><span>Modalidad</span><b>Virtual.</b></div>
+        <div class="mt-tile"><span>Participantes</span><b>4 o 5 personas de alta gerencia, incluido el dueño, y 2 de cobranza.</b></div>
+        <div class="mt-tile"><span>Ritmo de trabajo</span><b>Fuera de la temporada alta de ventas y sin frenar la operación.</b></div>
+        <div class="mt-tile"><span>Arranque</span><b>Apenas se apruebe la propuesta; una reunión de arranque, aparte, acuerda el calendario.</b></div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Blu Foods · DET-045</span>
+      </div>
+    </section>
+
+    <!-- 5 · Entregables: ¿con qué me quedo? (catálogo + piezas transversales) -->
+    <section class="slide s-deliv roomy">
+      <span class="counter">05 / 08</span>
+      <p class="eyebrow">05 · Entregables</p>
+      <div class="deliv-head">
+        <h2>Lo que recibe Blu Foods.</h2>
+        <p class="deliv-sub"><span class="nw">Lo que se llevan</span>: <strong>habilidades con Claude sobre sus tareas reales y Profit al alcance</strong>, más el seguimiento a 30, 60 y 90 días.</p>
+      </div>
+
+      <div class="deliv-carriles" style="--ncols:3">
+        <span class="dc acc-y" style="grid-column: span 3">Habilidades con Claude</span>
+      </div>
+
+      <div class="deliv-cols" style="--ncols:3">
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">Fundamentos de IA, ética y gobernanza</p>
+            <ul>
+              <li>Fundamentos de IA y pautas de datos para los seis usuarios<ul class="inc"><li>Cómo pedirle bien, con ejemplos de ventas y cobranza</li><li>Ética y gobernanza: qué datos se cargan y cuáles no</li><li>Pautas de uso acordadas con la dirección</li></ul></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">Levantamiento por área</p>
+            <ul>
+              <li>Levantamiento de Ventas, alta gerencia y dueño<ul class="inc"><li>Qué se consulta hoy y cómo se arma cada reporte</li><li>Qué información entrega Profit y cómo está armada su base</li></ul></li>
+              <li>Levantamiento de Cobranza y conciliación bancaria<ul class="inc"><li>Cómo se cruza hoy el reporte del banco con las facturas</li><li>Qué sale de Profit y qué se hace a mano</li></ul></li>
+            </ul>
+          </div>
+          <div class="da">
+            <p class="da-name">Consultas comerciales e indicadores</p>
+            <ul>
+              <li>Consultas comerciales e indicadores con Claude<ul class="inc"><li>Mejores clientes por producto y zona, y quién debe hoy</li><li>Qué producto deja más, qué no rota y qué conviene pedir</li></ul></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">Conciliación de la cobranza</p>
+            <ul>
+              <li>Conciliación del extracto bancario con la cobranza<ul class="inc"><li>El extracto se sube de forma controlada</li><li>Claude propone a qué factura corresponde cada pago</li><li>Una persona revisa antes de dar por bueno el cruce</li></ul></li>
+            </ul>
+          </div>
+          <div class="da">
+            <p class="da-name">Conexión de Profit con Claude</p>
+            <ul>
+              <li>Profit conectado a Claude, o su información por exportes<ul class="inc"><li>Se evalúa según la estructura de la base de Profit</li><li>Si no es viable, la información sale por exportes</li><li>Consultas desde cualquier lugar</li></ul></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="deliv-band">
+        <div class="db-card db-1">
+          <span class="db-label">Para todo el proyecto</span>
+        </div>
+        <div class="db-card db-2">
+          <span class="db-label">Valor inmediato</span>
+        </div>
+      </div>
+      <!-- Cajas multiline editables (vacías en HTML: el contenido vive dentro del AcroForm /V). -->
+      <div class="multi-box db-box db-box-1" data-field="Entregables"></div>
+      <div class="multi-box db-box db-box-2" data-field="Acreditacion"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Blu Foods · DET-045</span>
+      </div>
+    </section>
+
+    <!-- 6 · Retorno: ¿qué gano? (método de cálculo). Sin estudios ni citas externas. -->
+    <section class="slide s-roi">
+      <span class="counter">06 / 08</span>
+      <p class="eyebrow">06 · Retorno</p>
+      <h2>Retorno esperado: tiempo recuperado, medido.</h2>
+      <p class="sub">El retorno se mide contra la línea base de cada tarea, que se toma en el levantamiento.</p>
+
+      <div class="roi-body">
+        <div class="roi-panel">
+          <p class="roi-panel-title">Cómo se calcula el retorno</p>
+          <ol class="roi-steps">
+            <li><b>Volumen</b><span>Cuántos pagos se concilian y cuántas consultas de ventas se hacen cada mes.</span></li>
+            <li><b>Tiempo actual</b><span>Lo que toma hoy cada tarea: es la <strong>línea base</strong>.</span></li>
+            <li><b>Tiempo con la habilidad</b><span>Lo que toma el mismo trabajo con la habilidad en uso.</span></li>
+            <li><b>Horas recuperadas</b><span>Volumen por la diferencia de tiempos: una estimación referencial, sin compromiso de resultado.</span></li>
+            <li><b>Gasto de operar</b><span>Licencias, contra el trabajo manual que hoy resuelve cada tarea.</span></li>
+          </ol>
+        </div>
+
+        <div class="roi-right">
+          <p class="roi-right-title">Calendario de seguimiento y medición</p>
+          <div class="roi-card">
+            <b>30 días</b>
+            <p>Desde el cierre: habilidades en uso real y línea base validada con el equipo.</p>
+          </div>
+          <div class="roi-card">
+            <b>60 días</b>
+            <p>Horas recuperadas medidas contra la línea base, por tarea.</p>
+          </div>
+          <div class="roi-card">
+            <b>90 días</b>
+            <p>Medición del retorno: horas recuperadas contra el gasto de operar las habilidades.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="roi-dest-wrap">
+        <p class="roi-dest-title">Hacia dónde va el proyecto</p>
+        <div class="roi-dest">
+          <div class="rd-item"><b>Decidir con datos</b><p>La dirección consulta <strong>desde cualquier lugar</strong>, sin esperar un reporte armado a mano.</p></div>
+          <div class="rd-item"><b>Capacidad en el equipo</b><p>Ventas y Cobranza construyen y ajustan sus habilidades <strong>sin depender</strong> de un proveedor externo.</p></div>
+          <div class="rd-item"><b>Más adelante</b><p>Con el retorno medido, Blu Foods decide qué área sigue, y si se lleva a otros negocios del grupo.</p></div>
+        </div>
+      </div>
+
+      <div class="roi-hook"><p>A los 90 días del cierre, Blu Foods contará con el tiempo recuperado medido y el gasto de operar sus habilidades.</p></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Blu Foods · DET-045</span>
+      </div>
+    </section>
+
+    <!-- 7 · Inversión (hoja de cotización estándar; antepenúltima slide) -->
+    <section class="slide s-price">
+      <span class="counter">07 / 08</span>
+      <h2 class="title">Inversión del proyecto.</h2>
+      <p class="price-intro">Propuesta Económica · Servicio de Detección y Habilidades</p>
+
+      <div class="block">
+        <span class="block-eyebrow">Duración</span>
+        <p class="block-value"><strong>24 horas con el equipo</strong> de Blu Foods en tres fases, con seguimiento a 30, 60 y 90 días. La reunión de arranque va aparte.</p>
+      </div>
+
+      <div class="block block-programa">
+        <span class="block-eyebrow">Programa</span>
+      </div>
+      <div class="multi-box programa-box" data-field="Programa"></div>
+
+      <div class="block block-cotizacion">
+        <span class="block-eyebrow">Cotización</span>
+      </div>
+
+      <span class="cot-label cot-label-base">Propuesta + Inversión</span>
+      <div class="cot-frame base-frame"></div>
+
+      <span class="cot-label cot-label-discount">Descuento</span>
+      <span class="cot-sign-minus">&minus;$</span>
+      <div class="cot-frame discount-frame"></div>
+      <span class="cot-urgent-note">Descuento válido por 15 días</span>
+
+      <span class="cot-label cot-label-total">TOTAL</span>
+      <div class="cot-frame total-frame"></div>
+
+      <p class="cot-validity">Cotización válida por 30 días.</p>
+      <div class="cot-terms-box">
+        <span class="cot-terms-label">Importante</span>
+        <p class="cot-terms-text">Este servicio se presta bajo nuestros <a href="https://drive.google.com/file/d/1PA-ZSt4KnyY5dpxXzgkIk6-yfGlV2eF8/view?usp=drive_link" target="_blank" rel="noopener">términos y condiciones</a>. Al avanzar con esta propuesta, ambas partes los aceptan.</p>
+      </div>
+
+      <div class="cot-garantia-badge">
+        <span class="cot-garantia-tag">Garantía 30-60-90</span>
+        <p class="cot-garantia-text">Estamos contigo hasta que la habilidad quede instalada.</p>
+      </div>
+
+      <div class="block block-notes-container">
+        <span class="block-eyebrow">Notas</span>
+      </div>
+      <div class="multi-box notas-box" data-field="Notas"></div>
+
+      <div class="lic-wrap">
+        <span class="lic-eyebrow">Licenciamiento · aparte de esta inversión</span>
+        <div class="lic-cards">
+          <div class="lic-card acc-y">
+            <span class="lic-name">Claude Team · puesto estándar</span>
+            <p>El plan exige un mínimo de dos puestos. Valor de lista: <strong>USD 25</strong> por puesto al mes, o USD 20 pagando por año, al 02/11/2026. Con seis puestos: USD 150 al mes. Incluye Claude Code.</p>
+          </div>
+          <div class="lic-card acc-o">
+            <span class="lic-name">Conexión de Profit</span>
+            <p>Si la conexión con Profit requiere un servicio del proveedor o de terceros, su valor de lista se informa antes de construir.</p>
+          </div>
+        </div>
+        <p class="lic-note">Valores de lista del proveedor al 02/11/2026; pueden variar. Los confirma Blu Foods con el proveedor.</p>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Blu Foods · DET-045</span>
+      </div>
+    </section>
+
+    <!-- 9 · Próximos pasos: qué hacer y a quién escribir (última slide) -->
+    <section class="slide s-next">
+      <span class="counter">08 / 08</span>
+      <p class="eyebrow">08 · Próximos pasos</p>
+      <h2>Tres pasos para arrancar.</h2>
+      <p class="sub">Esto es lo que sigue cuando Blu Foods confirme la propuesta.</p>
+
+      <div class="nx-steps">
+        <div class="nx-step acc-y">
+          <span class="nx-num">1</span>
+          <b>Aprobación</b>
+          <p>Quien decide por Blu Foods confirma la propuesta y acordamos la fecha de la reunión de arranque.</p>
+        </div>
+        <div class="nx-step acc-o">
+          <span class="nx-num">2</span>
+          <b>Accesos y datos</b>
+          <p>Blu Foods confirma quién coordina y comparte los reportes y accesos que autorice, también con el proveedor de Profit.</p>
+        </div>
+        <div class="nx-step acc-w">
+          <span class="nx-num">3</span>
+          <b>Reunión de arranque</b>
+          <p>Una reunión para acordar el calendario, quiénes participan y los accesos.</p>
+        </div>
+      </div>
+
+      <div class="nx-contact">
+        <div class="nx-card nx-ase">
+          <span class="nx-label">¿Dudas? Escribe a tu asesora comercial</span>
+          <b class="nx-name">Flavia Martínez</b>
+          <span class="nx-role">Asesora comercial</span>
+          <p class="nx-line"><a href="mailto:fmartinez@intezia.com">fmartinez@intezia.com</a></p>
+          <p class="nx-line">+58 414 5756615</p>
+        </div>
+        <div class="nx-card nx-emp">
+          <span class="nx-label">Intezia</span>
+          <p class="nx-line">Intezia C.A J-505657950</p>
+          <p class="nx-line"><a href="mailto:servicio@intezia.com">servicio@intezia.com</a></p>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Blu Foods · DET-045</span>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

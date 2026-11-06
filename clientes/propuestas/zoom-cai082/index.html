@@ -1,0 +1,455 @@
+<!doctype html>
+<!--
+  Propuesta · Zoom · Servicio de Habilidades (CAI-082)
+  División: Educación · Servicio: Habilidades (§4.1a) · Alianza: no
+  GENERADO por scripts/generar-habilidades-compacto.py (plantilla 3.0 (2026-10-08), formato habilidades) desde datos.json.
+  No editar a mano: editar datos.json y regenerar. Estilos propios del deck: overrides.css.
+  Fuente del insumo: Plan piloto de monitoreo v2 (25/10/2026) y correos entre María Iribarren y Zoom (26/10 al 03/11/2026); sin Ficha de Levantamiento ni transcripción
+
+  Formato compacto de 8 slides, en el orden de las preguntas del cliente (Ventas, 2026-10-07), sin semanas, sesiones
+  ni fechas (Keiber, 2026-10-08):
+    1 Portada · 2 Alcance · 3 Ruta · 4 Cómo trabajamos · 5 Entregables · 6 Retorno · 7 Inversión · 8 Próximos pasos
+  Marcadores de detección de AcroForms (agregar-campo-precio.py), por página: «Propuesta Económica» solo en la slide de
+  inversión; «Lo que se llevan» y «Entregables» solo en la de entregables; «Facilidad de pago» solo en la de pago.
+  Campos AcroForm: Programa, Notas, PrecioBase, Descuento, PrecioTotal (inversión) y Entregables, Acreditacion (entregables). Se reposicionan con scripts/customize-habilidades-compacto.py.
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Propuesta · Zoom · Intezia Educación</title>
+  <link rel="stylesheet" href="../_base/styles.css">
+  <link rel="stylesheet" href="habilidades-compacto.css">
+  <link rel="stylesheet" href="overrides.css">
+</head>
+<body>
+
+  <main class="deck">
+
+    <!-- 1 · Portada: ¿cuál es mi problema? -->
+    <section class="slide s-cover">
+      <span class="counter">01 / 08</span>
+      <div class="logo-big">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia Educación">
+      </div>
+      <div class="body">
+        <p class="eyebrow">Propuesta de proyecto · Servicio de Habilidades</p>
+        <h1 style="font-size:46px">
+          Servicios de Zoom disponibles<br>
+          para agentes de IA mediante MCP<br>
+          <span class="hl">con el equipo de TI</span>
+        </h1>
+        <p class="lead">
+          Este proyecto construye junto al equipo de TI de Zoom un <strong>servidor MCP (Model Context Protocol)</strong> en pruebas, para que un agente de IA consulte tarifas, tracking y estatus y cree guías, y deja a TI listo para <strong>agregar más servicios</strong>.
+        </p>
+        <div class="pain-strip">
+          <div class="pain-item">
+            <span class="pain-num">MCP</span>
+            <span class="pain-lbl">en lugar de API es lo que ya le piden a Zoom: un comercio en Colombia quiere crear guías.</span>
+          </div>
+          <div class="pain-item">
+            <span class="pain-num">API</span>
+            <span class="pain-lbl">existen hoy para esos servicios; MCP los ofrecería también a los agentes de IA.</span>
+          </div>
+          <div class="pain-item">
+            <span class="pain-num">TI</span>
+            <span class="pain-lbl">tiene sus prioridades y poco tiempo: el trabajo se construye junto a ellos para no restarles más.</span>
+          </div>
+          <div class="pain-item">
+            <span class="pain-num">Pruebas</span>
+            <span class="pain-lbl">es donde se crean las guías: una guía creada por error o duplicada no puede llegar a producción.</span>
+          </div>
+        </div>
+      </div>
+      <div class="id-line">
+        <span class="codigo">Código: CAI-082</span>
+        <span class="cliente">Zoom</span>
+      </div>
+    </section>
+
+    <!-- 2 · Alcance: qué vamos a hacer y para qué -->
+    <section class="slide s-scope roomy">
+      <span class="counter">02 / 08</span>
+      <p class="eyebrow">02 · Alcance</p>
+      <h2>Un servidor MCP que Zoom puede ampliar.</h2>
+      <p class="sub">Construimos con el equipo de TI las consultas y la creación de guías, y lo dejamos documentado.</p>
+
+      <div class="scope-panels one" style="--np:1">
+        <div class="scope-panel acc-y">
+          <div class="scope-head">
+            <span class="scope-tag">Servidor MCP de Zoom</span>
+            <span class="scope-total"><b>5</b> bloques</span>
+          </div>
+          <ul class="scope-rows">
+              <li><span class="area">Diseño de las herramientas</span><span class="para">Definir con TI qué consultas y qué creación expone el servidor</span></li>
+              <li><span class="area">Consultas: tarifas, tracking, estatus</span><span class="para">Que un agente consulte tarifas, tracking y estatus de envío</span></li>
+              <li><span class="area">Creación de guías</span><span class="para">Que un agente cree guías en pruebas, sin duplicados ni errores</span></li>
+              <li><span class="area">Prueba con un comercio simulado</span><span class="para">Verificar de punta a punta lo que haría un comercio externo</span></li>
+              <li><span class="area">Documentación y traspaso</span><span class="para">Que el equipo de TI agregue servicios por su cuenta</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="scope-out">
+        <p class="scope-card-label">Fuera de este alcance</p>
+        <ul>
+          <li>Llevar el servidor a producción: se decide después de la prueba, con sus resultados.</li>
+          <li>Autenticación OAuth completa: se usan las llaves de API de los comercios; OAuth suma horas aparte.</li>
+          <li>Crear guías reales: la creación es solo en el ambiente de pruebas.</li>
+          <li>Licencias y consumo de las herramientas: los contrata Zoom, aparte de esta inversión.</li>
+        </ul>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Zoom · CAI-082</span>
+      </div>
+    </section>
+
+    <!-- 3 · Ruta: qué pasa en cada fase -->
+    <section class="slide s-route">
+      <span class="counter">03 / 08</span>
+      <p class="eyebrow">03 · Ruta</p>
+      <h2>Del levantamiento al servidor en manos de TI.</h2>
+      <p class="sub">El calendario se acuerda en la <strong>reunión de arranque</strong>, sin frenar las prioridades de TI.</p>
+
+      <div class="route-grid n1" style="--cols:3; --rows:1; --rowh:214px">
+
+        <div class="rg-corner"></div>
+        <div class="rg-phase rg-ph-1">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Diseño</span></span>
+          <span class="rg-phase-name">Levantamiento técnico y diseño de las herramientas</span>
+        </div>
+        <div class="rg-phase rg-ph-2 hi">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Construcción</span></span>
+          <span class="rg-phase-name">Consultas, creación de guías y comercio simulado</span>
+        </div>
+        <div class="rg-phase rg-ph-3">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Traspaso</span></span>
+          <span class="rg-phase-name">Documentación y traspaso al equipo de TI</span>
+        </div>
+        <div class="rg-phase rg-fu">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Garantía</span></span>
+          <span class="rg-phase-date">30, 60 y 90 días</span>
+          <span class="rg-phase-txt">Desde el cierre del traspaso</span>
+        </div>
+
+        <div class="rg-front acc-y">
+          <span class="rg-front-h">Servicios de Zoom vía MCP</span>
+          <span class="rg-front-row"><span class="rg-front-tool">MCP</span><b class="rg-front-n">40 horas</b></span>
+          <span class="rg-front-meta">con el equipo de TI</span>
+        </div>
+        <div class="rg-cell"><span class="rg-h solo-h"><b>6 horas con el equipo</b></span><p>Levantamiento técnico con TI y diseño de las herramientas.</p></div>
+        <div class="rg-cell hi"><span class="rg-h solo-h"><b>26 horas con el equipo</b></span><p>Consultas, creación de guías y prueba con un comercio simulado.</p></div>
+        <div class="rg-cell"><span class="rg-h solo-h"><b>8 horas con el equipo</b></span><p>Documentación y guía para que TI agregue servicios.</p></div>
+
+        <div class="rg-follow" style="grid-column:5; grid-row:2 / span 1">
+          <ul>
+            <li><b>30 días</b><span>Uso del servidor de pruebas</span></li>
+            <li><b>60 días</b><span>Servicios que TI agrega por su cuenta</span></li>
+            <li><b>90 días</b><span>Decisión sobre producción</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="route-miles" style="grid-template-columns:repeat(4,1fr)">
+        <div class="mile"><span class="mile-d"></span><b>Arranque · aparte</b><p>Reunión de 1 h para acordar el calendario, la persona de TI y los accesos.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Diseño</b><p>APIs confirmadas y herramientas diseñadas con TI.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Servidor en pruebas</b><p>Consultas, creación de guías y comercio simulado.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Traspaso a TI</b><p>Documentación, guía y operación en manos de TI.</p></div>
+      </div>
+      <p class="route-next"><b>Siguiente paso · Más servicios</b> Más servicios por MCP, como el cambio de dirección, y la decisión de llevarlo a producción, según los resultados.</p>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Zoom · CAI-082</span>
+      </div>
+    </section>
+
+    <!-- 4 · Cómo trabajamos: pasos, por qué en ese orden, casos reales, práctica, datos y logística -->
+    <section class="slide s-method">
+      <span class="counter">04 / 08</span>
+      <p class="eyebrow">04 · Cómo trabajamos</p>
+      <h2>Así construimos el servidor MCP.</h2>
+      <p class="sub">Primero se confirma qué hay; después se construye junto al equipo de TI, de lo que solo consulta a lo que crea.</p>
+
+      <ol class="mt-steps" style="--n:4">
+          <li><b>Confirmamos</b><span>Las APIs que existen, su documentación y cómo se autentica.</span></li>
+          <li><b>Construimos</b><span>Con TI, sobre el repositorio de Zoom, en pruebas.</span></li>
+          <li><b>Probamos</b><span>Un comercio simulado consulta y crea guías.</span></li>
+          <li><b>Traspasamos</b><span>Documentación y guía para que TI agregue servicios.</span></li>
+      </ol>
+      <div class="mt-strips">
+        <p class="mt-why"><b>Por qué en este orden</b> Primero se confirman las APIs, la documentación y cómo se autentica; después las consultas, que no modifican nada; la creación de guías va al final, con confirmación previa y solo en pruebas.</p>
+        <p class="mt-who"><b>Quién construye</b> Intezia construye <strong>junto al equipo de TI</strong>, sobre el repositorio de Zoom, para que el trabajo quede hecho mientras TI aprende y nada del esfuerzo se pierda.</p>
+      </div>
+
+      <div class="mt-info">
+        <div class="mt-card">
+          <p class="mt-card-label">Cómo funciona en la práctica</p>
+          <ul><li><b>Consultar antes que crear.</b> Las tres consultas no modifican nada; la creación de guías va al final y solo en el ambiente de pruebas.</li><li><b>Una confirmación antes de crear.</b> Cada guía exige confirmación previa y tiene protección contra duplicados.</li><li><b>Con tres condiciones.</b> Una API con documentación (OpenAPI) y ambiente de pruebas, y las llaves de API actuales; sin ellas se ajusta el alcance.</li></ul>
+        </div>
+        <div class="mt-card">
+          <p class="mt-card-label">Cómo cuidamos sus datos</p>
+          <p>Se trabaja en el ambiente de pruebas de Zoom, sin datos de clientes reales, y bajo el acuerdo de confidencialidad (NDA) que la empresa exige.</p>
+        </div>
+      </div>
+
+      <div class="mt-logi">
+        <div class="mt-tile"><span>Modalidad</span><b>Se acuerda en el arranque, junto con el equipo de TI.</b></div>
+        <div class="mt-tile"><span>Participantes</span><b>Una persona de TI con nombre y dedicación definida, y quien conozca las APIs y los servicios.</b></div>
+        <div class="mt-tile"><span>Ritmo de trabajo</span><b>El trabajo se agenda sin frenar las prioridades que TI ya tiene.</b></div>
+        <div class="mt-tile"><span>Arranque</span><b>Apenas se apruebe la propuesta; una reunión de 1 h, aparte, acuerda el calendario.</b></div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Zoom · CAI-082</span>
+      </div>
+    </section>
+
+    <!-- 5 · Entregables: ¿con qué me quedo? (catálogo + piezas transversales) -->
+    <section class="slide s-deliv roomy">
+      <span class="counter">05 / 08</span>
+      <p class="eyebrow">05 · Entregables</p>
+      <div class="deliv-head">
+        <h2>Lo que recibe Zoom.</h2>
+        <p class="deliv-sub"><span class="nw">Lo que se llevan</span>: <strong>un servidor MCP funcionando en pruebas y un equipo de TI que sabe ampliarlo</strong>, más el seguimiento a 30, 60 y 90 días.</p>
+      </div>
+
+      <div class="deliv-carriles" style="--ncols:3">
+        <span class="dc acc-y" style="grid-column: span 3">Servidor MCP de Zoom</span>
+      </div>
+
+      <div class="deliv-cols" style="--ncols:3">
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">Diseño de las herramientas</p>
+            <ul>
+              <li>Levantamiento técnico y diseño de las herramientas<ul class="inc"><li>Qué APIs existen, con qué documentación y ambiente de pruebas</li><li>Cómo se autentica hoy a los comercios</li><li>Las tres consultas y la creación que se construyen</li></ul></li>
+            </ul>
+          </div>
+          <div class="da">
+            <p class="da-name">Consultas: tarifas, tracking, estatus</p>
+            <ul>
+              <li>Servidor MCP con tres herramientas de consulta<ul class="inc"><li>Consulta de tarifas</li><li>Consulta de tracking</li><li>Consulta del estatus de un envío</li></ul></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">Creación de guías</p>
+            <ul>
+              <li>Herramienta de creación de guías, en pruebas<ul class="inc"><li>Creación solo en el ambiente de pruebas</li><li>Confirmación previa antes de crear</li><li>Protección contra guías duplicadas</li></ul></li>
+            </ul>
+          </div>
+          <div class="da">
+            <p class="da-name">Prueba con un comercio simulado</p>
+            <ul>
+              <li>Bot de prueba que consulta y crea guías<ul class="inc"><li>Un comercio simulado consulta tarifas y tracking</li><li>Y crea una guía en el ambiente de pruebas</li></ul></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">Documentación y traspaso</p>
+            <ul>
+              <li>Documentación y guía para agregar servicios<ul class="inc"><li>Cómo funciona el servidor y cómo se opera</li><li>Una guía para sumar un servicio nuevo</li></ul></li>
+              <li>Traspaso al equipo de TI<ul class="inc"><li>Revisión conjunta del código</li><li>El equipo de TI lo opera y lo ajusta</li></ul></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="deliv-band">
+        <div class="db-card db-1">
+          <span class="db-label">Para todo el proyecto</span>
+        </div>
+        <div class="db-card db-2">
+          <span class="db-label">Valor inmediato</span>
+        </div>
+      </div>
+      <!-- Cajas multiline editables (vacías en HTML: el contenido vive dentro del AcroForm /V). -->
+      <div class="multi-box db-box db-box-1" data-field="Entregables"></div>
+      <div class="multi-box db-box db-box-2" data-field="Acreditacion"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Zoom · CAI-082</span>
+      </div>
+    </section>
+
+    <!-- 6 · Retorno: ¿qué gano? (método de cálculo). Sin estudios ni citas externas. -->
+    <section class="slide s-roi">
+      <span class="counter">06 / 08</span>
+      <p class="eyebrow">06 · Retorno</p>
+      <h2>Retorno esperado: servicios listos para agentes.</h2>
+      <p class="sub">Cada indicador se mide contra el punto de partida que el levantamiento técnico deja registrado.</p>
+
+      <div class="roi-body">
+        <div class="roi-panel">
+          <p class="roi-panel-title">Cómo se mide el retorno del servidor</p>
+          <ol class="roi-steps">
+            <li><b>Demanda</b><span>Qué consultas y creaciones piden hoy los comercios por API.</span></li>
+            <li><b>Punto de partida</b><span>Cuánto toma hoy integrar un servicio nuevo con un tercero: es la línea base.</span></li>
+            <li><b>Con el servidor</b><span>Cuánto toma que un agente consulte o cree una guía en pruebas, y sumar un servicio.</span></li>
+            <li><b>Tiempo de TI recuperado</b><span>Integraciones por la diferencia de tiempos: una estimación referencial, sin compromiso de resultado.</span></li>
+            <li><b>Gasto de operar</b><span>Licencias y consumo, contra el valor de lo recuperado.</span></li>
+          </ol>
+        </div>
+
+        <div class="roi-right">
+          <p class="roi-right-title">Calendario de seguimiento y medición</p>
+          <div class="roi-card">
+            <b>30 días</b>
+            <p>Desde el cierre del traspaso: servidor en uso en pruebas y punto de partida validado con TI.</p>
+          </div>
+          <div class="roi-card">
+            <b>60 días</b>
+            <p>Tiempo de sumar un servicio nuevo medido contra el punto de partida.</p>
+          </div>
+          <div class="roi-card">
+            <b>90 días</b>
+            <p>Medición del retorno: lo recuperado frente al gasto de operar; con eso se decide producción.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="roi-dest-wrap">
+        <p class="roi-dest-title">Hacia dónde va el proyecto</p>
+        <div class="roi-dest">
+          <div class="rd-item"><b>Servicios para agentes</b><p>Zoom ofrece guías, tarifas y tracking también a los <strong>agentes de IA</strong> de sus clientes.</p></div>
+          <div class="rd-item"><b>Un TI autónomo</b><p>El equipo de TI <strong>agrega servicios</strong> por su cuenta, sin depender de nadie más.</p></div>
+          <div class="rd-item"><b>Decisión con datos</b><p>Llevarlo a producción se decide con <strong>resultados medidos</strong>.</p></div>
+        </div>
+      </div>
+
+      <div class="roi-hook"><p>A los 90 días del cierre, Zoom contará con el tiempo de sumar un servicio medido contra el punto de partida y el gasto de operar el servidor.</p></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Zoom · CAI-082</span>
+      </div>
+    </section>
+
+    <!-- 7 · Inversión (hoja de cotización estándar; antepenúltima slide) -->
+    <section class="slide s-price">
+      <span class="counter">07 / 08</span>
+      <h2 class="title">Inversión del proyecto.</h2>
+      <p class="price-intro">Propuesta Económica · Servicio de Habilidades</p>
+
+      <div class="block">
+        <span class="block-eyebrow">Duración</span>
+        <p class="block-value"><strong>40 horas con el equipo de TI</strong> de Zoom, en diseño, construcción y traspaso, con seguimiento a 30, 60 y 90 días.</p>
+      </div>
+
+      <div class="block block-programa">
+        <span class="block-eyebrow">Programa</span>
+      </div>
+      <div class="multi-box programa-box" data-field="Programa"></div>
+
+      <div class="block block-cotizacion">
+        <span class="block-eyebrow">Cotización</span>
+      </div>
+
+      <span class="cot-label cot-label-base">Propuesta + Inversión</span>
+      <div class="cot-frame base-frame"></div>
+
+      <span class="cot-label cot-label-discount">Descuento</span>
+      <span class="cot-sign-minus">&minus;$</span>
+      <div class="cot-frame discount-frame"></div>
+      <span class="cot-urgent-note">Descuento válido por 15 días</span>
+
+      <span class="cot-label cot-label-total">TOTAL</span>
+      <div class="cot-frame total-frame"></div>
+
+      <p class="cot-validity">Cotización válida por 30 días.</p>
+      <div class="cot-terms-box">
+        <span class="cot-terms-label">Importante</span>
+        <p class="cot-terms-text">Este servicio se presta bajo nuestros <a href="https://drive.google.com/file/d/1PA-ZSt4KnyY5dpxXzgkIk6-yfGlV2eF8/view?usp=drive_link" target="_blank" rel="noopener">términos y condiciones</a>. Al avanzar con esta propuesta, ambas partes los aceptan.</p>
+      </div>
+
+      <div class="cot-garantia-badge">
+        <span class="cot-garantia-tag">Garantía 30-60-90</span>
+        <p class="cot-garantia-text">Estamos contigo hasta que el servidor quede en manos de TI.</p>
+      </div>
+
+      <div class="block block-notes-container">
+        <span class="block-eyebrow">Notas</span>
+      </div>
+      <div class="multi-box notas-box" data-field="Notas"></div>
+
+      <div class="lic-wrap">
+        <span class="lic-eyebrow">Licenciamiento · aparte de esta inversión</span>
+        <div class="lic-cards">
+          <div class="lic-card acc-y">
+            <span class="lic-name">Cursor · la herramienta de TI</span>
+            <p>El servidor se construye sobre el repositorio de Zoom con la herramienta que TI ya adoptó. Su valor de lista lo confirma Zoom con el proveedor.</p>
+          </div>
+          <div class="lic-card acc-o">
+            <span class="lic-name">Bot de prueba · licencia aparte</span>
+            <p>Simula al comercio externo en el ambiente de pruebas y solo recibe datos de prueba. Su licencia y consumo van aparte.</p>
+          </div>
+        </div>
+        <p class="lic-note">Esta propuesta no incluye valores de lista: los confirma Zoom con cada proveedor. Pueden variar.</p>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Zoom · CAI-082</span>
+      </div>
+    </section>
+
+    <!-- 9 · Próximos pasos: qué hacer y a quién escribir (última slide) -->
+    <section class="slide s-next">
+      <span class="counter">08 / 08</span>
+      <p class="eyebrow">08 · Próximos pasos</p>
+      <h2>Tres pasos para arrancar.</h2>
+      <p class="sub">Esto es lo que sigue cuando Zoom confirme la propuesta.</p>
+
+      <div class="nx-steps">
+        <div class="nx-step acc-y">
+          <span class="nx-num">1</span>
+          <b>Aprobación</b>
+          <p>Quien decide por Zoom confirma la propuesta y acordamos la fecha de la reunión de arranque.</p>
+        </div>
+        <div class="nx-step acc-o">
+          <span class="nx-num">2</span>
+          <b>Persona de TI</b>
+          <p>Zoom nombra por escrito a la persona de TI que acompaña y su dedicación.</p>
+        </div>
+        <div class="nx-step acc-w">
+          <span class="nx-num">3</span>
+          <b>Reunión de arranque</b>
+          <p>Una hora para acordar el calendario, los accesos y el ambiente de pruebas.</p>
+        </div>
+      </div>
+
+      <div class="nx-contact">
+        <div class="nx-card nx-ase">
+          <span class="nx-label">¿Dudas? Escribe a tu directora comercial</span>
+          <b class="nx-name">María Iribarren</b>
+          <span class="nx-role">Directora comercial</span>
+          <p class="nx-line"><a href="mailto:miribarren@intezia.com">miribarren@intezia.com</a></p>
+          <p class="nx-line">+58 414 0570056</p>
+        </div>
+        <div class="nx-card nx-emp">
+          <span class="nx-label">Intezia</span>
+          <p class="nx-line">Intezia C.A J-505657950</p>
+          <p class="nx-line"><a href="mailto:servicio@intezia.com">servicio@intezia.com</a></p>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Zoom · CAI-082</span>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

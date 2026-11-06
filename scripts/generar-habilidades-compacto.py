@@ -119,6 +119,11 @@ CALENDARIO_ERR = [
     (re.compile(r"(?<!por )(?<!cada )(?<!a la )\bsemanas?\b", re.I), "la propuesta no lleva semanas: el calendario se acuerda en la reunión de arranque (kickoff). Describir la ruta por fases o etapas e hitos, y la duración en horas"),
     (re.compile(r"\bsesi[oó]n(?:es)?\b", re.I), "la propuesta no lleva sesiones: su número, duración y agenda se acuerdan en el kickoff. Hablar de horas de trabajo, jornadas, etapas o módulos"),
 ]
+# Horas de trabajo y cantidad de consultores (Ivana, 2026-10-27): ninguna propuesta los muestra. Las horas de encuentro con el
+# cliente, la duración de un taller o las horas del contenido sí pueden ir; las horas internas de Intezia y el número de
+# facilitadores o consultores, no. `sin_horas_trabajo: true` (por defecto en las plantillas) apaga también los textos automáticos.
+RE_N_CONSULTORES = re.compile(r"\b(?:\d+|un|una|dos|tres|cuatro|cinco|seis|siete|ocho)\s+(?:facilitador(?:es|as?)?|consultor(?:es|as?)?)\b", re.I)
+RE_HORAS_TRABAJO = re.compile(r"\b(?:\d+\s*h|horas?)\s+de\s+trabajo\b|\bhoras?\s+de\s+trabajo\b", re.I)
 # Detección (Keiber, 2026-10-08): no se prioriza antes de detectar, no hay «resto» que agrupe el grueso de las áreas y los
 # entregables no se cuentan.
 DETECCION_ERR = [
@@ -204,8 +209,9 @@ TOKENS_CONTEO = re.compile(r"^(n_total|n_total_txt|n_entregables_txt|n_sol|n_sol
 OMITIBLES = ("metodo", "entregables", "retorno", "proximos", "inversion", "pago")   # slides que datos.json → omitir puede quitar (el resto es el núcleo)
 PALABRA_N = {1: "una", 2: "dos", 3: "tres", 4: "cuatro", 5: "cinco", 6: "seis", 7: "siete", 8: "ocho", 9: "nueve", 10: "diez"}
 NOMBRES_SLIDE = {"portada": "Portada", "alcance": "Alcance", "ruta": "Ruta", "metodo": "Cómo trabajamos", "entregables": "Entregables",
-                 "retorno": "Retorno", "inversion": "Inversión", "inversion2": "Inversión (etapa 2)", "inversion3": "Inversión (etapa 3)", "inversion4": "Inversión (etapa 4)", "pago": "Facilidad de pago", "pago2": "Facilidad de pago (2)", "proximos": "Próximos pasos", "calendario": "Calendario", "cambios": "Qué está cambiando"}
-ORDEN_EDUCACION = ["portada", "cambios", "alcance", "ruta", "calendario", "metodo", "entregables", "retorno", "inversion", "inversion2", "inversion3", "inversion4", "pago", "pago2", "proximos"]
+                 "retorno": "Retorno", "inversion": "Inversión", "inversion2": "Inversión (etapa 2)", "inversion3": "Inversión (etapa 3)", "inversion4": "Inversión (etapa 4)", "pago": "Facilidad de pago", "pago2": "Facilidad de pago (2)", "proximos": "Próximos pasos", "calendario": "Calendario", "cambios": "Qué está cambiando", "impacto": "Impacto",
+                 "rfp1": "Respuesta a la solicitud (1)", "rfp2": "Respuesta a la solicitud (2)", "rfp3": "Respuesta a la solicitud (3)", "rfp4": "Respuesta a la solicitud (4)", "rfp5": "Respuesta a la solicitud (5)", "rfp6": "Respuesta a la solicitud (6)"}
+ORDEN_EDUCACION = ["portada", "cambios", "alcance", "ruta", "calendario", "metodo", "entregables", "retorno", "impacto", "rfp1", "rfp2", "rfp3", "rfp4", "rfp5", "rfp6", "inversion", "inversion2", "inversion3", "inversion4", "pago", "pago2", "proximos"]
 
 SUB_ENTREGABLES = "Lo que se llevan: **cada solución construida, probada y adoptada**, más el seguimiento a {rango_seguimiento} que mide su efecto."
 SUB_ENTREGABLES_SIN_SEG = "Lo que se llevan: **cada solución construida, probada y adoptada**."
@@ -325,13 +331,13 @@ DET_DEFAULTS = {
     },
     "inversion": {
         "sin_garantia": True,
-        "duracion": "Reunión de arranque, nivelación en IA de todo el equipo y **{h_levantamiento} horas de levantamiento**, repartidas según cada departamento.",
+        "duracion": "Reunión de arranque, nivelación en IA de todo el equipo y levantamiento por departamento: **{h_total} horas de trabajo en total**.",
         "programa": [
             "Servicio de Detección · {cliente_corto} ({codigo}).",
             "Arranque con la dirección y nivelación en IA de todo el equipo.",
             "Levantamiento por departamento, con cada líder y su mano derecha.",
             "Al menos {logros_minimos} logros inmediatos, Mapa de Calor e Informe Final.",
-            "{h_levantamiento} horas de levantamiento.",
+            "{h_total} horas de trabajo en total.",
         ],
         "notas": [
             "Esta inversión no incluye licencias de IA.",
@@ -360,10 +366,20 @@ ESQUEMAS = {
              "pago": "dict:pago", "pago2": "dict:pago", "entregables": "dict:entregables", "retorno": "dict:retorno",
              "proximos_pasos": "dict:proximos_pasos", "siglas_ok": "list:str", "frases_ok": "list:str", "supuestos": "list:str", "pendientes": "list:str",
              "servicio_rotulo": "str", "meta_servicio": "str", "meta_tipo": "str", "vocabulario": "dict:vocabulario", "sin_hoja_cotizacion": "bool",
-             "omitir": "list:str", "formato": "str", "deteccion": "dict:deteccion", "por_fases": "bool", "metodo_antes_de_ruta": "bool",
-             "calendario": "dict:calendario", "cambios": "dict:cambios"},
+             "omitir": "list:str", "formato": "str", "deteccion": "dict:deteccion", "por_fases": "bool", "metodo_antes_de_ruta": "bool", "sin_horas_trabajo": "bool",
+             "calendario": "dict:calendario", "cambios": "dict:cambios", "impacto": "dict:impacto", "respuesta_solicitud": "dict:rfp"},
+    "rfp": {"eyebrow": "str", "despues_de": "str", "paginas": "list:dict:rfp_pagina"},
+    "rfp_pagina": {"titulo": "str", "subtitulo": "str", "items": "list:dict:rfp_item", "tabla": "dict:rfp_tabla", "nota": "str"},
+    "rfp_item": {"num": "str", "titulo": "str", "texto": "str", "puntos": "list:str", "etiqueta": "str"},
+    "rfp_tabla": {"encabezados": "list:str", "filas": "list:dict:rfp_fila"},
+    "rfp_fila": {"a": "str", "b": "str", "c": "str", "d": "str"},
     "cambios": {"titulo": "str", "subtitulo": "str", "etiqueta_fechas": "str", "fechas": "list:dict:cambio_fecha", "etiqueta_riesgo": "str",
                 "riesgo": "list:dict:cambio_item", "etiqueta_porque": "str", "porque": "list:dict:cambio_item", "fuente": "str"},
+    "impacto": {"titulo": "str", "subtitulo": "str", "hoy": "dict:impacto_lado", "con": "dict:impacto_lado", "etiqueta_horas": "str",
+                "mensajes": "list:dict:cambio_item", "nota": "str"},
+    "impacto_lado": {"rotulo": "str", "texto": "str", "personas": "int", "liberadas": "int", "etiqueta_personas": "str", "etiqueta_liberadas": "str",
+                     "barra": "list:dict:impacto_seg"},
+    "impacto_seg": {"rotulo": "str", "pct": "num", "tipo": "str"},
     "cambio_fecha": {"cuando": "str", "texto": "str"},
     "cambio_item": {"titulo": "str", "texto": "str"},
     "calendario": {"inicio": "str", "dias": "list:str", "hora": "str", "horas_por_encuentro": "num", "omitir_fechas": "list:str", "titulo": "str",
@@ -396,8 +412,8 @@ ESQUEMAS = {
     "paso": {"titulo": "str", "texto": "str"},
     "practica": {"titulo": "str", "texto": "str"},
     "ejemplo": {"area": "str", "titulo": "str", "antes": "str", "despues": "str", "texto": "str", "fuente": "str"},
-    "fase": {"id": "str", "titulo": "str", "descripcion": "str", "destacada": "bool"},
-    "frente": {"id": "str", "carril": "str", "nombre": "str", "celdas": "dict:str"},
+    "fase": {"id": "str", "titulo": "str", "descripcion": "str", "destacada": "bool", "medida": "str"},
+    "frente": {"id": "str", "carril": "str", "nombre": "str", "celdas": "dict:str", "medida": "str", "medida_meta": "str", "celdas_medida": "dict:str"},
     "ruta": {"hitos": "list:dict:hito", "titulo": "str", "subtitulo": "str", "nota": "str", "siguiente_etapa": "dict:siguiente_etapa"},
     "siguiente_etapa": {"titulo": "str", "texto": "str"},
     "hito": {"titulo": "str", "texto": "str"},
@@ -406,7 +422,10 @@ ESQUEMAS = {
     "item": {"dias": "str", "texto": "str"},
     "inversion": {"notas": "list:str", "licencias": "dict:licencias", "titulo": "str", "duracion": "str", "programa": "list:str",
                   "garantia_texto": "str", "sin_garantia": "bool", "partes": "list:dict:parte", "etiqueta_partes": "str", "etapas": "list:dict:etapa_inversion",
-                  "etiqueta_suma": "str"},
+                  "etiqueta_suma": "str", "sin_suma": "bool", "hoja_paquetes": "bool", "validez_dias": "int", "validez_hasta": "str", "desglose": "dict:desglose"},
+    "desglose": {"eyebrow": "str", "titulo": "str", "subtitulo": "str", "encabezados": "list:str", "filas": "list:dict:dsg_fila", "etiquetas_totales": "list:str", "sin_iva": "bool",
+                 "descuento_validez_dias": "int", "nota": "str", "condiciones_titulo": "str", "condiciones": "list:str"},
+    "dsg_fila": {"fase": "str", "concepto": "str", "area": "str", "horas": "str", "valor": "str"},
     "parte": {"nombre": "str", "detalle": "str"},
     "etapa_inversion": {"titulo": "str", "rotulo": "str", "duracion": "str", "programa": "list:str", "notas": "list:str", "garantia_texto": "str", "sin_garantia": "bool"},
     "licencias": {"titulo": "str", "tarjetas": "list:dict:tarjeta", "nota": "str"},
@@ -605,7 +624,7 @@ def chequear_tipos(nodo, esquema, ruta, rep):
         else:
             if not _tipo_ok(v, kind):
                 rep.err(donde, "debe ser %s, recibido %s (%r)" % (_NOMBRE_TIPO.get(kind, kind), type(v).__name__, v))
-            elif kind == "str" and not v.strip() and k not in ("nombre_pie", "quien_construye"):
+            elif kind == "str" and not v.strip() and k not in ("nombre_pie", "quien_construye", "nota"):  # «nota» vacía: la oculta (ruta.nota, TA-039)
                 rep.err(donde, "no puede estar vacío (borrar la clave si es opcional)")
 
 
@@ -901,8 +920,10 @@ def calcular_det(d, rep):
     cl = d.get("cliente") or {}
     areas = [a for a in (det.get("areas") or []) if isinstance(a, str) and a.strip()]
     n_a = len(areas)
-    if not (1 <= n_a <= 8):
-        rep.err("deteccion.areas", "se necesitan 1 a 8 áreas, con el nombre que les da el cliente (hay %d)" % n_a)
+    if not (1 <= n_a <= 16):   # 14 → 16 (Clínica Santiago de León DET-056, 15 gerencias, 2026-11-06)
+        rep.err("deteccion.areas", "se necesitan 1 a 16 áreas, con el nombre que les da el cliente (hay %d)" % n_a)
+    elif n_a > 8:
+        rep.aviso("deteccion.areas", "hay %d áreas (más de 8): la lámina de alcance las pone en 3 columnas con CSS propio de la propuesta (.det-areas.many)" % n_a)
     vistas = set()
     for i, a in enumerate(areas):
         if a.strip().lower() in vistas:
@@ -1058,6 +1079,8 @@ def validar_semantica(d, ctx, agg, rep, silent):
             for sid in rp:
                 if sid not in all_ids:
                     rep.err(donde, "resuelto_por: la solución '%s' no existe" % sid)
+    if p.get("fuente"):
+        rep.aviso("portada.fuente", "las presentaciones no llevan fuentes (Ivana, 2026-10-29): quitar portada.fuente; la fuente del dato queda en origen/fuente_insumo")
     cont = p.get("contratacion")
     if cont is not None:
         for k in ("num", "texto", "fuente"):
@@ -1324,6 +1347,11 @@ def validar_semantica(d, ctx, agg, rep, silent):
                     rep.aviso("inversion.partes[%d].detalle" % i, "%d caracteres: máx. ~%s (%s en la tarjeta)" % (len(rs(p["detalle"])), "20" if cuatro else "70", "una línea" if cuatro else "2 líneas"))
         if tars and not inv.get("notas"):
             rep.aviso("inversion.notas", "hay licenciamiento pero no hay notas: se usan las de garantía y términos; aclarar si el licenciamiento se contrata aparte (confirmar quién lo contrata)")
+        # La hoja de cotización refleja el total de horas del proyecto (Ivana, 2026-10-27). Con texto propio en la hoja única, debe decirlo.
+        if not d.get("sin_horas_trabajo") and not isinstance(inv.get("etapas"), list) and (inv.get("duracion") or inv.get("programa")):
+            _txt = " ".join([rs(inv.get("duracion"))] + [rs(x) for x in (inv.get("programa") or [])])
+            if "{h_total}" not in _txt and not re.search(r"\b%d\s*(h\b|horas)" % agg["h_total"], _txt):
+                rep.aviso("inversion.duracion/programa", "la hoja de cotización debe reflejar el total de horas del proyecto (%d h): usar {h_total}" % agg["h_total"])
         # Una hoja de inversión por etapa (opcional): valor, descuento y total por separado, cada una con su garantía.
         if isinstance(inv.get("etapas"), list):
             et_ = etapas_inversion(d)
@@ -1610,6 +1638,20 @@ def orden_slides(d):
     orden = [k for k in ORDEN_EDUCACION if k not in omitir]
     if not isinstance(d.get("cambios"), dict) and "cambios" in orden:
         orden.remove("cambios")   # slide opcional: solo existe con datos.json → cambios («Qué está cambiando y cómo les afecta», Zoom INN-006, 2026-10-26)
+    _rf = d.get("respuesta_solicitud")
+    _np = len(_rf.get("paginas") or []) if isinstance(_rf, dict) and isinstance(_rf.get("paginas"), list) else 0
+    for _i in range(1, 7):   # páginas opcionales «Respuesta a la solicitud» (RFP de Viva, CAI-079, 2026-11-03): solo existen con datos.json → respuesta_solicitud.paginas
+        if "rfp%d" % _i in orden and _i > _np:
+            orden.remove("rfp%d" % _i)
+    _dd = _rf.get("despues_de") if isinstance(_rf, dict) else None
+    if _dd in orden:   # respuesta_solicitud.despues_de: las páginas adicionales van justo después de esa slide (p. ej. la hoja de Detección tras el alcance, Fasto CAI-077, 2026-11-03)
+        _ks = [k for k in orden if k.startswith("rfp")]
+        for k in _ks:
+            orden.remove(k)
+        _p = orden.index(_dd) + 1
+        orden[_p:_p] = _ks
+    if not isinstance(d.get("impacto"), dict) and "impacto" in orden:
+        orden.remove("impacto")   # slide opcional: solo existe con datos.json → impacto (gráfico de personas y horas «hoy» frente a «con el proceso», Canguro CAI-086, 2026-11-05)
     if not isinstance(d.get("calendario"), dict) and "calendario" in orden:
         orden.remove("calendario")   # slide opcional: solo existe con datos.json → calendario (Ivana, ESTEI CAI-058, 2026-10-20)
     for k_, n_min in (("inversion2", 2), ("inversion3", 3), ("inversion4", 4)):   # la 2.ª y la 3.ª hoja de inversión solo existen con inversion.etapas (2 o 3 etapas) y con hoja de inversión
@@ -2053,7 +2095,9 @@ def s_ruta(d, R):
         if pf:
             n = R.agg["fase_sol"].get(f["id"], 0)
         cuenta = ("%d %s" % (n, plural(n, *VOC["solucion"]))) if ((n or not pf) and CONTEO["on"]) else "%d h" % h
-        cuenta_html = "" if (pf and nf == 1) else '<b class="rg-phase-n">%s</b>' % cuenta
+        if d.get("sin_horas_trabajo"):  # TA-039 (2026-10-27): las horas de trabajo no se muestran; se usa la medida propia (p. ej. horas de video)
+            cuenta = f.get("medida") or ""
+        cuenta_html = "" if ((pf and nf == 1) or not cuenta) else '<b class="rg-phase-n">%s</b>' % cuenta
         hi = bool(f.get("destacada"))
         hdr += (
             '        <div class="rg-phase rg-ph-%d%s">\n'
@@ -2081,18 +2125,23 @@ def s_ruta(d, R):
         cuerpo += (
             '        <div class="rg-front %s">\n'
             '          <span class="rg-front-h">%s</span>\n'
-            '          <span class="rg-front-row"><span class="rg-front-tool">%s</span><b class="rg-front-n">%s</b></span>\n'
+            '          <span class="rg-front-row"><span class="rg-front-tool">%s</span>%s</span>\n'
             '          <span class="rg-front-meta">%s</span>\n'
             "        </div>\n" % (COLORES[car["color"]], T(fr["nombre"], "frentes.nombre"), T(car["nombre_corto"], "carriles.nombre_corto"),
-                                 ("%d %s" % (n, plural(n, *VOC["solucion"]))) if CONTEO["on"] else ("%d h" % h),
-                                 ("%d h de trabajo" % h) if CONTEO["on"] else "de trabajo")
+                                 ('<b class="rg-front-n">%s</b>' % T(fr["medida"], "frentes.medida") if fr.get("medida") else "") if d.get("sin_horas_trabajo") else '<b class="rg-front-n">%s</b>' % (("%d %s" % (n, plural(n, *VOC["solucion"]))) if CONTEO["on"] else ("%d h" % h)),
+                                 (fr.get("medida_meta") or "") if d.get("sin_horas_trabajo") else (("%d h de trabajo" % h) if CONTEO["on"] else "de trabajo"))
         )
         for f in fases_cols:
             nn, hh = R.agg["celda"].get((fr["id"], f["id"]), [0, 0])
             hi = " hi" if f.get("destacada") else ""
             txt = (fr.get("celdas") or {}).get(f["id"], "")
             ns = R.agg["celda_sol"].get((fr["id"], f["id"]), 0) if pf else nn
-            if nn and (not ns or not CONTEO["on"]):
+            if nn and d.get("sin_horas_trabajo"):
+                cuerpo += (
+                    '        <div class="rg-cell%s">%s<p>%s</p></div>\n'
+                    % (hi, ('<span class="rg-h solo-h"><b>%s</b></span>' % T(fr["celdas_medida"][f["id"]], "frentes.celdas_medida")) if (fr.get("celdas_medida") or {}).get(f["id"]) else "", M(txt, "frentes.celdas"))
+                )
+            elif nn and (not ns or not CONTEO["on"]):
                 cuerpo += (
                     '        <div class="rg-cell%s"><span class="rg-h solo-h"><b>%d</b> %s</span><p>%s</p></div>\n'
                     % (hi, hh, plural(hh, "hora", "horas"), M(txt, "frentes.celdas"))
@@ -2121,7 +2170,8 @@ def s_ruta(d, R):
         % (T(h["titulo"], "ruta.hitos.titulo"), M(h["texto"], "ruta.hitos.texto")) for h in hitos
     )
     nums = [f["id"][1:] for f in fases_cols]  # números reales de las fases (F1, F3 -> «1 y 3»)
-    nota = ruta.get("nota") or (
+    # `ruta.nota: ""` (cadena vacía explícita) oculta la nota; sin la clave se compone la nota por defecto (BNC TA-039, 2026-10-27)
+    nota = "" if (ruta.get("nota") == "" or (d.get("sin_horas_trabajo") and not ruta.get("nota"))) else ruta.get("nota") or (
         ("" if pf else "Las fases se traslapan: cada línea de trabajo pasa a la siguiente cuando quien ejecuta el proceso ya opera lo anterior. ")
         + ("Las {h_total} horas de trabajo son una proyección: {h_f0} h de arranque más " if R.ctx.get("h_f0") else "Las {h_total} horas de trabajo son una proyección: ")
         + ", ".join("{h_%s}" % f["id"].lower() for f in fases_cols[:-1])
@@ -2141,10 +2191,11 @@ def s_ruta(d, R):
         '      <p class="sub">%s</p>\n\n'
         '      <div class="route-grid n%d" style="--cols:%d; --rows:%d; --rowh:%dpx%s">\n\n%s\n%s\n%s      </div>\n\n'
         '      <div class="route-miles" style="grid-template-columns:repeat(%d,1fr)">\n%s      </div>\n'
-        '      <p class="route-note">%s</p>\n%s\n%s'
+        '%s%s\n%s'
         "    </section>\n"
         % (R.contador("ruta"), R.idx["ruta"], T(titulo, "ruta.titulo"), M(sub, "ruta.subtitulo"), nf, ncols, nf, rowh, grid_cols,
-           hdr, cuerpo, follow, len(hitos), mil, M(nota, "ruta.nota"), sig, foot(R, "oscuro"))
+           hdr, cuerpo, follow, len(hitos), mil,
+           ('      <p class="route-note">%s</p>\n' % M(nota, "ruta.nota")) if nota else "", sig, foot(R, "oscuro"))
     )
 
 def por_que_defecto(d):
@@ -2297,6 +2348,9 @@ def programa_auto(d, R):
                               else ("%s: %d h" % (sin_marcado(t(fr["nombre"], "frentes.nombre")), h)))
         resumen = "{n_total_txt} en {n_frentes_txt}, {h_total} h de trabajo." if CONTEO["on"] else "{n_frentes_txt}, {h_total} h de trabajo."
     cierre = "Horas de trabajo con quien ejecuta cada proceso."
+    if d.get("sin_horas_trabajo"):  # Ivana, 2026-10-27: sin horas de trabajo en la propuesta
+        resumen = "{n_fases_txt}." if por_fases(d) else "{n_frentes_txt}."
+        return [t(x, "inversion.programa") for x in (cab, resumen)]
     maxl = CAJAS_PDF["Programa"][3]
     for cand in ([cab] + por_frente + [cierre], [cab] + por_frente, [cab, resumen]):
         lineas = [t(x, "inversion.programa") for x in cand]
@@ -2318,7 +2372,9 @@ def s_inversion(d, R, et=None):
         base = "Proyecto en {n_fases_txt} (%s y %s)" % (", ".join(fc[:-1]), fc[-1])
     else:
         base = ("Proyecto de {n_total_txt} en {n_fases_txt}") if CONTEO["on"] else "Proyecto en {n_fases_txt}"
-    if gar_h:
+    if d.get("sin_horas_trabajo"):
+        dur_def = base + (", con seguimiento y garantía a {rango_seguimiento}." if gar_h else (", con seguimiento a {rango_seguimiento}." if seg_es_seguimiento(d) else "."))
+    elif gar_h:
         dur_def = base + ", con seguimiento y garantía a {rango_seguimiento}. {h_total} horas de trabajo."
     elif seg_es_seguimiento(d):
         dur_def = base + ", con seguimiento a {rango_seguimiento}. {h_total} horas de trabajo."
@@ -2352,27 +2408,31 @@ def s_inversion(d, R, et=None):
         )
     # Cotización por partes (opcional): una caja de valor por parte (PrecioParte1..N) en la zona del licenciamiento y la
     # suma en la caja base de la derecha. La geometría DEBE coincidir con scripts/agregar-campo-precio.py → partes_fields().
+    if inv.get("desglose"):
+        return html_hoja_desglose(d, R, inv, clave)
     partes = inv.get("partes") or []
     label_base = "Propuesta + Inversión"
     if partes:
-        label_base = T(inv.get("etiqueta_suma") or "Suma de las partes", "inversion.etiqueta_suma")
+        label_base = T(inv.get("etiqueta_suma") or ("Total de la opción elegida" if inv.get("sin_suma") else "Suma de las partes"), "inversion.etiqueta_suma")
         tarjetas = ""
         for i, p_ in enumerate(partes, 1):
             det = ('            <p class="parte-det">%s</p>\n' % T(p_["detalle"], "inversion.partes.detalle")) if p_.get("detalle") else ""
             tarjetas += (
                 '          <div class="parte-card %s">\n'
-                '            <span class="parte-tag">Parte %d</span>\n'
+                '            <span class="parte-tag">%s %d</span>\n'
                 '            <b class="parte-name">%s</b>\n%s'
                 '            <div class="parte-frame"></div>\n'
-                "          </div>\n" % ("acc-y" if i % 2 else "acc-o", i, T(p_["nombre"], "inversion.partes.nombre"), det)
+                "          </div>\n" % ("acc-y" if i % 2 else "acc-o", "Opción" if inv.get("sin_suma") else "Parte", i, T(p_["nombre"], "inversion.partes.nombre"), det)
             )
         lic_html = (
             '      <div class="partes-wrap">\n'
             '        <span class="partes-eyebrow">%s</span>\n'
             '        <div class="partes-cards">\n%s        </div>\n'
-            "      </div>\n\n" % (T(inv.get("etiqueta_partes") or "Valor por parte", "inversion.etiqueta_partes"), tarjetas)
+            "      </div>\n\n" % (T(inv.get("etiqueta_partes") or ("Valor por opción" if inv.get("sin_suma") else "Valor por parte"), "inversion.etiqueta_partes"), tarjetas)
         )
-    return (
+    if partes and inv.get("hoja_paquetes"):
+        return html_hoja_paquetes(d, R, inv, clave, titulo, dur, partes)
+    html_precio = (
         '    <!-- 7 · Inversión (hoja de cotización estándar; antepenúltima slide) -->\n'
         '    <section class="slide s-price">\n'
         '      <span class="counter">%s</span>\n'
@@ -2409,6 +2469,174 @@ def s_inversion(d, R, et=None):
         '      <div class="multi-box notas-box" data-field="Notas"></div>\n\n%s%s'
         "    </section>\n"
         % (R.contador(clave), T(titulo, "inversion.titulo"), T(inv.get("rotulo") or rotulo_servicio(d), "servicio_rotulo"), M(dur, "inversion.duracion"), label_base, garantia_html, lic_html, foot(R, "claro"))
+    )
+    if partes and inv.get("sin_suma"):
+        # Opciones alternativas sin fila de total de la opción: Descuento y Total suben a la posición de esa fila
+        # (CSS en overrides.css de la propuesta; los rects del PDF los fija scripts/agregar-campo-precio.py → precio_fields()).
+        html_precio = html_precio.replace('class="slide s-price"', 'class="slide s-price sin-base"', 1)
+        html_precio = re.sub(r'      <span class="cot-label cot-label-base">[^\n]*</span>\n      <div class="cot-frame base-frame"></div>\n\n', "", html_precio, count=1)
+    return html_precio
+
+
+def html_hoja_desglose(d, R, inv, clave):
+    """Hoja de inversión con la tabla pedida por el cliente (inversion.desglose; RFP de Viva, CAI-079, 2026-11-04): una fila por fase, concepto y área
+    con sus horas y un valor en USD en blanco; debajo, subtotal, descuento, total antes de impuestos, IVA y total con impuestos, también en blanco.
+    Los montos son campos editables que escribe Ventas: cada «campo-libre» lo convierte en AcroForm scripts/agregar-campos-libres.py (mide su caja en
+    Chrome, sin coordenadas escritas a mano) y los totales se calculan solos con data-calc. CSS en el overrides.css de la propuesta (por canonizar)."""
+    T, M = R.T, R.M
+    dg = inv["desglose"]
+    enc = dg.get("encabezados") or ["Fase", "Concepto", "Área", "Horas", "Valor (USD)"]
+    filas = ""
+    nombres = []
+    for i, f in enumerate(dg["filas"], 1):
+        # `valor` (p. ej. «Incluido», CAI-079 Viva, 2026-11-04): texto fijo en lugar del campo editable; no entra en el subtotal
+        if f.get("valor"):
+            celda_v = '<span class="dsg-incl">%s</span>' % T(f["valor"], "inversion.desglose.valor")
+        else:
+            nombres.append("ValorFila%d" % i)
+            celda_v = '<span class="campo-libre" data-campo="ValorFila%d" data-tip="%s"></span>' % (i, esc("Valor en USD de la fila %d (lo escribe Ventas)." % i))
+        filas += (
+            '          <tr><td class="dsg-f">%s</td><td class="dsg-c">%s</td><td class="dsg-a">%s</td><td class="dsg-h">%s</td>'
+            '<td class="dsg-v">%s</td></tr>\n'
+            % (T(f["fase"], "inversion.desglose.fase"), T(f["concepto"], "inversion.desglose.concepto"), T(f["area"], "inversion.desglose.area"),
+               (T(f["horas"], "inversion.desglose.horas") if f.get("horas") else ""), celda_v))
+    sin_iva = bool(dg.get("sin_iva"))   # CAI-083 Proimca (2026-11-04): Intezia no ofrece IVA; la hoja cierra con subtotal, descuento y total
+    et = dg.get("etiquetas_totales") or (["Subtotal", "Descuento por contratar el programa completo", "Total"] if sin_iva else ["Subtotal", "Descuento por contratar el programa completo", "Total antes de impuestos", "IVA", "Total con impuestos"])
+    vd = dg.get("descuento_validez_dias") or 30
+    if sin_iva:
+        tot_defs = [
+            ("Subtotal", "+".join(nombres), "Subtotal en USD. Se calcula solo al llenar los valores de las filas."),
+            ("DescuentoPrograma", "", "Descuento por contratar el programa completo, en USD (lo escribe Ventas)."),
+            ("TotalPrograma", "Subtotal-DescuentoPrograma", "Total en USD. Se calcula solo (subtotal menos descuento)."),
+        ]
+    else:
+        tot_defs = [
+            ("Subtotal", "+".join(nombres), "Subtotal en USD. Se calcula solo al llenar los valores de las filas."),
+            ("DescuentoPrograma", "", "Descuento por contratar el programa completo, en USD (lo escribe Ventas)."),
+            ("TotalAntesImpuestos", "Subtotal-DescuentoPrograma", "Total antes de impuestos en USD. Se calcula solo (subtotal menos descuento)."),
+            ("IVA", "", "IVA en USD (lo escribe Ventas)."),
+            ("TotalConImpuestos", "TotalAntesImpuestos+IVA", "Total con impuestos en USD. Se calcula solo (total antes de impuestos más IVA)."),
+        ]
+    totales = ""
+    for i, (nom, calc, tip) in enumerate(tot_defs):
+        extra = ('<span class="dsg-pill">Descuento válido por %d días</span>' % vd) if nom == "DescuentoPrograma" else ""
+        fuerte = " dsg-fuerte" if nom in ("TotalAntesImpuestos", "TotalConImpuestos", "TotalPrograma") else ""
+        totales += (
+            '        <div class="dsg-trow%s"><span class="dsg-tl">%s%s</span>'
+            '<span class="dsg-tv"><span class="campo-libre" data-campo="%s"%s data-tip="%s"></span></span></div>\n'
+            % (fuerte, T(et[i], "inversion.desglose.etiquetas_totales"), extra, nom, (' data-calc="%s"' % calc) if calc else "", esc(tip)))
+    nota = ('        <div class="dsg-caja"><span class="dsg-caja-t">Nota</span><p>%s</p></div>\n' % M(dg["nota"], "inversion.desglose.nota")) if dg.get("nota") else ""
+    cond = dg.get("condiciones") or []
+    cond_html = ""
+    if cond:
+        cond_html = ('        <div class="dsg-caja"><span class="dsg-caja-t">%s</span><ul>%s</ul></div>\n'
+                     % (T(dg.get("condiciones_titulo") or "Condiciones de pago", "inversion.desglose.condiciones_titulo"),
+                        "".join("<li>%s</li>" % M(x, "inversion.desglose.condiciones") for x in cond)))
+    vdias = inv.get("validez_dias") or 30
+    sub = dg.get("subtitulo") or ""
+    return (
+        '    <!-- Inversión (hoja con tabla de valores en blanco, inversion.desglose): fase, concepto, área, horas y valor en USD -->\n'
+        '    <section class="slide s-rfp s-dsg">\n'
+        '      <span class="counter">%s</span>\n'
+        '      <p class="eyebrow">%02d · %s</p>\n'
+        "      <h2>%s</h2>\n"
+        '%s'
+        '      <table class="dsg-tab">\n        <thead><tr>%s</tr></thead>\n        <tbody>\n%s        </tbody>\n      </table>\n\n'
+        '      <div class="dsg-bottom">\n'
+        '        <div class="dsg-left">\n%s%s        </div>\n'
+        '        <div class="dsg-tot">\n%s        </div>\n'
+        "      </div>\n\n"
+        '      <p class="dsg-validez">Cotización válida por %d días. Este servicio se presta bajo nuestros <a href="https://drive.google.com/file/d/1PA-ZSt4KnyY5dpxXzgkIk6-yfGlV2eF8/view?usp=drive_link" target="_blank" rel="noopener">términos y condiciones</a>.</p>\n'
+        "%s"
+        "    </section>\n"
+        % (R.contador(clave), R.idx[clave], T(dg.get("eyebrow") or "Inversión", "inversion.desglose.eyebrow"), T(dg.get("titulo") or inv.get("titulo") or "Inversión del proyecto.", "inversion.titulo"),
+           ('      <p class="sub">%s</p>\n\n' % M(sub, "inversion.desglose.subtitulo")) if sub else "\n",
+           "".join("<th%s>%s</th>" % (' class="dsg-hv"' if j == len(enc) - 1 else "", T(x, "inversion.desglose.encabezados")) for j, x in enumerate(enc)),
+           filas, nota, cond_html, totales, vdias, foot(R, "claro"))
+    )
+
+
+def validar_desglose(d, agg, rep):
+    """inversion.desglose: 5 encabezados, de 1 a 8 filas con fase, concepto y área, 5 etiquetas de totales y horas que suman las del proyecto."""
+    dg = (d.get("inversion") or {}).get("desglose")
+    if not isinstance(dg, dict):
+        return
+    w = "inversion.desglose"
+    if dg.get("encabezados") is not None and len(dg["encabezados"]) != 5:
+        rep.err(w + ".encabezados", "se necesitan 5 encabezados (fase, concepto, área, horas y valor)")
+    if dg.get("etiquetas_totales") is not None and dg.get("sin_iva") and len(dg["etiquetas_totales"]) != 3:
+        rep.err(w + ".etiquetas_totales", "con sin_iva se necesitan 3 etiquetas (subtotal, descuento y total)")
+    elif dg.get("etiquetas_totales") is not None and not dg.get("sin_iva") and len(dg["etiquetas_totales"]) != 5:
+        rep.err(w + ".etiquetas_totales", "se necesitan 5 etiquetas (subtotal, descuento, total antes de impuestos, IVA y total con impuestos)")
+    filas = dg.get("filas")
+    if not isinstance(filas, list) or not (1 <= len(filas) <= 8):
+        rep.err(w + ".filas", "de 1 a 8 filas")
+        return
+    suma, hay_horas = 0, False
+    for j, f in enumerate(filas):
+        if not isinstance(f, dict):
+            continue
+        for kk in ("fase", "concepto", "area"):
+            if not str(f.get(kk) or "").strip():
+                rep.err("%s.filas[%d].%s" % (w, j, kk), "falta")
+        m = re.match(r"^\s*(\d+)\s*h\b", str(f.get("horas") or ""))
+        if m:
+            suma += int(m.group(1)); hay_horas = True
+    if hay_horas and agg and suma != agg.get("h_total"):
+        rep.err(w + ".filas", "las horas de la tabla suman %d y el proyecto tiene %s: deben coincidir" % (suma, agg.get("h_total")))
+
+
+def html_hoja_paquetes(d, R, inv, clave, titulo, dur, partes):
+    """Variante de la hoja de cotización por opciones (inversion.hoja_paquetes, TA-039, boceto de Ivana del 2026-10-28): arriba
+    Duración y, al lado, Programa; después Notas; en la mitad inferior, por opción, Valor, Descuento (con «Válido por 15 días») y
+    Total, una columna al lado de otra; y al final Importante. La geometría (CSS en el overrides.css de la propuesta) DEBE
+    coincidir con scripts/agregar-campo-precio.py → paquetes_fields()."""
+    T, M = R.T, R.M
+    tarjetas = ""
+    for i, p_ in enumerate(partes, 1):
+        det = ('          <span class="pq-det">%s</span>\n' % T(p_["detalle"], "inversion.partes.detalle")) if p_.get("detalle") else ""
+        tarjetas += (
+            '        <div class="pq-card %s">\n'
+            '          <span class="pq-tag">Opción %d</span>\n'
+            '          <b class="pq-name">%s</b>\n%s'
+            '          <span class="pq-lab pq-lab-precio">Valor</span>\n'
+            '          <div class="pq-frame pq-precio"></div>\n'
+            '          <span class="pq-lab pq-lab-desc">Descuento<em class="pq-pill">Válido por 15 días</em></span>\n'
+            '          <div class="pq-frame pq-desc"></div>\n'
+            '          <span class="pq-lab pq-lab-total">Total</span>\n'
+            '          <div class="pq-frame pq-total"></div>\n'
+            "        </div>\n" % ("acc-y" if i % 2 else "acc-o", i, T(p_["nombre"], "inversion.partes.nombre"), det)
+        )
+    return (
+        '    <!-- 7 · Inversión (hoja por opciones: Duración y Programa arriba, Notas, valor por opción abajo e Importante) -->\n'
+        '    <section class="slide s-price s-price-paq">\n'
+        '      <span class="counter">%s</span>\n'
+        '      <h2 class="title">%s</h2>\n'
+        '      <p class="price-intro">Propuesta Económica · %s</p>\n\n'
+        '      <div class="block pq-dur">\n'
+        '        <span class="block-eyebrow">Duración</span>\n'
+        '        <p class="block-value">%s</p>\n'
+        "      </div>\n\n"
+        '      <div class="block block-programa">\n'
+        '        <span class="block-eyebrow">Programa</span>\n'
+        "      </div>\n"
+        '      <div class="multi-box programa-box" data-field="Programa"></div>\n\n'
+        '      <div class="block block-notes-container">\n'
+        '        <span class="block-eyebrow">Notas</span>\n'
+        "      </div>\n"
+        '      <div class="multi-box notas-box" data-field="Notas"></div>\n\n'
+        '      <div class="pq-wrap">\n'
+        '        <span class="pq-eyebrow">%s</span>\n'
+        '        <div class="pq-cards">\n%s        </div>\n'
+        "      </div>\n\n"
+        '      <p class="cot-validity pq-validity">Cotización válida por 30 días.</p>\n'
+        '      <div class="cot-terms-box pq-terms">\n'
+        '        <span class="cot-terms-label">Importante</span>\n'
+        '        <p class="cot-terms-text">Este servicio se presta bajo nuestros <a href="https://drive.google.com/file/d/1PA-ZSt4KnyY5dpxXzgkIk6-yfGlV2eF8/view?usp=drive_link" target="_blank" rel="noopener">términos y condiciones</a>. Al avanzar con esta propuesta, ambas partes los aceptan.</p>\n'
+        "      </div>\n\n%s"
+        "    </section>\n"
+        % (R.contador(clave), T(titulo, "inversion.titulo"), T(inv.get("rotulo") or rotulo_servicio(d), "servicio_rotulo"), M(dur, "inversion.duracion"),
+           T(inv.get("etiqueta_partes") or "Valor por paquete", "inversion.etiqueta_partes"), tarjetas, foot(R, "claro"))
     )
 
 
@@ -2679,6 +2907,99 @@ def s_calendario(d, R):
     )
 
 
+def campo_libre(html_):
+    """Convierte [[CAMPO:Nombre|Ayuda]] en un espacio en blanco editable (span.campo-libre): scripts/agregar-campos-libres.py lo vuelve un campo del PDF."""
+    return re.sub(r"\[\[CAMPO:(\w+)(?:\|([^\]]+))?\]\]",
+                  lambda m: '<span class="campo-libre" data-campo="%s" data-tip="%s"></span>' % (m.group(1), (m.group(2) or "Valor en USD (lo escribe Ventas)").replace('"', "&quot;")), html_)
+
+
+def s_rfp(d, R, k):
+    """Página opcional «Respuesta a la solicitud» (RFP de Viva Supercentro, CAI-079, 2026-11-03): responde los requerimientos del cliente en su orden.
+    Cada página lleva tarjetas numeradas (num, título, texto y puntos) o una tabla de 4 columnas. Con datos.json → respuesta_solicitud.paginas[]."""
+    T, M = R.T, R.M
+    rf = d["respuesta_solicitud"]
+    pg = rf["paginas"][k]
+    clave = "rfp%d" % (k + 1)
+    eyebrow = rf.get("eyebrow") or "Respuesta a la solicitud"
+    sub = pg.get("subtitulo") or ""
+    cuerpo = ""
+    items = pg.get("items") or []
+    if items:
+        tarjetas = ""
+        for it in items:
+            pts = "".join("            <li>%s</li>\n" % campo_libre(M(x, clave + ".puntos")) for x in (it.get("puntos") or []))
+            tarjetas += (
+                '        <div class="rfp-card">\n'
+                '          <p class="rfp-head"><span class="rfp-n">%s</span><span class="rfp-t">%s</span>%s</p>\n'
+                "%s%s"
+                "        </div>\n"
+                % (T(it["num"], clave + ".num"), T(it["titulo"], clave + ".titulo"),
+                   ('<span class="rfp-tag">%s</span>' % T(it["etiqueta"], clave + ".etiqueta")) if it.get("etiqueta") else "",
+                   ('          <p class="rfp-p">%s</p>\n' % M(it["texto"], clave + ".texto")) if it.get("texto") else "",
+                   ("          <ul>\n%s          </ul>\n" % pts) if pts else ""))
+        cuerpo += '      <div class="rfp-grid n%d">\n%s      </div>\n\n' % (len(items), tarjetas)
+    tb = pg.get("tabla")
+    if tb:
+        enc = "".join("<th>%s</th>" % T(x, clave + ".tabla.encabezados") for x in tb["encabezados"])
+        filas = "".join(
+            "          <tr><td class=\"rfp-a\">%s</td><td>%s</td><td>%s</td><td class=\"rfp-d\">%s</td></tr>\n"
+            % (T(f["a"], clave + ".tabla.a"), T(f["b"], clave + ".tabla.b"), T(f["c"], clave + ".tabla.c"), T(f["d"], clave + ".tabla.d"))
+            for f in tb["filas"])
+        cuerpo += '      <table class="rfp-tab" style="--rfp-rows:%d">\n        <thead><tr>%s</tr></thead>\n        <tbody>\n%s        </tbody>\n      </table>\n\n' % (len(tb["filas"]), enc, filas)
+    nota = ('      <p class="rfp-nota">%s</p>\n\n' % M(pg["nota"], clave + ".nota")) if pg.get("nota") else ""
+    return (
+        '    <!-- Respuesta a la solicitud (opcional): requerimientos del cliente, en su orden -->\n'
+        '    <section class="slide s-rfp">\n'
+        '      <span class="counter">%s</span>\n'
+        '      <p class="eyebrow">%02d · %s</p>\n'
+        "      <h2>%s</h2>\n"
+        "%s%s%s%s"
+        "    </section>\n"
+        % (R.contador(clave), R.idx[clave], T(eyebrow, "respuesta_solicitud.eyebrow"), T(pg["titulo"], clave + ".titulo"),
+           ('      <p class="sub">%s</p>\n\n' % M(sub, clave + ".subtitulo")) if sub else "\n", cuerpo, nota, foot(R, "claro"))
+    )
+
+
+def validar_rfp(d, rep):
+    """Las páginas «Respuesta a la solicitud» exigen de 1 a 6 páginas, cada una con título y tarjetas (1 a 4) o tabla (4 columnas, 1 a 12 filas)."""
+    rf = d.get("respuesta_solicitud")
+    pgs = rf.get("paginas") if isinstance(rf, dict) else None
+    if not isinstance(pgs, list) or not (1 <= len(pgs) <= 6):
+        rep.err("respuesta_solicitud.paginas", "se necesitan de 1 a 6 páginas")
+        return
+    for i, pg in enumerate(pgs):
+        w = "respuesta_solicitud.paginas[%d]" % i
+        if not isinstance(pg, dict):
+            continue
+        if not str(pg.get("titulo") or "").strip():
+            rep.err(w + ".titulo", "falta")
+        items, tb = pg.get("items") or [], pg.get("tabla")
+        if not items and not tb:
+            rep.err(w, "debe llevar items (tarjetas) o tabla")
+        if items and not (1 <= len(items) <= 4):
+            rep.err(w + ".items", "de 1 a 4 tarjetas por página")
+        for j, it in enumerate(items):
+            if not isinstance(it, dict):
+                continue
+            for kk in ("num", "titulo"):
+                if not str(it.get(kk) or "").strip():
+                    rep.err("%s.items[%d].%s" % (w, j, kk), "falta")
+            if len(str(it.get("texto") or "")) > 330:
+                rep.aviso("%s.items[%d].texto" % (w, j), "más de 330 caracteres: puede desbordar la tarjeta")
+            if len(it.get("puntos") or []) > 6:
+                rep.aviso("%s.items[%d].puntos" % (w, j), "más de 6 puntos: puede desbordar la tarjeta")
+        if tb:
+            if not isinstance(tb.get("encabezados"), list) or len(tb["encabezados"]) != 4:
+                rep.err(w + ".tabla.encabezados", "se necesitan 4 encabezados")
+            if not isinstance(tb.get("filas"), list) or not (1 <= len(tb["filas"]) <= 12):
+                rep.err(w + ".tabla.filas", "de 1 a 12 filas")
+            else:
+                for j, f in enumerate(tb["filas"]):
+                    for kk in ("a", "b", "c", "d"):
+                        if isinstance(f, dict) and not str(f.get(kk) or "").strip():
+                            rep.err("%s.tabla.filas[%d].%s" % (w, j, kk), "falta")
+
+
 def s_cambios(d, R):
     """«Qué está cambiando y cómo les afecta» (opcional): fechas del proveedor con su fuente, qué pasa si no se hace nada y por qué con Intezia.
     Pedida por Zoom (Emma, vía Ivana) para INN-006; corta y clara. Con datos.json → cambios."""
@@ -2721,6 +3042,94 @@ def s_cambios(d, R):
            T(c.get("etiqueta_porque") or "Por qué con Intezia", "cambios.etiqueta_porque"), lista(c["porque"], "cambios.porque"),
            ('      <p class="chg-src">%s</p>\n\n' % T(c["fuente"], "cambios.fuente")) if c.get("fuente") else "", foot(R, "oscuro"))
     )
+
+
+def s_impacto(d, R):
+    """«Impacto» (opcional): gráfico ilustrativo de personas y horas, «hoy» frente a «con el proceso». Pedido por Canguro (Gonzalo, vía Verónica,
+    CAI-086, 2026-11-05): mostrar de forma visual cómo se opera con menos personas. Son proporciones de ejemplo, no datos del cliente: la nota
+    lo dice y el verificador la exige. Con datos.json → impacto. CSS en el overrides.css de la propuesta (por canonizar)."""
+    T, M = R.T, R.M
+    c = d["impacto"]
+    def gente(n, lib):
+        return "".join('<svg class="p%s" viewBox="0 0 24 40" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M2 38V24a10 10 0 0 1 20 0v14z"/></svg>' % (" lib" if i >= n - lib else "") for i in range(n))
+    def barra(lado, clave):
+        return "".join('<span class="seg seg-%s" style="flex:%s">%s</span>' % (esc(str(x.get("tipo") or "manual")), esc(str(x["pct"]).replace(",", ".")), T(x["rotulo"], clave + ".rotulo")) for x in lado["barra"])
+    def lado(clave, cls):
+        x = c[clave]
+        lib = int(x.get("liberadas") or 0)
+        leyenda = ('        <p class="imp-leg"><svg class="p lib" viewBox="0 0 24 40" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M2 38V24a10 10 0 0 1 20 0v14z"/></svg>%s</p>\n' % T(x["etiqueta_liberadas"], "impacto.%s.etiqueta_liberadas" % clave)) if lib else ""
+        return (
+            '      <div class="imp-card %s">\n'
+            '        <p class="imp-label">%s</p>\n'
+            '        <p class="imp-cap">%s</p>\n'
+            '        <div class="imp-people">%s</div>\n'
+            '%s'
+            '        <p class="imp-cap">%s</p>\n'
+            '        <div class="imp-bar">%s</div>\n'
+            '        <p class="imp-txt">%s</p>\n'
+            "      </div>\n"
+            % (cls, T(x["rotulo"], "impacto.%s.rotulo" % clave), T(x["etiqueta_personas"], "impacto.%s.etiqueta_personas" % clave),
+               gente(int(x["personas"]), lib), leyenda, T(c.get("etiqueta_horas") or "Horas del equipo", "impacto.etiqueta_horas"),
+               barra(x, "impacto.%s.barra" % clave), M(x["texto"], "impacto.%s.texto" % clave)))
+    msgs = "".join('          <li><b>%s</b><span>%s</span></li>\n' % (T(x["titulo"], "impacto.mensajes.titulo"), M(x["texto"], "impacto.mensajes.texto")) for x in c["mensajes"])
+    sub = c.get("subtitulo") or ""
+    return (
+        '    <!-- Impacto (opcional): gráfico ilustrativo de personas y horas, hoy frente a con el proceso -->\n'
+        '    <section class="slide s-imp">\n'
+        '      <span class="counter">%s</span>\n'
+        '      <p class="eyebrow">%02d · Impacto</p>\n'
+        "      <h2>%s</h2>\n"
+        '%s'
+        '      <div class="imp-grid">\n%s'
+        '      <div class="imp-arrow" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M8 24h28M26 12l12 12-12 12"/></svg></div>\n%s      </div>\n\n'
+        '      <ul class="imp-msgs">\n%s        </ul>\n'
+        '      <p class="imp-nota">%s</p>\n\n'
+        "%s"
+        "    </section>\n"
+        % (R.contador("impacto"), R.idx["impacto"], T(c.get("titulo") or "Una operación más eficiente con menos personas.", "impacto.titulo"),
+           ('      <p class="sub">%s</p>\n\n' % M(sub, "impacto.subtitulo")) if sub else "\n",
+           lado("hoy", "imp-hoy"), lado("con", "imp-con"), msgs, T(c["nota"], "impacto.nota"), foot(R, "oscuro"))
+    )
+
+
+def validar_impacto(d, rep):
+    """La slide «impacto» exige los dos lados (hoy y con el proceso), personas enteras de 1 a 14, barras que sumen 100, de 2 a 3 mensajes y una
+    nota que diga que es una ilustración (no se inventan datos del cliente)."""
+    c = d.get("impacto") or {}
+    for clave in ("hoy", "con"):
+        x = c.get(clave)
+        if not isinstance(x, dict):
+            rep.err("impacto.%s" % clave, "falta")
+            continue
+        for k in ("rotulo", "texto", "etiqueta_personas"):
+            if not str(x.get(k) or "").strip():
+                rep.err("impacto.%s.%s" % (clave, k), "falta")
+        n = x.get("personas")
+        if not isinstance(n, int) or isinstance(n, bool) or not (1 <= n <= 14):
+            rep.err("impacto.%s.personas" % clave, "debe ser un entero de 1 a 14 (son íconos de ejemplo, no la dotación del cliente)")
+            n = 0
+        lib = x.get("liberadas", 0)
+        if not isinstance(lib, int) or isinstance(lib, bool) or lib < 0 or (n and lib > n):
+            rep.err("impacto.%s.liberadas" % clave, "debe ser un entero entre 0 y las personas del gráfico")
+        elif lib and not str(x.get("etiqueta_liberadas") or "").strip():
+            rep.err("impacto.%s.etiqueta_liberadas" % clave, "con liberadas > 0 hace falta decir qué representan")
+        barra = x.get("barra")
+        if not isinstance(barra, list) or not (1 <= len(barra) <= 4) or not all(isinstance(s, dict) and str(s.get("rotulo") or "").strip() and isinstance(s.get("pct"), (int, float)) and not isinstance(s.get("pct"), bool) and s["pct"] > 0 for s in barra):
+            rep.err("impacto.%s.barra" % clave, "de 1 a 4 tramos con rotulo y pct > 0")
+        elif abs(sum(s["pct"] for s in barra) - 100) > 0.01:
+            rep.err("impacto.%s.barra" % clave, "los tramos deben sumar 100 (suman %s)" % sum(s["pct"] for s in barra))
+    ms = c.get("mensajes")
+    if not isinstance(ms, list) or not (2 <= len(ms) <= 3):
+        rep.err("impacto.mensajes", "se necesitan 2 o 3 mensajes")
+    else:
+        for i, x in enumerate(ms):
+            if not isinstance(x, dict) or not str(x.get("titulo") or "").strip() or not str(x.get("texto") or "").strip():
+                rep.err("impacto.mensajes[%d]" % i, "faltan titulo o texto")
+            elif len(str(x["texto"])) > 150:
+                rep.aviso("impacto.mensajes[%d].texto" % i, "%d caracteres: máx. ~150 para que quepa" % len(str(x["texto"])))
+    nota = str(c.get("nota") or "")
+    if "ilustra" not in nota.lower():
+        rep.err("impacto.nota", "debe aclarar que es una ilustración y no una medición ni la dotación del cliente (palabra «ilustración» o «ilustrativo»)")
 
 
 def validar_cambios(d, rep):
@@ -3224,7 +3633,7 @@ def s_alcance_det(d, R):
         "      </div>\n\n%s%s"
         "    </section>\n"
         % (R.contador("alcance"), R.idx["alcance"], T(al["titulo"], "alcance.titulo"), M(al["subtitulo"], "alcance.subtitulo"),
-           T(det["etiqueta_que"], "deteccion.etiqueta_que"), " one" if len(det["areas"]) == 1 else "", areas, deps, foco,
+           T(det["etiqueta_que"], "deteccion.etiqueta_que"), " one" if len(det["areas"]) == 1 else (" many" if len(det["areas"]) > 8 else ""), areas, deps, foco,
            T(det["etiqueta_para_que"], "deteccion.etiqueta_para_que"), metas, bloque_fuera(al, T, M), foot(R, "claro"))
     )
 
@@ -3364,11 +3773,19 @@ def render_html(d, R, columnas, ncols):
         "metodo": lambda: s_metodo(d, R), "entregables": lambda: s_entregables(d, R, columnas, ncols), "retorno": lambda: s_retorno(d, R),
         "inversion": lambda: s_inversion(d, R, 0 if etapas_inversion(d) else None), "inversion2": lambda: s_inversion(d, R, 1), "inversion3": lambda: s_inversion(d, R, 2), "inversion4": lambda: s_inversion(d, R, 3),
         "pago": lambda: s_pago(d, R), "pago2": lambda: s_pago(d, R, "pago2"), "proximos": lambda: s_proximos(d, R), "calendario": lambda: s_calendario(d, R),
-        "cambios": lambda: s_cambios(d, R),
+        "cambios": lambda: s_cambios(d, R), "impacto": lambda: s_impacto(d, R),
     }
+    for _i in range(1, 7):
+        fns["rfp%d" % _i] = (lambda _k=_i - 1: s_rfp(d, R, _k))
     if es_deteccion(d):
         fns.update({"alcance": lambda: s_alcance_det(d, R), "ruta": lambda: s_ruta_det(d, R), "entregables": lambda: s_entregables_det(d, R)})
     cuerpo = "\n".join(fns[k]() for k in R.orden)
+    _vd = (d.get("inversion") or {}).get("validez_dias")
+    if isinstance(_vd, int) and _vd > 0:   # inversion.validez_dias: la solicitud del cliente puede pedir más de los 30 días estándar (Viva, CAI-079: mínimo 60)
+        cuerpo = cuerpo.replace("Cotización válida por 30 días.", "Cotización válida por %d días." % _vd)
+    _vh = (d.get("inversion") or {}).get("validez_hasta")
+    if isinstance(_vh, str) and _vh.strip():   # inversion.validez_hasta: vigencia con fecha de cierre («31 de enero de 2027»), cuando el cliente aprueba en su planificación (Mercosur CAI-049, 2026-11-06)
+        cuerpo = re.sub(r"Cotización válida por \d+ días\.", lambda _m: "Cotización válida hasta el %s." % _vh.strip(), cuerpo)
     return cab + head + cuerpo + "\n  </main>\n</body>\n</html>\n"
 
 
@@ -3383,6 +3800,8 @@ def con_vineta(x):
 def campos_acroform_txt(d, R):
     """Texto de la cabecera del index.html: qué campos AcroForm lleva el deck según las slides que tiene."""
     ent = "Entregables, Acreditacion (entregables)" if "entregables" in R.orden else ""
+    if "inversion" in R.orden and (d.get("inversion") or {}).get("desglose"):
+        return ("ValorFila1..N, Subtotal, DescuentoPrograma, TotalPrograma (inversión, campos libres)" if d["inversion"]["desglose"].get("sin_iva") else "ValorFila1..N, Subtotal, DescuentoPrograma, TotalAntesImpuestos, IVA, TotalConImpuestos (inversión, campos libres)") + (" y " + ent if ent else "")
     if "inversion" in R.orden:
         inv = "Programa, Notas, PrecioBase, Descuento, PrecioTotal (inversión)" + ((", PagoCuota1..%d (pago)" % len(cuotas_pago(d))) if "pago" in R.orden else "")
         return inv + (" y " + ent if ent else "")
@@ -3397,7 +3816,7 @@ def construir_acroforms(d, R):
         en = d["entregables"]
         out["Entregables"] = [con_vineta(sin_marcado(t(x, "entregables.transversales"))) for x in en["transversales"]]
         out["Acreditacion"] = [con_vineta(sin_marcado(t(x, "entregables.valor_inmediato"))) for x in en["valor_inmediato"]]
-    if R.con_precio:
+    if R.con_precio and not (d.get("inversion") or {}).get("desglose"):   # con inversion.desglose la hoja no lleva Programa ni Notas: sus montos son campos libres (agregar-campos-libres.py)
         hojas = [(hoja_inversion(d, i), "" if i == 0 else "_%d" % (i + 1)) for i in range(len(etapas_inversion(d)))] if etapas_inversion(d) else [(d.get("inversion") or {}, "")]
         for inv, suf in hojas:   # la 2.ª hoja (inversion.etapas) lleva los campos con sufijo _2, como agregar-campo-precio.py
             prog = inv.get("programa") or (DET_DEFAULTS["inversion"]["programa"] if es_deteccion(d) else programa_auto(d, R))
@@ -3804,13 +4223,11 @@ def bloque_auto(texto):
 # ----------------------------------------------------------------------------------------------
 def chequear_repeticion(textos, rep, minimo=9):
     """Avisa cuando dos slides repiten la misma frase (Ventas, 2026-10-07: «cada página tiene que aportar algo nuevo»)."""
-    pal = {}
-    for cls, txt in textos:
-        pal[cls] = re.findall(r"[\wáéíóúñü%$]+", txt.lower())
+    pal = [re.findall(r"[\wáéíóúñü%$]+", txt.lower()) for _, txt in textos]   # por posición: con varias slides de la misma clase (las páginas de respuesta) no se comparan consigo mismas
     claves = [c for c, _ in textos]
     for i in range(len(claves)):
         for j in range(i + 1, len(claves)):
-            a_, b_ = pal[claves[i]], pal[claves[j]]
+            a_, b_ = pal[i], pal[j]
             m = difflib.SequenceMatcher(None, a_, b_, autojunk=False).find_longest_match(0, len(a_), 0, len(b_))
             if m.size >= minimo:
                 rep.aviso("slides %s y %s" % (claves[i], claves[j]), "repiten %d palabras seguidas: «%s». Si algo ya se dijo no se repite; cada página aporta algo nuevo" % (m.size, " ".join(a_[m.a:m.a + min(m.size, 14)])))
@@ -3873,6 +4290,19 @@ def chequeos_html(html, d, rep):
             mj = rx.search(txt_j)
             if mj:
                 rep.aviso("slide " + cls, "«%s» cerca de «%s»: %s; si es el nombre de una solución del cliente, agregarlo a frases_ok" % (mj.group(0), txt_j[max(0, mj.start() - 25):mj.end() + 25], sugerencia))
+        txt_h = txt_j
+        mj = RE_N_CONSULTORES.search(txt_h)
+        if mj:
+            rep.err("slide " + cls, "«%s» cerca de «%s»: la propuesta no dice cuántos facilitadores o consultores participan (Ivana, 2026-10-27); si es el nombre propio de algo del cliente, agregarlo a frases_ok" % (
+                mj.group(0), txt_h[max(0, mj.start() - 25):mj.end() + 25]))
+        mj = RE_HORAS_TRABAJO.search(txt_h)
+        if mj:
+            msg = "«%s» cerca de «%s»: la propuesta no muestra las horas de trabajo de Intezia (Ivana, 2026-10-27); decir horas de encuentro, de contenido o del taller, o activar sin_horas_trabajo" % (
+                mj.group(0), txt_h[max(0, mj.start() - 25):mj.end() + 25])
+            if d.get("sin_horas_trabajo"):
+                rep.err("slide " + cls, msg)
+            else:
+                rep.aviso("slide " + cls, msg)
         txt_c = textos_fecha.get(cls, txt)   # sin las fuentes citadas (pain-src, mp-src, lic-note), que van tal cual
         for fr_ok in frases_ok:
             txt_c = re.sub(re.escape(fr_ok), " ", txt_c, flags=re.I)
@@ -4044,11 +4474,21 @@ def ejecutar(args):
     else:
         ctx, agg = calcular(d, rep)
     validar_semantica(d, ctx, agg, rep, Tokens(ctx, Reporte()))
+    if "impacto" in orden:
+        if det:
+            rep.err("impacto", "la slide de impacto no existe en el formato de Detección")
+        else:
+            validar_impacto(d, rep)
     if "cambios" in orden:
         if det:
             rep.err("cambios", "la slide «Qué está cambiando» no existe en el formato de Detección")
         else:
             validar_cambios(d, rep)
+    if "inversion" in orden:
+        validar_desglose(d, agg, rep)
+    if any(k_.startswith("rfp") for k_ in orden):
+        validar_rfp(d, rep)
+        rep.aviso("respuesta_solicitud", "la propuesta lleva páginas «Respuesta a la solicitud» (RFP del cliente): confirmar con el usuario que se quedan")
     if "calendario" in orden:
         if det:
             rep.err("calendario", "la slide de calendario no existe en el formato de Detección")
@@ -4133,6 +4573,9 @@ def ejecutar(args):
     if (columnas or det or "entregables" not in R.orden) and (not rep.errores or args.borrador):
         html = render_html(d, R, columnas, ncols)
         af = construir_acroforms(d, R)
+        if (d.get("inversion") or {}).get("hoja_paquetes"):   # Programa (480 px) y Notas (996 px de ancho) de la hoja por paquetes
+            CAJAS_PDF["Programa"] = (360.0, 11.0, False, 6)
+            CAJAS_PDF["Notas"] = (747.0, 11.0, False, 3)
         validar_acroforms(af, rep)
         chequeos_html(html, d, rep)
 

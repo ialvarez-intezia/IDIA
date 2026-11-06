@@ -1,5 +1,15 @@
 # Brief — G-MAX (DET-024)
 
+## Actualización 28/10/2026 · versión corta (3 áreas, 14 h)
+
+Pedido de Ivana a partir del correo de María Iribarren: Patricia recibió la propuesta y dijo que no todas las personas de la lista requieren el levantamiento; está incorporando cargos y no ha cerrado el número. Se reduce el alcance y las personas se definen juntos en la reunión de arranque. **Lo vigente es esto; lo de abajo describe la versión anterior (4 áreas, 20 h de levantamiento, 4 h de nivelación), archivada en `_anterior-4-areas-20h/`.**
+
+- **Áreas**: 3 (Gerencia de Operaciones, Gerencia de Tecnología y Recursos Humanos); se deja fuera la Dirección Médica y lo asistencial.
+- **Horas**: estimado de 14 h = 12 h de levantamiento (4 h por área, sin repartirse por área en el deck) + 2 h de nivelación en IA en un solo grupo (regalo de Intezia). Reunión de arranque (kick-off) de 1 h, sin cargo, para definir con Patricia quiénes participan en cada área.
+- **Formato**: el mismo de la versión anterior (compacto de Detección, sin facilidad de pago). María Iribarren pasa a figurar como Directora comercial.
+- **Pendiente**: qué departamentos caen en las 3 áreas, número definitivo de personas (lo cierra Patricia en el arranque) y valor (campos vacíos para ventas).
+
+
 ## Ajuste 2026-10-08 (noche): sin facilidad de pago y fundamentos de IA de regalo · SOLO G-MAX
 
 Instrucción del usuario: «quitarle la lámina del 50 50 y [...] poner que los fundamentos de IA serán un regalo de parte

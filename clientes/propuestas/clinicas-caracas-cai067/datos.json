@@ -1,0 +1,486 @@
+{
+ "version": 3,
+ "cliente": {
+  "nombre": "Hospital de Clínicas Caracas",
+  "slug": "clinicas-caracas-cai067",
+  "codigo": "CAI-067",
+  "nombre_pie": "Clínicas Caracas"
+ },
+ "division": "educacion",
+ "alianza": false,
+ "sin_horas_trabajo": true,
+ "meta_servicio": "habilidades",
+ "meta_tipo": "Habilidades · equipo comercial (9 personas): Fundamentos de IA, levantamiento y construcción de atención de leads, campañas por correo y web de reservas · seguimiento 30-60-90 · formato compacto v3",
+ "vocabulario": {
+  "solucion": [
+   "entregable",
+   "entregables"
+  ],
+  "area": [
+   "línea de trabajo",
+   "líneas de trabajo"
+  ]
+ },
+ "omitir": [
+  "pago"
+ ],
+ "eje": "Fundamentos de IA, atención y seguimiento de leads, campañas por correo segmentadas y mejoras de la web de reservas, construidos con el equipo comercial de Clínicas Caracas para que aprenda a sostenerlos",
+ "origen": "Ficha de Levantamiento de Hospital de Clínicas Caracas (Flavia Martínez, 27/10/2026; contacto Samuel Jiménez, área comercial) y contexto de la asesora, más instrucciones de Ivana del 27/10/2026: propuesta de Habilidades con Flavia Martínez como asesora. Sin transcripción de la reunión. Código CAI-067, división Educación y sin alianza, por confirmar",
+ "fuente_insumo": "Ficha de Levantamiento (27/10/2026) y contexto de la reunión redactado por Flavia Martínez; sin transcripción",
+ "siglas_ok": [
+  "IA"
+ ],
+ "portada": {
+  "titulo_lineas": [
+   "Atención de leads y campañas",
+   "con IA en el equipo comercial"
+  ],
+  "titulo_destacado": "de {cliente_corto}",
+  "lead": "Este proyecto nivela al equipo comercial en IA y construye con él la **atención de leads**, las **campañas segmentadas** y las mejoras de la **web de reservas**, hasta dejarlas en uso.",
+  "hechos": [
+   {
+    "num": "~1 día",
+    "texto": "de retraso en atender los leads en campañas grandes: todo se hace llamada por llamada.",
+    "resuelto_por": [
+     "AT-1",
+     "AT-2",
+     "AT-3"
+    ]
+   },
+   {
+    "num": "9",
+    "texto": "personas del equipo comercial captan, atienden y dan seguimiento a los leads.",
+    "resuelto_por": [
+     "AT-2",
+     "AT-3"
+    ]
+   },
+   {
+    "num": "A mano",
+    "texto": "se segmenta la base de pacientes para cada campaña por correo.",
+    "resuelto_por": [
+     "CA-1"
+    ]
+   },
+   {
+    "num": "De cero",
+    "texto": "es el punto de partida con la IA: por eso se empieza nivelando al equipo.",
+    "resuelto_por": [
+     "NV-1",
+     "NV-2"
+    ]
+   }
+  ]
+ },
+ "carriles": [
+  {
+   "id": "ia",
+   "nombre": "Herramientas de IA del hospital",
+   "nombre_corto": "IA del hospital",
+   "color": "amarillo"
+  }
+ ],
+ "areas": [
+  {
+   "id": "NV",
+   "nombre": "Fundamentos de IA",
+   "carril": "ia",
+   "frente": "A",
+   "para_que": "Nivelar al equipo para que participe en la construcción y luego la mantenga",
+   "soluciones": [
+    {
+     "id": "NV-1",
+     "entregable": "Fundamentos de IA: qué es y cómo pedirle bien",
+     "h": 2,
+     "fase": "F1",
+     "incluye": [
+      "Qué es y qué no es la IA",
+      "Cómo pedirle bien, con ejemplos del área comercial"
+     ],
+     "detalle": "Módulo de 2 h con las 9 personas del equipo comercial, en un solo grupo. Se nivela al equipo, que hoy parte de cero, con ejemplos de captación, atención y seguimiento de leads. Las herramientas concretas se definen en el levantamiento, según el ecosistema del hospital. Entrega al equipo con una noción común."
+    },
+    {
+     "id": "NV-2",
+     "entregable": "Fundamentos de IA: cuidar los datos de pacientes",
+     "h": 2,
+     "fase": "F1",
+     "incluye": [
+      "Qué datos de pacientes no se comparten con la IA",
+      "Pautas básicas de manejo de datos"
+     ],
+     "detalle": "Módulo de 2 h con el mismo grupo. Se acuerdan las pautas básicas para usar la IA sin exponer datos de pacientes, que son información de salud sensible. El hospital no tiene hoy una política de datos: estas pautas no la reemplazan (Políticas queda como complemento opcional). Entrega las pautas básicas."
+    }
+   ]
+  },
+  {
+   "id": "AT",
+   "nombre": "Atención y seguimiento de leads",
+   "carril": "ia",
+   "frente": "A",
+   "para_que": "Atender los leads más rápido, también en campaña, y no perder el seguimiento",
+   "soluciones": [
+    {
+     "id": "AT-1",
+     "entregable": "Levantamiento del equipo comercial",
+     "h": 2,
+     "fase": "F1",
+     "incluye": [
+      "Volumen de leads por canal, en un mes normal y en campaña",
+      "Dónde está la base de pacientes y en qué estado",
+      "Cómo funciona hoy la web de reservas",
+      "Línea base del retraso en la atención"
+     ],
+     "detalle": "Trabajo de 2 h con el equipo comercial. Se recorre cómo llega y se atiende cada lead por WhatsApp, Instagram y la web, se mide el punto de partida (volumen y retraso), se revisa dónde vive la base de pacientes y cómo funciona la web de reservas, y se confirman el ecosistema y las licencias, que hoy no están definidos. Cubre las tres líneas de trabajo del proyecto. Entrega la línea base y el alcance de cada herramienta."
+    },
+    {
+     "id": "AT-2",
+     "entregable": "Atención y filtrado de leads con IA",
+     "h": 4,
+     "fase": "F2",
+     "incluye": [
+      "Respuesta propuesta para cada tipo de consulta",
+      "Leads ordenados por prioridad",
+      "Una persona revisa y responde"
+     ],
+     "detalle": "Trabajo de 4 h con el equipo comercial. Se construye con él una herramienta que propone la respuesta a cada tipo de consulta y ordena los leads por prioridad, para atender primero los más urgentes en campaña; una persona revisa y responde. La respuesta automática directa por WhatsApp o Instagram depende de los canales oficiales y las herramientas que el hospital contrate: se evalúa en el levantamiento, sin compromiso previo. Entrega la herramienta en uso."
+    },
+    {
+     "id": "AT-3",
+     "entregable": "Seguimiento de leads",
+     "h": 2,
+     "fase": "F2",
+     "incluye": [
+      "Lista ordenada de leads por contactar",
+      "Mensajes de seguimiento listos para enviar"
+     ],
+     "detalle": "Trabajo de 2 h con el equipo comercial. Se arma con él una lista de seguimiento de los leads por contactar y los mensajes que la IA redacta para cada caso; la persona los revisa y los envía. No incluye un CRM. Entrega el seguimiento funcionando."
+    }
+   ]
+  },
+  {
+   "id": "CA",
+   "nombre": "Campañas por correo",
+   "carril": "ia",
+   "frente": "A",
+   "para_que": "Segmentar la base de pacientes y armar cada campaña sin trabajo manual",
+   "soluciones": [
+    {
+     "id": "CA-1",
+     "entregable": "Segmentación y campañas por correo con IA",
+     "h": 4,
+     "fase": "F2",
+     "incluye": [
+      "Segmentos por servicio de ingreso, género y edad",
+      "Textos de la campaña por segmento",
+      "Pautas de manejo de datos de pacientes"
+     ],
+     "detalle": "Trabajo de 4 h con el equipo comercial. Se construye con él la segmentación de la base por servicio de ingreso, género y edad, y los textos de cada campaña, trabajando con datos de muestra o sin identificar: los datos reales de pacientes no se cargan a ninguna herramienta sin autorización. Depende de que la base tenga esos campos, que se confirma en el levantamiento. El envío masivo requiere una herramienta de correo que el hospital ya tenga o contrate. Entrega el proceso de segmentación en uso."
+    }
+   ]
+  },
+  {
+   "id": "WE",
+   "nombre": "Página web de reservas",
+   "carril": "ia",
+   "frente": "A",
+   "para_que": "Proponer cómo mejorarla como canal de captación y de reserva de citas",
+   "soluciones": [
+    {
+     "id": "WE-1",
+     "entregable": "Propuesta de mejoras para la web de reservas",
+     "h": 2,
+     "fase": "F2",
+     "incluye": [
+      "Revisión de cómo se reserva hoy una cita",
+      "Mejoras propuestas, ordenadas por prioridad"
+     ],
+     "detalle": "Trabajo de 2 h con el equipo comercial. Se revisa cómo funciona hoy la web de reservas como canal de captación y se propone, con el equipo, cómo mejorarla. Los cambios en la web los aplica quien la administra; Intezia propone y acompaña. Entrega la propuesta de mejoras."
+    }
+   ]
+  }
+ ],
+ "alcance": {
+  "titulo": "Cuatro líneas de trabajo del equipo comercial.",
+  "subtitulo": "Nivelamos al equipo y construimos con él las herramientas para **atender, segmentar y mejorar la web**.",
+  "fuera_alcance": [
+   "Entregar o instalar un sistema de gestión de clientes (CRM): es software aparte, y luego es más fácil elegir uno.",
+   "Respuesta automática por WhatsApp o Instagram y envío masivo de correos: dependen de las herramientas que el hospital contrate.",
+   "Licencias y herramientas de envío: las contrata {cliente_corto}, según su ecosistema, y van aparte de esta inversión.",
+   "Cambios en la web: los aplica quien la administra; Intezia propone y acompaña."
+  ],
+  "etiqueta_destacados": "Lo que se mide desde el primer día",
+  "destacados": [
+   {
+    "titulo": "Retraso en la atención",
+    "texto": "El punto de partida en campañas grandes y su avance."
+   },
+   {
+    "titulo": "Leads por canal",
+    "texto": "Cuántos llegan por WhatsApp, Instagram y la web, en un mes normal y en campaña."
+   },
+   {
+    "titulo": "Campañas sin trabajo manual",
+    "texto": "Cuánto del armado y la segmentación deja de hacerse a mano."
+   },
+   {
+    "titulo": "Uso del equipo",
+    "texto": "Quién usa las herramientas a los 30, 60 y 90 días."
+   }
+  ]
+ },
+ "metodo": {
+  "titulo": "Así construimos cada herramienta.",
+  "subtitulo": "Primero se nivela al equipo y se mide dónde está cada proceso; después se construye con él, que aprende a sostenerlo.",
+  "quien_construye": "Intezia construye junto al equipo comercial, sobre sus casos reales, para que luego lo mantenga sin depender de un proveedor externo.",
+  "por_que_orden": "Primero se nivela al equipo, que hoy parte de cero, y se mide el punto de partida; después se construye con él, que así participa de verdad y puede mantener lo construido.",
+  "pasos": [
+   {
+    "titulo": "Nivelamos",
+    "texto": "Fundamentos de IA para que el equipo llegue con una noción común."
+   },
+   {
+    "titulo": "Medimos",
+    "texto": "Cómo se atiende hoy cada lead y se arma cada campaña."
+   },
+   {
+    "titulo": "Construimos",
+    "texto": "Con el equipo, cada herramienta, sobre casos reales."
+   },
+   {
+    "titulo": "Seguimos",
+    "texto": "Uso, ajustes y resultados, a 30, 60 y 90 días."
+   }
+  ],
+  "practica": [
+   {
+    "titulo": "Una persona en el circuito",
+    "texto": "La IA propone respuestas, mensajes y textos; una persona los revisa antes de enviarlos."
+   },
+   {
+    "titulo": "Datos de pacientes protegidos",
+    "texto": "Se trabaja con datos de muestra o sin identificar; los datos reales no se cargan sin autorización."
+   },
+   {
+    "titulo": "Sin prometer cifras",
+    "texto": "Se mide el punto de partida y cada avance; las metas son de {cliente_corto} y no se garantizan."
+   }
+  ],
+  "datos": "Los datos de pacientes son información de salud sensible: no se cargan a ninguna herramienta de IA sin la autorización de {cliente_corto}; las pautas básicas se acuerdan en los Fundamentos."
+ },
+ "fases": [
+  {
+   "id": "F1",
+   "titulo": "Nivelación y levantamiento",
+   "descripcion": "equipo nivelado y punto de partida medido"
+  },
+  {
+   "id": "F2",
+   "titulo": "Construcción",
+   "descripcion": "herramientas construidas con el equipo y en uso",
+   "destacada": true
+  }
+ ],
+ "frentes": [
+  {
+   "id": "A",
+   "carril": "ia",
+   "nombre": "Equipo comercial",
+   "medida": "18 horas",
+   "medida_meta": "con el equipo",
+   "celdas": {
+    "F1": "Fundamentos de IA, pautas de datos de pacientes y levantamiento del área.",
+    "F2": "Atención y seguimiento de leads, campañas segmentadas y mejoras de la web, en uso."
+   },
+   "celdas_medida": {
+    "F1": "6 horas con el equipo",
+    "F2": "12 horas con el equipo"
+   }
+  }
+ ],
+ "ruta": {
+  "titulo": "De la nivelación a las herramientas en uso.",
+  "subtitulo": "El calendario se acuerda en la **reunión de arranque**, tras las aprobaciones internas del hospital.",
+  "hitos": [
+   {
+    "titulo": "Arranque · aparte",
+    "texto": "Reunión de 1 h para acordar el calendario y quién coordina por {cliente_corto}."
+   },
+   {
+    "titulo": "Nivelación y levantamiento",
+    "texto": "Fundamentos de IA y el punto de partida de cada proceso del área."
+   },
+   {
+    "titulo": "Herramientas en uso",
+    "texto": "Atención y seguimiento de leads, campañas segmentadas y mejoras de la web."
+   },
+   {
+    "titulo": "30 · 60 · 90 días",
+    "texto": "Seguimiento: uso de las herramientas, ajustes y avances medidos."
+   }
+  ],
+  "siguiente_etapa": {
+   "titulo": "Siguiente paso · Detección",
+   "texto": "Cuando quieran llevar la IA a otras áreas del hospital; Políticas, como complemento opcional para los datos de pacientes."
+  }
+ },
+ "logistica": {
+  "modalidad": "Presencial, en las oficinas de {cliente_corto}.",
+  "participantes": "Las 9 personas del equipo comercial y quien coordina el proyecto por el hospital.",
+  "ritmo": "Dudas por escrito antes que en llamadas; el trabajo se agenda en el horario del equipo.",
+  "arranque": "La fija {cliente_corto}, tras sus aprobaciones; una reunión de 1 h, aparte, acuerda el calendario."
+ },
+ "seguimiento": {
+  "rango": "30, 60 y 90 días",
+  "texto": "Desde el cierre de cada línea",
+  "items": [
+   {
+    "dias": "30 días",
+    "texto": "Uso de las herramientas"
+   },
+   {
+    "dias": "60 días",
+    "texto": "Ajustes y nuevas construcciones"
+   },
+   {
+    "dias": "90 días",
+    "texto": "Atención de leads y campañas medidas"
+   }
+  ]
+ },
+ "entregables": {
+  "titulo": "Lo que recibe el hospital.",
+  "subtitulo": "Lo que se llevan: **un equipo nivelado y las herramientas en uso**, más el seguimiento a {rango_seguimiento}.",
+  "etiqueta_transversales": "Para todo el proyecto",
+  "transversales": [
+   "Línea base de la atención de leads y de las campañas.",
+   "Pautas básicas de manejo de datos de pacientes.",
+   "Seguimiento a 30, 60 y 90 días."
+  ],
+  "etiqueta_valor": "Valor inmediato",
+  "valor_inmediato": [
+   "Con los Fundamentos: el equipo con una noción común.",
+   "Con las herramientas: leads priorizados y campañas armadas.",
+   "Al cerrar: el equipo ajusta y mantiene lo construido."
+  ],
+  "columnas_por_carril": [
+   4
+  ]
+ },
+ "retorno": {
+  "modo": "metodo",
+  "posiciones": false,
+  "titulo": "Retorno esperado: indicadores medidos.",
+  "subtitulo": "Cada indicador se mide contra el punto de partida que el levantamiento deja registrado.",
+  "etiqueta_pasos": "Cómo se calcula el retorno de cada herramienta",
+  "pasos": [
+   {
+    "titulo": "Volumen",
+    "texto": "Cuántos leads llegan por canal y cuántas campañas se arman cada mes."
+   },
+   {
+    "titulo": "Punto de partida",
+    "texto": "Retraso en la atención y tiempo de armar cada campaña: es la **línea base**."
+   },
+   {
+    "titulo": "Con la herramienta",
+    "texto": "Lo que toma el mismo trabajo una vez que la herramienta está en uso."
+   },
+   {
+    "titulo": "Horas recuperadas",
+    "texto": "Volumen por la diferencia de tiempos: una estimación referencial, sin compromiso de resultado."
+   },
+   {
+    "titulo": "Gasto de operar",
+    "texto": "Licencias y consumo de IA, contra el valor de lo recuperado."
+   }
+  ],
+  "etiqueta_metas": "Calendario de seguimiento y medición",
+  "metas": [
+   {
+    "dias": "30 días",
+    "texto": "Desde el cierre de cada línea: herramientas en uso real y punto de partida validado con el equipo."
+   },
+   {
+    "dias": "60 días",
+    "texto": "Retraso en la atención y tiempo de las campañas medidos contra el punto de partida."
+   },
+   {
+    "dias": "90 días",
+    "texto": "Medición del retorno: lo recuperado frente al gasto de operar las herramientas."
+   }
+  ],
+  "etiqueta_destino": "Hacia dónde va el proyecto",
+  "destino": [
+   {
+    "rotulo": "Atención más ágil",
+    "texto": "Medir cada lead permite acercarse, paso a paso, a **atenderlos más rápido**, también en campaña."
+   },
+   {
+    "rotulo": "Campañas sin trabajo manual",
+    "texto": "Una segmentación armada con IA deja de depender del trabajo a mano en cada campaña."
+   },
+   {
+    "rotulo": "Una puerta de entrada",
+    "texto": "El equipo comercial abre el camino para llevar la IA a **otras áreas** del hospital."
+   }
+  ],
+  "gancho": "A los 90 días del cierre de cada línea, {cliente_corto} contará con su atención y sus campañas medidas contra el punto de partida y el gasto de operar sus herramientas."
+ },
+ "inversion": {
+  "duracion": "**{h_total} horas con el equipo** de {cliente_corto}, en nivelación, levantamiento y construcción, con seguimiento a {rango_seguimiento}.",
+  "programa": [
+   "Servicio de Habilidades para {cliente_corto} ({codigo}).",
+   "Fundamentos de IA, levantamiento previo y construcción de cada herramienta, hasta dejarla en uso.",
+   "{h_f1} h de nivelación y levantamiento y {h_f2} h de construcción: {h_total} horas con el equipo.",
+   "Seguimiento a 30, 60 y 90 días. La reunión de arranque va aparte."
+  ],
+  "notas": [
+   "Licencias, créditos de consumo de IA y herramientas de envío de correo: los contrata {cliente_corto} y van aparte; el levantamiento orienta sobre cuáles hacen falta.",
+   "Un CRM no está incluido: es software aparte."
+  ],
+  "garantia_texto": "Estamos contigo hasta que cada herramienta quede en uso."
+ },
+ "proximos_pasos": {
+  "subtitulo": "Esto es lo que sigue cuando {cliente_corto} confirme la propuesta.",
+  "asesora": {
+   "nombre": "Flavia Martínez",
+   "cargo": "Asesora comercial",
+   "correo": "fmartinez@intezia.com",
+   "telefono": "+58 414 5756615"
+  },
+  "pasos": [
+   {
+    "titulo": "Presentación en vivo",
+    "texto": "Presentamos la propuesta con quien decide por {cliente_corto}, para resolver las dudas."
+   },
+   {
+    "titulo": "Responsable y accesos",
+    "texto": "El hospital confirma quién coordina y comparte los accesos que autorice, sin datos de pacientes."
+   },
+   {
+    "titulo": "Reunión de arranque",
+    "texto": "Una hora para acordar el calendario del equipo, tras las aprobaciones internas."
+   }
+  ]
+ },
+ "supuestos": [
+  "Pedido de Ivana (27/10/2026): propuesta de Habilidades para Hospital de Clínicas Caracas con Flavia Martínez como asesora, a partir de la Ficha de Levantamiento y del contexto que redactó la asesora. Sin transcripción de la reunión (CLAUDE.md §4.23): el contexto de Flavia manda la estructura. Código CAI-067 (siguiente libre tras CAI-066), división Educación y sin alianza: los tres por confirmar con Ivana.",
+  "Cliente: hospital o clínica privada mediana (50 a 250 empleados), institución tradicional y conservadora, primer contacto, sin IA ni formación previa (la ficha dice a la vez «no usan IA» y «la usan suelta y sin criterio»: el deck dice «parte de cero»). Contacto: Samuel Jiménez (área comercial, responsable interno de logística); quién firma y quién decide aún no se sabe. El deck no nombra personas del hospital.",
+  "Qué NO se promete: un CRM (lo pidieron al inicio; Flavia aclaró que Intezia acompaña a construir y automatizar el proceso, no entrega un sistema, y que esto facilita elegir un CRM después): fuera de alcance explícito; respuesta automática directa por WhatsApp o Instagram y envío masivo de correos: dependen de canales oficiales y herramientas que el hospital contrate, se evalúan en el levantamiento sin compromiso previo (la IA propone y una persona responde o envía); reducir el retraso de ~1 día en campañas y enviar campañas sin trabajo manual: son el uso esperado a medir en el 30-60-90, no una garantía; cambios en la web: los aplica quien la administra, Intezia propone y acompaña; segmentar por servicio de ingreso, género y edad: depende de que la base tenga esos campos (se confirma en el levantamiento).",
+  "Datos de pacientes (información de salud sensible, sin política de datos): pautas básicas de manejo de datos dentro de Habilidades (módulo de Fundamentos y campañas), trabajo con datos de muestra o sin identificar y ningún dato real a la IA sin autorización. Políticas queda como complemento opcional, no como requisito, y solo se nombra como siguiente paso (Flavia). No hay regulación sectorial identificada además de la sensibilidad de los datos de salud.",
+  "Líneas de trabajo: Fundamentos de IA, atención y seguimiento de leads (WhatsApp, Instagram y web), campañas por correo con segmentación de la base de pacientes y mejora de la web de reservas. «Octubre Rosa» no se nombra en el deck (el generador avisa de los meses); se dice «campañas grandes».",
+  "Horas (Ivana, 27/10/2026: «súbela a 18 h»): 4 h de Fundamentos de IA (2 módulos de 2 h, un solo grupo de 9 personas, que la asesora pidió como «módulos iniciales» sin fijar horas) + 14 h del área comercial: levantamiento 2 h, atención y filtrado de leads 4 h, seguimiento de leads 2 h, campañas por correo 4 h y web 2 h = 18 h. La regla general de Habilidades (8 a 12 h por área hasta 5 procesos) daría 12 h al área comercial; las 2 h adicionales son pedido de Ivana y las puse en atención de leads y en campañas, que son los dos dolores principales. El reparto es mío, por confirmar. Habilidades no contempla Fundamentos y aquí se suman por pedido de Flavia, nombrados «Fundamentos de IA» (nunca «curso»).",
+  "Horas visibles (criterio de Ivana del 27/10/2026): el deck dice «horas con el equipo» en la ruta y en la hoja de inversión, nunca «horas de trabajo» ni cuántos consultores. Sin pago (facilidad de pago omitida, como en las últimas Habilidades): hoja de inversión única con campos vacíos para ventas; hoy el hospital reúne cotizaciones y el presupuesto está en evaluación.",
+  "Herramientas de IA: sin nombrar ninguna; el ecosistema (Google, Microsoft u otro) y las licencias no se conocen y se definen en el levantamiento. Nunca se promete VPN ni se menciona Claude. «Sistemas tradicionales» y hojas de cálculo: no se afirma migración de stack (§4.11).",
+  "Implementación en 2027, tras aprobaciones internas (hoy reúnen cotizaciones): el deck dice que el arranque lo fija el hospital tras sus aprobaciones, sin fechas (§4.23). Detección queda como siguiente paso cuando quieran escalar a otras áreas (Samuel: lo comercial sería la puerta de entrada); no se vende ahora porque tienen claro qué quieren y en qué área.",
+  "Sin casos de éxito, sin «curso», sin semanas, sesiones ni fechas, sin fuente en la portada ni kickoff o agenda."
+ ],
+ "pendientes": [
+  "Confirmar con Ivana el código CAI-067, la división Educación y que no hay alianza.",
+  "Confirmar los Fundamentos de IA (2 módulos de 2 h, un grupo) y el reparto de las 18 h (las 2 h adicionales sobre la regla general fueron pedido de Ivana).",
+  "Esperar las respuestas de Samuel (está de reposo): ecosistema y licencias, dónde está y en qué estado la base de pacientes, volumen de leads por canal en un mes normal y en campaña, cómo funciona la web de reservas y quién decide y quién aprueba. Flavia las reenvía si llegan antes de la propuesta.",
+  "Presentar la propuesta en vivo y sumar al decisor; pedir el segundo contacto del hospital.",
+  "Valor, descuento y total: campos vacíos para ventas; confirmar si lleva facilidad de pago (omitida).",
+  "Confirmar el teléfono y el correo de Flavia Martínez (tomados de CAI-055)."
+ ]
+}

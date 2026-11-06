@@ -1,0 +1,463 @@
+<!doctype html>
+<!--
+  Propuesta · Canguro · Servicio de Habilidades (CAI-086)
+  División: Educación · Servicio: Habilidades (§4.1a) · Alianza: no
+  GENERADO por scripts/generar-habilidades-compacto.py (plantilla 3.0 (2026-10-08), formato habilidades) desde datos.json.
+  No editar a mano: editar datos.json y regenerar. Estilos propios del deck: overrides.css.
+  Fuente del insumo: Transcripción de la reunión con Canguro (05/11/2026)
+
+  Formato compacto de 9 slides, en el orden de las preguntas del cliente (Ventas, 2026-10-07), sin semanas, sesiones
+  ni fechas (Keiber, 2026-10-08):
+    1 Portada · 2 Alcance · 3 Ruta · 4 Cómo trabajamos · 5 Entregables · 6 Retorno · 7 Impacto · 8 Inversión · 9 Próximos pasos
+  Marcadores de detección de AcroForms (agregar-campo-precio.py), por página: «Propuesta Económica» solo en la slide de
+  inversión; «Lo que se llevan» y «Entregables» solo en la de entregables; «Facilidad de pago» solo en la de pago.
+  Campos AcroForm: Programa, Notas, PrecioBase, Descuento, PrecioTotal (inversión) y Entregables, Acreditacion (entregables). Se reposicionan con scripts/customize-habilidades-compacto.py.
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Propuesta · Canguro · Intezia Educación</title>
+  <link rel="stylesheet" href="../_base/styles.css">
+  <link rel="stylesheet" href="habilidades-compacto.css">
+  <link rel="stylesheet" href="overrides.css">
+</head>
+<body>
+
+  <main class="deck">
+
+    <!-- 1 · Portada: ¿cuál es mi problema? -->
+    <section class="slide s-cover">
+      <span class="counter">01 / 09</span>
+      <div class="logo-big">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia Educación">
+      </div>
+      <div class="body">
+        <p class="eyebrow">Propuesta de proyecto · Servicio de Habilidades</p>
+        <h1 style="font-size:46px">
+          Productos en la tienda correcta,<br>
+          con IA en la cadena de suministro<br>
+          <span class="hl">de Canguro</span>
+        </h1>
+        <p class="lead">
+          Este proyecto <strong>construye con el equipo el proceso</strong> de repatriación y surtido que hoy se resuelve a mano, a partir de lo que se levante de cómo funciona hoy.
+        </p>
+        <div class="pain-strip">
+          <div class="pain-item">
+            <span class="pain-num">80 %</span>
+            <span class="pain-lbl">de la venta la generan unos 10 de cada 1.000 productos, y faltan en las tiendas que más venden.</span>
+          </div>
+          <div class="pain-item">
+            <span class="pain-num">A mano</span>
+            <span class="pain-lbl">es como los supervisores regionales repatrían hoy los productos entre tiendas.</span>
+          </div>
+          <div class="pain-item">
+            <span class="pain-num">230</span>
+            <span class="pain-lbl">tiendas, agrupadas por tamaño: las de una misma clase se tratan igual aunque no vendan igual.</span>
+          </div>
+          <div class="pain-item">
+            <span class="pain-num">Sin guía</span>
+            <span class="pain-lbl">escrita: el proceso logístico ideal no está documentado en un manual.</span>
+          </div>
+        </div>
+      </div>
+      <div class="id-line">
+        <span class="codigo">Código: CAI-086</span>
+        <span class="cliente">Canguro</span>
+      </div>
+    </section>
+
+    <!-- 2 · Alcance: qué vamos a hacer y para qué -->
+    <section class="slide s-scope roomy">
+      <span class="counter">02 / 09</span>
+      <p class="eyebrow">02 · Alcance</p>
+      <h2>El proceso de surtido y repatriación.</h2>
+      <p class="sub">Partimos de este proceso; <strong>lo que levantemos</strong> define el diseño final de cada pieza.</p>
+
+      <div class="scope-panels one" style="--np:1">
+        <div class="scope-panel acc-y">
+          <div class="scope-head">
+            <span class="scope-tag">BigQuery y Apps Script</span>
+            <span class="scope-total"><b>3</b> partes del proceso</span>
+          </div>
+          <ul class="scope-rows">
+              <li><span class="area">Levantamiento y clasificación <small class="comp">El diseño sale de lo que se levanta</small></span><span class="para">Levantar cómo se mueve hoy un producto, documentar el proceso ideal y clasificar las tiendas</span></li>
+              <li><span class="area">Surtido y repatriación <small class="comp">Según lo que se levante</small></span><span class="para">Que los productos clave no falten donde más se venden y trasladarlos sin hacerlo a mano</span></li>
+              <li><span class="area">Retorno del proceso <small class="comp">Contra el punto de partida</small></span><span class="para">Medir el tiempo, las posiciones y la venta recuperados frente al punto de partida</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="scope-out">
+        <p class="scope-card-label">Fuera de este alcance</p>
+        <ul>
+          <li>Licencias de IA y el consumo de BigQuery, si aplica: los asume Canguro, aparte de esta inversión.</li>
+          <li>Cambiar sistemas: Odoo, SimplyPost y la base de datos no se modifican; se usan los datos que entregan.</li>
+          <li>Mover la mercancía: la operación física sigue en manos del equipo de Canguro.</li>
+          <li>Otros procesos de Canguro, como comercio electrónico y finanzas: se mapean en una etapa posterior.</li>
+        </ul>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Canguro · CAI-086</span>
+      </div>
+    </section>
+
+    <!-- 3 · Ruta: qué pasa en cada fase -->
+    <section class="slide s-route">
+      <span class="counter">03 / 09</span>
+      <p class="eyebrow">03 · Ruta</p>
+      <h2>Del proceso levantado al uso.</h2>
+      <p class="sub">El calendario se acuerda en la <strong>reunión de arranque</strong>.</p>
+
+      <div class="route-grid n1" style="--cols:2; --rows:1; --rowh:214px">
+
+        <div class="rg-corner"></div>
+        <div class="rg-phase rg-ph-1">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Base</span></span>
+          <span class="rg-phase-name">Levantar el proceso y clasificar las tiendas</span>
+        </div>
+        <div class="rg-phase rg-ph-2 hi">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Uso</span></span>
+          <span class="rg-phase-name">Surtido, repatriación y tablero de retorno</span>
+        </div>
+        <div class="rg-phase rg-fu">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Garantía</span></span>
+          <span class="rg-phase-date">30, 60 y 90 días</span>
+          <span class="rg-phase-txt">Desde el cierre del proyecto</span>
+        </div>
+
+        <div class="rg-front acc-y">
+          <span class="rg-front-h">Repatriación y surtido</span>
+          <span class="rg-front-row"><span class="rg-front-tool">Entorno Google</span><b class="rg-front-n">40 horas</b></span>
+          <span class="rg-front-meta">con 5 personas, en tres partes</span>
+        </div>
+        <div class="rg-cell"><span class="rg-h solo-h"><b>16 horas con el equipo</b></span><p>Construcción, testeo y adopción: levantamiento, manual, flujo ideal y clasificación.</p></div>
+        <div class="rg-cell hi"><span class="rg-h solo-h"><b>24 horas con el equipo</b></span><p>Construcción, testeo y adopción: surtido, repatriación y tablero.</p></div>
+
+        <div class="rg-follow" style="grid-column:4; grid-row:2 / span 1">
+          <ul>
+            <li><b>30 días</b><span>Uso real del proceso</span></li>
+            <li><b>60 días</b><span>Fricciones resueltas y ajustes</span></li>
+            <li><b>90 días</b><span>Tiempo, posiciones y venta en el tablero</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="route-miles" style="grid-template-columns:repeat(4,1fr)">
+        <div class="mile"><span class="mile-d"></span><b>Arranque · aparte</b><p>Reunión de 1 h para acordar el calendario, quiénes participan y el acceso a los datos.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Proceso levantado</b><p>Cómo funciona hoy, el flujo ideal y las tiendas clasificadas; define el diseño.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Surtido y repatriación</b><p>Los productos clave y los traslados sugeridos, en uso.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Retorno a la vista</b><p>El tablero muestra el tiempo, las posiciones y la venta recuperados.</p></div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Canguro · CAI-086</span>
+      </div>
+    </section>
+
+    <!-- 4 · Cómo trabajamos: pasos, por qué en ese orden, casos reales, práctica, datos y logística -->
+    <section class="slide s-method">
+      <span class="counter">04 / 09</span>
+      <p class="eyebrow">04 · Cómo trabajamos</p>
+      <h2>Así construimos el proceso.</h2>
+      <p class="sub">Con la metodología de Habilidades: construimos, testeamos y adoptamos, sobre casos reales.</p>
+
+      <ol class="mt-steps" style="--n:4">
+          <li><b>Levantamos</b><span>Cómo se mueve hoy un producto, quién decide y con qué datos. De ahí sale el diseño.</span></li>
+          <li><b>Construimos</b><span>Cada pieza del proceso, con el equipo y sobre casos reales.</span></li>
+          <li><b>Testeamos</b><span>Probamos cada pieza con datos reales hasta que funciona.</span></li>
+          <li><b>Adoptamos</b><span>Cada persona la usa en su trabajo; seguimos a 30, 60 y 90 días.</span></li>
+      </ol>
+      <div class="mt-strips">
+        <p class="mt-why"><b>Por qué en este orden</b> Primero se levanta el proceso: lo que se encuentre define qué se construye y cómo. Después se arman el surtido y la repatriación, y al final el tablero.</p>
+        <p class="mt-who"><b>Quién construye</b> Se construye con las <strong>5 personas</strong> del equipo: <strong>Intezia guía</strong> y cada una prueba cada pieza sobre sus propios casos, dentro del entorno Google que ya usan.</p>
+      </div>
+
+      <div class="mt-info">
+        <div class="mt-card">
+          <p class="mt-card-label">Cómo funciona en la práctica</p>
+          <ul><li><b>Una persona decide.</b> La herramienta sugiere traslados y surtido; el supervisor o el comprador valida antes de ejecutar.</li><li><b>Dentro de Google.</b> Se construye con BigQuery y Apps Script, sin servidores ni programas nuevos que mantener; la herramienta de IA se define en el levantamiento.</li><li><b>Ya se ha hecho.</b> Con un cliente conectamos las ventas de caja con compras, almacén y recepción para saber qué comprar; hoy está en uso.</li></ul>
+        </div>
+        <div class="mt-card">
+          <p class="mt-card-label">Cómo cuidamos sus datos</p>
+          <p>Se trabaja con los datos que entregan BigQuery, Odoo y SimplyPost, con cuentas de la empresa y los accesos que autoriza su equipo de datos. Se validan primero con el equipo y los sistemas no se modifican.</p>
+        </div>
+      </div>
+
+      <div class="mt-logi">
+        <div class="mt-tile"><span>Modalidad</span><b>Presencial, como prefiere Canguro; un esquema mixto si hace falta.</b></div>
+        <div class="mt-tile"><span>Participantes</span><b>5 personas de Canguro que intervienen en el proceso: logística, compras y datos.</b></div>
+        <div class="mt-tile"><span>Ritmo de trabajo</span><b>Se agenda sin frenar la operación en temporada alta.</b></div>
+        <div class="mt-tile"><span>Arranque</span><b>Apenas se apruebe la propuesta; una reunión de 1 h, aparte, acuerda el calendario.</b></div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Canguro · CAI-086</span>
+      </div>
+    </section>
+
+    <!-- 5 · Entregables: ¿con qué me quedo? (catálogo + piezas transversales) -->
+    <section class="slide s-deliv roomy">
+      <span class="counter">05 / 09</span>
+      <p class="eyebrow">05 · Entregables</p>
+      <div class="deliv-head">
+        <h2>Lo que recibe Canguro.</h2>
+        <p class="deliv-sub"><span class="nw">Lo que se llevan</span>: <strong>un proceso documentado y funcionando, tiendas bien clasificadas y la capacidad instalada en su equipo</strong>, más el seguimiento a 30, 60 y 90 días.</p>
+      </div>
+
+      <div class="deliv-carriles" style="--ncols:3">
+        <span class="dc acc-y" style="grid-column: span 3">BigQuery y Apps Script</span>
+      </div>
+
+      <div class="deliv-cols" style="--ncols:3">
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">Levantamiento y clasificación</p>
+            <ul>
+              <li>Manual del proceso y flujo ideal</li>
+              <li>Clasificación de tiendas por metraje y venta</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">Surtido y repatriación</p>
+            <ul>
+              <li>Surtido de los productos clave por tienda</li>
+              <li>Repatriación sugerida entre tiendas</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">Retorno del proceso</p>
+            <ul>
+              <li>Tablero de retorno: tiempo, posiciones y venta</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="deliv-band">
+        <div class="db-card db-1">
+          <span class="db-label">Para todo el proceso</span>
+        </div>
+        <div class="db-card db-2">
+          <span class="db-label">Valor inmediato</span>
+        </div>
+      </div>
+      <!-- Cajas multiline editables (vacías en HTML: el contenido vive dentro del AcroForm /V). -->
+      <div class="multi-box db-box db-box-1" data-field="Entregables"></div>
+      <div class="multi-box db-box db-box-2" data-field="Acreditacion"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Canguro · CAI-086</span>
+      </div>
+    </section>
+
+    <!-- 6 · Retorno: ¿qué gano? (método de cálculo). Sin estudios ni citas externas. -->
+    <section class="slide s-roi">
+      <span class="counter">06 / 09</span>
+      <p class="eyebrow">06 · Retorno</p>
+      <h2>Retorno esperado: tiempo, posiciones y ventas.</h2>
+      <p class="sub">Cada indicador se mide contra el punto de partida que se registra al arrancar.</p>
+
+      <div class="roi-body">
+        <div class="roi-panel">
+          <p class="roi-panel-title">Cómo se calcula el retorno</p>
+          <ol class="roi-steps">
+            <li><b>Punto de partida</b><span>Traslados que se hacen, lo que tarda cada uno y cuántas personas lo gestionan hoy: es la línea base.</span></li>
+            <li><b>Con el proceso nuevo</b><span>Lo que tarda el mismo traslado con el flujo ideal y la sugerencia de traslados.</span></li>
+            <li><b>Horas recuperadas</b><span>Traslados al mes por la diferencia de tiempo, medidos contra la línea base.</span></li>
+            <li><b>Posiciones</b><span>Horas recuperadas entre las horas productivas de una posición: cuántas se reducen o no hace falta cubrir.</span></li>
+            <li><b>Venta recuperada</b><span>Lo que se deja de perder por faltantes: una estimación referencial, sin compromiso de resultado.</span></li>
+            <li><b>Gasto de operar</b><span>Licencias y consumo, contra el valor de lo recuperado.</span></li>
+          </ol>
+        </div>
+
+        <div class="roi-right">
+          <p class="roi-right-title">Calendario de seguimiento y medición</p>
+          <div class="roi-card">
+            <b>30 días</b>
+            <p>Desde el cierre: se confirma si el proceso se sigue usando y el punto de partida queda validado.</p>
+          </div>
+          <div class="roi-card">
+            <b>60 días</b>
+            <p>Fricciones resueltas; horas recuperadas y faltantes medidos contra el punto de partida.</p>
+          </div>
+          <div class="roi-card">
+            <b>90 días</b>
+            <p>Tablero de retorno: tiempo, posiciones y venta recuperados frente al gasto de operar.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="roi-dest-wrap">
+        <p class="roi-dest-title">Hacia dónde va el proyecto</p>
+        <div class="roi-dest">
+          <div class="rd-item"><b>Repatriación ágil</b><p>Un <strong>proceso común</strong> para mover productos entre tiendas, en vez de la gestión manual de cada supervisor.</p></div>
+          <div class="rd-item"><b>Surtido a la medida</b><p>Cada tienda con los productos que le corresponden según su <strong>metraje y su venta</strong>.</p></div>
+          <div class="rd-item"><b>Crecimiento sostenido</b><p>Una cadena de suministro que acompaña la <strong>meta de mantener</strong> el crecimiento del año siguiente.</p></div>
+        </div>
+      </div>
+
+      <div class="roi-hook"><p>Al cierre, Canguro verá en un tablero el tiempo y las posiciones recuperados, y la venta recuperada, frente al gasto de operar.</p></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Canguro · CAI-086</span>
+      </div>
+    </section>
+
+    <!-- Impacto (opcional): gráfico ilustrativo de personas y horas, hoy frente a con el proceso -->
+    <section class="slide s-imp">
+      <span class="counter">07 / 09</span>
+      <p class="eyebrow">07 · Impacto</p>
+      <h2>Una operación más eficiente con menos personas.</h2>
+      <p class="sub">El efecto de <strong>un proceso común</strong> sobre el tiempo y las posiciones del equipo que hoy gestiona traslados y surtido.</p>
+
+      <div class="imp-grid">
+      <div class="imp-card imp-hoy">
+        <p class="imp-label">Hoy</p>
+        <p class="imp-cap">Equipo que gestiona traslados y surtido</p>
+        <div class="imp-people"><svg class="p" viewBox="0 0 24 40" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M2 38V24a10 10 0 0 1 20 0v14z"/></svg><svg class="p" viewBox="0 0 24 40" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M2 38V24a10 10 0 0 1 20 0v14z"/></svg><svg class="p" viewBox="0 0 24 40" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M2 38V24a10 10 0 0 1 20 0v14z"/></svg><svg class="p" viewBox="0 0 24 40" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M2 38V24a10 10 0 0 1 20 0v14z"/></svg><svg class="p" viewBox="0 0 24 40" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M2 38V24a10 10 0 0 1 20 0v14z"/></svg><svg class="p" viewBox="0 0 24 40" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M2 38V24a10 10 0 0 1 20 0v14z"/></svg><svg class="p" viewBox="0 0 24 40" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M2 38V24a10 10 0 0 1 20 0v14z"/></svg><svg class="p" viewBox="0 0 24 40" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M2 38V24a10 10 0 0 1 20 0v14z"/></svg><svg class="p" viewBox="0 0 24 40" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M2 38V24a10 10 0 0 1 20 0v14z"/></svg><svg class="p" viewBox="0 0 24 40" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M2 38V24a10 10 0 0 1 20 0v14z"/></svg></div>
+        <p class="imp-cap">Horas del equipo</p>
+        <div class="imp-bar"><span class="seg seg-manual" style="flex:100">Todo el tiempo en trabajo manual</span></div>
+        <p class="imp-txt">Los supervisores regionales repatrían a mano y el surtido se decide sin la imagen de cada tienda.</p>
+      </div>
+      <div class="imp-arrow" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M8 24h28M26 12l12 12-12 12"/></svg></div>
+      <div class="imp-card imp-con">
+        <p class="imp-label">Con el proceso</p>
+        <p class="imp-cap">Equipo que gestiona traslados y surtido</p>
+        <div class="imp-people"><svg class="p" viewBox="0 0 24 40" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M2 38V24a10 10 0 0 1 20 0v14z"/></svg><svg class="p" viewBox="0 0 24 40" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M2 38V24a10 10 0 0 1 20 0v14z"/></svg><svg class="p" viewBox="0 0 24 40" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M2 38V24a10 10 0 0 1 20 0v14z"/></svg><svg class="p" viewBox="0 0 24 40" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M2 38V24a10 10 0 0 1 20 0v14z"/></svg><svg class="p" viewBox="0 0 24 40" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M2 38V24a10 10 0 0 1 20 0v14z"/></svg><svg class="p" viewBox="0 0 24 40" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M2 38V24a10 10 0 0 1 20 0v14z"/></svg><svg class="p lib" viewBox="0 0 24 40" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M2 38V24a10 10 0 0 1 20 0v14z"/></svg><svg class="p lib" viewBox="0 0 24 40" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M2 38V24a10 10 0 0 1 20 0v14z"/></svg><svg class="p lib" viewBox="0 0 24 40" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M2 38V24a10 10 0 0 1 20 0v14z"/></svg><svg class="p lib" viewBox="0 0 24 40" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M2 38V24a10 10 0 0 1 20 0v14z"/></svg></div>
+        <p class="imp-leg"><svg class="p lib" viewBox="0 0 24 40" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M2 38V24a10 10 0 0 1 20 0v14z"/></svg>Posiciones que se reducen o no hace falta cubrir</p>
+        <p class="imp-cap">Horas del equipo</p>
+        <div class="imp-bar"><span class="seg seg-manual" style="flex:35">Manual</span><span class="seg seg-valida" style="flex:25">Validar y decidir</span><span class="seg seg-recuperado" style="flex:40">Tiempo recuperado</span></div>
+        <p class="imp-txt">La herramienta sugiere traslados y surtido y <strong>una persona valida</strong>: la operación se sostiene con <strong>menos posiciones</strong>.</p>
+      </div>
+      </div>
+
+      <ul class="imp-msgs">
+          <li><b>Menos tiempo manual</b><span>Los traslados y el surtido se sugieren con los datos; nadie los arma a mano.</span></li>
+          <li><b>Menos posiciones</b><span>Lo que el tiempo recuperado cubre se reduce o no se contrata, y el tablero lo mide.</span></li>
+          <li><b>Crece con menos gasto</b><span>Los productos clave llegan a las tiendas que más venden, con el mismo equipo o menos.</span></li>
+        </ul>
+      <p class="imp-nota">Ilustración de proporciones: no es una medición ni la dotación de Canguro. Las cifras reales salen de la línea base que se mide al arrancar y del tablero de retorno.</p>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Canguro · CAI-086</span>
+      </div>
+    </section>
+
+    <!-- 7 · Inversión (hoja de cotización estándar; antepenúltima slide) -->
+    <section class="slide s-price">
+      <span class="counter">08 / 09</span>
+      <h2 class="title">Inversión del proyecto.</h2>
+      <p class="price-intro">Propuesta Económica · Servicio de Habilidades</p>
+
+      <div class="block">
+        <span class="block-eyebrow">Duración</span>
+        <p class="block-value"><strong>1 proceso</strong> con 5 entregables en tres partes y dos fases, con <strong>5 personas</strong> del equipo y seguimiento a 30, 60 y 90 días. <strong>40 horas</strong> de construcción, testeo y adopción.</p>
+      </div>
+
+      <div class="block block-programa">
+        <span class="block-eyebrow">Programa</span>
+      </div>
+      <div class="multi-box programa-box" data-field="Programa"></div>
+
+      <div class="block block-cotizacion">
+        <span class="block-eyebrow">Cotización</span>
+      </div>
+
+      <span class="cot-label cot-label-base">Propuesta + Inversión</span>
+      <div class="cot-frame base-frame"></div>
+
+      <span class="cot-label cot-label-discount">Descuento</span>
+      <span class="cot-sign-minus">&minus;$</span>
+      <div class="cot-frame discount-frame"></div>
+      <span class="cot-urgent-note">Descuento válido por 15 días</span>
+
+      <span class="cot-label cot-label-total">TOTAL</span>
+      <div class="cot-frame total-frame"></div>
+
+      <p class="cot-validity">Cotización válida por 60 días.</p>
+      <div class="cot-terms-box">
+        <span class="cot-terms-label">Importante</span>
+        <p class="cot-terms-text">Este servicio se presta bajo nuestros <a href="https://drive.google.com/file/d/1PA-ZSt4KnyY5dpxXzgkIk6-yfGlV2eF8/view?usp=drive_link" target="_blank" rel="noopener">términos y condiciones</a>. Al avanzar con esta propuesta, ambas partes los aceptan.</p>
+      </div>
+
+      <div class="cot-garantia-badge">
+        <span class="cot-garantia-tag">Garantía 30-60-90</span>
+        <p class="cot-garantia-text">Estamos contigo hasta que la capacidad quede instalada en tu equipo.</p>
+      </div>
+
+      <div class="block block-notes-container">
+        <span class="block-eyebrow">Notas</span>
+      </div>
+      <div class="multi-box notas-box" data-field="Notas"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Canguro · CAI-086</span>
+      </div>
+    </section>
+
+    <!-- 9 · Próximos pasos: qué hacer y a quién escribir (última slide) -->
+    <section class="slide s-next">
+      <span class="counter">09 / 09</span>
+      <p class="eyebrow">09 · Próximos pasos</p>
+      <h2>Tres pasos para arrancar.</h2>
+      <p class="sub">Esto es lo que sigue cuando Canguro confirme la propuesta.</p>
+
+      <div class="nx-steps">
+        <div class="nx-step acc-y">
+          <span class="nx-num">1</span>
+          <b>Revisión conjunta</b>
+          <p>Una reunión presencial para revisar la propuesta, aclarar dudas y ajustarla a la necesidad.</p>
+        </div>
+        <div class="nx-step acc-o">
+          <span class="nx-num">2</span>
+          <b>Participantes y accesos</b>
+          <p>Canguro nos indica quiénes participan y quién da acceso a los datos de BigQuery.</p>
+        </div>
+        <div class="nx-step acc-w">
+          <span class="nx-num">3</span>
+          <b>Reunión de arranque</b>
+          <p>Una hora para acordar el calendario y los primeros pasos.</p>
+        </div>
+      </div>
+
+      <div class="nx-contact">
+        <div class="nx-card nx-ase">
+          <span class="nx-label">¿Dudas? Escribe a tu asesora comercial</span>
+          <b class="nx-name">Verónica Rubio</b>
+          <span class="nx-role">Asesora comercial</span>
+          <p class="nx-line"><a href="mailto:vrubio01@intezia.com">vrubio01@intezia.com</a></p>
+          <p class="nx-line">+58 422 3355505</p>
+        </div>
+        <div class="nx-card nx-emp">
+          <span class="nx-label">Intezia</span>
+          <p class="nx-line">Intezia C.A J-505657950</p>
+          <p class="nx-line"><a href="mailto:servicio@intezia.com">servicio@intezia.com</a></p>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Canguro · CAI-086</span>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

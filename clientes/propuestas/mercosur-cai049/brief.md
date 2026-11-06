@@ -12,13 +12,13 @@
 - **Tipo de documento**: categoría de catálogo Capacitación In-Company (`CAI-049`), presentada al cliente como **propuesta de proyecto**; formato compacto de 8 slides (con hoja de inversión (campos de monto vacíos para ventas))
 - **Eje temático**: Nivelación en inteligencia artificial con Microsoft 365 Copilot para las 50 personas de una casa de bolsa digital, en cinco grupos por área, con ética y uso seguro de la información y un proyecto final por participante
 <!--auto:inicio-->
-- **Alcance**: 15 entregables en 5 grupos · 40 h de trabajo · seguimiento a 30, 60 y 90 días
-- **Orden de las slides**: 1 Portada · 2 Alcance · 3 Ruta · 4 Cómo trabajamos · 5 Entregables · 6 Retorno · 7 Inversión · 8 Próximos pasos
-- **Asesora comercial que ve el cliente (última slide)**: María Iribarren, Asesora comercial · miribarren@intezia.com · +58 414 0570056
+- **Alcance**: 4 entregables en 2 equipos · 20 h de trabajo · seguimiento a 30, 60 y 90 días
+- **Orden de las slides**: 1 Portada · 2 Alcance · 3 Ruta · 4 Respuesta a la solicitud (1) · 5 Cómo trabajamos · 6 Entregables · 7 Retorno · 8 Inversión · 9 Próximos pasos
+- **Asesora comercial que ve el cliente (última slide)**: María Iribarren, Directora comercial · miribarren@intezia.com · +58 414 0570056
 <!--auto:fin-->
 - **Estado**: `Borrador`
-- **Insumos (CLAUDE.md §4.23)**: no hay Ficha de Levantamiento. Se usó la minuta de la reunión (sin fecha en el deck, por indicación del usuario) y las indicaciones de la asesora (María). Donde se contradicen (composición de los grupos), el usuario confirmó la de María.
-- **fecha_arranque_deseada**: no se dio (se usa en el kickoff, no en la propuesta: la propuesta no lleva fechas, semanas ni sesiones). El kickoff es por grupo y se agenda tras la aprobación; el cliente pide fuera del horario de mercado (9:00 am a 1:00 pm), sugerido de 5:00 a 7:00 pm.
+- **Insumos (CLAUDE.md §4.23)**: no hay Ficha de Levantamiento. Reestructurada el 06/11/2026 con lo que Yuhaney (Mercosur) dijo a la asesora María en una llamada (fase 1: Operaciones y Cumplimiento, 13 personas; retoman en 2027) y la minuta original.
+- **fecha_arranque_deseada**: arranque tentativo hasta mediados de febrero de 2027 y vigencia hasta el 31 de enero de 2027 (excepción pedida por Ivana a la regla de no fechas). El cliente pide fuera del horario de mercado (9:00 am a 1:00 pm), sugerido de 5:00 a 7:00 pm.
 - **resultados_esperados**: no se dieron; sin esta respuesta no se agrega ROI, no se inventa (retorno en modo método).
 
 ## Origen y fuente

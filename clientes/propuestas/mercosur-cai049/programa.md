@@ -1,127 +1,94 @@
 # Programa interno · Mercosur · Servicio de Habilidades (CAI-049)
 
 > Documento interno (no se muestra al cliente). **Generado** por `scripts/generar-habilidades-compacto.py` desde `datos.json`: no editar a mano.
-> Fuente del insumo: Minuta de la reunión e indicaciones de la asesora: casa de bolsa de 50 personas en 8 unidades, nivelación en Copilot en 5 grupos por área de máximo 12 personas, 8 h por grupo, presencial y fuera del horario de mercado.
+> Fuente del insumo: Llamada de la asesora con Mercosur (06/11/2026) y minuta de la reunión original: casa de bolsa de 50 personas en 8 unidades; fase 1 en Operaciones (4) y Cumplimiento (9), presencial y fuera del horario de mercado.
 
 ## 1. Resumen
 
-- **15 entregables en 5 grupos**, **40 h** de trabajo, más seguimiento a 30, 60 y 90 días.
-- Herramienta **Microsoft 365 Copilot**: 15 entregables, 40 h.
-- Horas por fase: F1 10 h (5 sol.) · F2 20 h (5 sol.) · F3 10 h (5 sol.).
+- **4 entregables en 2 equipos**, **20 h** de trabajo, más seguimiento a 30, 60 y 90 días.
+- Herramienta **Microsoft 365 Copilot**: 4 entregables, 20 h.
+- Horas por fase: F1 4 h (2 sol.) · F2 16 h (2 sol.).
 
 ## 2. Líneas de trabajo y ruta
 
 | Línea de trabajo | Herramienta | Áreas | Horas | Soluciones |
 |---|---|---|---|---|
-| Nivelación en IA por grupos | Microsoft 365 Copilot | Atención al cliente, Tecnología, Mercadeo y áreas administrativas, Operaciones y Cumplimiento, Negocios | 40 | 15 |
+| Operaciones y Cumplimiento | Microsoft 365 Copilot | Operaciones, Cumplimiento | 20 | 4 |
 
 Sin semanas ni sesiones en la propuesta: el calendario se acuerda en la reunión de arranque (Brief de Kickoff, CLAUDE.md §12).
 
-| Línea de trabajo | Bases (qué es la IA y uso seguro de la información) | Taller (Copilot con tareas reales de cada grupo) | Cierre (proyecto final de cada participante) |
-|---|---|---|---|
-| Nivelación en IA por grupos | 10 h · 5 sol. | 20 h · 5 sol. | 10 h · 5 sol. |
+| Línea de trabajo | Mapeo inicial (mapear las tareas y procesos de cada equipo) | Construcción (una solución en Copilot, en uso, por equipo) |
+|---|---|---|
+| Operaciones y Cumplimiento | 4 h · 2 sol. | 16 h · 2 sol. |
 
-- **Kickoff con cada grupo**: Las prácticas se ajustan a las tareas reales de cada área.
-- **IA y uso seguro**: Cada grupo entiende qué es la IA y qué información puede subir.
-- **Práctica con Copilot**: Cada grupo resuelve tareas reales de su trabajo en Copilot.
-- **Proyecto final**: Cada participante entrega su proyecto como evidencia de lo aprendido.
-- **30 · 60 · 90 días**: Seguimiento del uso real y del tiempo recuperado.
+- **Reunión de arranque**: Se acuerdan el calendario, quién coordina y quién forma cada equipo.
+- **Mapeo inicial**: 2 h con cada equipo: cómo trabajan hoy y dónde se pierde tiempo.
+- **Prioridades**: La solución de cada equipo, según lo que muestre el mapeo.
+- **Soluciones**: 8 h con cada equipo: la solución, probada y en uso.
+- **30 · 60 · 90 días**: Seguimiento: uso de las soluciones, ajustes y tiempo recuperado.
 
 ## 3. Soluciones y horas (C = construcción, T = pruebas, A = adopción)
 
-### Atención al cliente · 3 entregables · 8 h · Microsoft 365 Copilot · línea A
+### Operaciones · 2 entregables · 10 h · Microsoft 365 Copilot · línea A
 
-Para qué (lo que ve el cliente): Responder a los clientes con más rapidez y consistencia, usando Copilot con criterio.
-
-| ID | Entregable (nombre en el deck) | Detalle de la fuente | C | T | A | Total | Fase |
-|---|---|---|---|---|---|---|---|
-| ATE-1 | IA sin miedo y uso seguro de datos | Qué es la IA y qué no es, para quitar el miedo; ética y uso seguro de la información (qué se puede subir a Copilot y cómo hacerlo sin poner datos en riesgo). | - | - | - | 2 | F1 |
-| ATE-2 | Práctica con Copilot en su trabajo (incluye: Respuestas claras y consistentes a consultas frecuentes; Resumir un caso largo antes de pasarlo a otra área; Mensajes de seguimiento al cliente en Outlook y Teams) | Prácticas sugeridas para atención al cliente: respuestas a consultas frecuentes, resumen de casos largos y mensajes de seguimiento. Se ajustan en el kickoff con el grupo. | - | - | - | 4 | F2 |
-| ATE-3 | Proyecto final de cada participante | Cada participante entrega un proyecto final que aplica Copilot a una tarea real de su trabajo, como evidencia de que entendió y aplica lo aprendido. | - | - | - | 2 | F3 |
-
-### Tecnología · 3 entregables · 8 h · Microsoft 365 Copilot · línea A
-
-Para qué (lo que ve el cliente): Documentar, analizar y resolver mejor su trabajo técnico con Copilot.
+Para qué (lo que ve el cliente): Agilizar el seguimiento de procesos y reportes con Copilot.
 
 | ID | Entregable (nombre en el deck) | Detalle de la fuente | C | T | A | Total | Fase |
 |---|---|---|---|---|---|---|---|
-| TEC-1 | IA sin miedo y uso seguro de datos | Qué es la IA y qué no es, para quitar el miedo; ética y uso seguro de la información (qué se puede subir a Copilot y cómo hacerlo sin poner datos en riesgo). Con lenguaje técnico. | - | - | - | 2 | F1 |
-| TEC-2 | Práctica con Copilot en su trabajo (incluye: Documentar sistemas y procedimientos técnicos en Word; Analizar y resumir reportes de incidentes con criterio; Explicar un tema técnico a otras áreas, en lenguaje claro; Tareas repetidas con datos en Excel, con Copilot) | Prácticas sugeridas para el grupo de Tecnología, con lenguaje técnico: documentación, análisis de incidentes, comunicación a otras áreas y tareas con datos. Se ajustan en el kickoff con el grupo. | - | - | - | 4 | F2 |
-| TEC-3 | Proyecto final de cada participante | Cada participante entrega un proyecto final que aplica Copilot a una tarea real de su trabajo, como evidencia de que entendió y aplica lo aprendido. | - | - | - | 2 | F3 |
+| OPE-1 | Mapeo inicial de Operaciones (incluye: Qué tareas y reportes del equipo consumen más tiempo; Qué información usa y cuál no debe subirse a la IA) | Dos horas con el equipo de Operaciones (4 personas). Se mapea cómo se trabaja hoy: tareas, quién las hace, con qué herramientas y datos, y dónde se pierde tiempo; qué información puede subirse a Copilot y cuál no. Con el mapeo se prioriza la solución del equipo. Entrega el diagnóstico de sus tareas y procesos. | - | - | - | 2 | F1 |
+| OPE-2 | Solución de Operaciones, construida con Copilot (incluye: La que el mapeo prioriza para el equipo; Construida en Copilot y probada con casos reales) | Ocho horas de construcción, testeo y adopción con el equipo de Operaciones (4 de construcción, 2 de testeo y 2 de adopción). Se construye en Copilot lo que el mapeo priorizó, se prueba con casos reales del equipo y el equipo lo adopta. No se define antes del mapeo. Entrega la solución funcionando y en uso. | 4 | 2 | 2 | 8 | F2 |
 
-### Mercadeo y áreas administrativas · 3 entregables · 8 h · Microsoft 365 Copilot · línea A
+### Cumplimiento · 2 entregables · 10 h · Microsoft 365 Copilot · línea A
 
-Para qué (lo que ve el cliente): Ahorrar tiempo en reportes, comunicaciones y documentos de cada área con Copilot.
-
-| ID | Entregable (nombre en el deck) | Detalle de la fuente | C | T | A | Total | Fase |
-|---|---|---|---|---|---|---|---|
-| ADM-1 | IA sin miedo y uso seguro de datos | Qué es la IA y qué no es, para quitar el miedo; ética y uso seguro de la información (qué se puede subir a Copilot y cómo hacerlo sin poner datos en riesgo). | - | - | - | 2 | F1 |
-| ADM-2 | Práctica con Copilot en su trabajo (incluye: Revisar y analizar hojas de cálculo en Excel; Borradores de contenidos y comunicaciones en Word y Outlook; Resúmenes de reuniones y seguimiento de acuerdos en Teams) | Prácticas sugeridas para Mercadeo, Contabilidad, Administración y Talento Humano: análisis en Excel, borradores en Word y Outlook, y resúmenes de reuniones. Se ajustan en el kickoff con el grupo. | - | - | - | 4 | F2 |
-| ADM-3 | Proyecto final de cada participante | Cada participante entrega un proyecto final que aplica Copilot a una tarea real de su trabajo, como evidencia de que entendió y aplica lo aprendido. | - | - | - | 2 | F3 |
-
-### Operaciones y Cumplimiento · 3 entregables · 8 h · Microsoft 365 Copilot · línea A
-
-Para qué (lo que ve el cliente): Agilizar el seguimiento de procesos, reportes y controles con Copilot.
+Para qué (lo que ve el cliente): Agilizar la revisión de normativas, controles y reportes con Copilot.
 
 | ID | Entregable (nombre en el deck) | Detalle de la fuente | C | T | A | Total | Fase |
 |---|---|---|---|---|---|---|---|
-| OPE-1 | IA sin miedo y uso seguro de datos | Qué es la IA y qué no es, para quitar el miedo; ética y uso seguro de la información (qué se puede subir a Copilot y cómo hacerlo sin poner datos en riesgo). | - | - | - | 2 | F1 |
-| OPE-2 | Práctica con Copilot en su trabajo (incluye: Resumir normativas y documentos extensos para consulta rápida; Reportes de seguimiento de operaciones en Excel y Word; Listas de verificación y procedimientos paso a paso) | Prácticas sugeridas para Operaciones y Cumplimiento: resumen de documentos extensos, reportes de seguimiento y procedimientos. Se ajustan en el kickoff con el grupo. | - | - | - | 4 | F2 |
-| OPE-3 | Proyecto final de cada participante | Cada participante entrega un proyecto final que aplica Copilot a una tarea real de su trabajo, como evidencia de que entendió y aplica lo aprendido. | - | - | - | 2 | F3 |
-
-### Negocios · 3 entregables · 8 h · Microsoft 365 Copilot · línea A
-
-Para qué (lo que ve el cliente): Profundizar en Copilot para analizar información y preparar propuestas con criterio.
-
-| ID | Entregable (nombre en el deck) | Detalle de la fuente | C | T | A | Total | Fase |
-|---|---|---|---|---|---|---|---|
-| NEG-1 | IA sin miedo y uso seguro de datos | Qué es la IA y qué no es, para quitar el miedo; ética y uso seguro de la información (qué se puede subir a Copilot y cómo hacerlo sin poner datos en riesgo). | - | - | - | 2 | F1 |
-| NEG-2 | Práctica con Copilot en su trabajo (incluye: Analizar datos y escenarios en Excel con más profundidad; Informes y presentaciones de resultados para la gerencia; Preparar reuniones y resumir lo acordado en Teams) | Prácticas sugeridas para Negocios, con un uso más avanzado: análisis de datos, informes y presentaciones, y preparación de reuniones. Se ajustan en el kickoff con el grupo. | - | - | - | 4 | F2 |
-| NEG-3 | Proyecto final de cada participante | Cada participante entrega un proyecto final que aplica Copilot a una tarea real de su trabajo, como evidencia de que entendió y aplica lo aprendido. | - | - | - | 2 | F3 |
+| CUM-1 | Mapeo inicial de Cumplimiento (incluye: Qué normativas, controles y reportes toman más tiempo; Qué información usa y cuál no debe subirse a la IA) | Dos horas con el equipo de Cumplimiento (9 personas). Se mapea cómo se trabaja hoy: tareas, quién las hace, con qué herramientas y datos, y dónde se pierde tiempo; qué información puede subirse a Copilot y cuál no. Con el mapeo se prioriza la solución del equipo. Entrega el diagnóstico de sus tareas y procesos. | - | - | - | 2 | F1 |
+| CUM-2 | Solución de Cumplimiento, construida con Copilot (incluye: La que el mapeo prioriza para el equipo; Construida en Copilot y probada con casos reales) | Ocho horas de construcción, testeo y adopción con el equipo de Cumplimiento (4 de construcción, 2 de testeo y 2 de adopción). Se construye en Copilot lo que el mapeo priorizó, se prueba con casos reales del equipo y el equipo lo adopta. No se define antes del mapeo. Entrega la solución funcionando y en uso. | 4 | 2 | 2 | 8 | F2 |
 
 ## 4. Fuera de alcance
 
-- Grupos de más de 12 personas: es la capacidad de la sala y, si hay más, se añaden horas a la propuesta.
+- Las fases siguientes: se ven en la ruta de fases y se cotizan aparte.
 - Las licencias de Microsoft 365 Copilot: ya las tiene Mercosur y no forman parte de esta inversión.
-- La redacción de una política de uso de IA: aquí se enseña el uso seguro y la política se trabaja aparte.
+- Cambios grandes en el número de personas: se revisan las horas antes de arrancar.
 
 ## 5. Supuestos a confirmar (antes del método)
 
-- Fuentes: minuta de la reunión con Mercosur, indicaciones de la asesora (María) y respuestas del usuario del 13/10/2026. División Educación, servicio Habilidades, sin alianza, código CAI-049. Por indicación del usuario, la propuesta no lleva fecha de la reunión ni de nada.
-- Composición de los 5 grupos según María (confirmada por el usuario): Atención al cliente; Tecnología; Mercadeo, Contabilidad, Administración y Talento Humano; Operaciones y Cumplimiento; Negocios. La minuta traía otra (Cumplimiento solo; Clientes personales con Operaciones y Negocios) y Talento Humano no aparecía: manda la de María.
-- 8 h por grupo para los 5 (decisión del usuario; María hablaba de 6 a 8 h): 2 h de IA y uso seguro, 4 h de práctica con Copilot y 2 h de proyecto final, 40 h en total. Interno para el kickoff: sesiones presenciales de 2 h (4 por grupo), horario sugerido de 5:00 a 7:00 pm por confirmar, fuera del horario de mercado (9:00 am a 1:00 pm). Nada de esto va en el deck (§4.23).
-- Máximo 12 personas por grupo (capacidad de la sala; no hay computadoras para todos). Si un grupo pasa de 12, se añaden horas: el deck lo aclara en el alcance, la logística y la inversión. No se conoce el número de personas por grupo; Atención al cliente es el más grande y podría superar las 12. Tecnología son 5 personas y un equipo externo pequeño: por confirmar si participa.
-- Herramienta: Microsoft 365 Copilot en los 5 grupos (el usuario confirmó que tienen la licencia), incluido Negocios, que ya usa Claude a nivel avanzado (no se menciona). No hay licencias adicionales: el cliente no puede pagar una suscripción extra.
-- Fuera de la propuesta por indicación del usuario: la automatización de la nómina de RRHH (la minuta pedía incluirla, con licencia de Claude y conector de Excel), el borrador de políticas de uso de IA y los valores. El kit de onboarding de la minuta se cubre con los workbooks. En el deck solo se aclara que la política de uso se trabaja aparte.
-- Sin facilidad de pago (omitir: pago), por indicación del usuario. El seguimiento a 30, 60 y 90 días va incluido; se dejó la garantía 30-60-90 estándar de Habilidades porque el usuario dijo «sí coloca el seguimiento»: confirmar si va como garantía o solo como medición.
-- Los tres datos de la portada salen de la minuta y de María, sin la fecha de la reunión y sin los incidentes con pasantes que suben documentos (indicación del usuario). La cita del líder de Tecnología no se usa.
-- Las prácticas sugeridas de cada grupo las propuso el sistema para mostrar el tipo de trabajo (Word, Excel, Outlook y Teams con Copilot): no salen de tareas confirmadas por el cliente y se ajustan en el kickoff con cada grupo.
-- Retorno en modo método: no hay datos del cliente (volúmenes, tiempos ni valor de la hora). La cifra de la nómina de RRHH (un día frente a unas 3 horas) no se usa.
-- Asesora: María Iribarren, con los datos de la CAI-045 (confirmados por el usuario).
+- Pedido de Ivana (06/11/2026): reestructurar la CAI-049 de Mercosur según lo que dijo Yuhaney a la asesora María en la llamada. Mercosur no aprueba este trimestre (para no sumar gasto a los de fin de año) y retoma la propuesta en 2027: enero es su mes de planificación, cada unidad entrega su plan semestral y ahí se aprueban los proyectos. Se ofreció mantener las condiciones con un arranque tentativo hasta mediados de febrero de 2027. Vigencia hasta el 31 de enero de 2027.
+- Ya no es para el personal completo: se hace por orden de necesidad. Fase 1: Operaciones (4 personas) y Cumplimiento (9), 13 en total; el número puede variar un poco hasta enero o febrero. Según el resultado del mapeo inicial deciden dónde seguir y quieren poder repartir el presupuesto en varias partes. Antes eran 5 grupos por área, 50 personas y 40 h; las 8 unidades y las 50 personas siguen en las fases siguientes.
+- Esquema (propuesta de María, tomada de otro cliente): 2 h de mapeo inicial con cada equipo («mapeo inicial» es la palabra de la clienta) y 8 h de construcción con cada equipo sobre lo que salga del mapeo, con Copilot = 10 h por equipo y 20 h en total (4 h de mapeo + 16 h de construcción). Las 8 h se reparten 4 de construcción, 2 de testeo y 2 de adopción, como en Habilidades; María preguntó si conviene ajustar horas: por confirmar. Sin horas de trabajo ni cantidad de consultores (§4.23): se muestran solo las horas con los equipos.
+- Operaciones y Cumplimiento pasan de un solo grupo a dos equipos con sus 10 h cada uno (antes compartían 8 h). La nivelación en IA de 2 h por grupo y el proyecto final por participante salen: ahora se mapea y se construye. El workbook y las prácticas sugeridas también salen de los entregables.
+- Fechas (excepción pedida por Ivana a la regla de Keiber, §4.23): el arranque tentativo hasta mediados de febrero de 2027 va en logística y en los próximos pasos; la vigencia («Cotización válida hasta el 31 de enero de 2027») va en la hoja de inversión con la opción nueva `inversion.validez_hasta` del generador. El calendario de encuentros sigue sin fijarse: se acuerda en el arranque.
+- Página de fases siguientes (pedida por María): una lámina «Fases siguientes» (opción respuesta_solicitud del generador, `despues_de: ruta`) con Atención al cliente, Tecnología, Mercadeo, Contabilidad, Administración y Talento Humano (como un solo equipo, composición de la propuesta original) y Negocios, sin montos y sin orden fijo (el orden lo decide Mercosur con el mapeo). María los listó seguidos, sin precisar si Mercadeo, Contabilidad, Administración y Talento Humano son uno o varios equipos: confirmar. Para meterlo completo en su planificación.
+- Herramienta: Microsoft 365 Copilot (ya tienen la licencia; sin licencias adicionales). Sin facilidad de pago (omitir: pago). Seguimiento 30-60-90 como garantía, igual que la versión anterior; confirmar. Retorno en modo método (sin datos del cliente).
+- Fuera de la propuesta (como antes): la automatización de la nómina de RRHH y la redacción de una política de uso de IA. Los incidentes con pasantes y la cita del líder de Tecnología no se usan.
+- Asesora: María Iribarren con el cargo de directora comercial (Ivana, 19/10/2026; antes figuraba como asesora comercial).
 
-## 6. Cómo trabajamos (slide 4)
+## 6. Cómo trabajamos (slide 5)
 
-**Por qué en este orden:** Primero se quita el miedo y se fijan las reglas de uso seguro; después se practica con tareas reales de cada grupo; al final cada persona demuestra lo aprendido.
+**Por qué en este orden:** Primero se mapea cada equipo; después se construye lo que el mapeo respalda, porque no se sabe de antemano qué conviene resolver primero.
 
-- **Ajustamos**: En el kickoff con cada grupo se adaptan las prácticas a sus tareas reales.
-- **Aprendemos**: Qué es la IA y qué no es, y cómo usar la información de forma segura.
-- **Practicamos**: Con Copilot, en Word, Excel, Outlook y Teams, sobre tareas reales del grupo.
-- **Medimos**: Cada participante entrega su proyecto final y medimos el efecto a 30, 60 y 90 días.
+- **Mapeamos**: Las tareas y los procesos reales de cada equipo, en el mapeo inicial.
+- **Construimos**: Con lo mapeado, la solución de cada equipo en Copilot.
+- **Testeamos**: Probamos cada solución con casos reales hasta que funciona.
+- **Adoptamos**: Cada equipo la usa en su trabajo; seguimos a 30, 60 y 90 días.
 
-- En la práctica, **Un grupo por área**: No se mezclan áreas: cada grupo practica con tareas de su trabajo. Tecnología usa lenguaje técnico.
-- En la práctica, **Prácticas sugeridas**: Las de esta propuesta muestran el tipo de trabajo. Se ajustan con cada grupo en el kickoff.
-- En la práctica, **Workbook para quedarse**: Lo visto en vivo queda en un workbook, útil también para el personal nuevo.
-- Datos: Los grupos aprenden qué información puede subirse a Copilot y cuál no. Los casos de práctica usan tareas reales que cada área elige, con la información que Mercosur autorice.
+- En la práctica, **Horas por equipo**: 2 h de mapeo inicial y 8 h de construcción, testeo y adopción por equipo, con quienes hacen el trabajo.
+- En la práctica, **Lo decide el mapeo**: Qué se construye en cada equipo sale del mapeo, no se define antes.
+- En la práctica, **Fase por fase**: Con el resultado del mapeo, Mercosur decide en qué equipo seguir.
+- Datos: Se trabaja con casos reales de cada equipo y con la información que Mercosur autorice. Qué datos pueden subirse a Copilot y cuáles no se define en el mapeo, y los sistemas no se modifican.
+- Quién construye: Se construye con las personas de cada equipo: Intezia guía y el equipo queda con la capacidad de sostener y ampliar lo construido.
 
-**Logística:** modalidad: Presencial, en las oficinas de Mercosur. · participantes: 50 personas en 5 grupos de máximo 12; con más personas por grupo, se añaden horas a la propuesta. · ritmo: Fuera del horario de mercado, en una franja que se confirma con Mercosur. · arranque: El kickoff con cada grupo adapta las prácticas a sus tareas reales..
+**Logística:** modalidad: Presencial, en las oficinas de Mercosur. · participantes: 13 personas: 4 de Operaciones y 9 de Cumplimiento; el número puede variar hasta el arranque. · ritmo: Fuera del horario de mercado, en una franja que se confirma con Mercosur. · arranque: Tentativo, hasta mediados de febrero de 2027; la fecha exacta se acuerda en la reunión de arranque..
 
-## 7. Retorno esperado (slide 6)
+## 7. Retorno esperado (slide 7)
 
 Modo **metodo**. La slide no cita estudios ni referencias de la web ni promete retorno.
 
-Pasos del método: Tareas elegidas; Tiempo antes; Tiempo después; Horas recuperadas; Valor del tiempo.
+Pasos del método: Tareas del mapeo; Tiempo antes; Tiempo después; Horas recuperadas; Valor del tiempo.
 
-## 8. Próximos pasos (slide 8)
+## 8. Próximos pasos (slide 9)
 
-Asesora comercial que ve el cliente: María Iribarren, Asesora comercial · miribarren@intezia.com · +58 414 0570056.
+Asesora comercial que ve el cliente: María Iribarren, Directora comercial · miribarren@intezia.com · +58 414 0570056.
 

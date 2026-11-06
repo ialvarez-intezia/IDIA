@@ -52,3 +52,11 @@ Un grupo de **4 mujeres profesionales independientes** que operan dentro de una 
 - Sin consultor nominado en la slide de Beneficios (Equipo Education presentado de forma genérica).
 - Slide de Impacto con datos de estudios reales citados (Stanford HAI AI Index 2026, McKinsey State of AI 2025, Anthropic Economic Index 2025).
 - No se afirma que Meru migra de stack: Claude es la herramienta que **ya pagan** y subutilizan; Gemini queda como complemento (§4.11).
+
+## Rehecha al formato compacto v3 (2026-11-03)
+
+- Pedido de Ivana: llevar CAP-056 al formato nuevo. El deck canónico de 16 slides (enviado el 2026-06-12) quedó en `_anterior-16-slides/` (index.html, acroforms.json, overrides.css y PDF). La fuente del deck nuevo es `datos.json` (se edita ahí y se regenera); el diseño curricular completo (módulos, temas y desglose instructivo) sigue en `programa-curricular.md`.
+- Los 6 módulos de 2 h se reexpresan como 6 módulos de 12 h en total, con dos entregables de 1 h por módulo; sin sesiones ni semanas (§4.23).
+- Sin VPN, sin Venezuela y sin riesgo de acceso en el deck (regla de Ivana). El módulo I queda como entorno técnico: cuenta, app, equipo y tokens.
+- Añadidos del formato: seguimiento 30-60-90, retorno en modo método, hoja de inversión sin facilidad de pago, contacto de María Iribarren como directora comercial. Quitados: slide de Impacto con estudios y bloque de Equipo facilitador.
+- Estado: «En corrección» (la propuesta original ya se había enviado el 2026-06-12). Pendientes: ver `datos.json → pendientes`.

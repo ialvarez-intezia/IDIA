@@ -1,0 +1,428 @@
+<!doctype html>
+<!--
+  Propuesta · Diktherion · Servicio de Habilidades (CAI-072)
+  División: Educación · Servicio: Habilidades (§4.1a) · Alianza: no
+  GENERADO por scripts/generar-habilidades-compacto.py (plantilla 3.0 (2026-10-08), formato habilidades) desde datos.json.
+  No editar a mano: editar datos.json y regenerar. Estilos propios del deck: overrides.css.
+  Fuente del insumo: Ficha de Levantamiento (28/10/2026) y transcripción de la reunión de Verónica Rubio con Diktherion (28/10/2026)
+
+  Formato compacto de 8 slides, en el orden de las preguntas del cliente (Ventas, 2026-10-07), sin semanas, sesiones
+  ni fechas (Keiber, 2026-10-08):
+    1 Portada · 2 Alcance · 3 Ruta · 4 Cómo trabajamos · 5 Entregables · 6 Retorno · 7 Inversión · 8 Próximos pasos
+  Marcadores de detección de AcroForms (agregar-campo-precio.py), por página: «Propuesta Económica» solo en la slide de
+  inversión; «Lo que se llevan» y «Entregables» solo en la de entregables; «Facilidad de pago» solo en la de pago.
+  Campos AcroForm: Programa, Notas, PrecioBase, Descuento, PrecioTotal (inversión) y Entregables, Acreditacion (entregables). Se reposicionan con scripts/customize-habilidades-compacto.py.
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Propuesta · Diktherion · Intezia Educación</title>
+  <link rel="stylesheet" href="../_base/styles.css">
+  <link rel="stylesheet" href="habilidades-compacto.css">
+  <link rel="stylesheet" href="overrides.css">
+</head>
+<body>
+
+  <main class="deck">
+
+    <!-- 1 · Portada: ¿cuál es mi problema? -->
+    <section class="slide s-cover">
+      <span class="counter">01 / 08</span>
+      <div class="logo-big">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia Educación">
+      </div>
+      <div class="body">
+        <p class="eyebrow">Propuesta de proyecto · Servicio de Habilidades</p>
+        <h1 style="font-size:46px">
+          Orden y seguimiento de causas<br>
+          con IA en el equipo jurídico<br>
+          <span class="hl">de Diktherion</span>
+        </h1>
+        <p class="lead">
+          Este proyecto nivela al equipo en Claude y construye con él el <strong>orden de la documentación</strong>, el <strong>seguimiento de causas</strong> y una forma común de <strong>investigar y redactar</strong>, hasta dejarlos en uso.
+        </p>
+        <div class="pain-strip">
+          <div class="pain-item">
+            <span class="pain-num">8</span>
+            <span class="pain-lbl">abogados llevan sus causas en hojas de cálculo, sin un lugar donde ver el estatus de cada una.</span>
+          </div>
+          <div class="pain-item">
+            <span class="pain-num">Diaria</span>
+            <span class="pain-lbl">es la frecuencia con que se registra a mano la documentación de las causas y los clientes.</span>
+          </div>
+          <div class="pain-item">
+            <span class="pain-num">5</span>
+            <span class="pain-lbl">herramientas de IA usa hoy un socio para investigar, sin un criterio común en el equipo.</span>
+          </div>
+        </div>
+        <p class="pain-src">Fuente: datos declarados por Diktherion en el levantamiento con Intezia.</p>
+      </div>
+      <div class="id-line">
+        <span class="codigo">Código: CAI-072</span>
+        <span class="cliente">Diktherion</span>
+      </div>
+    </section>
+
+    <!-- 2 · Alcance: qué vamos a hacer y para qué -->
+    <section class="slide s-scope roomy">
+      <span class="counter">02 / 08</span>
+      <p class="eyebrow">02 · Alcance</p>
+      <h2>Tres líneas de trabajo del equipo jurídico.</h2>
+      <p class="sub">Nivelamos al equipo en Claude, medimos cómo se trabaja hoy y construimos el <strong>orden de las causas</strong> y su <strong>seguimiento</strong>.</p>
+
+      <div class="scope-panels one" style="--np:1">
+        <div class="scope-panel acc-y">
+          <div class="scope-head">
+            <span class="scope-tag">Herramientas de IA del equipo jurídico</span>
+            <span class="scope-total"><b>3</b> líneas de trabajo</span>
+          </div>
+          <ul class="scope-rows">
+              <li><span class="area">Fundamentos de Claude</span><span class="para">Nivelar al equipo en Claude para que participe en la construcción y luego la sostenga</span></li>
+              <li><span class="area">Levantamiento por especialidad</span><span class="para">Medir cómo se trabaja hoy cada causa y definir qué construir primero</span></li>
+              <li><span class="area">Documentación y seguimiento de causas</span><span class="para">Ordenar los documentos, ver el estatus de cada causa y investigar con criterio común</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="scope-facts">
+        <p class="scope-card-label">Lo que se mide desde el primer día</p>
+        <ul>
+          <li><b>Registro de causas</b><span>Cuánto toma registrar y ordenar la documentación de cada causa.</span></li>
+          <li><b>Estatus a la vista</b><span>Cuánto tardan los socios en saber en qué punto está cada causa.</span></li>
+          <li><b>Consulta y redacción</b><span>Cuánto toma una consulta jurídica y su redacción, contra el punto de partida.</span></li>
+          <li><b>Uso del equipo</b><span>Quién usa Claude y las herramientas a los 30, 60 y 90 días.</span></li>
+        </ul>
+      </div>
+
+      <div class="scope-out">
+        <p class="scope-card-label">Fuera de este alcance</p>
+        <ul>
+          <li>El proceso legal: está reglamentado por ley; se trabaja la gestión alrededor de la causa.</li>
+          <li>Un sistema de gestión de causas o integraciones externas: es software aparte.</li>
+          <li>Licencias de Claude: las contrata Diktherion y van aparte de esta inversión.</li>
+          <li>Sustituir el criterio jurídico: un abogado revisa y firma cada documento.</li>
+        </ul>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Diktherion · CAI-072</span>
+      </div>
+    </section>
+
+    <!-- 3 · Ruta: qué pasa en cada fase -->
+    <section class="slide s-route">
+      <span class="counter">03 / 08</span>
+      <p class="eyebrow">03 · Ruta</p>
+      <h2>De la nivelación a las herramientas en uso.</h2>
+      <p class="sub">El calendario se acuerda en la <strong>reunión de arranque</strong>, con resultados pensados para el corto plazo.</p>
+
+      <div class="route-grid n1" style="--cols:2; --rows:1; --rowh:214px">
+
+        <div class="rg-corner"></div>
+        <div class="rg-phase rg-ph-1">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Nivelación y levantamiento</span></span>
+          <span class="rg-phase-name">Equipo nivelado y punto de partida medido</span>
+        </div>
+        <div class="rg-phase rg-ph-2 hi">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Construcción</span></span>
+          <span class="rg-phase-name">Herramientas construidas con el equipo y en uso</span>
+        </div>
+        <div class="rg-phase rg-fu">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Garantía</span></span>
+          <span class="rg-phase-date">30, 60 y 90 días</span>
+          <span class="rg-phase-txt">Desde el cierre de cada línea</span>
+        </div>
+
+        <div class="rg-front acc-y">
+          <span class="rg-front-h">Equipo jurídico</span>
+          <span class="rg-front-row"><span class="rg-front-tool">IA jurídica</span><b class="rg-front-n">20 horas</b></span>
+          <span class="rg-front-meta">con el equipo</span>
+        </div>
+        <div class="rg-cell"><span class="rg-h solo-h"><b>8 horas con el equipo</b></span><p>Claude y levantamiento de las siete especialidades.</p></div>
+        <div class="rg-cell hi"><span class="rg-h solo-h"><b>12 horas con el equipo</b></span><p>Documentación, seguimiento de causas e investigación jurídica, en uso.</p></div>
+
+        <div class="rg-follow" style="grid-column:4; grid-row:2 / span 1">
+          <ul>
+            <li><b>30 días</b><span>Uso de Claude y de las herramientas</span></li>
+            <li><b>60 días</b><span>Ajustes y nuevas construcciones</span></li>
+            <li><b>90 días</b><span>Documentación y seguimiento medidos</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="route-miles" style="grid-template-columns:repeat(4,1fr)">
+        <div class="mile"><span class="mile-d"></span><b>Arranque · aparte</b><p>Reunión de 1 h para acordar el calendario, quiénes participan y quién coordina por Diktherion.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Nivelación y levantamiento</b><p>Claude y el punto de partida de cómo se trabaja cada causa hoy.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Herramientas en uso</b><p>Documentación, seguimiento de causas e investigación jurídica.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>30 · 60 · 90 días</b><p>Seguimiento: uso de las herramientas, ajustes y avances medidos.</p></div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Diktherion · CAI-072</span>
+      </div>
+    </section>
+
+    <!-- 4 · Cómo trabajamos: pasos, por qué en ese orden, casos reales, práctica, datos y logística -->
+    <section class="slide s-method">
+      <span class="counter">04 / 08</span>
+      <p class="eyebrow">04 · Cómo trabajamos</p>
+      <h2>Así construimos cada herramienta.</h2>
+      <p class="sub">Primero se nivela al equipo y se mide dónde está cada proceso; después se construye con él, que aprende a sostenerlo.</p>
+
+      <ol class="mt-steps" style="--n:4">
+          <li><b>Nivelamos</b><span>Claude para que el equipo llegue con un criterio común.</span></li>
+          <li><b>Medimos</b><span>Cómo se registra, se sigue y se investiga cada causa hoy.</span></li>
+          <li><b>Construimos</b><span>Con el equipo, cada herramienta, sobre casos reales.</span></li>
+          <li><b>Seguimos</b><span>Uso, ajustes y resultados, a 30, 60 y 90 días.</span></li>
+      </ol>
+      <div class="mt-strips">
+        <p class="mt-why"><b>Por qué en este orden</b> Primero se nivela al equipo en Claude y se mide cómo se trabaja hoy; después se construye con él, y así lo sostiene sin depender de Intezia.</p>
+        <p class="mt-who"><b>Quién construye</b> Intezia construye junto al equipo, sobre sus causas reales, para que luego lo sostenga sin depender de un proveedor externo.</p>
+      </div>
+
+      <div class="mt-info">
+        <div class="mt-card">
+          <p class="mt-card-label">Cómo funciona en la práctica</p>
+          <ul><li><b>Un abogado en el circuito.</b> La IA ordena, resume y propone borradores; un abogado revisa y firma cada documento.</li><li><b>Información de clientes protegida.</b> Se trabaja con datos de muestra o autorizados; nada confidencial entra a la IA sin visto bueno de Diktherion.</li><li><b>Sin tocar el proceso legal.</b> El procedimiento está reglamentado: se trabaja la gestión documental alrededor de la causa.</li></ul>
+        </div>
+        <div class="mt-card">
+          <p class="mt-card-label">Cómo cuidamos sus datos</p>
+          <p>Las causas y los datos de clientes son confidenciales: no se cargan a ninguna herramienta de IA sin la autorización de Diktherion; las pautas básicas se acuerdan en los Fundamentos.</p>
+        </div>
+      </div>
+
+      <div class="mt-logi">
+        <div class="mt-tile"><span>Modalidad</span><b>Presencial o virtual, según convenga al equipo de Diktherion; se acuerda en el arranque.</b></div>
+        <div class="mt-tile"><span>Participantes</span><b>El equipo jurídico de Diktherion: los socios y los abogados asociados.</b></div>
+        <div class="mt-tile"><span>Ritmo de trabajo</span><b>Dudas por escrito antes que en llamadas; el trabajo se agenda en el horario del equipo.</b></div>
+        <div class="mt-tile"><span>Arranque</span><b>Apenas se apruebe la propuesta; una reunión de 1 h, aparte, acuerda el calendario.</b></div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Diktherion · CAI-072</span>
+      </div>
+    </section>
+
+    <!-- 5 · Entregables: ¿con qué me quedo? (catálogo + piezas transversales) -->
+    <section class="slide s-deliv roomy">
+      <span class="counter">05 / 08</span>
+      <p class="eyebrow">05 · Entregables</p>
+      <div class="deliv-head">
+        <h2>Lo que recibe Diktherion.</h2>
+        <p class="deliv-sub"><span class="nw">Lo que se llevan</span>: <strong>un equipo nivelado y las herramientas en uso</strong>, más el seguimiento a 30, 60 y 90 días.</p>
+      </div>
+
+      <div class="deliv-carriles" style="--ncols:3">
+        <span class="dc acc-y" style="grid-column: span 3">Herramientas de IA del equipo jurídico</span>
+      </div>
+
+      <div class="deliv-cols" style="--ncols:3">
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">Fundamentos de Claude</p>
+            <ul>
+              <li>Claude: qué es y cómo pedirle bien<ul class="inc"><li>Qué es Claude y cómo se usa en el trabajo diario</li><li>Cómo pedirle bien, con ejemplos jurídicos</li><li>Qué información de clientes se cuida</li></ul></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">Levantamiento por especialidad</p>
+            <ul>
+              <li>Levantamiento de las siete especialidades<ul class="inc"><li>Cómo se registra y se sigue cada causa hoy</li><li>Cómo consultan los socios el estatus de las causas</li><li>Cómo se investiga y se redacta en cada especialidad</li></ul></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">Documentación y seguimiento de causas</p>
+            <ul>
+              <li>Documentación de causas y clientes, ordenada con IA<ul class="inc"><li>Una estructura común para cada causa y cliente</li><li>Registro diario más rápido, con ayuda de la IA</li><li>Documentos de cada causa en un solo orden</li></ul></li>
+              <li>Seguimiento de causas y tablero para los socios<ul class="inc"><li>Estatus de cada causa en un solo lugar</li><li>Próximos pasos de cada causa</li><li>Resumen periódico para los socios</li></ul></li>
+              <li>Investigación y redacción jurídica con criterio común<ul class="inc"><li>Una forma común de plantear cada consulta</li><li>Cómo verificar lo que la IA responde</li><li>Modelos de redacción por especialidad</li></ul></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="deliv-band">
+        <div class="db-card db-1">
+          <span class="db-label">Para todo el proyecto</span>
+        </div>
+        <div class="db-card db-2">
+          <span class="db-label">Valor inmediato</span>
+        </div>
+      </div>
+      <!-- Cajas multiline editables (vacías en HTML: el contenido vive dentro del AcroForm /V). -->
+      <div class="multi-box db-box db-box-1" data-field="Entregables"></div>
+      <div class="multi-box db-box db-box-2" data-field="Acreditacion"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Diktherion · CAI-072</span>
+      </div>
+    </section>
+
+    <!-- 6 · Retorno: ¿qué gano? (método de cálculo). Sin estudios ni citas externas. -->
+    <section class="slide s-roi">
+      <span class="counter">06 / 08</span>
+      <p class="eyebrow">06 · Retorno</p>
+      <h2>Retorno esperado: tiempo del equipo, medido.</h2>
+      <p class="sub">Cada indicador se mide contra el punto de partida que el levantamiento deja registrado.</p>
+
+      <div class="roi-body">
+        <div class="roi-panel">
+          <p class="roi-panel-title">Cómo se calcula el retorno de cada herramienta</p>
+          <ol class="roi-steps">
+            <li><b>Volumen</b><span>Cuántas causas y documentos se registran, y cuántas consultas se hacen cada mes.</span></li>
+            <li><b>Punto de partida</b><span>Tiempo de registrar cada causa y de saber su estatus: es la línea base.</span></li>
+            <li><b>Con la herramienta</b><span>Lo que toma el mismo trabajo una vez que la herramienta está en uso.</span></li>
+            <li><b>Horas recuperadas</b><span>Volumen por la diferencia de tiempos: una estimación referencial, sin compromiso de resultado.</span></li>
+            <li><b>Gasto de operar</b><span>Licencias y consumo de IA, contra el valor de lo recuperado.</span></li>
+          </ol>
+        </div>
+
+        <div class="roi-right">
+          <p class="roi-right-title">Calendario de seguimiento y medición</p>
+          <div class="roi-card">
+            <b>30 días</b>
+            <p>Desde el cierre de cada línea: herramientas en uso real y punto de partida validado con el equipo.</p>
+          </div>
+          <div class="roi-card">
+            <b>60 días</b>
+            <p>Tiempo de registro, de consulta y de redacción medido contra el punto de partida.</p>
+          </div>
+          <div class="roi-card">
+            <b>90 días</b>
+            <p>Medición del retorno: lo recuperado frente al gasto de operar las herramientas.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="roi-dest-wrap">
+        <p class="roi-dest-title">Hacia dónde va el proyecto</p>
+        <div class="roi-dest">
+          <div class="rd-item"><b>Causas a la vista</b><p>Los socios consultan el estatus de cada causa <strong>sin preguntar</strong>.</p></div>
+          <div class="rd-item"><b>Un criterio común</b><p>Todo el equipo investiga y redacta con <strong>el mismo método</strong>.</p></div>
+          <div class="rd-item"><b>Un equipo autónomo</b><p>El equipo sostiene lo construido <strong>sin depender</strong> de un proveedor externo.</p></div>
+        </div>
+      </div>
+
+      <div class="roi-hook"><p>A los 90 días del cierre de cada línea, Diktherion contará con su tiempo de registro, consulta y redacción medido contra el punto de partida y el gasto de operar sus herramientas.</p></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Diktherion · CAI-072</span>
+      </div>
+    </section>
+
+    <!-- 7 · Inversión (hoja de cotización estándar; antepenúltima slide) -->
+    <section class="slide s-price">
+      <span class="counter">07 / 08</span>
+      <h2 class="title">Inversión del proyecto.</h2>
+      <p class="price-intro">Propuesta Económica · Servicio de Habilidades</p>
+
+      <div class="block">
+        <span class="block-eyebrow">Duración</span>
+        <p class="block-value"><strong>20 horas con el equipo</strong> de Diktherion, en nivelación, levantamiento y construcción, con seguimiento a 30, 60 y 90 días.</p>
+      </div>
+
+      <div class="block block-programa">
+        <span class="block-eyebrow">Programa</span>
+      </div>
+      <div class="multi-box programa-box" data-field="Programa"></div>
+
+      <div class="block block-cotizacion">
+        <span class="block-eyebrow">Cotización</span>
+      </div>
+
+      <span class="cot-label cot-label-base">Propuesta + Inversión</span>
+      <div class="cot-frame base-frame"></div>
+
+      <span class="cot-label cot-label-discount">Descuento</span>
+      <span class="cot-sign-minus">&minus;$</span>
+      <div class="cot-frame discount-frame"></div>
+      <span class="cot-urgent-note">Descuento válido por 15 días</span>
+
+      <span class="cot-label cot-label-total">TOTAL</span>
+      <div class="cot-frame total-frame"></div>
+
+      <p class="cot-validity">Cotización válida por 30 días.</p>
+      <div class="cot-terms-box">
+        <span class="cot-terms-label">Importante</span>
+        <p class="cot-terms-text">Este servicio se presta bajo nuestros <a href="https://drive.google.com/file/d/1PA-ZSt4KnyY5dpxXzgkIk6-yfGlV2eF8/view?usp=drive_link" target="_blank" rel="noopener">términos y condiciones</a>. Al avanzar con esta propuesta, ambas partes los aceptan.</p>
+      </div>
+
+      <div class="cot-garantia-badge">
+        <span class="cot-garantia-tag">Garantía 30-60-90</span>
+        <p class="cot-garantia-text">Estamos contigo hasta que cada herramienta quede en uso.</p>
+      </div>
+
+      <div class="block block-notes-container">
+        <span class="block-eyebrow">Notas</span>
+      </div>
+      <div class="multi-box notas-box" data-field="Notas"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Diktherion · CAI-072</span>
+      </div>
+    </section>
+
+    <!-- 9 · Próximos pasos: qué hacer y a quién escribir (última slide) -->
+    <section class="slide s-next">
+      <span class="counter">08 / 08</span>
+      <p class="eyebrow">08 · Próximos pasos</p>
+      <h2>Tres pasos para arrancar.</h2>
+      <p class="sub">Esto es lo que sigue cuando Diktherion confirme la propuesta.</p>
+
+      <div class="nx-steps">
+        <div class="nx-step acc-y">
+          <span class="nx-num">1</span>
+          <b>Aprobación</b>
+          <p>Quien decide por Diktherion confirma la propuesta y acordamos la fecha de la reunión de arranque.</p>
+        </div>
+        <div class="nx-step acc-o">
+          <span class="nx-num">2</span>
+          <b>Equipo y accesos</b>
+          <p>Diktherion confirma quiénes participan y quién coordina, y comparte los accesos que autorice.</p>
+        </div>
+        <div class="nx-step acc-w">
+          <span class="nx-num">3</span>
+          <b>Reunión de arranque</b>
+          <p>Una hora para acordar el calendario del equipo y los primeros pasos.</p>
+        </div>
+      </div>
+
+      <div class="nx-contact">
+        <div class="nx-card nx-ase">
+          <span class="nx-label">¿Dudas? Escribe a tu asesora comercial</span>
+          <b class="nx-name">Verónica Rubio</b>
+          <span class="nx-role">Asesora comercial</span>
+          <p class="nx-line"><a href="mailto:vrubio01@intezia.com">vrubio01@intezia.com</a></p>
+          <p class="nx-line">+58 422 3355505</p>
+        </div>
+        <div class="nx-card nx-emp">
+          <span class="nx-label">Intezia</span>
+          <p class="nx-line">Intezia C.A J-505657950</p>
+          <p class="nx-line"><a href="mailto:servicio@intezia.com">servicio@intezia.com</a></p>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Diktherion · CAI-072</span>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

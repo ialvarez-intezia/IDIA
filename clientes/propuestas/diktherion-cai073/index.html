@@ -1,0 +1,430 @@
+<!doctype html>
+<!--
+  Propuesta · Diktherion · Servicio de Habilidades (CAI-073)
+  División: Educación · Servicio: Habilidades (§4.1a) · Alianza: no
+  GENERADO por scripts/generar-habilidades-compacto.py (plantilla 3.0 (2026-10-08), formato habilidades) desde datos.json.
+  No editar a mano: editar datos.json y regenerar. Estilos propios del deck: overrides.css.
+  Fuente del insumo: Ficha de Levantamiento y transcripción de la reunión (28/10/2026) e instrucciones del usuario
+
+  Formato compacto de 8 slides, en el orden de las preguntas del cliente (Ventas, 2026-10-07), sin semanas, sesiones
+  ni fechas (Keiber, 2026-10-08):
+    1 Portada · 2 Alcance · 3 Ruta · 4 Cómo trabajamos · 5 Entregables · 6 Retorno · 7 Inversión · 8 Próximos pasos
+  Marcadores de detección de AcroForms (agregar-campo-precio.py), por página: «Propuesta Económica» solo en la slide de
+  inversión; «Lo que se llevan» y «Entregables» solo en la de entregables; «Facilidad de pago» solo en la de pago.
+  Campos AcroForm: Programa, Notas, PrecioBase, Descuento, PrecioTotal (inversión) y Entregables, Acreditacion (entregables). Se reposicionan con scripts/customize-habilidades-compacto.py.
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Propuesta · Diktherion · Intezia Educación</title>
+  <link rel="stylesheet" href="../_base/styles.css">
+  <link rel="stylesheet" href="habilidades-compacto.css">
+  <link rel="stylesheet" href="overrides.css">
+</head>
+<body>
+
+  <main class="deck">
+
+    <!-- 1 · Portada: ¿cuál es mi problema? -->
+    <section class="slide s-cover">
+      <span class="counter">01 / 08</span>
+      <div class="logo-big">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia Educación">
+      </div>
+      <div class="body">
+        <p class="eyebrow">Propuesta de proyecto · Servicio de Habilidades</p>
+        <h1 style="font-size:46px">
+          Cerebros Digitales para los socios,<br>
+          con la información centralizada<br>
+          <span class="hl">en Diktherion</span>
+        </h1>
+        <p class="lead">
+          Este proyecto construye con cada socio de Diktherion su <strong>Cerebro Digital en Claude</strong>: memoria propia, su criterio y la información de la firma conectada, para decidir y <strong>ahorrar tiempo de coordinación</strong>.
+        </p>
+        <div class="pain-strip">
+          <div class="pain-item">
+            <span class="pain-num">Suelto</span>
+            <span class="pain-lbl">es el uso actual de la IA: cada socio la usa por su cuenta, sin un cerebro que guarde su contexto.</span>
+          </div>
+          <div class="pain-item">
+            <span class="pain-num">Preguntar</span>
+            <span class="pain-lbl">es hoy cómo los socios saben el estatus del trabajo de los asociados, en vez de consultarlo.</span>
+          </div>
+          <div class="pain-item">
+            <span class="pain-num">Varias</span>
+            <span class="pain-lbl">hojas de cálculo guardan hoy la información de la firma, sin un lugar que la reúna.</span>
+          </div>
+        </div>
+        <p class="pain-src">Fuente: datos declarados por Diktherion en el levantamiento con Intezia.</p>
+      </div>
+      <div class="id-line">
+        <span class="codigo">Código: CAI-073</span>
+        <span class="cliente">Diktherion</span>
+      </div>
+    </section>
+
+    <!-- 2 · Alcance: qué vamos a hacer y para qué -->
+    <section class="slide s-scope roomy">
+      <span class="counter">02 / 08</span>
+      <p class="eyebrow">02 · Alcance</p>
+      <h2>Un Cerebro Digital para cada socio.</h2>
+      <p class="sub">Se construye su <strong>asistente personal en Claude</strong>, con memoria y criterio propios.</p>
+
+      <div class="scope-panels one" style="--np:1">
+        <div class="scope-panel acc-y">
+          <div class="scope-head">
+            <span class="scope-tag">Claude y Obsidian</span>
+            <span class="scope-total"><b>3</b> bloques</span>
+          </div>
+          <ul class="scope-rows">
+              <li><span class="area">Memoria <small class="comp">Propósito, contexto y línea base.</small></span><span class="para">Definir el propósito del cerebro y reunir el contexto, la voz y el criterio de cada socio</span></li>
+              <li><span class="area">Conocimiento <small class="comp">Notas por especialidad y por tema, conectadas.</small></span><span class="para">Reunir la información de la firma como notas conectadas que el cerebro recorre</span></li>
+              <li><span class="area">Uso diario <small class="comp">Una tarea repetitiva, en uso con autonomía.</small></span><span class="para">Convertir una tarea repetitiva en una instrucción reutilizable y un plan de uso</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="scope-out">
+        <p class="scope-card-label">Fuera de este alcance</p>
+        <ul>
+          <li>Más horas por cerebro: cada uno recibe 6 h con su socio; lo demás va en otra etapa.</li>
+          <li>Conexiones a sistemas internos o desarrollos a la medida: el cerebro usa lo que cada socio decide cargar.</li>
+          <li>Las licencias de Claude, que van aparte (detalle en las notas de la inversión).</li>
+        </ul>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Diktherion · CAI-073</span>
+      </div>
+    </section>
+
+    <!-- 3 · Ruta: qué pasa en cada fase -->
+    <section class="slide s-route">
+      <span class="counter">03 / 08</span>
+      <p class="eyebrow">03 · Ruta</p>
+      <h2>Un cerebro por socio, en tres fases.</h2>
+      <p class="sub">El calendario se acuerda en la reunión de arranque. La <strong>garantía y el seguimiento</strong> a 30, 60 y 90 días corren desde el cierre del proyecto.</p>
+
+      <div class="route-grid n1" style="--cols:3; --rows:1; --rowh:214px">
+
+        <div class="rg-corner"></div>
+        <div class="rg-phase rg-ph-1">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Base</span></span>
+          <span class="rg-phase-name">Propósito, memoria y línea base</span>
+        </div>
+        <div class="rg-phase rg-ph-2">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Grafo</span></span>
+          <span class="rg-phase-name">Información conectada</span>
+        </div>
+        <div class="rg-phase rg-ph-3 hi">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Uso</span></span>
+          <span class="rg-phase-name">Skill y plan de uso</span>
+        </div>
+        <div class="rg-phase rg-fu">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Garantía</span></span>
+          <span class="rg-phase-date">30, 60 y 90 días</span>
+          <span class="rg-phase-txt">Seguimiento desde el cierre del proyecto</span>
+        </div>
+
+        <div class="rg-front acc-y">
+          <span class="rg-front-h">Cada socio de Diktherion</span>
+          <span class="rg-front-row"><span class="rg-front-tool">Claude</span></span>
+          <span class="rg-front-meta"></span>
+        </div>
+        <div class="rg-cell"><p>Claude configurado con su propósito, su memoria y su línea base.</p></div>
+        <div class="rg-cell"><p>La información de la firma como grafo de notas conectadas en Obsidian.</p></div>
+        <div class="rg-cell hi"><p>Una instrucción reutilizable para una tarea real y su plan de uso.</p></div>
+
+        <div class="rg-follow" style="grid-column:5; grid-row:2 / span 1">
+          <ul>
+            <li><b>30 días</b><span>Uso autónomo del cerebro</span></li>
+            <li><b>60 días</b><span>Ajustes y nuevas construcciones</span></li>
+            <li><b>90 días</b><span>Tiempo recuperado contra la línea base</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="route-miles" style="grid-template-columns:repeat(5,1fr)">
+        <div class="mile"><span class="mile-d"></span><b>Arranque · aparte</b><p>1 h para acordar cuántos cerebros se construyen, casos reales y el calendario.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Base</b><p>Claude configurado, con propósito, memoria y línea base.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Grafo</b><p>Notas conectadas de la firma, en Obsidian.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Uso</b><p>Una instrucción reutilizable para una tarea real y su plan de uso.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>30 · 60 · 90 días</b><p>Seguimiento: uso del cerebro, ajustes y tiempo recuperado.</p></div>
+      </div>
+      <p class="route-note">Cada cerebro se trabaja en 6 horas con su socio: 2 h de base, 2 h de grafo y 2 h de uso. La reunión de arranque (1 h) va aparte y no suma horas.</p>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Diktherion · CAI-073</span>
+      </div>
+    </section>
+
+    <!-- 4 · Cómo trabajamos: pasos, por qué en ese orden, casos reales, práctica, datos y logística -->
+    <section class="slide s-method">
+      <span class="counter">04 / 08</span>
+      <p class="eyebrow">04 · Cómo trabajamos</p>
+      <h2>Así trabajamos el proyecto.</h2>
+      <p class="sub">Trabajo individual con cada socio, sobre su cerebro y sus casos reales, hasta que lo usa y lo amplía con autonomía.</p>
+
+      <ol class="mt-steps" style="--n:4">
+          <li><b>Construimos</b><span>Con cada socio, en vivo y sobre su propio contexto.</span></li>
+          <li><b>Probamos</b><span>Con su información y sus tareas, hasta que funcione.</span></li>
+          <li><b>Adoptamos</b><span>Cada socio usa su cerebro cada semana, con autonomía.</span></li>
+          <li><b>Medimos</b><span>El tiempo recuperado contra la línea base, a 30, 60 y 90 días.</span></li>
+      </ol>
+      <div class="mt-strips">
+        <p class="mt-why"><b>Por qué en este orden</b> Primero se define el propósito y se reúne el contexto de cada socio; después se conecta la información de la firma en un grafo de notas; al final se construye la instrucción reutilizable de una tarea real.</p>
+        <p class="mt-who"><b>Quién construye</b> Cada socio construye su propio cerebro; <strong>Intezia guía</strong> cada paso, sobre casos reales de su rol, para que luego lo sostenga sin depender de Intezia.</p>
+      </div>
+
+      <div class="mt-info">
+        <div class="mt-card">
+          <p class="mt-card-label">Cómo funciona en la práctica</p>
+          <ul><li><b>Cómo funciona.</b> El cerebro reúne el contexto del socio como notas conectadas que Claude recorre, en vez de empezar cada chat de cero.</li><li><b>En vivo, con método.</b> Cada paso se explica y queda documentado para que el socio pueda ampliarlo por su cuenta.</li><li><b>Cuenta de Claude.</b> Cada socio trabaja con su cuenta de Claude: al arrancar se confirma que su plan permite construir el cerebro.</li></ul>
+        </div>
+        <div class="mt-card">
+          <p class="mt-card-label">Cómo cuidamos sus datos</p>
+          <p>Solo se carga en cada cerebro lo que el socio decide compartir: los datos de clientes y los expedientes son confidenciales y no se cargan sin autorización. Los criterios de uso seguro se acuerdan al empezar y se repasan al cerrar.</p>
+        </div>
+      </div>
+
+      <div class="mt-logi">
+        <div class="mt-tile"><span>Modalidad</span><b>Presencial o virtual, según convenga a cada socio; se acuerda en la reunión de arranque.</b></div>
+        <div class="mt-tile"><span>Participantes</span><b>Los socios de Diktherion que tengan cerebro, uno a uno, acompañados por Intezia en todo el proyecto.</b></div>
+        <div class="mt-tile"><span>Ritmo de trabajo</span><b>En el horario que acuerde cada socio, sin frenar su agenda.</b></div>
+        <div class="mt-tile"><span>Arranque</span><b>La fecha la fija Diktherion; una reunión de arranque de 1 h, aparte, acuerda el calendario.</b></div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Diktherion · CAI-073</span>
+      </div>
+    </section>
+
+    <!-- 5 · Entregables: ¿con qué me quedo? (catálogo + piezas transversales) -->
+    <section class="slide s-deliv roomy">
+      <span class="counter">05 / 08</span>
+      <p class="eyebrow">05 · Entregables</p>
+      <div class="deliv-head">
+        <h2>Lo que recibe cada socio.</h2>
+        <p class="deliv-sub"><span class="nw">Lo que se llevan</span>: <strong>un Cerebro Digital propio y una Skill en uso</strong>, más el seguimiento a 30, 60 y 90 días que mide su efecto.</p>
+      </div>
+
+      <div class="deliv-carriles" style="--ncols:3">
+        <span class="dc acc-y" style="grid-column: span 3">Claude y Obsidian</span>
+      </div>
+
+      <div class="deliv-cols" style="--ncols:3">
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">Memoria</p>
+            <ul>
+              <li>Claude configurado: propósito, memoria y criterio<ul class="inc"><li>Claude configurado con su rol y su propósito</li><li>Su contexto, su voz y su criterio, por escrito</li><li>La línea base de sus tareas repetitivas</li></ul></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">Conocimiento</p>
+            <ul>
+              <li>Información de la firma en un grafo en Obsidian<ul class="inc"><li>Su repositorio de notas ordenado como grafo conectado</li><li>Lo que decide cargar desde su Drive y sus hojas</li><li>Conectado a Claude y visible en la Vista de Grafo</li></ul></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">Uso diario</p>
+            <ul>
+              <li>Skill de su tarea repetitiva y plan de uso<ul class="inc"><li>Una instrucción reutilizable para la tarea que más tiempo le quita</li><li>Probada con un caso real y ajustada</li><li>Plan de uso semanal y cómo seguir construyendo por su cuenta</li></ul></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="deliv-band">
+        <div class="db-card db-1">
+          <span class="db-label">Para todo el proyecto</span>
+        </div>
+        <div class="db-card db-2">
+          <span class="db-label">Valor inmediato</span>
+        </div>
+      </div>
+      <!-- Cajas multiline editables (vacías en HTML: el contenido vive dentro del AcroForm /V). -->
+      <div class="multi-box db-box db-box-1" data-field="Entregables"></div>
+      <div class="multi-box db-box db-box-2" data-field="Acreditacion"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Diktherion · CAI-073</span>
+      </div>
+    </section>
+
+    <!-- 6 · Retorno: ¿qué gano? (método de cálculo). Sin estudios ni citas externas. -->
+    <section class="slide s-roi">
+      <span class="counter">06 / 08</span>
+      <p class="eyebrow">06 · Retorno</p>
+      <h2>Retorno esperado: tiempo recuperado, medido.</h2>
+      <p class="sub">Se mide contra la línea base que la Presidencia deja al empezar y se sigue a 30, 60 y 90 días.</p>
+
+      <div class="roi-body">
+        <div class="roi-panel">
+          <p class="roi-panel-title">Cómo se calcula</p>
+          <ol class="roi-steps">
+            <li><b>Volumen semanal</b><span>Cuántas veces repite cada socio la tarea que automatiza su cerebro, por ejemplo, preguntar el estatus de una causa.</span></li>
+            <li><b>Tiempo actual</b><span>Cuánto le toma hoy cada tarea. Es la <strong>línea base</strong>.</span></li>
+            <li><b>Tiempo con el cerebro</b><span>Lo que toma el mismo trabajo con su Skill ya en uso.</span></li>
+            <li><b>Horas recuperadas</b><span>Diferencia entre ambos tiempos, por semana: una estimación referencial, sin compromiso de resultado.</span></li>
+            <li><b>Valor en dinero</b><span>Horas recuperadas por el valor hora de referencia que Diktherion valide.</span></li>
+          </ol>
+        </div>
+
+        <div class="roi-right">
+          <p class="roi-right-title">Calendario de garantía y cálculo del retorno</p>
+          <div class="roi-card">
+            <b>30 días</b>
+            <p>El cerebro en uso real y su línea base validada con cada socio.</p>
+          </div>
+          <div class="roi-card">
+            <b>60 días</b>
+            <p>Ajustes del cerebro y horas recuperadas medidas contra la línea base.</p>
+          </div>
+          <div class="roi-card">
+            <b>90 días</b>
+            <p>Medición del tiempo recuperado y de su valor en dinero.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="roi-dest-wrap">
+        <p class="roi-dest-title">Hacia dónde va el proyecto</p>
+        <div class="roi-dest">
+          <div class="rd-item"><b>Más tiempo para asesorar</b><p>Si el tiempo se libera, cada socio puede dedicarlo a <strong>asesoría y crecimiento</strong> del área sin trabajar más horas.</p></div>
+          <div class="rd-item"><b>Información reunida</b><p>La información de la firma queda en su grafo: una memoria propia que su cerebro recorre.</p></div>
+          <div class="rd-item"><b>Más cerebros</b><p>Con el resultado medido, Diktherion decide si lleva el mismo ciclo a <strong>los abogados asociados</strong>.</p></div>
+        </div>
+      </div>
+
+      <div class="roi-hook"><p>A los 90 días del cierre, cada socio contará con el tiempo recuperado de su cerebro, medido contra su línea base.</p></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Diktherion · CAI-073</span>
+      </div>
+    </section>
+
+    <!-- 7 · Inversión (hoja por opciones: Duración y Programa arriba, Notas, valor por opción abajo e Importante) -->
+    <section class="slide s-price s-price-paq">
+      <span class="counter">07 / 08</span>
+      <h2 class="title">Inversión del proyecto.</h2>
+      <p class="price-intro">Propuesta Económica · Servicio de Habilidades</p>
+
+      <div class="block pq-dur">
+        <span class="block-eyebrow">Duración</span>
+        <p class="block-value">Cada Cerebro Digital se construye en 6 horas con su socio, uno a uno, y la reunión de arranque (1 h) va aparte. Se elige 1 cerebro individual o los 4 en conjunto; seguimiento y garantía a 30, 60 y 90 días.</p>
+      </div>
+
+      <div class="block block-programa">
+        <span class="block-eyebrow">Programa</span>
+      </div>
+      <div class="multi-box programa-box" data-field="Programa"></div>
+
+      <div class="block block-notes-container">
+        <span class="block-eyebrow">Notas</span>
+      </div>
+      <div class="multi-box notas-box" data-field="Notas"></div>
+
+      <div class="pq-wrap">
+        <span class="pq-eyebrow">Valor por paquete</span>
+        <div class="pq-cards">
+        <div class="pq-card acc-y">
+          <span class="pq-tag">Opción 1</span>
+          <b class="pq-name">1 cerebro individual</b>
+          <span class="pq-det">6 horas</span>
+          <span class="pq-lab pq-lab-precio">Valor</span>
+          <div class="pq-frame pq-precio"></div>
+          <span class="pq-lab pq-lab-desc">Descuento<em class="pq-pill">Válido por 15 días</em></span>
+          <div class="pq-frame pq-desc"></div>
+          <span class="pq-lab pq-lab-total">Total</span>
+          <div class="pq-frame pq-total"></div>
+        </div>
+        <div class="pq-card acc-o">
+          <span class="pq-tag">Opción 2</span>
+          <b class="pq-name">4 cerebros en conjunto</b>
+          <span class="pq-det">24 horas</span>
+          <span class="pq-lab pq-lab-precio">Valor</span>
+          <div class="pq-frame pq-precio"></div>
+          <span class="pq-lab pq-lab-desc">Descuento<em class="pq-pill">Válido por 15 días</em></span>
+          <div class="pq-frame pq-desc"></div>
+          <span class="pq-lab pq-lab-total">Total</span>
+          <div class="pq-frame pq-total"></div>
+        </div>
+        </div>
+      </div>
+
+      <p class="cot-validity pq-validity">Cotización válida por 30 días.</p>
+      <div class="cot-terms-box pq-terms">
+        <span class="cot-terms-label">Importante</span>
+        <p class="cot-terms-text">Este servicio se presta bajo nuestros <a href="https://drive.google.com/file/d/1PA-ZSt4KnyY5dpxXzgkIk6-yfGlV2eF8/view?usp=drive_link" target="_blank" rel="noopener">términos y condiciones</a>. Al avanzar con esta propuesta, ambas partes los aceptan.</p>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Diktherion · CAI-073</span>
+      </div>
+    </section>
+
+    <!-- 9 · Próximos pasos: qué hacer y a quién escribir (última slide) -->
+    <section class="slide s-next">
+      <span class="counter">08 / 08</span>
+      <p class="eyebrow">08 · Próximos pasos</p>
+      <h2>Tres pasos para arrancar.</h2>
+      <p class="sub">Esto es lo que sigue cuando Diktherion confirme la propuesta.</p>
+
+      <div class="nx-steps">
+        <div class="nx-step acc-y">
+          <span class="nx-num">1</span>
+          <b>Fecha de arranque</b>
+          <p>Confirmamos con Diktherion cuántos cerebros se construyen, la fecha de arranque y el horario de cada socio.</p>
+        </div>
+        <div class="nx-step acc-o">
+          <span class="nx-num">2</span>
+          <b>Cuenta y material</b>
+          <p>Cada socio deja lista su cuenta de Claude y reúne el material de su rol que decida compartir.</p>
+        </div>
+        <div class="nx-step acc-w">
+          <span class="nx-num">3</span>
+          <b>Reunión de arranque</b>
+          <p>Una hora para alinear objetivos, definir los casos reales de cada socio y acordar el calendario.</p>
+        </div>
+      </div>
+
+      <div class="nx-contact">
+        <div class="nx-card nx-ase">
+          <span class="nx-label">¿Dudas? Escribe a tu asesora comercial</span>
+          <b class="nx-name">Verónica Rubio</b>
+          <span class="nx-role">Asesora comercial</span>
+          <p class="nx-line"><a href="mailto:vrubio01@intezia.com">vrubio01@intezia.com</a></p>
+          <p class="nx-line">+58 422 3355505</p>
+        </div>
+        <div class="nx-card nx-emp">
+          <span class="nx-label">Intezia</span>
+          <p class="nx-line">Intezia C.A J-505657950</p>
+          <p class="nx-line"><a href="mailto:servicio@intezia.com">servicio@intezia.com</a></p>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Diktherion · CAI-073</span>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

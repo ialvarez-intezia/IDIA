@@ -1,0 +1,310 @@
+{
+ "version": 3,
+ "formato": "deteccion",
+ "cliente": {
+  "nombre": "OCAATVE",
+  "slug": "ocaatve-det049",
+  "codigo": "DET-049",
+  "nombre_pie": "OCAATVE"
+ },
+ "division": "educacion",
+ "alianza": false,
+ "sin_horas_trabajo": true,
+ "eje": "Nivelar al equipo de OCAATVE en IA, auditar sus cuatro áreas (Legal, Administrativa contable, Tesorería y Gerencia operacional) y dejar logros inmediatos y un mapa de oportunidades que diga por dónde empezar, con qué herramienta y con la información confidencial a resguardo",
+ "origen": "Ficha de Levantamiento de OCAATVE (Verónica Rubio, registrada el 02/11/2026; contacto Nury De Oliveira, con Raquel González y Eduardo Calcaño) y transcripción de la reunión virtual del 02/11/2026, más instrucciones de Ivana del 03/11/2026: propuesta de Detección con Verónica Rubio como asesora comercial. Código DET-049 indicado por Ivana; división Educación y sin alianza, por confirmar",
+ "fuente_insumo": "Ficha de Levantamiento (02/11/2026) y transcripción de la reunión de Verónica Rubio con OCAATVE (02/11/2026)",
+ "siglas_ok": [
+  "IA",
+  "OCAATVE",
+  "SAP"
+ ],
+ "portada": {
+  "titulo_lineas": [
+   "Mapa de oportunidades de IA",
+   "con información protegida"
+  ],
+  "titulo_destacado": "en {n_areas} áreas de {cliente_corto}",
+  "lead": "Nivelamos al equipo en IA, auditamos las **{n_areas_txt}** de {cliente_corto} y dejamos **logros inmediatos**, para saber qué herramienta conviene a cada proceso y cuidar la información confidencial.",
+  "hechos": [
+   {
+    "num": "Copilot",
+    "texto": "está en todos los equipos con Microsoft 365, pero casi no se aprovecha."
+   },
+   {
+    "num": "Sin guía",
+    "texto": "escrita: la regla sobre qué datos entran a la IA es solo verbal."
+   },
+   {
+    "num": "Cifras",
+    "texto": "confidenciales de todas las empresas atendidas: hay que saber si la IA las resguarda."
+   },
+   {
+    "num": "Procesos",
+    "texto": "muy individuales: cada persona trabaja distinto, con poca conexión entre sí."
+   }
+  ]
+ },
+ "deteccion": {
+  "areas": [
+   "Legal",
+   "Administrativa contable",
+   "Tesorería",
+   "Gerencia operacional"
+  ],
+  "etiqueta_departamentos": "Qué miramos en cada proceso",
+  "departamentos": [
+   "Pasos del proceso",
+   "Información que usa",
+   "Herramientas que usa hoy",
+   "Datos confidenciales",
+   "Dónde se hace a mano"
+  ],
+  "horas": {
+   "levantamiento": 16,
+   "arranque": 0,
+   "nivelacion": 2
+  },
+  "foco": "Finanzas se abre en **cinco o seis subgrupos**, uno por cliente atendido: los recorremos por separado, con **dónde vive la información** confidencial.",
+  "logros_minimos": 3,
+  "texto_horas": "**{h_levantamiento} horas** de levantamiento, repartidas según lo que necesite cada área.",
+  "para_que": [
+   {
+    "titulo": "Ver la operación real",
+    "texto": "Cómo trabaja hoy cada persona y qué tareas se hacen a mano."
+   },
+   {
+    "titulo": "Mejorar desde ya",
+    "texto": "Logros inmediatos que cada equipo usa mientras avanza el levantamiento."
+   },
+   {
+    "titulo": "Invertir con criterio",
+    "texto": "Saber si Copilot alcanza para cada área o qué más conviene, antes de comprar licencias."
+   },
+   {
+    "titulo": "Cuidar la información",
+    "texto": "Qué datos pueden entrar a la IA y cuáles no, con cifras confidenciales de por medio."
+   }
+  ],
+  "etapas": [
+   {
+    "titulo": "Arranque",
+    "texto": "Reunión de arranque: alcance, responsables de cada área y calendario."
+   },
+   {
+    "titulo": "Nivelación",
+    "texto": "**{h_nivelacion} horas** de Fundamentos de IA para unas 17 personas, en un solo grupo, antes de levantar."
+   },
+   {
+    "titulo": "Levantamiento",
+    "texto": "Una conversación con cada área, con su líder y las personas clave.",
+    "horas": true
+   },
+   {
+    "titulo": "Priorización",
+    "texto": "Intezia cruza lo levantado y ordena las oportunidades por impacto y esfuerzo."
+   },
+   {
+    "titulo": "Informe Final",
+    "texto": "Diagnóstico, hoja de ruta y licencias, presentados a la dirección."
+   }
+  ],
+  "entregables": [
+   {
+    "cuando": "Al arrancar",
+    "titulo": "Alcance y calendario",
+    "texto": "Acordados en el arranque: el orden de las áreas y quién acompaña a cada una."
+   },
+   {
+    "cuando": "Al arrancar",
+    "titulo": "Equipo nivelado en IA",
+    "texto": "**2 horas** de fundamentos: qué es y qué no es la IA, cómo pedirle bien y qué información cuidar."
+   },
+   {
+    "cuando": "En el levantamiento",
+    "titulo": "Logros inmediatos",
+    "texto": "**Al menos {logros_minimos_palabra}**, a evaluar en el levantamiento, como definir qué información puede entrar a la IA y cuál no."
+   },
+   {
+    "cuando": "Al cierre",
+    "titulo": "Mapa de Calor",
+    "texto": "Las oportunidades de IA de toda la empresa en un solo mapa, por impacto y esfuerzo."
+   },
+   {
+    "cuando": "Al cierre",
+    "titulo": "Informe Final y hoja de ruta",
+    "texto": "Tareas que sí se pueden hacer con IA, un mismo criterio de uso y por dónde empezar."
+   },
+   {
+    "cuando": "Al cierre",
+    "titulo": "Inversión inteligente en licencias",
+    "texto": "Si Copilot alcanza para cada área o conviene sumar otra herramienta, con datos de sus propios procesos."
+   }
+  ]
+ },
+ "alcance": {
+  "titulo": "Auditamos cada área y dejamos logros inmediatos.",
+  "subtitulo": "Revisamos proceso por proceso cómo trabaja cada área y qué puede potenciar la IA, con quien hace el trabajo.",
+  "fuera_alcance": [
+   "Licencias de IA: la recomendación va en el Informe Final y no están en la inversión.",
+   "Cambios en sus sistemas, como SAP: se revisan en el levantamiento y no se modifican.",
+   "Construir las soluciones y llevar el proyecto a las empresas atendidas: es la fase que sigue."
+  ]
+ },
+ "ruta": {
+  "subtitulo": "El calendario y el orden de las conversaciones se acuerdan en la **reunión de arranque**."
+ },
+ "metodo": {
+  "titulo": "Así trabajamos con cada área.",
+  "subtitulo": "Nos sentamos con cada área y salimos de cada conversación con algo concreto.",
+  "pasos": [
+   {
+    "titulo": "Entrevistamos",
+    "texto": "Al líder de cada área y a las personas clave."
+   },
+   {
+    "titulo": "Mapeamos",
+    "texto": "Sus procesos, la información, las herramientas y los cuellos de botella."
+   },
+   {
+    "titulo": "Construimos",
+    "texto": "Un logro inmediato en el momento, cuando el proceso lo permite."
+   },
+   {
+    "titulo": "Priorizamos",
+    "texto": "Cada oportunidad en el Mapa de Calor, con su impacto y esfuerzo."
+   }
+  ],
+  "por_que_orden": "Primero se nivela al equipo, que parte de cero. Después se levanta área por área. Al final se prioriza con la foto completa de {cliente_corto}.",
+  "quien_construye": "Intezia levanta y construye junto a cada área, con las herramientas que {cliente_corto} autorice. Sus sistemas no se modifican.",
+  "practica": [
+   {
+    "titulo": "Sin tarea previa",
+    "texto": "Nadie prepara nada antes de su turno: todo se levanta en la conversación."
+   },
+   {
+    "titulo": "Un espacio por área",
+    "texto": "Cada área, y cada subgrupo de finanzas, se levanta por separado."
+   },
+   {
+    "titulo": "Sin forzar soluciones",
+    "texto": "Si un proceso exige mucho esfuerzo, no se resuelve en el momento: pasa al Mapa de Calor con su prioridad."
+   }
+  ],
+  "datos": "Antes de cualquier intercambio de información, las partes acuerdan la confidencialidad con un acuerdo de confidencialidad (NDA). Ninguna cifra confidencial entra a la IA sin el visto bueno de {cliente_corto}."
+ },
+ "logistica": {
+  "modalidad": "Presencial, en las oficinas de {cliente_corto} en Caracas.",
+  "participantes": "Unas 17 personas en la nivelación; en cada área, su líder y su equipo."
+ },
+ "entregables": {
+  "transversales": [
+   "Ficha de levantamiento de cada área, que valida su líder",
+   "Presentación del Informe Final a la dirección"
+  ],
+  "valor_inmediato": [
+   "Logros inmediatos en uso antes de cerrar",
+   "Datos para decidir licencias y reglas de uso"
+  ]
+ },
+ "retorno": {
+  "subtitulo": "El Informe Final estima el retorno de cada oportunidad con lo que cuenta cada área.",
+  "pasos": [
+   {
+    "titulo": "Volumen",
+    "texto": "Cuántas veces al mes se repite cada tarea del área."
+   },
+   {
+    "titulo": "Tiempo actual",
+    "texto": "Lo que toma hoy cada vez, según quien hace el trabajo."
+   },
+   {
+    "titulo": "Tiempo con la solución",
+    "texto": "La estimación de Intezia para cada oportunidad del Mapa de Calor."
+   },
+   {
+    "titulo": "Horas recuperables",
+    "texto": "Volumen por la diferencia de tiempos: una estimación de referencia, no un compromiso de resultado."
+   },
+   {
+    "titulo": "Prioridad",
+    "texto": "Impacto, esfuerzo y riesgo de cada oportunidad, para decidir por dónde empezar."
+   }
+  ],
+  "destino": [
+   {
+    "rotulo": "Información a resguardo",
+    "texto": "Se sabe qué datos pueden entrar a la IA y con qué herramienta, antes de comprar licencias."
+   },
+   {
+    "rotulo": "Tiempo para lo importante",
+    "texto": "Menos horas en tareas repetitivas y más para analizar y decidir."
+   },
+   {
+    "rotulo": "Listos para escalar",
+    "texto": "Con el mapa por área, {cliente_corto} decide si lleva el proyecto a las empresas que atiende."
+   }
+  ],
+  "gancho": "Con el Informe Final, {cliente_corto} sabe por dónde empezar, con qué herramienta y bajo qué reglas de uso, con datos de sus propias áreas."
+ },
+ "inversion": {
+  "duracion": "Reunión de arranque, **{h_nivelacion} horas de nivelación** y **{h_levantamiento} horas de levantamiento** en {n_areas_txt}.",
+  "programa": [
+   "Servicio de Detección para {cliente_corto} ({codigo}).",
+   "Arranque y {h_nivelacion} horas de Fundamentos de IA para el equipo.",
+   "Levantamiento área por área, de forma presencial.",
+   "Al menos {logros_minimos} logros inmediatos, Mapa de Calor e Informe Final.",
+   "{h_nivelacion} horas de nivelación y {h_levantamiento} horas de levantamiento."
+  ],
+  "notas": [
+   "Esta inversión no incluye licencias de IA.",
+   "Habilidades, la fase que viene después, se estructura con los resultados y se cotiza aparte."
+  ]
+ },
+ "proximos_pasos": {
+  "asesora": {
+   "nombre": "Verónica Rubio",
+   "cargo": "Asesora comercial",
+   "correo": "vrubio01@intezia.com",
+   "telefono": "+58 422 3355505"
+  },
+  "pasos": [
+   {
+    "titulo": "Confidencialidad",
+    "texto": "Con la propuesta enviamos nuestro formato de acuerdo de confidencialidad (NDA); luego la revisamos juntos."
+   },
+   {
+    "titulo": "Lista de responsables",
+    "texto": "{cliente_corto} nos comparte quién lidera cada área y quién la acompaña; con eso armamos la agenda."
+   },
+   {
+    "titulo": "Reunión de arranque",
+    "texto": "Una hora para cerrar el alcance, el orden de las áreas y el calendario."
+   }
+  ]
+ },
+ "supuestos": [
+  "Pedido de Ivana (03/11/2026): propuesta de Detección DET-049 para OCAATVE con Verónica Rubio como asesora comercial (quien hizo la ficha y la reunión), a partir de la Ficha de Levantamiento y la transcripción del 02/11/2026. Primero se indicó a María Iribarren y Ivana lo corrigió. División Educación y sin alianza: por confirmar con Ivana.",
+  "Insumos: ficha y transcripción coinciden. Primer contacto con la empresa (sin servicio previo ni propuesta previa). Servicios compartidos de tesorería, contabilidad y asesoría legal para el Grupo Cisneros Fontanales y terceros; aprox. 17 personas en Caracas. La ficha dice «Mixto (Google + Microsoft)», pero en la reunión dicen que casi todo es Microsoft 365 y que solo unos pocos usan Google Sheets: manda la transcripción.",
+  "Áreas: cuatro, como las nombra Eduardo Calcaño (Legal, Administrativa contable, Tesorería y Gerencia operacional, desde lo administrativo y de controller). Nury De Oliveira y Raquel González trabajan en finanzas con empresas distintas. Finanzas se abre en 5 o 6 subgrupos por cliente atendido; el deck los dice en el foco y no los cuenta como áreas. Sin prioridades entre áreas (CLAUDE.md §4.22).",
+  "Horas (lineamiento de empresa/politicas-comerciales.md): 4 h por área × 4 áreas = 16 h de levantamiento en global, sin reparto por área, y 2 h de Fundamentos de IA en un solo grupo (unas 17 personas, bajo el máximo de 25). Si Ivana prefiere contar los 5 o 6 subgrupos de finanzas como áreas, el levantamiento sube a 28-32 h. Arranque sin horas.",
+  "Las 2 h de nivelación se muestran en el deck (etapa, entregable y hoja de inversión), como en Grupo MDT, C&C y AGN. Raquel pidió arrancar por el entrenamiento y dimensionar sobre unas 17 personas: la nivelación va primero.",
+  "Pregunta central del cliente: si Copilot (licencia de Microsoft 365, hoy poco aprovechado) es la herramienta adecuada o se están quedando cortos. El deck la responde como un entregable (Inversión inteligente en licencias) y no pre-recomienda herramienta; no menciona Claude (una persona lo usa por su cuenta; Venezuela no es país soportado) ni promete VPN. Tampoco afirma migración de stack (§4.11).",
+  "Confidencialidad: Eduardo exige un NDA firmado antes de cualquier cruce de información; Intezia envía su formato junto con la propuesta (si no aplica, OCAATVE manda el suyo). Va en «Cómo trabajamos» y en el primer paso de la última slide. Requisitos de alta como proveedor: no se preguntaron.",
+  "Decisión: la presentan Nury y Raquel a la alta gerencia y Eduardo la lleva a junta directiva (tiempo muy limitado). El deck debe sostenerse sin Intezia delante. Presupuesto no definido («bajo aprobación»): valor, descuento y total quedan vacíos para ventas.",
+  "Fase 2 del cliente (escalar a Central Azucarero Portuguesa y Productos de Vidrio, con aplicativos en tiempo real sobre SAP) y la tesorería de las empresas internacionales del Grupo: solo aparecen como «el proyecto a las empresas atendidas», fuera de alcance y sin nombrar a esas empresas. De la presentación de Verónica no se toman los 10 roles delegables de DUSA ni la reubicación de personal.",
+  "Sin facilidad de pago (Ivana, 03/11/2026): se omite la slide de pago (8 slides). Valor, descuento y total quedan vacíos para ventas.",
+  "Sin semanas, sesiones ni fechas; sin horas de trabajo ni cantidad de consultores (CLAUDE.md §4.23). La propuesta se envía el martes 03/11 al final de la tarde o a más tardar el miércoles 04/11 por la mañana (compromiso de Verónica); la revisión conjunta es después."
+ ],
+ "pendientes": [
+  "Confirmar con Ivana la división Educación y que no hay alianza.",
+  "Confirmar si los 5 o 6 subgrupos de finanzas cuentan como áreas (16 h) o como parte de Administrativa contable y Tesorería.",
+  "Conseguir cargos, correo y teléfono de Eduardo Calcaño y cuántas personas hay en cada área (la ficha dice unas 17 en total).",
+  "Enviar el formato de NDA de Intezia junto con la propuesta (condición de Eduardo Calcaño).",
+  "Validar con quien imparta la nivelación el temario y cómo se mide el punto de partida de cada equipo.",
+  "Confirmar la moneda de facturación y el valor con Verónica (sin referencia de monto).",
+  "Confirmar el teléfono y el correo de Verónica Rubio (tomados de la DET-043)."
+ ],
+ "omitir": [
+  "pago"
+ ]
+}

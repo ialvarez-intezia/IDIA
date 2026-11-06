@@ -1,0 +1,302 @@
+<!doctype html>
+<!--
+  Dashboard de Impacto · Fasto (CAP-104) · formato de 7 slides.
+  Fuentes: Edu-Trace (formulario v1, 23/10/2026), 5 promedios de Edu-Pulse y el resumen de cierre del servicio
+  (sesiones, horas, instalación, satisfacción y hallazgos en los datos de Estelar, 25/10/2026).
+  Escala 1-5. Índice = 0.30·4 + 0.35·5 + 0.20·4.5 + 0.15·5 = 4.6 (cálculo en calculos.md).
+  Sin cédula, correo ni nombre de la persona que respondió (§4.16). Sin cotización, licencias ni valores (§4.15).
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard de Impacto · Fasto · Intezia Educación</title>
+  <link rel="stylesheet" href="../../propuestas/_base/styles.css">
+  <link rel="stylesheet" href="overrides.css">
+</head>
+<body>
+  <main class="deck">
+
+    <!-- 01 · Portada -->
+    <section class="slide s-cover">
+      <span class="counter">01 / 07</span>
+      <div class="logo-big">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia Educación">
+      </div>
+      <div class="body">
+        <p class="eyebrow">Dashboard de Impacto · Edu-Pulse y Edu-Trace</p>
+        <h1>
+          Un agente de Compras<br>
+          <span class="hl">con datos reales</span>
+        </h1>
+        <p class="lead">
+          Resultados del servicio de Habilidades del equipo de Compras de Fasto, en Maracaibo, medidos con las dos evaluaciones de Intezia.
+        </p>
+        <div class="eval2">
+          <div class="ev">
+            <span class="ev-t">Edu-Pulse · en cada sesión</span>
+            <p>Evalúa el <strong>progreso del grupo</strong>: cuánto se siente capaz de repetir lo practicado sin ayuda. Respuestas anónimas.</p>
+          </div>
+          <div class="ev">
+            <span class="ev-t">Edu-Trace · al cierre</span>
+            <p>Evalúa <strong>lo que quedó</strong>: el conocimiento (medido), la competencia y la aplicabilidad (percibidas) y la experiencia de la formación.</p>
+          </div>
+        </div>
+      </div>
+      <div class="id-line">
+        <span class="codigo">CAP-104</span>
+        <span class="cliente">Fasto</span>
+      </div>
+    </section>
+
+    <!-- 02 · Resultado global -->
+    <section class="slide s-impact">
+      <span class="counter">02 / 07</span>
+      <div class="impact-head">
+        <p class="eyebrow">01 · Resultado global</p>
+        <h2>Índice de Impacto<br><span class="hl">Edu-Trace</span>.</h2>
+      </div>
+      <div class="impact-body">
+        <div class="chart-panel">
+          <p class="panel-title">Los cuatro ejes que componen el índice (escala 1-5)</p>
+          <div class="bars">
+            <div class="bar-row">
+              <span class="bar-label">Competencia percibida</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:75%"><span class="bar-val">4.0</span></div></div>
+            </div>
+            <div class="bar-row">
+              <span class="bar-label">Retención objetiva · medido</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:100%"><span class="bar-val">5.0</span></div></div>
+            </div>
+            <div class="bar-row">
+              <span class="bar-label">Aplicabilidad e impacto</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:87.5%"><span class="bar-val">4.5</span></div></div>
+            </div>
+            <div class="bar-row">
+              <span class="bar-label">Calidad de la experiencia</span>
+              <div class="bar-track"><div class="bar-fill" style="--w:100%"><span class="bar-val">5.0</span></div></div>
+            </div>
+          </div>
+          <div class="bar-axis"><span class="scale"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span></span></div>
+          <p class="panel-source">Ponderación: Retención objetiva 35% · Competencia 30% · Aplicabilidad 20% · Calidad 15%. La retención es el único eje medido (3 de 3 aciertos, que equivale a 5 en esta escala); el resto es autopercibido. Lectura referencial: Edu-Trace se completará con las demás respuestas del equipo.</p>
+        </div>
+        <div class="gauge-panel">
+          <div class="gauge" style="--pct:90">
+            <div class="gauge-core">
+              <span class="gauge-num">4.6</span>
+              <span class="gauge-cap idx">Índice · de 5</span>
+            </div>
+          </div>
+          <div class="kpis">
+            <div class="kpi"><span class="k-num">3 de 3</span><span class="k-lbl">preguntas respondidas bien</span></div>
+            <div class="kpi"><span class="k-num">1 a 3 h</span><span class="k-lbl">por semana que declara ahorrar con IA</span></div>
+            <div class="kpi"><span class="k-num">4.8</span><span class="k-lbl">progreso del grupo, promedio de 5 sesiones</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="impact-hook">
+        <span class="hook-mark">&#9656;</span>
+        <p class="hook-text">
+          Edu-Trace muestra <strong>3 de 3 respuestas correctas</strong> en las preguntas de conocimiento, y el grupo calificó entre 4.6 y 4.9 su capacidad de repetir lo practicado. Es una primera lectura, que se completará con las demás respuestas del equipo.
+        </p>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Fasto · Dashboard de Impacto</span>
+      </div>
+    </section>
+
+    <!-- 03 · Resultados reales: lo que quedó funcionando y lo que revelaron los datos -->
+    <section class="slide s-data s-real">
+      <span class="counter">03 / 07</span>
+      <p class="eyebrow">02 · Resultados reales <span class="tag-entregado">entregado</span></p>
+      <h2>Lo que quedó funcionando.</h2>
+      <div class="stats3">
+        <div class="stat-card">
+          <span class="big">10</span>
+          <span class="lbl">consultas a Estelar desde Claude</span>
+          <span class="sub">Existencias por tienda, bajo mínimo, ventas de 12 meses, órdenes de compra y despachos de proveedores, entre otras</span>
+        </div>
+        <div class="stat-card">
+          <span class="big">3 <small>tiendas</small></span>
+          <span class="lbl">conectadas a Estelar</span>
+          <span class="sub">Norte y 72 operan. Sur tiene la conexión verificada y está en puesta en marcha</span>
+        </div>
+        <div class="stat-card">
+          <span class="big">Lunes <small>8:00 a. m.</small></span>
+          <span class="lbl">llegan los sugeridos de compra</span>
+          <span class="sub">El equipo los valida y envía los pedidos, con un reporte de existencias por proveedor</span>
+        </div>
+      </div>
+      <div class="body2">
+        <div>
+          <p class="mini-title">Lo que revelaron los datos de Estelar</p>
+          <div class="hall"><span class="hn">~10.000</span><p><strong>productos por tienda</strong> aparecen «bajo mínimo» porque sus mínimos y máximos están desactualizados.</p></div>
+          <div class="hall"><span class="hn">1 % a 8 %</span><p>de las recepciones queda ligado a su orden de compra (ninguna en el Sur): hoy no se mide con confianza el <strong>cumplimiento de los proveedores</strong>.</p></div>
+          <div class="hall"><span class="hn">167</span><p>unidades en existencia de un licor que vende 0.33 al mes: hay <strong>sobrecompra que vence</strong>.</p></div>
+        </div>
+        <div class="frenos">
+          <p class="mini-title">Por cerrar con el equipo</p>
+          <div class="f">Múltiplos de bulto <b>en curso</b></div>
+          <div class="f">Códigos duplicados <b>en curso</b></div>
+          <div class="f">Reglas con Compras <b>por validar</b></div>
+          <div class="f">Servidores de tienda <b>con Sistemas</b></div>
+          <p>Todo entra en el acompañamiento posterior al servicio.</p>
+        </div>
+      </div>
+      <p class="note-honest">Cifras de instalación y hallazgos <strong>verificados por Intezia</strong> sobre los datos de Estelar de las tiendas: describen lo entregado y el estado de los datos, no una mejora medida.</p>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Fasto · Dashboard de Impacto</span>
+      </div>
+    </section>
+
+    <!-- 04 · Progreso del grupo por sesión (escala 1-5) -->
+    <section class="slide s-data s-prog">
+      <span class="counter">04 / 07</span>
+      <p class="eyebrow">03 · Progreso del grupo <span class="tag-percibido">percibido</span></p>
+      <h2>Entre 4.6 y 4.9 en las cinco sesiones.</h2>
+      <p class="sub">«Me siento capaz de repetir lo practicado sin ayuda», promedio del grupo en cada sesión (escala 1-5). Respuestas anónimas.</p>
+      <svg viewBox="0 0 1000 218" preserveAspectRatio="none" style="font-family:var(--font-display)">
+        <defs>
+          <linearGradient id="gA" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#F4BA1A" stop-opacity="0.42"/>
+            <stop offset="1" stop-color="#F4BA1A" stop-opacity="0.02"/>
+          </linearGradient>
+        </defs>
+        <g stroke="#000" stroke-opacity="0.12" stroke-width="1">
+          <line x1="44" y1="30" x2="980" y2="30"/><line x1="44" y1="70" x2="980" y2="70"/>
+          <line x1="44" y1="110" x2="980" y2="110"/><line x1="44" y1="150" x2="980" y2="150"/>
+          <line x1="44" y1="190" x2="980" y2="190"/>
+        </g>
+        <g font-size="13" fill="#000" fill-opacity="0.5" text-anchor="end">
+          <text x="38" y="35">5</text><text x="38" y="75">4</text><text x="38" y="115">3</text>
+          <text x="38" y="155">2</text><text x="38" y="195">1</text>
+        </g>
+        <polygon points="100,190 100,34 300,46 500,38 700,34 900,34 900,190" fill="url(#gA)"/>
+        <polyline points="100,34 300,46 500,38 700,34 900,34" fill="none" stroke="#E58423" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+        <g fill="#000" stroke="#F4BA1A" stroke-width="4">
+          <circle cx="100" cy="34" r="9"/><circle cx="300" cy="46" r="9"/><circle cx="500" cy="38" r="9"/>
+          <circle cx="700" cy="34" r="9"/><circle cx="900" cy="34" r="9"/>
+        </g>
+        <g font-size="24" font-weight="700" fill="#000" text-anchor="middle">
+          <text x="100" y="82">4.9</text><text x="300" y="94">4.6</text><text x="500" y="86">4.8</text>
+          <text x="700" y="82">4.9</text><text x="900" y="82">4.9</text>
+        </g>
+      </svg>
+      <div class="cols5 solo-prom">
+        <div class="sc"><div class="sn">Sesión 1</div><span class="avg">4.9</span><div class="trk"><div class="fl" style="--w:97.5%"></div></div></div>
+        <div class="sc"><div class="sn">Sesión 2</div><span class="avg">4.6</span><div class="trk"><div class="fl" style="--w:90%"></div></div></div>
+        <div class="sc"><div class="sn">Sesión 3</div><span class="avg">4.8</span><div class="trk"><div class="fl" style="--w:95%"></div></div></div>
+        <div class="sc"><div class="sn">Sesión 4</div><span class="avg">4.9</span><div class="trk"><div class="fl" style="--w:97.5%"></div></div></div>
+        <div class="sc"><div class="sn">Sesión 5</div><span class="avg">4.9</span><div class="trk"><div class="fl" style="--w:97.5%"></div></div></div>
+      </div>
+      <div class="hook-bar">El grupo se sintió capaz de repetir lo practicado <strong>desde la primera sesión (4.9) y lo sostuvo hasta la última (4.9)</strong>. El punto más bajo fue la sesión 2, con 4.6. La medición empieza al terminar la primera sesión, por eso la curva no parte de un nivel previo.</div>
+    </section>
+
+    <!-- 05 · Conocimiento y experiencia -->
+    <section class="slide s-data s-know">
+      <span class="counter">05 / 07</span>
+      <p class="eyebrow">04 · Conocimiento y experiencia</p>
+      <h2>Lo que quedó y cómo lo vivieron.</h2>
+      <div class="two">
+        <div>
+          <p class="coltitle">Conocimiento <span class="tag-medido">medido</span></p>
+          <div class="gl"><span class="pct">3 de 3</span><span class="txt">respuestas correctas en 3 preguntas de situación</span></div>
+          <div class="kq"><div class="top"><span class="nm">Qué información no se le pasa a Claude</span><span class="sc">Correcta</span></div><div class="trk"><div class="fl" style="--w:100%"></div></div></div>
+          <div class="kq"><div class="top"><span class="nm">Diferencia entre proyecto y skill</span><span class="sc">Correcta</span></div><div class="trk"><div class="fl" style="--w:100%"></div></div></div>
+          <div class="kq"><div class="top"><span class="nm">Objetivo de la tarea programada de los lunes</span><span class="sc">Correcta</span></div><div class="trk"><div class="fl" style="--w:100%"></div></div></div>
+        </div>
+        <div>
+          <p class="coltitle">Experiencia <span class="tag-percibido">percibido · escala 1-5</span></p>
+          <div class="eb"><div class="top"><span class="nm">Dominio técnico<small>profundidad de las soluciones</small></span><span class="v">5.0</span></div><div class="trk"><div class="fl" style="--w:100%"></div></div></div>
+          <div class="eb"><div class="top"><span class="nm">Relevancia<small>los casos reflejan situaciones reales</small></span><span class="v">5.0</span></div><div class="trk"><div class="fl" style="--w:100%"></div></div></div>
+          <div class="eb"><div class="top"><span class="nm">Ritmo<small>tiempo para asimilar</small></span><span class="v">5.0</span></div><div class="trk"><div class="fl" style="--w:100%"></div></div></div>
+          <div class="eb"><div class="top"><span class="nm">Acompañamiento<small>dudas resueltas con inmediatez y precisión</small></span><span class="v">5.0</span></div><div class="trk"><div class="fl" style="--w:100%"></div></div></div>
+          <div class="sat">
+            <div class="s1"><b>4.93</b><span>satisfacción del grupo en Construcción</span></div>
+            <div class="s1"><b>4.86</b><span>satisfacción del grupo en Fundamentals</span></div>
+          </div>
+        </div>
+      </div>
+      <p class="note-honest">El conocimiento se mide con preguntas que tienen respuesta correcta. La experiencia es la opinión de quien respondió. Los datos de Edu-Trace son referenciales hasta completar las respuestas del equipo; la satisfacción es la del grupo en las cinco sesiones.</p>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Fasto · Dashboard de Impacto</span>
+      </div>
+    </section>
+
+    <!-- 06 · Próximos pasos -->
+    <section class="slide s-reco final">
+      <span class="counter">06 / 07</span>
+      <p class="eyebrow">05 · Próximos pasos</p>
+      <h2>Lo que pide el equipo para seguir.</h2>
+      <div class="cols">
+        <div class="card">
+          <span class="label">Áreas que se beneficiarían</span>
+          <ul class="rank plain">
+            <li><span>Inventario<small>6 procesos y 5 subproyectos levantados</small></span></li>
+            <li><span>Costos<small>8 procesos y 8 subproyectos levantados</small></span></li>
+            <li><span>Recursos humanos<small>la sugirió el equipo</small></span></li>
+          </ul>
+        </div>
+        <div class="card">
+          <span class="label">Habilidad que quiere dominar</span>
+          <ul class="rank plain">
+            <li><span>Mejorar la forma de dar instrucciones al agente de Claude</span></li>
+          </ul>
+        </div>
+        <div class="card">
+          <span class="label">Lo que aún falta automatizar</span>
+          <ul class="rank plain">
+            <li><span>Reportes</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="hook">
+        Inventario y Costos ya se levantaron con sus equipos y parten del mismo dato: <strong>una factura que hoy se teclea a mano</strong>. La conexión con Estelar ya construida es la base para ambos. Lo que señala Edu-Trace es una pista, no un ranking.
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Fasto · Dashboard de Impacto</span>
+      </div>
+    </section>
+
+    <!-- 07 · Recomendación de Intezia (se apoya en los próximos pasos de la slide 06) -->
+    <section class="slide s-reco final s-recomendacion">
+      <span class="counter">07 / 07</span>
+      <p class="eyebrow">06 · Recomendación de Intezia</p>
+      <h2>Tres pasos, en este orden.</h2>
+      <div class="cols">
+        <div class="card">
+          <div class="rh"><span class="n">1</span><span class="label">Primero</span></div>
+          <h3>Cerrar lo pendiente</h3>
+          <p>Quedan los múltiplos de bulto, los códigos duplicados, reglas por validar con Compras y el mantenimiento de los servidores. Proponemos <strong>cerrarlos con Compras y con Sistemas</strong> antes de sumar áreas.</p>
+        </div>
+        <div class="card">
+          <div class="rh"><span class="n">2</span><span class="label">Luego</span></div>
+          <h3>Empezar por Inventario</h3>
+          <p>Su prioridad es la recepción: un solo analista registra las facturas y los jueves y viernes llegan de 80 a 90 proveedores. Proponemos <strong>asistir la recepción con validación humana</strong>.</p>
+        </div>
+        <div class="card">
+          <div class="rh"><span class="n">3</span><span class="label">Después</span></div>
+          <h3>Sumar Costos</h3>
+          <p>El costo nace de una factura que se teclea a mano, igual que la recepción. Proponemos <strong>resolver la lectura de facturas para las dos áreas</strong> sobre la misma base.</p>
+        </div>
+      </div>
+      <div class="hook">
+        Intezia recomienda avanzar en este orden y <strong>completar la medición con las respuestas de todo el equipo</strong>, para confirmar con más datos esta primera lectura. Después, volver a medir con Edu-Trace al cierre de cada paso.
+      </div>
+      <div class="contact-mini">
+        <span><b>Asesora:</b> Verónica Rubio · +58 422 3355505 · vrubio01@intezia.com</span>
+        <span><b>Empresa:</b> Intezia C.A J-505657950 · servicio@intezia.com</span>
+      </div>
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Fasto · Dashboard de Impacto</span>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

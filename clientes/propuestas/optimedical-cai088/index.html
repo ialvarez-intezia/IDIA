@@ -1,0 +1,432 @@
+<!doctype html>
+<!--
+  Propuesta · Optimedical · Servicio de Habilidades (CAI-088)
+  División: Educación · Servicio: Habilidades (§4.1a) · Alianza: no
+  GENERADO por scripts/generar-habilidades-compacto.py (plantilla 3.0 (2026-10-08), formato habilidades) desde datos.json.
+  No editar a mano: editar datos.json y regenerar. Estilos propios del deck: overrides.css.
+  Fuente del insumo: Ficha de Levantamiento (03/11/2026) y transcripción de la reunión con Marling Duc (03/11/2026)
+
+  Formato compacto de 8 slides, en el orden de las preguntas del cliente (Ventas, 2026-10-07), sin semanas, sesiones
+  ni fechas (Keiber, 2026-10-08):
+    1 Portada · 2 Alcance · 3 Ruta · 4 Cómo trabajamos · 5 Entregables · 6 Retorno · 7 Inversión · 8 Próximos pasos
+  Marcadores de detección de AcroForms (agregar-campo-precio.py), por página: «Propuesta Económica» solo en la slide de
+  inversión; «Lo que se llevan» y «Entregables» solo en la de entregables; «Facilidad de pago» solo en la de pago.
+  Campos AcroForm: Programa, Notas, PrecioBase, Descuento, PrecioTotal (inversión) y Entregables, Acreditacion (entregables). Se reposicionan con scripts/customize-habilidades-compacto.py.
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Propuesta · Optimedical · Intezia Educación</title>
+  <link rel="stylesheet" href="../_base/styles.css">
+  <link rel="stylesheet" href="habilidades-compacto.css">
+  <link rel="stylesheet" href="overrides.css">
+</head>
+<body>
+
+  <main class="deck">
+
+    <!-- 1 · Portada: ¿cuál es mi problema? -->
+    <section class="slide s-cover">
+      <span class="counter">01 / 08</span>
+      <div class="logo-big">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia Educación">
+      </div>
+      <div class="body">
+        <p class="eyebrow">Propuesta de proyecto · Servicio de Habilidades</p>
+        <h1 style="font-size:46px">
+          Procesos que no se olvidan:<br>
+          un Cerebro Digital con IA<br>
+          <span class="hl">para Optimedical</span>
+        </h1>
+        <p class="lead">
+          Este proyecto acompaña a Marling a construir su <strong>Cerebro Digital</strong> en <strong>Claude</strong>: un asistente que conoce el catálogo, los procesos y las cotizaciones de la óptica, para que no dependan de la memoria de las personas.
+        </p>
+        <div class="pain-strip">
+          <div class="pain-item">
+            <span class="pain-num">+1.000</span>
+            <span class="pain-lbl">cristales de laboratorios externos: cada cambio de lista se traduce y se recalcula a mano.</span>
+          </div>
+          <div class="pain-item">
+            <span class="pain-num">A mano</span>
+            <span class="pain-lbl">se arma cada cotización: cambia según quién la haga y su seguimiento se olvida.</span>
+          </div>
+          <div class="pain-item">
+            <span class="pain-num">Un Word</span>
+            <span class="pain-lbl">es el manual de procesos que nadie consulta; la práctica vive en un chat cargado a mano.</span>
+          </div>
+        </div>
+      </div>
+      <div class="id-line">
+        <span class="codigo">Código: CAI-088</span>
+        <span class="cliente">Optimedical</span>
+      </div>
+    </section>
+
+    <!-- 2 · Alcance: qué vamos a hacer y para qué -->
+    <section class="slide s-scope roomy">
+      <span class="counter">02 / 08</span>
+      <p class="eyebrow">02 · Alcance</p>
+      <h2>Un Cerebro Digital para la óptica.</h2>
+      <p class="sub">Marling construye su <strong>asistente en Claude</strong>: cotizaciones, catálogo y procesos en un solo lugar.</p>
+
+      <div class="scope-panels one" style="--np:1">
+        <div class="scope-panel acc-y">
+          <div class="scope-head">
+            <span class="scope-tag">Claude y Obsidian</span>
+            <span class="scope-total"><b>1</b> Cerebro Digital</span>
+          </div>
+          <ul class="scope-rows">
+              <li><span class="area">Cerebro Digital de Marling <small class="comp">8 horas con Marling, guiadas por Intezia.</small></span><span class="para">Cotizar, consultar el catálogo y tener los procesos a la mano, sin depender de la memoria</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="scope-facts">
+        <p class="scope-card-label">Otras tareas que se pueden explorar al empezar</p>
+        <ul>
+          <li><b>Obligaciones del mes</b><span>IVA, patente y permisos, a la vista.</span></li>
+          <li><b>Ingreso administrativo</b><span>Gastos, pagos y cuentas.</span></li>
+          <li><b>Reporte para socios</b><span>Armado con menos trabajo.</span></li>
+          <li><b>Ofertas de empleo</b><span>Propuestas y su seguimiento.</span></li>
+        </ul>
+      </div>
+
+      <div class="scope-out">
+        <p class="scope-card-label">Fuera de este alcance</p>
+        <ul>
+          <li>Recordatorios y envíos que se hacen solos: el cerebro responde cuando se le pide; las tareas que corren solas son la etapa que sigue.</li>
+          <li>Ingreso automático de gastos, pagos y cuentas en las hojas de cálculo: se explora al empezar, pero no está incluido.</li>
+          <li>Cambiar sus herramientas: Google Workspace y sus hojas siguen igual; el cerebro trabaja con lo que se comparte.</li>
+          <li>La licencia de Claude, que va aparte (detalle en la inversión).</li>
+        </ul>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Optimedical · CAI-088</span>
+      </div>
+    </section>
+
+    <!-- 3 · Ruta: qué pasa en cada fase -->
+    <section class="slide s-route">
+      <span class="counter">03 / 08</span>
+      <p class="eyebrow">03 · Ruta</p>
+      <h2>Un cerebro en uso, en tres fases.</h2>
+      <p class="sub">El calendario se acuerda en la reunión de arranque. El <strong>seguimiento</strong> a 30, 60 y 90 días corre desde el cierre del proyecto.</p>
+
+      <div class="route-grid n1" style="--cols:3; --rows:1; --rowh:214px">
+
+        <div class="rg-corner"></div>
+        <div class="rg-phase rg-ph-1">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Base</span><b class="rg-phase-n">1 hora</b></span>
+          <span class="rg-phase-name">Claude y tareas</span>
+        </div>
+        <div class="rg-phase rg-ph-2">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Grafo</span><b class="rg-phase-n">2 horas</b></span>
+          <span class="rg-phase-name">Procesos y obligaciones</span>
+        </div>
+        <div class="rg-phase rg-ph-3 hi">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Uso</span><b class="rg-phase-n">5 horas</b></span>
+          <span class="rg-phase-name">Cotización, cristales y equipo</span>
+        </div>
+        <div class="rg-phase rg-fu">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Garantía</span></span>
+          <span class="rg-phase-date">30, 60 y 90 días</span>
+          <span class="rg-phase-txt">Seguimiento desde el cierre del proyecto</span>
+        </div>
+
+        <div class="rg-front acc-y">
+          <span class="rg-front-h">El Cerebro Digital de Marling</span>
+          <span class="rg-front-row"><span class="rg-front-tool">Claude</span><b class="rg-front-n">8 horas</b></span>
+          <span class="rg-front-meta">con Marling, guiadas</span>
+        </div>
+        <div class="rg-cell"><span class="rg-h solo-h"><b>1 hora con Marling</b></span><p>Claude explicado y tareas del cerebro delimitadas.</p></div>
+        <div class="rg-cell"><span class="rg-h solo-h"><b>2 horas con Marling</b></span><p>Procesos, protocolos y obligaciones ordenados en un grafo.</p></div>
+        <div class="rg-cell hi"><span class="rg-h solo-h"><b>5 horas con Marling</b></span><p>Cotización, catálogo de cristales e interfaz del equipo.</p></div>
+
+        <div class="rg-follow" style="grid-column:5; grid-row:2 / span 1">
+          <ul>
+            <li><b>30 días</b><span>Uso del cerebro en el día a día</span></li>
+            <li><b>60 días</b><span>Ajustes y nuevas construcciones</span></li>
+            <li><b>90 días</b><span>Tiempo recuperado y seguimientos</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="route-miles" style="grid-template-columns:repeat(5,1fr)">
+        <div class="mile"><span class="mile-d"></span><b>Arranque · aparte</b><p>1 h para fijar el calendario según su tiempo y traer casos reales.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Base</b><p>Claude explicado y las tareas del cerebro delimitadas.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Grafo</b><p>Procesos, protocolos y obligaciones ordenados y consultables.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Uso</b><p>Cotización con seguimiento, catálogo de cristales e interfaz del equipo.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>30 · 60 · 90 días</b><p>Seguimiento: uso del cerebro, ajustes, tiempo recuperado y seguimientos hechos.</p></div>
+      </div>
+      <p class="route-note">Son <strong>8 horas</strong> con Optimedical: 1 de base, 2 de grafo y 5 de uso. La reunión de arranque (1 h) va aparte.</p>
+      <p class="route-next"><b>Etapa siguiente</b> Tareas que corren solas, como recordatorios y envíos, y el ingreso administrativo automático, a evaluar con los resultados.</p>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Optimedical · CAI-088</span>
+      </div>
+    </section>
+
+    <!-- 4 · Cómo trabajamos: pasos, por qué en ese orden, casos reales, práctica, datos y logística -->
+    <section class="slide s-method roomy">
+      <span class="counter">04 / 08</span>
+      <p class="eyebrow">04 · Cómo trabajamos</p>
+      <h2>Así trabajamos el proyecto.</h2>
+      <p class="sub">Guiado por Intezia y sobre sus propios procesos, hasta que usa y mantiene su cerebro por sí misma.</p>
+
+      <ol class="mt-steps" style="--n:4">
+          <li><b>Delimitamos</b><span>Las tareas del cerebro, elegidas con casos de su propio día.</span></li>
+          <li><b>Construimos</b><span>En vivo, sobre una cotización y una lista de laboratorio reales.</span></li>
+          <li><b>Probamos</b><span>Con casos reales, hasta que el resultado coincide con el suyo.</span></li>
+          <li><b>Adoptamos</b><span>Marling lo usa y lo actualiza sola; seguimos a 30, 60 y 90 días.</span></li>
+      </ol>
+      <div class="mt-strips">
+        <p class="mt-why"><b>Por qué en este orden</b> Primero se entiende Claude y se delimitan las tareas; después se ordenan los procesos; al final se construyen la cotización, el catálogo y la interfaz del equipo.</p>
+        <p class="mt-who"><b>Quién construye</b> Optimedical construye su cerebro; <strong>Intezia guía</strong> cada paso, sobre sus cotizaciones, listas y procesos reales.</p>
+      </div>
+
+      <div class="mt-info">
+        <div class="mt-card">
+          <p class="mt-card-label">Cómo funciona en la práctica</p>
+          <ul><li><b>Sin prompts largos.</b> Claude se explica desde lo básico: se le pide lo que se necesita en palabras simples.</li><li><b>Una persona decide.</b> El cerebro propone la cotización y la lista; Marling valida antes de enviarla al paciente.</li><li><b>Lo que hace y lo que no.</b> Responde cuando se le pide; no envía mensajes ni recordatorios por sí solo.</li></ul>
+        </div>
+        <div class="mt-card">
+          <p class="mt-card-label">Cómo cuidamos sus datos</p>
+          <p>La información financiera, de pacientes y de laboratorios es confidencial: solo se carga en el cerebro lo que Optimedical decide compartir, sin claves bancarias ni historias clínicas. Los criterios de uso seguro se acuerdan al empezar.</p>
+        </div>
+      </div>
+
+      <div class="mt-logi">
+        <div class="mt-tile"><span>Modalidad</span><b>Presencial o virtual, según lo que más le convenga a Marling.</b></div>
+        <div class="mt-tile"><span>Participantes</span><b>Marling Duc, socia y responsable de la operación; las 5 personas del equipo usan lo construido.</b></div>
+        <div class="mt-tile"><span>Ritmo de trabajo</span><b>Bloques cortos y a su medida, pensados para quien atiende la operación.</b></div>
+        <div class="mt-tile"><span>Arranque</span><b>La fecha la fija Marling; una reunión de arranque de 1 h, aparte, acuerda el calendario.</b></div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Optimedical · CAI-088</span>
+      </div>
+    </section>
+
+    <!-- 5 · Entregables: ¿con qué me quedo? (catálogo + piezas transversales) -->
+    <section class="slide s-deliv">
+      <span class="counter">05 / 08</span>
+      <p class="eyebrow">05 · Entregables</p>
+      <div class="deliv-head">
+        <h2>Lo que recibe Optimedical.</h2>
+        <p class="deliv-sub"><span class="nw">Lo que se llevan</span>: <strong>un cerebro en uso</strong> para cotizar, consultar cristales y tener los procesos a la mano, más el seguimiento a 30, 60 y 90 días.</p>
+      </div>
+
+      <div class="deliv-carriles" style="--ncols:1">
+        <span class="dc acc-y" style="grid-column: span 1">Claude y Obsidian</span>
+      </div>
+
+      <div class="deliv-cols" style="--ncols:1">
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">Cerebro Digital de Marling</p>
+            <ul>
+              <li>Claude explicado y tareas del cerebro delimitadas<ul class="inc"><li>Qué es Claude y cómo se usa, sin términos técnicos</li><li>Las tareas que trabajará el cerebro, con su día a día</li><li>El propósito del cerebro y sus primeros pedidos</li></ul></li>
+              <li>Procesos, protocolos y obligaciones en el cerebro<ul class="inc"><li>Manual de procesos y protocolo de jornada, vivos</li><li>Práctica de atención con casos de pacientes</li><li>Orden de pasos de las obligaciones del mes</li></ul></li>
+              <li>Cotización estandarizada con envío y seguimiento<ul class="inc"><li>Cotización con un mismo formato, la haga quien la haga</li><li>Mensaje de envío y seguimiento que no se olvida</li><li>Seguimiento post-consulta y de entrega, con el enlace de reseña</li></ul></li>
+              <li>Catálogo de cristales consultable y al día<ul class="inc"><li>Listas de cada laboratorio traducidas al lenguaje interno</li><li>Valores de compra y de venta recalculados al cambiar una lista</li><li>Consulta del cristal con el paciente enfrente</li></ul></li>
+              <li>Interfaz para el equipo y cerebro mantenible<ul class="inc"><li>Una página interna con procesos, práctica y catálogo</li><li>Cómo actualizar el cerebro si cambia el negocio</li><li>Cómo sumar un rol nuevo cuando entre alguien</li></ul></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="deliv-band">
+        <div class="db-card db-1">
+          <span class="db-label">Para todo el proyecto</span>
+        </div>
+        <div class="db-card db-2">
+          <span class="db-label">Valor inmediato</span>
+        </div>
+      </div>
+      <!-- Cajas multiline editables (vacías en HTML: el contenido vive dentro del AcroForm /V). -->
+      <div class="multi-box db-box db-box-1" data-field="Entregables"></div>
+      <div class="multi-box db-box db-box-2" data-field="Acreditacion"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Optimedical · CAI-088</span>
+      </div>
+    </section>
+
+    <!-- 6 · Retorno: ¿qué gano? (método de cálculo). Sin estudios ni citas externas. -->
+    <section class="slide s-roi">
+      <span class="counter">06 / 08</span>
+      <p class="eyebrow">06 · Retorno</p>
+      <h2>Retorno esperado: tiempo recuperado, medido.</h2>
+      <p class="sub">Se mide contra la línea base que Marling deja al empezar y se sigue a 30, 60 y 90 días.</p>
+
+      <div class="roi-body">
+        <div class="roi-panel">
+          <p class="roi-panel-title">Cómo se calcula</p>
+          <ol class="roi-steps">
+            <li><b>Punto de partida</b><span>Cuánto toman hoy una cotización y actualizar la lista de un laboratorio. Es la línea base.</span></li>
+            <li><b>Tiempo con el cerebro</b><span>Lo que toman las mismas tareas con sus Skills ya en uso.</span></li>
+            <li><b>Horas recuperadas</b><span>Diferencia entre ambos tiempos, por tarea: una estimación referencial, sin compromiso de resultado.</span></li>
+            <li><b>Seguimientos hechos</b><span>Cuántas cotizaciones y entregas reciben hoy seguimiento, y cuántas después.</span></li>
+            <li><b>Gasto de operar</b><span>La licencia de Claude, contra el tiempo recuperado.</span></li>
+          </ol>
+        </div>
+
+        <div class="roi-right">
+          <p class="roi-right-title">Calendario de seguimiento y medición</p>
+          <div class="roi-card">
+            <b>30 días</b>
+            <p>El cerebro en uso real y la línea base validada con Marling.</p>
+          </div>
+          <div class="roi-card">
+            <b>60 días</b>
+            <p>Ajustes del cerebro y horas recuperadas medidas contra la línea base.</p>
+          </div>
+          <div class="roi-card">
+            <b>90 días</b>
+            <p>Tiempo recuperado y seguimientos hechos, medidos; cerebro mantenido por Marling.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="roi-dest-wrap">
+        <p class="roi-dest-title">Hacia dónde va el proyecto</p>
+        <div class="roi-dest">
+          <div class="rd-item"><b>Un solo criterio</b><p>Cada cotización sale con el <strong>mismo formato</strong>, la haga quien la haga.</p></div>
+          <div class="rd-item"><b>Seguimiento que no se pierde</b><p>El envío y el seguimiento dejan de <strong>depender de que alguien se acuerde</strong>.</p></div>
+          <div class="rd-item"><b>Equipo que sabe qué hacer</b><p>Quien entre al equipo encuentra los <strong>procesos y el catálogo</strong> a la mano, sin que Marling los explique.</p></div>
+        </div>
+      </div>
+
+      <div class="roi-hook"><p>A los 90 días del cierre, Optimedical contará con el tiempo recuperado y los seguimientos hechos, medidos contra su línea base.</p></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Optimedical · CAI-088</span>
+      </div>
+    </section>
+
+    <!-- 7 · Inversión (hoja de cotización estándar; antepenúltima slide) -->
+    <section class="slide s-price">
+      <span class="counter">07 / 08</span>
+      <h2 class="title">Inversión del proyecto.</h2>
+      <p class="price-intro">Propuesta Económica · Servicio de Habilidades</p>
+
+      <div class="block">
+        <span class="block-eyebrow">Duración</span>
+        <p class="block-value">Un Cerebro Digital en tres fases, <strong>8 horas</strong> con Optimedical y seguimiento a 30, 60 y 90 días.</p>
+      </div>
+
+      <div class="block block-programa">
+        <span class="block-eyebrow">Programa</span>
+      </div>
+      <div class="multi-box programa-box" data-field="Programa"></div>
+
+      <div class="block block-cotizacion">
+        <span class="block-eyebrow">Cotización</span>
+      </div>
+
+      <span class="cot-label cot-label-base">Propuesta + Inversión</span>
+      <div class="cot-frame base-frame"></div>
+
+      <span class="cot-label cot-label-discount">Descuento</span>
+      <span class="cot-sign-minus">&minus;$</span>
+      <div class="cot-frame discount-frame"></div>
+      <span class="cot-urgent-note">Descuento válido por 15 días</span>
+
+      <span class="cot-label cot-label-total">TOTAL</span>
+      <div class="cot-frame total-frame"></div>
+
+      <p class="cot-validity">Cotización válida por 30 días.</p>
+      <div class="cot-terms-box">
+        <span class="cot-terms-label">Importante</span>
+        <p class="cot-terms-text">Este servicio se presta bajo nuestros <a href="https://drive.google.com/file/d/1PA-ZSt4KnyY5dpxXzgkIk6-yfGlV2eF8/view?usp=drive_link" target="_blank" rel="noopener">términos y condiciones</a>. Al avanzar con esta propuesta, ambas partes los aceptan.</p>
+      </div>
+
+      <div class="cot-garantia-badge">
+        <span class="cot-garantia-tag">Garantía 30-60-90</span>
+        <p class="cot-garantia-text">Estamos contigo hasta que el cerebro quede en uso.</p>
+      </div>
+
+      <div class="block block-notes-container">
+        <span class="block-eyebrow">Notas</span>
+      </div>
+      <div class="multi-box notas-box" data-field="Notas"></div>
+
+      <div class="lic-wrap">
+        <span class="lic-eyebrow">Licenciamiento · aparte de esta inversión</span>
+        <div class="lic-cards">
+          <div class="lic-card acc-y">
+            <span class="lic-name">Claude · plan individual</span>
+            <p><strong>USD 20</strong> al mes para el cerebro de Marling. Si más personas lo usan con Claude, cada una necesita su propio puesto; se define al empezar.</p>
+          </div>
+          <div class="lic-card acc-o">
+            <span class="lic-name">Obsidian · gratuito</span>
+            <p>Aplicación de notas donde se organiza el conocimiento como grafo. Se instala al trabajar el grafo.</p>
+          </div>
+        </div>
+        <p class="lic-note">Valor de lista dicho en la reunión del 03/11/2026; puede variar y lo confirma Optimedical con el proveedor. No es un valor de Intezia.</p>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Optimedical · CAI-088</span>
+      </div>
+    </section>
+
+    <!-- 9 · Próximos pasos: qué hacer y a quién escribir (última slide) -->
+    <section class="slide s-next">
+      <span class="counter">08 / 08</span>
+      <p class="eyebrow">08 · Próximos pasos</p>
+      <h2>Tres pasos para arrancar.</h2>
+      <p class="sub">Esto es lo que sigue cuando Optimedical confirme la propuesta.</p>
+
+      <div class="nx-steps">
+        <div class="nx-step acc-y">
+          <span class="nx-num">1</span>
+          <b>Revisión conjunta</b>
+          <p>Revisamos la propuesta con quien decide por Optimedical y respondemos sus dudas.</p>
+        </div>
+        <div class="nx-step acc-o">
+          <span class="nx-num">2</span>
+          <b>Cuenta y material</b>
+          <p>Se deja lista la cuenta de Claude y se reúne el material que se decida compartir: catálogo, procesos y listas.</p>
+        </div>
+        <div class="nx-step acc-w">
+          <span class="nx-num">3</span>
+          <b>Reunión de arranque</b>
+          <p>Una hora para acordar las fechas y elegir las primeras tareas con Marling.</p>
+        </div>
+      </div>
+
+      <div class="nx-contact">
+        <div class="nx-card nx-ase">
+          <span class="nx-label">¿Dudas? Escribe a tu asesora comercial</span>
+          <b class="nx-name">Verónica Rubio</b>
+          <span class="nx-role">Asesora comercial</span>
+          <p class="nx-line"><a href="mailto:vrubio01@intezia.com">vrubio01@intezia.com</a></p>
+          <p class="nx-line">+58 422 3355505</p>
+        </div>
+        <div class="nx-card nx-emp">
+          <span class="nx-label">Intezia</span>
+          <p class="nx-line">Intezia C.A J-505657950</p>
+          <p class="nx-line"><a href="mailto:servicio@intezia.com">servicio@intezia.com</a></p>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Optimedical · CAI-088</span>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

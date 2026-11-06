@@ -520,8 +520,8 @@ Habilidades (incluido el que llega como «ajusta la propuesta de X al formato nu
    - **Facilidad de pago**: cuotas ligadas a hitos de la ruta; los montos son campos
      editables y vacíos (los llena ventas; nunca se escriben en el repositorio).
    - **Ni semanas, ni sesiones, ni fechas** (§4.23): la ruta va por fases nombradas e hitos por
-     evento, y las cuotas, por hito. Las horas se calculan, no se escriben, y van en pequeño
-     detrás de las soluciones. Los conteos de soluciones sí van: en Habilidades se conocen
+     evento, y las cuotas, por hito. **Sin horas de trabajo ni cantidad de consultores** (§4.23
+     punto 4): se usa `sin_horas_trabajo: true`. Los conteos de soluciones sí van: en Habilidades se conocen
      (salen del informe de Detección).
    - Sin Metodología ABR ni Equipo facilitador (§4.10a): «Cómo trabajamos» explica cómo se
      trabaja (pasos, límites, datos), no la pedagogía. Sin Cierre. Próximos pasos = logística
@@ -619,6 +619,16 @@ cuadra en el kickoff» y «que lo entienda alguien que no seamos tú ni yo ni Iv
    (p. ej. sus «áreas prioritarias» no se convierten en frentes prioritarios).
 3. **Que lo entienda quien no estuvo en la reunión:** cada cifra dice de qué es; nada de conteos
    sueltos ni números sin explicar.
+4. **Sin horas de trabajo ni cantidad de consultores, en ninguna propuesta (Ivana, 2026-10-27):**
+   la propuesta no muestra las horas de trabajo internas de Intezia («104 horas de trabajo», «total
+   de 132 h», «8 h por cápsula») ni cuántos consultores o facilitadores participan («2 facilitadores
+   por encuentro»). Sí pueden ir las horas de encuentro con el cliente, la duración de un taller o
+   charla y las horas de contenido (p. ej. «52 horas de encuentro», «taller de 2 a 3 horas»). Las
+   horas internas viven solo en `programa.md` y `brief.md`, para cotizar. En las plantillas
+   compactas: `sin_horas_trabajo: true` (por defecto en `datos.plantilla.json`) apaga los textos
+   automáticos con horas, y el generador **bloquea** «N facilitadores/consultores» y, con la opción
+   activa, «horas de trabajo». En los decks sin la opción avisa (⚠); los ya entregados no se tocan.
+   Pendiente de confirmar con Ivana: Detección (§4.22) muestra las horas globales de levantamiento.
 
 > Caso base: 2026-10-08 G-MAX DET-024 (reunión de Keiber con David y María). Detalle:
 > `plantillas/deteccion-compacto.md` §2, `plantillas/habilidades-compacto.md` §6 y `aprendizajes.md`.
@@ -909,6 +919,12 @@ de un cliente cuya formación terminó.
 > compartir pantalla. Paleta y tipografía propias, **distintas** de la oficial de propuesta:
 > `empresa/marca-artefactos.md`. Spec completo: `plantillas/brief-kickoff.md`. Canónico:
 > `plantillas/kickoff-canonico/kickoff.html` (servicio Habilidades, cliente demo "Gato").
+
+**Solo cuando el usuario lo pida (Ivana, 2026-10-27):** el Brief de Kickoff, su PDF y el `.ics` de
+agenda **nunca** se generan como parte de armar, ajustar o regenerar una propuesta ni se ofrecen por
+iniciativa propia; el flujo de propuestas termina en el PDF de la propuesta. Ningún script del flujo de
+propuestas llama a `generar-kickoff.py` ni crea `.ics` (el `.ics` solo lo baja el botón «Agendar todo» del
+`kickoff.html`, en el navegador, cuando la persona lo pulsa).
 
 **Bloqueante:** antes de generar, **pregunta al usuario si la propuesta está aprobada** (y,
 si tenía varios caminos de cotización, cuál se aprobó). Sin confirmación, no generes el brief.

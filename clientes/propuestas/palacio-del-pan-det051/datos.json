@@ -1,0 +1,315 @@
+{
+ "version": 3,
+ "formato": "deteccion",
+ "cliente": {
+  "nombre": "El Palacio del Pan",
+  "slug": "palacio-del-pan-det051",
+  "codigo": "DET-051",
+  "nombre_pie": "El Palacio del Pan"
+ },
+ "division": "educacion",
+ "alianza": false,
+ "sin_horas_trabajo": true,
+ "omitir": [
+  "pago"
+ ],
+ "eje": "Nivelar al equipo de El Palacio del Pan en IA, auditar sus tres áreas administrativas y dejar logros inmediatos, un mapa de oportunidades y los roles que necesita la operación administrativa",
+ "origen": "Ficha de Levantamiento de Panadería El Palacio del Pan, DAG Inversiones (Verónica Rubio, registrada el 02/11/2026; contacto Juan Carlos, dueño y accionista mayoritario, quien decide y firma) y transcripción de la reunión virtual del 02/11/2026 (recibida incompleta: llega hasta el minuto 55 de 89), más instrucciones de Ivana del 03/11/2026: propuesta de Detección DET-051 con Verónica Rubio como asesora. División Educación y sin alianza, por confirmar",
+ "fuente_insumo": "Ficha de Levantamiento (02/11/2026) y transcripción de la reunión de Verónica Rubio con El Palacio del Pan (02/11/2026, incompleta)",
+ "siglas_ok": [
+  "IA",
+  "RRHH",
+  "Profit"
+ ],
+ "portada": {
+  "titulo_lineas": [
+   "Mapa de oportunidades de IA",
+   "y control administrativo"
+  ],
+  "titulo_destacado": "en {cliente_corto}",
+  "lead": "Nivelamos al equipo en IA, auditamos las **{n_areas_txt}** de {cliente_corto} y dejamos **logros inmediatos**, para saber cómo controlar lo administrativo y con qué herramientas hacerlo.",
+  "hechos": [
+   {
+    "num": "Doble",
+    "texto": "registro del cierre diario: fiscal en Profit y manual en Excel, que luego se comparan a mano."
+   },
+   {
+    "num": "Manual",
+    "texto": "es la recepción de mercancía: se carga en Profit y el precio se calcula con calculadora."
+   },
+   {
+    "num": "Martes",
+    "texto": "es cuando el dueño conoce la venta, con el reporte que envía administración."
+   },
+   {
+    "num": "Excel",
+    "texto": "aislados pasan de mano en mano para el cierre mensual, que siempre llega atrasado."
+   }
+  ]
+ },
+ "deteccion": {
+  "areas": [
+   "Gerencia general",
+   "Administración",
+   "Compras y recepción"
+  ],
+  "etiqueta_departamentos": "Qué miramos en cada proceso",
+  "departamentos": [
+   "Pasos del proceso",
+   "Información que usa",
+   "Quién lo hace",
+   "Dónde se hace a mano"
+  ],
+  "horas": {
+   "levantamiento": 12,
+   "arranque": 0,
+   "nivelacion": 2
+  },
+  "foco": "No hay departamentos formales: recorremos **cada zona de trabajo** como el equipo la conoce, y dónde se **registra** lo que pasa en el día.",
+  "logros_minimos": 3,
+  "texto_horas": "**{h_levantamiento} horas** de levantamiento, repartidas según lo que necesite cada área.",
+  "para_que": [
+   {
+    "titulo": "Ver la operación real",
+    "texto": "Cómo se hace hoy cada tarea, incluso donde no hay un proceso escrito."
+   },
+   {
+    "titulo": "Mejorar desde ya",
+    "texto": "Logros inmediatos que cada equipo usa mientras avanza el levantamiento."
+   },
+   {
+    "titulo": "Roles y tareas",
+    "texto": "Quién hace qué y cuánto toma, para repartir el trabajo sin sobrecargar a nadie."
+   },
+   {
+    "titulo": "Invertir con criterio",
+    "texto": "Elegir herramientas y licencias de IA sobre una base cierta, antes de comprar."
+   }
+  ],
+  "etapas": [
+   {
+    "titulo": "Arranque",
+    "texto": "Reunión de arranque: alcance, responsables de cada área y calendario."
+   },
+   {
+    "titulo": "Nivelación",
+    "texto": "**{h_nivelacion} horas** de Fundamentos de IA para todo el equipo, en un solo grupo, antes de levantar."
+   },
+   {
+    "titulo": "Levantamiento",
+    "texto": "Una conversación con cada área, con quien hace el trabajo.",
+    "horas": true
+   },
+   {
+    "titulo": "Priorización",
+    "texto": "Intezia cruza lo levantado y ordena las oportunidades por impacto y esfuerzo."
+   },
+   {
+    "titulo": "Informe Final",
+    "texto": "Diagnóstico, roles, hoja de ruta y licencias, presentados al dueño."
+   }
+  ],
+  "entregables": [
+   {
+    "cuando": "Al arrancar",
+    "titulo": "Alcance y calendario",
+    "texto": "Acordados en el arranque: el orden de las áreas y quién acompaña a cada una."
+   },
+   {
+    "cuando": "Al arrancar",
+    "titulo": "Equipo nivelado en IA",
+    "texto": "**2 horas** de fundamentos: qué es y qué no es la IA, cómo pedirle bien y qué información cuidar."
+   },
+   {
+    "cuando": "En el levantamiento",
+    "titulo": "Logros inmediatos",
+    "texto": "**Al menos {logros_minimos_palabra}**, a evaluar en el levantamiento, como el cierre diario de caja o la proyección de compras."
+   },
+   {
+    "cuando": "Al cierre",
+    "titulo": "Mapa de Calor",
+    "texto": "Las oportunidades de IA de las áreas auditadas en un solo mapa, por impacto y esfuerzo."
+   },
+   {
+    "cuando": "Al cierre",
+    "titulo": "Informe Final y hoja de ruta",
+    "texto": "Tareas que sí se pueden hacer con IA, qué roles necesita la operación y por dónde empezar."
+   },
+   {
+    "cuando": "Al cierre",
+    "titulo": "Inversión inteligente en licencias",
+    "texto": "Qué herramientas de IA conviene tener y para qué puestos, con datos de sus propios procesos."
+   }
+  ]
+ },
+ "alcance": {
+  "titulo": "Auditamos cada área y dejamos logros inmediatos.",
+  "subtitulo": "Revisamos tarea por tarea cómo trabaja cada área y qué puede potenciar la IA, con quien hace el trabajo.",
+  "fuera_alcance": [
+   "Un sistema administrativo nuevo o reemplazar Profit: no es parte del servicio; el Informe Final señala qué falta, como el inventario.",
+   "Licencias de IA: la recomendación va en el Informe Final y no están en la inversión.",
+   "Construir las soluciones de cada área: es la fase que sigue (Habilidades).",
+   "Otras áreas y empresas: Producción, Piso y ventas, Contabilidad y RRHH, y los otros negocios del dueño, quedan fuera."
+  ]
+ },
+ "ruta": {
+  "subtitulo": "El calendario y el orden de las conversaciones se acuerdan en la **reunión de arranque**."
+ },
+ "metodo": {
+  "titulo": "Así trabajamos con cada área.",
+  "subtitulo": "Nos sentamos con quien hace el trabajo y salimos de cada conversación con algo concreto.",
+  "pasos": [
+   {
+    "titulo": "Entrevistamos",
+    "texto": "A quien hace cada tarea, también donde no hay un proceso escrito."
+   },
+   {
+    "titulo": "Mapeamos",
+    "texto": "Sus tareas, la información, las herramientas y los cuellos de botella."
+   },
+   {
+    "titulo": "Construimos",
+    "texto": "Un logro inmediato en el momento, cuando la tarea lo permite."
+   },
+   {
+    "titulo": "Priorizamos",
+    "texto": "Cada oportunidad en el Mapa de Calor, con su impacto y esfuerzo."
+   }
+  ],
+  "por_que_orden": "Primero se nivela al equipo, para que todos sepan qué es la IA. Después se levanta área por área. Al final se prioriza con la foto completa de {cliente_corto}.",
+  "quien_construye": "Intezia levanta y construye junto a quien hace cada tarea, para que la use desde el primer día. Las herramientas las autoriza {cliente_corto}.",
+  "practica": [
+   {
+    "titulo": "Se aprende, no se ordena",
+    "texto": "Cada persona ve para qué sirve la herramienta con sus propias tareas antes de usarla."
+   },
+   {
+    "titulo": "Sin tarea previa",
+    "texto": "Nadie prepara nada antes de su turno: todo se levanta en la conversación."
+   },
+   {
+    "titulo": "Sin forzar soluciones",
+    "texto": "Si una tarea exige mucho esfuerzo, no se resuelve en el momento: pasa al Mapa de Calor con su prioridad."
+   }
+  ],
+  "datos": "Los datos de ventas, bancos y nómina no se cargan a la IA sin el visto bueno de {cliente_corto}; se trabaja con los ejemplos que autoriza."
+ },
+ "logistica": {
+  "modalidad": "Presencial, en las oficinas de {cliente_corto}.",
+  "participantes": "Todo el equipo en la nivelación; en cada área, quien hace el trabajo."
+ },
+ "entregables": {
+  "transversales": [
+   "Ficha de levantamiento de cada área",
+   "Presentación del Informe Final al dueño"
+  ],
+  "valor_inmediato": [
+   "Logros inmediatos en uso antes de cerrar",
+   "Datos para decidir roles y licencias"
+  ],
+  "titulo": "Lo que recibe la panadería."
+ },
+ "retorno": {
+  "subtitulo": "El Informe Final estima el retorno de cada oportunidad con lo que cuenta cada área.",
+  "pasos": [
+   {
+    "titulo": "Volumen",
+    "texto": "Cuántas veces al día, a la semana o al mes se repite cada tarea."
+   },
+   {
+    "titulo": "Tiempo actual",
+    "texto": "Lo que toma hoy cada vez, según quien hace el trabajo."
+   },
+   {
+    "titulo": "Tiempo con la solución",
+    "texto": "La estimación de Intezia para cada oportunidad del Mapa de Calor."
+   },
+   {
+    "titulo": "Horas recuperables",
+    "texto": "Volumen por la diferencia de tiempos: una estimación de referencia, no un compromiso de resultado."
+   },
+   {
+    "titulo": "Prioridad",
+    "texto": "Impacto, esfuerzo y riesgo de cada oportunidad, para decidir por dónde empezar."
+   }
+  ],
+  "destino": [
+   {
+    "rotulo": "Procesos que se sostienen",
+    "texto": "Cada tarea queda descrita para que se haga igual, **entre quien entre o salga**."
+   },
+   {
+    "rotulo": "Control sin esperar",
+    "texto": "Se ve cómo llegar al dato de ventas **sin esperar** el reporte de los martes."
+   },
+   {
+    "rotulo": "El rol justo",
+    "texto": "Qué roles y cuántas personas necesita la operación administrativa, sin sobrecargar a nadie."
+   }
+  ],
+  "gancho": "Con el Informe Final, {cliente_corto} sabe por dónde empezar a ordenar su administración, con qué herramientas y con qué roles, con datos de su propia operación."
+ },
+ "inversion": {
+  "duracion": "Reunión de arranque, **{h_nivelacion} horas de nivelación** y **{h_levantamiento} horas de levantamiento** en {n_areas_txt}.",
+  "programa": [
+   "Servicio de Detección para {cliente_corto} ({codigo}).",
+   "Arranque y {h_nivelacion} horas de Fundamentos de IA para el equipo.",
+   "Levantamiento área por área, de forma presencial.",
+   "Al menos {logros_minimos} logros inmediatos, Mapa de Calor e Informe Final.",
+   "{h_nivelacion} horas de nivelación y {h_levantamiento} horas de levantamiento."
+  ],
+  "notas": [
+   "Esta inversión no incluye licencias de IA.",
+   "Habilidades, la fase que viene después, se estructura con los resultados y se cotiza aparte."
+  ]
+ },
+ "proximos_pasos": {
+  "asesora": {
+   "nombre": "Verónica Rubio",
+   "cargo": "Asesora comercial",
+   "correo": "vrubio01@intezia.com",
+   "telefono": "+58 422 3355505"
+  },
+  "pasos": [
+   {
+    "titulo": "Revisión de la propuesta",
+    "texto": "Nos reunimos para aclarar dudas y dimensionar el alcance."
+   },
+   {
+    "titulo": "Lista de responsables",
+    "texto": "{cliente_corto} nos indica quién lleva cada área; con eso armamos la agenda."
+   },
+   {
+    "titulo": "Reunión de arranque",
+    "texto": "Una hora para cerrar el alcance, el orden de las áreas y el calendario."
+   }
+  ]
+ },
+ "supuestos": [
+  "Pedido de Ivana (03/11/2026): propuesta de Detección DET-051 para El Palacio del Pan (DAG Inversiones) con Verónica Rubio como asesora, a partir de la Ficha de Levantamiento y la transcripción del 02/11/2026. La transcripción llegó incompleta (hasta el minuto 55 de 89): lo que falta, se tomó de la ficha. División Educación y sin alianza: por confirmar con Ivana. Sin facilidad de pago (criterio de Ivana en las últimas propuestas); la ficha dice que la forma de pago aún no se acordó: confirmar. Ajuste del 03/11/2026 (Ivana): la Detección se reduce a tres áreas: Gerencia general, Administración y Compras y recepción.",
+  "Insumos: primer contacto. Panadería familiar de 35 años en Valencia; Juan Carlos tiene el 80 %, decide y firma solo, sin comité. 16 a 17 personas (el cliente habla de unas 20). Compara con un proveedor local en Valencia y quiere decidir esta semana. No existen departamentos formales: él habla de «zonas». El deck no usa sus frases ni los juicios sobre las personas (la administrativa «muy bien mandada», Carolina, el contador externo que renunció, los socios anteriores).",
+  "Áreas: tres, por instrucción de Ivana (03/11/2026): Gerencia general, Administración y Compras y recepción. La ficha listaba seis; quedan fuera Producción, Piso y ventas, y Contabilidad y RRHH (allí están el contador externo, la conciliación bancaria y el cierre mensual, que dejan de ser logros candidatos del deck). Sin prioridades entre las tres (CLAUDE.md §4.22).",
+  "Horas (lineamiento de empresa/politicas-comerciales.md): 4 h por área × 3 áreas = 12 h de levantamiento en global, sin reparto por área, y 2 h de Fundamentos de IA en un solo grupo (16 a 17 personas, bajo el máximo de 25). Arranque sin horas. Presencial en Valencia: los viáticos de Intezia no se hablaron.",
+  "Objeción central del cliente: la adopción. Ya intentó digitalizar procesos «dos o tres veces», midió el uso y la gente «hacía dos tonterías y se salía»; calcula que de 10 personas la mitad adopta. La ficha pide atacarlo con la nivelación más un acompañamiento 30-60-90; esto último es de Habilidades y la regla de Detección lo excluye (§4.22), así que el deck lo responde con la nivelación primero, los logros construidos con quien hace la tarea, «se aprende, no se ordena» y Habilidades como fase siguiente. Confirmar con Ivana si se quiere nombrar el seguimiento de la fase siguiente.",
+  "Expectativa de software (ficha y reunión): llegó pidiendo un sistema administrativo propio y quiere dejar Profit. Intezia no lo vende: va explícito en «Fuera de este alcance» («no es parte del servicio; el Informe Final señala qué falta, como el inventario»), sin prometer cubrir el hueco. Hay que repetirlo en la reunión de revisión.",
+  "Roles y personas: él quiere saber qué roles necesita y cuántas personas (hoy 3 en administración; «2, 4, 5 o 6»). El deck lo ofrece como «roles y tareas» dentro del Informe Final y como destino del retorno («el rol justo»), sin cifras ni nombres ni reubicación (sin aval, §4.21). No se toman de la presentación de Verónica los 10 roles delegables de DUSA.",
+  "Logros inmediatos candidatos de la ficha (a validar), dentro de las tres áreas: cierre diario de caja unificado (fiscal en Profit y manual en Excel) y proyección de compras e inventario (no existe inventario). La conciliación bancaria y la consolidación del cierre mensual quedaron fuera con Contabilidad y RRHH. El deck nombra solo dos como ejemplos y no promete ninguno.",
+  "Herramientas: no se pre-recomienda ninguna (la da el Informe Final). Juan Carlos probó Claude Code por su cuenta; no se menciona Claude ni VPN (Venezuela no es país soportado). No afirma migración de stack (§4.11).",
+  "Valor: Verónica mencionó «de 2.300 en adelante» y que probablemente se mantendría; el cliente dijo «ok, está bien». No va en el deck: valor, descuento y total quedan vacíos para ventas, pero esa cifra condiciona la cotización. El deck no usa la palabra «curso». Con 12 h en vez de 24 h, el valor puede bajar frente al anclaje «de 2.300 en adelante»: confirmar con Verónica.",
+  "Calendario (no va en el deck, §4.23): propuesta comprometida para hoy 03/11 por la tarde o el 04/11 por la mañana; revisión presencial en Caracas (Las Mercedes) el miércoles 04/11 o el jueves 05/11, con el equipo de Servicio (Juan Carlos viaja a Caracas una o dos veces por semana). Asiste al evento de IA de Intezia el 14/11. Otras empresas suyas (un hotel en Valencia con cuatro sistemas y un depósito en Caracas): fuera de alcance, posible segundo proyecto.",
+  "Sin semanas, sesiones ni fechas; sin horas de trabajo ni cantidad de consultores (CLAUDE.md §4.23)."
+ ],
+ "pendientes": [
+  "Confirmar con Ivana la división Educación, que no hay alianza y que va sin facilidad de pago.",
+  "Recibir la transcripción completa (llegó hasta el minuto 55 de 89) y contrastarla con la ficha.",
+  "Confirmar con Verónica que el cliente acepta el alcance de tres áreas (sin Producción, Piso y ventas ni Contabilidad y RRHH), y quién lleva la conciliación y el cierre mensual.",
+  "Confirmar el valor y la moneda con Verónica para 12 h de levantamiento (anclaje «de 2.300 en adelante» ya dicho al cliente con seis áreas).",
+  "Confirmar los viáticos de Intezia para el levantamiento presencial en Valencia.",
+  "Conseguir el cargo y el contacto de Víctor (gerente general) y cuántas personas entran en cada área.",
+  "Confirmar el teléfono y el correo de Verónica Rubio (tomados de propuestas anteriores).",
+  "Validar con quien imparta la nivelación el temario y cómo se mide el punto de partida de cada equipo."
+ ],
+ "frases_ok": [
+  "el precio se calcula con calculadora"
+ ]
+}

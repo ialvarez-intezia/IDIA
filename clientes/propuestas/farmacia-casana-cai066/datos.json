@@ -1,0 +1,470 @@
+{
+ "version": 3,
+ "cliente": {
+  "nombre": "Farmacia Casana",
+  "slug": "farmacia-casana-cai066",
+  "codigo": "CAI-066",
+  "nombre_pie": "Farmacia Casana"
+ },
+ "division": "educacion",
+ "alianza": false,
+ "sin_horas_trabajo": true,
+ "meta_servicio": "habilidades",
+ "meta_tipo": "Habilidades · 2 áreas (Ventas y atención online con agente de WhatsApp, Marketing) · levantamiento y construcción con el equipo · seguimiento 30-60-90 · formato compacto v3",
+ "vocabulario": {
+  "solucion": [
+   "entregable",
+   "entregables"
+  ]
+ },
+ "omitir": [
+  "pago"
+ ],
+ "eje": "Agente conversacional de ventas por WhatsApp construido en conjunto con Ventas y atención online de Farmacia Casana (lo desarrolla la persona de tecnología de Casana; Intezia guía, prueba y acompaña la adopción) y producción de contenido con IA en Marketing",
+ "origen": "Ficha de Levantamiento de Farmacia Casana (Verónica Rubio, 27/10/2026; contacto Francisco Barrios, director, quien decide) y transcripción de la reunión del 27/10/2026, más instrucciones de Ivana del 27/10/2026: propuesta de Habilidades con Verónica Rubio como asesora y sin vender lo que Intezia no puede hacer. Código CAI-066, división Educación y sin alianza, por confirmar",
+ "fuente_insumo": "Ficha de Levantamiento (27/10/2026) y transcripción de la reunión de Verónica Rubio con Farmacia Casana (27/10/2026)",
+ "siglas_ok": [
+  "IA"
+ ],
+ "portada": {
+  "titulo_lineas": [
+   "Agente de ventas por WhatsApp",
+   "y contenido con IA en Marketing"
+  ],
+  "titulo_destacado": "de {cliente_corto}",
+  "lead": "Este proyecto mide cómo atienden y venden hoy, y construye en conjunto con el equipo de {cliente_corto} un **agente de ventas por WhatsApp** y la **producción de contenido**, hasta dejarlos **en uso**.",
+  "hechos": [
+   {
+    "num": "12 a 13 %",
+    "texto": "es la tasa de cierre de las solicitudes de hoy, sin seguimiento a los clientes.",
+    "resuelto_por": [
+     "VE-3",
+     "VE-4"
+    ]
+   },
+   {
+    "num": "350-400",
+    "texto": "solicitudes diarias por WhatsApp, sin medir cuánto tarda cada respuesta.",
+    "resuelto_por": [
+     "VE-1",
+     "VE-3"
+    ]
+   },
+   {
+    "num": "300",
+    "texto": "clientes fidelizados hoy, sin recordatorio de recompra para quienes consumen de forma recurrente.",
+    "resuelto_por": [
+     "VE-3"
+    ]
+   },
+   {
+    "num": "Una",
+    "texto": "persona crea el contenido y la publicidad, y usa la IA solo para consultas.",
+    "resuelto_por": [
+     "MK-1",
+     "MK-2"
+    ]
+   }
+  ]
+ },
+ "carriles": [
+  {
+   "id": "ia",
+   "nombre": "Herramientas de IA de Casana",
+   "nombre_corto": "IA de Casana",
+   "color": "amarillo"
+  }
+ ],
+ "areas": [
+  {
+   "id": "VE",
+   "nombre": "Ventas y atención online",
+   "carril": "ia",
+   "frente": "A",
+   "para_que": "Atender por WhatsApp con un mismo criterio, dar seguimiento a los clientes y medir la atención",
+   "soluciones": [
+    {
+     "id": "VE-1",
+     "entregable": "Levantamiento y alcance del agente",
+     "h": 2,
+     "fase": "F1",
+     "incluye": [
+      "Cómo se atiende hoy cada solicitud, de la llegada al cierre",
+      "Línea base del tiempo de respuesta y del cierre",
+      "Qué casos atiende el agente y cuáles pasan a una persona"
+     ],
+     "detalle": "Trabajo de 2 h con el equipo de ventas. Se recorre cómo llega y se atiende hoy cada solicitud por WhatsApp, se mide el punto de partida (tiempo de respuesta y tasa de cierre) y se acuerda qué casos atenderá el agente y cuáles pasarán a una persona. Incluye una recomendación de qué piezas faltan para que el agente atienda por WhatsApp (un sistema de gestión de clientes, para el que podemos recomendar Go High Level, y la vía oficial de WhatsApp) y en qué orden conseguirlas. No incluye instalar nada de eso. Entrega la línea base y el alcance del agente."
+    },
+    {
+     "id": "VE-2",
+     "entregable": "Reglas del agente: qué puede y qué no puede decir",
+     "h": 2,
+     "fase": "F2",
+     "incluye": [
+      "Información que el agente sí puede dar",
+      "Récipe y automedicación: lo que nunca dice",
+      "Cuándo pasa la conversación a una persona"
+     ],
+     "detalle": "Trabajo de 2 h con la dirección, los supervisores y la persona de tecnología. Se define por escrito qué información puede dar el agente y cuál no: no promover la automedicación ni el uso de medicamentos que requieren récipe, y en qué casos pasa la conversación a una persona del equipo. Entrega las reglas que el agente sigue en cada respuesta."
+    },
+    {
+     "id": "VE-3",
+     "entregable": "Agente de ventas por WhatsApp, construido en conjunto",
+     "h": 6,
+     "fase": "F2",
+     "incluye": [
+      "Respuestas por tipo de solicitud y objeciones frecuentes",
+      "Seguimiento de recompra a clientes recurrentes",
+      "Agente desarrollado por la persona de tecnología de Casana"
+     ],
+     "detalle": "Trabajo de 6 h con la persona de tecnología y el equipo de ventas. Se construye en conjunto un agente conversacional de ventas por WhatsApp: la persona de tecnología de la farmacia lo desarrolla y Intezia guía el diseño de la conversación (respuestas por tipo de solicitud, objeciones frecuentes, tono de la farmacia y recordatorio de recompra con incentivo para clientes recurrentes). Intezia no desarrolla el agente. Funciona sobre el sistema de gestión de clientes y la vía oficial de WhatsApp que Casana contrate. Entrega el agente construido y listo para probar."
+    },
+    {
+     "id": "VE-4",
+     "entregable": "Pruebas, medidas y adopción con el equipo",
+     "h": 2,
+     "fase": "F2",
+     "incluye": [
+      "Pruebas con solicitudes reales y ajustes",
+      "Las cuatro medidas de servicio",
+      "El equipo usa y ajusta el agente"
+     ],
+     "detalle": "Trabajo de 2 h con los supervisores y la persona de tecnología. Intezia prueba el agente con solicitudes reales, se ajustan las respuestas y las reglas, y se acuerdan las cuatro medidas de servicio que Casana definió (respuesta en menos de 10 minutos, disponibilidad de los medicamentos, solución ofrecida e incentivo ofrecido), con lo que sus reportes permitan exportar. Intezia acompaña la adopción por parte del equipo. Entrega el agente en uso y su revisión semanal."
+    }
+   ]
+  },
+  {
+   "id": "MK",
+   "nombre": "Marketing",
+   "carril": "ia",
+   "frente": "A",
+   "para_que": "Producir más contenido y publicidad con la misma persona, dentro de las reglas del sector",
+   "soluciones": [
+    {
+     "id": "MK-1",
+     "entregable": "Levantamiento de contenido y publicidad",
+     "h": 2,
+     "fase": "F1",
+     "incluye": [
+      "Cómo se crea hoy el contenido y la publicidad",
+      "Línea base del tiempo de cada pieza"
+     ],
+     "detalle": "Trabajo de 2 h con la persona de Marketing. Se recorre cómo se crea hoy el contenido y la publicidad, cuánto tarda cada pieza y qué se publica, y se delimita la solución. Entrega la línea base y el alcance."
+    },
+    {
+     "id": "MK-2",
+     "entregable": "Producción de contenido y publicidad con IA",
+     "h": 6,
+     "fase": "F2",
+     "incluye": [
+      "Calendario y guiones de contenido",
+      "Textos y piezas de publicidad con IA",
+      "Reglas de lo que no se puede publicar"
+     ],
+     "detalle": "Trabajo de 6 h con la persona de Marketing. Se construye con ella una forma de producir con IA el calendario, los guiones, los textos y las piezas de publicidad, con el tono de la farmacia y las reglas del sector (nada que promueva medicamentos de prescripción ni la automedicación). Los volúmenes que se logren se miden contra la línea base, sin comprometer una cifra. Entrega el proceso de producción en uso."
+    }
+   ]
+  }
+ ],
+ "alcance": {
+  "titulo": "Un agente de ventas y contenido con IA, en uso.",
+  "subtitulo": "Medimos la atención de hoy y construimos en conjunto el **agente de ventas** y la **producción de contenido**.",
+  "fuera_alcance": [
+   "Desarrollar el agente: lo desarrolla la persona de tecnología de {cliente_corto}; Intezia guía, prueba y acompaña.",
+   "Implementar el sistema de gestión de clientes (CRM): lo contrata y lo instala {cliente_corto}; podemos recomendar Go High Level.",
+   "Tokens del modelo de IA, mensajería de WhatsApp (Meta) y licencias del CRM: los contrata {cliente_corto}, aparte de esta inversión.",
+   "Cifras de cierre, solicitudes o clientes fidelizados: son metas de {cliente_corto}; se miden y no se garantizan."
+  ],
+  "etiqueta_destacados": "Lo que se mide desde el primer día",
+  "destacados": [
+   {
+    "titulo": "Respuesta en menos de 10 minutos",
+    "texto": "El tiempo de cada solicitud, contra el punto de partida."
+   },
+   {
+    "titulo": "Medicamentos disponibles",
+    "texto": "La meta de la farmacia: el 90 % de los medicamentos pedidos."
+   },
+   {
+    "titulo": "Solución e incentivo",
+    "texto": "En cada solicitud, una solución a la inquietud y un incentivo para la siguiente compra."
+   },
+   {
+    "titulo": "Cierre y recompra",
+    "texto": "La tasa de cierre y los clientes que vuelven a comprar."
+   }
+  ]
+ },
+ "metodo": {
+  "titulo": "Así construimos cada herramienta.",
+  "subtitulo": "Primero se mide dónde está hoy cada proceso y después se construye en conjunto con el equipo, que aprende a sostenerlo.",
+  "quien_construye": "Se construye en conjunto: la persona de tecnología de {cliente_corto} desarrolla el agente, e **Intezia guía**, prueba y acompaña la adopción.",
+  "por_que_orden": "Primero se mide el punto de partida y se acuerda qué puede decir el agente; después se construye, se prueba con solicitudes reales y el equipo lo ajusta y lo mantiene sin depender de un proveedor externo.",
+  "pasos": [
+   {
+    "titulo": "Medimos",
+    "texto": "Cómo se atiende y se crea contenido hoy, y el tiempo de cada tarea."
+   },
+   {
+    "titulo": "Construimos",
+    "texto": "En conjunto: la persona de tecnología desarrolla y Intezia guía."
+   },
+   {
+    "titulo": "Adoptamos",
+    "texto": "Pruebas con casos reales; el equipo usa, ajusta y mantiene."
+   },
+   {
+    "titulo": "Seguimos",
+    "texto": "Uso, ajustes y resultados, a 30, 60 y 90 días."
+   }
+  ],
+  "practica": [
+   {
+    "titulo": "Cada quien su parte",
+    "texto": "La persona de tecnología de {cliente_corto} desarrolla el agente; Intezia no desarrolla, guía, prueba y acompaña."
+   },
+   {
+    "titulo": "Con límites claros",
+    "texto": "El agente no da información sobre medicamentos de récipe ni promueve la automedicación, y pasa a una persona cuando hace falta: se define al empezar."
+   },
+   {
+    "titulo": "Sin prometer cifras",
+    "texto": "Se mide desde el primer día cada indicador del equipo; las metas son de {cliente_corto} y no se garantizan."
+   }
+  ],
+  "datos": "Los datos de clientes y pacientes no se cargan a ninguna herramienta de IA sin la autorización de {cliente_corto}; las reglas básicas de uso se acuerdan al empezar."
+ },
+ "fases": [
+  {
+   "id": "F1",
+   "titulo": "Levantamiento",
+   "descripcion": "medir la atención y el contenido de hoy"
+  },
+  {
+   "id": "F2",
+   "titulo": "Construcción",
+   "descripcion": "herramientas construidas con el equipo y en uso",
+   "destacada": true
+  }
+ ],
+ "frentes": [
+  {
+   "id": "A",
+   "carril": "ia",
+   "nombre": "Ventas y marketing de Casana",
+   "medida": "20 horas",
+   "medida_meta": "con el equipo",
+   "celdas": {
+    "F1": "Un levantamiento por área: se mide la atención de hoy y se delimita cada herramienta.",
+    "F2": "Reglas del agente, agente de ventas por WhatsApp, pruebas y contenido, en uso."
+   },
+   "celdas_medida": {
+    "F1": "4 horas con el equipo",
+    "F2": "16 horas con el equipo"
+   }
+  }
+ ],
+ "ruta": {
+  "titulo": "Del levantamiento a las herramientas en uso.",
+  "subtitulo": "El calendario se acuerda en la **reunión de arranque**. El **levantamiento** mide el punto de partida.",
+  "hitos": [
+   {
+    "titulo": "Arranque · aparte",
+    "texto": "Reunión de 1 h para acordar el calendario y quién coordina el proyecto por {cliente_corto}."
+   },
+   {
+    "titulo": "Levantamiento",
+    "texto": "Ventas y atención online y Marketing: cómo funciona hoy cada proceso y qué atenderá el agente."
+   },
+   {
+    "titulo": "Agente y contenido en uso",
+    "texto": "Agente de ventas por WhatsApp probado y producción de contenido, construidos en conjunto."
+   },
+   {
+    "titulo": "30 · 60 · 90 días",
+    "texto": "Seguimiento: uso de las herramientas, ajustes e indicadores medidos."
+   }
+  ],
+  "siguiente_etapa": {
+   "titulo": "Siguiente paso · Detección",
+   "texto": "Si los resultados de Ventas lo respaldan, auditar otros departamentos de {cliente_corto}, como ustedes lo plantearon."
+  }
+ },
+ "logistica": {
+  "modalidad": "Virtual, en el horario del equipo de {cliente_corto}.",
+  "participantes": "Dirección, supervisores y analistas de ventas, Marketing y la persona de tecnología.",
+  "ritmo": "Dudas por escrito antes que en llamadas; el trabajo se agenda en el horario del equipo.",
+  "arranque": "La fecha la fija {cliente_corto}; una reunión de arranque de 1 h, aparte, acuerda el calendario."
+ },
+ "seguimiento": {
+  "rango": "30, 60 y 90 días",
+  "texto": "Desde el cierre de cada área",
+  "items": [
+   {
+    "dias": "30 días",
+    "texto": "Uso del agente y de las herramientas"
+   },
+   {
+    "dias": "60 días",
+    "texto": "Ajustes y nuevas construcciones"
+   },
+   {
+    "dias": "90 días",
+    "texto": "Indicadores y tiempo recuperado medidos"
+   }
+  ]
+ },
+ "entregables": {
+  "titulo": "Lo que recibe la farmacia.",
+  "subtitulo": "Lo que se llevan: **la medición de hoy, el agente y el contenido en uso**, más el seguimiento a {rango_seguimiento}.",
+  "etiqueta_transversales": "Para todo el proyecto",
+  "transversales": [
+   "Línea base de la atención y del contenido.",
+   "Reglas de lo que el agente dice y no dice de medicamentos.",
+   "Seguimiento a 30, 60 y 90 días."
+  ],
+  "etiqueta_valor": "Valor inmediato",
+  "valor_inmediato": [
+   "Con el levantamiento: el punto de partida y el alcance del agente.",
+   "Con las reglas: límites claros sobre récipe y automedicación.",
+   "Con el agente: respuestas por WhatsApp probadas y en uso."
+  ],
+  "columnas_por_carril": [
+   2
+  ]
+ },
+ "retorno": {
+  "modo": "metodo",
+  "posiciones": false,
+  "titulo": "Retorno esperado: indicadores medidos.",
+  "subtitulo": "Cada indicador se mide contra el punto de partida que el levantamiento deja registrado.",
+  "etiqueta_pasos": "Cómo se calcula el retorno de cada herramienta",
+  "pasos": [
+   {
+    "titulo": "Volumen",
+    "texto": "Cuántas solicitudes, recordatorios y piezas se repiten cada mes."
+   },
+   {
+    "titulo": "Punto de partida",
+    "texto": "Tiempo de respuesta, cierre y tiempo de cada tarea: es la **línea base**."
+   },
+   {
+    "titulo": "Con la herramienta",
+    "texto": "Lo que toma el mismo trabajo una vez que el agente o la herramienta está en uso."
+   },
+   {
+    "titulo": "Horas recuperadas",
+    "texto": "Volumen por la diferencia de tiempos: una estimación referencial, sin compromiso de resultado."
+   },
+   {
+    "titulo": "Gasto de operar",
+    "texto": "Licencias, consumo de IA y mensajería, contra el valor de lo recuperado."
+   }
+  ],
+  "etiqueta_metas": "Calendario de seguimiento y medición",
+  "metas": [
+   {
+    "dias": "30 días",
+    "texto": "Desde el cierre de cada área: herramientas en uso real y punto de partida validado con el equipo."
+   },
+   {
+    "dias": "60 días",
+    "texto": "Tiempo de respuesta, cierre y horas recuperadas medidos contra el punto de partida."
+   },
+   {
+    "dias": "90 días",
+    "texto": "Medición del retorno: lo recuperado frente al gasto de operar las herramientas."
+   }
+  ],
+  "etiqueta_destino": "Hacia dónde va el proyecto",
+  "destino": [
+   {
+    "rotulo": "Mejor atención online",
+    "texto": "Medir cada solicitud permite acercarse, paso a paso, a las cuatro medidas de servicio que {cliente_corto} definió."
+   },
+   {
+    "rotulo": "Clientes que vuelven",
+    "texto": "Un seguimiento ordenado ayuda a que quien consume de forma recurrente **vuelva a comprar**."
+   },
+   {
+    "rotulo": "Un equipo autónomo",
+    "texto": "El equipo construye y ajusta sus herramientas **sin depender** de un proveedor externo."
+   }
+  ],
+  "gancho": "A los 90 días del cierre de cada área, {cliente_corto} contará con sus indicadores medidos contra el punto de partida y el gasto de operar sus herramientas."
+ },
+ "inversion": {
+  "duracion": "**{h_total} horas con el equipo** de {cliente_corto}, en levantamiento y construcción, con seguimiento a {rango_seguimiento}.",
+  "programa": [
+   "Servicio de Habilidades para {cliente_corto} ({codigo}).",
+   "Ventas y Marketing: levantamiento de ventas y producción de contenido con IA, 10 h con el equipo.",
+   "Agente de IA: reglas, agente de ventas por WhatsApp y adopción, 10 h con el equipo.",
+   "Seguimiento a 30, 60 y 90 días. La reunión de arranque va aparte."
+  ],
+  "notas": [
+   "{cliente_corto} puede elegir el proyecto completo o solo una de las partes.",
+   "Tokens del modelo de IA, mensajería de Meta y licencias del CRM: los contrata {cliente_corto}, aparte."
+  ],
+  "garantia_texto": "Estamos contigo hasta que cada herramienta quede en uso.",
+  "partes": [
+   {
+    "nombre": "Ventas y Marketing",
+    "detalle": "Operativa del departamento"
+   },
+   {
+    "nombre": "Agente de IA",
+    "detalle": "Agente de ventas por WhatsApp"
+   }
+  ],
+  "etiqueta_suma": "Proyecto completo"
+ },
+ "proximos_pasos": {
+  "subtitulo": "Esto es lo que sigue cuando {cliente_corto} confirme la propuesta.",
+  "asesora": {
+   "nombre": "Verónica Rubio",
+   "cargo": "Asesora comercial",
+   "correo": "vrubio01@intezia.com",
+   "telefono": "+58 422 3355505"
+  },
+  "pasos": [
+   {
+    "titulo": "Responsable y arranque",
+    "texto": "Confirmamos con {cliente_corto} la fecha de arranque y quién coordina el proyecto desde su equipo."
+   },
+   {
+    "titulo": "Accesos y casos",
+    "texto": "El equipo comparte los reportes que autorice y ejemplos reales de solicitudes, sin datos de pacientes."
+   },
+   {
+    "titulo": "Reunión de arranque",
+    "texto": "Una hora para acordar el calendario de las dos áreas, el orden del trabajo y los accesos."
+   }
+  ]
+ },
+ "supuestos": [
+  "**Ajuste de Ivana (29/10/2026):** enfoque = construcción conjunta de un agente conversacional de ventas por WhatsApp (no una capacitación genérica); lo desarrolla la persona de TI del cliente e Intezia guía, prueba y acompaña la adopción, sin desarrollar. No implementamos el CRM (se puede recomendar Go High Level). Quedan fuera los costos de herramientas (tokens del modelo, mensajería de Meta y licencias del CRM). Guardrails: definir qué información puede o no dar el agente (récipe y automedicación). Esto reemplaza el supuesto «Qué NO se promete (2)» de abajo: el agente ahora es el centro, pero depende del CRM y de la vía oficial de WhatsApp que contrate Casana. **Supuestos míos:** se mantienen las dos áreas y las 20 h; en Ventas, las 12 h pasan a levantamiento y alcance del agente (2), reglas del agente (2), agente construido en conjunto (6) y pruebas, medidas y adopción (2); el seguimiento de recompra y el tablero de las cuatro medidas dejan de ser entregables propios (el recordatorio de recompra va dentro del agente y las medidas, en las pruebas). Marketing no cambia.",
+  "Pedido de Ivana (27/10/2026): propuesta de Habilidades para Farmacia Casana con Verónica Rubio como asesora, a partir de la Ficha de Levantamiento y la transcripción de la reunión, y «nada de vender cosas que no podemos hacer». Código CAI-066 (siguiente libre tras CAI-065), división Educación y sin alianza: los tres por confirmar con Ivana.",
+  "Insumos: ficha y transcripción coinciden. Primer contacto. Farmacia en Maracaibo (Zulia), menos de 50 empleados: 2 supervisores y 10 analistas de ventas y atención online, y 1 persona de Marketing, que además asesora a la farmacia en tecnología (no hay departamento de tecnología). Decide solo Francisco Barrios (director), con la calculadora en la mano. El deck no nombra personas de Casana.",
+  "Qué NO se promete (cuidado pedido por Ivana): (1) implementar o instalar un CRM (Go High Level u otro) ni conectar WhatTicket con el sistema administrativo (PC Cloud): Verónica lo aclaró en la reunión y el deck lo repite como fuera de alcance; (2) un agente que atienda solo por WhatsApp: el envío automático depende del CRM y de la vía oficial de WhatsApp, donde Meta cobra por mensaje y ya les canceló cuentas por operar con QR; por eso la IA propone y una persona envía, y la automatización queda «a evaluar en el levantamiento, sin compromiso previo»; (3) cifras de resultado: 12-13 % de cierre, 1.000 solicitudes diarias, 1.000 clientes fidelizados a 100 USD, respuesta en menos de 10 minutos, 90 % de medicamentos y 95 % de las solicitudes son metas de Casana, que el proyecto mide y no garantiza; (4) un precio atado al resultado, que es lo que pidió Francisco: Intezia no puede comprometer esos resultados; (5) pagos y créditos de OpenAI: solo orientación sobre cuáles licencias hacen falta, las contrata Casana; (6) medir el tiempo de respuesta: depende de lo que los reportes de WhatTicket y del sistema administrativo permitan exportar, se confirma en el levantamiento.",
+  "Reglas del sector: por ser farmacia, nada que promueva la automedicación ni medicamentos que requieren récipe; es un entregable explícito (reglas de lo que la IA no puede decir) en Ventas y en Marketing. Sin política de datos definida: los datos de clientes y pacientes no se cargan a ninguna herramienta sin autorización; las reglas básicas se acuerdan al empezar (no se vende Políticas).",
+  "Áreas y procesos: Ventas y atención online (atención y cierre, objeciones, seguimiento de recompra a clientes recurrentes, medición del flujo: 4 procesos) y Marketing (contenido y publicidad: 1 proceso). Regla general de Habilidades (8 a 12 h por área hasta 5 procesos): 12 h en Ventas (2 de levantamiento y 10 de construcción) y 8 h en Marketing (2 y 6) = 20 h. El reparto dentro de cada área es mío, por confirmar.",
+  "Horas (regla de Ivana del 27/10/2026, sin horas de trabajo ni consultores): el deck no dice «horas de trabajo» ni cuántos consultores. Solo muestra en la ruta las horas con el equipo de Casana (4 de levantamiento y 16 de construcción, 20 en total), que es tiempo del cliente; no aparecen en la hoja de inversión. Si Ivana prefiere quitarlas también de la ruta, se borran `frentes[].medida` y `celdas_medida`.",
+  "Herramientas de IA: ya usan ChatGPT, Gemini y Claude (licencia paga) solo para consultas, sobre Google Workspace. El deck no nombra ninguna: dice «herramientas de IA» y que la persona de tecnología participa para sostenerlas. Nunca se promete VPN ni se menciona el acceso a Claude desde Venezuela (memoria sobre Claude y Venezuela). Verónica también ofreció recomendaciones de CRM (Intezia usa Go High Level): solo como recomendación dentro del levantamiento.",
+  "Sin pago (facilidad de pago omitida), como en las últimas Habilidades; hoja de inversión única con campos vacíos para ventas. Francisco comparó el valor con el resultado y dijo que 100 USD pueden ser caros sin resultado y una cifra mayor rentable si va atada: presupuesto no definido (usa una línea de crédito que migra de inventario a tecnología). Preguntar a Ivana si se agrega la hoja de pago por hitos, que es lo más cercano a «atado a resultados» sin comprometer cifras.",
+  "Seguimiento 30-60-90 estándar (Verónica lo explicó en la reunión: 30 días uso, 60 días fricciones y 90 días resultados). Retorno en modo método, sin cifras inventadas: no hay tiempos por tarea. El deck no promete un dashboard de ROI específico.",
+  "Modalidad virtual (Francisco la prefirió, aunque antes no lo veía bien); Verónica ofreció combinarla con presencial en Maracaibo si Intezia viaja en los próximos meses: no consta en el deck. Detección queda como «siguiente paso» solo si los resultados lo respaldan, sin cotizar, tal como lo planteó Francisco.",
+  "Sin casos de éxito: no se usa el agente de Go Pharma ni otros (sin fuente documentada en este deck). Sin «curso». Sin semanas, sesiones ni fechas (§4.23); sin fuente en la portada. La reunión de revisión del viernes 30/10 y los segundos proyectos de Francisco no van en el deck.",
+  "Hoja de inversión por partes (Ivana, 29/10/2026, pedido de ventas): dos partes y el proyecto completo. «Ventas y Marketing» = VE-1 (levantamiento de ventas, 2 h) + MK-1 + MK-2 = 10 h; «Agente de IA» = VE-2 + VE-3 + VE-4 = 10 h. La caja de la derecha suma las partes. Reparto mío, por confirmar (en particular, dónde cae VE-1)."
+ ],
+ "pendientes": [
+  "Confirmar con Ivana el reparto de las 12 h de Ventas (levantamiento 2, reglas 2, agente 6, pruebas y adopción 2) y si Marketing sigue igual; quién es la persona de TI (hoy se supone que es la misma de Marketing, que además asesora en tecnología) y si puede dedicar el tiempo al desarrollo.",
+  "Confirmar con Ivana el código CAI-066, la división Educación y que no hay alianza.",
+  "Decidir si se agrega la hoja de facilidad de pago por hitos, dado que Francisco evalúa por rentabilidad y quiere el valor atado al resultado.",
+  "Confirmar el reparto de horas (12 h Ventas y 8 h Marketing) y si las horas con el equipo se muestran en la ruta.",
+  "Valor, descuento y total: campos vacíos para ventas; Intezia no puede atar el valor a cifras de resultado.",
+  "Revisión de la propuesta con Francisco el viernes 30/10 por la mañana, con alguien de Servicio que aclare el alcance técnico (qué se puede conectar a WhatsApp y qué datos exportan WhatTicket y PC Cloud).",
+  "Explorar el segundo proyecto de Francisco (alianza y acompañamiento de IA, con una persona que programa): oportunidad aparte para la reunión de revisión.",
+  "Confirmar el teléfono y el correo de Verónica Rubio (tomados de DET-041 y DET-043).",
+  "Confirmar el reparto de las dos partes (VE-1 en «Ventas y Marketing»): quien avance solo con el agente necesitará el levantamiento de ventas o las 2 h pasan a esa parte. Si el cliente elige una sola parte, ventas escribe el total a mano."
+ ]
+}

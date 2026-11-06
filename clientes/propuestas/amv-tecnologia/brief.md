@@ -1,5 +1,13 @@
 # Brief — AMV Tecnología
 
+> **Reajuste del 27/10/2026 (DET-019 en el formato compacto de Detección).** La Detección quedó preaprobada por dos de los tres socios; falta el ok formal del tercero (de viaje) y quieren que esté en el kick-off. Solo Detección por ahora: los dos Cerebros Digitales (CAI-023) quedan para más adelante. El deck anterior de 12 slides (con la página de Ardent Partners) está en `_anterior-12-slides/`; la recomendación de licencias, en `_complementarios/` (hecha para 8 licencias; los socios quieren empezar con 6).
+>
+> **Qué cambió respecto a lo enviado:** tres áreas (Administrativo, Logística con almacén y despacho, y Comercialización y Ventas) con Servicio Técnico condensado dentro de Logística, a confirmar en el kick-off; 12 h de levantamiento y 2 h de Fundamentals (14 en total); primer contacto presencial en Caracas (Macaracuay) y el resto en línea; horario por la mañana (8:00 a 10:30) y puestos clave que a veces no pasan de una hora; sin calendario en el deck (5 a 15 días tentativos e intensivo de lunes, miércoles y viernes se acuerdan en el kick-off); sin facilidad de pago; ruta completa Detección y después Habilidades; licencias solo como «se recomiendan durante el proceso». Fuera del deck por indicación de Ivana: Valencia y viáticos, el miedo del cliente a las implementaciones anteriores, las 6 licencias, los nombres.
+>
+> **Logros que Yamil señaló como un gran éxito (contexto):** cotizaciones inmediatas para los vendedores (hoy se espera el último precio de importación y, si se tarda, vende la competencia) y un canal de comunicación rápido y efectivo (hoy hay muchos grupos de WhatsApp y los socios llaman uno por uno). Los ejemplos de otras empresas que se mostraron: creativos comerciales de 240 a 24 minutos, informe del área de salud de 8 a 2 horas, consolidado de cuentas por cobrar de 2 a 1 hora; se dijo que no se prometen esos porcentajes. Insumo: resumen de la asesora, sin transcripción. La fuente de los datos del deck es `datos.json`.
+
+---
+
 ---
 
 ## Datos administrativos

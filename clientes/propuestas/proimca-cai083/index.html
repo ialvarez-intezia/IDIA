@@ -1,0 +1,419 @@
+<!doctype html>
+<!--
+  Propuesta · Proimca · Servicio de Habilidades (CAI-083)
+  División: Educación · Servicio: Habilidades (§4.1a) · Alianza: no
+  GENERADO por scripts/generar-habilidades-compacto.py (plantilla 3.0 (2026-10-08), formato habilidades) desde datos.json.
+  No editar a mano: editar datos.json y regenerar. Estilos propios del deck: overrides.css.
+  Fuente del insumo: Ficha de Levantamiento (02/11/2026) y transcripción de la reunión de Verónica Rubio con Proimca (02/11/2026)
+
+  Formato compacto de 8 slides, en el orden de las preguntas del cliente (Ventas, 2026-10-07), sin semanas, sesiones
+  ni fechas (Keiber, 2026-10-08):
+    1 Portada · 2 Alcance · 3 Ruta · 4 Cómo trabajamos · 5 Entregables · 6 Retorno · 7 Inversión · 8 Próximos pasos
+  Marcadores de detección de AcroForms (agregar-campo-precio.py), por página: «Propuesta Económica» solo en la slide de
+  inversión; «Lo que se llevan» y «Entregables» solo en la de entregables; «Facilidad de pago» solo en la de pago.
+  Campos AcroForm: ValorFila1..N, Subtotal, DescuentoPrograma, TotalPrograma (inversión, campos libres) y Entregables, Acreditacion (entregables). Se reposicionan con scripts/customize-habilidades-compacto.py.
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Propuesta · Proimca · Intezia Educación</title>
+  <link rel="stylesheet" href="../_base/styles.css">
+  <link rel="stylesheet" href="habilidades-compacto.css">
+  <link rel="stylesheet" href="overrides.css">
+</head>
+<body>
+
+  <main class="deck">
+
+    <!-- 1 · Portada: ¿cuál es mi problema? -->
+    <section class="slide s-cover">
+      <span class="counter">01 / 08</span>
+      <div class="logo-big">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia Educación">
+      </div>
+      <div class="body">
+        <p class="eyebrow">Propuesta de proyecto · Servicio de Habilidades</p>
+        <h1 style="font-size:46px">
+          Procesos automatizados con IA<br>
+          y un criterio común de uso<br>
+          <span class="hl">en 4 áreas de Proimca</span>
+        </h1>
+        <p class="lead">
+          Este proyecto automatiza con el equipo los <strong>procesos manuales y repetitivos</strong> de cuatro áreas de Proimca y deja <strong>un solo criterio de uso de IA</strong>, con herramientas de la empresa.
+        </p>
+        <div class="pain-strip">
+          <div class="pain-item">
+            <span class="pain-num">Miles</span>
+            <span class="pain-lbl">de pagos al mes se concilian contra el banco, con retrabajo cuando la referencia viene errada.</span>
+          </div>
+          <div class="pain-item">
+            <span class="pain-num">Papel</span>
+            <span class="pain-lbl">es como llegan las visitas técnicas: cada supervisor las vacía a mano y las cierra en el sistema.</span>
+          </div>
+          <div class="pain-item">
+            <span class="pain-num">Sin cruce</span>
+            <span class="pain-lbl">entre HiBot y SAE Plus: el ciclo del cliente pasa por dos sistemas que no se hablan.</span>
+          </div>
+          <div class="pain-item">
+            <span class="pain-num">Disperso</span>
+            <span class="pain-lbl">es lo que entra por Instagram, Facebook y Telegram, sin un resumen que mida qué llega.</span>
+          </div>
+        </div>
+      </div>
+      <div class="id-line">
+        <span class="codigo">Código: CAI-083</span>
+        <span class="cliente">Proimca</span>
+      </div>
+    </section>
+
+    <!-- 2 · Alcance: qué vamos a hacer y para qué -->
+    <section class="slide s-scope roomy">
+      <span class="counter">02 / 08</span>
+      <p class="eyebrow">02 · Alcance</p>
+      <h2>Soluciones en 4 áreas de Proimca.</h2>
+      <p class="sub">Asistentes de IA, validadores y tableros que automatizan lo manual y repetitivo de cada área.</p>
+
+      <div class="scope-panels one" style="--np:1">
+        <div class="scope-panel acc-y">
+          <div class="scope-head">
+            <span class="scope-tag">Gemini en Google Workspace</span>
+            <span class="scope-total"><b>4</b> áreas</span>
+          </div>
+          <ul class="scope-rows">
+              <li><span class="area">Administración y contabilidad <small class="comp">Con talento humano, bajo una sola gerencia</small></span><span class="para">Conciliar pagos, cargar la venta a Odoo y revisar libros con menos retrabajo</span></li>
+              <li><span class="area">CDC (Centro de Contacto) <small class="comp">Venta, cobranza y soporte</small></span><span class="para">Que ningún cliente quede sin respuesta, de la venta a la postventa</span></li>
+              <li><span class="area">Mercadeo y redes sociales</span><span class="para">Ver en un solo resumen qué entra y qué llega por cada red</span></li>
+              <li><span class="area">Planificación técnica <small class="comp">Gerencia y supervisión por sucursal</small></span><span class="para">Cerrar las visitas sin retrabajo y medir si se cumplen los tiempos acordados</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="scope-out">
+        <p class="scope-card-label">Fuera de este alcance</p>
+        <ul>
+          <li>Licencias de IA y su consumo: las contrata Proimca, aparte de esta inversión.</li>
+          <li>Conectar SAE Plus con Odoo: los proveedores no han permitido una API; se usa lo que cada sistema exporta.</li>
+          <li>Los ajustes al bot de WhatsApp del CRM: es un proyecto aparte, del área de Tecnología.</li>
+          <li>El manual de uso y gobernanza de la IA: es el servicio de Políticas, el paso que sigue.</li>
+          <li>Traslado del equipo de Intezia a Barquisimeto: los viáticos los asume Proimca o se cotizan aparte.</li>
+        </ul>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Proimca · CAI-083</span>
+      </div>
+    </section>
+
+    <!-- 3 · Ruta: qué pasa en cada fase -->
+    <section class="slide s-route">
+      <span class="counter">03 / 08</span>
+      <p class="eyebrow">03 · Ruta</p>
+      <h2>Del punto de partida al uso.</h2>
+      <p class="sub">El calendario se acuerda en la <strong>reunión de arranque</strong>.</p>
+
+      <div class="route-grid n1" style="--cols:2; --rows:1; --rowh:214px">
+
+        <div class="rg-corner"></div>
+        <div class="rg-phase rg-ph-1">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Inicio</span></span>
+          <span class="rg-phase-name">Procesos con los datos que ya tienen</span>
+        </div>
+        <div class="rg-phase rg-ph-2 hi">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Enlace</span></span>
+          <span class="rg-phase-name">Procesos que dependen de sus sistemas</span>
+        </div>
+        <div class="rg-phase rg-fu">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Garantía</span></span>
+          <span class="rg-phase-date">30, 60 y 90 días</span>
+          <span class="rg-phase-txt">Desde el cierre de cada área</span>
+        </div>
+
+        <div class="rg-front acc-y">
+          <span class="rg-front-h">Las cuatro áreas de Proimca</span>
+          <span class="rg-front-row"><span class="rg-front-tool">Gemini y Google</span><b class="rg-front-n">36 horas</b></span>
+          <span class="rg-front-meta">con el equipo, en cuatro áreas</span>
+        </div>
+        <div class="rg-cell"><span class="rg-h solo-h"><b>18 horas con el equipo</b></span><p>Conciliación, libros, métricas y requerimientos de redes, y carga de visitas.</p></div>
+        <div class="rg-cell hi"><span class="rg-h solo-h"><b>18 horas con el equipo</b></span><p>Carga a Odoo, talento humano, CDC y cumplimiento de tiempos.</p></div>
+
+        <div class="rg-follow" style="grid-column:4; grid-row:2 / span 1">
+          <ul>
+            <li><b>30 días</b><span>Uso de las herramientas</span></li>
+            <li><b>60 días</b><span>Ajustes y nuevas construcciones</span></li>
+            <li><b>90 días</b><span>Procesos y retorno medidos</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="route-miles" style="grid-template-columns:repeat(4,1fr)">
+        <div class="mile"><span class="mile-d"></span><b>Arranque · aparte</b><p>Reunión de 1 h para acordar el calendario, quién lidera cada área y el acceso a los datos.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Punto de partida</b><p>Se mide cuánto toma hoy cada proceso: el «antes» del retorno.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Primeras herramientas</b><p>Conciliación, libros, redes y visitas funcionando.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Procesos conectados</b><p>Carga contable, talento humano, CDC y tiempos en calle.</p></div>
+      </div>
+      <p class="route-next"><b>Siguiente paso · Políticas e Innovación</b> Un manual de uso de IA construido sobre lo implementado y, después, acompañamiento continuo.</p>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Proimca · CAI-083</span>
+      </div>
+    </section>
+
+    <!-- 4 · Cómo trabajamos: pasos, por qué en ese orden, casos reales, práctica, datos y logística -->
+    <section class="slide s-method roomy">
+      <span class="counter">04 / 08</span>
+      <p class="eyebrow">04 · Cómo trabajamos</p>
+      <h2>Así construimos cada herramienta.</h2>
+      <p class="sub">Primero se mide dónde está cada proceso; después se construye con el equipo, sobre casos reales.</p>
+
+      <ol class="mt-steps" style="--n:4">
+          <li><b>Medimos</b><span>Cuánto toma hoy cada proceso y quién lo hace.</span></li>
+          <li><b>Construimos</b><span>Cada herramienta con el equipo, sobre sus casos reales.</span></li>
+          <li><b>Adoptamos</b><span>Cada persona la usa en su trabajo hasta sostenerla.</span></li>
+          <li><b>Seguimos</b><span>Uso, ajustes y resultados, a 30, 60 y 90 días.</span></li>
+      </ol>
+      <div class="mt-strips">
+        <p class="mt-why"><b>Por qué en este orden</b> Primero se mide el punto de partida; después se construye en dos fases: los procesos que parten de datos que ya tienen y luego los que dependen de sus sistemas.</p>
+        <p class="mt-who"><b>Quién construye</b> Se construye con el equipo: <strong>Intezia guía</strong> y cada persona prueba la herramienta sobre sus propios casos, dentro del entorno Google que ya usan.</p>
+      </div>
+
+      <div class="mt-info">
+        <div class="mt-card">
+          <p class="mt-card-label">Cómo funciona en la práctica</p>
+          <ul><li><b>Una persona revisa.</b> La IA propone conciliaciones, asientos y respuestas; una persona las revisa antes de cargarlas o enviarlas.</li><li><b>Un criterio común.</b> Mismas reglas de uso en todas las áreas, dentro de las cuentas de la empresa.</li><li><b>Sin tocar sus sistemas.</b> SAE Plus, Odoo y el CRM no se modifican: se trabaja con los datos que cada uno entrega.</li></ul>
+        </div>
+        <div class="mt-card">
+          <p class="mt-card-label">Cómo cuidamos sus datos</p>
+          <p>Los datos de clientes, pagos y nómina no se cargan a la IA sin la autorización de Proimca; se trabaja con cuentas de la empresa y los accesos que autoriza su área de Tecnología.</p>
+        </div>
+      </div>
+
+      <div class="mt-logi">
+        <div class="mt-tile"><span>Modalidad</span><b>Virtual; si conviene, algún encuentro presencial en Barquisimeto, con viáticos aparte.</b></div>
+        <div class="mt-tile"><span>Participantes</span><b>Unas 23 personas de las cuatro áreas, con sus líderes y los supervisores por sucursal.</b></div>
+        <div class="mt-tile"><span>Ritmo de trabajo</span><b>Se agenda sin frenar la operación y fuera de los días de corte de cada mes (del 6 al 10).</b></div>
+        <div class="mt-tile"><span>Arranque</span><b>Apenas se apruebe la propuesta; una reunión de 1 h, aparte, acuerda el calendario.</b></div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Proimca · CAI-083</span>
+      </div>
+    </section>
+
+    <!-- 5 · Entregables: ¿con qué me quedo? (catálogo + piezas transversales) -->
+    <section class="slide s-deliv roomy">
+      <span class="counter">05 / 08</span>
+      <p class="eyebrow">05 · Entregables</p>
+      <div class="deliv-head">
+        <h2>Lo que recibe Proimca.</h2>
+        <p class="deliv-sub"><span class="nw">Lo que se llevan</span>: <strong>diez herramientas en uso, un criterio común de IA y las licencias que cada área necesita</strong>, más el seguimiento a 30, 60 y 90 días.</p>
+      </div>
+
+      <div class="deliv-carriles" style="--ncols:4">
+        <span class="dc acc-y" style="grid-column: span 4">Gemini en Google Workspace</span>
+      </div>
+
+      <div class="deliv-cols" style="--ncols:4">
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">Administración y contabilidad</p>
+            <ul>
+              <li>Conciliación de pagos con el banco</li>
+              <li>Carga de la venta diaria a Odoo</li>
+              <li>Revisión de libros de venta y compra</li>
+              <li>Recibos, vacaciones y liquidaciones</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name" style="min-height:2.4em">CDC (Centro de Contacto)</p>
+            <ul>
+              <li>Control de clientes sin respuesta</li>
+              <li>Seguimiento de PQR y postventa</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name" style="min-height:2.4em">Mercadeo y redes sociales</p>
+            <ul>
+              <li>Resumen de métricas de redes sociales</li>
+              <li>Requerimientos de redes en un solo lugar</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name" style="min-height:2.4em">Planificación técnica</p>
+            <ul>
+              <li>Carga y cierre de visitas técnicas</li>
+              <li>Cumplimiento de tiempos en calle</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="deliv-band">
+        <div class="db-card db-1">
+          <span class="db-label">Para todas las áreas</span>
+        </div>
+        <div class="db-card db-2">
+          <span class="db-label">Valor inmediato</span>
+        </div>
+      </div>
+      <!-- Cajas multiline editables (vacías en HTML: el contenido vive dentro del AcroForm /V). -->
+      <div class="multi-box db-box db-box-1" data-field="Entregables"></div>
+      <div class="multi-box db-box db-box-2" data-field="Acreditacion"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Proimca · CAI-083</span>
+      </div>
+    </section>
+
+    <!-- 6 · Retorno: ¿qué gano? (método de cálculo). Sin estudios ni citas externas. -->
+    <section class="slide s-roi">
+      <span class="counter">06 / 08</span>
+      <p class="eyebrow">06 · Retorno</p>
+      <h2>Retorno esperado: tiempo y exactitud, medidos.</h2>
+      <p class="sub">Cada indicador se mide contra el punto de partida que se registra al arrancar.</p>
+
+      <div class="roi-body">
+        <div class="roi-panel">
+          <p class="roi-panel-title">Cómo se calcula el retorno de cada herramienta</p>
+          <ol class="roi-steps">
+            <li><b>Volumen</b><span>Cuántos pagos se concilian, cuántas visitas se cierran y cuántos contactos se atienden cada mes.</span></li>
+            <li><b>Punto de partida</b><span>Lo que toma hoy cada proceso, según quien lo hace: es la línea base.</span></li>
+            <li><b>Con la herramienta</b><span>Lo que toma el mismo trabajo una vez que la herramienta está en uso.</span></li>
+            <li><b>Horas recuperadas</b><span>Volumen por la diferencia de tiempos: una estimación referencial, sin compromiso de resultado.</span></li>
+            <li><b>Gasto de operar</b><span>Licencias y consumo de IA, contra el valor de lo recuperado.</span></li>
+          </ol>
+        </div>
+
+        <div class="roi-right">
+          <p class="roi-right-title">Calendario de seguimiento y medición</p>
+          <div class="roi-card">
+            <b>30 días</b>
+            <p>Desde el cierre de cada área: herramientas en uso real y punto de partida validado con el equipo.</p>
+          </div>
+          <div class="roi-card">
+            <b>60 días</b>
+            <p>Tiempo de conciliación, de cierre de visitas y de respuesta medido contra el punto de partida.</p>
+          </div>
+          <div class="roi-card">
+            <b>90 días</b>
+            <p>Medición del retorno: lo recuperado frente al gasto de operar las herramientas.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="roi-dest-wrap">
+        <p class="roi-dest-title">Hacia dónde va el proyecto</p>
+        <div class="roi-dest">
+          <div class="rd-item"><b>Un criterio común</b><p>Cuatro áreas con <strong>herramientas de la empresa</strong>, no cuentas personales, y una sola forma de usar la IA.</p></div>
+          <div class="rd-item"><b>Ningún cliente sin respuesta</b><p>Con cada solicitud seguida, el CDC puede <strong>responder a todos</strong>, en línea con su meta de retención.</p></div>
+          <div class="rd-item"><b>Tiempos en calle medibles</b><p>Con las visitas cargadas, se puede <strong>medir</strong> si se cumple lo acordado.</p></div>
+        </div>
+      </div>
+
+      <div class="roi-hook"><p>A los 90 días del cierre de cada área, Proimca contará con el tiempo de sus procesos medido contra el punto de partida y el gasto de operar sus herramientas.</p></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Proimca · CAI-083</span>
+      </div>
+    </section>
+
+    <!-- Inversión (hoja con tabla de valores en blanco, inversion.desglose): fase, concepto, área, horas y valor en USD -->
+    <section class="slide s-rfp s-dsg">
+      <span class="counter">07 / 08</span>
+      <p class="eyebrow">07 · Inversión</p>
+      <h2>Inversión del proyecto, por área.</h2>
+      <p class="sub">Valor en dólares estadounidenses (USD) de cada área.</p>
+
+      <table class="dsg-tab">
+        <thead><tr><th>Área</th><th>Qué se construye</th><th>Herramientas</th><th>Horas</th><th class="dsg-hv">Valor (USD)</th></tr></thead>
+        <tbody>
+          <tr><td class="dsg-f">Administración y contabilidad</td><td class="dsg-c">Conciliación de pagos, carga de la venta a Odoo, libros y talento humano</td><td class="dsg-a">4 herramientas</td><td class="dsg-h">12 h</td><td class="dsg-v"><span class="campo-libre" data-campo="ValorFila1" data-tip="Valor en USD de la fila 1 (lo escribe Ventas)."></span></td></tr>
+          <tr><td class="dsg-f">CDC (Centro de Contacto)</td><td class="dsg-c">Atención de contactos en venta, cobranza, soporte y postventa</td><td class="dsg-a">2 herramientas</td><td class="dsg-h">8 h</td><td class="dsg-v"><span class="campo-libre" data-campo="ValorFila2" data-tip="Valor en USD de la fila 2 (lo escribe Ventas)."></span></td></tr>
+          <tr><td class="dsg-f">Mercadeo y redes sociales</td><td class="dsg-c">Resumen de métricas y requerimientos de redes en un solo lugar</td><td class="dsg-a">2 herramientas</td><td class="dsg-h">8 h</td><td class="dsg-v"><span class="campo-libre" data-campo="ValorFila3" data-tip="Valor en USD de la fila 3 (lo escribe Ventas)."></span></td></tr>
+          <tr><td class="dsg-f">Planificación técnica</td><td class="dsg-c">Carga y cierre de visitas técnicas y cumplimiento de tiempos en calle</td><td class="dsg-a">2 herramientas</td><td class="dsg-h">8 h</td><td class="dsg-v"><span class="campo-libre" data-campo="ValorFila4" data-tip="Valor en USD de la fila 4 (lo escribe Ventas)."></span></td></tr>
+        </tbody>
+      </table>
+
+      <div class="dsg-bottom">
+        <div class="dsg-left">
+        <div class="dsg-caja"><span class="dsg-caja-t">Nota</span><p>Cada área tiene su propio valor: Proimca puede arrancar con todas o con las que elija y sumar las demás después. Incluye el seguimiento a 30, 60 y 90 días. Licencias de IA y su consumo, y los viáticos a Barquisimeto, van aparte.</p></div>
+        </div>
+        <div class="dsg-tot">
+        <div class="dsg-trow"><span class="dsg-tl">Subtotal</span><span class="dsg-tv"><span class="campo-libre" data-campo="Subtotal" data-calc="ValorFila1+ValorFila2+ValorFila3+ValorFila4" data-tip="Subtotal en USD. Se calcula solo al llenar los valores de las filas."></span></span></div>
+        <div class="dsg-trow"><span class="dsg-tl">Descuento por contratar el programa completo<span class="dsg-pill">Descuento válido por 15 días</span></span><span class="dsg-tv"><span class="campo-libre" data-campo="DescuentoPrograma" data-tip="Descuento por contratar el programa completo, en USD (lo escribe Ventas)."></span></span></div>
+        <div class="dsg-trow dsg-fuerte"><span class="dsg-tl">Total</span><span class="dsg-tv"><span class="campo-libre" data-campo="TotalPrograma" data-calc="Subtotal-DescuentoPrograma" data-tip="Total en USD. Se calcula solo (subtotal menos descuento)."></span></span></div>
+        </div>
+      </div>
+
+      <p class="dsg-validez">Cotización válida por 60 días. Este servicio se presta bajo nuestros <a href="https://drive.google.com/file/d/1PA-ZSt4KnyY5dpxXzgkIk6-yfGlV2eF8/view?usp=drive_link" target="_blank" rel="noopener">términos y condiciones</a>.</p>
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Proimca · CAI-083</span>
+      </div>
+    </section>
+
+    <!-- 9 · Próximos pasos: qué hacer y a quién escribir (última slide) -->
+    <section class="slide s-next">
+      <span class="counter">08 / 08</span>
+      <p class="eyebrow">08 · Próximos pasos</p>
+      <h2>Tres pasos para arrancar.</h2>
+      <p class="sub">Esto es lo que sigue cuando Proimca confirme la propuesta.</p>
+
+      <div class="nx-steps">
+        <div class="nx-step acc-y">
+          <span class="nx-num">1</span>
+          <b>Revisión conjunta</b>
+          <p>Nos reunimos con quienes deciden para aclarar dudas y dimensionar el alcance.</p>
+        </div>
+        <div class="nx-step acc-o">
+          <span class="nx-num">2</span>
+          <b>Líderes y accesos</b>
+          <p>Proimca nos indica quién lidera cada área y quién da acceso a los datos de sus sistemas.</p>
+        </div>
+        <div class="nx-step acc-w">
+          <span class="nx-num">3</span>
+          <b>Reunión de arranque</b>
+          <p>Una hora para acordar el calendario de las cuatro áreas y los primeros pasos.</p>
+        </div>
+      </div>
+
+      <div class="nx-contact">
+        <div class="nx-card nx-ase">
+          <span class="nx-label">¿Dudas? Escribe a tu asesora comercial</span>
+          <b class="nx-name">Verónica Rubio</b>
+          <span class="nx-role">Asesora comercial</span>
+          <p class="nx-line"><a href="mailto:vrubio01@intezia.com">vrubio01@intezia.com</a></p>
+          <p class="nx-line">+58 422 3355505</p>
+        </div>
+        <div class="nx-card nx-emp">
+          <span class="nx-label">Intezia</span>
+          <p class="nx-line">Intezia C.A J-505657950</p>
+          <p class="nx-line"><a href="mailto:servicio@intezia.com">servicio@intezia.com</a></p>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Proimca · CAI-083</span>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

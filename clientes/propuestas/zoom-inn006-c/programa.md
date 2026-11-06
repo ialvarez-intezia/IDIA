@@ -135,7 +135,7 @@ Pasos del método: Caso real; Tiempo de hoy; Con la Skill; Diferencia.
 
 | Cuota | Cuándo | Hito | %% |
 |---|---|---|---|
-| 1 | Al aprobar | Reserva del calendario y del equipo de facilitadores. | 40 |
+| 1 | Al aprobar | Reserva del calendario. | 40 |
 | 2 | Fin de noviembre | Los encuentros por área realizados. | 30 |
 | 3 | Cierre | El bootcamp abierto realizado y los casos medidos. | 30 |
 

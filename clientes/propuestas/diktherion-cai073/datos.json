@@ -1,0 +1,413 @@
+{
+ "version": 3,
+ "cliente": {
+  "nombre": "Diktherion",
+  "slug": "diktherion-cai073",
+  "codigo": "CAI-073",
+  "nombre_pie": "Diktherion"
+ },
+ "division": "educacion",
+ "alianza": false,
+ "omitir": [
+  "pago"
+ ],
+ "meta_tipo": "Capacitación In-Company · Cerebros Digitales de 6 h por socio (1 individual o 4 en conjunto) · seguimiento 30-60-90 · hoja de inversión por paquetes (1 y 4) · formato compacto v3",
+ "vocabulario": {
+  "solucion": [
+   "entregable",
+   "entregables"
+  ],
+  "area": [
+   "bloque",
+   "bloques"
+  ]
+ },
+ "eje": "Cerebro Digital con Claude y Obsidian para cada socio de Diktherion: memoria y criterio propios, con la información de la firma conectada, para centralizar y ahorrar tiempo de coordinación",
+ "origen": "Ficha de Levantamiento de Diktherion (Verónica Rubio, 28/10/2026), transcripción de la reunión del 28/10/2026 e instrucciones de Ivana del 29/10/2026: CAI-073, Cerebros Digitales para los socios, independiente de la CAI-072; hoja de inversión por opciones de 1 a 4 cerebros solo para esta propuesta",
+ "fuente_insumo": "Ficha de Levantamiento y transcripción de la reunión (28/10/2026) e instrucciones del usuario",
+ "portada": {
+  "titulo_lineas": [
+   "Cerebros Digitales para los socios,",
+   "con la información centralizada"
+  ],
+  "titulo_destacado": "en {cliente_corto}",
+  "lead": "Este proyecto construye con cada socio de {cliente_corto} su **Cerebro Digital en Claude**: memoria propia, su criterio y la información de la firma conectada, para decidir y **ahorrar tiempo de coordinación**.",
+  "hechos": [
+   {
+    "num": "Suelto",
+    "texto": "es el uso actual de la IA: cada socio la usa por su cuenta, sin un cerebro que guarde su contexto.",
+    "resuelto_por": [
+     "ME-1",
+     "US-1"
+    ]
+   },
+   {
+    "num": "Preguntar",
+    "texto": "es hoy cómo los socios saben el estatus del trabajo de los asociados, en vez de consultarlo.",
+    "resuelto_por": [
+     "GR-1",
+     "US-1"
+    ]
+   },
+   {
+    "num": "Varias",
+    "texto": "hojas de cálculo guardan hoy la información de la firma, sin un lugar que la reúna.",
+    "resuelto_por": [
+     "GR-1"
+    ]
+   }
+  ]
+ },
+ "carriles": [
+  {
+   "id": "claude",
+   "nombre": "Claude y Obsidian",
+   "nombre_corto": "Claude",
+   "color": "amarillo"
+  }
+ ],
+ "areas": [
+  {
+   "id": "ME",
+   "nombre": "Memoria",
+   "para_que": "Definir el propósito del cerebro y reunir el contexto, la voz y el criterio de cada socio",
+   "carril": "claude",
+   "frente": "A",
+   "composicion": "Propósito, contexto y línea base.",
+   "soluciones": [
+    {
+     "id": "ME-1",
+     "entregable": "Claude configurado: propósito, memoria y criterio",
+     "h": 2,
+     "fase": "F1",
+     "detalle": "Referencia interna (2 h, individual con cada socio). Se configura Claude para el rol del socio y se define el propósito de su Cerebro Digital. Se pasa del uso suelto de varias herramientas al método: anatomía del prompt (rol, contexto, tarea y formato), iteración y verificación, y por qué Claude responde como responde. Se levanta la línea base: qué tareas repite cada semana y cuánto tiempo le toman. Memoria de su rol (contexto, voz y criterio) y criterios de uso seguro: solo se carga lo que el socio decide compartir. Entrega el propósito del cerebro, su memoria ordenada y la línea base.",
+     "incluye": [
+      "Claude configurado con su rol y su propósito",
+      "Su contexto, su voz y su criterio, por escrito",
+      "La línea base de sus tareas repetitivas"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "GR",
+   "nombre": "Conocimiento",
+   "para_que": "Reunir la información de la firma como notas conectadas que el cerebro recorre",
+   "carril": "claude",
+   "frente": "A",
+   "composicion": "Notas por especialidad y por tema, conectadas.",
+   "soluciones": [
+    {
+     "id": "GR-1",
+     "entregable": "Información de la firma en un grafo en Obsidian",
+     "h": 2,
+     "fase": "F2",
+     "detalle": "Referencia interna (2 h, individual con cada socio). Su repositorio de notas se ordena como grafo relacional en Obsidian (gratuito, se instala al trabajar): notas por especialidad y por tema de gestión de la firma, y las conexiones entre ellas, para que el cerebro vea cómo se relaciona cada cosa. Se conecta con lo que el socio decide cargar desde su Drive y sus hojas de cálculo de Google Workspace, y se visualiza en su Vista de Grafo. Sin expedientes ni datos de clientes sin autorización. Entrega el grafo de la firma enlazado a su cerebro.",
+     "incluye": [
+      "Su repositorio de notas ordenado como grafo conectado",
+      "Lo que decide cargar desde su Drive y sus hojas",
+      "Conectado a Claude y visible en la Vista de Grafo"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "US",
+   "nombre": "Uso diario",
+   "para_que": "Convertir una tarea repetitiva en una instrucción reutilizable y un plan de uso",
+   "carril": "claude",
+   "frente": "A",
+   "composicion": "Una tarea repetitiva, en uso con autonomía.",
+   "soluciones": [
+    {
+     "id": "US-1",
+     "entregable": "Skill de su tarea repetitiva y plan de uso",
+     "h": 2,
+     "fase": "F3",
+     "detalle": "Referencia interna (2 h, individual con cada socio). Qué es una Skill (instrucción reutilizable) y cómo se construye. Se elige con el socio, de su línea base, la tarea que más tiempo le quita (por ejemplo, consultar el estatus del trabajo de los asociados o la investigación jurídica) y se construye su Skill; se prueba con un caso real y se ajusta. Criterios de privacidad y uso seguro, ajuste final del cerebro y plan para usarlo cada semana y seguir ampliándolo por su cuenta. Entrega la Skill funcionando y el plan de uso semanal.",
+     "incluye": [
+      "Una instrucción reutilizable para la tarea que más tiempo le quita",
+      "Probada con un caso real y ajustada",
+      "Plan de uso semanal y cómo seguir construyendo por su cuenta"
+     ]
+    }
+   ]
+  }
+ ],
+ "alcance": {
+  "sin_conteo_por_fila": true,
+  "titulo": "Un Cerebro Digital para cada socio.",
+  "subtitulo": "Se construye su **asistente personal en Claude**, con memoria y criterio propios.",
+  "fuera_alcance": [
+   "Más horas por cerebro: cada uno recibe 6 h con su socio; lo demás va en otra etapa.",
+   "Conexiones a sistemas internos o desarrollos a la medida: el cerebro usa lo que cada socio decide cargar.",
+   "Las licencias de Claude, que van aparte (detalle en las notas de la inversión)."
+  ]
+ },
+ "metodo": {
+  "titulo": "Así trabajamos el proyecto.",
+  "subtitulo": "Trabajo individual con cada socio, sobre su cerebro y sus casos reales, hasta que lo usa y lo amplía con autonomía.",
+  "quien_construye": "Cada socio construye su propio cerebro; **Intezia guía** cada paso, sobre casos reales de su rol, para que luego lo sostenga sin depender de Intezia.",
+  "pasos": [
+   {
+    "titulo": "Construimos",
+    "texto": "Con cada socio, en vivo y sobre su propio contexto."
+   },
+   {
+    "titulo": "Probamos",
+    "texto": "Con su información y sus tareas, hasta que funcione."
+   },
+   {
+    "titulo": "Adoptamos",
+    "texto": "Cada socio usa su cerebro cada semana, con autonomía."
+   },
+   {
+    "titulo": "Medimos",
+    "texto": "El tiempo recuperado contra la línea base, a 30, 60 y 90 días."
+   }
+  ],
+  "por_que_orden": "Primero se define el propósito y se reúne el contexto de cada socio; después se conecta la información de la firma en un grafo de notas; al final se construye la instrucción reutilizable de una tarea real.",
+  "practica": [
+   {
+    "titulo": "Cómo funciona",
+    "texto": "El cerebro reúne el contexto del socio como notas conectadas que Claude recorre, en vez de empezar cada chat de cero."
+   },
+   {
+    "titulo": "En vivo, con método",
+    "texto": "Cada paso se explica y queda documentado para que el socio pueda ampliarlo por su cuenta."
+   },
+   {
+    "titulo": "Cuenta de Claude",
+    "texto": "Cada socio trabaja con su cuenta de Claude: al arrancar se confirma que su plan permite construir el cerebro."
+   }
+  ],
+  "datos": "Solo se carga en cada cerebro lo que el socio decide compartir: los datos de clientes y los expedientes son confidenciales y no se cargan sin autorización. Los criterios de uso seguro se acuerdan al empezar y se repasan al cerrar."
+ },
+ "fases": [
+  {
+   "id": "F1",
+   "titulo": "Base",
+   "descripcion": "propósito, memoria y línea base"
+  },
+  {
+   "id": "F2",
+   "titulo": "Grafo",
+   "descripcion": "información conectada"
+  },
+  {
+   "id": "F3",
+   "titulo": "Uso",
+   "descripcion": "Skill y plan de uso",
+   "destacada": true
+  }
+ ],
+ "frentes": [
+  {
+   "id": "A",
+   "carril": "claude",
+   "nombre": "Cada socio de {cliente_corto}",
+   "celdas": {
+    "F1": "Claude configurado con su propósito, su memoria y su línea base.",
+    "F2": "La información de la firma como grafo de notas conectadas en Obsidian.",
+    "F3": "Una instrucción reutilizable para una tarea real y su plan de uso."
+   }
+  }
+ ],
+ "ruta": {
+  "titulo": "Un cerebro por socio, en tres fases.",
+  "subtitulo": "El calendario se acuerda en la reunión de arranque. La **garantía y el seguimiento** a 30, 60 y 90 días corren desde el cierre del proyecto.",
+  "nota": "Cada cerebro se trabaja en {h_total} horas con su socio: {h_f1} h de base, {h_f2} h de grafo y {h_f3} h de uso. La reunión de arranque (1 h) va aparte y no suma horas.",
+  "hitos": [
+   {
+    "titulo": "Arranque · aparte",
+    "texto": "1 h para acordar cuántos cerebros se construyen, casos reales y el calendario."
+   },
+   {
+    "titulo": "Base",
+    "texto": "Claude configurado, con propósito, memoria y línea base."
+   },
+   {
+    "titulo": "Grafo",
+    "texto": "Notas conectadas de la firma, en Obsidian."
+   },
+   {
+    "titulo": "Uso",
+    "texto": "Una instrucción reutilizable para una tarea real y su plan de uso."
+   },
+   {
+    "titulo": "30 · 60 · 90 días",
+    "texto": "Seguimiento: uso del cerebro, ajustes y tiempo recuperado."
+   }
+  ]
+ },
+ "logistica": {
+  "modalidad": "Presencial o virtual, según convenga a cada socio; se acuerda en la reunión de arranque.",
+  "participantes": "Los socios de {cliente_corto} que tengan cerebro, uno a uno, acompañados por Intezia en todo el proyecto.",
+  "ritmo": "En el horario que acuerde cada socio, sin frenar su agenda.",
+  "arranque": "La fecha la fija {cliente_corto}; una reunión de arranque de 1 h, aparte, acuerda el calendario."
+ },
+ "seguimiento": {
+  "rango": "30, 60 y 90 días",
+  "texto": "Seguimiento desde el cierre del proyecto",
+  "items": [
+   {
+    "dias": "30 días",
+    "texto": "Uso autónomo del cerebro"
+   },
+   {
+    "dias": "60 días",
+    "texto": "Ajustes y nuevas construcciones"
+   },
+   {
+    "dias": "90 días",
+    "texto": "Tiempo recuperado contra la línea base"
+   }
+  ]
+ },
+ "entregables": {
+  "subtitulo": "Lo que se llevan: **un Cerebro Digital propio y una Skill en uso**, más el seguimiento a {rango_seguimiento} que mide su efecto.",
+  "etiqueta_transversales": "Para todo el proyecto",
+  "etiqueta_valor": "Valor inmediato",
+  "transversales": [
+   "Línea base del tiempo en sus tareas repetitivas.",
+   "Criterios de uso seguro de la información.",
+   "Seguimiento a 30, 60 y 90 días con medición del tiempo."
+  ],
+  "valor_inmediato": [
+   "Con la base: Claude configurado y su línea base.",
+   "Con el grafo: la información de la firma en un solo lugar.",
+   "Al cerrar: una Skill funcionando y su plan de uso semanal."
+  ],
+  "columnas_por_carril": [
+   3
+  ],
+  "titulo": "Lo que recibe cada socio."
+ },
+ "retorno": {
+  "modo": "metodo",
+  "posiciones": false,
+  "titulo": "Retorno esperado: tiempo recuperado, medido.",
+  "subtitulo": "Se mide contra la línea base que la Presidencia deja al empezar y se sigue a 30, 60 y 90 días.",
+  "etiqueta_pasos": "Cómo se calcula",
+  "pasos": [
+   {
+    "titulo": "Volumen semanal",
+    "texto": "Cuántas veces repite cada socio la tarea que automatiza su cerebro, por ejemplo, preguntar el estatus de una causa."
+   },
+   {
+    "titulo": "Tiempo actual",
+    "texto": "Cuánto le toma hoy cada tarea. Es la **línea base**."
+   },
+   {
+    "titulo": "Tiempo con el cerebro",
+    "texto": "Lo que toma el mismo trabajo con su Skill ya en uso."
+   },
+   {
+    "titulo": "Horas recuperadas",
+    "texto": "Diferencia entre ambos tiempos, por semana: una estimación referencial, sin compromiso de resultado."
+   },
+   {
+    "titulo": "Valor en dinero",
+    "texto": "Horas recuperadas por el valor hora de referencia que {cliente_corto} valide."
+   }
+  ],
+  "etiqueta_metas": "Calendario de garantía y cálculo del retorno",
+  "metas": [
+   {
+    "dias": "30 días",
+    "texto": "El cerebro en uso real y su línea base validada con cada socio."
+   },
+   {
+    "dias": "60 días",
+    "texto": "Ajustes del cerebro y horas recuperadas medidas contra la línea base."
+   },
+   {
+    "dias": "90 días",
+    "texto": "Medición del tiempo recuperado y de su valor en dinero."
+   }
+  ],
+  "etiqueta_destino": "Hacia dónde va el proyecto",
+  "destino": [
+   {
+    "rotulo": "Más tiempo para asesorar",
+    "texto": "Si el tiempo se libera, cada socio puede dedicarlo a **asesoría y crecimiento** del área sin trabajar más horas."
+   },
+   {
+    "rotulo": "Información reunida",
+    "texto": "La información de la firma queda en su grafo: una memoria propia que su cerebro recorre."
+   },
+   {
+    "rotulo": "Más cerebros",
+    "texto": "Con el resultado medido, {cliente_corto} decide si lleva el mismo ciclo a **los abogados asociados**."
+   }
+  ],
+  "gancho": "A los 90 días del cierre, cada socio contará con el tiempo recuperado de su cerebro, medido contra su línea base."
+ },
+ "inversion": {
+  "hoja_paquetes": true,
+  "etiqueta_partes": "Valor por paquete",
+  "partes": [
+   {
+    "nombre": "1 cerebro individual",
+    "detalle": "6 horas"
+   },
+   {
+    "nombre": "4 cerebros en conjunto",
+    "detalle": "24 horas"
+   }
+  ],
+  "duracion": "Cada Cerebro Digital se construye en {h_total} horas con su socio, uno a uno, y la reunión de arranque (1 h) va aparte. Se elige 1 cerebro individual o los 4 en conjunto; seguimiento y garantía a {rango_seguimiento}.",
+  "programa": [
+   "Cerebros Digitales con Claude y Obsidian para los socios de {cliente_corto} ({codigo}).",
+   "Cada cerebro: {h_total} h con su socio, guiadas por Intezia.",
+   "Dos paquetes: 1 cerebro individual o 4 cerebros en conjunto. Licencias aparte."
+  ],
+  "notas": [
+   "Las licencias van aparte: cada socio necesita una cuenta de Claude con plan de pago, que contrata {cliente_corto}. Obsidian es gratuito.",
+   "Garantía 30-60-90: seguimiento a 30, 60 y 90 días desde el cierre del proyecto, con cada cerebro en uso."
+  ]
+ },
+ "proximos_pasos": {
+  "asesora": {
+   "nombre": "Verónica Rubio",
+   "cargo": "Asesora comercial",
+   "correo": "vrubio01@intezia.com",
+   "telefono": "+58 422 3355505"
+  },
+  "pasos": [
+   {
+    "titulo": "Fecha de arranque",
+    "texto": "Confirmamos con {cliente_corto} cuántos cerebros se construyen, la fecha de arranque y el horario de cada socio."
+   },
+   {
+    "titulo": "Cuenta y material",
+    "texto": "Cada socio deja lista su cuenta de Claude y reúne el material de su rol que decida compartir."
+   },
+   {
+    "titulo": "Reunión de arranque",
+    "texto": "Una hora para alinear objetivos, definir los casos reales de cada socio y acordar el calendario."
+   }
+  ]
+ },
+ "siglas_ok": [
+  "IA"
+ ],
+ "sin_horas_trabajo": true,
+ "supuestos": [
+  "Pedido de Ivana (29/10/2026): CAI-073, Cerebros Digitales en Claude para los socios de Diktherion, independiente de la CAI-072. Educación, sin alianza, sin facilidad de pago, con seguimiento 30-60-90, asesora Verónica Rubio: confirmados por Ivana. La propuesta no menciona la CAI-072.",
+  "Alcance (Ricardo, en la reunión): subió de 1 a 4 personas («creo que podrían ser cuatro»). La ficha habla de tres socios de la misma familia y no dice quién sería la cuarta persona. Ivana pidió resolverlo con la hoja de inversión por paquetes, solo para esta propuesta (no es un estándar); el 29/10/2026 la redujo a dos: un cerebro individual y cuatro en conjunto, sin los de 2 y 3. El deck no da una cifra de personas ni nombra a los socios.",
+  "Horas: 6 h por cerebro (3 encuentros de 2 h, uno por entregable), el estándar de «Excepción — Cerebros Digitales», confirmado por Ivana. Reunión de arranque de 1 h aparte. Los paquetes suman 6 h (1 cerebro) o 24 h (4 cerebros) con los socios, de a una persona.",
+  "Hoja de inversión: `inversion.hoja_paquetes` con 2 paquetes (1 cerebro individual y 4 en conjunto; antes 1, 2, 3 y 4) (patrón de la TA-039 del BNC), sin facilidad de pago y con montos vacíos para ventas. Paquetes alternativos, no sumables. Es una decisión de Ivana solo para esta propuesta.",
+  "Licencias (Ivana, sí): se menciona que las contrata Diktherion y que hace falta una cuenta de Claude con plan de pago, sin valor de lista (Verónica habló de un plan de 20 dólares y uno de 100 compartido entre cuatro: no va al deck). Obsidian es gratuito. Sin VPN ni mención al acceso desde Venezuela.",
+  "Mecanismo (memoria «mecanismo vs. resultado»): «Cómo trabajamos» explica que el cerebro reúne el contexto del socio como notas conectadas que Claude recorre. Verónica también mostró conectarlo a Drive: el deck dice «lo que decida cargar desde su Drive y sus hojas».",
+  "Contenido tomado de la reunión: centralizar información y ahorrar tiempo de coordinación, y que los socios consulten el estatus del trabajo de los asociados en vez de preguntarlo (lo mostró el cerebro del CEO de Intezia); Ricardo quiere sostenerlo él mismo sin depender de Intezia («Cómo trabajamos» y «Hacia dónde va»). La Skill del tercer encuentro se elige con cada socio; los ejemplos son el estatus de las causas de los asociados y la investigación jurídica.",
+  "Lo que NO se promete: expedientes ni datos de clientes en el cerebro sin autorización, conexiones a sistemas ni desarrollos a la medida, más de 6 h por cerebro. No se mencionan la visión de «despacho jurídico digital», Cavedatos ni la CAI-072. Sin casos de éxito, sin «curso», sin semanas, sesiones ni fechas, sin kickoff ni agenda."
+ ],
+ "pendientes": [
+  "Confirmar con Verónica cuántos socios quieren cerebro y quién sería la cuarta persona (la ficha menciona tres socios).",
+  "Valor, descuento y total de cada opción: campos vacíos para ventas.",
+  "Si los cerebros son un grupo o uno por uno (se escribió «uno a uno»).",
+  "Confirmar el teléfono y el correo de Verónica Rubio (tomados de propuestas anteriores).",
+  "Quién decide estará en la presentación: por confirmar (los tres socios)."
+ ]
+}

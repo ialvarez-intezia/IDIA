@@ -127,7 +127,7 @@ Pasos del método: Caso real; Tiempo de hoy; Con la Skill; Diferencia.
 
 | Cuota | Cuándo | Hito | %% |
 |---|---|---|---|
-| 1 | Al aprobar | Reserva del calendario y del equipo de facilitadores. | 50 |
+| 1 | Al aprobar | Reserva del calendario. | 50 |
 | 2 | Cierre | Todos los encuentros realizados y los casos medidos. | 50 |
 
 Los montos van vacíos en el PDF (campos `PagoCuota1..2`): los escribe ventas y deben sumar el total de la slide de inversión. No se anotan en este repositorio.

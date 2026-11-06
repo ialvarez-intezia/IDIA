@@ -114,7 +114,28 @@ const MEDIR = `(async () => {
       const h2m = s.querySelector('h2'); const subm = s.querySelector('.sub');
       if (h2m && subm) add(n, 'método: título vs subtítulo', top(s, subm) - bot(s, h2m), 2);
     }
-    if (s.classList.contains('s-price')) {
+    if (s.classList.contains('s-price-paq')) {
+      // hoja por opciones (inversion.hoja_paquetes): Duración y Programa arriba, Notas, columnas de valor, Importante
+      const dur = s.querySelector('.pq-dur .block-value'); const notasEb = s.querySelector('.block-notes-container');
+      if (dur && notasEb) add(n, 'inversión: Duración vs etiqueta Notas', top(s, notasEb) - bot(s, dur), 4);
+      const wrap = s.querySelector('.pq-wrap'); const notasBox = s.querySelector('.notas-box');
+      if (wrap && notasBox) add(n, 'inversión: Notas vs valor por paquete', top(s, wrap) - bot(s, notasBox), 4);
+      const terms = s.querySelector('.pq-terms'); const cards = s.querySelector('.pq-cards');
+      if (terms && cards) add(n, 'inversión: valor por paquete vs términos', top(s, terms) - bot(s, cards), 8);
+      if (terms) add(n, 'inversión: términos vs pie', footTop - bot(s, terms), 8);
+      overflowEls(n, s, '.pq-card', 'columna de opción');
+      const k = s.querySelectorAll('.pq-card').length; const gap = 16, w = (1011 - gap * (k - 1)) / k; const sr = s.getBoundingClientRect();
+      // las cajas deben caer donde scripts/agregar-campo-precio.py → paquetes_fields() pone PaqPrecioN, PaqDescuentoN y PaqTotalN (tolerancia 1 px)
+      s.querySelectorAll('.pq-card').forEach((c, i) => {
+        const left = 56 + i * (w + gap);
+        [['.pq-precio', 452, 484], ['.pq-desc', 508, 540], ['.pq-total', 564, 608]].forEach(([q, t0, t1]) => {
+          const r = c.querySelector(q).getBoundingClientRect();
+          const dif = Math.max(Math.abs(r.left - sr.left - (left + 14)), Math.abs(r.right - sr.left - (left + w - 14)), Math.abs(r.top - sr.top - t0), Math.abs(r.bottom - sr.top - t1));
+          add(n, 'inversión: caja ' + q.slice(4) + ' de la opción ' + (i + 1) + ' coincide con su campo del PDF', 1 - dif, 0, 'desfase de ' + dif.toFixed(1) + ' px: sincronizar overrides.css (.pq-frame) con agregar-campo-precio.py → paquetes_fields()');
+        });
+      });
+    }
+    if (s.classList.contains('s-price') && !s.classList.contains('s-price-paq')) {
       const dur = s.querySelector('.block-value'); const prog = s.querySelector('.block-programa');
       if (dur && prog) add(n, 'inversión: Duración vs etiqueta Programa', top(s, prog) - bot(s, dur), 4);
       const lic = s.querySelector('.lic-wrap');

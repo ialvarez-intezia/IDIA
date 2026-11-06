@@ -1,0 +1,490 @@
+{
+ "version": 3,
+ "cliente": {
+  "nombre": "Zoom",
+  "slug": "zoom-cai082",
+  "codigo": "CAI-082",
+  "nombre_pie": "Zoom"
+ },
+ "division": "educacion",
+ "alianza": false,
+ "sin_horas_trabajo": true,
+ "meta_servicio": "habilidades",
+ "meta_tipo": "Habilidades · construcción de un servidor MCP en pruebas junto al equipo de TI (consulta de tarifas, tracking y estatus, y creación de guías) · seguimiento 30-60-90 · formato compacto v3",
+ "vocabulario": {
+  "solucion": [
+   "entregable",
+   "entregables"
+  ],
+  "area": [
+   "bloque",
+   "bloques"
+  ]
+ },
+ "omitir": [
+  "pago"
+ ],
+ "eje": "Servicios de Zoom (tarifas, tracking, estatus de envío y creación de guías) disponibles para agentes de IA mediante un servidor MCP construido junto al equipo de TI, en ambiente de pruebas",
+ "origen": "Plan piloto de monitoreo proactivo v2 (25/10/2026), sección 07 (frente paralelo de servicios vía MCP), y correos de María Iribarren y de Zoom (26/10 al 03/11/2026), más instrucción de Ivana del 03/11/2026: CAI-082, contacto María, solo la parte del MCP",
+ "fuente_insumo": "Plan piloto de monitoreo v2 (25/10/2026) y correos entre María Iribarren y Zoom (26/10 al 03/11/2026); sin Ficha de Levantamiento ni transcripción",
+ "siglas_ok": [
+  "IA",
+  "TI",
+  "API",
+  "MCP",
+  "NDA",
+  "OpenAPI"
+ ],
+ "portada": {
+  "titulo_lineas": [
+   "Servicios de Zoom disponibles",
+   "para agentes de IA mediante MCP"
+  ],
+  "titulo_destacado": "con el equipo de TI",
+  "lead": "Este proyecto construye junto al equipo de TI de {cliente_corto} un **servidor MCP (Model Context Protocol)** en pruebas, para que un agente de IA consulte tarifas, tracking y estatus y cree guías, y deja a TI listo para **agregar más servicios**.",
+  "hechos": [
+   {
+    "num": "MCP",
+    "texto": "en lugar de API es lo que ya le piden a Zoom: un comercio en Colombia quiere crear guías.",
+    "resuelto_por": [
+     "CO-1",
+     "CR-1"
+    ]
+   },
+   {
+    "num": "API",
+    "texto": "existen hoy para esos servicios; MCP los ofrecería también a los agentes de IA.",
+    "resuelto_por": [
+     "DS-1",
+     "CO-1"
+    ]
+   },
+   {
+    "num": "TI",
+    "texto": "tiene sus prioridades y poco tiempo: el trabajo se construye junto a ellos para no restarles más.",
+    "resuelto_por": [
+     "DS-1",
+     "DO-2"
+    ]
+   },
+   {
+    "num": "Pruebas",
+    "texto": "es donde se crean las guías: una guía creada por error o duplicada no puede llegar a producción.",
+    "resuelto_por": [
+     "CR-1",
+     "PR-1"
+    ]
+   }
+  ]
+ },
+ "carriles": [
+  {
+   "id": "mcp",
+   "nombre": "Servidor MCP de Zoom",
+   "nombre_corto": "MCP",
+   "color": "amarillo"
+  }
+ ],
+ "areas": [
+  {
+   "id": "DS",
+   "nombre": "Diseño de las herramientas",
+   "carril": "mcp",
+   "frente": "A",
+   "para_que": "Definir con TI qué consultas y qué creación expone el servidor",
+   "soluciones": [
+    {
+     "id": "DS-1",
+     "entregable": "Levantamiento técnico y diseño de las herramientas",
+     "h": 6,
+     "fase": "F1",
+     "incluye": [
+      "Qué APIs existen, con qué documentación y ambiente de pruebas",
+      "Cómo se autentica hoy a los comercios",
+      "Las tres consultas y la creación que se construyen"
+     ],
+     "detalle": "Trabajo de 6 h con el equipo de TI. Se confirma qué APIs existen, con qué documentación (OpenAPI) y si tienen ambiente de pruebas, cómo se autentica a los comercios y qué pasa con una guía creada por error, y se diseñan las herramientas del servidor. Entrega el diseño acordado y las condiciones confirmadas."
+    }
+   ]
+  },
+  {
+   "id": "CO",
+   "nombre": "Consultas: tarifas, tracking, estatus",
+   "carril": "mcp",
+   "frente": "A",
+   "para_que": "Que un agente consulte tarifas, tracking y estatus de envío",
+   "soluciones": [
+    {
+     "id": "CO-1",
+     "entregable": "Servidor MCP con tres herramientas de consulta",
+     "h": 14,
+     "fase": "F2",
+     "incluye": [
+      "Consulta de tarifas",
+      "Consulta de tracking",
+      "Consulta del estatus de un envío"
+     ],
+     "detalle": "Trabajo de 14 h junto al equipo de TI, sobre el repositorio de Zoom y en ambiente de pruebas. Se construye el servidor MCP con tres herramientas de consulta (tarifas, tracking y estatus de envío) que usan las llaves de API que ya usan los comercios. Las consultas no modifican nada. Entrega el servidor consultando en pruebas."
+    }
+   ]
+  },
+  {
+   "id": "CR",
+   "nombre": "Creación de guías",
+   "carril": "mcp",
+   "frente": "A",
+   "para_que": "Que un agente cree guías en pruebas, sin duplicados ni errores",
+   "soluciones": [
+    {
+     "id": "CR-1",
+     "entregable": "Herramienta de creación de guías, en pruebas",
+     "h": 8,
+     "fase": "F2",
+     "incluye": [
+      "Creación solo en el ambiente de pruebas",
+      "Confirmación previa antes de crear",
+      "Protección contra guías duplicadas"
+     ],
+     "detalle": "Trabajo de 8 h junto al equipo de TI. Se construye una herramienta que crea guías solo en el ambiente de pruebas, con confirmación previa y protección contra duplicados. Entrega la creación funcionando en pruebas."
+    }
+   ]
+  },
+  {
+   "id": "PR",
+   "nombre": "Prueba con un comercio simulado",
+   "carril": "mcp",
+   "frente": "A",
+   "para_que": "Verificar de punta a punta lo que haría un comercio externo",
+   "soluciones": [
+    {
+     "id": "PR-1",
+     "entregable": "Bot de prueba que consulta y crea guías",
+     "h": 4,
+     "fase": "F2",
+     "incluye": [
+      "Un comercio simulado consulta tarifas y tracking",
+      "Y crea una guía en el ambiente de pruebas"
+     ],
+     "detalle": "Trabajo de 4 h con el equipo de TI. Un bot de prueba simula a un comercio externo que consulta y crea guías en el ambiente de pruebas. Entrega la prueba de punta a punta."
+    }
+   ]
+  },
+  {
+   "id": "DO",
+   "nombre": "Documentación y traspaso",
+   "carril": "mcp",
+   "frente": "A",
+   "para_que": "Que el equipo de TI agregue servicios por su cuenta",
+   "soluciones": [
+    {
+     "id": "DO-1",
+     "entregable": "Documentación y guía para agregar servicios",
+     "h": 5,
+     "fase": "F3",
+     "incluye": [
+      "Cómo funciona el servidor y cómo se opera",
+      "Una guía para sumar un servicio nuevo"
+     ],
+     "detalle": "Trabajo de 5 h con el equipo de TI. Se documenta el servidor y se deja una guía para que TI agregue servicios, por ejemplo el cambio de dirección por webhook que ya están armando. Entrega la documentación y la guía."
+    },
+    {
+     "id": "DO-2",
+     "entregable": "Traspaso al equipo de TI",
+     "h": 3,
+     "fase": "F3",
+     "incluye": [
+      "Revisión conjunta del código",
+      "El equipo de TI lo opera y lo ajusta"
+     ],
+     "detalle": "Trabajo de 3 h con el equipo de TI. Se revisa el código en conjunto y TI queda con la operación y los ajustes. Entrega el servidor en manos de TI."
+    }
+   ]
+  }
+ ],
+ "alcance": {
+  "titulo": "Un servidor MCP que Zoom puede ampliar.",
+  "subtitulo": "Construimos con el equipo de TI las consultas y la creación de guías, y lo dejamos documentado.",
+  "fuera_alcance": [
+   "Llevar el servidor a producción: se decide después de la prueba, con sus resultados.",
+   "Autenticación OAuth completa: se usan las llaves de API de los comercios; OAuth suma horas aparte.",
+   "Crear guías reales: la creación es solo en el ambiente de pruebas.",
+   "Licencias y consumo de las herramientas: los contrata {cliente_corto}, aparte de esta inversión."
+  ]
+ },
+ "metodo": {
+  "titulo": "Así construimos el servidor MCP.",
+  "subtitulo": "Primero se confirma qué hay; después se construye junto al equipo de TI, de lo que solo consulta a lo que crea.",
+  "quien_construye": "Intezia construye **junto al equipo de TI**, sobre el repositorio de {cliente_corto}, para que el trabajo quede hecho mientras TI aprende y nada del esfuerzo se pierda.",
+  "por_que_orden": "Primero se confirman las APIs, la documentación y cómo se autentica; después las consultas, que no modifican nada; la creación de guías va al final, con confirmación previa y solo en pruebas.",
+  "pasos": [
+   {
+    "titulo": "Confirmamos",
+    "texto": "Las APIs que existen, su documentación y cómo se autentica."
+   },
+   {
+    "titulo": "Construimos",
+    "texto": "Con TI, sobre el repositorio de Zoom, en pruebas."
+   },
+   {
+    "titulo": "Probamos",
+    "texto": "Un comercio simulado consulta y crea guías."
+   },
+   {
+    "titulo": "Traspasamos",
+    "texto": "Documentación y guía para que TI agregue servicios."
+   }
+  ],
+  "practica": [
+   {
+    "titulo": "Consultar antes que crear",
+    "texto": "Las tres consultas no modifican nada; la creación de guías va al final y solo en el ambiente de pruebas."
+   },
+   {
+    "titulo": "Una confirmación antes de crear",
+    "texto": "Cada guía exige confirmación previa y tiene protección contra duplicados."
+   },
+   {
+    "titulo": "Con tres condiciones",
+    "texto": "Una API con documentación (OpenAPI) y ambiente de pruebas, y las llaves de API actuales; sin ellas se ajusta el alcance."
+   }
+  ],
+  "datos": "Se trabaja en el ambiente de pruebas de {cliente_corto}, sin datos de clientes reales, y bajo el acuerdo de confidencialidad (NDA) que la empresa exige."
+ },
+ "fases": [
+  {
+   "id": "F1",
+   "titulo": "Diseño",
+   "descripcion": "levantamiento técnico y diseño de las herramientas"
+  },
+  {
+   "id": "F2",
+   "titulo": "Construcción",
+   "descripcion": "consultas, creación de guías y comercio simulado",
+   "destacada": true
+  },
+  {
+   "id": "F3",
+   "titulo": "Traspaso",
+   "descripcion": "documentación y traspaso al equipo de TI"
+  }
+ ],
+ "frentes": [
+  {
+   "id": "A",
+   "carril": "mcp",
+   "nombre": "Servicios de {cliente_corto} vía MCP",
+   "medida": "40 horas",
+   "medida_meta": "con el equipo de TI",
+   "celdas": {
+    "F1": "Levantamiento técnico con TI y diseño de las herramientas.",
+    "F2": "Consultas, creación de guías y prueba con un comercio simulado.",
+    "F3": "Documentación y guía para que TI agregue servicios."
+   },
+   "celdas_medida": {
+    "F1": "6 horas con el equipo",
+    "F2": "26 horas con el equipo",
+    "F3": "8 horas con el equipo"
+   }
+  }
+ ],
+ "ruta": {
+  "titulo": "Del levantamiento al servidor en manos de TI.",
+  "subtitulo": "El calendario se acuerda en la **reunión de arranque**, sin frenar las prioridades de TI.",
+  "hitos": [
+   {
+    "titulo": "Arranque · aparte",
+    "texto": "Reunión de 1 h para acordar el calendario, la persona de TI y los accesos."
+   },
+   {
+    "titulo": "Diseño",
+    "texto": "APIs confirmadas y herramientas diseñadas con TI."
+   },
+   {
+    "titulo": "Servidor en pruebas",
+    "texto": "Consultas, creación de guías y comercio simulado."
+   },
+   {
+    "titulo": "Traspaso a TI",
+    "texto": "Documentación, guía y operación en manos de TI."
+   }
+  ],
+  "siguiente_etapa": {
+   "titulo": "Siguiente paso · Más servicios",
+   "texto": "Más servicios por MCP, como el cambio de dirección, y la decisión de llevarlo a producción, según los resultados."
+  }
+ },
+ "logistica": {
+  "modalidad": "Se acuerda en el arranque, junto con el equipo de TI.",
+  "participantes": "Una persona de TI con nombre y dedicación definida, y quien conozca las APIs y los servicios.",
+  "ritmo": "El trabajo se agenda sin frenar las prioridades que TI ya tiene.",
+  "arranque": "Apenas se apruebe la propuesta; una reunión de 1 h, aparte, acuerda el calendario."
+ },
+ "seguimiento": {
+  "rango": "30, 60 y 90 días",
+  "texto": "Desde el cierre del traspaso",
+  "items": [
+   {
+    "dias": "30 días",
+    "texto": "Uso del servidor de pruebas"
+   },
+   {
+    "dias": "60 días",
+    "texto": "Servicios que TI agrega por su cuenta"
+   },
+   {
+    "dias": "90 días",
+    "texto": "Decisión sobre producción"
+   }
+  ]
+ },
+ "entregables": {
+  "titulo": "Lo que recibe Zoom.",
+  "subtitulo": "Lo que se llevan: **un servidor MCP funcionando en pruebas y un equipo de TI que sabe ampliarlo**, más el seguimiento a {rango_seguimiento}.",
+  "etiqueta_transversales": "Para todo el proyecto",
+  "transversales": [
+   "Servidor MCP en el ambiente de pruebas.",
+   "Documentación y guía para agregar servicios.",
+   "Seguimiento a 30, 60 y 90 días."
+  ],
+  "etiqueta_valor": "Valor inmediato",
+  "valor_inmediato": [
+   "Con las consultas: un agente ve tarifas y tracking.",
+   "Con la creación: guías en pruebas, con confirmación.",
+   "Al cerrar: TI agrega servicios por su cuenta."
+  ],
+  "columnas_por_carril": [
+   3
+  ]
+ },
+ "inversion": {
+  "duracion": "**{h_total} horas con el equipo de TI** de {cliente_corto}, en diseño, construcción y traspaso, con seguimiento a {rango_seguimiento}.",
+  "programa": [
+   "Servicio de Habilidades para {cliente_corto} ({codigo}).",
+   "Servidor MCP con tres consultas y la creación de guías, en pruebas: 40 h con el equipo de TI.",
+   "Documentación y guía para agregar servicios.",
+   "Seguimiento a 30, 60 y 90 días. La reunión de arranque va aparte."
+  ],
+  "notas": [
+   "Licencias y consumo de las herramientas: los contrata {cliente_corto} y van aparte."
+  ],
+  "licencias": {
+   "titulo": "Licenciamiento · aparte de esta inversión",
+   "tarjetas": [
+    {
+     "nombre": "Cursor · la herramienta de TI",
+     "color": "amarillo",
+     "texto": "El servidor se construye sobre el repositorio de {cliente_corto} con la herramienta que TI ya adoptó. Su valor de lista lo confirma {cliente_corto} con el proveedor."
+    },
+    {
+     "nombre": "Bot de prueba · licencia aparte",
+     "color": "naranja",
+     "texto": "Simula al comercio externo en el ambiente de pruebas y solo recibe datos de prueba. Su licencia y consumo van aparte."
+    }
+   ],
+   "nota": "Esta propuesta no incluye valores de lista: los confirma {cliente_corto} con cada proveedor. Pueden variar."
+  },
+  "garantia_texto": "Estamos contigo hasta que el servidor quede en manos de TI."
+ },
+ "proximos_pasos": {
+  "subtitulo": "Esto es lo que sigue cuando {cliente_corto} confirme la propuesta.",
+  "etiqueta_contacto": "¿Dudas? Escribe a tu directora comercial",
+  "asesora": {
+   "nombre": "María Iribarren",
+   "cargo": "Directora comercial",
+   "correo": "miribarren@intezia.com",
+   "telefono": "+58 414 0570056"
+  },
+  "pasos": [
+   {
+    "titulo": "Aprobación",
+    "texto": "Quien decide por {cliente_corto} confirma la propuesta y acordamos la fecha de la reunión de arranque."
+   },
+   {
+    "titulo": "Persona de TI",
+    "texto": "{cliente_corto} nombra por escrito a la persona de TI que acompaña y su dedicación."
+   },
+   {
+    "titulo": "Reunión de arranque",
+    "texto": "Una hora para acordar el calendario, los accesos y el ambiente de pruebas."
+   }
+  ]
+ },
+ "supuestos": [
+  "Pedido de Ivana (03/11/2026): propuesta CAI-082 para Zoom, contacto María Iribarren (directora comercial), con la instrucción «solo coloca la parte del MCP». Educación y sin alianza (según la cuenta de Zoom), 40 h y sin facilidad de pago: **defaults míos** (la pregunta de confirmación se canceló); por confirmar. Insumos: plan piloto de monitoreo v2 (25/10/2026, sección 07) y los correos del 26/10 al 03/11; sin Ficha ni transcripción.",
+  "Alcance: solo la construcción del MCP, como la plantea María («construirlo nosotros junto a tu equipo en las mismas sesiones de consultoría, de modo que el trabajo quede hecho mientras ellos aprenden»). El piloto de monitoreo, Collectio, legitimación de capitales, la proyección de recursos y la hoja de ruta 2027 quedan fuera: no se nombran en el deck. El monitoreo depende del levantamiento con el equipo (la semana próxima) y no se cotiza todavía.",
+  "Horas: 40 h de la prueba de concepto del plan (con las llaves de API actuales; un OAuth completo suma 15 h o más, fuera). El plan las llama «esfuerzo estimado» (horas internas); aquí se tratan como horas junto al equipo de TI, como dice María (se construye en las mismas sesiones). Si son horas internas de Intezia, hay que quitarlas del deck (regla de Ivana). **Reparto mío:** diseño 6 h, consultas 14 h, creación de guías 8 h, bot de prueba 4 h, documentación 5 h y traspaso 3 h.",
+  "Del plan (sección 07): servidor MCP en pruebas con tres herramientas de consulta (tarifas, tracking y estatus) y una de creación (guía); el bot de prueba simula a un comercio externo; documentación y guía para agregar servicios (por ejemplo el cambio de dirección por webhook que ya arman). Tres condiciones: API con documentación OpenAPI y ambiente de pruebas, autenticación con las llaves de API actuales y creación solo en pruebas con confirmación previa y protección contra duplicados.",
+  "Sin semanas, sesiones ni fechas (§4.23): el plan dice 3 a 4 semanas y en paralelo al monitoreo; el deck no lo muestra. Retorno en modo método, sin cifras (no hay datos del cliente: se mide la línea base en el levantamiento); lo pide el criterio de Ventas en toda propuesta. Seguimiento 30-60-90 estándar, con ítems míos.",
+  "Herramientas: Cursor es la que TI ya adoptó (CAP-077) y el bot de prueba es el Grok Bot del plan, que el deck llama «bot de prueba» (producto en beta, solo con datos de prueba). Zoom usa solo Gemini como herramienta de IA (Operaciones): el deck no nombra Claude, Gemini ni Vertex AI y no promete que un modelo concreto consuma el MCP. Sin precios de licencias (no verificados).",
+  "Marca: Brand Kit v2.1 (amarillo #FFD300, Poppins), como en INN-006, porque Ivana lo dio para las propuestas de Zoom; el logo sigue siendo el del repo (falta el logo v2). No van los nombres de personas de Zoom (Ricardo, Carlos) ni el feedback textual. NDA obligatorio (Zoom lo pidió): se menciona en «Cómo cuidamos tus datos», no en los pasos de arranque."
+ ],
+ "pendientes": [
+  "Confirmar con Ivana: Educación y sin alianza, 40 h, sin facilidad de pago, y que se aplica el Brand Kit v2.1.",
+  "Confirmar si las 40 h son horas junto al equipo de TI o horas internas de Intezia (en ese caso se quitan del deck).",
+  "Confirmar con Zoom las tres condiciones: API con OpenAPI y ambiente de pruebas, llaves de API actuales y creación solo en pruebas.",
+  "Confirmar con Ivana si el bot de prueba se nombra como Grok Bot y si Cursor va en la tarjeta de licencias.",
+  "Valor, descuento y total: campos vacíos para María (el plan dice que el valor final lo define la CCO).",
+  "Decidir si el deck menciona el piloto de monitoreo como siguiente paso (hoy solo «más servicios por MCP»)."
+ ],
+ "frases_ok": [],
+ "retorno": {
+  "modo": "metodo",
+  "posiciones": false,
+  "titulo": "Retorno esperado: servicios listos para agentes.",
+  "subtitulo": "Cada indicador se mide contra el punto de partida que el levantamiento técnico deja registrado.",
+  "etiqueta_pasos": "Cómo se mide el retorno del servidor",
+  "pasos": [
+   {
+    "titulo": "Demanda",
+    "texto": "Qué consultas y creaciones piden hoy los comercios por API."
+   },
+   {
+    "titulo": "Punto de partida",
+    "texto": "Cuánto toma hoy integrar un servicio nuevo con un tercero: es la línea base."
+   },
+   {
+    "titulo": "Con el servidor",
+    "texto": "Cuánto toma que un agente consulte o cree una guía en pruebas, y sumar un servicio."
+   },
+   {
+    "titulo": "Tiempo de TI recuperado",
+    "texto": "Integraciones por la diferencia de tiempos: una estimación referencial, sin compromiso de resultado."
+   },
+   {
+    "titulo": "Gasto de operar",
+    "texto": "Licencias y consumo, contra el valor de lo recuperado."
+   }
+  ],
+  "etiqueta_metas": "Calendario de seguimiento y medición",
+  "metas": [
+   {
+    "dias": "30 días",
+    "texto": "Desde el cierre del traspaso: servidor en uso en pruebas y punto de partida validado con TI."
+   },
+   {
+    "dias": "60 días",
+    "texto": "Tiempo de sumar un servicio nuevo medido contra el punto de partida."
+   },
+   {
+    "dias": "90 días",
+    "texto": "Medición del retorno: lo recuperado frente al gasto de operar; con eso se decide producción."
+   }
+  ],
+  "etiqueta_destino": "Hacia dónde va el proyecto",
+  "destino": [
+   {
+    "rotulo": "Servicios para agentes",
+    "texto": "Zoom ofrece guías, tarifas y tracking también a los **agentes de IA** de sus clientes."
+   },
+   {
+    "rotulo": "Un TI autónomo",
+    "texto": "El equipo de TI **agrega servicios** por su cuenta, sin depender de nadie más."
+   },
+   {
+    "rotulo": "Decisión con datos",
+    "texto": "Llevarlo a producción se decide con **resultados medidos**."
+   }
+  ],
+  "gancho": "A los 90 días del cierre, {cliente_corto} contará con el tiempo de sumar un servicio medido contra el punto de partida y el gasto de operar el servidor."
+ }
+}

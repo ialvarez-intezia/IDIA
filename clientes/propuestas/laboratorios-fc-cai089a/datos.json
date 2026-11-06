@@ -1,0 +1,667 @@
+{
+ "version": 3,
+ "cliente": {
+  "nombre": "Laboratorios FC",
+  "slug": "laboratorios-fc-cai089a",
+  "codigo": "CAI-089A",
+  "nombre_pie": "Laboratorios FC"
+ },
+ "division": "educacion",
+ "alianza": false,
+ "sin_horas_trabajo": true,
+ "omitir": [
+  "pago"
+ ],
+ "meta_servicio": "habilidades",
+ "meta_tipo": "Habilidades · 9 áreas (4 procesos clave y 5 de apoyo): levantamiento de 2 h y construcción, testeo y adopción de 8 h por área = 90 h con los equipos · seguimiento 30-60-90 · sin facilidad de pago · formato compacto v3",
+ "vocabulario": {
+  "solucion": [
+   "entregable",
+   "entregables"
+  ]
+ },
+ "eje": "Aplicar IA con método en los procesos de las 9 áreas de Laboratorios FC, clave y de apoyo: levantar cada proceso y construir una solución por área, con seguimiento a 30, 60 y 90 días",
+ "origen": "Ficha de Levantamiento de Laboratorios FC (Verónica Rubio, 05/11/2026) y transcripción de la reunión del 05/11/2026 con Mariana Salcedo (Gerente de Tecnología). Estructura (levantamiento de 2 h y 8 h de ejecución por área) indicada por Ivana el 05/11/2026",
+ "fuente_insumo": "Ficha de Levantamiento y transcripción de la reunión (05/11/2026)",
+ "siglas_ok": [
+  "IA"
+ ],
+ "portada": {
+  "titulo_lineas": [
+   "IA en las 9 áreas, con método",
+   "y capacidad instalada"
+  ],
+  "titulo_destacado": "en {cliente_corto}",
+  "lead": "Este proyecto **levanta cómo trabaja cada una de las 9 áreas** y construye con sus equipos la **solución** que el levantamiento prioriza, hasta dejarla en uso.",
+  "hechos": [
+   {
+    "num": "Dispersa",
+    "texto": "es la IA que se usa hoy: licencias puntuales por grupo, sin método ni formación formal.",
+    "resuelto_por": [
+     "CO-2",
+     "PO-2",
+     "VC-2",
+     "DL-2",
+     "FI-2",
+     "GH-2",
+     "AR-2",
+     "TE-2",
+     "ME-2"
+    ]
+   },
+   {
+    "num": "Desigual",
+    "texto": "el nivel de partida: hay grupos que ya automatizan y personas que parten desde cero.",
+    "resuelto_por": [
+     "CO-1",
+     "PO-1",
+     "VC-1",
+     "DL-1",
+     "FI-1",
+     "GH-1",
+     "AR-1",
+     "TE-1",
+     "ME-1"
+    ]
+   },
+   {
+    "num": "9 áreas",
+    "texto": "entre procesos clave y de apoyo, con una sola dirección y niveles muy distintos de IA.",
+    "resuelto_por": [
+     "CO-1",
+     "PO-1",
+     "VC-1",
+     "DL-1",
+     "FI-1",
+     "GH-1",
+     "AR-1",
+     "TE-1",
+     "ME-1"
+    ]
+   },
+   {
+    "num": "En papel",
+    "texto": "los procesos están documentados, pero no todos completos ni revisados.",
+    "resuelto_por": [
+     "CO-1",
+     "PO-1",
+     "VC-1",
+     "DL-1",
+     "FI-1",
+     "GH-1",
+     "AR-1",
+     "TE-1",
+     "ME-1"
+    ]
+   }
+  ]
+ },
+ "carriles": [
+  {
+   "id": "dh",
+   "nombre": "Habilidades",
+   "nombre_corto": "Proyecto",
+   "color": "amarillo"
+  }
+ ],
+ "areas": [
+  {
+   "id": "CO",
+   "nombre": "Compras",
+   "para_que": "Mejorar la compra de materia prima y de producto terminado importado",
+   "carril": "dh",
+   "frente": "A",
+   "soluciones": [
+    {
+     "id": "CO-1",
+     "entregable": "Levantamiento de Compras",
+     "incluye": [
+      "Qué se compra hoy, materia prima o producto importado",
+      "Cómo se decide qué y cuánto comprar"
+     ],
+     "h": 2,
+     "fase": "F1",
+     "detalle": "Dos horas con el equipo de compras. Se levanta cómo se trabaja hoy el proceso del área: pasos, quién decide, con qué herramientas y datos, y dónde se pierde tiempo. Insumo de la ficha: mejorar la compra de materia prima y de producto terminado importado. Con el levantamiento se prioriza la solución del área y se define la herramienta de IA. Entrega el diagnóstico del proceso."
+    },
+    {
+     "id": "CO-2",
+     "entregable": "Solución de Compras, construida y en uso",
+     "incluye": [
+      "La que el levantamiento prioriza para el área",
+      "Construida con el equipo y probada con casos reales"
+     ],
+     "C": 4,
+     "T": 2,
+     "A": 2,
+     "fase": "F2",
+     "detalle": "Ocho horas de construcción, testeo y adopción con el equipo de compras (4 de construcción, 2 de testeo y 2 de adopción). Se construye la solución que el levantamiento priorizó, se prueba con casos reales del área y el equipo la adopta. No se define antes del levantamiento. Entrega la solución funcionando y en uso."
+    }
+   ]
+  },
+  {
+   "id": "PO",
+   "nombre": "Producción y operaciones",
+   "para_que": "Ordenar el trabajo con los maquiladores, de la orden al producto terminado",
+   "carril": "dh",
+   "frente": "A",
+   "soluciones": [
+    {
+     "id": "PO-1",
+     "entregable": "Levantamiento de Producción y operaciones",
+     "incluye": [
+      "Cómo se coordina hoy la producción con los maquiladores",
+      "Qué seguimiento se hace al producto terminado"
+     ],
+     "h": 2,
+     "fase": "F1",
+     "detalle": "Dos horas con el equipo de producción y operaciones. Se levanta cómo se trabaja hoy el proceso del área: pasos, quién decide, con qué herramientas y datos, y dónde se pierde tiempo. Insumo de la ficha: ordenar el trabajo con los maquiladores, de la orden al producto terminado. Con el levantamiento se prioriza la solución del área y se define la herramienta de IA. Entrega el diagnóstico del proceso."
+    },
+    {
+     "id": "PO-2",
+     "entregable": "Solución de Producción y operaciones, construida y en uso",
+     "incluye": [
+      "La que el levantamiento prioriza para el área",
+      "Construida con el equipo y probada con casos reales"
+     ],
+     "C": 4,
+     "T": 2,
+     "A": 2,
+     "fase": "F2",
+     "detalle": "Ocho horas de construcción, testeo y adopción con el equipo de producción y operaciones (4 de construcción, 2 de testeo y 2 de adopción). Se construye la solución que el levantamiento priorizó, se prueba con casos reales del área y el equipo la adopta. No se define antes del levantamiento. Entrega la solución funcionando y en uso."
+    }
+   ]
+  },
+  {
+   "id": "VC",
+   "nombre": "Ventas y comercialización",
+   "para_que": "Apoyar la venta con los grandes distribuidores y a la fuerza de venta",
+   "carril": "dh",
+   "frente": "A",
+   "soluciones": [
+    {
+     "id": "VC-1",
+     "entregable": "Levantamiento de Ventas y comercialización",
+     "incluye": [
+      "Venta con los grandes distribuidores y su seguimiento",
+      "Cómo trabajan la fuerza de venta y el equipo administrativo"
+     ],
+     "h": 2,
+     "fase": "F1",
+     "detalle": "Dos horas con el equipo de ventas y comercialización. Se levanta cómo se trabaja hoy el proceso del área: pasos, quién decide, con qué herramientas y datos, y dónde se pierde tiempo. Insumo de la ficha: apoyar la venta con los grandes distribuidores y a la fuerza de venta. Con el levantamiento se prioriza la solución del área y se define la herramienta de IA. Entrega el diagnóstico del proceso."
+    },
+    {
+     "id": "VC-2",
+     "entregable": "Solución de Ventas y comercialización, construida y en uso",
+     "incluye": [
+      "La que el levantamiento prioriza para el área",
+      "Construida con el equipo y probada con casos reales"
+     ],
+     "C": 4,
+     "T": 2,
+     "A": 2,
+     "fase": "F2",
+     "detalle": "Ocho horas de construcción, testeo y adopción con el equipo de ventas y comercialización (4 de construcción, 2 de testeo y 2 de adopción). Se construye la solución que el levantamiento priorizó, se prueba con casos reales del área y el equipo la adopta. No se define antes del levantamiento. Entrega la solución funcionando y en uso."
+    }
+   ]
+  },
+  {
+   "id": "DL",
+   "nombre": "Despacho y logística",
+   "para_que": "Ordenar el despacho y la distribución hacia las grandes cadenas",
+   "carril": "dh",
+   "frente": "A",
+   "soluciones": [
+    {
+     "id": "DL-1",
+     "entregable": "Levantamiento de Despacho y logística",
+     "incluye": [
+      "Cómo se prepara y se sigue cada despacho",
+      "Qué se hace a mano hoy en la distribución"
+     ],
+     "h": 2,
+     "fase": "F1",
+     "detalle": "Dos horas con el equipo de despacho y logística. Se levanta cómo se trabaja hoy el proceso del área: pasos, quién decide, con qué herramientas y datos, y dónde se pierde tiempo. Insumo de la ficha: ordenar el despacho y la distribución hacia las grandes cadenas. Con el levantamiento se prioriza la solución del área y se define la herramienta de IA. Entrega el diagnóstico del proceso."
+    },
+    {
+     "id": "DL-2",
+     "entregable": "Solución de Despacho y logística, construida y en uso",
+     "incluye": [
+      "La que el levantamiento prioriza para el área",
+      "Construida con el equipo y probada con casos reales"
+     ],
+     "C": 4,
+     "T": 2,
+     "A": 2,
+     "fase": "F2",
+     "detalle": "Ocho horas de construcción, testeo y adopción con el equipo de despacho y logística (4 de construcción, 2 de testeo y 2 de adopción). Se construye la solución que el levantamiento priorizó, se prueba con casos reales del área y el equipo la adopta. No se define antes del levantamiento. Entrega la solución funcionando y en uso."
+    }
+   ]
+  },
+  {
+   "id": "FI",
+   "nombre": "Finanzas",
+   "para_que": "Quitar trabajo manual a finanzas, sobre su sistema contable",
+   "carril": "dh",
+   "frente": "B",
+   "soluciones": [
+    {
+     "id": "FI-1",
+     "entregable": "Levantamiento de Finanzas",
+     "incluye": [
+      "Tareas administrativas y de cierre que hoy se hacen a mano",
+      "Qué datos salen hoy del sistema contable"
+     ],
+     "h": 2,
+     "fase": "F1",
+     "detalle": "Dos horas con el equipo de finanzas. Se levanta cómo se trabaja hoy el proceso del área: pasos, quién decide, con qué herramientas y datos, y dónde se pierde tiempo. Insumo de la ficha: quitar trabajo manual a finanzas, sobre su sistema contable. Con el levantamiento se prioriza la solución del área y se define la herramienta de IA. Entrega el diagnóstico del proceso."
+    },
+    {
+     "id": "FI-2",
+     "entregable": "Solución de Finanzas, construida y en uso",
+     "incluye": [
+      "La que el levantamiento prioriza para el área",
+      "Construida con el equipo y probada con casos reales"
+     ],
+     "C": 4,
+     "T": 2,
+     "A": 2,
+     "fase": "F2",
+     "detalle": "Ocho horas de construcción, testeo y adopción con el equipo de finanzas (4 de construcción, 2 de testeo y 2 de adopción). Se construye la solución que el levantamiento priorizó, se prueba con casos reales del área y el equipo la adopta. No se define antes del levantamiento. Entrega la solución funcionando y en uso."
+    }
+   ]
+  },
+  {
+   "id": "GH",
+   "nombre": "Gestión humana",
+   "para_que": "Agilizar los procesos de gestión humana",
+   "carril": "dh",
+   "frente": "B",
+   "soluciones": [
+    {
+     "id": "GH-1",
+     "entregable": "Levantamiento de Gestión humana",
+     "incluye": [
+      "Procesos de gestión humana y sus tareas repetitivas",
+      "Qué información se maneja y cómo se resguarda"
+     ],
+     "h": 2,
+     "fase": "F1",
+     "detalle": "Dos horas con el equipo de gestión humana. Se levanta cómo se trabaja hoy el proceso del área: pasos, quién decide, con qué herramientas y datos, y dónde se pierde tiempo. Insumo de la ficha: agilizar los procesos de gestión humana. Con el levantamiento se prioriza la solución del área y se define la herramienta de IA. Entrega el diagnóstico del proceso."
+    },
+    {
+     "id": "GH-2",
+     "entregable": "Solución de Gestión humana, construida y en uso",
+     "incluye": [
+      "La que el levantamiento prioriza para el área",
+      "Construida con el equipo y probada con casos reales"
+     ],
+     "C": 4,
+     "T": 2,
+     "A": 2,
+     "fase": "F2",
+     "detalle": "Ocho horas de construcción, testeo y adopción con el equipo de gestión humana (4 de construcción, 2 de testeo y 2 de adopción). Se construye la solución que el levantamiento priorizó, se prueba con casos reales del área y el equipo la adopta. No se define antes del levantamiento. Entrega la solución funcionando y en uso."
+    }
+   ]
+  },
+  {
+   "id": "AR",
+   "nombre": "Asuntos regulatorios",
+   "para_que": "Ordenar y agilizar los trámites y documentos regulatorios",
+   "carril": "dh",
+   "frente": "B",
+   "soluciones": [
+    {
+     "id": "AR-1",
+     "entregable": "Levantamiento de Asuntos regulatorios",
+     "incluye": [
+      "Trámites y documentos regulatorios y su seguimiento",
+      "Qué cambió con la homologación reciente"
+     ],
+     "h": 2,
+     "fase": "F1",
+     "detalle": "Dos horas con el equipo de asuntos regulatorios. Se levanta cómo se trabaja hoy el proceso del área: pasos, quién decide, con qué herramientas y datos, y dónde se pierde tiempo. Insumo de la ficha: ordenar y agilizar los trámites y documentos regulatorios. Con el levantamiento se prioriza la solución del área y se define la herramienta de IA. Entrega el diagnóstico del proceso."
+    },
+    {
+     "id": "AR-2",
+     "entregable": "Solución de Asuntos regulatorios, construida y en uso",
+     "incluye": [
+      "La que el levantamiento prioriza para el área",
+      "Construida con el equipo y probada con casos reales"
+     ],
+     "C": 4,
+     "T": 2,
+     "A": 2,
+     "fase": "F2",
+     "detalle": "Ocho horas de construcción, testeo y adopción con el equipo de asuntos regulatorios (4 de construcción, 2 de testeo y 2 de adopción). Se construye la solución que el levantamiento priorizó, se prueba con casos reales del área y el equipo la adopta. No se define antes del levantamiento. Entrega la solución funcionando y en uso."
+    }
+   ]
+  },
+  {
+   "id": "TE",
+   "nombre": "Tecnología",
+   "para_que": "Que tecnología construya y sostenga automatizaciones con autonomía",
+   "carril": "dh",
+   "frente": "B",
+   "soluciones": [
+    {
+     "id": "TE-1",
+     "entregable": "Levantamiento de Tecnología",
+     "incluye": [
+      "Qué automatizaciones y aplicaciones internas existen hoy",
+      "Qué necesita tecnología para sostener y ampliar lo construido"
+     ],
+     "h": 2,
+     "fase": "F1",
+     "detalle": "Dos horas con el equipo de tecnología. Se levanta cómo se trabaja hoy el proceso del área: pasos, quién decide, con qué herramientas y datos, y dónde se pierde tiempo. Insumo de la ficha: que tecnología construya y sostenga automatizaciones con autonomía. Con el levantamiento se prioriza la solución del área y se define la herramienta de IA. Entrega el diagnóstico del proceso."
+    },
+    {
+     "id": "TE-2",
+     "entregable": "Solución de Tecnología, construida y en uso",
+     "incluye": [
+      "La que el levantamiento prioriza para el área",
+      "Construida con el equipo y probada con casos reales"
+     ],
+     "C": 4,
+     "T": 2,
+     "A": 2,
+     "fase": "F2",
+     "detalle": "Ocho horas de construcción, testeo y adopción con el equipo de tecnología (4 de construcción, 2 de testeo y 2 de adopción). Se construye la solución que el levantamiento priorizó, se prueba con casos reales del área y el equipo la adopta. No se define antes del levantamiento. Entrega la solución funcionando y en uso."
+    }
+   ]
+  },
+  {
+   "id": "ME",
+   "nombre": "Mercadeo",
+   "para_que": "Agilizar la creación de contenido y el análisis de mercadeo",
+   "carril": "dh",
+   "frente": "B",
+   "soluciones": [
+    {
+     "id": "ME-1",
+     "entregable": "Levantamiento de Mercadeo",
+     "incluye": [
+      "Cómo se prepara hoy el contenido y el análisis de mercadeo",
+      "Qué tareas repetitivas se pueden quitar"
+     ],
+     "h": 2,
+     "fase": "F1",
+     "detalle": "Dos horas con el equipo de mercadeo. Se levanta cómo se trabaja hoy el proceso del área: pasos, quién decide, con qué herramientas y datos, y dónde se pierde tiempo. Insumo de la ficha: agilizar la creación de contenido y el análisis de mercadeo. Con el levantamiento se prioriza la solución del área y se define la herramienta de IA. Entrega el diagnóstico del proceso."
+    },
+    {
+     "id": "ME-2",
+     "entregable": "Solución de Mercadeo, construida y en uso",
+     "incluye": [
+      "La que el levantamiento prioriza para el área",
+      "Construida con el equipo y probada con casos reales"
+     ],
+     "C": 4,
+     "T": 2,
+     "A": 2,
+     "fase": "F2",
+     "detalle": "Ocho horas de construcción, testeo y adopción con el equipo de mercadeo (4 de construcción, 2 de testeo y 2 de adopción). Se construye la solución que el levantamiento priorizó, se prueba con casos reales del área y el equipo la adopta. No se define antes del levantamiento. Entrega la solución funcionando y en uso."
+    }
+   ]
+  }
+ ],
+ "alcance": {
+  "titulo": "Una solución en uso en cada una de las 9 áreas.",
+  "subtitulo": "Levantamos **9 áreas**, de procesos clave y de apoyo, y construimos con cada una su **solución de IA**.",
+  "fuera_alcance": [
+   "Licencias de IA: la herramienta se define con el levantamiento y su valor va aparte, a cargo de {cliente_corto}.",
+   "Cambios en los sistemas: el sistema contable y las demás aplicaciones no se modifican; se usan sus datos.",
+   "Más de una solución por área: cada una recibe 8 h de construcción, lo demás va en otra etapa.",
+   "Políticas de uso de IA y gobernanza de datos: se definen en otra etapa."
+  ]
+ },
+ "metodo": {
+  "titulo": "Así trabajamos cada área.",
+  "subtitulo": "Con la metodología de Habilidades: construimos, testeamos y adoptamos, sobre sus procesos reales.",
+  "quien_construye": "Se construye con las personas de cada área: **Intezia guía** y el equipo queda con la capacidad de sostener y ampliar lo construido, tecnología incluida.",
+  "por_que_orden": "Primero se levanta cada área y se prioriza con ella; después se construye en cada una la solución que el levantamiento respalda.",
+  "pasos": [
+   {
+    "titulo": "Levantamos",
+    "texto": "Cómo trabaja hoy cada área, su nivel con IA y dónde se pierde tiempo."
+   },
+   {
+    "titulo": "Construimos",
+    "texto": "Con lo levantado, la solución de cada área, con su equipo y casos reales."
+   },
+   {
+    "titulo": "Testeamos",
+    "texto": "Probamos cada solución con datos reales hasta que funciona."
+   },
+   {
+    "titulo": "Adoptamos",
+    "texto": "Cada equipo la usa en su trabajo; seguimos a 30, 60 y 90 días."
+   }
+  ],
+  "practica": [
+   {
+    "titulo": "Horas por área",
+    "texto": "2 h de levantamiento y 8 h de construcción, testeo y adopción por área, con quienes hacen el trabajo."
+   },
+   {
+    "titulo": "Nivel a su medida",
+    "texto": "El levantamiento dice dónde está cada equipo: se avanza con quien ya automatiza y se parte desde cero con quien empieza."
+   },
+   {
+    "titulo": "Lo prioriza el levantamiento",
+    "texto": "La herramienta de IA, entre las que {cliente_corto} puede usar con sus licencias, y la solución de cada área nacen de lo que se encuentra."
+   }
+  ],
+  "datos": "Se trabaja con casos reales de cada área, con las cuentas y los accesos que autoriza tecnología. La información sensible, como la de pacientes o clientes, no se carga en ninguna herramienta de IA, y los sistemas de la empresa no se modifican."
+ },
+ "fases": [
+  {
+   "id": "F1",
+   "titulo": "Levantamiento",
+   "descripcion": "levantar cada área y priorizar",
+   "medida": "18 h en total"
+  },
+  {
+   "id": "F2",
+   "titulo": "Uso",
+   "descripcion": "una solución construida y en uso por área",
+   "medida": "72 h en total",
+   "destacada": true
+  }
+ ],
+ "frentes": [
+  {
+   "id": "A",
+   "carril": "dh",
+   "nombre": "Procesos clave",
+   "medida": "40 horas",
+   "medida_meta": "4 áreas, con sus equipos",
+   "celdas": {
+    "F1": "4 áreas, 2 h cada una: levantamiento de cada proceso.",
+    "F2": "4 áreas, 8 h cada una: la solución de cada área, en uso."
+   },
+   "celdas_medida": {
+    "F1": "8 horas con los equipos",
+    "F2": "32 horas con los equipos"
+   }
+  },
+  {
+   "id": "B",
+   "carril": "dh",
+   "nombre": "Procesos de apoyo",
+   "medida": "50 horas",
+   "medida_meta": "5 áreas, con sus equipos",
+   "celdas": {
+    "F1": "5 áreas, 2 h cada una: levantamiento de cada proceso.",
+    "F2": "5 áreas, 8 h cada una: la solución de cada área, en uso."
+   },
+   "celdas_medida": {
+    "F1": "10 horas con los equipos",
+    "F2": "40 horas con los equipos"
+   }
+  }
+ ],
+ "ruta": {
+  "titulo": "Del levantamiento a la solución en uso.",
+  "subtitulo": "El calendario se acuerda en la **reunión de arranque**. El **levantamiento** orienta las soluciones.",
+  "hitos": [
+   {
+    "titulo": "Arranque · aparte",
+    "texto": "Reunión de 1 h para acordar el calendario, quién coordina y los líderes de cada área."
+   },
+   {
+    "titulo": "Levantamiento",
+    "texto": "9 áreas, 2 h cada una: cómo se trabaja hoy cada proceso."
+   },
+   {
+    "titulo": "Prioridades",
+    "texto": "La solución de cada área y la recomendación de la herramienta de IA."
+   },
+   {
+    "titulo": "Soluciones",
+    "texto": "9 áreas, 8 h cada una: la solución de cada área, en uso."
+   },
+   {
+    "titulo": "30 · 60 · 90 días",
+    "texto": "Seguimiento: uso de las soluciones, ajustes y tiempo recuperado."
+   }
+  ]
+ },
+ "logistica": {
+  "modalidad": "Mixta: virtual o presencial, según se acuerde en la reunión de arranque.",
+  "participantes": "Los equipos de las 9 áreas: gerentes, líderes, analistas y colaboradores del personal administrativo.",
+  "ritmo": "Se agenda en el horario de cada equipo, sin frenar la venta en calle.",
+  "arranque": "La fecha la fija {cliente_corto}; una reunión de arranque de 1 h, aparte, acuerda el calendario."
+ },
+ "seguimiento": {
+  "rango": "30, 60 y 90 días",
+  "texto": "Desde el cierre de cada área",
+  "items": [
+   {
+    "dias": "30 días",
+    "texto": "Uso de las soluciones"
+   },
+   {
+    "dias": "60 días",
+    "texto": "Ajustes y nuevas construcciones"
+   },
+   {
+    "dias": "90 días",
+    "texto": "Tiempo recuperado contra la línea base"
+   }
+  ]
+ },
+ "entregables": {
+  "titulo": "Lo que recibe el equipo.",
+  "subtitulo": "Lo que se llevan: **el levantamiento y la solución en uso de cada área**, más el seguimiento a {rango_seguimiento}.",
+  "etiqueta_transversales": "Para todo el proyecto",
+  "transversales": [
+   "Prioridades de cada área, definidas con el levantamiento.",
+   "Recomendación de la herramienta de IA.",
+   "Línea base del tiempo y seguimiento a 30, 60 y 90 días."
+  ],
+  "etiqueta_valor": "Valor inmediato",
+  "compacto": true,
+  "valor_inmediato": [
+   "Con el levantamiento: cada proceso, claro y priorizado.",
+   "Con las soluciones: una solución en uso por área.",
+   "Al cerrar: criterio común de IA en todo el equipo."
+  ]
+ },
+ "retorno": {
+  "modo": "metodo",
+  "posiciones": false,
+  "subtitulo": "El retorno se mide contra la línea base que cada área entrega en su levantamiento.",
+  "pasos": [
+   {
+    "titulo": "Volumen",
+    "texto": "Cuántas veces se ejecuta cada proceso al mes: pedidos, despachos, registros o reportes."
+   },
+   {
+    "titulo": "Tiempo actual",
+    "texto": "Lo que toma hoy cada proceso, medido con el líder del área: es la **línea base**."
+   },
+   {
+    "titulo": "Tiempo con la solución",
+    "texto": "Lo que toma el mismo proceso una vez que la solución está en uso."
+   },
+   {
+    "titulo": "Horas recuperadas",
+    "texto": "Volumen por la diferencia de tiempos: una estimación referencial, sin compromiso de resultado."
+   },
+   {
+    "titulo": "Valor en dinero",
+    "texto": "Horas recuperadas por el valor de la hora que {cliente_corto} valide."
+   }
+  ],
+  "destino": [
+   {
+    "rotulo": "Un criterio común",
+    "texto": "El nivel de partida desigual se nivela: quien ya automatiza avanza y quien empieza parte de una base común."
+   },
+   {
+    "rotulo": "Mismo equipo, más trabajo",
+    "texto": "Si el tiempo se libera, el mismo equipo puede atender más volumen sin ampliar su tamaño."
+   },
+   {
+    "rotulo": "Más procesos, con autonomía",
+    "texto": "Con el retorno medido, {cliente_corto} decide si lleva el ciclo a **más procesos**, con tecnología sosteniendo las automatizaciones."
+   }
+  ]
+ },
+ "inversion": {
+  "duracion": "**9 áreas**, cada una con un levantamiento y una solución en uso, y seguimiento a {rango_seguimiento}. **90 horas** con los equipos de las áreas.",
+  "programa": [
+   "Servicio de Habilidades para {cliente_corto} ({codigo}).",
+   "9 áreas: 4 de procesos clave y 5 de apoyo.",
+   "Levantamiento de 2 h y solución en uso de 8 h por área.",
+   "90 horas con los equipos, más seguimiento a 30, 60 y 90 días. La reunión de arranque va aparte."
+  ],
+  "notas": [
+   "Licencias de IA: la herramienta se define con el levantamiento y {cliente_corto} confirma su valor con el proveedor, aparte de esta inversión.",
+   "No nos retiramos hasta que la capacidad quede instalada en el equipo."
+  ],
+  "garantia_texto": "Estamos contigo hasta que la capacidad quede instalada en tu equipo."
+ },
+ "proximos_pasos": {
+  "subtitulo": "Esto es lo que sigue cuando {cliente_corto} confirme la propuesta.",
+  "asesora": {
+   "nombre": "Verónica Rubio",
+   "cargo": "Asesora comercial",
+   "correo": "vrubio01@intezia.com",
+   "telefono": "+58 422 3355505"
+  },
+  "pasos": [
+   {
+    "titulo": "Revisión conjunta",
+    "texto": "Una reunión para revisar la propuesta con quienes deciden, aclarar dudas y ajustarla."
+   },
+   {
+    "titulo": "Líderes y accesos",
+    "texto": "{cliente_corto} nos indica quién coordina el proyecto y quién lidera cada una de las 9 áreas."
+   },
+   {
+    "titulo": "Reunión de arranque",
+    "texto": "Una hora para acordar el calendario y el orden del trabajo."
+   }
+  ]
+ },
+ "supuestos": [
+  "Pedido de Ivana (05/11/2026): propuesta de Habilidades CAI-089 para Laboratorios FC, asesora Verónica Rubio. Aunque el cliente pidió Detección, Ivana decidió Habilidades por ser más atractivo para la directiva y porque hay procesos documentados: levantamiento de 2 h por área y 8 h de ejecución por área. Educación, sin alianza y sin facilidad de pago: confirmados con Ivana. Después pidió dos propuestas: A con todas las áreas y B con las áreas priorizadas, para que Mariana decida.",
+  "Áreas: las 9 de la ficha. Procesos clave: Compras, Producción y operaciones (vía maquiladores), Ventas y comercialización, Despacho y logística. Procesos de apoyo: Finanzas, Gestión humana, Asuntos regulatorios, Tecnología y Mercadeo. La propuesta B toma los 4 procesos clave como áreas priorizadas: es mi lectura de la reunión («en mi opinión serían esos procesos clave», Mariana); confirmar con Ivana.",
+  "Horas: 2 h de levantamiento (F1) y 8 h de ejecución (F2: 4 de construcción, 2 de testeo y 2 de adopción) por área, según Ivana; A = 9 áreas = 90 h (18 + 72); B = 4 áreas = 40 h (8 + 32). Son horas de encuentro con los equipos (sin_horas_trabajo). La solución de cada área no se define antes del levantamiento: por eso los entregables se llaman «Levantamiento de X» y «Solución de X, construida y en uso».",
+  "Herramienta de IA: no se nombra. La ficha dice que aún no saben y esperan la recomendación; ya tienen licencias puntuales (Claude Enterprise para un grupo, una Pro) y usan gratuitas (Gemini, Perplexity); su ecosistema de oficina es Microsoft 365 con Power Automate. Tecnología quiere conocer n8n, Claude Code y Cursor: no se nombran en el deck. El deck dice «entre las que Laboratorios FC puede usar con sus licencias».",
+  "Restricciones de OpenAI y Anthropic en Venezuela (el «12 de noviembre»): Mariana lo preguntó y la ficha pide una respuesta por escrito. El deck NO promete acceso ni VPN (regla del sistema) y no repite lo dicho en la llamada. Falta una respuesta verificada (consulta a Rebeca).",
+  "Transferencia de conocimiento y autonomía de Tecnología (la pregunta clave de Mariana): se responde en «Cómo trabajamos» («el equipo queda con la capacidad de sostener y ampliar lo construido, tecnología incluida») y en el área de Tecnología.",
+  "Detección o Habilidades: Mariana, como gerente de tecnología, prefería Detección y pidió que Intezia recomiende; Ivana eligió Habilidades con levantamiento por área. No se nombra Detección en el deck. Casos del sector (Laboratorios Farmac, Go Pharma) mencionados en la llamada: no se incluyen sin fuente documentada.",
+  "Contexto interno que no va en el deck: presupuesto 2027 en formulación (ejecución probable en 2027), Junta de Presidencia decide (Mariana no), patrocinio tibio, 60 % de la plantilla es fuerza de venta en calle (de ahí «sin frenar la venta en calle»), sistema contable Profit, cadena de distribución con aplicación web propia. Sin fechas ni semanas en el deck (§4.23).",
+  "Participantes: ~40-45 personas del personal administrativo (de ~120 en total), por áreas (gerentes, líderes, analistas, colaboradores); los líderes por área están por identificar. Modalidad mixta; sede en Caracas."
+ ],
+ "pendientes": [
+  "Confirmar los códigos de las dos propuestas (CAI-089A todas las áreas, CAI-089B áreas priorizadas) y que B son los 4 procesos clave.",
+  "Confirmar con Ivana el reparto (2 h + 8 h por área) y si las 8 h cuentan como construcción, testeo y adopción de 4, 2 y 2.",
+  "Respuesta por escrito, verificada, sobre las restricciones de Claude y OpenAI en Venezuela antes de enviar (Mariana la pidió en la reunión).",
+  "Valor, descuento y total: campos vacíos para ventas; moneda de facturación y la forma de pago la define el cliente.",
+  "Vigencia de la cotización: el sistema usa 30 días y el cliente decide al formular el presupuesto 2027; ver con Ivana si se extiende.",
+  "Quién asiste a la presentación (Junta de Presidencia) y si Mariana quiere a otros líderes; si trabajan con orden de compra.",
+  "Identificar los líderes de cada área y si el programador o tecnología participa en todas las áreas."
+ ]
+}

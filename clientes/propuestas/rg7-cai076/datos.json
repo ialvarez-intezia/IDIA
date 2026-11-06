@@ -1,0 +1,438 @@
+{
+ "version": 3,
+ "cliente": {
+  "nombre": "RG7 Corp",
+  "slug": "rg7-cai076",
+  "codigo": "CAI-076",
+  "nombre_pie": "RG7 Corp"
+ },
+ "division": "educacion",
+ "alianza": false,
+ "sin_horas_trabajo": true,
+ "meta_servicio": "habilidades",
+ "meta_tipo": "Habilidades · equipo de 6 personas: Fundamentos de IA, levantamiento y construcción de arqueo de caja, cierre diario, inventario, consumo por receta y compras con IA · seguimiento 30-60-90 · formato compacto v3",
+ "vocabulario": {
+  "solucion": [
+   "entregable",
+   "entregables"
+  ],
+  "area": [
+   "línea de trabajo",
+   "líneas de trabajo"
+  ]
+ },
+ "omitir": [
+  "pago"
+ ],
+ "eje": "Arqueo de caja, cierre diario, inventario, consumo por receta y compras con IA, construidos por el equipo de RG7 Corp, restaurante franquiciado en Barquisimeto, sobre su sistema de ventas y su app interna",
+ "origen": "Ficha de Levantamiento de RG7 Corp (Flavia Martínez, 29/10/2026) y texto de la asesora con el requerimiento del cliente, más respuestas de Ivana del 29/10/2026: CAI-076, Habilidades con un levantamiento previo corto, Educación, sin alianza, propuesta pequeña con los dos dolores más fuertes",
+ "fuente_insumo": "Ficha de Levantamiento (29/10/2026) y texto de Flavia Martínez con el requerimiento inicial de RG7 Corp (sin transcripción de la reunión)",
+ "siglas_ok": [
+  "IA"
+ ],
+ "portada": {
+  "titulo_lineas": [
+   "Arqueo, cierre e inventario",
+   "con IA construidos por el equipo"
+  ],
+  "titulo_destacado": "de {cliente_corto}",
+  "lead": "Este proyecto nivela al equipo en IA y le enseña a construir sus propias herramientas para el **arqueo de caja**, el **cierre diario** y el **inventario**, hasta dejarlas en uso.",
+  "hechos": [
+   {
+    "num": "Un lunes",
+    "texto": "entero le toma a la administradora el arqueo de caja de viernes a domingo.",
+    "resuelto_por": [
+     "CO-1"
+    ]
+   },
+   {
+    "num": "Papel",
+    "texto": "es donde se llevan hoy los cierres diarios y el inventario: planillas llenas a mano.",
+    "resuelto_por": [
+     "CO-1",
+     "CO-2"
+    ]
+   },
+   {
+    "num": "Recetas",
+    "texto": "incompletas en el sistema de ventas, así que no descuenta los insumos.",
+    "resuelto_por": [
+     "CO-2"
+    ]
+   },
+   {
+    "num": "6",
+    "texto": "personas: una ya usa IA a diario y el resto no la usa con un criterio común.",
+    "resuelto_por": [
+     "NV-1"
+    ]
+   }
+  ]
+ },
+ "carriles": [
+  {
+   "id": "ia",
+   "nombre": "Herramientas de IA del equipo",
+   "nombre_corto": "IA del equipo",
+   "color": "amarillo"
+  }
+ ],
+ "areas": [
+  {
+   "id": "NV",
+   "nombre": "Fundamentos de IA",
+   "carril": "ia",
+   "frente": "A",
+   "para_que": "Llevar a todo el equipo al mismo punto, para que construya y sostenga sus herramientas",
+   "soluciones": [
+    {
+     "id": "NV-1",
+     "entregable": "Fundamentos de IA para todo el equipo",
+     "h": 2,
+     "fase": "F1",
+     "incluye": [
+      "Del uso de una persona a un criterio común",
+      "Cómo pedirle bien, con ejemplos del trabajo del equipo",
+      "Qué datos se cuidan y cuáles no se cargan"
+     ],
+     "detalle": "Módulo de 2 h con el equipo, en un solo grupo. Una persona ya usa IA a diario y el resto no la usa con un criterio común, así que se nivela para que todos lleguen al mismo punto: cómo pedirle bien, con ejemplos del arqueo, el cierre y el inventario. Se acuerdan las pautas básicas de qué datos se cuidan, porque la nómina y las cifras financieras son confidenciales. Entrega al equipo con una noción común."
+    }
+   ]
+  },
+  {
+   "id": "LV",
+   "nombre": "Levantamiento de procesos",
+   "carril": "ia",
+   "frente": "A",
+   "para_que": "Ver el punto de partida de caja, cierre e inventario y definir qué construir",
+   "soluciones": [
+    {
+     "id": "LV-1",
+     "entregable": "Levantamiento del arqueo, el cierre y el inventario",
+     "h": 2,
+     "fase": "F1",
+     "incluye": [
+      "Cómo se trabaja hoy en caja, cierre e inventario",
+      "Qué reportes entrega ya el sistema de ventas",
+      "Qué construir primero y con qué herramienta"
+     ],
+     "detalle": "Dos horas de entrevista con el equipo de administración, compras y cierre. Se recorre cómo trabaja hoy cada proceso, se mide el punto de partida y se revisa qué reportes entrega ya el sistema de ventas y qué se armó en la app interna. Se confirma qué construir primero y con qué herramienta: se parte de ChatGPT, que ya usan, y el levantamiento confirma si es la indicada o se recomienda otra. Entrega el punto de partida y el plan de construcción."
+    }
+   ]
+  },
+  {
+   "id": "CO",
+   "nombre": "Caja, cierres e inventario",
+   "carril": "ia",
+   "frente": "A",
+   "para_que": "Construir con el equipo el arqueo, el cierre diario y el control de inventario",
+   "soluciones": [
+    {
+     "id": "CO-1",
+     "entregable": "Arqueo de caja y cierre diario con IA",
+     "h": 6,
+     "fase": "F2",
+     "incluye": [
+      "Arqueo de viernes a domingo a partir de los reportes del sistema",
+      "Cierre diario sin planillas de papel",
+      "Revisión de una persona antes de darlos por buenos"
+     ],
+     "detalle": "Trabajo de 6 h con la administración y el personal de cierre. Hoy el arqueo de caja de viernes a domingo toma todo el lunes y los cierres diarios se llenan en planillas de papel. Cada persona construye con IA, mientras Intezia la guía, la herramienta que toma los reportes que el sistema de ventas ya entrega y arma el arqueo y el cierre. Una persona revisa el resultado antes de darlo por bueno. Se trabaja sobre el sistema y la app que ya tienen. Entrega el arqueo y el cierre diario en uso."
+    },
+    {
+     "id": "CO-2",
+     "entregable": "Inventario, consumo por receta y compras con IA",
+     "h": 6,
+     "fase": "F2",
+     "incluye": [
+      "Inventario de producto y de materia prima al día",
+      "Consumo de insumos calculado por receta",
+      "Compras sugeridas, revisadas por una persona"
+     ],
+     "detalle": "Trabajo de 6 h con el equipo de compras y administración. Se parte de lo que el equipo ya probó: cruzar el reporte de ventas del día con las recetas para calcular el consumo y sugerir compras. Se amplía y se ordena: inventario de producto y materia prima, consumo por receta (las recetas que falten se levantan con ayuda de la IA) y compras sugeridas, que una persona revisa antes de comprar. No cambia el sistema de ventas ni carga información en él. Entrega el inventario, el consumo y las compras en uso."
+    }
+   ]
+  }
+ ],
+ "alcance": {
+  "titulo": "Tres líneas de trabajo del equipo.",
+  "subtitulo": "Nivelamos al equipo, medimos cómo trabaja hoy y construimos con él **dos herramientas** de administración.",
+  "etiqueta_destacados": "Lo que se mide desde el primer día",
+  "destacados": [
+   {
+    "titulo": "Arqueo de caja",
+    "texto": "Cuánto toma el arqueo de viernes a domingo, contra el punto de partida."
+   },
+   {
+    "titulo": "Cierre diario",
+    "texto": "Cuánto toma el cierre y cuántas cuentas se hacen a mano."
+   },
+   {
+    "titulo": "Inventario y compras",
+    "texto": "Cuánto toma tener el consumo y las compras al día."
+   },
+   {
+    "titulo": "Uso del equipo",
+    "texto": "Quién usa las herramientas a los 30, 60 y 90 días."
+   }
+  ],
+  "fuera_alcance": [
+   "Desarrollar un sistema nuevo: se trabaja sobre el sistema de ventas y la app interna que ya tienen.",
+   "El servidor central de la franquicia: no se modifica ni se carga información en él.",
+   "Licencias y consumo de las herramientas de IA: los contrata {cliente_corto}, aparte de esta inversión.",
+   "Nómina, pagos a proveedores y análisis de ventas: quedan para una siguiente etapa."
+  ]
+ },
+ "metodo": {
+  "titulo": "Así construimos cada herramienta.",
+  "subtitulo": "Primero se nivela al equipo y se ve dónde duele más; después se construye lo que más pesa, con el equipo.",
+  "quien_construye": "El **equipo construye** sus propias herramientas con IA y Intezia lo guía, sobre su sistema de ventas y su app interna.",
+  "por_que_orden": "Primero se nivela al equipo y se mide cómo se trabaja hoy; después se construye lo que más pesa, para que los procesos no dependan de una sola persona.",
+  "pasos": [
+   {
+    "titulo": "Nivelamos",
+    "texto": "Fundamentos de IA para que todo el equipo parta del mismo punto."
+   },
+   {
+    "titulo": "Medimos",
+    "texto": "Cómo trabaja hoy cada proceso y cuánto tarda."
+   },
+   {
+    "titulo": "Construimos",
+    "texto": "Con el equipo, sobre el sistema que ya tienen."
+   },
+   {
+    "titulo": "Seguimos",
+    "texto": "Uso, ajustes y resultados, a 30, 60 y 90 días."
+   }
+  ],
+  "practica": [
+   {
+    "titulo": "Una persona en el circuito",
+    "texto": "La IA calcula y propone; una persona revisa el arqueo, el cierre y las compras antes de darlos por buenos."
+   },
+   {
+    "titulo": "Sobre lo que ya tienen",
+    "texto": "Se trabaja encima de su sistema de ventas y su app interna; no se desarrolla un sistema nuevo."
+   },
+   {
+    "titulo": "ChatGPT, abierto a recomendación",
+    "texto": "Se parte de ChatGPT, que ya usan; el levantamiento confirma si es la indicada o se recomienda otra."
+   }
+  ],
+  "datos": "La nómina y las cifras financieras son confidenciales: solo se cargan a las herramientas de IA los datos que {cliente_corto} autoriza, con pautas acordadas en los Fundamentos."
+ },
+ "fases": [
+  {
+   "id": "F1",
+   "titulo": "Nivelación y levantamiento",
+   "descripcion": "equipo nivelado y punto de partida medido"
+  },
+  {
+   "id": "F2",
+   "titulo": "Construcción",
+   "descripcion": "herramientas construidas por el equipo y en uso",
+   "destacada": true
+  }
+ ],
+ "frentes": [
+  {
+   "id": "A",
+   "carril": "ia",
+   "nombre": "Equipo de {cliente_corto}",
+   "medida": "16 horas",
+   "medida_meta": "con el equipo",
+   "celdas": {
+    "F1": "Fundamentos de IA y levantamiento del arqueo, el cierre y el inventario.",
+    "F2": "Arqueo y cierre diario; inventario, consumo y compras, en uso."
+   },
+   "celdas_medida": {
+    "F1": "4 horas con el equipo",
+    "F2": "12 horas con el equipo"
+   }
+  }
+ ],
+ "ruta": {
+  "titulo": "De la nivelación a las herramientas en uso.",
+  "subtitulo": "El calendario se acuerda en la **reunión de arranque**, con resultados pensados para el corto plazo.",
+  "hitos": [
+   {
+    "titulo": "Arranque · aparte",
+    "texto": "Reunión de 1 h para acordar el calendario, quiénes participan y quién coordina por {cliente_corto}."
+   },
+   {
+    "titulo": "Nivelación y levantamiento",
+    "texto": "Fundamentos de IA y punto de partida de cada proceso."
+   },
+   {
+    "titulo": "Herramientas en uso",
+    "texto": "Arqueo y cierre diario; inventario, consumo y compras."
+   },
+   {
+    "titulo": "30 · 60 · 90 días",
+    "texto": "Seguimiento: uso de las herramientas, ajustes y avances medidos."
+   }
+  ],
+  "siguiente_etapa": {
+   "titulo": "Siguiente paso · Más procesos",
+   "texto": "Nómina, pagos a proveedores, análisis de ventas e indicadores; y, si funciona, llevarlo a otras sedes de la marca."
+  }
+ },
+ "logistica": {
+  "modalidad": "Se acuerda en la reunión de arranque, según lo que mejor funcione para el equipo.",
+  "participantes": "Las personas del equipo de {cliente_corto} que se definan en la reunión de arranque.",
+  "ritmo": "El trabajo se agenda sin frenar la operación diaria del restaurante.",
+  "arranque": "Apenas se apruebe la propuesta; una reunión de 1 h, aparte, acuerda el calendario."
+ },
+ "seguimiento": {
+  "rango": "30, 60 y 90 días",
+  "texto": "Desde el cierre de cada línea",
+  "items": [
+   {
+    "dias": "30 días",
+    "texto": "Uso de las herramientas"
+   },
+   {
+    "dias": "60 días",
+    "texto": "Ajustes y nuevas construcciones"
+   },
+   {
+    "dias": "90 días",
+    "texto": "Arqueo, cierre e inventario medidos"
+   }
+  ]
+ },
+ "entregables": {
+  "titulo": "Lo que recibe RG7 Corp.",
+  "subtitulo": "Lo que se llevan: **un equipo nivelado y dos herramientas construidas por él**, más el seguimiento a {rango_seguimiento}.",
+  "etiqueta_transversales": "Para todo el proyecto",
+  "transversales": [
+   "Punto de partida de cómo se trabaja hoy.",
+   "Pautas de qué datos se cargan y cuáles no.",
+   "Seguimiento a 30, 60 y 90 días."
+  ],
+  "etiqueta_valor": "Valor inmediato",
+  "valor_inmediato": [
+   "Con el levantamiento: se ve qué construir primero.",
+   "Con el arqueo: el lunes deja de ser de una sola persona.",
+   "Al cerrar: el equipo mantiene lo que construyó."
+  ],
+  "columnas_por_carril": [
+   3
+  ]
+ },
+ "retorno": {
+  "modo": "metodo",
+  "posiciones": false,
+  "titulo": "Retorno esperado: tiempo del equipo, medido.",
+  "subtitulo": "Cada indicador se mide contra el punto de partida que el levantamiento deja registrado.",
+  "etiqueta_pasos": "Cómo se calcula el retorno de cada herramienta",
+  "pasos": [
+   {
+    "titulo": "Volumen",
+    "texto": "Cuántos arqueos y cierres se hacen cada mes y cuántas compras se planifican."
+   },
+   {
+    "titulo": "Punto de partida",
+    "texto": "Tiempo de hacer el arqueo, el cierre y el inventario hoy: es la línea base."
+   },
+   {
+    "titulo": "Con la herramienta",
+    "texto": "Lo que toma el mismo trabajo una vez que la herramienta está en uso."
+   },
+   {
+    "titulo": "Horas recuperadas",
+    "texto": "Volumen por la diferencia de tiempos: una estimación referencial, sin compromiso de resultado."
+   },
+   {
+    "titulo": "Gasto de operar",
+    "texto": "Licencias y consumo de IA, contra el valor de lo recuperado."
+   }
+  ],
+  "etiqueta_metas": "Calendario de seguimiento y medición",
+  "metas": [
+   {
+    "dias": "30 días",
+    "texto": "Desde el cierre de cada línea: herramientas en uso real y punto de partida validado con el equipo."
+   },
+   {
+    "dias": "60 días",
+    "texto": "Tiempo de arqueo, de cierre y de inventario medido contra el punto de partida."
+   },
+   {
+    "dias": "90 días",
+    "texto": "Medición del retorno: lo recuperado frente al gasto de operar las herramientas."
+   }
+  ],
+  "etiqueta_destino": "Hacia dónde va el proyecto",
+  "destino": [
+   {
+    "rotulo": "Más capacidad",
+    "texto": "Con tiempo liberado, un equipo pequeño puede sostener la operación **sin depender de una sola persona**."
+   },
+   {
+    "rotulo": "Tiempo para analizar",
+    "texto": "Con el arqueo y el cierre resueltos, la administración puede **analizar** en lugar de transcribir."
+   },
+   {
+    "rotulo": "Compras con datos",
+    "texto": "Con el consumo por receta, las compras se planifican con **datos del día**."
+   }
+  ],
+  "gancho": "A los 90 días del cierre de cada línea, {cliente_corto} contará con su tiempo de arqueo, de cierre y de inventario medido contra el punto de partida y el gasto de operar sus herramientas."
+ },
+ "inversion": {
+  "duracion": "**{h_total} horas con el equipo** de {cliente_corto}, en nivelación, levantamiento y construcción, con seguimiento a {rango_seguimiento}.",
+  "programa": [
+   "Servicio de Habilidades para {cliente_corto} ({codigo}).",
+   "Fundamentos de IA, levantamiento previo y construcción de cada herramienta, hasta dejarla en uso.",
+   "{h_f1} h de nivelación y levantamiento y {h_f2} h de construcción: {h_total} horas con el equipo.",
+   "Seguimiento a 30, 60 y 90 días. La reunión de arranque va aparte."
+  ],
+  "notas": [
+   "Licencias y consumo de las herramientas de IA: los contrata {cliente_corto} y van aparte; el levantamiento orienta sobre cuáles hacen falta.",
+   "Intezia no desarrolla un sistema nuevo: se trabaja sobre el sistema y la app que ya tienen."
+  ],
+  "garantia_texto": "Estamos contigo hasta que cada herramienta quede en uso."
+ },
+ "proximos_pasos": {
+  "subtitulo": "Esto es lo que sigue cuando {cliente_corto} confirme la propuesta.",
+  "asesora": {
+   "nombre": "Flavia Martínez",
+   "cargo": "Asesora comercial",
+   "correo": "fmartinez@intezia.com",
+   "telefono": "+58 414 5756615"
+  },
+  "pasos": [
+   {
+    "titulo": "Aprobación",
+    "texto": "Quienes deciden por {cliente_corto} confirman la propuesta y acordamos la fecha de la reunión de arranque."
+   },
+   {
+    "titulo": "Equipo y accesos",
+    "texto": "{cliente_corto} confirma quién coordina por el equipo y comparte los reportes que autorice."
+   },
+   {
+    "titulo": "Reunión de arranque",
+    "texto": "Una hora para acordar el calendario del equipo y los primeros pasos."
+   }
+  ]
+ },
+ "supuestos": [
+  "Pedido de Ivana (29/10/2026): propuesta CAI-076 para RG7 Corp, C.A., asesora Flavia Martínez. Habilidades con un levantamiento previo corto (Flavia: «no hace falta una Detección completa»), sin nombrar Detección. Educación, sin alianza, sin facilidad de pago y con seguimiento 30-60-90: confirmados por Ivana.",
+  "Insumos: Ficha de Levantamiento y texto de Flavia con el requerimiento del cliente; **no hay transcripción de la reunión**. Primer contacto. Franquiciado de una marca de hamburguesas en Barquisimeto con administración propia, 6 personas; decide el gerente de administración junto con su hermano (socio), que ya confirmó que estará en la presentación. El deck no nombra personas.",
+  "Alcance (Ivana: «deja los dolores más fuertes y haz una propuesta más pequeña»): solo arqueo de caja y cierre diario, e inventario, consumo por receta y compras: 16 h con el equipo = Fundamentos 2 h + levantamiento 2 h (Flavia planteó 2 a 4 h) + arqueo y cierre 6 h + inventario y compras 6 h. Quedan fuera del alcance, para una siguiente etapa: nómina, pagos a proveedores, cuentas por pagar, análisis de ventas e indicadores. Cocina y producción entra solo a través de las recetas. El reparto de horas es mío, por confirmar.",
+  "Herramienta (Ivana): se nombra ChatGPT porque el gerente ya la usa a diario y armó con ella la app interna; queda abierto a la recomendación del levantamiento. No se nombra Claude (ver memoria de Venezuela) ni se promete VPN.",
+  "Sistema actual: el deck dice «sistema de ventas» y no nombra Setu Technology. Se trabaja sobre él y sobre la app interna; no se desarrolla un sistema nuevo y no se toca el servidor central de la franquicia (el cliente no puede cargar datos porque lo alimenta ese servidor).",
+  "Siguiente etapa (Ivana, sí): se menciona como «Siguiente paso · Más procesos» (nómina, proveedores, análisis de ventas) y llevarlo a otras sedes de la marca, sin cotizar y sin nombrar a los dueños.",
+  "Datos: no hay política de datos; la nómina y las cifras financieras son confidenciales y se cuidan en los Fundamentos. Modalidad y participantes: «se acuerdan en la reunión de arranque» (Ivana: «a definir»). Presupuesto en evaluación: hoja de inversión estándar con valores vacíos para ventas.",
+  "Sin casos de éxito, sin «curso», sin semanas, sesiones ni fechas, sin kickoff ni agenda. Entrega pedida para el viernes 31/10/2026; presentación el lunes 2 o martes 3 de noviembre."
+ ],
+ "pendientes": [
+  "Confirmar el reparto de horas (2 + 2 + 6 + 6) con Ivana.",
+  "Confirmar con Flavia modalidad (¿presencial en Barquisimeto?) y quiénes participan (¿los socios?).",
+  "Confirmar que el levantamiento de 2 h alcanza (Flavia planteó de 2 a 4 h).",
+  "Valor, descuento y total: campos vacíos para ventas (presupuesto en evaluación).",
+  "Confirmar el teléfono y el correo de Flavia Martínez (tomados de CAI-067 a CAI-069)."
+ ]
+}

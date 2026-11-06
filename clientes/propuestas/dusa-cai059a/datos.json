@@ -1,0 +1,386 @@
+{
+ "version": 3,
+ "cliente": {
+  "nombre": "DUSA",
+  "slug": "dusa-cai059a",
+  "codigo": "CAI-059A",
+  "nombre_pie": "DUSA"
+ },
+ "division": "educacion",
+ "alianza": false,
+ "sin_horas_trabajo": true,
+ "meta_servicio": "habilidades",
+ "meta_tipo": "Habilidades · etapa piloto de la CAI-059: 3 soluciones nuevas y 2 agentes instalados en 4 áreas (Contabilidad, Tesorería, Nómina y Cuentas por Cobrar), 42 h, medición antes y después, garantía 30-60-90 · sin facilidad de pago · formato compacto v3",
+ "omitir": [
+  "pago"
+ ],
+ "eje": "Construir tres soluciones frecuentes de DUSA, instalar dos agentes ya construidos y medir, antes del 11 de noviembre, las horas que liberan los cinco procesos",
+ "origen": "Estructura y horas enviadas a Ivana el 04/11/2026: DUSA eligió la opción 3 del piloto y sumó la instalación de los dos agentes ya construidos. Cifras de las fichas de levantamiento de septiembre de 2026 y base de la CAI-035 y la CAI-059",
+ "fuente_insumo": "Estructura y horas de la etapa (04/11/2026) y fichas de levantamiento de septiembre de 2026",
+ "siglas_ok": [
+  "JD",
+  "IA"
+ ],
+ "frases_ok": [
+  "antes del 11 de noviembre"
+ ],
+ "carriles": [
+  {
+   "id": "copilot",
+   "nombre": "Microsoft 365 Copilot",
+   "nombre_corto": "Copilot",
+   "color": "amarillo"
+  }
+ ],
+ "fases": [
+  {
+   "id": "F0",
+   "descripcion": "Preparación en línea: línea base cronometrada de los cinco procesos (2 h)"
+  },
+  {
+   "id": "F1",
+   "titulo": "Construcción",
+   "descripcion": "construcción y testeo de las tres soluciones",
+   "destacada": true,
+   "medida": "27 h · presencial"
+  },
+  {
+   "id": "F2",
+   "titulo": "Adopción",
+   "descripcion": "adopción e instalación de los agentes",
+   "medida": "13 h · presencial"
+  }
+ ],
+ "portada": {
+  "titulo_lineas": [
+   "Tres procesos frecuentes de DUSA,",
+   "con horas liberadas medidas"
+  ],
+  "titulo_destacado": "antes del 11 de noviembre",
+  "lead": "Construimos **tres soluciones nuevas**, instalamos **dos agentes ya construidos** y medimos el antes y el después de cada proceso.",
+  "hechos": [
+   {
+    "num": "≈30",
+    "texto": "bases que 6 personas reestructuran a mano cada día, según las fichas de septiembre.",
+    "resuelto_por": [
+     "CP-2"
+    ]
+   },
+   {
+    "num": "½ día",
+    "texto": "dedica Tesorería cada día a su bandeja de correo, según las fichas de septiembre.",
+    "resuelto_por": [
+     "TS-1"
+    ]
+   },
+   {
+    "num": "42 h",
+    "texto": "en total, en 4 áreas: Contabilidad, Tesorería, Nómina y Cuentas por Cobrar.",
+    "resuelto_por": [
+     "CP-2",
+     "CP-3",
+     "TS-1",
+     "NM-3",
+     "CC-1"
+    ]
+   },
+   {
+    "num": "5",
+    "texto": "procesos medidos: 3 nuevos y 2 instalados.",
+    "resuelto_por": [
+     "CP-2",
+     "CP-3",
+     "TS-1",
+     "NM-3",
+     "CC-1"
+    ]
+   }
+  ]
+ },
+ "areas": [
+  {
+   "id": "CP",
+   "nombre": "Contabilidad",
+   "carril": "copilot",
+   "frente": "A",
+   "para_que": "Reportes limpios y estados financieros en uso para todo el equipo",
+   "soluciones": [
+    {
+     "id": "CP-2",
+     "entregable": "Depurador de reportes de JD Edwards, por formato",
+     "C": 4,
+     "T": 2,
+     "A": 3,
+     "fase": "F1",
+     "detalle": "Depurador de reportes exportados de JD Edwards: quita columnas y filas vacías, espacios y dispersión, con una plantilla por formato."
+    },
+    {
+     "id": "CP-3",
+     "entregable": "Agente de estados financieros, instalado",
+     "h": 2,
+     "fase": "F2",
+     "detalle": "Instalación del agente de estados financieros, ya construido, con cuenta activa y uso verificado."
+    }
+   ]
+  },
+  {
+   "id": "TS",
+   "nombre": "Tesorería",
+   "carril": "copilot",
+   "frente": "A",
+   "para_que": "Solicitudes de pago ordenadas en un resumen diario",
+   "soluciones": [
+    {
+     "id": "TS-1",
+     "entregable": "Clasificador de la bandeja del tesorero, con resumen diario",
+     "C": 7,
+     "T": 4,
+     "A": 3,
+     "fase": "F1",
+     "detalle": "Clasificador de la bandeja del tesorero: separa las solicitudes de pago y entrega un resumen diario."
+    }
+   ]
+  },
+  {
+   "id": "NM",
+   "nombre": "Nómina",
+   "carril": "copilot",
+   "frente": "A",
+   "para_que": "Archivo de pago listo desde el reporte, con cuadro y correos",
+   "soluciones": [
+    {
+     "id": "NM-3",
+     "entregable": "Archivo de pago desde el reporte 337, con cuadro y correos",
+     "C": 8,
+     "T": 4,
+     "A": 3,
+     "fase": "F1",
+     "detalle": "Archivo de pago desde el reporte 337, con cuadro resumen y correos a Tesorería."
+    }
+   ]
+  },
+  {
+   "id": "CC",
+   "nombre": "Cuentas por Cobrar",
+   "carril": "copilot",
+   "frente": "A",
+   "para_que": "Cobros validados con el agente ya construido",
+   "soluciones": [
+    {
+     "id": "CC-1",
+     "entregable": "Validador de cobros, instalado",
+     "h": 2,
+     "fase": "F2",
+     "detalle": "Instalación del validador de cobros, ya construido, con cuenta activa y uso verificado."
+    }
+   ]
+  }
+ ],
+ "alcance": {
+  "titulo": "Tres soluciones nuevas y dos agentes, con su medición.",
+  "subtitulo": "Tres soluciones nuevas, dos agentes ya construidos para instalar y la medición del antes y el después.",
+  "fuera_alcance": [
+   "El resto de las 44 soluciones del plan.",
+   "Los procesos anuales del plan financiero: plan y presupuesto de nómina, integración del plan de nómina y plan de ventas.",
+   "Llevar los estados financieros al cierre completo de 10 estados.",
+   "Los otros escenarios de Cuentas por Cobrar."
+  ]
+ },
+ "frentes": [
+  {
+   "id": "A",
+   "carril": "copilot",
+   "nombre": "Los cinco procesos de {cliente_corto}",
+   "medida": "42 horas",
+   "medida_meta": "en cuatro áreas",
+   "celdas": {
+    "F1": "Construcción y testeo: depurador 4 y 2 h, clasificador 7 y 4 h, archivo de pago 8 y 4 h.",
+    "F2": "Adopción: 3 h por solución nueva. Instalación: 2 h por agente."
+   },
+   "celdas_medida": {
+    "F1": "27 h · presencial",
+    "F2": "13 h · presencial"
+   }
+  }
+ ],
+ "ruta": {
+  "titulo": "De la línea base a la solución en uso.",
+  "subtitulo": "Horas del proyecto completo, no por persona: 42 h en total.",
+  "hitos": [
+   {
+    "titulo": "Línea base",
+    "texto": "Preparación en línea (2 h): los cinco procesos cronometrados antes de tocarlos."
+   },
+   {
+    "titulo": "Soluciones construidas",
+    "texto": "Depurador, clasificador y archivo de pago, probados con casos reales."
+   },
+   {
+    "titulo": "Agentes instalados",
+    "texto": "Validador de cobros y estados financieros, con cuenta activa."
+   },
+   {
+    "titulo": "Antes y después",
+    "texto": "Horas liberadas medidas por proceso."
+   }
+  ],
+  "nota": "Las 29 h de construcción y testeo incluyen 2 h de preparación en línea y 27 h presenciales. La adopción y la instalación suman 13 h presenciales."
+ },
+ "metodo": {
+  "practica": [
+   {
+    "titulo": "Cuentas de Copilot",
+    "texto": "DUSA aporta 6 cuentas de Copilot Premium."
+   },
+   {
+    "titulo": "Un ejecutor por proceso",
+    "texto": "Con hasta 4 horas por día para trabajar su solución."
+   },
+   {
+    "titulo": "Insumos y formato",
+    "texto": "Muestras de cada proceso y el formato del resumen de nómina acordado con Tesorería."
+   }
+  ],
+  "datos": "Trabajamos con muestras reales de cada proceso, sin sacar información financiera ni datos de nómina de DUSA. Las soluciones usan solo las cuentas autorizadas por tecnología, y sus sistemas no se modifican."
+ },
+ "logistica": {
+  "modalidad": "Preparación en línea; construcción, adopción e instalación presenciales.",
+  "participantes": "Un ejecutor por proceso, con hasta 4 h por día.",
+  "arranque": "La fecha la fija DUSA al confirmar la propuesta."
+ },
+ "seguimiento": {
+  "rango": "30, 60 y 90 días",
+  "texto": "Garantía de esta etapa",
+  "items": [
+   {
+    "dias": "30 días",
+    "texto": "Uso y ajustes"
+   },
+   {
+    "dias": "60 días",
+    "texto": "Mediciones de control"
+   },
+   {
+    "dias": "90 días",
+    "texto": "Cierre y retorno final"
+   }
+  ]
+ },
+ "entregables": {
+  "transversales": [
+   "Informe por proceso, con el antes y el después",
+   "Línea base cronometrada de los cinco procesos"
+  ],
+  "valor_inmediato": [
+   "Dos agentes instalados con cuenta activa y uso verificado"
+  ]
+ },
+ "retorno": {
+  "modo": "metodo",
+  "titulo": "Cómo se mide: horas liberadas, antes y después.",
+  "subtitulo": "La medición del antes y el después se completa **antes del 11 de noviembre**.",
+  "etiqueta_pasos": "Cómo se mide cada proceso",
+  "pasos": [
+   {
+    "titulo": "Línea base cronometrada",
+    "texto": "Antes de construir: al menos 5 ejecuciones de cada proceso, con cronómetro."
+   },
+   {
+    "titulo": "Medición después",
+    "texto": "Las mismas mediciones, con al menos 5 ejecuciones, con la solución en uso."
+   },
+   {
+    "titulo": "Cinco indicadores",
+    "texto": "Horas liberadas, calidad, adopción, autonomía y percepción de quien ejecuta."
+   },
+   {
+    "titulo": "Informe por proceso",
+    "texto": "Cada proceso recibe su informe con el antes y el después."
+   }
+  ],
+  "etiqueta_metas": "Garantía de esta etapa",
+  "metas": [
+   {
+    "dias": "30 días",
+    "texto": "Uso real de cada solución y ajustes."
+   },
+   {
+    "dias": "60 días",
+    "texto": "Horas liberadas medidas contra la línea base."
+   },
+   {
+    "dias": "90 días",
+    "texto": "Retorno en tiempo ahorrado, por proceso."
+   }
+  ],
+  "etiqueta_destino": "Qué deja la medición",
+  "destino": [
+   {
+    "rotulo": "Horas liberadas medidas",
+    "texto": "Cada proceso queda con su tiempo antes y después medido, no estimado."
+   },
+   {
+    "rotulo": "Decisión con datos",
+    "texto": "Con los informes, DUSA decide qué soluciones del resto del plan extender y en qué orden."
+   },
+   {
+    "rotulo": "Autonomía",
+    "texto": "Cada ejecutor aprende a usar y ajustar su solución sin depender de Intezia."
+   }
+  ],
+  "gancho": "En esta etapa DUSA ve, con datos de sus propios procesos, cuántas horas se liberan y si cada solución se adopta."
+ },
+ "inversion": {
+  "duracion": "**{h_total} horas** en total: construcción, testeo, adopción e instalación.",
+  "programa": [
+   "Servicio de Habilidades para {cliente_corto} ({codigo}).",
+   "Tres soluciones nuevas: depurador de JD Edwards, clasificador de la bandeja y archivo de pago.",
+   "Instalación de dos agentes ya construidos.",
+   "Medición del antes y el después, e informe por proceso."
+  ],
+  "notas": [
+   "Licencias de Microsoft 365 Copilot Premium: las aporta {cliente_corto}, aparte de esta inversión.",
+   "Garantía de 30, 60 y 90 días de esta etapa."
+  ],
+  "garantia_texto": "Estamos contigo hasta que cada solución quede en uso."
+ },
+ "proximos_pasos": {
+  "etiqueta_contacto": "¿Dudas? Escribe a tu directora comercial",
+  "asesora": {
+   "nombre": "María Iribarren",
+   "cargo": "Directora comercial",
+   "correo": "miribarren@intezia.com",
+   "telefono": "+58 414 0570056"
+  },
+  "pasos": [
+   {
+    "titulo": "Cuentas y ejecutores",
+    "texto": "{cliente_corto} confirma las 6 cuentas de Copilot Premium y quién ejecuta cada proceso."
+   },
+   {
+    "titulo": "Insumos de muestra",
+    "texto": "Con Tesorería cerramos el resumen de nómina y reunimos las muestras de cada proceso."
+   },
+   {
+    "titulo": "Preparación en línea",
+    "texto": "Una reunión de 2 h en línea deja lista la línea base y acuerda el calendario."
+   }
+  ]
+ },
+ "supuestos": [
+  "Código: Ivana pidió «mismo código con sufijo A» sin decir cuál; se tomó CAI-059 (última propuesta de DUSA, con tres opciones). Si era CAI-035, cambiar `cliente.codigo` y el slug.",
+  "El «piloto» y su opción 3 no están en el repositorio: la estructura y las horas son las enviadas a Ivana el 04/11/2026.",
+  "Fecha: «antes del 11 de noviembre» va en la portada y en el retorno por pedido expreso (excepción a §4.23; en `frases_ok`).",
+  "Las fichas de septiembre se citan dentro del texto de la portada, sin línea de fuente (regla del 30/10/2026).",
+  "Todo en Copilot Premium (6 cuentas aportadas por DUSA); la CAI-059 usaba Claude Team para Nómina.",
+  "Sin facilidad de pago: no se pidió; la propuesta económica es una hoja con 42 h y licencias aparte.",
+  "Horas: 42 en total = construcción 19, testeo 10, adopción 9 e instalación 4; por etapa, preparación en línea 2 h, construcción presencial 27 h y adopción e instalación presencial 13 h. Ivana las pidió visibles (excepción a la regla del 27/10/2026): se usa `sin_horas_trabajo` con las horas escritas a mano. Lectura propia: las 29 h de construcción y testeo (19 + 10) se dividen en 2 h de preparación en línea y 27 h presenciales; es la única que cuadra con el total."
+ ],
+ "pendientes": [
+  "Confirmar el código (CAI-059A o CAI-035A) y que el nombre de la carpeta es el correcto.",
+  "Valor, descuento y total: campos vacíos para ventas; moneda de facturación por confirmar.",
+  "Confirmar la fecha del 11 de noviembre y si la medición incluye los dos agentes instalados.",
+  "Confirmar que la preparación en línea (2 h) sale de las 29 h de construcción y testeo (19 + 10), y no se suma aparte.",
+  "Ivana pidió 3 o 4 páginas: el formato compacto vigente tiene 8 láminas (sin pago) y el generador no produce menos sin perder secciones que ella listó."
+ ]
+}

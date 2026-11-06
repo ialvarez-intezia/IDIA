@@ -1,156 +1,90 @@
-# Documento Oficial de Diseño Curricular e Instruccional
+# Programa interno · AMV Tecnología · Servicio de Detección (DET-019)
 
-**[LOGO INTEZIA — `logos/educacion/NEGRO.png`]**  /  **[LOGO AMV Tecnología]**
+> Documento interno (no se muestra al cliente). **Generado** por `scripts/generar-habilidades-compacto.py` desde `datos.json` (formato de Detección, `plantillas/deteccion-compacto.md`): no editar a mano.
+> Fuente del insumo: Resumen de la asesora, Ficha de Levantamiento AMV (22/09/2026) y DET-019 enviada el 23/09/2026..
 
-# Servicio de Detección
-## De 8 horas a 10 minutos: un criterio común para Logística, Comercialización y Administrativo
+## 1. Horas (internas: el deck solo dice las de levantamiento, en global)
 
-**Código**: DET-019
-**Versión**: Fundamentals (2h grupal, presencial en Valencia) + auditoría de 3 áreas (Logística,
-Comercialización y Venta, Administrativo) · 4h por área (12h, remoto) · 14h totales, modalidad
-mixta
-**Elaborado por**: Equipo INTEZIA Education
-**Aprobado por**: Dirección Académica Intezia
-**Fecha de Aprobación**: 2026-09-23
+| Etapa | Horas | En el deck |
+|---|---|---|
+| Arranque | 0 | sin horas |
+| Nivelación | 2 | sin horas ni grupos |
+| Levantamiento | 12 | «12 horas», sin reparto por área |
+| **Total de referencia para cotizar** | **14** | no se muestra |
 
----
+Sin semanas ni sesiones en la propuesta (Keiber, 2026-10-08): el número de sesiones, su duración, los grupos de la nivelación y el calendario se acuerdan en la reunión de arranque (Brief de Kickoff, CLAUDE.md §12). Las horas de levantamiento se reparten según lo que necesite cada departamento.
 
-## 1. Información general del programa
+## 2. Qué se audita
 
-- **Nombre**: Detección de IA para AMV Tecnología
-- **Empresa**: AMV Tecnología (distribución de dispositivos e insumos médicos oftalmológicos)
-- **Modalidad**: Mixta — Fundamentals presencial en Valencia (sede principal), las 3 sesiones
-  de área en remoto.
-- **Estructura**: 1 sesión grupal de Fundamentals (2h) + 3 áreas (Logística, Comercialización y
-  Venta, Administrativo) con una sesión de 4 horas cada una (12h) = 14 horas totales.
-- **Acreditación**: sin certificado — la Detección (incluida la sesión de Fundamentals) es una
-  auditoría, no un curso.
-- **Alcance de personas**: 20 personas en la organización; Comercialización y Venta es el grupo
-  más numeroso (~7-8 personas, incluyendo a los socios que también venden).
-- **Alcance de sesiones**: la sesión de Fundamentals nivela a las 3 áreas antes de la auditoría,
-  dado que el nivel de partida con IA es muy desigual. Cada una de las 3 áreas tiene su propia
-  sesión de 4 horas y deja un **logro inmediato** aplicable en esa misma área, empezando por lo
-  que AMV ya validó por su cuenta: consolidar facturas en minutos, no en horas.
+- **Áreas (como las nombra el cliente)**: Administrativo, Logística, Comercialización y Ventas.
+- **Departamentos** (12): Facturación, Cuentas por pagar y cobrar, Tesorería, Contabilidad, Compras internacionales, Importación, Almacén, Despacho, Servicio Técnico (condensado), Servicio al cliente, Gerencia, Vendedores.
+- **Foco**: El levantamiento cubre Administrativo, Logística y Comercialización y Ventas. Servicio Técnico entra de forma condensada dentro de Logística y se confirma en el arranque.
+- **Para qué**: Ver la operación real (Cómo trabaja hoy cada departamento y dónde se pierde tiempo.); Mejorar desde ya (Logros inmediatos que el equipo usa mientras avanza el levantamiento.); Invertir con criterio (Las licencias que convengan se recomiendan durante el proceso, sobre una base cierta.); Cuidar la información (Saber qué datos maneja cada puesto y dónde hace falta control.).
+- **Logros inmediatos mínimos del proyecto**: 3 (no uno por área: un proceso de mucho esfuerzo pasa al mapa).
 
-> **Restricción de diseño (ficha de levantamiento):** Intezia no recomienda herramienta antes de
-> auditar (Metodología ABR). AMV ya probó Claude con un resultado real y medible, pero el
-> Reporte Final entrega su propia **recomendación de ecosistema de IA** por área, a confirmar
-> con los hallazgos reales de las 3 áreas, no se asume de antemano.
+## 3. Ruta por etapas (slide 3)
 
----
+1. **Arranque**: Reunión con la dirección: alcance, responsables de cada departamento y calendario.
+2. **Nivelación**: Fundamentos de IA para todo el equipo, con ejemplos de su propio trabajo.
+3. **Levantamiento**: Departamento por departamento, con cada líder y su mano derecha. · 12 horas de levantamiento, repartidas según lo que necesite cada departamento.
+4. **Priorización**: Intezia cruza lo levantado en todas las áreas y ordena las oportunidades.
+5. **Informe Final**: Diagnóstico y hoja de ruta, presentados a la dirección.
 
-## 2. Fundamentación y justificación pedagógica
+Ruta completa: Ahora, Detección: Esta propuesta. · Después, Habilidades: Formación práctica por área sobre lo que encontró la Detección.
 
-### 2.1 Planteamiento de la necesidad
+## 4. Entregables (slide 5)
 
-AMV Tecnología es una distribuidora especializada de dispositivos e insumos médicos
-oftalmológicos, con sede en Valencia, Caracas y San Cristóbal, en su primer contacto con
-Intezia. El equipo tiene licencias de Microsoft 365 con Copilot y Google Workspace con Gemini,
-pero el uso real hoy es básico: redacción de correos y cálculos simples, muy desigual entre
-áreas. Juan Vázquez, socio, ya probó por su cuenta una tarea real con Claude (consolidar 80
-facturas con miles de items) y pasó de 8 horas manuales a 10 minutos con un prompt simple. Por
-eso la Detección abre con una sesión de Fundamentals que nivela a las 3 áreas antes de auditar,
-y cada sesión de área construye un logro inmediato aplicable, empezando por ese mismo tipo de
-hallazgo ya validado en Administrativo.
+- Al arrancar · **Alcance y calendario**: Acordados en la reunión de arranque, con los tres socios presentes.
+- Al arrancar · **Equipo nivelado en IA**: Todo el equipo con un lenguaje común sobre IA y su uso responsable.
+- En el levantamiento · **Logros inmediatos**: Al menos tres en las áreas, como cotizaciones inmediatas o un canal de comunicación; el alcance se evalúa en el proceso.
+- Al cierre · **Mapa de Calor**: Todas las oportunidades de AMV en un solo mapa, con su Índice de Madurez en IA, para ver por dónde empezar.
+- Al cierre · **Informe Final y hoja de ruta**: Diagnóstico por área y ruta de adopción de IA, con un resumen ejecutivo de una página.
+- Al cierre · **Inversión inteligente en licencias**: Las licencias que convenga adquirir se recomiendan durante el proceso, con datos de AMV.
+- Caja editable «Para todo el proyecto»: Ficha de levantamiento de cada departamento; Presentación del Informe Final a la dirección.
+- Caja editable «Valor inmediato»: Cotizaciones inmediatas y un canal de comunicación efectivo.; Referencia, no promesa: otras empresas pasaron de 240 a 24 min por creativo, de 8 a 2 h un informe y de 2 a 1 h un consolidado..
 
-### 2.2 Enfoque pedagógico (Modelo INTEZIA)
+## 5. Fuera de alcance
 
-Aprendizaje Basado en Retos (ABR) — tres pilares:
+- Las licencias de IA: se recomiendan durante el proceso y no se incluyen en esta inversión.
+- Cambios en los sistemas de AMV: el levantamiento no los modifica.
+- Desarrollos a la medida o integraciones: si el Informe Final los recomienda, se cotizan aparte.
 
-- **Tutoría activa**: el consultor nivela a las 3 áreas en Fundamentals y luego levanta cada
-  área en vivo, sobre sus procesos e indicadores reales.
-- **Transferibilidad inmediata**: cada sesión de 4 horas no termina en preguntas — deja un
-  logro inmediato aplicable en esa misma área.
-- **Curaduría de contenidos**: el Mapa de Calor y el Reporte Final se construyen desde
-  hallazgos reales de las 3 áreas, no desde supuestos.
+## 6. Supuestos a confirmar
 
----
+- Rehecha en el formato compacto de Detección (antes, deck de 12 slides con la página de Ardent Partners, archivado en _anterior-12-slides/). Servicio Técnico no es un área aparte: se incluye de forma condensada dentro de Logística y se confirma en el kick-off.
+- Tres áreas tal como las nombra la ficha y el correo: Administrativo, Logística (con almacén y despacho) y Comercialización y Ventas. En el deck no se usa la palabra «frentes» (el generador la bloquea).
+- Horas: 12 de levantamiento y 2 de Fundamentals (14 en total, como en la propuesta enviada). Solo se muestran las 12 de levantamiento; las 2 de nivelación son internas (spec de Detección). Sin horas adicionales ni horas de arranque.
+- Sin calendario, sin semanas ni sesiones (§4.23): la duración tentativa de 5 a 15 días y el intensivo de lunes, miércoles y viernes se acuerdan en el kick-off. Solo consta el horario del cliente: por la mañana, entre las 8:00 y las 10:30.
+- Modalidad: primer contacto presencial en su oficina de Caracas (Macaracuay) y el resto en línea. Por indicación de Ivana no se menciona Valencia ni los viáticos de encuentros adicionales.
+- Licencias: el deck solo dice que se recomiendan durante el proceso. Los socios quieren empezar con 6 licencias en lugar de 8 (los tres socios, un responsable administrativo, una compartida para importación y almacén, y una para Servicio Técnico): contexto interno, no va en la propuesta.
+- Logros inmediatos: al menos 3, dentro de las áreas, con el alcance a evaluar durante el proceso. Los que el socio señaló como un gran éxito (cotizaciones inmediatas para los vendedores y un canal de comunicación rápido y efectivo) se nombran como ejemplos, sin porcentajes. Los ejemplos de otras empresas (240 a 24 minutos por creativo, 8 a 2 horas un informe del área de salud, 2 a 1 hora un consolidado de cuentas por cobrar) se mencionan como referencia, no como promesa, y sin nombrar a las empresas.
+- Sin Cerebros Digitales (CAI-023) ni la recomendación de licencias en el deck. Ruta completa: Detección ahora y Habilidades después, sin Políticas.
+- Sin nombres de personas del cliente. No se incluye el temor del cliente por implementaciones anteriores. Sin facilidad de pago (omitida).
 
-## 3. Perfiles académicos
+## 7. Cómo trabajamos (slide 4)
 
-> **Detección**: no incluye Perfil de ingreso. AMV designa a los equipos de Logística,
-> Comercialización y Venta, y Administrativo para Fundamentals y sus respectivas sesiones de
-> área.
+**Por qué en este orden:** Primero nivelamos al equipo, para que todos hablen el mismo idioma sobre IA. Después levantamos cada departamento por separado, para que cada líder hable de sus procesos sin esperar a otros. Al final priorizamos con la foto completa de AMV.
 
-### Perfil de egreso
+- **Entrevistamos**: Al líder de cada departamento y a su mano derecha.
+- **Mapeamos**: Procesos, tiempos, herramientas y cuellos de botella del día a día.
+- **Construimos**: Un logro inmediato en el momento, cuando el proceso lo permite.
+- **Priorizamos**: Cada oportunidad por impacto, esfuerzo y riesgo.
 
-- **Saber (Cognitivo)**: el equipo entiende qué es y qué no es la IA (Fundamentals), y cada
-  área entiende dónde está su proceso frente a las demás.
-- **Saber hacer (Procedimental)**: cada área se lleva un logro inmediato aplicable a su tarea
-  más repetitiva, construido en la misma sesión de 4 horas.
-- **Saber ser (Actitudinal)**: el equipo entiende la IA como una herramienta a auditar y
-  ordenar primero, con datos reales antes de invertir en licencias.
+- En la práctica, **Sin tarea previa**: Los líderes no preparan nada antes: todo se levanta en la conversación.
+- En la práctica, **Un espacio por departamento**: Nadie espera mientras otra área expone sus procesos.
+- En la práctica, **Sin forzar soluciones**: Si un proceso exige mucho esfuerzo, no se resuelve en el momento: pasa al Mapa de Calor con su prioridad.
+- Datos: Trabajamos con ejemplos reales sin sacar información financiera ni datos de clientes y proveedores de AMV. Los logros usan solo las cuentas autorizadas, y sus sistemas no se modifican.
+- Quién construye: Intezia levanta y construye junto a cada líder. Los socios de AMV autorizan los accesos y las herramientas con las que se trabaja.
 
----
+**Logística:** modalidad: Primer contacto presencial en su oficina de Caracas (Macaracuay); el resto, en línea. · participantes: Los tres socios y el líder de cada departamento, con su mano derecha. · ritmo: Encuentros por la mañana, entre las 8:00 y las 10:30; la duración por puesto se ajusta en el arranque. · arranque: Reunión de arranque con los tres socios presentes; ahí se define el calendario..
 
-## 4. Objetivos estratégicos
+## 8. Retorno esperado (slide 6)
 
-### 4.1 Objetivo general
+Modo **metodo**. La slide no cita estudios ni referencias de la web ni promete retorno.
 
-Auditar las 3 áreas de AMV Tecnología (Logística, Comercialización y Venta, Administrativo) con
-una sesión grupal de Fundamentals y 4 horas dedicadas a cada área, dejando un logro inmediato en
-cada una, para llevar el uso disperso de IA de hoy a un criterio común, empezando por consolidar
-facturas en minutos, no en horas.
+Pasos del método: Volumen; Tiempo actual; Tiempo con la solución; Horas recuperables; Prioridad.
 
-### 4.2 Objetivos específicos
+## 9. Próximos pasos (slide 8)
 
-1. Nivelar a las 3 áreas con una sesión de Fundamentals (2h) antes de auditar, dado que el uso
-   de IA hoy es muy desigual.
-2. Auditar las 3 áreas con 4 horas dedicadas a cada una, modalidad mixta (Fundamentals
-   presencial en Valencia, sesiones de área en remoto).
-3. Dejar un logro inmediato y aplicable en cada área, empezando por la consolidación de
-   facturas en Administrativo.
-4. Entregar un Reporte Final que valide dónde aplicar IA primero y entregue una recomendación
-   de ecosistema de IA.
+Asesora comercial que ve el cliente: María Iribarren, Directora comercial · miribarren@intezia.com · +58 414 0570056.
 
-> Cada específico responde al objetivo general → al perfil de egreso → al planteamiento de la
-> necesidad.
-
----
-
-## 5. Estructura curricular y diseño instruccional
-
-### 5.1 Estructura modular (4 módulos)
-
-| Módulo | Objetivo Instructivo | Temas | Elaboración (Práctica del participante) |
-|---|---|---|---|
-| **I: Fundamentals** | Nivela a Logística, Comercialización y Administrativo en fundamentos de IA antes de auditar. | 1.1 Qué es y qué no es la IA<br>1.2 Casos reales de AMV<br>1.3 Ruta de las 3 sesiones de auditoría | El equipo llega a sus sesiones de área con un lenguaje común. |
-| **II: Trabajo por Área** | Audita cada una de las 3 áreas (Logística, Comercialización y Venta, Administrativo) con 4 horas dedicadas, dejando un logro inmediato. | 2.1 Procesos reales del área<br>2.2 Cuellos de botella<br>2.3 Construcción del logro inmediato | Cada área se lleva un logro inmediato aplicable a su tarea más repetitiva. |
-| **III: Priorización** | Prioriza hallazgos por impacto, esfuerzo y riesgo. | 3.1 Consolidación de las 3 áreas<br>3.2 Mapa de Calor | El equipo consultor construye el Mapa de Calor priorizado de las 3 áreas. |
-| **IV: Reporte Final** | Entrega el diagnóstico completo, el mapa de oportunidades y la recomendación de ecosistema de IA. | 4.1 Diagnóstico consolidado<br>4.2 Mapa de oportunidades priorizado<br>4.3 Recomendación de ecosistema de IA | AMV recibe el Reporte Final y la recomendación. |
-
-### 5.2 Desglose instructivo (cronograma y ruta de aprendizaje)
-
-| Módulo | Sesión | Temas y subtemas | Tiempo de ejecución | Estrategias de enseñanza (facilitador) | Estrategias de aprendizaje (participante) | Recursos y entornos |
-|---|---|---|---|---|---|---|
-| I | 1 sesión grupal | Tema 1: Fundamentals<br>1.1–1.3 | Total 2 h (30' encuadre y fundamentos / 45' casos reales de AMV / 30' ruta de las 3 sesiones / 15' cierre y preguntas) | Encuadre de qué es y qué no es la IA, casos reales del sector de dispositivos médicos | El equipo alinea expectativas antes de las sesiones de área | Sesión presencial en Valencia, las 3 áreas juntas, sin herramientas técnicas todavía |
-| II | 3 sesiones (1 por área) | Tema 2: Trabajo por área<br>2.1–2.3 | Total 4 h por área (45' contexto y objetivos / 90' levantamiento de procesos e indicadores / 75' construcción del logro inmediato / 30' cierre y siguientes pasos) | Entrevista guiada sobre procesos reales, construcción asistida del logro inmediato | Cada área deja un inventario real y un logro inmediato aplicable | Sesión remota, guion de levantamiento Intezia, sin tocar el sistema de gestión de AMV |
-| III | Consolidación | Tema 3: Priorización<br>3.1–3.2 | Trabajo de equipo consultor (sin sesión con el cliente) | Consolidación y priorización por impacto, esfuerzo y riesgo | — | Hallazgos de las 3 sesiones del Módulo II |
-| IV | Entrega | Tema 4: Reporte Final<br>4.1–4.3 | Reunión de entrega con Juan Vázquez y Yamil Yaguas | Presentación del diagnóstico, el mapa de oportunidades y la recomendación de ecosistema de IA | AMV recibe el Reporte Final | Mapa de Calor + Reporte Final consolidado |
-
----
-
-## 6. Garantía de calidad y mejora continua
-
-- **Construcción curricular**: cada una de las 3 sesiones se adapta a los procesos reales del
-  área (consolidación de facturas, gestión de inventario de lentes intraoculares, entre otros).
-- **Encuesta de satisfacción**: monitoreo de la experiencia al cierre de cada sesión.
-- **Entregables**: equipo nivelado con Fundamentals, inventario de procesos por área, un logro
-  inmediato aplicable por cada una de las 3 áreas, Mapa de Calor priorizado, Reporte Final con
-  recomendación de ecosistema de IA. **Sin certificado de participación** — la Detección
-  (incluido Fundamentals) es una auditoría, no un curso.
-- **Beneficio del programa**: al finalizar, AMV Tecnología pasa de un uso de IA disperso a un
-  equipo nivelado y un logro tangible ya funcionando en sus 3 áreas, con un mapa de
-  oportunidades priorizado y una recomendación de ecosistema de IA para decidir qué automatizar
-  primero, con datos reales en vez de comprar licencias a ciegas.
-
----
-
-## 7. Perfil del equipo facilitador
-
-- **Detección (3 áreas + Fundamentals)**: facilitada por el **Equipo INTEZIA Education**, con
-  dominio de nivelación en fundamentos de IA, levantamiento de procesos, priorización por
-  impacto/esfuerzo/riesgo y diagnóstico de madurez de IA.
-- **Asesora comercial**: María Iribarren.
-- **Competencias pedagógicas**: facilitación grupal (Fundamentals), entrevista guiada,
-  construcción asistida del logro inmediato por área, consolidación con lista de cotejo.

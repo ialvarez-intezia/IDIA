@@ -1,0 +1,475 @@
+{
+ "version": 3,
+ "cliente": {
+  "nombre": "Rodienca",
+  "slug": "rodienca-cai080",
+  "codigo": "CAI-080",
+  "nombre_pie": "Rodienca"
+ },
+ "division": "educacion",
+ "alianza": false,
+ "sin_horas_trabajo": true,
+ "meta_servicio": "habilidades",
+ "meta_tipo": "Habilidades · 3 procesos (cotizaciones y atención a clientes, reportes de ventas, contenido y correos) con Claude Team · levantamiento y nivelación en Claude · seguimiento 30-60-90 · formato compacto v3",
+ "vocabulario": {
+  "solucion": [
+   "entregable",
+   "entregables"
+  ],
+  "area": [
+   "línea de trabajo",
+   "líneas de trabajo"
+  ]
+ },
+ "omitir": [
+  "pago"
+ ],
+ "eje": "Respuesta a presupuestos y atención a clientes por WhatsApp y correo, reportes de ventas cada 15 días y contenido y correos para los nuevos servicios, con Claude Team y skills, para el equipo de tres personas de Rodienca (comercio y fabricación industrial)",
+ "origen": "Ficha de Levantamiento de Rodienca (Flavia Martínez, registro 02/10/2026; contacto Benily Ramos, directora general, quien decide) y contexto de la ruta recomendada (Flavia, 03/11/2026), más respuestas de Ivana del 03/11/2026: CAI-080, Educación, sin alianza, 18 h, sin facilidad de pago",
+ "fuente_insumo": "Ficha de Levantamiento (registro 02/10/2026, PDF del 02/11/2026) y contexto de Flavia Martínez (sin transcripción de la reunión)",
+ "siglas_ok": [
+  "IA"
+ ],
+ "portada": {
+  "titulo_lineas": [
+   "Atención ágil a clientes, reportes",
+   "de ventas y contenido con IA"
+  ],
+  "titulo_destacado": "en {cliente_corto}",
+  "lead": "Este proyecto mide cómo responden hoy y construye con las tres personas de {cliente_corto}, en **Claude**, la respuesta a cotizaciones, el reporte de ventas y el contenido, hasta dejarlos **en uso**.",
+  "hechos": [
+   {
+    "num": "6 h",
+    "texto": "tardó la respuesta a una cotización pedida a las 10 de la mañana.",
+    "resuelto_por": [
+     "CP-1"
+    ]
+   },
+   {
+    "num": "Una",
+    "texto": "sola persona confirma los trabajos de construcción, y los correos de cotización no se priorizan.",
+    "resuelto_por": [
+     "CP-1"
+    ]
+   },
+   {
+    "num": "15 días",
+    "texto": "es cada cuánto quieren ver qué se vende y qué no, y hoy no tienen esa visión rápida.",
+    "resuelto_por": [
+     "RV-1"
+    ]
+   },
+   {
+    "num": "A mano",
+    "texto": "se arman hoy los correos para dar a conocer los nuevos servicios, desde cero.",
+    "resuelto_por": [
+     "CC-1"
+    ]
+   }
+  ]
+ },
+ "carriles": [
+  {
+   "id": "cl",
+   "nombre": "Claude Team de Rodienca",
+   "nombre_corto": "Claude Team",
+   "color": "amarillo"
+  }
+ ],
+ "areas": [
+  {
+   "id": "BA",
+   "nombre": "Levantamiento y nivelación",
+   "carril": "cl",
+   "frente": "A",
+   "para_que": "Medir cómo se responde hoy y llevar al equipo a un mismo nivel en Claude",
+   "soluciones": [
+    {
+     "id": "BA-1",
+     "entregable": "Levantamiento con las tres personas",
+     "h": 4,
+     "fase": "F1",
+     "incluye": [
+      "Los tres procesos y sus casos reales",
+      "Consultas y presupuestos recibidos, y cuánto tardan en responderse",
+      "Qué se construye primero"
+     ],
+     "detalle": "Sesión presencial de 4 h con la directora general, marketing y operaciones. Se recorre cómo funciona hoy cada proceso con casos reales, se afinan los detalles y se toma el punto de partida que hoy no existe: cuántas consultas y presupuestos llegan y cuánto tardan en responderse. Entrega la línea base y el orden de construcción."
+    },
+    {
+     "id": "BA-2",
+     "entregable": "Nivelación en Claude",
+     "h": 2,
+     "fase": "F1",
+     "incluye": [
+      "Claude en el trabajo diario del equipo",
+      "Skills: instrucciones guardadas que se reutilizan",
+      "Reglas básicas de uso y de datos"
+     ],
+     "detalle": "Dos horas con las tres personas, que no han usado la herramienta. Se ve cómo se trabaja con Claude, qué son las skills (instrucciones guardadas que Claude reutiliza, con las que el consumo se mantiene manejable) y las reglas básicas de uso y de datos. Entrega un equipo con el mismo punto de partida."
+    }
+   ]
+  },
+  {
+   "id": "CP",
+   "nombre": "Cotizaciones y atención a clientes",
+   "carril": "cl",
+   "frente": "A",
+   "para_que": "Responder cotizaciones y consultas rápido, sin que todo dependa de una sola persona",
+   "soluciones": [
+    {
+     "id": "CP-1",
+     "entregable": "Respuesta a presupuestos y atención por WhatsApp y correo",
+     "h": 4,
+     "fase": "F2",
+     "incluye": [
+      "Borradores de respuesta a cotizaciones y consultas",
+      "Clasificación y prioridad de los correos de cotización",
+      "Respuestas listas para WhatsApp"
+     ],
+     "detalle": "Trabajo de 4 h con las tres personas. Se construye con Claude y skills la respuesta a presupuestos y consultas: borradores a partir de lo que el equipo conoce, clasificación y prioridad de los correos de cotización que se le comparten, y respuestas listas para WhatsApp. Una persona revisa cada respuesta antes de enviarla. Entrega el proceso en uso."
+    }
+   ]
+  },
+  {
+   "id": "RV",
+   "nombre": "Reportes de ventas",
+   "carril": "cl",
+   "frente": "A",
+   "para_que": "Ver cada 15 días qué se vende y qué no, para decidir y orientar el contenido",
+   "soluciones": [
+    {
+     "id": "RV-1",
+     "entregable": "Reporte de ventas cada 15 días",
+     "h": 4,
+     "fase": "F2",
+     "incluye": [
+      "Qué se vende más y qué no, y cómo va la tienda",
+      "Promedios y comparación entre quincenas",
+      "Lectura para Dirección, marketing y operaciones"
+     ],
+     "detalle": "Trabajo de 4 h con Dirección, marketing y operaciones. Se construye con Claude el reporte quincenal a partir de los datos que el sistema administrativo permita exportar: qué rodamientos se venden más, cómo va la tienda y promedios. No se conecta con el sistema ni escribe en él; qué se exporta se confirma en el levantamiento. Entrega el reporte en uso."
+    }
+   ]
+  },
+  {
+   "id": "CC",
+   "nombre": "Contenido y correos",
+   "carril": "cl",
+   "frente": "A",
+   "para_que": "Dar a conocer los nuevos servicios con ideas y correos armados con IA",
+   "soluciones": [
+    {
+     "id": "CC-1",
+     "entregable": "Ideas de contenido y estructura de correos",
+     "h": 4,
+     "fase": "F2",
+     "incluye": [
+      "Ideas de contenido para cada servicio nuevo",
+      "Estructura y borradores de correos",
+      "El tono de Rodienca, guardado para reutilizarlo"
+     ],
+     "detalle": "Trabajo de 4 h con marketing y la directora general. Se construye con Claude una forma de generar ideas de contenido y armar la estructura y los borradores de los correos para los nuevos servicios, con el tono de la empresa. Enviarlos requiere una herramienta de envío que Rodienca elija. Entrega el proceso en uso."
+    }
+   ]
+  }
+ ],
+ "alcance": {
+  "titulo": "Tres procesos con IA, en uso.",
+  "subtitulo": "Medimos cómo se responde hoy y dejamos tres procesos funcionando, con casos reales del equipo.",
+  "etiqueta_destacados": "Lo que se mide desde el primer día",
+  "destacados": [
+   {
+    "titulo": "Tiempo de respuesta",
+    "texto": "Cuánto tarda cada cotización, contra el punto de partida."
+   },
+   {
+    "titulo": "Cotizaciones priorizadas",
+    "texto": "Cuáles se atienden primero y en cuánto tiempo."
+   },
+   {
+    "titulo": "Reporte cada 15 días",
+    "texto": "Si sale a tiempo y se usa para decidir."
+   },
+   {
+    "titulo": "Uso del equipo",
+    "texto": "Quién usa Claude a los 30, 60 y 90 días."
+   }
+  ],
+  "fuera_alcance": [
+   "Licencias de Claude y de Gemini si se suma: las contrata {cliente_corto}, aparte.",
+   "Conectar o modificar el sistema administrativo: los reportes parten de lo que se exporte.",
+   "Herramienta para enviar los correos: la elige y la contrata {cliente_corto}.",
+   "Tiempos de respuesta y ventas: son metas de {cliente_corto}; se miden, no se garantizan."
+  ]
+ },
+ "metodo": {
+  "titulo": "Así construimos cada herramienta.",
+  "subtitulo": "Primero se mide dónde está hoy cada proceso; después se construye con el equipo, sobre casos reales.",
+  "quien_construye": "Se construye con el equipo: **Intezia guía** y las tres personas prueban cada herramienta sobre sus propios casos, hasta sostenerla sin depender de nadie.",
+  "por_que_orden": "Primero se mide el punto de partida y se nivela al equipo en Claude; después se construye cada proceso, empezando por el que más urge: responder cotizaciones.",
+  "pasos": [
+   {
+    "titulo": "Medimos",
+    "texto": "Cuántas consultas llegan y cuánto tardan en responderse."
+   },
+   {
+    "titulo": "Nivelamos",
+    "texto": "El equipo aprende Claude y sus skills desde cero."
+   },
+   {
+    "titulo": "Construimos",
+    "texto": "Cotizaciones, reporte de ventas y contenido, con casos reales."
+   },
+   {
+    "titulo": "Seguimos",
+    "texto": "Uso, ajustes y resultados, a 30, 60 y 90 días."
+   }
+  ],
+  "practica": [
+   {
+    "titulo": "Una persona revisa",
+    "texto": "Claude propone borradores y clasificaciones; una persona los revisa antes de enviar una respuesta."
+   },
+   {
+    "titulo": "Skills que cuidan el consumo",
+    "texto": "Cada herramienta se guarda como una skill, para que el equipo la repita sin gastar de más."
+   },
+   {
+    "titulo": "Sin prometer cifras",
+    "texto": "Se mide el punto de partida y cada avance; las metas son de {cliente_corto} y no se garantizan."
+   }
+  ],
+  "datos": "Los datos de clientes y presupuestos no se cargan a ninguna herramienta de IA sin la autorización de {cliente_corto}; las reglas básicas de uso se acuerdan en la nivelación."
+ },
+ "fases": [
+  {
+   "id": "F1",
+   "titulo": "Levantamiento",
+   "descripcion": "medir la respuesta de hoy y nivelar al equipo en Claude"
+  },
+  {
+   "id": "F2",
+   "titulo": "Construcción",
+   "descripcion": "tres procesos construidos con el equipo y en uso",
+   "destacada": true
+  }
+ ],
+ "frentes": [
+  {
+   "id": "A",
+   "carril": "cl",
+   "nombre": "Operación y ventas de {cliente_corto}",
+   "medida": "18 horas",
+   "medida_meta": "con el equipo",
+   "celdas": {
+    "F1": "Levantamiento presencial con las tres personas y nivelación en Claude.",
+    "F2": "Cotizaciones y atención, reporte de ventas y contenido, en uso."
+   },
+   "celdas_medida": {
+    "F1": "6 horas con el equipo",
+    "F2": "12 horas con el equipo"
+   }
+  }
+ ],
+ "ruta": {
+  "titulo": "Del levantamiento a las herramientas en uso.",
+  "subtitulo": "El calendario se acuerda en la **reunión de arranque**, con resultados pensados para el corto plazo.",
+  "hitos": [
+   {
+    "titulo": "Arranque · aparte",
+    "texto": "Reunión de 1 h para acordar el calendario, la modalidad y quién coordina por {cliente_corto}."
+   },
+   {
+    "titulo": "Levantamiento y nivelación",
+    "texto": "Casos reales, punto de partida y el equipo en Claude."
+   },
+   {
+    "titulo": "Tres procesos en uso",
+    "texto": "Cotizaciones, reporte de ventas y contenido, construidos con el equipo."
+   },
+   {
+    "titulo": "30 · 60 · 90 días",
+    "texto": "Seguimiento: uso, ajustes e indicadores medidos."
+   }
+  ]
+ },
+ "logistica": {
+  "modalidad": "Levantamiento y revisiones presenciales; formación en línea. Se confirma en el arranque.",
+  "participantes": "Las tres personas: dirección general, marketing y operaciones.",
+  "ritmo": "El trabajo se agenda sin interrumpir la operación diaria de la tienda, la fabricación y las obras.",
+  "arranque": "Apenas se apruebe la propuesta; una reunión de 1 h, aparte, acuerda el calendario."
+ },
+ "seguimiento": {
+  "rango": "30, 60 y 90 días",
+  "texto": "Desde el cierre, con tablero de resultados",
+  "items": [
+   {
+    "dias": "30 días",
+    "texto": "Uso de las herramientas"
+   },
+   {
+    "dias": "60 días",
+    "texto": "Ajustes y nuevas construcciones"
+   },
+   {
+    "dias": "90 días",
+    "texto": "Tiempo de respuesta medido"
+   }
+  ]
+ },
+ "entregables": {
+  "titulo": "Lo que recibe Rodienca.",
+  "subtitulo": "Lo que se llevan: **la medición de hoy, tres procesos en uso y un equipo que usa Claude**, más el seguimiento a {rango_seguimiento}.",
+  "etiqueta_transversales": "Para todo el proyecto",
+  "transversales": [
+   "Punto de partida: consultas y tiempo de respuesta.",
+   "Skills guardadas, para repetir cada proceso.",
+   "Seguimiento a 30, 60 y 90 días."
+  ],
+  "etiqueta_valor": "Valor inmediato",
+  "valor_inmediato": [
+   "Con el levantamiento: punto de partida y prioridades.",
+   "Con la nivelación: las tres personas usan Claude.",
+   "Con las herramientas: cotizaciones, reporte y contenido."
+  ],
+  "columnas_por_carril": [
+   2
+  ]
+ },
+ "retorno": {
+  "modo": "metodo",
+  "posiciones": false,
+  "titulo": "Retorno esperado: tiempo de respuesta, medido.",
+  "subtitulo": "Cada indicador se mide contra el punto de partida que el levantamiento deja registrado.",
+  "etiqueta_pasos": "Cómo se calcula el retorno de cada herramienta",
+  "pasos": [
+   {
+    "titulo": "Volumen",
+    "texto": "Cuántas cotizaciones, consultas y reportes se atienden cada mes."
+   },
+   {
+    "titulo": "Punto de partida",
+    "texto": "Cuánto tarda hoy cada respuesta y cada reporte: es la línea base."
+   },
+   {
+    "titulo": "Con la herramienta",
+    "texto": "Lo que toma el mismo trabajo una vez que la herramienta está en uso."
+   },
+   {
+    "titulo": "Horas recuperadas",
+    "texto": "Volumen por la diferencia de tiempos: una estimación referencial, sin compromiso de resultado."
+   },
+   {
+    "titulo": "Gasto de operar",
+    "texto": "Licencias y consumo de IA, contra el valor de lo recuperado."
+   }
+  ],
+  "etiqueta_metas": "Calendario de seguimiento y medición",
+  "metas": [
+   {
+    "dias": "30 días",
+    "texto": "Desde el cierre: herramientas en uso real y punto de partida validado con el equipo."
+   },
+   {
+    "dias": "60 días",
+    "texto": "Tiempo de respuesta a clientes y presupuestos medido contra el punto de partida."
+   },
+   {
+    "dias": "90 días",
+    "texto": "Medición del retorno: lo recuperado frente al gasto de operar las herramientas."
+   }
+  ],
+  "etiqueta_destino": "Hacia dónde va el proyecto",
+  "destino": [
+   {
+    "rotulo": "Respuestas más rápidas",
+    "texto": "Con los correos de cotización priorizados, el equipo sabe **cuál responder primero**, sin depender de una sola persona."
+   },
+   {
+    "rotulo": "Visión cada 15 días",
+    "texto": "Con el reporte quincenal, Dirección ve **qué se vende y qué no** para decidir."
+   },
+   {
+    "rotulo": "Contenido sin empezar de cero",
+    "texto": "Ideas y correos armados con IA para dar a conocer los nuevos servicios."
+   }
+  ],
+  "gancho": "A los 90 días del cierre, {cliente_corto} contará con su tiempo de respuesta medido contra el punto de partida y el gasto de operar sus herramientas."
+ },
+ "inversion": {
+  "duracion": "**{h_total} horas con el equipo** de {cliente_corto}, en levantamiento, nivelación y construcción, con seguimiento a {rango_seguimiento}.",
+  "programa": [
+   "Servicio de Habilidades para {cliente_corto} ({codigo}).",
+   "Levantamiento y nivelación en Claude: 6 h con el equipo.",
+   "Cotizaciones, reportes de ventas y contenido: 12 h con el equipo.",
+   "Seguimiento a 30, 60 y 90 días. La reunión de arranque va aparte."
+  ],
+  "notas": [
+   "Licencias de Claude y de Gemini si se suma: las contrata {cliente_corto} y van aparte."
+  ],
+  "licencias": {
+   "titulo": "Licenciamiento · aparte de esta inversión",
+   "tarjetas": [
+    {
+     "nombre": "Claude Team · por persona",
+     "color": "amarillo",
+     "texto": "Se paga **por cada persona**, no es una cuenta única para todos. Valor de lista: USD 25 por puesto al mes, o USD 20 pagando por año, con mínimo de dos puestos, al 02/11/2026. Con tres puestos: USD 75 al mes."
+    },
+    {
+     "nombre": "Gemini · opcional por perfil",
+     "color": "naranja",
+     "texto": "Si algún perfil lo necesita, se puede sumar una licencia de **Gemini**; se define en el levantamiento y su valor de lista se informa antes."
+    }
+   ],
+   "nota": "Valores de lista del proveedor al 02/11/2026; pueden variar. Los confirma {cliente_corto} con el proveedor."
+  },
+  "garantia_texto": "Estamos contigo hasta que cada herramienta quede en uso."
+ },
+ "proximos_pasos": {
+  "subtitulo": "Esto es lo que sigue cuando {cliente_corto} confirme la propuesta.",
+  "asesora": {
+   "nombre": "Flavia Martínez",
+   "cargo": "Asesora comercial",
+   "correo": "fmartinez@intezia.com",
+   "telefono": "+58 414 5756615"
+  },
+  "pasos": [
+   {
+    "titulo": "Aprobación",
+    "texto": "Quien decide por {cliente_corto} confirma la propuesta y acordamos la fecha de la reunión de arranque."
+   },
+   {
+    "titulo": "Casos reales",
+    "texto": "El equipo reúne ejemplos reales de cotizaciones y el reporte de ventas que quiera usar, sin datos que no autorice."
+   },
+   {
+    "titulo": "Reunión de arranque",
+    "texto": "Una hora para acordar el calendario, la modalidad presencial o en línea y quién coordina."
+   }
+  ]
+ },
+ "supuestos": [
+  "Pedido de Ivana (03/11/2026): propuesta CAI-080 para Rodienca, asesora Flavia Martínez (la ficha escribe «Martinez»; el correo y el teléfono se tomaron de propuestas anteriores). Confirmados por Ivana: división Educación, sin alianza, 18 h y sin facilidad de pago. Insumos: Ficha de Levantamiento (registro 02/10/2026) y el contexto de Flavia; no hay transcripción de la reunión.",
+  "Ruta (contexto de Flavia): Habilidades sin Detección, porque la directora ya tiene sus procesos casi identificados y una auditoría completa sería más de lo que necesitan. Se propone un levantamiento presencial con las tres personas (la ficha dice de 2 a 4 h), nivelación en Claude, construcción de tres procesos y seguimiento a 30, 60 y 90 días con tablero de resultados.",
+  "Horas (opción recomendada, elegida por Ivana): levantamiento 4 h (el tope de la ficha; **supuesto mío**) + nivelación en Claude 2 h + construcción 12 h, 4 h por proceso (reparto mío) = 18 h con el equipo. Reunión de arranque de 1 h aparte. Las horas se muestran como tiempo con el equipo, sin horas de trabajo ni consultores (regla de Ivana del 27/10/2026).",
+  "Tres procesos de la ficha: (1) atención a clientes y respuesta a presupuestos y cotizaciones por WhatsApp y correo, con filtro y prioridad de los correos de cotización; (2) reportes de ventas cada 15 días, con promedios, desde el sistema administrativo y contable; (3) ideas de contenido y estructura de correos para los nuevos servicios (no tienen email marketing).",
+  "Qué NO se promete: (1) conectar Claude al sistema administrativo ni escribir en él: el reporte parte de lo que el sistema permita exportar, se confirma en el levantamiento; (2) que Claude responda solo a los clientes: propone borradores y clasificaciones y una persona revisa antes de enviar; (3) una herramienta de envío de correos: la elige y la contrata Rodienca; (4) un tiempo de respuesta o una cifra de ventas: son metas de la cliente y se miden, no se garantizan; (5) ahorro en tokens: se dice que las skills ayudan a mantener el consumo manejable, sin cifra.",
+  "Herramienta: Claude Team con skills (le gustó a la directora por el manejo del costo); licencias de Gemini abiertas para algún perfil. Claude Team se paga por persona (dato que Flavia pide dejar claro): valor de lista USD 25 al mes o USD 20 por año, mínimo 2 puestos, al 02/11/2026, con tres puestos USD 75 al mes. No se da precio de Gemini (sin verificar). El país de la cliente no figura en la ficha: si la empresa está en Venezuela, Claude no figura en la lista oficial de países soportados y nunca se promete VPN; confirmar antes de enviar.",
+  "El mensaje de Flavia llegó cortado tras «Dos datos que hay que dejar claros»: solo consta el primero (Claude Team se paga por usuario). Falta el segundo dato.",
+  "Del deck se quitan la cita de la directora («ansiedad»), los nombres de personas y la presión sobre el gerente de operaciones: la portada habla de «una sola persona» que confirma los trabajos. El caso de la cotización de las 10 a. m. respondida a las 4 p. m. se dice como 6 h (dato de la ficha). Sin fuente en la portada ni estudios.",
+  "Modalidad: levantamiento y revisiones presenciales y formación en línea, a confirmar con la directora (la ficha dice «mixta»). Sin semanas, sesiones ni fechas (§4.23). Retorno en modo método, sin cifras inventadas. Sin pago, hoja de inversión única con campos vacíos para ventas; el presupuesto de la cliente no está definido."
+ ],
+ "pendientes": [
+  "Confirmar con Flavia el segundo dato que debía quedar claro (el mensaje llegó cortado).",
+  "Confirmar con Ivana el reparto de 18 h (levantamiento 4 h, nivelación 2 h y 4 h por proceso).",
+  "Confirmar el país de la cliente (Claude y Venezuela) antes de enviar.",
+  "Confirmar con la directora la modalidad (presencial para el levantamiento y las revisiones, en línea para la formación) y qué datos exporta el sistema administrativo.",
+  "Valor, descuento y total: campos vacíos para ventas; presupuesto no definido.",
+  "Confirmar el teléfono y el correo de Flavia Martínez (tomados de propuestas anteriores).",
+  "Decidir si se ofrece facilidad de pago más adelante, dado que el presupuesto no está definido."
+ ],
+ "frases_ok": [
+  "WhatsApp"
+ ]
+}

@@ -1,0 +1,431 @@
+<!doctype html>
+<!--
+  Propuesta · RG7 Corp · Servicio de Habilidades (CAI-076)
+  División: Educación · Servicio: Habilidades (§4.1a) · Alianza: no
+  GENERADO por scripts/generar-habilidades-compacto.py (plantilla 3.0 (2026-10-08), formato habilidades) desde datos.json.
+  No editar a mano: editar datos.json y regenerar. Estilos propios del deck: overrides.css.
+  Fuente del insumo: Ficha de Levantamiento (29/10/2026) y texto de Flavia Martínez con el requerimiento inicial de RG7 Corp (sin transcripción de la reunión)
+
+  Formato compacto de 8 slides, en el orden de las preguntas del cliente (Ventas, 2026-10-07), sin semanas, sesiones
+  ni fechas (Keiber, 2026-10-08):
+    1 Portada · 2 Alcance · 3 Ruta · 4 Cómo trabajamos · 5 Entregables · 6 Retorno · 7 Inversión · 8 Próximos pasos
+  Marcadores de detección de AcroForms (agregar-campo-precio.py), por página: «Propuesta Económica» solo en la slide de
+  inversión; «Lo que se llevan» y «Entregables» solo en la de entregables; «Facilidad de pago» solo en la de pago.
+  Campos AcroForm: Programa, Notas, PrecioBase, Descuento, PrecioTotal (inversión) y Entregables, Acreditacion (entregables). Se reposicionan con scripts/customize-habilidades-compacto.py.
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Propuesta · RG7 Corp · Intezia Educación</title>
+  <link rel="stylesheet" href="../_base/styles.css">
+  <link rel="stylesheet" href="habilidades-compacto.css">
+  <link rel="stylesheet" href="overrides.css">
+</head>
+<body>
+
+  <main class="deck">
+
+    <!-- 1 · Portada: ¿cuál es mi problema? -->
+    <section class="slide s-cover">
+      <span class="counter">01 / 08</span>
+      <div class="logo-big">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia Educación">
+      </div>
+      <div class="body">
+        <p class="eyebrow">Propuesta de proyecto · Servicio de Habilidades</p>
+        <h1 style="font-size:46px">
+          Arqueo, cierre e inventario<br>
+          con IA construidos por el equipo<br>
+          <span class="hl">de RG7 Corp</span>
+        </h1>
+        <p class="lead">
+          Este proyecto nivela al equipo en IA y le enseña a construir sus propias herramientas para el <strong>arqueo de caja</strong>, el <strong>cierre diario</strong> y el <strong>inventario</strong>, hasta dejarlas en uso.
+        </p>
+        <div class="pain-strip">
+          <div class="pain-item">
+            <span class="pain-num">Un lunes</span>
+            <span class="pain-lbl">entero le toma a la administradora el arqueo de caja de viernes a domingo.</span>
+          </div>
+          <div class="pain-item">
+            <span class="pain-num">Papel</span>
+            <span class="pain-lbl">es donde se llevan hoy los cierres diarios y el inventario: planillas llenas a mano.</span>
+          </div>
+          <div class="pain-item">
+            <span class="pain-num">Recetas</span>
+            <span class="pain-lbl">incompletas en el sistema de ventas, así que no descuenta los insumos.</span>
+          </div>
+          <div class="pain-item">
+            <span class="pain-num">6</span>
+            <span class="pain-lbl">personas: una ya usa IA a diario y el resto no la usa con un criterio común.</span>
+          </div>
+        </div>
+      </div>
+      <div class="id-line">
+        <span class="codigo">Código: CAI-076</span>
+        <span class="cliente">RG7 Corp</span>
+      </div>
+    </section>
+
+    <!-- 2 · Alcance: qué vamos a hacer y para qué -->
+    <section class="slide s-scope roomy">
+      <span class="counter">02 / 08</span>
+      <p class="eyebrow">02 · Alcance</p>
+      <h2>Tres líneas de trabajo del equipo.</h2>
+      <p class="sub">Nivelamos al equipo, medimos cómo trabaja hoy y construimos con él <strong>dos herramientas</strong> de administración.</p>
+
+      <div class="scope-panels one" style="--np:1">
+        <div class="scope-panel acc-y">
+          <div class="scope-head">
+            <span class="scope-tag">Herramientas de IA del equipo</span>
+            <span class="scope-total"><b>3</b> líneas de trabajo</span>
+          </div>
+          <ul class="scope-rows">
+              <li><span class="area">Fundamentos de IA</span><span class="para">Llevar a todo el equipo al mismo punto, para que construya y sostenga sus herramientas</span></li>
+              <li><span class="area">Levantamiento de procesos</span><span class="para">Ver el punto de partida de caja, cierre e inventario y definir qué construir</span></li>
+              <li><span class="area">Caja, cierres e inventario</span><span class="para">Construir con el equipo el arqueo, el cierre diario y el control de inventario</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="scope-facts">
+        <p class="scope-card-label">Lo que se mide desde el primer día</p>
+        <ul>
+          <li><b>Arqueo de caja</b><span>Cuánto toma el arqueo de viernes a domingo, contra el punto de partida.</span></li>
+          <li><b>Cierre diario</b><span>Cuánto toma el cierre y cuántas cuentas se hacen a mano.</span></li>
+          <li><b>Inventario y compras</b><span>Cuánto toma tener el consumo y las compras al día.</span></li>
+          <li><b>Uso del equipo</b><span>Quién usa las herramientas a los 30, 60 y 90 días.</span></li>
+        </ul>
+      </div>
+
+      <div class="scope-out">
+        <p class="scope-card-label">Fuera de este alcance</p>
+        <ul>
+          <li>Desarrollar un sistema nuevo: se trabaja sobre el sistema de ventas y la app interna que ya tienen.</li>
+          <li>El servidor central de la franquicia: no se modifica ni se carga información en él.</li>
+          <li>Licencias y consumo de las herramientas de IA: los contrata RG7 Corp, aparte de esta inversión.</li>
+          <li>Nómina, pagos a proveedores y análisis de ventas: quedan para una siguiente etapa.</li>
+        </ul>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">RG7 Corp · CAI-076</span>
+      </div>
+    </section>
+
+    <!-- 3 · Ruta: qué pasa en cada fase -->
+    <section class="slide s-route">
+      <span class="counter">03 / 08</span>
+      <p class="eyebrow">03 · Ruta</p>
+      <h2>De la nivelación a las herramientas en uso.</h2>
+      <p class="sub">El calendario se acuerda en la <strong>reunión de arranque</strong>, con resultados pensados para el corto plazo.</p>
+
+      <div class="route-grid n1" style="--cols:2; --rows:1; --rowh:214px">
+
+        <div class="rg-corner"></div>
+        <div class="rg-phase rg-ph-1">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Nivelación y levantamiento</span></span>
+          <span class="rg-phase-name">Equipo nivelado y punto de partida medido</span>
+        </div>
+        <div class="rg-phase rg-ph-2 hi">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Construcción</span></span>
+          <span class="rg-phase-name">Herramientas construidas por el equipo y en uso</span>
+        </div>
+        <div class="rg-phase rg-fu">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Garantía</span></span>
+          <span class="rg-phase-date">30, 60 y 90 días</span>
+          <span class="rg-phase-txt">Desde el cierre de cada línea</span>
+        </div>
+
+        <div class="rg-front acc-y">
+          <span class="rg-front-h">Equipo de RG7 Corp</span>
+          <span class="rg-front-row"><span class="rg-front-tool">IA del equipo</span><b class="rg-front-n">16 horas</b></span>
+          <span class="rg-front-meta">con el equipo</span>
+        </div>
+        <div class="rg-cell"><span class="rg-h solo-h"><b>4 horas con el equipo</b></span><p>Fundamentos de IA y levantamiento del arqueo, el cierre y el inventario.</p></div>
+        <div class="rg-cell hi"><span class="rg-h solo-h"><b>12 horas con el equipo</b></span><p>Arqueo y cierre diario; inventario, consumo y compras, en uso.</p></div>
+
+        <div class="rg-follow" style="grid-column:4; grid-row:2 / span 1">
+          <ul>
+            <li><b>30 días</b><span>Uso de las herramientas</span></li>
+            <li><b>60 días</b><span>Ajustes y nuevas construcciones</span></li>
+            <li><b>90 días</b><span>Arqueo, cierre e inventario medidos</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="route-miles" style="grid-template-columns:repeat(4,1fr)">
+        <div class="mile"><span class="mile-d"></span><b>Arranque · aparte</b><p>Reunión de 1 h para acordar el calendario, quiénes participan y quién coordina por RG7 Corp.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Nivelación y levantamiento</b><p>Fundamentos de IA y punto de partida de cada proceso.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Herramientas en uso</b><p>Arqueo y cierre diario; inventario, consumo y compras.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>30 · 60 · 90 días</b><p>Seguimiento: uso de las herramientas, ajustes y avances medidos.</p></div>
+      </div>
+      <p class="route-next"><b>Siguiente paso · Más procesos</b> Nómina, pagos a proveedores, análisis de ventas e indicadores; y, si funciona, llevarlo a otras sedes de la marca.</p>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">RG7 Corp · CAI-076</span>
+      </div>
+    </section>
+
+    <!-- 4 · Cómo trabajamos: pasos, por qué en ese orden, casos reales, práctica, datos y logística -->
+    <section class="slide s-method">
+      <span class="counter">04 / 08</span>
+      <p class="eyebrow">04 · Cómo trabajamos</p>
+      <h2>Así construimos cada herramienta.</h2>
+      <p class="sub">Primero se nivela al equipo y se ve dónde duele más; después se construye lo que más pesa, con el equipo.</p>
+
+      <ol class="mt-steps" style="--n:4">
+          <li><b>Nivelamos</b><span>Fundamentos de IA para que todo el equipo parta del mismo punto.</span></li>
+          <li><b>Medimos</b><span>Cómo trabaja hoy cada proceso y cuánto tarda.</span></li>
+          <li><b>Construimos</b><span>Con el equipo, sobre el sistema que ya tienen.</span></li>
+          <li><b>Seguimos</b><span>Uso, ajustes y resultados, a 30, 60 y 90 días.</span></li>
+      </ol>
+      <div class="mt-strips">
+        <p class="mt-why"><b>Por qué en este orden</b> Primero se nivela al equipo y se mide cómo se trabaja hoy; después se construye lo que más pesa, para que los procesos no dependan de una sola persona.</p>
+        <p class="mt-who"><b>Quién construye</b> El <strong>equipo construye</strong> sus propias herramientas con IA y Intezia lo guía, sobre su sistema de ventas y su app interna.</p>
+      </div>
+
+      <div class="mt-info">
+        <div class="mt-card">
+          <p class="mt-card-label">Cómo funciona en la práctica</p>
+          <ul><li><b>Una persona en el circuito.</b> La IA calcula y propone; una persona revisa el arqueo, el cierre y las compras antes de darlos por buenos.</li><li><b>Sobre lo que ya tienen.</b> Se trabaja encima de su sistema de ventas y su app interna; no se desarrolla un sistema nuevo.</li><li><b>ChatGPT, abierto a recomendación.</b> Se parte de ChatGPT, que ya usan; el levantamiento confirma si es la indicada o se recomienda otra.</li></ul>
+        </div>
+        <div class="mt-card">
+          <p class="mt-card-label">Cómo cuidamos sus datos</p>
+          <p>La nómina y las cifras financieras son confidenciales: solo se cargan a las herramientas de IA los datos que RG7 Corp autoriza, con pautas acordadas en los Fundamentos.</p>
+        </div>
+      </div>
+
+      <div class="mt-logi">
+        <div class="mt-tile"><span>Modalidad</span><b>Se acuerda en la reunión de arranque, según lo que mejor funcione para el equipo.</b></div>
+        <div class="mt-tile"><span>Participantes</span><b>Las personas del equipo de RG7 Corp que se definan en la reunión de arranque.</b></div>
+        <div class="mt-tile"><span>Ritmo de trabajo</span><b>El trabajo se agenda sin frenar la operación diaria del restaurante.</b></div>
+        <div class="mt-tile"><span>Arranque</span><b>Apenas se apruebe la propuesta; una reunión de 1 h, aparte, acuerda el calendario.</b></div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">RG7 Corp · CAI-076</span>
+      </div>
+    </section>
+
+    <!-- 5 · Entregables: ¿con qué me quedo? (catálogo + piezas transversales) -->
+    <section class="slide s-deliv roomy">
+      <span class="counter">05 / 08</span>
+      <p class="eyebrow">05 · Entregables</p>
+      <div class="deliv-head">
+        <h2>Lo que recibe RG7 Corp.</h2>
+        <p class="deliv-sub"><span class="nw">Lo que se llevan</span>: <strong>un equipo nivelado y dos herramientas construidas por él</strong>, más el seguimiento a 30, 60 y 90 días.</p>
+      </div>
+
+      <div class="deliv-carriles" style="--ncols:3">
+        <span class="dc acc-y" style="grid-column: span 3">Herramientas de IA del equipo</span>
+      </div>
+
+      <div class="deliv-cols" style="--ncols:3">
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">Fundamentos de IA</p>
+            <ul>
+              <li>Fundamentos de IA para todo el equipo<ul class="inc"><li>Del uso de una persona a un criterio común</li><li>Cómo pedirle bien, con ejemplos del trabajo del equipo</li><li>Qué datos se cuidan y cuáles no se cargan</li></ul></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">Levantamiento de procesos</p>
+            <ul>
+              <li>Levantamiento del arqueo, el cierre y el inventario<ul class="inc"><li>Cómo se trabaja hoy en caja, cierre e inventario</li><li>Qué reportes entrega ya el sistema de ventas</li><li>Qué construir primero y con qué herramienta</li></ul></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">Caja, cierres e inventario</p>
+            <ul>
+              <li>Arqueo de caja y cierre diario con IA<ul class="inc"><li>Arqueo de viernes a domingo a partir de los reportes del sistema</li><li>Cierre diario sin planillas de papel</li><li>Revisión de una persona antes de darlos por buenos</li></ul></li>
+              <li>Inventario, consumo por receta y compras con IA<ul class="inc"><li>Inventario de producto y de materia prima al día</li><li>Consumo de insumos calculado por receta</li><li>Compras sugeridas, revisadas por una persona</li></ul></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="deliv-band">
+        <div class="db-card db-1">
+          <span class="db-label">Para todo el proyecto</span>
+        </div>
+        <div class="db-card db-2">
+          <span class="db-label">Valor inmediato</span>
+        </div>
+      </div>
+      <!-- Cajas multiline editables (vacías en HTML: el contenido vive dentro del AcroForm /V). -->
+      <div class="multi-box db-box db-box-1" data-field="Entregables"></div>
+      <div class="multi-box db-box db-box-2" data-field="Acreditacion"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">RG7 Corp · CAI-076</span>
+      </div>
+    </section>
+
+    <!-- 6 · Retorno: ¿qué gano? (método de cálculo). Sin estudios ni citas externas. -->
+    <section class="slide s-roi">
+      <span class="counter">06 / 08</span>
+      <p class="eyebrow">06 · Retorno</p>
+      <h2>Retorno esperado: tiempo del equipo, medido.</h2>
+      <p class="sub">Cada indicador se mide contra el punto de partida que el levantamiento deja registrado.</p>
+
+      <div class="roi-body">
+        <div class="roi-panel">
+          <p class="roi-panel-title">Cómo se calcula el retorno de cada herramienta</p>
+          <ol class="roi-steps">
+            <li><b>Volumen</b><span>Cuántos arqueos y cierres se hacen cada mes y cuántas compras se planifican.</span></li>
+            <li><b>Punto de partida</b><span>Tiempo de hacer el arqueo, el cierre y el inventario hoy: es la línea base.</span></li>
+            <li><b>Con la herramienta</b><span>Lo que toma el mismo trabajo una vez que la herramienta está en uso.</span></li>
+            <li><b>Horas recuperadas</b><span>Volumen por la diferencia de tiempos: una estimación referencial, sin compromiso de resultado.</span></li>
+            <li><b>Gasto de operar</b><span>Licencias y consumo de IA, contra el valor de lo recuperado.</span></li>
+          </ol>
+        </div>
+
+        <div class="roi-right">
+          <p class="roi-right-title">Calendario de seguimiento y medición</p>
+          <div class="roi-card">
+            <b>30 días</b>
+            <p>Desde el cierre de cada línea: herramientas en uso real y punto de partida validado con el equipo.</p>
+          </div>
+          <div class="roi-card">
+            <b>60 días</b>
+            <p>Tiempo de arqueo, de cierre y de inventario medido contra el punto de partida.</p>
+          </div>
+          <div class="roi-card">
+            <b>90 días</b>
+            <p>Medición del retorno: lo recuperado frente al gasto de operar las herramientas.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="roi-dest-wrap">
+        <p class="roi-dest-title">Hacia dónde va el proyecto</p>
+        <div class="roi-dest">
+          <div class="rd-item"><b>Más capacidad</b><p>Con tiempo liberado, un equipo pequeño puede sostener la operación <strong>sin depender de una sola persona</strong>.</p></div>
+          <div class="rd-item"><b>Tiempo para analizar</b><p>Con el arqueo y el cierre resueltos, la administración puede <strong>analizar</strong> en lugar de transcribir.</p></div>
+          <div class="rd-item"><b>Compras con datos</b><p>Con el consumo por receta, las compras se planifican con <strong>datos del día</strong>.</p></div>
+        </div>
+      </div>
+
+      <div class="roi-hook"><p>A los 90 días del cierre de cada línea, RG7 Corp contará con su tiempo de arqueo, de cierre y de inventario medido contra el punto de partida y el gasto de operar sus herramientas.</p></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">RG7 Corp · CAI-076</span>
+      </div>
+    </section>
+
+    <!-- 7 · Inversión (hoja de cotización estándar; antepenúltima slide) -->
+    <section class="slide s-price">
+      <span class="counter">07 / 08</span>
+      <h2 class="title">Inversión del proyecto.</h2>
+      <p class="price-intro">Propuesta Económica · Servicio de Habilidades</p>
+
+      <div class="block">
+        <span class="block-eyebrow">Duración</span>
+        <p class="block-value"><strong>16 horas con el equipo</strong> de RG7 Corp, en nivelación, levantamiento y construcción, con seguimiento a 30, 60 y 90 días.</p>
+      </div>
+
+      <div class="block block-programa">
+        <span class="block-eyebrow">Programa</span>
+      </div>
+      <div class="multi-box programa-box" data-field="Programa"></div>
+
+      <div class="block block-cotizacion">
+        <span class="block-eyebrow">Cotización</span>
+      </div>
+
+      <span class="cot-label cot-label-base">Propuesta + Inversión</span>
+      <div class="cot-frame base-frame"></div>
+
+      <span class="cot-label cot-label-discount">Descuento</span>
+      <span class="cot-sign-minus">&minus;$</span>
+      <div class="cot-frame discount-frame"></div>
+      <span class="cot-urgent-note">Descuento válido por 15 días</span>
+
+      <span class="cot-label cot-label-total">TOTAL</span>
+      <div class="cot-frame total-frame"></div>
+
+      <p class="cot-validity">Cotización válida por 30 días.</p>
+      <div class="cot-terms-box">
+        <span class="cot-terms-label">Importante</span>
+        <p class="cot-terms-text">Este servicio se presta bajo nuestros <a href="https://drive.google.com/file/d/1PA-ZSt4KnyY5dpxXzgkIk6-yfGlV2eF8/view?usp=drive_link" target="_blank" rel="noopener">términos y condiciones</a>. Al avanzar con esta propuesta, ambas partes los aceptan.</p>
+      </div>
+
+      <div class="cot-garantia-badge">
+        <span class="cot-garantia-tag">Garantía 30-60-90</span>
+        <p class="cot-garantia-text">Estamos contigo hasta que cada herramienta quede en uso.</p>
+      </div>
+
+      <div class="block block-notes-container">
+        <span class="block-eyebrow">Notas</span>
+      </div>
+      <div class="multi-box notas-box" data-field="Notas"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">RG7 Corp · CAI-076</span>
+      </div>
+    </section>
+
+    <!-- 9 · Próximos pasos: qué hacer y a quién escribir (última slide) -->
+    <section class="slide s-next">
+      <span class="counter">08 / 08</span>
+      <p class="eyebrow">08 · Próximos pasos</p>
+      <h2>Tres pasos para arrancar.</h2>
+      <p class="sub">Esto es lo que sigue cuando RG7 Corp confirme la propuesta.</p>
+
+      <div class="nx-steps">
+        <div class="nx-step acc-y">
+          <span class="nx-num">1</span>
+          <b>Aprobación</b>
+          <p>Quienes deciden por RG7 Corp confirman la propuesta y acordamos la fecha de la reunión de arranque.</p>
+        </div>
+        <div class="nx-step acc-o">
+          <span class="nx-num">2</span>
+          <b>Equipo y accesos</b>
+          <p>RG7 Corp confirma quién coordina por el equipo y comparte los reportes que autorice.</p>
+        </div>
+        <div class="nx-step acc-w">
+          <span class="nx-num">3</span>
+          <b>Reunión de arranque</b>
+          <p>Una hora para acordar el calendario del equipo y los primeros pasos.</p>
+        </div>
+      </div>
+
+      <div class="nx-contact">
+        <div class="nx-card nx-ase">
+          <span class="nx-label">¿Dudas? Escribe a tu asesora comercial</span>
+          <b class="nx-name">Flavia Martínez</b>
+          <span class="nx-role">Asesora comercial</span>
+          <p class="nx-line"><a href="mailto:fmartinez@intezia.com">fmartinez@intezia.com</a></p>
+          <p class="nx-line">+58 414 5756615</p>
+        </div>
+        <div class="nx-card nx-emp">
+          <span class="nx-label">Intezia</span>
+          <p class="nx-line">Intezia C.A J-505657950</p>
+          <p class="nx-line"><a href="mailto:servicio@intezia.com">servicio@intezia.com</a></p>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">RG7 Corp · CAI-076</span>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

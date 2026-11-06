@@ -1,0 +1,21 @@
+/* Ajustes propios de esta propuesta (se enlaza después de habilidades-compacto.css). */
+
+/* ===========================================================================
+   Marca: Brand Kit Intezia v2.1 (13/10/2026). Amarillo #FFD300, Negro Noche #0A0A0A, Naranja Brasa #E58423 y Poppins (OFL).
+   Sobreescribe los tokens de ../_base/styles.css para este deck. Fuentes en ../_base/fonts/ (fontsource, latin).
+   =========================================================================== */
+@font-face { font-family: 'Poppins'; src: url('../_base/fonts/poppins-400.woff2') format('woff2'); font-weight: 400; font-style: normal; }
+@font-face { font-family: 'Poppins'; src: url('../_base/fonts/poppins-600.woff2') format('woff2'); font-weight: 600; font-style: normal; }
+@font-face { font-family: 'Poppins'; src: url('../_base/fonts/poppins-700.woff2') format('woff2'); font-weight: 700; font-style: normal; }
+@font-face { font-family: 'Poppins'; src: url('../_base/fonts/poppins-800.woff2') format('woff2'); font-weight: 800; font-style: normal; }
+:root {
+  --black: #0A0A0A;
+  --yellow: #FFD300;
+  --orange: #E58423;
+  --font-display: "Poppins", "Inter", system-ui, sans-serif;
+  --font-body: "Poppins", "Inter", system-ui, sans-serif;
+  --gradient-warm: linear-gradient(135deg, #FFD300 0%, #E58423 100%);
+  --gradient-warm-rev: linear-gradient(135deg, #E58423 0%, #FFD300 100%);
+}
+body { background: var(--black); }
+.slide h1, .slide h2 { letter-spacing: -0.015em; }

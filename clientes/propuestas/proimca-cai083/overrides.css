@@ -1,0 +1,65 @@
+/* Ajustes propios de esta propuesta (se enlaza después de habilidades-compacto.css). */
+/* Base de las páginas .s-rfp (la hoja de inversión con tabla la usa; por canonizar) */
+.s-rfp { background: var(--white); color: var(--black); padding: 44px 56px 0; }
+.s-rfp .counter { color: var(--black); }
+.s-rfp .eyebrow { color: var(--orange); margin-bottom: 6px; }
+.s-rfp h2 { font-family: var(--font-display); font-weight: 700; font-size: 32px; line-height: 1.05; margin-bottom: 8px; }
+.s-rfp .sub { font-family: var(--font-body); font-size: 15px; line-height: 1.4; max-width: 900px; margin-bottom: 12px; color: rgba(0, 0, 0, 0.78); }
+/* Hoja de inversión con tabla (.s-dsg, opción inversion.desglose del generador; RFP de Viva, CAI-079, 2026-11-04). Por canonizar.
+   Los espacios en blanco (.campo-libre) los vuelve campos editables del PDF scripts/agregar-campos-libres.py, midiendo su caja. */
+.campo-libre { display: inline-block; min-width: 96px; height: 1.2em; border-bottom: 1.5px solid rgba(0, 0, 0, 0.5); vertical-align: bottom; margin: 0 2px; }
+.s-dsg { padding-top: 38px; }
+.s-dsg h2 { font-size: 30px; margin-bottom: 4px; }
+.s-dsg .sub { font-size: 14px; margin-bottom: 8px; }
+.dsg-tab { width: 100%; border-collapse: collapse; margin-top: 6px; font-family: var(--font-body); font-size: 12.5px; table-layout: fixed; }
+.dsg-tab th { background: var(--black); color: var(--white); text-align: left; font-family: var(--font-display); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; padding: 7px 10px; }
+.dsg-tab th.dsg-hv { text-align: center; }
+.dsg-tab td { padding: 5px 10px; border-bottom: 1px solid rgba(0, 0, 0, 0.14); line-height: 1.3; vertical-align: middle; }
+.dsg-tab tr:nth-child(even) td { background: rgba(10, 10, 10, 0.035); }
+.dsg-tab col.c-f, .dsg-tab th:nth-child(1) { width: 8%; }
+.dsg-tab th:nth-child(2) { width: 30%; }
+.dsg-tab th:nth-child(3) { width: 33%; }
+.dsg-tab th:nth-child(4) { width: 6%; }
+.dsg-tab th:nth-child(5) { width: 23%; }
+.dsg-f { font-weight: 700; white-space: nowrap; }
+.dsg-h { font-weight: 700; color: var(--orange); white-space: nowrap; }
+.dsg-v .campo-libre { display: block; width: 100%; height: 28px; margin: 0; border: 1.5px solid rgba(0, 0, 0, 0.3); border-radius: 5px; background: rgba(255, 211, 0, 0.18); }
+.dsg-bottom { display: grid; grid-template-columns: 1fr 440px; gap: 26px; margin-top: 12px; align-items: start; }
+.dsg-left { display: flex; flex-direction: column; gap: 8px; }
+.dsg-caja { background: rgba(10, 10, 10, 0.04); border-left: 4px solid var(--orange); border-radius: 0 8px 8px 0; padding: 8px 14px 9px; }
+.dsg-caja-t { display: block; font-family: var(--font-display); font-weight: 700; font-size: 10.5px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--orange); margin-bottom: 3px; }
+.dsg-caja p, .dsg-caja li { font-family: var(--font-body); font-size: 12.5px; line-height: 1.38; color: rgba(0, 0, 0, 0.86); }
+.dsg-caja ul { list-style: none; margin: 0; padding: 0; }
+.dsg-caja li { position: relative; padding-left: 13px; margin-bottom: 2px; }
+.dsg-caja li::before { content: ""; position: absolute; left: 0; top: 6px; width: 5px; height: 5px; background: var(--orange); }
+.dsg-tot { display: flex; flex-direction: column; gap: 5px; }
+.dsg-trow { display: grid; grid-template-columns: 1fr 175px; align-items: center; gap: 12px; }
+.dsg-tl { font-family: var(--font-body); font-weight: 600; font-size: 12.5px; line-height: 1.25; }
+.dsg-pill { display: inline-block; margin-left: 6px; font-family: var(--font-display); font-weight: 700; font-size: 10px; background: #FBE3E6; color: #C8102E; padding: 2px 8px; border-radius: 10px; white-space: nowrap; }
+.dsg-tv .campo-libre { display: block; width: 100%; height: 28px; margin: 0; border: 1.5px solid rgba(0, 0, 0, 0.3); border-radius: 5px; background: rgba(255, 211, 0, 0.18); }
+.dsg-fuerte .dsg-tl { font-weight: 800; font-size: 13.5px; }
+.dsg-fuerte .dsg-tv .campo-libre { height: 32px; background: var(--yellow); border-color: var(--black); }
+.dsg-validez { margin-top: 8px; font-family: var(--font-body); font-size: 11.5px; color: rgba(0, 0, 0, 0.7); }
+.dsg-validez a { color: var(--black); text-decoration-color: var(--yellow); text-underline-offset: 3px; text-decoration-thickness: 2px; }
+
+/* Tabla de inversión por área (4 filas): columnas a la medida y filas más altas para llenar la hoja */
+.dsg-tab th:nth-child(1) { width: 25%; }
+.dsg-tab th:nth-child(2) { width: 36%; }
+.dsg-tab th:nth-child(3) { width: 14%; }
+.dsg-tab th:nth-child(4) { width: 8%; }
+.dsg-tab th:nth-child(5) { width: 17%; }
+.dsg-tab { font-size: 14.5px; margin-top: 10px; }
+.dsg-tab th { font-size: 11.5px; padding: 9px 12px; }
+.dsg-tab td { padding: 14px 12px; }
+.dsg-f { white-space: normal; font-size: 15.5px; }
+.dsg-v .campo-libre { height: 36px; }
+.dsg-bottom { margin-top: 20px; }
+.dsg-caja { padding: 12px 16px 13px; }
+.dsg-caja p { font-size: 14px; line-height: 1.45; }
+.dsg-caja-t { font-size: 11.5px; }
+.dsg-tot { gap: 9px; }
+.dsg-tl { font-size: 14px; }
+.dsg-fuerte .dsg-tl { font-size: 15px; }
+.dsg-tv .campo-libre { height: 32px; }
+.dsg-fuerte .dsg-tv .campo-libre { height: 36px; }
+.dsg-validez { margin-top: 16px; font-size: 12.5px; }

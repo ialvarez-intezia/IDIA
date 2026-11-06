@@ -1,0 +1,428 @@
+{
+ "version": 3,
+ "formato": "deteccion",
+ "cliente": {
+  "nombre": "Clínica Santiago de León",
+  "slug": "clinica-santiago-de-leon-det056",
+  "codigo": "DET-056",
+  "nombre_pie": "Santiago de León"
+ },
+ "division": "educacion",
+ "alianza": false,
+ "sin_horas_trabajo": true,
+ "omitir": [
+  "pago"
+ ],
+ "eje": "Auditar las 15 gerencias (14 en operación y Estadística y Planificación, hoy vacante) de la Clínica Santiago de León, nivelar a sus directores, gerentes y jefes en IA y dejar logros inmediatos, un mapa de oportunidades priorizado, las herramientas y licencias que corresponden a cada área y las bases de gobernanza del uso de IA, para que la Junta Directiva decida por dónde empezar",
+ "origen": "Ficha de Levantamiento de la Clínica Santiago de León (Verónica Rubio, registrada el 05/11/2026; promotor interno Carlos Serrano, Tecnología; decide la Junta Directiva), organigrama de febrero de 2024 y transcripción de la reunión del 05/11/2026, más instrucciones de Ivana del 06/11/2026: propuesta de Detección DET-056 con Verónica Rubio como asesora, que debe entrar en la matriz de comparación del cliente y ganar por sí sola, con la gobernanza explícita. División Educación y sin alianza por confirmar. Ajuste de Ivana del 06/11/2026: se unifican la DET-056 y la B (DET-056B) en una sola propuesta, con el proyecto completo y la primera fase en la misma hoja de cotización (dos opciones)",
+ "fuente_insumo": "Ficha de Levantamiento (05/11/2026), organigrama de febrero de 2024 y transcripción de la reunión de Verónica Rubio con la clínica (05/11/2026)",
+ "siglas_ok": [
+  "IA",
+  "CEM",
+  "ATC",
+  "SAP"
+ ],
+ "portada": {
+  "titulo_lineas": [
+   "Diagnóstico de IA con gobernanza",
+   "y ruta priorizada"
+  ],
+  "titulo_destacado": "en {cliente_corto}",
+  "lead": "Auditamos en persona las **{n_areas_txt}** de la clínica y dejamos **logros inmediatos**, un mapa de oportunidades y las bases de gobernanza para decidir qué herramienta usar en cada área.",
+  "hechos": [
+   {
+    "num": "Disperso",
+    "texto": "es el uso de la IA: cada quien usa la herramienta gratuita que le alcanza."
+   },
+   {
+    "num": "Sin norma",
+    "texto": "ni política de IA ni licencias de la clínica: lo que se construye no queda en casa."
+   },
+   {
+    "num": "Manual",
+    "texto": "es el trabajo, desde la evaluación de desempeño hasta los pagos a proveedores."
+   },
+   {
+    "num": "Acceso",
+    "texto": "limitado a algunos proveedores de IA desde Venezuela: la clínica quiere decidir con criterio."
+   }
+  ]
+ },
+ "deteccion": {
+  "areas": [
+   "Servicios Farmacéuticos",
+   "Enfermería",
+   "Laboratorio",
+   "Talento Humano",
+   "Seguridad Física y Patrimonial",
+   "Mantenimiento y Hotelería",
+   "Servicios Hospitalarios",
+   "CEM, Diagnóstico y ATC",
+   "Tecnología e Información",
+   "Estadística y Planificación",
+   "Costos y Presupuesto",
+   "Logística y Distribución",
+   "Administración y Finanzas",
+   "Contabilidad e Impuesto",
+   "Facturación y Cobranzas"
+  ],
+  "horas": {
+   "levantamiento": 60,
+   "arranque": 0,
+   "nivelacion": 2
+  },
+  "foco": "Recorremos **cómo se trabaja hoy** en cada gerencia de las cuatro direcciones, también el uso de IA que ya existe: qué se usa, con qué datos y quién accede.",
+  "logros_minimos": 3,
+  "texto_horas": "**{h_levantamiento} horas** de levantamiento, repartidas según lo que necesite cada gerencia.",
+  "para_que": [
+   {
+    "titulo": "Ordenar el uso de la IA",
+    "texto": "Ver qué herramientas se usan hoy, con qué datos y quién accede, para normarlo."
+   },
+   {
+    "titulo": "Mejorar desde ya",
+    "texto": "Logros inmediatos construidos con cada equipo durante el levantamiento."
+   },
+   {
+    "titulo": "Decidir con criterio",
+    "texto": "Elegir la herramienta y el plan de cada área, con su disponibilidad en Venezuela."
+   },
+   {
+    "titulo": "Priorizar con datos",
+    "texto": "Qué procesos atacar primero, por impacto y esfuerzo, para que la Junta decida."
+   }
+  ],
+  "etapas": [
+   {
+    "titulo": "Arranque",
+    "texto": "Reunión de arranque: alcance, responsables de cada gerencia y calendario."
+   },
+   {
+    "titulo": "Nivelación",
+    "texto": "**{h_nivelacion} horas** de Fundamentos de IA para directores, gerentes y jefes, en grupos de hasta 25 personas."
+   },
+   {
+    "titulo": "Levantamiento",
+    "texto": "Gerencia por gerencia, con su líder y quien hace el trabajo.",
+    "horas": true
+   },
+   {
+    "titulo": "Priorización",
+    "texto": "Intezia cruza lo levantado y ordena las oportunidades por impacto, esfuerzo y retorno."
+   },
+   {
+    "titulo": "Informe Final",
+    "texto": "Mapa de oportunidades, herramientas por área y gobernanza, presentados a la Junta Directiva."
+   }
+  ],
+  "ruta_completa": [
+   {
+    "cuando": "Ahora",
+    "servicio": "Detección",
+    "texto": "Auditar, dejar logros inmediatos y priorizar con gobernanza."
+   },
+   {
+    "cuando": "Después",
+    "servicio": "Habilidades",
+    "texto": "Construir con cada equipo lo priorizado, con seguimiento a 30, 60 y 90 días."
+   },
+   {
+    "cuando": "Más adelante",
+    "servicio": "Políticas",
+    "texto": "Redactar la política de uso de IA con la base que deje el diagnóstico."
+   }
+  ],
+  "entregables": [
+   {
+    "cuando": "Al arrancar",
+    "titulo": "Alcance y calendario",
+    "texto": "Acordados en el arranque: el orden de las gerencias y quién participa en cada una."
+   },
+   {
+    "cuando": "Al arrancar",
+    "titulo": "Equipo nivelado en IA",
+    "texto": "**{h_nivelacion} horas** de fundamentos: qué es y qué no es la IA, cómo pedirle bien y qué información cuidar."
+   },
+   {
+    "cuando": "En el levantamiento",
+    "titulo": "Logros inmediatos",
+    "texto": "**Al menos {logros_minimos_palabra}**, a evaluar en el levantamiento, sobre procesos manuales que la clínica ya identificó."
+   },
+   {
+    "cuando": "Al cierre",
+    "titulo": "Mapa de oportunidades",
+    "texto": "Los procesos de la clínica en un solo mapa, por impacto y esfuerzo, con las horas estimadas que liberan."
+   },
+   {
+    "cuando": "Al cierre",
+    "titulo": "Informe Final y hoja de ruta",
+    "texto": "La ruta priorizada para la Junta: por dónde empezar, con qué retorno y en qué orden."
+   },
+   {
+    "cuando": "Al cierre",
+    "titulo": "Herramientas y gobernanza",
+    "texto": "Qué herramienta y plan corresponde a cada área, evaluada por su disponibilidad en Venezuela, y las bases de la política."
+   }
+  ]
+ },
+ "alcance": {
+  "subtitulo": "Revisamos **proceso por proceso** cada gerencia de la clínica, con quien hace el trabajo, y ordenamos el uso de la IA.",
+  "fuera_alcance": [
+   "Licencias de IA: la recomendación va en el Informe Final y no están en la inversión.",
+   "Cambios en SAP y en sus demás sistemas: se revisan en el levantamiento y no se modifican.",
+   "Redactar la política y construir las soluciones: son las fases que siguen (Políticas y Habilidades)."
+  ]
+ },
+ "ruta": {
+  "subtitulo": "El calendario y el orden de las conversaciones se acuerdan en la **reunión de arranque**."
+ },
+ "metodo": {
+  "titulo": "Así trabajamos con cada gerencia.",
+  "subtitulo": "Nos sentamos con cada gerencia y salimos de cada conversación con algo concreto.",
+  "pasos": [
+   {
+    "titulo": "Entrevistamos",
+    "texto": "Al líder de cada gerencia y a quien hace el trabajo."
+   },
+   {
+    "titulo": "Mapeamos",
+    "texto": "Sus procesos, la información, las herramientas y los cuellos de botella."
+   },
+   {
+    "titulo": "Construimos",
+    "texto": "Un logro inmediato en el momento, cuando el proceso lo permite."
+   },
+   {
+    "titulo": "Priorizamos",
+    "texto": "Cada oportunidad en el mapa, con su impacto y esfuerzo."
+   }
+  ],
+  "por_que_orden": "Primero se nivela a quienes dirigen. Después se levanta gerencia por gerencia. Al final se prioriza con la foto completa de la clínica.",
+  "quien_construye": "Intezia levanta y construye junto a cada gerencia, con sus sistemas y las herramientas que ya usan. Sus sistemas no se modifican; las herramientas de IA las autoriza la clínica.",
+  "practica": [
+   {
+    "titulo": "Sin tarea previa",
+    "texto": "Nadie prepara nada antes de su turno: todo se levanta en la conversación."
+   },
+   {
+    "titulo": "Una gerencia por vez",
+    "texto": "Cada gerencia se levanta por separado, nunca varias en la misma mesa."
+   },
+   {
+    "titulo": "Sin forzar soluciones",
+    "texto": "Si un proceso exige mucho esfuerzo, no se resuelve en el momento: pasa al mapa con su prioridad."
+   }
+  ],
+  "datos": "Los datos de pacientes no se cargan a la IA: trabajamos con ejemplos que la clínica autoriza y nada confidencial entra a una herramienta sin su visto bueno."
+ },
+ "logistica": {
+  "modalidad": "Presencial, en las instalaciones de la clínica en Caracas.",
+  "participantes": "Los líderes de cada gerencia y su equipo; en la nivelación, directores, gerentes y jefes."
+ },
+ "entregables": {
+  "transversales": [
+   "Ficha del levantamiento de cada gerencia, que valida su líder",
+   "Presentación del Informe Final a la Junta Directiva"
+  ],
+  "valor_inmediato": [
+   "Logros inmediatos en uso antes de cerrar",
+   "Ruta priorizada y bases para normar el uso de la IA"
+  ],
+  "titulo": "Lo que recibe la clínica."
+ },
+ "retorno": {
+  "subtitulo": "El Informe Final estima el retorno de cada oportunidad con lo que cuenta cada gerencia en su levantamiento.",
+  "pasos": [
+   {
+    "titulo": "Volumen",
+    "texto": "Cuántas veces al mes se repite cada tarea de la gerencia."
+   },
+   {
+    "titulo": "Tiempo actual",
+    "texto": "Lo que toma hoy cada vez, según quien hace el trabajo."
+   },
+   {
+    "titulo": "Tiempo con la solución",
+    "texto": "La estimación de Intezia para cada oportunidad del mapa."
+   },
+   {
+    "titulo": "Horas liberables",
+    "texto": "Volumen por la diferencia de tiempos: una estimación de referencia, no un compromiso de resultado."
+   },
+   {
+    "titulo": "Prioridad",
+    "texto": "Impacto, esfuerzo y riesgo de cada oportunidad, para decidir por dónde empezar."
+   }
+  ],
+  "destino": [
+   {
+    "rotulo": "Un uso ordenado",
+    "texto": "Herramientas y licencias definidas por área, con reglas claras de quién accede a qué."
+   },
+   {
+    "rotulo": "Prioridad con datos",
+    "texto": "La Junta decide por dónde empezar con el impacto, el esfuerzo y el retorno a la vista."
+   },
+   {
+    "rotulo": "Listos para construir",
+    "texto": "Con el mapa, Habilidades construye lo priorizado y las políticas lo dejan normado."
+   }
+  ],
+  "gancho": "Con el Informe Final, la clínica sabe qué herramienta corresponde a cada área, bajo qué reglas y por dónde empezar para el mayor retorno."
+ },
+ "inversion": {
+  "duracion": "Reunión de arranque, **{h_nivelacion} horas de nivelación** y **{h_levantamiento} horas de levantamiento** en {n_areas_txt}.",
+  "programa": [
+   "Servicio de Detección para la Clínica Santiago de León ({codigo}).",
+   "Arranque y {h_nivelacion} horas de Fundamentos de IA para quienes dirigen.",
+   "Levantamiento gerencia por gerencia, de forma presencial.",
+   "Al menos {logros_minimos} logros inmediatos, mapa de oportunidades e Informe Final.",
+   "{h_nivelacion} horas de nivelación y {h_levantamiento} horas de levantamiento."
+  ],
+  "notas": [
+   "Esta inversión no incluye licencias de IA.",
+   "Habilidades y Políticas, las fases que siguen, se estructuran con los resultados y se cotizan aparte."
+  ],
+  "etapas": [
+   {
+    "titulo": "Proyecto completo.",
+    "rotulo": "Opción 1 · Proyecto completo",
+    "duracion": "Reunión de arranque, **{h_nivelacion} horas de nivelación** y **{h_levantamiento} horas de levantamiento** en las {n_areas_txt}.",
+    "programa": [
+     "Detección para la Clínica Santiago de León ({codigo}): proyecto completo.",
+     "Arranque y {h_nivelacion} horas de Fundamentos de IA para quienes dirigen.",
+     "Levantamiento gerencia por gerencia, presencial.",
+     "Al menos {logros_minimos} logros inmediatos, mapa e Informe Final.",
+     "{h_nivelacion} h de nivelación y {h_levantamiento} h de levantamiento."
+    ],
+    "notas": [
+     "Esta inversión no incluye licencias de IA.",
+     "Esta hoja es una de dos opciones (proyecto completo o primera fase): se elige una sola."
+    ]
+   },
+   {
+    "titulo": "Primera fase.",
+    "rotulo": "Opción 2 · Primera fase",
+    "duracion": "Reunión de arranque, **{h_nivelacion} horas de nivelación** y **36 horas de levantamiento** en 9 áreas del frente administrativo.",
+    "programa": [
+     "Detección para la Clínica Santiago de León ({codigo}): primera fase.",
+     "Arranque y {h_nivelacion} horas de Fundamentos de IA para quienes dirigen.",
+     "Levantamiento del frente administrativo, presencial.",
+     "Al menos {logros_minimos} logros inmediatos, mapa e Informe Final de la fase.",
+     "{h_nivelacion} h de nivelación y 36 h de levantamiento."
+    ],
+    "notas": [
+     "Esta inversión no incluye licencias de IA.",
+     "La segunda fase (24 horas de levantamiento) se cotiza aparte y se decide con los resultados de esta."
+    ]
+   }
+  ]
+ },
+ "respuesta_solicitud": {
+  "eyebrow": "Para la decisión de la Junta",
+  "despues_de": "alcance",
+  "paginas": [
+   {
+    "titulo": "Gobernanza: lo que este diagnóstico resuelve.",
+    "subtitulo": "No es un entrenamiento: es **ordenar el uso de la IA** en la clínica antes de decidir qué herramienta comprar o construir.",
+    "items": [
+     {
+      "num": "1",
+      "titulo": "Herramientas por área",
+      "texto": "Qué herramienta y qué plan corresponde a cada área según su carga de trabajo, sin atarse a un solo proveedor: lo que hoy está de moda puede cambiar."
+     },
+     {
+      "num": "2",
+      "titulo": "Restricción geográfica",
+      "texto": "Cada herramienta se evalúa también por su disponibilidad y sus términos de servicio en Venezuela, y la clínica decide con ese criterio por escrito."
+     },
+     {
+      "num": "3",
+      "titulo": "Prioridad para la Junta",
+      "texto": "El mapa ordena los procesos por impacto y esfuerzo, para que la Junta Directiva decida por dónde empezar con datos y no con la herramienta del momento."
+     },
+     {
+      "num": "4",
+      "titulo": "Camino a la política",
+      "texto": "Qué se usa hoy, con qué datos y quién accede: la base de la política de uso de IA, que se redacta en el servicio de Políticas."
+     }
+    ]
+   },
+   {
+    "titulo": "Dos formas de avanzar, con el mismo diagnóstico.",
+    "subtitulo": "La clínica puede aprobar **el proyecto completo** o **empezar por la primera fase**; la segunda se decide con los resultados de la primera.",
+    "items": [
+     {
+      "num": "1",
+      "titulo": "Primera fase",
+      "etiqueta": "36 horas",
+      "texto": "El frente administrativo: las 6 gerencias de Administración y Planificación Financiera, Talento Humano, Tecnología e Información, y la admisión y ATC."
+     },
+     {
+      "num": "2",
+      "titulo": "Segunda fase",
+      "etiqueta": "24 horas",
+      "texto": "Las 6 gerencias restantes: farmacia, enfermería, laboratorio, seguridad, mantenimiento y servicios hospitalarios."
+     },
+     {
+      "num": "1+2",
+      "titulo": "Proyecto completo",
+      "etiqueta": "60 horas",
+      "texto": "Las dos fases juntas: 15 gerencias y un solo mapa de oportunidades de toda la clínica."
+     }
+    ],
+    "nota": "Cada opción tiene su hoja de inversión y se elige una sola. La nivelación de 2 horas está en las dos."
+   }
+  ]
+ },
+ "proximos_pasos": {
+  "asesora": {
+   "nombre": "Verónica Rubio",
+   "cargo": "Asesora comercial",
+   "correo": "vrubio01@intezia.com",
+   "telefono": "+58 422 3355505"
+  },
+  "pasos": [
+   {
+    "titulo": "Revisión de la propuesta",
+    "texto": "Nos reunimos para aclarar dudas y dimensionar el alcance, con quien decida en la clínica."
+   },
+   {
+    "titulo": "Alta de proveedor",
+    "texto": "Enviamos la documentación que la clínica requiera para inscribirnos como proveedor."
+   },
+   {
+    "titulo": "Lista de responsables",
+    "texto": "La clínica indica quién lidera cada gerencia; con eso se arma la agenda del arranque."
+   }
+  ]
+ },
+ "supuestos": [
+  "Pedido de Ivana (06/11/2026): propuesta de Detección DET-056 para la Clínica Santiago de León con Verónica Rubio como asesora, a partir de la ficha (05/11/2026), la transcripción y el organigrama. División Educación y sin alianza: por confirmar con Ivana. IMPORTANTE: la ficha dice que es el primer contacto, pero en el repositorio ya existe la DET-027 (octubre de 2026) para la misma clínica, con otro contacto del ámbito médico (60 a 70 personas, 4 áreas, 22 h). Revisar con Ivana y Verónica cómo se reconcilian: son contactos y alcances distintos (la ficha habla de la visión transversal; la DET-027 solo del ámbito médico).",
+  "Esta propuesta entra en una matriz de comparación junto a otras cuatro empresas que ofrecen lo mismo (en su mayoría especialistas en adiestramiento), sin que Intezia esté presente: debe ganar sola, con estructura clara, alcance dimensionado y resultados medibles. No se nombra a ninguna otra empresa ni a clientes de Intezia. La diferencia, que es el diagnóstico con gobernanza y no el entrenamiento, queda por escrito en la lámina «Gobernanza de IA» (página 3, opción respuesta_solicitud del generador), en el alcance y en «Herramientas y gobernanza».",
+  "Gobernanza y restricción geográfica: el contacto objetó que los proveedores de IA más conocidos no incluyen a Venezuela entre sus mercados y que usarlos expone a la clínica a operar fuera de los términos de servicio. La objeción quedó sin resolver en la reunión (se respondió con el respaldo de un socio de Intezia y con «esperamos que no pase»). El deck no repite ese argumento ni promete acceso ni VPN (memoria sobre Claude y Venezuela): dice que cada herramienta se evalúa por su disponibilidad y términos de servicio en Venezuela, que no se ata a un proveedor y que el Informe Final recomienda por área. No nombra proveedores. Falta la respuesta verificada y por escrito para la próxima reunión.",
+  "Alcance y horas (versión unificada del 06/11/2026): proyecto completo = 15 gerencias (las 14 en operación más Estadística y Planificación, vacante: se levanta con quien asuma la función o con la Dirección; si sigue sin responsable, se quitan 4 h) a 4 h cada una = 60 h de levantamiento en global (lineamiento de empresa/politicas-comerciales.md) + 2 h de nivelación. Primera fase = el foco administrativo recomendado en la ficha (las 6 gerencias de Administración y Planificación Financiera, Talento Humano, Tecnología e Información y Admisión/ATC dentro de CEM) = 9 áreas, 36 h + 2 h de nivelación. Segunda fase = las 6 gerencias restantes (Servicios Farmacéuticos, Enfermería, Laboratorio, Seguridad Física y Patrimonial, Mantenimiento y Hotelería, Servicios Hospitalarios), 24 h. Las gerencias asistenciales se levantan por sus procesos administrativos, no clínicos. Faltan Mercadeo y la Contraloría (vacantes). La nivelación de 2 h va completa en la primera fase y no se repite en la segunda.",
+  "Nivelación: 2 h de Fundamentos de IA para directores, gerentes y jefes, en grupos de hasta 25 personas (lineamiento). Hay 4 directores y unos 14 gerentes más los jefes que se sumen: si pasan de 25, se añaden sesiones de 2 h (el deck no las cuenta). El contacto quiere instalar criterio en gerentes y jefes antes que herramientas. Decisión mía por confirmar: dejar 2 h.",
+  "Dimensionar para la Junta (decisión de Ivana, 06/11/2026): en vez de dos propuestas (DET-056 completa y DET-056B reducida) se unificó en una sola con dos opciones en la misma cotización: Opción 1 proyecto completo (60 h) y Opción 2 primera fase (36 h), para que el contacto lleve a la Junta un número para cada camino. La primera fase pesa 60 % de las horas del proyecto (36 de 60), no la mitad exacta; los valores los pone ventas (campos vacíos) y pueden reflejar la mitad. La DET-056B queda reemplazada por esta versión. La plantilla de Detección no documenta `inversion.etapas` (solo Habilidades): se usó igual y funcionó; por documentar. Una página «Dos formas de avanzar» (opción respuesta_solicitud, después del alcance) muestra las dos fases y el proyecto completo.",
+  "Logros inmediatos (al menos 3): los candidatos que el contacto puso sobre la mesa y que se confirman en el levantamiento son la evaluación de desempeño (Excel impreso y firmado para unos 400 empleados), la gestión de pagos a proveedores y la admisión/ATC; además planteó la extracción de reportes desde SAP y los sistemas satélite como pregunta técnica abierta. En el deck van como «procesos manuales que la clínica ya identificó», sin nombrar áreas ni personas.",
+  "Contexto del cliente que no va en el deck: uso de IA sin política (el contacto usa DeepSeek y paga Claude de su bolsillo; su equipo usa Gemini y ChatGPT gratuitos), correo propio en Zimbra, WhatsApp, Power BI y licenciamiento de servidores de Microsoft, SAP y sistemas satélite con una misma base de datos, sin suite colaborativa; no existe política de datos y evalúan una herramienta contra la fuga de información. Datos de pacientes: el deck lo dice en «Cómo cuidamos sus datos». Las citas textuales de la ficha no se usan y no se nombran personas del cliente.",
+  "Personas clave (solo internas): el promotor es el contacto de Tecnología, que no decide ni fija la pauta; decide la Junta Directiva (sobre ella, el Comité Ejecutivo); la Directora de Talento Humano es la aliada y segunda patrocinadora, y conviene involucrarla en la presentación. Patrocinio «presente pero tibio», presupuesto sin definir (el del año ya está ejecutado: se alinea con la proyección estratégica de 2027 o se aprueba este año y se ejecuta en enero). Quedan unas 6 semanas productivas del año. Fechas y semanas no van en el deck (§4.23).",
+  "Inscripción como proveedor: la clínica tiene un proceso formal (consultoría jurídica, directores externos y administración) y pidió material de Intezia (quiénes somos, portafolio, clientes y casos de éxito). El deck lo recoge en el segundo paso. Hay que enviar ese material y arrancar el trámite en paralelo, sin esperar al sí. Al mandar casos de éxito, recordar la regla de no nombrar clientes sin permiso de Ivana.",
+  "Sin facilidad de pago (omitir: pago): decisión mía por ser lo que se ha pedido en las últimas Detecciones; confirmar con Ivana. Valor, descuento y total: campos vacíos para ventas; moneda por confirmar. Sin semanas, sesiones ni fechas; sin horas de trabajo ni cantidad de consultores (§4.23)."
+ ],
+ "pendientes": [
+  "Confirmar con Ivana que la DET-056B queda reemplazada por esta propuesta unificada (hoy sigue en su carpeta) y que la primera fase puede pesar 60 % de las horas en vez de la mitad.",
+  "Reconciliar con Ivana y Verónica la DET-027 existente de la misma clínica (otro contacto, ámbito médico) con esta propuesta transversal; confirmar división Educación y que no hay alianza.",
+  "Respuesta verificada y por escrito sobre las restricciones de los proveedores de IA en Venezuela, para llevarla a la próxima reunión (consulta a Rebeca); el deck no la afirma.",
+  "Confirmar con el contacto el número de personas por gerencia, el organigrama vigente (el enviado es de febrero de 2024), los líderes de cada gerencia y si hay unidades externas a la sede de Caracas.",
+  "Confirmar cuántas personas entran a la nivelación (directores, gerentes y jefes) y si hacen falta más sesiones.",
+  "Enviar al contacto el material de Intezia para su matriz y para la inscripción de proveedores (sin nombrar clientes sin permiso de Ivana).",
+  "Responder su pregunta técnica sobre reportería y extracción de datos desde SAP y los sistemas satélite.",
+  "Confirmar con Verónica si la Junta o la Directora de Talento Humano estarán en la presentación, y si prefiere presencial.",
+  "Valor, descuento y total: campos vacíos para ventas; moneda por confirmar. Confirmar el teléfono y el correo de Verónica Rubio.",
+  "Valores de las dos opciones (completa y primera fase): campos vacíos para ventas; sugerencia de Ivana: la primera fase a la mitad del proyecto completo."
+ ],
+ "frases_ok": [
+  "Costos y Presupuesto"
+ ]
+}

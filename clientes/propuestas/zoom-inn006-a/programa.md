@@ -89,7 +89,7 @@ Pasos del método: Caso real; Tiempo de hoy; Con la Skill; Diferencia.
 
 | Cuota | Cuándo | Hito | %% |
 |---|---|---|---|
-| 1 | Al aprobar | Reserva del calendario y del equipo de facilitadores. | 40 |
+| 1 | Al aprobar | Reserva del calendario. | 40 |
 | 2 | Fin de noviembre | Los 12 encuentros de noviembre realizados. | 30 |
 | 3 | Cierre | Todos los encuentros realizados y los casos medidos. | 30 |
 

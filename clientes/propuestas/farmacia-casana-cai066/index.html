@@ -1,0 +1,442 @@
+<!doctype html>
+<!--
+  Propuesta · Farmacia Casana · Servicio de Habilidades (CAI-066)
+  División: Educación · Servicio: Habilidades (§4.1a) · Alianza: no
+  GENERADO por scripts/generar-habilidades-compacto.py (plantilla 3.0 (2026-10-08), formato habilidades) desde datos.json.
+  No editar a mano: editar datos.json y regenerar. Estilos propios del deck: overrides.css.
+  Fuente del insumo: Ficha de Levantamiento (27/10/2026) y transcripción de la reunión de Verónica Rubio con Farmacia Casana (27/10/2026)
+
+  Formato compacto de 8 slides, en el orden de las preguntas del cliente (Ventas, 2026-10-07), sin semanas, sesiones
+  ni fechas (Keiber, 2026-10-08):
+    1 Portada · 2 Alcance · 3 Ruta · 4 Cómo trabajamos · 5 Entregables · 6 Retorno · 7 Inversión · 8 Próximos pasos
+  Marcadores de detección de AcroForms (agregar-campo-precio.py), por página: «Propuesta Económica» solo en la slide de
+  inversión; «Lo que se llevan» y «Entregables» solo en la de entregables; «Facilidad de pago» solo en la de pago.
+  Campos AcroForm: Programa, Notas, PrecioBase, Descuento, PrecioTotal (inversión) y Entregables, Acreditacion (entregables). Se reposicionan con scripts/customize-habilidades-compacto.py.
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Propuesta · Farmacia Casana · Intezia Educación</title>
+  <link rel="stylesheet" href="../_base/styles.css">
+  <link rel="stylesheet" href="habilidades-compacto.css">
+  <link rel="stylesheet" href="overrides.css">
+</head>
+<body>
+
+  <main class="deck">
+
+    <!-- 1 · Portada: ¿cuál es mi problema? -->
+    <section class="slide s-cover">
+      <span class="counter">01 / 08</span>
+      <div class="logo-big">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia Educación">
+      </div>
+      <div class="body">
+        <p class="eyebrow">Propuesta de proyecto · Servicio de Habilidades</p>
+        <h1 style="font-size:46px">
+          Agente de ventas por WhatsApp<br>
+          y contenido con IA en Marketing<br>
+          <span class="hl">de Farmacia Casana</span>
+        </h1>
+        <p class="lead">
+          Este proyecto mide cómo atienden y venden hoy, y construye en conjunto con el equipo de Farmacia Casana un <strong>agente de ventas por WhatsApp</strong> y la <strong>producción de contenido</strong>, hasta dejarlos <strong>en uso</strong>.
+        </p>
+        <div class="pain-strip">
+          <div class="pain-item">
+            <span class="pain-num">12 a 13 %</span>
+            <span class="pain-lbl">es la tasa de cierre de las solicitudes de hoy, sin seguimiento a los clientes.</span>
+          </div>
+          <div class="pain-item">
+            <span class="pain-num">350-400</span>
+            <span class="pain-lbl">solicitudes diarias por WhatsApp, sin medir cuánto tarda cada respuesta.</span>
+          </div>
+          <div class="pain-item">
+            <span class="pain-num">300</span>
+            <span class="pain-lbl">clientes fidelizados hoy, sin recordatorio de recompra para quienes consumen de forma recurrente.</span>
+          </div>
+          <div class="pain-item">
+            <span class="pain-num">Una</span>
+            <span class="pain-lbl">persona crea el contenido y la publicidad, y usa la IA solo para consultas.</span>
+          </div>
+        </div>
+      </div>
+      <div class="id-line">
+        <span class="codigo">Código: CAI-066</span>
+        <span class="cliente">Farmacia Casana</span>
+      </div>
+    </section>
+
+    <!-- 2 · Alcance: qué vamos a hacer y para qué -->
+    <section class="slide s-scope roomy">
+      <span class="counter">02 / 08</span>
+      <p class="eyebrow">02 · Alcance</p>
+      <h2>Un agente de ventas y contenido con IA, en uso.</h2>
+      <p class="sub">Medimos la atención de hoy y construimos en conjunto el <strong>agente de ventas</strong> y la <strong>producción de contenido</strong>.</p>
+
+      <div class="scope-panels one" style="--np:1">
+        <div class="scope-panel acc-y">
+          <div class="scope-head">
+            <span class="scope-tag">Herramientas de IA de Casana</span>
+            <span class="scope-total"><b>2</b> áreas</span>
+          </div>
+          <ul class="scope-rows">
+              <li><span class="area">Ventas y atención online</span><span class="para">Atender por WhatsApp con un mismo criterio, dar seguimiento a los clientes y medir la atención</span></li>
+              <li><span class="area">Marketing</span><span class="para">Producir más contenido y publicidad con la misma persona, dentro de las reglas del sector</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="scope-facts">
+        <p class="scope-card-label">Lo que se mide desde el primer día</p>
+        <ul>
+          <li><b>Respuesta en menos de 10 minutos</b><span>El tiempo de cada solicitud, contra el punto de partida.</span></li>
+          <li><b>Medicamentos disponibles</b><span>La meta de la farmacia: el 90 % de los medicamentos pedidos.</span></li>
+          <li><b>Solución e incentivo</b><span>En cada solicitud, una solución a la inquietud y un incentivo para la siguiente compra.</span></li>
+          <li><b>Cierre y recompra</b><span>La tasa de cierre y los clientes que vuelven a comprar.</span></li>
+        </ul>
+      </div>
+
+      <div class="scope-out">
+        <p class="scope-card-label">Fuera de este alcance</p>
+        <ul>
+          <li>Desarrollar el agente: lo desarrolla la persona de tecnología de Farmacia Casana; Intezia guía, prueba y acompaña.</li>
+          <li>Implementar el sistema de gestión de clientes (CRM): lo contrata y lo instala Farmacia Casana; podemos recomendar Go High Level.</li>
+          <li>Tokens del modelo de IA, mensajería de WhatsApp (Meta) y licencias del CRM: los contrata Farmacia Casana, aparte de esta inversión.</li>
+          <li>Cifras de cierre, solicitudes o clientes fidelizados: son metas de Farmacia Casana; se miden y no se garantizan.</li>
+        </ul>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Farmacia Casana · CAI-066</span>
+      </div>
+    </section>
+
+    <!-- 3 · Ruta: qué pasa en cada fase -->
+    <section class="slide s-route">
+      <span class="counter">03 / 08</span>
+      <p class="eyebrow">03 · Ruta</p>
+      <h2>Del levantamiento a las herramientas en uso.</h2>
+      <p class="sub">El calendario se acuerda en la <strong>reunión de arranque</strong>. El <strong>levantamiento</strong> mide el punto de partida.</p>
+
+      <div class="route-grid n1" style="--cols:2; --rows:1; --rowh:214px">
+
+        <div class="rg-corner"></div>
+        <div class="rg-phase rg-ph-1">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Levantamiento</span></span>
+          <span class="rg-phase-name">Medir la atención y el contenido de hoy</span>
+        </div>
+        <div class="rg-phase rg-ph-2 hi">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Construcción</span></span>
+          <span class="rg-phase-name">Herramientas construidas con el equipo y en uso</span>
+        </div>
+        <div class="rg-phase rg-fu">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Garantía</span></span>
+          <span class="rg-phase-date">30, 60 y 90 días</span>
+          <span class="rg-phase-txt">Desde el cierre de cada área</span>
+        </div>
+
+        <div class="rg-front acc-y">
+          <span class="rg-front-h">Ventas y marketing de Casana</span>
+          <span class="rg-front-row"><span class="rg-front-tool">IA de Casana</span><b class="rg-front-n">20 horas</b></span>
+          <span class="rg-front-meta">con el equipo</span>
+        </div>
+        <div class="rg-cell"><span class="rg-h solo-h"><b>4 horas con el equipo</b></span><p>Un levantamiento por área: se mide la atención de hoy y se delimita cada herramienta.</p></div>
+        <div class="rg-cell hi"><span class="rg-h solo-h"><b>16 horas con el equipo</b></span><p>Reglas del agente, agente de ventas por WhatsApp, pruebas y contenido, en uso.</p></div>
+
+        <div class="rg-follow" style="grid-column:4; grid-row:2 / span 1">
+          <ul>
+            <li><b>30 días</b><span>Uso del agente y de las herramientas</span></li>
+            <li><b>60 días</b><span>Ajustes y nuevas construcciones</span></li>
+            <li><b>90 días</b><span>Indicadores y tiempo recuperado medidos</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="route-miles" style="grid-template-columns:repeat(4,1fr)">
+        <div class="mile"><span class="mile-d"></span><b>Arranque · aparte</b><p>Reunión de 1 h para acordar el calendario y quién coordina el proyecto por Farmacia Casana.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Levantamiento</b><p>Ventas y atención online y Marketing: cómo funciona hoy cada proceso y qué atenderá el agente.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Agente y contenido en uso</b><p>Agente de ventas por WhatsApp probado y producción de contenido, construidos en conjunto.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>30 · 60 · 90 días</b><p>Seguimiento: uso de las herramientas, ajustes e indicadores medidos.</p></div>
+      </div>
+      <p class="route-next"><b>Siguiente paso · Detección</b> Si los resultados de Ventas lo respaldan, auditar otros departamentos de Farmacia Casana, como ustedes lo plantearon.</p>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Farmacia Casana · CAI-066</span>
+      </div>
+    </section>
+
+    <!-- 4 · Cómo trabajamos: pasos, por qué en ese orden, casos reales, práctica, datos y logística -->
+    <section class="slide s-method">
+      <span class="counter">04 / 08</span>
+      <p class="eyebrow">04 · Cómo trabajamos</p>
+      <h2>Así construimos cada herramienta.</h2>
+      <p class="sub">Primero se mide dónde está hoy cada proceso y después se construye en conjunto con el equipo, que aprende a sostenerlo.</p>
+
+      <ol class="mt-steps" style="--n:4">
+          <li><b>Medimos</b><span>Cómo se atiende y se crea contenido hoy, y el tiempo de cada tarea.</span></li>
+          <li><b>Construimos</b><span>En conjunto: la persona de tecnología desarrolla y Intezia guía.</span></li>
+          <li><b>Adoptamos</b><span>Pruebas con casos reales; el equipo usa, ajusta y mantiene.</span></li>
+          <li><b>Seguimos</b><span>Uso, ajustes y resultados, a 30, 60 y 90 días.</span></li>
+      </ol>
+      <div class="mt-strips">
+        <p class="mt-why"><b>Por qué en este orden</b> Primero se mide el punto de partida y se acuerda qué puede decir el agente; después se construye, se prueba con solicitudes reales y el equipo lo ajusta y lo mantiene sin depender de un proveedor externo.</p>
+        <p class="mt-who"><b>Quién construye</b> Se construye en conjunto: la persona de tecnología de Farmacia Casana desarrolla el agente, e <strong>Intezia guía</strong>, prueba y acompaña la adopción.</p>
+      </div>
+
+      <div class="mt-info">
+        <div class="mt-card">
+          <p class="mt-card-label">Cómo funciona en la práctica</p>
+          <ul><li><b>Cada quien su parte.</b> La persona de tecnología de Farmacia Casana desarrolla el agente; Intezia no desarrolla, guía, prueba y acompaña.</li><li><b>Con límites claros.</b> El agente no da información sobre medicamentos de récipe ni promueve la automedicación, y pasa a una persona cuando hace falta: se define al empezar.</li><li><b>Sin prometer cifras.</b> Se mide desde el primer día cada indicador del equipo; las metas son de Farmacia Casana y no se garantizan.</li></ul>
+        </div>
+        <div class="mt-card">
+          <p class="mt-card-label">Cómo cuidamos sus datos</p>
+          <p>Los datos de clientes y pacientes no se cargan a ninguna herramienta de IA sin la autorización de Farmacia Casana; las reglas básicas de uso se acuerdan al empezar.</p>
+        </div>
+      </div>
+
+      <div class="mt-logi">
+        <div class="mt-tile"><span>Modalidad</span><b>Virtual, en el horario del equipo de Farmacia Casana.</b></div>
+        <div class="mt-tile"><span>Participantes</span><b>Dirección, supervisores y analistas de ventas, Marketing y la persona de tecnología.</b></div>
+        <div class="mt-tile"><span>Ritmo de trabajo</span><b>Dudas por escrito antes que en llamadas; el trabajo se agenda en el horario del equipo.</b></div>
+        <div class="mt-tile"><span>Arranque</span><b>La fecha la fija Farmacia Casana; una reunión de arranque de 1 h, aparte, acuerda el calendario.</b></div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Farmacia Casana · CAI-066</span>
+      </div>
+    </section>
+
+    <!-- 5 · Entregables: ¿con qué me quedo? (catálogo + piezas transversales) -->
+    <section class="slide s-deliv">
+      <span class="counter">05 / 08</span>
+      <p class="eyebrow">05 · Entregables</p>
+      <div class="deliv-head">
+        <h2>Lo que recibe la farmacia.</h2>
+        <p class="deliv-sub"><span class="nw">Lo que se llevan</span>: <strong>la medición de hoy, el agente y el contenido en uso</strong>, más el seguimiento a 30, 60 y 90 días.</p>
+      </div>
+
+      <div class="deliv-carriles" style="--ncols:2">
+        <span class="dc acc-y" style="grid-column: span 2">Herramientas de IA de Casana</span>
+      </div>
+
+      <div class="deliv-cols" style="--ncols:2">
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">Ventas y atención online</p>
+            <ul>
+              <li>Levantamiento y alcance del agente<ul class="inc"><li>Cómo se atiende hoy cada solicitud, de la llegada al cierre</li><li>Línea base del tiempo de respuesta y del cierre</li><li>Qué casos atiende el agente y cuáles pasan a una persona</li></ul></li>
+              <li>Reglas del agente: qué puede y qué no puede decir<ul class="inc"><li>Información que el agente sí puede dar</li><li>Récipe y automedicación: lo que nunca dice</li><li>Cuándo pasa la conversación a una persona</li></ul></li>
+              <li>Agente de ventas por WhatsApp, construido en conjunto<ul class="inc"><li>Respuestas por tipo de solicitud y objeciones frecuentes</li><li>Seguimiento de recompra a clientes recurrentes</li><li>Agente desarrollado por la persona de tecnología de Casana</li></ul></li>
+              <li>Pruebas, medidas y adopción con el equipo<ul class="inc"><li>Pruebas con solicitudes reales y ajustes</li><li>Las cuatro medidas de servicio</li><li>El equipo usa y ajusta el agente</li></ul></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">Marketing</p>
+            <ul>
+              <li>Levantamiento de contenido y publicidad<ul class="inc"><li>Cómo se crea hoy el contenido y la publicidad</li><li>Línea base del tiempo de cada pieza</li></ul></li>
+              <li>Producción de contenido y publicidad con IA<ul class="inc"><li>Calendario y guiones de contenido</li><li>Textos y piezas de publicidad con IA</li><li>Reglas de lo que no se puede publicar</li></ul></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="deliv-band">
+        <div class="db-card db-1">
+          <span class="db-label">Para todo el proyecto</span>
+        </div>
+        <div class="db-card db-2">
+          <span class="db-label">Valor inmediato</span>
+        </div>
+      </div>
+      <!-- Cajas multiline editables (vacías en HTML: el contenido vive dentro del AcroForm /V). -->
+      <div class="multi-box db-box db-box-1" data-field="Entregables"></div>
+      <div class="multi-box db-box db-box-2" data-field="Acreditacion"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Farmacia Casana · CAI-066</span>
+      </div>
+    </section>
+
+    <!-- 6 · Retorno: ¿qué gano? (método de cálculo). Sin estudios ni citas externas. -->
+    <section class="slide s-roi">
+      <span class="counter">06 / 08</span>
+      <p class="eyebrow">06 · Retorno</p>
+      <h2>Retorno esperado: indicadores medidos.</h2>
+      <p class="sub">Cada indicador se mide contra el punto de partida que el levantamiento deja registrado.</p>
+
+      <div class="roi-body">
+        <div class="roi-panel">
+          <p class="roi-panel-title">Cómo se calcula el retorno de cada herramienta</p>
+          <ol class="roi-steps">
+            <li><b>Volumen</b><span>Cuántas solicitudes, recordatorios y piezas se repiten cada mes.</span></li>
+            <li><b>Punto de partida</b><span>Tiempo de respuesta, cierre y tiempo de cada tarea: es la <strong>línea base</strong>.</span></li>
+            <li><b>Con la herramienta</b><span>Lo que toma el mismo trabajo una vez que el agente o la herramienta está en uso.</span></li>
+            <li><b>Horas recuperadas</b><span>Volumen por la diferencia de tiempos: una estimación referencial, sin compromiso de resultado.</span></li>
+            <li><b>Gasto de operar</b><span>Licencias, consumo de IA y mensajería, contra el valor de lo recuperado.</span></li>
+          </ol>
+        </div>
+
+        <div class="roi-right">
+          <p class="roi-right-title">Calendario de seguimiento y medición</p>
+          <div class="roi-card">
+            <b>30 días</b>
+            <p>Desde el cierre de cada área: herramientas en uso real y punto de partida validado con el equipo.</p>
+          </div>
+          <div class="roi-card">
+            <b>60 días</b>
+            <p>Tiempo de respuesta, cierre y horas recuperadas medidos contra el punto de partida.</p>
+          </div>
+          <div class="roi-card">
+            <b>90 días</b>
+            <p>Medición del retorno: lo recuperado frente al gasto de operar las herramientas.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="roi-dest-wrap">
+        <p class="roi-dest-title">Hacia dónde va el proyecto</p>
+        <div class="roi-dest">
+          <div class="rd-item"><b>Mejor atención online</b><p>Medir cada solicitud permite acercarse, paso a paso, a las cuatro medidas de servicio que Farmacia Casana definió.</p></div>
+          <div class="rd-item"><b>Clientes que vuelven</b><p>Un seguimiento ordenado ayuda a que quien consume de forma recurrente <strong>vuelva a comprar</strong>.</p></div>
+          <div class="rd-item"><b>Un equipo autónomo</b><p>El equipo construye y ajusta sus herramientas <strong>sin depender</strong> de un proveedor externo.</p></div>
+        </div>
+      </div>
+
+      <div class="roi-hook"><p>A los 90 días del cierre de cada área, Farmacia Casana contará con sus indicadores medidos contra el punto de partida y el gasto de operar sus herramientas.</p></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Farmacia Casana · CAI-066</span>
+      </div>
+    </section>
+
+    <!-- 7 · Inversión (hoja de cotización estándar; antepenúltima slide) -->
+    <section class="slide s-price">
+      <span class="counter">07 / 08</span>
+      <h2 class="title">Inversión del proyecto.</h2>
+      <p class="price-intro">Propuesta Económica · Servicio de Habilidades</p>
+
+      <div class="block">
+        <span class="block-eyebrow">Duración</span>
+        <p class="block-value"><strong>20 horas con el equipo</strong> de Farmacia Casana, en levantamiento y construcción, con seguimiento a 30, 60 y 90 días.</p>
+      </div>
+
+      <div class="block block-programa">
+        <span class="block-eyebrow">Programa</span>
+      </div>
+      <div class="multi-box programa-box" data-field="Programa"></div>
+
+      <div class="block block-cotizacion">
+        <span class="block-eyebrow">Cotización</span>
+      </div>
+
+      <span class="cot-label cot-label-base">Proyecto completo</span>
+      <div class="cot-frame base-frame"></div>
+
+      <span class="cot-label cot-label-discount">Descuento</span>
+      <span class="cot-sign-minus">&minus;$</span>
+      <div class="cot-frame discount-frame"></div>
+      <span class="cot-urgent-note">Descuento válido por 15 días</span>
+
+      <span class="cot-label cot-label-total">TOTAL</span>
+      <div class="cot-frame total-frame"></div>
+
+      <p class="cot-validity">Cotización válida por 30 días.</p>
+      <div class="cot-terms-box">
+        <span class="cot-terms-label">Importante</span>
+        <p class="cot-terms-text">Este servicio se presta bajo nuestros <a href="https://drive.google.com/file/d/1PA-ZSt4KnyY5dpxXzgkIk6-yfGlV2eF8/view?usp=drive_link" target="_blank" rel="noopener">términos y condiciones</a>. Al avanzar con esta propuesta, ambas partes los aceptan.</p>
+      </div>
+
+      <div class="cot-garantia-badge">
+        <span class="cot-garantia-tag">Garantía 30-60-90</span>
+        <p class="cot-garantia-text">Estamos contigo hasta que cada herramienta quede en uso.</p>
+      </div>
+
+      <div class="block block-notes-container">
+        <span class="block-eyebrow">Notas</span>
+      </div>
+      <div class="multi-box notas-box" data-field="Notas"></div>
+
+      <div class="partes-wrap">
+        <span class="partes-eyebrow">Valor por parte</span>
+        <div class="partes-cards">
+          <div class="parte-card acc-y">
+            <span class="parte-tag">Parte 1</span>
+            <b class="parte-name">Ventas y Marketing</b>
+            <p class="parte-det">Operativa del departamento</p>
+            <div class="parte-frame"></div>
+          </div>
+          <div class="parte-card acc-o">
+            <span class="parte-tag">Parte 2</span>
+            <b class="parte-name">Agente de IA</b>
+            <p class="parte-det">Agente de ventas por WhatsApp</p>
+            <div class="parte-frame"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Farmacia Casana · CAI-066</span>
+      </div>
+    </section>
+
+    <!-- 9 · Próximos pasos: qué hacer y a quién escribir (última slide) -->
+    <section class="slide s-next">
+      <span class="counter">08 / 08</span>
+      <p class="eyebrow">08 · Próximos pasos</p>
+      <h2>Tres pasos para arrancar.</h2>
+      <p class="sub">Esto es lo que sigue cuando Farmacia Casana confirme la propuesta.</p>
+
+      <div class="nx-steps">
+        <div class="nx-step acc-y">
+          <span class="nx-num">1</span>
+          <b>Responsable y arranque</b>
+          <p>Confirmamos con Farmacia Casana la fecha de arranque y quién coordina el proyecto desde su equipo.</p>
+        </div>
+        <div class="nx-step acc-o">
+          <span class="nx-num">2</span>
+          <b>Accesos y casos</b>
+          <p>El equipo comparte los reportes que autorice y ejemplos reales de solicitudes, sin datos de pacientes.</p>
+        </div>
+        <div class="nx-step acc-w">
+          <span class="nx-num">3</span>
+          <b>Reunión de arranque</b>
+          <p>Una hora para acordar el calendario de las dos áreas, el orden del trabajo y los accesos.</p>
+        </div>
+      </div>
+
+      <div class="nx-contact">
+        <div class="nx-card nx-ase">
+          <span class="nx-label">¿Dudas? Escribe a tu asesora comercial</span>
+          <b class="nx-name">Verónica Rubio</b>
+          <span class="nx-role">Asesora comercial</span>
+          <p class="nx-line"><a href="mailto:vrubio01@intezia.com">vrubio01@intezia.com</a></p>
+          <p class="nx-line">+58 422 3355505</p>
+        </div>
+        <div class="nx-card nx-emp">
+          <span class="nx-label">Intezia</span>
+          <p class="nx-line">Intezia C.A J-505657950</p>
+          <p class="nx-line"><a href="mailto:servicio@intezia.com">servicio@intezia.com</a></p>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Farmacia Casana · CAI-066</span>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

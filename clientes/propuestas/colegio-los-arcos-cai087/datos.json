@@ -1,0 +1,438 @@
+{
+ "version": 3,
+ "cliente": {
+  "nombre": "Colegio Los Arcos",
+  "slug": "colegio-los-arcos-cai087",
+  "codigo": "CAI-087",
+  "nombre_pie": "Los Arcos"
+ },
+ "division": "educacion",
+ "alianza": false,
+ "sin_horas_trabajo": true,
+ "meta_servicio": "habilidades",
+ "meta_tipo": "Habilidades · formación docente: 4 módulos, 12 h en total (6 h por grupo, 2 grupos de hasta 25), 50 docentes · seguimiento 30-60-90 · sin facilidad de pago · formato compacto v3",
+ "omitir": [
+  "pago"
+ ],
+ "vocabulario": {
+  "solucion": [
+   "entregable",
+   "entregables"
+  ],
+  "area": [
+   "módulo",
+   "módulos"
+  ]
+ },
+ "eje": "IA en el aula para 50 docentes en dos grupos: un asistente propio para planificar, corregir e informar, material visual y dinámico, evaluar y enseñar con alumnos que ya usan IA, y un plan personal de adopción con visión a 2030, todo con ejercicios sobre su propio material",
+ "origen": "Contexto de Ivana del 05/11/2026 (50 docentes; ejes del programa; seguimiento 30-60-90; visión 2030), PDF «Programa de Formación Docente 2026» de Intezia (contenido de referencia, no se concretó por el valor) y banco de casos de éxito de Intezia (formación de 50 docentes en 2024). Sin Ficha de Levantamiento ni transcripción",
+ "fuente_insumo": "Contexto de Ivana (05/11/2026) y programa docente 2026 de Intezia",
+ "siglas_ok": [
+  "IA"
+ ],
+ "portada": {
+  "titulo_lineas": [
+   "Docentes con tiempo para enseñar",
+   "y un aula renovada con IA"
+  ],
+  "titulo_destacado": "en {cliente_corto}",
+  "lead": "Un programa **puntual y práctico** para que los 50 docentes recuperen tiempo, renueven sus clases y evalúen con criterio, trabajando con su propio material.",
+  "hechos": [
+   {
+    "num": "50",
+    "texto": "docentes se formaron en 2024 en IA básica; ahora toca integrarla en el aula.",
+    "resuelto_por": [
+     "V-1",
+     "E-2"
+    ]
+   },
+   {
+    "num": "En casa",
+    "texto": "es donde hoy se planifica, se corrige y se informa a las familias.",
+    "resuelto_por": [
+     "T-1",
+     "T-2"
+    ]
+   },
+   {
+    "num": "A diario",
+    "texto": "los alumnos ya usan IA, y la evaluación tiene que cambiar con ellos.",
+    "resuelto_por": [
+     "E-1"
+    ]
+   }
+  ]
+ },
+ "carriles": [
+  {
+   "id": "doc",
+   "nombre": "Formación docente en IA",
+   "nombre_corto": "Programa",
+   "color": "amarillo"
+  }
+ ],
+ "areas": [
+  {
+   "id": "T",
+   "nombre": "Módulo 1 · Tiempo del docente",
+   "carril": "doc",
+   "frente": "A",
+   "para_que": "Tener un asistente propio que planifica, corrige e informa en minutos",
+   "soluciones": [
+    {
+     "id": "T-1",
+     "entregable": "Asistente de planificación con el estilo de Los Arcos",
+     "h": 1,
+     "fase": "F1",
+     "incluye": [
+      "Cada docente crea su asistente con el tono del colegio",
+      "Planifica su próxima unidad en minutos",
+      "Ajusta su plan anual y semanal"
+     ]
+    },
+    {
+     "id": "T-2",
+     "entregable": "Corrección, informes y comunicados en minutos",
+     "h": 1,
+     "fase": "F1",
+     "incluye": [
+      "Rúbrica y retroalimentación sobre trabajos de muestra",
+      "Informe de un grupo desde sus notas",
+      "Comunicado a las familias con el tono del colegio"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "V",
+   "nombre": "Módulo 2 · Material visual y dinámico",
+   "carril": "doc",
+   "frente": "A",
+   "para_que": "Convertir tus propias fuentes en material que atrape a los alumnos",
+   "soluciones": [
+    {
+     "id": "V-1",
+     "entregable": "Material visual y dinámico para una clase",
+     "h": 1,
+     "fase": "F2",
+     "incluye": [
+      "Cuaderno de estudio con tus fuentes: guía, resumen y audio",
+      "Presentación viva y video corto desde un guion",
+      "Infografía para explicar un concepto"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "E",
+   "nombre": "Módulo 3 · Evaluar y enseñar con IA",
+   "carril": "doc",
+   "frente": "A",
+   "para_que": "Evaluar y enseñar ahora que los alumnos ya usan IA todos los días",
+   "soluciones": [
+    {
+     "id": "E-1",
+     "entregable": "Evaluación del proceso, no solo del resultado",
+     "h": 1,
+     "fase": "F2",
+     "incluye": [
+      "Rúbrica que premia el proceso y el criterio",
+      "Preguntas de defensa oral sobre un trabajo",
+      "Qué hacer si un alumno entrega algo hecho con IA"
+     ]
+    },
+    {
+     "id": "E-2",
+     "entregable": "Clase que enseña con la IA de los alumnos",
+     "h": 1,
+     "fase": "F2",
+     "incluye": [
+      "Tutor que hace preguntas guía, sin dar la respuesta",
+      "Una misma clase en dos niveles: refuerzo y reto",
+      "Simulación con un personaje o escenario"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "Q",
+   "nombre": "Módulo 4 · Educación 2030",
+   "carril": "doc",
+   "frente": "A",
+   "para_que": "Salir con un plan personal de adopción y una mirada a 2030",
+   "soluciones": [
+    {
+     "id": "Q-1",
+     "entregable": "Plan personal de adopción y visión 2030",
+     "h": 1,
+     "fase": "F3",
+     "incluye": [
+      "Cómo será tu clase en 2030",
+      "Compromiso de uso a 30, 60 y 90 días",
+      "Prioridades de Los Arcos para los próximos años"
+     ]
+    }
+   ]
+  }
+ ],
+ "alcance": {
+  "titulo": "Cuatro módulos, más tiempo y un aula renovada.",
+  "subtitulo": "**12 horas** en total, 6 por grupo, y cada docente sale con algo hecho con su propio material.",
+  "fuera_alcance": [
+   "Licencias y cuentas de las herramientas de IA: las define y asume {cliente_corto}, aparte de esta inversión.",
+   "Datos de alumnos y familias: los ejercicios usan material propio del docente, sin información personal.",
+   "Reglamento y normas del colegio: se mantienen; el programa propone criterios, no cambia normas."
+  ]
+ },
+ "metodo": {
+  "titulo": "Así trabajamos con los docentes.",
+  "subtitulo": "Cada docente sale con algo hecho: se construye con su material, se prueba en clase y se adopta.",
+  "quien_construye": "Cada docente construye con su **propio material**; **Intezia guía** y nadie sale solo con teoría.",
+  "por_que_orden": "Primero se recupera el tiempo que más pesa; después se renueva la clase y se ajusta la evaluación; al final se mira hacia 2030.",
+  "pasos": [
+   {
+    "titulo": "Partimos",
+    "texto": "Del material propio de cada docente: su plan, su examen, su comunicado."
+   },
+   {
+    "titulo": "Construimos",
+    "texto": "Con IA, en el taller y con guía, algo listo para usar en clase."
+   },
+   {
+    "titulo": "Probamos",
+    "texto": "Cada docente lo prueba con sus grupos y lo ajusta."
+   },
+   {
+    "titulo": "Adoptamos",
+    "texto": "Pasa a su rutina; seguimos a 30, 60 y 90 días."
+   }
+  ],
+  "practica": [
+   {
+    "titulo": "Con material propio",
+    "texto": "Cada docente trabaja con sus planes, evaluaciones y comunicados reales."
+   },
+   {
+    "titulo": "El docente decide",
+    "texto": "La IA propone; el docente revisa y firma lo que usa con alumnos y familias."
+   },
+   {
+    "titulo": "Dos grupos de hasta 25",
+    "texto": "Los 50 docentes se reparten en dos grupos, con más práctica y atención por persona."
+   }
+  ],
+  "datos": "No se cargan datos personales de alumnos ni de familias: los ejercicios usan material propio del docente y las cuentas autorizadas por el colegio."
+ },
+ "logistica": {
+  "modalidad": "Presencial en el colegio; un esquema mixto si hace falta.",
+  "participantes": "50 docentes de {cliente_corto}, en dos grupos de hasta 25.",
+  "ritmo": "Se agenda sin interrumpir las clases, de acuerdo con la dirección.",
+  "arranque": "Apenas se confirme; una reunión corta, aparte, acuerda el calendario."
+ },
+ "fases": [
+  {
+   "id": "F1",
+   "titulo": "Tiempo",
+   "descripcion": "**planificar, corregir e informar**",
+   "medida": "4 h en total"
+  },
+  {
+   "id": "F2",
+   "titulo": "Aula",
+   "descripcion": "material visual, evaluar y enseñar",
+   "medida": "6 h en total",
+   "destacada": true
+  },
+  {
+   "id": "F3",
+   "titulo": "Visión",
+   "descripcion": "educación a 2030",
+   "medida": "2 h en total"
+  }
+ ],
+ "frentes": [
+  {
+   "id": "A",
+   "carril": "doc",
+   "nombre": "Equipo docente",
+   "medida": "12 horas",
+   "medida_meta": "6 por grupo, en 2 grupos",
+   "celdas": {
+    "F1": "Asistente propio de planificación, corrección e informes.",
+    "F2": "Material visual y dinámico, y evaluar y enseñar con IA.",
+    "F3": "Cierre con la mirada puesta en 2030."
+   },
+   "celdas_medida": {
+    "F1": "2 h por grupo",
+    "F2": "3 h por grupo",
+    "F3": "1 h por grupo"
+   }
+  }
+ ],
+ "ruta": {
+  "titulo": "Del tiempo recuperado a la visión 2030.",
+  "subtitulo": "El calendario y la división en grupos se acuerdan en la **reunión de arranque**.",
+  "hitos": [
+   {
+    "titulo": "Arranque · aparte",
+    "texto": "Reunión corta para acordar el calendario y los grupos."
+   },
+   {
+    "titulo": "Tiempo recuperado",
+    "texto": "Planificación, informes y comunicados listos, con material propio."
+   },
+   {
+    "titulo": "Aula renovada",
+    "texto": "Material visual y criterios de evaluación para usar en clase."
+   },
+   {
+    "titulo": "Visión 2030",
+    "texto": "Cierre con la visión de Los Arcos y el seguimiento en marcha."
+   }
+  ]
+ },
+ "seguimiento": {
+  "rango": "30, 60 y 90 días",
+  "texto": "Desde el cierre de la formación",
+  "items": [
+   {
+    "dias": "30 días",
+    "texto": "Uso real en clase"
+   },
+   {
+    "dias": "60 días",
+    "texto": "Nuevos usos y ajustes"
+   },
+   {
+    "dias": "90 días",
+    "texto": "Tiempo recuperado, medido"
+   }
+  ]
+ },
+ "entregables": {
+  "titulo": "Lo que recibe {cliente_corto}.",
+  "subtitulo": "Lo que se llevan: **material propio hecho por cada docente, tiempo recuperado y una visión a 2030**, más el seguimiento a {rango_seguimiento}.",
+  "etiqueta_transversales": "Para todo el programa",
+  "transversales": [
+   "Material hecho por cada docente con su propio contenido.",
+   "Seguimiento a 30, 60 y 90 días.",
+   "Certificado de participación INTEZIA."
+  ],
+  "etiqueta_valor": "Valor inmediato",
+  "valor_inmediato": [
+   "Un asistente propio y una planificación hechos en el taller.",
+   "Una clase con material visual y dinámico.",
+   "Una rúbrica para evaluar el proceso."
+  ]
+ },
+ "retorno": {
+  "modo": "metodo",
+  "posiciones": false,
+  "titulo": "Retorno esperado: el tiempo del docente, medido.",
+  "subtitulo": "Se mide contra el punto de partida de cada docente, sin cifras anticipadas.",
+  "etiqueta_pasos": "Cómo se calcula el retorno",
+  "pasos": [
+   {
+    "titulo": "Punto de partida",
+    "texto": "Horas por semana que cada docente dedica hoy a planificar, corregir e informar: encuesta breve al arrancar."
+   },
+   {
+    "titulo": "Material hecho",
+    "texto": "Qué docentes salen con planificación, material visual y criterios de evaluación propios."
+   },
+   {
+    "titulo": "Uso en clase",
+    "texto": "Cuántos lo usan con sus grupos durante los primeros 30 días."
+   },
+   {
+    "titulo": "Tiempo recuperado",
+    "texto": "Horas por semana a los 90 días frente al punto de partida: referencial, sin compromiso de resultado."
+   }
+  ],
+  "etiqueta_metas": "Calendario de seguimiento y medición",
+  "metas": [
+   {
+    "dias": "30 días",
+    "texto": "Desde el cierre: material en uso real en clase y punto de partida validado."
+   },
+   {
+    "dias": "60 días",
+    "texto": "Nuevos usos y ajustes; primeras horas recuperadas medidas."
+   },
+   {
+    "dias": "90 días",
+    "texto": "Tiempo recuperado por docente frente al punto de partida."
+   }
+  ],
+  "etiqueta_destino": "Hacia dónde va el programa",
+  "destino": [
+   {
+    "rotulo": "Tiempo para enseñar",
+    "texto": "El docente deja de **planificar y corregir en casa** para dedicarse a lo que solo él hace: inspirar."
+   },
+   {
+    "rotulo": "Aula renovada",
+    "texto": "Clases con **material visual y dinámico** que conecta con alumnos que viven en un mundo multimedia."
+   },
+   {
+    "rotulo": "Educación 2030",
+    "texto": "Una visión compartida de **cómo enseñar y evaluar** con IA en Los Arcos."
+   }
+  ],
+  "gancho": "Al cierre, {cliente_corto} sabrá cuánto tiempo recuperó cada docente y qué material nuevo usa en sus clases."
+ },
+ "inversion": {
+  "duracion": "**4 módulos** en tres fases, con seguimiento a {rango_seguimiento}. **12 horas** en total: 6 por grupo, en 2 grupos de hasta 25.",
+  "programa": [
+   "Servicio de Habilidades para {cliente_corto} ({codigo}).",
+   "Tiempo, material visual, evaluación y Educación 2030: 4 módulos.",
+   "50 docentes en dos grupos de hasta 25, con ejercicios sobre su propio material.",
+   "12 horas en total (6 por grupo), más seguimiento a 30, 60 y 90 días."
+  ],
+  "notas": [
+   "Licencias de las herramientas de IA: las define y asume {cliente_corto}, aparte de esta inversión."
+  ]
+ },
+ "proximos_pasos": {
+  "subtitulo": "Esto es lo que sigue cuando {cliente_corto} confirme la propuesta.",
+  "asesora": {
+   "nombre": "María Iribarren",
+   "cargo": "Directora comercial",
+   "correo": "miribarren@intezia.com",
+   "telefono": "+58 414 0570056"
+  },
+  "pasos": [
+   {
+    "titulo": "Revisión conjunta",
+    "texto": "Una reunión con la dirección para revisar la propuesta y ajustarla a lo que necesite el colegio."
+   },
+   {
+    "titulo": "Grupos y cuentas",
+    "texto": "{cliente_corto} define los grupos de docentes y deja listas las cuentas autorizadas."
+   },
+   {
+    "titulo": "Reunión de arranque",
+    "texto": "Una hora para acordar el calendario y pedir el material propio de cada docente."
+   }
+  ],
+  "etiqueta_contacto": "¿Dudas? Escribe a tu directora comercial"
+ },
+ "supuestos": [
+  "Pedido de Ivana (05/11/2026): propuesta de Habilidades CAI-087 para el Colegio Los Arcos, contacto María Iribarren (directora comercial). Educación, sin alianza, sin herramienta nombrada, sin facilidad de pago y con certificado de participación: confirmados con Ivana. Sin Ficha ni transcripción: el insumo es su contexto y el programa docente 2026 de Intezia.",
+  "Duración (propuesta mía; Ivana dijo «ustedes me dicen»): 6 h por grupo en 4 módulos (tiempo 2, material visual y dinámico 1, evaluar y enseñar 2, Educación 2030 1); con dos grupos de 25, el total es de 12 h de encuentro con los docentes (Ivana pidió ver el total). El programa 2026 era de 8 h y no se concretó por su valor. Las horas son de encuentro, no horas de trabajo de Intezia (§4.23); las horas de `datos.json` son marcadores técnicos.",
+  "50 docentes en dos grupos de hasta 25 (Luis Prieto, director, confirmó «en principio 50»; Ivana confirmó los dos grupos el 05/11/2026). Dato del cliente, así que se dice; el calendario se acuerda en el arranque, sin número de sesiones.",
+  "Hecho de la portada: la formación de 2024 (50 docentes) sale del banco de casos de éxito de Intezia (la fuente va en `origen`, no en la portada, por la regla del 29/10); los otros dos hechos («en casa» y «a diario») son contenido del programa y del contexto de Ivana, no mediciones de Los Arcos.",
+  "Contenido rediseñado (Ivana: no copiar el programa 2026): cada módulo es lo que el docente construye con su propio material (asistente propio, material visual y dinámico, rúbrica y tutor, plan personal de adopción). Del PDF 2026 se tomó la intención, no el temario: quedan fuera el repaso de fundamentos, la configuración del entorno, la taxonomía de Bloom y las tarjetas de agentes.",
+  "Herramienta de IA: no se nombra, pero las actividades están pensadas para lo que ofrece Gemini (Ivana supone que el colegio lo usa): asistente personalizado con el tono del colegio (Gems), cuaderno de estudio con fuentes propias, guía, resumen y audio (NotebookLM), presentaciones, video corto desde un guion e infografías, y tutor con preguntas guía. Si el colegio no tiene Gemini, se adaptan al arrancar. No se mencionan Gemini ni Microsoft for Startups.",
+  "Seguimiento 30-60-90 tipo Habilidades, adaptado a docentes: uso real en clase, nuevos usos y ajustes, tiempo recuperado medido contra una encuesta breve de inicio (método, sin cifras ni valor de la hora).",
+  "Contacto de María: miribarren@intezia.com (el PDF de 2026 traía maria@intezia.com). El director es Luis Prieto; el deck no lo nombra.",
+  "Sin valor, descuento ni total en el repositorio: campos vacíos para ventas. El colegio está corto de presupuesto: el valor accesible lo fija ventas."
+ ],
+ "pendientes": [
+  "Confirmar con Ivana las 12 h en total (6 por grupo) y el reparto entre los cuatro módulos.",
+  "Confirmar la modalidad (presencial en el colegio) y si el colegio usa Gemini (y quién contrata las cuentas), para ajustar las actividades.",
+  "Valor, descuento y total: campos vacíos para ventas; moneda de facturación por confirmar.",
+  "Confirmar el correo de María (miribarren@ o maria@) y si el director, Luis Prieto, debe aparecer.",
+  "Confirmar si se quiere citar la formación de 2024 como hecho de la portada."
+ ]
+}

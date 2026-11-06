@@ -1,0 +1,583 @@
+{
+ "version": 3,
+ "cliente": {
+  "nombre": "Banco Nacional de Crédito (BNC) · Crece con BNC",
+  "slug": "bnc-emprendedores",
+  "codigo": "TA-039",
+  "nombre_pie": "Crece con BNC"
+ },
+ "division": "educacion",
+ "alianza": false,
+ "eje": "Paquetes de 4, 8 o 16 cápsulas cortas de IA para los emprendedores de la comunidad Crece con BNC, con un webinar online o una charla presencial de cortesía",
+ "origen": "Reunión con el área de Desarrollo de Negocios e Innovación del BNC (programa Crece con BNC), levantamiento comercial de María Iribarren y criterio técnico de producción de Ivana.",
+ "fuente_insumo": "Resumen de la transcripción de la reunión con el BNC y levantamiento comercial; respuestas de Ivana del 27/10/2026.",
+ "meta_tipo": "Paquetes de 4, 8 y 16 cápsulas con IA (1, 2 y 4 horas de video) y webinar o charla de cortesía de 2 horas · 6 áreas para elegir · formato compacto v3",
+ "siglas_ok": [
+  "BNC",
+  "PDF"
+ ],
+ "omitir": [
+  "pago"
+ ],
+ "vocabulario": {
+  "solucion": [
+   "entregable",
+   "entregables"
+  ],
+  "area": [
+   "bloque",
+   "bloques"
+  ]
+ },
+ "supuestos": [
+  "Los temas de cada cápsula son una propuesta de Intezia a partir de las áreas y los ejemplos que pidió el BNC (manual de marca, presentaciones, contenido para redes, edición de video con Claude, página web con IA, ventas); el BNC los confirma al aprobar.",
+  "24 cápsulas de 13 a 15 minutos cada una (criterio interno de Ivana, 27/10/2026; no se muestra en el deck): Ventas 5, Marketing 5, Página web con IA 3, Operaciones 4, Finanzas y administración 4 y Talento humano 3. El deck solo dice cuántas cápsulas hay por área, en la lámina de la ruta (excepción puntual a la regla del 20/10/2026).",
+  "Horas del deck (Ivana, 27/10/2026): no se muestran horas de trabajo de Intezia ni minutos u horas de video. Solo la cantidad de cápsulas por área y lote (lámina 3: Lote 1 con 9, Lote 2 con 8 y Lote 3 con 7) y las horas del taller asíncrono (de 2 a 3 h). Referencia interna: 24 × 13 a 15 min = de 5 h 12 min a 6 h de video, más el taller (total de 7 h 12 min a 9 h), si el taller trae contenido propio.",
+  "Lote 1: 9 cápsulas de Marketing, página web y Ventas. Los lotes 2 y 3 reparten el resto: el reparto es propuesta de Intezia, por confirmar. Si la aprobación llega con poco margen antes del lanzamiento del portal, el Lote 1 se acotaría (Marketing y web primero, Ventas después); ya no consta en el deck.",
+  "Taller online asíncrono (TA-039, con certificado de Intezia; no es CU-, que exigiría acreditación con un aliado): recorrido de 2 a 3 h con videos de introducción y cierre, práctica, evaluaciones por módulo y banco de preguntas, guía y certificado. Su producción es interna y no se muestra en horas.",
+  "El recorrido del taller (de 2 a 3 horas) incluye videos, práctica y evaluaciones.",
+  "Sin plan de pago ni seguimiento a 30, 60 y 90 días: no se pidieron y la facilidad de pago se omite por defecto. La hoja de inversión va por partes (cápsulas cortas y taller online) con los montos vacíos para ventas.",
+  "Sin nombres de personas del BNC ni de Intezia en el deck. La persona de la dirección de Intezia que participa en algunas grabaciones se confirma según su agenda.",
+  "No se mencionan herramientas específicas, salvo la edición de video con Claude (aprobada por Ivana): cada cápsula dice qué herramienta usa.",
+  "Webinar colaborativo (gratuito para el BNC) y alianza de marca a evaluar: no constan en el deck por indicación de Ivana (27/10/2026); los temas propuestos del webinar están en brief.md.",
+  "Ivana (27/10/2026): la propuesta se presenta como de 9 horas de contenido (tope del cálculo interno: hasta 6 h de video de cápsulas más hasta 3 h del taller).",
+  "Ajuste del 28/10/2026 (Ivana): se ofrece por paquetes de 4 cápsulas de 15 min (1 h de video). Esta vez la propuesta es un solo paquete, que el BNC arma con cápsulas de una sola área o una de cada área, escogidas entre las seis áreas (el catálogo de 24 temas queda visible como menú). Sin lotes, sin «24 cápsulas» y sin «9 horas». La hoja de inversión lleva el valor del paquete y el valor del taller en casillas separadas a la izquierda (inversion.partes) y el total a la derecha; ventas llena los montos. El taller sigue como parte aparte, ahora de 2 h (antes de 2 a 3 h), con evaluaciones y certificado como antes (confirmar con Ivana). Las horas internas de programa.md aún cuentan el catálogo entero, no el paquete.",
+  "Ajuste del 28/10/2026 (Ivana, segunda vez): se ofrecen tres paquetes de cápsulas de 15 min, de 4, 8 y 16 (1, 2 y 4 horas de video), que el BNC arma de una sola área o de varias entre las seis áreas. Se elimina el taller online asíncrono; en su lugar va un webinar online o una charla presencial de cortesía, de 2 h, con formato a elección del BNC; la cantidad de asistentes se calcula según el formato (no se indica en el deck). Los tres paquetes son opciones alternativas: la hoja de inversión lleva tres casillas de valor a la izquierda y un total que escribe ventas (opción inversion.sin_suma, sin suma automática). Las horas internas de programa.md siguen contando el catálogo entero.",
+  "Ajuste del 28/10/2026 (Ivana, tercera vez): se quita de la hoja de cotización el renglón «Total del paquete elegido» (PrecioBase); quedan las tres opciones, el descuento y el total que escribe ventas (Descuento y Total suben a la posición de esa fila: `.s-price.sin-base` en overrides.css y rects en agregar-campo-precio.py). En la ruta se quitan las celdas «Sin entregas en esta fase» al pasar a una sola fila con tres etapas: levantamiento previo, cápsulas y cortesía. Se añade una reunión de levantamiento previo de 1 h, distinta de la reunión de arranque, para validar el contenido (se escribe «reunión» y no «sesión», que el generador bloquea por §4.23). Son horas con el cliente."
+ ],
+ "pendientes": [
+  "Confirmar con el BNC los temas de cada cápsula y revisar el temario de Nivel 1 y Nivel 2: Marketing es donde más puede repetirse.",
+  "Confirmar qué 12 cápsulas forman el taller y el reparto de las 18 horas adicionales.",
+  "Definir el plazo de actualización del contenido si una herramienta cambia (se acuerda al aprobar).",
+  "Producir el Loom de muestra: una cápsula de Marketing de 5 a 7 minutos, con porqué, paso a paso y resultado.",
+  "Fecha y temas del webinar colaborativo, con el BNC.",
+  "Montos de la hoja de inversión: los aprueba María antes de enviar."
+ ],
+ "portada": {
+  "titulo_lineas": [
+   "Negocios sólidos con IA",
+   "construidos desde cero por"
+  ],
+  "titulo_destacado": "emprendedores de Crece con BNC",
+  "lead": "Cápsulas de 15 minutos en **paquetes de 4, 8 o 16**, a elegir entre **ventas, marketing, página web, operaciones, finanzas y talento humano**, y un webinar o una charla de cortesía.",
+  "hechos": [
+   {
+    "num": "+13.000",
+    "texto": "personas en la comunidad de Crece con BNC, en todo el país.",
+    "resuelto_por": [
+     "VE1",
+     "MK1",
+     "WB2"
+    ]
+   },
+   {
+    "num": "70 %",
+    "texto": "son emprendedores que ya venden, pero no saben qué hacer para crecer.",
+    "resuelto_por": [
+     "VE5",
+     "FA1",
+     "OP1"
+    ]
+   },
+   {
+    "num": "1 hora",
+    "texto": "es lo máximo que caben en sus encuentros presenciales: por eso, cápsulas cortas de 15 minutos.",
+    "resuelto_por": [
+     "MK3",
+     "CO1"
+    ]
+   }
+  ]
+ },
+ "carriles": [
+  {
+   "id": "caps",
+   "nombre": "Cápsulas cortas y cortesía",
+   "nombre_corto": "Cápsulas y cortesía",
+   "color": "amarillo"
+  }
+ ],
+ "areas": [
+  {
+   "id": "LV",
+   "nombre": "Levantamiento previo",
+   "carril": "caps",
+   "frente": "A",
+   "para_que": "Validar con el BNC el contenido antes de producir.",
+   "soluciones": [
+    {
+     "id": "LV1",
+     "entregable": "Reunión de levantamiento previo",
+     "h": 1,
+     "fase": "F1",
+     "incluye": [
+      "Validar el contenido de las cápsulas con el BNC",
+      "Confirmar los temas del paquete elegido"
+     ],
+     "detalle": "Reunión de 1 h con el BNC, aparte de la reunión de arranque. Se valida el contenido de las cápsulas y se confirman los temas del paquete elegido antes de producir. Entrega el contenido validado."
+    }
+   ]
+  },
+  {
+   "id": "VE",
+   "nombre": "Ventas",
+   "carril": "caps",
+   "frente": "A",
+   "para_que": "Vender más y organizar el área comercial.",
+   "soluciones": [
+    {
+     "id": "VE1",
+     "entregable": "Cómo ordenar tus clientes y ventas",
+     "h": 8,
+     "fase": "F2"
+    },
+    {
+     "id": "VE2",
+     "entregable": "Respuestas a clientes en minutos",
+     "h": 8,
+     "fase": "F2"
+    },
+    {
+     "id": "VE3",
+     "entregable": "Cotizaciones y propuestas listas",
+     "h": 8,
+     "fase": "F2"
+    },
+    {
+     "id": "VE4",
+     "entregable": "Seguimiento para no perder ventas",
+     "h": 8,
+     "fase": "F2"
+    },
+    {
+     "id": "VE5",
+     "entregable": "Tu plan de ventas del mes",
+     "h": 8,
+     "fase": "F2"
+    }
+   ]
+  },
+  {
+   "id": "MK",
+   "nombre": "Marketing",
+   "carril": "caps",
+   "frente": "A",
+   "para_que": "Marca, presentaciones, redes y video con IA.",
+   "soluciones": [
+    {
+     "id": "MK1",
+     "entregable": "Manual de marca de tu negocio",
+     "h": 8,
+     "fase": "F2"
+    },
+    {
+     "id": "MK2",
+     "entregable": "Presentación de tu negocio",
+     "h": 8,
+     "fase": "F2"
+    },
+    {
+     "id": "MK3",
+     "entregable": "Contenido para redes en una tarde",
+     "h": 8,
+     "fase": "F2"
+    },
+    {
+     "id": "MK4",
+     "entregable": "Edición de video con Claude",
+     "h": 8,
+     "fase": "F2"
+    },
+    {
+     "id": "MK5",
+     "entregable": "Calendario de contenido del mes",
+     "h": 8,
+     "fase": "F2"
+    }
+   ]
+  },
+  {
+   "id": "WB",
+   "nombre": "Página web con IA",
+   "carril": "caps",
+   "frente": "A",
+   "para_que": "Construir la página web con IA y publicarla.",
+   "soluciones": [
+    {
+     "id": "WB1",
+     "entregable": "Estructura y textos de tu página",
+     "h": 8,
+     "fase": "F2"
+    },
+    {
+     "id": "WB2",
+     "entregable": "Tu página web construida con IA",
+     "h": 8,
+     "fase": "F2"
+    },
+    {
+     "id": "WB3",
+     "entregable": "Publicar y mejorar tu página",
+     "h": 8,
+     "fase": "F2"
+    }
+   ]
+  },
+  {
+   "id": "OP",
+   "nombre": "Operaciones",
+   "carril": "caps",
+   "frente": "A",
+   "para_que": "Ordenar procesos y tareas para ganar tiempo.",
+   "soluciones": [
+    {
+     "id": "OP1",
+     "entregable": "Mapa de los procesos de tu negocio",
+     "h": 8,
+     "fase": "F2"
+    },
+    {
+     "id": "OP2",
+     "entregable": "Control de inventario y pedidos",
+     "h": 8,
+     "fase": "F2"
+    },
+    {
+     "id": "OP3",
+     "entregable": "Atención al cliente con plantillas",
+     "h": 8,
+     "fase": "F2"
+    },
+    {
+     "id": "OP4",
+     "entregable": "Lista de tareas y rutinas del día",
+     "h": 8,
+     "fase": "F2"
+    }
+   ]
+  },
+  {
+   "id": "FA",
+   "nombre": "Finanzas y administración",
+   "carril": "caps",
+   "frente": "A",
+   "para_que": "Llevar ingresos, gastos y caja con orden.",
+   "soluciones": [
+    {
+     "id": "FA1",
+     "entregable": "Control de ingresos y gastos",
+     "h": 8,
+     "fase": "F2"
+    },
+    {
+     "id": "FA2",
+     "entregable": "Cálculo de lo que ganas por producto",
+     "h": 8,
+     "fase": "F2"
+    },
+    {
+     "id": "FA3",
+     "entregable": "Flujo de caja del mes",
+     "h": 8,
+     "fase": "F2"
+    },
+    {
+     "id": "FA4",
+     "entregable": "Facturas, recibos y orden de pagos",
+     "h": 8,
+     "fase": "F2"
+    }
+   ]
+  },
+  {
+   "id": "TH",
+   "nombre": "Talento humano",
+   "carril": "caps",
+   "frente": "A",
+   "para_que": "Prepararse para contratar y organizar al equipo.",
+   "soluciones": [
+    {
+     "id": "TH1",
+     "entregable": "Aviso de empleo y perfil del cargo",
+     "h": 8,
+     "fase": "F2"
+    },
+    {
+     "id": "TH2",
+     "entregable": "Guía de bienvenida para tu equipo",
+     "h": 8,
+     "fase": "F2"
+    },
+    {
+     "id": "TH3",
+     "entregable": "Tareas y metas de tu equipo",
+     "h": 8,
+     "fase": "F2"
+    }
+   ]
+  },
+  {
+   "id": "CO",
+   "nombre": "Cortesía",
+   "carril": "caps",
+   "frente": "A",
+   "para_que": "De cortesía, en el formato que el BNC prefiera.",
+   "soluciones": [
+    {
+     "id": "CO1",
+     "entregable": "Webinar online o charla presencial",
+     "h": 2,
+     "fase": "F3",
+     "incluye": [
+      "El BNC escoge el formato: online o presencial",
+      "Dura 2 horas, de cortesía"
+     ],
+     "detalle": "Evento de 2 h, de cortesía. El BNC escoge el formato: webinar online o charla presencial, y la cantidad de asistentes se calcula según el formato. No tiene costo y no cambia el valor de los paquetes."
+    }
+   ]
+  }
+ ],
+ "alcance": {
+  "titulo": "Paquetes de 4, 8 y 16 cápsulas, a elegir.",
+  "subtitulo": "Tres paquetes de cápsulas de 15 minutos, de una o varias áreas, y una cortesía de 2 horas.",
+  "fuera_alcance": [
+   "La carga y configuración en el portal: las hace la empresa externa del BNC; nosotros entregamos los archivos.",
+   "Las licencias de las herramientas que usen los participantes y el soporte a ellos.",
+   "Una ronda de revisión por cápsula está incluida; más rondas y actualizar el contenido si una herramienta cambia se acuerdan antes."
+  ]
+ },
+ "metodo": {
+  "titulo": "Así producimos cada cápsula.",
+  "subtitulo": "Siempre con el porqué primero y un resultado hecho al final.",
+  "quien_construye": "Consultores de Intezia graban cada área; alguien de la dirección de Intezia podrá participar en algunas cápsulas de Marketing, según su agenda.",
+  "practica": [
+   {
+    "titulo": "En pantalla, paso a paso",
+    "texto": "Se construye en vivo, con la pantalla y la cámara al lado, como un tutorial."
+   },
+   {
+    "titulo": "El porqué primero",
+    "texto": "Cada cápsula abre con lo que gana el negocio: visibilidad, clientes o tiempo."
+   },
+   {
+    "titulo": "La herramienta a la vista",
+    "texto": "Cada cápsula dice qué herramienta usa y si funciona en su plan gratuito."
+   }
+  ],
+  "datos": "Las cápsulas usan datos de muestra y negocios pequeños de ejemplo: nunca información de clientes del BNC ni de los participantes.",
+  "pasos": [
+   {
+    "titulo": "Porqué",
+    "texto": "Qué gana el negocio con la cápsula."
+   },
+   {
+    "titulo": "Paso a paso",
+    "texto": "Se hace en pantalla, con cámara."
+   },
+   {
+    "titulo": "Resultado",
+    "texto": "El emprendedor termina con algo listo para usar."
+   },
+   {
+    "titulo": "Revisión",
+    "texto": "Una ronda con el BNC antes de publicar."
+   }
+  ],
+  "por_que_orden": "Primero el porqué, para que el emprendedor vea el valor; después el paso a paso y, al final, un resultado que ya puede usar en su negocio."
+ },
+ "logistica": {
+  "modalidad": "Video y guía por cápsula; versión presencial de 45 a 60 minutos.",
+  "participantes": "Emprendedores y pymes de la comunidad Crece con BNC.",
+  "arranque": "Con la aprobación del BNC y el paquete elegido, se empieza a producir.",
+  "ritmo": "Las cápsulas se entregan juntas, con su guía, listas para publicar."
+ },
+ "fases": [
+  {
+   "id": "F1",
+   "titulo": "Levantamiento previo",
+   "descripcion": "**Reunión de 1 hora**"
+  },
+  {
+   "id": "F2",
+   "titulo": "Cápsulas",
+   "descripcion": "**Paquete de 4, 8 o 16 cápsulas**",
+   "destacada": true
+  },
+  {
+   "id": "F3",
+   "titulo": "Cortesía",
+   "descripcion": "**Webinar o charla de 2 horas**"
+  }
+ ],
+ "frentes": [
+  {
+   "id": "A",
+   "carril": "caps",
+   "nombre": "Paquete de cápsulas",
+   "celdas": {
+    "F1": "Una reunión de 1 hora, aparte del arranque, para validar el contenido.",
+    "F2": "Tres paquetes: 4 cápsulas (1 h de video), 8 (2 h) o 16 (4 h), de una o varias áreas.",
+    "F3": "Un webinar online o una charla presencial, a elección del BNC."
+   },
+   "medida": "4·8·16",
+   "medida_meta": "cápsulas de 15 min, a elegir",
+   "celdas_medida": {
+    "F1": "1 hora",
+    "F2": "4, 8 o 16 cápsulas",
+    "F3": "2 horas, de cortesía"
+   }
+  }
+ ],
+ "ruta": {
+  "titulo": "De las cápsulas elegidas a la cortesía.",
+  "subtitulo": "El calendario se acuerda en la reunión de arranque. Las cápsulas se entregan con sus videos y descargables.",
+  "hitos": [
+   {
+    "titulo": "Aprobación del BNC",
+    "texto": "El BNC aprueba el alcance, escoge el paquete e indica el formato de archivos de su portal."
+   },
+   {
+    "titulo": "Levantamiento previo",
+    "texto": "Reunión de 1 hora, aparte del arranque, para validar el contenido y los temas."
+   },
+   {
+    "titulo": "Cápsulas producidas",
+    "texto": "Las cápsulas de 15 minutos, con su guía, listas para publicar."
+   },
+   {
+    "titulo": "Webinar o charla",
+    "texto": "De cortesía: 2 horas, en línea o presencial, según el formato que escoja el BNC."
+   }
+  ],
+  "nota": ""
+ },
+ "seguimiento": {
+  "tipo": "ninguno"
+ },
+ "entregables": {
+  "titulo": "Lo que recibe el BNC.",
+  "subtitulo": "Lo que se llevan: **cápsulas en video con su guía descargable**, en paquetes de 4, 8 o 16, y un webinar o charla de cortesía.",
+  "etiqueta_transversales": "Para todo el proyecto",
+  "transversales": [
+   "Versión presencial de 45 a 60 min para sus eventos.",
+   "Archivos para el portal, en el formato que indique el BNC.",
+   "Una ronda de revisión por cápsula."
+  ],
+  "etiqueta_valor": "Valor inmediato",
+  "valor_inmediato": [
+   "Con el paquete: cápsulas a elegir entre seis áreas.",
+   "En cada cápsula: algo hecho y listo para usar.",
+   "De cortesía: un webinar online o una charla presencial."
+  ]
+ },
+ "retorno": {
+  "modo": "metodo",
+  "posiciones": false,
+  "titulo": "Retorno esperado: valor para el negocio.",
+  "subtitulo": "Cada cápsula dice qué gana el negocio y deja algo hecho: así el emprendedor ve su valor al terminar.",
+  "etiqueta_pasos": "Cómo se mide el valor de cada cápsula",
+  "pasos": [
+   {
+    "titulo": "Qué gana el negocio",
+    "texto": "Al abrir, la cápsula dice si el resultado es visibilidad, clientes o tiempo."
+   },
+   {
+    "titulo": "Tiempo actual",
+    "texto": "El emprendedor anota cuánto tarda hoy en esa tarea: es su **línea base**."
+   },
+   {
+    "titulo": "Tiempo con la cápsula",
+    "texto": "Lo que tarda la misma tarea al aplicar el paso a paso."
+   },
+   {
+    "titulo": "Resultado hecho",
+    "texto": "Lo que queda listo para usar: un manual, una página, un plan."
+   }
+  ],
+  "etiqueta_metas": "Qué queda hecho al cerrar cada entrega",
+  "metas": [
+   {
+    "dias": "Cada cápsula",
+    "texto": "Un resultado hecho y listo para usar en el negocio."
+   },
+   {
+    "dias": "Cada área",
+    "texto": "Una guía descargable con el porqué, los pasos y las instrucciones usadas."
+   },
+   {
+    "dias": "La cortesía",
+    "texto": "Un webinar o una charla de 2 horas, de cortesía."
+   }
+  ],
+  "etiqueta_destino": "Hacia dónde va el programa",
+  "destino": [
+   {
+    "rotulo": "Emprendedores con criterio",
+    "texto": "Cada cápsula deja una práctica que el emprendedor puede repetir **sin ayuda**."
+   },
+   {
+    "rotulo": "Un portal con más valor",
+    "texto": "Contenido práctico para **cada área** del negocio, producido una vez y usado en dos formatos."
+   },
+   {
+    "rotulo": "Más adelante",
+    "texto": "Contenido para jóvenes de 16 a 20 años, que el BNC ya tiene en proyecto."
+   }
+  ],
+  "gancho": "Al cerrar el paquete, el BNC tendrá sus cápsulas con descargables listas para su portal, y cada emprendedor, algo hecho para su negocio."
+ },
+ "inversion": {
+  "sin_garantia": true,
+  "partes": [
+   {
+    "nombre": "4 cápsulas",
+    "detalle": "1 hora de video"
+   },
+   {
+    "nombre": "8 cápsulas",
+    "detalle": "2 horas de video"
+   },
+   {
+    "nombre": "16 cápsulas",
+    "detalle": "4 horas de video"
+   }
+  ],
+  "duracion": "Un levantamiento previo de 1 hora, paquetes de 4, 8 o 16 cápsulas (1, 2 o 4 horas de video), con los archivos listos para el portal del BNC, y un webinar o una charla de cortesía de 2 horas.",
+  "programa": [
+   "Servicio de Habilidades para {cliente_corto} ({codigo}).",
+   "Levantamiento previo de 1 hora, aparte del arranque, para validar el contenido.",
+   "Cada paquete: cápsulas de 15 minutos con guía, de una o varias áreas.",
+   "Webinar online o charla presencial de 2 horas, de cortesía."
+  ],
+  "notas": [
+   "Licencias aparte: las herramientas que usen los participantes no se incluyen en esta inversión.",
+   "Derechos: el contenido es autoría de Intezia, con uso del BNC en su portal.",
+   "Términos y condiciones: los del enlace de «Importante», que ambas partes aceptan al avanzar con esta propuesta."
+  ],
+  "etiqueta_partes": "Valor por paquete",
+  "hoja_paquetes": true
+ },
+ "proximos_pasos": {
+  "asesora": {
+   "nombre": "María Iribarren",
+   "cargo": "Directora comercial",
+   "telefono": "+58 414-0570056",
+   "correo": "miribarren@intezia.com"
+  },
+  "pasos": [
+   {
+    "titulo": "Confirmar el alcance",
+    "texto": "El BNC elige el paquete, los temas y el formato de la cortesía."
+   },
+   {
+    "titulo": "Levantamiento previo",
+    "texto": "Una reunión de 1 hora, aparte de la de arranque, para validar el contenido y el formato del portal."
+   },
+   {
+    "titulo": "Reunión de arranque",
+    "texto": "De unos 30 minutos, para definir el calendario de entrega."
+   }
+  ]
+ },
+ "sin_horas_trabajo": true
+}

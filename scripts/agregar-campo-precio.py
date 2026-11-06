@@ -525,10 +525,11 @@ STEPS_FIELDS = [
 # lateral, 69 px del borde superior y de 36 px de alto; px × 0,75 = pt):
 #   y2 = 595 − (534 + 69)·0,75 = 142,75   ·   y1 = 595 − (534 + 69 + 36)·0,75 = 115,75
 # build_field() escribe /Rect como enteros (NumberObject): se redondea al entero más cercano (error máx. 0,25 pt) en vez de truncar.
-def _partes_field(n, x1, x2):
+def _partes_field(n, x1, x2, opciones=False):
     return {
         "name": f"PrecioParte{n}",
-        "tooltip": f"Valor de la parte {n} (editable). La suma de las partes se calcula en la caja de la derecha.",
+        "tooltip": (f"Valor de la opción {n} (editable). El total de la opción elegida lo escribe ventas en la caja de la derecha."
+                    if opciones else f"Valor de la parte {n} (editable). La suma de las partes se calcula en la caja de la derecha."),
         "rect": (x1, 116, x2, 143),
         "font_size": 14,
         "font_color": "0 g",
@@ -547,24 +548,101 @@ def partes_cantidad(page) -> int:
         texto = re.sub(r"\s+", "", (page.extract_text() or "")).casefold()
     except Exception:
         texto = ""
-    nums = [int(x) for x in re.findall(r"parte(\d+)", texto)]
+    nums = [int(x) for x in re.findall(r"(?:parte|opci[oó]n)(\d)", texto)]
     return max(nums) if nums and max(nums) in (2, 3, 4) else 0
+
+
+def partes_son_opciones(page) -> bool:
+    """True si las cajas son opciones alternativas («Opción N», inversion.sin_suma): el total lo escribe ventas y no se suma."""
+    try:
+        texto = re.sub(r"\s+", "", (page.extract_text() or "")).casefold()
+    except Exception:
+        texto = ""
+    return bool(re.search(r"opci[oó]n\d+", texto)) and not re.search(r"parte\d+", texto)
+
+
+# Variante «hoja por paquetes» (TA-039, 2026-10-28; inversion.hoja_paquetes del generador): Duración y Programa arriba, Notas, y por
+# paquete (de 2 a 4, uno al lado del otro) Precio, Descuento y Precio total. Geometría = overrides.css de la propuesta
+# (.s-price-paq): Programa top=140 left=580 w=480 h=112; Notas top=284 left=64 w=996 h=64 (marcos dibujados 6 px por fuera); tarjetas top=384, 246 px de alto,
+# ancho (1011 − 16·(n−1))/n; cajas a 14 px del borde lateral: Valor top=452 h=32, Descuento top=508 h=32, Total top=564 h=44.
+# y_pt = 595 − px·0,75. Se activa con las etiquetas «Valor por paquete» y «Opción N» (boceto de Ivana).
+def paquetes_cantidad(page) -> int:
+    try:
+        texto = re.sub(r"\s+", "", (page.extract_text() or "")).casefold()
+    except Exception:
+        texto = ""
+    if "valorporpaquete" not in texto:
+        return 0
+    nums = [int(x) for x in re.findall(r"(?:paquete|opci[oó]n)(\d)", texto)]
+    return max(nums) if nums and max(nums) in (2, 3, 4) else 0
+
+
+def make_paquete_total_js(i: int) -> str:
+    parse = (
+        'function nv(v){var s=String(v).replace(/[^0-9.,\\-]/g,"");'
+        'if(/^-?\\d{1,3}(\\.\\d{3})+(,\\d+)?$/.test(s)){s=s.replace(/\\./g,"").replace(",",".");}'
+        'else{s=s.replace(",",".");}return parseFloat(s)||0;}'
+    )
+    return (parse + f'var p=nv(this.getField("PaqPrecio{i}").value);var d=Math.abs(nv(this.getField("PaqDescuento{i}").value));'
+            'if(p===0&&d===0){event.value="";}else{event.value=(p-d).toFixed(0);}')
+
+
+def paquetes_fields(n):
+    gap = 16.0
+    w = (1011.0 - gap * (n - 1)) / n
+    campos = []
+    for i in range(n):
+        left = 56.0 + i * (w + gap)
+        x1, x2 = round((left + 14) * 0.75), round((left + w - 14) * 0.75)
+        base = {"font_color": "0 g", "quadding": 1, "multiline": False, "readonly": False, "default": "", "calc_action": False}
+        campos.append({**base, "name": f"PaqPrecio{i + 1}", "tooltip": f"Valor de la opción {i + 1} (editable).",
+                       "rect": (x1, 232, x2, 256), "font_size": 14})
+        campos.append({**base, "name": f"PaqDescuento{i + 1}", "tooltip": f"Descuento de la opción {i + 1} (editable).",
+                       "rect": (x1, 190, x2, 214), "font_size": 14})
+        campos.append({**base, "name": f"PaqTotal{i + 1}", "tooltip": f"Total de la opción {i + 1}: valor menos descuento (autocalculado; editable a mano).",
+                       "rect": (x1, 139, x2, 172), "font_size": 20, "calc_action": True, "calc_js": make_paquete_total_js(i + 1)})
+    return campos
 
 
 def precio_fields(page):
     """Hoja estándar (PRECIO_FIELDS) o, si la página trae partes, las cajas PrecioParteN + PrecioBase como suma. El orden
     importa: /CO calcula PrecioBase (suma) antes que PrecioTotal (base − descuento)."""
+    np_ = paquetes_cantidad(page)
+    if np_:
+        resto = []
+        for spec in PRECIO_FIELDS:
+            if spec["name"] == "Programa":
+                spec = {**spec, "rect": (435, 406, 795, 490)}
+            elif spec["name"] == "Notas":
+                spec = {**spec, "rect": (48, 334, 795, 382)}
+            else:
+                continue
+            resto.append(spec)
+        return paquetes_fields(np_) + resto
     n = partes_cantidad(page)
     if not n:
         return PRECIO_FIELDS
     gap = 12.0
     w = (480.0 - gap * (n - 1)) / n
+    opciones = partes_son_opciones(page)
     partes = []
     for i in range(n):
         left = 56.0 + i * (w + gap)
-        partes.append(_partes_field(i + 1, round((left + 13) * 0.75), round((left + w - 13) * 0.75)))
+        partes.append(_partes_field(i + 1, round((left + 13) * 0.75), round((left + w - 13) * 0.75), opciones))
     resto = []
     for spec in PRECIO_FIELDS:
+        if opciones:
+            # Opciones alternativas (inversion.sin_suma): sin caja de total de la opción; Descuento y Total suben 98 px (73,5 pt)
+            # a la posición de esa fila (overrides.css de la propuesta: .s-price.sin-base). El Total lo escribe ventas (sin cálculo).
+            if spec["name"] == "PrecioBase":
+                continue
+            if spec["name"] == "Descuento":
+                spec = {**spec, "rect": (435, 397, 800, 430)}
+            elif spec["name"] == "PrecioTotal":
+                spec = {**spec, "rect": (435, 301, 800, 358), "calc_action": False,
+                        "tooltip": "Total de la opción elegida (lo escribe ventas, ya con el descuento si aplica)."}
+            resto.append(spec)
+            continue
         if spec["name"] == "PrecioBase":
             spec = {**spec,
                     "tooltip": "Suma de las partes (autocalculada). Si no hay valores por parte, puede escribirse a mano.",

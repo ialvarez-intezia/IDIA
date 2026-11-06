@@ -1,0 +1,467 @@
+<!doctype html>
+<!--
+  Propuesta · Fiat · Servicio de Habilidades (CAI-081)
+  División: Educación · Servicio: Habilidades (§4.1a) · Alianza: no
+  GENERADO por scripts/generar-habilidades-compacto.py (plantilla 3.0 (2026-10-08), formato habilidades) desde datos.json.
+  No editar a mano: editar datos.json y regenerar. Estilos propios del deck: overrides.css.
+  Fuente del insumo: Ficha de Levantamiento (registro 02/11/2026) y contexto de Flavia Martínez (sin transcripción de la reunión)
+
+  Formato compacto de 8 slides, en el orden de las preguntas del cliente (Ventas, 2026-10-07), sin semanas, sesiones
+  ni fechas (Keiber, 2026-10-08):
+    1 Portada · 2 Alcance · 3 Ruta · 4 Cómo trabajamos · 5 Entregables · 6 Retorno · 7 Inversión · 8 Próximos pasos
+  Marcadores de detección de AcroForms (agregar-campo-precio.py), por página: «Propuesta Económica» solo en la slide de
+  inversión; «Lo que se llevan» y «Entregables» solo en la de entregables; «Facilidad de pago» solo en la de pago.
+  Campos AcroForm: Programa, Notas, PrecioBase, Descuento, PrecioTotal (inversión) y Entregables, Acreditacion (entregables). Se reposicionan con scripts/customize-habilidades-compacto.py.
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Propuesta · Fiat · Intezia Educación</title>
+  <link rel="stylesheet" href="../_base/styles.css">
+  <link rel="stylesheet" href="habilidades-compacto.css">
+  <link rel="stylesheet" href="overrides.css">
+</head>
+<body>
+
+  <main class="deck">
+
+    <!-- 1 · Portada: ¿cuál es mi problema? -->
+    <section class="slide s-cover">
+      <span class="counter">01 / 08</span>
+      <div class="logo-big">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia Educación">
+      </div>
+      <div class="body">
+        <p class="eyebrow">Propuesta de proyecto · Servicio de Habilidades</p>
+        <h1 style="font-size:46px">
+          Claude aplicado en cada gerencia<br>
+          con un entregable real por gerente<br>
+          <span class="hl">de Fiat</span>
+        </h1>
+        <p class="lead">
+          Este proyecto nivela a la alta gerencia de Fiat en <strong>Claude</strong> y construye con cada gerente una solución real para su área, hasta dejarla <strong>en uso</strong>.
+        </p>
+        <div class="pain-strip">
+          <div class="pain-item">
+            <span class="pain-num">Cero</span>
+            <span class="pain-lbl">es la experiencia previa del equipo con IA: nadie la ha usado ni recibido formación.</span>
+          </div>
+          <div class="pain-item">
+            <span class="pain-num">6 a 7</span>
+            <span class="pain-lbl">personas forman la alta gerencia: cinco gerencias y la dirección general.</span>
+          </div>
+          <div class="pain-item">
+            <span class="pain-num">5</span>
+            <span class="pain-lbl">gerencias con una tarea real del día a día que hoy se hace sin IA.</span>
+          </div>
+          <div class="pain-item">
+            <span class="pain-num">Una</span>
+            <span class="pain-lbl">cuenta corporativa de LinkedIn por poblar y posicionar: la urgencia de Mercadeo.</span>
+          </div>
+        </div>
+      </div>
+      <div class="id-line">
+        <span class="codigo">Código: CAI-081</span>
+        <span class="cliente">Fiat</span>
+      </div>
+    </section>
+
+    <!-- 2 · Alcance: qué vamos a hacer y para qué -->
+    <section class="slide s-scope roomy">
+      <span class="counter">02 / 08</span>
+      <p class="eyebrow">02 · Alcance</p>
+      <h2>Una gerencia que aplica Claude, con resultados.</h2>
+      <p class="sub">Nivelamos a la alta gerencia y dejamos una solución en uso en cada gerencia, con casos reales.</p>
+
+      <div class="scope-panels one" style="--np:1">
+        <div class="scope-panel acc-y">
+          <div class="scope-head">
+            <span class="scope-tag">Claude para la alta gerencia</span>
+            <span class="scope-total"><b>6</b> líneas de trabajo</span>
+          </div>
+          <ul class="scope-rows">
+              <li><span class="area">Nivelación y levantamiento</span><span class="para">Que la gerencia entienda qué hacer con Claude y elija la tarea de cada área</span></li>
+              <li><span class="area">Administración</span><span class="para">Una tarea real de contabilidad, finanzas, tesorería o auditoría, resuelta con Claude</span></li>
+              <li><span class="area">Comercial</span><span class="para">Una tarea real de ventas o postventa, como el análisis de la competencia, resuelta con Claude</span></li>
+              <li><span class="area">Mercadeo</span><span class="para">Poblar y posicionar la cuenta corporativa de LinkedIn con Claude</span></li>
+              <li><span class="area">Tecnología</span><span class="para">Una tarea real de tecnología de información y sistemas, resuelta con Claude</span></li>
+              <li><span class="area">Recursos Humanos</span><span class="para">Una tarea real de recursos humanos, resuelta con Claude</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="scope-facts">
+        <p class="scope-card-label">Lo que se mide desde el primer día</p>
+        <ul>
+          <li><b>Gerentes nivelados</b><span>Cuántos usan Claude a los 30 días.</span></li>
+          <li><b>Un entregable por gerencia</b><span>Cuántas soluciones quedan en uso.</span></li>
+          <li><b>LinkedIn</b><span>Contenido publicado y cuenta posicionada.</span></li>
+          <li><b>Tiempo por tarea</b><span>Cuánto tarda cada tarea, contra su punto de partida.</span></li>
+        </ul>
+      </div>
+
+      <div class="scope-out">
+        <p class="scope-card-label">Fuera de este alcance</p>
+        <ul>
+          <li>Licencias de Claude: las contrata Fiat, aparte de esta inversión.</li>
+          <li>Publicar y administrar la cuenta de LinkedIn: lo hace el equipo de Fiat.</li>
+          <li>Conectar Claude a los sistemas propios de la empresa: otra etapa.</li>
+          <li>Metas de resultados: son de Fiat; se miden y no se garantizan.</li>
+        </ul>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Fiat · CAI-081</span>
+      </div>
+    </section>
+
+    <!-- 3 · Ruta: qué pasa en cada fase -->
+    <section class="slide s-route">
+      <span class="counter">03 / 08</span>
+      <p class="eyebrow">03 · Ruta</p>
+      <h2>De la nivelación a un resultado por gerente.</h2>
+      <p class="sub">El calendario se acuerda en la <strong>reunión de arranque</strong>, con resultados pensados para el corto plazo.</p>
+
+      <div class="route-grid n1" style="--cols:2; --rows:1; --rowh:214px">
+
+        <div class="rg-corner"></div>
+        <div class="rg-phase rg-ph-1">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Nivelación</span></span>
+          <span class="rg-phase-name">Alta gerencia nivelada y tarea elegida por gerente</span>
+        </div>
+        <div class="rg-phase rg-ph-2 hi">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Entregables</span></span>
+          <span class="rg-phase-name">Una solución por gerente, en uso</span>
+        </div>
+        <div class="rg-phase rg-fu">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Garantía</span></span>
+          <span class="rg-phase-date">30, 60 y 90 días</span>
+          <span class="rg-phase-txt">Desde el cierre de cada entregable</span>
+        </div>
+
+        <div class="rg-front acc-y">
+          <span class="rg-front-h">Alta gerencia de Fiat</span>
+          <span class="rg-front-row"><span class="rg-front-tool">Claude</span><b class="rg-front-n">28 horas</b></span>
+          <span class="rg-front-meta">con el equipo</span>
+        </div>
+        <div class="rg-cell"><span class="rg-h solo-h"><b>8 horas con el equipo</b></span><p>Nivelación estratégica, demostración en vivo y levantamiento de la tarea de cada gerente.</p></div>
+        <div class="rg-cell hi"><span class="rg-h solo-h"><b>20 horas con el equipo</b></span><p>Una solución por gerente, con LinkedIn en Mercadeo, en uso.</p></div>
+
+        <div class="rg-follow" style="grid-column:4; grid-row:2 / span 1">
+          <ul>
+            <li><b>30 días</b><span>Uso de las soluciones</span></li>
+            <li><b>60 días</b><span>Ajustes y nuevas construcciones</span></li>
+            <li><b>90 días</b><span>Tiempo por tarea medido</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="route-miles" style="grid-template-columns:repeat(4,1fr)">
+        <div class="mile"><span class="mile-d"></span><b>Arranque · aparte</b><p>Reunión de 1 h para acordar el calendario, los gerentes que participan y la modalidad.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Nivelación</b><p>La alta gerencia, con demostración en vivo y bloque de licencias y acceso.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Un entregable por gerente</b><p>Una solución real por área, con LinkedIn en Mercadeo.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>30 · 60 · 90 días</b><p>Seguimiento: uso, ajustes e indicadores medidos.</p></div>
+      </div>
+      <p class="route-next"><b>Siguiente paso · Más áreas y procesos</b> Habilidades en más áreas y procesos de Fiat, según los resultados de la gerencia.</p>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Fiat · CAI-081</span>
+      </div>
+    </section>
+
+    <!-- 4 · Cómo trabajamos: pasos, por qué en ese orden, casos reales, práctica, datos y logística -->
+    <section class="slide s-method roomy">
+      <span class="counter">04 / 08</span>
+      <p class="eyebrow">04 · Cómo trabajamos</p>
+      <h2>Así construimos cada solución.</h2>
+      <p class="sub">Primero se nivela a la gerencia; después se construye con cada gerente sobre una tarea real de su día a día.</p>
+
+      <ol class="mt-steps" style="--n:4">
+          <li><b>Nivelamos</b><span>La alta gerencia entiende qué puede hacer Claude en su área.</span></li>
+          <li><b>Levantamos</b><span>Una tarea real de cada gerente y su punto de partida.</span></li>
+          <li><b>Construimos</b><span>Una solución por gerente, con su caso real.</span></li>
+          <li><b>Seguimos</b><span>Uso, ajustes y resultados, a 30, 60 y 90 días.</span></li>
+      </ol>
+      <div class="mt-strips">
+        <p class="mt-why"><b>Por qué en este orden</b> Primero se nivela a toda la gerencia y se ve algo avanzado en vivo; después se levanta la tarea de cada área y se construye, para que nadie se quede solo con una inducción.</p>
+        <p class="mt-who"><b>Quién construye</b> Intezia construye <strong>con cada gerente</strong> la solución a su tarea real: una skill, un flujo o lo que haga falta, hasta que la usa por su cuenta.</p>
+      </div>
+
+      <div class="mt-info">
+        <div class="mt-card">
+          <p class="mt-card-label">Cómo funciona en la práctica</p>
+          <ul><li><b>El gerente decide.</b> Claude propone y analiza; cada gerente revisa y decide antes de usar un resultado.</li><li><b>Un caso real por área.</b> Cada solución parte de una tarea o un dolor de la propia gerencia, no de un ejemplo genérico.</li><li><b>Sin prometer cifras.</b> Se mide el punto de partida y cada avance; las metas son de Fiat y no se garantizan.</li></ul>
+        </div>
+        <div class="mt-card">
+          <p class="mt-card-label">Cómo cuidamos sus datos</p>
+          <p>Qué información no se sube a Claude se acuerda en la nivelación; los datos del negocio no se cargan a ninguna herramienta sin la autorización de Fiat.</p>
+        </div>
+      </div>
+
+      <div class="mt-logi">
+        <div class="mt-tile"><span>Modalidad</span><b>Se acuerda en el arranque, según lo que mejor funcione para la gerencia.</b></div>
+        <div class="mt-tile"><span>Participantes</span><b>La alta gerencia: administración, comercial, mercadeo, tecnología, recursos humanos y dirección general.</b></div>
+        <div class="mt-tile"><span>Ritmo de trabajo</span><b>Los entregables se agendan en el horario de cada gerente, sin frenar la operación de la red.</b></div>
+        <div class="mt-tile"><span>Arranque</span><b>Apenas se apruebe la propuesta; una reunión de 1 h, aparte, acuerda el calendario.</b></div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Fiat · CAI-081</span>
+      </div>
+    </section>
+
+    <!-- 5 · Entregables: ¿con qué me quedo? (catálogo + piezas transversales) -->
+    <section class="slide s-deliv">
+      <span class="counter">05 / 08</span>
+      <p class="eyebrow">05 · Entregables</p>
+      <div class="deliv-head">
+        <h2>Lo que recibe Fiat.</h2>
+        <p class="deliv-sub"><span class="nw">Lo que se llevan</span>: <strong>una gerencia nivelada y una solución en uso por gerente</strong>, más el seguimiento a 30, 60 y 90 días.</p>
+      </div>
+
+      <div class="deliv-carriles" style="--ncols:3">
+        <span class="dc acc-y" style="grid-column: span 3">Claude para la alta gerencia</span>
+      </div>
+
+      <div class="deliv-cols" style="--ncols:3">
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">Nivelación y levantamiento</p>
+            <ul>
+              <li>Nivelación estratégica en Claude<ul class="inc"><li>Qué puede hacer Claude en cada área</li><li>Demostración avanzada en vivo</li><li>Licencias y acceso: plan, puestos y datos</li></ul></li>
+              <li>Levantamiento de la tarea de cada gerente<ul class="inc"><li>Una tarea o un dolor real de cada gerencia</li><li>Línea base: cuánto toma hoy</li><li>Qué se construye con cada gerente</li></ul></li>
+            </ul>
+          </div>
+          <div class="da">
+            <p class="da-name">Administración</p>
+            <ul>
+              <li>Entregable de Administración<ul class="inc"><li>Una tarea real de la gerencia</li><li>Solución construida con el gerente</li><li>El gerente la usa y la ajusta</li></ul></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">Comercial</p>
+            <ul>
+              <li>Entregable de Comercial<ul class="inc"><li>Una tarea real de ventas o postventa</li><li>Solución construida con el gerente</li><li>El gerente la usa y la ajusta</li></ul></li>
+            </ul>
+          </div>
+          <div class="da">
+            <p class="da-name">Mercadeo</p>
+            <ul>
+              <li>LinkedIn: contenido y posicionamiento de la cuenta<ul class="inc"><li>Contenido para poblar la cuenta corporativa</li><li>Posicionamiento de la cuenta</li><li>El equipo de Mercadeo lo usa y lo ajusta</li></ul></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">Tecnología</p>
+            <ul>
+              <li>Entregable de Tecnología<ul class="inc"><li>Una tarea real de la gerencia</li><li>Solución construida con el gerente</li><li>El gerente la usa y la ajusta</li></ul></li>
+            </ul>
+          </div>
+          <div class="da">
+            <p class="da-name">Recursos Humanos</p>
+            <ul>
+              <li>Entregable de Recursos Humanos<ul class="inc"><li>Una tarea real de la gerencia</li><li>Solución construida con el gerente</li><li>El gerente la usa y la ajusta</li></ul></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="deliv-band">
+        <div class="db-card db-1">
+          <span class="db-label">Para todo el proyecto</span>
+        </div>
+        <div class="db-card db-2">
+          <span class="db-label">Valor inmediato</span>
+        </div>
+      </div>
+      <!-- Cajas multiline editables (vacías en HTML: el contenido vive dentro del AcroForm /V). -->
+      <div class="multi-box db-box db-box-1" data-field="Entregables"></div>
+      <div class="multi-box db-box db-box-2" data-field="Acreditacion"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Fiat · CAI-081</span>
+      </div>
+    </section>
+
+    <!-- 6 · Retorno: ¿qué gano? (método de cálculo). Sin estudios ni citas externas. -->
+    <section class="slide s-roi">
+      <span class="counter">06 / 08</span>
+      <p class="eyebrow">06 · Retorno</p>
+      <h2>Retorno esperado: tiempo por tarea, medido.</h2>
+      <p class="sub">Cada indicador se mide contra el punto de partida que el levantamiento de cada gerente deja registrado.</p>
+
+      <div class="roi-body">
+        <div class="roi-panel">
+          <p class="roi-panel-title">Cómo se calcula el retorno de cada solución</p>
+          <ol class="roi-steps">
+            <li><b>Tarea elegida</b><span>Cada gerente escoge la tarea de su día a día que más tiempo toma.</span></li>
+            <li><b>Punto de partida</b><span>Cuánto tarda hoy y con qué frecuencia: es la línea base.</span></li>
+            <li><b>Con la solución</b><span>Lo que toma la misma tarea una vez que la solución está en uso.</span></li>
+            <li><b>Horas recuperadas</b><span>Frecuencia por la diferencia de tiempos: una estimación referencial, sin compromiso de resultado.</span></li>
+            <li><b>Gasto de operar</b><span>Licencias y consumo de IA, contra el valor de lo recuperado.</span></li>
+          </ol>
+        </div>
+
+        <div class="roi-right">
+          <p class="roi-right-title">Calendario de seguimiento y medición</p>
+          <div class="roi-card">
+            <b>30 días</b>
+            <p>Desde el cierre de cada entregable: soluciones en uso real y punto de partida validado.</p>
+          </div>
+          <div class="roi-card">
+            <b>60 días</b>
+            <p>Tiempo de cada tarea medido contra el punto de partida.</p>
+          </div>
+          <div class="roi-card">
+            <b>90 días</b>
+            <p>Medición del retorno: lo recuperado frente al gasto de operar las soluciones.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="roi-dest-wrap">
+        <p class="roi-dest-title">Hacia dónde va el proyecto</p>
+        <div class="roi-dest">
+          <div class="rd-item"><b>Una gerencia que sabe</b><p>Cada gerente entiende <strong>qué puede hacer Claude</strong> en su área.</p></div>
+          <div class="rd-item"><b>Un resultado por área</b><p>Cada gerente sale con una <strong>solución en uso</strong> para su trabajo.</p></div>
+          <div class="rd-item"><b>LinkedIn en marcha</b><p>La cuenta corporativa con contenido y posicionamiento construidos con Claude.</p></div>
+        </div>
+      </div>
+
+      <div class="roi-hook"><p>A los 90 días del cierre, Fiat contará con el tiempo de cada tarea medido contra el punto de partida y el gasto de operar sus soluciones.</p></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Fiat · CAI-081</span>
+      </div>
+    </section>
+
+    <!-- 7 · Inversión (hoja de cotización estándar; antepenúltima slide) -->
+    <section class="slide s-price">
+      <span class="counter">07 / 08</span>
+      <h2 class="title">Inversión del proyecto.</h2>
+      <p class="price-intro">Propuesta Económica · Servicio de Habilidades</p>
+
+      <div class="block">
+        <span class="block-eyebrow">Duración</span>
+        <p class="block-value"><strong>28 horas con el equipo</strong> de Fiat, en nivelación y entregables por gerente, con seguimiento a 30, 60 y 90 días.</p>
+      </div>
+
+      <div class="block block-programa">
+        <span class="block-eyebrow">Programa</span>
+      </div>
+      <div class="multi-box programa-box" data-field="Programa"></div>
+
+      <div class="block block-cotizacion">
+        <span class="block-eyebrow">Cotización</span>
+      </div>
+
+      <span class="cot-label cot-label-base">Propuesta + Inversión</span>
+      <div class="cot-frame base-frame"></div>
+
+      <span class="cot-label cot-label-discount">Descuento</span>
+      <span class="cot-sign-minus">&minus;$</span>
+      <div class="cot-frame discount-frame"></div>
+      <span class="cot-urgent-note">Descuento válido por 15 días</span>
+
+      <span class="cot-label cot-label-total">TOTAL</span>
+      <div class="cot-frame total-frame"></div>
+
+      <p class="cot-validity">Cotización válida por 30 días.</p>
+      <div class="cot-terms-box">
+        <span class="cot-terms-label">Importante</span>
+        <p class="cot-terms-text">Este servicio se presta bajo nuestros <a href="https://drive.google.com/file/d/1PA-ZSt4KnyY5dpxXzgkIk6-yfGlV2eF8/view?usp=drive_link" target="_blank" rel="noopener">términos y condiciones</a>. Al avanzar con esta propuesta, ambas partes los aceptan.</p>
+      </div>
+
+      <div class="cot-garantia-badge">
+        <span class="cot-garantia-tag">Garantía 30-60-90</span>
+        <p class="cot-garantia-text">Estamos contigo hasta que cada solución quede en uso.</p>
+      </div>
+
+      <div class="block block-notes-container">
+        <span class="block-eyebrow">Notas</span>
+      </div>
+      <div class="multi-box notas-box" data-field="Notas"></div>
+
+      <div class="lic-wrap">
+        <span class="lic-eyebrow">Licenciamiento · aparte de esta inversión</span>
+        <div class="lic-cards">
+          <div class="lic-card acc-y">
+            <span class="lic-name">Claude Team · puesto estándar</span>
+            <p>El plan exige un mínimo de dos puestos. Valor de lista: <strong>USD 25</strong> por puesto al mes, o USD 20 pagando por año, al 02/11/2026. Con seis puestos: USD 150 al mes.</p>
+          </div>
+          <div class="lic-card acc-o">
+            <span class="lic-name">Acceso y datos · en la nivelación</span>
+            <p>La nivelación define quién tiene cuenta, cómo se accede según las condiciones del proveedor y qué información no se sube.</p>
+          </div>
+        </div>
+        <p class="lic-note">Valores de lista del proveedor al 02/11/2026; pueden variar. El número de puestos se confirma en la presentación y los confirma Fiat con el proveedor.</p>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Fiat · CAI-081</span>
+      </div>
+    </section>
+
+    <!-- 9 · Próximos pasos: qué hacer y a quién escribir (última slide) -->
+    <section class="slide s-next">
+      <span class="counter">08 / 08</span>
+      <p class="eyebrow">08 · Próximos pasos</p>
+      <h2>Tres pasos para arrancar.</h2>
+      <p class="sub">Esto es lo que sigue cuando Fiat confirme la propuesta.</p>
+
+      <div class="nx-steps">
+        <div class="nx-step acc-y">
+          <span class="nx-num">1</span>
+          <b>Aprobación</b>
+          <p>Quien decide por Fiat confirma la propuesta y acordamos la fecha de la reunión de arranque.</p>
+        </div>
+        <div class="nx-step acc-o">
+          <span class="nx-num">2</span>
+          <b>Gerentes y tareas</b>
+          <p>Fiat confirma qué gerentes participan, quién coordina y las personas de Mercadeo.</p>
+        </div>
+        <div class="nx-step acc-w">
+          <span class="nx-num">3</span>
+          <b>Reunión de arranque</b>
+          <p>Una hora para acordar el calendario, la modalidad y el orden de los entregables.</p>
+        </div>
+      </div>
+
+      <div class="nx-contact">
+        <div class="nx-card nx-ase">
+          <span class="nx-label">¿Dudas? Escribe a tu asesora comercial</span>
+          <b class="nx-name">Flavia Martínez</b>
+          <span class="nx-role">Asesora comercial</span>
+          <p class="nx-line"><a href="mailto:fmartinez@intezia.com">fmartinez@intezia.com</a></p>
+          <p class="nx-line">+58 414 5756615</p>
+        </div>
+        <div class="nx-card nx-emp">
+          <span class="nx-label">Intezia</span>
+          <p class="nx-line">Intezia C.A J-505657950</p>
+          <p class="nx-line"><a href="mailto:servicio@intezia.com">servicio@intezia.com</a></p>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Fiat · CAI-081</span>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

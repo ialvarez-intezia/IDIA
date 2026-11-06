@@ -1,0 +1,553 @@
+{
+ "version": 3,
+ "cliente": {
+  "nombre": "Meru",
+  "slug": "meru",
+  "codigo": "CAP-056",
+  "nombre_pie": "Meru"
+ },
+ "division": "educacion",
+ "alianza": false,
+ "sin_horas_trabajo": true,
+ "meta_servicio": "habilidades",
+ "meta_tipo": "Capacitación In-Company · 6 módulos / 12 h · Claude Fundamentals, Skills, Projects, Artifacts y conectores para 4 profesionales independientes · seguimiento 30-60-90 · formato compacto v3",
+ "vocabulario": {
+  "solucion": [
+   "entregable",
+   "entregables"
+  ],
+  "area": [
+   "módulo",
+   "módulos"
+  ]
+ },
+ "omitir": [
+  "pago"
+ ],
+ "eje": "Claude Fundamentals, Skills, Projects, Artifacts y conectores aplicados a la gestión administrativa (cobranza, conciliación, reportes), con la licencia Claude Pro que ya pagan las participantes",
+ "origen": "brief.md y programa.md de Meru (CAP-056, 12/06/2026), rehechos al formato compacto v3 a pedido de Ivana (03/11/2026)",
+ "fuente_insumo": "brief.md y programa.md de la propuesta original de Meru (12/06/2026); sin Ficha de Levantamiento ni transcripción",
+ "siglas_ok": [
+  "IA"
+ ],
+ "portada": {
+  "titulo_lineas": [
+   "Claude como entorno de trabajo",
+   "para la gestión administrativa"
+  ],
+  "titulo_destacado": "de {cliente_corto}",
+  "lead": "Este proyecto lleva a las cuatro profesionales de {cliente_corto} a operar **Claude** de principio a fin: desde dejar el entorno listo hasta automatizar sus **tareas administrativas**.",
+  "hechos": [
+   {
+    "num": "20 USD",
+    "texto": "al mes por persona es lo que ya se paga por Claude Pro, hoy casi sin aprovechar.",
+    "resuelto_por": [
+     "M1-1",
+     "M1-2"
+    ]
+   },
+   {
+    "num": "4",
+    "texto": "profesionales independientes de una misma alianza, cada una con su empresa y su área.",
+    "resuelto_por": [
+     "M2-1"
+    ]
+   },
+   {
+    "num": "En blanco",
+    "texto": "es como empiezan hoy: sin método para escribir instrucciones, el resultado depende del intento.",
+    "resuelto_por": [
+     "M1-2"
+    ]
+   },
+   {
+    "num": "Disperso",
+    "texto": "llega lo de facturas y abonos: en imágenes, chats y correos.",
+    "resuelto_por": [
+     "M4-2",
+     "M5-2"
+    ]
+   }
+  ]
+ },
+ "carriles": [
+  {
+   "id": "cl",
+   "nombre": "Claude de la A a la Z",
+   "nombre_corto": "Claude",
+   "color": "amarillo"
+  }
+ ],
+ "areas": [
+  {
+   "id": "M1",
+   "nombre": "Fundamentals: entorno y modelos",
+   "carril": "cl",
+   "frente": "A",
+   "para_que": "Dejar Claude listo para trabajar y escribir instrucciones con método",
+   "soluciones": [
+    {
+     "id": "M1-1",
+     "entregable": "Cuenta, app y modelos de Claude",
+     "h": 1,
+     "fase": "F1",
+     "incluye": [
+      "Claude Pro, la app de escritorio y la interfaz",
+      "Opus, Sonnet y Haiku: qué modelo y cuándo",
+      "Gemini o Claude: criterio de uso"
+     ],
+     "detalle": "Una hora con demostración en vivo. Se revisa la cuenta de Claude Pro que ya pagan, se instala la app de escritorio, se compara cómo responden los modelos de Claude con tareas del propio negocio y se define cuándo basta Gemini. Entrega el entorno listo y un criterio de elección de modelo."
+    },
+    {
+     "id": "M1-2",
+     "entregable": "Tokens y prompts con método",
+     "h": 1,
+     "fase": "F1",
+     "incluye": [
+      "La barra de consumo y cómo cuidar los tokens",
+      "Rol, contexto, objetivo y límite",
+      "Qué información del negocio no se comparte"
+     ],
+     "detalle": "Una hora de práctica con casos propios. Se explica el consumo de tokens, se reescriben instrucciones con una estructura (rol, contexto, objetivo y límite) y se define qué información del negocio no se comparte con Claude. Entrega un método para escribir prompts y cuidar el consumo."
+    }
+   ]
+  },
+  {
+   "id": "M2",
+   "nombre": "Fundamentals: Projects y Artifacts",
+   "carril": "cl",
+   "frente": "A",
+   "para_que": "Organizar cada negocio en su Project y crear documentos y reportes con Artifacts",
+   "soluciones": [
+    {
+     "id": "M2-1",
+     "entregable": "Un Project por negocio",
+     "h": 1,
+     "fase": "F1",
+     "incluye": [
+      "Projects: la memoria de cada negocio",
+      "Instrucciones y archivos propios por Project"
+     ],
+     "detalle": "Una hora de construcción guiada. Cada participante crea un Project independiente para su empresa o área, con sus instrucciones y sus archivos. Entrega un Project en uso por negocio."
+    },
+    {
+     "id": "M2-2",
+     "entregable": "Artifacts: documentos y reportes a la medida",
+     "h": 1,
+     "fase": "F1",
+     "incluye": [
+      "Qué son los Artifacts y cuándo usarlos",
+      "Un reporte armado desde datos reales"
+     ],
+     "detalle": "Una hora con datos reales. Se construyen con Artifacts un documento y un reporte a partir de facturas y abonos del propio negocio. Entrega un Artifact reutilizable."
+    }
+   ]
+  },
+  {
+   "id": "M3",
+   "nombre": "Skills: procesos guardados",
+   "carril": "cl",
+   "frente": "A",
+   "para_que": "Guardar como Skill cada tarea que se repite, para repetirla sin empezar de cero",
+   "soluciones": [
+    {
+     "id": "M3-1",
+     "entregable": "Skills propias para tareas repetidas",
+     "h": 1,
+     "fase": "F2",
+     "incluye": [
+      "Qué es una Skill y cuándo conviene crearla",
+      "Una Skill construida desde una tarea real"
+     ],
+     "detalle": "Una hora de construcción. Cada participante elige una tarea que repite (un correo, una revisión, un reporte) y la guarda como Skill. Entrega una Skill propia en uso."
+    },
+    {
+     "id": "M3-2",
+     "entregable": "Skills dentro de cada Project",
+     "h": 1,
+     "fase": "F2",
+     "incluye": [
+      "Skills y Projects trabajando juntos",
+      "Biblioteca de Skills por área"
+     ],
+     "detalle": "Una hora de práctica. Se incorporan las Skills a cada Project y se ordena una biblioteca por área. Entrega Projects con sus Skills activas."
+    }
+   ]
+  },
+  {
+   "id": "M4",
+   "nombre": "Conectores con sus herramientas",
+   "carril": "cl",
+   "frente": "A",
+   "para_que": "Conectar Claude con las herramientas del negocio que lo permiten",
+   "soluciones": [
+    {
+     "id": "M4-1",
+     "entregable": "Conectores de Claude en uso",
+     "h": 1,
+     "fase": "F2",
+     "incluye": [
+      "Qué conectores ofrece Claude y cuáles sirven",
+      "Correo y archivos al alcance de Claude"
+     ],
+     "detalle": "Una hora de configuración guiada. Se revisan los conectores de Claude, se activan los que sirven al negocio (por ejemplo, correo y archivos) y se define qué puede leer Claude y qué no. Entrega los conectores activos. No se conecta Claude a los sistemas administrativos propios."
+    },
+    {
+     "id": "M4-2",
+     "entregable": "Una tarea resuelta con conectores",
+     "h": 1,
+     "fase": "F2",
+     "incluye": [
+      "Información dispersa reunida en un solo lugar",
+      "Una tarea real, de punta a punta"
+     ],
+     "detalle": "Una hora de prueba sobre una tarea real. Con los conectores activos se reúne la información que hoy llega dispersa y se resuelve una tarea completa. Entrega un flujo en uso."
+    }
+   ]
+  },
+  {
+   "id": "M5",
+   "nombre": "Cobranza y conciliación con Claude",
+   "carril": "cl",
+   "frente": "A",
+   "para_que": "Resolver con Projects, Skills y conectores las tareas de cobranza y conciliación",
+   "soluciones": [
+    {
+     "id": "M5-1",
+     "entregable": "Correos de cobranza y seguimiento",
+     "h": 1,
+     "fase": "F3",
+     "incluye": [
+      "Correos de cobranza con casos reales",
+      "Seguimiento con Skill y Project"
+     ],
+     "detalle": "Una hora con casos reales de cada participante. Se redactan y se les da seguimiento a los correos de cobranza con el Project, la Skill y el conector de correo. Entrega el proceso de cobranza en uso."
+    },
+    {
+     "id": "M5-2",
+     "entregable": "Conciliación de cuentas y facturas",
+     "h": 1,
+     "fase": "F3",
+     "incluye": [
+      "Facturas, abonos y cuentas por pagar",
+      "Información en Excel, PDF e imágenes"
+     ],
+     "detalle": "Una hora con datos reales. Se concilian cuentas por pagar y se controlan facturas contra abonos a partir de Excel, PDF e imágenes. Entrega el proceso de conciliación en uso."
+    }
+   ]
+  },
+  {
+   "id": "M6",
+   "nombre": "Reportes y plan de adopción",
+   "carril": "cl",
+   "frente": "A",
+   "para_que": "Dejar los reportes periódicos y un plan de uso sostenible",
+   "soluciones": [
+    {
+     "id": "M6-1",
+     "entregable": "Reportes periódicos con Artifacts",
+     "h": 1,
+     "fase": "F3",
+     "incluye": [
+      "Reportes con Artifact y Skill",
+      "Transcripción de datos a reportes"
+     ],
+     "detalle": "Una hora con datos reales. Se arman los reportes periódicos con un Artifact y una Skill, incluida la transcripción de datos. Entrega el reporte en uso."
+    },
+    {
+     "id": "M6-2",
+     "entregable": "Repositorio y plan de adopción a 30 días",
+     "h": 1,
+     "fase": "F3",
+     "incluye": [
+      "Prompts, Skills y plantillas por área",
+      "Compromisos de uso de cada participante"
+     ],
+     "detalle": "Una hora de coaching. Se ordena el repositorio de prompts, Skills y plantillas por área y cada participante deja su plan de uso para los primeros 30 días. Entrega el repositorio y el plan."
+    }
+   ]
+  }
+ ],
+ "alcance": {
+  "titulo": "Seis módulos para dominar Claude.",
+  "subtitulo": "De los Fundamentals de Claude a Skills y conectores, aplicados a las tareas reales de cada negocio.",
+  "fuera_alcance": [
+   "Licencias de Claude y de otras herramientas: las contrata cada participante, aparte de esta inversión.",
+   "Conectores: se usan los que Claude ofrece; no se conecta Claude a los sistemas administrativos propios.",
+   "Ahorro de horas o de personal: son metas de {cliente_corto}; se miden y no se garantizan."
+  ]
+ },
+ "metodo": {
+  "titulo": "Así aprende y aplica cada módulo.",
+  "subtitulo": "Cada módulo parte de una tarea real del negocio: lo que se practica se aplica al día siguiente.",
+  "quien_construye": "Intezia facilita en vivo, con ejercicios sobre los **datos reales** de cada participante, y deja cada herramienta lista para usar.",
+  "por_que_orden": "Primero los Fundamentals: entorno, modelos, Projects y Artifacts; después Skills y conectores para guardar y conectar lo que se repite; al final, las tareas reales de cobranza, conciliación y reportes.",
+  "pasos": [
+   {
+    "titulo": "Vemos",
+    "texto": "Demostración en vivo con un caso real."
+   },
+   {
+    "titulo": "Practicamos",
+    "texto": "Cada participante lo prueba con su propio caso."
+   },
+   {
+    "titulo": "Aplicamos",
+    "texto": "Lo ejercitado se usa en el trabajo del día siguiente."
+   },
+   {
+    "titulo": "Seguimos",
+    "texto": "Uso, ajustes y resultados, a 30, 60 y 90 días."
+   }
+  ],
+  "practica": [
+   {
+    "titulo": "Con sus propios datos",
+    "texto": "Los ejercicios usan facturas, abonos y correos reales de cada participante."
+   },
+   {
+    "titulo": "Sin código",
+    "texto": "Son herramientas listas para usar; no hace falta programar."
+   },
+   {
+    "titulo": "Sin prometer cifras",
+    "texto": "Se mide el punto de partida y cada avance; las metas son de {cliente_corto} y no se garantizan."
+   }
+  ],
+  "datos": "Desde los Fundamentals se define qué información del negocio se comparte con Claude y cuál no; nada sensible se carga sin criterio."
+ },
+ "fases": [
+  {
+   "id": "F1",
+   "titulo": "Fundamentals",
+   "descripcion": "Claude, modelos, prompts, Projects y Artifacts"
+  },
+  {
+   "id": "F2",
+   "titulo": "Herramientas",
+   "descripcion": "tareas guardadas como Skills y conectores activos"
+  },
+  {
+   "id": "F3",
+   "titulo": "Tareas reales",
+   "descripcion": "cobranza, conciliación y reportes en uso",
+   "destacada": true
+  }
+ ],
+ "frentes": [
+  {
+   "id": "A",
+   "carril": "cl",
+   "nombre": "Claude de la A a la Z",
+   "medida": "12 horas",
+   "medida_meta": "con el grupo",
+   "celdas": {
+    "F1": "Claude Fundamentals: entorno, modelos, prompts, Projects y Artifacts.",
+    "F2": "Skills propias y conectores con las herramientas del negocio.",
+    "F3": "Cobranza, conciliación y reportes en uso, y plan de adopción."
+   },
+   "celdas_medida": {
+    "F1": "4 horas con el grupo",
+    "F2": "4 horas con el grupo",
+    "F3": "4 horas con el grupo"
+   }
+  }
+ ],
+ "ruta": {
+  "titulo": "Del entorno listo a Claude en el trabajo.",
+  "subtitulo": "El calendario y la modalidad se acuerdan en la **reunión de arranque**.",
+  "hitos": [
+   {
+    "titulo": "Arranque · aparte",
+    "texto": "Reunión de 1 h para acordar el calendario y la modalidad."
+   },
+   {
+    "titulo": "Fundamentals",
+    "texto": "Claude, modelos, prompts, Projects y Artifacts."
+   },
+   {
+    "titulo": "Skills y conectores",
+    "texto": "Tareas guardadas como Skills y conectores activos."
+   },
+   {
+    "titulo": "Tareas reales",
+    "texto": "Cobranza, conciliación y reportes, con plan de adopción."
+   }
+  ]
+ },
+ "logistica": {
+  "modalidad": "Se acuerda en el arranque; los módulos son en vivo y en grupo.",
+  "participantes": "Las cuatro profesionales independientes de {cliente_corto}.",
+  "ritmo": "El trabajo se agenda en el horario del grupo, sin frenar sus negocios.",
+  "arranque": "Apenas se apruebe la propuesta; una reunión de 1 h, aparte, acuerda el calendario."
+ },
+ "seguimiento": {
+  "rango": "30, 60 y 90 días",
+  "texto": "Desde el cierre del último módulo",
+  "items": [
+   {
+    "dias": "30 días",
+    "texto": "Uso de Claude en el trabajo"
+   },
+   {
+    "dias": "60 días",
+    "texto": "Ajustes y nuevas plantillas"
+   },
+   {
+    "dias": "90 días",
+    "texto": "Tiempo por tarea medido"
+   }
+  ]
+ },
+ "entregables": {
+  "titulo": "Lo que recibe Meru.",
+  "subtitulo": "Lo que se llevan: **Claude Fundamentals, Skills y conectores en uso y las tareas reales resueltas**, más el seguimiento a {rango_seguimiento}.",
+  "etiqueta_transversales": "Para todo el proyecto",
+  "transversales": [
+   "Un Project por negocio y repositorio de prompts y Skills.",
+   "Workbook digital y certificado de participación.",
+   "Seguimiento a 30, 60 y 90 días."
+  ],
+  "etiqueta_valor": "Valor inmediato",
+  "valor_inmediato": [
+   "Con los Fundamentals: Claude listo y un Project por negocio.",
+   "Con Skills y conectores: tareas guardadas y conectadas.",
+   "Con las tareas reales: cobranza, conciliación y reportes."
+  ],
+  "columnas_por_carril": [
+   3
+  ]
+ },
+ "retorno": {
+  "modo": "metodo",
+  "posiciones": false,
+  "titulo": "Retorno esperado: tiempo por tarea, medido.",
+  "subtitulo": "Cada indicador se mide contra el punto de partida de cada participante, antes de usar Claude.",
+  "etiqueta_pasos": "Cómo se calcula el retorno de cada tarea",
+  "pasos": [
+   {
+    "titulo": "Tarea",
+    "texto": "Cobranza, conciliación o reportes: la tarea que más tiempo toma a cada participante."
+   },
+   {
+    "titulo": "Punto de partida",
+    "texto": "Cuánto tarda hoy y con qué frecuencia: es la línea base."
+   },
+   {
+    "titulo": "Con Claude",
+    "texto": "Lo que toma la misma tarea con el método y las plantillas en uso."
+   },
+   {
+    "titulo": "Horas recuperadas",
+    "texto": "Frecuencia por la diferencia de tiempos: una estimación referencial, sin compromiso de resultado."
+   },
+   {
+    "titulo": "Gasto de operar",
+    "texto": "La licencia y el consumo de IA, contra el valor de lo recuperado."
+   }
+  ],
+  "etiqueta_metas": "Calendario de seguimiento y medición",
+  "metas": [
+   {
+    "dias": "30 días",
+    "texto": "Desde el cierre del último módulo: Claude en uso real y punto de partida validado."
+   },
+   {
+    "dias": "60 días",
+    "texto": "Tiempo de cada tarea medido contra el punto de partida."
+   },
+   {
+    "dias": "90 días",
+    "texto": "Medición del retorno: lo recuperado frente al gasto de operar."
+   }
+  ],
+  "etiqueta_destino": "Hacia dónde va el proyecto",
+  "destino": [
+   {
+    "rotulo": "Una licencia aprovechada",
+    "texto": "Claude Pro **deja de usarse como un chat básico** y pasa a ser un entorno de trabajo."
+   },
+   {
+    "rotulo": "Tareas en minutos",
+    "texto": "La cobranza, la conciliación y los reportes se apoyan en **Skills y Projects** reutilizables."
+   },
+   {
+    "rotulo": "Un hábito sostenido",
+    "texto": "Cada participante sale con un **plan de adopción** y un repositorio propio."
+   }
+  ],
+  "gancho": "A los 90 días del cierre, {cliente_corto} contará con el tiempo de cada tarea medido contra el punto de partida y el gasto de operar su licencia."
+ },
+ "inversion": {
+  "duracion": "**{h_total} horas con el grupo** de {cliente_corto}, en seis módulos, con seguimiento a {rango_seguimiento}.",
+  "programa": [
+   "Capacitación en Claude para {cliente_corto} ({codigo}).",
+   "Fundamentals, Skills, conectores y tareas reales en seis módulos: 12 h con el grupo.",
+   "Workbook digital y certificado de participación.",
+   "Seguimiento a 30, 60 y 90 días. La reunión de arranque va aparte."
+  ],
+  "notas": [
+   "La licencia de Claude Pro la paga cada participante: no se suma a esta inversión."
+  ],
+  "licencias": {
+   "titulo": "Licenciamiento · aparte de esta inversión",
+   "tarjetas": [
+    {
+     "nombre": "Claude Pro · ya contratada",
+     "color": "amarillo",
+     "texto": "Cada participante usa la licencia de **Claude Pro** que ya paga; esta propuesta no la suma ni la cambia."
+    },
+    {
+     "nombre": "Gemini · complemento",
+     "color": "naranja",
+     "texto": "Se mantiene para consultas rápidas, con el criterio de uso que se define en los **Fundamentals**."
+    }
+   ],
+   "nota": "Esta propuesta no incluye valores de lista: cada participante los confirma con el proveedor. Pueden variar."
+  },
+  "garantia_texto": "Estamos contigo hasta que cada herramienta quede en uso."
+ },
+ "proximos_pasos": {
+  "subtitulo": "Esto es lo que sigue cuando {cliente_corto} confirme la propuesta.",
+  "etiqueta_contacto": "¿Dudas? Escribe a tu directora comercial",
+  "asesora": {
+   "nombre": "María Iribarren",
+   "cargo": "Directora comercial",
+   "correo": "miribarren@intezia.com",
+   "telefono": "+58 414 0570056"
+  },
+  "pasos": [
+   {
+    "titulo": "Aprobación",
+    "texto": "Quien decide por {cliente_corto} confirma la propuesta y acordamos la fecha de la reunión de arranque."
+   },
+   {
+    "titulo": "Cuentas y casos",
+    "texto": "Cada participante confirma su cuenta de Claude Pro y reúne ejemplos reales de su trabajo."
+   },
+   {
+    "titulo": "Reunión de arranque",
+    "texto": "Una hora para definir con cada participante la tarea con la que arranca."
+   }
+  ]
+ },
+ "supuestos": [
+  "Pedido de Ivana (03/11/2026): llevar CAP-056 de Meru al formato nuevo. Es un deck canónico de 16 slides (enviado el 12/06/2026) con un programa de 6 módulos y 6 sesiones de 2 h. Se rehace en la plantilla compacta v3 con la receta de «Capacitación por etapas» (§1b): cada módulo es un módulo (área) y cada entrega, un entregable de 1 h; las 6 sesiones de 2 h se reexpresan como 12 h en 6 módulos, sin mostrar sesiones. El deck anterior (index.html, acroforms.json, overrides.css y PDF) quedó en `_anterior-16-slides/`; el diseño curricular completo sigue en `programa-curricular.md`.",
+  "Datos del cliente: del brief y del programa originales (4 profesionales independientes de una alianza; ya pagan Claude Pro a USD 20 al mes por persona; Gemini y ChatGPT gratuitos de forma empírica; tareas de cobranza, conciliación y reportes). Sin Ficha ni transcripción. El nombre de la persona de contacto (Loredana) no va al deck. Division Educación y sin alianza de Intezia (en el brief, «alianza» describe a Meru: consorcio de profesionales), por confirmar con Ivana.",
+  "**Venezuela y VPN (regla de Ivana):** el deck original tenía el módulo I con «Acceso estable con VPN» y recursos de VPN (Proton, TunnelBear), la fricción de Venezuela en el diagnóstico y el objetivo de «resolver el acceso desde Venezuela». En la versión nueva **no se nombra ni se promete VPN ni se menciona el riesgo de acceso**; el módulo I queda como entorno técnico (cuenta, app, equipo y tokens). Es una pérdida deliberada respecto del programa vendido: confirmar con Ivana que el cliente no espera la VPN como parte del servicio.",
+  "Añadidos por el formato nuevo, que el original no traía: seguimiento a 30, 60 y 90 días, retorno en modo método sin cifras, hoja de inversión única con campos vacíos para Ventas y sin facilidad de pago (se omite, como en las últimas propuestas). El original tenía slide de Impacto con estudios (Stanford HAI, McKinsey, Anthropic) y slide de Beneficios con Equipo facilitador: ya no van (§4.9 y §4.10a para compactos).",
+  "**Contenido actualizado (Ivana, 03/11/2026):** «son 6 sesiones que deben tener fundamentals y hacer uso de skills, projects, artifacts y conectores». Los 6 módulos se reordenaron: M1 y M2 son Claude Fundamentals (entorno, modelos, prompts, Projects y Artifacts), M3 Skills, M4 conectores y M5 y M6 aplican todo a las tareas reales (cobranza, conciliación, reportes) y al plan de adopción. Cada módulo corresponde a un encuentro de 2 h; **el deck no muestra sesiones** (§4.23): el detalle por sesión vive en `programa-curricular.md` y se acuerda en el arranque.",
+  "Horas: 12 h en 6 módulos, dos entregables de 1 h por módulo (reparto mío). Fases: F1 Fundamentals (4 h), F2 Skills y conectores (4 h), F3 Tareas reales (4 h). Entregables pedidos por el cliente (workbooks, certificados y repositorio de prompts): transversales. Conectores: los que Claude ofrece para correo y archivos; no se promete conectar los sistemas administrativos propios ni nombrar un conector sin verificarlo en el módulo."
+ ],
+ "pendientes": [
+  "Confirmar con Ivana que la versión nueva no menciona VPN ni Venezuela (el programa original sí) y que el cliente no la espera como parte del servicio.",
+  "Confirmar la división Educación y que no hay alianza de Intezia.",
+  "Confirmar el reparto de 12 h (dos entregables de 1 h por módulo) y la modalidad.",
+  "Valor, descuento y total: campos vacíos para ventas.",
+  "Decidir si se envía la versión nueva a Meru o solo se archiva: la propuesta original ya fue enviada el 12/06/2026.",
+  "Confirmar con Ivana qué conectores se muestran (se dijo «correo y archivos» sin nombrar uno) y si Claude Cowork o Claude Code entran en los Fundamentals de Meru."
+ ],
+ "frases_ok": [
+  "Gemini"
+ ]
+}

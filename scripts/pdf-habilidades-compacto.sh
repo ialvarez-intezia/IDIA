@@ -80,6 +80,9 @@ echo "== 4/4 Campos AcroForm (par obligatorio) =="
 python3 scripts/customize-acroforms.py "$SLUG"
 PDF="$(find "$DIR" -maxdepth 1 -name '*.pdf' | head -1)"
 python3 scripts/customize-habilidades-compacto.py "$PDF"
+if grep -q 'class="campo-libre"' "$DIR/index.html"; then   # espacios en blanco editables (inversion.desglose, [[CAMPO:...]]): campos medidos en Chrome
+  python3 scripts/agregar-campos-libres.py "$PDF" "$DIR/index.html"
+fi
 trap - ERR INT TERM
 [ -n "$META_BAK" ] && rm -f "$META_BAK"
 echo

@@ -1,0 +1,492 @@
+{
+ "version": 3,
+ "cliente": {
+  "nombre": "Canguro",
+  "slug": "canguro-cai086",
+  "codigo": "CAI-086",
+  "nombre_pie": "Canguro"
+ },
+ "division": "educacion",
+ "alianza": false,
+ "sin_horas_trabajo": true,
+ "meta_servicio": "habilidades",
+ "meta_tipo": "Habilidades · cadena de suministro: un proceso de repatriación y surtido construido con 5 personas, 5 entregables en 3 partes, 40 h (construcción, testeo y adopción) · seguimiento 30-60-90 · sin facilidad de pago · formato compacto v3",
+ "omitir": [
+  "pago"
+ ],
+ "eje": "Construir un proceso ágil de repatriación y surtido entre tiendas, que clasifica las tiendas por metraje y venta y mantiene los productos clave donde más se venden, con IA y datos dentro del entorno Google de Canguro; el diseño final se define con lo que se levante",
+ "origen": "Transcripción de la reunión de Verónica Rubio, Keiber Quintana y David Prato con Canguro (Gonzalo y su equipo de datos), pasada por Ivana el 05/11/2026, y las especificaciones de Ivana para la propuesta CAI-086. Sin Ficha de Levantamiento en el repositorio",
+ "fuente_insumo": "Transcripción de la reunión con Canguro (05/11/2026)",
+ "siglas_ok": [
+  "IA"
+ ],
+ "frases_ok": [
+  "SimplyPost"
+ ],
+ "portada": {
+  "titulo_lineas": [
+   "Productos en la tienda correcta,",
+   "con IA en la cadena de suministro"
+  ],
+  "titulo_destacado": "de {cliente_corto}",
+  "lead": "Este proyecto **construye con el equipo el proceso** de repatriación y surtido que hoy se resuelve a mano, a partir de lo que se levante de cómo funciona hoy.",
+  "hechos": [
+   {
+    "num": "80 %",
+    "texto": "de la venta la generan unos 10 de cada 1.000 productos, y faltan en las tiendas que más venden.",
+    "resuelto_por": [
+     "SR-1"
+    ]
+   },
+   {
+    "num": "A mano",
+    "texto": "es como los supervisores regionales repatrían hoy los productos entre tiendas.",
+    "resuelto_por": [
+     "SR-2"
+    ]
+   },
+   {
+    "num": "230",
+    "texto": "tiendas, agrupadas por tamaño: las de una misma clase se tratan igual aunque no vendan igual.",
+    "resuelto_por": [
+     "BA-2"
+    ]
+   },
+   {
+    "num": "Sin guía",
+    "texto": "escrita: el proceso logístico ideal no está documentado en un manual.",
+    "resuelto_por": [
+     "BA-1"
+    ]
+   }
+  ]
+ },
+ "carriles": [
+  {
+   "id": "ia",
+   "nombre": "BigQuery y Apps Script",
+   "nombre_corto": "Entorno Google",
+   "color": "amarillo"
+  }
+ ],
+ "areas": [
+  {
+   "id": "BA",
+   "nombre": "Levantamiento y clasificación",
+   "carril": "ia",
+   "frente": "A",
+   "para_que": "Levantar cómo se mueve hoy un producto, documentar el proceso ideal y clasificar las tiendas",
+   "composicion": "El diseño sale de lo que se levanta",
+   "soluciones": [
+    {
+     "id": "BA-1",
+     "entregable": "Manual del proceso y flujo ideal",
+     "fase": "F1",
+     "detalle": "Ocho horas de construcción, testeo y adopción con el equipo. Es el levantamiento: no existe un manual del proceso, así que se registra cómo se mueve hoy un producto, desde la compra y la recepción en el centro de distribución hasta la tienda, quién decide en cada paso y con qué datos, y se validan las bases de datos. Lo que se encuentre define el diseño de las demás piezas. Se construye el flujo ideal, se prueba con casos reales y el equipo lo adopta. Entrega el manual y el flujo.",
+     "C": 5,
+     "T": 1,
+     "A": 2
+    },
+    {
+     "id": "BA-2",
+     "entregable": "Clasificación de tiendas por metraje y venta",
+     "fase": "F1",
+     "detalle": "Ocho horas de construcción, testeo y adopción con el área de datos. Las tiendas se agrupan por tamaño y las de una misma clase se tratan igual, aunque una tienda grande del interior no venda como una de Valencia. Con lo levantado se define el criterio y se construye una clasificación por metraje y venta, con la imagen de cada grupo: lo que debe tener en surtido. Entrega la clasificación en uso.",
+     "C": 4,
+     "T": 2,
+     "A": 2
+    }
+   ]
+  },
+  {
+   "id": "SR",
+   "nombre": "Surtido y repatriación",
+   "carril": "ia",
+   "frente": "A",
+   "para_que": "Que los productos clave no falten donde más se venden y trasladarlos sin hacerlo a mano",
+   "composicion": "Según lo que se levante",
+   "soluciones": [
+    {
+     "id": "SR-1",
+     "entregable": "Surtido de los productos clave por tienda",
+     "fase": "F2",
+     "detalle": "Ocho horas de construcción, testeo y adopción con Compras. Unos 10 de cada 1.000 productos generan el 80 % de la venta y faltan en las tiendas que más venden. Con la clasificación y los datos levantados se construye el surtido de esos productos por tienda, según la imagen de su grupo, y se prueba antes de usarlo. Depende de BA-2. Entrega el surtido en uso.",
+     "C": 4,
+     "T": 2,
+     "A": 2
+    },
+    {
+     "id": "SR-2",
+     "entregable": "Repatriación sugerida entre tiendas",
+     "fase": "F2",
+     "detalle": "Doce horas de construcción, testeo y adopción con el equipo de Logística. Hoy repatriar productos entre tiendas lo hacen los supervisores regionales de forma manual y no hay un proceso ágil. Sobre el flujo ideal y los datos de BigQuery se construye una sugerencia de qué traslados hacer y dónde; se prueba con traslados reales y una persona valida antes de ejecutar. Entrega la repatriación en uso.",
+     "C": 6,
+     "T": 3,
+     "A": 3
+    }
+   ]
+  },
+  {
+   "id": "RE",
+   "nombre": "Retorno del proceso",
+   "carril": "ia",
+   "frente": "A",
+   "para_que": "Medir el tiempo, las posiciones y la venta recuperados frente al punto de partida",
+   "composicion": "Contra el punto de partida",
+   "soluciones": [
+    {
+     "id": "RE-1",
+     "entregable": "Tablero de retorno: tiempo, posiciones y venta",
+     "fase": "F2",
+     "detalle": "Cuatro horas de construcción, testeo y adopción con el área de datos. Se construye el tablero que muestra, contra el punto de partida, las horas recuperadas, las posiciones que se reducen o no hace falta cubrir y la venta recuperada, frente al gasto de operar. Usa las herramientas de reporte que ya usa el equipo y sirve para presentar el retorno a la dirección. Depende de las demás piezas. Entrega el tablero en uso.",
+     "C": 2,
+     "T": 1,
+     "A": 1
+    }
+   ]
+  }
+ ],
+ "alcance": {
+  "titulo": "El proceso de surtido y repatriación.",
+  "subtitulo": "Partimos de este proceso; **lo que levantemos** define el diseño final de cada pieza.",
+  "fuera_alcance": [
+   "Licencias de IA y el consumo de BigQuery, si aplica: los asume {cliente_corto}, aparte de esta inversión.",
+   "Cambiar sistemas: Odoo, SimplyPost y la base de datos no se modifican; se usan los datos que entregan.",
+   "Mover la mercancía: la operación física sigue en manos del equipo de {cliente_corto}.",
+   "Otros procesos de {cliente_corto}, como comercio electrónico y finanzas: se mapean en una etapa posterior."
+  ]
+ },
+ "metodo": {
+  "titulo": "Así construimos el proceso.",
+  "subtitulo": "Con la metodología de Habilidades: construimos, testeamos y adoptamos, sobre casos reales.",
+  "quien_construye": "Se construye con las **5 personas** del equipo: **Intezia guía** y cada una prueba cada pieza sobre sus propios casos, dentro del entorno Google que ya usan.",
+  "por_que_orden": "Primero se levanta el proceso: lo que se encuentre define qué se construye y cómo. Después se arman el surtido y la repatriación, y al final el tablero.",
+  "pasos": [
+   {
+    "titulo": "Levantamos",
+    "texto": "Cómo se mueve hoy un producto, quién decide y con qué datos. De ahí sale el diseño."
+   },
+   {
+    "titulo": "Construimos",
+    "texto": "Cada pieza del proceso, con el equipo y sobre casos reales."
+   },
+   {
+    "titulo": "Testeamos",
+    "texto": "Probamos cada pieza con datos reales hasta que funciona."
+   },
+   {
+    "titulo": "Adoptamos",
+    "texto": "Cada persona la usa en su trabajo; seguimos a 30, 60 y 90 días."
+   }
+  ],
+  "practica": [
+   {
+    "titulo": "Una persona decide",
+    "texto": "La herramienta sugiere traslados y surtido; el supervisor o el comprador valida antes de ejecutar."
+   },
+   {
+    "titulo": "Dentro de Google",
+    "texto": "Se construye con BigQuery y Apps Script, sin servidores ni programas nuevos que mantener; la herramienta de IA se define en el levantamiento."
+   },
+   {
+    "titulo": "Ya se ha hecho",
+    "texto": "Con un cliente conectamos las ventas de caja con compras, almacén y recepción para saber qué comprar; hoy está en uso."
+   }
+  ],
+  "datos": "Se trabaja con los datos que entregan BigQuery, Odoo y SimplyPost, con cuentas de la empresa y los accesos que autoriza su equipo de datos. Se validan primero con el equipo y los sistemas no se modifican."
+ },
+ "fases": [
+  {
+   "id": "F1",
+   "titulo": "Base",
+   "descripcion": "levantar el proceso y clasificar las tiendas"
+  },
+  {
+   "id": "F2",
+   "titulo": "Uso",
+   "descripcion": "surtido, repatriación y tablero de retorno",
+   "destacada": true
+  }
+ ],
+ "frentes": [
+  {
+   "id": "A",
+   "carril": "ia",
+   "nombre": "Repatriación y surtido",
+   "medida": "40 horas",
+   "medida_meta": "con 5 personas, en tres partes",
+   "celdas": {
+    "F1": "Construcción, testeo y adopción: levantamiento, manual, flujo ideal y clasificación.",
+    "F2": "Construcción, testeo y adopción: surtido, repatriación y tablero."
+   },
+   "celdas_medida": {
+    "F1": "16 horas con el equipo",
+    "F2": "24 horas con el equipo"
+   }
+  }
+ ],
+ "ruta": {
+  "titulo": "Del proceso levantado al uso.",
+  "subtitulo": "El calendario se acuerda en la **reunión de arranque**.",
+  "hitos": [
+   {
+    "titulo": "Arranque · aparte",
+    "texto": "Reunión de 1 h para acordar el calendario, quiénes participan y el acceso a los datos."
+   },
+   {
+    "titulo": "Proceso levantado",
+    "texto": "Cómo funciona hoy, el flujo ideal y las tiendas clasificadas; define el diseño."
+   },
+   {
+    "titulo": "Surtido y repatriación",
+    "texto": "Los productos clave y los traslados sugeridos, en uso."
+   },
+   {
+    "titulo": "Retorno a la vista",
+    "texto": "El tablero muestra el tiempo, las posiciones y la venta recuperados."
+   }
+  ]
+ },
+ "logistica": {
+  "modalidad": "Presencial, como prefiere {cliente_corto}; un esquema mixto si hace falta.",
+  "participantes": "5 personas de {cliente_corto} que intervienen en el proceso: logística, compras y datos.",
+  "ritmo": "Se agenda sin frenar la operación en temporada alta.",
+  "arranque": "Apenas se apruebe la propuesta; una reunión de 1 h, aparte, acuerda el calendario."
+ },
+ "seguimiento": {
+  "rango": "30, 60 y 90 días",
+  "texto": "Desde el cierre del proyecto",
+  "items": [
+   {
+    "dias": "30 días",
+    "texto": "Uso real del proceso"
+   },
+   {
+    "dias": "60 días",
+    "texto": "Fricciones resueltas y ajustes"
+   },
+   {
+    "dias": "90 días",
+    "texto": "Tiempo, posiciones y venta en el tablero"
+   }
+  ]
+ },
+ "entregables": {
+  "titulo": "Lo que recibe {cliente_corto}.",
+  "subtitulo": "Lo que se llevan: **un proceso documentado y funcionando, tiendas bien clasificadas y la capacidad instalada en su equipo**, más el seguimiento a {rango_seguimiento}.",
+  "etiqueta_transversales": "Para todo el proceso",
+  "transversales": [
+   "Punto de partida del proceso, antes de automatizar.",
+   "Seguimiento a 30, 60 y 90 días."
+  ],
+  "etiqueta_valor": "Valor inmediato",
+  "valor_inmediato": [
+   "Base: proceso levantado, flujo ideal y tiendas clasificadas.",
+   "Uso: surtido, repatriación y tablero de retorno.",
+   "El equipo sabe ajustar el proceso por sí mismo."
+  ]
+ },
+ "retorno": {
+  "modo": "metodo",
+  "posiciones": true,
+  "titulo": "Retorno esperado: tiempo, posiciones y ventas.",
+  "subtitulo": "Cada indicador se mide contra el punto de partida que se registra al arrancar.",
+  "etiqueta_pasos": "Cómo se calcula el retorno",
+  "pasos": [
+   {
+    "titulo": "Punto de partida",
+    "texto": "Traslados que se hacen, lo que tarda cada uno y cuántas personas lo gestionan hoy: es la línea base."
+   },
+   {
+    "titulo": "Con el proceso nuevo",
+    "texto": "Lo que tarda el mismo traslado con el flujo ideal y la sugerencia de traslados."
+   },
+   {
+    "titulo": "Horas recuperadas",
+    "texto": "Traslados al mes por la diferencia de tiempo, medidos contra la línea base."
+   },
+   {
+    "titulo": "Posiciones",
+    "texto": "Horas recuperadas entre las horas productivas de una posición: cuántas se reducen o no hace falta cubrir."
+   },
+   {
+    "titulo": "Venta recuperada",
+    "texto": "Lo que se deja de perder por faltantes: una estimación referencial, sin compromiso de resultado."
+   },
+   {
+    "titulo": "Gasto de operar",
+    "texto": "Licencias y consumo, contra el valor de lo recuperado."
+   }
+  ],
+  "etiqueta_metas": "Calendario de seguimiento y medición",
+  "metas": [
+   {
+    "dias": "30 días",
+    "texto": "Desde el cierre: se confirma si el proceso se sigue usando y el punto de partida queda validado."
+   },
+   {
+    "dias": "60 días",
+    "texto": "Fricciones resueltas; horas recuperadas y faltantes medidos contra el punto de partida."
+   },
+   {
+    "dias": "90 días",
+    "texto": "Tablero de retorno: tiempo, posiciones y venta recuperados frente al gasto de operar."
+   }
+  ],
+  "etiqueta_destino": "Hacia dónde va el proyecto",
+  "destino": [
+   {
+    "rotulo": "Repatriación ágil",
+    "texto": "Un **proceso común** para mover productos entre tiendas, en vez de la gestión manual de cada supervisor."
+   },
+   {
+    "rotulo": "Surtido a la medida",
+    "texto": "Cada tienda con los productos que le corresponden según su **metraje y su venta**."
+   },
+   {
+    "rotulo": "Crecimiento sostenido",
+    "texto": "Una cadena de suministro que acompaña la **meta de mantener** el crecimiento del año siguiente."
+   }
+  ],
+  "gancho": "Al cierre, {cliente_corto} verá en un tablero el tiempo y las posiciones recuperados, y la venta recuperada, frente al gasto de operar.",
+  "aval_posiciones": {
+   "quien": "Gonzalo (Canguro), según el mensaje de la asesora Verónica Rubio",
+   "fecha": "2026-11-05",
+   "medio": "mensaje de la asesora, pasado por Ivana"
+  }
+ },
+ "inversion": {
+  "duracion": "**1 proceso** con 5 entregables en tres partes y dos fases, con **5 personas** del equipo y seguimiento a {rango_seguimiento}. **40 horas** de construcción, testeo y adopción.",
+  "programa": [
+   "Servicio de Habilidades para {cliente_corto} ({codigo}).",
+   "Proceso de repatriación y surtido: 5 entregables.",
+   "Construcción, testeo y adopción, con 5 personas del equipo.",
+   "40 horas con el equipo, más seguimiento a 30, 60 y 90 días. La reunión de arranque va aparte."
+  ],
+  "notas": [
+   "Licencias de IA y consumo de BigQuery, si aplica: los asume {cliente_corto}, aparte de esta inversión.",
+   "No nos retiramos hasta que la capacidad quede instalada en el equipo."
+  ],
+  "garantia_texto": "Estamos contigo hasta que la capacidad quede instalada en tu equipo.",
+  "validez_dias": 60
+ },
+ "proximos_pasos": {
+  "subtitulo": "Esto es lo que sigue cuando {cliente_corto} confirme la propuesta.",
+  "asesora": {
+   "nombre": "Verónica Rubio",
+   "cargo": "Asesora comercial",
+   "correo": "vrubio01@intezia.com",
+   "telefono": "+58 422 3355505"
+  },
+  "pasos": [
+   {
+    "titulo": "Revisión conjunta",
+    "texto": "Una reunión presencial para revisar la propuesta, aclarar dudas y ajustarla a la necesidad."
+   },
+   {
+    "titulo": "Participantes y accesos",
+    "texto": "{cliente_corto} nos indica quiénes participan y quién da acceso a los datos de BigQuery."
+   },
+   {
+    "titulo": "Reunión de arranque",
+    "texto": "Una hora para acordar el calendario y los primeros pasos."
+   }
+  ]
+ },
+ "supuestos": [
+  "Pedido de Ivana (05/11/2026): propuesta de Habilidades CAI-086 para Canguro, asesora Verónica Rubio. Educación, sin alianza y sin facilidad de pago: confirmados con Ivana. Ajustada con la transcripción de la reunión (Gonzalo, 2 meses en la empresa, y su equipo de datos); donde se contradicen las notas y la transcripción, manda la transcripción (§4.23).",
+  "Horas (propuesta mía; Ivana dijo «propón tú» y luego pidió subirlas un poco porque participan 5 personas y se construye el producto): 40 h = manual y flujo ideal 8 (construcción 5, testeo 1, adopción 2), repatriación sugerida 12 (6, 3, 3), clasificación de tiendas 8 (4, 2, 2), surtido de productos clave 8 (4, 2, 2) y tablero de retorno 4 (2, 1, 1); total construcción 21, testeo 9, adopción 10. Antes eran 32 h. Las cinco soluciones y su reparto son diseño mío; la transcripción no fija horas.",
+  "El preservicio (levantamiento, manual y flujo ideal, y validación de las bases de datos) se integra como la solución LG-1 de la fase de base; el postservicio es el seguimiento 30-60-90 y el tablero de retorno (DP-2).",
+  "Cifras de la transcripción: 230 tiendas, ~19.000 productos activos, crecimiento del 100 % que esperan mantener. Gonzalo dijo «10 de 1000 aproximadamente hacen el 80 % de la venta»: se leyó como «10 de cada 1.000» por ser coherente con ~19.000 productos (≈ 190); confirmar con él. «50 personas» se dijo de forma ambigua (¿BI y Pricing?): no se cita.",
+  "Clasificación de tiendas: Gonzalo dice que hoy es por venta; otro participante mencionó metraje. Se escribe «por tamaño» (mini, pequeña, mediana, grande) y la solución DP-1 la lleva a metraje y venta, con la «imagen» (término de Canguro para el surtido que debe tener cada tienda o grupo de tiendas).",
+  "Caso análogo: se cuenta como «con un cliente», sin nombrar a Fasto ni la ciudad (Ivana, 05/11/2026); es el caso que Keiber contó en la reunión (conexión de las ventas de caja con compras, almacén y recepción; hoy en uso), sin cifras.",
+  "Herramienta de IA: no se nombra. Keiber dijo que se define en el levantamiento; Canguro ya usa varias (Claude, Gemini, Kiro, Antigravity, Lovable), todo en entorno Google, sin Python ni servidores propios; Odoo y SimplyPost no se modifican. No se afirma que migren de stack (§4.11) ni se promete acceso desde Venezuela.",
+  "Sin IA TechDay, sin Presidencia (está de viaje), sin diciembre ni plazos de aprobación en el deck: contexto interno del seguimiento comercial. El siguiente paso que se habló (mapear las demás áreas: comercio electrónico, finanzas) queda en «fuera de alcance» sin nombrar el servicio. La gobernanza de la IA no se menciona.",
+  "Seguimiento comercial: Verónica envía la propuesta esta semana y la reunión de revisión es presencial la semana siguiente; Gonzalo la lleva a Presidencia.",
+  "Participantes: 5 personas de Canguro (dato de Ivana, 05/11/2026), de Logística, Compras y Datos y Pricing; no se nombra quiénes. Metodología: construir, testear y adoptar (la de Habilidades de Intezia), explicada en «Cómo trabajamos».",
+  "Ajuste del 05/11/2026 (Ivana): no hablar de áreas sino del proceso que se construye y cómo, según la información que se levante. El deck presenta un solo proceso (repatriación y surtido) en tres partes: levantamiento y clasificación (levantamiento, manual, flujo ideal y clasificación de tiendas), surtido y repatriación, y retorno. Las partes sustituyen a Logística, Datos y Pricing y Compras; las horas y la fase de cada entregable no cambian. El levantamiento (BA-1) define el diseño final de las demás piezas; si cambia, se ajusta el reparto de las 40 h con Ivana y Verónica. Los ids pasaron de LG/DP/CO a BA/SR/RE.",
+  "Pedido del 05/11/2026 (mensaje de Verónica, pasado por Ivana): Gonzalo pidió mostrar de forma visual el impacto del recorte de personal y cómo operar con menos personas, porque a Presidencia le atraerá el beneficio operativo y la rentabilidad. Se plantea con `retorno.posiciones: true` y aval registrado (Gonzalo, 05/11/2026, mensaje de la asesora). Sin datos de dotación, escalas ni valor de la hora, el deck no trae cifras de personas ni de dinero: es método y comparación «Hoy / Con el proceso / Crecer con menos personas» en la lámina de retorno, y el tablero RE-1 mide horas, posiciones y venta contra el punto de partida. Se dice «posiciones que se reducen o no hace falta cubrir», no «recorte» ni «despidos».",
+  "Lámina 7, «Impacto» (Ivana, 05/11/2026: «haz algo visual, un gráfico, así sea una hoja más»): gráfico de personas y horas, hoy frente a con el proceso. Son proporciones de ejemplo (10 íconos, 4 liberados; barra 35 % manual, 25 % validar y decidir, 40 % tiempo recuperado) sin datos de Canguro: la propia lámina lo dice en su nota y los números no se muestran. Se reemplaza por cifras reales cuando Gonzalo entregue personas, horas y escalas (modo cifras del retorno)."
+ ],
+ "pendientes": [
+  "Confirmar el reparto de las 40 h (21 de construcción, 9 de testeo y 10 de adopción) y las cinco soluciones con Ivana y Verónica.",
+  "Confirmar con Gonzalo qué significa «10 de 1000 aproximadamente» frente a ~19.000 productos.",
+  "Valor, descuento y total: campos vacíos para ventas; moneda de facturación por confirmar.",
+  "Gonzalo es el contacto y lleva la propuesta a Presidencia: confirmar su nombre completo y cargo para dirigirla.",
+  "Confirmar qué 5 personas participan (de qué áreas) y si los supervisores regionales validan sin ser parte de las 5.",
+  "Si lo que se levante cambia el diseño de los entregables, reconfirmar el reparto de las 40 h antes de arrancar.",
+  "Aval de posiciones: reconfirmar por escrito con Gonzalo (con fecha) que quiere el planteamiento de posiciones y que Presidencia lo verá; el aval actual es un mensaje de la asesora.",
+  "Los 5 participantes y los supervisores regionales pueden leer la propuesta: decidir con Verónica y Gonzalo si el documento circula entre ellos o va solo a Presidencia.",
+  "Para mostrar cifras reales (posiciones hoy, a reducir, valor anual) hacen falta datos de Canguro: personas que gestionan hoy traslados y surtido, horas productivas y escalas. Sin ellos se queda en método.",
+  "Los íconos y porcentajes de la lámina de impacto son de ejemplo: confirmar con Ivana y Verónica que se aceptan como ilustración o esperar los datos reales de Canguro."
+ ],
+ "vocabulario": {
+  "area": [
+   "parte del proceso",
+   "partes del proceso"
+  ],
+  "solucion": [
+   "entregable",
+   "entregables"
+  ]
+ },
+ "impacto": {
+  "titulo": "Una operación más eficiente con menos personas.",
+  "subtitulo": "El efecto de **un proceso común** sobre el tiempo y las posiciones del equipo que hoy gestiona traslados y surtido.",
+  "hoy": {
+   "rotulo": "Hoy",
+   "etiqueta_personas": "Equipo que gestiona traslados y surtido",
+   "personas": 10,
+   "liberadas": 0,
+   "barra": [
+    {
+     "rotulo": "Todo el tiempo en trabajo manual",
+     "pct": 100,
+     "tipo": "manual"
+    }
+   ],
+   "texto": "Los supervisores regionales repatrían a mano y el surtido se decide sin la imagen de cada tienda."
+  },
+  "con": {
+   "rotulo": "Con el proceso",
+   "etiqueta_personas": "Equipo que gestiona traslados y surtido",
+   "personas": 10,
+   "liberadas": 4,
+   "etiqueta_liberadas": "Posiciones que se reducen o no hace falta cubrir",
+   "barra": [
+    {
+     "rotulo": "Manual",
+     "pct": 35,
+     "tipo": "manual"
+    },
+    {
+     "rotulo": "Validar y decidir",
+     "pct": 25,
+     "tipo": "valida"
+    },
+    {
+     "rotulo": "Tiempo recuperado",
+     "pct": 40,
+     "tipo": "recuperado"
+    }
+   ],
+   "texto": "La herramienta sugiere traslados y surtido y **una persona valida**: la operación se sostiene con **menos posiciones**."
+  },
+  "etiqueta_horas": "Horas del equipo",
+  "mensajes": [
+   {
+    "titulo": "Menos tiempo manual",
+    "texto": "Los traslados y el surtido se sugieren con los datos; nadie los arma a mano."
+   },
+   {
+    "titulo": "Menos posiciones",
+    "texto": "Lo que el tiempo recuperado cubre se reduce o no se contrata, y el tablero lo mide."
+   },
+   {
+    "titulo": "Crece con menos gasto",
+    "texto": "Los productos clave llegan a las tiendas que más venden, con el mismo equipo o menos."
+   }
+  ],
+  "nota": "Ilustración de proporciones: no es una medición ni la dotación de {cliente_corto}. Las cifras reales salen de la línea base que se mide al arrancar y del tablero de retorno."
+ }
+}

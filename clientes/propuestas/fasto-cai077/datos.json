@@ -1,0 +1,585 @@
+{
+ "version": 3,
+ "cliente": {
+  "nombre": "Fasto",
+  "slug": "fasto-cai077",
+  "codigo": "CAI-077",
+  "nombre_pie": "Fasto"
+ },
+ "division": "educacion",
+ "alianza": false,
+ "sin_horas_trabajo": true,
+ "meta_servicio": "habilidades",
+ "meta_tipo": "Habilidades · Inventario y Costos: recepción asistida con lectura de facturas y cuatro herramientas sobre la conexión con Estelar, más levantamiento de la oficina de costo y Detección en seis áreas (Recepción, Mercadeo, Administración, Contabilidad, Cuentas por pagar y Recursos Humanos, 4 h por área) · seguimiento 30-60-90 · formato compacto v3",
+ "vocabulario": {
+  "solucion": [
+   "entregable",
+   "entregables"
+  ],
+  "area": [
+   "línea de trabajo",
+   "líneas de trabajo"
+  ]
+ },
+ "omitir": [
+  "pago"
+ ],
+ "eje": "Habilidades en Inventario y Costos de Fasto (recepción asistida de facturas, alertas de stock, distribución por sede, cobertura y vencimientos, conteos y mermas) con Claude conectado a Estelar, y Detección en seis áreas de Fasto, cadena de supermercados",
+ "origen": "Resumen interno «FASTO: lo que quedó funcionando y lo que sigue» (David Prato, 25/10/2026), transcripciones de las sesiones del servicio de Habilidades para Compras (5 al 23 de octubre), texto de Verónica Rubio con la ruta propuesta y respuestas de Ivana del 30/10/2026: CAI-077, Educación, sin alianza, 40 h, hoja de inversión por partes",
+ "fuente_insumo": "Resumen interno de David Prato (25/10/2026), transcripciones de las sesiones de Compras y texto de Verónica Rubio (sin Ficha de Levantamiento propia ni transcripción de la reunión de esta propuesta)",
+ "siglas_ok": [
+  "IA"
+ ],
+ "portada": {
+  "titulo_lineas": [
+   "Habilidades en Inventario y Costos",
+   "y Detección en las demás áreas"
+  ],
+  "titulo_destacado": "de {cliente_corto}",
+  "lead": "Este proyecto construye con Inventario y Costos la **recepción asistida** y cuatro herramientas de control, sobre la **conexión con Estelar** ya en uso, y hace la Detección de seis áreas más, a 4 h por área.",
+  "hechos": [
+   {
+    "num": "80 a 90",
+    "texto": "proveedores llegan los jueves y viernes, y un solo analista teclea cada factura.",
+    "resuelto_por": [
+     "RE-1"
+    ]
+   },
+   {
+    "num": "167",
+    "texto": "unidades en existencia tiene un licor que vende 0,33 al mes, según los datos de Estelar.",
+    "resuelto_por": [
+     "IV-3"
+    ]
+   },
+   {
+    "num": "1 % a 8 %",
+    "texto": "de las recepciones queda ligado a su orden de compra, según los datos de Estelar.",
+    "resuelto_por": [
+     "RE-1"
+    ]
+   },
+   {
+    "num": "Papel",
+    "texto": "es donde el almacén anota las fallas, y una sola persona las cruza en Excel.",
+    "resuelto_por": [
+     "IV-1"
+    ]
+   }
+  ]
+ },
+ "carriles": [
+  {
+   "id": "cl",
+   "nombre": "Claude conectado a Estelar",
+   "nombre_corto": "Claude y Estelar",
+   "color": "amarillo"
+  }
+ ],
+ "areas": [
+  {
+   "id": "CS",
+   "nombre": "Oficina de costo",
+   "carril": "cl",
+   "frente": "A",
+   "para_que": "Medir cómo se registra cada factura y definir qué construir con Costos",
+   "soluciones": [
+    {
+     "id": "CS-1",
+     "entregable": "Levantamiento de la oficina de costo",
+     "h": 4,
+     "fase": "F1",
+     "incluye": [
+      "Tiempo de registro por factura",
+      "Facturas por día y errores más frecuentes",
+      "Qué sigue en Costos tras la recepción asistida"
+     ],
+     "detalle": "Cuatro horas de trabajo con el equipo de Costos. Se mide cuánto toma registrar cada factura, cuántas facturas llegan por día y cuáles son los errores más frecuentes, porque hasta que Costos registra la factura Estelar no deja trasladar la mercancía. Es la condición de la recepción asistida. Entrega el punto de partida de Costos y qué sigue."
+    }
+   ]
+  },
+  {
+   "id": "LV",
+   "nombre": "Detección en seis áreas",
+   "carril": "cl",
+   "frente": "A",
+   "para_que": "Detectar cómo trabajan seis áreas y definir dónde construir después",
+   "soluciones": [
+    {
+     "id": "LV-1",
+     "entregable": "Detección de Recepción",
+     "h": 4,
+     "fase": "F1",
+     "detalle": "Cuatro horas con el equipo de Recepción. Se recorre cómo trabaja hoy el área, se mide su punto de partida y se define dónde conviene construir después, apoyándose en la conexión con Estelar cuando aplique. Entrega el punto de partida del área y su lugar en el Mapa de Calor."
+    },
+    {
+     "id": "LV-2",
+     "entregable": "Detección de Mercadeo",
+     "h": 4,
+     "fase": "F1",
+     "detalle": "Cuatro horas con el equipo de Mercadeo. Se recorre cómo trabaja hoy el área, se mide su punto de partida y se define dónde conviene construir después, apoyándose en la conexión con Estelar cuando aplique. Entrega el punto de partida del área y su lugar en el Mapa de Calor."
+    },
+    {
+     "id": "LV-3",
+     "entregable": "Detección de Administración",
+     "h": 4,
+     "fase": "F1",
+     "detalle": "Cuatro horas con el equipo de Administración. Se recorre cómo trabaja hoy el área, se mide su punto de partida y se define dónde conviene construir después, apoyándose en la conexión con Estelar cuando aplique. Entrega el punto de partida del área y su lugar en el Mapa de Calor."
+    },
+    {
+     "id": "LV-4",
+     "entregable": "Detección de Contabilidad",
+     "h": 4,
+     "fase": "F1",
+     "detalle": "Cuatro horas con el equipo de Contabilidad. Se recorre cómo trabaja hoy el área, se mide su punto de partida y se define dónde conviene construir después, apoyándose en la conexión con Estelar cuando aplique. Entrega el punto de partida del área y su lugar en el Mapa de Calor."
+    },
+    {
+     "id": "LV-5",
+     "entregable": "Detección de Cuentas por pagar",
+     "h": 4,
+     "fase": "F1",
+     "detalle": "Cuatro horas con el equipo de Cuentas por pagar. Se recorre cómo trabaja hoy el área, se mide su punto de partida y se define dónde conviene construir después, apoyándose en la conexión con Estelar cuando aplique. Entrega el punto de partida del área y su lugar en el Mapa de Calor."
+    },
+    {
+     "id": "LV-6",
+     "entregable": "Detección de Recursos Humanos",
+     "h": 4,
+     "fase": "F1",
+     "detalle": "Cuatro horas con el equipo de Recursos Humanos. Se recorre cómo trabaja hoy el área, se mide su punto de partida y se define dónde conviene construir después, apoyándose en la conexión con Estelar cuando aplique. Entrega el punto de partida del área y su lugar en el Mapa de Calor."
+    }
+   ]
+  },
+  {
+   "id": "RE",
+   "nombre": "Recepción de mercancía",
+   "carril": "cl",
+   "frente": "A",
+   "para_que": "Que la factura llegue precargada a la recepción de Estelar",
+   "soluciones": [
+    {
+     "id": "RE-1",
+     "entregable": "Recepción asistida con lectura de facturas",
+     "h": 12,
+     "fase": "F2",
+     "incluye": [
+      "Foto o escaneo de la factura que precarga la recepción",
+      "Validación de una persona antes de cargar",
+      "Facturas y recepción ligadas a su orden de compra"
+     ],
+     "detalle": "Trabajo de 12 h con los equipos de Inventario y Costos. Hoy un solo analista teclea cada factura y los jueves y viernes llegan de 80 a 90 proveedores, con la mercancía retenida. Se construye con ellos, con Claude, la lectura de la factura (descripción, cantidad y código) para precargar la recepción en Estelar, con validación de una persona antes de cargarla. Es un proyecto nuevo y requiere que Fasto habilite la carga de datos en Estelar. Entrega la recepción asistida en uso."
+    }
+   ]
+  },
+  {
+   "id": "IV",
+   "nombre": "Inventario sobre la conexión actual",
+   "carril": "cl",
+   "frente": "A",
+   "para_que": "Cuatro herramientas de inventario sobre la conexión actual",
+   "soluciones": [
+    {
+     "id": "IV-1",
+     "entregable": "Alertas de fallas y stock mínimo",
+     "h": 6,
+     "fase": "F2",
+     "incluye": [
+      "Fallas del almacén registradas sin papel",
+      "Piso y almacén cruzados sin Excel",
+      "Alerta de productos en riesgo de quiebre"
+     ],
+     "detalle": "Trabajo de 6 h con el equipo de Inventario. Hoy el almacén anota las fallas en papel y solo una persona cruza piso y almacén en Excel. Se construye con Claude, sobre la conexión con Estelar ya en uso, el registro de fallas y las alertas de stock mínimo. Entrega las alertas en uso."
+    },
+    {
+     "id": "IV-2",
+     "entregable": "Sugerido de distribución por sede",
+     "h": 6,
+     "fase": "F2",
+     "incluye": [
+      "Cuánto enviar a cada tienda según lo que vende",
+      "Existencia y venta de cada sede a la vista",
+      "Sugerido revisado por una persona"
+     ],
+     "detalle": "Trabajo de 6 h con el equipo de Inventario. Hoy el almacén decide cuánto enviar a cada tienda por su existencia, sin ver lo que vende. Se construye con Claude un sugerido de distribución por sede que cruza existencia y ventas de cada tienda, y una persona lo revisa antes de enviar. Entrega el sugerido en uso."
+    },
+    {
+     "id": "IV-3",
+     "entregable": "Panel de cobertura y vencimientos",
+     "h": 6,
+     "fase": "F2",
+     "incluye": [
+      "Días de cobertura por producto y por sede",
+      "Productos con sobreexistencia o por vencer",
+      "Panel compartido con Compras"
+     ],
+     "detalle": "Trabajo de 6 h con el equipo de Inventario. Parte del Excel que ya lleva la líder de Inventario y se construye con Claude un panel de cobertura y vencimientos que se comparte con Compras, para ver la sobrecompra antes de que venza. Entrega el panel en uso."
+    },
+    {
+     "id": "IV-4",
+     "entregable": "Conteos priorizados y mermas",
+     "h": 6,
+     "fase": "F2",
+     "incluye": [
+      "Conteos ordenados por riesgo y diferencia",
+      "Ajustes validados con menos pasos manuales",
+      "Merma calculada con el mismo método"
+     ],
+     "detalle": "Trabajo de 6 h con el equipo de Inventario. Hoy cada diferencia de conteo se valida y se ajusta a mano, y la merma se calcula a mano. Se construye con Claude la priorización de los conteos y el cálculo de la merma, y una persona valida cada ajuste. Entrega los conteos y las mermas en uso."
+    }
+   ]
+  }
+ ],
+ "alcance": {
+  "titulo": "Cuatro líneas de trabajo del equipo.",
+  "subtitulo": "Una recepción nueva, cuatro herramientas de inventario y la Detección de seis áreas.",
+  "etiqueta_destacados": "Lo que se mide desde el primer día",
+  "destacados": [
+   {
+    "titulo": "Recepción",
+    "texto": "Cuánto toma registrar cada factura, contra el punto de partida."
+   },
+   {
+    "titulo": "Alertas y stock",
+    "texto": "Cuántas fallas y quiebres se avisan a tiempo."
+   },
+   {
+    "titulo": "Cobertura",
+    "texto": "Cuántos productos vencen sin rotar."
+   },
+   {
+    "titulo": "Uso del equipo",
+    "texto": "Quién usa las herramientas a los 30, 60 y 90 días."
+   }
+  ],
+  "fuera_alcance": [
+   "Desarrollar un sistema nuevo: se trabaja sobre Estelar y la conexión actual.",
+   "Habilitar la carga de datos en Estelar: la acuerda {cliente_corto} con Sistemas y el proveedor.",
+   "Licencias de Claude y su consumo: los contrata {cliente_corto}, aparte de esta inversión.",
+   "Otros subproyectos de Costos y construcción en las demás áreas: siguiente etapa."
+  ]
+ },
+ "metodo": {
+  "titulo": "Así construimos cada herramienta.",
+  "subtitulo": "Primero se mide dónde está cada proceso; después se construye, con los equipos, sobre lo que ya funciona.",
+  "quien_construye": "Intezia construye con Inventario y Costos, sobre la **conexión con Estelar** ya construida, probada y en uso.",
+  "por_que_orden": "Primero se mide Costos, porque Estelar no deja trasladar la mercancía hasta que Costos registra la factura; después se construye la recepción y las herramientas de inventario.",
+  "pasos": [
+   {
+    "titulo": "Medimos",
+    "texto": "La oficina de costo y las demás áreas de Fasto."
+   },
+   {
+    "titulo": "Recibimos",
+    "texto": "Recepción asistida, con Inventario y Costos."
+   },
+   {
+    "titulo": "Sumamos",
+    "texto": "Cuatro herramientas sobre la conexión actual."
+   },
+   {
+    "titulo": "Seguimos",
+    "texto": "Uso, ajustes y resultados, a 30, 60 y 90 días."
+   }
+  ],
+  "practica": [
+   {
+    "titulo": "Una persona valida",
+    "texto": "La factura se precarga y las sugerencias se calculan; una persona las valida antes de cargarlas."
+   },
+   {
+    "titulo": "Solo lectura por defecto",
+    "texto": "La conexión actual solo lee datos; escribir en Estelar se acuerda con Sistemas y el proveedor."
+   },
+   {
+    "titulo": "Sin prometer cifras",
+    "texto": "Se mide el punto de partida y cada avance; las metas son de {cliente_corto} y no se garantizan."
+   }
+  ],
+  "datos": "La conexión usa un usuario dedicado y consultas predefinidas, sin acceso libre a la base; cada persona tiene su clave y cada consulta queda registrada."
+ },
+ "fases": [
+  {
+   "id": "F1",
+   "titulo": "Levantamiento",
+   "descripcion": "levantamiento de Costos y Detección en seis áreas"
+  },
+  {
+   "id": "F2",
+   "titulo": "Construcción",
+   "descripcion": "recepción asistida y herramientas de inventario, en uso",
+   "destacada": true
+  }
+ ],
+ "frentes": [
+  {
+   "id": "A",
+   "carril": "cl",
+   "nombre": "Inventario y Costos de {cliente_corto}",
+   "medida": "64 horas",
+   "medida_meta": "con el equipo: 40 de Habilidades y 24 de Detección",
+   "celdas": {
+    "F1": "Levantamiento de Costos y Detección en seis áreas.",
+    "F2": "Recepción asistida y cuatro herramientas de inventario, en uso."
+   },
+   "celdas_medida": {
+    "F1": "28 horas con el equipo",
+    "F2": "36 horas con el equipo"
+   }
+  }
+ ],
+ "ruta": {
+  "titulo": "Del levantamiento a las herramientas en uso.",
+  "subtitulo": "El calendario se acuerda en la **reunión de arranque**, con resultados pensados para el corto plazo.",
+  "hitos": [
+   {
+    "titulo": "Arranque · aparte",
+    "texto": "Reunión de 1 h para acordar el calendario, quiénes participan y la carga de datos en Estelar."
+   },
+   {
+    "titulo": "Levantamiento y Detección",
+    "texto": "Costos y seis áreas, con su punto de partida y su Mapa de Calor."
+   },
+   {
+    "titulo": "Recepción asistida",
+    "texto": "La factura precarga la recepción en Estelar."
+   },
+   {
+    "titulo": "Inventario en uso",
+    "texto": "Alertas, distribución, cobertura, conteos y mermas."
+   }
+  ],
+  "siguiente_etapa": {
+   "titulo": "Siguiente paso · Más líneas",
+   "texto": "Habilidades en las demás áreas según la Detección, escritura en Estelar y acompañamiento quincenal o mensual."
+  }
+ },
+ "logistica": {
+  "modalidad": "Se acuerda en la reunión de arranque, según lo que mejor funcione para los equipos.",
+  "participantes": "Las personas de Inventario, Costos y las demás áreas que se definan en el arranque.",
+  "ritmo": "El trabajo se agenda sin frenar la recepción de mercancía, que se concentra los jueves y viernes.",
+  "arranque": "Apenas se apruebe la propuesta; una reunión de 1 h, aparte, acuerda el calendario."
+ },
+ "seguimiento": {
+  "rango": "30, 60 y 90 días",
+  "texto": "Desde el cierre de cada línea",
+  "items": [
+   {
+    "dias": "30 días",
+    "texto": "Uso de las herramientas"
+   },
+   {
+    "dias": "60 días",
+    "texto": "Ajustes y nuevas construcciones"
+   },
+   {
+    "dias": "90 días",
+    "texto": "Recepción e inventario medidos"
+   }
+  ]
+ },
+ "entregables": {
+  "titulo": "Lo que recibe Fasto.",
+  "subtitulo": "Lo que se llevan: **la recepción asistida, el control de inventario en uso y el Mapa de Calor de seis áreas con su hoja de ruta**, más el seguimiento a {rango_seguimiento}.",
+  "etiqueta_transversales": "Para todo el proyecto",
+  "transversales": [
+   "Punto de partida de Costos y de las seis áreas.",
+   "Mapa de Calor, Informe Final y hoja de ruta de la Detección.",
+   "Inversión inteligente en licencias: qué herramienta, para quién.",
+   "Seguimiento a 30, 60 y 90 días."
+  ],
+  "etiqueta_valor": "Valor inmediato",
+  "valor_inmediato": [
+   "Con la Detección: logros inmediatos y hoja de ruta.",
+   "Con la recepción: la factura llega precargada a Estelar.",
+   "Al cerrar: Inventario usa alertas, cobertura y conteos."
+  ],
+  "columnas_por_carril": [
+   3
+  ]
+ },
+ "retorno": {
+  "modo": "metodo",
+  "posiciones": false,
+  "titulo": "Retorno esperado: tiempo del equipo, medido.",
+  "subtitulo": "Cada indicador se mide contra el punto de partida que el levantamiento y la Detección dejan registrado.",
+  "etiqueta_pasos": "Cómo se calcula el retorno de cada herramienta",
+  "pasos": [
+   {
+    "titulo": "Volumen",
+    "texto": "Cuántas facturas se reciben, cuántos conteos se hacen y cuántas alertas se atienden cada mes."
+   },
+   {
+    "titulo": "Punto de partida",
+    "texto": "Tiempo de registrar una factura, de cruzar piso y almacén y de validar un conteo: es la línea base."
+   },
+   {
+    "titulo": "Con la herramienta",
+    "texto": "Lo que toma el mismo trabajo una vez que la herramienta está en uso."
+   },
+   {
+    "titulo": "Horas recuperadas",
+    "texto": "Volumen por la diferencia de tiempos: una estimación referencial, sin compromiso de resultado."
+   },
+   {
+    "titulo": "Gasto de operar",
+    "texto": "Licencias y consumo de IA, contra el valor de lo recuperado."
+   }
+  ],
+  "etiqueta_metas": "Calendario de seguimiento y medición",
+  "metas": [
+   {
+    "dias": "30 días",
+    "texto": "Desde el cierre de cada línea: herramientas en uso real y punto de partida validado con el equipo."
+   },
+   {
+    "dias": "60 días",
+    "texto": "Tiempo de recepción, de alertas y de conteos medido contra el punto de partida."
+   },
+   {
+    "dias": "90 días",
+    "texto": "Medición del retorno: lo recuperado frente al gasto de operar las herramientas."
+   }
+  ],
+  "etiqueta_destino": "Hacia dónde va el proyecto",
+  "destino": [
+   {
+    "rotulo": "Recepción sin teclear",
+    "texto": "Con la factura precargada, **un solo analista deja de teclear** cada una."
+   },
+   {
+    "rotulo": "Menos sobrecompra",
+    "texto": "Con cobertura y vencimientos a la vista, se detecta la **sobreexistencia** antes de que venza."
+   },
+   {
+    "rotulo": "Proveedores medibles",
+    "texto": "Con las órdenes ligadas a la recepción, se puede **medir** el cumplimiento de los proveedores."
+   }
+  ],
+  "gancho": "A los 90 días del cierre de cada línea, {cliente_corto} contará con su tiempo de recepción, de alertas y de conteos medido contra el punto de partida y el gasto de operar sus herramientas."
+ },
+ "inversion": {
+  "partes": [
+   {
+    "nombre": "Habilidades",
+    "detalle": "Inventario y Costos · 40 h"
+   },
+   {
+    "nombre": "Detección en seis áreas",
+    "detalle": "4 h por área · 24 h"
+   }
+  ],
+  "etiqueta_suma": "Proyecto completo",
+  "duracion": "**40 horas de Habilidades** con el equipo de {cliente_corto}, más la **Detección de seis áreas a 4 h por área (24 h)**, con seguimiento a {rango_seguimiento}.",
+  "programa": [
+   "Servicio de Habilidades y Detección para {cliente_corto} ({codigo}).",
+   "Habilidades: levantamiento de Costos, recepción asistida y cuatro herramientas de inventario, 40 h con el equipo.",
+   "Detección: Recepción, Mercadeo, Administración, Contabilidad, Cuentas por pagar y Recursos Humanos, a 4 h por área.",
+   "Seguimiento a 30, 60 y 90 días. La reunión de arranque va aparte."
+  ],
+  "notas": [
+   "Licencias de Claude y su consumo: los contrata {cliente_corto} y van aparte.",
+   "La recepción asistida requiere que {cliente_corto} habilite la carga de datos en Estelar."
+  ],
+  "garantia_texto": "Estamos contigo hasta que cada herramienta quede en uso."
+ },
+ "proximos_pasos": {
+  "subtitulo": "Esto es lo que sigue cuando {cliente_corto} confirme la propuesta.",
+  "asesora": {
+   "nombre": "Verónica Rubio",
+   "cargo": "Asesora comercial",
+   "correo": "vrubio01@intezia.com",
+   "telefono": "+58 422 3355505"
+  },
+  "pasos": [
+   {
+    "titulo": "Aprobación",
+    "texto": "Quien decide por {cliente_corto} confirma la propuesta y acordamos la fecha de la reunión de arranque."
+   },
+   {
+    "titulo": "Carga de datos",
+    "texto": "{cliente_corto} confirma quién coordina y habilita la carga de datos en Estelar con su proveedor."
+   },
+   {
+    "titulo": "Reunión de arranque",
+    "texto": "Una hora para acordar el calendario de los equipos y los primeros pasos."
+   }
+  ]
+ },
+ "supuestos": [
+  "Pedido de Ivana (30/10/2026): propuesta CAI-077 para Fasto, asesora Verónica Rubio. Educación y sin alianza (confirmados). **Combo Habilidades y Detección con Habilidades al frente** (Ivana: «es detección y habilidades pero tiene que reflejar que es habilidades»): portada «Servicio de Habilidades y Detección», `meta_servicio: habilidades`, título que empieza por Habilidades. Continuación del servicio de Habilidades para Compras (CAP-104 y su implementación del 5 al 23 de octubre).",
+  "Insumos: resumen interno de David Prato (25/10/2026), transcripciones de las sesiones de Compras y texto de Verónica; no hay Ficha ni transcripción propias de esta propuesta. El levantamiento de Inventario ya está hecho (22/10, enviado el 23/10), por eso no hay levantamiento ni Fundamentos de Inventario: va directo a construcción.",
+  "Alcance (corrección de Ivana, 30/10/2026: «ya va habilidades para inventario y costos y las demás áreas de Fasto para levantar información»): Habilidades en Inventario (cinco subproyectos del PDF de David) y el levantamiento de la oficina de costo, más el **levantamiento de información de las demás áreas de Fasto**, que ya no es siguiente paso. Ivana pidió decir «demás áreas» mientras tanto: no se nombran (en las transcripciones aparecen Mercadeo y Recursos Humanos). La lectura asistida de facturas de Costos se trata como la misma pieza que la recepción asistida. Siguiente paso, sin cotizar: otros subproyectos de Costos (Verónica habló de ocho), carga de mínimos y máximos, Habilidades en las demás áreas y acompañamiento quincenal o mensual.",
+  "Cifras de la portada: del propio cliente y de sus datos de Estelar, con el origen dicho en el texto (80 a 90 proveedores, licor de 167 unidades que vende 0,33 al mes, 1 % a 8 % de recepciones ligadas a su orden). Sin línea «Fuente» (Ivana, 30/10/2026: ninguna presentación lleva fuentes). No se citan las satisfacciones, los 10.000 productos bajo mínimo ni el número de tiendas, ni personas de Fasto.",
+  "Herramienta: se nombra Claude (ya en uso por el servicio anterior), sin precios de licencias, sin VPN y sin «cuesta menos» (frase del argumento interno de David). Estelar es el nombre del sistema; el texto de Verónica dice «Stellar» y el PDF usa «Estelar» para el sistema y «Stellar» para el proveedor: no se nombra al proveedor.",
+  "Requisito: la recepción asistida necesita que Fasto habilite la carga de datos en Estelar (la conexión actual es de solo lectura): va en fuera de alcance, notas y próximos pasos. Sin facilidad de pago, con seguimiento 30-60-90.",
+  "Horas: levantamiento de Costos 4 h + recepción asistida 12 h + cuatro herramientas de 6 h (24 h) = 40 h de Habilidades, tal como estaban (Ivana, 03/11/2026: «mantén las habilidades tal cual»). Detección: 4 h por área en seis áreas = 24 h; total con el equipo 64 h. Reunión de arranque de 1 h aparte. Partes de la hoja de cotización: «Habilidades» (40 h) y «Detección en seis áreas» (24 h), cada una con su caja de valor para Ventas, más el total del proyecto.",
+  "Áreas de la Detección (Ivana, 03/11/2026): Recepción, Mercadeo, Administración, Contabilidad, Cuentas por pagar y RRHH (escrito Recursos Humanos). La lista traía «contabilidad» dos veces: se tomó como una sola (**supuesto mío**, por eso son seis áreas y 24 h). Beneficios de la Detección añadidos a la slide de entregables: Mapa de Calor, Informe Final y hoja de ruta, inversión inteligente en licencias y logros inmediatos (sin cifra); el Mapa de Calor y los logros se incluyen como en el estándar de Detección y están por confirmar con Ivana. La Detección conserva «4 h por área» en el deck (Detección de cada área por separado, sin reparto distinto)."
+ ],
+ "pendientes": [
+  "Confirmar con Ivana si «contabilidad» repetida era un error (seis áreas, 24 h) o si faltaba otra área (p. ej. Costos u otra); si cambia, ajustar 4 h por cada una.",
+  "Confirmar que los logros inmediatos y el Mapa de Calor van como beneficios de la Detección de Fasto.",
+  "Confirmar con Verónica los demás subproyectos de Costos (¿ocho?).",
+  "Confirmar quiénes participan y la modalidad.",
+  "Valor, descuento y total: campos vacíos para ventas; con una sola parte elegida, ventas escribe el total a mano.",
+  "Confirmar el teléfono y el correo de Verónica Rubio (tomados de propuestas anteriores)."
+ ],
+ "frases_ok": [
+  "Oficina de costo",
+  "oficina de costo",
+  "Costos",
+  "costo de la oficina"
+ ],
+ "servicio_rotulo": "Servicio de Habilidades y Detección",
+ "respuesta_solicitud": {
+  "eyebrow": "Detección",
+  "despues_de": "alcance",
+  "paginas": [
+   {
+    "titulo": "La Detección: cómo se hace y qué deja.",
+    "subtitulo": "Es un trabajo aparte de las Habilidades: primero se mide dónde está cada área; después se decide qué construir.",
+    "items": [
+     {
+      "num": "1",
+      "titulo": "Seis áreas, 4 h cada una",
+      "etiqueta": "24 h",
+      "texto": "Cada área se recorre por separado: cómo trabaja hoy, dónde están sus procesos más pesados y qué conviene construir primero.",
+      "puntos": [
+       "Recepción y Mercadeo",
+       "Administración y Contabilidad",
+       "Cuentas por pagar y Recursos Humanos"
+      ]
+     },
+     {
+      "num": "2",
+      "titulo": "Logros inmediatos",
+      "etiqueta": "Durante la Detección",
+      "texto": "Al menos tres soluciones pequeñas, construidas con el equipo y en uso desde el primer día.",
+      "puntos": [
+       "Resultados que se ven sin esperar al informe",
+       "Lo que no se resuelve en el momento pasa al Mapa de Calor"
+      ]
+     },
+     {
+      "num": "3",
+      "titulo": "Mapa de Calor e Informe Final",
+      "etiqueta": "Al cierre",
+      "texto": "Todas las oportunidades de {cliente_corto} en un solo mapa, con su Índice de Madurez en IA, para ver por dónde empezar.",
+      "puntos": [
+       "Diagnóstico por área y hoja de ruta de adopción de IA",
+       "Resumen ejecutivo de una página"
+      ]
+     },
+     {
+      "num": "4",
+      "titulo": "Inversión inteligente en licencias",
+      "etiqueta": "Al cierre",
+      "texto": "Qué ecosistema de IA conviene adquirir y para qué puestos, con la inversión estimada.",
+      "puntos": [
+       "Se compra solo lo que cada puesto va a usar"
+      ]
+     }
+    ],
+    "nota": "La Detección y las Habilidades se presentan por separado en la hoja de inversión, cada una con su propio valor."
+   }
+  ]
+ }
+}

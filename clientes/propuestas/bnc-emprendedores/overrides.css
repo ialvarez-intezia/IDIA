@@ -1,0 +1,44 @@
+/* Ajustes propios de esta propuesta (se enlaza después de habilidades-compacto.css). */
+
+.s-route .rg-cell p { font-size: 15px; line-height: 1.4; }
+
+/* Alcance: cápsulas por área y horas de trabajo bien visibles bajo el nombre del área */
+.s-scope .scope-rows .area .comp { display: block; margin-top: 2px; font-size: 13px; font-weight: 700; color: var(--orange); }
+.s-scope.compact .scope-rows li { padding: 9px 0 10px; }
+.s-scope.compact .scope-panel { padding: 14px 20px 6px; }
+
+/* Hoja de cotización por opciones (inversion.hoja_paquetes, boceto de Ivana del 28/10/2026), solo para esta propuesta.
+   Duración y Programa arriba, Notas, valor por opción (Valor, Descuento, Total) y, al final, Importante.
+   Los rects del PDF están en scripts/agregar-campo-precio.py → paquetes_fields() (px × 0,75; y_pt = 595 − px × 0,75). */
+.s-price-paq .block.pq-dur { position: absolute; top: 118px; left: 56px; width: 480px; padding: 0; border-bottom: 0; }
+.s-price-paq .pq-dur .block-eyebrow { line-height: 12px; margin-bottom: 4px; }
+.s-price-paq .pq-dur .block-value { box-sizing: border-box; height: 124px; padding: 16px 14px; border: 1px solid rgba(0, 0, 0, 0.14); border-radius: 6px; font-size: 15px; line-height: 1.3; text-wrap: balance; }
+.s-price-paq .block-programa { top: 118px; left: 580px; width: 487px; }
+.s-price-paq .block-programa .block-eyebrow { line-height: 12px; margin-bottom: 10px; }
+.s-price-paq .programa-box { top: 140px; left: 580px; width: 480px; height: 112px; }
+.s-price-paq .programa-box::before { content: ""; position: absolute; top: -6px; bottom: -6px; left: -6px; right: -7px; border: 1px solid rgba(0, 0, 0, 0.14); border-radius: 6px; }
+.s-price-paq .block-notes-container { top: 262px; left: 56px; width: 1011px; }
+.s-price-paq .block-notes-container .block-eyebrow { line-height: 12px; margin-bottom: 10px; }
+.s-price-paq .notas-box { top: 284px; left: 64px; width: 996px; height: 64px; }
+.s-price-paq .notas-box::before { content: ""; position: absolute; top: -6px; bottom: -6px; left: -8px; right: -7px; border: 1px solid rgba(0, 0, 0, 0.14); border-radius: 6px; }
+.s-price-paq .pq-wrap { position: absolute; top: 362px; left: 56px; width: 1011px; z-index: 2; }
+.s-price-paq .pq-eyebrow { display: block; height: 14px; line-height: 14px; font-family: var(--font-display); font-weight: 700; font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--orange); }
+.s-price-paq .pq-cards { position: absolute; top: 22px; left: 0; right: 0; display: flex; gap: 16px; }
+.s-price-paq .pq-card { --c: var(--orange); position: relative; box-sizing: border-box; flex: 1 1 0; min-width: 0; height: 236px; border-radius: 10px; background: var(--white); box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.14); }
+.s-price-paq .pq-card.acc-y { --c: var(--yellow); }
+.s-price-paq .pq-card::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 4px; border-radius: 10px 10px 0 0; background: var(--c); }
+.s-price-paq .pq-tag { position: absolute; top: 10px; left: 14px; font-family: var(--font-display); font-weight: 700; font-size: 8.5px; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(0, 0, 0, 0.45); }
+.s-price-paq .pq-name { position: absolute; top: 22px; left: 14px; right: 14px; font-family: var(--font-display); font-weight: 700; font-size: 14px; line-height: 1.2; }
+.s-price-paq .pq-det { position: absolute; top: 40px; left: 14px; right: 14px; font-family: var(--font-body); font-size: 10px; line-height: 1.3; color: rgba(0, 0, 0, 0.7); }
+.s-price-paq .pq-lab { position: absolute; left: 14px; right: 14px; height: 14px; line-height: 14px; font-family: var(--font-display); font-weight: 700; font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--orange); white-space: nowrap; }
+.s-price-paq .pq-lab-total { color: var(--black); }
+.s-price-paq .pq-lab-precio { top: 52px; }
+.s-price-paq .pq-lab-desc { top: 108px; }
+.s-price-paq .pq-lab-total { top: 164px; }
+.s-price-paq .pq-pill { font-style: normal; margin-left: 8px; padding: 2px 8px; border-radius: 5px; background: var(--discount-urgent-pink-bg); color: var(--discount-urgent-red); font-size: 9.5px; letter-spacing: 0; text-transform: none; }
+.s-price-paq .pq-frame { position: absolute; left: 14px; right: 14px; background: rgba(244, 186, 26, 0.22); }
+.s-price-paq .pq-precio { top: 68px; height: 32px; }
+.s-price-paq .pq-desc { top: 124px; height: 32px; }
+.s-price-paq .pq-total { top: 180px; height: 44px; background: var(--yellow); }
+.s-price-paq .pq-validity { top: 632px; left: 56px; right: 56px; }
+.s-price-paq .pq-terms { top: 652px; left: 56px; right: 56px; padding: 12px 18px; }

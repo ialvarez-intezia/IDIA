@@ -277,7 +277,7 @@ def opcion_A(r, ses_areas, total_areas):
         hechos_resuelto=["BOO-1", "BOO-2"],
         participantes="Hasta 25 personas de varias áreas por encuentro; %d personas en total." % BASE_A,
         ruta_titulo="Del arranque con TI a los bootcamps.",
-        ruta_nota="Los %d encuentros suman 42 horas de encuentro: %d antes de diciembre y %d en enero y febrero, con 2 facilitadores por encuentro." % (x["n"], x["nov"], x["ene"]),
+        ruta_nota="Los %d encuentros suman %d horas de encuentro: %d antes de diciembre y %d en enero y febrero." % (x["n"], x["h_ses"], x["nov"], x["ene"]),
         hitos=[{"titulo": "TI activa las Skills", "texto": "Antes del primer encuentro, en la consola de administración."},
                {"titulo": "Primer encuentro", "texto": "Arranca antes del 17 de noviembre, cuando los Gems pasan a Configuración."},
                {"titulo": "Cierre del grueso", "texto": "Los primeros %d encuentros terminan antes de diciembre." % x["nov"]},
@@ -285,15 +285,108 @@ def opcion_A(r, ses_areas, total_areas):
                {"titulo": "Cierre", "texto": "Casos medidos y Skills compartidas, antes del 1 de marzo."}],
         duracion="%d encuentros de 2 horas en bootcamps de hasta 25 personas, de noviembre a febrero. %d horas de encuentro." % (x["n"], x["h_ses"]),
         programa=["Servicio de Innovación para Zoom (INN-006-A): Gems a Skills en bootcamps de varias áreas.",
-                  "%d encuentros de 2 horas: %d horas de encuentro, con 2 facilitadores (%d horas de trabajo)." % (x["n"], x["h_ses"], x["h_fac"]),
-                  "Preparación %d h, coordinación con TI %d h y seguimiento %d h." % (x["prep"], x["ti"], x["seg"]),
-                  "Total: %d horas de trabajo." % x["total"]],
-        cuotas=[{"cuando": "Al aprobar", "hito": "Reserva del calendario y del equipo de facilitadores.", "pct": 40},
+                  "%d encuentros de 2 horas: %d horas de encuentro." % (x["n"], x["h_ses"]),
+                  "Incluye la preparación, la coordinación con TI y el seguimiento de las Skills."],
+        cuotas=[{"cuando": "Al aprobar", "hito": "Reserva del calendario.", "pct": 40},
                 {"cuando": "Fin de noviembre", "hito": "Los %d encuentros de noviembre realizados." % x["nov"], "pct": 30},
                 {"cuando": "Cierre", "hito": "Todos los encuentros realizados y los casos medidos.", "pct": 30}],
         intro=INTRO_BASE + " Son %d encuentros: %d antes de diciembre y %d en enero." % (x["n"], x["nov"], x["ene"]),
         extra_supuestos=["Opción A: %d personas (base de la dirección) en %d encuentros de 2 h, hasta 25 de varias áreas; 12 antes de diciembre (4 semanas × 3) y %d en enero (11 al 29 de enero)." % (BASE_A, x["n"], x["ene"])],
     )
+
+
+def opcion_final(r, ses_areas, total_areas):
+    """Propuesta única INN-006 (27/10/2026): bootcamp para las 510 personas, mencionando las áreas del servicio. Parte de la opción A."""
+    # 26 encuentros: los 21 de las 510 personas más 5 de recuperación para quienes no asistan (indicación del equipo, 27/10/2026)
+    x = dict(r["A"])
+    x.update(n=26, nov=12, ene=14, h_ses=52, h_fac=104, seg=math.ceil(26 * 0.5) + H_SEG_CIERRE)
+    x["total"] = x["h_fac"] + x["prep"] + x["ti"] + x["seg"]
+    r2 = {**r, "A": x}
+    o = opcion_A(r2, ses_areas, total_areas)
+    o["r_override"] = r2
+    def pulir(d):   # lenguaje cuidado para el cliente (Ivana, 27/10/2026)
+        d["portada"]["lead"] = "Las **%d personas** de Zoom pasan sus **Gems** a **Skills** en bootcamps prácticos de 2 horas y hasta 25 personas, antes de que Google deje de ofrecer los Gems." % BASE_A
+        h = d["portada"]["hechos"]
+        h[0]["texto"] = "Google dejará de permitir crear, editar y usar Gems, no antes del 1 de marzo de 2027."
+        h[1]["texto"] = "es el estado en que quedan los Gems al convertirse en Skills: cada creador debe activarlos."
+        h[2]["texto"] = "van las Skills de la app de Gemini y las de Workspace: no se sincronizan entre sí."
+        d["cambios"]["subtitulo"] = "Google reemplaza los Gems por Skills. Esto es lo que cambia y por qué conviene dar el paso con tiempo."
+        d["areas"][0]["para_que"] = "Las %d personas de Zoom, en grupos de hasta 25, pasan sus Gems a Skills en vivo." % BASE_A
+        d["ruta"]["hitos"][2] = {"titulo": "Cierre de noviembre", "texto": "Los primeros %d encuentros terminan antes de diciembre." % x["nov"]}
+        d["calendario"]["intro"] = ("Las sesiones arrancan la semana del 2 de noviembre, con hasta tres por semana, para llegar a la mayor cantidad de personas antes de diciembre. "
+                                    "Diciembre es temporada alta de Zoom, por eso no hay encuentros. Enero y febrero quedan de margen, siempre antes del 1 de marzo de 2027. "
+                                    "Son %d grupos, uno por encuentro: %d antes de diciembre, %d en enero y febrero y %d de respaldo para quienes no puedan asistir." % (x["n"], x["nov"], base - x["nov"], recup))
+        d["cambios"]["porque"][1]["texto"] = "El 88 % de esas personas usa Gemini como su herramienta de IA principal (73 de 83): se parte de lo que ya construyeron."
+        d["metodo"]["quien_construye"] = "Intezia guía cada encuentro en vivo y las personas de Zoom trabajan con sus propios Gems: se construye en conjunto."
+        d["metodo"]["pasos"][0]["texto"] = "Cada persona anota sus Gems en un formulario breve y llega con su inventario listo."
+        # Ivana, 27/10/2026: ni horas de trabajo ni cantidad de consultores; solo las horas de encuentro con Zoom
+        d["sin_horas_trabajo"] = True
+        fr = d["frentes"][0]
+        fr["medida_meta"] = "%d horas de encuentro en total" % x["h_ses"]
+        fr["celdas_medida"] = {"F1": "%d horas de encuentro" % (2 * x["nov"]), "F2": "%d horas de encuentro" % (2 * (x["n"] - x["nov"]))}
+        return d
+    o["parchear"] = pulir
+    base = math.ceil(BASE_A / TOPE)      # 21 encuentros para las 510 personas
+    recup = x["n"] - base                # 5 de recuperación
+    o["areas"][0]["soluciones"] = [
+        {"id": "BOO-1", "entregable": "Bootcamps de noviembre", "h": 2 * x["nov"], "fase": "F1",
+         "detalle": "Referencia interna: %d encuentros de 2 horas en noviembre, hasta 25 personas por encuentro." % x["nov"]},
+        {"id": "BOO-2", "entregable": "Bootcamps de enero y febrero", "h": 2 * (base - x["nov"]), "fase": "F2",
+         "detalle": "Referencia interna: %d encuentros de 2 horas en enero y febrero, de margen para rezagados." % (base - x["nov"])},
+        {"id": "BOO-3", "entregable": "Grupos de respaldo", "h": 2 * recup, "fase": "F2",
+         "detalle": "Referencia interna: %d grupos de respaldo de hasta 25 personas, un encuentro de 2 horas cada uno (rango extra)." % recup},
+    ]
+    o["hechos_resuelto"] = ["BOO-1", "BOO-2", "BOO-3"]
+    o["fases"][1]["descripcion"] = "**%d de margen y %d de respaldo**" % (base - x["nov"], recup)
+    o["celdas"]["F2"] = "%d encuentros de margen para quienes se incorporen después y %d grupos de respaldo, antes del 1 de marzo de 2027." % (base - x["nov"], recup)
+    o["hitos"][3] = {"titulo": "Grupos de respaldo", "texto": "Los últimos %d encuentros: %d de margen y %d de respaldo." % (x["ene"], base - x["nov"], recup)}
+    o["areas"][0]["nombre"] = "Todas las áreas de Zoom"
+    o["areas"][0]["para_que"] = "Las %d personas de Zoom, en grupos de hasta 25 que Zoom arma, migran Gems a Skills en vivo." % BASE_A
+    o.update(
+        slug="zoom-inn006", codigo="INN-006", clave="A", nombre_opcion="Bootcamp",
+        meta_tipo="Plan de Innovación · bootcamps de Gems a Skills para %d personas de todas las áreas de Zoom: %d encuentros de 2 h (%d h de encuentro), hasta 25 personas por encuentro · calendario con fechas · formato compacto v3" % (BASE_A, x["n"], x["h_ses"]),
+        eje="Migrar a Skills los Gems de las %d personas de Zoom, de todas sus áreas, en bootcamps de 2 horas de hasta 25 personas, antes de que Google retire los Gems" % BASE_A,
+        titulo_lineas=["Gems a Skills en bootcamps", "para %d personas" % BASE_A], titulo_destacado="de Zoom",
+        lead="Las **%d personas** de Zoom llevan sus **Gems** a **Skills** en bootcamps de 2 horas, hasta 25 por encuentro, antes de que Google deje de ofrecer los Gems." % BASE_A,
+        alcance_titulo="Gems a Skills en bootcamps para todas las áreas.",
+        alcance_sub="%d grupos de hasta 25 personas, con encuentros de 2 horas: %d para las %d personas y %d de respaldo." % (x["n"], base, BASE_A, recup),
+        intro=INTRO_BASE + " Son %d grupos, uno por encuentro: %d antes de diciembre, %d en enero y febrero y %d de respaldo para quienes no puedan asistir." % (x["n"], x["nov"], base - x["nov"], recup),
+        participantes="Hasta 25 personas por encuentro; %d personas de todas las áreas de Zoom." % BASE_A,
+        destacados=("Cómo funciona el bootcamp", [
+            ("Para todas las áreas", "Operaciones, Comercial, Legal, Zoom Miami, Gestión Humana, Tecnología y el resto de las áreas de Zoom."),
+            ("Zoom conforma los grupos", "Cada bootcamp reúne hasta 25 personas; Zoom decide cómo agrupar las áreas."),
+            ("Grupos cotizados", "Se cotizan %d grupos: %d para las %d personas y %d de respaldo para quienes no puedan asistir." % (x["n"], base, BASE_A, recup)),
+            ("Un solo criterio", "Personas de áreas distintas acuerdan los mismos nombres y reglas para todas las Skills."),
+        ]),
+        sub_metodo="Se llega con el inventario hecho y las 2 horas son de práctica.",
+        notas_propias=["Licencias de Google y accesos de TI: los gestiona Zoom, fuera de esta inversión.",
+                       "Valores y cuotas de pago: los define el equipo comercial de Intezia.",
+                       "Se cotizan 26 grupos de hasta 25 personas (52 horas de encuentro); cualquier grupo adicional se cotiza aparte.",
+                       "Términos y condiciones: los del enlace de «Importante»."],
+        programa=["Servicio de Innovación para Zoom (INN-006): Gems a Skills en bootcamps para %d personas de todas las áreas." % BASE_A,
+                  "%d encuentros de 2 horas: %d horas de encuentro." % (x["n"], x["h_ses"]),
+                  "Incluye la preparación, la coordinación con TI y el seguimiento de las Skills."],
+        origen_propio="Pedido de Ivana del 27/10/2026: una sola propuesta INN-006, bootcamp para las 510 personas y mencionando las áreas del servicio, tras los mensajes del equipo (las opciones B y C solo cubrían 121 personas y Emma pidió los 510; si Zoom arma los grupos el número de encuentros puede crecer). Parte de la opción A de las tres propuestas INN-006-A/B/C del 26/10/2026. Sin Ficha de Levantamiento ni transcripción",
+        supuestos_propios=[
+            "Decisión de Ivana (27/10/2026): una sola propuesta INN-006, bootcamp con las 510 personas, mencionando las áreas del servicio. No hay total de personas por área (no se tiene), así que no se ofrecen las opciones por área (B y C). INN-006-A, -B, -C y la unión A-B-C siguen en sus carpetas, sin archivar.",
+            "Control del número de encuentros (mensaje del equipo): como Zoom arma los grupos, el deck dice que se cotizan 26 grupos de hasta 25 personas y que los adicionales se cotizan aparte (en las Notas de la inversión). Es redacción del sistema, no dicha por María: confirmar.",
+            "26 grupos (indicación del equipo, 27/10/2026: «cotizar 26 grupos de hasta 25 personas: los 21 que hacen falta para los 510, más 5 grupos extra por si acaso; 52 horas de sesión»): 21 para las 510 personas (510 / 25, redondeado hacia arriba) más 5 grupos extra. Cada grupo es un encuentro de 2 h. Calendario del sistema: 12 antes de diciembre, 9 en enero y febrero y los 5 grupos extra al final, antes del 1 de marzo de 2027. Horas: 26 × 2 = 52 h de encuentro.",
+            "Áreas mencionadas: Operaciones, Comercial, Legal, Zoom Miami, Gestión Humana y Tecnología (las ya trabajadas, según la memoria y los casos de éxito) y «el resto de las áreas»; sin números por área.",
+        ] + [supuestos_comunes(r)[i] for i in (1, 4, 5, 6, 7, 8, 9, 11, 13)] + [
+            "Horas para cotizar (el deck no lleva precios): %d encuentros de 2 h = %d h; con 2 facilitadores, %d h de trabajo de encuentro; preparación %d h, coordinación con TI %d h y seguimiento %d h: total %d horas de trabajo. Estimación del sistema, por confirmar." % (
+                x["n"], x["h_ses"], x["h_fac"], x["prep"], x["ti"], x["seg"], x["total"]),
+            "Pago: tres cuotas ligadas a hitos (40/30/30, propuesta del sistema, por confirmar con María), montos vacíos. Sin garantía ni seguimiento 30-60-90.",
+        ],
+        pendientes_propios=[
+            "Confirmar con María la cláusula de los encuentros adicionales por grupos más chicos y la cifra de cotización (el deck no lleva precios).",
+            "Confirmar con David la lista de requisitos de TI y que TI pueda activar las Skills antes del 2 de noviembre.",
+            "Confirmar horario y días (se propusieron lunes, miércoles y viernes), las horas internas y los 2 facilitadores por encuentro.",
+            "Confirmar los porcentajes de las cuotas, la moneda y los impuestos de facturación.",
+            "Las fechas de Google pueden cambiar: reconsultar la página oficial antes de enviar.",
+            "Si Ivana consigue el total por área, se puede volver a ofrecer la opción por áreas (B) con control exacto de encuentros.",
+        ],
+    )
+    return o
 
 
 def filas_areas_B(ses_areas, ini_f1=True):
@@ -329,17 +422,16 @@ def opcion_B(r, ses_areas, total_areas):
         hechos_resuelto=[i + "-1" for i, _, _, _ in ses_areas],
         participantes="Una sola área por encuentro, en grupos de hasta 25 personas; %d personas en total." % total_areas,
         ruta_titulo="Del arranque con TI a un encuentro por área.",
-        ruta_nota="Los %d encuentros suman 16 horas de encuentro, con 1 facilitador por encuentro; todos se hacen antes de diciembre." % x["n"],
+        ruta_nota="Los %d encuentros suman 16 horas de encuentro; todos se hacen antes de diciembre." % x["n"],
         hitos=[{"titulo": "TI activa las Skills", "texto": "Antes del primer encuentro, en la consola de administración."},
                {"titulo": "Áreas en grupos", "texto": "Operaciones y Comercial, en %d encuentros de hasta 25 personas." % n_f1},
                {"titulo": "Áreas de un grupo", "texto": "Legal, Zoom Miami, Gestión Humana y Tecnología, en %d encuentros." % n_f2},
                {"titulo": "Cierre", "texto": "Casos medidos y reglas de las Skills acordadas por área."}],
         duracion="%d encuentros de 2 horas, uno por área o por grupo de hasta 25 personas, antes de diciembre. %d horas de encuentro." % (x["n"], x["h_ses"]),
         programa=["Servicio de Innovación para Zoom (INN-006-B): Gems a Skills con un encuentro por área.",
-                  "%d encuentros de 2 horas: %d horas de encuentro, con 1 facilitador (%d horas de trabajo)." % (x["n"], x["h_ses"], x["h_fac"]),
-                  "Preparación %d h, coordinación con TI %d h y seguimiento %d h." % (x["prep"], x["ti"], x["seg"]),
-                  "Total: %d horas de trabajo." % x["total"]],
-        cuotas=[{"cuando": "Al aprobar", "hito": "Reserva del calendario y del equipo de facilitadores.", "pct": 50},
+                  "%d encuentros de 2 horas: %d horas de encuentro." % (x["n"], x["h_ses"]),
+                  "Incluye la preparación, la coordinación con TI y el seguimiento de las Skills."],
+        cuotas=[{"cuando": "Al aprobar", "hito": "Reserva del calendario.", "pct": 50},
                 {"cuando": "Cierre", "hito": "Todos los encuentros realizados y los casos medidos.", "pct": 50}],
         intro=INTRO_BASE + " Las áreas de más de 25 personas se dividen en grupos de hasta 25.",
         extra_supuestos=["Opción B: totales por área de Ivana (26/10/2026), provisionales: " + ", ".join("%s %d (%d %s)" % (nom, n, g, "grupos" if g > 1 else "grupo") for _, nom, n, g in ses_areas) + "; suman %d personas y %d encuentros. Las áreas de más de 25 se dividen en grupos de hasta 25 (Operaciones 20 + 20, Comercial 14 + 13)." % (total_areas, x["n"])],
@@ -374,17 +466,16 @@ def opcion_C(r, ses_areas, total_areas):
         hechos_resuelto=[i + "-1" for i, _, _, _ in ses_areas] + ["BOO-1"],
         participantes="Una sola área por encuentro; el bootcamp abierto, hasta 25 personas de varias áreas.",
         ruta_titulo="Del arranque con TI a los encuentros por área.",
-        ruta_nota="%d encuentros por área (16 horas, 1 facilitador) más %d bootcamp de 2 horas con 2 facilitadores, para %d personas que se estima faltarán (%d %% de ausencia)." % (x["n_areas"], x["n_boot"], x["ausentes"], round(AUSENCIA * 100)),
+        ruta_nota="%d encuentros por área (16 horas) más %d bootcamp de 2 horas, para %d personas que se estima faltarán (%d %% de ausencia)." % (x["n_areas"], x["n_boot"], x["ausentes"], round(AUSENCIA * 100)),
         hitos=[{"titulo": "TI activa las Skills", "texto": "Antes del primer encuentro, en la consola de administración."},
                {"titulo": "Encuentros por área", "texto": "Seis áreas, con grupos de hasta 25 personas, antes de diciembre."},
                {"titulo": "Bootcamp abierto", "texto": "Para quienes no estuvieron, en enero, antes del tope de Google."},
                {"titulo": "Cierre", "texto": "Casos medidos y Skills compartidas, antes del 1 de marzo."}],
         duracion="%d encuentros por área y %d bootcamp abierto, de 2 horas cada uno, de noviembre a enero. %d horas de encuentro." % (x["n_areas"], x["n_boot"], x["h_ses"]),
         programa=["Servicio de Innovación para Zoom (INN-006-C): Gems a Skills por área y un bootcamp abierto.",
-                  "%d encuentros: %d horas de encuentro; %d h con 1 facilitador por área y %d h con 2 en el bootcamp (%d horas de trabajo)." % (x["n"], x["h_ses"], 2 * x["n_areas"], 2 * x["n_boot"], x["h_fac"]),
-                  "Preparación %d h, coordinación con TI %d h y seguimiento %d h." % (x["prep"], x["ti"], x["seg"]),
-                  "Total: %d horas de trabajo." % x["total"]],
-        cuotas=[{"cuando": "Al aprobar", "hito": "Reserva del calendario y del equipo de facilitadores.", "pct": 40},
+                  "%d encuentros: %d horas de encuentro." % (x["n"], x["h_ses"]),
+                  "Incluye la preparación, la coordinación con TI y el seguimiento de las Skills."],
+        cuotas=[{"cuando": "Al aprobar", "hito": "Reserva del calendario.", "pct": 40},
                 {"cuando": "Fin de noviembre", "hito": "Los encuentros por área realizados.", "pct": 30},
                 {"cuando": "Cierre", "hito": "El bootcamp abierto realizado y los casos medidos.", "pct": 30}],
         intro=INTRO_BASE + " El bootcamp abierto para quienes no estuvieron va en enero.",
@@ -394,7 +485,7 @@ def opcion_C(r, ses_areas, total_areas):
 
 # --- Armado del datos.json -------------------------------------------------------------------------------------------------------------
 def datos(o, r, ses_areas, total_areas):
-    sup = supuestos_comunes(r) + o["extra_supuestos"]
+    sup = o.get("supuestos_propios") or (supuestos_comunes(r) + o["extra_supuestos"])
     return {
         "version": 3,
         "cliente": {"nombre": "Zoom", "slug": o["slug"], "codigo": o["codigo"], "nombre_pie": "Zoom"},
@@ -408,13 +499,13 @@ def datos(o, r, ses_areas, total_areas):
         "frases_ok": ["Las sesiones arrancan la semana del 2 de noviembre"],   # la excepción del calendario (Ivana, 26/10/2026)
         "vocabulario": {"solucion": ["encuentro", "encuentros"], "area": ["área", "áreas"]},
         "eje": o["eje"],
-        "origen": "Pedido de Ivana del 26/10/2026 con el texto de la dirección de Intezia (tres opciones, A, B y C, bajo el código INN-006), la documentación oficial de Google para administradores (consultada el " + CONSULTA + "), los dashboards de impacto y el informe de casos de éxito de Zoom, los totales por área de Ivana y el Brand Kit Intezia v2.1. Sin Ficha de Levantamiento ni transcripción",
+        "origen": o.get("origen_propio") or "Pedido de Ivana del 26/10/2026 con el texto de la dirección de Intezia (tres opciones, A, B y C, bajo el código INN-006), la documentación oficial de Google para administradores (consultada el " + CONSULTA + "), los dashboards de impacto y el informe de casos de éxito de Zoom, los totales por área de Ivana y el Brand Kit Intezia v2.1. Sin Ficha de Levantamiento ni transcripción",
         "fuente_insumo": "Texto de la dirección y respuestas de Ivana (26/10/2026); documentación de Google para administradores (" + CONSULTA + "); dashboards y casos de éxito de Zoom",
         "supuestos": sup,
-        "pendientes": pendientes_comunes(),
+        "pendientes": o.get("pendientes_propios") or pendientes_comunes(),
         "portada": {
             "titulo_lineas": o["titulo_lineas"],
-            "titulo_destacado": "en Zoom",
+            "titulo_destacado": o.get("titulo_destacado", "en Zoom"),
             "lead": o["lead"],
             "hechos": [
                 {"num": "Mar 2027", "texto": "Google deja de permitir crear, editar y usar Gems, no antes del 1 de marzo de 2027.", "resuelto_por": o["hechos_resuelto"]},
@@ -427,8 +518,9 @@ def datos(o, r, ses_areas, total_areas):
         "areas": o["areas"],
         "alcance": {
             "titulo": o["alcance_titulo"], "subtitulo": o["alcance_sub"], "sin_conteo_por_fila": True,
-            **({"etiqueta_destacados": DESTACADOS["A"][0],
-                "destacados": [{"titulo": t, "texto": x} for t, x in DESTACADOS["A"][1]]} if o["codigo"].endswith("A") else {}),
+            **({"etiqueta_destacados": o["destacados"][0], "destacados": [{"titulo": t, "texto": x} for t, x in o["destacados"][1]]} if o.get("destacados")
+               else ({"etiqueta_destacados": DESTACADOS["A"][0],
+                      "destacados": [{"titulo": t, "texto": x} for t, x in DESTACADOS["A"][1]]} if o["codigo"].endswith("A") else {})),
             "fuera_alcance": [
                 "Licencias de Google y activación de las Skills: las gestiona el equipo de TI de Zoom antes del primer encuentro.",
                 "Construir Skills nuevas: se migran los Gems que ya existen y se acuerdan las reglas; lo nuevo es otra etapa.",
@@ -439,15 +531,15 @@ def datos(o, r, ses_areas, total_areas):
         "frentes": [{"id": "A", "carril": "gw", "nombre": o["frente_nombre"], "celdas": o["celdas"]}],
         "seguimiento": {"tipo": "ninguno"},
         "ruta": {"titulo": o["ruta_titulo"], "subtitulo": "El horario de cada encuentro se acuerda con Zoom; las fechas están en el calendario.", "nota": o["ruta_nota"], "hitos": o["hitos"]},
-        "calendario": calendario(o["omitir_fechas"], o["encuentro"], o["intro"], "%d encuentros de 2 horas, los lunes, miércoles y viernes: %d horas de encuentro." % (r[o["codigo"][-1]]["n"], r[o["codigo"][-1]]["h_ses"])),
-        "metodo": metodo(o["nombre_opcion"], o["participantes"]),
+        "calendario": calendario(o["omitir_fechas"], o["encuentro"], o["intro"], "%d encuentros de 2 horas, los lunes, miércoles y viernes: %d horas de encuentro." % (r[o.get("clave", o["codigo"][-1])]["n"], r[o.get("clave", o["codigo"][-1])]["h_ses"])),
+        "metodo": {**metodo(o["nombre_opcion"], o["participantes"]), **({"subtitulo": o["sub_metodo"]} if o.get("sub_metodo") else {})},
         "logistica": logistica(o["participantes"]),
         "retorno": retorno(),
         "inversion": {
             "duracion": o["duracion"], "programa": o["programa"], "sin_garantia": True,
-            "notas": ["Licencias de Google y accesos de TI: los gestiona Zoom y no se incluyen en esta inversión.",
+            "notas": o.get("notas_propias") or ["Licencias de Google y accesos de TI: los gestiona Zoom y no se incluyen en esta inversión.",
                       "Valores y cuotas de pago: los define el equipo comercial de Intezia con Zoom.",
-                      "Términos y condiciones: los del enlace de «Importante», que ambas partes aceptan al avanzar con esta propuesta."],
+                      "Términos y condiciones: los del enlace de «Importante», que ambas partes aceptan al avanzar con esta propuesta."] + o.get("notas_extra", []),
         },
         "pago": {"cuotas": o["cuotas"], "mensaje": "Los montos de cada cuota los acuerda el equipo comercial de Intezia con Zoom antes de arrancar."},
         "proximos_pasos": proximos(),
@@ -544,10 +636,10 @@ body { background: var(--black); }
 .s-scope.roomy:has(.scope-facts) .scope-rows .area { font-size: 22px; }
 .s-scope.roomy:has(.scope-facts) .scope-rows .para { font-size: 17px; line-height: 1.4; }
 .s-scope.roomy:has(.scope-facts) .scope-panels.one .scope-rows li { grid-template-columns: 340px 1fr auto; padding: 16px 0 18px; }
-.s-scope .scope-facts { margin-top: 22px; }
+.s-scope .scope-facts { margin-top: 18px; }
 .s-scope .scope-facts .scope-card-label { font-size: 12px; padding: 5px 12px; }
 .s-scope .scope-facts ul { list-style: none; margin: 12px 0 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
-.s-scope .scope-facts li { border-top: 4px solid var(--yellow); background: rgba(10, 10, 10, 0.045); border-radius: 0 0 11px 11px; padding: 14px 18px 16px; min-height: 128px; }
+.s-scope .scope-facts li { border-top: 4px solid var(--yellow); background: rgba(10, 10, 10, 0.045); border-radius: 0 0 11px 11px; padding: 14px 18px 16px; min-height: 104px; }
 .s-scope .scope-facts li:nth-child(even) { border-top-color: var(--orange); }
 .s-scope .scope-facts b { display: block; font-family: var(--font-display); font-weight: 700; font-size: 17px; line-height: 1.2; margin-bottom: 8px; color: var(--black); }
 .s-scope .scope-facts span { font-family: var(--font-body); font-size: 14px; line-height: 1.45; color: rgba(10, 10, 10, 0.82); }
@@ -629,11 +721,13 @@ def main():
     ses_areas, total_areas, r = calcular()
     print("Totales: base A = %d; áreas B/C = %d personas; encuentros A=%d B=%d C=%d; horas totales A=%d B=%d C=%d" % (
         BASE_A, total_areas, r["A"]["n"], r["B"]["n"], r["C"]["n"], r["A"]["total"], r["B"]["total"], r["C"]["total"]))
-    for fn in (opcion_A, opcion_B, opcion_C):
+    for fn in (opcion_A, opcion_B, opcion_C, opcion_final):
         o = fn(r, ses_areas, total_areas)
         carpeta = PROPUESTAS / o["slug"]
         carpeta.mkdir(parents=True, exist_ok=True)
-        d = datos(o, r, ses_areas, total_areas)
+        d = datos(o, o.get("r_override", r), ses_areas, total_areas)
+        if o.get("parchear"):
+            d = o["parchear"](d)
         (carpeta / "datos.json").write_text(json.dumps(d, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
         (carpeta / "overrides.css").write_text(CSS_MARCA, encoding="utf-8")
         if generar:

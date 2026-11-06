@@ -1,0 +1,26 @@
+/* Ajustes propios de esta propuesta (se enlaza después de habilidades-compacto.css). */
+
+/* Ajustes propios de esta propuesta (se enlaza después de habilidades-compacto.css). */
+/* Alcance con las medidas del cliente (.scope-facts, opción del generador; copiado de zoom-inn006 sin la marca v2.1) */
+.s-scope.roomy:has(.scope-facts) .scope-panel { padding: 20px 28px 12px; }
+.s-scope.roomy:has(.scope-facts) .scope-rows .area { font-size: 22px; }
+.s-scope.roomy:has(.scope-facts) .scope-rows .para { font-size: 17px; line-height: 1.4; }
+.s-scope.roomy:has(.scope-facts) .scope-panels.one .scope-rows li { grid-template-columns: 340px 1fr auto; padding: 16px 0 18px; }
+.s-scope .scope-facts { margin-top: 18px; }
+.s-scope .scope-facts .scope-card-label { font-size: 12px; padding: 5px 12px; }
+.s-scope .scope-facts ul { list-style: none; margin: 12px 0 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+.s-scope .scope-facts li { border-top: 4px solid var(--yellow); background: rgba(10, 10, 10, 0.045); border-radius: 0 0 11px 11px; padding: 14px 18px 16px; min-height: 104px; }
+.s-scope .scope-facts li:nth-child(even) { border-top-color: var(--orange); }
+.s-scope .scope-facts b { display: block; font-family: var(--font-display); font-weight: 700; font-size: 17px; line-height: 1.2; margin-bottom: 8px; color: var(--black); }
+.s-scope .scope-facts span { font-family: var(--font-body); font-size: 14px; line-height: 1.45; color: rgba(10, 10, 10, 0.82); }
+.s-scope.roomy:has(.scope-facts) .scope-out { margin-top: 18px; padding: 14px 24px; grid-template-columns: 170px 1fr; }
+.s-scope.roomy:has(.scope-facts) .scope-out li { font-size: 14px; line-height: 1.45; padding: 4px 0 4px 16px; }
+.s-scope.roomy:has(.scope-facts) .scope-out li::before { top: 12px; }
+
+/* Ajuste fino: alcance con medidas y entregables de dos áreas (para que no queden espacios en blanco) */
+.s-scope.roomy:has(.scope-facts) .scope-panel { padding: 14px 28px 8px; }
+.s-scope.roomy:has(.scope-facts) .scope-rows .area { font-size: 19px; }
+.s-scope.roomy:has(.scope-facts) .scope-rows .para { font-size: 15px; }
+.s-scope.roomy:has(.scope-facts) .scope-panels.one .scope-rows li { padding: 10px 0 11px; }
+.s-scope .scope-facts { margin-top: 12px; }
+.s-scope .scope-facts li { min-height: 84px; padding: 11px 16px 12px; }

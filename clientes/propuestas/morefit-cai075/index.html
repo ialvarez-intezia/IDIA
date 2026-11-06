@@ -1,0 +1,431 @@
+<!doctype html>
+<!--
+  Propuesta · MoreFit · Servicio de Habilidades (CAI-075)
+  División: Educación · Servicio: Habilidades (§4.1a) · Alianza: no
+  GENERADO por scripts/generar-habilidades-compacto.py (plantilla 3.0 (2026-10-08), formato habilidades) desde datos.json.
+  No editar a mano: editar datos.json y regenerar. Estilos propios del deck: overrides.css.
+  Fuente del insumo: Ficha de Levantamiento (28/10/2026) y transcripción de la reunión de Verónica Rubio con Corporación MoreFit (28/10/2026)
+
+  Formato compacto de 8 slides, en el orden de las preguntas del cliente (Ventas, 2026-10-07), sin semanas, sesiones
+  ni fechas (Keiber, 2026-10-08):
+    1 Portada · 2 Alcance · 3 Ruta · 4 Cómo trabajamos · 5 Entregables · 6 Retorno · 7 Inversión · 8 Próximos pasos
+  Marcadores de detección de AcroForms (agregar-campo-precio.py), por página: «Propuesta Económica» solo en la slide de
+  inversión; «Lo que se llevan» y «Entregables» solo en la de entregables; «Facilidad de pago» solo en la de pago.
+  Campos AcroForm: Programa, Notas, PrecioBase, Descuento, PrecioTotal (inversión) y Entregables, Acreditacion (entregables). Se reposicionan con scripts/customize-habilidades-compacto.py.
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Propuesta · MoreFit · Intezia Educación</title>
+  <link rel="stylesheet" href="../_base/styles.css">
+  <link rel="stylesheet" href="habilidades-compacto.css">
+  <link rel="stylesheet" href="overrides.css">
+</head>
+<body>
+
+  <main class="deck">
+
+    <!-- 1 · Portada: ¿cuál es mi problema? -->
+    <section class="slide s-cover">
+      <span class="counter">01 / 08</span>
+      <div class="logo-big">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia Educación">
+      </div>
+      <div class="body">
+        <p class="eyebrow">Propuesta de proyecto · Servicio de Habilidades</p>
+        <h1 style="font-size:46px">
+          Pedidos, facturación<br>
+          e inventario con IA en el equipo<br>
+          <span class="hl">de MoreFit</span>
+        </h1>
+        <p class="lead">
+          Este proyecto nivela al equipo en IA y construye con él el orden de los <strong>pedidos</strong>, la <strong>facturación</strong> y el <strong>inventario</strong>, hasta dejarlos en uso.
+        </p>
+        <div class="pain-strip">
+          <div class="pain-item">
+            <span class="pain-num">Manual</span>
+            <span class="pain-lbl">es la facturación hoy: no hay un sistema administrativo que la lleve.</span>
+          </div>
+          <div class="pain-item">
+            <span class="pain-num">Excel</span>
+            <span class="pain-lbl">es donde se lleva el inventario de producto terminado y de materia prima.</span>
+          </div>
+          <div class="pain-item">
+            <span class="pain-num">WhatsApp</span>
+            <span class="pain-lbl">es por donde piden muchos clientes, y cada pedido se monta a mano en la tienda.</span>
+          </div>
+          <div class="pain-item">
+            <span class="pain-num">9 a 10</span>
+            <span class="pain-lbl">personas sostienen toda la operación y hoy no usan IA.</span>
+          </div>
+        </div>
+      </div>
+      <div class="id-line">
+        <span class="codigo">Código: CAI-075</span>
+        <span class="cliente">MoreFit</span>
+      </div>
+    </section>
+
+    <!-- 2 · Alcance: qué vamos a hacer y para qué -->
+    <section class="slide s-scope roomy">
+      <span class="counter">02 / 08</span>
+      <p class="eyebrow">02 · Alcance</p>
+      <h2>Tres líneas de trabajo del equipo.</h2>
+      <p class="sub">Nivelamos al equipo, medimos cómo trabaja hoy y construimos con él <strong>tres procesos</strong> de la operación.</p>
+
+      <div class="scope-panels one" style="--np:1">
+        <div class="scope-panel acc-y">
+          <div class="scope-head">
+            <span class="scope-tag">Herramientas de IA del equipo</span>
+            <span class="scope-total"><b>3</b> líneas de trabajo</span>
+          </div>
+          <ul class="scope-rows">
+              <li><span class="area">Fundamentos de IA</span><span class="para">Llevar a todo el equipo al mismo punto, para que participe en la construcción y la sostenga</span></li>
+              <li><span class="area">Levantamiento de las cinco áreas</span><span class="para">Medir cómo trabaja hoy cada área, ver los cuellos de botella y definir qué construir</span></li>
+              <li><span class="area">Pedidos, facturación e inventario</span><span class="para">Ordenar con IA los pedidos, la facturación y el inventario</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="scope-facts">
+        <p class="scope-card-label">Lo que se mide desde el primer día</p>
+        <ul>
+          <li><b>Pedidos al detalle</b><span>Cuántos pedidos se montan y cuánto toma cada uno.</span></li>
+          <li><b>Facturación</b><span>Cuánto toma preparar cada factura, contra el punto de partida.</span></li>
+          <li><b>Inventario</b><span>Cuánto toma tenerlo al día y cuántas veces no cuadra.</span></li>
+          <li><b>Uso del equipo</b><span>Quién usa las herramientas a los 30, 60 y 90 días.</span></li>
+        </ul>
+      </div>
+
+      <div class="scope-out">
+        <p class="scope-card-label">Fuera de este alcance</p>
+        <ul>
+          <li>Implementar un sistema administrativo (ERP): se ordena la facturación con IA, pero no se instala un sistema.</li>
+          <li>Licencias y consumo de las herramientas de IA: los contrata MoreFit, aparte de esta inversión.</li>
+          <li>Marketing y redes: los lleva un proveedor externo y no forman parte de este alcance.</li>
+          <li>Ventas: son una meta de MoreFit; se acompañan y miden, no se garantizan.</li>
+        </ul>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">MoreFit · CAI-075</span>
+      </div>
+    </section>
+
+    <!-- 3 · Ruta: qué pasa en cada fase -->
+    <section class="slide s-route">
+      <span class="counter">03 / 08</span>
+      <p class="eyebrow">03 · Ruta</p>
+      <h2>De la nivelación a las herramientas en uso.</h2>
+      <p class="sub">El calendario se acuerda en la <strong>reunión de arranque</strong>, con resultados pensados para el corto plazo.</p>
+
+      <div class="route-grid n1" style="--cols:2; --rows:1; --rowh:214px">
+
+        <div class="rg-corner"></div>
+        <div class="rg-phase rg-ph-1">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Nivelación y levantamiento</span></span>
+          <span class="rg-phase-name">Equipo nivelado y punto de partida medido</span>
+        </div>
+        <div class="rg-phase rg-ph-2 hi">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Construcción</span></span>
+          <span class="rg-phase-name">Procesos construidos con el equipo y en uso</span>
+        </div>
+        <div class="rg-phase rg-fu">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Garantía</span></span>
+          <span class="rg-phase-date">30, 60 y 90 días</span>
+          <span class="rg-phase-txt">Desde el cierre de cada línea</span>
+        </div>
+
+        <div class="rg-front acc-y">
+          <span class="rg-front-h">Equipo de MoreFit</span>
+          <span class="rg-front-row"><span class="rg-front-tool">IA del equipo</span><b class="rg-front-n">18 horas</b></span>
+          <span class="rg-front-meta">con el equipo</span>
+        </div>
+        <div class="rg-cell"><span class="rg-h solo-h"><b>6 horas con el equipo</b></span><p>Fundamentos de IA y levantamiento de las cinco áreas.</p></div>
+        <div class="rg-cell hi"><span class="rg-h solo-h"><b>12 horas con el equipo</b></span><p>Pedidos, facturación e inventario, en uso.</p></div>
+
+        <div class="rg-follow" style="grid-column:4; grid-row:2 / span 1">
+          <ul>
+            <li><b>30 días</b><span>Uso de las herramientas</span></li>
+            <li><b>60 días</b><span>Ajustes y nuevas construcciones</span></li>
+            <li><b>90 días</b><span>Pedidos, facturación e inventario medidos</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="route-miles" style="grid-template-columns:repeat(4,1fr)">
+        <div class="mile"><span class="mile-d"></span><b>Arranque · aparte</b><p>Reunión de 1 h para acordar el calendario, quiénes participan y quién coordina por MoreFit.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Nivelación y levantamiento</b><p>Fundamentos de IA y cómo trabaja hoy cada área.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Procesos en uso</b><p>Pedidos, facturación e inventario.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>30 · 60 · 90 días</b><p>Seguimiento: uso de las herramientas, ajustes y avances medidos.</p></div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">MoreFit · CAI-075</span>
+      </div>
+    </section>
+
+    <!-- 4 · Cómo trabajamos: pasos, por qué en ese orden, casos reales, práctica, datos y logística -->
+    <section class="slide s-method">
+      <span class="counter">04 / 08</span>
+      <p class="eyebrow">04 · Cómo trabajamos</p>
+      <h2>Así construimos cada herramienta.</h2>
+      <p class="sub">Primero se nivela al equipo y se observa dónde está cada proceso; después se construye con él, que aprende a sostenerlo.</p>
+
+      <ol class="mt-steps" style="--n:4">
+          <li><b>Nivelamos</b><span>Fundamentos de IA para que todo el equipo parta del mismo punto.</span></li>
+          <li><b>Medimos</b><span>Cómo trabaja hoy cada área y dónde están los cuellos de botella.</span></li>
+          <li><b>Construimos</b><span>Con el equipo, sobre sus pedidos, su facturación y su inventario.</span></li>
+          <li><b>Seguimos</b><span>Uso, ajustes y resultados, a 30, 60 y 90 días.</span></li>
+      </ol>
+      <div class="mt-strips">
+        <p class="mt-why"><b>Por qué en este orden</b> Primero se nivela al equipo y se observa cómo trabaja cada área, para construir donde más pesa; después se construye, y el equipo lo sostiene sin depender de Intezia.</p>
+        <p class="mt-who"><b>Quién construye</b> Intezia construye junto al equipo, sobre sus casos reales: sus pedidos, su facturación y su inventario.</p>
+      </div>
+
+      <div class="mt-info">
+        <div class="mt-card">
+          <p class="mt-card-label">Cómo funciona en la práctica</p>
+          <ul><li><b>Una persona en el circuito.</b> La IA prepara y ordena; una persona revisa cada pedido y cada factura antes de confirmarlos.</li><li><b>Sin instalar un sistema.</b> Se ordena lo que hoy se hace a mano con herramientas de IA; no se implementa un sistema administrativo (ERP).</li><li><b>Sin prometer cifras.</b> Se mide el punto de partida y cada avance; las metas son de MoreFit y no se garantizan.</li></ul>
+        </div>
+        <div class="mt-card">
+          <p class="mt-card-label">Cómo cuidamos sus datos</p>
+          <p>Las recetas, los gramajes y la base de datos de los aliados no se cargan a ninguna herramienta de IA; solo se usan los datos que MoreFit autoriza.</p>
+        </div>
+      </div>
+
+      <div class="mt-logi">
+        <div class="mt-tile"><span>Modalidad</span><b>Se acuerda en la reunión de arranque, según lo que mejor funcione para el equipo.</b></div>
+        <div class="mt-tile"><span>Participantes</span><b>El equipo de MoreFit: venta al detalle, venta al mayor, producción, administración e inventario.</b></div>
+        <div class="mt-tile"><span>Ritmo de trabajo</span><b>El trabajo se agenda sin frenar la operación diaria de un equipo pequeño.</b></div>
+        <div class="mt-tile"><span>Arranque</span><b>Apenas se apruebe la propuesta; una reunión de 1 h, aparte, acuerda el calendario.</b></div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">MoreFit · CAI-075</span>
+      </div>
+    </section>
+
+    <!-- 5 · Entregables: ¿con qué me quedo? (catálogo + piezas transversales) -->
+    <section class="slide s-deliv roomy">
+      <span class="counter">05 / 08</span>
+      <p class="eyebrow">05 · Entregables</p>
+      <div class="deliv-head">
+        <h2>Lo que recibe MoreFit.</h2>
+        <p class="deliv-sub"><span class="nw">Lo que se llevan</span>: <strong>un equipo nivelado y tres procesos ordenados con IA</strong>, más el seguimiento a 30, 60 y 90 días.</p>
+      </div>
+
+      <div class="deliv-carriles" style="--ncols:3">
+        <span class="dc acc-y" style="grid-column: span 3">Herramientas de IA del equipo</span>
+      </div>
+
+      <div class="deliv-cols" style="--ncols:3">
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">Fundamentos de IA</p>
+            <ul>
+              <li>Fundamentos de IA para todo el equipo<ul class="inc"><li>Qué es la IA y qué puede hacer por la operación</li><li>Cómo pedirle bien, con ejemplos del trabajo del equipo</li><li>Qué datos se cuidan y cuáles no se cargan</li></ul></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">Levantamiento de las cinco áreas</p>
+            <ul>
+              <li>Levantamiento de las cinco áreas<ul class="inc"><li>Cómo trabaja hoy cada una de las cinco áreas</li><li>Dónde están los cuellos de botella de cada proceso</li><li>Qué construir primero y en qué orden</li></ul></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">Pedidos, facturación e inventario</p>
+            <ul>
+              <li>Pedidos del canal al detalle con IA<ul class="inc"><li>Del mensaje de WhatsApp al pedido listo, sin transcribir a mano</li><li>Un mismo formato para todos los pedidos que llegan</li><li>Registro claro de cada pedido y su estado</li></ul></li>
+              <li>Facturación y administración ordenadas con IA<ul class="inc"><li>Facturas preparadas a partir del pedido, sin escribir todo de nuevo</li><li>Control de lo facturado, lo cobrado y lo pendiente</li><li>Información lista para la administradora y el contador</li></ul></li>
+              <li>Control de inventario con IA<ul class="inc"><li>Inventario de producto terminado y materia prima al día</li><li>Entradas y salidas registradas con un mismo método</li><li>Alertas de lo que se acaba, para comprar a tiempo</li></ul></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="deliv-band">
+        <div class="db-card db-1">
+          <span class="db-label">Para todo el proyecto</span>
+        </div>
+        <div class="db-card db-2">
+          <span class="db-label">Valor inmediato</span>
+        </div>
+      </div>
+      <!-- Cajas multiline editables (vacías en HTML: el contenido vive dentro del AcroForm /V). -->
+      <div class="multi-box db-box db-box-1" data-field="Entregables"></div>
+      <div class="multi-box db-box db-box-2" data-field="Acreditacion"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">MoreFit · CAI-075</span>
+      </div>
+    </section>
+
+    <!-- 6 · Retorno: ¿qué gano? (método de cálculo). Sin estudios ni citas externas. -->
+    <section class="slide s-roi">
+      <span class="counter">06 / 08</span>
+      <p class="eyebrow">06 · Retorno</p>
+      <h2>Retorno esperado: tiempo del equipo, medido.</h2>
+      <p class="sub">Cada indicador se mide contra el punto de partida que el levantamiento deja registrado.</p>
+
+      <div class="roi-body">
+        <div class="roi-panel">
+          <p class="roi-panel-title">Cómo se calcula el retorno de cada herramienta</p>
+          <ol class="roi-steps">
+            <li><b>Volumen</b><span>Cuántos pedidos se montan, cuántas facturas se preparan y cuántos movimientos de inventario se registran cada mes.</span></li>
+            <li><b>Punto de partida</b><span>Tiempo de montar un pedido, de facturar y de cuadrar el inventario: es la línea base.</span></li>
+            <li><b>Con la herramienta</b><span>Lo que toma el mismo trabajo una vez que la herramienta está en uso.</span></li>
+            <li><b>Horas recuperadas</b><span>Volumen por la diferencia de tiempos: una estimación referencial, sin compromiso de resultado.</span></li>
+            <li><b>Gasto de operar</b><span>Licencias y consumo de IA, contra el valor de lo recuperado.</span></li>
+          </ol>
+        </div>
+
+        <div class="roi-right">
+          <p class="roi-right-title">Calendario de seguimiento y medición</p>
+          <div class="roi-card">
+            <b>30 días</b>
+            <p>Desde el cierre de cada línea: herramientas en uso real y punto de partida validado con el equipo.</p>
+          </div>
+          <div class="roi-card">
+            <b>60 días</b>
+            <p>Tiempo de montaje, de facturación y de inventario medido contra el punto de partida.</p>
+          </div>
+          <div class="roi-card">
+            <b>90 días</b>
+            <p>Medición del retorno: lo recuperado frente al gasto de operar las herramientas.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="roi-dest-wrap">
+        <p class="roi-dest-title">Hacia dónde va el proyecto</p>
+        <div class="roi-dest">
+          <div class="rd-item"><b>Más capacidad</b><p>Con tiempo liberado, un equipo reducido puede sostener la operación <strong>sin ahogarse en lo manual</strong>.</p></div>
+          <div class="rd-item"><b>Datos confiables</b><p>Una facturación y un inventario ordenados dan una base <strong>confiable</strong> para decidir cuánto producir y comprar.</p></div>
+          <div class="rd-item"><b>Tiempo para vender</b><p>Con los pedidos al día, queda más tiempo para vender y <strong>abrir más puntos de venta</strong>.</p></div>
+        </div>
+      </div>
+
+      <div class="roi-hook"><p>A los 90 días del cierre de cada línea, MoreFit contará con su tiempo de montaje de pedidos, de facturación y de inventario medido contra el punto de partida y el gasto de operar sus herramientas.</p></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">MoreFit · CAI-075</span>
+      </div>
+    </section>
+
+    <!-- 7 · Inversión (hoja de cotización estándar; antepenúltima slide) -->
+    <section class="slide s-price">
+      <span class="counter">07 / 08</span>
+      <h2 class="title">Inversión del proyecto.</h2>
+      <p class="price-intro">Propuesta Económica · Servicio de Habilidades</p>
+
+      <div class="block">
+        <span class="block-eyebrow">Duración</span>
+        <p class="block-value"><strong>18 horas con el equipo</strong> de MoreFit, en nivelación, levantamiento y construcción, con seguimiento a 30, 60 y 90 días.</p>
+      </div>
+
+      <div class="block block-programa">
+        <span class="block-eyebrow">Programa</span>
+      </div>
+      <div class="multi-box programa-box" data-field="Programa"></div>
+
+      <div class="block block-cotizacion">
+        <span class="block-eyebrow">Cotización</span>
+      </div>
+
+      <span class="cot-label cot-label-base">Propuesta + Inversión</span>
+      <div class="cot-frame base-frame"></div>
+
+      <span class="cot-label cot-label-discount">Descuento</span>
+      <span class="cot-sign-minus">&minus;$</span>
+      <div class="cot-frame discount-frame"></div>
+      <span class="cot-urgent-note">Descuento válido por 15 días</span>
+
+      <span class="cot-label cot-label-total">TOTAL</span>
+      <div class="cot-frame total-frame"></div>
+
+      <p class="cot-validity">Cotización válida por 30 días.</p>
+      <div class="cot-terms-box">
+        <span class="cot-terms-label">Importante</span>
+        <p class="cot-terms-text">Este servicio se presta bajo nuestros <a href="https://drive.google.com/file/d/1PA-ZSt4KnyY5dpxXzgkIk6-yfGlV2eF8/view?usp=drive_link" target="_blank" rel="noopener">términos y condiciones</a>. Al avanzar con esta propuesta, ambas partes los aceptan.</p>
+      </div>
+
+      <div class="cot-garantia-badge">
+        <span class="cot-garantia-tag">Garantía 30-60-90</span>
+        <p class="cot-garantia-text">Estamos contigo hasta que cada herramienta quede en uso.</p>
+      </div>
+
+      <div class="block block-notes-container">
+        <span class="block-eyebrow">Notas</span>
+      </div>
+      <div class="multi-box notas-box" data-field="Notas"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">MoreFit · CAI-075</span>
+      </div>
+    </section>
+
+    <!-- 9 · Próximos pasos: qué hacer y a quién escribir (última slide) -->
+    <section class="slide s-next">
+      <span class="counter">08 / 08</span>
+      <p class="eyebrow">08 · Próximos pasos</p>
+      <h2>Tres pasos para arrancar.</h2>
+      <p class="sub">Esto es lo que sigue cuando MoreFit confirme la propuesta.</p>
+
+      <div class="nx-steps">
+        <div class="nx-step acc-y">
+          <span class="nx-num">1</span>
+          <b>Aprobación</b>
+          <p>Quien decide por MoreFit confirma la propuesta y acordamos la fecha de la reunión de arranque.</p>
+        </div>
+        <div class="nx-step acc-o">
+          <span class="nx-num">2</span>
+          <b>Equipo y accesos</b>
+          <p>MoreFit confirma quién coordina por el equipo y comparte los archivos que autorice.</p>
+        </div>
+        <div class="nx-step acc-w">
+          <span class="nx-num">3</span>
+          <b>Reunión de arranque</b>
+          <p>Una hora para acordar el calendario del equipo y los primeros pasos.</p>
+        </div>
+      </div>
+
+      <div class="nx-contact">
+        <div class="nx-card nx-ase">
+          <span class="nx-label">¿Dudas? Escribe a tu asesora comercial</span>
+          <b class="nx-name">Verónica Rubio</b>
+          <span class="nx-role">Asesora comercial</span>
+          <p class="nx-line"><a href="mailto:vrubio01@intezia.com">vrubio01@intezia.com</a></p>
+          <p class="nx-line">+58 422 3355505</p>
+        </div>
+        <div class="nx-card nx-emp">
+          <span class="nx-label">Intezia</span>
+          <p class="nx-line">Intezia C.A J-505657950</p>
+          <p class="nx-line"><a href="mailto:servicio@intezia.com">servicio@intezia.com</a></p>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">MoreFit · CAI-075</span>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

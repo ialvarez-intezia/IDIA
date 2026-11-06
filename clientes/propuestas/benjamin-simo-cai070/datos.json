@@ -1,0 +1,458 @@
+{
+ "version": 3,
+ "cliente": {
+  "nombre": "Benjamín Simo",
+  "slug": "benjamin-simo-cai070",
+  "codigo": "CAI-070",
+  "nombre_pie": "Benjamín Simo"
+ },
+ "division": "educacion",
+ "alianza": false,
+ "sin_horas_trabajo": true,
+ "meta_tipo": "Capacitación In-Company · 1 Cerebro Digital para el dueño de dos restaurantes y un hotel · 5 sesiones de 2 h (10 h) · seguimiento 30-60-90 · sin pago · formato compacto v3",
+ "vocabulario": {
+  "solucion": [
+   "entregable",
+   "entregables"
+  ],
+  "area": [
+   "Cerebro Digital",
+   "Cerebros Digitales"
+  ]
+ },
+ "omitir": [
+  "pago"
+ ],
+ "eje": "Construcción guiada de un Cerebro Digital (asistente personal) con Claude y Obsidian para el dueño de Alma Mia, Hostal Madrid y Motel Villa Ricardo: cierre de ventas, cuentas por pagar y por cobrar con vencimientos por plazo de proveedor, e ideas de mercadeo para el restaurante nuevo",
+ "origen": "Ficha de Levantamiento de Alma Mia, Hostal Madrid y Motel Villa Ricardo (Flavia Martínez, 27/10/2026; dueño Benjamín Simo, quien decide y firma) y contexto escrito por la asesora, más instrucciones de Ivana del 28/10/2026: propuesta de Cerebro Digital con el código CAI-070 y 5 sesiones. No hay transcripción de la reunión. División Educación y sin alianza, por confirmar",
+ "fuente_insumo": "Ficha de Levantamiento (27/10/2026) y contexto de la asesora; sin transcripción",
+ "siglas_ok": [
+  "IA",
+  "PDF"
+ ],
+ "frases_ok": [
+  "5 sesiones de 2 horas",
+  "5 sesiones guiadas",
+  "5 sesiones",
+  "Costo de los platos"
+ ],
+ "portada": {
+  "titulo_lineas": [
+   "Un Cerebro Digital para cerrar",
+   "ventas y cuentas sin Excel"
+  ],
+  "titulo_destacado": "y renovar el mercadeo",
+  "lead": "Este proyecto acompaña a {cliente_corto} a construir su **Cerebro Digital**: un asistente en **Claude** que conoce sus ventas, sus cuentas por pagar y por cobrar y su mercadeo, para que el domingo deje de ser día de Excel.",
+  "hechos": [
+   {
+    "num": "Domingo",
+    "texto": "y lunes se van en Excel: se juntan las ventas del restaurante y del hotel y se revisan las cuentas.",
+    "resuelto_por": [
+     "CD-3",
+     "CD-4"
+    ]
+   },
+   {
+    "num": "7 a 60",
+    "texto": "días de plazo da cada proveedor, y hay que cuidar cada vencimiento sin equivocarse.",
+    "resuelto_por": [
+     "CD-2",
+     "CD-4"
+    ]
+   },
+   {
+    "num": "Ideas",
+    "texto": "frescas es lo que falta en el restaurante nuevo, que aún no tiene la reputación del familiar.",
+    "resuelto_por": [
+     "CD-5"
+    ]
+   }
+  ]
+ },
+ "carriles": [
+  {
+   "id": "claude",
+   "nombre": "Claude y Obsidian",
+   "nombre_corto": "Claude",
+   "color": "amarillo"
+  }
+ ],
+ "areas": [
+  {
+   "id": "CD",
+   "nombre": "Cerebro Digital del dueño",
+   "para_que": "Cerrar ventas, controlar cuentas por pagar y por cobrar y recibir ideas de mercadeo",
+   "carril": "claude",
+   "frente": "A",
+   "composicion": "5 sesiones de 2 horas, guiadas por Intezia.",
+   "soluciones": [
+    {
+     "id": "CD-1",
+     "entregable": "Claude explicado y tareas del cerebro delimitadas",
+     "h": 2,
+     "fase": "F1",
+     "incluye": [
+      "Qué es Claude y cómo se usa, sin términos técnicos",
+      "Las tareas que trabajará el cerebro, con ejemplos de su día a día",
+      "El propósito del cerebro y sus primeros pedidos"
+     ],
+     "detalle": "Referencia interna (2 h, con el dueño). Qué es Claude y cómo se usa, en palabras simples: conversar, Projects, Skills y Artifacts y para qué sirve cada pieza; qué hace el cerebro por sí solo y qué requeriría integraciones aparte (Instagram, banco). Se mapean y delimitan las tareas que se trabajarán y se exploran otras posibles: reservas y ocupación del hotel, costo de los platos y sus márgenes, pedidos a proveedores e inventario, turnos del personal y respuestas a reseñas. Define el propósito del cerebro. Entrega el propósito, las tareas delimitadas y sus primeros pedidos."
+    },
+    {
+     "id": "CD-2",
+     "entregable": "Proveedores, plazos y ventas ordenados en el cerebro",
+     "h": 2,
+     "fase": "F2",
+     "incluye": [
+      "Cada proveedor con su plazo: 7, 15, 30 o 60 días",
+      "Las ventas del restaurante principal y del hotel",
+      "Qué puede consultar cada gerente o supervisor"
+     ],
+     "detalle": "Referencia interna (2 h, con el dueño). Project de Claude (memoria y contexto) con su rol y su forma de trabajar; su conocimiento organizado como grafo relacional en Obsidian (gratuito): los proveedores con su plazo de pago, el formato de las ventas del restaurante principal y del hotel que hoy vuelca en Excel, y qué información consulta cada gerente o supervisor con su propio puesto de Claude Team. Entrega el Project configurado, su grafo y la definición del acceso de gerentes."
+    },
+    {
+     "id": "CD-3",
+     "entregable": "Cierre de ventas del restaurante y del hotel",
+     "h": 2,
+     "fase": "F3",
+     "incluye": [
+      "Las ventas del restaurante y del hotel juntas",
+      "Un resumen listo para analizar el cierre"
+     ],
+     "detalle": "Referencia interna (2 h, con el dueño). Skill (instrucción reutilizable) del cierre: toma los reportes de ventas que el dueño comparte desde Excel, consolida el restaurante principal y el hotel y arma el resumen para analizar el cierre. Se prueba con un cierre real. El sistema administrativo sigue sirviendo para lo fiscal; el cerebro trabaja con lo que el dueño decide compartir. Entrega una Skill funcional del cierre."
+    },
+    {
+     "id": "CD-4",
+     "entregable": "Cuentas por pagar y por cobrar, con vencimientos por plazo",
+     "h": 2,
+     "fase": "F3",
+     "incluye": [
+      "Qué vence primero y cuándo, según el plazo de cada proveedor",
+      "El estado de las cuentas por cobrar",
+      "El aviso de lo que vence, cada vez que se pide"
+     ],
+     "detalle": "Referencia interna (2 h, con el dueño). Skill de cuentas por pagar y por cobrar: con los plazos de cada proveedor (7, 15, 30 y 60 días) dice qué vence primero y cuándo y resume el estado de las cuentas por cobrar, cada vez que el dueño se lo pide. No envía alertas por sí solo: las tareas que corren solas son la etapa que sigue. Se prueba con las cuentas reales. Entrega una Skill funcional y su criterio de uso seguro."
+    },
+    {
+     "id": "CD-5",
+     "entregable": "Ideas y contenido para las redes del restaurante nuevo",
+     "h": 2,
+     "fase": "F3",
+     "incluye": [
+      "Un bosquejo de ideas y campañas para empezar",
+      "Contenido para las redes, con su propia voz",
+      "Ideas nuevas cada vez que se piden"
+     ],
+     "detalle": "Referencia interna (2 h, con el dueño). Skill de mercadeo del restaurante nuevo: parte de un bosquejo de ideas y campañas y genera contenido para las redes con la voz del dueño; luego se piden ideas nuevas cuando hagan falta. La persona externa que lleva las redes puede usar las ideas. Entrega una Skill funcional de ideas y contenido."
+    }
+   ]
+  }
+ ],
+ "alcance": {
+  "compacto": false,
+  "titulo": "Un Cerebro Digital para el dueño.",
+  "subtitulo": "{cliente_corto} construye su **asistente personal en Claude**: ventas, cuentas y mercadeo en un solo lugar.",
+  "fuera_alcance": [
+   "Conexión automática con Instagram o el banco: requiere integraciones aparte y no está incluida.",
+   "Tareas que corren solas, sin pedirlas: son la etapa que sigue.",
+   "Reemplazar su sistema administrativo: sigue para lo fiscal; el cerebro trabaja con lo que se comparte.",
+   "Las licencias de Claude Team, que van aparte (detalle en la inversión)."
+  ],
+  "etiqueta_destacados": "Otras tareas que se pueden explorar al empezar",
+  "destacados": [
+   {
+    "titulo": "Reservas y ocupación",
+    "texto": "Las del hotel, a la vista."
+   },
+   {
+    "titulo": "Costo de los platos",
+    "texto": "Y sus márgenes."
+   },
+   {
+    "titulo": "Pedidos e inventario",
+    "texto": "De los proveedores."
+   },
+   {
+    "titulo": "Turnos y reseñas",
+    "texto": "Del personal y de los clientes."
+   }
+  ]
+ },
+ "metodo": {
+  "titulo": "Así trabajamos el proyecto.",
+  "subtitulo": "5 sesiones guiadas, sobre sus propios cierres y cuentas, hasta que usa su cerebro por sí solo.",
+  "quien_construye": "{cliente_corto} construye su cerebro; **Intezia guía** cada paso, sobre sus ventas, cuentas y redes reales.",
+  "pasos": [
+   {
+    "titulo": "Delimitamos",
+    "texto": "Las tareas del cerebro, elegidas con casos de su propio día."
+   },
+   {
+    "titulo": "Construimos",
+    "texto": "En vivo, sobre un cierre y unas cuentas reales."
+   },
+   {
+    "titulo": "Adoptamos",
+    "texto": "El dueño usa su cerebro en cada cierre, sin ayuda."
+   },
+   {
+    "titulo": "Medimos",
+    "texto": "El tiempo recuperado y los errores, a 30, 60 y 90 días."
+   }
+  ],
+  "por_que_orden": "Primero se entiende Claude y se delimitan las tareas; después se ordenan proveedores, plazos y ventas; al final se construyen las Skills del cierre, de las cuentas y del mercadeo.",
+  "practica": [
+   {
+    "titulo": "Un cerebro, varios accesos",
+    "texto": "Un cerebro para el dueño; gerentes y supervisores lo consultan con su propio puesto de Claude Team."
+   },
+   {
+    "titulo": "Sin términos técnicos",
+    "texto": "Claude se explica desde lo básico: se le pide lo que se necesita en palabras simples."
+   },
+   {
+    "titulo": "Lo que hace y lo que no",
+    "texto": "El cerebro responde cuando se le pide; no se conecta solo con Instagram ni con el banco."
+   }
+  ],
+  "datos": "Las ventas y las cuentas son información confidencial: solo se carga en el cerebro lo que {cliente_corto} decide compartir, y no se suben claves del banco ni datos de clientes. Los criterios de uso seguro se acuerdan al empezar."
+ },
+ "fases": [
+  {
+   "id": "F1",
+   "titulo": "Base",
+   "descripcion": "Claude y tareas"
+  },
+  {
+   "id": "F2",
+   "titulo": "Grafo",
+   "descripcion": "proveedores y ventas"
+  },
+  {
+   "id": "F3",
+   "titulo": "Uso",
+   "descripcion": "Skills del cierre y del mercadeo",
+   "destacada": true
+  }
+ ],
+ "frentes": [
+  {
+   "id": "A",
+   "carril": "claude",
+   "nombre": "El Cerebro Digital del dueño",
+   "celdas": {
+    "F1": "Claude explicado y las tareas del cerebro delimitadas.",
+    "F2": "Proveedores, plazos y ventas, ordenados en un grafo.",
+    "F3": "Skills del cierre de ventas, las cuentas y el mercadeo."
+   }
+  }
+ ],
+ "ruta": {
+  "titulo": "Un cerebro en uso, en tres fases.",
+  "subtitulo": "El calendario se acuerda en la reunión de arranque. El **seguimiento** a 30, 60 y 90 días corre desde el cierre del proyecto.",
+  "nota": "Son **5 sesiones de 2 horas** con {cliente_corto}: 1 de base, 1 de grafo y 3 de uso. La reunión de arranque (1 h) va aparte.",
+  "hitos": [
+   {
+    "titulo": "Arranque · aparte",
+    "texto": "1 h para acordar el calendario y elegir un cierre y unas cuentas reales."
+   },
+   {
+    "titulo": "Base",
+    "texto": "Claude explicado y las tareas del cerebro delimitadas."
+   },
+   {
+    "titulo": "Grafo",
+    "texto": "Proveedores, plazos y ventas ordenados; qué consulta cada gerente."
+   },
+   {
+    "titulo": "Uso",
+    "texto": "Skills del cierre de ventas, de las cuentas y del mercadeo."
+   },
+   {
+    "titulo": "30 · 60 · 90 días",
+    "texto": "Seguimiento: uso del cerebro, ajustes, tiempo recuperado y errores."
+   }
+  ],
+  "siguiente_etapa": {
+   "titulo": "Etapa siguiente",
+   "texto": "Integraciones con Instagram para atender clientes y tareas que corren solas, a evaluar con los resultados."
+  }
+ },
+ "logistica": {
+  "modalidad": "Virtual, en vivo con Intezia.",
+  "participantes": "{cliente_corto}, con acceso para los gerentes y supervisores que decida (el número se define al empezar).",
+  "ritmo": "Según la agenda de {cliente_corto}.",
+  "arranque": "La fecha la fija {cliente_corto}; una reunión de arranque de 1 h, aparte, acuerda el calendario."
+ },
+ "seguimiento": {
+  "rango": "30, 60 y 90 días",
+  "texto": "Seguimiento desde el cierre del proyecto",
+  "items": [
+   {
+    "dias": "30 días",
+    "texto": "Uso del cerebro en el cierre"
+   },
+   {
+    "dias": "60 días",
+    "texto": "Ajustes y nuevas construcciones"
+   },
+   {
+    "dias": "90 días",
+    "texto": "Tiempo recuperado y errores"
+   }
+  ]
+ },
+ "entregables": {
+  "titulo": "Lo que recibe {cliente_corto}.",
+  "subtitulo": "Lo que se llevan: **un cerebro en uso** para cerrar ventas y cuentas y generar ideas de mercadeo, más el seguimiento a {rango_seguimiento}.",
+  "etiqueta_transversales": "Para todo el proyecto",
+  "transversales": [
+   "Línea base del tiempo que toma hoy el cierre.",
+   "Criterios de uso seguro de la información.",
+   "Seguimiento a 30, 60 y 90 días con medición."
+  ],
+  "etiqueta_valor": "Valor inmediato",
+  "valor_inmediato": [
+   "Con la base: Claude explicado y las tareas delimitadas.",
+   "Con el grafo: proveedores y plazos ordenados.",
+   "Al cerrar: cierre, cuentas y mercadeo con el cerebro."
+  ],
+  "columnas_por_carril": [
+   1
+  ]
+ },
+ "retorno": {
+  "modo": "metodo",
+  "posiciones": false,
+  "titulo": "Retorno esperado: tiempo recuperado, medido.",
+  "subtitulo": "Se mide contra la línea base que el dueño deja al empezar y se sigue a 30, 60 y 90 días.",
+  "etiqueta_pasos": "Cómo se calcula",
+  "pasos": [
+   {
+    "titulo": "Punto de partida",
+    "texto": "Cuánto toman hoy el cierre de ventas y la revisión de cuentas. Es la **línea base**."
+   },
+   {
+    "titulo": "Tiempo con el cerebro",
+    "texto": "Lo que toma el mismo cierre con sus Skills ya en uso."
+   },
+   {
+    "titulo": "Horas recuperadas",
+    "texto": "Diferencia entre ambos tiempos, por cierre: una estimación referencial, sin compromiso de resultado."
+   },
+   {
+    "titulo": "Errores",
+    "texto": "Cuántas correcciones hay hoy en el cierre y en las cuentas, y cuántas después."
+   },
+   {
+    "titulo": "Gasto de operar",
+    "texto": "Las licencias de Claude, contra el tiempo recuperado."
+   }
+  ],
+  "etiqueta_metas": "Calendario de seguimiento y medición",
+  "metas": [
+   {
+    "dias": "30 días",
+    "texto": "El cerebro en uso real en el cierre y la línea base validada con el dueño."
+   },
+   {
+    "dias": "60 días",
+    "texto": "Ajustes del cerebro y horas recuperadas medidas contra la línea base."
+   },
+   {
+    "dias": "90 días",
+    "texto": "Medición del tiempo recuperado y de su valor, y acceso de gerentes y supervisores."
+   }
+  ],
+  "etiqueta_destino": "Hacia dónde va el proyecto",
+  "destino": [
+   {
+    "rotulo": "Tiempo propio",
+    "texto": "Si el cierre se acorta, los **domingos y lunes** pueden dedicarse a otra cosa."
+   },
+   {
+    "rotulo": "Cuentas bajo control",
+    "texto": "Cada vencimiento, por proveedor, queda a la vista **antes de que llegue**."
+   },
+   {
+    "rotulo": "Más tareas al cerebro",
+    "texto": "Con el resultado medido, {cliente_corto} decide qué más lleva a su cerebro y a sus gerentes."
+   }
+  ],
+  "gancho": "A los 90 días del cierre, {cliente_corto} contará con el tiempo recuperado y los errores evitados, medidos contra su línea base."
+ },
+ "inversion": {
+  "duracion": "**5 sesiones de 2 horas**, {h_total} horas con {cliente_corto}, y seguimiento a {rango_seguimiento}.",
+  "licencias": {
+   "titulo": "Licenciamiento · aparte de esta inversión",
+   "tarjetas": [
+    {
+     "nombre": "Claude Team · puesto estándar",
+     "color": "amarillo",
+     "texto": "**USD 25** por persona al mes (USD 20 pagando por año), con mínimo 2 puestos. Cada gerente o supervisor que consulte el cerebro suma uno; el número se define al empezar."
+    },
+    {
+     "nombre": "Obsidian · gratuito",
+     "color": "naranja",
+     "texto": "Aplicación de notas donde se organiza el conocimiento como grafo. Se instala al trabajar el grafo."
+    }
+   ],
+   "nota": "Valores de lista de Claude Team verificados el 28/10/2026; pueden variar y los confirma {cliente_corto} con el proveedor. No son un valor de Intezia."
+  },
+  "programa": [
+   "Construcción de 1 Cerebro Digital con Claude y Obsidian para {cliente_corto} ({codigo}).",
+   "5 sesiones de 2 horas guiadas por Intezia: base, grafo y tres de uso.",
+   "{h_total} horas con {cliente_corto}, más 1 h de reunión de arranque aparte. Licencias aparte."
+  ],
+  "notas": [
+   "Las licencias van aparte: Claude Team exige mínimo 2 puestos; Obsidian es gratuito.",
+   "Garantía 30-60-90: seguimiento a 30, 60 y 90 días desde el cierre del proyecto, con el cerebro en uso."
+  ],
+  "garantia_texto": "Estamos contigo hasta que el cerebro quede en uso."
+ },
+ "proximos_pasos": {
+  "asesora": {
+   "nombre": "Flavia Martínez",
+   "cargo": "Asesora comercial",
+   "correo": "fmartinez@intezia.com",
+   "telefono": "+58 414 5756615"
+  },
+  "pasos": [
+   {
+    "titulo": "Presentación en vivo",
+    "texto": "Presentamos la propuesta a {cliente_corto}, que decide, y respondemos sus preguntas sobre cómo funciona."
+   },
+   {
+    "titulo": "Cuenta y material",
+    "texto": "Se deja lista la cuenta de Claude Team (mínimo 2 puestos) y se reúne el material que se decida compartir."
+   },
+   {
+    "titulo": "Reunión de arranque",
+    "texto": "Una hora para acordar el calendario de las 5 sesiones y elegir un cierre y unas cuentas reales."
+   }
+  ]
+ },
+ "supuestos": [
+  "Pedido de Ivana (28/10/2026): propuesta de Cerebro Digital para Benjamín Simo con el código CAI-070 y 5 sesiones, a partir de la Ficha de Levantamiento (27/10/2026) y el contexto de Flavia Martínez. No hay transcripción. División Educación y sin alianza: por confirmar con Ivana.",
+  "Cliente: dueño de dos restaurantes (uno familiar de 40 años y uno nuevo) y de un hotel pequeño que funciona como motel (Alma Mia, Hostal Madrid y Motel Villa Ricardo); primer contacto, llega por Jimena Simó, cercana a Flavia: se trata como cliente de la casa. Él decide y firma, y confirmó que estará en la presentación. Los nombres de las tres marcas y de personas no van al deck (se asigna el cerebro al dueño).",
+  "Su dolor, para ventas: trabaja domingos y lunes consolidando en Excel las ventas del restaurante principal y del hotel y revisando cuentas por pagar y por cobrar, con proveedores a 7, 15, 30 y 60 días; el sistema administrativo solo le sirve para lo fiscal. Segundo frente: ideas frescas de mercadeo del restaurante nuevo (lo lleva una persona externa; «la gente es más crítica»). La cita textual no va en el deck.",
+  "5 sesiones (pedido de Ivana, excepción a CLAUDE.md §4.23): se escribe «5 sesiones de 2 horas» y las frases están en `frases_ok`. La duración de 2 h por sesión es mía (es la forma de CAP-060 y de los cerebros anteriores), lo que da 10 h con el cliente (la referencia de Cerebro Digital sin horas es 6 h, y Decovenezia usó 10 h). Reparto mío: 1 de base y levantamiento de tareas, 1 de grafo, y 3 de uso (cierre de ventas, cuentas por pagar y por cobrar, mercadeo).",
+  "Flavia pidió que las primeras sesiones sirvan para mapear y delimitar las tareas, porque él no conoce la IA y probablemente no ve otros usos; los ejemplos a explorar (reservas y ocupación del hotel, costo de platos y márgenes, pedidos e inventario, turnos del personal, reseñas) van como posibles, nunca como promesa. La sesión de base los explora; si salen más tareas, se ajustan las horas.",
+  "Qué hace el cerebro solo y qué requiere integraciones aparte (preguntas del cliente: qué IA es, si necesita el computador encendido, conexión con WhatsApp, Instagram y el banco; Ivana pidió el 28/10/2026 quitar del deck toda mención a WhatsApp): el deck aclara que responde cuando se le pide, que no se conecta solo con Instagram ni el banco y que no envía alertas por sí solo. Qué necesita el computador encendido no se afirma en el deck (depende de dónde corra Obsidian): decirlo en la presentación en vivo. La Fase 2 que propuso Flavia (integraciones con Instagram para atención al cliente y tareas que corran solas; sin WhatsApp en el deck) se menciona como etapa siguiente, sin cotizar.",
+  "Acceso de gerentes y supervisores (lo pidió): va por Claude Team, que exige mínimo 2 puestos; estándar USD 25 al mes pagando mensual y USD 20 pagando por año (verificado el 28/10/2026 en support.claude.com, «What is the Team plan?»; coincide con la verificación del 16/10). La tarjeta de licencias lo dice y la nota aclara que los valores los confirma el cliente. Cuántos gerentes y supervisores: sin definir; Benjamín lo mencionará en las sesiones.",
+  "Claude con un cliente venezolano: nunca VPN; sin mención al acceso ni al riesgo en el deck (criterio de Ivana en Simple TV y Go Pharma). Nota interna: Venezuela no figura entre los países soportados por Anthropic; si Ivana dice algo distinto, cambiarlo.",
+  "Dato contradictorio en la ficha: «Regulación sectorial aplicable: manejo de datos de pacientes (información de salud sensible)». No tiene sentido para restaurantes y un hotel (parece un valor copiado de otra ficha): se ignora en el deck y se pregunta a Flavia. El tipo de dato del cierre es «confidencial»: el deck dice que no se suben claves del banco ni datos de clientes.",
+  "Horizonte: implementación en 2027 tras aprobaciones internas; presupuesto «en evaluación»; apertura al cambio alta y patrocinio fuerte. Sin fechas en el deck (§4.23).",
+  "Pago: se omite la facilidad de pago (criterio habitual); valor, descuento y total quedan como campos vacíos para ventas. Sin horas de trabajo ni cantidad de consultores (§4.23). Las licencias van en tarjetas dentro de la inversión (con valores de lista y su fecha), no como precio de Intezia."
+ ],
+ "pendientes": [
+  "Confirmar con Ivana la división Educación y que no hay alianza (el código CAI-070 y las 5 sesiones los dio Ivana).",
+  "Confirmar con Ivana que cada sesión es de 2 h (10 h en total) y el reparto 1 de base, 1 de grafo y 3 de uso.",
+  "Confirmar con Flavia cuántos gerentes y supervisores tendrán acceso (cada uno suma un puesto de Claude Team) y quién contrata la cuenta.",
+  "Preguntar a Flavia por la «regulación sectorial: datos de pacientes» de la ficha (parece un error).",
+  "Confirmar si Benjamín quiere facilidad de pago, la moneda de facturación y el valor.",
+  "Aclarar en la presentación qué requiere el computador encendido y qué integraciones (Instagram, banco; sin WhatsApp en el deck) serían de la etapa siguiente.",
+  "Confirmar el teléfono y el correo de Flavia Martínez (tomados de la CAI-067).",
+  "Volver a verificar el precio de Claude Team antes de enviar si pasan semanas."
+ ]
+}
