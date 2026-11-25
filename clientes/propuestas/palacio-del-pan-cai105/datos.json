@@ -1,0 +1,490 @@
+{
+ "version": 3,
+ "cliente": {
+  "nombre": "El Palacio del Pan",
+  "slug": "palacio-del-pan-cai105",
+  "codigo": "CAI-105",
+  "nombre_pie": "Palacio del Pan"
+ },
+ "division": "educacion",
+ "alianza": false,
+ "sin_horas_trabajo": true,
+ "meta_tipo": "Capacitación In-Company · Herramientas con IA para cuatro áreas administrativas (caja, pagos, producción e inventario), 12 h por área = 48 h con el equipo · formato compacto v3",
+ "eje": "Construir con el equipo de El Palacio del Pan, con IA, las herramientas de cuatro áreas administrativas (cierre de caja, cuentas por pagar, producción y costos, inventario y compras) a partir del informe del sistema y los datos base que la panadería entregó",
+ "origen": "Pedido de Ivana (18/11/2026): propuesta de Habilidades para El Palacio del Pan a partir del paquete que la panadería envió a los proveedores del sistema (Informe del sistema v14, Esquema del sistema v3, Datos base v10, Recetas de referencia v2, noviembre de 2026) y de lo que ya se sabe de ellos por la DET-051. Asesora: Verónica Rubio",
+ "fuente_insumo": "Informe del sistema v14 (17/11/2026), Esquema del sistema v3, Datos base del sistema v10 y Recetas de referencia v2 del cliente; DET-051 (Ficha y transcripción del 02/11/2026)",
+ "vocabulario": {
+  "solucion": [
+   "entregable",
+   "entregables"
+  ],
+  "area": [
+   "área",
+   "áreas"
+  ]
+ },
+ "siglas_ok": [
+  "IA",
+  "IVA"
+ ],
+ "portada": {
+  "titulo_lineas": [
+   "Control de caja, pagos, producción",
+   "e inventario con IA"
+  ],
+  "titulo_destacado": "en El Palacio del Pan",
+  "lead": "Construimos con el equipo de la panadería, con IA, las herramientas para **cerrar la caja una sola vez**, llevar las **cuentas por pagar con abonos**, conocer el costo de cada tanda y controlar el inventario.",
+  "hechos": [
+   {
+    "num": "2 veces",
+    "texto": "se teclea cada cierre de caja: primero en Excel y después en el programa administrativo.",
+    "resuelto_por": [
+     "CC-1",
+     "CC-2"
+    ]
+   },
+   {
+    "num": "Abonos",
+    "texto": "muchas facturas se pagan en partes y llevar lo que falta de cada una en Excel es muy laborioso.",
+    "resuelto_por": [
+     "CP-1",
+     "CP-2"
+    ]
+   },
+   {
+    "num": "Margen",
+    "texto": "el programa actual no registra el costo de lo vendido: hoy no se conoce el margen de cada producto.",
+    "resuelto_por": [
+     "PC-3",
+     "PC-4"
+    ]
+   },
+   {
+    "num": "775",
+    "texto": "productos y 13 recetas ya entregados, con unidades y costos por completar para llevar el inventario.",
+    "resuelto_por": [
+     "IC-1",
+     "PC-1"
+    ]
+   }
+  ]
+ },
+ "carriles": [
+  {
+   "id": "ia",
+   "nombre": "IA para la administración",
+   "nombre_corto": "Administración",
+   "color": "amarillo"
+  }
+ ],
+ "areas": [
+  {
+   "id": "CC",
+   "nombre": "Cierre de caja",
+   "carril": "ia",
+   "frente": "A",
+   "para_que": "Cerrar cada turno una sola vez y cuadrar lo físico con los bancos",
+   "soluciones": [
+    {
+     "id": "CC-1",
+     "entregable": "Cierre de turno en una sola captura",
+     "h": 3,
+     "fase": "F1",
+     "detalle": "Efectivo en bolívares y dólares, lotes de los puntos de venta y lo facturado contra lo cobrado, registrados una sola vez al terminar el turno."
+    },
+    {
+     "id": "CC-2",
+     "entregable": "Arqueo del día siguiente",
+     "h": 3,
+     "fase": "F1",
+     "detalle": "La administración valida que los cierres coinciden con lo físico y con el banco; los faltantes y sobrantes quedan con su motivo."
+    },
+    {
+     "id": "CC-3",
+     "entregable": "Cruce de lotes con los bancos",
+     "h": 3,
+     "fase": "F1",
+     "detalle": "El lote de cada punto de venta contra lo que abona cada banco, para ver las diferencias a tiempo."
+    },
+    {
+     "id": "CC-4",
+     "entregable": "Resumen diario por medio de pago",
+     "h": 3,
+     "fase": "F1",
+     "detalle": "Los ingresos del día por medio de pago, listos para entregar al contador."
+    }
+   ]
+  },
+  {
+   "id": "CP",
+   "nombre": "Cuentas por pagar",
+   "carril": "ia",
+   "frente": "A",
+   "para_que": "Saber cuánto falta por pagar de cada factura, aunque se pague en abonos",
+   "soluciones": [
+    {
+     "id": "CP-1",
+     "entregable": "Registro de facturas sin duplicados",
+     "h": 3,
+     "fase": "F1",
+     "detalle": "Número, número de control, fecha, exento, base, IVA y total de cada factura de compra; una factura no se carga dos veces."
+    },
+    {
+     "id": "CP-2",
+     "entregable": "Saldo de cada factura con abonos",
+     "h": 3,
+     "fase": "F1",
+     "detalle": "Cada pago parcial se descuenta de la factura y se ve lo que falta por pagar de cada una."
+    },
+    {
+     "id": "CP-3",
+     "entregable": "Programación de pagos sugerida",
+     "h": 3,
+     "fase": "F1",
+     "detalle": "Según los ingresos y los compromisos fijos, indica qué facturas se pueden pagar; la programación definitiva la escoge una persona."
+    },
+    {
+     "id": "CP-4",
+     "entregable": "Antigüedad de saldos de proveedores",
+     "h": 3,
+     "fase": "F1",
+     "detalle": "Lo que se debe a cada proveedor, ordenado por antigüedad, como auxiliar para el contador."
+    }
+   ]
+  },
+  {
+   "id": "PC",
+   "nombre": "Producción y costos",
+   "carril": "ia",
+   "frente": "A",
+   "para_que": "Conocer el costo y el margen de cada tanda y de cada producto",
+   "soluciones": [
+    {
+     "id": "PC-1",
+     "entregable": "Recetario de las 13 recetas",
+     "h": 3,
+     "fase": "F2",
+     "detalle": "Las recetas de referencia, con varios niveles (una masa o una crema pueden ser ingrediente de otro producto) y los productos que sirven para cada ingrediente."
+    },
+    {
+     "id": "PC-2",
+     "entregable": "Plan de producción del día",
+     "h": 3,
+     "fase": "F2",
+     "detalle": "Qué tandas se hacen cada día y cuánto sale de cada una, a partir del recetario."
+    },
+    {
+     "id": "PC-3",
+     "entregable": "Costo de cada tanda y producto",
+     "h": 3,
+     "fase": "F2",
+     "detalle": "El costo de cada tanda según los ingredientes de la última compra, repartido entre los productos que salen de ella."
+    },
+    {
+     "id": "PC-4",
+     "entregable": "Margen y alerta bajo el costo",
+     "h": 3,
+     "fase": "F2",
+     "detalle": "El margen de cada producto y un aviso cuando el valor de venta queda por debajo del costo."
+    }
+   ]
+  },
+  {
+   "id": "IC",
+   "nombre": "Inventario y compras",
+   "carril": "ia",
+   "frente": "A",
+   "para_que": "Contar y reponer con alertas, y recibir las compras sin teclear de más",
+   "soluciones": [
+    {
+     "id": "IC-1",
+     "entregable": "Fichas de productos con unidades",
+     "h": 3,
+     "fase": "F2",
+     "detalle": "Unidad de compra, unidad de uso y cuántas unidades trae cada una, completadas para los productos que hoy no las tienen."
+    },
+    {
+     "id": "IC-2",
+     "entregable": "Conteo físico guiado",
+     "h": 3,
+     "fase": "F2",
+     "detalle": "Una lista guiada para contar el inventario, con las diferencias contra lo que el sistema espera."
+    },
+    {
+     "id": "IC-3",
+     "entregable": "Alertas de mínimo y de merma",
+     "h": 3,
+     "fase": "F2",
+     "detalle": "Aviso cuando un producto baja de su cantidad mínima y registro de la merma de insumos y de producto terminado."
+    },
+    {
+     "id": "IC-4",
+     "entregable": "Orden de compra y recepción",
+     "h": 3,
+     "fase": "F2",
+     "detalle": "La orden de compra al proveedor y la recepción de la mercancía contra la factura, que alimenta el inventario y las cuentas por pagar."
+    }
+   ]
+  }
+ ],
+ "alcance": {
+  "titulo": "Cuatro áreas, de la caja al inventario.",
+  "subtitulo": "Herramientas con IA para el día a día de la panadería, construidas con quien hace cada tarea.",
+  "fuera_alcance": [
+   "Un sistema integral que reemplace a Profit: se construyen las herramientas de cuatro áreas, no el sistema completo.",
+   "Facturación fiscal e impresora fiscal: siguen en el sistema que la panadería usa hoy.",
+   "Contabilidad, nómina, impuestos, mercadeo y mantenimiento: los asientos los sigue llevando el servicio contable.",
+   "Licencias de IA: no están en la inversión; se confirman en el arranque."
+  ]
+ },
+ "metodo": {
+  "titulo": "Así construimos con el equipo.",
+  "subtitulo": "Cada herramienta se construye con quien hace la tarea, se prueba con ejemplos de la panadería y se mide.",
+  "quien_construye": "**Intezia guía** y el equipo de la panadería construye con la IA sus propias herramientas, sobre lo que ya usa.",
+  "por_que_orden": "Primero la caja y los pagos, que hoy dan más trabajo; después producción e inventario, que parten de los datos base ya entregados.",
+  "practica": [
+   {
+    "titulo": "Con quien hace el trabajo",
+    "texto": "Cada herramienta se construye con quien cierra la caja, paga las facturas o produce, para que la use desde el primer día."
+   },
+   {
+    "titulo": "Con datos ya entregados",
+    "texto": "Se parte de los productos, recetas y proveedores que la panadería preparó, usados como datos de prueba."
+   },
+   {
+    "titulo": "Depende de las herramientas",
+    "texto": "Lo que se construye depende de las herramientas de IA y de los sistemas que la panadería usa, y de qué tan fácil sea integrarse a ellos: se verifica en el arranque."
+   }
+  ],
+  "pasos": [
+   {
+    "titulo": "Construimos",
+    "texto": "Con quien hace la tarea y con sus casos reales."
+   },
+   {
+    "titulo": "Probamos",
+    "texto": "Con ejemplos de cierres y facturas que la panadería autoriza."
+   },
+   {
+    "titulo": "Adoptamos",
+    "texto": "Cada equipo usa su herramienta en el día a día."
+   },
+   {
+    "titulo": "Medimos",
+    "texto": "El tiempo ganado en cada tarea, a 30, 60 y 90 días."
+   }
+  ],
+  "datos": "Las claves, las cuentas bancarias y los datos de nómina no se cargan a la IA: se trabaja con ejemplos que la panadería autoriza."
+ },
+ "logistica": {
+  "modalidad": "Presencial en la panadería o en línea, según se acuerde en la reunión de arranque.",
+  "participantes": "Quienes hacen la tarea en caja, administración, compras y producción.",
+  "arranque": "Las fechas se acuerdan en la reunión de arranque."
+ },
+ "fases": [
+  {
+   "id": "F1",
+   "titulo": "Caja y pagos",
+   "descripcion": "**cierre de caja y cuentas por pagar**",
+   "destacada": true
+  },
+  {
+   "id": "F2",
+   "titulo": "Producción e inventario",
+   "descripcion": "**costos, inventario y compras**"
+  }
+ ],
+ "frentes": [
+  {
+   "id": "A",
+   "carril": "ia",
+   "nombre": "Administración de la panadería",
+   "celdas": {
+    "F1": "Cierre de caja y cuentas por pagar, construidos y probados.",
+    "F2": "Recetario, costos, inventario y compras, a partir de los datos base."
+   }
+  }
+ ],
+ "ruta": {
+  "titulo": "De la caja al inventario.",
+  "subtitulo": "Dos fases de dos áreas cada una. La **garantía y el seguimiento** a 30, 60 y 90 días corren desde el cierre de cada área.",
+  "nota": "Las {h_total} h son una proyección: {h_f1} h de caja y pagos y {h_f2} h de producción e inventario. La reunión de arranque no suma horas.",
+  "hitos": [
+   {
+    "titulo": "Arranque",
+    "texto": "Se confirman los participantes y los accesos, y se verifica la integración con las herramientas."
+   },
+   {
+    "titulo": "Caja y pagos",
+    "texto": "El cierre de caja y las cuentas por pagar, construidos y probados con ejemplos."
+   },
+   {
+    "titulo": "Producción e inventario",
+    "texto": "Recetario, costos e inventario, construidos con las 13 recetas entregadas."
+   },
+   {
+    "titulo": "Cierre",
+    "texto": "Las cuatro áreas en uso diario; empieza la garantía a 30, 60 y 90 días."
+   }
+  ]
+ },
+ "seguimiento": {
+  "rango": "30, 60 y 90 días",
+  "texto": "Seguimiento desde el cierre de cada área",
+  "items": [
+   {
+    "dias": "30 días",
+    "texto": "Uso diario de cada una"
+   },
+   {
+    "dias": "60 días",
+    "texto": "Ajustes con casos nuevos"
+   },
+   {
+    "dias": "90 días",
+    "texto": "Tiempo ganado, medido"
+   }
+  ]
+ },
+ "entregables": {
+  "titulo": "Lo que recibe la panadería.",
+  "subtitulo": "Lo que se llevan los equipos: **las herramientas de cada área**, funcionando con sus datos y con el seguimiento que mide su efecto.",
+  "etiqueta_transversales": "Para todo el proyecto",
+  "transversales": [
+   "Línea base del tiempo de cada tarea.",
+   "Cuaderno de trabajo digital del proyecto.",
+   "Seguimiento a 30, 60 y 90 días."
+  ],
+  "valor_inmediato": [
+   "Fase 1: el cierre de caja en una sola captura.",
+   "Fase 1: el saldo de cada factura con sus abonos.",
+   "Fase 2: el recetario con el costo de cada tanda."
+  ],
+  "columnas_por_carril": [
+   4
+  ],
+  "impacto": {
+   "enfoque": "operacion",
+   "texto": "El cierre de caja se hace **una sola vez**, los saldos con los proveedores están al día y la panadería conoce el **costo, el margen y el inventario** de cada producto, con sus propios datos."
+  }
+ },
+ "retorno": {
+  "modo": "metodo",
+  "posiciones": false,
+  "titulo": "Retorno esperado: tiempo y control.",
+  "subtitulo": "Se calcula con las tareas de cada área, partiendo del tiempo que hoy toman.",
+  "etiqueta_pasos": "Cómo se calcula, por área y por tarea",
+  "pasos": [
+   {
+    "titulo": "Tareas del área",
+    "texto": "Qué cierres, facturas, tandas y conteos se apoyan en la herramienta y cuántas veces se repiten."
+   },
+   {
+    "titulo": "Tiempo actual por tarea",
+    "texto": "Se mide al arrancar, con quien hace el trabajo, y es la **línea base**."
+   },
+   {
+    "titulo": "Tiempo con la herramienta",
+    "texto": "Lo que toma la misma tarea ya con la herramienta en uso."
+   },
+   {
+    "titulo": "Horas recuperadas",
+    "texto": "Número de tareas por la diferencia entre el tiempo actual y el tiempo con la herramienta."
+   }
+  ],
+  "etiqueta_metas": "Calendario de garantía, desde el cierre de cada área",
+  "metas": [
+   {
+    "dias": "30 días",
+    "texto": "Las herramientas de cada área en uso diario, con datos reales."
+   },
+   {
+    "dias": "60 días",
+    "texto": "Ajustes con casos nuevos y menos correcciones a mano."
+   },
+   {
+    "dias": "90 días",
+    "texto": "Medición del tiempo ganado en cada tarea, contra la línea base."
+   }
+  ],
+  "destino": [
+   {
+    "rotulo": "Un cierre sin doble registro",
+    "texto": "Cada cierre se registra una sola vez y las diferencias se ven a tiempo."
+   },
+   {
+    "rotulo": "Saldos a la vista",
+    "texto": "Cada factura muestra lo que falta por pagar y los pagos se programan con datos."
+   },
+   {
+    "rotulo": "Costo y margen conocidos",
+    "texto": "Con el recetario y el inventario, la panadería sabe **cuánto cuesta** cada producto."
+   }
+  ],
+  "gancho": "A los 90 días del cierre, la panadería conocerá el tiempo que ganó en cada tarea de sus cuatro áreas."
+ },
+ "inversion": {
+  "duracion": "Proyecto de {n_areas_txt}: {h_total} horas en total, 12 para cada una, con seguimiento y garantía a 30, 60 y 90 días.",
+  "programa": [
+   "Herramientas con IA para cuatro áreas de El Palacio del Pan ({codigo}).",
+   "Caja, pagos, producción e inventario: 12 horas por área, en dos fases.",
+   "{h_total} horas con el equipo, más la reunión de arranque aparte."
+  ],
+  "notas": [
+   "Garantía 30-60-90: seguimiento a {rango_seguimiento} desde el cierre de cada área.",
+   "Términos y condiciones: los del enlace de «Importante», que ambas partes aceptan al avanzar con esta propuesta.",
+   "Licencias de IA, aparte: se confirman en el arranque."
+  ]
+ },
+ "omitir": [
+  "pago"
+ ],
+ "proximos_pasos": {
+  "asesora": {
+   "nombre": "Verónica Rubio",
+   "cargo": "Asesora comercial",
+   "correo": "vrubio01@intezia.com",
+   "telefono": "+58 422 3355505"
+  },
+  "pasos": [
+   {
+    "titulo": "Confirmar el alcance",
+    "texto": "Resolvemos las dudas de la panadería y validamos las áreas y el orden de las dos fases."
+   },
+   {
+    "titulo": "Accesos y agenda",
+    "texto": "Coordinamos los accesos y la agenda de quien trabaja en cada área."
+   },
+   {
+    "titulo": "Reunión de arranque",
+    "texto": "Reunión de unos 30 minutos para alinear las tareas y los datos de cada área."
+   }
+  ]
+ },
+ "frases_ok": [],
+ "supuestos": [
+  "Ajuste de Ivana (18/11/2026): el deck dice, en «Cómo trabajamos» y en el hito de arranque, que lo que se construye depende de las herramientas y de la facilidad de integrarse a ellas, y que se verifica en el arranque (el informe del cliente dice que Profit no tiene API ni importador). No se nombra Profit en esa frase.",
+  "Pedido de Ivana (18/11/2026): propuesta de Habilidades a partir del paquete que El Palacio del Pan envió a los proveedores del sistema (Informe v14, Esquema v3, Datos base v10, Recetas v2) y de lo que ya se sabe por DET-051. Asesora: Verónica Rubio.",
+  "Decisiones de Ivana (18/11/2026): alcance de cuatro áreas (cierre de caja, cuentas por pagar, producción y costos, inventario y compras), 12 h por área = 48 h con el equipo, sin nombrar herramienta de IA, impacto «operación». División Educación y alianza = no: tomados por mí (misma cuenta que DET-051), no los dio Ivana.",
+  "Reparto mío: cada área en 4 entregables de 3 h, tomados del informe (cierre por turno, arqueo, conciliación de lotes y resumen diario de cierres; registro de facturas, abonos, programación de pagos y antigüedad de saldos; recetario, plan del día, costo de cada tanda y margen; fichas con unidades, conteo guiado, alertas de mínimo y merma, orden de compra y recepción). Fase 1 = los dos cuellos de botella que marca el informe; fase 2 = producción e inventario, que parten de los datos base.",
+  "Lo que el cliente pide es un sistema integral de 15 módulos que reemplace a Profit y lo ofrece a varios proveedores. El deck no promete un sistema completo: dice qué se construye (cuatro áreas) y deja explícito lo que queda fuera (sistema integral, facturación fiscal, contabilidad, nómina, impuestos, mercadeo y mantenimiento).",
+  "Hechos de la portada: salen del propio informe del cliente (cierre tecleado dos veces, cuentas por pagar con abonos en Excel, Profit sin costo de lo vendido, 775 productos y 13 recetas). No se cita su fuente en el deck (regla de fuentes en presentaciones).",
+  "Profit no se nombra en las soluciones; solo en «Fuera de este alcance» (reemplazarlo no es parte del servicio). No se afirma que la panadería migre ni que las herramientas se conecten con Profit (§4.11): el informe dice que el sistema nuevo no se conecta con él.",
+  "Datos fiscales y de nómina: fuera de alcance. No se cargan datos de clientes ni cuentas bancarias a la IA; los 775 productos, recetas y proveedores se usan como datos de prueba, que el informe declara «de referencia».",
+  "Herramienta (Ivana): sin nombrar. Juan Carlos ya probó Claude Code por su cuenta; no se menciona Claude ni VPN (Venezuela no es país soportado).",
+  "Enfoque del cuadro Impacto: operación (Ivana, 18/11/2026), sin posiciones ni nómina: no hay aval del cliente. La pregunta de Juan Carlos sobre roles y cuántas personas (DET-051) no se responde en esta propuesta.",
+  "Seguimiento 30-60-90 incluido por ser estándar de Habilidades y porque responde a la objeción de adopción de DET-051; Ivana puede quitarlo. Sin facilidad de pago (omitir: pago, regla permanente). Sin certificado. Hoja de inversión con valores vacíos para ventas, en REF.",
+  "Sin semanas, sesiones ni fechas (§4.23): el informe habla de conteo semanal y de calendarios de avisos; no aparecen en el deck.",
+  "Contacto de la última slide: Verónica Rubio, asesora comercial."
+ ],
+ "pendientes": [
+  "Valor, descuento y total: campos vacíos para ventas. En DET-051 Verónica dio como anclaje «de 2.300 en adelante»; con 48 h de Habilidades el valor es otro: confirmar con Verónica antes de enviar.",
+  "Expectativa del cliente: pide un sistema completo que reemplace a Profit. Conviene que Verónica lo aclare con Juan Carlos antes o durante la presentación: Intezia construye con su equipo herramientas con IA, no entrega un sistema integral.",
+  "Relación con DET-051 (Detección en 3 áreas, aún en Borrador): confirmar con Ivana y Verónica si se presentan juntas, por separado o si CAI-105 reemplaza a DET-051. El deck de CAI-105 no nombra la Detección.",
+  "Qué herramienta de IA se usa y quién contrata las licencias (se define en el arranque).",
+  "Dónde se ejecutan las herramientas construidas (los equipos de la panadería usan Windows y Excel; el servidor tiene SQL Server) y quién las sostiene después: aclarar en el arranque.",
+  "Quién del equipo participa en cada área (el informe cuenta 18 personas) y si el trabajo es presencial en Guacara o en línea.",
+  "Dudas del cliente que el informe pide listar («qué dudas tienen y cuáles serían los siguientes pasos»): armar la respuesta con Verónica.",
+  "Si hace falta agregar más áreas (Ventas y clientes, Bancos y tesorería, Nómina, Impuestos): +12 h por área según el lineamiento; no incluidas."
+ ]
+}

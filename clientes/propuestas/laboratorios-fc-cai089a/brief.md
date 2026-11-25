@@ -1,4 +1,4 @@
-# Brief · Laboratorios FC · Servicio de Habilidades (CAI-089A)
+# Brief · Laboratorios FC · Servicio de Habilidades (CAI-089)
 
 > Generado por `scripts/generar-habilidades-compacto.py` la primera vez (no se sobrescribe después, salvo el bloque marcado como automático). Completar a mano lo que falte; los datos del deck viven en `datos.json`.
 
@@ -9,11 +9,11 @@
 - **División Intezia**: `educacion`
 - **Servicio (§4.1a)**: `habilidades`
 - **Alianza**: `no`
-- **Tipo de documento**: categoría de catálogo Capacitación In-Company (`CAI-089A`), presentada al cliente como **propuesta de proyecto**; formato compacto de 8 slides (con hoja de inversión (campos de monto vacíos para ventas))
+- **Tipo de documento**: categoría de catálogo Capacitación In-Company (`CAI-089`), presentada al cliente como **propuesta de proyecto**; formato compacto de 8 slides (con hoja de inversión (campos de monto vacíos para ventas))
 - **Eje temático**: Aplicar IA con método en los procesos de las 9 áreas de Laboratorios FC, clave y de apoyo: levantar cada proceso y construir una solución por área, con seguimiento a 30, 60 y 90 días
 <!--auto:inicio-->
 - **Alcance**: 18 entregables en 9 áreas · 90 h de trabajo · seguimiento a 30, 60 y 90 días
-- **Orden de las slides**: 1 Portada · 2 Alcance · 3 Ruta · 4 Cómo trabajamos · 5 Entregables · 6 Retorno · 7 Inversión · 8 Próximos pasos
+- **Orden de las slides**: 1 Portada · 2 Alcance · 3 Ruta · 4 Cómo trabajamos · 5 Entregables · 6 Retorno · 7 Inversión · 8 Inversión (etapa 2) · 9 Próximos pasos
 - **Asesora comercial que ve el cliente (última slide)**: Verónica Rubio, Asesora comercial · vrubio01@intezia.com · +58 422 3355505
 <!--auto:fin-->
 - **Estado**: `Borrador`
@@ -52,9 +52,10 @@
 
 ## Pendientes
 
-- Confirmar los códigos de las dos propuestas (CAI-089A todas las áreas, CAI-089B áreas priorizadas) y que B son los 4 procesos clave.
+- Confirmar el código CAI-089 (una sola propuesta desde el 11/11/2026, con dos hojas de inversión separadas, una por alcance: 9 áreas y 5 áreas) y qué se hace con la carpeta laboratorios-fc-cai089b, superada.
 - Confirmar con Ivana el reparto (2 h + 8 h por área) y si las 8 h cuentan como construcción, testeo y adopción de 4, 2 y 2.
 - Respuesta por escrito, verificada, sobre las restricciones de Claude y OpenAI en Venezuela antes de enviar (Mariana la pidió en la reunión).
+- Ajuste del 16/11/2026 (Ivana): el descuento no puede quedar ambiguo, así que hay dos hojas de inversión (`inversion.etapas`, páginas 7 y 8), cada una con su valor, descuento y total para ventas: proyecto completo de 9 áreas y proyecto de 5 áreas. Campos del PDF: `PrecioBase/Descuento/PrecioTotal` y los mismos con sufijo `_2`. Ojo: el rótulo de la hoja no puede llevar «Opción N» (el script de campos lo confunde con hoja de partes).
 - Valor, descuento y total: campos vacíos para ventas; moneda de facturación y la forma de pago la define el cliente.
 - Vigencia de la cotización: el sistema usa 30 días y el cliente decide al formular el presupuesto 2027; ver con Ivana si se extiende.
 - Quién asiste a la presentación (Junta de Presidencia) y si Mariana quiere a otros líderes; si trabajan con orden de compra.

@@ -1,0 +1,416 @@
+<!doctype html>
+<!--
+  Propuesta · Dezuca · Servicio de Habilidades (CAI-119)
+  División: Educación · Servicio: Habilidades (§4.1a) · Alianza: no
+  GENERADO por scripts/generar-habilidades-compacto.py (plantilla 3.0 (2026-10-08), formato habilidades) desde datos.json.
+  No editar a mano: editar datos.json y regenerar. Estilos propios del deck: overrides.css.
+  Fuente del insumo: Resumen de Ventas de la primera reunión con el dueño de Dezuca (23/11/2026); sin ficha ni transcripción
+
+  Formato compacto de 8 slides, en el orden de las preguntas del cliente (Ventas, 2026-10-07), sin semanas, sesiones
+  ni fechas (Keiber, 2026-10-08):
+    1 Portada · 2 Alcance · 3 Ruta · 4 Cómo trabajamos · 5 Entregables · 6 Retorno · 7 Inversión · 8 Próximos pasos
+  Marcadores de detección de AcroForms (agregar-campo-precio.py), por página: «Propuesta Económica» solo en la slide de
+  inversión; «Lo que se llevan» y «Entregables» solo en la de entregables; «Facilidad de pago» solo en la de pago.
+  Campos AcroForm: Programa, Notas, PrecioBase, Descuento, PrecioTotal (inversión) y Entregables, Acreditacion (entregables). Se reposicionan con scripts/customize-habilidades-compacto.py.
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Propuesta · Dezuca · Intezia Educación</title>
+  <link rel="stylesheet" href="../_base/styles.css">
+  <link rel="stylesheet" href="habilidades-compacto.css">
+  <link rel="stylesheet" href="overrides.css">
+</head>
+<body>
+
+  <main class="deck">
+
+    <!-- 1 · Portada: ¿cuál es mi problema? -->
+    <section class="slide s-cover">
+      <span class="counter">01 / 08</span>
+      <div class="logo-big">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia Educación">
+      </div>
+      <div class="body">
+        <p class="eyebrow">Propuesta de proyecto · Servicio de Habilidades</p>
+        <h1 style="font-size:46px">
+          Producción bajo control con IA:<br>
+          cada puesto, cada pedido<br>
+          <span class="hl">en Dezuca</span>
+        </h1>
+        <p class="lead">
+          Cada puesto ve solo lo que le toca, cada pedido tiene su <strong>línea de tiempo</strong> y la dirección decide con <strong>datos reales</strong>, todo construido en conjunto con el equipo.
+        </p>
+        <div class="pain-strip">
+          <div class="pain-item">
+            <span class="pain-num">2 vías</span>
+            <span class="pain-lbl">separadas siguen el corte y el diseño, y recién se unen en impresión y sublimación.</span>
+          </div>
+          <div class="pain-item">
+            <span class="pain-num">Sin línea</span>
+            <span class="pain-lbl">de tiempo del pedido: cuando el cliente pregunta en qué punto va, no hay una respuesta clara.</span>
+          </div>
+          <div class="pain-item">
+            <span class="pain-num">A mano</span>
+            <span class="pain-lbl">arma hoy la dirección sus tableros en Excel, y cuesta mantenerlos al día.</span>
+          </div>
+        </div>
+      </div>
+      <div class="id-line">
+        <span class="codigo">Código: CAI-119</span>
+        <span class="cliente">Dezuca</span>
+      </div>
+    </section>
+
+    <!-- 2 · Alcance: qué vamos a hacer y para qué -->
+    <section class="slide s-scope roomy">
+      <span class="counter">02 / 08</span>
+      <p class="eyebrow">02 · Alcance</p>
+      <h2>Dos áreas, del puesto a la dirección.</h2>
+      <p class="sub">Una aplicación sencilla con pantallas por puesto y un Cerebro Digital, construidos en conjunto con el equipo.</p>
+
+      <div class="scope-panels one" style="--np:1">
+        <div class="scope-panel acc-y">
+          <div class="scope-head">
+            <span class="scope-tag">IA para la producción</span>
+            <span class="scope-total"><b>2</b> áreas</span>
+          </div>
+          <ul class="scope-rows">
+              <li><span class="area">Aplicación de producción</span><span class="para">Que cada puesto vea solo lo que le toca y la dirección siga cada pedido hasta la entrega</span></li>
+              <li><span class="area">Cerebro Digital de la dirección</span><span class="para">Un asistente con el contexto de la empresa, para decidir con datos</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="scope-out">
+        <p class="scope-card-label">Fuera de este alcance</p>
+        <ul>
+          <li>Licencias de IA: no están en la inversión; Dezuca ya tiene ChatGPT Business.</li>
+          <li>Un sistema completo de gestión: se construye una aplicación base sencilla, que puede crecer en una siguiente etapa.</li>
+          <li>Siguiente etapa: inventario y compras, productividad por costurera, presupuesto contra real, predicción y alertas.</li>
+          <li>Cambiar las tabletas que ya usan: la aplicación se apoya en ellas.</li>
+        </ul>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Dezuca · CAI-119</span>
+      </div>
+    </section>
+
+    <!-- 3 · Ruta: qué pasa en cada fase -->
+    <section class="slide s-route">
+      <span class="counter">03 / 08</span>
+      <p class="eyebrow">03 · Ruta</p>
+      <h2>Del pedido a la decisión.</h2>
+      <p class="sub">El calendario se acuerda en la reunión de arranque. La <strong>garantía y el seguimiento</strong> a 30, 60 y 90 días corren desde el cierre de cada área.</p>
+
+      <div class="route-grid n1" style="--cols:2; --rows:1; --rowh:214px">
+
+        <div class="rg-corner"></div>
+        <div class="rg-phase rg-ph-1">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Aplicación</span></span>
+          <span class="rg-phase-name">Pedido, puestos y dashboard</span>
+        </div>
+        <div class="rg-phase rg-ph-2 hi">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Cerebro</span></span>
+          <span class="rg-phase-name">Dirección</span>
+        </div>
+        <div class="rg-phase rg-fu">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Garantía</span></span>
+          <span class="rg-phase-date">30, 60 y 90 días</span>
+          <span class="rg-phase-txt">Seguimiento desde el cierre de cada área</span>
+        </div>
+
+        <div class="rg-front acc-y">
+          <span class="rg-front-h">Producción de Dezuca</span>
+          <span class="rg-front-row"><span class="rg-front-tool">Producción</span></span>
+          <span class="rg-front-meta"></span>
+        </div>
+        <div class="rg-cell"><p>Orden única, pantalla por puesto, línea de tiempo y dashboard.</p></div>
+        <div class="rg-cell hi"><p>Cerebro de la dirección con su contexto y un informe semanal.</p></div>
+
+        <div class="rg-follow" style="grid-column:4; grid-row:2 / span 1">
+          <ul>
+            <li><b>30 días</b><span>Uso real y ajustes</span></li>
+            <li><b>60 días</b><span>Ajustes con casos nuevos</span></li>
+            <li><b>90 días</b><span>Dashboard del tiempo ganado, contra la línea base</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="route-miles" style="grid-template-columns:repeat(4,1fr)">
+        <div class="mile"><span class="mile-d"></span><b>Arranque</b><p>Reunión para conocer los puestos, ver el recorrido de un pedido y fijar la línea base.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Puestos</b><p>Cada puesto usa su pantalla con órdenes reales.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Dashboard</b><p>Un pedido se sigue en su línea de tiempo y en el dashboard.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Cierre</b><p>La dirección usa su Cerebro Digital; empieza la garantía.</p></div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Dezuca · CAI-119</span>
+      </div>
+    </section>
+
+    <!-- 4 · Cómo trabajamos: pasos, por qué en ese orden, casos reales, práctica, datos y logística -->
+    <section class="slide s-method">
+      <span class="counter">04 / 08</span>
+      <p class="eyebrow">04 · Cómo trabajamos</p>
+      <h2>Se construye en conjunto con el equipo.</h2>
+      <p class="sub">Cada pieza se arma con quien la va a usar, se prueba en la planta con órdenes reales y se mide.</p>
+
+      <ol class="mt-steps" style="--n:4">
+          <li><b>Mapeamos</b><span>Cómo viaja hoy un pedido por cada puesto y qué necesita ver cada uno.</span></li>
+          <li><b>Construimos</b><span>En conjunto con el equipo, con Codex y con lo que ya tiene Dezuca.</span></li>
+          <li><b>Probamos</b><span>Cada puesto prueba su pantalla con órdenes reales y dice qué ajustar.</span></li>
+          <li><b>Medimos</b><span>El tiempo de cada tarea, contra la línea base del arranque.</span></li>
+      </ol>
+      <div class="mt-strips">
+        <p class="mt-why"><b>Por qué en este orden</b> Primero el pedido y los puestos, porque de ahí salen los datos. La línea de tiempo y el dashboard se alimentan de las marcas, y al final el Cerebro Digital reúne el contexto de la dirección.</p>
+        <p class="mt-who"><b>Quién construye</b> <strong>Intezia guía</strong> y el equipo de Dezuca construye en conjunto, con Codex, la aplicación que cada puesto va a usar.</p>
+      </div>
+
+      <div class="mt-info">
+        <div class="mt-card">
+          <p class="mt-card-label">Cómo funciona en la práctica</p>
+          <ul><li><b>Una aplicación para todos.</b> Pantallas sencillas por puesto, pensadas para personas no técnicas; cada puesto entra solo a lo suyo.</li><li><b>Dos toques por tarea.</b> Cada pantalla se diseña para la planta: ver la orden y marcar el avance, sin escribir ni buscar.</li><li><b>Una base que puede crecer.</b> Es un prototipo funcional que se prueba en la planta; lo que se agregue después se acuerda en una siguiente etapa.</li></ul>
+        </div>
+        <div class="mt-card">
+          <p class="mt-card-label">Cómo cuidamos sus datos</p>
+          <p>Los márgenes, los gastos y los datos de la empresa quedan solo para la dirección y para quien ella decida; cada puesto ve únicamente lo suyo.</p>
+        </div>
+      </div>
+
+      <div class="mt-logi">
+        <div class="mt-tile"><span>Modalidad</span><b>Se acuerda en la reunión de arranque: en la planta con los puestos y en línea con la dirección.</b></div>
+        <div class="mt-tile"><span>Participantes</span><b>La dirección, administración, ventas y una persona por puesto de la planta.</b></div>
+        <div class="mt-tile"><span>Ritmo de trabajo</span><b>Según la disponibilidad de cada área, sin frenar su operación diaria.</b></div>
+        <div class="mt-tile"><span>Arranque</span><b>Las fechas se acuerdan en la reunión de arranque.</b></div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Dezuca · CAI-119</span>
+      </div>
+    </section>
+
+    <!-- 5 · Entregables: ¿con qué me quedo? (catálogo + piezas transversales) -->
+    <section class="slide s-deliv roomy con-imp">
+      <span class="counter">05 / 08</span>
+      <p class="eyebrow">05 · Entregables</p>
+      <div class="deliv-head">
+        <h2>Lo que recibe Dezuca.</h2>
+        <p class="deliv-sub"><span class="nw">Lo que se llevan</span> los equipos: <strong>una aplicación</strong> con una pantalla por puesto y un Cerebro Digital para la dirección.</p>
+      </div>
+
+      <div class="deliv-impact grande">
+        <span class="di-label">Impacto</span>
+        <p>Cada puesto <strong>sabe qué le toca</strong>, el pedido deja de ser una pregunta en planta y la dirección ve <strong>la fábrica con datos</strong>, no con Excel armado a mano.</p>
+      </div>
+
+      <div class="deliv-carriles" style="--ncols:2">
+        <span class="dc acc-y" style="grid-column: span 2">IA para la producción</span>
+      </div>
+
+      <div class="deliv-cols" style="--ncols:2">
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">Aplicación de producción</p>
+            <ul>
+              <li>Carga del pedido (orden única)</li>
+              <li>Pantalla simple por puesto</li>
+              <li>Línea de tiempo y dashboard</li>
+              <li>Prueba en planta con cada puesto</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">Cerebro Digital de la dirección</p>
+            <ul>
+              <li>Cerebro con contexto y análisis financiero</li>
+              <li>Informe semanal de ejemplo</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="deliv-band">
+        <div class="db-card db-1">
+          <span class="db-label">Para todo el proyecto</span>
+        </div>
+        <div class="db-card db-2">
+          <span class="db-label">Valor inmediato</span>
+        </div>
+      </div>
+      <!-- Cajas multiline editables (vacías en HTML: el contenido vive dentro del AcroForm /V). -->
+      <div class="multi-box db-box db-box-1" data-field="Entregables"></div>
+      <div class="multi-box db-box db-box-2" data-field="Acreditacion"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Dezuca · CAI-119</span>
+      </div>
+    </section>
+
+    <!-- 6 · Retorno: ¿qué gano? (método de cálculo). Sin estudios ni citas externas. -->
+    <section class="slide s-roi">
+      <span class="counter">06 / 08</span>
+      <p class="eyebrow">06 · Retorno</p>
+      <h2>Retorno esperado: tiempo y control.</h2>
+      <p class="sub">Se calcula con las tareas de cada puesto, partiendo del tiempo que hoy tienen.</p>
+
+      <div class="roi-body">
+        <div class="roi-panel">
+          <p class="roi-panel-title">Cómo se calcula, por puesto y por tarea</p>
+          <ol class="roi-steps">
+            <li><b>Tareas de cada puesto</b><span>Qué órdenes, marcas de avance y consultas se hacen y cuántas veces se repiten.</span></li>
+            <li><b>Tiempo actual por tarea</b><span>Se mide al arrancar, con quien hace el trabajo, y es la <strong>línea base</strong>.</span></li>
+            <li><b>Tiempo con la pantalla</b><span>Lo que toma la misma tarea con la pantalla del puesto en uso.</span></li>
+            <li><b>Horas recuperadas</b><span>Número de tareas por la diferencia entre el tiempo actual y el tiempo con la pantalla.</span></li>
+          </ol>
+        </div>
+
+        <div class="roi-right">
+          <p class="roi-right-title">Calendario de garantía, desde el cierre de cada área</p>
+          <div class="roi-card">
+            <b>30 días</b>
+            <p>Los puestos usan su pantalla a diario con órdenes reales.</p>
+          </div>
+          <div class="roi-card">
+            <b>60 días</b>
+            <p>Ajustes con casos nuevos y menos consultas en planta.</p>
+          </div>
+          <div class="roi-card">
+            <b>90 días</b>
+            <p>Dashboard con el tiempo ganado en cada puesto.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="roi-dest-wrap">
+        <p class="roi-dest-title">Hacia dónde va el proyecto</p>
+        <div class="roi-dest">
+          <div class="rd-item"><b>Respuesta al cliente</b><p>Ventas responde en qué punto va el pedido <strong>con la realidad</strong>, sin ir a preguntar a planta.</p></div>
+          <div class="rd-item"><b>Cada puesto, su tarea</b><p>Corte, diseño y sublimación llegan juntos, sin desencuentros.</p></div>
+          <div class="rd-item"><b>Decisiones con datos</b><p>La dirección decide con <strong>datos de la fábrica</strong> y con el contexto de la empresa a la mano.</p></div>
+        </div>
+      </div>
+
+      <div class="roi-hook"><p>A los 90 días del cierre de cada área, Dezuca conocerá el tiempo que ganó en cada pedido.</p></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Dezuca · CAI-119</span>
+      </div>
+    </section>
+
+    <!-- 7 · Inversión (hoja de cotización estándar; antepenúltima slide) -->
+    <section class="slide s-price">
+      <span class="counter">07 / 08</span>
+      <h2 class="title">Inversión del proyecto.</h2>
+      <p class="price-intro">Propuesta Económica · Servicio de Habilidades</p>
+
+      <div class="block">
+        <span class="block-eyebrow">Duración</span>
+        <p class="block-value">Proyecto en dos áreas y dos fases: 16 horas de proyecto, con seguimiento y garantía a 30, 60 y 90 días.</p>
+      </div>
+
+      <div class="block block-programa">
+        <span class="block-eyebrow">Programa</span>
+      </div>
+      <div class="multi-box programa-box" data-field="Programa"></div>
+
+      <div class="block block-cotizacion">
+        <span class="block-eyebrow">Cotización</span>
+      </div>
+
+      <span class="cot-label cot-label-base">Propuesta + Inversión</span>
+      <span class="cot-sign cot-sign-base">REF</span>
+      <div class="cot-frame base-frame"></div>
+
+      <span class="cot-label cot-label-discount">Descuento</span>
+      <span class="cot-sign-minus">&minus;REF</span>
+      <div class="cot-frame discount-frame"></div>
+      <span class="cot-urgent-note">Descuento válido por 15 días</span>
+
+      <span class="cot-label cot-label-total">TOTAL</span>
+      <span class="cot-sign cot-sign-total">REF</span>
+      <div class="cot-frame total-frame"></div>
+
+      <p class="cot-moneda">Pago en Divisas o Bolívares a Tasa BCV del Euro</p>
+      <p class="cot-validity">Cotización válida por 30 días.</p>
+      <div class="cot-terms-box">
+        <span class="cot-terms-label">Importante</span>
+        <p class="cot-terms-text">Este servicio se presta bajo nuestros <a href="https://drive.google.com/file/d/1PA-ZSt4KnyY5dpxXzgkIk6-yfGlV2eF8/view?usp=drive_link" target="_blank" rel="noopener">términos y condiciones</a>. Al avanzar con esta propuesta, ambas partes los aceptan.</p>
+      </div>
+
+      <div class="cot-garantia-badge">
+        <span class="cot-garantia-tag">Garantía 30-60-90</span>
+        <p class="cot-garantia-text">Estamos contigo hasta que la habilidad quede instalada.</p>
+      </div>
+
+      <div class="block block-notes-container">
+        <span class="block-eyebrow">Notas</span>
+      </div>
+      <div class="multi-box notas-box" data-field="Notas"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Dezuca · CAI-119</span>
+      </div>
+    </section>
+
+    <!-- 9 · Próximos pasos: qué hacer y a quién escribir (última slide) -->
+    <section class="slide s-next">
+      <span class="counter">08 / 08</span>
+      <p class="eyebrow">08 · Próximos pasos</p>
+      <h2>Tres pasos para arrancar.</h2>
+      <p class="sub">Esto es lo que sigue cuando Dezuca confirme la propuesta.</p>
+
+      <div class="nx-steps">
+        <div class="nx-step acc-y">
+          <span class="nx-num">1</span>
+          <b>Revisar la propuesta</b>
+          <p>La revisamos con la dirección y resolvemos sus dudas sobre el alcance y el orden.</p>
+        </div>
+        <div class="nx-step acc-o">
+          <span class="nx-num">2</span>
+          <b>Accesos y puestos</b>
+          <p>Coordinamos el acceso a ChatGPT y a Codex, las tabletas y qué persona participa por puesto.</p>
+        </div>
+        <div class="nx-step acc-w">
+          <span class="nx-num">3</span>
+          <b>Reunión de arranque</b>
+          <p>Reunión de unos 30 minutos para conocer los puestos, alinear prioridades y medir la línea base.</p>
+        </div>
+      </div>
+
+      <div class="nx-contact">
+        <div class="nx-card nx-ase">
+          <span class="nx-label">¿Dudas? Escribe a tu directora comercial</span>
+          <b class="nx-name">María Iribarren</b>
+          <span class="nx-role">Directora comercial</span>
+          <p class="nx-line"><a href="mailto:miribarren@intezia.com">miribarren@intezia.com</a></p>
+          <p class="nx-line">+58 414 0570056</p>
+        </div>
+        <div class="nx-card nx-emp">
+          <span class="nx-label">Intezia</span>
+          <p class="nx-line">Intezia C.A J-505657950</p>
+          <p class="nx-line"><a href="mailto:servicio@intezia.com">servicio@intezia.com</a></p>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Dezuca · CAI-119</span>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

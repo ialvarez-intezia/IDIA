@@ -1,0 +1,439 @@
+<!doctype html>
+<!--
+  Propuesta · Instituto de Cirugía Integral · Servicio de Habilidades (CAI-116)
+  División: Educación · Servicio: Habilidades (§4.1a) · Alianza: no
+  GENERADO por scripts/generar-habilidades-compacto.py (plantilla 3.0 (2026-10-08), formato habilidades) desde datos.json.
+  No editar a mano: editar datos.json y regenerar. Estilos propios del deck: overrides.css.
+  Fuente del insumo: Ficha de Levantamiento (18/11/2026), resumen de la asesora y transcripción de la reunión del 18/11/2026
+
+  Formato compacto de 8 slides, en el orden de las preguntas del cliente (Ventas, 2026-10-07), sin semanas, sesiones
+  ni fechas (Keiber, 2026-10-08):
+    1 Portada · 2 Alcance · 3 Ruta · 4 Cómo trabajamos · 5 Entregables · 6 Retorno · 7 Inversión · 8 Próximos pasos
+  Marcadores de detección de AcroForms (agregar-campo-precio.py), por página: «Propuesta Económica» solo en la slide de
+  inversión; «Lo que se llevan» y «Entregables» solo en la de entregables; «Facilidad de pago» solo en la de pago.
+  Campos AcroForm: Programa, Notas, PrecioBase, Descuento, PrecioTotal (inversión) y Entregables, Acreditacion (entregables). Se reposicionan con scripts/customize-habilidades-compacto.py.
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Propuesta · Instituto de Cirugía Integral · Intezia Educación</title>
+  <link rel="stylesheet" href="../_base/styles.css">
+  <link rel="stylesheet" href="habilidades-compacto.css">
+  <link rel="stylesheet" href="overrides.css">
+</head>
+<body>
+
+  <main class="deck">
+
+    <!-- 1 · Portada: ¿cuál es mi problema? -->
+    <section class="slide s-cover">
+      <span class="counter">01 / 08</span>
+      <div class="logo-big">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia Educación">
+      </div>
+      <div class="body">
+        <p class="eyebrow">Propuesta de proyecto · Servicio de Habilidades</p>
+        <h1 style="font-size:46px">
+          Atención del paciente<br>
+          y administración con IA<br>
+          <span class="hl">en el Instituto de Cirugía Integral</span>
+        </h1>
+        <p class="lead">
+          Mapeamos con el equipo cómo se atiende hoy al paciente y construimos los flujos que <strong>digitalizan</strong> cada paso, desde el primer dato hasta el postoperatorio, para que la información <strong>no se pase a mano</strong> entre áreas.
+        </p>
+        <div class="pain-strip">
+          <div class="pain-item">
+            <span class="pain-num">1 o 2</span>
+            <span class="pain-lbl">personas sostienen la atención del paciente y el movimiento de la información entre áreas.</span>
+          </div>
+          <div class="pain-item">
+            <span class="pain-num">Papel</span>
+            <span class="pain-lbl">y correo llevan hoy la propuesta, el presupuesto, el instructivo y el postoperatorio.</span>
+          </div>
+          <div class="pain-item">
+            <span class="pain-num">A mano</span>
+            <span class="pain-lbl">se pasan los datos del paciente entre recepción, cita, ficha médica y laboratorios.</span>
+          </div>
+          <div class="pain-item">
+            <span class="pain-num">Gratis</span>
+            <span class="pain-lbl">es la versión de IA que el equipo usa hoy, de forma suelta y sin un criterio común.</span>
+          </div>
+        </div>
+      </div>
+      <div class="id-line">
+        <span class="codigo">Código: CAI-116</span>
+        <span class="cliente">Cirugía Integral</span>
+      </div>
+    </section>
+
+    <!-- 2 · Alcance: qué vamos a hacer y para qué -->
+    <section class="slide s-scope roomy">
+      <span class="counter">02 / 08</span>
+      <p class="eyebrow">02 · Alcance</p>
+      <h2>Tres áreas de trabajo, en tres fases.</h2>
+      <p class="sub">Primero se mapea y se entiende; después se digitaliza la atención del paciente y la administración.</p>
+
+      <div class="scope-panels one" style="--np:1">
+        <div class="scope-panel acc-y">
+          <div class="scope-head">
+            <span class="scope-tag">IA para la clínica</span>
+            <span class="scope-total"><b>3</b> áreas</span>
+          </div>
+          <ul class="scope-rows">
+              <li><span class="area">Levantamiento e introducción</span><span class="para">Mapear dónde aplicar la IA y entender con criterio qué se puede lograr</span></li>
+              <li><span class="area">Atención del paciente</span><span class="para">Que el paciente no pase datos a mano y reciba sus documentos a tiempo</span></li>
+              <li><span class="area">Administración</span><span class="para">Pagos, correos y pedidos de material ordenados, con indicadores</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="scope-out">
+        <p class="scope-card-label">Fuera de este alcance</p>
+        <ul>
+          <li>Historias clínicas e imágenes de pacientes: no se cargan a la IA ni se mueven del sistema actual.</li>
+          <li>Mercadeo y redes sociales: los lleva una empresa externa.</li>
+          <li>Reemplazar el sistema de citas actual: se conecta lo que se pueda, no se cambia.</li>
+        </ul>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Cirugía Integral · CAI-116</span>
+      </div>
+    </section>
+
+    <!-- 3 · Ruta: qué pasa en cada fase -->
+    <section class="slide s-route">
+      <span class="counter">03 / 08</span>
+      <p class="eyebrow">03 · Ruta</p>
+      <h2>Del mapa al flujo digital.</h2>
+      <p class="sub">El calendario se acuerda en la reunión de arranque. La <strong>garantía y el seguimiento</strong> a 30, 60 y 90 días corren desde el cierre de cada área.</p>
+
+      <div class="route-grid n1" style="--cols:3; --rows:1; --rowh:214px">
+
+        <div class="rg-corner"></div>
+        <div class="rg-phase rg-ph-1">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Base</span></span>
+          <span class="rg-phase-name">Levantamiento e introducción</span>
+        </div>
+        <div class="rg-phase rg-ph-2 hi">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Paciente</span></span>
+          <span class="rg-phase-name">Atención del paciente</span>
+        </div>
+        <div class="rg-phase rg-ph-3">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Cierre</span></span>
+          <span class="rg-phase-name">Pagos, correos, material e indicadores</span>
+        </div>
+        <div class="rg-phase rg-fu">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Garantía</span></span>
+          <span class="rg-phase-date">30, 60 y 90 días</span>
+          <span class="rg-phase-txt">Seguimiento desde el cierre de cada área</span>
+        </div>
+
+        <div class="rg-front acc-y">
+          <span class="rg-front-h">Atención y administración</span>
+          <span class="rg-front-row"><span class="rg-front-tool">Clínica</span></span>
+          <span class="rg-front-meta"></span>
+        </div>
+        <div class="rg-cell"><p>Se mapea cómo se trabaja hoy y el equipo entiende qué logra la IA.</p></div>
+        <div class="rg-cell hi"><p>Datos, cita, ficha, presupuesto, instructivo y postoperatorio digitalizados.</p></div>
+        <div class="rg-cell"><p>Pagos, correos, pedido de material e indicadores.</p></div>
+
+        <div class="rg-follow" style="grid-column:5; grid-row:2 / span 1">
+          <ul>
+            <li><b>30 días</b><span>Uso real y ajustes</span></li>
+            <li><b>60 días</b><span>Ajustes con casos nuevos</span></li>
+            <li><b>90 días</b><span>Tablero del tiempo ganado, contra la línea base</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="route-miles" style="grid-template-columns:repeat(4,1fr)">
+        <div class="mile"><span class="mile-d"></span><b>Arranque</b><p>Reunión para conocer al equipo y sus roles y fijar la línea base de tiempos.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Mapa de procesos</b><p>Recorrido del paciente y administración mapeados, con prioridades acordadas.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Paciente en digital</b><p>Del primer dato al postoperatorio, en un solo flujo.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Cierre</b><p>Administración e indicadores; empieza la garantía.</p></div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Cirugía Integral · CAI-116</span>
+      </div>
+    </section>
+
+    <!-- 4 · Cómo trabajamos: pasos, por qué en ese orden, casos reales, práctica, datos y logística -->
+    <section class="slide s-method">
+      <span class="counter">04 / 08</span>
+      <p class="eyebrow">04 · Cómo trabajamos</p>
+      <h2>Así construimos con el equipo.</h2>
+      <p class="sub">Primero entendemos cómo trabajan hoy; después construimos y probamos cada flujo con quien lo ejecuta.</p>
+
+      <ol class="mt-steps" style="--n:4">
+          <li><b>Construimos</b><span>Junto a quien hace cada tarea, con sus casos reales.</span></li>
+          <li><b>Probamos</b><span>Con el equipo administrativo y de enfermería, antes de usarlo con pacientes.</span></li>
+          <li><b>Adoptamos</b><span>El equipo lo usa en su trabajo diario.</span></li>
+          <li><b>Medimos</b><span>El tiempo ahorrado por proceso y los pasos que ya no se hacen a mano.</span></li>
+      </ol>
+      <div class="mt-strips">
+        <p class="mt-why"><b>Por qué en este orden</b> Primero el levantamiento y la introducción, para que el equipo decida con criterio qué construir. Después el recorrido del paciente, el corazón del trabajo diario. Al final la administración, que se apoya en lo anterior.</p>
+        <p class="mt-who"><b>Quién construye</b> <strong>Intezia guía</strong> y construye junto al equipo, que aprende cómo se hace y cómo saber si el resultado es bueno.</p>
+      </div>
+
+      <div class="mt-info">
+        <div class="mt-card">
+          <p class="mt-card-label">Cómo funciona en la práctica</p>
+          <ul><li><b>Con el trabajo real de cada uno.</b> Cada flujo parte de una tarea de su día a día, no de ejercicios de aula.</li><li><b>Con los datos del paciente protegidos.</b> Antes de cargar datos de pacientes se acuerda qué se puede compartir con la IA y cómo protegerlo.</li><li><b>Sobre lo que ya usan.</b> Se parte de sus hojas de cálculo, su correo y su sistema de citas; lo que conviene cambiar se decide con el equipo.</li></ul>
+        </div>
+        <div class="mt-card">
+          <p class="mt-card-label">Cómo cuidamos sus datos</p>
+          <p>Los datos de los pacientes son confidenciales: se firma un acuerdo de confidencialidad y se trabaja solo con los datos que el Instituto autoriza.</p>
+        </div>
+      </div>
+
+      <div class="mt-logi">
+        <div class="mt-tile"><span>Modalidad</span><b>Presencial en sus oficinas, según se acuerde en la reunión de arranque.</b></div>
+        <div class="mt-tile"><span>Participantes</span><b>Administración, enfermería e instrumentistas y, si lo desean, los doctores.</b></div>
+        <div class="mt-tile"><span>Ritmo de trabajo</span><b>Según la disponibilidad de cada área, sin frenar su operación diaria.</b></div>
+        <div class="mt-tile"><span>Arranque</span><b>Las fechas se acuerdan en la reunión de arranque.</b></div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Cirugía Integral · CAI-116</span>
+      </div>
+    </section>
+
+    <!-- 5 · Entregables: ¿con qué me quedo? (catálogo + piezas transversales) -->
+    <section class="slide s-deliv roomy con-imp">
+      <span class="counter">05 / 08</span>
+      <p class="eyebrow">05 · Entregables</p>
+      <div class="deliv-head">
+        <h2>Lo que recibe el Instituto.</h2>
+        <p class="deliv-sub"><span class="nw">Lo que se llevan</span> los equipos: el mapa de procesos y los flujos digitales de cada área, más el seguimiento a 30, 60 y 90 días.</p>
+      </div>
+
+      <div class="deliv-impact grande">
+        <span class="di-label">Impacto</span>
+        <p>El recorrido del paciente queda <strong>digitalizado</strong>, los documentos del antes y el después de la cirugía <strong>salen según la intervención</strong> y el equipo opera sin depender de una o dos personas.</p>
+      </div>
+
+      <div class="deliv-carriles" style="--ncols:3">
+        <span class="dc acc-y" style="grid-column: span 3">IA para la clínica</span>
+      </div>
+
+      <div class="deliv-cols" style="--ncols:3">
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">Levantamiento e introducción</p>
+            <ul>
+              <li>Levantamiento y mapa de oportunidades</li>
+              <li>Introducción a la IA y datos del paciente</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">Atención del paciente</p>
+            <ul>
+              <li>Recepción y datos del paciente</li>
+              <li>Agenda de citas y ficha médica</li>
+              <li>Propuesta quirúrgica y presupuesto</li>
+              <li>Instructivo preoperatorio y laboratorios</li>
+              <li>Postoperatorio según la intervención</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">Administración</p>
+            <ul>
+              <li>Pagos y confirmaciones</li>
+              <li>Correos separados por función</li>
+              <li>Pedido de material quirúrgico</li>
+              <li>Indicadores de pacientes y respuesta</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="deliv-band">
+        <div class="db-card db-1">
+          <span class="db-label">Para todo el proyecto</span>
+        </div>
+        <div class="db-card db-2">
+          <span class="db-label">Valor inmediato</span>
+        </div>
+      </div>
+      <!-- Cajas multiline editables (vacías en HTML: el contenido vive dentro del AcroForm /V). -->
+      <div class="multi-box db-box db-box-1" data-field="Entregables"></div>
+      <div class="multi-box db-box db-box-2" data-field="Acreditacion"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Cirugía Integral · CAI-116</span>
+      </div>
+    </section>
+
+    <!-- 6 · Retorno: ¿qué gano? (método de cálculo). Sin estudios ni citas externas. -->
+    <section class="slide s-roi">
+      <span class="counter">06 / 08</span>
+      <p class="eyebrow">06 · Retorno</p>
+      <h2>Retorno esperado: tiempo y respuesta.</h2>
+      <p class="sub">Se calcula con las tareas de cada proceso, partiendo del tiempo que hoy toman.</p>
+
+      <div class="roi-body">
+        <div class="roi-panel">
+          <p class="roi-panel-title">Cómo se calcula, por proceso y por tarea</p>
+          <ol class="roi-steps">
+            <li><b>Tareas del proceso</b><span>Cuántos pacientes y cuántas veces se repite cada tarea: datos, presupuesto, instructivo y postoperatorio.</span></li>
+            <li><b>Tiempo actual por tarea</b><span>Se mide al arrancar, con quien hace el trabajo, y es la <strong>línea base</strong>.</span></li>
+            <li><b>Tiempo con la solución</b><span>Lo que toma la misma tarea ya con el flujo digital en uso.</span></li>
+            <li><b>Horas recuperadas</b><span>Número de tareas por la diferencia entre el tiempo actual y el tiempo con la solución.</span></li>
+            <li><b>Respuesta al paciente</b><span>Cuánto tarda el Instituto en responder y enviar sus documentos, antes y después.</span></li>
+          </ol>
+        </div>
+
+        <div class="roi-right">
+          <p class="roi-right-title">Calendario de garantía, desde el cierre de cada área</p>
+          <div class="roi-card">
+            <b>30 días</b>
+            <p>Los flujos de cada proceso en uso diario, con pacientes reales.</p>
+          </div>
+          <div class="roi-card">
+            <b>60 días</b>
+            <p>Ajustes con casos nuevos y menos pasos a mano.</p>
+          </div>
+          <div class="roi-card">
+            <b>90 días</b>
+            <p>Tablero con el tiempo ganado por proceso y los pasos que ya van solos.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="roi-dest-wrap">
+        <p class="roi-dest-title">Hacia dónde va el proyecto</p>
+        <div class="roi-dest">
+          <div class="rd-item"><b>Información en un solo lugar</b><p>Los datos del paciente quedan centralizados, <strong>sin pasarlos a mano</strong> entre áreas.</p></div>
+          <div class="rd-item"><b>Documentos que salen solos</b><p>El instructivo y el postoperatorio se envían <strong>según la intervención</strong>.</p></div>
+          <div class="rd-item"><b>Menos dependencia</b><p>Los procesos quedan documentados y cualquiera del equipo puede continuar; el Instituto decide si lleva el ciclo a otras áreas.</p></div>
+        </div>
+      </div>
+
+      <div class="roi-hook"><p>A los 90 días del cierre, el Instituto conocerá el tiempo que ganó en cada proceso y cuántos pasos dejaron de hacerse a mano.</p></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Cirugía Integral · CAI-116</span>
+      </div>
+    </section>
+
+    <!-- 7 · Inversión (hoja de cotización estándar; antepenúltima slide) -->
+    <section class="slide s-price">
+      <span class="counter">07 / 08</span>
+      <h2 class="title">Inversión del proyecto.</h2>
+      <p class="price-intro">Propuesta Económica · Servicio de Habilidades</p>
+
+      <div class="block">
+        <span class="block-eyebrow">Duración</span>
+        <p class="block-value">Proyecto en tres áreas de trabajo y tres fases: 40 horas con el equipo, con seguimiento y garantía a 30, 60 y 90 días.</p>
+      </div>
+
+      <div class="block block-programa">
+        <span class="block-eyebrow">Programa</span>
+      </div>
+      <div class="multi-box programa-box" data-field="Programa"></div>
+
+      <div class="block block-cotizacion">
+        <span class="block-eyebrow">Cotización</span>
+      </div>
+
+      <span class="cot-label cot-label-base">Propuesta + Inversión</span>
+      <span class="cot-sign cot-sign-base">REF</span>
+      <div class="cot-frame base-frame"></div>
+
+      <span class="cot-label cot-label-discount">Descuento</span>
+      <span class="cot-sign-minus">&minus;REF</span>
+      <div class="cot-frame discount-frame"></div>
+      <span class="cot-urgent-note">Descuento válido por 15 días</span>
+
+      <span class="cot-label cot-label-total">TOTAL</span>
+      <span class="cot-sign cot-sign-total">REF</span>
+      <div class="cot-frame total-frame"></div>
+
+      <p class="cot-moneda">Pago en Divisas o Bolívares a Tasa BCV del Euro</p>
+      <p class="cot-validity">Cotización válida por 30 días.</p>
+      <div class="cot-terms-box">
+        <span class="cot-terms-label">Importante</span>
+        <p class="cot-terms-text">Este servicio se presta bajo nuestros <a href="https://drive.google.com/file/d/1PA-ZSt4KnyY5dpxXzgkIk6-yfGlV2eF8/view?usp=drive_link" target="_blank" rel="noopener">términos y condiciones</a>. Al avanzar con esta propuesta, ambas partes los aceptan.</p>
+      </div>
+
+      <div class="cot-garantia-badge">
+        <span class="cot-garantia-tag">Garantía 30-60-90</span>
+        <p class="cot-garantia-text">Estamos contigo hasta que la habilidad quede instalada.</p>
+      </div>
+
+      <div class="block block-notes-container">
+        <span class="block-eyebrow">Notas</span>
+      </div>
+      <div class="multi-box notas-box" data-field="Notas"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Cirugía Integral · CAI-116</span>
+      </div>
+    </section>
+
+    <!-- 9 · Próximos pasos: qué hacer y a quién escribir (última slide) -->
+    <section class="slide s-next">
+      <span class="counter">08 / 08</span>
+      <p class="eyebrow">08 · Próximos pasos</p>
+      <h2>Tres pasos para arrancar.</h2>
+      <p class="sub">Esto es lo que sigue cuando el Instituto confirme la propuesta.</p>
+
+      <div class="nx-steps">
+        <div class="nx-step acc-y">
+          <span class="nx-num">1</span>
+          <b>Revisar la propuesta</b>
+          <p>La presentamos a quienes toman la decisión y resolvemos sus dudas sobre el alcance.</p>
+        </div>
+        <div class="nx-step acc-o">
+          <span class="nx-num">2</span>
+          <b>Accesos y participantes</b>
+          <p>Coordinamos quién participa de cada área y el acceso al sistema de citas.</p>
+        </div>
+        <div class="nx-step acc-w">
+          <span class="nx-num">3</span>
+          <b>Reunión de arranque</b>
+          <p>Reunión de unos 30 minutos para conocer al equipo, alinear prioridades y medir la línea base.</p>
+        </div>
+      </div>
+
+      <div class="nx-contact">
+        <div class="nx-card nx-ase">
+          <span class="nx-label">¿Dudas? Escribe a tu asesora comercial</span>
+          <b class="nx-name">Verónica Rubio</b>
+          <span class="nx-role">Asesora comercial</span>
+          <p class="nx-line"><a href="mailto:vrubio01@intezia.com">vrubio01@intezia.com</a></p>
+          <p class="nx-line">+58 422 3355505</p>
+        </div>
+        <div class="nx-card nx-emp">
+          <span class="nx-label">Intezia</span>
+          <p class="nx-line">Intezia C.A J-505657950</p>
+          <p class="nx-line"><a href="mailto:servicio@intezia.com">servicio@intezia.com</a></p>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Cirugía Integral · CAI-116</span>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

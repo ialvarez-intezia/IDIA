@@ -1,0 +1,482 @@
+<!doctype html>
+<!--
+  Propuesta · Superfina · Servicio de Habilidades (CAI-092)
+  División: Educación · Servicio: Habilidades (§4.1a) · Alianza: no
+  GENERADO por scripts/generar-habilidades-compacto.py (plantilla 3.0 (2026-10-08), formato habilidades) desde datos.json.
+  No editar a mano: editar datos.json y regenerar. Estilos propios del deck: overrides.css.
+  Fuente del insumo: Especificación de la propuesta (Ivana, 09/11/2026) y tabla de distribución de horas
+
+  Formato compacto de 10 slides, en el orden de las preguntas del cliente (Ventas, 2026-10-07), sin semanas, sesiones
+  ni fechas (Keiber, 2026-10-08):
+    1 Portada · 2 Alcance · 3 Ruta · 4 Cómo trabajamos · 5 Entregables · 6 Retorno · 7 Respuesta a la solicitud (1) · 8 Respuesta a la solicitud (2) · 9 Inversión · 10 Próximos pasos
+  Marcadores de detección de AcroForms (agregar-campo-precio.py), por página: «Propuesta Económica» solo en la slide de
+  inversión; «Lo que se llevan» y «Entregables» solo en la de entregables; «Facilidad de pago» solo en la de pago.
+  Campos AcroForm: Programa, Notas, PrecioBase, Descuento, PrecioTotal (inversión) y Entregables, Acreditacion (entregables). Se reposicionan con scripts/customize-habilidades-compacto.py.
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Propuesta · Superfina · Intezia Educación</title>
+  <link rel="stylesheet" href="../_base/styles.css">
+  <link rel="stylesheet" href="habilidades-compacto.css">
+  <link rel="stylesheet" href="overrides.css">
+</head>
+<body>
+
+  <main class="deck">
+
+    <!-- 1 · Portada: ¿cuál es mi problema? -->
+    <section class="slide s-cover">
+      <span class="counter">01 / 10</span>
+      <div class="logo-big">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia Educación">
+      </div>
+      <div class="body">
+        <p class="eyebrow">Propuesta de proyecto · Servicio de Habilidades</p>
+        <h1 style="font-size:46px">
+          Compras automatizadas con IA<br>
+          sobre Estelar y Vilches<br>
+          <span class="hl">para Superfina</span>
+        </h1>
+        <p class="lead">
+          Este proyecto <strong>automatiza la compra</strong> de Superfina: de los sugeridos con <strong>ventas reales</strong> a la orden de compra cargada en Estelar con validación humana y enviada a los proveedores por WhatsApp.
+        </p>
+        <div class="pain-strip">
+          <div class="pain-item">
+            <span class="pain-num">A mano</span>
+            <span class="pain-lbl">es como el asistente de compras carga cada producto en Estelar, desde pedidos reportados por WhatsApp.</span>
+          </div>
+          <div class="pain-item">
+            <span class="pain-num">24 y 48</span>
+            <span class="pain-lbl">es lo que pasa con una orden mal cargada: se piden 24 y llegan 48.</span>
+          </div>
+          <div class="pain-item">
+            <span class="pain-num">70-80 %</span>
+            <span class="pain-lbl">de las ventas es lo que cubre Estelar, y la compra depende de la venta completa.</span>
+          </div>
+          <div class="pain-item">
+            <span class="pain-num">Atraso</span>
+            <span class="pain-lbl">en la recepción: hay órdenes que quedan sin cargar por falta de tiempo.</span>
+          </div>
+        </div>
+      </div>
+      <div class="id-line">
+        <span class="codigo">Código: CAI-092</span>
+        <span class="cliente">Superfina</span>
+      </div>
+    </section>
+
+    <!-- 2 · Alcance: qué vamos a hacer y para qué -->
+    <section class="slide s-scope roomy">
+      <span class="counter">02 / 10</span>
+      <p class="eyebrow">02 · Alcance</p>
+      <h2>La compra de Superfina, de punta a punta.</h2>
+      <p class="sub">Un solo departamento, <strong>Compras</strong>, trabajado a fondo; los demás se abren después, cada uno con su propia propuesta.</p>
+
+      <div class="scope-panels one" style="--np:1">
+        <div class="scope-panel acc-y">
+          <div class="scope-head">
+            <span class="scope-tag">Claude con Estelar y Vilches</span>
+            <span class="scope-total"><b>2</b> partes del proceso</span>
+          </div>
+          <ul class="scope-rows">
+              <li><span class="area">Conexiones</span><span class="para">Dar a Claude las ventas completas y la lectura de Estelar, con el sistema protegido</span></li>
+              <li><span class="area">Proceso de compra</span><span class="para">Que la compra corra de punta a punta, con una persona que valida</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="scope-out">
+        <p class="scope-card-label">Fuera de este alcance</p>
+        <ul>
+          <li>Los demás departamentos: cada uno se abre después, con su propia propuesta.</li>
+          <li>La conexión de Vilches para otras empresas del grupo: presupuesto aparte.</li>
+          <li>La depuración de los datos de Superfina.</li>
+          <li>Licencias de Claude: van aparte de esta inversión.</li>
+        </ul>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Superfina · CAI-092</span>
+      </div>
+    </section>
+
+    <!-- 3 · Ruta: qué pasa en cada fase -->
+    <section class="slide s-route">
+      <span class="counter">03 / 10</span>
+      <p class="eyebrow">03 · Ruta</p>
+      <h2>De las conexiones a la compra en uso.</h2>
+      <p class="sub">El calendario se acuerda en la <strong>reunión de arranque</strong>. El <strong>seguimiento</strong> corre desde el cierre del proyecto.</p>
+
+      <div class="route-grid n1" style="--cols:2; --rows:1; --rowh:214px">
+
+        <div class="rg-corner"></div>
+        <div class="rg-phase rg-ph-1">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Conexión</span></span>
+          <span class="rg-phase-name">Estelar y Vilches conectados</span>
+        </div>
+        <div class="rg-phase rg-ph-2 hi">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Compra</span></span>
+          <span class="rg-phase-name">La compra, de punta a punta</span>
+        </div>
+        <div class="rg-phase rg-fu">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Garantía</span></span>
+          <span class="rg-phase-date">30, 60 y 90 días</span>
+          <span class="rg-phase-txt">Desde el cierre del proyecto</span>
+        </div>
+
+        <div class="rg-front acc-y">
+          <span class="rg-front-h">Compras de Superfina</span>
+          <span class="rg-front-row"><span class="rg-front-tool">Claude y Estelar</span><b class="rg-front-n">42 horas</b></span>
+          <span class="rg-front-meta">2 compradores y TI</span>
+        </div>
+        <div class="rg-cell"><span class="rg-h solo-h"><b>22 horas con el equipo</b></span><p>Construcción, testeo y adopción: TI, Estelar y Vilches con ventas completas.</p></div>
+        <div class="rg-cell hi"><span class="rg-h solo-h"><b>20 horas con el equipo</b></span><p>Construcción, testeo y adopción: proyecto del comprador, tareas programadas y Skills.</p></div>
+
+        <div class="rg-follow" style="grid-column:4; grid-row:2 / span 1">
+          <ul>
+            <li><b>30 días</b><span>Uso real del proceso por los compradores</span></li>
+            <li><b>60 días</b><span>Errores y atrasos contra la línea base</span></li>
+            <li><b>90 días</b><span>Tiempo recuperado medido</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="route-miles" style="grid-template-columns:repeat(5,1fr)">
+        <div class="mile"><span class="mile-d"></span><b>Checklist previo</b><p>Compras entrega el cronograma, los parámetros por departamento, los lead times y los formatos.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Conexiones</b><p>En línea, con TI: Estelar con lectura y carga controlada, y Vilches con ventas completas.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Proyecto y Skills</b><p>En línea: el proyecto del comprador y su manual, las tareas programadas y las Skills.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Prueba en sitio</b><p>Presencial: un ciclo real de compra con proveedores, comparado con la carga manual.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Adopción en sitio</b><p>Presencial: los compradores ejecutan con acompañamiento; evaluación del proceso y acta.</p></div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Superfina · CAI-092</span>
+      </div>
+    </section>
+
+    <!-- 4 · Cómo trabajamos: pasos, por qué en ese orden, casos reales, práctica, datos y logística -->
+    <section class="slide s-method roomy">
+      <span class="counter">04 / 10</span>
+      <p class="eyebrow">04 · Cómo trabajamos</p>
+      <h2>Así construimos la compra.</h2>
+      <p class="sub">Con la metodología de Habilidades: construimos, testeamos y adoptamos, sobre compras reales.</p>
+
+      <ol class="mt-steps" style="--n:4">
+          <li><b>Conectamos</b><span>Estelar y Vilches, con TI y en solo lectura al principio.</span></li>
+          <li><b>Construimos</b><span>El proyecto del comprador, las tareas programadas y las Skills, en línea.</span></li>
+          <li><b>Testeamos</b><span>Un ciclo real de compra en sitio, comparado con la carga manual.</span></li>
+          <li><b>Adoptamos</b><span>Los compradores ejecutan; seguimos a 30, 60 y 90 días.</span></li>
+      </ol>
+      <div class="mt-strips">
+        <p class="mt-why"><b>Por qué en este orden</b> Primero las conexiones, porque la compra depende de la venta completa. Después Claude arma la orden con esas ventas, una persona la valida y se carga en Estelar; compras la envía por WhatsApp.</p>
+        <p class="mt-who"><b>Quién construye</b> Se construye en línea con TI de Superfina, que habilita puertos y usuarios mientras <strong>Intezia guía</strong> la conexión; el equipo de TI del grupo participa solo cuando su experiencia aporte.</p>
+      </div>
+
+      <div class="mt-info">
+        <div class="mt-card">
+          <p class="mt-card-label">Cómo funciona en la práctica</p>
+          <ul><li><b>Una persona valida.</b> Cada carga en Estelar pasa por validación humana y cada acción queda registrada.</li><li><b>Solo lectura primero.</b> La escritura en Estelar se acuerda con TI y con el proveedor del sistema.</li><li><b>Solución lista.</b> El equipo recibe el proyecto armado y el proceso por escrito; se evalúa si carga bien.</li></ul>
+        </div>
+        <div class="mt-card">
+          <p class="mt-card-label">Cómo cuidamos sus datos</p>
+          <p>Se parte de solo lectura y los sistemas no se modifican más allá de la carga controlada. Claude corre en una cuenta con el dominio de la compañía y trabaja con los datos que Superfina autoriza.</p>
+        </div>
+      </div>
+
+      <div class="mt-logi">
+        <div class="mt-tile"><span>Modalidad</span><b>Construcción en línea; testeo y adopción presenciales, en Superfina.</b></div>
+        <div class="mt-tile"><span>Participantes</span><b>2 compradores, el equipo de TI de Superfina y un responsable dedicado al 100 %.</b></div>
+        <div class="mt-tile"><span>Ritmo de trabajo</span><b>Se agenda sin frenar la operación de compra.</b></div>
+        <div class="mt-tile"><span>Arranque</span><b>Apenas se apruebe la propuesta; el checklist previo y la reunión de arranque acuerdan el calendario.</b></div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Superfina · CAI-092</span>
+      </div>
+    </section>
+
+    <!-- 5 · Entregables: ¿con qué me quedo? (catálogo + piezas transversales) -->
+    <section class="slide s-deliv roomy con-imp">
+      <span class="counter">05 / 10</span>
+      <p class="eyebrow">05 · Entregables</p>
+      <div class="deliv-head">
+        <h2>Lo que recibe Superfina.</h2>
+        <p class="deliv-sub"><span class="nw">Lo que se llevan</span>: <strong>la compra conectada, probada y en uso</strong>, con su proceso por escrito, más el seguimiento a 30, 60 y 90 días.</p>
+      </div>
+
+      <div class="deliv-impact grande">
+        <span class="di-label">Impacto</span>
+        <p>Las órdenes de compra salen bien cargadas y a tiempo: Claude las prepara con las <strong>ventas reales</strong> y una persona las valida antes de cargarlas en Estelar. Menos errores, sin órdenes pendientes y una recepción sin atrasos.</p>
+      </div>
+
+      <div class="deliv-carriles" style="--ncols:2">
+        <span class="dc acc-y" style="grid-column: span 2">Claude con Estelar y Vilches</span>
+      </div>
+
+      <div class="deliv-cols" style="--ncols:2">
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">Conexiones</p>
+            <ul>
+              <li>Conexiones habilitadas con TI<ul class="inc"><li>Puertos, usuarios y pruebas de conexión</li><li>Ruta de escritura acordada con TI y con el proveedor de Estelar</li></ul></li>
+              <li>Conexión de Claude con Estelar<ul class="inc"><li>Lectura de Estelar adaptada a Superfina</li><li>Herramienta de carga de orden de compra, controlada</li></ul></li>
+              <li>Conexión con Vilches: ventas completas<ul class="inc"><li>Su base de datos, identificada</li><li>Consultas de ventas completas y cruce con Estelar</li></ul></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">Proceso de compra</p>
+            <ul>
+              <li>Proyecto del comprador y manual de proceso<ul class="inc"><li>Cronograma, parámetros por departamento, lead times y reglas</li><li>Con las reglas ya detectadas en el grupo</li></ul></li>
+              <li>Tareas programadas de compra<ul class="inc"><li>Reporte semanal</li><li>Sugeridos de compra automáticos</li></ul></li>
+              <li>Skills de compra<ul class="inc"><li>Análisis de existencia a orden de compra</li><li>Validación de la carga y envío por el WhatsApp de compras</li></ul></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="deliv-band">
+        <div class="db-card db-1">
+          <span class="db-label">Para todo el proyecto</span>
+        </div>
+        <div class="db-card db-2">
+          <span class="db-label">Valor inmediato</span>
+        </div>
+      </div>
+      <!-- Cajas multiline editables (vacías en HTML: el contenido vive dentro del AcroForm /V). -->
+      <div class="multi-box db-box db-box-1" data-field="Entregables"></div>
+      <div class="multi-box db-box db-box-2" data-field="Acreditacion"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Superfina · CAI-092</span>
+      </div>
+    </section>
+
+    <!-- 6 · Retorno: ¿qué gano? (método de cálculo). Sin estudios ni citas externas. -->
+    <section class="slide s-roi">
+      <span class="counter">06 / 10</span>
+      <p class="eyebrow">06 · Retorno</p>
+      <h2>Retorno esperado: menos errores y tiempo.</h2>
+      <p class="sub">Se calcula con las compras reales de Superfina y se mide a 30, 60 y 90 días.</p>
+
+      <div class="roi-body">
+        <div class="roi-panel">
+          <p class="roi-panel-title">Cómo se calcula</p>
+          <ol class="roi-steps">
+            <li><b>Órdenes de hoy</b><span>Cuántas órdenes se cargan al mes y cuántas salen mal cargadas o sin cargar: es la <strong>línea base</strong>.</span></li>
+            <li><b>Tiempo de carga</b><span>Cuánto toma hoy cargar cada orden, producto por producto.</span></li>
+            <li><b>Con la solución</b><span>Lo que toma la misma orden preparada por Claude y validada por una persona.</span></li>
+            <li><b>Errores y atrasos</b><span>Órdenes mal cargadas o pendientes y atraso en la recepción, antes y después.</span></li>
+            <li><b>Horas recuperadas</b><span>Diferencia de tiempo por orden: una estimación referencial, sin compromiso de resultado.</span></li>
+          </ol>
+        </div>
+
+        <div class="roi-right">
+          <p class="roi-right-title">Calendario de garantía, desde el cierre del proyecto</p>
+          <div class="roi-card">
+            <b>30 días</b>
+            <p>Uso real del proceso: los compradores cargan las órdenes con el proyecto.</p>
+          </div>
+          <div class="roi-card">
+            <b>60 días</b>
+            <p>Errores y atrasos medidos contra la línea base.</p>
+          </div>
+          <div class="roi-card">
+            <b>90 días</b>
+            <p>Tiempo recuperado y cumplimiento del proceso, medidos.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="roi-dest-wrap">
+        <p class="roi-dest-title">Hacia dónde va el proyecto</p>
+        <div class="roi-dest">
+          <div class="rd-item"><b>Compra sin errores</b><p>Cada orden se carga bien, con <strong>validación humana</strong> y cada acción registrada.</p></div>
+          <div class="rd-item"><b>Ventas completas</b><p>La compra parte de la venta real, no solo de la parte que hoy ve Estelar.</p></div>
+          <div class="rd-item"><b>Lo que sigue</b><p>Con Compras automatizada, Recepción fluye sola: la orden ya está en el sistema.</p></div>
+        </div>
+      </div>
+
+      <div class="roi-hook"><p>A los 90 días del cierre, Superfina contará con órdenes bien cargadas, menos atrasos y el tiempo recuperado, medidos contra su punto de partida.</p></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Superfina · CAI-092</span>
+      </div>
+    </section>
+
+    <!-- Respuesta a la solicitud (opcional): requerimientos del cliente, en su orden -->
+    <section class="slide s-rfp">
+      <span class="counter">07 / 10</span>
+      <p class="eyebrow">07 · Requisitos y hoja de ruta</p>
+      <h2>Lo que necesitamos de Superfina.</h2>
+      <p class="sub">Es una <strong>solución lista</strong>: Intezia la construye y la compañía la opera, con estos cuatro requisitos.</p>
+
+      <div class="rfp-grid n4">
+        <div class="rfp-card">
+          <p class="rfp-head"><span class="rfp-n">1</span><span class="rfp-t">TI</span></p>
+          <p class="rfp-p">Habilita puertos y usuarios. Se parte de solo lectura; la escritura se acuerda con TI y con el proveedor de Estelar.</p>
+        </div>
+        <div class="rfp-card">
+          <p class="rfp-head"><span class="rfp-n">2</span><span class="rfp-t">Checklist</span></p>
+          <p class="rfp-p">Cronograma de compras, parámetros por departamento, lead times y formatos, entregados antes de arrancar con Compras.</p>
+        </div>
+        <div class="rfp-card">
+          <p class="rfp-head"><span class="rfp-n">3</span><span class="rfp-t">Responsable</span></p>
+          <p class="rfp-p">Una persona dedicada al 100 % al proyecto y el patrocinio de la dirección.</p>
+        </div>
+        <div class="rfp-card">
+          <p class="rfp-head"><span class="rfp-n">4</span><span class="rfp-t">Cuenta y red</span></p>
+          <p class="rfp-p">Una cuenta de Claude con el dominio de la compañía, dentro de su Claude Team (las licencias van aparte), y una VPN estable.</p>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Superfina · CAI-092</span>
+      </div>
+    </section>
+
+    <!-- Respuesta a la solicitud (opcional): requerimientos del cliente, en su orden -->
+    <section class="slide s-rfp">
+      <span class="counter">08 / 10</span>
+      <p class="eyebrow">08 · Requisitos y hoja de ruta</p>
+      <h2>Después de Compras, la hoja de ruta.</h2>
+      <p class="sub">Sin valor en esta propuesta: <strong>cada paso se cotiza aparte</strong> y se decide con el resultado de Compras.</p>
+
+      <div class="rfp-grid n3">
+        <div class="rfp-card">
+          <p class="rfp-head"><span class="rfp-n">1</span><span class="rfp-t">Recepción</span></p>
+          <p class="rfp-p">Si Compras queda automatizada, Recepción fluye sola porque la orden ya está en el sistema.</p>
+        </div>
+        <div class="rfp-card">
+          <p class="rfp-head"><span class="rfp-n">2</span><span class="rfp-t">Costeo y márgenes</span></p>
+          <p class="rfp-p">El siguiente cuello de botella: un cerebro de márgenes para el 70 al 80 % de los proveedores (víveres y enlatados), con las proteínas a mano.</p>
+        </div>
+        <div class="rfp-card">
+          <p class="rfp-head"><span class="rfp-n">Meta</span><span class="rfp-t">Lead time</span></p>
+          <p class="rfp-p">Bajar el tiempo de entrega de 24 a 12 horas.</p>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Superfina · CAI-092</span>
+      </div>
+    </section>
+
+    <!-- 7 · Inversión (hoja de cotización estándar; antepenúltima slide) -->
+    <section class="slide s-price">
+      <span class="counter">09 / 10</span>
+      <h2 class="title">Inversión del proyecto.</h2>
+      <p class="price-intro">Propuesta Económica · Servicio de Habilidades</p>
+
+      <div class="block">
+        <span class="block-eyebrow">Duración</span>
+        <p class="block-value"><strong>1 departamento</strong>, Compras, con 6 entregables en dos fases y seguimiento a 30, 60 y 90 días. <strong>42 horas</strong> de construcción, testeo y adopción.</p>
+      </div>
+
+      <div class="block block-programa">
+        <span class="block-eyebrow">Programa</span>
+      </div>
+      <div class="multi-box programa-box" data-field="Programa"></div>
+
+      <div class="block block-cotizacion">
+        <span class="block-eyebrow">Cotización</span>
+      </div>
+
+      <span class="cot-label cot-label-base">Propuesta + Inversión</span>
+      <span class="cot-sign cot-sign-base">REF</span>
+      <div class="cot-frame base-frame"></div>
+
+      <span class="cot-label cot-label-discount">Descuento</span>
+      <span class="cot-sign-minus">&minus;REF</span>
+      <div class="cot-frame discount-frame"></div>
+      <span class="cot-urgent-note">Descuento válido por 15 días</span>
+
+      <span class="cot-label cot-label-total">TOTAL</span>
+      <span class="cot-sign cot-sign-total">REF</span>
+      <div class="cot-frame total-frame"></div>
+
+      <p class="cot-moneda">Pago en Divisas o Bolívares a Tasa BCV del Euro</p>
+      <p class="cot-validity">Cotización válida por 30 días.</p>
+      <div class="cot-terms-box">
+        <span class="cot-terms-label">Importante</span>
+        <p class="cot-terms-text">Este servicio se presta bajo nuestros <a href="https://drive.google.com/file/d/1PA-ZSt4KnyY5dpxXzgkIk6-yfGlV2eF8/view?usp=drive_link" target="_blank" rel="noopener">términos y condiciones</a>. Al avanzar con esta propuesta, ambas partes los aceptan.</p>
+      </div>
+
+      <div class="cot-garantia-badge">
+        <span class="cot-garantia-tag">Garantía 30-60-90</span>
+        <p class="cot-garantia-text">Estamos contigo hasta que el proceso quede instalado en tu equipo.</p>
+      </div>
+
+      <div class="block block-notes-container">
+        <span class="block-eyebrow">Notas</span>
+      </div>
+      <div class="multi-box notas-box" data-field="Notas"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Superfina · CAI-092</span>
+      </div>
+    </section>
+
+    <!-- 9 · Próximos pasos: qué hacer y a quién escribir (última slide) -->
+    <section class="slide s-next">
+      <span class="counter">10 / 10</span>
+      <p class="eyebrow">10 · Próximos pasos</p>
+      <h2>Tres pasos para arrancar.</h2>
+      <p class="sub">Esto es lo que sigue cuando Superfina confirme la propuesta.</p>
+
+      <div class="nx-steps">
+        <div class="nx-step acc-y">
+          <span class="nx-num">1</span>
+          <b>Checklist de Compras</b>
+          <p>Superfina prepara el checklist de Compras en los formatos que pedimos.</p>
+        </div>
+        <div class="nx-step acc-o">
+          <span class="nx-num">2</span>
+          <b>TI y responsable</b>
+          <p>TI habilita puertos y usuarios, y se nombra a la persona que dedica el 100 % al proyecto.</p>
+        </div>
+        <div class="nx-step acc-w">
+          <span class="nx-num">3</span>
+          <b>Reunión de arranque</b>
+          <p>Una hora para acordar el calendario y quién participa en cada etapa.</p>
+        </div>
+      </div>
+
+      <div class="nx-contact">
+        <div class="nx-card nx-ase">
+          <span class="nx-label">¿Dudas? Escribe a tu asesora comercial</span>
+          <b class="nx-name">Verónica Rubio</b>
+          <span class="nx-role">Asesora comercial</span>
+          <p class="nx-line"><a href="mailto:vrubio01@intezia.com">vrubio01@intezia.com</a></p>
+          <p class="nx-line">+58 422 3355505</p>
+        </div>
+        <div class="nx-card nx-emp">
+          <span class="nx-label">Intezia</span>
+          <p class="nx-line">Intezia C.A J-505657950</p>
+          <p class="nx-line"><a href="mailto:servicio@intezia.com">servicio@intezia.com</a></p>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Superfina · CAI-092</span>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

@@ -13,7 +13,7 @@
 - **Eje temático**: Claude aplicado por la alta gerencia de Fiat (red automotriz de 21 concesionarios): nivelación estratégica y un entregable real por gerente, con el posicionamiento de la cuenta corporativa de LinkedIn como entregable de Mercadeo
 <!--auto:inicio-->
 - **Alcance**: 7 entregables en 6 líneas de trabajo · 28 h de trabajo · seguimiento a 30, 60 y 90 días
-- **Orden de las slides**: 1 Portada · 2 Alcance · 3 Ruta · 4 Cómo trabajamos · 5 Entregables · 6 Retorno · 7 Inversión · 8 Próximos pasos
+- **Orden de las slides**: 1 Portada · 2 Alcance · 3 Ruta · 4 Cómo trabajamos · 5 Entregables · 6 Respuesta a la solicitud (1) · 7 Respuesta a la solicitud (2) · 8 Respuesta a la solicitud (3) · 9 Respuesta a la solicitud (4) · 10 Retorno · 11 Inversión · 12 Próximos pasos
 - **Asesora comercial que ve el cliente (última slide)**: Flavia Martínez, Asesora comercial · fmartinez@intezia.com · +58 414 5756615
 <!--auto:fin-->
 - **Estado**: `Borrador`

@@ -1,0 +1,447 @@
+{
+ "version": 3,
+ "cliente": {
+  "nombre": "Grupo Ferrara",
+  "slug": "grupo-ferrara-cai101",
+  "codigo": "CAI-101",
+  "nombre_pie": "Ferrara"
+ },
+ "division": "educacion",
+ "alianza": false,
+ "servicio_rotulo": "Servicio de Habilidades y Políticas",
+ "meta_servicio": "habilidades",
+ "meta_tipo": "Combo Habilidades y Políticas: clon del equipo de Marketing, cotizador de Ventas en minutos y marco de gobernanza de IA con comité de inteligencia, en tres líneas de trabajo cotizadas por separado (CAI-101)",
+ "sin_horas_trabajo": true,
+ "omitir": [
+  "pago"
+ ],
+ "eje": "Clonar el criterio del equipo de marketing para medir qué convierte, llevar el cotizador de propuestas de Ventas a minutos, y dejar un marco de políticas de IA y un comité de inteligencia para todo el equipo, en Grupo Ferrara",
+ "origen": "Ficha de Levantamiento de Grupo Ferrara (Verónica Rubio, 17/11/2026) y transcripción de la reunión con el cliente.",
+ "fuente_insumo": "Ficha de Levantamiento + transcripción de la reunión con el cliente. Primer contacto de Intezia con esta empresa: sin informe de Detección propio.",
+ "portada": {
+  "titulo_lineas": [
+   "Marketing, ventas y",
+   "gobernanza de IA"
+  ],
+  "titulo_destacado": "en Grupo Ferrara",
+  "lead": "Clona el criterio de Marketing en un sistema que mide qué convierte, lleva el cotizador de Ventas a minutos, y deja un marco de **políticas de IA** y un comité de inteligencia para todo el equipo.",
+  "hechos": [
+   {
+    "num": "+24 h",
+    "texto": "para armar una propuesta de diseño con cotización, hoy a mano con el software de diseño.",
+    "resuelto_por": [
+     "VTA-1"
+    ]
+   },
+   {
+    "num": "2-3 posts",
+    "texto": "por semana y 4 historias al día: no alcanza para que la nueva generación conozca la marca.",
+    "resuelto_por": [
+     "MKT-3",
+     "MKT-4"
+    ]
+   },
+   {
+    "num": "12",
+    "texto": "personas del equipo usando IA cada una a su manera, sin un criterio corporativo común.",
+    "resuelto_por": [
+     "POL-1"
+    ]
+   },
+   {
+    "num": "5.000",
+    "texto": "productos en una librería interna confidencial, sin una cuenta corporativa que la proteja.",
+    "resuelto_por": [
+     "POL-2"
+    ]
+   }
+  ]
+ },
+ "carriles": [
+  {
+   "id": "claude",
+   "nombre": "Claude",
+   "nombre_corto": "Claude",
+   "color": "amarillo"
+  }
+ ],
+ "areas": [
+  {
+   "id": "MKT",
+   "nombre": "Marketing",
+   "para_que": "Medir qué contenido convierte de verdad y replicarlo automáticamente en cada red",
+   "carril": "claude",
+   "frente": "A",
+   "composicion": "Equipo de marketing y publicidad in-house.",
+   "soluciones": [
+    {
+     "id": "MKT-1",
+     "entregable": "Dashboard de rendimiento de creativos orgánicos y pagos",
+     "h": 6,
+     "fase": "F1",
+     "detalle": "Dashboard conectado a Claude, Meta, la base de datos interna y Grafana. Mide creativos orgánicos y pagos por conversión, no solo por viralidad, y resume el rendimiento diario."
+    },
+    {
+     "id": "MKT-2",
+     "entregable": "Monitor de contenido de marcas de referencia del sector",
+     "h": 3,
+     "fase": "F1",
+     "detalle": "Apify conectado a Claude para rastrear el contenido de marcas de referencia del sector (lujo), como insumo de inspiración para las piezas propias."
+    },
+    {
+     "id": "MKT-3",
+     "entregable": "Asistente de redacción y edición de piezas por canal",
+     "h": 4,
+     "fase": "F2",
+     "detalle": "Claude redacta, ajusta colores y animaciones, y prepara la publicación y la segmentación de cada pieza para Meta, YouTube y TikTok."
+    },
+    {
+     "id": "MKT-4",
+     "entregable": "Sistema que replica los creativos ganadores por canal",
+     "h": 3,
+     "fase": "F2",
+     "detalle": "El sistema identifica los creativos ganadores por conversión y genera automáticamente variantes para cada canal, incluidos YouTube y TikTok, hoy poco explotados."
+    }
+   ]
+  },
+  {
+   "id": "VTA",
+   "nombre": "Ventas",
+   "para_que": "Generar una propuesta de diseño con cotización en minutos, en vivo con el cliente",
+   "carril": "claude",
+   "frente": "B",
+   "composicion": "Equipo de ventas y diseño.",
+   "soluciones": [
+    {
+     "id": "VTA-1",
+     "entregable": "Cotizador de propuestas con la librería de productos cargada",
+     "h": 10,
+     "fase": "F1",
+     "detalle": "Cotizador construido sobre la librería interna de 5.000 productos (códigos y medidas), para armar una propuesta estética con cotización en minutos, en la misma reunión con el cliente."
+    },
+    {
+     "id": "VTA-2",
+     "entregable": "Conexión del cotizador con el sistema de gestión del inventario",
+     "h": 6,
+     "fase": "F2",
+     "detalle": "Conecta el cotizador con el sistema de gestión del inventario de Ferrara, vía API, para que la propuesta refleje existencias y precios reales. Suma capacidades de render tridimensional más avanzadas."
+    }
+   ]
+  },
+  {
+   "id": "POL",
+   "nombre": "Políticas",
+   "para_que": "Centralizar el uso de IA en una sola cuenta corporativa, con reglas y accesos claros",
+   "carril": "claude",
+   "frente": "C",
+   "composicion": "Dirección y equipo de Tecnología.",
+   "soluciones": [
+    {
+     "id": "POL-1",
+     "entregable": "Manual de políticas de uso de IA, con roles y accesos",
+     "h": 1,
+     "fase": "F1",
+     "detalle": "Manual de políticas de uso de IA: una sola cuenta corporativa en lugar de licencias sueltas, con roles, permisos y reglas de uso para los tres equipos."
+    },
+    {
+     "id": "POL-2",
+     "entregable": "Protocolo de protección de la librería interna de productos",
+     "h": 1,
+     "fase": "F1",
+     "detalle": "Protocolo para que la librería interna de 5.000 productos y la información de clientes no se pierdan ni salgan de la empresa cuando alguien del equipo se va."
+    },
+    {
+     "id": "POL-3",
+     "entregable": "Comité de inteligencia: criterios de aprobación de contenido",
+     "h": 1,
+     "fase": "F2",
+     "detalle": "Comité de inteligencia que valida el contenido antes de publicarse, con criterios de estética, información, comunicación y conexión con el público."
+    }
+   ]
+  }
+ ],
+ "alcance": {
+  "titulo": "Tres líneas de trabajo para Grupo Ferrara.",
+  "subtitulo": "**Claude** ordena el criterio de marketing, acelera las propuestas de ventas y deja un marco de políticas.",
+  "fuera_alcance": [
+   "El sistema de gestión del inventario de Ferrara: se integra lo que ya tengan listo, sin intervenir en ese proceso.",
+   "Publicar en redes o cerrar ventas en nombre del equipo: las herramientas preparan, las personas deciden.",
+   "Render tridimensional avanzado de los diseños: queda para una fase posterior, fuera de este alcance.",
+   "Las licencias de las herramientas de IA: van aparte (detalle en la inversión)."
+  ]
+ },
+ "metodo": {
+  "quien_construye": "Se construye en vivo con los equipos de Marketing, Ventas y Dirección/Tecnología, sobre sus casos y su librería reales.",
+  "practica": [
+   {
+    "titulo": "Una sola cuenta corporativa",
+    "texto": "No licencias sueltas por persona: todo el equipo trabaja bajo el mismo criterio y la información no se pierde cuando alguien se va."
+   },
+   {
+    "titulo": "Claude se integra a su operación",
+    "texto": "Se suma a Google Workspace y al sistema de gestión que ya usan; no reemplaza nada de lo que ya funciona."
+   },
+   {
+    "titulo": "La librería de productos queda protegida",
+    "texto": "Los 5.000 productos con sus códigos y medidas son información confidencial: se trabaja con accesos controlados, no con copias sueltas."
+   }
+  ],
+  "datos": "La librería interna de 5.000 productos y la información de clientes son datos sensibles: se definen accesos por rol y la cuenta corporativa evita que la información se pierda si alguien del equipo se va.",
+  "pasos": [
+   {
+    "titulo": "Construimos",
+    "texto": "Con los tres equipos, sobre sus datos y su librería reales."
+   },
+   {
+    "titulo": "Probamos",
+    "texto": "Sobre sus piezas, sus propuestas y su librería reales, hasta que funcione."
+   },
+   {
+    "titulo": "Adoptamos",
+    "texto": "Cada equipo lo usa en su día a día, bajo el mismo criterio."
+   },
+   {
+    "titulo": "Medimos",
+    "texto": "El alcance y la velocidad ganados, a 30, 60 y 90 días."
+   }
+  ],
+  "por_que_orden": "Primero se ordena el criterio y los datos de cada equipo; después se automatiza, y al final se mide el resultado."
+ },
+ "fases": [
+  {
+   "id": "F1",
+   "titulo": "Primeras soluciones",
+   "descripcion": "**dashboard, cotizador y manual de políticas**",
+   "destacada": true
+  },
+  {
+   "id": "F2",
+   "titulo": "Escala y automatización",
+   "descripcion": "**réplica automática, conexión y comité de IA**"
+  }
+ ],
+ "frentes": [
+  {
+   "id": "A",
+   "carril": "claude",
+   "nombre": "Marketing: contenido que convierte",
+   "celdas": {
+    "F1": "Dashboard de creativos y monitor de marcas de referencia del sector, en marcha.",
+    "F2": "Asistente de redacción y réplica automática de los creativos ganadores."
+   }
+  },
+  {
+   "id": "B",
+   "carril": "claude",
+   "nombre": "Ventas: propuestas en minutos",
+   "celdas": {
+    "F1": "Cotizador con la librería de productos cargada, listo para usar.",
+    "F2": "Cotizador conectado al sistema de gestión del inventario."
+   }
+  },
+  {
+   "id": "C",
+   "carril": "claude",
+   "nombre": "Políticas: marco y comité de IA",
+   "celdas": {
+    "F1": "Manual de políticas y protocolo de protección de la librería, listos.",
+    "F2": "Comité de inteligencia validando el contenido antes de publicarse."
+   }
+  }
+ ],
+ "ruta": {
+  "titulo": "Tres líneas de trabajo, en dos fases.",
+  "subtitulo": "El calendario se acuerda en la reunión de arranque. La **garantía y el seguimiento** a 30, 60 y 90 días corren desde el cierre de cada línea de trabajo.",
+  "nota": "Habilidades Marketing y Habilidades Ventas son 16 horas con el equipo cada una, repartidas en las dos fases. La fase 1 deja en marcha las primeras soluciones de cada línea de trabajo; la fase 2 suma automatización, conexión y el comité de inteligencia.",
+  "hitos": [
+   {
+    "titulo": "Arranque",
+    "texto": "Accesos listos, cuenta corporativa activa y la librería de productos cargada."
+   },
+   {
+    "titulo": "Primeros resultados",
+    "texto": "Dashboard, cotizador inicial y manual de políticas operando."
+   },
+   {
+    "titulo": "Escala",
+    "texto": "Réplica automática de contenido, cotizador conectado y comité de inteligencia activo."
+   },
+   {
+    "titulo": "Cierre",
+    "texto": "El equipo usa las herramientas por su cuenta; empieza la garantía a 30, 60 y 90 días."
+   }
+  ]
+ },
+ "logistica": {
+  "modalidad": "Presencial, en las oficinas de Grupo Ferrara.",
+  "participantes": "Equipo de Marketing, Ventas y Dirección/Tecnología: 12 personas en total.",
+  "arranque": "En cuanto se aprueba, Grupo Ferrara está abierto a arrancar de inmediato con las tres líneas a la vez."
+ },
+ "seguimiento": {
+  "rango": "30, 60 y 90 días",
+  "texto": "Seguimiento desde el cierre de cada línea de trabajo",
+  "items": [
+   {
+    "dias": "30 días",
+    "texto": "Uso diario del dashboard, el cotizador y el manual de políticas"
+   },
+   {
+    "dias": "60 días",
+    "texto": "Ajustes de criterio y nuevas piezas o automatizaciones construidas"
+   },
+   {
+    "dias": "90 días",
+    "texto": "Alcance y velocidad ganados, medidos contra la línea base"
+   }
+  ]
+ },
+ "entregables": {
+  "titulo": "Lo que recibe Grupo Ferrara.",
+  "subtitulo": "Lo que se llevan: Marketing, Ventas y Políticas, con el seguimiento a {rango_seguimiento} que mide su efecto.",
+  "etiqueta_transversales": "Para todo el proyecto",
+  "etiqueta_valor": "Valor inmediato",
+  "transversales": [
+   "Línea base del tiempo en cada propuesta y en cada pieza.",
+   "Cuenta corporativa única, con accesos y roles definidos.",
+   "Seguimiento a 30, 60 y 90 días con medición del alcance."
+  ],
+  "valor_inmediato": [
+   "Dashboard y cotizador inicial, desde la primera fase.",
+   "Manual de políticas y protocolo de protección, listos.",
+   "Librería y sistema de gestión, conectados al cotizador."
+  ],
+  "impacto": {
+   "texto": "El equipo de marketing pasa a medir qué convierte de verdad; Ventas cierra en minutos lo que hoy toma más de un día; y la empresa trabaja con la IA bajo un mismo criterio, con su librería protegida.",
+   "enfoque": "operacion"
+  }
+ },
+ "retorno": {
+  "modo": "metodo",
+  "posiciones": false,
+  "titulo": "Retorno esperado: velocidad y alcance de marca.",
+  "subtitulo": "Se calcula con los datos de Grupo Ferrara, se confirma con la línea base del arranque y se mide a 30, 60 y 90 días.",
+  "etiqueta_pasos": "Cómo se calcula",
+  "pasos": [
+   {
+    "titulo": "Tiempo por propuesta",
+    "texto": "Cuánto tarda hoy generar una propuesta de diseño con cotización, y cuánto tarda con el cotizador. Es la línea base."
+   },
+   {
+    "titulo": "Volumen de contenido",
+    "texto": "Cuántas piezas publica hoy el equipo de marketing, y cuántas puede publicar con el sistema de medición y réplica."
+   },
+   {
+    "titulo": "Qué convierte",
+    "texto": "Qué creativos realmente generan resultado, no solo alcance, según el dashboard."
+   },
+   {
+    "titulo": "Adopción del criterio",
+    "texto": "Cuántas personas del equipo usan la cuenta corporativa y el manual de políticas bajo el mismo criterio."
+   },
+   {
+    "titulo": "Propuestas cerradas en vivo",
+    "texto": "Cuántas propuestas se arman y presentan en la misma reunión con el cliente, sin esperar al día siguiente."
+   }
+  ],
+  "etiqueta_metas": "Calendario de garantía, desde el cierre de cada línea de trabajo",
+  "metas": [
+   {
+    "dias": "30 días",
+    "texto": "El dashboard, el cotizador y el manual de políticas en uso real por los tres equipos."
+   },
+   {
+    "dias": "60 días",
+    "texto": "Ajustes de criterio, primeras piezas replicadas y primeras propuestas cerradas en vivo."
+   },
+   {
+    "dias": "90 días",
+    "texto": "Medición del alcance y la velocidad ganados, contra la línea base del arranque."
+   }
+  ],
+  "destino": [
+   {
+    "rotulo": "Marca reconocida",
+    "texto": "Contenido medido por lo que convierte, no por lo viral, para recuperar el lugar de Ferrara en la nueva generación."
+   },
+   {
+    "rotulo": "Ventas más rápidas",
+    "texto": "Propuestas con cotización, listas en la misma reunión con el cliente."
+   },
+   {
+    "rotulo": "Una sola IA corporativa",
+    "texto": "Todo el equipo trabajando bajo el mismo criterio, con su información protegida."
+   }
+  ],
+  "gancho": "A los 90 días del cierre de cada línea de trabajo, Grupo Ferrara contará con su alcance y su velocidad medidos."
+ },
+ "inversion": {
+  "duracion": "Tres líneas de trabajo en dos fases: **16 horas con el equipo en cada Habilidades**, con garantía a 30, 60 y 90 días.",
+  "programa": [
+   "Marketing, ventas y políticas de IA para Grupo Ferrara (CAI-101).",
+   "Habilidades Marketing (16 horas) y Habilidades Ventas (16 horas), en dos fases, más Políticas.",
+   "Modalidad presencial, en las oficinas de Grupo Ferrara."
+  ],
+  "notas": [
+   "Garantía 30-60-90: seguimiento a {rango_seguimiento} desde el cierre de cada línea de trabajo.",
+   "Términos y condiciones: los del enlace de «Importante», que ambas partes aceptan al avanzar con esta propuesta.",
+   "Licencias de IA, aparte: Ferrara aún no elige herramienta; se confirma según el volumen de cada línea."
+  ],
+  "partes": [
+   {
+    "nombre": "Marketing",
+    "detalle": "Habilidades, 16 horas"
+   },
+   {
+    "nombre": "Ventas",
+    "detalle": "Habilidades, 16 horas"
+   },
+   {
+    "nombre": "Políticas"
+   }
+  ],
+  "etiqueta_partes": "Valor por línea de trabajo",
+  "etiqueta_suma": "Suma de las tres líneas de trabajo"
+ },
+ "proximos_pasos": {
+  "asesora": {
+   "nombre": "Verónica Rubio",
+   "cargo": "Asesora comercial",
+   "correo": "vrubio01@intezia.com",
+   "telefono": "+58 422 3355505"
+  },
+  "pasos": [
+   {
+    "titulo": "Fecha de arranque",
+    "texto": "Confirmamos con Grupo Ferrara la fecha de la reunión de arranque para las tres líneas de trabajo."
+   },
+   {
+    "titulo": "Accesos y agenda",
+    "texto": "Coordinamos accesos, participantes y la agenda de cada equipo."
+   },
+   {
+    "titulo": "Reunión de arranque",
+    "texto": "Alineamos el criterio de marketing, el cotizador de ventas y el marco de políticas con los tres equipos."
+   }
+  ]
+ },
+ "siglas_ok": [],
+ "frases_ok": [],
+ "supuestos": [
+  "Combo Habilidades + Políticas registrado en meta.json como servicio: habilidades (servicio_rotulo: «Servicio de Habilidades y Políticas»), siguiendo el mismo criterio que Andrómeda DET-016 (combo Detección + Políticas bajo deteccion, confirmado con Ivana el 2026-11-17): no hay un formato propio para Políticas, así que se representa como una línea de trabajo más, con sus propios entregables y su propia parte en la inversión (inversion.partes).",
+  "No se nombra el sistema de gestión (Odoo) ni su migración en el deck (§4.11): Ferrara ya está migrando de Profit a Odoo por su cuenta; el cotizador se conecta a «su sistema de gestión» en el texto de cara al cliente, y el detalle interno (Odoo) vive en las soluciones[].detalle, que es interno (programa.md).",
+  "Sin informe de Detección previo (primer contacto de Intezia con esta empresa, según la Ficha): los «para_que» y las soluciones salen de la Ficha de Levantamiento y de la transcripción de la reunión, no de un informe propio de Ferrara.",
+  "No se muestra en el deck la cantidad de consultores de Intezia que cubren las tres líneas de trabajo (la Ficha menciona «hasta 3 consultores» para el arranque): dato interno para la coordinación del kickoff, no para la propuesta (regla permanente de Ivana del 2026-10-27, sin_horas_trabajo: true).",
+  "Sin datos propios del cliente para el retorno (horas-hombre, valor de la hora, volumen exacto de ventas): modo metodo.",
+  "entregables.impacto con enfoque «operacion»: el equipo de marketing y ventas mantiene su tamaño (12 personas) y gana velocidad y alcance; no se plantea operar con menos personas ni se habla de nómina.",
+  "Facilidad de pago omitida (omitir: [\"pago\"]): la Ficha no trae un plan de cuotas propio; se puede agregar si se confirma con Ventas.",
+  "Herramienta de IA sin elegir todavía por el cliente (la Ficha dice «aún no lo saben, esperan la recomendación»): el carril del deck es Claude, consistente con lo recomendado en la transcripción para Marketing, Dirección/Tecnología y el marco de gobernanza; el cotizador de Ventas se describe sin nombrar una herramienta de diseño de terceros (iHouse, Cojum) porque esas no son una recomendación de Intezia, sino lo que el cliente ya exploró por su cuenta.",
+  "Horas visibles (Ivana, 2026-11-17): 16 h con el equipo en Habilidades Marketing y 16 h en Habilidades Ventas (suman exactamente las soluciones MKT y VTA); Políticas no muestra horas (sus 3 h de soluciones son internas, solo viven en programa.md). Son horas con el equipo del cliente, no de trabajo interno de Intezia (sin_horas_trabajo)."
+ ],
+ "pendientes": [
+  "Confirmar responsable de Marketing y de Ventas/Diseño (la Ficha los deja «por confirmar»).",
+  "Confirmar si Nacho (propietario, quien decide) estará en la presentación de la propuesta (la Ficha lo deja «por confirmar»).",
+  "Definir el valor de cada línea de trabajo (Habilidades Marketing, Habilidades Ventas, Políticas), el descuento y el total: campos vacíos para ventas; la suma se calcula sola en Adobe Reader.",
+  "Confirmar con Grupo Ferrara qué herramienta de IA licencian para cada equipo y quién la paga.",
+  "Si se quiere facilidad de pago, definir las cuotas y a qué hito de la ruta se ligan."
+ ]
+}

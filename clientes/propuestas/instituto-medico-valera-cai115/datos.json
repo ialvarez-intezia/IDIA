@@ -1,0 +1,461 @@
+{
+ "version": 3,
+ "cliente": {
+  "nombre": "Instituto Médico Valera",
+  "slug": "instituto-medico-valera-cai115",
+  "codigo": "CAI-115",
+  "nombre_pie": "Instituto Médico Valera"
+ },
+ "division": "educacion",
+ "alianza": false,
+ "sin_horas_trabajo": true,
+ "servicio_rotulo": "Servicio de Habilidades y Políticas",
+ "meta_servicio": "habilidades",
+ "meta_tipo": "Capacitación In-Company · Habilidades en IT (agente de pacientes y procesos internos, 2 áreas de 20 h = 40 h con el equipo) y Políticas de IA en paralelo (cotizadas por entregable, sin horas) · formato compacto v3 con servicio_rotulo",
+ "eje": "Transferir al equipo de IT del Instituto Médico Valera la capacidad de construir y operar un agente de atención a pacientes propio y de automatizar procesos internos, con una gobernanza de IA en paralelo: política, matriz de datos, stack y licencias, responsable y control del gasto",
+ "origen": "Ficha de Levantamiento del Instituto Médico Valera (Verónica Rubio, registrada el 20/11/2026; contacto Max Arismendi, presidente ejecutivo, que decide y escala a junta directiva), transcripción de la reunión de Google Meet del 20/11/2026 (42 min) y resumen de Ventas, más instrucciones de Ivana (22/11/2026): propuesta CAI-115 de Habilidades con Políticas en paralelo, Verónica Rubio como asesora. Ajuste de Ivana (24/11/2026): solo el agente de pacientes y los procesos internos, más Políticas; sin modernización del código RPG, sin conexión con ese sistema y sin datos para gerentes",
+ "fuente_insumo": "Ficha de Levantamiento (20/11/2026) y transcripción de la reunión de Verónica Rubio con el Instituto Médico Valera (20/11/2026)",
+ "vocabulario": {
+  "solucion": [
+   "entregable",
+   "entregables"
+  ],
+  "area": [
+   "área",
+   "áreas"
+  ]
+ },
+ "siglas_ok": [
+  "IA",
+  "IT"
+ ],
+ "portada": {
+  "titulo_lineas": [
+   "Agente propio, procesos con IA",
+   "y gobernanza de IA"
+  ],
+  "titulo_destacado": "en {cliente_corto}",
+  "lead": "Transferimos al equipo de IT la capacidad de **construir y operar el agente de pacientes** y de automatizar procesos internos, con una **gobernanza de IA** para toda la clínica.",
+  "hechos": [
+   {
+    "num": "100%",
+    "texto": "depende de un proveedor externo el agente de atención a pacientes: la clínica no lo opera.",
+    "resuelto_por": [
+     "AP-1",
+     "AP-2",
+     "AP-3"
+    ]
+   },
+   {
+    "num": "Una",
+    "texto": "persona revisa o autoriza hoy los procesos internos que se van a automatizar.",
+    "resuelto_por": [
+     "PA-1",
+     "PA-3"
+    ]
+   },
+   {
+    "num": "Disperso",
+    "texto": "es el uso de IA: cuentas personales y licencias sin una política común.",
+    "resuelto_por": [
+     "GI-1",
+     "GI-3"
+    ]
+   }
+  ]
+ },
+ "carriles": [
+  {
+   "id": "hab",
+   "nombre": "Habilidades en IT",
+   "nombre_corto": "Habilidades",
+   "color": "amarillo"
+  },
+  {
+   "id": "pol",
+   "nombre": "Políticas de IA",
+   "nombre_corto": "Políticas",
+   "color": "naranja"
+  }
+ ],
+ "areas": [
+  {
+   "id": "PA",
+   "nombre": "Procesos internos automatizados",
+   "carril": "hab",
+   "frente": "A",
+   "para_que": "Automatizar lo que hoy debe revisar o autorizar una sola persona",
+   "soluciones": [
+    {
+     "id": "PA-1",
+     "entregable": "Procesos a automatizar, elegidos",
+     "h": 4,
+     "fase": "F1",
+     "detalle": "Lista de los procesos internos que hoy pasan por la revisión o autorización de una persona, ordenados por impacto y esfuerzo con el equipo de IT."
+    },
+    {
+     "id": "PA-2",
+     "entregable": "Flujos con herramientas de flujo",
+     "h": 10,
+     "fase": "F2",
+     "detalle": "Flujos de trabajo automáticos construidos por el equipo con herramientas de flujo para los procesos elegidos."
+    },
+    {
+     "id": "PA-3",
+     "entregable": "Reglas de autorización compartidas",
+     "h": 6,
+     "fase": "F3",
+     "detalle": "Reglas escritas de quién aprueba qué y qué se autoriza solo, para que la autorización no dependa de una sola persona."
+    }
+   ]
+  },
+  {
+   "id": "AP",
+   "nombre": "Agente de atención a pacientes",
+   "carril": "hab",
+   "frente": "B",
+   "para_que": "Que la clínica opere y actualice su propio agente de atención",
+   "soluciones": [
+    {
+     "id": "AP-1",
+     "entregable": "Mapa del agente y de lo que es propio",
+     "h": 4,
+     "fase": "F1",
+     "detalle": "Revisión del agente actual: cómo está construido, qué canales atiende y qué es de la clínica y qué del proveedor."
+    },
+    {
+     "id": "AP-2",
+     "entregable": "Agente de WhatsApp construido por IT",
+     "h": 10,
+     "fase": "F2",
+     "detalle": "El equipo de IT construye con Intezia el agente de atención por WhatsApp, con propiedad de la clínica. El canal telefónico se evalúa según lo que permita la telefonía."
+    },
+    {
+     "id": "AP-3",
+     "entregable": "Guía para operar y actualizar el agente",
+     "h": 6,
+     "fase": "F3",
+     "detalle": "Guía escrita con el equipo para operar, actualizar y probar el agente sin depender del proveedor."
+    }
+   ]
+  },
+  {
+   "id": "GI",
+   "nombre": "Gobernanza de IA",
+   "carril": "pol",
+   "frente": "C",
+   "para_que": "Reglas claras de qué se carga a la IA, con qué herramienta y quién responde",
+   "soluciones": [
+    {
+     "id": "GI-1",
+     "entregable": "Política de uso de IA para aprobar",
+     "h": 0,
+     "fase": "F1",
+     "detalle": "Política de IA escrita, lista para que la apruebe la junta directiva."
+    },
+    {
+     "id": "GI-2",
+     "entregable": "Matriz de datos por herramienta",
+     "h": 0,
+     "fase": "F1",
+     "detalle": "Clasificación de la información (sensible, interna y pública) y qué puede ir a cada herramienta, con los datos de pacientes, operativos y financieros."
+    },
+    {
+     "id": "GI-3",
+     "entregable": "Stack oficial y licencias consolidadas",
+     "h": 0,
+     "fase": "F2",
+     "detalle": "Las herramientas de IA oficiales de la clínica y las licencias que hoy están dispersas, reunidas y repartidas por área o por gerente."
+    },
+    {
+     "id": "GI-4",
+     "entregable": "Responsable de IA y comité",
+     "h": 0,
+     "fase": "F3",
+     "detalle": "Definición del responsable de IA, con sus funciones, y de un comité de gobernanza."
+    },
+    {
+     "id": "GI-5",
+     "entregable": "Control del gasto en IA por área",
+     "h": 0,
+     "fase": "F3",
+     "detalle": "Cómo se reparte y se controla el gasto en licencias y en uso de IA por área y por gerente."
+    }
+   ],
+   "sin_horas": true
+  }
+ ],
+ "alcance": {
+  "titulo": "Tres áreas, del agente a la gobernanza.",
+  "subtitulo": "Un agente propio y procesos automatizados en IT, con reglas claras de uso de IA para toda la clínica.",
+  "fuera_alcance": [
+   "Cerebros Digitales de los gerentes: se evalúan en una propuesta aparte.",
+   "Licencias de IA: no están en la inversión; el stack oficial lo define la política."
+  ]
+ },
+ "metodo": {
+  "titulo": "Así construimos con el equipo.",
+  "subtitulo": "Cada pieza se construye con quien la va a mantener, se prueba con casos reales y se mide.",
+  "quien_construye": "**Intezia guía** y el equipo de IT construye con IA el agente y los flujos; lo que se construye queda en propiedad de la clínica.",
+  "por_que_orden": "Primero se mapea el agente actual, se eligen los procesos y se escribe la política, que ordenan lo demás. Después se construye con el equipo. Al final se traspasa a la clínica para que opere y mantenga cada pieza.",
+  "practica": [
+   {
+    "titulo": "Un agente que es de la clínica",
+    "texto": "El equipo aprende a construir, probar y actualizar el agente de atención con IA, sin depender del proveedor."
+   },
+   {
+    "titulo": "Con datos autorizados",
+    "texto": "El agente y los flujos trabajan solo con la información que la clínica autoriza compartir."
+   },
+   {
+    "titulo": "Depende del canal",
+    "texto": "WhatsApp es el primer canal; el telefónico depende de lo que permita la telefonía y se verifica en el arranque."
+   }
+  ],
+  "datos": "Los datos de pacientes, historiales y finanzas no se cargan a la IA sin autorización: la matriz de datos de la política define qué puede ir a cada herramienta."
+ },
+ "logistica": {
+  "modalidad": "Mixta: presencial en Valera y encuentros en línea, según se acuerde en la reunión de arranque.",
+  "participantes": "El equipo de IT y la alta dirección en la política.",
+  "arranque": "Las fechas se acuerdan en la reunión de arranque."
+ },
+ "fases": [
+  {
+   "id": "F1",
+   "titulo": "Base",
+   "descripcion": "**mapa del agente y política**",
+   "destacada": true
+  },
+  {
+   "id": "F2",
+   "titulo": "Obra",
+   "descripcion": "**construcción con el equipo**"
+  },
+  {
+   "id": "F3",
+   "titulo": "Traspaso",
+   "descripcion": "**autonomía y gobernanza**"
+  }
+ ],
+ "frentes": [
+  {
+   "id": "A",
+   "carril": "hab",
+   "nombre": "Procesos internos de IT",
+   "celdas": {
+    "F1": "Procesos a automatizar, elegidos.",
+    "F2": "Flujos construidos por el equipo.",
+    "F3": "Reglas de autorización compartidas."
+   }
+  },
+  {
+   "id": "B",
+   "carril": "hab",
+   "nombre": "Agente de pacientes",
+   "celdas": {
+    "F1": "Mapa del agente actual y de lo que es propio.",
+    "F2": "El agente de atención propio, en WhatsApp.",
+    "F3": "Cómo operarlo y actualizarlo sin proveedor."
+   }
+  },
+  {
+   "id": "C",
+   "carril": "pol",
+   "nombre": "Gobernanza de IA en paralelo",
+   "celdas": {
+    "F1": "Política y matriz de datos para aprobar.",
+    "F2": "Stack oficial y licencias consolidadas.",
+    "F3": "Responsable de IA, comité y control del gasto."
+   }
+  }
+ ],
+ "ruta": {
+  "titulo": "Del mapa del agente a la autonomía.",
+  "subtitulo": "Tres líneas de trabajo en paralelo, en tres fases. La garantía y el seguimiento a 30, 60 y 90 días corren desde el cierre de cada línea.",
+  "nota": "Las {h_total} h de Habilidades son una proyección: {h_f1} h de base, {h_f2} h de construcción y {h_f3} h de traspaso. Políticas se cotiza por entregable, sin horas. La reunión de arranque no suma horas.",
+  "hitos": [
+   {
+    "titulo": "Arranque",
+    "texto": "Accesos, participantes y orden de las piezas confirmados con IT y la dirección."
+   },
+   {
+    "titulo": "Base",
+    "texto": "Mapa del agente, procesos elegidos y política lista para aprobar."
+   },
+   {
+    "titulo": "Obra",
+    "texto": "El agente propio y los flujos en marcha."
+   },
+   {
+    "titulo": "Cierre",
+    "texto": "Guías y comité en uso; empieza la garantía."
+   }
+  ]
+ },
+ "seguimiento": {
+  "rango": "30, 60 y 90 días",
+  "texto": "Seguimiento desde el cierre de cada línea",
+  "items": [
+   {
+    "dias": "30 días",
+    "texto": "Uso real y ajustes"
+   },
+   {
+    "dias": "60 días",
+    "texto": "Ajustes con casos nuevos"
+   },
+   {
+    "dias": "90 días",
+    "texto": "Tiempo ganado, medido contra la línea base"
+   }
+  ]
+ },
+ "entregables": {
+  "titulo": "Lo que recibe la clínica.",
+  "subtitulo": "Lo que se llevan los equipos: **un agente propio** y una política de IA aprobada, con el seguimiento que mide su efecto.",
+  "etiqueta_transversales": "Para todo el proyecto",
+  "transversales": [
+   "Línea base del tiempo de cada tarea.",
+   "Documentación de cada pieza, para mantenerla.",
+   "Seguimiento a 30, 60 y 90 días."
+  ],
+  "valor_inmediato": [
+   "Fase 1: el mapa del agente y la política de IA.",
+   "Fase 2: el agente de pacientes en manos de IT.",
+   "Fase 3: guías para operar el agente y autorizar con reglas."
+  ],
+  "columnas_por_carril": [
+   2,
+   1
+  ],
+  "impacto": {
+   "enfoque": "operacion",
+   "texto": "La clínica **deja de depender de un proveedor** para su agente y de **una sola persona** para autorizar, y el uso de IA tiene reglas claras."
+  },
+  "compacto": false
+ },
+ "retorno": {
+  "modo": "metodo",
+  "posiciones": false,
+  "titulo": "Retorno esperado: continuidad y velocidad.",
+  "subtitulo": "Se calcula con las tareas de cada área, partiendo del tiempo que hoy toman.",
+  "etiqueta_pasos": "Cómo se calcula, por área y por tarea",
+  "pasos": [
+   {
+    "titulo": "Tareas del área",
+    "texto": "Qué atenciones y autorizaciones se apoyan en la pieza y cuántas veces se repiten."
+   },
+   {
+    "titulo": "Tiempo actual por tarea",
+    "texto": "Se mide al arrancar, con quien hace el trabajo, y es la **línea base**."
+   },
+   {
+    "titulo": "Tiempo con la pieza",
+    "texto": "Lo que toma la misma tarea ya con la pieza en uso."
+   },
+   {
+    "titulo": "Horas recuperadas",
+    "texto": "Número de tareas por la diferencia entre el tiempo actual y el tiempo con la pieza."
+   }
+  ],
+  "etiqueta_metas": "Calendario de garantía, desde el cierre de cada línea",
+  "metas": [
+   {
+    "dias": "30 días",
+    "texto": "Las piezas de cada línea en uso, con casos reales."
+   },
+   {
+    "dias": "60 días",
+    "texto": "Ajustes del agente con casos nuevos y procesos de IT iniciados en paralelo."
+   },
+   {
+    "dias": "90 días",
+    "texto": "Medición del tiempo ganado y de la dependencia reducida, contra la línea base."
+   }
+  ],
+  "destino": [
+   {
+    "rotulo": "Sin cuello de botella",
+    "texto": "Lo que hoy revisa una sola persona **sigue reglas compartidas**: IT trabaja en paralelo."
+   },
+   {
+    "rotulo": "Un agente propio",
+    "texto": "El agente de pacientes se opera y se actualiza desde la clínica."
+   },
+   {
+    "rotulo": "IA con reglas claras",
+    "texto": "Licencias, datos y gasto bajo una **política común**, sin cuentas personales."
+   }
+  ],
+  "gancho": "A los 90 días del cierre de cada línea, {cliente_corto} conocerá el tiempo que ganó y cuánto bajó su dependencia de una sola persona."
+ },
+ "inversion": {
+  "duracion": "Proyecto en {n_areas_txt} en paralelo: Habilidades en IT con {h_total} horas con el equipo y Políticas por entregable, con seguimiento y garantía a 30, 60 y 90 días.",
+  "programa": [
+   "Habilidades en IT y gobernanza de IA para {cliente_corto} ({codigo}).",
+   "Agente de pacientes y procesos internos, más la política de IA.",
+   "Habilidades: {h_total} horas con el equipo, más la reunión de arranque aparte. Políticas: por entregable."
+  ],
+  "notas": [
+   "Garantía 30-60-90: seguimiento a {rango_seguimiento} desde el cierre de cada línea.",
+   "Términos y condiciones: los del enlace de «Importante», que ambas partes aceptan al avanzar con esta propuesta.",
+   "Licencias de IA, aparte: las define el stack oficial de la política."
+  ],
+  "partes": [
+   {
+    "nombre": "Habilidades en IT",
+    "detalle": "{h_total} horas con el equipo, en dos áreas."
+   },
+   {
+    "nombre": "Políticas de IA",
+    "detalle": "Se cotiza por entregable, sin horas."
+   }
+  ],
+  "etiqueta_suma": "Suma de las dos partes"
+ },
+ "omitir": [
+  "pago"
+ ],
+ "proximos_pasos": {
+  "asesora": {
+   "nombre": "Verónica Rubio",
+   "cargo": "Asesora comercial",
+   "correo": "vrubio01@intezia.com",
+   "telefono": "+58 422 3355505"
+  },
+  "pasos": [
+   {
+    "titulo": "Confirmar el alcance",
+    "texto": "Resolvemos las dudas con la dirección y validamos las tres áreas y el orden de las tres fases."
+   },
+   {
+    "titulo": "Accesos y agenda",
+    "texto": "Coordinamos con IT los accesos al agente actual y a los procesos, y la agenda del equipo."
+   },
+   {
+    "titulo": "Reunión de arranque",
+    "texto": "Reunión de unos 30 minutos con IT y la dirección para alinear prioridades y participantes."
+   }
+  ]
+ },
+ "frases_ok": [],
+ "supuestos": [
+  "Pedido de Ivana (22/11/2026): propuesta CAI-115 de Habilidades para el Instituto Médico Valera, con Políticas de IA en paralelo, y Verónica Rubio como asesora. Insumos: Ficha (20/11/2026), transcripción de Meet (42 min) y resumen de Ventas. Primer contacto.",
+  "Ajuste de Ivana (24/11/2026): «dejando solo el desarrollo del agente», sin la migración a un lenguaje moderno ni la conexión con el sistema hecho en RPG. Respuestas: se quita toda el área de Modernización del código RPG, se quita completa el área de Datos al alcance de los gerentes (consulta segura de los datos del sistema, interfaces y guía) y quedan Procesos internos, Agente de pacientes y Políticas. El deck no nombra RPG, AS400, modernización ni migración, ni el sistema de gestión. Horas confirmadas por Ivana: 20 h por área de Habilidades, total 40 h (antes 80 h).",
+  "Decisiones previas de Ivana (22/11/2026): Educación y sin alianza; combo de Habilidades y Políticas en un deck, con Políticas en paralelo y SIN horas (se cotiza por entregable); impacto «operación». Combo parcial: se registra bajo `habilidades` (CLAUDE.md §4.1a) y el rótulo dice «Servicio de Habilidades y Políticas».",
+  "Reparto de horas mío (Ivana fijó 20 h por área): Procesos internos 20 h (procesos elegidos 4, flujos 10, reglas de autorización 6); Agente de pacientes 20 h (mapa 4, agente de WhatsApp 10, guía 6). Fases de Habilidades de 8, 20 y 12 h = 40 h. Los cinco entregables de Gobernanza de IA llevan 0 h (política, matriz de datos, stack y licencias, responsable y comité, control del gasto).",
+  "Sin nombres de personas (el gerente de IT, la gerente médica) ni del proveedor externo que hoy opera el agente. Sin marcas de IA: no se nombra Claude ni Meta ni N8N («herramientas de flujo»); sí WhatsApp. No se menciona VPN (Claude no está soportado en Venezuela). El stack oficial lo define la política.",
+  "Viáticos y logística de traslado: el presidente pidió que la propuesta no los incluya. Modalidad mixta (ficha y reunión): presencial en Valera y encuentros en línea.",
+  "Cerebros Digitales de los gerentes: quedan fuera, en «Fuera de este alcance» (propuesta aparte).",
+  "Retorno en modo método: no hay horas ni volúmenes medidos. Seguimiento 30-60-90 incluido por ser estándar de Habilidades. Sin facilidad de pago (regla permanente). Sin certificado. Hoja de inversión con valores vacíos para ventas, en REF.",
+  "Sin semanas, sesiones ni fechas (§4.23). Cotización de Políticas: la hoja de inversión usa `inversion.partes` (Habilidades en IT y Políticas de IA) para que ventas ponga cada valor; la regla de memoria dice que las partes solo van si Ivana las pide: confirmar o quitarlas."
+ ],
+ "pendientes": [
+  "Valor, descuento y total: campos vacíos para ventas; con 40 h el valor cambia frente al borrador de 80 h. Moneda y forma de pago sin definir.",
+  "Confirmar con Ivana el reparto de las 40 h entre los 6 entregables de Habilidades, y cómo se cotiza Políticas (por entregable, sin horas).",
+  "Confirmar con Keiber que el alcance de Políticas (política, matriz, stack, responsable y control del gasto) es el que se vende.",
+  "Confirmar cuánto del agente actual es de la clínica (el cliente no sabe si el proveedor es dueño del agente que paga) y qué permite el canal telefónico.",
+  "Si el cliente pregunta por el sistema de gestión o los datos para gerentes, quedaron fuera por decisión de Ivana: confirmar si se ofrecen más adelante como otra propuesta.",
+  "Confirmar el teléfono y el correo de Verónica Rubio (tomados de propuestas anteriores)."
+ ]
+}

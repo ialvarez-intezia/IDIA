@@ -1,1 +1,15 @@
 /* Ajustes propios de esta propuesta (se enlaza después de habilidades-compacto.css). */
+
+/* Hoja de inversión por opciones alternativas (inversion.sin_suma, CAI-089, 2026-11-11): no hay caja de «valor de la opción elegida»,
+   así que Descuento, Total y todo lo que sigue suben 98 px. Los rects de PrecioDescuento y PrecioTotal del PDF los fija
+   scripts/agregar-campo-precio.py (precio_fields, rama «opciones») con ese mismo desplazamiento. */
+.s-price.sin-base .cot-label-discount { top: 200px; }
+.s-price.sin-base .discount-frame { top: 220px; }
+.s-price.sin-base .cot-sign-minus { top: 220px; }
+.s-price.sin-base .cot-urgent-note { top: 189px; }
+.s-price.sin-base .cot-label-total { top: 292px; }
+.s-price.sin-base .total-frame { top: 316px; }
+.s-price.sin-base .cot-moneda { top: 399px; }
+.s-price.sin-base .cot-moneda + .cot-validity { top: 439px; }
+.s-price.sin-base .cot-moneda ~ .cot-terms-box { top: 460px; }
+.s-price.sin-base .cot-moneda ~ .cot-garantia-badge { top: 562px; }

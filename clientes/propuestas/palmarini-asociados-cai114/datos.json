@@ -1,0 +1,447 @@
+{
+ "version": 3,
+ "cliente": {
+  "nombre": "Palmarini&Asociados",
+  "slug": "palmarini-asociados-cai114",
+  "codigo": "CAI-114",
+  "nombre_pie": "Palmarini&Asociados"
+ },
+ "division": "educacion",
+ "alianza": false,
+ "sin_horas_trabajo": true,
+ "meta_tipo": "Capacitación In-Company · IA para reclutamiento, contratos, cobros y seguimiento de asesoras, 80 h con el equipo en tres fases · formato compacto v3",
+ "eje": "Construir con el equipo de Palmarini&Asociados, con IA, las herramientas de cuatro áreas de su operación de RRHH y outsourcing: reclutamiento y banco de reclutados, vencimientos de contratos y firmas, cobros a clientes nuevos y seguimiento de lo que hace cada asesora por cliente, empezando por un piloto con cinco empresas",
+ "origen": "Ficha de Levantamiento de Palmarini&Asociados (Verónica Rubio, registrada el 18/11/2026; contacto Ingrid Palmarini, responsable de RRHH y outsourcing, decisora única) y transcripción de la reunión de Google Meet del 18/11/2026 (25 min), más instrucciones de Ivana (22/11/2026): propuesta de Habilidades CAI-114 con Verónica Rubio como asesora",
+ "fuente_insumo": "Ficha de Levantamiento (18/11/2026) y transcripción de la reunión de Verónica Rubio con Palmarini&Asociados (18/11/2026)",
+ "vocabulario": {
+  "solucion": [
+   "entregable",
+   "entregables"
+  ],
+  "area": [
+   "área",
+   "áreas"
+  ]
+ },
+ "siglas_ok": [
+  "IA",
+  "RRHH",
+  "CVs"
+ ],
+ "portada": {
+  "titulo_lineas": [
+   "Reclutamiento, contratos y cobros",
+   "sistematizados con IA"
+  ],
+  "titulo_destacado": "en {cliente_corto}",
+  "lead": "Construimos con el equipo de Palmarini&Asociados un **agente que filtra CVs**, un **banco de reclutados por cliente**, **alertas** de vencimientos y cobros, y un reporte de lo que hace cada asesora.",
+  "hechos": [
+   {
+    "num": "Manual",
+    "texto": "es la revisión de los CVs, con el banco de vacantes disperso en Excel y en carpetas.",
+    "resuelto_por": [
+     "RC-1",
+     "RC-2"
+    ]
+   },
+   {
+    "num": "A mano",
+    "texto": "se revisan los vencimientos de contratos, turno por turno, y a veces se olvidan.",
+    "resuelto_por": [
+     "CT-1",
+     "CT-2",
+     "CT-3"
+    ]
+   },
+   {
+    "num": "4 a 5",
+    "texto": "días pueden pasar sin facturar a un cliente nuevo, porque nada lo recuerda.",
+    "resuelto_por": [
+     "CB-1"
+    ]
+   },
+   {
+    "num": "25",
+    "texto": "personas en el equipo y ningún reporte centralizado de lo que hace cada asesora por cliente.",
+    "resuelto_por": [
+     "SA-1",
+     "SA-2"
+    ]
+   }
+  ]
+ },
+ "carriles": [
+  {
+   "id": "rh",
+   "nombre": "IA para la operación de RRHH",
+   "nombre_corto": "Operación",
+   "color": "amarillo"
+  }
+ ],
+ "areas": [
+  {
+   "id": "RC",
+   "nombre": "Reclutamiento y banco de vacantes",
+   "carril": "rh",
+   "frente": "A",
+   "para_que": "Filtrar CVs y no perder a los candidatos que ya se entrevistaron",
+   "soluciones": [
+    {
+     "id": "RC-1",
+     "entregable": "Agente que filtra los CVs",
+     "h": 8,
+     "fase": "F1",
+     "detalle": "Un agente de IA que revisa los CVs que llegan para cada vacante y deja solo los candidatos que cumplen lo que pide el cargo; la persona agenda y entrevista."
+    },
+    {
+     "id": "RC-2",
+     "entregable": "Banco de reclutados por cliente",
+     "h": 8,
+     "fase": "F1",
+     "detalle": "Base de datos centralizada de los candidatos entrevistados, por cliente y por tipo de cargo (meseros, cajeros), con búsqueda y filtrado, que reemplaza el Excel y las carpetas."
+    },
+    {
+     "id": "RC-3",
+     "entregable": "Lista corta por vacante",
+     "h": 4,
+     "fase": "F1",
+     "detalle": "Para cada vacante nueva, la lista de candidatos del banco que encajan, para llamarlos antes de buscar otros."
+    }
+   ]
+  },
+  {
+   "id": "CT",
+   "nombre": "Contratos y firmas",
+   "carril": "rh",
+   "frente": "B",
+   "para_que": "Que ningún vencimiento ni firma se olvide, turno por turno",
+   "soluciones": [
+    {
+     "id": "CT-1",
+     "entregable": "Base de contratos por empresa y turno",
+     "h": 8,
+     "fase": "F2",
+     "detalle": "Una base de datos por empresa con cada contrato, su turno y su fecha de vencimiento, en lugar de revisar a mano cada archivo."
+    },
+    {
+     "id": "CT-2",
+     "entregable": "Alertas de vencimiento por correo",
+     "h": 6,
+     "fase": "F2",
+     "detalle": "Aviso por correo cuando se acerca el vencimiento de un contrato, con el nombre de la persona y de la empresa."
+    },
+    {
+     "id": "CT-3",
+     "entregable": "Firmas pendientes por turno",
+     "h": 6,
+     "fase": "F2",
+     "detalle": "Por empresa y por turno, quién firmó y quién falta, con un recordatorio de las firmas pendientes."
+    }
+   ]
+  },
+  {
+   "id": "CB",
+   "nombre": "Cobros a clientes nuevos",
+   "carril": "rh",
+   "frente": "B",
+   "para_que": "Que ningún cliente nuevo pase días sin facturarse",
+   "soluciones": [
+    {
+     "id": "CB-1",
+     "entregable": "Alerta de cobro a cliente nuevo",
+     "h": 10,
+     "fase": "F2",
+     "detalle": "Cuando entra un cliente nuevo, un recordatorio para facturar sus honorarios, que llega a la dirección y al área administrativa."
+    },
+    {
+     "id": "CB-2",
+     "entregable": "Honorarios por cobrar, a la vista",
+     "h": 10,
+     "fase": "F2",
+     "detalle": "Un listado de los honorarios facturados y pendientes de cobro por cliente, con aviso cuando pasan los días."
+    }
+   ]
+  },
+  {
+   "id": "SA",
+   "nombre": "Seguimiento de asesoras",
+   "carril": "rh",
+   "frente": "C",
+   "para_que": "Ver qué hace cada asesora en cada cliente y qué falta firmar",
+   "soluciones": [
+    {
+     "id": "SA-1",
+     "entregable": "Registro de la actividad por cliente",
+     "h": 10,
+     "fase": "F3",
+     "detalle": "Cada asesora registra de forma sencilla a dónde va, qué hizo y qué documentos se firmaron en cada cliente."
+    },
+    {
+     "id": "SA-2",
+     "entregable": "Reporte centralizado por asesora",
+     "h": 10,
+     "fase": "F3",
+     "detalle": "Un reporte para la dirección con lo que hizo cada asesora por cliente y por turno, y lo que falta."
+    }
+   ]
+  }
+ ],
+ "alcance": {
+  "titulo": "Cuatro áreas, del reclutamiento al reporte.",
+  "subtitulo": "Herramientas con IA que se construyen con quien hace cada tarea: agente, bases de datos, alertas y reporte.",
+  "fuera_alcance": [
+   "Las nóminas y los cálculos: se siguen haciendo como hoy; la IA no los reemplaza.",
+   "Información de clientes con contrato de confidencialidad: solo entra lo que cada cliente autorice.",
+   "Las demás empresas clientes: el piloto empieza con cinco y el resto se suma después."
+  ]
+ },
+ "metodo": {
+  "titulo": "Así construimos con el equipo.",
+  "subtitulo": "Cada herramienta se construye con quien hace la tarea, se prueba con casos reales y se mide.",
+  "quien_construye": "**Intezia guía** y el equipo de Palmarini&Asociados construye con IA sus propias herramientas, sobre lo que ya usa.",
+  "por_que_orden": "Primero el reclutamiento y el banco de reclutados, que es lo más urgente. Después contratos y cobros, que usan la misma base. Al final el seguimiento de asesoras, que reúne lo anterior.",
+  "practica": [
+   {
+    "titulo": "Con quien hace el trabajo",
+    "texto": "Cada herramienta se construye con la asesora o la gerente que hace la tarea, para que la use desde el primer día."
+   },
+   {
+    "titulo": "Empezamos con cinco empresas",
+    "texto": "El piloto se hace con cinco empresas clientes; con lo aprendido, el resto se suma después."
+   },
+   {
+    "titulo": "Depende de cada conexión",
+    "texto": "Lo que se conecta (correo, WhatsApp Business, Profit) depende de lo que permita cada plataforma: se verifica en el arranque."
+   }
+  ],
+  "datos": "Los datos de clientes con contrato de confidencialidad no se cargan a la IA sin su autorización: se trabaja con los ejemplos y accesos que cada cliente permita."
+ },
+ "logistica": {
+  "modalidad": "Presencial en las oficinas de Maracay, según se acuerde en la reunión de arranque.",
+  "participantes": "Las asesoras y líderes de Maracay que hacen cada tarea.",
+  "arranque": "Las fechas se acuerdan en la reunión de arranque."
+ },
+ "fases": [
+  {
+   "id": "F1",
+   "titulo": "Banco",
+   "descripcion": "**reclutamiento y banco de reclutados**",
+   "destacada": true
+  },
+  {
+   "id": "F2",
+   "titulo": "Alertas",
+   "descripcion": "**contratos, firmas y cobros**"
+  },
+  {
+   "id": "F3",
+   "titulo": "Reporte",
+   "descripcion": "**seguimiento de asesoras**"
+  }
+ ],
+ "frentes": [
+  {
+   "id": "A",
+   "carril": "rh",
+   "nombre": "Reclutamiento y banco de vacantes",
+   "celdas": {
+    "F1": "Agente de CVs, banco de reclutados y lista corta."
+   }
+  },
+  {
+   "id": "B",
+   "carril": "rh",
+   "nombre": "Contratos y cobros",
+   "celdas": {
+    "F2": "Contratos con alertas, firmas pendientes y cobros a clientes nuevos."
+   }
+  },
+  {
+   "id": "C",
+   "carril": "rh",
+   "nombre": "Seguimiento de asesoras",
+   "celdas": {
+    "F3": "Registro de actividad y reporte centralizado."
+   }
+  }
+ ],
+ "ruta": {
+  "titulo": "Del reclutamiento al reporte de asesoras.",
+  "subtitulo": "Tres líneas de trabajo, tres fases. La garantía y el seguimiento a 30, 60 y 90 días corren desde el cierre de cada línea.",
+  "nota": "Las {h_total} h son una proyección: {h_f1} h de reclutamiento y banco, {h_f2} h de contratos, firmas y cobros, y {h_f3} h de seguimiento de asesoras. La reunión de arranque no suma horas.",
+  "hitos": [
+   {
+    "titulo": "Arranque",
+    "texto": "Se eligen las cinco empresas del piloto y se confirman accesos y participantes."
+   },
+   {
+    "titulo": "Banco y agente",
+    "texto": "El agente filtra CVs y el banco de reclutados está en uso."
+   },
+   {
+    "titulo": "Alertas en marcha",
+    "texto": "Contratos, firmas y cobros con sus avisos, probados con las empresas del piloto."
+   },
+   {
+    "titulo": "Cierre",
+    "texto": "Reporte de asesoras en uso; empieza la garantía."
+   }
+  ]
+ },
+ "seguimiento": {
+  "rango": "30, 60 y 90 días",
+  "texto": "Seguimiento desde el cierre de cada línea",
+  "items": [
+   {
+    "dias": "30 días",
+    "texto": "Uso real y ajustes"
+   },
+   {
+    "dias": "60 días",
+    "texto": "Ajustes con casos nuevos"
+   },
+   {
+    "dias": "90 días",
+    "texto": "Tiempo ganado, medido contra la línea base"
+   }
+  ]
+ },
+ "entregables": {
+  "titulo": "Lo que recibe Palmarini.",
+  "subtitulo": "Lo que se llevan los equipos: **las herramientas de cada área**, funcionando con sus datos y con el seguimiento que mide su efecto.",
+  "etiqueta_transversales": "Para todo el proyecto",
+  "transversales": [
+   "Línea base del tiempo de cada tarea.",
+   "Documentación de cada herramienta, para mantenerla.",
+   "Seguimiento a 30, 60 y 90 días."
+  ],
+  "valor_inmediato": [
+   "Fase 1: el agente que filtra los CVs en uso.",
+   "Fase 2: avisos de vencimientos de contratos.",
+   "Fase 3: el reporte de lo que hace cada asesora."
+  ],
+  "impacto": {
+   "enfoque": "reenfoque",
+   "texto": "El equipo deja de revisar a mano CVs, vencimientos y cobros y **se concentra en atender clientes** y decidir, con la información **reunida y al día**."
+  }
+ },
+ "retorno": {
+  "modo": "metodo",
+  "posiciones": false,
+  "titulo": "Retorno esperado: tiempo y control.",
+  "subtitulo": "Se calcula con las tareas de cada área, partiendo del tiempo que hoy toman.",
+  "etiqueta_pasos": "Cómo se calcula, por área y por tarea",
+  "pasos": [
+   {
+    "titulo": "Tareas del área",
+    "texto": "Qué CVs, contratos, cobros y reportes se apoyan en la herramienta y cuántas veces se repiten."
+   },
+   {
+    "titulo": "Tiempo actual por tarea",
+    "texto": "Se mide al arrancar, con quien hace el trabajo, y es la **línea base**."
+   },
+   {
+    "titulo": "Tiempo con la herramienta",
+    "texto": "Lo que toma la misma tarea ya con la herramienta en uso."
+   },
+   {
+    "titulo": "Horas recuperadas",
+    "texto": "Número de tareas por la diferencia entre el tiempo actual y el tiempo con la herramienta."
+   }
+  ],
+  "etiqueta_metas": "Calendario de garantía, desde el cierre de cada línea",
+  "metas": [
+   {
+    "dias": "30 días",
+    "texto": "Las herramientas de cada área en uso diario, con casos reales."
+   },
+   {
+    "dias": "60 días",
+    "texto": "Ajustes con casos nuevos y menos revisión a mano."
+   },
+   {
+    "dias": "90 días",
+    "texto": "Medición del tiempo ganado en cada tarea, contra la línea base."
+   }
+  ],
+  "destino": [
+   {
+    "rotulo": "Menos revisión manual",
+    "texto": "Vencimientos, cobros y CVs se vigilan con avisos y el equipo **decide** en lugar de revisar."
+   },
+   {
+    "rotulo": "Un banco que crece",
+    "texto": "Cada candidato entrevistado queda en el banco, disponible para la próxima vacante de cualquier cliente."
+   },
+   {
+    "rotulo": "Más clientes, el mismo método",
+    "texto": "Con el retorno medido, {cliente_corto} decide si lleva este ciclo a **más empresas clientes**."
+   }
+  ],
+  "gancho": "A los 90 días del cierre de cada línea, {cliente_corto} conocerá el tiempo que ganó y qué empresas conviene sumar."
+ },
+ "inversion": {
+  "duracion": "Proyecto en {n_areas_txt}: {h_total} horas en total con el equipo, con seguimiento y garantía a 30, 60 y 90 días.",
+  "programa": [
+   "Reclutamiento, contratos, cobros y seguimiento de asesoras con IA ({codigo}).",
+   "Piloto con cinco empresas clientes de {cliente_corto}, en tres fases.",
+   "{h_total} horas con el equipo, más la reunión de arranque aparte."
+  ],
+  "notas": [
+   "Garantía 30-60-90: seguimiento a {rango_seguimiento} desde el cierre de cada línea.",
+   "Términos y condiciones: los del enlace de «Importante», que ambas partes aceptan al avanzar con esta propuesta.",
+   "Licencias de IA, aparte: se confirman en el arranque."
+  ]
+ },
+ "omitir": [
+  "pago"
+ ],
+ "proximos_pasos": {
+  "asesora": {
+   "nombre": "Verónica Rubio",
+   "cargo": "Asesora comercial",
+   "correo": "vrubio01@intezia.com",
+   "telefono": "+58 422 3355505"
+  },
+  "pasos": [
+   {
+    "titulo": "Confirmar el alcance",
+    "texto": "Resolvemos las dudas y validamos las áreas, las cinco empresas del piloto y el orden de las tres fases."
+   },
+   {
+    "titulo": "Accesos y agenda",
+    "texto": "Coordinamos los accesos a las hojas de cálculo, Profit y las bases de cada empresa, y la agenda del equipo."
+   },
+   {
+    "titulo": "Reunión de arranque",
+    "texto": "Reunión de unos 30 minutos para alinear prioridades, empresas del piloto y datos de cada área."
+   }
+  ]
+ },
+ "frases_ok": [],
+ "supuestos": [
+  "Pedido de Ivana (22/11/2026): propuesta de Habilidades CAI-114 para Palmarini&Asociados con Verónica Rubio como asesora, a partir de la Ficha (18/11/2026) y la transcripción de la reunión (25 min). Primer contacto con Intezia. La clienta rechazó una Detección («no quiero algo que me lleve mucho tiempo»): el deck no nombra la Detección.",
+  "Decisiones de Ivana (22/11/2026): Educación y sin alianza; impacto «reenfoque»; se nombran solo sus plataformas (Excel, Profit, WhatsApp Business), sin marcas de IA ni licencias de IA. Horas: primero 60 h; luego Ivana pidió subirlas a 80 h y precisó que son 20 h por cada proceso (cuatro áreas).",
+  "Reparto de horas: Ivana fijó 20 h por área (4 × 20 = 80 h). El reparto dentro de cada área es mío: Reclutamiento y banco 20 h (agente que filtra CVs 8, banco de reclutados por cliente 8, lista corta por vacante 4); Contratos y firmas 20 h (base de contratos 8, alertas por correo 6, firmas pendientes 6); Cobros a clientes nuevos 20 h (alerta de cobro 10, honorarios por cobrar 10); Seguimiento de asesoras 20 h (registro 10, reporte centralizado 10). Fases de 20, 40 y 20 h (contratos y cobros comparten la fase 2). Cobros tiene solo dos entregables, así que cada uno pesa 10 h: si Ivana prefiere más entregables en esa área, se agregan. Las versiones de 60 h y de 80 h con otro reparto quedaron en `_pdf-anteriores/`.",
+  "Orden de las fases según lo que dijo la clienta: lo más importante ahora es el reclutamiento y, luego, las bases de datos («por lo menos la parte de reclutamiento este año, luego bases de datos, resto en enero»). Por eso reclutamiento va en la fase 1; contratos y cobros (que usan la base de datos) en la 2; el seguimiento de asesoras en la 3. El deck no dice este año ni enero (§4.23, sin fechas); la propuesta se puede dividir en dos partes en la reunión, como habló Verónica.",
+  "Los entregables salen de los cinco resultados que pidió Ingrid: agente que filtre CVs, base de datos de reclutados por cliente con alertas, notificaciones de vencimiento de contratos, reporte centralizado de lo que hace cada asesora y alertas de cobros. «Lista corta por vacante», «firmas pendientes por turno» y «honorarios por cobrar» salen de lo que ella describió (candidatos del banco para una vacante, quién firmó y quién falta, cobrar honorarios a clientes nuevos).",
+  "Verónica dijo que el agente le dejaría «30, 40, 50 opciones»: es un ejemplo de su charla, no un compromiso; el deck no lo cita. Tampoco cita el piloto como «cinco empresas» con nombres: se dice «cinco empresas clientes» sin nombrarlas (son clientes de la clienta y están bajo contratos de confidencialidad).",
+  "Piloto con cinco empresas: lo propuso la clienta, que dijo que «con estas cinco empresas vamos a digitalizar primero, quizás la más sencilla». No se sabe cuáles; se eligen en el arranque (hito 1).",
+  "No se menciona el WhatsApp como conexión prometida: Ingrid quiere conectar Claude con WhatsApp Business y no lo ha logrado. El deck dice que lo que se conecta (correo, WhatsApp Business, Profit) depende de cada plataforma y se verifica en el arranque. No se nombra Claude ni ninguna marca de IA ni VPN (Claude no está soportado en Venezuela).",
+  "Sin nombres de personas ni de los clientes de la clienta (los de la ficha y la transcripción). Se llaman «las asesoras», «la gerente» y «la dirección». «Cobros»: el deck habla de recordar la facturación de honorarios a clientes nuevos; no promete cobranza.",
+  "Fuera de alcance: nóminas y cálculos (la clienta dijo que los seguirá sacando en su cálculo tradicional), información bajo contrato de confidencialidad y las demás empresas clientes. La ficha menciona también el área Legal, que no tiene proceso propio en la ficha ni en la reunión; no se incluyó como área.",
+  "Retorno en modo método: no hay horas, volúmenes ni dotación medidos. La frase de Ingrid «crecer sin sumar más personas a la nómina» no se usa: enfoque de reenfoque, sin posiciones ni nómina (no hay aval).",
+  "Seguimiento 30-60-90 incluido por ser estándar de Habilidades. Sin facilidad de pago (regla permanente; además moneda y forma de pago siguen sin definirse en la ficha). Sin certificado. Hoja de inversión con valores vacíos para ventas, en REF.",
+  "Modalidad presencial en las oficinas de Maracay (la matriz, según la ficha)."
+ ],
+ "pendientes": [
+  "Valor, descuento y total: campos vacíos para ventas. La ficha dice que la disponibilidad presupuestaria está en evaluación y la clienta dijo que todo depende de los honorarios.",
+  "La ficha tiene tres campos que parecen copiados de la ficha de otro cliente (Cartonbar): «Segundo contacto» (hijo de Daniel, 18 años), «Si se aprueba, qué semana arrancamos» (borrador esta semana, 2 a 3 sesiones por semana) y «Vacaciones, viajes o cierres» (Diciembre, «Yo no paro»). No se usaron. Pedir a Verónica que corrija la ficha y confirmar si Ingrid tiene un segundo contacto.",
+  "Confirmar con Ivana el reparto dentro de cada área de 20 h (en Cobros, solo dos entregables de 10 h cada uno).",
+  "Confirmar con Ivana y Verónica si la propuesta se divide en dos partes (una este año y otra en enero), como habló Verónica con la clienta; hoy es una sola con tres fases.",
+  "Elegir las cinco empresas del piloto (se hace en el arranque) y confirmar qué permiten sus contratos de confidencialidad.",
+  "Quién lleva cada área y cuántas personas participan (la clienta opera con unas 10 personas clave y cuatro líderes); si Ingrid estará en la presentación (ficha: por confirmar).",
+  "Qué herramienta de IA se usa en la construcción y quién contrata las licencias (se define en el arranque); ya paga licencias de varias herramientas.",
+  "Confirmar el teléfono y el correo de Verónica Rubio (tomados de propuestas anteriores)."
+ ]
+}

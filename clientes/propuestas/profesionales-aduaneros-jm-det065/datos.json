@@ -1,0 +1,318 @@
+{
+ "version": 3,
+ "formato": "deteccion",
+ "cliente": {
+  "nombre": "Profesionales Aduaneros JM",
+  "slug": "profesionales-aduaneros-jm-det065",
+  "codigo": "DET-065",
+  "nombre_pie": "Aduaneros JM"
+ },
+ "division": "educacion",
+ "alianza": false,
+ "omitir": [
+  "pago"
+ ],
+ "eje": "Auditar los cinco departamentos de Profesionales Aduaneros JM para saber qué se puede trabajar con IA y qué no, nivelar al equipo con un uso sencillo y dejar resultados desde el inicio, un mapa de oportunidades y una hoja de ruta por departamento para decidir con datos",
+ "origen": "Ficha de Levantamiento de Profesionales Aduaneros JM (Flavia Martínez, registrada el 19/11/2026; decide la familia, con la dueña como contacto) y resumen de la reunión pegado por Ivana el 20/11/2026. Sin transcripción: pendiente de recibir",
+ "fuente_insumo": "Ficha de Levantamiento (19/11/2026) y resumen de la reunión de Flavia Martínez con Profesionales Aduaneros JM. Sin transcripción",
+ "portada": {
+  "titulo_lineas": [
+   "Mapa de oportunidades de IA",
+   "en cada departamento"
+  ],
+  "titulo_destacado": "de Aduaneros JM",
+  "lead": "Revisamos **los cinco departamentos** para saber qué se puede hacer con inteligencia artificial (IA) y qué no, y nivelamos al equipo con un uso **sencillo**, para dejar resultados desde el inicio.",
+  "hechos": [
+   {
+    "num": "Tiempos",
+    "texto": "cada demora en un trámite puede hacer que el cliente termine pagando más."
+   },
+   {
+    "num": "Errores",
+    "texto": "una mala valoración o clasificación puede costar impuestos de más o el comiso de la carga."
+   },
+   {
+    "num": "Externo",
+    "texto": "el software propio de revisión de documentos solo lo cambia un programador externo."
+   },
+   {
+    "num": "Sin uso",
+    "texto": "el equipo aún no usa IA, y parte de él no está familiarizado con estas herramientas."
+   }
+  ]
+ },
+ "deteccion": {
+  "areas": [
+   "Operativo",
+   "Valoración",
+   "Administrativo",
+   "Permisología y regímenes legales",
+   "Ventas"
+  ],
+  "foco": "Entrevistamos a 1 o 2 personas de cada departamento, sin tarea previa, para ver qué se puede trabajar con IA y qué no.",
+  "horas": {
+   "levantamiento": 20,
+   "arranque": 0,
+   "nivelacion": 4
+  },
+  "texto_horas": "**{h_levantamiento} horas** de levantamiento: las entrevistas con cada departamento.",
+  "logros_minimos": 1,
+  "para_que": [
+   {
+    "titulo": "Ver cómo trabaja cada uno",
+    "texto": "Qué se hace hoy en cada departamento, cuánto tarda y dónde se cometen errores."
+   },
+   {
+    "titulo": "Saber qué sí y qué no",
+    "texto": "Qué se puede trabajar con IA y qué no, incluido el software propio de revisión."
+   },
+   {
+    "titulo": "Empezar con resultados",
+    "texto": "Un resultado que el equipo ya usa, cuando el proceso o el área lo permite."
+   },
+   {
+    "titulo": "Decidir con datos",
+    "texto": "Una hoja de ruta por departamento: qué hacer primero y qué dejar para después."
+   }
+  ],
+  "etapas": [
+   {
+    "titulo": "Arranque",
+    "texto": "Reunión con la dirección: alcance, responsable de cada departamento y calendario."
+   },
+   {
+    "titulo": "Nivelación",
+    "texto": "**{h_nivelacion} horas** de fundamentos de IA, sencillos y con tareas reales, para todo el equipo."
+   },
+   {
+    "titulo": "Levantamiento",
+    "texto": "Entrevistas por departamento, con quien hace el trabajo.",
+    "horas": true
+   },
+   {
+    "titulo": "Priorización",
+    "texto": "Intezia ordena lo encontrado: qué conviene hacer primero y qué no."
+   },
+   {
+    "titulo": "Informe Final",
+    "texto": "Hoja de ruta por departamento para decidir con datos, presentada a la familia y al equipo."
+   }
+  ],
+  "ruta_completa": [
+   {
+    "cuando": "Ahora",
+    "servicio": "Detección",
+    "texto": "Esta propuesta: los cinco departamentos y la nivelación del equipo."
+   },
+   {
+    "cuando": "Después",
+    "servicio": "Habilidades",
+    "texto": "Construir con el equipo lo que el mapa priorice; solo si lo deciden, se cotiza aparte."
+   }
+  ],
+  "entregables": [
+   {
+    "cuando": "Al arrancar",
+    "titulo": "Alcance y calendario",
+    "texto": "Acordados con la dirección: quién atiende cada departamento y en qué orden."
+   },
+   {
+    "cuando": "Al arrancar",
+    "titulo": "Equipo nivelado en IA",
+    "texto": "Un uso sencillo de la IA para todo el equipo, incluidas las personas que nunca la han usado."
+   },
+   {
+    "cuando": "En el levantamiento",
+    "titulo": "Logros inmediatos",
+    "texto": "Cuando el proceso lo permite; por ejemplo, reconocer en el correo qué documento llegó y marcarlo en la lista."
+   },
+   {
+    "cuando": "Al cierre",
+    "titulo": "Mapa de Calor",
+    "texto": "Un cuadro que ordena lo que se puede mejorar con IA, de lo más fácil y útil a lo más difícil."
+   },
+   {
+    "cuando": "Al cierre",
+    "titulo": "Cómo mantenerlo",
+    "texto": "Cada mejora queda documentada para que el equipo pueda manejarla sin depender de un proveedor."
+   },
+   {
+    "cuando": "Al cierre",
+    "titulo": "Informe Final y hoja de ruta",
+    "texto": "Qué automatizar primero y qué no, por departamento, y qué licencias conviene, para decidir con datos."
+   }
+  ]
+ },
+ "alcance": {
+  "subtitulo": "Revisamos **tarea por tarea** cómo trabaja cada departamento de {cliente_corto}, con quien hace el trabajo.",
+  "fuera_alcance": [
+   "La clasificación y la valoración: las sigue decidiendo el profesional; la IA solo apoya.",
+   "Cambiar el software propio de revisión de documentos: se evalúa qué conviene, y el cambio es de la fase siguiente.",
+   "Construir lo que el mapa priorice: es Habilidades, la fase que sigue, y se cotiza aparte.",
+   "Las licencias de IA: la recomendación se hace al finalizar la Detección y no están en la inversión."
+  ]
+ },
+ "metodo": {
+  "por_que_orden": "Primero se nivela al equipo, para que todos sepan qué es la IA. Después se entrevista departamento por departamento. Al final se decide con la foto completa.",
+  "quien_construye": "Intezia levanta y construye junto a quien hace cada tarea, con las herramientas que ya usan. Las herramientas de IA las autoriza {cliente_corto}.",
+  "subtitulo": "Nos sentamos con quien hace el trabajo, con sus casos reales, y salimos de cada entrevista con algo concreto.",
+  "practica": [
+   {
+    "titulo": "Un espacio por departamento",
+    "texto": "Cada departamento se entrevista por separado, sin tarea previa."
+   },
+   {
+    "titulo": "Lenguaje sencillo",
+    "texto": "Todo se explica sin jerga y a su ritmo, para que nadie se quede atrás."
+   },
+   {
+    "titulo": "Que el equipo lo sostenga",
+    "texto": "Cada mejora se construye con quien la usa y se documenta, para que el equipo la maneje."
+   }
+  ],
+  "datos": "Los documentos y datos de clientes no se cargan a la IA sin el visto bueno de {cliente_corto}; se trabaja con los ejemplos que autorice.",
+  "pasos": [
+   {
+    "titulo": "Entrevistamos",
+    "texto": "A quien hace el trabajo en cada departamento."
+   },
+   {
+    "titulo": "Mapeamos",
+    "texto": "Procesos, tiempos, herramientas y cuellos de botella del día a día."
+   },
+   {
+    "titulo": "Construimos",
+    "texto": "Un logro inmediato en el momento, cuando el proceso lo permite."
+   },
+   {
+    "titulo": "Priorizamos",
+    "texto": "Cada oportunidad por impacto, esfuerzo y riesgo."
+   }
+  ]
+ },
+ "logistica": {
+  "modalidad": "Presencial, en las oficinas de {cliente_corto}.",
+  "participantes": "1 o 2 personas de cada departamento; todo el equipo en la nivelación.",
+  "arranque": "En cuanto se aprueba, se coordina el arranque con cada responsable."
+ },
+ "entregables": {
+  "transversales": [
+   "Ficha de levantamiento de cada departamento",
+   "Presentación del Informe Final a la familia y al equipo"
+  ],
+  "valor_inmediato": [
+   "Mejoras en uso antes de cerrar el proyecto",
+   "Hoja de ruta por departamento para decidir con datos",
+   "Un equipo que sabe usar la IA con sencillez"
+  ],
+  "impacto": {
+   "enfoque": "operacion",
+   "texto": "Con menos tiempo en la revisión de documentos y menos errores que dependen de la persona, la operación gana **tiempo y tranquilidad**, con el profesional a cargo de decidir."
+  }
+ },
+ "retorno": {
+  "modo": "metodo",
+  "subtitulo": "El Informe Final estima el retorno de cada oportunidad con lo que cuenta cada departamento.",
+  "pasos": [
+   {
+    "titulo": "Volumen",
+    "texto": "Cuántos documentos y trámites se repiten por mes en cada departamento."
+   },
+   {
+    "titulo": "Tiempo actual",
+    "texto": "Lo que toma hoy cada tarea, según quien hace el trabajo."
+   },
+   {
+    "titulo": "Tiempo con la solución",
+    "texto": "La estimación de Intezia para cada oportunidad del Mapa de Calor."
+   },
+   {
+    "titulo": "Horas recuperables",
+    "texto": "Volumen por la diferencia de tiempos: una estimación de referencia, no un compromiso de resultado."
+   },
+   {
+    "titulo": "Prioridad",
+    "texto": "Impacto, esfuerzo y riesgo de cada oportunidad, para decidir qué hacer primero."
+   }
+  ],
+  "destino": [
+   {
+    "rotulo": "Errores a la vista",
+    "texto": "Se ve **dónde** se cometen errores y cuáles se pueden evitar."
+   },
+   {
+    "rotulo": "Un criterio común",
+    "texto": "Cada departamento usa la IA con **el mismo criterio** y la familia ve su avance."
+   },
+   {
+    "rotulo": "Un equipo autónomo",
+    "texto": "El equipo **sabe usar y mantener** lo que se construya."
+   }
+  ],
+  "gancho": "Con el Informe Final, {cliente_corto} sabe qué hacer primero y qué no, con datos de su propia operación."
+ },
+ "inversion": {
+  "duracion": "**{h_total} horas** en total: **{h_nivelacion} de nivelación** y **{h_levantamiento} de levantamiento** en {n_areas_txt}.",
+  "programa": [
+   "Servicio de Detección para {cliente_corto} ({codigo}).",
+   "{h_nivelacion} horas de fundamentos de IA, sencillos y con tareas reales.",
+   "Entrevistas con cada uno de los cinco departamentos.",
+   "Logros inmediatos, Mapa de Calor e Informe Final.",
+   "Hoja de ruta por departamento.",
+   "{h_levantamiento} horas de levantamiento."
+  ],
+  "notas": [
+   "Esta inversión no incluye licencias de IA: su recomendación se hace al finalizar la Detección.",
+   "Habilidades, la fase que viene después, se estructura con los resultados y se cotiza aparte."
+  ]
+ },
+ "proximos_pasos": {
+  "asesora": {
+   "nombre": "Flavia Martínez",
+   "cargo": "Asesora comercial",
+   "correo": "fmartinez@intezia.com",
+   "telefono": "+58 414 5756615"
+  },
+  "pasos": [
+   {
+    "titulo": "Revisión con la familia",
+    "texto": "Revisamos la propuesta con la familia y el equipo, en una videollamada, y resolvemos sus dudas."
+   },
+   {
+    "titulo": "Responsables y agenda",
+    "texto": "{cliente_corto} indica quién atiende cada departamento y quiénes participan en la nivelación; con eso queda lista la agenda."
+   },
+   {
+    "titulo": "Reunión de arranque",
+    "texto": "Reunión de unos 30 minutos para alinear el alcance, la nivelación y el calendario."
+   }
+  ]
+ },
+ "siglas_ok": [
+  "IA"
+ ],
+ "frases_ok": [],
+ "supuestos": [
+  "Pedido de Ivana (20/11/2026): propuesta de Detección DET-065 para Profesionales Aduaneros JM con Flavia Martínez como asesora, a partir de la Ficha de Levantamiento (19/11/2026) y del resumen pegado por Ivana. No hay transcripción: la Ficha y ese resumen son la fuente (§4.23).",
+  "Decisiones de Ivana (20/11/2026): **24 h** = 20 h de levantamiento (4 h por cada uno de los 5 departamentos) + 4 h de nivelación, sencilla y con tareas reales (el deck muestra solo las de levantamiento, en global, §4.22); impacto **operación**; y **no inventar un cupo**: la razón para decidir a tiempo es la vigencia de 30 días y dejar listos responsables y agenda. División Educación y alianza = no: tomados por mí (primer contacto: los trajo el IA TechDay), no los dio Ivana.",
+  "Razón para fijar la fecha este año (pedido de Flavia): no hay urgencia del cliente (quieren arrancar en 2027) ni se afirma un cupo limitado, que Ivana no confirmó. El deck no lleva fechas ni meses (§4.23): lo real es la vigencia de la cotización (30 días, ya impresa en la hoja de inversión) y que confirmar con tiempo deja listos a los responsables y la agenda. Flavia puede sostener de palabra la fecha de arranque deseada.",
+  "Tono: no es un equipo técnico y parte de la familia es «de la vieja escuela» con estas herramientas. Lenguaje simple y sin jerga: «inteligencia artificial (IA)» expandida en la portada; se explican el Mapa de Calor («un cuadro que ordena lo que se puede mejorar») y el levantamiento («entrevistas con cada departamento»). La nivelación va con tareas reales y a su ritmo.",
+  "Cinco departamentos con los nombres del cliente (operativo, valoración, administrativo, permisología y regímenes legales, y ventas); el orden de prioridad no se definió, así que no se prioriza ninguno (§4.22). De 1 a 2 personas por departamento; personas en la nivelación «a consultar»: el deck dice «todo el equipo». Si pasan de 25 por grupo, el número de grupos va al kickoff (§4.23).",
+  "Sector aduanero (regulación sectorial): una mala clasificación o valoración tiene consecuencias directas. El deck dice, en «Fuera de este alcance», en «Cómo trabajamos» y en el cuadro de impacto, que la clasificación y la valoración las sigue decidiendo el profesional y que la IA solo apoya; no promete cero errores ni cumplimiento normativo.",
+  "Software propio de revisión de documentos: lo tienen hecho con programación y no saben modificarlo; cada cambio depende de un programador externo. La Detección lo incluye al ver qué se puede trabajar con IA y qué no; cambiarlo es de la fase siguiente. El logro inmediato de ejemplo (reconocer el tipo de documento que llega por correo y marcarlo en la lista del valorador) se habló como ejemplo: las áreas y los logros se definen en el levantamiento, y el deck lo dice «cuando el proceso lo permite», sin cifra (regla del 13/11).",
+  "Capacidad instalada (lo que más resonó): tarjeta «Cómo mantenerlo» y práctica «Que el equipo lo sostenga». No se promete que puedan modificar el software propio: se promete documentar cada mejora para que el equipo la maneje.",
+  "Licencias: la recomendación se hace al finalizar la Detección y no están en la inversión (como Peroca). Sin herramienta pre-recomendada: esperan la recomendación. No se menciona el acceso a Claude desde Venezuela.",
+  "Resumen de una página para la familia (pedido de Flavia): PDF aparte `DET-065 Resumen de una página.pdf`, en lenguaje simple. La presentación en vivo por Meet con toda la familia está por cuadrar.",
+  "Sin citas ni dolor dramatizado (regla de Detección): los datos de la portada son datos de la Ficha parafraseados. No se nombra a ninguna persona del cliente ni a su familia. Sin certificado. Sin facilidad de pago (omitir: pago, regla permanente). Hoja de inversión con valores vacíos para ventas, en REF.",
+  "Contacto de la última slide: Flavia Martínez, asesora comercial; correo y teléfono tomados de DET-060 y DET-061, no confirmados."
+ ],
+ "pendientes": [
+  "Valor, descuento y total: campos vacíos para ventas. Moneda REF. Total de horas: 24 h (4 de nivelación + 20 de levantamiento).",
+  "Cuántas personas reciben la nivelación («a consultar») y si caben en un solo grupo (máximo 25).",
+  "Recibir la transcripción de la reunión y contrastarla con la Ficha (si se contradicen, manda la transcripción).",
+  "Presentación en vivo por Meet con toda la familia y el equipo: fecha por cuadrar.",
+  "Si más adelante hay un cupo real de arranque, agregarlo (Ivana lo confirma); hoy la razón es la vigencia de 30 días.",
+  "Confirmar el teléfono y el correo de Flavia Martínez.",
+  "Confirmar con Ivana si el programa lleva certificado."
+ ]
+}

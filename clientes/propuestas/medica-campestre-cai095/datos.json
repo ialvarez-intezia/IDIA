@@ -1,0 +1,580 @@
+{
+ "version": 3,
+ "cliente": {
+  "nombre": "Médica Campestre",
+  "slug": "medica-campestre-cai095",
+  "codigo": "CAI-095",
+  "nombre_pie": "Médica Campestre"
+ },
+ "division": "educacion",
+ "alianza": false,
+ "sin_horas_trabajo": true,
+ "meta_tipo": "Capacitación In-Company · Clon Digital con Claude para 17 directivos de Médica Campestre y Proquimed, en parejas por cargo · 9 cargos de 8 h (levantamiento de información de 2 h + construcción de 6 h) · seguimiento 30-60-90 · 3 cuotas · formato compacto v3",
+ "vocabulario": {
+  "solucion": [
+   "entregable",
+   "entregables"
+  ],
+  "area": [
+   "cargo",
+   "cargos"
+  ]
+ },
+ "eje": "Clon Digital con Claude para 17 directivos y gerentes de Médica Campestre y Proquimed, construido en parejas del mismo cargo entre ambas empresas, con medición Edu-Pulse y Edu-Trace",
+ "origen": "Instrucciones de Ivana del 12/11/2026: problema (todos los directivos ya usan IA, no todos bien), mismo modelo del CAP-075, 17 personas en parejas del mismo cargo, Clon Digital y medición con Edu-Pulse y Edu-Trace, cronograma flexible, 3 cuotas",
+ "fuente_insumo": "Instrucciones pegadas por Ivana (sin Ficha Comercial ni transcripción de la reunión); propuesta anterior de la cuenta, CAP-075, solo como referencia del modelo",
+ "siglas_ok": [
+  "IA"
+ ],
+ "supuestos": [
+  "Servicio y cuenta (instrucciones de Ivana, 12/11/2026): Habilidades, plantilla compacta v3, código CAI-095, contacto María Iribarren (directora comercial). División Educación y sin alianza: tomados de la cuenta (CAP-075, Educación, sin aliado); por confirmar.",
+  "Participantes: 17 personas, 8 de Médica Campestre y 9 de Proquimed, de nueve cargos (médica, administrativa, comercial, recursos humanos, IT, compras, operaciones, contabilidad y calidad). Con 8 + 9 sale **un cargo con una sola persona**, sin contraparte (la fuente no dice cuál). Se dejó como un cargo más, con las mismas 8 h; la alternativa es sumarlo como tercero a la pareja del cargo más cercano (8 grupos y 64 h).",
+  "Horas por pareja (mía, a confirmar): **8 h por cargo** = levantamiento de información de 2 h + construcción de 6 h en tres encuentros de 2 h (cómo funciona Claude y arquitectura del Clon, construcción del Clon, prueba y ajuste). Total 9 cargos × 8 h = 72 h (18 h de levantamiento y 54 h de construcción). Referencia del CAP-075: 6 sesiones de 2 h, de las cuales 3 eran de Clon; aquí no hay fundamentos básicos ni Claude Code ni app propia. Las 6 h de construcción son compartidas por la pareja: cada persona construye su propio Clon en el mismo encuentro.",
+  "Esquema de encuentros: Ivana pidió el esquema de sesiones en la propuesta, lo que es una excepción a la regla de Keiber (§4.23). Se escribe «encuentros», sin días, fechas ni semanas. El horario de cada pareja se acuerda en su levantamiento.",
+  "Cronograma flexible (Ivana): levantamientos de información de las parejas este año con una primera cuota y encuentros de construcción según la agenda de cada pareja. Intezia sale de vacaciones el 15 de diciembre y vuelve la segunda semana de enero: en el deck se dice «antes del cierre de año de Intezia» y «desde mediados de enero» (sin fechas).",
+  "Cuotas (mías, a confirmar): 40 % al aprobar (levantamientos de información), 30 % cuando la mitad de las parejas tiene sus Clones listos y 30 % al cierre con todos los Clones y la medición. Los montos quedan como campos vacíos para ventas.",
+  "Medición: Edu-Pulse (anónimo, después de cada encuentro) y Edu-Trace (de cierre, personal) con el Dashboard de Impacto, como en el CAP-075. Es autopercepción salvo el bloque de conocimientos (§4.17): la propuesta no promete «mejora medida».",
+  "Claude se nombra como herramienta del Clon (Ivana: «entender cómo funciona Claude»). Licencias fuera de la propuesta, sin valor de lista (no verificado para esta cuenta) y sin afirmar qué plan tienen. Sin afirmar que ya usan Claude ni qué herramientas de IA usan hoy (§4.11).",
+  "Sin Ficha ni transcripción: los hechos de portada salen de lo que dijo Ivana de la reunión (17 personas, ya usan IA, distinto nivel). «Abusan de ella» no va al deck (sin dolor dramatizado); se dice distinto nivel y criterio. Sin nombres de personas del cliente.",
+  "Hechos de contexto de la cuenta no verificados: país y moneda de Médica Campestre y Proquimed. La hoja de inversión sale con REF y la leyenda de pago a tasa BCV (automático); si facturan en otra moneda se apaga con `inversion.sin_ref`."
+ ],
+ "pendientes": [
+  "Confirmar con Ivana el enfoque del cuadro «Impacto» de «Lo que se llevan» (reenfoque, posiciones u operación). No se incluyó: el generador avisa.",
+  "Confirmar cuál de los nueve cargos queda con una sola persona y si es un cargo más (72 h) o un tercero en otra pareja (64 h).",
+  "Confirmar las 8 h por cargo (levantamiento de información de 2 h + 6 h de construcción) y que el levantamiento cuenta dentro de las horas y de la primera cuota.",
+  "Confirmar división (Educación) y alianza (no). Modalidad: todos los encuentros son online (Ivana, 12/11/2026).",
+  "Confirmar si Proquimed debe aparecer en el titular de la portada (hoy solo en el lead y la logística) y quién contrata y factura: una empresa o cada una por separado.",
+  "Confirmar quién contrata las licencias de Claude para los 17 y qué plan; no se afirma ninguno.",
+  "Ventas llena inversión, descuento, total y los montos de las 3 cuotas antes de enviar.",
+  "Confirmar que se da el 15 de diciembre y la segunda semana de enero como datos al cliente y no solo como límite interno."
+ ],
+ "portada": {
+  "titulo_lineas": [
+   "Directivos al mismo nivel con IA,",
+   "cada uno con su Clon Digital"
+  ],
+  "titulo_destacado": "en {cliente_corto}",
+  "lead": "17 directivos y gerentes de **Médica Campestre** y **Proquimed** construyen en vivo su **Clon Digital con Claude**, en parejas del mismo cargo entre ambas empresas.",
+  "hechos": [
+   {
+    "num": "17",
+    "texto": "directivos y gerentes de las dos empresas ya usan IA, cada uno a su manera y con distinto criterio.",
+    "resuelto_por": [
+     "MED-2",
+     "ADM-2",
+     "COM-2",
+     "RRH-2",
+     "TEC-2",
+     "CMP-2",
+     "OPE-2",
+     "CON-2",
+     "CAL-2"
+    ]
+   },
+   {
+    "num": "1 base",
+    "texto": "común para todos: cómo funciona Claude y cuándo apoyarse en él antes de construir.",
+    "resuelto_por": [
+     "MED-2",
+     "ADM-2",
+     "COM-2",
+     "RRH-2",
+     "TEC-2",
+     "CMP-2",
+     "OPE-2",
+     "CON-2",
+     "CAL-2"
+    ]
+   },
+   {
+    "num": "Parejas",
+    "texto": "del mismo cargo entre ambas empresas: criterio compartido sin perder la personalización del Clon.",
+    "resuelto_por": [
+     "MED-1",
+     "ADM-1",
+     "COM-1",
+     "RRH-1",
+     "TEC-1",
+     "CMP-1",
+     "OPE-1",
+     "CON-1",
+     "CAL-1"
+    ]
+   }
+  ]
+ },
+ "carriles": [
+  {
+   "id": "claude",
+   "nombre": "Claude",
+   "nombre_corto": "Claude",
+   "color": "amarillo"
+  }
+ ],
+ "areas": [
+  {
+   "id": "MED",
+   "nombre": "Dirección médica",
+   "para_que": "El Clon Digital de cada médico directivo, hecho en pareja entre las dos empresas.",
+   "carril": "claude",
+   "frente": "A",
+   "soluciones": [
+    {
+     "id": "MED-1",
+     "entregable": "Levantamiento de Dirección médica",
+     "h": 2,
+     "fase": "F1",
+     "detalle": "Referencia interna: levantamiento de información de la pareja, con el perfil de cada persona y de qué construye cada una."
+    },
+    {
+     "id": "MED-2",
+     "entregable": "Clones Digitales de Dirección médica",
+     "h": 6,
+     "fase": "F2",
+     "detalle": "Referencia interna: tres encuentros de 2 h (cómo funciona Claude y arquitectura del Clon, construcción, prueba y ajuste); cada persona construye su propio Clon."
+    }
+   ]
+  },
+  {
+   "id": "ADM",
+   "nombre": "Administración",
+   "para_que": "El Clon Digital de cada gerente administrativo, hecho en pareja entre las dos empresas.",
+   "carril": "claude",
+   "frente": "A",
+   "soluciones": [
+    {
+     "id": "ADM-1",
+     "entregable": "Levantamiento de Administración",
+     "h": 2,
+     "fase": "F1",
+     "detalle": "Referencia interna: levantamiento de información de la pareja."
+    },
+    {
+     "id": "ADM-2",
+     "entregable": "Clones Digitales de Administración",
+     "h": 6,
+     "fase": "F2",
+     "detalle": "Referencia interna: tres encuentros de 2 h de construcción."
+    }
+   ]
+  },
+  {
+   "id": "COM",
+   "nombre": "Comercial",
+   "para_que": "El Clon Digital de cada gerente comercial, hecho en pareja entre las dos empresas.",
+   "carril": "claude",
+   "frente": "A",
+   "soluciones": [
+    {
+     "id": "COM-1",
+     "entregable": "Levantamiento de Comercial",
+     "h": 2,
+     "fase": "F1",
+     "detalle": "Referencia interna: levantamiento de información de la pareja."
+    },
+    {
+     "id": "COM-2",
+     "entregable": "Clones Digitales de Comercial",
+     "h": 6,
+     "fase": "F2",
+     "detalle": "Referencia interna: tres encuentros de 2 h de construcción."
+    }
+   ]
+  },
+  {
+   "id": "RRH",
+   "nombre": "Recursos humanos",
+   "para_que": "El Clon Digital de cada gerente de recursos humanos, hecho en pareja entre las dos empresas.",
+   "carril": "claude",
+   "frente": "A",
+   "soluciones": [
+    {
+     "id": "RRH-1",
+     "entregable": "Levantamiento de Recursos humanos",
+     "h": 2,
+     "fase": "F1",
+     "detalle": "Referencia interna: levantamiento de información de la pareja."
+    },
+    {
+     "id": "RRH-2",
+     "entregable": "Clones Digitales de Recursos humanos",
+     "h": 6,
+     "fase": "F2",
+     "detalle": "Referencia interna: tres encuentros de 2 h de construcción."
+    }
+   ]
+  },
+  {
+   "id": "TEC",
+   "nombre": "Tecnología",
+   "para_que": "El Clon Digital de cada gerente de tecnología, hecho en pareja entre las dos empresas.",
+   "carril": "claude",
+   "frente": "A",
+   "soluciones": [
+    {
+     "id": "TEC-1",
+     "entregable": "Levantamiento de Tecnología",
+     "h": 2,
+     "fase": "F1",
+     "detalle": "Referencia interna: levantamiento de información de la pareja."
+    },
+    {
+     "id": "TEC-2",
+     "entregable": "Clones Digitales de Tecnología",
+     "h": 6,
+     "fase": "F2",
+     "detalle": "Referencia interna: tres encuentros de 2 h de construcción."
+    }
+   ]
+  },
+  {
+   "id": "CMP",
+   "nombre": "Compras",
+   "para_que": "El Clon Digital de cada gerente de compras, hecho en pareja entre las dos empresas.",
+   "carril": "claude",
+   "frente": "A",
+   "soluciones": [
+    {
+     "id": "CMP-1",
+     "entregable": "Levantamiento de Compras",
+     "h": 2,
+     "fase": "F1",
+     "detalle": "Referencia interna: levantamiento de información de la pareja."
+    },
+    {
+     "id": "CMP-2",
+     "entregable": "Clones Digitales de Compras",
+     "h": 6,
+     "fase": "F2",
+     "detalle": "Referencia interna: tres encuentros de 2 h de construcción."
+    }
+   ]
+  },
+  {
+   "id": "OPE",
+   "nombre": "Operaciones",
+   "para_que": "El Clon Digital de cada gerente de operaciones, hecho en pareja entre las dos empresas.",
+   "carril": "claude",
+   "frente": "A",
+   "soluciones": [
+    {
+     "id": "OPE-1",
+     "entregable": "Levantamiento de Operaciones",
+     "h": 2,
+     "fase": "F1",
+     "detalle": "Referencia interna: levantamiento de información de la pareja."
+    },
+    {
+     "id": "OPE-2",
+     "entregable": "Clones Digitales de Operaciones",
+     "h": 6,
+     "fase": "F2",
+     "detalle": "Referencia interna: tres encuentros de 2 h de construcción."
+    }
+   ]
+  },
+  {
+   "id": "CON",
+   "nombre": "Contabilidad",
+   "para_que": "El Clon Digital de cada gerente de contabilidad, hecho en pareja entre las dos empresas.",
+   "carril": "claude",
+   "frente": "A",
+   "soluciones": [
+    {
+     "id": "CON-1",
+     "entregable": "Levantamiento de Contabilidad",
+     "h": 2,
+     "fase": "F1",
+     "detalle": "Referencia interna: levantamiento de información de la pareja."
+    },
+    {
+     "id": "CON-2",
+     "entregable": "Clones Digitales de Contabilidad",
+     "h": 6,
+     "fase": "F2",
+     "detalle": "Referencia interna: tres encuentros de 2 h de construcción."
+    }
+   ]
+  },
+  {
+   "id": "CAL",
+   "nombre": "Calidad",
+   "para_que": "El Clon Digital de cada gerente de calidad, hecho en pareja entre las dos empresas.",
+   "carril": "claude",
+   "frente": "A",
+   "soluciones": [
+    {
+     "id": "CAL-1",
+     "entregable": "Levantamiento de Calidad",
+     "h": 2,
+     "fase": "F1",
+     "detalle": "Referencia interna: levantamiento de información de la pareja."
+    },
+    {
+     "id": "CAL-2",
+     "entregable": "Clones Digitales de Calidad",
+     "h": 6,
+     "fase": "F2",
+     "detalle": "Referencia interna: tres encuentros de 2 h de construcción."
+    }
+   ]
+  }
+ ],
+ "alcance": {
+  "titulo": "Un Clon Digital por persona, en parejas por cargo.",
+  "subtitulo": "**17 personas** de **9 cargos**: un levantamiento de información y tres encuentros de construcción por pareja.",
+  "fuera_alcance": [
+   "Aplicar el Clon a un proceso concreto de cada cargo: se define después, con el Clon ya construido.",
+   "Licencias de Claude y sus accesos: no forman parte de esta propuesta y los autoriza {cliente_corto}.",
+   "Datos confidenciales, de pacientes o de personas: no se cargan sin autorización de {cliente_corto}."
+  ],
+  "sin_conteo_por_fila": true
+ },
+ "metodo": {
+  "titulo": "Así construimos cada Clon Digital.",
+  "subtitulo": "Cada persona construye el suyo en vivo, con su propio contexto y práctica real.",
+  "quien_construye": "**Intezia guía** y cada persona construye su **Clon Digital** con su propio contexto.",
+  "por_que_orden": "Primero el levantamiento de información de cada pareja, para conocer a cada persona; luego los encuentros de construcción, que se ubican según la agenda de la pareja.",
+  "practica": [
+   {
+    "titulo": "Práctica real",
+    "texto": "Se construye en vivo con tareas y contexto reales del cargo, sin teoría de relleno."
+   },
+   {
+    "titulo": "Parejas por cargo",
+    "texto": "El mismo cargo de ambas empresas trabaja junto: criterio compartido, Clon personalizado."
+   },
+   {
+    "titulo": "Criterio común",
+    "texto": "Todos parten de lo mismo: cómo funciona Claude, qué conviene delegarle y qué decide siempre una persona."
+   }
+  ],
+  "datos": "Solo se carga la información que {cliente_corto} autoriza: ningún dato confidencial, de pacientes o de personas entra sin su permiso.",
+  "pasos": [
+   {
+    "titulo": "Construimos",
+    "texto": "Junto a cada persona, con su cargo real."
+   },
+   {
+    "titulo": "Probamos",
+    "texto": "Cada Clon, con tareas reales de su trabajo."
+   },
+   {
+    "titulo": "Adoptamos",
+    "texto": "Cada persona lo usa en su día a día."
+   },
+   {
+    "titulo": "Medimos",
+    "texto": "Edu-Pulse en cada encuentro y Edu-Trace al cierre."
+   }
+  ]
+ },
+ "logistica": {
+  "modalidad": "Online síncrono: todos los encuentros se hacen en línea y en vivo, con cada pareja.",
+  "participantes": "17 personas: 8 de Médica Campestre y 9 de Proquimed, en parejas del mismo cargo.",
+  "arranque": "Los levantamientos, antes del cierre de año de Intezia; la construcción, desde mediados de enero.",
+  "ritmo": "Cada pareja fija sus horarios en su levantamiento, según su agenda y sin frenar su operación."
+ },
+ "fases": [
+  {
+   "id": "F1",
+   "titulo": "Levantamiento",
+   "descripcion": "**levantamiento de información por pareja**",
+   "medida": "2 h por pareja"
+  },
+  {
+   "id": "F2",
+   "titulo": "Clon",
+   "descripcion": "**construcción del Clon**",
+   "destacada": true,
+   "medida": "6 h por pareja"
+  }
+ ],
+ "frentes": [
+  {
+   "id": "A",
+   "carril": "claude",
+   "nombre": "Parejas por cargo",
+   "celdas": {
+    "F1": "Cada pareja conoce el método, define qué construye cada persona y fija su agenda.",
+    "F2": "Tres encuentros por pareja: cómo funciona Claude, construcción del Clon y prueba."
+   },
+   "medida": "8 h",
+   "medida_meta": "por pareja",
+   "celdas_medida": {
+    "F1": "2 h",
+    "F2": "6 h"
+   }
+  }
+ ],
+ "ruta": {
+  "titulo": "Levantamiento este año, Clones según agenda.",
+  "subtitulo": "Las parejas arrancan antes del cierre de año y construyen cuando su agenda lo permite. El seguimiento a 30, 60 y 90 días corre desde el cierre.",
+  "nota": "Son **{h_total} horas** con las parejas: {h_f1} h de levantamiento y {h_f2} h de construcción, a razón de 8 h por cargo. El calendario de cada pareja se fija en su levantamiento.",
+  "hitos": [
+   {
+    "titulo": "Levantamientos",
+    "texto": "Antes del cierre de año: cada pareja define qué construye y fija su agenda."
+   },
+   {
+    "titulo": "Construcción",
+    "texto": "Tres encuentros por pareja: Claude, Clon y prueba, según su agenda."
+   },
+   {
+    "titulo": "Clones listos",
+    "texto": "Los Clones Digitales de las 17 personas construidos y probados."
+   },
+   {
+    "titulo": "Medición",
+    "texto": "Edu-Pulse en cada encuentro, Edu-Trace al cierre y Dashboard de Impacto."
+   },
+   {
+    "titulo": "30 · 60 · 90 días",
+    "texto": "Seguimiento: uso de cada Clon, nuevas construcciones y tiempo recuperado."
+   }
+  ]
+ },
+ "seguimiento": {
+  "rango": "30, 60 y 90 días",
+  "texto": "Seguimiento desde el cierre del proyecto",
+  "items": [
+   {
+    "dias": "30 días",
+    "texto": "Uso diario de cada Clon"
+   },
+   {
+    "dias": "60 días",
+    "texto": "Nuevas construcciones de cada persona"
+   },
+   {
+    "dias": "90 días",
+    "texto": "Tiempo recuperado contra la línea base"
+   }
+  ]
+ },
+ "entregables": {
+  "transversales": [
+   "Línea base y seguimiento a 30, 60 y 90 días",
+   "Edu-Pulse de cada encuentro y Edu-Trace de cierre",
+   "Dashboard de Impacto con la medición del grupo"
+  ],
+  "valor_inmediato": [
+   "Un criterio común sobre cómo usar Claude",
+   "Clon Digital de cada persona listo y probado"
+  ],
+  "subtitulo": "Lo que se llevan: **un Clon Digital por persona**, más la medición con **Edu-Pulse y Edu-Trace**.",
+  "titulo": "Un Clon Digital por persona"
+ },
+ "pago": {
+  "cuotas": [
+   {
+    "cuando": "Al aprobar",
+    "hito": "Aprobación de la propuesta, para iniciar el levantamiento de información de las parejas este año.",
+    "pct": 40
+   },
+   {
+    "cuando": "Mitad de Clones",
+    "hito": "La mitad de las parejas tiene sus Clones Digitales construidos y probados.",
+    "pct": 30
+   },
+   {
+    "cuando": "Cierre",
+    "hito": "Todos los Clones listos y medición de cierre con Edu-Trace.",
+    "pct": 30
+   }
+  ],
+  "subtitulo": "Cada cuota se paga al cumplirse un hito del proyecto."
+ },
+ "proximos_pasos": {
+  "etiqueta_contacto": "¿Dudas? Escribe a tu directora comercial",
+  "asesora": {
+   "nombre": "María Iribarren",
+   "cargo": "Directora comercial",
+   "correo": "miribarren@intezia.com",
+   "telefono": "+58 414 0570056"
+  },
+  "pasos": [
+   {
+    "titulo": "Parejas y cargos",
+    "texto": "Confirmamos con {cliente_corto} las 17 personas y qué cargo de cada empresa forma cada pareja."
+   },
+   {
+    "titulo": "Agenda inicial",
+    "texto": "Se programan los levantamientos de información antes del cierre de año; la construcción se ubica según cada agenda."
+   },
+   {
+    "titulo": "Reunión de arranque",
+    "texto": "Una reunión de ~30 min para alinear objetivos, cuentas de Claude y horarios."
+   }
+  ]
+ },
+ "retorno": {
+  "modo": "metodo",
+  "posiciones": false,
+  "subtitulo": "Se calcula con los datos de cada persona, se confirma con la línea base inicial y se mide a 30, 60 y 90 días.",
+  "etiqueta_pasos": "Cómo se calcula, por tarea",
+  "pasos": [
+   {
+    "titulo": "Repeticiones de la tarea",
+    "texto": "Cuántas veces repite cada persona las tareas que su Clon va a asumir."
+   },
+   {
+    "titulo": "Tiempo actual por tarea",
+    "texto": "Se mide al empezar y es la **línea base**."
+   },
+   {
+    "titulo": "Tiempo con Claude",
+    "texto": "Lo que toma la misma tarea con el Clon ya en uso."
+   },
+   {
+    "titulo": "Horas recuperadas",
+    "texto": "Repeticiones por la diferencia entre el tiempo actual y el tiempo con Claude."
+   }
+  ],
+  "etiqueta_metas": "Calendario de garantía y cálculo del retorno",
+  "metas": [
+   {
+    "dias": "30 días",
+    "texto": "El Clon en uso real en el trabajo diario de cada persona."
+   },
+   {
+    "dias": "60 días",
+    "texto": "Nuevas construcciones y horas recuperadas medidas contra la línea base."
+   },
+   {
+    "dias": "90 días",
+    "texto": "Medición del tiempo recuperado y de cómo se usa Claude."
+   }
+  ],
+  "etiqueta_destino": "Hacia dónde va el proyecto",
+  "destino": [
+   {
+    "rotulo": "Mismo nivel",
+    "texto": "Con un criterio común, los equipos de ambas empresas usan Claude con **el mismo estándar**."
+   },
+   {
+    "rotulo": "Clones que crecen",
+    "texto": "Cada persona puede seguir sumando skills a su Clon por su cuenta."
+   },
+   {
+    "rotulo": "Procesos propios",
+    "texto": "Con el Clon listo, cada cargo decide en qué **proceso** lo aplica."
+   }
+  ],
+  "gancho": "A los 90 días del cierre, cada persona contará con su tiempo recuperado medido contra su línea base."
+ },
+ "inversion": {
+  "notas": [
+   "Las licencias de Claude van aparte.",
+   "Garantía 30-60-90: seguimiento a 30, 60 y 90 días desde el cierre del proyecto."
+  ],
+  "programa": [
+   "Servicio de Habilidades para {cliente_corto} ({codigo}).",
+   "Levantamiento de información por pareja: 2 h por cargo, en 9 cargos.",
+   "Construcción del Clon Digital: 6 h por cargo.",
+   "Edu-Pulse, Edu-Trace y Dashboard de Impacto.",
+   "Seguimiento a 30, 60 y 90 días."
+  ],
+  "duracion": "Proyecto de **{h_total} horas con las parejas**: levantamiento de información y construcción de los Clones Digitales de 17 personas, con seguimiento a {rango_seguimiento}."
+ }
+}

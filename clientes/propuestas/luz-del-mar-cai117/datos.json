@@ -1,0 +1,480 @@
+{
+  "version": 3,
+  "cliente": {
+    "nombre": "Luz del Mar",
+    "slug": "luz-del-mar-cai117",
+    "codigo": "CAI-117",
+    "nombre_pie": "Luz del Mar"
+  },
+  "division": "educacion",
+  "alianza": false,
+  "sin_horas_trabajo": true,
+  "meta_tipo": "Capacitación In-Company · Tres agentes de IA conectados (valoración, tráfico y cotización), 80 h de proyecto en tres fases · formato compacto v3",
+  "eje": "Construir tres agentes de IA conectados entre sí (cálculo de impuestos de valoración, gestión de tráfico con rastreo en las navieras y cotización) y dejar al equipo de Luz del Mar probándolos y usándolos en su trabajo diario",
+  "origen": "Pedido de Ivana (23/11/2026): propuesta de Habilidades para Luz del Mar a partir de la Ficha de Levantamiento del 20/11/2026, el resumen de Verónica y la transcripción de su reunión con la dueña (50 min). Asesora: Verónica Rubio",
+  "fuente_insumo": "Ficha de Levantamiento (20/11/2026), resumen de la asesora y transcripción de la reunión del 20/11/2026",
+  "vocabulario": {
+    "solucion": [
+      "entregable",
+      "entregables"
+    ],
+    "area": [
+      "área",
+      "áreas"
+    ]
+  },
+  "siglas_ok": [
+    "IA"
+  ],
+  "portada": {
+    "titulo_lineas": [
+      "Tres agentes de IA conectados",
+      "para valorar, rastrear y cotizar"
+    ],
+    "titulo_destacado": "en Luz del Mar",
+    "lead": "Construimos tres agentes de IA conectados entre sí, que **valoran** los impuestos, **rastrean** la carga en las navieras y **cotizan**, y el equipo los prueba y los adopta en su trabajo diario.",
+    "hechos": [
+      {
+        "num": "90 %",
+        "texto": "de las tareas de Tráfico y Valoración son manuales, entre Excel, correos y portales, según la dueña.",
+        "resuelto_por": [
+          "TR-2",
+          "VA-2"
+        ]
+      },
+      {
+        "num": "10",
+        "texto": "navieras se consultan una por una, cada día, en su propio portal.",
+        "resuelto_por": [
+          "TR-2"
+        ]
+      },
+      {
+        "num": "1 externo",
+        "texto": "valorador calcula los impuestos a mano, cobra por documento y hay que esperar su turno.",
+        "resuelto_por": [
+          "VA-1",
+          "VA-2"
+        ]
+      },
+      {
+        "num": "70 %",
+        "texto": "de la información de cada carga se repite siempre y hoy se rearma a mano cada vez.",
+        "resuelto_por": [
+          "VA-1",
+          "CO-1"
+        ]
+      }
+    ]
+  },
+  "carriles": [
+    {
+      "id": "ia",
+      "nombre": "Agentes de IA",
+      "nombre_corto": "Agentes",
+      "color": "amarillo"
+    }
+  ],
+  "areas": [
+    {
+      "id": "VA",
+      "nombre": "Valoración",
+      "carril": "ia",
+      "frente": "A",
+      "para_que": "Calcular los impuestos de cada carga con la base propia, sin esperar al valorador externo",
+      "soluciones": [
+        {
+          "id": "VA-1",
+          "entregable": "Base de gacetas y reglas",
+          "h": 6,
+          "fase": "F1",
+          "detalle": "Ordenar las gacetas de arancel y el historial de cargas anteriores que la agencia ya tiene archivados, con las reglas de valoración, para que el agente los consulte y se actualicen con cada gaceta nueva."
+        },
+        {
+          "id": "VA-2",
+          "entregable": "Agente de cálculo de impuestos",
+          "h": 8,
+          "fase": "F1",
+          "detalle": "Agente que recibe el documento de la carga, consulta las gacetas y las referencias de importaciones anteriores y genera la pre-valoración; la persona de Valoración la revisa."
+        },
+        {
+          "id": "VA-3",
+          "entregable": "Pruebas del equipo con cargas reales",
+          "h": 6,
+          "fase": "F1",
+          "detalle": "El equipo de Valoración prueba el agente con cargas reales de la agencia, comparadas con valoraciones ya hechas, y Intezia ajusta hasta que confíe en el resultado."
+        }
+      ]
+    },
+    {
+      "id": "TR",
+      "nombre": "Tráfico",
+      "carril": "ia",
+      "frente": "A",
+      "para_que": "Saber dónde está cada carga y qué falta, sin perseguir información portal por portal",
+      "soluciones": [
+        {
+          "id": "TR-1",
+          "entregable": "Lectura del correo y de la carga",
+          "h": 5,
+          "fase": "F2",
+          "detalle": "Agente que revisa el correo de entrada, identifica la carga y lo que falta de cada cliente."
+        },
+        {
+          "id": "TR-2",
+          "entregable": "Rastreo en las 10 navieras",
+          "h": 9,
+          "fase": "F2",
+          "detalle": "Consulta automática del estado de cada carga en el portal de cada naviera con su número de guía. Depende de cómo permita consultar cada portal; se prueba con cada una."
+        },
+        {
+          "id": "TR-3",
+          "entregable": "Estatus consolidado para enviar",
+          "h": 4,
+          "fase": "F2",
+          "detalle": "Estatus armado con el rastreo, lo que falta y la valoración recibida, listo para que la persona de Tráfico lo revise y lo envíe al cliente."
+        },
+        {
+          "id": "TR-4",
+          "entregable": "Cartas y documentos de cada carga",
+          "h": 2,
+          "fase": "F2",
+          "detalle": "Las cartas y solicitudes que cada carga necesita, generadas de una vez cuando llega."
+        }
+      ]
+    },
+    {
+      "id": "CO",
+      "nombre": "Cotización",
+      "carril": "ia",
+      "frente": "A",
+      "para_que": "Cotizar cada carga a partir de su valoración, con lo que se pagó antes",
+      "soluciones": [
+        {
+          "id": "CO-1",
+          "entregable": "Historial de pagos y permisos",
+          "h": 6,
+          "fase": "F3",
+          "detalle": "Ordenar el historial de lo que se pagó en cargas anteriores y los permisos con su valor, hoy en hojas de cálculo, para que el agente lo consulte."
+        },
+        {
+          "id": "CO-2",
+          "entregable": "Agente de cotización",
+          "h": 9,
+          "fase": "F3",
+          "detalle": "Agente que, a partir de la valoración del agente anterior, arma la cotización para el cliente; la persona la revisa."
+        },
+        {
+          "id": "CO-3",
+          "entregable": "Cotización revisada para el cliente",
+          "h": 5,
+          "fase": "F3",
+          "detalle": "Formato de cotización de la agencia y revisión de la persona antes de enviarla."
+        }
+      ]
+    },
+    {
+      "id": "CX",
+      "nombre": "Conexión y traspaso",
+      "carril": "ia",
+      "frente": "A",
+      "para_que": "Que los tres agentes funcionen como un solo flujo y el equipo sepa usarlos y probarlos",
+      "soluciones": [
+        {
+          "id": "CX-1",
+          "entregable": "Tres agentes en un solo flujo",
+          "h": 8,
+          "fase": "F3",
+          "detalle": "Conexión de los tres agentes: la valoración alimenta el estatus y la cotización, sin pasar datos a mano."
+        },
+        {
+          "id": "CX-2",
+          "entregable": "Alertas y revisión de fallas",
+          "h": 4,
+          "fase": "F3",
+          "detalle": "Avisos cuando un agente falla o le falta información, para que el equipo sepa cuándo revisar y a quién reportarlo."
+        },
+        {
+          "id": "CX-3",
+          "entregable": "Guía de uso de cada agente",
+          "h": 4,
+          "fase": "F3",
+          "detalle": "Guía de qué hace cada agente, cuándo revisar su resultado y cómo avisar de una falla."
+        },
+        {
+          "id": "CX-4",
+          "entregable": "Capacitación de uso de los agentes",
+          "h": 4,
+          "fase": "F3",
+          "detalle": "Capacitación breve para que el equipo use y pruebe los agentes: qué hace cada uno, cuándo revisar y cómo reportar lo que falla."
+        }
+      ]
+    }
+  ],
+  "alcance": {
+    "titulo": "Tres agentes y su conexión, en tres fases.",
+    "subtitulo": "Cada agente resuelve un flujo de la agencia: Intezia los construye y el equipo los prueba y adopta.",
+    "fuera_alcance": [
+      "Cerebro Digital de la dueña: propuesta aparte.",
+      "Página web con usuario y clave para que cada cliente vea su estatus: queda para una etapa posterior.",
+      "Crear un software o un sistema administrativo propio: se construyen agentes, no un sistema."
+    ]
+  },
+  "metodo": {
+    "titulo": "Intezia construye, el equipo adopta.",
+    "subtitulo": "Intezia construye cada agente; el equipo de la agencia lo prueba y lo adopta en su trabajo diario.",
+    "pasos": [
+      {
+        "titulo": "Construimos",
+        "texto": "Intezia construye cada agente con cargas y correos reales de la agencia."
+      },
+      {
+        "titulo": "Probamos",
+        "texto": "El equipo los prueba con cargas reales y dice qué ajustar, antes de usarlos solos."
+      },
+      {
+        "titulo": "Adoptamos",
+        "texto": "El equipo los usa en su trabajo diario y sabe cuándo revisar."
+      },
+      {
+        "titulo": "Medimos",
+        "texto": "El tiempo recuperado por flujo y el gasto en cada valoración."
+      }
+    ],
+    "por_que_orden": "Primero Valoración, porque su cálculo alimenta a los otros dos. Después Tráfico, que usa esa valoración en el estatus. Al final Cotización y la conexión de los tres, que dependen de lo anterior.",
+    "quien_construye": "**Intezia construye** los agentes con la información de la agencia; el equipo los **prueba y adopta**, sin tener que construir nada.",
+    "practica": [
+      {
+        "titulo": "Con el trabajo real de cada uno",
+        "texto": "Cada agente parte de una tarea de su día a día: cargas, correos y cálculos reales, no ejercicios de aula."
+      },
+      {
+        "titulo": "Sobre la base propia",
+        "texto": "Se parte de lo que la agencia ya tiene archivado; no hace falta el software de un proveedor del sector."
+      },
+      {
+        "titulo": "Depende de cada portal",
+        "texto": "El rastreo depende de cómo permita consultar cada naviera: se prueba con cada una antes de fijar el flujo."
+      }
+    ],
+    "datos": "Los datos de las cargas y de los clientes se usan solo con la autorización de la agencia, y una persona revisa cada estatus y cotización antes de enviarlos."
+  },
+  "logistica": {
+    "modalidad": "Presencial en su sede de Puerto Cabello, según se acuerde en la reunión de arranque.",
+    "participantes": "Tráfico, Valoración y la dueña, para probar y adoptar los agentes.",
+    "arranque": "Las fechas se acuerdan en la reunión de arranque."
+  },
+  "fases": [
+    {
+      "id": "F1",
+      "titulo": "Base",
+      "descripcion": "Valoración y gacetas"
+    },
+    {
+      "id": "F2",
+      "titulo": "Estatus",
+      "descripcion": "Tráfico y rastreo"
+    },
+    {
+      "id": "F3",
+      "titulo": "Cierre",
+      "descripcion": "Cotización y conexión",
+      "destacada": true
+    }
+  ],
+  "frentes": [
+    {
+      "id": "A",
+      "carril": "ia",
+      "nombre": "Tres agentes conectados",
+      "celdas": {
+        "F1": "El agente calcula los impuestos con las gacetas y el historial de la agencia.",
+        "F2": "El agente revisa el correo, rastrea las navieras y arma el estatus.",
+        "F3": "Cotización automática y los tres agentes en un solo flujo."
+      }
+    }
+  ],
+  "ruta": {
+    "titulo": "De la carga a la cotización.",
+    "hitos": [
+      {
+        "titulo": "Arranque",
+        "texto": "Reunión para conocer al equipo, ver el recorrido de una carga y fijar la línea base de tiempos."
+      },
+      {
+        "titulo": "Valoración",
+        "texto": "El agente calcula la pre-valoración de una carga real."
+      },
+      {
+        "titulo": "Estatus",
+        "texto": "El estatus de una carga sale armado, con lo que falta."
+      },
+      {
+        "titulo": "Cierre",
+        "texto": "Los tres agentes conectados; empieza la garantía."
+      }
+    ]
+  },
+  "seguimiento": {
+    "rango": "30, 60 y 90 días",
+    "texto": "Seguimiento desde el cierre de cada área",
+    "items": [
+      {
+        "dias": "30 días",
+        "texto": "Uso real y ajustes"
+      },
+      {
+        "dias": "60 días",
+        "texto": "Ajustes con casos nuevos"
+      },
+      {
+        "dias": "90 días",
+        "texto": "Tablero del tiempo ganado, contra la línea base"
+      }
+    ]
+  },
+  "entregables": {
+    "titulo": "Lo que recibe la agencia.",
+    "subtitulo": "Lo que se llevan los equipos: los tres agentes funcionando y conectados, más el seguimiento a 30, 60 y 90 días.",
+    "etiqueta_transversales": "Para todo el proyecto",
+    "transversales": [
+      "Línea base del tiempo de cada tarea.",
+      "Documentación de cada agente.",
+      "Seguimiento a 30, 60 y 90 días."
+    ],
+    "valor_inmediato": [
+      "Fase 1: la pre-valoración de una carga, sin esperar al valorador.",
+      "Fase 2: el estatus de la carga, armado y listo para revisar.",
+      "Fase 3: la cotización y los tres agentes conectados."
+    ],
+    "impacto": {
+      "enfoque": "operacion",
+      "texto": "Los tres flujos quedan **conectados**: de la carga que llega al correo a la valoración, el estatus y la cotización, con el equipo **usando y revisando** cada agente."
+    }
+  },
+  "retorno": {
+    "modo": "metodo",
+    "posiciones": false,
+    "titulo": "Retorno esperado: tiempo y gasto por carga.",
+    "subtitulo": "Se calcula con las tareas de cada flujo, partiendo del tiempo y del gasto que hoy tienen.",
+    "etiqueta_pasos": "Cómo se calcula, por flujo y por tarea",
+    "pasos": [
+      {
+        "titulo": "Tareas de cada flujo",
+        "texto": "Cuántas cargas, consultas a navieras, valoraciones y cotizaciones se hacen y cuántas veces se repiten."
+      },
+      {
+        "titulo": "Tiempo actual por tarea",
+        "texto": "Se mide al arrancar, con quien hace el trabajo, y es la **línea base**."
+      },
+      {
+        "titulo": "Tiempo con el agente",
+        "texto": "Lo que toma la misma tarea con el agente en uso y la revisión de la persona."
+      },
+      {
+        "titulo": "Horas recuperadas",
+        "texto": "Número de tareas por la diferencia entre el tiempo actual y el tiempo con el agente."
+      },
+      {
+        "titulo": "Gasto en cada valoración",
+        "texto": "Lo que hoy se paga por cada valoración externa, contra lo que toma calcularla con el agente."
+      }
+    ],
+    "etiqueta_metas": "Calendario de garantía, desde el cierre de cada área",
+    "metas": [
+      {
+        "dias": "30 días",
+        "texto": "Los agentes funcionan a diario con cargas reales."
+      },
+      {
+        "dias": "60 días",
+        "texto": "Ajustes con casos nuevos y menos pasos a mano."
+      },
+      {
+        "dias": "90 días",
+        "texto": "Tablero con el tiempo ganado y el gasto en cada valoración."
+      }
+    ],
+    "destino": [
+      {
+        "rotulo": "Estatus a tiempo real",
+        "texto": "El cliente recibe su estatus armado, **sin esperar** a que alguien persiga cada portal."
+      },
+      {
+        "rotulo": "Menos espera",
+        "texto": "La valoración se calcula con la base propia, con menos espera del valorador externo."
+      },
+      {
+        "rotulo": "Equipo que los usa",
+        "texto": "El equipo **prueba y usa** los agentes en su trabajo diario, y sabe cuándo revisar o avisar si algo falla."
+      }
+    ],
+    "gancho": "La meta de la dueña es liberar la mayor parte del trabajo manual de Tráfico y Valoración; a los 90 días se mide cuánto se logró."
+  },
+  "inversion": {
+    "duracion": "Proyecto en tres agentes conectados y tres fases: {h_total} horas de proyecto, con seguimiento y garantía a 30, 60 y 90 días.",
+    "programa": [
+      "Agentes de valoración, tráfico y cotización, y su conexión ({codigo}).",
+      "Valoración, tráfico, cotización y conexión de los tres agentes, en tres fases.",
+      "{h_total} horas de proyecto, más la reunión de arranque aparte."
+    ],
+    "notas": [
+      "Garantía 30-60-90: seguimiento a {rango_seguimiento} desde el cierre de cada área.",
+      "Términos y condiciones: los del enlace de «Importante», que ambas partes aceptan al avanzar con esta propuesta.",
+      "Licencias de IA, aparte: se confirman en el arranque."
+    ]
+  },
+  "omitir": [
+    "pago"
+  ],
+  "proximos_pasos": {
+    "titulo": "Tres pasos para arrancar.",
+    "subtitulo": "Esto es lo que sigue cuando Luz del Mar confirme la propuesta.",
+    "asesora": {
+      "nombre": "Verónica Rubio",
+      "cargo": "Asesora comercial",
+      "correo": "vrubio01@intezia.com",
+      "telefono": "+58 422 3355505"
+    },
+    "pasos": [
+      {
+        "titulo": "Revisar la propuesta",
+        "texto": "La revisamos con la dueña y resolvemos sus dudas sobre el alcance y el orden."
+      },
+      {
+        "titulo": "Accesos y participantes",
+        "texto": "Coordinamos el acceso a las gacetas, el correo y los portales, y quién de Tráfico y Valoración prueba los agentes."
+      },
+      {
+        "titulo": "Reunión de arranque",
+        "texto": "Reunión de unos 30 minutos para conocer al equipo, alinear prioridades y medir la línea base."
+      }
+    ]
+  },
+  "frases_ok": [],
+  "supuestos": [
+    "Pedido de Ivana (23/11/2026): propuesta de Habilidades CAI-117 para Luz del Mar (agencia de aduanas en Puerto Cabello, primer contacto). Asesora: Verónica Rubio.",
+    "Decisiones de Ivana: 80 h, impacto «operación», sin nombrar herramienta de IA ni licencias, sin facilidad de pago. División Educación y sin alianza: supuesto mío, no se preguntó (confirmar).",
+    "Reparto de las 80 h mío: 20 h por agente (Valoración 6, 8 y 6; Tráfico 5, 9, 4 y 2; Cotización 6, 9 y 5) y 20 h de conexión y traspaso (8, 4, 4 y 4).",
+    "Orden de las fases por dependencia (no el de la ficha): Valoración primero porque su cálculo alimenta a Tráfico y a Cotización; la conexión de los tres cierra.",
+    "Sin nombres de personas del cliente, del valorador externo ni de empresas de mensajería. Se dice «el valorador externo», «las 10 navieras» y «la dueña».",
+    "Sin nombrar herramienta ni plataforma de flujos (la dueña pidió n8n, Make o Zapier; Verónica habló de Claude, n8n y Gemini). Sin VPN: Venezuela no es país soportado.",
+    "El rastreo en las 10 navieras depende de cómo permita consultar cada portal: el deck lo dice y lo prueba con cada una; no promete que todas sean automatizables.",
+    "La meta «liberar 90 % del trabajo manual» es declarada por la dueña, no medida: el deck la rotula como meta. El 70 % de información repetida de cada carga y el 90 % manual también son declarados por ella.",
+    "Retorno en modo método: la ficha no trae tiempos ni volúmenes ni lo que cobra el valorador externo por documento. Si llegan, pasar a cifras con su origen.",
+    "Fuera de alcance: Cerebro Digital de la dueña (propuesta aparte, Verónica ofreció enviarla), página web de estatus con usuario y clave (la dueña lo mencionó como deseo) y crear un software propio.",
+    "La dueña pidió ver las formas de pago y el pago inicial; se omitió la facilidad de pago por decisión de Ivana y se comentará aparte (Verónica mencionó 30 % inicial y 2 o 3 cuotas). Sin fechas ni meses (§4.23).",
+    "Un solo valorador externo y eventual: la persona de Valoración interna revisa su cálculo. El agente reemplaza la pre-valoración del externo, no la revisión humana.",
+    "Ajuste del 23/11/2026 (Ivana): Intezia construye los agentes y la agencia los prueba y adopta; el equipo no participa en la construcción ni queda a cargo de mantenerlos (los ajustes los cubre la garantía 30-60-90). Se reescribieron la portada, el alcance, el método, el retorno, los entregables y los próximos pasos; «Pruebas con cargas reales» pasa a «Pruebas del equipo», «Guía de mantenimiento» a «Guía de uso» e «Introducción a los agentes» a «Capacitación de uso». Las horas no cambian (80 h)."
+  ],
+  "pendientes": [
+    "Valor, descuento y total: campos vacíos para ventas.",
+    "Confirmar División (Educación) y alianza (no).",
+    "Confirmar el reparto de las 80 h entre los 14 entregables.",
+    "Confirmar con el consultor si los 10 portales de navieras permiten consulta automática.",
+    "Si la dueña quiere ver las formas de pago en la propuesta (lo pidió en la reunión).",
+    "Herramienta de IA y de flujos, y quién contrata las licencias (arranque).",
+    "Propuesta aparte del Cerebro Digital de la dueña.",
+    "Confirmar el teléfono y el correo de Verónica Rubio (tomados de propuestas anteriores)."
+  ]
+}

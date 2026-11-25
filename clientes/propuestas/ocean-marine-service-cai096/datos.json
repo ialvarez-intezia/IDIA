@@ -1,0 +1,526 @@
+{
+ "version": 3,
+ "cliente": {
+  "nombre": "Ocean Marine Service International LLC",
+  "slug": "ocean-marine-service-cai096",
+  "codigo": "CAI-096",
+  "nombre_pie": "OMS"
+ },
+ "division": "educacion",
+ "alianza": false,
+ "sin_horas_trabajo": true,
+ "meta_tipo": "Habilidades · agente de IA para las compras de Stores y materiales técnicos · dos opciones de 50 h cada una: A) construcción en casa (25 h asíncronas) y 25 h síncronas con el equipo; B) 25 h de construcción con el equipo y 25 h más para testear y adoptar · seguimiento 30-60-90 · sin facilidad de pago · formato compacto v3",
+ "vocabulario": {
+  "solucion": [
+   "entregable",
+   "entregables"
+  ],
+  "area": [
+   "bloque",
+   "bloques"
+  ]
+ },
+ "eje": "Agente de IA que procesa requerimientos de compra recibidos por correo, consulta el historial de Odoo v18 en solo lectura y presenta comparativos con recomendación para aprobación del equipo de Stores",
+ "origen": "Requerimiento escrito del cliente (pegado por Ivana el 12/11/2026) e instrucciones de Ivana: desarrollo en casa, luego adaptación y pruebas con el equipo; 40 h con la construcción sin el equipo; enfoque de Impacto: operación; asesora Flavia Martínez",
+ "fuente_insumo": "Documento de requerimiento de OMS (alcance de recepción, Odoo, validación, proveedores, comparativos, catálogo y control) sin Ficha Comercial ni transcripción de la reunión",
+ "siglas_ok": [
+  "IA",
+  "OMS",
+  "IMPA",
+  "PDF"
+ ],
+ "supuestos": [
+  "Servicio y cuenta (instrucciones de Ivana, 12/11/2026): Habilidades, plantilla compacta v3, Educación y sin alianza (confirmados con Ivana). Código **CAI-096**: Ivana lo pidió bajo CAI-095, que ya se usó para Médica Campestre; ella aceptó CAI-096 para Ocean Marine Service.",
+  "**Dos opciones (Ivana, 12/11/2026, segunda ronda):** el requerimiento pedía presentar ambas y Ivana pidió reflejarlas. **Opción A:** desarrollo en casa (20 h asíncronas sin el equipo) y 20 h síncronas con Stores (levantamiento, adaptación, testeo y adopción). **Opción B:** se construye con Stores 20 h y 20 h más para testear y adoptar (el levantamiento va dentro de la construcción). Ambas de 40 h (luego 50 h, ver «Subida a 50 h»); se elige una. Se reflejan en alcance, ruta, método y dos hojas de inversión (`inversion.etapas`, con valor, descuento y total propios).",
+  "Horas (Ivana, 12/11/2026): 40 h por opción (subidas a 50 h el 13/11/2026, ver «Subida a 50 h»). A = 20 h asíncronas sin el equipo + 20 h síncronas (reparto mío: levantamiento 4, adaptación 4, pruebas 6, adopción y documentación 6; las 20 h asíncronas se reparten 3 + 3 + 3 + 3 + 6 + 2 entre los módulos del agente). B = 20 h de construcción con el equipo + 20 h de testeo y adopción. Ivana pidió mostrar las horas asíncronas (excepción a ocultar las de Intezia, §4.23 punto 4). Ojo: `{h_total}` suma 80 (las dos opciones); el deck escribe las horas a mano.",
+  "Alcance: sale del requerimiento de OMS, sin agregar nada. Recepción (correo y adjuntos Excel, PDF e imágenes, inglés y español), conector de solo lectura a Odoo v18, validación en cuatro clases, proveedores y solicitudes de cotización, comparativo por artículo y combinación recomendada con Excel, fichas de producto nuevo con base de conocimiento, y control (aprobaciones, pendientes, accesos y registro). La primera fase no escribe en Odoo, no envía correos ni emite órdenes.",
+  "Sin herramienta de IA nombrada: el requerimiento no la define; se acuerda en el levantamiento. Odoo v18 se nombra como entorno del cliente al que el agente se integra (§4.11); no se afirma migración.",
+  "El requerimiento pide también arquitectura, costos de desarrollo, operación y mantenimiento, seguridad y soporte: el deck cubre seguridad (solo lectura, accesos restringidos y registro) y deja la **operación y el mantenimiento posteriores como cotizados aparte** (supuesto mío). La arquitectura detallada se presentará en vivo.",
+  "El requerimiento no dice país, moneda ni modalidad de OMS (LLC): la hoja de inversión sale con REF y la leyenda de pago a tasa BCV (automático); se apaga con `inversion.sin_ref` si facturan en otra moneda. Sin nombres de personas del cliente (solo el cargo del Director de Logística).",
+  "Impacto (Ivana, 12/11/2026): enfoque **operación**; texto sin cifras.",
+  "Sin facilidad de pago (Ivana, 12/11/2026): el deck no lleva la lámina de pago (`omitir: [\"pago\"]`); la hoja de inversión sigue con valor, descuento y total vacíos para ventas.",
+  "Opción B: el levantamiento va dentro de las 25 h de construcción; internamente se anota como 2 h (OPB-0) + 23 h (OPB-1) porque el generador no admite 0 h. El deck muestra «Incluido» y «25 h».",
+  "**Respuestas de OMS a las preguntas de viabilidad (13/11/2026):** su Odoo 18 está en **Odoo.sh**, que admite la API externa por XML-RPC y JSON-RPC; el usuario de integración será de solo lectura; y OMS puede habilitar una clave de API de un modelo de IA para el desarrollo. Con eso el deck dejó de condicionar el conector a «alojamiento y accesos»: lo afirma como confirmado por el cliente (método, entregable del conector, fuera de alcance y próximos pasos: «Usuario y clave»). Sin n8n ni protocolo en las láminas, solo «API externa».",
+  "**Subida a 50 h (Ivana, 13/11/2026):** cada opción pasa de 40 a 50 h; Ivana no dijo dónde van las 10 h extra, así que las repartí a partes iguales (+5 y +5, reparto mío). A: 25 asíncronas (lectura de correos 4, conector 4, clasificación 4, cotizaciones 4, comparativo 7, fichas 2) + 25 síncronas (levantamiento 5, adaptación 5, pruebas 7, adopción y documentación 8). B: 25 de construcción (levantamiento incluido, 2 + 23 internas) + 25 de testeo y adopción. `{h_total}` suma 100.",
+  "**Una sola hoja de cotización (Ivana, 13/11/2026):** se quitó `inversion.etapas`: las dos opciones de 50 h comparten una hoja con un solo valor, descuento y total, y la nota dice que el valor es el mismo para A y B (supuesto que sigue de pedir una sola hoja). La hoja resume ambas opciones en la duración y el programa."
+ ],
+ "pendientes": [
+  "OMS no respondió la tercera parte de la pregunta 3: si TI restringe usar una plataforma de automatización (p. ej. n8n) con un modelo externo. Preguntarlo antes de definir la arquitectura. Falta también qué modelo de IA habilitan y quién crea el usuario de solo lectura.",
+  "Confirmar si la operación y el mantenimiento posteriores se cotizan aparte y si hay que ponerles valor; y los servicios que OMS contrata (modelo de IA, correo, alojamiento).",
+  "Confirmar modalidad (remota o presencial), moneda de facturación y país de OMS.",
+  "Preparar la presentación en vivo de la arquitectura (correo → agente → Odoo en solo lectura → comparativo en pantalla y Excel → aprobación humana).",
+  "Reasignar el código en el registro si Médica Campestre vuelve a pedirlo.",
+  "Confirmar el reparto de las 10 h extra por opción (+5 en construcción y +5 en pruebas y adopción) y que ambas opciones valgan lo mismo, porque ahora hay un solo valor.",
+  "Ventas llena inversión, descuento y total de la hoja única antes de enviar."
+ ],
+ "portada": {
+  "titulo_lineas": [
+   "Agente de IA que lleva el correo",
+   "a una compra lista para aprobar"
+  ],
+  "titulo_destacado": "en {cliente_corto}",
+  "lead": "Un **agente de inteligencia artificial** que lee los requerimientos que llegan por correo a **Ocean Marine Service**, consulta el historial de **Odoo** y presenta comparativos con recomendación para que Stores apruebe.",
+  "hechos": [
+   {
+    "num": "4",
+    "texto": "personas de Stores, incluido el Director de Logística, atienden las compras.",
+    "resuelto_por": [
+     "AGE-1",
+     "AGE-5"
+    ]
+   },
+   {
+    "num": "Correo",
+    "texto": "con adjuntos en Excel, PDF e imágenes, en inglés y en español.",
+    "resuelto_por": [
+     "AGE-1"
+    ]
+   },
+   {
+    "num": "Catálogo",
+    "texto": "con fichas incompletas: encontrar una ficha no valida el producto ni su compatibilidad.",
+    "resuelto_por": [
+     "AGE-2",
+     "AGE-3",
+     "AGE-6"
+    ]
+   }
+  ]
+ },
+ "carriles": [
+  {
+   "id": "agente",
+   "nombre": "Agente de compras",
+   "nombre_corto": "Agente de compras",
+   "color": "amarillo"
+  }
+ ],
+ "areas": [
+  {
+   "id": "LEV",
+   "nombre": "A · Levantamiento con Stores",
+   "para_que": "Entender cómo llegan hoy los requerimientos y qué se revisa y aprueba.",
+   "carril": "agente",
+   "frente": "A",
+   "soluciones": [
+    {
+     "id": "LEV-1",
+     "entregable": "Levantamiento de requerimientos y reglas",
+     "h": 5,
+     "fase": "F1",
+     "detalle": "Referencia interna: levantamiento con el equipo de Stores de cómo llegan los requerimientos, qué revisa cada quien y las reglas de aprobación.",
+     "incluye": [
+      "Cómo llegan hoy los requerimientos y qué se aprueba",
+      "Reglas de aprobación y quién autoriza cada compra"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "AGE",
+   "nombre": "A · Agente construido en casa",
+   "para_que": "Intezia construye el agente sin el equipo: lee, valida, cotiza y compara.",
+   "carril": "agente",
+   "frente": "A",
+   "soluciones": [
+    {
+     "id": "AGE-1",
+     "entregable": "Lectura de correos y adjuntos",
+     "h": 4,
+     "fase": "F2",
+     "detalle": "Referencia interna: lectura de correos y adjuntos en Excel, PDF e imágenes, en inglés y español; barco, puerto, fecha, artículos, cantidades, unidades, marcas, modelos, referencias y códigos IMPA; consultas por datos faltantes; vínculo de cada artículo al requerimiento original y control de revisiones.",
+     "incluye": [
+      "Correo y adjuntos, en ambos idiomas",
+      "Barco, puerto, fecha, artículos, cantidades y códigos IMPA",
+      "Consultas por los datos que faltan, sin inventar especificaciones"
+     ]
+    },
+    {
+     "id": "AGE-2",
+     "entregable": "Conector de solo lectura a Odoo",
+     "h": 4,
+     "fase": "F2",
+     "detalle": "Referencia interna: consulta por la API externa de Odoo.sh (XML-RPC o JSON-RPC), con un usuario de solo lectura creado por OMS, de productos, proveedores, existencias, reservas, cotizaciones, órdenes de compra, recepciones y facturas; sin modificar registros ni instalar módulos dentro de Odoo.",
+     "incluye": [
+      "Consulta por la API externa de Odoo, solo lectura",
+      "Productos, proveedores, existencias y reservas",
+      "Cotizaciones, órdenes, recepciones y facturas"
+     ]
+    },
+    {
+     "id": "AGE-3",
+     "entregable": "Clasificación de productos",
+     "h": 4,
+     "fase": "F2",
+     "detalle": "Referencia interna: búsqueda por código, marca, modelo, referencia y descripción, con revisión de la evidencia documental; cada producto queda en una de cuatro clases, con los registros que la respaldan.",
+     "incluye": [
+      "Historial comprobable, registrado sin validar, posible equivalente o nuevo",
+      "Muestra los registros de Odoo que respaldan cada clase"
+     ]
+    },
+    {
+     "id": "AGE-4",
+     "entregable": "Solicitudes de cotización a proveedores",
+     "h": 4,
+     "fase": "F2",
+     "detalle": "Referencia interna: consulta de proveedores históricos y búsqueda de nuevas opciones; solicitudes de cotización preparadas como borrador; distingue valor publicado, cotización recibida y disponibilidad confirmada, con fuente y fecha."
+    },
+    {
+     "id": "AGE-5",
+     "entregable": "Comparativo y compra recomendada",
+     "h": 7,
+     "fase": "F2",
+     "detalle": "Referencia interna: cuadro comparativo por artículo con las ofertas lado a lado, sobre una misma base de cantidades, unidades y moneda; mejor opción por artículo y combinación recomendada del pedido completo; la más económica, entrega más rápida y recomendada; consulta en pantalla y exportación a Excel con vínculos a las cotizaciones.",
+     "incluye": [
+      "Ofertas lado a lado y total hasta el destino",
+      "La más económica, la más rápida y la recomendada, con su criterio",
+      "En pantalla y en Excel, con vínculos a las cotizaciones"
+     ]
+    },
+    {
+     "id": "AGE-6",
+     "entregable": "Fichas nuevas y base de conocimiento",
+     "h": 2,
+     "fase": "F2",
+     "detalle": "Referencia interna: propuesta de ficha para productos nuevos, con búsqueda previa de duplicados y sin crear ni modificar productos en Odoo; correcciones y equivalencias aprobadas en una base de conocimiento que administra OMS."
+    }
+   ]
+  },
+  {
+   "id": "ADA",
+   "nombre": "A · Testeo y adopción con Stores",
+   "para_que": "El agente ajustado a Stores, probado con casos reales y en uso.",
+   "carril": "agente",
+   "frente": "A",
+   "soluciones": [
+    {
+     "id": "ADA-1",
+     "entregable": "Adaptación del agente a Stores",
+     "h": 5,
+     "fase": "F3",
+     "detalle": "Referencia interna: ajuste del agente a las reglas, formatos y criterios de Stores, con el equipo."
+    },
+    {
+     "id": "ADA-2",
+     "entregable": "Pruebas con requerimientos reales",
+     "h": 7,
+     "fase": "F3",
+     "detalle": "Referencia interna: pruebas con requerimientos reales (productos con historial, fichas incompletas, productos nuevos y posibles equivalencias) y validación de comparativos, conversiones de unidades, totales y fechas de entrega."
+    },
+    {
+     "id": "ADA-3",
+     "entregable": "Adopción, documentación y accesos",
+     "h": 8,
+     "fase": "F3",
+     "detalle": "Referencia interna: adopción del agente por el equipo de Stores, entrega de la documentación y de los accesos a OMS, y recorrido completo desde el correo hasta una propuesta de compra verificable lista para aprobación."
+    }
+   ]
+  },
+  {
+   "id": "OPB",
+   "nombre": "B · Construido junto a Stores",
+   "para_que": "El mismo agente, construido en vivo con el equipo de Stores y luego testeado.",
+   "carril": "agente",
+   "frente": "B",
+   "soluciones": [
+    {
+     "id": "OPB-0",
+     "entregable": "Levantamiento dentro de la construcción",
+     "h": 2,
+     "fase": "F1",
+     "detalle": "Referencia interna: el levantamiento con Stores se hace dentro de los primeros encuentros de las 25 h de construcción (2 h de ellas); en el deck se muestra «Incluido»."
+    },
+    {
+     "id": "OPB-1",
+     "entregable": "Construcción del agente con Stores",
+     "h": 23,
+     "fase": "F2",
+     "detalle": "Referencia interna: construcción del agente junto al equipo de Stores, en vivo; el levantamiento se hace dentro de los primeros encuentros. Mismos módulos que la opción A: lectura de correos, conector de solo lectura a Odoo, clasificación, cotizaciones, comparativo y fichas nuevas.",
+     "incluye": [
+      "Los mismos módulos del agente, construidos en vivo con Stores",
+      "Levantamiento dentro de los primeros encuentros"
+     ]
+    },
+    {
+     "id": "OPB-2",
+     "entregable": "Testeo y adopción con Stores",
+     "h": 25,
+     "fase": "F3",
+     "detalle": "Referencia interna: 25 h más para testear con requerimientos reales, adaptar, adoptar y entregar la documentación y los accesos.",
+     "incluye": [
+      "Pruebas con requerimientos reales y adaptación",
+      "Adopción, documentación y accesos"
+     ]
+    }
+   ]
+  }
+ ],
+ "alcance": {
+  "titulo": "Un agente que prepara la compra para aprobar.",
+  "subtitulo": "Dos formas de construirlo, **en casa** o **en conjunto**, de 50 horas cada una; se elige una.",
+  "fuera_alcance": [
+   "Escribir en Odoo, crear productos, enviar correos, emitir órdenes o aceptar sustituciones: requieren autorización expresa.",
+   "Licencias y servicios de terceros (Odoo, correo, modelo de IA): los define y contrata {cliente_corto}.",
+   "Operación y mantenimiento posteriores al proyecto: se cotizan aparte."
+  ],
+  "sin_conteo_por_fila": true
+ },
+ "metodo": {
+  "titulo": "Dos formas de construir el agente de Stores.",
+  "subtitulo": "Intezia lo construye en casa o junto al equipo de Stores; en ambas, se prueba con requerimientos reales.",
+  "quien_construye": "**Opción A:** Intezia construye sin el equipo. **Opción B:** se construye junto al equipo de Stores.",
+  "por_que_orden": "Primero se construye el agente, sin el equipo o con él; después se testea y se adopta con Stores, con sus requerimientos reales.",
+  "practica": [
+   {
+    "titulo": "Opción A · en casa",
+    "texto": "Intezia construye el agente de forma asíncrona (25 h) y luego Stores lo testea y lo adopta en 25 h síncronas."
+   },
+   {
+    "titulo": "Opción B · en conjunto",
+    "texto": "Se construye junto al equipo de Stores (25 h) y se dedican 25 h más a testear y adoptar."
+   },
+   {
+    "titulo": "Casos reales",
+    "texto": "Productos con historial, fichas incompletas, nuevos y posibles equivalencias."
+   }
+  ],
+  "datos": "Odoo se consulta por su API externa con un usuario de solo lectura que crea {cliente_corto}: nada se modifica. Enviar correos, emitir órdenes o aceptar sustituciones requiere autorización expresa, y las acciones quedan registradas.",
+  "pasos": [
+   {
+    "titulo": "Levantamos",
+    "texto": "Con el equipo de Stores."
+   },
+   {
+    "titulo": "Construimos",
+    "texto": "En casa o en conjunto."
+   },
+   {
+    "titulo": "Probamos juntos",
+    "texto": "Con requerimientos reales."
+   },
+   {
+    "titulo": "Adoptamos",
+    "texto": "Stores lo usa y lo administra."
+   }
+  ]
+ },
+ "logistica": {
+  "modalidad": "A: construcción asíncrona y encuentros síncronos. B: todo síncrono. Remota o presencial, por acordar.",
+  "participantes": "El equipo de Stores y materiales técnicos de {cliente_corto}: 4 personas, con el Director de Logística.",
+  "arranque": "{cliente_corto} confirma las fechas; la reunión de arranque acuerda el calendario y los accesos.",
+  "ritmo": "Según la agenda de Stores, sin frenar su operación diaria."
+ },
+ "fases": [
+  {
+   "id": "F1",
+   "titulo": "Base",
+   "descripcion": "**levantamiento con Stores**",
+   "medida": "Levantamiento"
+  },
+  {
+   "id": "F2",
+   "titulo": "Agente",
+   "descripcion": "**desarrollo en casa**",
+   "medida": "Construcción"
+  },
+  {
+   "id": "F3",
+   "titulo": "Uso",
+   "descripcion": "**adaptación y pruebas**",
+   "destacada": true,
+   "medida": "Testeo y uso"
+  }
+ ],
+ "frentes": [
+  {
+   "id": "A",
+   "carril": "agente",
+   "nombre": "Opción A · En casa",
+   "celdas": {
+    "F1": "Levantamiento con Stores de cómo llegan los requerimientos y qué se aprueba.",
+    "F2": "Intezia construye el agente sin el equipo, de forma asíncrona.",
+    "F3": "Adaptación, pruebas con requerimientos reales y adopción por Stores."
+   },
+   "medida": "50 h",
+   "medida_meta": "25 asíncronas y 25 síncronas",
+   "celdas_medida": {
+    "F1": "5 h",
+    "F2": "25 h",
+    "F3": "20 h"
+   }
+  },
+  {
+   "id": "B",
+   "carril": "agente",
+   "nombre": "Opción B · En conjunto",
+   "celdas": {
+    "F2": "Se construye el agente junto al equipo de Stores, en vivo.",
+    "F3": "25 h más para testear con requerimientos reales y adoptar.",
+    "F1": "Se levanta dentro de los primeros encuentros de construcción."
+   },
+   "medida": "50 h",
+   "medida_meta": "25 de construcción y 25 de adopción",
+   "celdas_medida": {
+    "F1": "Incluido",
+    "F2": "25 h",
+    "F3": "25 h"
+   }
+  }
+ ],
+ "ruta": {
+  "titulo": "Dos opciones de 50 horas cada una.",
+  "subtitulo": "Se elige una. El calendario se acuerda en la reunión de arranque. El seguimiento a 30, 60 y 90 días corre desde el cierre del proyecto.",
+  "nota": "Opción A: 25 horas asíncronas, en las que Intezia construye sin el equipo, y 25 síncronas con {cliente_corto}. Opción B: 25 horas de construcción con el equipo y 25 más para testear y adoptar.",
+  "hitos": [
+   {
+    "titulo": "Arranque",
+    "texto": "Se acuerdan el calendario, los accesos y los primeros requerimientos reales."
+   },
+   {
+    "titulo": "Levantamiento",
+    "texto": "Stores explica cómo llegan y se aprueban hoy los requerimientos."
+   },
+   {
+    "titulo": "Agente construido",
+    "texto": "En casa (A) o junto a Stores (B), listo para probar."
+   },
+   {
+    "titulo": "Pruebas reales",
+    "texto": "Un requerimiento recorrido del correo a la compra lista para aprobar."
+   },
+   {
+    "titulo": "30 · 60 · 90 días",
+    "texto": "Seguimiento: uso, ajustes y tiempo recuperado."
+   }
+  ]
+ },
+ "seguimiento": {
+  "rango": "30, 60 y 90 días",
+  "texto": "Seguimiento desde el cierre del proyecto",
+  "items": [
+   {
+    "dias": "30 días",
+    "texto": "Uso real del agente en Stores"
+   },
+   {
+    "dias": "60 días",
+    "texto": "Ajustes y equivalencias aprobadas"
+   },
+   {
+    "dias": "90 días",
+    "texto": "Tiempo recuperado contra la línea base"
+   }
+  ]
+ },
+ "entregables": {
+  "transversales": [
+   "Documentación del agente entregada a {cliente_corto}",
+   "Accesos restringidos y registro de las acciones",
+   "Base de conocimiento que administra {cliente_corto}"
+  ],
+  "valor_inmediato": [
+   "Un requerimiento real recorrido de punta a punta",
+   "Comparativo listo para aprobar, sin compras automáticas"
+  ],
+  "subtitulo": "Lo que se llevan: **un agente listo para aprobar compras** y la documentación para operarlo.",
+  "impacto": {
+   "enfoque": "operacion",
+   "texto": "Cada requerimiento llega a la aprobación con sus **productos validados**, sus ofertas comparadas sobre una misma base y su total hasta el destino. Compras más rápidas, con trazabilidad y control, y sin que nada se compre sin aprobación."
+  }
+ },
+ "proximos_pasos": {
+  "asesora": {
+   "nombre": "Flavia Martínez",
+   "cargo": "Asesora comercial",
+   "correo": "fmartinez@intezia.com",
+   "telefono": "+58 414 5756615"
+  },
+  "pasos": [
+   {
+    "titulo": "Revisión conjunta",
+    "texto": "Presentamos las dos opciones en vivo, aclaramos dudas y elegimos con Stores la que mejor encaje."
+   },
+   {
+    "titulo": "Usuario y clave",
+    "texto": "{cliente_corto} crea el usuario de solo lectura de Odoo y habilita la clave de API del modelo de IA para el desarrollo."
+   },
+   {
+    "titulo": "Reunión de arranque",
+    "texto": "Una reunión de ~30 min para acordar el calendario y elegir los primeros requerimientos."
+   }
+  ]
+ },
+ "retorno": {
+  "modo": "metodo",
+  "posiciones": false,
+  "subtitulo": "Se calcula con los datos de Stores, se confirma con la línea base inicial y se mide a 30, 60 y 90 días.",
+  "etiqueta_pasos": "Cómo se calcula, por requerimiento",
+  "pasos": [
+   {
+    "titulo": "Requerimientos por mes",
+    "texto": "Cuántos requerimientos de compra procesa hoy Stores."
+   },
+   {
+    "titulo": "Tiempo actual",
+    "texto": "Lo que toma cada uno hasta quedar listo para aprobar: es la **línea base**."
+   },
+   {
+    "titulo": "Tiempo con el agente",
+    "texto": "Lo que toma el mismo requerimiento con el agente en uso."
+   },
+   {
+    "titulo": "Horas recuperadas",
+    "texto": "Requerimientos por la diferencia entre el tiempo actual y el tiempo con el agente."
+   }
+  ],
+  "etiqueta_metas": "Calendario de garantía y cálculo del retorno",
+  "metas": [
+   {
+    "dias": "30 días",
+    "texto": "El agente en uso real con requerimientos de Stores."
+   },
+   {
+    "dias": "60 días",
+    "texto": "Ajustes, equivalencias aprobadas y horas recuperadas medidas."
+   },
+   {
+    "dias": "90 días",
+    "texto": "Medición del tiempo recuperado frente a la línea base."
+   }
+  ],
+  "etiqueta_destino": "Hacia dónde va el proyecto",
+  "destino": [
+   {
+    "rotulo": "Compras con control",
+    "texto": "Cada compra queda **trazable**: qué se pidió, qué se validó y por qué se recomendó."
+   },
+   {
+    "rotulo": "Catálogo que mejora",
+    "texto": "Las equivalencias y fichas aprobadas **enriquecen** la base de conocimiento de {cliente_corto}."
+   },
+   {
+    "rotulo": "Siguiente fase",
+    "texto": "Con el agente probado, {cliente_corto} decide si autoriza más acciones, como escribir en Odoo."
+   }
+  ],
+  "gancho": "A los 90 días del cierre, Stores contará con el tiempo recuperado por requerimiento medido contra su línea base."
+ },
+ "inversion": {
+  "notas": [
+   "Se elige una sola opción, A o B; el valor es el mismo para ambas.",
+   "Licencias, alojamiento y servicios de terceros van aparte; operación y mantenimiento posteriores se cotizan aparte."
+  ],
+  "duracion": "**50 horas**, con la opción que elija {cliente_corto}: **A** (25 asíncronas y 25 síncronas) o **B** (25 de construcción y 25 de testeo y adopción). Seguimiento a {rango_seguimiento}.",
+  "programa": [
+   "Servicio de Habilidades para {cliente_corto} ({codigo}).",
+   "Levantamiento con Stores y construcción del agente, en casa o en conjunto.",
+   "Testeo con requerimientos reales, adaptación y adopción con Stores.",
+   "Documentación y accesos entregados a {cliente_corto}.",
+   "Seguimiento a 30, 60 y 90 días."
+  ],
+  "garantia_texto": "Acompañamos a Stores hasta que el agente quede en uso."
+ },
+ "omitir": [
+  "pago"
+ ]
+}

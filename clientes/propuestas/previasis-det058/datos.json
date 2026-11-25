@@ -1,0 +1,305 @@
+{
+ "version": 3,
+ "formato": "deteccion",
+ "cliente": {
+  "nombre": "Previasis",
+  "slug": "previasis-det058",
+  "codigo": "DET-058",
+  "nombre_pie": "Previasis"
+ },
+ "division": "educacion",
+ "alianza": false,
+ "sin_horas_trabajo": true,
+ "servicio_rotulo": "Servicio de Detección",
+ "meta_servicio": "deteccion",
+ "meta_tipo": "Detección · 3 áreas (Suscripción, Administración y Siniestros) con nivelación de 30 a 35 personas y agente de soporte al afiliado construido en conjunto · 65 h (16 h de levantamiento, 4 h de nivelación, 45 h del agente: construcción, testeo y adopción) · Habilidades como siguiente paso, sin valor · formato compacto de Detección v3",
+ "eje": "Detección de oportunidades de IA en Suscripción, Administración y Siniestros de una empresa de medicina prepagada, con nivelación del equipo y un agente de soporte al afiliado construido en conjunto con las áreas",
+ "origen": "Ficha de Levantamiento de Previasis (Flavia Martínez, 11/11/2026) y resumen de Flavia con la ruta única: Detección con el agente de soporte dentro, Habilidades como siguiente paso. Instrucción de Ivana: sin precios ni fechas en la propuesta",
+ "fuente_insumo": "Ficha de Levantamiento de Previasis y resumen de la asesora; sin transcripción de la reunión",
+ "siglas_ok": [
+  "IA",
+  "CRM"
+ ],
+ "supuestos": [
+  "Cuenta (Ivana, 12/11/2026): Detección compacta (§4.22), Educación, sin alianza, código DET-058 (libre en el registro), asesora Flavia Martínez. Insumo: la Ficha de Levantamiento del 11/11/2026 y el resumen de Flavia; sin transcripción (si la hay y contradice, manda ella, §4.23).",
+  "**Sin precios ni fechas (Ivana, 12/11/2026):** el deck no pone valores ni fechas. Quedan fuera el rango de Habilidades (4.500 a 8.000 REF), la fecha de la presentación en vivo y la de la migración de sistema del cliente. Habilidades va solo como siguiente paso, en la ruta completa, sin valor y sin horas. Los campos de inversión y de las cuotas quedan vacíos para ventas.",
+  "**Una sola ruta (Flavia):** Detección primero; Habilidades se arma después con lo que se mapee, con las personas más pertinentes (no las 35). El agente de soporte va **dentro de la Detección**, como entrega final, construido en conjunto con las áreas en vivo.",
+  "Horas (propuesta mía, aceptada por Ivana): **65 h** = levantamiento 16 h en global (Suscripción 4, Siniestros 4 y Administración 8 por sus cuatro departamentos: cobranzas, cuentas por pagar, cuentas por cobrar y tesorería), nivelación 4 h (30 a 35 personas: las tres áreas y los coordinadores de ventas, en dos grupos de hasta 25; sin grupos en el deck) y agente de soporte 45 h que incluyen construcción, testeo y adopción, en conjunto con las áreas (Ivana, 13/11/2026: antes eran 20 h de construcción). Las 45 h son un estimado a cerrar con Servicio.",
+  "Sin dolor dramatizado ni citas (§4.22): el deck no cita «construir otro piso». Los dolores son hechos de la ficha: 9 personas de soporte para unos 15.000 afiliados, chatbot que solo enruta por botones, listas de unos 500 siniestros revisadas una por una, y uso de IA por cuenta propia sin criterio común. El resumen de Flavia dice que probaron el agente interno del CRM y falló: no va al deck (no se critica una herramienta del cliente).",
+  "**Migración de sistema (§4.11):** el cliente migra su sistema administrativo, pero Intezia no lo afirma. El deck dice que la conexión del agente se define en el levantamiento según los sistemas disponibles; no promete integraciones ni nombra el sistema de destino. Pendiente interno de Servicio: decidir sobre qué sistema se conecta el agente antes de prometerlo.",
+  "Herramienta del agente: el deck **no nombra** ninguna herramienta (ni n8n): dice solo que se construye en conjunto con las áreas, conectado a WhatsApp, CRM y sistema. La ficha y Flavia hablan de n8n «u otra herramienta», según la robustez que se detecte; la herramienta la recomienda el Informe Final (§4.22).",
+  "Qué hace solo el agente y qué escala: es soporte, no ventas (consultas, citas, pagos, enrutamiento y escalamiento a una persona); el cliente quiere capacidad agéntica y el deck lo dice: responde, orienta, enruta y consulta datos del sistema, y pasa a una persona lo que no resuelve. La lista fina de acciones se define en el levantamiento.",
+  "Datos de salud y regulación: información de afiliados y siniestros de una empresa regulada por la Superintendencia de Seguros; pesa en el diseño del agente (accesos restringidos, escalamiento) y se dice en «Cómo cuidamos los datos».",
+  "Lo que Miguel pidió y el deck no responde con cifras (son del equipo de Servicio y no van sin precios): total de Detección + Habilidades + implementación, costo de licencias por usuario para 30 a 35 personas y estimado mensual de tokens según el volumen de mensajes. El Informe Final lo incluye como «inversión inteligente en licencias»; la cifra se da en vivo.",
+  "Impacto (Ivana, 12/11/2026): enfoque **operación**, sin cifras ni personas. Sin facilidad de pago (Ivana, 13/11/2026): se quitó el plan de pago estándar de Detección; la hoja de inversión queda con valores vacíos.",
+  "El resumen dice que la propuesta pasa primero por María antes de la presentación en vivo: `meta.json` queda en Borrador.",
+  "Logros inmediatos sin cifra (Ivana, 13/11/2026, regla para toda propuesta): el deck dice que se realizan cuando el proceso o el área lo permite, sin decir cuántos."
+ ],
+ "pendientes": [
+  "Servicio: decidir sobre qué sistema se conecta el agente (el cliente usa dos sistemas y migra), antes de prometer integraciones.",
+  "Servicio: confirmar las 45 h del agente (construcción, testeo y adopción; antes 20 h), un estimado de licencias por usuario para 30 a 35 personas (qué plan recomendar) y un rango de tokens mensuales según el volumen. Flavia pide el volumen diario de mensajes de soporte a Miguel.",
+  "Confirmar con Ivana o María si el deck debe mencionar n8n por su nombre (hoy no se nombra ninguna herramienta, como pide §4.22).",
+  "Confirmar la modalidad (se puso presencial en Barquisimeto o remota) y qué sedes participan (gestión comercial en varias ciudades).",
+  "Confirmar con el cliente quién entra a cada área (1 a 2 personas por área) y quiénes son los coordinadores de ventas de la nivelación.",
+  "Ventas llena inversión, descuento, total y los montos de las 2 cuotas antes de enviar. La hoja sale con REF y la leyenda a tasa BCV (automático).",
+  "La propuesta pasa por María antes de la presentación en vivo con Miguel."
+ ],
+ "portada": {
+  "titulo_lineas": [
+   "Mapa de prioridades de IA y agente",
+   "de soporte al afiliado"
+  ],
+  "titulo_destacado": "en {n_areas} áreas de {cliente_corto}",
+  "lead": "Auditamos las **{n_areas_txt}** de {cliente_corto}, proceso por proceso, con quien hace el trabajo, y construimos en conjunto un **agente de soporte al afiliado** conectado a su WhatsApp, su CRM y su sistema.",
+  "hechos": [
+   {
+    "num": "9",
+    "texto": "personas de soporte atienden a unos 15.000 afiliados que escriben cada mes."
+   },
+   {
+    "num": "Botones",
+    "texto": "es lo que hace hoy el chatbot de WhatsApp: enruta, sin atención conversacional."
+   },
+   {
+    "num": "~500",
+    "texto": "siniestros por lista se revisan hoy uno por uno, a mano, antes de pasar a pago."
+   },
+   {
+    "num": "Cada uno",
+    "texto": "usa IA por su cuenta, sin criterio común y sin medir el impacto."
+   }
+  ]
+ },
+ "deteccion": {
+  "areas": [
+   "Suscripción",
+   "Administración",
+   "Siniestros"
+  ],
+  "etiqueta_departamentos": "Administración, con sus departamentos",
+  "departamentos": [
+   "Cobranzas",
+   "Cuentas por pagar",
+   "Cuentas por cobrar",
+   "Tesorería"
+  ],
+  "horas": {
+   "levantamiento": 16,
+   "arranque": 0,
+   "nivelacion": 4
+  },
+  "foco": "Partimos de lo que ya identificaron: el soporte al afiliado, el registro de facturas y la revisión de siniestros, para saber **por dónde empezar**.",
+  "logros_minimos": 3,
+  "texto_horas": "**{h_levantamiento} horas** de levantamiento, repartidas según lo que necesite cada área.",
+  "para_que": [
+   {
+    "titulo": "Ver la operación real",
+    "texto": "Cómo trabaja hoy cada área y dónde la IA suma más allá de lo evidente."
+   },
+   {
+    "titulo": "Atender mejor al afiliado",
+    "texto": "Qué resuelve el agente de soporte por sí solo y qué pasa a una persona."
+   },
+   {
+    "titulo": "Invertir con criterio",
+    "texto": "Elegir licencias y conexiones con los sistemas sobre una base cierta."
+   },
+   {
+    "titulo": "Cuidar la información",
+    "texto": "Qué datos de afiliados y siniestros maneja cada área y cómo se resguardan."
+   }
+  ],
+  "etapas": [
+   {
+    "titulo": "Arranque",
+    "texto": "Reunión de arranque: alcance, responsable de cada área y calendario."
+   },
+   {
+    "titulo": "Nivelación",
+    "texto": "**{h_nivelacion} horas** de Fundamentals de IA para las tres áreas y los coordinadores de ventas."
+   },
+   {
+    "titulo": "Levantamiento",
+    "texto": "Por área, con su líder y quien hace el trabajo; Administración, por departamentos.",
+    "horas": true
+   },
+   {
+    "titulo": "Priorización",
+    "texto": "Intezia cruza lo levantado y ordena las oportunidades por impacto y esfuerzo."
+   },
+   {
+    "titulo": "Informe Final",
+    "texto": "Diagnóstico, Mapa de Calor y hoja de ruta, presentados a la dirección."
+   },
+   {
+    "titulo": "Agente",
+    "texto": "45 horas para construir, testear y adoptar con las áreas el agente de soporte."
+   }
+  ],
+  "ruta_completa": [
+   {
+    "cuando": "Ahora",
+    "servicio": "Detección",
+    "texto": "Auditar las tres áreas, nivelar al equipo y construir con ellas el agente de soporte."
+   },
+   {
+    "cuando": "Después",
+    "servicio": "Habilidades",
+    "texto": "Con las personas más pertinentes, optimizar los procesos internos que se detecten."
+   }
+  ],
+  "entregables": [
+   {
+    "cuando": "Al arrancar",
+    "titulo": "Alcance y calendario",
+    "texto": "Acordados en el arranque: el orden de las áreas y quién participa en cada una."
+   },
+   {
+    "cuando": "Al arrancar",
+    "titulo": "Equipo nivelado en IA",
+    "texto": "**{h_nivelacion} horas** de fundamentos: qué es y qué no es la IA, cómo pedirle bien y qué información cuidar."
+   },
+   {
+    "cuando": "En el levantamiento",
+    "titulo": "Logros inmediatos",
+    "texto": "Construidos con el equipo de cada área y en uso desde el primer día, **cuando el proceso o el área lo permite**."
+   },
+   {
+    "cuando": "Al cierre",
+    "titulo": "Mapa de Calor",
+    "texto": "Las oportunidades de IA de las tres áreas, en un solo mapa, por impacto y esfuerzo."
+   },
+   {
+    "cuando": "Al cierre",
+    "titulo": "Informe Final y hoja de ruta",
+    "texto": "Diagnóstico, prioridades y la inversión inteligente en licencias, con la ruta hacia Habilidades."
+   },
+   {
+    "cuando": "Al cierre",
+    "titulo": "Agente de soporte al afiliado",
+    "texto": "Responde, orienta y enruta, consulta datos del sistema y pasa a una persona lo que no resuelve."
+   }
+  ]
+ },
+ "alcance": {
+  "subtitulo": "Revisamos proceso por proceso dónde la IA suma más y construimos con las áreas el agente de soporte.",
+  "fuera_alcance": [
+   "Licencias de IA y su consumo: no están en la inversión; el Informe Final dice cuáles hacen falta y cuántas.",
+   "Cambios en los sistemas de {cliente_corto}: se revisan en el levantamiento y no se modifican.",
+   "Soluciones de los procesos que se prioricen: son la fase que sigue (Habilidades)."
+  ]
+ },
+ "metodo": {
+  "datos": "Los datos de afiliados y siniestros son confidenciales y la empresa es regulada: el agente se diseña con accesos restringidos, sin cargar datos sin autorización y escalando a una persona lo que sea sensible."
+ },
+ "logistica": {
+  "modalidad": "Presencial en Barquisimeto o remota, según cada área; se acuerda en la reunión de arranque.",
+  "participantes": "Por área, su líder y su mano derecha; la nivelación, para 30 a 35 personas.",
+  "ritmo": "Las conversaciones se agendan por área para no sacar a mucha gente de su puesto a la vez."
+ },
+ "entregables": {
+  "impacto": {
+   "enfoque": "operacion",
+   "texto": "El diagnóstico y el agente muestran dónde se pierde tiempo y dónde la atención al afiliado se queda corta. Con ellos, {cliente_corto} decide qué mejorar primero, con más control de su operación y una atención más ágil."
+  },
+  "transversales": [
+   "Ficha de levantamiento de cada área, que valida su líder",
+   "Informe Final presentado a la dirección",
+   "Qué hace solo el agente y qué escala a una persona"
+  ],
+  "valor_inmediato": [
+   "Logros inmediatos en uso, cuando el proceso lo permite",
+   "Agente de soporte construido con las áreas",
+   "Datos para decidir licencias y sistemas"
+  ]
+ },
+ "retorno": {
+  "subtitulo": "El Informe Final estima, por oportunidad, el tiempo que hoy se invierte y el que se recupera, para evaluar la inversión.",
+  "pasos": [
+   {
+    "titulo": "Horas de hoy",
+    "texto": "Cuánto toma hoy cada proceso y cuántas veces se repite al mes, según quien lo hace."
+   },
+   {
+    "titulo": "Horas con la solución",
+    "texto": "La estimación de Intezia para cada oportunidad del Mapa de Calor."
+   },
+   {
+    "titulo": "Horas recuperables",
+    "texto": "La diferencia entre ambas: una estimación de referencia, no un compromiso de resultado."
+   },
+   {
+    "titulo": "Prioridad",
+    "texto": "Impacto, esfuerzo y riesgo de cada oportunidad, para decidir qué abordar primero."
+   }
+  ],
+  "metas": [
+   {
+    "dias": "Prioridades",
+    "texto": "Qué abordar primero según el impacto y el esfuerzo de cada oportunidad."
+   },
+   {
+    "dias": "Licencias",
+    "texto": "Qué licencias conviene tener y cuánto consumiría el agente según el volumen de mensajes."
+   },
+   {
+    "dias": "Control",
+    "texto": "Qué información puede salir de cada área, quién la maneja y qué decide siempre una persona."
+   }
+  ],
+  "destino": [
+   {
+    "rotulo": "Atención más ágil",
+    "texto": "Un soporte que responde y enruta mejor desde el primer mensaje, con una persona cuando hace falta."
+   },
+   {
+    "rotulo": "Criterio común",
+    "texto": "Todo el equipo usa la IA con las mismas reglas y mide su impacto."
+   },
+   {
+    "rotulo": "Listos para construir",
+    "texto": "Con las prioridades claras, Habilidades arranca por lo que más retorno da."
+   }
+  ],
+  "gancho": "Con el Informe Final, {cliente_corto} sabe por dónde empezar y cuánto tiempo recupera, con datos de sus propias áreas."
+ },
+ "inversion": {
+  "duracion": "Reunión de arranque, **{h_nivelacion} horas de nivelación**, **{h_levantamiento} horas de levantamiento** y **45 horas** para el desarrollo del agente de soporte: construcción, testeo y adopción.",
+  "programa": [
+   "Servicio de Detección para {cliente_corto} ({codigo}).",
+   "Nivelación en IA y levantamiento en {n_areas_txt}.",
+   "Logros inmediatos, Mapa de Calor e Informe Final.",
+   "Agente de soporte al afiliado: 45 h de construcción, testeo y adopción con las áreas.",
+   "Habilidades se cotiza aparte, con lo que arroje la Detección."
+  ],
+  "notas": [
+   "Esta inversión no incluye licencias de IA ni su consumo.",
+   "Habilidades es la fase que sigue y se define con los resultados de la Detección."
+  ]
+ },
+ "proximos_pasos": {
+  "asesora": {
+   "nombre": "Flavia Martínez",
+   "cargo": "Asesora comercial",
+   "correo": "fmartinez@intezia.com",
+   "telefono": "+58 414 5756615"
+  },
+  "pasos": [
+   {
+    "titulo": "Revisión de la propuesta",
+    "texto": "Presentamos la propuesta en vivo, aclaramos dudas y ajustamos el alcance."
+   },
+   {
+    "titulo": "Lista de responsables",
+    "texto": "Nos comparten, por área, su líder y su mano derecha, y el volumen diario de mensajes de soporte."
+   },
+   {
+    "titulo": "Reunión de arranque",
+    "texto": "Una hora para cerrar el alcance, el calendario y el orden de las áreas."
+   }
+  ]
+ },
+ "omitir": [
+  "pago"
+ ]
+}

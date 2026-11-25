@@ -1,0 +1,377 @@
+{
+ "version": 3,
+ "cliente": {
+  "nombre": "Ecofuel",
+  "slug": "ecofuel-cai107",
+  "codigo": "CAI-107",
+  "nombre_pie": "Ecofuel"
+ },
+ "division": "educacion",
+ "alianza": false,
+ "sin_horas_trabajo": true,
+ "meta_tipo": "Capacitación In-Company · Habilidades de IA para el equipo de administración y finanzas, dos procesos de 8 h = 16 h con el equipo · formato compacto v3",
+ "eje": "Desarrollar con IA las habilidades de las tres personas del equipo de administración y finanzas de Ecofuel para que automaticen sus propios procesos: órdenes de compra y conciliación con PDVSA, y facturación y reportes mensuales",
+ "origen": "Pedido de Ivana (18/11/2026): ajustar la CAI-106 (Cerebro Digital en 6 h) y pasar a una propuesta de Habilidades, la CAI-107, los procesos conocidos de la Ficha de Levantamiento de Ecofuel (16/11/2026). Mensaje posterior de Ivana: debe incluir el desarrollo de habilidades de las otras tres personas del equipo, enfocadas en administración y finanzas, para ayudarlas a automatizar sus procesos. Asesora: Verónica Rubio",
+ "fuente_insumo": "Ficha de Levantamiento de Ecofuel (Verónica Rubio, 16/11/2026): Bloque C (dos procesos), Bloque G (expectativas) y bloque específico de Habilidades. Sin transcripción en esta propuesta",
+ "vocabulario": {
+  "area": [
+   "proceso",
+   "procesos"
+  ],
+  "solucion": [
+   "entregable",
+   "entregables"
+  ]
+ },
+ "siglas_ok": [
+  "IA",
+  "PDVSA"
+ ],
+ "portada": {
+  "titulo_lineas": [
+   "Automatización con IA de procesos",
+   "de administración y finanzas"
+  ],
+  "titulo_destacado": "de Ecofuel",
+  "lead": "Desarrollamos las habilidades del **equipo de administración y finanzas** para que **automatice con IA** sus propios procesos: la conciliación con PDVSA, la facturación y los reportes.",
+  "hechos": [
+   {
+    "num": "PDVSA",
+    "texto": "factura sin que Ecofuel haya facturado, y cuadrarlo exige revisar cada factura a mano.",
+    "resuelto_por": [
+     "OC-1",
+     "OC-2"
+    ]
+   },
+   {
+    "num": "Boletas",
+    "texto": "todo llega a una sola persona y, con mucho volumen, las boletas quedan sin procesar.",
+    "resuelto_por": [
+     "FR-1",
+     "FR-2"
+    ]
+   },
+   {
+    "num": "Atrasos",
+    "texto": "se descubre tarde lo que no se facturó o lo que había que pagar, y los reportes se atrasan.",
+    "resuelto_por": [
+     "FR-1",
+     "FR-2"
+    ]
+   }
+  ]
+ },
+ "carriles": [
+  {
+   "id": "claude",
+   "nombre": "Claude",
+   "nombre_corto": "Claude",
+   "color": "amarillo"
+  }
+ ],
+ "areas": [
+  {
+   "id": "OC",
+   "nombre": "Órdenes y conciliación con PDVSA",
+   "carril": "claude",
+   "frente": "A",
+   "para_que": "Cuadrar lo que factura PDVSA con lo que facturó Ecofuel, sin revisar factura por factura",
+   "soluciones": [
+    {
+     "id": "OC-1",
+     "entregable": "Conciliación de facturas con PDVSA",
+     "h": 4,
+     "fase": "F1",
+     "detalle": "Las facturas de PDVSA contra lo facturado por Ecofuel, con las diferencias a la vista, para dejar de revisar factura por factura."
+    },
+    {
+     "id": "OC-2",
+     "entregable": "Órdenes de compra con sus datos completos",
+     "h": 4,
+     "fase": "F1",
+     "detalle": "La orden de compra preparada con sus datos completos y contrastada con lo conciliado, lista para que una persona la apruebe."
+    }
+   ]
+  },
+  {
+   "id": "FR",
+   "nombre": "Facturación y reportes mensuales",
+   "carril": "claude",
+   "frente": "A",
+   "para_que": "Facturar a tiempo, saber qué se debe pagar y entregar la información a quien la necesita",
+   "soluciones": [
+    {
+     "id": "FR-1",
+     "entregable": "Control de facturas y pagos pendientes",
+     "h": 4,
+     "fase": "F2",
+     "detalle": "Aviso de lo que falta por facturar y de los pagos por hacer, y seguimiento de cada boleta hasta que se procesa."
+    },
+    {
+     "id": "FR-2",
+     "entregable": "Reporte mensual y envío de la información",
+     "h": 4,
+     "fase": "F2",
+     "detalle": "El reporte mensual armado con la información del mes y enviado a quien corresponde, sin pasar por la dirección."
+    }
+   ]
+  }
+ ],
+ "alcance": {
+  "titulo": "Dos procesos, un equipo que los automatiza.",
+  "subtitulo": "Las **tres personas** de administración y finanzas desarrollan, con **Claude**, la automatización de sus procesos.",
+  "fuera_alcance": [
+   "Un Cerebro Digital para la dirección: es un proyecto aparte.",
+   "Cambiar los sistemas con los que Ecofuel factura hoy: se trabaja sobre lo que ya usan.",
+   "Cargar datos bancarios, claves o accesos a la IA.",
+   "Las licencias de Claude: van aparte (detalle en la inversión)."
+  ]
+ },
+ "metodo": {
+  "titulo": "Así desarrollamos al equipo.",
+  "subtitulo": "Cada persona construye la automatización de su propio proceso, con sus casos reales, y la prueba en su trabajo diario.",
+  "quien_construye": "**Intezia guía** y las tres personas del equipo construyen con IA la automatización de sus procesos, sobre lo que Ecofuel ya usa.",
+  "por_que_orden": "Primero la conciliación con PDVSA, el proceso que más trabajo da; después la facturación y los reportes, que usan lo ya conciliado.",
+  "practica": [
+   {
+    "titulo": "Con quien hace el trabajo",
+    "texto": "Cada automatización se construye con quien lleva el proceso, para que la use desde el primer día."
+   },
+   {
+    "titulo": "Con casos reales",
+    "texto": "Se trabaja con facturas, órdenes y reportes que Ecofuel autoriza, no con ejemplos inventados."
+   },
+   {
+    "titulo": "Depende de las herramientas",
+    "texto": "Lo que se automatiza depende de las herramientas que Ecofuel usa y de qué tan fácil sea integrarse a ellas: se verifica en el arranque."
+   }
+  ],
+  "pasos": [
+   {
+    "titulo": "Construimos",
+    "texto": "Con quien lleva cada proceso y sus casos reales."
+   },
+   {
+    "titulo": "Probamos",
+    "texto": "Con facturas y reportes que Ecofuel autoriza."
+   },
+   {
+    "titulo": "Adoptamos",
+    "texto": "Cada persona usa su automatización en el día a día."
+   },
+   {
+    "titulo": "Medimos",
+    "texto": "El tiempo ganado en cada tarea, a 30, 60 y 90 días."
+   }
+  ],
+  "datos": "Los datos bancarios, las claves y la información de PDVSA no se cargan sin el visto bueno de Ecofuel: se trabaja con los ejemplos que autoriza."
+ },
+ "logistica": {
+  "modalidad": "Presencial, en las oficinas de Ecofuel en Caracas.",
+  "participantes": "Las tres personas del equipo de administración y finanzas, con la dirección para validar el criterio.",
+  "arranque": "En cuanto se aprueba, se coordina el arranque.",
+  "ritmo": "Según la disponibilidad del equipo, sin frenar la operación diaria."
+ },
+ "fases": [
+  {
+   "id": "F1",
+   "titulo": "PDVSA",
+   "descripcion": "**órdenes de compra y conciliación**",
+   "destacada": true
+  },
+  {
+   "id": "F2",
+   "titulo": "Facturación y reportes",
+   "descripcion": "**pendientes y reporte mensual**"
+  }
+ ],
+ "frentes": [
+  {
+   "id": "A",
+   "carril": "claude",
+   "nombre": "Administración y finanzas",
+   "celdas": {
+    "F1": "Conciliación con PDVSA y órdenes de compra, construidas y probadas.",
+    "F2": "Control de facturas y pagos, y reporte mensual, con casos reales."
+   }
+  }
+ ],
+ "ruta": {
+  "titulo": "De PDVSA al reporte mensual.",
+  "subtitulo": "Dos fases, una por proceso. La **garantía y el seguimiento** a 30, 60 y 90 días corren desde el cierre de cada proceso.",
+  "nota": "Las {h_total} h son una proyección: {h_f1} h de PDVSA y {h_f2} h de facturación y reportes. La reunión de arranque no suma horas.",
+  "hitos": [
+   {
+    "titulo": "Arranque",
+    "texto": "Se confirman participantes y accesos, y se verifica la integración con las herramientas."
+   },
+   {
+    "titulo": "PDVSA",
+    "texto": "La conciliación y las órdenes de compra, construidas y probadas con casos reales."
+   },
+   {
+    "titulo": "Facturación y reportes",
+    "texto": "El control de pendientes y el reporte mensual, construidos con quien los lleva."
+   },
+   {
+    "titulo": "Cierre",
+    "texto": "Los dos procesos en uso diario; empieza la garantía a 30, 60 y 90 días."
+   }
+  ]
+ },
+ "seguimiento": {
+  "rango": "30, 60 y 90 días",
+  "texto": "Seguimiento desde el cierre de cada proceso",
+  "items": [
+   {
+    "dias": "30 días",
+    "texto": "Uso diario de cada una"
+   },
+   {
+    "dias": "60 días",
+    "texto": "Ajustes con casos nuevos"
+   },
+   {
+    "dias": "90 días",
+    "texto": "Tiempo ganado, medido"
+   }
+  ]
+ },
+ "entregables": {
+  "titulo": "Lo que recibe el equipo.",
+  "subtitulo": "Lo que se llevan: **la automatización de cada proceso**, funcionando con sus casos reales y con el seguimiento que mide su efecto.",
+  "etiqueta_transversales": "Para todo el proyecto",
+  "transversales": [
+   "Línea base del tiempo de cada tarea.",
+   "Cuaderno de trabajo digital del proyecto.",
+   "Seguimiento a 30, 60 y 90 días."
+  ],
+  "valor_inmediato": [
+   "Fase 1: las diferencias con PDVSA a la vista.",
+   "Fase 2: avisos de lo pendiente por facturar y pagar.",
+   "Un equipo que automatiza sus propios procesos."
+  ],
+  "impacto": {
+   "enfoque": "reenfoque",
+   "texto": "El equipo de administración y finanzas **automatiza sus propios procesos** y la dirección deja de ser la intermediaria de cada conciliación y cada reporte: pasa a **supervisar y decidir**."
+  }
+ },
+ "retorno": {
+  "modo": "metodo",
+  "posiciones": false,
+  "titulo": "Retorno esperado: tiempo recuperado.",
+  "subtitulo": "Se calcula con las tareas de cada proceso, partiendo del tiempo que hoy toman.",
+  "etiqueta_pasos": "Cómo se calcula, por proceso y por tarea",
+  "pasos": [
+   {
+    "titulo": "Tareas del proceso",
+    "texto": "Qué conciliaciones, órdenes, facturas y reportes se apoyan en la automatización y cuántas veces se repiten."
+   },
+   {
+    "titulo": "Tiempo actual por tarea",
+    "texto": "Se mide al arrancar, con quien hace el trabajo, y es la **línea base**."
+   },
+   {
+    "titulo": "Tiempo con la automatización",
+    "texto": "Lo que toma la misma tarea ya con la automatización en uso."
+   },
+   {
+    "titulo": "Horas recuperadas",
+    "texto": "Número de tareas por la diferencia entre el tiempo actual y el tiempo con la automatización."
+   }
+  ],
+  "etiqueta_metas": "Calendario de garantía, desde el cierre de cada proceso",
+  "metas": [
+   {
+    "dias": "30 días",
+    "texto": "Las automatizaciones en uso diario, con casos reales."
+   },
+   {
+    "dias": "60 días",
+    "texto": "Ajustes con casos nuevos y menos correcciones a mano."
+   },
+   {
+    "dias": "90 días",
+    "texto": "Medición del tiempo ganado en cada tarea, contra la línea base."
+   }
+  ],
+  "destino": [
+   {
+    "rotulo": "Conciliación sin revisión manual",
+    "texto": "Las diferencias con PDVSA se ven de inmediato, sin revisar factura por factura."
+   },
+   {
+    "rotulo": "Pendientes con aviso",
+    "texto": "Lo que falta facturar o pagar **se avisa a tiempo**, en lugar de descubrirse tarde."
+   },
+   {
+    "rotulo": "Un equipo que opera por sí mismo",
+    "texto": "Cada persona lleva su proceso y la dirección **supervisa y decide**."
+   }
+  ],
+  "gancho": "A los 90 días del cierre, Ecofuel conocerá el tiempo que ganó en cada tarea de sus dos procesos."
+ },
+ "inversion": {
+  "duracion": "Proyecto de {n_areas_txt}: {h_total} horas en total, 8 para cada uno, con seguimiento y garantía a 30, 60 y 90 días.",
+  "programa": [
+   "Habilidades de IA para el equipo de administración y finanzas de Ecofuel ({codigo}).",
+   "Dos procesos: 8 horas por proceso, en dos fases.",
+   "{h_total} horas con el equipo, más la reunión de arranque aparte."
+  ],
+  "notas": [
+   "Garantía 30-60-90: seguimiento a {rango_seguimiento} desde el cierre de cada proceso.",
+   "Términos y condiciones: los del enlace de «Importante», que ambas partes aceptan al avanzar con esta propuesta.",
+   "Licencias de Claude, aparte: se confirma el plan según el uso de cada persona."
+  ]
+ },
+ "omitir": [
+  "pago"
+ ],
+ "proximos_pasos": {
+  "asesora": {
+   "nombre": "Verónica Rubio",
+   "cargo": "Asesora comercial",
+   "correo": "vrubio01@intezia.com",
+   "telefono": "+58 422 3355505"
+  },
+  "pasos": [
+   {
+    "titulo": "Confirmar el alcance",
+    "texto": "Resolvemos las dudas de Ecofuel y validamos los dos procesos y quiénes participan."
+   },
+   {
+    "titulo": "Accesos y agenda",
+    "texto": "Coordinamos los accesos y la agenda de cada persona del equipo."
+   },
+   {
+    "titulo": "Reunión de arranque",
+    "texto": "Reunión de unos 30 minutos para alinear las tareas y los casos de cada proceso."
+   }
+  ]
+ },
+ "frases_ok": [],
+ "supuestos": [
+  "Pedido de Ivana (18/11/2026): ajustar la CAI-106 a 6 h y pasar a Habilidades, en la CAI-107, los procesos conocidos de la ficha. Horas (Ivana): 8 h por proceso, 16 h en total, con dos procesos. Enfoque del cuadro Impacto: reenfoque (Ivana). Asesora: Verónica Rubio.",
+  "Mensaje posterior de Ivana: la propuesta debe incluir el desarrollo de habilidades de las otras tres personas del equipo, enfocadas en administración y finanzas, para ayudarlas a automatizar sus procesos. Por eso los participantes son esas tres personas (la dirección queda con el Cerebro Digital de la CAI-106) y la portada, el alcance, el método y el impacto hablan de un equipo que automatiza sus propios procesos.",
+  "Los dos procesos son los del Bloque C de la ficha: órdenes de compra y conciliación con PDVSA, y facturación, reportes mensuales y redistribución de información. «Control de pagos pendientes» y «seguimiento de boletas», que la ficha lista como tareas, van dentro del proceso de facturación y reportes.",
+  "Reparto mío: cada proceso en 2 entregables de 4 h (conciliación y órdenes de compra; control de facturas y pagos, y reporte mensual). Fase 1 = PDVSA, el cuello de botella más complejo según la ficha; fase 2 = facturación y reportes.",
+  "División Educación y alianza = no: tomados por mí (primer contacto con Ecofuel), no los dio Ivana.",
+  "Herramienta: Claude, que el cliente quiere incorporar (la ficha lo dice y pide «dominio de Claude»). El deck no menciona el acceso desde Venezuela ni VPN. Lo que se automatiza depende de las herramientas de Ecofuel (hojas de cálculo y sistemas a medida, «Otro / a medida»): se dice en «Cómo trabajamos» y en el hito de arranque, igual que en CAI-105. No se nombra n8n ni ninguna otra herramienta.",
+  "La meta de la ficha («procesos de 1 hora en 15 minutos») no se promete; el retorno es por método y se mide a 30, 60 y 90 días. Sin cifras ni nómina en el impacto.",
+  "Sin transcripción: solo la ficha. No se nombran personas del cliente (la dueña es «la dirección»; la persona de PDVSA y la que arma reportes son «quien lleva el proceso»). PDVSA se nombra porque es parte del proceso. Sin referencias a otros clientes.",
+  "Seguimiento 30-60-90 incluido (la ficha lo pide para medir). Sin facilidad de pago (omitir: pago, regla permanente de Ivana). Sin certificado. Hoja de inversión con valores vacíos para ventas, en REF.",
+  "Sin semanas, sesiones ni fechas (§4.23): la ficha habla de sesiones de 2 h y de una reunión de revisión; no aparecen en el deck.",
+  "Contacto de la última slide: Verónica Rubio, asesora comercial."
+ ],
+ "pendientes": [
+  "Valor, descuento y total: campos vacíos para ventas; la ficha dice que el presupuesto está «en evaluación» y que la moneda de pago es divisas. Si se presenta junto a la CAI-106, las dos suman 22 h (6 h + 16 h).",
+  "Quiénes son las tres personas del equipo y si entre ellas están quien lleva PDVSA y quien arma los reportes (la ficha dice que son dos personas distintas de la dueña; no da cuántas más hay). El universo es de 4 o 5 personas.",
+  "Qué sistema usan hoy para facturar (la ficha dice «mezcla de sistemas y hojas de cálculo») y qué tan fácil es integrarse: se verifica en el arranque.",
+  "Qué información de PDVSA se carga (confidencial según la ficha) y cuál se trabaja con ejemplos autorizados.",
+  "Quién contrata las licencias de Claude y qué plan; confirmar el acceso antes de arrancar, sin prometer VPN.",
+  "Si hace falta agregar la conciliación bancaria o la tesorería internacional, que la ficha menciona entre los roles y lo que debe poder hacer el equipo: +8 h por proceso según el rango; no incluidas.",
+  "Si se presentan CAI-106 y CAI-107 juntas o por separado; el deck de cada una no nombra a la otra, solo deja en «Fuera de este alcance» lo que es otro proyecto.",
+  "Confirmar quién decide asistirá a la reunión de revisión (la ficha dice «por confirmar») y si trabajan con orden de compra.",
+  "Confirmar con Ivana si el programa lleva certificado."
+ ]
+}

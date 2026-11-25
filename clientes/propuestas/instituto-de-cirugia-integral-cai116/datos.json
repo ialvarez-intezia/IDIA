@@ -1,0 +1,448 @@
+{
+ "version": 3,
+ "cliente": {
+  "nombre": "Instituto de Cirugía Integral",
+  "slug": "instituto-de-cirugia-integral-cai116",
+  "codigo": "CAI-116",
+  "nombre_pie": "Cirugía Integral"
+ },
+ "division": "educacion",
+ "alianza": false,
+ "sin_horas_trabajo": true,
+ "meta_tipo": "Capacitación In-Company · Atención del paciente y administración con IA, 40 h con el equipo en tres fases · formato compacto v3",
+ "eje": "Digitalizar con IA el recorrido del paciente (datos, cita, ficha médica, presupuesto, instructivo preoperatorio y postoperatorio) y la administración del Instituto de Cirugía Integral, con un levantamiento breve de procesos y una introducción a la IA para el equipo",
+ "origen": "Pedido de Ivana (23/11/2026): propuesta de Habilidades para el Instituto de Cirugía Integral a partir de la Ficha de Levantamiento del 18/11/2026, el resumen de Verónica y la transcripción de su reunión con la administradora (dos partes, 38 y 18 min). Asesora: Verónica Rubio",
+ "fuente_insumo": "Ficha de Levantamiento (18/11/2026), resumen de la asesora y transcripción de la reunión del 18/11/2026",
+ "vocabulario": {
+  "solucion": [
+   "entregable",
+   "entregables"
+  ],
+  "area": [
+   "área",
+   "áreas"
+  ]
+ },
+ "siglas_ok": [
+  "IA"
+ ],
+ "portada": {
+  "titulo_lineas": [
+   "Atención del paciente",
+   "y administración con IA"
+  ],
+  "titulo_destacado": "en el Instituto de Cirugía Integral",
+  "lead": "Mapeamos con el equipo cómo se atiende hoy al paciente y construimos los flujos que **digitalizan** cada paso, desde el primer dato hasta el postoperatorio, para que la información **no se pase a mano** entre áreas.",
+  "hechos": [
+   {
+    "num": "1 o 2",
+    "texto": "personas sostienen la atención del paciente y el movimiento de la información entre áreas.",
+    "resuelto_por": [
+     "LF-1",
+     "AP-2"
+    ]
+   },
+   {
+    "num": "Papel",
+    "texto": "y correo llevan hoy la propuesta, el presupuesto, el instructivo y el postoperatorio.",
+    "resuelto_por": [
+     "AP-3",
+     "AP-4",
+     "AP-5"
+    ]
+   },
+   {
+    "num": "A mano",
+    "texto": "se pasan los datos del paciente entre recepción, cita, ficha médica y laboratorios.",
+    "resuelto_por": [
+     "AP-1",
+     "AP-2"
+    ]
+   },
+   {
+    "num": "Gratis",
+    "texto": "es la versión de IA que el equipo usa hoy, de forma suelta y sin un criterio común.",
+    "resuelto_por": [
+     "LF-2"
+    ]
+   }
+  ]
+ },
+ "carriles": [
+  {
+   "id": "ia",
+   "nombre": "IA para la clínica",
+   "nombre_corto": "Clínica",
+   "color": "amarillo"
+  }
+ ],
+ "areas": [
+  {
+   "id": "LF",
+   "nombre": "Levantamiento e introducción",
+   "carril": "ia",
+   "frente": "A",
+   "para_que": "Mapear dónde aplicar la IA y entender con criterio qué se puede lograr",
+   "soluciones": [
+    {
+     "id": "LF-1",
+     "entregable": "Levantamiento y mapa de oportunidades",
+     "h": 5,
+     "fase": "F1",
+     "detalle": "Levantamiento breve del recorrido del paciente y de la administración, con quien hace cada tarea, para mapear dónde aplicar la IA y qué se construye primero."
+    },
+    {
+     "id": "LF-2",
+     "entregable": "Introducción a la IA y datos del paciente",
+     "h": 3,
+     "fase": "F1",
+     "detalle": "Introducción a la IA para todo el equipo, enfocada en eficiencia, y una regla de qué datos de pacientes se comparten con la IA y cuáles no."
+    }
+   ]
+  },
+  {
+   "id": "AP",
+   "nombre": "Atención del paciente",
+   "carril": "ia",
+   "frente": "A",
+   "para_que": "Que el paciente no pase datos a mano y reciba sus documentos a tiempo",
+   "soluciones": [
+    {
+     "id": "AP-1",
+     "entregable": "Recepción y datos del paciente",
+     "h": 4,
+     "fase": "F2",
+     "detalle": "Captura de los datos del paciente una sola vez, por una vía digital, para adelantar la ficha sin esperar al paciente en persona."
+    },
+    {
+     "id": "AP-2",
+     "entregable": "Agenda de citas y ficha médica",
+     "h": 4,
+     "fase": "F2",
+     "detalle": "Flujo entre el pedido de cita, el sistema de citas y la ficha médica, sin repetir datos. Se investiga qué se puede conectar con el sistema de citas actual."
+    },
+    {
+     "id": "AP-3",
+     "entregable": "Propuesta quirúrgica y presupuesto",
+     "h": 4,
+     "fase": "F2",
+     "detalle": "Propuesta y presupuesto armados y enviados en digital, en lugar de papel o correo suelto, con las alternativas de fecha."
+    },
+    {
+     "id": "AP-4",
+     "entregable": "Instructivo preoperatorio y laboratorios",
+     "h": 4,
+     "fase": "F2",
+     "detalle": "Instructivo preoperatorio y lista de exámenes y laboratorios enviados al paciente según la intervención, con seguimiento de lo pendiente."
+    },
+    {
+     "id": "AP-5",
+     "entregable": "Postoperatorio según la intervención",
+     "h": 4,
+     "fase": "F2",
+     "detalle": "Indicaciones postoperatorias personalizadas, enviadas según el tipo de intervención que se realizó."
+    }
+   ]
+  },
+  {
+   "id": "AD",
+   "nombre": "Administración",
+   "carril": "ia",
+   "frente": "A",
+   "para_que": "Pagos, correos y pedidos de material ordenados, con indicadores",
+   "soluciones": [
+    {
+     "id": "AD-1",
+     "entregable": "Pagos y confirmaciones",
+     "h": 4,
+     "fase": "F3",
+     "detalle": "Registro y confirmación de los pagos y transferencias del paciente, con el cierre administrativo ordenado."
+    },
+    {
+     "id": "AD-2",
+     "entregable": "Correos separados por función",
+     "h": 2,
+     "fase": "F3",
+     "detalle": "Un correo por tipo de gestión, con criterio, para saber quién envió y quién recibió cada cosa y no exponer un solo buzón."
+    },
+    {
+     "id": "AD-3",
+     "entregable": "Pedido de material quirúrgico",
+     "h": 4,
+     "fase": "F3",
+     "detalle": "Pedido de material según el plan quirúrgico próximo y lo que falta en quirófano, con un método propio, hoy sin números."
+    },
+    {
+     "id": "AD-4",
+     "entregable": "Indicadores de pacientes y respuesta",
+     "h": 2,
+     "fase": "F3",
+     "detalle": "Indicadores simples: pacientes que vinieron y los que se operaron, y tiempo de respuesta, para decidir con datos."
+    }
+   ]
+  }
+ ],
+ "alcance": {
+  "titulo": "Tres áreas de trabajo, en tres fases.",
+  "subtitulo": "Primero se mapea y se entiende; después se digitaliza la atención del paciente y la administración.",
+  "fuera_alcance": [
+   "Historias clínicas e imágenes de pacientes: no se cargan a la IA ni se mueven del sistema actual.",
+   "Mercadeo y redes sociales: los lleva una empresa externa.",
+   "Reemplazar el sistema de citas actual: se conecta lo que se pueda, no se cambia."
+  ]
+ },
+ "metodo": {
+  "titulo": "Así construimos con el equipo.",
+  "subtitulo": "Primero entendemos cómo trabajan hoy; después construimos y probamos cada flujo con quien lo ejecuta.",
+  "pasos": [
+   {
+    "titulo": "Construimos",
+    "texto": "Junto a quien hace cada tarea, con sus casos reales."
+   },
+   {
+    "titulo": "Probamos",
+    "texto": "Con el equipo administrativo y de enfermería, antes de usarlo con pacientes."
+   },
+   {
+    "titulo": "Adoptamos",
+    "texto": "El equipo lo usa en su trabajo diario."
+   },
+   {
+    "titulo": "Medimos",
+    "texto": "El tiempo ahorrado por proceso y los pasos que ya no se hacen a mano."
+   }
+  ],
+  "por_que_orden": "Primero el levantamiento y la introducción, para que el equipo decida con criterio qué construir. Después el recorrido del paciente, el corazón del trabajo diario. Al final la administración, que se apoya en lo anterior.",
+  "quien_construye": "**Intezia guía** y construye junto al equipo, que aprende cómo se hace y cómo saber si el resultado es bueno.",
+  "practica": [
+   {
+    "titulo": "Con el trabajo real de cada uno",
+    "texto": "Cada flujo parte de una tarea de su día a día, no de ejercicios de aula."
+   },
+   {
+    "titulo": "Con los datos del paciente protegidos",
+    "texto": "Antes de cargar datos de pacientes se acuerda qué se puede compartir con la IA y cómo protegerlo."
+   },
+   {
+    "titulo": "Sobre lo que ya usan",
+    "texto": "Se parte de sus hojas de cálculo, su correo y su sistema de citas; lo que conviene cambiar se decide con el equipo."
+   }
+  ],
+  "datos": "Los datos de los pacientes son confidenciales: se firma un acuerdo de confidencialidad y se trabaja solo con los datos que el Instituto autoriza."
+ },
+ "logistica": {
+  "modalidad": "Presencial en sus oficinas, según se acuerde en la reunión de arranque.",
+  "participantes": "Administración, enfermería e instrumentistas y, si lo desean, los doctores.",
+  "arranque": "Las fechas se acuerdan en la reunión de arranque."
+ },
+ "fases": [
+  {
+   "id": "F1",
+   "titulo": "Base",
+   "descripcion": "Levantamiento e introducción"
+  },
+  {
+   "id": "F2",
+   "titulo": "Paciente",
+   "descripcion": "Atención del paciente",
+   "destacada": true
+  },
+  {
+   "id": "F3",
+   "titulo": "Cierre",
+   "descripcion": "Pagos, correos, material e indicadores"
+  }
+ ],
+ "frentes": [
+  {
+   "id": "A",
+   "carril": "ia",
+   "nombre": "Atención y administración",
+   "celdas": {
+    "F1": "Se mapea cómo se trabaja hoy y el equipo entiende qué logra la IA.",
+    "F2": "Datos, cita, ficha, presupuesto, instructivo y postoperatorio digitalizados.",
+    "F3": "Pagos, correos, pedido de material e indicadores."
+   }
+  }
+ ],
+ "ruta": {
+  "titulo": "Del mapa al flujo digital.",
+  "hitos": [
+   {
+    "titulo": "Arranque",
+    "texto": "Reunión para conocer al equipo y sus roles y fijar la línea base de tiempos."
+   },
+   {
+    "titulo": "Mapa de procesos",
+    "texto": "Recorrido del paciente y administración mapeados, con prioridades acordadas."
+   },
+   {
+    "titulo": "Paciente en digital",
+    "texto": "Del primer dato al postoperatorio, en un solo flujo."
+   },
+   {
+    "titulo": "Cierre",
+    "texto": "Administración e indicadores; empieza la garantía."
+   }
+  ]
+ },
+ "seguimiento": {
+  "rango": "30, 60 y 90 días",
+  "texto": "Seguimiento desde el cierre de cada área",
+  "items": [
+   {
+    "dias": "30 días",
+    "texto": "Uso real y ajustes"
+   },
+   {
+    "dias": "60 días",
+    "texto": "Ajustes con casos nuevos"
+   },
+   {
+    "dias": "90 días",
+    "texto": "Tablero del tiempo ganado, contra la línea base"
+   }
+  ]
+ },
+ "entregables": {
+  "titulo": "Lo que recibe el Instituto.",
+  "subtitulo": "Lo que se llevan los equipos: el mapa de procesos y los flujos digitales de cada área, más el seguimiento a 30, 60 y 90 días.",
+  "etiqueta_transversales": "Para todo el proyecto",
+  "transversales": [
+   "Línea base del tiempo de cada tarea.",
+   "Documentación de cada flujo, para continuarlo.",
+   "Seguimiento a 30, 60 y 90 días."
+  ],
+  "valor_inmediato": [
+   "Fase 1: el mapa de dónde aplicar la IA y un equipo con criterio.",
+   "Fase 2: el paciente recorre el proceso sin pasar datos a mano.",
+   "Fase 3: pagos, pedidos e indicadores ordenados."
+  ],
+  "impacto": {
+   "enfoque": "operacion",
+   "texto": "El recorrido del paciente queda **digitalizado**, los documentos del antes y el después de la cirugía **salen según la intervención** y el equipo opera sin depender de una o dos personas."
+  }
+ },
+ "retorno": {
+  "modo": "metodo",
+  "posiciones": false,
+  "titulo": "Retorno esperado: tiempo y respuesta.",
+  "subtitulo": "Se calcula con las tareas de cada proceso, partiendo del tiempo que hoy toman.",
+  "etiqueta_pasos": "Cómo se calcula, por proceso y por tarea",
+  "pasos": [
+   {
+    "titulo": "Tareas del proceso",
+    "texto": "Cuántos pacientes y cuántas veces se repite cada tarea: datos, presupuesto, instructivo y postoperatorio."
+   },
+   {
+    "titulo": "Tiempo actual por tarea",
+    "texto": "Se mide al arrancar, con quien hace el trabajo, y es la **línea base**."
+   },
+   {
+    "titulo": "Tiempo con la solución",
+    "texto": "Lo que toma la misma tarea ya con el flujo digital en uso."
+   },
+   {
+    "titulo": "Horas recuperadas",
+    "texto": "Número de tareas por la diferencia entre el tiempo actual y el tiempo con la solución."
+   },
+   {
+    "titulo": "Respuesta al paciente",
+    "texto": "Cuánto tarda el Instituto en responder y enviar sus documentos, antes y después."
+   }
+  ],
+  "etiqueta_metas": "Calendario de garantía, desde el cierre de cada área",
+  "metas": [
+   {
+    "dias": "30 días",
+    "texto": "Los flujos de cada proceso en uso diario, con pacientes reales."
+   },
+   {
+    "dias": "60 días",
+    "texto": "Ajustes con casos nuevos y menos pasos a mano."
+   },
+   {
+    "dias": "90 días",
+    "texto": "Tablero con el tiempo ganado por proceso y los pasos que ya van solos."
+   }
+  ],
+  "destino": [
+   {
+    "rotulo": "Información en un solo lugar",
+    "texto": "Los datos del paciente quedan centralizados, **sin pasarlos a mano** entre áreas."
+   },
+   {
+    "rotulo": "Documentos que salen solos",
+    "texto": "El instructivo y el postoperatorio se envían **según la intervención**."
+   },
+   {
+    "rotulo": "Menos dependencia",
+    "texto": "Los procesos quedan documentados y cualquiera del equipo puede continuar; el Instituto decide si lleva el ciclo a otras áreas."
+   }
+  ],
+  "gancho": "A los 90 días del cierre, el Instituto conocerá el tiempo que ganó en cada proceso y cuántos pasos dejaron de hacerse a mano."
+ },
+ "inversion": {
+  "duracion": "Proyecto en tres áreas de trabajo y tres fases: {h_total} horas con el equipo, con seguimiento y garantía a 30, 60 y 90 días.",
+  "programa": [
+   "Levantamiento, introducción a la IA y flujos digitales ({codigo}).",
+   "Levantamiento e introducción, atención del paciente y administración, en tres fases.",
+   "{h_total} horas con el equipo, más la reunión de arranque aparte."
+  ],
+  "notas": [
+   "Garantía 30-60-90: seguimiento a {rango_seguimiento} desde el cierre de cada área.",
+   "Términos y condiciones: los del enlace de «Importante», que ambas partes aceptan al avanzar con esta propuesta.",
+   "Licencias de IA, aparte: se confirman en el arranque."
+  ]
+ },
+ "omitir": [
+  "pago"
+ ],
+ "proximos_pasos": {
+  "titulo": "Tres pasos para arrancar.",
+  "subtitulo": "Esto es lo que sigue cuando el Instituto confirme la propuesta.",
+  "asesora": {
+   "nombre": "Verónica Rubio",
+   "cargo": "Asesora comercial",
+   "correo": "vrubio01@intezia.com",
+   "telefono": "+58 422 3355505"
+  },
+  "pasos": [
+   {
+    "titulo": "Revisar la propuesta",
+    "texto": "La presentamos a quienes toman la decisión y resolvemos sus dudas sobre el alcance."
+   },
+   {
+    "titulo": "Accesos y participantes",
+    "texto": "Coordinamos quién participa de cada área y el acceso al sistema de citas."
+   },
+   {
+    "titulo": "Reunión de arranque",
+    "texto": "Reunión de unos 30 minutos para conocer al equipo, alinear prioridades y medir la línea base."
+   }
+  ]
+ },
+ "frases_ok": [],
+ "supuestos": [
+  "Pedido de Ivana (23/11/2026): propuesta de Habilidades CAI-116 para el Instituto de Cirugía Integral (primer contacto, sin servicio previo de Intezia). Asesora: Verónica Rubio.",
+  "Decisiones de Ivana: Educación y sin alianza; 40 h; impacto «operación»; sin nombrar herramienta de IA ni tarjeta de licencias.",
+  "Reparto de las 40 h mío: levantamiento e introducción 8 h (5 + 3), atención del paciente 20 h (5 entregables de 4 h) y administración 12 h (4, 2, 4, 2).",
+  "Insumos: Ficha del 18/11/2026, resumen de Verónica y transcripción de la reunión del 18/11/2026 (parte 2 truncada al final). Si se contradicen, manda la transcripción.",
+  "El pequeño levantamiento de procesos y la introducción a la IA salen del pedido de Verónica a la clienta («un levantamiento pequeño que nos permite mapear bien los procesos» y «una primera capacitación básica»). Van como el primer bloque.",
+  "Sin nombres de personas del cliente (ni de la administradora ni del cirujano) ni del software de citas ni de la empresa de mercadeo. El decisor conjunto aún no está en la conversación: los próximos pasos dicen «quienes toman la decisión».",
+  "Sin nombrar herramienta de IA ni VPN (Verónica recomendó Claude, pero Venezuela no es país soportado). La preocupación por la seguridad de los datos se responde con el acuerdo de confidencialidad y una regla de qué datos se comparten con la IA.",
+  "Sin fechas ni meses: la clienta prefiere arrancar en enero de 2027 y Verónica habló de 1 a 1,5 meses, pero el calendario se acuerda en el arranque (§4.23).",
+  "Sin facilidad de pago (regla permanente); Verónica mencionó reservar con 30 % y cuotas ligadas a hitos, solo si Ivana lo pide.",
+  "Retorno en modo método: la clienta no declaró tiempos ni volúmenes. Los ejemplos de Verónica (registro de 40 a 10 min) eran ilustrativos y no van como cifras del cliente.",
+  "Inventario de material quirúrgico: Mabel contó que el pedido se hace según el plan quirúrgico y lo que falta, sin números formales; se plantea un método propio, no una promesa de predicción.",
+  "Modalidad presencial en sus oficinas (ficha). Las historias clínicas y las imágenes de pacientes quedan fuera de alcance por confidencialidad."
+ ],
+ "pendientes": [
+  "Valor, descuento y total: campos vacíos para ventas.",
+  "Confirmar el reparto de las 40 h entre los 11 entregables.",
+  "Qué herramienta de IA se usa y quién contrata las licencias (se define en el arranque).",
+  "Si el sistema de citas actual permite conectarse con la IA (se investiga en el levantamiento).",
+  "Presentación a ambos decisores; presupuesto en evaluación y cierre en diciembre.",
+  "Confirmar el teléfono y el correo de Verónica Rubio (tomados de propuestas anteriores)."
+ ]
+}

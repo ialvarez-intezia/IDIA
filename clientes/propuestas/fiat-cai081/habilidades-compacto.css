@@ -1,5 +1,6 @@
 /* ============================================================================
-   Habilidades y Detección compacto · CSS genérico (v3.0, 2026-10-08) · deck en el orden de las preguntas del cliente
+   Habilidades y Detección compacto · CSS genérico (v3.1, 2026-11-09) · deck en el orden de las preguntas del cliente
+   v3.1 (Ivana, 2026-11-09): cuadro «Impacto» en «Lo que se llevan» y REF con la leyenda de pago en la hoja de inversión (solo se suman reglas al final del archivo).
    v3.0 (Keiber Quintana, 2026-10-08): sin semanas ni sesiones (la fase se nombra, no se fecha) y slides propias de
    Detección (.s-det-scope, .s-det-route, .s-det-deliv: plantillas/deteccion-compacto.md).
    Origen: clientes/propuestas/dusa-cai035 (CAI-035) + feedback consolidado de Ventas (2026-10-07). Se copia a cada
@@ -1943,3 +1944,126 @@
 }
 .s-det-deliv .det-card p { font-family: var(--font-body); font-size: 14px; line-height: 1.45; color: rgba(255, 255, 255, 0.84); }
 .s-det-deliv .det-card p strong { color: var(--yellow); }
+
+/* ===========================================================================
+   Cuadro de Impacto en «Lo que se llevan» (entregables.impacto, Ivana 2026-11-09) y REF en la hoja de inversión.
+   El cuadro va bajo el titular de la slide 5 y no lleva campos ni mueve las cajas editables del pie (.db-box-1/2). Es GRANDE (.grande, amarillo
+   pleno con texto negro) cuando el catálogo deja espacio y la franja delgada (fondo tenue) cuando no: lo decide el generador (R.imp_grande).
+   REF: signo fijo junto a Valor, Descuento y Total de la hoja estándar; la leyenda de pago va en un recuadro rojo debajo del total.
+   =========================================================================== */
+.s-deliv .deliv-impact {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 0 0 8px;
+  padding: 8px 16px;
+  background: rgba(244, 186, 26, 0.10);
+  border: 1px solid rgba(244, 186, 26, 0.32);
+  border-left: 5px solid var(--yellow);
+  border-radius: 10px;
+}
+.s-deliv .di-label {
+  flex: 0 0 auto;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--black);
+  background: var(--yellow);
+  padding: 4px 12px;
+  border-radius: 999px;
+}
+.s-deliv .deliv-impact p {
+  font-family: var(--font-body);
+  font-size: 12.5px;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.92);
+}
+.s-deliv .deliv-impact p strong { color: var(--yellow); font-weight: 700; }
+/* Versión grande: el cuadro protagonista de la slide */
+.s-deliv .deliv-impact.grande {
+  gap: 22px;
+  margin: 2px 0 12px;
+  padding: 14px 24px;
+  background: var(--yellow);
+  border: 0;
+  border-radius: 14px;
+  box-shadow: 0 0 0 3px rgba(244, 186, 26, 0.25);
+}
+.s-deliv .deliv-impact.grande .di-label {
+  font-size: 15px;
+  letter-spacing: 0.16em;
+  padding: 10px 18px;
+  color: var(--yellow);
+  background: var(--black);
+  border-radius: 10px;
+}
+.s-deliv .deliv-impact.grande p {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.32;
+  color: var(--black);
+}
+.s-deliv .deliv-impact.grande p strong { color: var(--black); font-weight: 800; text-decoration: underline; text-decoration-color: var(--orange); text-decoration-thickness: 3px; text-underline-offset: 3px; }
+.s-det-deliv.con-imp .deliv-head { margin-bottom: 10px; }
+.s-det-deliv.con-imp .det-cards { grid-auto-rows: 176px; }
+.s-det-deliv.con-imp .det-card { padding: 12px 20px; }
+.s-det-deliv.con-imp .dk-when { margin-bottom: 9px; }
+.s-det-deliv.imp-g .det-cards { grid-auto-rows: 150px; gap: 12px; }
+.s-det-deliv.imp-g .det-card { padding: 10px 20px; }
+.s-det-deliv.imp-g .dk-when { margin-bottom: 6px; padding: 3px 9px; }
+.s-det-deliv.imp-g .det-card b { font-size: 18px; margin-bottom: 5px; }
+.s-det-deliv.imp-g .det-card p { font-size: 13px; line-height: 1.38; }
+
+.s-price .cot-sign {
+  position: absolute;
+  left: 536px;
+  width: 44px;
+  text-align: center;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  color: rgba(0, 0, 0, 0.55);
+  z-index: 2;
+}
+.s-price .cot-sign-base  { top: 220px; height: 52px; line-height: 52px; }
+.s-price .cot-sign-total { top: 414px; height: 76px; line-height: 76px; }
+.s-price .cot-sign-minus { font-size: 12px; letter-spacing: 0.04em; }
+/* Leyenda de pago: recuadro rojo debajo del total (mismo rojo y rosa de «Descuento válido por 15 días») */
+.s-price .cot-moneda {
+  position: absolute;
+  top: 497px;
+  left: 580px;
+  right: 56px;
+  padding: 7px 14px;
+  text-align: center;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 1.2;
+  color: var(--discount-urgent-red);
+  background: var(--discount-urgent-pink-bg);
+  border: 2px solid var(--discount-urgent-red);
+  border-radius: 8px;
+  z-index: 2;
+}
+.s-price .cot-moneda + .cot-validity { top: 537px; }
+.s-price .cot-moneda ~ .cot-terms-box { top: 558px; }
+.s-price .cot-moneda ~ .cot-garantia-badge { top: 660px; }
+/* En las hojas por paquetes y de desglose la leyenda va dentro de la línea de validez, como píldora roja */
+.s-price .cot-validity b, .s-price .dsg-validez b {
+  display: inline-block;
+  margin-right: 6px;
+  padding: 2px 10px;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-style: normal;
+  font-size: 12px;
+  color: var(--discount-urgent-red);
+  background: var(--discount-urgent-pink-bg);
+  border: 1.5px solid var(--discount-urgent-red);
+  border-radius: 6px;
+}

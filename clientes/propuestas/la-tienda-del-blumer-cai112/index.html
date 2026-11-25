@@ -1,0 +1,523 @@
+<!doctype html>
+<!--
+  Propuesta · La Tienda del Blúmer · Servicio de Habilidades (CAI-112)
+  División: Educación · Servicio: Habilidades (§4.1a) · Alianza: no
+  GENERADO por scripts/generar-habilidades-compacto.py (plantilla 3.0 (2026-10-08), formato habilidades) desde datos.json.
+  No editar a mano: editar datos.json y regenerar. Estilos propios del deck: overrides.css.
+  Fuente del insumo: Informe Final de Auditoría DET-020 (21/11/2026), Resumen Ejecutivo DET-020 y planteamiento del consultor para Habilidades (22/11/2026)
+
+  Formato compacto de 8 slides, en el orden de las preguntas del cliente (Ventas, 2026-10-07), sin semanas, sesiones
+  ni fechas (Keiber, 2026-10-08):
+    1 Portada · 2 Alcance · 3 Ruta · 4 Cómo trabajamos · 5 Entregables · 6 Retorno · 7 Inversión · 8 Próximos pasos
+  Marcadores de detección de AcroForms (agregar-campo-precio.py), por página: «Propuesta Económica» solo en la slide de
+  inversión; «Lo que se llevan» y «Entregables» solo en la de entregables; «Facilidad de pago» solo en la de pago.
+  Campos AcroForm: Programa, Notas, PrecioBase, Descuento, PrecioTotal (inversión) y Entregables, Acreditacion (entregables). Se reposicionan con scripts/customize-habilidades-compacto.py.
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Propuesta · La Tienda del Blúmer · Intezia Educación</title>
+  <link rel="stylesheet" href="../_base/styles.css">
+  <link rel="stylesheet" href="habilidades-compacto.css">
+  <link rel="stylesheet" href="overrides.css">
+</head>
+<body>
+
+  <main class="deck">
+
+    <!-- 1 · Portada: ¿cuál es mi problema? -->
+    <section class="slide s-cover">
+      <span class="counter">01 / 08</span>
+      <div class="logo-big">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia Educación">
+      </div>
+      <div class="body">
+        <p class="eyebrow">Propuesta de proyecto · Servicio de Habilidades</p>
+        <h1 style="font-size:46px">
+          Desarrollo con IA en Sistemas<br>
+          y soluciones en siete áreas<br>
+          <span class="hl">de La Tienda del Blúmer</span>
+        </h1>
+        <p class="lead">
+          Fortalecemos a Sistemas para <strong>desarrollar con IA</strong>, conectamos sus bases de datos y construimos con cada una de las siete áreas soluciones que <strong>reúnen la información</strong> y le devuelven horas al equipo.
+        </p>
+        <div class="pain-strip">
+          <div class="pain-item">
+            <span class="pain-num">2</span>
+            <span class="pain-lbl">personas atienden soporte, infraestructura, datos y desarrollo para todas las áreas y tiendas.</span>
+          </div>
+          <div class="pain-item">
+            <span class="pain-num">Copias</span>
+            <span class="pain-lbl">de la misma información se reconstruyen en mensajes, papel y hojas distintas entre las áreas.</span>
+          </div>
+          <div class="pain-item">
+            <span class="pain-num">Aislados</span>
+            <span class="pain-lbl">los sistemas de las áreas se usan por pantalla, sin una conexión comprobada con la IA.</span>
+          </div>
+          <div class="pain-item">
+            <span class="pain-num">≈300 h</span>
+            <span class="pain-lbl">al mes podrían liberarse al optimizar estos procesos, según la Detección; estimación aún sin medir.</span>
+          </div>
+        </div>
+      </div>
+      <div class="id-line">
+        <span class="codigo">Código: CAI-112</span>
+        <span class="cliente">La Tienda del Blúmer</span>
+      </div>
+    </section>
+
+    <!-- 2 · Alcance por fases: qué vamos a hacer, en qué orden y para qué -->
+    <section class="slide s-scope fases compact">
+      <span class="counter">02 / 08</span>
+      <p class="eyebrow">02 · Alcance</p>
+      <h2>Siete áreas y cuatro fases.</h2>
+      <p class="sub">Cada área tiene sus procesos y Sistemas va primero; la fase 4 suma los Cerebros Digitales.</p>
+
+      <div class="scope-panels one" style="--np:1">
+        <div class="scope-panel acc-y">
+          <div class="scope-head">
+            <span class="scope-tag">IA para la operación</span>
+            <span class="scope-total"><b>7</b> áreas</span>
+          </div>
+          <div class="scope-step">
+            <p class="step-h"><span class="step-n">1</span><b>Fase 1</b><span class="step-d">Sistemas</span></p>
+            <ul class="scope-rows">
+              <li><span class="area">Sistemas</span><span class="para">Ajustar sus sistemas con Claude Code y conectarlos por MCP, el enlace de la IA con cada sistema</span></li>
+            </ul>
+          </div>
+          <div class="scope-step">
+            <p class="step-h"><span class="step-n">2</span><b>Fase 2</b><span class="step-d">Bodega, Compras y RRHH</span></p>
+            <ul class="scope-rows">
+              <li><span class="area">Bodega y Compras</span><span class="para">Saber qué se vendió contra lo que hay y seguir cada importación</span></li>
+              <li><span class="area">Recursos Humanos</span><span class="para">Preparar y validar la nómina con datos completos y menos copias</span></li>
+            </ul>
+          </div>
+          <div class="scope-step hi">
+            <p class="step-h"><span class="step-n">3</span><b>Fase 3</b><span class="step-d">Contabilidad, Tesorería y las dos auditorías</span></p>
+            <ul class="scope-rows">
+              <li><span class="area">Contabilidad</span><span class="para">Registrar las ventas como asientos con los criterios del área</span></li>
+              <li><span class="area">Tesorería</span><span class="para">Guardar cada soporte una sola vez, ordenado, para que las áreas lo reutilicen</span></li>
+              <li><span class="area">Auditoría Interna y Cashea</span><span class="para">Revisar cada venta con un mismo criterio y conciliar los abonos de Cashea</span></li>
+              <li><span class="area">Auditoría Externa</span><span class="para">Que cada pago coincida con su aprobación, su comprobante y su banco</span></li>
+            </ul>
+          </div>
+          <div class="scope-step">
+            <p class="step-h"><span class="step-n">4</span><b>Fase 4</b><span class="step-d">Cerebros Digitales</span></p>
+            <ul class="scope-rows">
+              <li><span class="area">Cerebros Digitales</span><span class="para">Un asistente con el conocimiento de cada responsable clave, para consultarlo y delegarlo</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="scope-out">
+        <p class="scope-card-label">Fuera de este alcance</p>
+        <ul>
+          <li>Cerebros Digitales para otras personas: se pueden sumar después, según impacto.</li>
+          <li>Marketing, gestión de clientes y comercio electrónico: no tuvieron levantamiento propio.</li>
+          <li>Reemplazar los sistemas actuales: se conectan y se extienden, no se cambian.</li>
+        </ul>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">La Tienda del Blúmer · CAI-112</span>
+      </div>
+    </section>
+
+    <!-- 3 · Ruta: qué pasa en cada fase -->
+    <section class="slide s-route">
+      <span class="counter">03 / 08</span>
+      <p class="eyebrow">03 · Ruta</p>
+      <h2>De Sistemas a cada área.</h2>
+      <p class="sub">Cuatro fases: tres de áreas y una de Cerebros Digitales. La garantía y el seguimiento a 30, 60 y 90 días corren desde el cierre de cada área.</p>
+
+      <div class="route-grid n1" style="--cols:4; --rows:1; --rowh:214px">
+
+        <div class="rg-corner"></div>
+        <div class="rg-phase rg-ph-1">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Fase 1</span></span>
+          <span class="rg-phase-name">Sistemas</span>
+        </div>
+        <div class="rg-phase rg-ph-2">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Fase 2</span></span>
+          <span class="rg-phase-name">Bodega, Compras y RRHH</span>
+        </div>
+        <div class="rg-phase rg-ph-3 hi">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Fase 3</span></span>
+          <span class="rg-phase-name">Contabilidad, Tesorería y las dos auditorías</span>
+        </div>
+        <div class="rg-phase rg-ph-4">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Fase 4</span></span>
+          <span class="rg-phase-name">Cerebros Digitales</span>
+        </div>
+        <div class="rg-phase rg-fu">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Garantía</span></span>
+          <span class="rg-phase-date">30, 60 y 90 días</span>
+          <span class="rg-phase-txt">Seguimiento desde el cierre de cada área</span>
+        </div>
+
+        <div class="rg-front acc-y">
+          <span class="rg-front-h">Áreas de La Tienda del Blúmer</span>
+          <span class="rg-front-row"><span class="rg-front-tool">Operación</span></span>
+          <span class="rg-front-meta"></span>
+        </div>
+        <div class="rg-cell"><p>Ajustes y tareas repetidas con Claude Code, conexión por MCP a los sistemas, y soportes.</p></div>
+        <div class="rg-cell"><p>Reporte de inventario, importaciones, nómina validada y contratos.</p></div>
+        <div class="rg-cell hi"><p>Asientos, soportes, conciliaciones y cruce de Cashea.</p></div>
+        <div class="rg-cell"><p>Un Cerebro Digital para cada responsable clave.</p></div>
+
+        <div class="rg-follow" style="grid-column:6; grid-row:2 / span 1">
+          <ul>
+            <li><b>30 días</b><span>Uso real y ajustes</span></li>
+            <li><b>60 días</b><span>Ajustes con casos nuevos</span></li>
+            <li><b>90 días</b><span>Tiempo ganado, medido contra la línea base</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="route-miles" style="grid-template-columns:repeat(5,1fr)">
+        <div class="mile"><span class="mile-d"></span><b>Arranque</b><p>Accesos, participantes y orden de las áreas, según el informe de la Detección.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Sistemas con IA</b><p>Conexión a SQL Server, SRH, Conetsoft y SPDV por MCP, el conector entre la IA y cada sistema.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Datos y nómina</b><p>Reporte de inventario, importaciones y nómina validada.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Cierre de las áreas</b><p>Contabilidad, Tesorería y las auditorías; empieza la garantía.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Cerebros Digitales</b><p>Cinco asistentes con el conocimiento de los responsables clave.</p></div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">La Tienda del Blúmer · CAI-112</span>
+      </div>
+    </section>
+
+    <!-- 4 · Cómo trabajamos: pasos, por qué en ese orden, casos reales, práctica, datos y logística -->
+    <section class="slide s-method">
+      <span class="counter">04 / 08</span>
+      <p class="eyebrow">04 · Cómo trabajamos</p>
+      <h2>Así construimos con el equipo.</h2>
+      <p class="sub">Sistemas aprende construyendo sobre sus propios casos y después lleva lo aprendido a cada área.</p>
+
+      <ol class="mt-steps" style="--n:4">
+          <li><b>Construimos</b><span>Junto a quien ejecuta el proceso, con sus casos reales.</span></li>
+          <li><b>Probamos</b><span>Con ese equipo y con el equipo de tecnología de La Tienda del Blúmer.</span></li>
+          <li><b>Adoptamos</b><span>El equipo la usa en su trabajo diario.</span></li>
+          <li><b>Medimos</b><span>El retorno en tiempo y las oportunidades de optimización para la empresa.</span></li>
+      </ol>
+      <div class="mt-strips">
+        <p class="mt-why"><b>Por qué en este orden</b> Primero Sistemas, porque su capacidad y sus conexiones sirven a todas las áreas. Después Bodega, Compras y RRHH; luego Contabilidad, Tesorería y las auditorías, que dependen de los criterios previos. Al final, los Cerebros Digitales, con la información ya reunida.</p>
+        <p class="mt-who"><b>Quién construye</b> <strong>Intezia guía</strong> y el equipo de Sistemas construye con IA, junto a quien conoce cada proceso de su área.</p>
+      </div>
+
+      <div class="mt-info">
+        <div class="mt-card">
+          <p class="mt-card-label">Cómo funciona en la práctica</p>
+          <ul><li><b>Con el trabajo real de cada uno.</b> Sistemas aprende con su propio trabajo y cada área construye sobre sus procesos, no con ejercicios de aula.</li><li><b>Sobre las réplicas de datos.</b> La IA se conecta a las réplicas que Sistemas desarrolla, no a las bases en uso, y cada consulta queda registrada.</li><li><b>Depende de cada sistema.</b> Lo que se conecta depende de cada sistema y de qué tan fácil sea integrarlo: se investiga y se prueba antes de fijar la solución.</li></ul>
+        </div>
+        <div class="mt-card">
+          <p class="mt-card-label">Cómo cuidamos sus datos</p>
+          <p>Los datos de nómina, bancos y clientes no se cargan a la IA sin la autorización de La Tienda del Blúmer: se trabaja con las réplicas y los ejemplos que Sistemas aprueba.</p>
+        </div>
+      </div>
+
+      <div class="mt-logi">
+        <div class="mt-tile"><span>Modalidad</span><b>Presencial en Valencia o en línea, según se acuerde en la reunión de arranque.</b></div>
+        <div class="mt-tile"><span>Participantes</span><b>El equipo de Sistemas y, en cada fase, quienes conocen el proceso de cada área.</b></div>
+        <div class="mt-tile"><span>Ritmo de trabajo</span><b>Según la disponibilidad de cada área, sin frenar su operación diaria.</b></div>
+        <div class="mt-tile"><span>Arranque</span><b>Las fechas se acuerdan en la reunión de arranque.</b></div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">La Tienda del Blúmer · CAI-112</span>
+      </div>
+    </section>
+
+    <!-- 5 · Entregables: ¿con qué me quedo? (catálogo + piezas transversales) -->
+    <section class="slide s-deliv compact con-imp">
+      <span class="counter">05 / 08</span>
+      <p class="eyebrow">05 · Entregables</p>
+      <div class="deliv-head">
+        <h2>Lo que recibe cada área.</h2>
+        <p class="deliv-sub"><span class="nw">Lo que se llevan</span> los equipos: las soluciones de cada área, probadas y en uso. MCP: conector que comunica a la IA con un sistema.</p>
+      </div>
+
+      <div class="deliv-impact">
+        <span class="di-label">Impacto</span>
+        <p>La información de las siete áreas queda <strong>reunida y conectada</strong>, y Sistemas <strong>desarrolla con IA</strong> las soluciones, con menos tareas repetidas y cambios probados.</p>
+      </div>
+
+      <div class="deliv-carriles" style="--ncols:4">
+        <span class="dc acc-y fase" style="grid-column: span 1">Fase 1</span>
+        <span class="dc acc-y fase" style="grid-column: span 1">Fase 2</span>
+        <span class="dc acc-y fase hi" style="grid-column: span 1">Fase 3</span>
+        <span class="dc acc-y fase" style="grid-column: span 1">Fase 4</span>
+      </div>
+
+      <div class="deliv-cols" style="--ncols:4">
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">Sistemas</p>
+            <ul>
+              <li>Mantenimiento ágil de sus sistemas y scripts con Claude Code</li>
+              <li>Tareas repetidas entre tiendas, automatizadas con scripts</li>
+              <li>Cambios probados antes de tocar las bases en uso</li>
+              <li>Conexión a SQL Server por MCP</li>
+              <li>Prueba de conexión con SRH por MCP</li>
+              <li>Pruebas de conexión: Conetsoft, SPDV, Infotex</li>
+              <li>Registro de solicitudes de soporte</li>
+              <li>Requerimientos breves de cada área</li>
+              <li>Solución centralizada con trazabilidad</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">Bodega y Compras</p>
+            <ul>
+              <li>Reporte de inventario contra ventas</li>
+              <li>Pedido, recepción y saldos de importación</li>
+              <li>Reglas de reposición y reparto por tienda</li>
+            </ul>
+          </div>
+          <div class="da">
+            <p class="da-name">Recursos Humanos</p>
+            <ul>
+              <li>Validación de nómina contra asistencia</li>
+              <li>Reporte de RRHH con todos los datos</li>
+              <li>Formatos de pago de nómina y liquidaciones</li>
+              <li>Seguimiento de contratos y préstamos</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">Contabilidad</p>
+            <ul>
+              <li>Criterios de asiento por banco y tarjeta</li>
+              <li>Prueba: de la venta al asiento contable</li>
+              <li>Libro de ventas y conciliación, en uso</li>
+            </ul>
+          </div>
+          <div class="da">
+            <p class="da-name">Tesorería</p>
+            <ul>
+              <li>Soportes digitales con archivo ordenado</li>
+              <li>Consolidación de las herramientas de Tesorería</li>
+              <li>Medición de la cola de transferencias</li>
+            </ul>
+          </div>
+          <div class="da">
+            <p class="da-name">Auditoría Interna y Cashea</p>
+            <ul>
+              <li>Registro digital de la revisión de ventas</li>
+              <li>Cruce de Cashea: órdenes y abonos</li>
+              <li>Soportes de Oriente en digital</li>
+            </ul>
+          </div>
+          <div class="da">
+            <p class="da-name">Auditoría Externa</p>
+            <ul>
+              <li>Conciliación de pagos con sus soportes</li>
+              <li>Registro de dólares y bolívares</li>
+              <li>Planillas de Interna recibidas en digital</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">Cerebros Digitales</p>
+            <ul>
+              <li>Cerebro del líder de Sistemas</li>
+              <li>Cerebro de soporte y desarrollo</li>
+              <li>Cerebro de Recursos Humanos</li>
+              <li>Cerebro de Compras</li>
+              <li>Cerebro de Dirección</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="deliv-band">
+        <div class="db-card db-1">
+          <span class="db-label">Para todo el proyecto</span>
+        </div>
+        <div class="db-card db-2">
+          <span class="db-label">Valor inmediato</span>
+        </div>
+      </div>
+      <!-- Cajas multiline editables (vacías en HTML: el contenido vive dentro del AcroForm /V). -->
+      <div class="multi-box db-box db-box-1" data-field="Entregables"></div>
+      <div class="multi-box db-box db-box-2" data-field="Acreditacion"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">La Tienda del Blúmer · CAI-112</span>
+      </div>
+    </section>
+
+    <!-- 6 · Retorno: ¿qué gano? (método de cálculo). Sin estudios ni citas externas. -->
+    <section class="slide s-roi">
+      <span class="counter">06 / 08</span>
+      <p class="eyebrow">06 · Retorno</p>
+      <h2>Retorno esperado: horas que se liberan.</h2>
+      <p class="sub">Lo que la Detección encontró en cada área y lo que quedaría al optimizar el proceso; se mide a 30, 60 y 90 días.</p>
+
+      <div class="roi-body">
+        <div class="roi-panel">
+          <p class="roi-panel-title">Horas que se liberan por área, estimadas en la Detección</p>
+          <ol class="roi-steps">
+            <li><b>Tesorería</b><span>De 5 h a 1 h por día con la relación y la recepción de comprobantes: 80 h al mes.</span></li>
+            <li><b>Auditoría Interna y Cashea</b><span>3 h por día en el registro de ventas y 3 h por día en el cruce de Cashea: 120 h al mes.</span></li>
+            <li><b>Recursos Humanos</b><span>De 20 h a 5 h por analista y quincena en el cálculo de nómina: 60 h al mes.</span></li>
+            <li><b>Contabilidad</b><span>30 min por día en el libro de ventas y 12 h al mes en la conciliación: 22 h al mes.</span></li>
+            <li><b>Auditoría Externa</b><span>De 20 h a 7 h por ciclo de conciliación: 13 h al mes.</span></li>
+            <li><b>Bodega y Compras</b><span>De 1 o 1,5 jornadas a 20 min más 2 o 3 h de revisión por factura comparable: de 5 a 10 h al mes.</span></li>
+            <li><b>Sistemas</b><span>Menos soporte repetido y conocimiento documentado: beneficio sin cifra de horas.</span></li>
+          </ol>
+        </div>
+
+        <div class="roi-right">
+          <p class="roi-right-title">Calendario de garantía, desde el cierre de cada área</p>
+          <div class="roi-card">
+            <b>30 días</b>
+            <p>Las soluciones de cada área en uso diario, con datos reales.</p>
+          </div>
+          <div class="roi-card">
+            <b>60 días</b>
+            <p>Ajustes con casos nuevos y menos correcciones a mano.</p>
+          </div>
+          <div class="roi-card">
+            <b>90 días</b>
+            <p>Medición del tiempo ganado en cada tarea, contra la línea base.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="roi-dest-wrap">
+        <p class="roi-dest-title">Hacia dónde va el proyecto</p>
+        <div class="roi-dest">
+          <div class="rd-item"><b>Información en un solo lugar</b><p>Cada área consulta la misma información, actualizada, <strong>sin reconstruirla</strong> desde mensajes y hojas.</p></div>
+          <div class="rd-item"><b>Conocimiento que se comparte</b><p>Cada solución queda documentada, y los Cerebros Digitales guardan el conocimiento de los responsables clave para consultarlo y delegarlo.</p></div>
+          <div class="rd-item"><b>Capacidad propia en Sistemas</b><p>Sistemas desarrolla y mantiene con IA las mejoras, y La Tienda del Blúmer decide si lleva el ciclo a <strong>otras áreas</strong>.</p></div>
+        </div>
+      </div>
+
+      <div class="roi-hook"><p>Optimizando estos procesos, La Tienda del Blúmer podría liberar unas 300 h al mes, cerca de 3.600 al año; a los 90 días del cierre de cada área se mide lo que ganó.</p></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">La Tienda del Blúmer · CAI-112</span>
+      </div>
+    </section>
+
+    <!-- 7 · Inversión (hoja de cotización estándar; antepenúltima slide) -->
+    <section class="slide s-price">
+      <span class="counter">07 / 08</span>
+      <h2 class="title">Inversión del proyecto.</h2>
+      <p class="price-intro">Propuesta Económica · Servicio de Habilidades</p>
+
+      <div class="block">
+        <span class="block-eyebrow">Duración</span>
+        <p class="block-value">Proyecto en siete áreas y cuatro fases: 120 horas con el equipo, con seguimiento y garantía a 30, 60 y 90 días.</p>
+      </div>
+
+      <div class="block block-programa">
+        <span class="block-eyebrow">Programa</span>
+      </div>
+      <div class="multi-box programa-box" data-field="Programa"></div>
+
+      <div class="block block-cotizacion">
+        <span class="block-eyebrow">Cotización</span>
+      </div>
+
+      <span class="cot-label cot-label-base">Propuesta + Inversión</span>
+      <span class="cot-sign cot-sign-base">REF</span>
+      <div class="cot-frame base-frame"></div>
+
+      <span class="cot-label cot-label-discount">Descuento</span>
+      <span class="cot-sign-minus">&minus;REF</span>
+      <div class="cot-frame discount-frame"></div>
+      <span class="cot-urgent-note">Descuento válido por 15 días</span>
+
+      <span class="cot-label cot-label-total">TOTAL</span>
+      <span class="cot-sign cot-sign-total">REF</span>
+      <div class="cot-frame total-frame"></div>
+
+      <p class="cot-moneda">Pago en Divisas o Bolívares a Tasa BCV del Euro</p>
+      <p class="cot-validity">Cotización válida por 30 días.</p>
+      <div class="cot-terms-box">
+        <span class="cot-terms-label">Importante</span>
+        <p class="cot-terms-text">Este servicio se presta bajo nuestros <a href="https://drive.google.com/file/d/1PA-ZSt4KnyY5dpxXzgkIk6-yfGlV2eF8/view?usp=drive_link" target="_blank" rel="noopener">términos y condiciones</a>. Al avanzar con esta propuesta, ambas partes los aceptan.</p>
+      </div>
+
+      <div class="cot-garantia-badge">
+        <span class="cot-garantia-tag">Garantía 30-60-90</span>
+        <p class="cot-garantia-text">Estamos contigo hasta que la habilidad quede instalada.</p>
+      </div>
+
+      <div class="block block-notes-container">
+        <span class="block-eyebrow">Notas</span>
+      </div>
+      <div class="multi-box notas-box" data-field="Notas"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">La Tienda del Blúmer · CAI-112</span>
+      </div>
+    </section>
+
+    <!-- 9 · Próximos pasos: qué hacer y a quién escribir (última slide) -->
+    <section class="slide s-next">
+      <span class="counter">08 / 08</span>
+      <p class="eyebrow">08 · Próximos pasos</p>
+      <h2>Tres pasos para arrancar.</h2>
+      <p class="sub">Esto es lo que sigue cuando La Tienda del Blúmer confirme la propuesta.</p>
+
+      <div class="nx-steps">
+        <div class="nx-step acc-y">
+          <span class="nx-num">1</span>
+          <b>Confirmar el alcance</b>
+          <p>Resolvemos las dudas de La Tienda del Blúmer y validamos las siete áreas, sus procesos y el orden de las cuatro fases.</p>
+        </div>
+        <div class="nx-step acc-o">
+          <span class="nx-num">2</span>
+          <b>Accesos y agenda</b>
+          <p>Coordinamos con Sistemas los accesos a las réplicas de datos y la agenda de cada área.</p>
+        </div>
+        <div class="nx-step acc-w">
+          <span class="nx-num">3</span>
+          <b>Reunión de arranque</b>
+          <p>Reunión de unos 30 minutos para alinear prioridades, participantes y datos de cada área.</p>
+        </div>
+      </div>
+
+      <div class="nx-contact">
+        <div class="nx-card nx-ase">
+          <span class="nx-label">¿Dudas? Escribe a tu asesora comercial</span>
+          <b class="nx-name">Verónica Rubio</b>
+          <span class="nx-role">Asesora comercial</span>
+          <p class="nx-line"><a href="mailto:vrubio01@intezia.com">vrubio01@intezia.com</a></p>
+          <p class="nx-line">+58 422 3355505</p>
+        </div>
+        <div class="nx-card nx-emp">
+          <span class="nx-label">Intezia</span>
+          <p class="nx-line">Intezia C.A J-505657950</p>
+          <p class="nx-line"><a href="mailto:servicio@intezia.com">servicio@intezia.com</a></p>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">La Tienda del Blúmer · CAI-112</span>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

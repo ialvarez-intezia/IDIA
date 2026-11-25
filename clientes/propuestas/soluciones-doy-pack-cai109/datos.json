@@ -1,0 +1,514 @@
+{
+ "version": 3,
+ "cliente": {
+  "nombre": "Soluciones Doy Pack",
+  "slug": "soluciones-doy-pack-cai109",
+  "codigo": "CAI-109",
+  "nombre_pie": "Doy Pack"
+ },
+ "division": "educacion",
+ "alianza": false,
+ "sin_horas_trabajo": true,
+ "servicio_rotulo": "Servicio de Detección y Habilidades",
+ "meta_servicio": "habilidades",
+ "por_fases": true,
+ "omitir": [
+  "pago"
+ ],
+ "meta_tipo": "Capacitación In-Company · Detección previa, fundamentos y construcción en conjunto de un agente de Instagram en n8n con la API de Meta y apoyo en compras, 41 h · formato compacto v3",
+ "eje": "Detectar con las tres gerencias los procesos de Ventas y Mercadeo y de Administración, nivelar al equipo en IA y construir con él un agente conectado a Instagram (n8n y API de Meta) que atiende y deriva clientes, y apoyo en cotizaciones, cuentas por pagar, facturas y históricos",
+ "origen": "Ficha de Levantamiento de Soluciones Doy Pack (Flavia Martínez, registrada el 19/11/2026) y resumen de la reunión con las gerencias pegado por Ivana el 20/11/2026. Sin transcripción: pendiente de recibir",
+ "fuente_insumo": "Ficha de Levantamiento (19/11/2026) y resumen de la reunión de Flavia Martínez con las gerencias. Sin transcripción",
+ "siglas_ok": [
+  "IA"
+ ],
+ "vocabulario": {
+  "solucion": [
+   "entregable",
+   "entregables"
+  ]
+ },
+ "portada": {
+  "titulo_lineas": [
+   "Asistentes de IA que atienden",
+   "clientes y ordenan las compras"
+  ],
+  "titulo_destacado": "de Doy Pack",
+  "lead": "Primero, una **detección** con las tres gerencias. Después, el equipo aprende a usar la IA. Al final, construimos con él un **agente conectado a Instagram** y apoyo en **compras y cuentas por pagar**.",
+  "hechos": [
+   {
+    "num": "6 al día",
+    "texto": "solicitudes de Instagram se responden; otras quedan sin respuesta.",
+    "resuelto_por": [
+     "VEN-1",
+     "VEN-2"
+    ]
+   },
+   {
+    "num": "~3 horas",
+    "texto": "puede costar una sola conversación con un cliente que no califica.",
+    "resuelto_por": [
+     "VEN-1"
+    ]
+   },
+   {
+    "num": "A mano",
+    "texto": "cada semana se comparan 3 cotizaciones y se arma la lista de cuentas por pagar.",
+    "resuelto_por": [
+     "ADM-1"
+    ]
+   },
+   {
+    "num": "Carpetas",
+    "texto": "los históricos de compras se buscan carpeta por carpeta.",
+    "resuelto_por": [
+     "ADM-2"
+    ]
+   }
+  ]
+ },
+ "carriles": [
+  {
+   "id": "ia",
+   "nombre": "Asistentes de IA",
+   "nombre_corto": "Asistentes de IA",
+   "color": "amarillo"
+  }
+ ],
+ "areas": [
+  {
+   "id": "DET",
+   "nombre": "Detección previa con las gerencias",
+   "carril": "ia",
+   "frente": "A",
+   "proceso_base": true,
+   "para_que": "Cerrar los procesos y confirmar la herramienta antes de construir",
+   "soluciones": [
+    {
+     "id": "DET-1",
+     "entregable": "Reunión central con las 3 gerencias",
+     "h": 2,
+     "fase": "F1",
+     "detalle": "Reunión con las tres gerencias del grupo para alinear procesos, prioridades y la herramienta de IA."
+    },
+    {
+     "id": "DET-2",
+     "entregable": "Levantamiento de Ventas y Mercadeo",
+     "h": 2,
+     "fase": "F1",
+     "detalle": "Levantamiento de la atención por Instagram y WhatsApp: cómo llegan las solicitudes, cómo se filtran y a qué empresa del grupo se derivan."
+    },
+    {
+     "id": "DET-3",
+     "entregable": "Levantamiento de Administración y Almacén",
+     "h": 2,
+     "fase": "F1",
+     "detalle": "Levantamiento de compras, cuentas por pagar, facturas y históricos, con almacén."
+    }
+   ]
+  },
+  {
+   "id": "FUN",
+   "nombre": "Fundamentos de IA",
+   "carril": "ia",
+   "frente": "A",
+   "para_que": "El «paso cero»: que todo el equipo use la IA con criterio y cuide la información",
+   "soluciones": [
+    {
+     "id": "FUN-1",
+     "entregable": "Fundamentos: instrucciones, documentos y proyectos",
+     "h": 2,
+     "fase": "F2",
+     "detalle": "Cómo darle instrucciones a la IA, cargar documentos y contexto, armar proyectos y qué información no se debe subir.",
+     "incluye": [
+      "Cómo darle instrucciones a la IA",
+      "Cargar documentos y armar proyectos",
+      "Qué información no se debe subir"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "VEN",
+   "nombre": "Ventas y Mercadeo",
+   "carril": "ia",
+   "frente": "A",
+   "para_que": "Un agente que atiende Instagram, filtra al cliente y lo deriva al área correcta",
+   "soluciones": [
+    {
+     "id": "VEN-1",
+     "entregable": "Agente que atiende y califica al cliente",
+     "h": 8,
+     "fase": "F3",
+     "detalle": "Con el equipo, el agente que atiende lo que entra por Instagram y distingue al emprendedor pequeño del cliente industrial según volumen y producto, con las preguntas técnicas resueltas desde información cargada."
+    },
+    {
+     "id": "VEN-2",
+     "entregable": "Flujo en n8n conectado a la API de Meta",
+     "h": 10,
+     "fase": "F3",
+     "detalle": "Construcción en n8n del flujo que recibe los mensajes de Instagram por la API de Meta y se los entrega al agente, y devuelve su respuesta."
+    },
+    {
+     "id": "VEN-3",
+     "entregable": "Derivación al área del grupo y pruebas",
+     "h": 7,
+     "fase": "F3",
+     "detalle": "Derivación de cada cliente a la empresa del grupo que corresponde y pruebas con solicitudes reales, hasta que el flujo funcione."
+    }
+   ]
+  },
+  {
+   "id": "ADM",
+   "nombre": "Administración y Almacén",
+   "carril": "ia",
+   "frente": "A",
+   "para_que": "Compras, cuentas por pagar y facturas con menos búsqueda manual",
+   "soluciones": [
+    {
+     "id": "ADM-1",
+     "entregable": "Comparativo de cotizaciones y cuentas por pagar",
+     "h": 4,
+     "fase": "F3",
+     "detalle": "Comparación de las cotizaciones de cada compra y armado de la lista semanal de cuentas por pagar."
+    },
+    {
+     "id": "ADM-2",
+     "entregable": "Facturas y consulta de históricos",
+     "h": 4,
+     "fase": "F3",
+     "detalle": "Apoyo para cargar facturas y consultar históricos de compras y pagos sin buscar en carpetas."
+    }
+   ]
+  }
+ ],
+ "alcance": {
+  "titulo": "Detectar, aprender y construir con el equipo.",
+  "subtitulo": "Un solo proyecto en **tres tramos**: detección previa, fundamentos y construcción en conjunto.",
+  "etiqueta_fuera": "Para una siguiente etapa",
+  "fuera_alcance": [
+   "Conexión directa al banco: hoy no es posible; la descarga de pagos sigue como está.",
+   "Conciliación automática: depende de la conexión al banco; se evalúa en la siguiente etapa.",
+   "Informes de indicadores, flujo de caja e inventario: se planifican en la siguiente etapa.",
+   "Licencias de IA y de n8n, y la cuenta de Meta: se confirman en la Detección previa y no están en la inversión.",
+   "Reemplazar el sistema administrativo actual: la IA se apoya en él, no lo sustituye."
+  ]
+ },
+ "metodo": {
+  "titulo": "Cómo trabajamos con el equipo.",
+  "subtitulo": "Se construye con las gerencias y los analistas, sobre sus procesos reales, para que aprendan a crearlos y mantenerlos.",
+  "quien_construye": "**Intezia guía** y el equipo construye con IA sus propios agentes y skills, sobre sus procesos reales, para mantenerlos solo.",
+  "por_que_orden": "Primero se cierran los procesos y la herramienta; luego se aprende lo básico; solo entonces se construye sobre procesos reales.",
+  "practica": [
+   {
+    "titulo": "Herramienta a confirmar",
+    "texto": "La Detección previa confirma qué herramienta y qué plan conviene, con sus condiciones de privacidad y de acceso."
+   },
+   {
+    "titulo": "Conexión a Instagram",
+    "texto": "Se construye en n8n con la API de Meta; su viabilidad (cuenta de Meta para empresas y permisos) se confirma en la Detección previa."
+   },
+   {
+    "titulo": "Los analistas, protagonistas",
+    "texto": "Los agentes son sobre todo para los analistas, que los usan a diario; las gerencias los consultan."
+   }
+  ],
+  "datos": "Los datos del banco, de clientes y de pagos no se cargan a la IA sin el visto bueno de las gerencias: se trabaja con los ejemplos que autoricen. Ver la hoja de gobernanza de datos.",
+  "pasos": [
+   {
+    "titulo": "Construimos",
+    "texto": "Con el equipo, sobre sus procesos reales."
+   },
+   {
+    "titulo": "Probamos",
+    "texto": "Con solicitudes y compras reales, hasta que funcione."
+   },
+   {
+    "titulo": "Adoptamos",
+    "texto": "El equipo usa los agentes en su día a día."
+   },
+   {
+    "titulo": "Medimos",
+    "texto": "El tiempo recuperado, a 30, 60 y 90 días."
+   }
+  ]
+ },
+ "logistica": {
+  "modalidad": "Presencial, en las oficinas de Soluciones Doy Pack.",
+  "participantes": "Las 3 gerencias y de 2 a 3 analistas; el número exacto se confirma al arrancar.",
+  "arranque": "En cuanto se aprueba, se coordina el arranque con las gerencias.",
+  "ritmo": "Según la agenda del equipo, sin frenar la operación diaria."
+ },
+ "fases": [
+  {
+   "id": "F1",
+   "titulo": "Detección",
+   "descripcion": "con las 3 gerencias, antes de construir"
+  },
+  {
+   "id": "F2",
+   "titulo": "Fundamentos",
+   "descripcion": "el «paso cero» de todo el equipo"
+  },
+  {
+   "id": "F3",
+   "titulo": "Construcción",
+   "descripcion": "en conjunto, sobre procesos reales",
+   "destacada": true
+  }
+ ],
+ "frentes": [
+  {
+   "id": "A",
+   "carril": "ia",
+   "nombre": "Las tres empresas del grupo",
+   "celdas": {
+    "F1": "Reunión central con las gerencias y levantamiento de Ventas y de Administración.",
+    "F2": "El equipo aprende a instruir a la IA y a cuidar la información.",
+    "F3": "Los agentes de atención y de compras, construidos con el equipo."
+   }
+  }
+ ],
+ "ruta": {
+  "titulo": "De la detección a los agentes en uso.",
+  "subtitulo": "El calendario se acuerda en la reunión de arranque. La **garantía y el seguimiento** a 30, 60 y 90 días corren desde el cierre de la construcción.",
+  "nota": "Un solo proyecto de {h_total} horas en tres tramos: {h_f1} h de detección previa, {h_f2} h de fundamentos y {h_f3} h de construcción en conjunto.",
+  "hitos": [
+   {
+    "titulo": "Detección previa",
+    "texto": "Procesos cerrados y herramienta confirmada con las gerencias."
+   },
+   {
+    "titulo": "Fundamentos",
+    "texto": "El equipo sabe instruir a la IA y qué información no se sube."
+   },
+   {
+    "titulo": "Atención por Instagram",
+    "texto": "El agente califica y deriva cada solicitud al área correcta."
+   },
+   {
+    "titulo": "Compras y pagos",
+    "texto": "Cotizaciones, lista semanal y facturas con apoyo de la IA."
+   },
+   {
+    "titulo": "30 · 60 · 90 días",
+    "texto": "Seguimiento: uso, ajustes y tiempo recuperado."
+   }
+  ],
+  "siguiente_etapa": {
+   "titulo": "Siguiente etapa:",
+   "texto": "la conexión al banco y la conciliación, si se hace posible, y lo demás de «Para una siguiente etapa» se planifican con el grupo al cierre."
+  }
+ },
+ "seguimiento": {
+  "rango": "30, 60 y 90 días",
+  "texto": "Desde el cierre de la construcción",
+  "items": [
+   {
+    "dias": "30 días",
+    "texto": "Uso diario de los agentes"
+   },
+   {
+    "dias": "60 días",
+    "texto": "Ajustes con casos nuevos"
+   },
+   {
+    "dias": "90 días",
+    "texto": "Tiempo recuperado, medido"
+   }
+  ]
+ },
+ "entregables": {
+  "titulo": "Lo que recibe el equipo.",
+  "subtitulo": "Lo que se llevan: un equipo que usa la IA con criterio y agentes propios, con el seguimiento a {rango_seguimiento} que mide su efecto.",
+  "etiqueta_transversales": "Para todo el proyecto",
+  "transversales": [
+   "Línea base del tiempo de cada tarea.",
+   "Cuaderno de trabajo digital del proyecto.",
+   "Seguimiento a 30, 60 y 90 días."
+  ],
+  "etiqueta_valor": "Valor inmediato",
+  "valor_inmediato": [
+   "Detección: procesos cerrados y herramienta confirmada.",
+   "Fundamentos: el equipo usa la IA con criterio.",
+   "Construcción: agentes en uso con casos reales."
+  ],
+  "impacto": {
+   "enfoque": "reenfoque",
+   "texto": "Gerentes y analistas recuperan tiempo del trabajo repetitivo y de la búsqueda de documentos, para dedicarlo a **decidir** y a atender mejor a los clientes que sí califican."
+  }
+ },
+ "retorno": {
+  "modo": "metodo",
+  "posiciones": false,
+  "titulo": "Retorno esperado: tiempo recuperado.",
+  "subtitulo": "Se calcula con las tareas del grupo, partiendo del tiempo que hoy toman y se confirma en la Detección previa.",
+  "etiqueta_pasos": "Cómo se calcula",
+  "pasos": [
+   {
+    "titulo": "Volumen",
+    "texto": "Cuántas solicitudes por Instagram, cotizaciones y facturas se repiten por semana."
+   },
+   {
+    "titulo": "Tiempo actual",
+    "texto": "Lo que toma hoy cada tarea, medido con quien la hace: la **línea base**."
+   },
+   {
+    "titulo": "Tiempo con el agente",
+    "texto": "Lo que toma la misma tarea con el agente en uso."
+   },
+   {
+    "titulo": "Horas recuperadas",
+    "texto": "Volumen por la diferencia entre el tiempo actual y el tiempo con el agente."
+   }
+  ],
+  "etiqueta_metas": "Calendario de garantía, desde el cierre de la construcción",
+  "metas": [
+   {
+    "dias": "30 días",
+    "texto": "Los agentes en uso real, con solicitudes y compras del grupo."
+   },
+   {
+    "dias": "60 días",
+    "texto": "Ajustes con casos nuevos y menos correcciones a mano."
+   },
+   {
+    "dias": "90 días",
+    "texto": "Medición del tiempo ganado en cada tarea, contra la línea base."
+   }
+  ],
+  "destino": [
+   {
+    "rotulo": "Clientes mejor atendidos",
+    "texto": "Cada solicitud recibe respuesta y llega al área correcta del grupo."
+   },
+   {
+    "rotulo": "Compras con menos búsqueda",
+    "texto": "Cotizaciones comparadas y **históricos a la mano**, sin buscar en carpetas."
+   },
+   {
+    "rotulo": "Equipo autónomo",
+    "texto": "Los analistas **crean y mantienen** sus propios agentes."
+   }
+  ],
+  "gancho": "A los 90 días del cierre, el grupo conocerá el tiempo que ganó en cada tarea."
+ },
+ "inversion": {
+  "duracion": "**{h_total} horas** en total, en tres tramos: detección previa ({h_f1} h), fundamentos ({h_f2} h) y construcción en conjunto ({h_f3} h). Seguimiento a {rango_seguimiento}.",
+  "programa": [
+   "Servicio de Detección y Habilidades para {cliente_corto} ({codigo}).",
+   "Detección previa con las 3 gerencias y levantamiento de 2 áreas.",
+   "Fundamentos de IA para el equipo.",
+   "Agente de Instagram en n8n con la API de Meta, y apoyo en compras y cuentas por pagar.",
+   "Seguimiento a 30, 60 y 90 días."
+  ],
+  "notas": [
+   "Garantía 30-60-90: seguimiento a {rango_seguimiento} desde el cierre de la construcción.",
+   "Términos y condiciones: los del enlace de «Importante», que ambas partes aceptan al avanzar con esta propuesta.",
+   "Licencias de IA, n8n y cuenta de Meta, aparte: se confirman en la Detección previa."
+  ]
+ },
+ "respuesta_solicitud": {
+  "eyebrow": "Gobernanza de datos",
+  "despues_de": "metodo",
+  "paginas": [
+   {
+    "titulo": "Cómo se cuida la información del grupo.",
+    "subtitulo": "Qué datos se usan, dónde se trabaja y quién decide, antes de cargar nada a la IA.",
+    "items": [
+     {
+      "num": "1",
+      "titulo": "Qué información no se sube",
+      "texto": "Se trabaja con ejemplos que autoricen las gerencias. En Fundamentos todo el equipo aprende qué no se sube.",
+      "puntos": [
+       "Pagos y datos del banco",
+       "Datos personales de clientes",
+       "Claves y accesos"
+      ]
+     },
+     {
+      "num": "2",
+      "titulo": "Cómo se separa la información",
+      "texto": "Cada persona trabaja en su propia cuenta y la información se organiza por proyecto.",
+      "puntos": [
+       "Un espacio por empresa del grupo",
+       "Sin cuentas ni claves compartidas",
+       "Acceso solo a quien autoricen las gerencias"
+      ]
+     },
+     {
+      "num": "3",
+      "titulo": "Qué se confirma antes de arrancar",
+      "texto": "La Detección previa define la herramienta y revisa las condiciones de su proveedor.",
+      "puntos": [
+       "Plan, privacidad y uso de datos para entrenar",
+       "Dónde se aloja n8n y qué datos pasan por él",
+       "Cómo se accede desde Venezuela"
+      ]
+     },
+     {
+      "num": "4",
+      "titulo": "Reglas que reducen el riesgo",
+      "texto": "Dejamos una guía breve de uso para el equipo.",
+      "puntos": [
+       "Nada sensible en las conversaciones",
+       "Se revisa qué se conecta antes de conectarlo",
+       "Quién ve qué se decide por roles"
+      ]
+     }
+    ],
+    "nota": "Intezia no ofrece ni garantiza formas de acceso a las herramientas: las condiciones, incluido el acceso desde Venezuela, las fija cada proveedor. Esta hoja no es una certificación de seguridad."
+   }
+  ]
+ },
+ "proximos_pasos": {
+  "asesora": {
+   "nombre": "Flavia Martínez",
+   "cargo": "Asesora comercial",
+   "correo": "fmartinez@intezia.com",
+   "telefono": "+58 414 5756615"
+  },
+  "pasos": [
+   {
+    "titulo": "Confirmar el alcance",
+    "texto": "Resolvemos las dudas de las gerencias y validamos los tres tramos y lo que queda para la siguiente etapa."
+   },
+   {
+    "titulo": "Participantes y agenda",
+    "texto": "Doy Pack indica quiénes son los analistas que participan y se arma la agenda con las gerencias."
+   },
+   {
+    "titulo": "Reunión de arranque",
+    "texto": "Reunión de unos 30 minutos para alinear la detección previa y el calendario."
+   }
+  ]
+ },
+ "supuestos": [
+  "Pedido de Ivana (20/11/2026): propuesta CAI-109 para Soluciones Doy Pack con Flavia Martínez como asesora, a partir de la Ficha (19/11/2026) y del resumen de la reunión que pegó Ivana. No hay transcripción: la Ficha y ese resumen son la fuente (§4.23).",
+  "Decisiones de Ivana (20/11/2026): el agente de Instagram va **conectado a Instagram** y, en un segundo mensaje, **25 h de construcción para el agente** porque debe hacerse con **n8n y la API de Meta**; impacto **reenfoque**; y una **hoja extra de gobernanza de datos dentro de la propuesta** (no un PDF aparte), como lámina adicional «Gobernanza de datos». Total **41 h** = detección previa 6 h + fundamentos 2 h + construcción 33 h (agente 25 h + compras y cuentas por pagar 8 h). Ivana había elegido antes 24 h (construcción 16 h, el tope de Flavia). Si las 25 h debían cubrir toda la construcción (6 + 2 + 25 = 33 h), basta bajar las 8 h de compras. División Educación y alianza = no: tomados por mí (primer contacto), no los dio Ivana.",
+  "Combo: la Detección previa va dentro del mismo proyecto como paso previo, con la plantilla de Habilidades y `servicio_rotulo` «Servicio de Detección y Habilidades» (como CAI-032). `meta.json` queda en habilidades (código CAI y servicio de interés de la Ficha). Una sola hoja de inversión con tres tramos descritos (no `inversion.partes`: solo si Ivana lo pide).",
+  "Reparto de horas (decisión mía a partir de lo que dijo Flavia e Ivana): detección previa 6 h = reunión central 2 h + 2 h en Ventas y Mercadeo + 2 h en Administración y Almacén; fundamentos 2 h (el «paso cero» de Lady); construcción 33 h = agente de Instagram 25 h (atiende y califica 8 h, flujo en n8n con la API de Meta 10 h, derivación al área del grupo y pruebas 7 h) + compras y cuentas por pagar 8 h (cotizaciones y lista 4 h; facturas e históricos 4 h). El calendario (sesiones de 2 h) va al kickoff, no a la propuesta (§4.23).",
+  "Agente de Instagram conectado con **n8n y la API de Meta** (Ivana, 20/11/2026): se nombran en «Cómo trabajamos», el entregable y la inversión. La viabilidad (cuenta de Meta para empresas, permisos y aprobación de la API, dónde se aloja n8n) no está validada: el deck dice que se confirma en la Detección previa, antes de comprometer la construcción. n8n y la cuenta de Meta quedan fuera de la inversión. Con 25 h esta parte es más desarrollo que formación: alinear con Flavia cómo se lo presentó al cliente (construcción en conjunto).",
+  "Quedan fuera (siguiente etapa): conexión directa al banco (se les dijo que hoy no es posible), conciliación automática, informes de indicadores, flujo de caja e inventario. Flavia nombró «indicadores e inventario» como fase 2 y el pedido original incluía informes de indicadores y flujo de caja: confirmar que el flujo de caja también pasa a la fase 2. Reemplazar los sistemas administrativos y el Excel (expectativa de la Ficha) queda fuera: la IA se apoya en ellos.",
+  "Herramienta de IA sin nombrar: la Detección previa la confirma. Hoy usan Gemini gratuito y Claude gratuito (se agotó el límite), sin licencias. No se pre-recomienda ninguna, no se habla de VPN ni se garantiza nada sobre las cuentas (Claude no está soportado en Venezuela).",
+  "Gobernanza de datos (lámina adicional, `respuesta_solicitud`): responde lo que preguntaron las gerencias (filtración, VPN y Venezuela, separación entre cuentas) sin explicar la filtración que escucharon (no la conocemos) y sin prometer acceso ni seguridad. «Un espacio por empresa del grupo» y «sin cuentas compartidas» son reglas de diseño mías: confirmar con Ivana.",
+  "Participantes: 3 gerencias más 2 o 3 analistas (compras y administración, y mercadeo); la Ficha dice que podrían sumarse hasta 3 personas más. El número exacto está sin cerrar. Mary insistió en que los agentes son sobre todo para los analistas. No se nombra a ninguna persona del cliente.",
+  "Sin citas ni dolor dramatizado: los hechos de la portada son datos de la Ficha parafraseados (6 solicitudes al día, ~3 h por conversación que no califica, cotizaciones a mano, históricos en carpetas). Las 6 solicitudes y las 3 h son cifras declaradas por el cliente, sin medir.",
+  "Sin facilidad de pago (omitir: pago, regla permanente de Ivana). Sin certificado. Hoja de inversión con valores vacíos para ventas, en REF.",
+  "Sin semanas, sesiones ni fechas (§4.23). Modalidad presencial en sus oficinas (Ficha). Las gerencias quieren que María Prin, quien decide y firma, esté en la presentación.",
+  "Contacto de la última slide: Flavia Martínez, asesora comercial; correo y teléfono tomados de DET-060 y DET-061, no confirmados."
+ ],
+ "pendientes": [
+  "Valor, descuento y total: campos vacíos para ventas. Moneda REF. Total de horas: 41 h (6 + 2 + 33).",
+  "Viabilidad técnica de la conexión del agente a Instagram con n8n y la API de Meta (cuenta de Meta para empresas, permisos, alojamiento de n8n): se confirma en la Detección previa.",
+  "Número exacto de analistas (2 o 3, o hasta 3 más) y de personas que participan.",
+  "Confirmar que informes de indicadores, flujo de caja e inventario pasan a la fase 2.",
+  "Qué herramienta de IA y qué plan se usan (la Detección previa la confirma); licencias a cargo del cliente.",
+  "Revisar con Ivana la hoja de gobernanza de datos antes de presentarla (reglas de separación entre cuentas).",
+  "Recibir la transcripción de la reunión y contrastarla con la Ficha (si se contradicen, manda la transcripción).",
+  "Presentación: las gerencias quieren a quien decide y firma (María Prin) presente.",
+  "Confirmar el teléfono y el correo de Flavia Martínez.",
+  "Confirmar con Ivana si el programa lleva certificado.",
+  "Confirmar con Ivana si las 25 h cubren solo el agente (41 h en total, como quedó) o toda la construcción (33 h)."
+ ]
+}

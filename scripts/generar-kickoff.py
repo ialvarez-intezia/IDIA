@@ -115,13 +115,18 @@ def armar_deteccion(g, d, ctx, k, errores):
             et["horas"] = h_lev
         elif "priorizaci" in low:
             et["badge"] = "Automático"
+        # kickoff.json → etapas_kickoff: {"nivelación": "texto"}: redacta una etapa solo en el kick-off (la clave es parte del título,
+        # sin distinguir mayúsculas), p. ej. DET-048 (19/11/2026): fechas ya acordadas que la propuesta tenía estimadas.
+        for clave, texto in (k.get("etapas_kickoff") or {}).items():
+            if str(clave).lower() in low:
+                et["texto"] = plano(str(texto))
         etapas.append(et)
     if not tiene_arranque:
         etapas.insert(0, {"titulo": "Kick-off", "texto": ("Presentamos la ruta y agendamos el calendario." if k.get("sin_checklist") else "Presentamos la ruta, marcamos lo técnico y agendamos el calendario."), "horas": None, "badge": "Hoy", "now": True})
     grupos = []
     if h_niv:
         grupos.append({"id": "niv", "titulo": "Nivelación en IA", "horas": h_niv, "sub": "Fundamentos de IA para todo el equipo.", "chips": ["Nivelación del equipo"]})
-    grupos.append({"id": "lev", "titulo": "Levantamiento por departamento", "horas": h_lev, "sub": "Un espacio por departamento, con su líder y su mano derecha.", "chips": areas})
+    grupos.append({"id": "lev", "titulo": "Levantamiento por departamento", "horas": h_lev, "sub": k.get("levantamiento_sub") or "Un espacio por departamento, con su líder y su mano derecha.", "chips": areas})   # kickoff.json → levantamiento_sub: otra redacción (p. ej. «con todo el equipo»)
     grupos.append({"id": "inf", "titulo": "Informe Final", "horas": None, "sin_horas": True, "sub": "Presentación a la dirección.", "chips": [], "fijas": ["Presentación del Informe Final a la dirección"], "dur_fija": 1})
     total = h_lev + h_niv
     se_llevan = [plano(x.get("titulo", "")) for x in (det.get("entregables") or []) if isinstance(x, dict) and x.get("titulo")]
@@ -142,10 +147,30 @@ def armar_habilidades(g, d, ctx, agg, k, errores):
         h = (k.get("horas_por_fase") or {}).get(fid, h)
         titulo = f.get("titulo") or ("Arranque" if fid == "F0" else fid)
         desc = plano(resolver(f.get("descripcion", ""), ctx, "fases[%s].descripcion" % fid, errores))
-        etapas.append({"titulo": titulo, "texto": desc[:1].upper() + desc[1:] if desc else "", "horas": h or None, "badge": None, "now": False})
         nombres = [a["nombre"] for a in areas if any(s.get("fase") == fid for s in a.get("soluciones") or [])]
+        # kickoff.json → fases_kickoff: {"F1": {"titulo", "descripcion", "horas", "chips"}} cambia cómo se muestra una fase solo en el
+        # kick-off (p. ej. CAI-040, 16/11/2026: dos bloques con nombre propio y 10 h), sin tocar la propuesta.
+        ov = (k.get("fases_kickoff") or {}).get(fid) or {}
+        titulo = ov.get("titulo", titulo)
+        desc = ov.get("descripcion", desc)
+        h = ov.get("horas", h)
+        nombres = ov.get("chips", nombres)
+        etapas.append({"titulo": titulo, "texto": desc[:1].upper() + desc[1:] if desc else "", "horas": h or None, "badge": None, "now": False})
         sugerencias += nombres
         grupos.append({"id": str(fid).lower(), "titulo": titulo, "horas": h, "sub": desc, "chips": nombres})
+    # kickoff.json → grupos_kickoff: reemplaza por completo las fases de la propuesta por grupos propios, cada uno con su ruta y sus
+    # sesiones (p. ej. CAI-093, 16/11/2026: «Cerebro Digital 1 a 4», 5 sesiones cada uno, en vez de Base/Grafo/Uso).
+    # [{"id": "c1", "titulo", "descripcion", "horas", "chips"}]
+    if k.get("grupos_kickoff"):
+        etapas, grupos, sugerencias = etapas[:1], [], []
+        for i, gk in enumerate(k["grupos_kickoff"]):
+            if not isinstance(gk, dict) or not gk.get("id") or not gk.get("titulo"):
+                errores.append("kickoff.json → grupos_kickoff[%d]: falta id o titulo" % i)
+                continue
+            d_ = gk.get("descripcion", "")
+            etapas.append({"titulo": gk["titulo"], "texto": d_[:1].upper() + d_[1:] if d_ else "", "horas": gk.get("horas") or None, "badge": None, "now": False})
+            grupos.append({"id": str(gk["id"]).lower(), "titulo": gk["titulo"], "horas": gk.get("horas"), "sub": d_, "chips": gk.get("chips") or []})
+            sugerencias += gk.get("chips") or []
     if k.get("cierre_medicion", True):
         etapas.append({"titulo": "Cierre y medición", "texto": "72 horas después de la última sesión: Edu-Trace, certificados y dashboard de impacto. No requiere agenda propia.", "horas": None, "badge": "Automático", "now": False})
     seg = d.get("seguimiento") or {}
@@ -157,8 +182,13 @@ def armar_habilidades(g, d, ctx, agg, k, errores):
             texto = str(k["seguimiento_texto"])
         etapas.append({"titulo": "Seguimiento", "texto": texto, "horas": None, "badge": None, "now": False})
     total = ctx["h_total"]
-    resumen = ["Áreas: " + ", ".join(dict.fromkeys(a["nombre"] for a in areas)),
-               "Horas de trabajo del proyecto: %d h" % total]
+    if k.get("fases_kickoff") or k.get("grupos_kickoff"):   # con fases_kickoff el resumen sale de lo que se muestra, no de las áreas de la propuesta
+        total = sum(x["horas"] or 0 for x in grupos)
+        resumen = ["Bloques: " + ", ".join(x["titulo"] for x in grupos),
+                   "Horas del proyecto: %d h" % total]
+    else:
+        resumen = ["Áreas: " + ", ".join(dict.fromkeys(a["nombre"] for a in areas)),
+                   "Horas de trabajo del proyecto: %d h" % total]
     return etapas, grupos, total, sorted(set(sugerencias), key=str.lower), [], resumen
 
 

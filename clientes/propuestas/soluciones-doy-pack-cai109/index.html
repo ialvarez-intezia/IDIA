@@ -1,0 +1,516 @@
+<!doctype html>
+<!--
+  Propuesta · Soluciones Doy Pack · Servicio de Detección y Habilidades (CAI-109)
+  División: Educación · Servicio: Detección y Habilidades (§4.1a) · Alianza: no
+  GENERADO por scripts/generar-habilidades-compacto.py (plantilla 3.0 (2026-10-08), formato habilidades) desde datos.json.
+  No editar a mano: editar datos.json y regenerar. Estilos propios del deck: overrides.css.
+  Fuente del insumo: Ficha de Levantamiento (19/11/2026) y resumen de la reunión de Flavia Martínez con las gerencias. Sin transcripción
+
+  Formato compacto de 9 slides, en el orden de las preguntas del cliente (Ventas, 2026-10-07), sin semanas, sesiones
+  ni fechas (Keiber, 2026-10-08):
+    1 Portada · 2 Alcance · 3 Ruta · 4 Cómo trabajamos · 5 Respuesta a la solicitud (1) · 6 Entregables · 7 Retorno · 8 Inversión · 9 Próximos pasos
+  Marcadores de detección de AcroForms (agregar-campo-precio.py), por página: «Propuesta Económica» solo en la slide de
+  inversión; «Lo que se llevan» y «Entregables» solo en la de entregables; «Facilidad de pago» solo en la de pago.
+  Campos AcroForm: Programa, Notas, PrecioBase, Descuento, PrecioTotal (inversión) y Entregables, Acreditacion (entregables). Se reposicionan con scripts/customize-habilidades-compacto.py.
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Propuesta · Soluciones Doy Pack · Intezia Educación</title>
+  <link rel="stylesheet" href="../_base/styles.css">
+  <link rel="stylesheet" href="habilidades-compacto.css">
+  <link rel="stylesheet" href="overrides.css">
+</head>
+<body>
+
+  <main class="deck">
+
+    <!-- 1 · Portada: ¿cuál es mi problema? -->
+    <section class="slide s-cover">
+      <span class="counter">01 / 09</span>
+      <div class="logo-big">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia Educación">
+      </div>
+      <div class="body">
+        <p class="eyebrow">Propuesta de proyecto · Servicio de Detección y Habilidades</p>
+        <h1 style="font-size:46px">
+          Asistentes de IA que atienden<br>
+          clientes y ordenan las compras<br>
+          <span class="hl">de Doy Pack</span>
+        </h1>
+        <p class="lead">
+          Primero, una <strong>detección</strong> con las tres gerencias. Después, el equipo aprende a usar la IA. Al final, construimos con él un <strong>agente conectado a Instagram</strong> y apoyo en <strong>compras y cuentas por pagar</strong>.
+        </p>
+        <div class="pain-strip">
+          <div class="pain-item">
+            <span class="pain-num">6 al día</span>
+            <span class="pain-lbl">solicitudes de Instagram se responden; otras quedan sin respuesta.</span>
+          </div>
+          <div class="pain-item">
+            <span class="pain-num">~3 horas</span>
+            <span class="pain-lbl">puede costar una sola conversación con un cliente que no califica.</span>
+          </div>
+          <div class="pain-item">
+            <span class="pain-num">A mano</span>
+            <span class="pain-lbl">cada semana se comparan 3 cotizaciones y se arma la lista de cuentas por pagar.</span>
+          </div>
+          <div class="pain-item">
+            <span class="pain-num">Carpetas</span>
+            <span class="pain-lbl">los históricos de compras se buscan carpeta por carpeta.</span>
+          </div>
+        </div>
+      </div>
+      <div class="id-line">
+        <span class="codigo">Código: CAI-109</span>
+        <span class="cliente">Doy Pack</span>
+      </div>
+    </section>
+
+    <!-- 2 · Alcance por fases: qué vamos a hacer, en qué orden y para qué -->
+    <section class="slide s-scope fases roomy">
+      <span class="counter">02 / 09</span>
+      <p class="eyebrow">02 · Alcance</p>
+      <h2>Detectar, aprender y construir con el equipo.</h2>
+      <p class="sub">Un solo proyecto en <strong>tres tramos</strong>: detección previa, fundamentos y construcción en conjunto.</p>
+
+      <div class="scope-panels one" style="--np:1">
+        <div class="scope-panel acc-y">
+          <div class="scope-head">
+            <span class="scope-tag">Asistentes de IA</span>
+            <span class="scope-total"><b>3</b> áreas</span>
+          </div>
+          <div class="scope-step">
+            <p class="step-h"><span class="step-n">1</span><b>Detección</b><span class="step-d">Con las 3 gerencias, antes de construir</span></p>
+            <ul class="scope-rows">
+              <li class="base"><span class="area">Detección previa con las gerencias</span><span class="para">Cerrar los procesos y confirmar la herramienta antes de construir</span></li>
+            </ul>
+          </div>
+          <div class="scope-step">
+            <p class="step-h"><span class="step-n">2</span><b>Fundamentos</b><span class="step-d">El «paso cero» de todo el equipo</span></p>
+            <ul class="scope-rows">
+              <li><span class="area">Fundamentos de IA</span><span class="para">El «paso cero»: que todo el equipo use la IA con criterio y cuide la información</span></li>
+            </ul>
+          </div>
+          <div class="scope-step hi">
+            <p class="step-h"><span class="step-n">3</span><b>Construcción</b><span class="step-d">En conjunto, sobre procesos reales</span></p>
+            <ul class="scope-rows">
+              <li><span class="area">Ventas y Mercadeo</span><span class="para">Un agente que atiende Instagram, filtra al cliente y lo deriva al área correcta</span></li>
+              <li><span class="area">Administración y Almacén</span><span class="para">Compras, cuentas por pagar y facturas con menos búsqueda manual</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="scope-out">
+        <p class="scope-card-label">Para una siguiente etapa</p>
+        <ul>
+          <li>Conexión directa al banco: hoy no es posible; la descarga de pagos sigue como está.</li>
+          <li>Conciliación automática: depende de la conexión al banco; se evalúa en la siguiente etapa.</li>
+          <li>Informes de indicadores, flujo de caja e inventario: se planifican en la siguiente etapa.</li>
+          <li>Licencias de IA y de n8n, y la cuenta de Meta: se confirman en la Detección previa y no están en la inversión.</li>
+          <li>Reemplazar el sistema administrativo actual: la IA se apoya en él, no lo sustituye.</li>
+        </ul>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Doy Pack · CAI-109</span>
+      </div>
+    </section>
+
+    <!-- 3 · Ruta: qué pasa en cada fase -->
+    <section class="slide s-route">
+      <span class="counter">03 / 09</span>
+      <p class="eyebrow">03 · Ruta</p>
+      <h2>De la detección a los agentes en uso.</h2>
+      <p class="sub">El calendario se acuerda en la reunión de arranque. La <strong>garantía y el seguimiento</strong> a 30, 60 y 90 días corren desde el cierre de la construcción.</p>
+
+      <div class="route-grid n1" style="--cols:3; --rows:1; --rowh:214px">
+
+        <div class="rg-corner"></div>
+        <div class="rg-phase rg-ph-1">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Detección</span></span>
+          <span class="rg-phase-name">Con las 3 gerencias, antes de construir</span>
+        </div>
+        <div class="rg-phase rg-ph-2">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Fundamentos</span></span>
+          <span class="rg-phase-name">El «paso cero» de todo el equipo</span>
+        </div>
+        <div class="rg-phase rg-ph-3 hi">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Construcción</span></span>
+          <span class="rg-phase-name">En conjunto, sobre procesos reales</span>
+        </div>
+        <div class="rg-phase rg-fu">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Garantía</span></span>
+          <span class="rg-phase-date">30, 60 y 90 días</span>
+          <span class="rg-phase-txt">Desde el cierre de la construcción</span>
+        </div>
+
+        <div class="rg-front acc-y">
+          <span class="rg-front-h">Las tres empresas del grupo</span>
+          <span class="rg-front-row"><span class="rg-front-tool">Asistentes de IA</span></span>
+          <span class="rg-front-meta"></span>
+        </div>
+        <div class="rg-cell"><p>Reunión central con las gerencias y levantamiento de Ventas y de Administración.</p></div>
+        <div class="rg-cell"><p>El equipo aprende a instruir a la IA y a cuidar la información.</p></div>
+        <div class="rg-cell hi"><p>Los agentes de atención y de compras, construidos con el equipo.</p></div>
+
+        <div class="rg-follow" style="grid-column:5; grid-row:2 / span 1">
+          <ul>
+            <li><b>30 días</b><span>Uso diario de los agentes</span></li>
+            <li><b>60 días</b><span>Ajustes con casos nuevos</span></li>
+            <li><b>90 días</b><span>Tiempo recuperado, medido</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="route-miles" style="grid-template-columns:repeat(5,1fr)">
+        <div class="mile"><span class="mile-d"></span><b>Detección previa</b><p>Procesos cerrados y herramienta confirmada con las gerencias.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Fundamentos</b><p>El equipo sabe instruir a la IA y qué información no se sube.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Atención por Instagram</b><p>El agente califica y deriva cada solicitud al área correcta.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Compras y pagos</b><p>Cotizaciones, lista semanal y facturas con apoyo de la IA.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>30 · 60 · 90 días</b><p>Seguimiento: uso, ajustes y tiempo recuperado.</p></div>
+      </div>
+      <p class="route-note">Un solo proyecto de 41 horas en tres tramos: 6 h de detección previa, 2 h de fundamentos y 33 h de construcción en conjunto.</p>
+      <p class="route-next"><b>Siguiente etapa:</b> la conexión al banco y la conciliación, si se hace posible, y lo demás de «Para una siguiente etapa» se planifican con el grupo al cierre.</p>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Doy Pack · CAI-109</span>
+      </div>
+    </section>
+
+    <!-- 4 · Cómo trabajamos: pasos, por qué en ese orden, casos reales, práctica, datos y logística -->
+    <section class="slide s-method">
+      <span class="counter">04 / 09</span>
+      <p class="eyebrow">04 · Cómo trabajamos</p>
+      <h2>Cómo trabajamos con el equipo.</h2>
+      <p class="sub">Se construye con las gerencias y los analistas, sobre sus procesos reales, para que aprendan a crearlos y mantenerlos.</p>
+
+      <ol class="mt-steps" style="--n:4">
+          <li><b>Construimos</b><span>Con el equipo, sobre sus procesos reales.</span></li>
+          <li><b>Probamos</b><span>Con solicitudes y compras reales, hasta que funcione.</span></li>
+          <li><b>Adoptamos</b><span>El equipo usa los agentes en su día a día.</span></li>
+          <li><b>Medimos</b><span>El tiempo recuperado, a 30, 60 y 90 días.</span></li>
+      </ol>
+      <div class="mt-strips">
+        <p class="mt-why"><b>Por qué en este orden</b> Primero se cierran los procesos y la herramienta; luego se aprende lo básico; solo entonces se construye sobre procesos reales.</p>
+        <p class="mt-who"><b>Quién construye</b> <strong>Intezia guía</strong> y el equipo construye con IA sus propios agentes y skills, sobre sus procesos reales, para mantenerlos solo.</p>
+      </div>
+
+      <div class="mt-info">
+        <div class="mt-card">
+          <p class="mt-card-label">Cómo funciona en la práctica</p>
+          <ul><li><b>Herramienta a confirmar.</b> La Detección previa confirma qué herramienta y qué plan conviene, con sus condiciones de privacidad y de acceso.</li><li><b>Conexión a Instagram.</b> Se construye en n8n con la API de Meta; su viabilidad (cuenta de Meta para empresas y permisos) se confirma en la Detección previa.</li><li><b>Los analistas, protagonistas.</b> Los agentes son sobre todo para los analistas, que los usan a diario; las gerencias los consultan.</li></ul>
+        </div>
+        <div class="mt-card">
+          <p class="mt-card-label">Cómo cuidamos sus datos</p>
+          <p>Los datos del banco, de clientes y de pagos no se cargan a la IA sin el visto bueno de las gerencias: se trabaja con los ejemplos que autoricen. Ver la hoja de gobernanza de datos.</p>
+        </div>
+      </div>
+
+      <div class="mt-logi">
+        <div class="mt-tile"><span>Modalidad</span><b>Presencial, en las oficinas de Soluciones Doy Pack.</b></div>
+        <div class="mt-tile"><span>Participantes</span><b>Las 3 gerencias y de 2 a 3 analistas; el número exacto se confirma al arrancar.</b></div>
+        <div class="mt-tile"><span>Ritmo de trabajo</span><b>Según la agenda del equipo, sin frenar la operación diaria.</b></div>
+        <div class="mt-tile"><span>Arranque</span><b>En cuanto se aprueba, se coordina el arranque con las gerencias.</b></div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Doy Pack · CAI-109</span>
+      </div>
+    </section>
+
+    <!-- Respuesta a la solicitud (opcional): requerimientos del cliente, en su orden -->
+    <section class="slide s-rfp">
+      <span class="counter">05 / 09</span>
+      <p class="eyebrow">05 · Gobernanza de datos</p>
+      <h2>Cómo se cuida la información del grupo.</h2>
+      <p class="sub">Qué datos se usan, dónde se trabaja y quién decide, antes de cargar nada a la IA.</p>
+
+      <div class="rfp-grid n4">
+        <div class="rfp-card">
+          <p class="rfp-head"><span class="rfp-n">1</span><span class="rfp-t">Qué información no se sube</span></p>
+          <p class="rfp-p">Se trabaja con ejemplos que autoricen las gerencias. En Fundamentos todo el equipo aprende qué no se sube.</p>
+          <ul>
+            <li>Pagos y datos del banco</li>
+            <li>Datos personales de clientes</li>
+            <li>Claves y accesos</li>
+          </ul>
+        </div>
+        <div class="rfp-card">
+          <p class="rfp-head"><span class="rfp-n">2</span><span class="rfp-t">Cómo se separa la información</span></p>
+          <p class="rfp-p">Cada persona trabaja en su propia cuenta y la información se organiza por proyecto.</p>
+          <ul>
+            <li>Un espacio por empresa del grupo</li>
+            <li>Sin cuentas ni claves compartidas</li>
+            <li>Acceso solo a quien autoricen las gerencias</li>
+          </ul>
+        </div>
+        <div class="rfp-card">
+          <p class="rfp-head"><span class="rfp-n">3</span><span class="rfp-t">Qué se confirma antes de arrancar</span></p>
+          <p class="rfp-p">La Detección previa define la herramienta y revisa las condiciones de su proveedor.</p>
+          <ul>
+            <li>Plan, privacidad y uso de datos para entrenar</li>
+            <li>Dónde se aloja n8n y qué datos pasan por él</li>
+            <li>Cómo se accede desde Venezuela</li>
+          </ul>
+        </div>
+        <div class="rfp-card">
+          <p class="rfp-head"><span class="rfp-n">4</span><span class="rfp-t">Reglas que reducen el riesgo</span></p>
+          <p class="rfp-p">Dejamos una guía breve de uso para el equipo.</p>
+          <ul>
+            <li>Nada sensible en las conversaciones</li>
+            <li>Se revisa qué se conecta antes de conectarlo</li>
+            <li>Quién ve qué se decide por roles</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="rfp-nota">Intezia no ofrece ni garantiza formas de acceso a las herramientas: las condiciones, incluido el acceso desde Venezuela, las fija cada proveedor. Esta hoja no es una certificación de seguridad.</p>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Doy Pack · CAI-109</span>
+      </div>
+    </section>
+
+    <!-- 5 · Entregables: ¿con qué me quedo? (catálogo + piezas transversales) -->
+    <section class="slide s-deliv roomy con-imp">
+      <span class="counter">06 / 09</span>
+      <p class="eyebrow">06 · Entregables</p>
+      <div class="deliv-head">
+        <h2>Lo que recibe el equipo.</h2>
+        <p class="deliv-sub"><span class="nw">Lo que se llevan</span>: un equipo que usa la IA con criterio y agentes propios, con el seguimiento a 30, 60 y 90 días que mide su efecto.</p>
+      </div>
+
+      <div class="deliv-impact grande">
+        <span class="di-label">Impacto</span>
+        <p>Gerentes y analistas recuperan tiempo del trabajo repetitivo y de la búsqueda de documentos, para dedicarlo a <strong>decidir</strong> y a atender mejor a los clientes que sí califican.</p>
+      </div>
+
+      <div class="deliv-carriles" style="--ncols:3">
+        <span class="dc acc-y fase" style="grid-column: span 1">Detección</span>
+        <span class="dc acc-y fase" style="grid-column: span 1">Fundamentos</span>
+        <span class="dc acc-y fase hi" style="grid-column: span 1">Construcción</span>
+      </div>
+
+      <div class="deliv-cols" style="--ncols:3">
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">Detección previa con las gerencias</p>
+            <ul>
+              <li>Reunión central con las 3 gerencias</li>
+              <li>Levantamiento de Ventas y Mercadeo</li>
+              <li>Levantamiento de Administración y Almacén</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">Fundamentos de IA</p>
+            <ul>
+              <li>Fundamentos: instrucciones, documentos y proyectos<ul class="inc"><li>Cómo darle instrucciones a la IA</li><li>Cargar documentos y armar proyectos</li><li>Qué información no se debe subir</li></ul></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">Ventas y Mercadeo</p>
+            <ul>
+              <li>Agente que atiende y califica al cliente</li>
+              <li>Flujo en n8n conectado a la API de Meta</li>
+              <li>Derivación al área del grupo y pruebas</li>
+            </ul>
+          </div>
+          <div class="da">
+            <p class="da-name">Administración y Almacén</p>
+            <ul>
+              <li>Comparativo de cotizaciones y cuentas por pagar</li>
+              <li>Facturas y consulta de históricos</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="deliv-band">
+        <div class="db-card db-1">
+          <span class="db-label">Para todo el proyecto</span>
+        </div>
+        <div class="db-card db-2">
+          <span class="db-label">Valor inmediato</span>
+        </div>
+      </div>
+      <!-- Cajas multiline editables (vacías en HTML: el contenido vive dentro del AcroForm /V). -->
+      <div class="multi-box db-box db-box-1" data-field="Entregables"></div>
+      <div class="multi-box db-box db-box-2" data-field="Acreditacion"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Doy Pack · CAI-109</span>
+      </div>
+    </section>
+
+    <!-- 7 · Retorno: ¿qué gano? (método de cálculo). Sin estudios ni citas externas. -->
+    <section class="slide s-roi">
+      <span class="counter">07 / 09</span>
+      <p class="eyebrow">07 · Retorno</p>
+      <h2>Retorno esperado: tiempo recuperado.</h2>
+      <p class="sub">Se calcula con las tareas del grupo, partiendo del tiempo que hoy toman y se confirma en la Detección previa.</p>
+
+      <div class="roi-body">
+        <div class="roi-panel">
+          <p class="roi-panel-title">Cómo se calcula</p>
+          <ol class="roi-steps">
+            <li><b>Volumen</b><span>Cuántas solicitudes por Instagram, cotizaciones y facturas se repiten por semana.</span></li>
+            <li><b>Tiempo actual</b><span>Lo que toma hoy cada tarea, medido con quien la hace: la <strong>línea base</strong>.</span></li>
+            <li><b>Tiempo con el agente</b><span>Lo que toma la misma tarea con el agente en uso.</span></li>
+            <li><b>Horas recuperadas</b><span>Volumen por la diferencia entre el tiempo actual y el tiempo con el agente.</span></li>
+          </ol>
+        </div>
+
+        <div class="roi-right">
+          <p class="roi-right-title">Calendario de garantía, desde el cierre de la construcción</p>
+          <div class="roi-card">
+            <b>30 días</b>
+            <p>Los agentes en uso real, con solicitudes y compras del grupo.</p>
+          </div>
+          <div class="roi-card">
+            <b>60 días</b>
+            <p>Ajustes con casos nuevos y menos correcciones a mano.</p>
+          </div>
+          <div class="roi-card">
+            <b>90 días</b>
+            <p>Medición del tiempo ganado en cada tarea, contra la línea base.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="roi-dest-wrap">
+        <p class="roi-dest-title">Hacia dónde va el proyecto</p>
+        <div class="roi-dest">
+          <div class="rd-item"><b>Clientes mejor atendidos</b><p>Cada solicitud recibe respuesta y llega al área correcta del grupo.</p></div>
+          <div class="rd-item"><b>Compras con menos búsqueda</b><p>Cotizaciones comparadas y <strong>históricos a la mano</strong>, sin buscar en carpetas.</p></div>
+          <div class="rd-item"><b>Equipo autónomo</b><p>Los analistas <strong>crean y mantienen</strong> sus propios agentes.</p></div>
+        </div>
+      </div>
+
+      <div class="roi-hook"><p>A los 90 días del cierre, el grupo conocerá el tiempo que ganó en cada tarea.</p></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Doy Pack · CAI-109</span>
+      </div>
+    </section>
+
+    <!-- 7 · Inversión (hoja de cotización estándar; antepenúltima slide) -->
+    <section class="slide s-price">
+      <span class="counter">08 / 09</span>
+      <h2 class="title">Inversión del proyecto.</h2>
+      <p class="price-intro">Propuesta Económica · Servicio de Detección y Habilidades</p>
+
+      <div class="block">
+        <span class="block-eyebrow">Duración</span>
+        <p class="block-value"><strong>41 horas</strong> en total, en tres tramos: detección previa (6 h), fundamentos (2 h) y construcción en conjunto (33 h). Seguimiento a 30, 60 y 90 días.</p>
+      </div>
+
+      <div class="block block-programa">
+        <span class="block-eyebrow">Programa</span>
+      </div>
+      <div class="multi-box programa-box" data-field="Programa"></div>
+
+      <div class="block block-cotizacion">
+        <span class="block-eyebrow">Cotización</span>
+      </div>
+
+      <span class="cot-label cot-label-base">Propuesta + Inversión</span>
+      <span class="cot-sign cot-sign-base">REF</span>
+      <div class="cot-frame base-frame"></div>
+
+      <span class="cot-label cot-label-discount">Descuento</span>
+      <span class="cot-sign-minus">&minus;REF</span>
+      <div class="cot-frame discount-frame"></div>
+      <span class="cot-urgent-note">Descuento válido por 15 días</span>
+
+      <span class="cot-label cot-label-total">TOTAL</span>
+      <span class="cot-sign cot-sign-total">REF</span>
+      <div class="cot-frame total-frame"></div>
+
+      <p class="cot-moneda">Pago en Divisas o Bolívares a Tasa BCV del Euro</p>
+      <p class="cot-validity">Cotización válida por 30 días.</p>
+      <div class="cot-terms-box">
+        <span class="cot-terms-label">Importante</span>
+        <p class="cot-terms-text">Este servicio se presta bajo nuestros <a href="https://drive.google.com/file/d/1PA-ZSt4KnyY5dpxXzgkIk6-yfGlV2eF8/view?usp=drive_link" target="_blank" rel="noopener">términos y condiciones</a>. Al avanzar con esta propuesta, ambas partes los aceptan.</p>
+      </div>
+
+      <div class="cot-garantia-badge">
+        <span class="cot-garantia-tag">Garantía 30-60-90</span>
+        <p class="cot-garantia-text">Estamos contigo hasta que la habilidad quede instalada.</p>
+      </div>
+
+      <div class="block block-notes-container">
+        <span class="block-eyebrow">Notas</span>
+      </div>
+      <div class="multi-box notas-box" data-field="Notas"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Doy Pack · CAI-109</span>
+      </div>
+    </section>
+
+    <!-- 9 · Próximos pasos: qué hacer y a quién escribir (última slide) -->
+    <section class="slide s-next">
+      <span class="counter">09 / 09</span>
+      <p class="eyebrow">09 · Próximos pasos</p>
+      <h2>Tres pasos para arrancar.</h2>
+      <p class="sub">Esto es lo que sigue cuando Doy Pack confirme la propuesta.</p>
+
+      <div class="nx-steps">
+        <div class="nx-step acc-y">
+          <span class="nx-num">1</span>
+          <b>Confirmar el alcance</b>
+          <p>Resolvemos las dudas de las gerencias y validamos los tres tramos y lo que queda para la siguiente etapa.</p>
+        </div>
+        <div class="nx-step acc-o">
+          <span class="nx-num">2</span>
+          <b>Participantes y agenda</b>
+          <p>Doy Pack indica quiénes son los analistas que participan y se arma la agenda con las gerencias.</p>
+        </div>
+        <div class="nx-step acc-w">
+          <span class="nx-num">3</span>
+          <b>Reunión de arranque</b>
+          <p>Reunión de unos 30 minutos para alinear la detección previa y el calendario.</p>
+        </div>
+      </div>
+
+      <div class="nx-contact">
+        <div class="nx-card nx-ase">
+          <span class="nx-label">¿Dudas? Escribe a tu asesora comercial</span>
+          <b class="nx-name">Flavia Martínez</b>
+          <span class="nx-role">Asesora comercial</span>
+          <p class="nx-line"><a href="mailto:fmartinez@intezia.com">fmartinez@intezia.com</a></p>
+          <p class="nx-line">+58 414 5756615</p>
+        </div>
+        <div class="nx-card nx-emp">
+          <span class="nx-label">Intezia</span>
+          <p class="nx-line">Intezia C.A J-505657950</p>
+          <p class="nx-line"><a href="mailto:servicio@intezia.com">servicio@intezia.com</a></p>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Doy Pack · CAI-109</span>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DET-065 · Resumen de una página · Aduaneros JM</title>
+<!--
+  Resumen de una página de la propuesta DET-065 para Profesionales Aduaneros JM.
+  Documento complementario del deck (NO es parte del deck de 8 slides): la dueña lo reenvía a su familia y a su equipo.
+  Se imprime a A4 horizontal con Chrome DESPUÉS del wrapper de PDF:
+    "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless=new --disable-gpu \
+      --no-pdf-header-footer --print-to-pdf-no-header --virtual-time-budget=15000 \
+      --print-to-pdf="DET-065 Resumen de una página.pdf" "file://$PWD/resumen-una-pagina.html"
+  Fuente de las cifras: datos.json (4 h de nivelación + 20 h de levantamiento = 24 h, 5 departamentos). Si cambia el deck, actualizar aquí.
+  Lenguaje simple y sin jerga (la familia no es técnica); sin fechas, semanas ni sesiones (§4.23).
+-->
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
+
+:root {
+  --black: #000000;
+  --yellow: #F4BA1A;
+  --orange: #E58423;
+  --white: #FFFFFF;
+  --ink-soft: #3a3a3a;
+  --line: #e4e4e4;
+  --tint-y: #FDF6E3;
+  --tint-o: #FCF1E6;
+  --font: "Graphit", "Inter", system-ui, sans-serif;
+}
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+@page { size: A4 landscape; margin: 0; }
+html, body { background: var(--white); }
+body {
+  font-family: var(--font);
+  color: var(--black);
+  -webkit-font-smoothing: antialiased;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+.page {
+  position: relative;
+  width: 1123px;
+  height: 794px;
+  overflow: hidden;
+  background: var(--white);
+}
+
+/* ---------- Cabecera ---------- */
+.head {
+  position: relative;
+  height: 204px;
+  background: var(--black);
+  color: var(--white);
+  padding: 30px 48px 0;
+  overflow: hidden;
+}
+.head .diamond {
+  position: absolute;
+  right: -88px;
+  top: -150px;
+  width: 270px;
+  height: 270px;
+  background: linear-gradient(180deg, var(--yellow) 0%, var(--orange) 100%);
+  transform: rotate(45deg);
+}
+.head .logo { height: 84px; display: block; margin: -28px 0 -18px -22px; position: relative; }
+.head .eyebrow {
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+  color: var(--yellow);
+  margin-bottom: 9px;
+  position: relative;
+}
+.head h1 {
+  font-size: 30px;
+  line-height: 1.14;
+  font-weight: 700;
+  max-width: 1000px;
+  position: relative;
+}
+.head h1 .hl {
+  display: inline-block;
+  background: var(--yellow);
+  color: var(--black);
+  padding: 0 11px 4px;
+  margin-top: 5px;
+}
+.head .sub {
+  position: relative;
+  margin-top: 10px;
+  font-size: 13.5px;
+  color: rgba(255, 255, 255, 0.78);
+}
+.head .sub b { color: var(--white); font-weight: 600; }
+
+/* ---------- Tres bloques ---------- */
+.cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+  padding: 20px 48px 0;
+}
+.card {
+  border: 1px solid var(--line);
+  border-top: 4px solid var(--yellow);
+  border-radius: 12px;
+  padding: 15px 19px 14px;
+  min-height: 0;
+}
+.card.c2 { border-top-color: var(--orange); }
+.card .lab {
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--orange);
+  margin-bottom: 5px;
+}
+.card h2 {
+  font-size: 18.5px;
+  line-height: 1.2;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.card p.lead { font-size: 13.5px; line-height: 1.45; color: var(--ink-soft); margin-bottom: 12px; }
+.card ul { list-style: none; }
+.card li {
+  position: relative;
+  padding: 0 0 8px 17px;
+  font-size: 13.2px;
+  line-height: 1.42;
+  color: var(--ink-soft);
+}
+.card li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 7px;
+  height: 7px;
+  background: var(--orange);
+}
+.card li b { color: var(--black); font-weight: 700; }
+.card .note {
+  margin-top: 4px;
+  padding: 8px 12px;
+  background: var(--tint-y);
+  border-left: 3px solid var(--yellow);
+  border-radius: 0 6px 6px 0;
+  font-size: 12.5px;
+  line-height: 1.4;
+  color: var(--black);
+}
+
+/* Línea de tiempo de entregables */
+.tl { position: relative; padding-left: 0; }
+.tl::before {
+  content: "";
+  position: absolute;
+  left: 112px;
+  top: 8px;
+  bottom: 12px;
+  width: 2px;
+  background: linear-gradient(180deg, var(--yellow), var(--orange));
+}
+.tl .st { position: relative; display: grid; grid-template-columns: 118px 1fr; gap: 0; padding-bottom: 10px; }
+.tl .st:last-child { padding-bottom: 0; }
+.tl .wk {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--black);
+  padding-top: 2px;
+  position: relative;
+}
+.tl .wk::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 3px;
+  width: 11px;
+  height: 11px;
+  background: var(--yellow);
+  transform: rotate(45deg);
+}
+.tl .st:nth-child(n+3) .wk::after { background: var(--orange); }
+.tl .wk { font-size: 10.5px; }
+.tl .tx { font-size: 13.2px; line-height: 1.4; color: var(--ink-soft); padding-left: 16px; }
+.tl .tx b { display: block; color: var(--black); font-size: 14px; margin-bottom: 1px; }
+
+/* Bloque de confidencialidad, oscuro porque es la primera preocupación */
+.card.c3 {
+  background: var(--black);
+  border-color: var(--black);
+  border-top-color: var(--yellow);
+  color: var(--white);
+}
+.card.c3 .lab { color: var(--yellow); }
+.card.c3 h2 { color: var(--white); }
+.card.c3 li { color: rgba(255, 255, 255, 0.86); }
+.card.c3 li b { color: var(--yellow); }
+.card.c3 li::before { background: var(--yellow); }
+
+/* ---------- Camino ---------- */
+.road { padding: 14px 48px 0; }
+.road .rl {
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--orange);
+  margin-bottom: 8px;
+}
+.road .steps { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; }
+.road .rs { border-radius: 10px; padding: 10px 14px 11px; font-size: 12.5px; line-height: 1.38; }
+.road .rs b { display: block; font-size: 13.5px; margin-bottom: 2px; }
+.road .rs.a { background: var(--yellow); color: var(--black); }
+.road .rs.b { background: var(--tint-o); border: 1px solid #f1cfa6; color: var(--black); }
+.road .rs.c { background: var(--white); border: 1px solid var(--line); color: var(--black); }
+.road .rl span { font-weight: 400; letter-spacing: 0; text-transform: none; font-size: 12px; color: #555; margin-left: 6px; }
+
+/* ---------- Pie ---------- */
+.foot {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 54px;
+  background: var(--black);
+  color: var(--white);
+  padding: 0 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12.5px;
+}
+.foot .who b { font-weight: 700; }
+.foot .who span { color: rgba(255, 255, 255, 0.75); }
+.foot .code {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--yellow);
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header class="head">
+    <div class="diamond"></div>
+    <img class="logo" src="../../../logos/educacion/BLANCO.png" alt="Intezia">
+    <div class="eyebrow">Resumen de la propuesta · Servicio de Detección</div>
+    <h1>Mapa de oportunidades de IA en cada departamento<br><span class="hl">de Aduaneros JM</span></h1>
+    <div class="sub"><b>Profesionales Aduaneros JM</b> · 5 departamentos · 24 horas en total · presencial, en sus oficinas</div>
+  </header>
+
+  <main class="cols">
+
+    <section class="card c1">
+      <div class="lab">1 · Qué hacemos</div>
+      <h2>Ver qué sí y qué no se puede hacer con IA</h2>
+      <ul>
+        <li><b>Entrevistamos a cada departamento:</b> operativo, valoración, administrativo, permisología y ventas.</li>
+        <li><b>Nivelamos al equipo</b> con 4&nbsp;h de fundamentos de IA, sencillos y con tareas reales.</li>
+        <li><b>Dejamos resultados desde el inicio,</b> cuando el proceso lo permite.</li>
+      </ul>
+      <div class="note">La clasificación y la valoración las sigue decidiendo el profesional.</div>
+    </section>
+
+    <section class="card c2">
+      <div class="lab">2 · Qué reciben</div>
+      <h2>Una hoja de ruta para decidir con datos</h2>
+      <div class="tl">
+        <div class="st"><div class="wk">Al arrancar</div><div class="tx"><b>Equipo nivelado</b>Todos usan la IA con sencillez.</div></div>
+        <div class="st"><div class="wk">En las entrevistas</div><div class="tx"><b>Primeros resultados</b>Mejoras que el equipo ya usa.</div></div>
+        <div class="st"><div class="wk">Al cierre</div><div class="tx"><b>Mapa de Calor</b>Lo más fácil y útil, primero.</div></div>
+        <div class="st"><div class="wk">Al cierre</div><div class="tx"><b>Hoja de ruta</b>Qué automatizar primero y qué no.</div></div>
+      </div>
+    </section>
+
+    <section class="card c3">
+      <div class="lab">3 · Por qué conviene</div>
+      <h2>Un equipo que sabe y no depende de nadie</h2>
+      <ul>
+        <li><b>Decidir con datos:</b> qué hacer primero y qué dejar para después.</li>
+        <li><b>Todos aprenden:</b> también quien nunca ha usado IA.</li>
+        <li><b>Sin depender de un proveedor:</b> cada mejora se documenta para que el equipo la maneje.</li>
+        <li><b>Sus datos:</b> nada se carga a la IA sin su visto bueno.</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <section class="road">
+    <div class="rl">El camino y la inversión<span>· Esta propuesta es solo el primer paso: lo que sigue se decide con sus resultados.</span></div>
+    <div class="steps">
+      <div class="rs a"><b>Ahora · Detección</b>Esta propuesta: los 5 departamentos y la nivelación del equipo.</div>
+      <div class="rs b"><b>Después · Habilidades</b>Construir con el equipo lo que el mapa priorice; solo si lo deciden.</div>
+      <div class="rs c"><b>Inversión · 24 horas en total</b>4 h de nivelación y 20 h de entrevistas. La cotización vale 30 días; no incluye licencias de IA.</div>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <div class="who"><b>Flavia Martínez</b> <span>· Asesora comercial · fmartinez@intezia.com · +58 414 5756615</span></div>
+    <div class="code">DET-065 · Aduaneros JM</div>
+  </footer>
+
+</div>
+</body>
+</html>

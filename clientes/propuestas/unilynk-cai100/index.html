@@ -1,0 +1,508 @@
+<!doctype html>
+<!--
+  Propuesta · Unilynk C.A. · Servicio de Habilidades (CAI-100)
+  División: Educación · Servicio: Habilidades (§4.1a) · Alianza: no
+  GENERADO por scripts/generar-habilidades-compacto.py (plantilla 3.0 (2026-10-08), formato habilidades) desde datos.json.
+  No editar a mano: editar datos.json y regenerar. Estilos propios del deck: overrides.css.
+  Fuente del insumo: Ficha de Levantamiento (10/11/2026) y transcripción de la reunión de Verónica Rubio con Unilynk (10/11/2026)
+
+  Formato compacto de 9 slides, en el orden de las preguntas del cliente (Ventas, 2026-10-07), sin semanas, sesiones
+  ni fechas (Keiber, 2026-10-08):
+    1 Portada · 2 Alcance · 3 Ruta · 4 Cómo trabajamos · 5 Entregables · 6 Retorno · 7 Inversión · 8 Inversión (etapa 2) · 9 Próximos pasos
+  Marcadores de detección de AcroForms (agregar-campo-precio.py), por página: «Propuesta Económica» solo en la slide de
+  inversión; «Lo que se llevan» y «Entregables» solo en la de entregables; «Facilidad de pago» solo en la de pago.
+  Campos AcroForm: Programa, Notas, PrecioBase, Descuento, PrecioTotal (inversión) y Entregables, Acreditacion (entregables). Se reposicionan con scripts/customize-habilidades-compacto.py.
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Propuesta · Unilynk C.A. · Intezia Educación</title>
+  <link rel="stylesheet" href="../_base/styles.css">
+  <link rel="stylesheet" href="habilidades-compacto.css">
+  <link rel="stylesheet" href="overrides.css">
+</head>
+<body>
+
+  <main class="deck">
+
+    <!-- 1 · Portada: ¿cuál es mi problema? -->
+    <section class="slide s-cover">
+      <span class="counter">01 / 09</span>
+      <div class="logo-big">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia Educación">
+      </div>
+      <div class="body">
+        <p class="eyebrow">Propuesta de proyecto · Servicio de Habilidades</p>
+        <h1 style="font-size:54px">
+          Operación, ventas y gestión<br>
+          con IA, por fases<br>
+          <span class="hl">en Unilynk</span>
+        </h1>
+        <p class="lead">
+          Este proyecto levanta cómo trabajan hoy <strong>cuatro áreas</strong> de Unilynk y construye con sus equipos las <strong>soluciones</strong> que ese levantamiento prioriza, empezando por <strong>Operaciones y Mercadeo y Ventas</strong>.
+        </p>
+        <div class="pain-strip">
+          <div class="pain-item">
+            <span class="pain-num">Manual</span>
+            <span class="pain-lbl">es hoy todo Operaciones, desde las estructuras de costo hasta las evaluaciones.</span>
+          </div>
+          <div class="pain-item">
+            <span class="pain-num">Cada mes</span>
+            <span class="pain-lbl">se rehacen a mano las estructuras de costo, aunque el servicio sea idéntico.</span>
+          </div>
+          <div class="pain-item">
+            <span class="pain-num">Perdidos</span>
+            <span class="pain-lbl">quedan los prospectos que entran al pipeline y reciben propuesta, sin seguimiento.</span>
+          </div>
+        </div>
+      </div>
+      <div class="id-line">
+        <span class="codigo">Código: CAI-100</span>
+        <span class="cliente">Unilynk</span>
+      </div>
+    </section>
+
+    <!-- 2 · Alcance por fases: qué vamos a hacer, en qué orden y para qué -->
+    <section class="slide s-scope fases roomy">
+      <span class="counter">02 / 09</span>
+      <p class="eyebrow">02 · Alcance</p>
+      <h2>Cuatro áreas, en dos fases.</h2>
+      <p class="sub">Cada área tiene su <strong>levantamiento</strong> y sus <strong>soluciones</strong> con Claude; la Fase 2 puede aprobarse después.</p>
+
+      <div class="scope-panels one" style="--np:1">
+        <div class="scope-panel acc-y">
+          <div class="scope-head">
+            <span class="scope-tag">Claude</span>
+            <span class="scope-total"><b>4</b> áreas</span>
+          </div>
+          <div class="scope-step hi">
+            <p class="step-h"><span class="step-n">1</span><b>Fase 1</b><span class="step-d">Operaciones y Mercadeo y Ventas</span></p>
+            <ul class="scope-rows">
+              <li><span class="area">Operaciones</span><span class="para">Generar cada mes las estructuras de costo y seguir las evaluaciones sin rehacer nada a mano</span></li>
+              <li><span class="area">Mercadeo y Ventas</span><span class="para">Dar seguimiento sistemático a cada prospecto, para que ninguno se pierda en el pipeline</span></li>
+            </ul>
+          </div>
+          <div class="scope-step">
+            <p class="step-h"><span class="step-n">2</span><b>Fase 2</b><span class="step-d">Administración y Finanzas, y Recursos Humanos</span></p>
+            <ul class="scope-rows">
+              <li><span class="area">Administración y Finanzas</span><span class="para">Trabajar con IA junto al sistema administrativo, con procesos escritos y un criterio común</span></li>
+              <li><span class="area">Recursos Humanos</span><span class="para">Cargar la nómina con su sustento y dejar por escrito los cargos y sus funciones</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="scope-out">
+        <p class="scope-card-label">Fuera de este alcance</p>
+        <ul>
+          <li>Dirección General: queda fuera de este alcance y puede sumarse en otra etapa.</li>
+          <li>Implementar o cambiar el sistema administrativo: lo hace Unilynk; la Fase 2 se ajusta al que tenga al empezar.</li>
+          <li>Conexiones automáticas con sus sistemas: se evalúan en el levantamiento, sin compromiso previo.</li>
+          <li>Las licencias de Claude: las contrata Unilynk, aparte de esta inversión.</li>
+        </ul>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Unilynk · CAI-100</span>
+      </div>
+    </section>
+
+    <!-- 3 · Ruta: qué pasa en cada fase -->
+    <section class="slide s-route">
+      <span class="counter">03 / 09</span>
+      <p class="eyebrow">03 · Ruta</p>
+      <h2>De las áreas que más pesan a las de apoyo.</h2>
+      <p class="sub">El calendario se acuerda en la <strong>reunión de arranque</strong>. El seguimiento a 30, 60 y 90 días corre desde el cierre de cada área.</p>
+
+      <div class="route-grid n1" style="--cols:2; --rows:1; --rowh:214px">
+
+        <div class="rg-corner"></div>
+        <div class="rg-phase rg-ph-1 hi">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Fase 1</span></span>
+          <span class="rg-phase-name">Operaciones y Mercadeo y Ventas</span>
+        </div>
+        <div class="rg-phase rg-ph-2">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Fase 2</span></span>
+          <span class="rg-phase-name">Administración y Finanzas, y Recursos Humanos</span>
+        </div>
+        <div class="rg-phase rg-fu">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Garantía</span></span>
+          <span class="rg-phase-date">30, 60 y 90 días</span>
+          <span class="rg-phase-txt">Desde el cierre de cada área</span>
+        </div>
+
+        <div class="rg-front acc-y">
+          <span class="rg-front-h">Cuatro áreas de Unilynk</span>
+          <span class="rg-front-row"><span class="rg-front-tool">Claude</span></span>
+          <span class="rg-front-meta"></span>
+        </div>
+        <div class="rg-cell hi"><p>Operaciones y Mercadeo y Ventas: levantamiento y soluciones, con sus equipos.</p></div>
+        <div class="rg-cell"><p>Administración y Finanzas y Recursos Humanos: levantamiento y soluciones.</p></div>
+
+        <div class="rg-follow" style="grid-column:4; grid-row:2 / span 1">
+          <ul>
+            <li><b>30 días</b><span>Uso de las soluciones en cada área</span></li>
+            <li><b>60 días</b><span>Ajustes y nuevas construcciones</span></li>
+            <li><b>90 días</b><span>Indicadores y tiempo recuperado medidos</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="route-miles" style="grid-template-columns:repeat(5,1fr)">
+        <div class="mile"><span class="mile-d"></span><b>Arranque · aparte</b><p>Reunión de 30 min para acordar el calendario y quién coordina el proyecto por Unilynk.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Levantamientos</b><p>Operaciones y Mercadeo y Ventas: cómo funciona hoy cada proceso.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Fase 1 en uso</b><p>Estructuras de costo, evaluaciones y seguimiento de prospectos, probados.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Fase 2 en uso</b><p>Administración y Finanzas y Recursos Humanos, con sus soluciones probadas.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>30 · 60 · 90 días</b><p>Seguimiento: uso de las soluciones, ajustes e indicadores medidos.</p></div>
+      </div>
+      <p class="route-note">Son <strong>40 horas</strong> con los equipos, 20 en cada fase: 2 de levantamiento y 8 de construcción, pruebas y adopción por área. La Fase 2 puede aprobarse después de ver los resultados de la Fase 1.</p>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Unilynk · CAI-100</span>
+      </div>
+    </section>
+
+    <!-- 4 · Cómo trabajamos: pasos, por qué en ese orden, casos reales, práctica, datos y logística -->
+    <section class="slide s-method">
+      <span class="counter">04 / 09</span>
+      <p class="eyebrow">04 · Cómo trabajamos</p>
+      <h2>Así construimos cada solución.</h2>
+      <p class="sub">Primero se levanta cómo trabaja cada área y después se construye con su equipo, que aprende a sostenerlo.</p>
+
+      <ol class="mt-steps" style="--n:4">
+          <li><b>Levantamos</b><span>Cómo trabaja hoy cada área y cuánto tarda cada proceso.</span></li>
+          <li><b>Construimos</b><span>Con Claude, sobre los procesos reales del equipo.</span></li>
+          <li><b>Adoptamos</b><span>Pruebas con casos reales; el equipo usa y ajusta.</span></li>
+          <li><b>Seguimos</b><span>Uso, ajustes y resultados, a 30, 60 y 90 días.</span></li>
+      </ol>
+      <div class="mt-strips">
+        <p class="mt-why"><b>Por qué en este orden</b> Primero las áreas que más pesan en el servicio y la venta; después las de apoyo, que se ajustan al sistema administrativo vigente y pueden aprobarse más tarde.</p>
+        <p class="mt-who"><b>Quién construye</b> Se construye en conjunto: cada equipo de Unilynk trabaja con <strong>Claude</strong> sobre sus procesos reales, e <strong>Intezia guía</strong> cada paso.</p>
+      </div>
+
+      <div class="mt-info">
+        <div class="mt-card">
+          <p class="mt-card-label">Cómo funciona en la práctica</p>
+          <ul><li><b>Una herramienta común.</b> Claude se elige como herramienta compartida: ahí va quedando la base del trabajo de cada área.</li><li><b>Con lo que ya tienen.</b> Claude se suma al entorno de oficina y al sistema administrativo del cliente: no los reemplaza.</li><li><b>Por fases, a su ritmo.</b> Cada fase tiene su levantamiento y puede aprobarse por separado, según el presupuesto.</li></ul>
+        </div>
+        <div class="mt-card">
+          <p class="mt-card-label">Cómo cuidamos sus datos</p>
+          <p>Los datos de nómina, finanzas y clientes son confidenciales: solo se carga en Claude lo que Unilynk decide compartir. Las reglas básicas de uso se acuerdan al empezar.</p>
+        </div>
+      </div>
+
+      <div class="mt-logi">
+        <div class="mt-tile"><span>Modalidad</span><b>Presencial en la sede de Caracas o virtual, a acordar en la reunión de arranque.</b></div>
+        <div class="mt-tile"><span>Participantes</span><b>Los gerentes y equipos de las cuatro áreas, con quien dirige Unilynk.</b></div>
+        <div class="mt-tile"><span>Ritmo de trabajo</span><b>Según la disponibilidad de cada área, sin frenar su operación diaria.</b></div>
+        <div class="mt-tile"><span>Arranque</span><b>El proyecto arranca en enero; una reunión de arranque de 30 min, aparte, acuerda el calendario.</b></div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Unilynk · CAI-100</span>
+      </div>
+    </section>
+
+    <!-- 5 · Entregables: ¿con qué me quedo? (catálogo + piezas transversales) -->
+    <section class="slide s-deliv compact con-imp">
+      <span class="counter">05 / 09</span>
+      <p class="eyebrow">05 · Entregables</p>
+      <div class="deliv-head">
+        <h2>Lo que deja cada fase.</h2>
+        <p class="deliv-sub"><span class="nw">Lo que se llevan</span>: <strong>soluciones en uso y una base común de trabajo</strong>, más el seguimiento a 30, 60 y 90 días.</p>
+      </div>
+
+      <div class="deliv-impact">
+        <span class="di-label">Impacto</span>
+        <p>Las tareas repetitivas dejan de consumir el día de cada equipo: el tiempo pasa a <strong>elevar la calidad del servicio</strong>, atender a los clientes y vender, con un criterio común y una herramienta compartida.</p>
+      </div>
+
+      <div class="deliv-carriles" style="--ncols:2">
+        <span class="dc acc-y fase hi" style="grid-column: span 1">Fase 1</span>
+        <span class="dc acc-y fase" style="grid-column: span 1">Fase 2</span>
+      </div>
+
+      <div class="deliv-cols" style="--ncols:2">
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">Operaciones</p>
+            <ul>
+              <li>Levantamiento de Operaciones<ul class="inc"><li>Cómo se presta cada servicio, de principio a fin</li><li>Línea base del tiempo de cada proceso</li></ul></li>
+              <li>Estructuras de costo regeneradas<ul class="inc"><li>Una estructura por servicio, con sus personas y productos</li><li>Solo se actualizan los valores y se regeneran todas</li></ul></li>
+              <li>Evaluaciones con seguimiento<ul class="inc"><li>Lista de quién devolvió la evaluación y quién falta</li><li>Recordatorios listos para enviar</li></ul></li>
+              <li>Necesidades y cronogramas<ul class="inc"><li>Lo que el cliente necesita al llegar, en un formato</li><li>El cronograma de actividades del servicio en sitio</li></ul></li>
+            </ul>
+          </div>
+          <div class="da">
+            <p class="da-name">Mercadeo y Ventas</p>
+            <ul>
+              <li>Levantamiento de Mercadeo y Ventas<ul class="inc"><li>Cómo llega y avanza hoy cada prospecto</li><li>Línea base del seguimiento</li></ul></li>
+              <li>Seguimiento de prospectos<ul class="inc"><li>Cada prospecto con su estado y su próximo paso</li><li>Mensajes de seguimiento listos para enviar</li></ul></li>
+              <li>Guion de telemercadeo y presupuestos<ul class="inc"><li>El guion de la llamada, con lo que se pregunta</li><li>Los datos para armar un presupuesto</li></ul></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">Administración y Finanzas</p>
+            <ul>
+              <li>Levantamiento de Administración y Finanzas<ul class="inc"><li>Cómo se trabaja hoy con el sistema administrativo</li><li>Línea base del tiempo de cada proceso</li></ul></li>
+              <li>Criterios de IA junto al sistema<ul class="inc"><li>Qué se hace con IA y qué en el sistema administrativo</li><li>Qué datos se comparten y cuáles no</li></ul></li>
+              <li>Procesos del área, escritos<ul class="inc"><li>Cada proceso, paso a paso</li><li>Responsables y documentos de cada uno</li></ul></li>
+            </ul>
+          </div>
+          <div class="da">
+            <p class="da-name">Recursos Humanos</p>
+            <ul>
+              <li>Levantamiento de Recursos Humanos<ul class="inc"><li>Cómo se carga hoy la nómina y con qué sustento</li><li>Línea base del tiempo de cada tarea</li></ul></li>
+              <li>Carga de nómina con sustento<ul class="inc"><li>Los documentos de cada carga, ordenados</li><li>Una lista de verificación antes de cargar</li></ul></li>
+              <li>Descripciones de cargo y funciones<ul class="inc"><li>La descripción de cada cargo, con sus funciones</li><li>La base para volver a procedimentar</li></ul></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="deliv-band">
+        <div class="db-card db-1">
+          <span class="db-label">Para todo el proyecto</span>
+        </div>
+        <div class="db-card db-2">
+          <span class="db-label">Valor inmediato</span>
+        </div>
+      </div>
+      <!-- Cajas multiline editables (vacías en HTML: el contenido vive dentro del AcroForm /V). -->
+      <div class="multi-box db-box db-box-1" data-field="Entregables"></div>
+      <div class="multi-box db-box db-box-2" data-field="Acreditacion"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Unilynk · CAI-100</span>
+      </div>
+    </section>
+
+    <!-- 6 · Retorno: ¿qué gano? (método de cálculo). Sin estudios ni citas externas. -->
+    <section class="slide s-roi">
+      <span class="counter">06 / 09</span>
+      <p class="eyebrow">06 · Retorno</p>
+      <h2>Retorno esperado: tiempo recuperado, medido.</h2>
+      <p class="sub">Cada indicador se mide contra el punto de partida que cada levantamiento deja registrado.</p>
+
+      <div class="roi-body">
+        <div class="roi-panel">
+          <p class="roi-panel-title">Cómo se calcula el retorno</p>
+          <ol class="roi-steps">
+            <li><b>Volumen</b><span>Cuántas estructuras, evaluaciones, prospectos y cargas se hacen cada mes.</span></li>
+            <li><b>Punto de partida</b><span>Cuánto tarda hoy cada una: es la <strong>línea base</strong>.</span></li>
+            <li><b>Con la solución</b><span>Lo que toma el mismo trabajo con la solución en uso.</span></li>
+            <li><b>Horas recuperadas</b><span>Volumen por la diferencia de tiempos: una estimación referencial, sin compromiso de resultado.</span></li>
+            <li><b>Gasto de operar</b><span>Las licencias de Claude, contra el valor del tiempo recuperado.</span></li>
+          </ol>
+        </div>
+
+        <div class="roi-right">
+          <p class="roi-right-title">Calendario de seguimiento y medición</p>
+          <div class="roi-card">
+            <b>30 días</b>
+            <p>Desde el cierre de cada área: soluciones en uso real y línea base validada con el equipo.</p>
+          </div>
+          <div class="roi-card">
+            <b>60 días</b>
+            <p>Horas recuperadas medidas contra el punto de partida.</p>
+          </div>
+          <div class="roi-card">
+            <b>90 días</b>
+            <p>Medición del retorno: lo recuperado frente al gasto de operar las soluciones.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="roi-dest-wrap">
+        <p class="roi-dest-title">Hacia dónde va el proyecto</p>
+        <div class="roi-dest">
+          <div class="rd-item"><b>Una base común</b><p>El conocimiento se acumula en la empresa, <strong>no en cada persona</strong> por separado.</p></div>
+          <div class="rd-item"><b>Procesos escritos</b><p>Cargos, funciones y procesos vuelven a estar <strong>documentados</strong>.</p></div>
+          <div class="rd-item"><b>Crecer con control</b><p>Con el resultado medido, Unilynk decide qué áreas suma.</p></div>
+        </div>
+      </div>
+
+      <div class="roi-hook"><p>A los 90 días del cierre de cada área, Unilynk contará con sus indicadores medidos contra el punto de partida y el gasto de operar sus soluciones.</p></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Unilynk · CAI-100</span>
+      </div>
+    </section>
+
+    <!-- 7 · Inversión (hoja de cotización estándar; antepenúltima slide) -->
+    <section class="slide s-price">
+      <span class="counter">07 / 09</span>
+      <h2 class="title">Proyecto completo.</h2>
+      <p class="price-intro">Propuesta Económica · Proyecto completo de 4 áreas</p>
+
+      <div class="block">
+        <span class="block-eyebrow">Duración</span>
+        <p class="block-value"><strong>Proyecto completo de cuatro áreas</strong> (40 horas con los equipos), en dos fases, con seguimiento a 30, 60 y 90 días.</p>
+      </div>
+
+      <div class="block block-programa">
+        <span class="block-eyebrow">Programa</span>
+      </div>
+      <div class="multi-box programa-box" data-field="Programa"></div>
+
+      <div class="block block-cotizacion">
+        <span class="block-eyebrow">Cotización</span>
+      </div>
+
+      <span class="cot-label cot-label-base">Propuesta + Inversión</span>
+      <span class="cot-sign cot-sign-base">REF</span>
+      <div class="cot-frame base-frame"></div>
+
+      <span class="cot-label cot-label-discount">Descuento</span>
+      <span class="cot-sign-minus">&minus;REF</span>
+      <div class="cot-frame discount-frame"></div>
+      <span class="cot-urgent-note">Descuento válido por 15 días</span>
+
+      <span class="cot-label cot-label-total">TOTAL</span>
+      <span class="cot-sign cot-sign-total">REF</span>
+      <div class="cot-frame total-frame"></div>
+
+      <p class="cot-moneda">Pago en Divisas o Bolívares a Tasa BCV del Euro</p>
+      <p class="cot-validity">Cotización válida por 30 días.</p>
+      <div class="cot-terms-box">
+        <span class="cot-terms-label">Importante</span>
+        <p class="cot-terms-text">Este servicio se presta bajo nuestros <a href="https://drive.google.com/file/d/1PA-ZSt4KnyY5dpxXzgkIk6-yfGlV2eF8/view?usp=drive_link" target="_blank" rel="noopener">términos y condiciones</a>. Al avanzar con esta propuesta, ambas partes los aceptan.</p>
+      </div>
+
+      <div class="cot-garantia-badge">
+        <span class="cot-garantia-tag">Garantía 30-60-90</span>
+        <p class="cot-garantia-text">Estamos contigo hasta que cada área quede con sus soluciones en uso.</p>
+      </div>
+
+      <div class="block block-notes-container">
+        <span class="block-eyebrow">Notas</span>
+      </div>
+      <div class="multi-box notas-box" data-field="Notas"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Unilynk · CAI-100</span>
+      </div>
+    </section>
+
+    <!-- 7 · Inversión (hoja por opciones: Duración y Programa arriba, Notas, valor por opción abajo e Importante) -->
+    <section class="slide s-price s-price-paq">
+      <span class="counter">08 / 09</span>
+      <h2 class="title">Inversión por fase.</h2>
+      <p class="price-intro">Propuesta Económica · Fase 1 y Fase 2, cada una con su valor</p>
+
+      <div class="block pq-dur">
+        <span class="block-eyebrow">Duración</span>
+        <p class="block-value"><strong>Cada fase se aprueba por separado</strong>: la Fase 1 (20 horas con los equipos) trabaja las dos áreas que Unilynk prioriza, y la Fase 2 (20 horas) las áreas de apoyo, con seguimiento a 30, 60 y 90 días.</p>
+      </div>
+
+      <div class="block block-programa">
+        <span class="block-eyebrow">Programa</span>
+      </div>
+      <div class="multi-box programa-box" data-field="Programa"></div>
+
+      <div class="block block-notes-container">
+        <span class="block-eyebrow">Notas</span>
+      </div>
+      <div class="multi-box notas-box" data-field="Notas"></div>
+
+      <div class="pq-wrap">
+        <span class="pq-eyebrow">Valor por fase</span>
+        <div class="pq-cards">
+        <div class="pq-card acc-y">
+          <span class="pq-tag">Fase 1</span>
+          <b class="pq-name">Operaciones y Mercadeo y Ventas</b>
+          <span class="pq-det">20 horas con los equipos</span>
+          <span class="pq-lab pq-lab-precio">Valor (REF)</span>
+          <div class="pq-frame pq-precio"></div>
+          <span class="pq-lab pq-lab-desc">Descuento (REF)<em class="pq-pill">Válido por 15 días</em></span>
+          <div class="pq-frame pq-desc"></div>
+          <span class="pq-lab pq-lab-total">Total (REF)</span>
+          <div class="pq-frame pq-total"></div>
+        </div>
+        <div class="pq-card acc-o">
+          <span class="pq-tag">Fase 2</span>
+          <b class="pq-name">Administración y Finanzas y Recursos Humanos</b>
+          <span class="pq-det">20 horas con los equipos</span>
+          <span class="pq-lab pq-lab-precio">Valor (REF)</span>
+          <div class="pq-frame pq-precio"></div>
+          <span class="pq-lab pq-lab-desc">Descuento (REF)<em class="pq-pill">Válido por 15 días</em></span>
+          <div class="pq-frame pq-desc"></div>
+          <span class="pq-lab pq-lab-total">Total (REF)</span>
+          <div class="pq-frame pq-total"></div>
+        </div>
+        </div>
+      </div>
+
+      <p class="cot-validity pq-validity"><b>Pago en Divisas o Bolívares a Tasa BCV del Euro.</b> Cotización válida por 30 días.</p>
+      <div class="cot-terms-box pq-terms">
+        <span class="cot-terms-label">Importante</span>
+        <p class="cot-terms-text">Este servicio se presta bajo nuestros <a href="https://drive.google.com/file/d/1PA-ZSt4KnyY5dpxXzgkIk6-yfGlV2eF8/view?usp=drive_link" target="_blank" rel="noopener">términos y condiciones</a>. Al avanzar con esta propuesta, ambas partes los aceptan.</p>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Unilynk · CAI-100</span>
+      </div>
+    </section>
+
+    <!-- 9 · Próximos pasos: qué hacer y a quién escribir (última slide) -->
+    <section class="slide s-next">
+      <span class="counter">09 / 09</span>
+      <p class="eyebrow">09 · Próximos pasos</p>
+      <h2>Tres pasos para arrancar.</h2>
+      <p class="sub">Esto es lo que sigue cuando Unilynk confirme la propuesta.</p>
+
+      <div class="nx-steps">
+        <div class="nx-step acc-y">
+          <span class="nx-num">1</span>
+          <b>Escenario y arranque</b>
+          <p>Confirmamos con Unilynk el escenario (completo o por fases) y el arranque en enero.</p>
+        </div>
+        <div class="nx-step acc-o">
+          <span class="nx-num">2</span>
+          <b>Accesos y casos</b>
+          <p>Cada área comparte ejemplos reales de sus procesos, sin datos personales.</p>
+        </div>
+        <div class="nx-step acc-w">
+          <span class="nx-num">3</span>
+          <b>Reunión de arranque</b>
+          <p>Media hora para acordar el calendario, el orden del trabajo y los accesos.</p>
+        </div>
+      </div>
+
+      <div class="nx-contact">
+        <div class="nx-card nx-ase">
+          <span class="nx-label">¿Dudas? Escribe a tu asesora comercial</span>
+          <b class="nx-name">Verónica Rubio</b>
+          <span class="nx-role">Asesora comercial</span>
+          <p class="nx-line"><a href="mailto:vrubio01@intezia.com">vrubio01@intezia.com</a></p>
+          <p class="nx-line">+58 422 3355505</p>
+        </div>
+        <div class="nx-card nx-emp">
+          <span class="nx-label">Intezia</span>
+          <p class="nx-line">Intezia C.A J-505657950</p>
+          <p class="nx-line"><a href="mailto:servicio@intezia.com">servicio@intezia.com</a></p>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Unilynk · CAI-100</span>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

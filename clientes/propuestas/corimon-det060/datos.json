@@ -1,0 +1,305 @@
+{
+ "version": 3,
+ "formato": "deteccion",
+ "cliente": {
+  "nombre": "Corimón",
+  "slug": "corimon-det060",
+  "codigo": "DET-060",
+  "nombre_pie": "Corimón"
+ },
+ "division": "educacion",
+ "alianza": false,
+ "servicio_rotulo": "Servicio de Detección y Políticas",
+ "meta_servicio": "deteccion",
+ "meta_tipo": "Detección y Políticas: Fundamentals en 2 grupos (4 h, 46 líderes sin TI) + auditoría de 12 áreas con 51 líderes estratégicos (52 h de levantamiento, más peso en TI) y marco de gobernanza de IA, en formato compacto de Detección",
+ "eje": "Auditar la operación real de las 12 áreas corporativas y de planta de Corimón con sus 51 líderes estratégicos, recomendar la arquitectura y el camino tecnológico por área, y construir el marco de gobernanza de IA que necesitan antes de escalar a toda la organización",
+ "origen": "Ficha de Levantamiento de Corimón (Flavia Martínez, 16/11/2026) y contexto adicional del usuario del 17/11/2026 (exclusión de TI de los Fundamentals por grupos de 25, y de omitir cualquier referencia a un modelo pre-entrenado).",
+ "fuente_insumo": "Ficha de Levantamiento de Corimón. Sin transcripción de la reunión disponible; si aparece y contradice la ficha, manda la transcripción.",
+ "omitir": ["pago"],
+ "portada": {
+  "titulo_lineas": [
+   "Diagnóstico de IA",
+   "con gobernanza"
+  ],
+  "titulo_destacado": "en 12 áreas de Corimón",
+  "lead": "Auditamos las 12 áreas corporativas y de planta de {cliente_corto}, proceso por proceso, con quien hace el trabajo. Dejamos **logros inmediatos** en el camino y construimos el **marco de gobernanza de IA** que necesitan antes de escalar el uso de IA a toda la organización.",
+  "hechos": [
+   {
+    "num": "12",
+    "texto": "áreas y 51 líderes estratégicos, con un nivel de IA muy desigual entre ellas."
+   },
+   {
+    "num": "3",
+    "texto": "herramientas ya en uso, sin un criterio objetivo de cuál conviene en cada área."
+   },
+   {
+    "num": "Millones",
+    "texto": "de documentos en Legal y datos de personal en RR. HH., sin política de monitoreo."
+   },
+   {
+    "num": "150",
+    "texto": "personas ya capacitadas en uso básico de IA, pero sin gobernanza ni un camino tecnológico común."
+   }
+  ]
+ },
+ "deteccion": {
+  "areas": [
+   "TI",
+   "Finanzas",
+   "Compras",
+   "Negocios, Comercial y BI",
+   "RR. HH.",
+   "Gerencia General",
+   "Logística",
+   "Normalización, Laboratorio y Desarrollo",
+   "Legal",
+   "CEO",
+   "Proyectos, Ingeniería y Mantenimiento",
+   "Producción"
+  ],
+  "foco": "Levantamiento con los 51 líderes estratégicos de las 12 áreas, con más tiempo dedicado a TI, donde se define el camino tecnológico.",
+  "horas": {
+   "levantamiento": 52,
+   "arranque": 2,
+   "nivelacion": 4
+  },
+  "logros_minimos": 3,
+  "para_que": [
+   {
+    "titulo": "Ver la operación real",
+    "texto": "Cómo trabaja hoy cada una de las 12 áreas, con quien hace el trabajo, no solo con la dirección."
+   },
+   {
+    "titulo": "Recomendar con objetividad",
+    "texto": "La Brújula dice qué herramienta conviene en cada área, sin inclinarse por ninguna."
+   },
+   {
+    "titulo": "Mejorar desde ya",
+    "texto": "Logros inmediatos que el equipo usa mientras avanza el levantamiento."
+   },
+   {
+    "titulo": "Gobernar y proteger datos",
+    "texto": "Políticas de uso de IA y reglas para monitorear el uso indebido de la información más sensible."
+   }
+  ],
+  "etapas": [
+   {
+    "titulo": "Arranque",
+    "texto": "Reunión con la dirección: alcance, responsable de cada área y calendario."
+   },
+   {
+    "titulo": "Nivelación",
+    "texto": "**{h_nivelacion} horas** de Fundamentals en 2 grupos, para 46 líderes."
+   },
+   {
+    "titulo": "Auditoría",
+    "texto": "Área por área, con el líder y su equipo; más tiempo dedicado a TI.",
+    "horas": true
+   },
+   {
+    "titulo": "Priorización",
+    "texto": "Intezia cruza lo levantado y ordena las oportunidades de las 12 áreas."
+   },
+   {
+    "titulo": "Políticas",
+    "texto": "Diagnóstico de madurez y redacción del marco, con foco en el uso indebido."
+   },
+   {
+    "titulo": "Informe",
+    "texto": "Diagnóstico, camino tecnológico por área y hoja de ruta, presentados a la dirección."
+   }
+  ],
+  "ruta_completa": [
+   {
+    "cuando": "Ahora",
+    "servicio": "Detección y Políticas",
+    "texto": "Esta propuesta: 51 líderes estratégicos en 12 áreas."
+   },
+   {
+    "cuando": "Después",
+    "servicio": "Habilidades",
+    "texto": "Profundización por filial y nivelación del resto del personal."
+   }
+  ],
+  "entregables": [
+   {
+    "cuando": "Al arrancar",
+    "titulo": "Alcance y calendario",
+    "texto": "Acordados con la dirección: responsable de cada área y orden de las auditorías."
+   },
+   {
+    "cuando": "Al arrancar",
+    "titulo": "Equipo nivelado en IA",
+    "texto": "Los 46 líderes sin nivelación previa, con un lenguaje común sobre IA y su uso responsable."
+   },
+   {
+    "cuando": "En el levantamiento",
+    "titulo": "Logros inmediatos",
+    "texto": "Soluciones construidas con el equipo, cuando el proceso o el área lo permite."
+   },
+   {
+    "cuando": "Al cierre",
+    "titulo": "Mapa de Calor",
+    "texto": "Las oportunidades de las 12 áreas en un solo mapa, con su Índice de Madurez en IA."
+   },
+   {
+    "cuando": "Al cierre",
+    "titulo": "Marco de gobernanza de IA",
+    "texto": "Manual de políticas, Matriz de riesgos y Brújula IA, con roles, permisos y reglas de escalamiento y de monitoreo del uso indebido."
+   },
+   {
+    "cuando": "Al cierre",
+    "titulo": "Informe Final y hoja de ruta",
+    "texto": "Diagnóstico por área, camino tecnológico recomendado y resumen ejecutivo de una página."
+   }
+  ]
+ },
+ "alcance": {
+  "compacto": true,
+  "subtitulo": "Revisamos **proceso por proceso** cada una de las 12 áreas de {cliente_corto}, con quien hace el trabajo.",
+  "fuera_alcance": [
+   "Construir la arquitectura central (la columna vertebral): la recomendamos; la construye el equipo de TI.",
+   "Las licencias de las herramientas recomendadas: van aparte.",
+   "Desarrollos a la medida: si el Informe Final los recomienda, se cotizan aparte."
+  ]
+ },
+ "metodo": {
+  "quien_construye": "Intezia recomienda la arquitectura central, los criterios de separación de datos y control de tokens, y la ruta. La construcción queda del lado del equipo de TI de {cliente_corto}.",
+  "practica": [
+   {
+    "titulo": "Un espacio por área",
+    "texto": "Nunca varias áreas juntas en la misma mesa, salvo las que ya comparten subdepartamento."
+   },
+   {
+    "titulo": "Sin tarea previa",
+    "texto": "Los líderes no preparan nada antes de su turno: llegan con su día a día real."
+   },
+   {
+    "titulo": "Herramienta sin favoritismos",
+    "texto": "El Informe Final recomienda con datos, no con lo que ya usa cada área."
+   }
+  ],
+  "datos": "Legal maneja millones de documentos y RR. HH. datos de personal: trabajamos con ejemplos reales sin sacarlos de la organización, y las políticas definen cómo monitorear el uso indebido de la información confidencial."
+ },
+ "logistica": {
+  "modalidad": "Presencial, coordinada por área en la reunión de arranque."
+ },
+ "retorno": {
+  "modo": "metodo",
+  "titulo": "Retorno esperado: orden y objetividad.",
+  "subtitulo": "Se calcula con los hallazgos del levantamiento y se confirma en el Informe Final.",
+  "pasos": [
+   {
+    "titulo": "Volumen por área",
+    "texto": "Cuántos procesos y cuánto tiempo dedica cada área a tareas que la IA podría asumir, por ejemplo armar un contrato tipo en Legal."
+   },
+   {
+    "titulo": "Nivel de madurez",
+    "texto": "Qué tan avanzada está cada área con IA hoy, medido en el levantamiento."
+   },
+   {
+    "titulo": "Oportunidades priorizadas",
+    "texto": "Cuáles procesos conviene atacar primero, según impacto y esfuerzo."
+   },
+   {
+    "titulo": "Camino tecnológico",
+    "texto": "Qué herramienta conviene en cada área, con datos y sin favoritismos."
+   }
+  ],
+  "destino": [
+   {
+    "rotulo": "Orden en toda el grupo",
+    "texto": "Las 12 áreas con su madurez y sus oportunidades en un solo mapa."
+   },
+   {
+    "rotulo": "Decisión con criterio",
+    "texto": "Qué herramienta y qué licencias conviene en cada área, con datos."
+   },
+   {
+    "rotulo": "Información protegida",
+    "texto": "Reglas claras de uso de IA y de monitoreo del uso indebido."
+   }
+  ],
+  "gancho": "Al cierre del Informe Final, Corimón cuenta con su mapa de oportunidades, su camino tecnológico y su marco de gobernanza, listos para decidir."
+ },
+ "pago": {
+  "facturacion": "Cada factura se emite en divisas o en bolívares (Bs) a la tasa BCV Euro, y se liquida a la tasa del día de pago."
+ },
+ "entregables": {
+  "transversales": [
+   "Ficha de levantamiento de cada área",
+   "Presentación del Informe Final a la dirección"
+  ],
+  "valor_inmediato": [
+   "Mejoras en uso antes de cerrar el proyecto",
+   "Datos para decidir licencias con criterio",
+   "Brújula de herramienta por área, sin inclinarse de antemano"
+  ],
+  "impacto": {
+   "texto": "Corimón sale con un diagnóstico objetivo de sus 12 áreas, una Brújula que dice qué herramienta conviene en cada una sin favoritismos, y un marco de políticas que protege su información más sensible.",
+   "enfoque": "operacion"
+  }
+ },
+ "inversion": {
+  "partes": [
+   {
+    "nombre": "Detección",
+    "detalle": "Fundamentals y auditoría · {h_total} h"
+   },
+   {
+    "nombre": "Políticas",
+    "detalle": "Marco de gobernanza de IA"
+   }
+  ],
+  "etiqueta_partes": "Valor por servicio",
+  "etiqueta_suma": "Inversión total del proyecto",
+  "duracion": "**{h_total} horas** en total: {h_arranque} de arranque, {h_nivelacion} de Fundamentals y {h_levantamiento} de levantamiento, más el marco de gobernanza de IA.",
+  "programa": [
+   "Servicio de Detección y Políticas · Corimón (DET-060).",
+   "{h_nivelacion} h de Fundamentals en 2 grupos, sin TI.",
+   "Levantamiento por área, con más peso en TI.",
+   "Logros inmediatos, Mapa de Calor e Informe Final.",
+   "Marco de gobernanza de IA: manual, matriz y brújula.",
+   "{h_levantamiento} horas de levantamiento."
+  ],
+  "notas": [
+   "Modalidad presencial, coordinada por área en la reunión de arranque.",
+   "Esta inversión no incluye licencias de IA."
+  ]
+ },
+ "proximos_pasos": {
+  "asesora": {
+   "nombre": "Flavia Martínez",
+   "cargo": "Asesora comercial",
+   "correo": "fmartinez@intezia.com",
+   "telefono": "+58 414 5756615"
+  }
+ },
+ "siglas_ok": [
+  "TI",
+  "BI",
+  "CEO",
+  "IA",
+  "RR",
+  "HH"
+ ],
+ "frases_ok": [],
+ "supuestos": [
+  "Servicio: combo Detección + Políticas bajo `deteccion` (CLAUDE.md §4.1a), mismo criterio que Andrómeda DET-016: Políticas se representa como una etapa de la ruta y un entregable (Marco de gobernanza de IA), con su propio valor en `inversion.partes`. La plantilla de Detección no tiene un formato propio para Políticas.",
+  "Fundamentals (nivelación): instrucción directa del usuario (17/11/2026) de excluir a TI (5 personas) porque ya trabaja con Claude para desarrollo y no necesita repetir lo básico (la Ficha pedía nivelar a las mismas 51 personas entrevistadas, sin excluir a TI; el usuario lo ajustó en el chat). Quedan 46 líderes, repartidos en 2 grupos de hasta 25 personas (25 y 21), 2 h cada grupo = 4 h de Fundamentals en total. La composición exacta de cada grupo se define en el kickoff.",
+  "Horas de levantamiento: 4 h por área (lineamiento estándar, `empresa/politicas-comerciales.md`) para las 11 áreas restantes (44 h) + 8 h para TI (el doble, por el pedido explícito de más peso en sus sesiones porque ahí se define el camino tecnológico) = 52 h en total. El reparto exacto por área se decide en el kickoff (regla de la plantilla: horas en global, sin desglose por área en la propuesta).",
+  "Sin mencionar ningún modelo pre-entrenado ni el tipo de modelo detrás de la arquitectura recomendada (instrucción directa del usuario, 17/11/2026): el deck solo habla de la recomendación de arquitectura (IA central que reparte peticiones), los criterios de separación de datos y control de tokens, y la ruta de implementación — nunca de construirla ni de qué modelo la sustenta.",
+  "La «columna vertebral» (arquitectura central tipo router) queda explícitamente fuera de alcance como construcción: Intezia la recomienda, Corimón (su equipo de TI) la construye. Esto se escribió con claridad en `fuera_alcance` a pedido explícito del cliente (Ficha, Bloque F).",
+  "Recomendación de herramienta objetiva: Jonathan (gerente de TI) se inclina por Copilot y pidió privacidad como criterio; Alejandro pidió expresamente que la recomendación no esté «amañada». El deck no pre-recomienda ninguna herramienta (ni Copilot, ni Gemini, ni Claude): la Brújula del Informe Final decide con datos.",
+  "Nombres de personas (Alejandro Padra, Jonathan, Valerie) no se mencionan en el deck — quedan en brief.md para uso interno de Ventas.",
+  "Plan de pago: se usa el estándar de la plantilla (50 % al aprobar, 50 % con el Informe Final); no se pidió otro.",
+  "Impacto (`entregables.impacto`) con enfoque `operacion`: el diagnóstico y la gobernanza dan orden y objetividad, no implican reducir personal.",
+  "Segunda fase (fuera de esta propuesta): profundización por filial y nivelación del resto del personal (~600 personas en el grupo), según la Ficha y el contexto del usuario. Se refleja solo en `ruta_completa` como «Después»."
+ ],
+ "pendientes": [
+  "Confirmar con Flavia si hay transcripción de la reunión (la Ficha es la única fuente disponible); si aparece, contrastarla antes de enviar.",
+  "Definir el valor de Detección y de Políticas, el descuento y el total (campos vacíos para ventas).",
+  "Confirmar modalidad exacta (100 % presencial u algo mixto para alguna filial) y si Alejandro o Jonathan estarán en la presentación.",
+  "Confirmar la composición final de los 2 grupos de Fundamentals en el kickoff."
+ ]
+}

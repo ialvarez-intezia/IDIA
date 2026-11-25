@@ -5,16 +5,16 @@
 
 ## 1. Resumen
 
-- **5 entregables en 5 bloques**, **57 h** de trabajo, más seguimiento a 30, 60 y 90 días.
-- Herramienta **Formación en IA**: 5 entregables, 57 h.
-- Horas por fase: F1 14 h (2 sol.) · F2 43 h (3 sol.).
+- **8 entregables en 5 bloques**, **69 h** de trabajo, más seguimiento a 30, 60 y 90 días.
+- Herramienta **Formación en IA**: 8 entregables, 69 h.
+- Horas por fase: F1 14 h (2 sol.) · F2 55 h (6 sol.).
 
 ## 2. Líneas de trabajo y ruta
 
 | Línea de trabajo | Herramienta | Áreas | Horas | Soluciones |
 |---|---|---|---|---|
 | Webinar de lanzamiento | Formación en IA | Toda la organización | 2 | 1 |
-| Habilidades con Copilot | Formación en IA | Líderes de área, Grupo TI (avanzado), Grupo corporativo | 52 | 3 |
+| Habilidades con Copilot | Formación en IA | Líderes de área, Grupos de TI (avanzado), Grupos corporativos | 64 | 6 |
 | Claude para directivos | Formación en IA | Directivos | 3 | 1 |
 
 Sin semanas ni sesiones en la propuesta: el calendario se acuerda en la reunión de arranque (Brief de Kickoff, CLAUDE.md §12).
@@ -22,12 +22,12 @@ Sin semanas ni sesiones en la propuesta: el calendario se acuerda en la reunión
 | Línea de trabajo | Lanzamiento (webinar y levantamiento en cada área) | Formación (dos temarios y Claude para directivos) |
 |---|---|---|
 | Webinar de lanzamiento | 2 h · 1 sol. | 0 h · 0 sol. |
-| Habilidades con Copilot | 12 h · 1 sol. | 40 h · 2 sol. |
+| Habilidades con Copilot | 12 h · 1 sol. | 52 h · 5 sol. |
 | Claude para directivos | 0 h · 0 sol. | 3 h · 1 sol. |
 
 - **Webinar de lanzamiento**: Toda la organización ve cuánto tiempo puede liberar la IA.
 - **Levantamiento**: Cada área deja curado su temario con tareas reales.
-- **Formación en Copilot**: TI y el grupo corporativo practican con tareas de su día a día.
+- **Formación en Copilot**: Los grupos de TI y los corporativos practican con tareas de su día a día.
 - **Entrenamiento de Claude**: Cada directivo resuelve un caso real propio.
 - **30 · 60 · 90 días**: Seguimiento de la adopción y del tiempo liberado, antes y después.
 
@@ -49,21 +49,24 @@ Para qué (lo que ve el cliente): Curar cada temario con tareas reales y detecta
 |---|---|---|---|---|---|---|---|
 | LEV-1 | Temarios curados con cada área y tareas comunes detectadas (incluye: Un levantamiento con cada director y su mano derecha operativa; Prácticas reales que impactan, por área; Tareas comunes entre áreas; Medición previa: el punto de partida de cada área) | Levantamiento de información con cada líder de área (en la minuta y en el brief interno se llama kickoff): el director y su «plus one», el mando medio que conoce la operativa, durante ~1 h por área, 12 áreas (IT, Ingeniería, Customer Experience, Nuevos Negocios y Planificación Financiera, Marketing/Comunicaciones/Producto, PMO, Talento, Dirección Ejecutiva/Auditoría/Riesgo/Compliance, Legal, Comercial, Finanzas y Programación y Curaduría) = 12 h. Sirve para curar cada temario, encontrar prácticas reales que impacten, detectar tareas comunes entre áreas y tomar la medición previa (antes) del seguimiento. Puede ser presencial o virtual (no se menciona en el deck: lo negocia ventas). | - | - | - | 12 | F1 |
 
-### Grupo TI (avanzado) · 1 entregable · 24 h · Formación en IA · línea B
+### Grupos de TI (avanzado) · 3 entregables · 36 h · Formación en IA · línea B
 
-Para qué (lo que ve el cliente): Optimizar su trabajo técnico con Copilot y las herramientas que ya tienen.
+Para qué (lo que ve el cliente): Optimizar su trabajo técnico con Copilot, en grupos separados por tipo de trabajo.
 
 | ID | Entregable (nombre en el deck) | Detalle de la fuente | C | T | A | Total | Fase |
 |---|---|---|---|---|---|---|---|
-| TI-1 | Temario de 12 h para IT e Ingeniería: Copilot a nivel avanzado (incluye: Copilot a nivel avanzado, aplicado a tareas técnicas reales; Prompts y contexto para tareas técnicas; Documentación, diagnóstico y automatización de tareas repetitivas; Buenas prácticas con ética y seguridad de datos) | Temario avanzado de 12 h para las 28 personas de IT (17) e Ingeniería (11). Grupos de hasta 25 personas: 2 grupos x 12 h = 24 h. Base: CAI-014 re-curada con este contexto (ver hoja de temarios). Las herramientas técnicas específicas que ya tienen no constan en el repositorio: el módulo 5 se define en el levantamiento. | - | - | - | 24 | F2 |
+| TI-1 | Grupo TI · Infraestructura IT: Copilot a nivel avanzado (12 h) (incluye: Copilot avanzado en soporte, monitoreo de incidencias y medios de pago; Prompts y contexto para tareas técnicas; Documentación, diagnóstico y automatización de tareas repetitivas; Buenas prácticas con ética y seguridad de datos) | Temario avanzado de 12 h para el grupo de la gerencia de Infraestructura IT (soporte, monitoreo de incidencias y medios de pago). Grupo de hasta 25 personas. Base: CAI-014 re-curada con este contexto (ver hoja de temarios). Las herramientas técnicas específicas no constan en el repositorio: el módulo 5 se define en el levantamiento. | - | - | - | 12 | F2 |
+| TI-2 | Grupo TI · Aplicaciones: Copilot a nivel avanzado (12 h) (incluye: Copilot avanzado en desarrollo, gestión de la demanda y CRM; Prompts y contexto para tareas técnicas; Documentación, diagnóstico y automatización de tareas repetitivas; Buenas prácticas con ética y seguridad de datos) | Temario avanzado de 12 h para el grupo de la gerencia de Aplicaciones (innovación e IA, desarrollo, gestión de la demanda y CRM). Grupo de hasta 25 personas. Mismo formato que el grupo de Infraestructura IT, con casos propios de su trabajo. Base: CAI-014 re-curada (ver hoja de temarios). | - | - | - | 12 | F2 |
+| TI-3 | Grupo TI · Ingeniería: Copilot a nivel avanzado (12 h) (incluye: Copilot avanzado en monitoreo de señal, streaming y fibra; Prompts y contexto para tareas técnicas; Documentación, diagnóstico y automatización de tareas repetitivas; Buenas prácticas con ética y seguridad de datos) | Temario avanzado de 12 h para el equipo técnico de Ingeniería (centro de transmisión: monitoreo de señal, streaming y fibra). Grupo de hasta 25 personas, mismo formato que los otros dos grupos de TI. Quién entra a este grupo lo define Simple TV con la dirección de Ingeniería. Base: CAI-014 re-curada (ver hoja de temarios). | - | - | - | 12 | F2 |
 
-### Grupo corporativo · 1 entregable · 16 h · Formación en IA · línea B
+### Grupos corporativos · 2 entregables · 16 h · Formación en IA · línea B
 
 Para qué (lo que ve el cliente): Usar la IA para ser más productivos y efectivos, con práctica real en Copilot.
 
 | ID | Entregable (nombre en el deck) | Detalle de la fuente | C | T | A | Total | Fase |
 |---|---|---|---|---|---|---|---|
-| CORP-1 | Temario de 8 h de fundamentos de IA, con práctica en Copilot (incluye: Fundamentos de IA para la productividad y la efectividad; Práctica en Copilot con tareas reales de cada área; Ejemplos de uso acordes a la función de cada área; Buenas prácticas con ética y seguridad de datos) | Temario de 8 h para las 42 personas del grupo corporativo: Customer Experience (10), Nuevos Negocios y Planificación Financiera (8), Marketing, Comunicaciones y Producto (5), PMO (5), Talento (5), Dirección Ejecutiva, Auditoría, Riesgo y Compliance (4), Legal (2), Comercial (1), Finanzas (1) y Programación y Curaduría (1). Grupos de hasta 25 personas: 2 grupos x 8 h = 16 h. Base: CAI-014 re-curada (ver hoja de temarios). | - | - | - | 16 | F2 |
+| CORP-1 | Grupo corporativo A: fundamentos de IA, con práctica en Copilot (8 h) (incluye: Fundamentos de IA para la productividad y la efectividad; Práctica en Copilot con tareas reales de cada área; Ejemplos de uso acordes a la función de cada área; Buenas prácticas con ética y seguridad de datos) | Temario de 8 h para el grupo corporativo A (hasta 25 personas), integrado por personas de Customer Experience, Nuevos Negocios y Planificación Financiera, Marketing, Comunicaciones y Producto, PMO, Talento, Dirección Ejecutiva, Auditoría, Riesgo y Compliance, Legal, Comercial, Finanzas y Programación y Curaduría. Base: CAI-014 re-curada (ver hoja de temarios). | - | - | - | 8 | F2 |
+| CORP-2 | Grupo corporativo B: fundamentos de IA, con práctica en Copilot (8 h) (incluye: Fundamentos de IA para la productividad y la efectividad; Práctica en Copilot con tareas reales de cada área; Ejemplos de uso acordes a la función de cada área; Buenas prácticas con ética y seguridad de datos) | Temario de 8 h para el grupo corporativo B (hasta 25 personas), integrado por personas de Customer Experience, Nuevos Negocios y Planificación Financiera, Marketing, Comunicaciones y Producto, PMO, Talento, Dirección Ejecutiva, Auditoría, Riesgo y Compliance, Legal, Comercial, Finanzas y Programación y Curaduría. Base: CAI-014 re-curada (ver hoja de temarios). | - | - | - | 8 | F2 |
 
 ### Directivos · 1 entregable · 3 h · Formación en IA · línea C
 
@@ -81,6 +84,9 @@ Para qué (lo que ve el cliente): Llevar la IA a la decisión y a la comunicaci�
 
 ## 5. Supuestos a confirmar (antes del método)
 
+- Ajuste del 11/11/2026 (Neliana, vía Ivana): IT son 29 personas (no 17) y tiene dos gerencias con trabajo distinto: Infraestructura IT (soporte, monitoreo de incidencias, medios de pago) y Aplicaciones (innovación e IA, desarrollo, gestión de la demanda, CRM); su jefa prefiere que no vayan juntas. Se segmenta TI en TRES grupos de 12 h (Infraestructura IT, Aplicaciones e Ingeniería: centro de transmisión, que ya construye soluciones con IA y «no llega a 25»): 36 h en lugar de 24 h; total 69 h con el equipo en lugar de 57 h. Corporativo A y B no cambian (2 x 8 h). Se presenta por grupo y con horas con el equipo (sin_horas_trabajo; «de sesión» lo bloquea §4.23), sin totales de personas, para que un cambio de número no obligue a rehacer. Se retiró el «70 personas» y el «28 en TI (17 + 11)» de todo el deck.
+- GRUPO DE RESERVA (solo interno, NO se menciona en el deck, Ivana 11/11/2026): si Ingeniería entra completa (campo y centro de transmisión; Neliana dijo «cotícenla completa», sin número), se suma otro grupo técnico de 12 h incluido en la propuesta SIN valor extra. No cuenta en las horas ni en las casillas de valor; ventas y el equipo de servicio lo tienen presente. Alternativa que Neliana valida con el director de Ingeniería: el personal de campo va al corporativo y solo el centro de transmisión al grupo avanzado.
+- Números: IT 29 en total; Ingeniería con licencia de Copilot 11 (cuadro anterior); total de Ingeniería pendiente. Kickoff = levantamiento: una sola sesión por área (12 h), con quienes el cliente elija (director con gerente y un mando medio, o solo el gerente). Las 12 h del contenido avanzado de los grupos técnicos las aprobó Neliana: no se profundiza hacia un curso de desarrolladores. Calendario tentativo hasta que Neliana confirme la fecha del comité; los dos escenarios del roadmap siguen vigentes (el roadmap aparte no se tocó).
 - Una sola propuesta con tres componentes (webinar, Habilidades con Copilot y entrenamiento de Claude para directivos). La hoja de cotización lleva 4 casillas de valor a la izquierda (inversion.partes), con el nombre que dio Ivana el 13/10/2026: Webinar, TI, Corporativo (resto de áreas) y Claude. El levantamiento de información (12 h, 12 áreas x ~1 h) no tiene casilla propia: queda incluido en el valor de TI (IT e Ingeniería, 2 áreas) y de Corporativo (las otras 10 áreas); por eso las casillas no muestran horas (sumarían 45 h, no 57 h). Confirmar con Ivana o ventas cómo se reparte su valor. Historia: el 09/10/2026 hubo 3 casillas (webinar, Habilidades con Copilot y Claude) y se quitaron; el 13/10/2026 se pidieron 4 y se armaron como Webinar, Levantamiento, Dos temarios de Copilot y Claude; ese mismo día Ivana las redefinió con los nombres de arriba. Es nueva: CAI-014 y CAI-015 (07/09/2026) quedan como base y no se tocan. Código CAI-045, Educación, sin alianza (respuesta de Ivana, 09/10/2026).
 - Horas con el dimensionamiento de Ivana: grupos de hasta 25 personas y cada temario contado por grupo. TI: 28 personas = 2 grupos x 12 h = 24 h. Corporativo: 42 personas = 2 grupos x 8 h = 16 h. Levantamiento: 12 áreas x ~1 h = 12 h. Webinar: 2 h. Claude: un solo grupo de 10 directivos, 3 h. Total 57 h. Ivana dijo «usa ese estándar para las horas»: se entendió 12 h para TI (avanzado) y 8 h para el corporativo, como se propuso; confirmar si era otra cosa.
 - Ni fechas, ni semanas, ni sesiones en la propuesta (§4.23). Interno: webinar la semana del 26 de octubre; ejecución desde el 26 de octubre hasta la primera o segunda semana de diciembre; retoman el 20 de enero; segunda ola a fines de enero o febrero de 2027.
@@ -107,10 +113,10 @@ Para qué (lo que ve el cliente): Llevar la IA a la decisión y a la comunicaci�
 
 - En la práctica, **Fundamentos que sirven en cualquier suite**: Se enseñan criterios y prácticas de uso de la IA; se practica en Copilot y lo aprendido aplica si Simple TV cambia de herramienta.
 - En la práctica, **Ética y seguridad en las buenas prácticas**: Se alinean con el borrador de política interna de Simple TV, que aún no tenemos y se incorpora cuando lo compartan.
-- En la práctica, **Grupos de hasta 25 personas**: TI y corporativo se dividen en grupos pequeños para practicar; los directivos trabajan juntos, con un caso real cada uno.
+- En la práctica, **Grupos de hasta 25 personas**: TI se divide según el trabajo de cada gerencia y el corporativo en dos grupos, para practicar con casos propios; los directivos trabajan juntos, con un caso real cada uno.
 - Datos: Los casos de práctica salen de tareas reales de cada área. Simple TV decide qué información se usa en cada ejercicio, y la ética y la seguridad de datos se enseñan desde el primer día.
 
-**Logística:** modalidad: Se define con Simple TV para cada componente. · participantes: 70 personas: 28 en TI y 42 en el grupo corporativo, directivos incluidos. · ritmo: Según la disponibilidad de cada área, sin frenar su operación diaria. · arranque: La fecha se acuerda con Simple TV en la reunión de arranque..
+**Logística:** modalidad: Se define con Simple TV para cada componente. · participantes: Cinco grupos de Habilidades, de hasta 25 personas, y 10 directivos en Claude. · ritmo: Según la disponibilidad de cada área, sin frenar su operación diaria. · arranque: La fecha se acuerda con Simple TV en la reunión de arranque..
 
 ## 7. Retorno esperado (slide 6)
 

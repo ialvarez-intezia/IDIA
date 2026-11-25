@@ -1,0 +1,481 @@
+<!doctype html>
+<!--
+  Propuesta · Clínica Santiago de León · Servicio de Habilidades (CAI-104)
+  División: Educación · Servicio: Habilidades (§4.1a) · Alianza: no
+  GENERADO por scripts/generar-habilidades-compacto.py (plantilla 3.0 (2026-10-08), formato habilidades) desde datos.json.
+  No editar a mano: editar datos.json y regenerar. Estilos propios del deck: overrides.css.
+  Fuente del insumo: Solicitud de propuesta (instrucción directa, sin Ficha Comercial ni transcripción)
+
+  Formato compacto de 8 slides, en el orden de las preguntas del cliente (Ventas, 2026-10-07), sin semanas, sesiones
+  ni fechas (Keiber, 2026-10-08):
+    1 Portada · 2 Alcance · 3 Ruta · 4 Cómo trabajamos · 5 Entregables · 6 Retorno · 7 Inversión · 8 Próximos pasos
+  Marcadores de detección de AcroForms (agregar-campo-precio.py), por página: «Propuesta Económica» solo en la slide de
+  inversión; «Lo que se llevan» y «Entregables» solo en la de entregables; «Facilidad de pago» solo en la de pago.
+  Campos AcroForm: Programa, Notas, PrecioBase, Descuento, PrecioTotal (inversión) y Entregables, Acreditacion (entregables). Se reposicionan con scripts/customize-habilidades-compacto.py.
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Propuesta · Clínica Santiago de León · Intezia Educación</title>
+  <link rel="stylesheet" href="../_base/styles.css">
+  <link rel="stylesheet" href="habilidades-compacto.css">
+  <link rel="stylesheet" href="overrides.css">
+</head>
+<body>
+
+  <main class="deck">
+
+    <!-- 1 · Portada: ¿cuál es mi problema? -->
+    <section class="slide s-cover">
+      <span class="counter">01 / 08</span>
+      <div class="logo-big">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia Educación">
+      </div>
+      <div class="body">
+        <p class="eyebrow">Propuesta de proyecto · Servicio de Habilidades</p>
+        <h1 style="font-size:46px">
+          Diez Cerebros Digitales para<br>
+          <span class="hl">los gerentes de Santiago de León</span>
+        </h1>
+        <p class="lead">
+          Construye <strong>diez Cerebros Digitales</strong>, uno por gerente, con el contexto real de cada área cargado para <strong>consultar y decidir en minutos</strong>.
+        </p>
+        <div class="pain-strip">
+          <div class="pain-item">
+            <span class="pain-num">10</span>
+            <span class="pain-lbl">gerentes de distintas áreas, cada uno con un cerebro digital propio.</span>
+          </div>
+          <div class="pain-item">
+            <span class="pain-num">Propio</span>
+            <span class="pain-lbl">cada cerebro se construye con la información y el criterio de su gerente, no uno compartido.</span>
+          </div>
+          <div class="pain-item">
+            <span class="pain-num">Minutos</span>
+            <span class="pain-lbl">consultas que exigen reunir y revisar información, resueltas desde un cerebro ya cargado.</span>
+          </div>
+        </div>
+      </div>
+      <div class="id-line">
+        <span class="codigo">Código: CAI-104</span>
+        <span class="cliente">Santiago de León</span>
+      </div>
+    </section>
+
+    <!-- 2 · Alcance: qué vamos a hacer y para qué -->
+    <section class="slide s-scope compact">
+      <span class="counter">02 / 08</span>
+      <p class="eyebrow">02 · Alcance</p>
+      <h2>Diez cerebros, uno por gerente.</h2>
+      <p class="sub">Un <strong>Cerebro Digital</strong> es un asistente de IA propio de cada gerente, con el contexto de su área, en <strong>Claude</strong>.</p>
+
+      <div class="scope-panels one" style="--np:1">
+        <div class="scope-panel acc-y">
+          <div class="scope-head">
+            <span class="scope-tag">Claude</span>
+            <span class="scope-total"><b>10</b> Cerebros Digitales</span>
+          </div>
+          <ul class="scope-rows">
+              <li><span class="area">Cerebro Digital · Gerente 1</span><span class="para">Un cerebro propio, con el contexto de su área, para decidir en minutos</span></li>
+              <li><span class="area">Cerebro Digital · Gerente 2</span><span class="para">Un cerebro propio, con el contexto de su área, para decidir en minutos</span></li>
+              <li><span class="area">Cerebro Digital · Gerente 3</span><span class="para">Un cerebro propio, con el contexto de su área, para decidir en minutos</span></li>
+              <li><span class="area">Cerebro Digital · Gerente 4</span><span class="para">Un cerebro propio, con el contexto de su área, para decidir en minutos</span></li>
+              <li><span class="area">Cerebro Digital · Gerente 5</span><span class="para">Un cerebro propio, con el contexto de su área, para decidir en minutos</span></li>
+              <li><span class="area">Cerebro Digital · Gerente 6</span><span class="para">Un cerebro propio, con el contexto de su área, para decidir en minutos</span></li>
+              <li><span class="area">Cerebro Digital · Gerente 7</span><span class="para">Un cerebro propio, con el contexto de su área, para decidir en minutos</span></li>
+              <li><span class="area">Cerebro Digital · Gerente 8</span><span class="para">Un cerebro propio, con el contexto de su área, para decidir en minutos</span></li>
+              <li><span class="area">Cerebro Digital · Gerente 9</span><span class="para">Un cerebro propio, con el contexto de su área, para decidir en minutos</span></li>
+              <li><span class="area">Cerebro Digital · Gerente 10</span><span class="para">Un cerebro propio, con el contexto de su área, para decidir en minutos</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="scope-out">
+        <p class="scope-card-label">Fuera de este alcance</p>
+        <ul>
+          <li>Cargar datos de pacientes: cada cerebro usa información de gestión del área.</li>
+        </ul>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Santiago de León · CAI-104</span>
+      </div>
+    </section>
+
+    <!-- 3 · Ruta: qué pasa en cada fase -->
+    <section class="slide s-route">
+      <span class="counter">03 / 08</span>
+      <p class="eyebrow">03 · Ruta</p>
+      <h2>Diez cerebros, en dos fases.</h2>
+      <p class="sub">El calendario se acuerda en la reunión de arranque. La <strong>garantía y el seguimiento</strong> a 30, 60 y 90 días corren desde el cierre de cada cerebro.</p>
+
+      <div class="route-grid n1" style="--cols:2; --rows:1; --rowh:214px">
+
+        <div class="rg-corner"></div>
+        <div class="rg-phase rg-ph-1 hi">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Grafo de conocimiento</span></span>
+          <span class="rg-phase-name"><strong>El contexto del área, cargado</strong></span>
+        </div>
+        <div class="rg-phase rg-ph-2">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Cerebro en acción</span></span>
+          <span class="rg-phase-name"><strong>Consultas y decisiones reales</strong></span>
+        </div>
+        <div class="rg-phase rg-fu">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Garantía</span></span>
+          <span class="rg-phase-date">30, 60 y 90 días</span>
+          <span class="rg-phase-txt">Seguimiento desde el cierre de cada cerebro</span>
+        </div>
+
+        <div class="rg-front acc-y">
+          <span class="rg-front-h">10 Cerebros Digitales</span>
+          <span class="rg-front-row"><span class="rg-front-tool">Claude</span></span>
+          <span class="rg-front-meta"></span>
+        </div>
+        <div class="rg-cell hi"><p>Grafo de conocimiento de cada cerebro, construido y probado.</p></div>
+        <div class="rg-cell"><p>Project de Claude de cada gerente resolviendo consultas reales.</p></div>
+
+        <div class="rg-follow" style="grid-column:4; grid-row:2 / span 1">
+          <ul>
+            <li><b>30 días</b><span>Uso diario de cada cerebro</span></li>
+            <li><b>60 días</b><span>Ajustes del grafo con nueva información</span></li>
+            <li><b>90 días</b><span>Tiempo ganado en cada consulta, medido</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="route-miles" style="grid-template-columns:repeat(4,1fr)">
+        <div class="mile"><span class="mile-d"></span><b>Arranque</b><p>Accesos listos y la información de cada área reunida para construir los cerebros.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Primeros cerebros</b><p>El grafo de conocimiento de cada cerebro, construido y probado.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Cerebros en acción</b><p>Los Project de Claude de los gerentes resolviendo consultas reales.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Cierre</b><p>Los diez cerebros en uso diario; empieza la garantía a 30, 60 y 90 días.</p></div>
+      </div>
+      <p class="route-note">La fase 1 deja listo el grafo de conocimiento de cada cerebro; la fase 2 lo pone en acción con consultas reales.</p>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Santiago de León · CAI-104</span>
+      </div>
+    </section>
+
+    <!-- 4 · Cómo trabajamos: pasos, por qué en ese orden, casos reales, práctica, datos y logística -->
+    <section class="slide s-method">
+      <span class="counter">04 / 08</span>
+      <p class="eyebrow">04 · Cómo trabajamos</p>
+      <h2>Así construimos cada cerebro.</h2>
+      <p class="sub">Cada cerebro se construye con su gerente, sobre la información real de su área, y se prueba con consultas reales.</p>
+
+      <ol class="mt-steps" style="--n:4">
+          <li><b>Construimos</b><span>Con cada gerente, en vivo y con la información de su área.</span></li>
+          <li><b>Probamos</b><span>Con consultas y decisiones reales, hasta que funcione.</span></li>
+          <li><b>Adoptamos</b><span>Cada gerente lo usa en su día a día.</span></li>
+          <li><b>Medimos</b><span>El tiempo ganado en cada consulta, a 30, 60 y 90 días.</span></li>
+      </ol>
+      <div class="mt-strips">
+        <p class="mt-why"><b>Por qué en este orden</b> Primero se construye el grafo de conocimiento de cada cerebro; después se pone en acción con consultas reales.</p>
+        <p class="mt-who"><b>Quién construye</b> Se construye en vivo con cada gerente, sobre su propio criterio y la información real de su área.</p>
+      </div>
+
+      <div class="mt-info">
+        <div class="mt-card">
+          <p class="mt-card-label">Cómo funciona en la práctica</p>
+          <ul><li><b>Datos que usa.</b> La información de gestión de cada área (procesos, políticas, reportes), cargada en un grafo propio del gerente.</li><li><b>Qué hace.</b> Responde las consultas del gerente con esa información, en lugar de empezar de cero en cada conversación.</li><li><b>Cómo le ayuda.</b> Resuelve en minutos lo que hoy exige reunir y revisar información, y el gerente decide.</li></ul>
+        </div>
+        <div class="mt-card">
+          <p class="mt-card-label">Cómo cuidamos sus datos</p>
+          <p>Cada cerebro se construye con información de gestión del área: los datos de pacientes no se cargan, cada gerente decide qué información incorpora y su cerebro es privado.</p>
+        </div>
+      </div>
+
+      <div class="mt-logi">
+        <div class="mt-tile"><span>Modalidad</span><b>Presencial o en línea, según se acuerde con la clínica en la reunión de arranque.</b></div>
+        <div class="mt-tile"><span>Participantes</span><b>10 gerentes de distintas áreas de la clínica, convocados por la clínica.</b></div>
+        <div class="mt-tile"><span>Ritmo de trabajo</span><b>Según la disponibilidad de cada área, sin frenar su operación diaria.</b></div>
+        <div class="mt-tile"><span>Arranque</span><b>En cuanto se aprueba, se coordina el arranque con cada gerente.</b></div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Santiago de León · CAI-104</span>
+      </div>
+    </section>
+
+    <!-- 5 · Entregables: ¿con qué me quedo? (catálogo + piezas transversales) -->
+    <section class="slide s-deliv con-imp">
+      <span class="counter">05 / 08</span>
+      <p class="eyebrow">05 · Entregables</p>
+      <div class="deliv-head">
+        <h2>10 Cerebros Digitales.</h2>
+        <p class="deliv-sub"><span class="nw">Lo que se llevan</span>: un cerebro digital propio por gerente, con el seguimiento a 30, 60 y 90 días que mide su efecto.</p>
+      </div>
+
+      <div class="deliv-impact grande">
+        <span class="di-label">Impacto</span>
+        <p>Cada gerente pasa de reunir información y revisar documentos a <strong>consultar su propio cerebro</strong> y decidir en minutos, con el contexto de su área a la mano.</p>
+      </div>
+
+      <div class="deliv-carriles" style="--ncols:4">
+        <span class="dc acc-y" style="grid-column: span 4">Claude</span>
+      </div>
+
+      <div class="deliv-cols" style="--ncols:4">
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">Cerebro Digital · Gerente 1</p>
+            <ul>
+              <li>Grafo de conocimiento del área</li>
+              <li>Project de Claude para consultar</li>
+            </ul>
+          </div>
+          <div class="da">
+            <p class="da-name">Cerebro Digital · Gerente 2</p>
+            <ul>
+              <li>Grafo de conocimiento del área</li>
+              <li>Project de Claude para consultar</li>
+            </ul>
+          </div>
+          <div class="da">
+            <p class="da-name">Cerebro Digital · Gerente 3</p>
+            <ul>
+              <li>Grafo de conocimiento del área</li>
+              <li>Project de Claude para consultar</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">Cerebro Digital · Gerente 4</p>
+            <ul>
+              <li>Grafo de conocimiento del área</li>
+              <li>Project de Claude para consultar</li>
+            </ul>
+          </div>
+          <div class="da">
+            <p class="da-name">Cerebro Digital · Gerente 5</p>
+            <ul>
+              <li>Grafo de conocimiento del área</li>
+              <li>Project de Claude para consultar</li>
+            </ul>
+          </div>
+          <div class="da">
+            <p class="da-name">Cerebro Digital · Gerente 6</p>
+            <ul>
+              <li>Grafo de conocimiento del área</li>
+              <li>Project de Claude para consultar</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">Cerebro Digital · Gerente 7</p>
+            <ul>
+              <li>Grafo de conocimiento del área</li>
+              <li>Project de Claude para consultar</li>
+            </ul>
+          </div>
+          <div class="da">
+            <p class="da-name">Cerebro Digital · Gerente 8</p>
+            <ul>
+              <li>Grafo de conocimiento del área</li>
+              <li>Project de Claude para consultar</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">Cerebro Digital · Gerente 9</p>
+            <ul>
+              <li>Grafo de conocimiento del área</li>
+              <li>Project de Claude para consultar</li>
+            </ul>
+          </div>
+          <div class="da">
+            <p class="da-name">Cerebro Digital · Gerente 10</p>
+            <ul>
+              <li>Grafo de conocimiento del área</li>
+              <li>Project de Claude para consultar</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="deliv-band">
+        <div class="db-card db-1">
+          <span class="db-label">Para todo el proyecto</span>
+        </div>
+        <div class="db-card db-2">
+          <span class="db-label">Valor inmediato</span>
+        </div>
+      </div>
+      <!-- Cajas multiline editables (vacías en HTML: el contenido vive dentro del AcroForm /V). -->
+      <div class="multi-box db-box db-box-1" data-field="Entregables"></div>
+      <div class="multi-box db-box db-box-2" data-field="Acreditacion"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Santiago de León · CAI-104</span>
+      </div>
+    </section>
+
+    <!-- 6 · Retorno: ¿qué gano? (método de cálculo). Sin estudios ni citas externas. -->
+    <section class="slide s-roi">
+      <span class="counter">06 / 08</span>
+      <p class="eyebrow">06 · Retorno</p>
+      <h2>Retorno esperado: decisiones más rápidas.</h2>
+      <p class="sub">Se calcula con los datos de cada gerente, se confirma con la línea base del arranque y se mide a 30, 60 y 90 días.</p>
+
+      <div class="roi-body">
+        <div class="roi-panel">
+          <p class="roi-panel-title">Cómo se calcula</p>
+          <ol class="roi-steps">
+            <li><b>Tiempo por consulta</b><span>Cuánto tarda hoy cada gerente en reunir información y decidir sobre un tema, y cuánto tarda con su cerebro. Es la línea base.</span></li>
+            <li><b>Consultas resueltas</b><span>Cuántas consultas resuelve cada cerebro, sin pedir ayuda a otras personas.</span></li>
+            <li><b>Calidad del contexto</b><span>Qué tan completo queda el grafo de conocimiento de cada cerebro con la información real del área.</span></li>
+            <li><b>Adopción diaria</b><span>Con qué frecuencia cada gerente consulta su cerebro en el día a día.</span></li>
+          </ol>
+        </div>
+
+        <div class="roi-right">
+          <p class="roi-right-title">Calendario de garantía, desde el cierre de cada cerebro</p>
+          <div class="roi-card">
+            <b>30 días</b>
+            <p>Los diez cerebros en uso real, con su grafo de conocimiento cargado.</p>
+          </div>
+          <div class="roi-card">
+            <b>60 días</b>
+            <p>Ajustes del grafo con nueva información y nuevas consultas resueltas.</p>
+          </div>
+          <div class="roi-card">
+            <b>90 días</b>
+            <p>Medición del tiempo ganado en cada consulta, contra la línea base.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="roi-dest-wrap">
+        <p class="roi-dest-title">Hacia dónde va el proyecto</p>
+        <div class="roi-dest">
+          <div class="rd-item"><b>Decisiones en minutos</b><p>Consultas que hoy exigen reunir información, resueltas por cada gerente en minutos.</p></div>
+          <div class="rd-item"><b>Contexto a la mano</b><p>La información de cada área cargada y lista, sin reunir todo de nuevo cada vez.</p></div>
+          <div class="rd-item"><b>Un criterio propio</b><p>Cada gerente decide con su propio cerebro, con el <strong>contexto de su área</strong>.</p></div>
+        </div>
+      </div>
+
+      <div class="roi-hook"><p>A los 90 días del cierre, cada gerente contará con su tiempo de consulta medido.</p></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Santiago de León · CAI-104</span>
+      </div>
+    </section>
+
+    <!-- 7 · Inversión (hoja de cotización estándar; antepenúltima slide) -->
+    <section class="slide s-price">
+      <span class="counter">07 / 08</span>
+      <h2 class="title">Inversión del proyecto.</h2>
+      <p class="price-intro">Propuesta Económica · Servicio de Habilidades</p>
+
+      <div class="block">
+        <span class="block-eyebrow">Duración</span>
+        <p class="block-value">Proyecto de 10 Cerebros Digitales: 60 horas en total, 6 para cada uno, con seguimiento y garantía a 30, 60 y 90 días.</p>
+      </div>
+
+      <div class="block block-programa">
+        <span class="block-eyebrow">Programa</span>
+      </div>
+      <div class="multi-box programa-box" data-field="Programa"></div>
+
+      <div class="block block-cotizacion">
+        <span class="block-eyebrow">Cotización</span>
+      </div>
+
+      <span class="cot-label cot-label-base">Propuesta + Inversión</span>
+      <span class="cot-sign cot-sign-base">REF</span>
+      <div class="cot-frame base-frame"></div>
+
+      <span class="cot-label cot-label-discount">Descuento</span>
+      <span class="cot-sign-minus">&minus;REF</span>
+      <div class="cot-frame discount-frame"></div>
+      <span class="cot-urgent-note">Descuento válido por 15 días</span>
+
+      <span class="cot-label cot-label-total">TOTAL</span>
+      <span class="cot-sign cot-sign-total">REF</span>
+      <div class="cot-frame total-frame"></div>
+
+      <p class="cot-moneda">Pago en Divisas o Bolívares a Tasa BCV del Euro</p>
+      <p class="cot-validity">Cotización válida por 30 días.</p>
+      <div class="cot-terms-box">
+        <span class="cot-terms-label">Importante</span>
+        <p class="cot-terms-text">Este servicio se presta bajo nuestros <a href="https://drive.google.com/file/d/1PA-ZSt4KnyY5dpxXzgkIk6-yfGlV2eF8/view?usp=drive_link" target="_blank" rel="noopener">términos y condiciones</a>. Al avanzar con esta propuesta, ambas partes los aceptan.</p>
+      </div>
+
+      <div class="cot-garantia-badge">
+        <span class="cot-garantia-tag">Garantía 30-60-90</span>
+        <p class="cot-garantia-text">Estamos contigo hasta que la habilidad quede instalada.</p>
+      </div>
+
+      <div class="block block-notes-container">
+        <span class="block-eyebrow">Notas</span>
+      </div>
+      <div class="multi-box notas-box" data-field="Notas"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Santiago de León · CAI-104</span>
+      </div>
+    </section>
+
+    <!-- 9 · Próximos pasos: qué hacer y a quién escribir (última slide) -->
+    <section class="slide s-next">
+      <span class="counter">08 / 08</span>
+      <p class="eyebrow">08 · Próximos pasos</p>
+      <h2>Tres pasos para arrancar.</h2>
+      <p class="sub">Esto es lo que sigue cuando Santiago de León confirme la propuesta.</p>
+
+      <div class="nx-steps">
+        <div class="nx-step acc-y">
+          <span class="nx-num">1</span>
+          <b>Confirmar gerentes</b>
+          <p>Validamos con la clínica los 10 gerentes que participan y su disponibilidad.</p>
+        </div>
+        <div class="nx-step acc-o">
+          <span class="nx-num">2</span>
+          <b>Accesos y agenda</b>
+          <p>Coordinamos los accesos y la agenda de cada gerente.</p>
+        </div>
+        <div class="nx-step acc-w">
+          <span class="nx-num">3</span>
+          <b>Reunión de arranque</b>
+          <p>Reunión de unos 30 minutos para alinear el criterio y la información de cada cerebro.</p>
+        </div>
+      </div>
+
+      <div class="nx-contact">
+        <div class="nx-card nx-ase">
+          <span class="nx-label">¿Dudas? Escribe a tu asesora comercial</span>
+          <b class="nx-name">Verónica Rubio</b>
+          <span class="nx-role">Asesora comercial</span>
+          <p class="nx-line"><a href="mailto:vrubio01@intezia.com">vrubio01@intezia.com</a></p>
+          <p class="nx-line">+58 422 3355505</p>
+        </div>
+        <div class="nx-card nx-emp">
+          <span class="nx-label">Intezia</span>
+          <p class="nx-line">Intezia C.A J-505657950</p>
+          <p class="nx-line"><a href="mailto:servicio@intezia.com">servicio@intezia.com</a></p>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Santiago de León · CAI-104</span>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

@@ -1,4 +1,4 @@
-# Programa interno · Laboratorios FC · Servicio de Habilidades (CAI-089A)
+# Programa interno · Laboratorios FC · Servicio de Habilidades (CAI-089)
 
 > Documento interno (no se muestra al cliente). **Generado** por `scripts/generar-habilidades-compacto.py` desde `datos.json`: no editar a mano.
 > Fuente del insumo: Ficha de Levantamiento y transcripción de la reunión (05/11/2026).
@@ -121,6 +121,7 @@ Para qué (lo que ve el cliente): Agilizar la creación de contenido y el análi
 
 ## 5. Supuestos a confirmar (antes del método)
 
+- Ajuste del 11/11/2026 (Ivana): una sola propuesta, CAI-089 (reemplaza a CAI-089A y CAI-089B). La hoja de cotización es una sola y trae dos recuadros de valor: proyecto completo de 9 áreas (90 h) y proyecto de 5 áreas (50 h: Ventas y comercialización, Compras, Despacho y logística, Tecnología y Producción con maquiladores, 10 h por área). Ivana escribió primero «4 áreas» y luego listó 5: se tomaron las 5. «Producción con maquiladores» es el área Producción y operaciones. Se usa inversion.partes con sin_suma (opciones alternativas): la caja de la derecha lleva el valor de la opción elegida. La CAI-089B queda sin uso (carpeta intacta).
 - Pedido de Ivana (05/11/2026): propuesta de Habilidades CAI-089 para Laboratorios FC, asesora Verónica Rubio. Aunque el cliente pidió Detección, Ivana decidió Habilidades por ser más atractivo para la directiva y porque hay procesos documentados: levantamiento de 2 h por área y 8 h de ejecución por área. Educación, sin alianza y sin facilidad de pago: confirmados con Ivana. Después pidió dos propuestas: A con todas las áreas y B con las áreas priorizadas, para que Mariana decida.
 - Áreas: las 9 de la ficha. Procesos clave: Compras, Producción y operaciones (vía maquiladores), Ventas y comercialización, Despacho y logística. Procesos de apoyo: Finanzas, Gestión humana, Asuntos regulatorios, Tecnología y Mercadeo. La propuesta B toma los 4 procesos clave como áreas priorizadas: es mi lectura de la reunión («en mi opinión serían esos procesos clave», Mariana); confirmar con Ivana.
 - Horas: 2 h de levantamiento (F1) y 8 h de ejecución (F2: 4 de construcción, 2 de testeo y 2 de adopción) por área, según Ivana; A = 9 áreas = 90 h (18 + 72); B = 4 áreas = 40 h (8 + 32). Son horas de encuentro con los equipos (sin_horas_trabajo). La solución de cada área no se define antes del levantamiento: por eso los entregables se llaman «Levantamiento de X» y «Solución de X, construida y en uso».
@@ -154,7 +155,7 @@ Modo **metodo**. La slide no cita estudios ni referencias de la web ni promete r
 
 Pasos del método: Volumen; Tiempo actual; Tiempo con la solución; Horas recuperadas; Valor en dinero.
 
-## 8. Próximos pasos (slide 8)
+## 8. Próximos pasos (slide 9)
 
 Asesora comercial que ve el cliente: Verónica Rubio, Asesora comercial · vrubio01@intezia.com · +58 422 3355505.
 

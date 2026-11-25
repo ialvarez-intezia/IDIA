@@ -571,9 +571,9 @@ def paquetes_cantidad(page) -> int:
         texto = re.sub(r"\s+", "", (page.extract_text() or "")).casefold()
     except Exception:
         texto = ""
-    if "valorporpaquete" not in texto:
+    if not re.search(r"valorpor(paquete|fase)", texto):
         return 0
-    nums = [int(x) for x in re.findall(r"(?:paquete|opci[oó]n)(\d)", texto)]
+    nums = [int(x) for x in re.findall(r"(?:paquete|opci[oó]n|fase)(\d)", texto)]
     return max(nums) if nums and max(nums) in (2, 3, 4) else 0
 
 
@@ -838,7 +838,10 @@ def add_fields(pdf_path: Path) -> None:
                 new_spec = {**spec, "name": spec["name"] + suffix}
                 field = build_field(new_spec)
                 if new_spec.get("calc_action"):
-                    add_calculation_action(field, new_spec.get("calc_js") or make_calc_js(suffix))
+                    cjs = new_spec.get("calc_js")
+                    if cjs and suffix:   # el cálculo de la hoja por paquetes (2.ª hoja de inversión) lee sus propias cajas: PaqPrecio1_2, etc.
+                        cjs = re.sub(r'getField\("((?:Paq|PrecioParte)\w*?\d)"\)', lambda m: 'getField("%s%s")' % (m.group(1), suffix), cjs)
+                    add_calculation_action(field, cjs or make_calc_js(suffix))
 
                 ref = writer._add_object(field)
                 field[NameObject("/P")] = page.indirect_reference

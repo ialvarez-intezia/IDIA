@@ -1,0 +1,507 @@
+{
+ "version": 3,
+ "cliente": {
+  "nombre": "GSC Moda",
+  "slug": "gsc-moda-cai098",
+  "codigo": "CAI-098",
+  "nombre_pie": "GSC Moda"
+ },
+ "division": "educacion",
+ "alianza": false,
+ "sin_horas_trabajo": true,
+ "omitir": [
+  "pago"
+ ],
+ "meta_servicio": "habilidades",
+ "meta_tipo": "Habilidades · 2 áreas (Ventas, y Atención en redes sociales y marketplaces) con levantamiento acotado: 2 h de levantamiento y 11 h de construcción, pruebas y adopción por área = 26 h con el equipo · Claude · seguimiento 30-60-90 · sin facilidad de pago · formato compacto v3",
+ "vocabulario": {
+  "solucion": [
+   "entregable",
+   "entregables"
+  ]
+ },
+ "frases_ok": [
+  "precio, dirección, horario, disponibilidad y colores",
+  "estimar costos",
+  "estimar los costos",
+  "Costos a la vista",
+  "estimar el costo de operar la IA"
+ ],
+ "eje": "Levantamiento acotado y construcción con Claude en Ventas y en Atención en redes sociales y marketplaces de GSC Moda: respuestas con el criterio de la marca, procesos de venta documentados y criterios para usar la IA que ya trae su CRM, con seguimiento a 30, 60 y 90 días",
+ "origen": "Ficha de Levantamiento de GSC Moda (Verónica Rubio, 11/11/2026; Carmen Carrero, dueña y CEO, quien decide) y transcripción de la reunión del 11/11/2026 (parcial: llega hasta el minuto 49), más instrucciones de Ivana del 16/11/2026: dos propuestas, CAI-098 de Habilidades y CAI-099 de Cerebro Digital; herramienta Claude; impacto con enfoque operación; 2 áreas priorizadas; sin partes",
+ "fuente_insumo": "Ficha de Levantamiento (11/11/2026) y transcripción de la reunión de Verónica Rubio con GSC Moda (11/11/2026)",
+ "siglas_ok": [
+  "IA",
+  "CRM"
+ ],
+ "portada": {
+  "titulo_lineas": [
+   "Atención y ventas con IA,",
+   "con el criterio de la marca"
+  ],
+  "titulo_destacado": "en {cliente_corto}",
+  "lead": "Este proyecto levanta cómo vende y atiende hoy {cliente_corto} y construye con su equipo las **respuestas con el criterio de la marca** y los **procesos de venta**, hasta dejarlos **en uso**.",
+  "hechos": [
+   {
+    "num": "A mano",
+    "texto": "se buscan y se pegan, una por una, las respuestas sobre valor, dirección y horario.",
+    "resuelto_por": [
+     "AT-2"
+    ]
+   },
+   {
+    "num": "Apagada",
+    "texto": "está la IA que ya trae su CRM: no hay tiempo para entrenarla ni certeza de cuidar la marca.",
+    "resuelto_por": [
+     "AT-3"
+    ]
+   },
+   {
+    "num": "Picos",
+    "texto": "de temporada que llevan al equipo a jornadas de hasta 22 horas, como en Halloween.",
+    "resuelto_por": [
+     "AT-2",
+     "AT-4"
+    ]
+   },
+   {
+    "num": "Traspaso",
+    "texto": "de cada vendedor que rota: hoy se aprende sentándose con la dueña, errores incluidos.",
+    "resuelto_por": [
+     "VE-2",
+     "VE-3"
+    ]
+   }
+  ]
+ },
+ "carriles": [
+  {
+   "id": "claude",
+   "nombre": "Claude",
+   "nombre_corto": "Claude",
+   "color": "amarillo"
+  }
+ ],
+ "areas": [
+  {
+   "id": "VE",
+   "nombre": "Ventas (mayor y detal)",
+   "carril": "claude",
+   "frente": "A",
+   "para_que": "Vender con un mismo proceso, tienda y online, que no dependa de quién atiende",
+   "soluciones": [
+    {
+     "id": "VE-1",
+     "entregable": "Levantamiento de ventas y de otros procesos",
+     "h": 2,
+     "fase": "F1",
+     "incluye": [
+      "Cómo se vende hoy al mayor y al detal, en tienda y en línea",
+      "Línea base del tiempo de cada tarea del equipo",
+      "Otros procesos que cuestan tiempo y dinero y hoy no se ven"
+     ],
+     "detalle": "Trabajo de 2 h con el equipo de ventas. Se recorre cómo se vende hoy al mayor y al detal, en tienda y en línea, se mide el punto de partida de cada tarea y, al ser un levantamiento acotado, se mapean también otros procesos del equipo que cuestan tiempo y dinero y hoy no están a la vista. Entrega la línea base y el alcance de lo que se construye."
+    },
+    {
+     "id": "VE-2",
+     "entregable": "Procesos de venta documentados, con la identidad de la marca",
+     "C": 4,
+     "T": 2,
+     "A": 1,
+     "fase": "F2",
+     "incluye": [
+      "Cómo se atiende al mayor y al detal, paso a paso",
+      "El saludo y el tono que son de la marca",
+      "Lo que se resuelve solo y lo que pasa a la dueña"
+     ],
+     "detalle": "Trabajo de 7 h con el equipo de ventas. Se construye con Claude la forma de vender de la marca, escrita paso a paso: cómo se atiende al mayor y al detal, el saludo y el tono propios de la marca y cuándo una decisión pasa a la dueña. Se prueba con casos reales del equipo. Entrega los procesos documentados y en uso."
+    },
+    {
+     "id": "VE-3",
+     "entregable": "Guía para quien se incorpora al equipo",
+     "C": 2,
+     "T": 1,
+     "A": 1,
+     "fase": "F2",
+     "incluye": [
+      "Cómo se trabaja en el equipo, desde el primer día",
+      "Casos reales con su mejor respuesta"
+     ],
+     "detalle": "Trabajo de 4 h con el equipo de ventas. A partir de los procesos documentados se arma una guía para quien entra al equipo, con casos reales y su mejor respuesta, de modo que el traspaso no dependa de sentarse con la dueña. Entrega la guía y su prueba con quien más recientemente llegó."
+    }
+   ]
+  },
+  {
+   "id": "AT",
+   "nombre": "Atención en redes y marketplaces",
+   "carril": "claude",
+   "frente": "A",
+   "para_que": "Responder lo repetitivo con el criterio de la marca y medir cada mensaje",
+   "soluciones": [
+    {
+     "id": "AT-1",
+     "entregable": "Levantamiento de la atención y de la cantidad de mensajes",
+     "h": 2,
+     "fase": "F1",
+     "incluye": [
+      "Cómo llega y se responde cada mensaje en cada canal",
+      "Cantidad de mensajes al mes, para estimar costos",
+      "Línea base del tiempo de respuesta"
+     ],
+     "detalle": "Trabajo de 2 h con quien atiende. Se recorre cómo llega y se responde hoy cada mensaje en WhatsApp, Instagram y marketplaces, y se mide el punto de partida. Se registra la cantidad de mensajes que se atienden al mes: es un dato necesario para estimar los costos de operar la IA, y hoy no está cuantificado. Entrega la línea base, el volumen de mensajes y el alcance."
+    },
+    {
+     "id": "AT-2",
+     "entregable": "Respuestas con el criterio de la marca",
+     "C": 3,
+     "T": 1,
+     "A": 1,
+     "fase": "F2",
+     "incluye": [
+      "Precio, dirección, horario, disponibilidad y colores",
+      "Una misma respuesta, con el tono de la marca",
+      "Cuándo la conversación pasa a una persona"
+     ],
+     "detalle": "Trabajo de 5 h con quien atiende. Se construye con Claude el banco de respuestas a las preguntas que más se repiten (precio, dirección, horario, disponibilidad y colores), con el tono de la marca y la regla de cuándo pasa a una persona. Se prueba con mensajes reales y las respuestas quedan listas para usar desde el CRM. No incluye desarrollar un agente de IA. Entrega las respuestas en uso."
+    },
+    {
+     "id": "AT-3",
+     "entregable": "Criterios para usar la IA de Como y de Mercasys",
+     "C": 2,
+     "T": 1,
+     "A": 1,
+     "fase": "F2",
+     "incluye": [
+      "Qué IA conviene usar y para qué mensajes",
+      "Qué se le entrena y qué nunca debe decir",
+      "Cómo probarla sin exponer la marca"
+     ],
+     "detalle": "Trabajo de 4 h con quien atiende y la dirección. Se evalúa la IA que ya trae el CRM Como y la de Mercasys, y se acuerdan criterios para usarla sin riesgo para la marca: qué se le entrena, qué nunca debe responder y cómo se prueba antes de usarla con clientes. Una conexión con Mercasys se evalúa en el levantamiento, sin compromiso previo. Entrega los criterios y una primera prueba."
+    },
+    {
+     "id": "AT-4",
+     "entregable": "Tablero de mensajes respondidos y pendientes",
+     "C": 1,
+     "T": 0,
+     "A": 1,
+     "fase": "F2",
+     "incluye": [
+      "Cuántos mensajes se respondieron y cuántos faltan",
+      "Quién debía responder cada uno"
+     ],
+     "detalle": "Trabajo de 2 h con quien atiende y la dirección. Con lo que los reportes del CRM permitan exportar, se arma un tablero para ver cuántos mensajes se respondieron, cuántos quedaron sin responder y a quién le tocaba, sin pedir reportes. Entrega el tablero en uso."
+    }
+   ]
+  }
+ ],
+ "alcance": {
+  "titulo": "Respuestas y procesos con IA, en uso.",
+  "subtitulo": "Medimos cómo se vende y atiende hoy y construimos **respuestas con criterio de marca** y **procesos documentados**.",
+  "fuera_alcance": [
+   "Agentes de IA que respondan solos: no se desarrollan en esta etapa. La IA de Como se evalúa con criterios para cuidar la marca.",
+   "Inventario, compras y finanzas: se trabajan en el Cerebro Digital, que es una propuesta aparte.",
+   "Licencias de Claude, de Como y de Mercasys, y el consumo de la IA: los contrata {cliente_corto}, aparte de esta inversión.",
+   "Cantidad de mensajes: hace falta conocerla para estimar costos; se mide en el levantamiento."
+  ],
+  "etiqueta_destacados": "Lo que buscamos lograr",
+  "destacados": [
+   {
+    "titulo": "Sin buscar y pegar",
+    "texto": "Las respuestas repetitivas salen con el mismo criterio."
+   },
+   {
+    "titulo": "La IA de Como, con criterio",
+    "texto": "Se usa sin riesgo para la marca."
+   },
+   {
+    "titulo": "Procesos que se quedan",
+    "texto": "Lo que se sabe queda escrito, aunque rote el equipo."
+   },
+   {
+    "titulo": "Mensajes a la vista",
+    "texto": "Qué se respondió, qué falta y a quién le toca."
+   }
+  ]
+ },
+ "metodo": {
+  "titulo": "Así construimos cada herramienta.",
+  "subtitulo": "Primero se mide dónde está hoy cada proceso y después se construye con el equipo, que aprende a sostenerlo.",
+  "quien_construye": "Se construye en conjunto: el equipo de {cliente_corto} trabaja con **Claude** sobre sus mensajes y procesos reales, y **Intezia guía** cada paso.",
+  "por_que_orden": "Primero se mide el punto de partida y se cuenta cuántos mensajes se atienden; después se construyen las respuestas y los procesos, y al final se prueban con casos reales y el equipo los adopta.",
+  "pasos": [
+   {
+    "titulo": "Medimos",
+    "texto": "Cómo se vende y se responde hoy, y cuánto tarda cada tarea."
+   },
+   {
+    "titulo": "Construimos",
+    "texto": "Con Claude, sobre los mensajes y procesos reales."
+   },
+   {
+    "titulo": "Adoptamos",
+    "texto": "Pruebas con casos reales; el equipo usa y ajusta."
+   },
+   {
+    "titulo": "Seguimos",
+    "texto": "Uso, ajustes y resultados, a 30, 60 y 90 días."
+   }
+  ],
+  "practica": [
+   {
+    "titulo": "Con las herramientas que ya tienen",
+    "texto": "Claude se suma al CRM y a Mercasys: no se reemplazan, se evalúan y se usan mejor."
+   },
+   {
+    "titulo": "Con límites claros",
+    "texto": "No se construyen agentes que respondan solos; la IA que ya tienen se usa con criterios para no arriesgar la marca."
+   },
+   {
+    "titulo": "Costos a la vista",
+    "texto": "La cantidad de mensajes se mide en el levantamiento para estimar el costo de operar la IA."
+   }
+  ],
+  "datos": "Los datos de clientes no se cargan a ninguna herramienta de IA sin la autorización de {cliente_corto}; las reglas básicas de uso se acuerdan al empezar.",
+  "etiqueta_ejemplos": "Un caso que se parece",
+  "ejemplos": [
+   {
+    "area": "Contabilidad",
+    "titulo": "Una firma contable pequeña",
+    "texto": "Con acompañamiento a su medida, **ordenó sus procesos con IA** y encontró, para cada caso de uso, la herramienta que mejor le servía.",
+    "fuente": "Proyecto de Intezia con una firma contable pequeña"
+   }
+  ]
+ },
+ "fases": [
+  {
+   "id": "F1",
+   "titulo": "Levantamiento",
+   "descripcion": "medir la atención y las ventas de hoy"
+  },
+  {
+   "id": "F2",
+   "titulo": "Construcción",
+   "descripcion": "respuestas y procesos construidos y en uso",
+   "destacada": true
+  }
+ ],
+ "frentes": [
+  {
+   "id": "A",
+   "carril": "claude",
+   "nombre": "Ventas y atención de {cliente_corto}",
+   "medida": "26 horas",
+   "medida_meta": "con el equipo",
+   "celdas": {
+    "F1": "Un levantamiento por área: se mide el punto de partida y se mapean otros procesos.",
+    "F2": "Procesos de venta, respuestas con criterio de marca, criterios de IA y tablero, en uso."
+   },
+   "celdas_medida": {
+    "F1": "4 horas con el equipo",
+    "F2": "22 horas con el equipo"
+   }
+  }
+ ],
+ "ruta": {
+  "titulo": "Del levantamiento a las herramientas en uso.",
+  "subtitulo": "El calendario se acuerda en la **reunión de arranque**. El **levantamiento** mide el punto de partida.",
+  "hitos": [
+   {
+    "titulo": "Arranque · aparte",
+    "texto": "Reunión de 30 min para acordar el calendario y quién coordina el proyecto por {cliente_corto}."
+   },
+   {
+    "titulo": "Levantamiento",
+    "texto": "Ventas y atención: cómo funciona hoy cada proceso y cuántos mensajes se atienden."
+   },
+   {
+    "titulo": "Herramientas en uso",
+    "texto": "Procesos de venta, respuestas con criterio de marca, criterios de IA y tablero, probados."
+   },
+   {
+    "titulo": "30 · 60 · 90 días",
+    "texto": "Seguimiento: uso de las herramientas, ajustes e indicadores medidos."
+   }
+  ]
+ },
+ "logistica": {
+  "modalidad": "Presencial o virtual, a acordar en la reunión de arranque.",
+  "participantes": "El equipo de ventas y de atención en redes, con la dirección de {cliente_corto}.",
+  "arranque": "El proyecto arranca en enero; una reunión de arranque de 30 min, aparte, acuerda el calendario."
+ },
+ "seguimiento": {
+  "rango": "30, 60 y 90 días",
+  "texto": "Desde el cierre de cada área",
+  "items": [
+   {
+    "dias": "30 días",
+    "texto": "Uso de las respuestas y de los procesos"
+   },
+   {
+    "dias": "60 días",
+    "texto": "Ajustes y nuevas construcciones"
+   },
+   {
+    "dias": "90 días",
+    "texto": "Indicadores y tiempo recuperado medidos"
+   }
+  ]
+ },
+ "entregables": {
+  "titulo": "Lo que recibe {cliente_corto}.",
+  "subtitulo": "Lo que se llevan: **respuestas y procesos con el criterio de la marca, en uso**, más el seguimiento a {rango_seguimiento}.",
+  "etiqueta_transversales": "Para todo el proyecto",
+  "transversales": [
+   "Línea base del tiempo de respuesta y de cada tarea.",
+   "Cantidad de mensajes al mes, para estimar costos.",
+   "Seguimiento a 30, 60 y 90 días."
+  ],
+  "etiqueta_valor": "Valor inmediato",
+  "valor_inmediato": [
+   "Con el levantamiento: punto de partida y procesos a la vista.",
+   "Con las respuestas: lo repetitivo ya no se busca y pega.",
+   "Con los criterios: la IA de Como, lista para probarse."
+  ],
+  "columnas_por_carril": [
+   2
+  ],
+  "impacto": {
+   "enfoque": "operacion",
+   "texto": "Las consultas repetitivas dejan de responderse a mano: el equipo contesta con el **mismo criterio de la marca**, más rápido y con menos errores, y su tiempo se reserva para concretar ventas."
+  }
+ },
+ "retorno": {
+  "modo": "metodo",
+  "posiciones": false,
+  "titulo": "Retorno esperado: tiempo recuperado, medido.",
+  "subtitulo": "Cada indicador se mide contra el punto de partida que el levantamiento deja registrado.",
+  "etiqueta_pasos": "Cómo se calcula el retorno",
+  "pasos": [
+   {
+    "titulo": "Volumen",
+    "texto": "Cuántos mensajes se atienden al mes: el dato que hoy no se mide."
+   },
+   {
+    "titulo": "Punto de partida",
+    "texto": "Tiempo de respuesta y de cada tarea: es la **línea base**."
+   },
+   {
+    "titulo": "Con las herramientas",
+    "texto": "Lo que toma el mismo trabajo con las respuestas y los procesos en uso."
+   },
+   {
+    "titulo": "Horas recuperadas",
+    "texto": "Volumen por la diferencia de tiempos: una estimación referencial, sin compromiso de resultado."
+   },
+   {
+    "titulo": "Gasto de operar",
+    "texto": "Licencias y consumo de IA, estimados con la cantidad de mensajes, contra el valor de lo recuperado."
+   }
+  ],
+  "etiqueta_metas": "Calendario de seguimiento y medición",
+  "metas": [
+   {
+    "dias": "30 días",
+    "texto": "Desde el cierre de cada área: respuestas y procesos en uso real y línea base validada con el equipo."
+   },
+   {
+    "dias": "60 días",
+    "texto": "Tiempo de respuesta y horas recuperadas medidos contra el punto de partida."
+   },
+   {
+    "dias": "90 días",
+    "texto": "Medición del retorno: lo recuperado frente al gasto de operar las herramientas."
+   }
+  ],
+  "etiqueta_destino": "Hacia dónde va el proyecto",
+  "destino": [
+   {
+    "rotulo": "Mejor atención",
+    "texto": "Cada mensaje sale con el tono de la marca, **sin importar quién atienda**."
+   },
+   {
+    "rotulo": "Tiempo para vender",
+    "texto": "Lo repetitivo se resuelve solo y el tiempo humano se reserva para **concretar ventas**."
+   },
+   {
+    "rotulo": "Un equipo autónomo",
+    "texto": "El equipo construye y ajusta sus herramientas sin depender de un proveedor externo."
+   }
+  ],
+  "gancho": "A los 90 días del cierre de cada área, {cliente_corto} contará con sus indicadores medidos contra el punto de partida y el gasto estimado de operar sus herramientas."
+ },
+ "inversion": {
+  "duracion": "**{h_total} horas con el equipo** de {cliente_corto}, en levantamiento y construcción, con seguimiento a {rango_seguimiento}.",
+  "licencias": {
+   "titulo": "Licenciamiento · aparte de esta inversión",
+   "tarjetas": [
+    {
+     "nombre": "Claude Team · puesto estándar",
+     "color": "amarillo",
+     "texto": "**USD 25** por persona al mes (USD 20 pagando por año), con mínimo 2 puestos. Cada persona del equipo que use Claude suma un puesto; el número se define al empezar."
+    },
+    {
+     "nombre": "Como y Mercasys · ya contratados",
+     "color": "naranja",
+     "texto": "Siguen como hoy: no se reemplazan ni se suman a esta inversión. Se evalúa qué IA de cada uno conviene usar."
+    }
+   ],
+   "nota": "Valores de lista de Claude Team verificados el 28/10/2026; pueden variar y los confirma {cliente_corto} con el proveedor. No son un valor de Intezia."
+  },
+  "programa": [
+   "Servicio de Habilidades para {cliente_corto} ({codigo}).",
+   "Ventas: levantamiento, procesos de venta documentados y guía para quien entra, 13 h con el equipo.",
+   "Atención: levantamiento, respuestas con criterio de marca, criterios de IA y tablero, 13 h.",
+   "Seguimiento a 30, 60 y 90 días. La reunión de arranque va aparte."
+  ],
+  "notas": [
+   "Para estimar los costos de operar la IA hace falta conocer la cantidad de mensajes que se atienden al mes; se mide en el levantamiento.",
+   "Las licencias de Claude van aparte: el servicio exige mínimo 2 puestos. Como y Mercasys siguen como hoy.",
+   "No nos retiramos hasta que la capacidad quede instalada en el equipo."
+  ],
+  "garantia_texto": "Estamos contigo hasta que las herramientas queden en uso."
+ },
+ "proximos_pasos": {
+  "subtitulo": "Esto es lo que sigue cuando {cliente_corto} confirme la propuesta.",
+  "asesora": {
+   "nombre": "Verónica Rubio",
+   "cargo": "Asesora comercial",
+   "correo": "vrubio01@intezia.com",
+   "telefono": "+58 422 3355505"
+  },
+  "pasos": [
+   {
+    "titulo": "Responsable y arranque",
+    "texto": "Confirmamos con {cliente_corto} el arranque en enero y quién coordina el proyecto desde su equipo."
+   },
+   {
+    "titulo": "Accesos y casos",
+    "texto": "El equipo comparte los reportes que autorice y ejemplos reales de mensajes, sin datos personales."
+   },
+   {
+    "titulo": "Reunión de arranque",
+    "texto": "Media hora para acordar el calendario de las dos áreas, el orden del trabajo y los accesos."
+   }
+  ]
+ },
+ "supuestos": [
+  "**Ajuste de Ivana (16/11/2026):** la CAI-098 pasa de 20 h a 26 h con el equipo, y la reunión de arranque, de 1 h a 30 min (también en la CAI-099). Reparto mío, por confirmar: cada área suma 13 h (2 de levantamiento y 11 de construcción, pruebas y adopción); Ventas: VE-1 2 h, VE-2 7 h y VE-3 4 h; Atención: AT-1 2 h, AT-2 5 h, AT-3 4 h y AT-4 2 h. El levantamiento sigue en 4 h y la construcción pasa de 16 h a 22 h.",
+  "Pedido de Ivana (16/11/2026): dos propuestas para GSC Moda con Verónica Rubio como asesora, CAI-098 (Habilidades con levantamiento acotado en Ventas y atención, 5 personas internas) y CAI-099 (Cerebro Digital para la dueña, aparte). Respuestas de Ivana: división Educación y sin alianza; impacto con enfoque operación en las dos; herramienta Claude; hoja de cotización sin partes; priorizar 2 áreas; mencionar que hace falta la cantidad de mensajes para estimar costos; mencionar una firma contable pequeña ayudada a optimizar sus procesos y a elegir la mejor herramienta de IA según sus casos de uso; mencionar el arranque en enero y solo eso; 8 h al Cerebro Digital.",
+  "Áreas: Ventas (mayor y detal, tienda y online) y Atención en redes sociales y marketplaces, las dos primeras de las 5 áreas priorizadas de la ficha. Mercadeo, Procura y Contabilidad y finanzas quedan fuera (los procesos de inventario, procura y finanzas van en el Cerebro Digital CAI-099). Estructura de horas de Laboratorios FC (CAI-089): 2 h de levantamiento y 8 h de construcción, pruebas y adopción por área = 26 h con el equipo (ajuste del 16/11). El reparto en entregables es mío, por confirmar con Ivana.",
+  "Solución de Atención: no es un agente. La ficha pide entrenar la IA de Como y evaluar la de Mercasys; el alcance acordado con la cliente excluyó agentes («sería como darle un Ferrari a un bebé»). Por eso AT-3 entrega criterios de uso de esa IA y una primera prueba, no un agente construido; AT-2 son respuestas en uso desde el CRM. Verónica dijo en la reunión que la conexión con Claude por API o MCP es posible con Como y que con Mercasys no estaba segura: no se promete.",
+  "Cantidad de mensajes (Ivana): se menciona en la alcance (fuera de alcance), el método, AT-1, el retorno y las notas de la inversión como dato necesario para estimar costos; la ficha dice que no se cuantificó el volumen mensual ni las horas de atención. El retorno va en modo método, sin cifras.",
+  "Caso de una firma contable pequeña (Ivana): texto en «Un caso que se parece», sin nombre ni cifras. Falta la fuente documentada que exige el sistema (§4.21): quede como pendiente antes de enviar. El caso Conserval que Verónica mencionó en la reunión (5 personas) no se usa: es otro rubro.",
+  "Arranque: solo se dice «arranca en enero» (instrucción de Ivana). La disponibilidad después de las 6 p.m. o en sábados, el 10 de enero y el posible adelanto en diciembre quedan en el brief, no en el deck. Sin semanas, sesiones ni fechas (§4.23).",
+  "Contexto interno que no va en el deck: Carmen es la única decisora, contadora pública y consultora; pidió «aterrizar números»; rechaza los bots genéricos; presupuesto en evaluación; Noviembre y diciembre son temporada alta (equipo desbordado). Sus citas textuales no se usan. El deck no nombra personas ni empresas de terceros (Como y Mercasys son las herramientas del cliente).",
+  "Claude no está soportado oficialmente en Venezuela: el deck no promete acceso ni VPN. Licencias: valor de lista de Claude Team verificado el 28/10/2026 (CAI-070), no reverificado el 16/11/2026: confirmar antes de enviar.",
+  "Sin facilidad de pago (omitida), como en las últimas propuestas; hoja de inversión única con campos vacíos para ventas, sin partes. Seguimiento 30-60-90 estándar, que Verónica explicó en la reunión como incluido en toda propuesta."
+ ],
+ "pendientes": [
+  "Documentar la fuente del caso de la firma contable pequeña (cliente, fecha y quién lo valida) antes de enviar.",
+  "Confirmar con Ivana el reparto de horas de las dos áreas (13 h cada una, tras el ajuste a 26 h) y los entregables propuestos.",
+  "Confirmar la modalidad (presencial o virtual) y quiénes participan; Carmen no definió horario ni duración.",
+  "Reverificar el valor de lista de Claude Team (USD 25 o USD 20 anual, mínimo 2 puestos; verificado el 28/10/2026).",
+  "Transcripción incompleta: llega al minuto 49. Revisar la parte final por si trae algo que cambie el alcance.",
+  "Decidir si se agrega la hoja de facilidad de pago; valor, descuento y total: campos vacíos para ventas.",
+  "Verónica quedó en enviar por WhatsApp ejemplos de videos hechos con IA; la propuesta llega por correo antes de agendar la reunión de presentación."
+ ]
+}

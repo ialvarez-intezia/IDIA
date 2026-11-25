@@ -1,0 +1,426 @@
+{
+ "version": 3,
+ "cliente": {
+  "nombre": "Juan Van Heel",
+  "slug": "juan-van-heel-cai091",
+  "codigo": "CAI-091",
+  "nombre_pie": "Juan Van Heel"
+ },
+ "division": "educacion",
+ "alianza": false,
+ "sin_horas_trabajo": true,
+ "vocabulario": {
+  "area": [
+   "paso",
+   "pasos"
+  ],
+  "solucion": [
+   "entregable",
+   "entregables"
+  ]
+ },
+ "omitir": [
+  "pago"
+ ],
+ "meta_tipo": "Capacitación In-Company · Servicio de Habilidades · Gemini por función para unas 21 personas, en un programa de 12 h en vivo: base común 4 h y trabajo por función 8 h · seguimiento 30-60-90 · sin facilidad de pago · compacto v3",
+ "eje": "Nivelar en Gemini, que ya tienen en su dominio de Google, a unas 21 personas de varias áreas de Juan Van Heel, con una base común para todos y después el trabajo por función, en vivo (presencial en Caracas y en línea para el resto), para que cada área lo use en su día a día y salga con algo propio construido",
+ "origen": "Ficha de Levantamiento de Juan Van Heel (Flavia Martínez, 05/11/2026) y las notas de la reunión de Flavia pasadas por Ivana el 09/11/2026: primer proyecto de dos que el cliente pide por separado (nivelación en Gemini; el agente de atención por WhatsApp es otro proyecto, otra propuesta). Sin transcripción en el repositorio",
+ "fuente_insumo": "Ficha de Levantamiento (05/11/2026) y notas de la reunión de la asesora (09/11/2026)",
+ "siglas_ok": [
+  "IA"
+ ],
+ "portada": {
+  "titulo_lineas": [
+   "Gemini en el día a día",
+   "de cada función"
+  ],
+  "titulo_destacado": "de Juan Van Heel",
+  "lead": "Nivelamos en **Gemini**, que {cliente_corto} ya tiene en su dominio de Google, a unas 21 personas de varias áreas: una **base común** para todos y después el **trabajo por función**, con ejemplos tangibles y algo propio construido por cada área.",
+  "hechos": [
+   {
+    "num": "Gemini",
+    "texto": "ya está en su dominio de Google, pero no se usa en el día a día.",
+    "resuelto_por": [
+     "BC-1",
+     "SN-2"
+    ]
+   },
+   {
+    "num": "~21",
+    "texto": "personas de varias áreas, dentro y fuera de Caracas, que necesitan aprender a usarlo.",
+    "resuelto_por": [
+     "BC-1",
+     "BC-2"
+    ]
+   },
+   {
+    "num": "Suelta",
+    "texto": "es la forma en que se usa la IA hoy: sin criterio ni reglas comunes.",
+    "resuelto_por": [
+     "BC-1",
+     "SN-3"
+    ]
+   },
+   {
+    "num": "En vivo",
+    "texto": "y sin videos grabados: es como piden aprender, en Caracas y en línea.",
+    "resuelto_por": [
+     "BC-1",
+     "BC-2",
+     "SN-1"
+    ]
+   }
+  ]
+ },
+ "carriles": [
+  {
+   "id": "gm",
+   "nombre": "Gemini",
+   "nombre_corto": "Gemini",
+   "color": "amarillo"
+  }
+ ],
+ "areas": [
+  {
+   "id": "BC",
+   "nombre": "Base común",
+   "carril": "gm",
+   "frente": "A",
+   "para_que": "Llevar a todo el equipo al mismo punto con Gemini y sus reglas de uso",
+   "soluciones": [
+    {
+     "id": "BC-1",
+     "entregable": "Fundamentos de Gemini para todo el equipo",
+     "h": 2,
+     "fase": "F1",
+     "detalle": "Dos horas en vivo con todo el equipo, presencial en Caracas y en línea para quienes están fuera. Se nivela a todos en qué es y qué no es Gemini, cómo pedirle bien y qué información de la empresa no se carga. Entrega a todos en el mismo punto y con reglas básicas de uso.",
+     "incluye": [
+      "Qué es y qué no es Gemini, con palabras sencillas",
+      "Cómo pedirle bien y qué información no se carga"
+     ]
+    },
+    {
+     "id": "BC-2",
+     "entregable": "Gemini aplicado a cada función, con ejemplos",
+     "h": 2,
+     "fase": "F1",
+     "detalle": "Dos horas en vivo con todo el equipo. Se recorren ejemplos tangibles de cómo usar Gemini en los procesos de cada función, con casos del trabajo real de sus áreas. Entrega la guía de ejemplos por función para ponerlos en práctica.",
+     "incluye": [
+      "Ejemplos por función, de su trabajo real",
+      "Nivel básico o avanzado según lo que cada función necesita"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "SN",
+   "nombre": "Trabajo por función",
+   "carril": "gm",
+   "frente": "A",
+   "para_que": "Que cada función construya algo propio con Gemini, en vivo",
+   "soluciones": [
+    {
+     "id": "SN-1",
+     "entregable": "Casos reales de cada función",
+     "h": 2,
+     "fase": "F2",
+     "detalle": "Dos horas en vivo con el grupo de cada función. Cada función elige los casos reales de su trabajo sobre los que construye y se define qué se arma para cada una. Entrega la lista de casos y de lo que se construye por función.",
+     "incluye": [
+      "Casos reales de cada función",
+      "Qué se construye para cada una"
+     ]
+    },
+    {
+     "id": "SN-2",
+     "entregable": "Skill de Gemini propia de cada función",
+     "h": 4,
+     "fase": "F2",
+     "detalle": "Cuatro horas en vivo. Cada función construye con Gemini una Skill o solución propia para uno de sus casos, la prueba con ejemplos reales y sale usándola. Se ajusta a lo que incluya la licencia de Google Workspace de la empresa. Entrega una Skill o solución por función, funcionando.",
+     "incluye": [
+      "Una Skill o solución por función, construida en vivo",
+      "Probada con ejemplos reales de cada área"
+     ]
+    },
+    {
+     "id": "SN-3",
+     "entregable": "Protocolo de uso común de Gemini",
+     "h": 2,
+     "fase": "F2",
+     "detalle": "Dos horas en vivo con todos los grupos. Se acuerdan las reglas que comparte todo el equipo: qué información se sube, cómo se pide, cómo se revisa lo que responde y cómo se comparte lo construido. Entrega el protocolo de uso común de Gemini.",
+     "incluye": [
+      "Qué se sube, cómo se pide y cómo se revisa",
+      "Cómo se comparte lo que cada función construye"
+     ]
+    }
+   ]
+  }
+ ],
+ "alcance": {
+  "titulo": "Un equipo nivelado en Gemini, por función.",
+  "subtitulo": "Un programa de 12 horas en vivo: todos parten del mismo punto y cada función construye su **Skill de Gemini**.",
+  "fuera_alcance": [
+   "El agente de atención por WhatsApp: es otro proyecto, con su propia propuesta.",
+   "Licencias nuevas: {cliente_corto} ya tiene Gemini en su dominio de Google.",
+   "Videos grabados: todo se trabaja en vivo, con el equipo."
+  ]
+ },
+ "fases": [
+  {
+   "id": "F1",
+   "titulo": "Base",
+   "descripcion": "todo el equipo, mismo punto"
+  },
+  {
+   "id": "F2",
+   "titulo": "Función",
+   "descripcion": "una Skill propia por función",
+   "destacada": true
+  }
+ ],
+ "frentes": [
+  {
+   "id": "A",
+   "carril": "gm",
+   "nombre": "Gemini para el equipo",
+   "medida": "12 horas",
+   "medida_meta": "unas 21 personas",
+   "celdas": {
+    "F1": "Base común: fundamentos y ejemplos por función para todo el equipo.",
+    "F2": "Trabajo por función: casos, una Skill propia por función y el protocolo de uso."
+   },
+   "celdas_medida": {
+    "F1": "4 horas con todo el equipo",
+    "F2": "8 horas por función"
+   }
+  }
+ ],
+ "ruta": {
+  "titulo": "De la base común a una Skill por función.",
+  "subtitulo": "El calendario se acuerda en la **reunión de arranque**. El **seguimiento** corre desde el cierre del proyecto.",
+  "nota": "Las 12 horas son el proyecto y se distribuyen entre las funciones cuando se confirmen: 4 h de base común y 8 h para las funciones.",
+  "hitos": [
+   {
+    "titulo": "Reunión de arranque",
+    "texto": "Se acuerdan el calendario, quién participa por función y el formato en vivo."
+   },
+   {
+    "titulo": "Base común",
+    "texto": "4 h con todo el equipo: fundamentos y ejemplos por función."
+   },
+   {
+    "titulo": "Trabajo por función",
+    "texto": "Casos reales y una Skill de Gemini propia de cada función."
+   },
+   {
+    "titulo": "Protocolo común",
+    "texto": "Las reglas de uso que comparte todo el equipo."
+   },
+   {
+    "titulo": "30 · 60 · 90 días",
+    "texto": "Seguimiento: uso de Gemini, Skills en uso y tiempo recuperado."
+   }
+  ]
+ },
+ "metodo": {
+  "titulo": "Así trabajamos con el equipo.",
+  "subtitulo": "Un solo programa, con un orden: primero una base para todos y después el trabajo por función, en vivo.",
+  "pasos": [
+   {
+    "titulo": "Nivelamos",
+    "texto": "A todo el equipo, con una base común y reglas de uso."
+   },
+   {
+    "titulo": "Aterrizamos",
+    "texto": "Ejemplos y casos reales del trabajo de cada función."
+   },
+   {
+    "titulo": "Construimos",
+    "texto": "Una Skill o solución propia de cada función, en vivo."
+   },
+   {
+    "titulo": "Adoptamos",
+    "texto": "Cada función la usa en su día a día; seguimos a 30, 60 y 90 días."
+   }
+  ],
+  "por_que_orden": "Primero todos parten del mismo punto. Después cada función construye sobre sus propios casos, porque no sirve un entrenamiento genérico.",
+  "quien_construye": "Se construye en vivo con cada función: **Intezia guía** y cada área sale con su propia Skill de Gemini, según lo que incluya la licencia de Google Workspace de {cliente_corto}.",
+  "practica": [
+   {
+    "titulo": "Todo en vivo",
+    "texto": "Presencial en Caracas y en línea para el resto, sin videos grabados."
+   },
+   {
+    "titulo": "Según la función",
+    "texto": "Cada función recibe el nivel que necesita, básico o avanzado."
+   },
+   {
+    "titulo": "Un solo programa",
+    "texto": "Una secuencia dentro del mismo proyecto: no son piezas separables."
+   }
+  ],
+  "datos": "Se trabaja con los ejemplos que {cliente_corto} autorice; nada confidencial se carga a Gemini sin su visto bueno, y las reglas de uso quedan en el protocolo común."
+ },
+ "logistica": {
+  "modalidad": "Híbrida: presencial en Caracas y en línea, en vivo, para quienes están fuera.",
+  "participantes": "Unas 21 personas de varias áreas, a confirmar; las 12 horas se distribuyen entre las funciones.",
+  "ritmo": "Bloques cortos, que se acuerdan con el equipo en la reunión de arranque.",
+  "arranque": "Apenas se apruebe la propuesta; la reunión de arranque acuerda el calendario."
+ },
+ "seguimiento": {
+  "rango": "30, 60 y 90 días",
+  "texto": "Desde el cierre del proyecto",
+  "items": [
+   {
+    "dias": "30 días",
+    "texto": "Uso de Gemini en el día a día"
+   },
+   {
+    "dias": "60 días",
+    "texto": "Skills en uso en cada función"
+   },
+   {
+    "dias": "90 días",
+    "texto": "Tiempo recuperado medido"
+   }
+  ]
+ },
+ "entregables": {
+  "titulo": "Lo que recibe {cliente_corto}.",
+  "subtitulo": "Lo que se llevan: **un equipo nivelado y una Skill de Gemini por función**, más el seguimiento a {rango_seguimiento}.",
+  "etiqueta_transversales": "Para todo el proyecto",
+  "transversales": [
+   "Línea base del uso de Gemini, al arrancar.",
+   "Protocolo de uso común de Gemini.",
+   "Seguimiento a 30, 60 y 90 días con medición del tiempo."
+  ],
+  "etiqueta_valor": "Valor inmediato",
+  "valor_inmediato": [
+   "Con la base común: todos usan Gemini con las mismas reglas.",
+   "Con el trabajo por función: ejemplos y su Skill.",
+   "Al cerrar: el equipo usa Gemini en su día a día."
+  ],
+  "impacto": {
+   "enfoque": "operacion",
+   "texto": "Cada área usa **Gemini** en sus procesos del día a día, con reglas compartidas y una herramienta propia construida en vivo. El equipo responde más rápido, con mejor calidad y un mismo criterio, sin que cada uno tenga que aprenderlo por su cuenta."
+  }
+ },
+ "retorno": {
+  "modo": "metodo",
+  "posiciones": false,
+  "titulo": "Retorno esperado: tiempo y criterio común.",
+  "subtitulo": "Se calcula con las tareas reales de cada función y se mide a 30, 60 y 90 días.",
+  "etiqueta_pasos": "Cómo se calcula, por función",
+  "pasos": [
+   {
+    "titulo": "Uso de hoy",
+    "texto": "Cuántas personas usan Gemini en su día a día al arrancar: es la **línea base**."
+   },
+   {
+    "titulo": "Tareas de la función",
+    "texto": "Las tareas que cada función repite y donde Gemini puede ayudar."
+   },
+   {
+    "titulo": "Tiempo antes",
+    "texto": "Cuánto toma hoy cada tarea, según quien la hace."
+   },
+   {
+    "titulo": "Tiempo después",
+    "texto": "Lo que toma la misma tarea con Gemini y la Skill de la función."
+   },
+   {
+    "titulo": "Horas recuperadas",
+    "texto": "Diferencia entre ambos tiempos: una estimación referencial, sin compromiso de resultado."
+   }
+  ],
+  "etiqueta_metas": "Calendario de garantía, desde el cierre del proyecto",
+  "metas": [
+   {
+    "dias": "30 días",
+    "texto": "Uso real de Gemini en las tareas elegidas por cada función."
+   },
+   {
+    "dias": "60 días",
+    "texto": "Skills en uso y nuevos usos de cada función."
+   },
+   {
+    "dias": "90 días",
+    "texto": "Tiempo recuperado medido, con el resultado de cada función."
+   }
+  ],
+  "destino": [
+   {
+    "rotulo": "Un criterio común",
+    "texto": "Todo el equipo usa Gemini con las **mismas reglas** y sabe qué información cuidar."
+   },
+   {
+    "rotulo": "Una Skill por función",
+    "texto": "Cada área sale con algo propio, hecho con sus casos reales."
+   },
+   {
+    "rotulo": "Dónde seguir",
+    "texto": "Con el equipo nivelado, {cliente_corto} decide qué proyecto construye sobre esa base."
+   }
+  ],
+  "gancho": "A los 90 días del cierre, {cliente_corto} contará con el uso real de Gemini y el tiempo recuperado, medidos contra su punto de partida."
+ },
+ "inversion": {
+  "duracion": "Un programa de Gemini en vivo, con seguimiento y garantía a {rango_seguimiento}. **12 horas** con el equipo, con la nivelación y el trabajo por función incluidos.",
+  "programa": [
+   "Habilidades para {cliente_corto} ({codigo}): Gemini por función.",
+   "12 h en vivo, con un orden: base común y luego por función.",
+   "Base común: 4 h para todos. Por función: 8 h.",
+   "Seguimiento a {rango_seguimiento}. El arranque va aparte."
+  ],
+  "notas": [
+   "Licencias: {cliente_corto} ya tiene Gemini en su dominio de Google.",
+   "El número de personas y funciones se confirma en la reunión de arranque; el proyecto es uno solo y se cotiza completo.",
+   "Garantía 30-60-90: seguimiento desde el cierre, con lo construido en uso.",
+   "Términos y condiciones: los del enlace de «Importante»."
+  ],
+  "etiqueta_valor": "Valor del proyecto"
+ },
+ "proximos_pasos": {
+  "asesora": {
+   "nombre": "Flavia Martínez",
+   "cargo": "Asesora comercial",
+   "correo": "fmartinez@intezia.com",
+   "telefono": "+58 414 5756615"
+  },
+  "pasos": [
+   {
+    "titulo": "Quién participa",
+    "texto": "Confirmamos con {cliente_corto} el número de personas y la función de cada una, para organizar el calendario y los grupos."
+   },
+   {
+    "titulo": "Versión de Google",
+    "texto": "Confirmamos qué incluye su licencia de Google Workspace para ajustar lo que se construye."
+   },
+   {
+    "titulo": "Reunión de arranque",
+    "texto": "Una hora para acordar el calendario, los grupos y el formato en vivo."
+   }
+  ]
+ },
+ "supuestos": [
+  "Pedido de Ivana (09/11/2026): propuesta CAI-091 para Juan Van Heel, asesora Flavia Martínez, con la ficha (05/11/2026) y las notas de la reunión. Educación y sin alianza: confirmados con Ivana. La ficha dice que es el primer contacto y que hay competencia (están evaluando otras empresas): no va al deck.",
+  "El cliente pide dos proyectos por separado, de áreas distintas. Esta propuesta es solo el primero: la nivelación en Gemini. El agente de atención por WhatsApp (10 vendedores, números propios, respuestas humanizadas, demo previa) es otra propuesta; el deck lo deja fuera del alcance sin dar detalles. Mantener el número de cada vendedor debe validarlo Servicio antes de prometerlo.",
+  "Horas (propuesta mía; la ficha no las fija; Ivana eligió la opción de 12 h): módulo 1, base común, 4 h para todo el equipo (fundamentos 2 h y Gemini aplicado a cada función 2 h); módulo 2, segundo nivel por función, 8 h (casos 2 h, una Skill propia por función 4 h y protocolo común 2 h). Modular, para ajustar en vivo según personas y funciones.",
+  "Personas y funciones: ~21 según Flavia («unas 21»), aproximado y por confirmar por escrito con Luis Calatayud; no se sabe de qué áreas, qué funciones tienen ni su nivel con Gemini. Se escribe «unas 21» y el segundo nivel «por función». La versión de Google Workspace tampoco se sabe: Flavia se la pregunta a Luis en la reunión y se ajusta la Skill a lo que incluya la licencia (el deck lo dice).",
+  "Modalidad (Flavia, notas): sin videos grabados; presencial en Caracas y en línea en vivo para el resto (híbrido), con sesiones de máximo 2 horas, una o dos por semana. El deck no lleva sesiones, duración ni frecuencia (§4.23): dice «en vivo» y «bloques cortos» y el calendario se acuerda en el arranque. La ficha dice «sesiones de 2 horas» y que no todos están en Caracas.",
+  "Cotización por módulos (decisión de Ivana, 09/11/2026): `inversion.partes` con una caja de valor por módulo (base común y segundo nivel) que suman el total, para que Ventas ajuste en la reunión como se hizo con otro cliente (no se nombra: regla de no nombrar clientes). Valor, descuento y total quedan vacíos para ventas; moneda en REF con la leyenda de pago.",
+  "Impacto (cuadro de «Lo que se llevan»): enfoque «operación», elegido por Ivana el 09/11/2026: tiempo, calidad y criterio común, sin hablar de personas ni de nómina.",
+  "Herramienta: Gemini, que el cliente ya tiene en su dominio de Google y quiere aprovechar; es lo que pide el cliente, no una recomendación. «Skill de Gemini» viene de las notas de Flavia; si la licencia no la incluye, se construye otra solución equivalente. Sin licencias nuevas.",
+  "Sin facilidad de pago (omitida): decisión mía por ser lo que se ha pedido en las últimas propuestas; confirmar con Ivana. Sin horas de trabajo internas ni cantidad de consultores (§4.23). Seguimiento y garantía 30-60-90 por defecto. Sin certificado.",
+  "Personas del cliente (solo internas): Freddy Rojas, gerente general, firma y decide y estará en la presentación (confirmado); Luis Calatayud, segundo contacto y responsable de logística. No se nombran en el deck.",
+  "Ajuste del 11/11/2026 (Ivana): un solo valor del proyecto, sin tarjetas de «Parte 1» y «Parte 2» ni desglose. La hoja de inversión dice «Valor del proyecto» (opción nueva `inversion.etiqueta_valor` del generador) y la nota aclara que el número de personas y funciones se confirma en el arranque y que el proyecto se cotiza completo. El deck ya no habla de «dos módulos»: es un programa de 12 horas en vivo con un orden (base común y después trabajo por función); «Segundo nivel» pasó a «Trabajo por función» para que no suene opcional. Las 12 horas son el proyecto y se distribuyen entre las funciones cuando se confirmen. Garantía 30-60-90 asociada al proyecto completo, sin cambio."
+ ],
+ "pendientes": [
+  "Confirmar por escrito con Luis Calatayud el número de personas (~21), sus áreas y funciones, y su nivel actual con Gemini.",
+  "Preguntar a Luis qué versión de Google Workspace tienen y qué incluye su licencia de Gemini, para ajustar la Skill.",
+  "Confirmar con Ivana el reparto de las 12 h (4 de base común y 8 de segundo nivel) y que se omite la facilidad de pago.",
+  "Valor por módulo, descuento y total: campos vacíos para ventas; moneda en REF.",
+  "La propuesta del agente de atención por WhatsApp (otro código): pendiente de pedir; validar con Servicio que se pueda mantener el número de cada vendedor antes de prometerlo, y preparar la demo que piden.",
+  "Fecha y formato de la reunión de presentación con Freddy Rojas (ya confirmado que asiste).",
+  "El paso 1 de los próximos pasos (confirmar personas y funciones) ahora es para organizar el calendario y los grupos, no para decidir si hay segunda parte. El valor es uno solo, campo vacío para ventas."
+ ]
+}

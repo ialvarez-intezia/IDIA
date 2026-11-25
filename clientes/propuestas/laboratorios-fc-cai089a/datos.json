@@ -3,7 +3,7 @@
  "cliente": {
   "nombre": "Laboratorios FC",
   "slug": "laboratorios-fc-cai089a",
-  "codigo": "CAI-089A",
+  "codigo": "CAI-089",
   "nombre_pie": "Laboratorios FC"
  },
  "division": "educacion",
@@ -13,7 +13,7 @@
   "pago"
  ],
  "meta_servicio": "habilidades",
- "meta_tipo": "Habilidades · 9 áreas (4 procesos clave y 5 de apoyo): levantamiento de 2 h y construcción, testeo y adopción de 8 h por área = 90 h con los equipos · seguimiento 30-60-90 · sin facilidad de pago · formato compacto v3",
+ "meta_tipo": "Habilidades · 9 áreas (4 procesos clave y 5 de apoyo): levantamiento de 2 h y construcción, testeo y adopción de 8 h por área = 90 h con los equipos; hoja de inversión con dos recuadros: proyecto completo (9 áreas) y proyecto de 5 áreas (50 h) · seguimiento 30-60-90 · sin facilidad de pago · formato compacto v3",
  "vocabulario": {
   "solucion": [
    "entregable",
@@ -405,7 +405,7 @@
  ],
  "alcance": {
   "titulo": "Una solución en uso en cada una de las 9 áreas.",
-  "subtitulo": "Levantamos **9 áreas**, de procesos clave y de apoyo, y construimos con cada una su **solución de IA**.",
+  "subtitulo": "Levantamos **9 áreas** y construimos su **solución de IA**; la inversión muestra también el proyecto de **5 áreas**.",
   "fuera_alcance": [
    "Licencias de IA: la herramienta se define con el levantamiento y su valor va aparte, a cargo de {cliente_corto}.",
    "Cambios en los sistemas: el sistema contable y las demás aplicaciones no se modifican; se usan sus datos.",
@@ -608,18 +608,40 @@
   ]
  },
  "inversion": {
-  "duracion": "**9 áreas**, cada una con un levantamiento y una solución en uso, y seguimiento a {rango_seguimiento}. **90 horas** con los equipos de las áreas.",
-  "programa": [
-   "Servicio de Habilidades para {cliente_corto} ({codigo}).",
-   "9 áreas: 4 de procesos clave y 5 de apoyo.",
-   "Levantamiento de 2 h y solución en uso de 8 h por área.",
-   "90 horas con los equipos, más seguimiento a 30, 60 y 90 días. La reunión de arranque va aparte."
-  ],
-  "notas": [
-   "Licencias de IA: la herramienta se define con el levantamiento y {cliente_corto} confirma su valor con el proveedor, aparte de esta inversión.",
-   "No nos retiramos hasta que la capacidad quede instalada en el equipo."
-  ],
-  "garantia_texto": "Estamos contigo hasta que la capacidad quede instalada en tu equipo."
+  "etapas": [
+   {
+    "titulo": "Proyecto completo.",
+    "rotulo": "Proyecto completo de 9 áreas",
+    "duracion": "**Proyecto completo de 9 áreas** (90 horas): las 4 de procesos clave y las 5 de apoyo, con seguimiento a {rango_seguimiento}.",
+    "programa": [
+     "Servicio de Habilidades para {cliente_corto} ({codigo}): proyecto completo.",
+     "9 áreas: 4 de procesos clave y 5 de apoyo, 90 h.",
+     "Levantamiento de 2 h y solución en uso de 8 h por área.",
+     "Seguimiento a 30, 60 y 90 días. La reunión de arranque va aparte."
+    ],
+    "notas": [
+     "Licencias de IA: la herramienta se define con el levantamiento y {cliente_corto} confirma su valor con el proveedor, aparte de esta inversión.",
+     "No nos retiramos hasta que la capacidad quede instalada en el equipo."
+    ],
+    "garantia_texto": "Estamos contigo hasta que la capacidad quede instalada en tu equipo."
+   },
+   {
+    "titulo": "Proyecto de 5 áreas.",
+    "rotulo": "Proyecto de 5 áreas",
+    "duracion": "**Proyecto de 5 áreas** (50 horas): las que concentran la operación, con seguimiento a {rango_seguimiento}.",
+    "programa": [
+     "Servicio de Habilidades para {cliente_corto} ({codigo}): proyecto de 5 áreas.",
+     "5 áreas: Ventas, Compras, Despacho, Tecnología y Producción con maquiladores, 50 h.",
+     "Levantamiento de 2 h y solución en uso de 8 h por área.",
+     "Seguimiento a 30, 60 y 90 días. La reunión de arranque va aparte."
+    ],
+    "notas": [
+     "Licencias de IA: la herramienta se define con el levantamiento y {cliente_corto} confirma su valor con el proveedor, aparte de esta inversión.",
+     "Las demás áreas pueden sumarse en otra etapa."
+    ],
+    "garantia_texto": "Estamos contigo hasta que las 5 áreas tengan su solución en uso."
+   }
+  ]
  },
  "proximos_pasos": {
   "subtitulo": "Esto es lo que sigue cuando {cliente_corto} confirme la propuesta.",
@@ -645,6 +667,7 @@
   ]
  },
  "supuestos": [
+  "Ajuste del 11/11/2026 (Ivana): una sola propuesta, CAI-089 (reemplaza a CAI-089A y CAI-089B). La hoja de cotización es una sola y trae dos recuadros de valor: proyecto completo de 9 áreas (90 h) y proyecto de 5 áreas (50 h: Ventas y comercialización, Compras, Despacho y logística, Tecnología y Producción con maquiladores, 10 h por área). Ivana escribió primero «4 áreas» y luego listó 5: se tomaron las 5. «Producción con maquiladores» es el área Producción y operaciones. Se usa inversion.partes con sin_suma (opciones alternativas): la caja de la derecha lleva el valor de la opción elegida. La CAI-089B queda sin uso (carpeta intacta).",
   "Pedido de Ivana (05/11/2026): propuesta de Habilidades CAI-089 para Laboratorios FC, asesora Verónica Rubio. Aunque el cliente pidió Detección, Ivana decidió Habilidades por ser más atractivo para la directiva y porque hay procesos documentados: levantamiento de 2 h por área y 8 h de ejecución por área. Educación, sin alianza y sin facilidad de pago: confirmados con Ivana. Después pidió dos propuestas: A con todas las áreas y B con las áreas priorizadas, para que Mariana decida.",
   "Áreas: las 9 de la ficha. Procesos clave: Compras, Producción y operaciones (vía maquiladores), Ventas y comercialización, Despacho y logística. Procesos de apoyo: Finanzas, Gestión humana, Asuntos regulatorios, Tecnología y Mercadeo. La propuesta B toma los 4 procesos clave como áreas priorizadas: es mi lectura de la reunión («en mi opinión serían esos procesos clave», Mariana); confirmar con Ivana.",
   "Horas: 2 h de levantamiento (F1) y 8 h de ejecución (F2: 4 de construcción, 2 de testeo y 2 de adopción) por área, según Ivana; A = 9 áreas = 90 h (18 + 72); B = 4 áreas = 40 h (8 + 32). Son horas de encuentro con los equipos (sin_horas_trabajo). La solución de cada área no se define antes del levantamiento: por eso los entregables se llaman «Levantamiento de X» y «Solución de X, construida y en uso».",
@@ -656,7 +679,7 @@
   "Participantes: ~40-45 personas del personal administrativo (de ~120 en total), por áreas (gerentes, líderes, analistas, colaboradores); los líderes por área están por identificar. Modalidad mixta; sede en Caracas."
  ],
  "pendientes": [
-  "Confirmar los códigos de las dos propuestas (CAI-089A todas las áreas, CAI-089B áreas priorizadas) y que B son los 4 procesos clave.",
+  "Confirmar el código CAI-089 (sin A ni B) y qué se hace con la carpeta laboratorios-fc-cai089b (superada; no se borró). Confirmar que las 5 áreas son Ventas, Compras, Despacho, Tecnología y Producción (escribiste primero «4»).",
   "Confirmar con Ivana el reparto (2 h + 8 h por área) y si las 8 h cuentan como construcción, testeo y adopción de 4, 2 y 2.",
   "Respuesta por escrito, verificada, sobre las restricciones de Claude y OpenAI en Venezuela antes de enviar (Mariana la pidió en la reunión).",
   "Valor, descuento y total: campos vacíos para ventas; moneda de facturación y la forma de pago la define el cliente.",

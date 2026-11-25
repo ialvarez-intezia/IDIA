@@ -1,0 +1,478 @@
+<!doctype html>
+<!--
+  Propuesta · Distribuidora Prodimic C.A. · Servicio de Detección (DET-059)
+  División: Educación · Servicio: Detección (§4.1a) · Alianza: no
+  GENERADO por scripts/generar-habilidades-compacto.py (plantilla 3.0 (2026-10-08), formato deteccion) desde datos.json.
+  No editar a mano: editar datos.json y regenerar. Estilos propios del deck: overrides.css.
+  Fuente del insumo: Ficha de Levantamiento de Prodimic y resumen de la asesora; sin transcripción de la reunión
+
+  Formato compacto de 9 slides, en el orden de las preguntas del cliente (Ventas, 2026-10-07), sin semanas, sesiones
+  ni fechas (Keiber, 2026-10-08):
+    1 Portada · 2 Alcance · 3 Ruta · 4 Calendario · 5 Cómo trabajamos · 6 Entregables · 7 Retorno · 8 Inversión · 9 Próximos pasos
+  Marcadores de detección de AcroForms (agregar-campo-precio.py), por página: «Propuesta Económica» solo en la slide de
+  inversión; «Lo que se llevan» y «Entregables» solo en la de entregables; «Facilidad de pago» solo en la de pago.
+  Campos AcroForm: Programa, Notas, PrecioBase, Descuento, PrecioTotal (inversión) y Entregables, Acreditacion (entregables). Se reposicionan con scripts/customize-habilidades-compacto.py.
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Propuesta · Distribuidora Prodimic C.A. · Intezia Educación</title>
+  <link rel="stylesheet" href="../_base/styles.css">
+  <link rel="stylesheet" href="habilidades-compacto.css">
+  <link rel="stylesheet" href="overrides.css">
+</head>
+<body>
+
+  <main class="deck">
+
+    <!-- 1 · Portada: ¿cuál es mi problema? -->
+    <section class="slide s-cover">
+      <span class="counter">01 / 09</span>
+      <div class="logo-big">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia Educación">
+      </div>
+      <div class="body">
+        <p class="eyebrow">Propuesta de proyecto · Servicio de Detección</p>
+        <h1 style="font-size:46px">
+          Mapa de prioridades de IA y un<br>
+          equipo nivelado<br>
+          <span class="hl">en 4 áreas de Prodimic</span>
+        </h1>
+        <p class="lead">
+          Auditamos las <strong>4 áreas</strong> de Prodimic, proceso por proceso, con quien hace el trabajo, y nivelamos al equipo para ver cómo lograr que los <strong>datos entren una sola vez</strong> y cada área reciba lo suyo.
+        </p>
+        <div class="pain-strip">
+          <div class="pain-item">
+            <span class="pain-num">A mano</span>
+            <span class="pain-lbl">es como se carga hoy en Profit cada proforma de proveedor que llega en Excel o PDF.</span>
+          </div>
+          <div class="pain-item">
+            <span class="pain-num">Despacho</span>
+            <span class="pain-lbl">es donde más errores se cometen: puede salir mercancía sin facturar o con montos equivocados.</span>
+          </div>
+          <div class="pain-item">
+            <span class="pain-num">~400</span>
+            <span class="pain-lbl">entradas de pago se concilian hoy a mano con Profit, entre cobros por bancos y por Binance.</span>
+          </div>
+          <div class="pain-item">
+            <span class="pain-num">Sin IA</span>
+            <span class="pain-lbl">propia: se usa de forma suelta y sin criterio común.</span>
+          </div>
+        </div>
+      </div>
+      <div class="id-line">
+        <span class="codigo">Código: DET-059</span>
+        <span class="cliente">Prodimic</span>
+      </div>
+    </section>
+
+    <!-- 2 · Alcance (Detección): qué auditamos y para qué, sin conteos ni horas por área -->
+    <section class="slide s-scope s-det-scope">
+      <span class="counter">02 / 09</span>
+      <p class="eyebrow">02 · Alcance</p>
+      <h2>Auditamos cada área y dejamos logros inmediatos.</h2>
+      <p class="sub">Revisamos proceso por proceso dónde la IA suma más; las soluciones se construyen con el equipo.</p>
+
+      <div class="scope-panels det-scope">
+        <div class="det-panel det-que">
+          <p class="det-panel-label">Qué auditamos</p>
+          <div class="det-areas">
+            <span class="det-area">Compras Internacionales</span>
+            <span class="det-area">Administración</span>
+            <span class="det-area">Almacén y Despacho</span>
+            <span class="det-area">Ventas y Mercadeo</span>
+          </div>
+          <p class="det-deps-label">Con sus departamentos</p>
+          <ul class="det-deps">
+            <li>Cobranzas</li>
+            <li>Finanzas</li>
+            <li>Ventas</li>
+            <li>Mercadeo</li>
+          </ul>
+          <p class="det-foco">Partimos de lo que ya identificaron: la compra internacional, el despacho y las cobranzas, para saber <strong>por dónde empezar</strong>.</p>
+        </div>
+
+        <div class="det-panel det-para">
+          <p class="det-panel-label">Para qué</p>
+          <ol class="det-goals">
+            <li><b>Ver la operación real</b><span>Cómo trabaja hoy cada área y dónde la IA suma más allá de lo evidente.</span></li>
+            <li><b>Datos que entren una vez</b><span>Cómo viaja la información entre áreas y dónde se repite la carga a mano.</span></li>
+            <li><b>Conectar con Profit</b><span>La IA se puede conectar a Profit: lo evaluamos con el consorcio que desarrolla ahí.</span></li>
+            <li><b>Cuidar la información</b><span>Qué datos maneja cada área, quién accede a ellos y cómo se resguardan.</span></li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="scope-out">
+        <p class="scope-card-label">Fuera de este alcance</p>
+        <ul>
+          <li>No entregamos software a la medida: cada área construye sus soluciones con IA, guiada por Intezia.</li>
+          <li>Desarrollos dentro de Profit y conexión con los bancos: no están incluidos ni se prometen.</li>
+          <li>Licencias de IA: no están en la inversión; el Informe Final dice cuáles hacen falta y cuántas.</li>
+        </ul>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Prodimic · DET-059</span>
+      </div>
+    </section>
+
+    <!-- 3 · Ruta (Detección): etapas sin semanas ni sesiones (se acuerdan en el arranque) y sin horas por área -->
+    <section class="slide s-route s-det-route">
+      <span class="counter">03 / 09</span>
+      <p class="eyebrow">03 · Ruta</p>
+      <h2>Del arranque al Informe Final, en cinco etapas.</h2>
+      <p class="sub">El calendario y el orden de las áreas se acuerdan con la dirección en la <strong>reunión de arranque</strong>.</p>
+
+      <div class="det-line"></div>
+      <div class="det-stages" style="--n:5">
+        <div class="det-stage acc-y">
+          <span class="ds-d"></span>
+          <span class="ds-n">1</span>
+          <b class="ds-t">Arranque</b>
+          <p>Reunión de arranque: alcance, responsable de cada área y calendario.</p>
+        </div>
+        <div class="det-stage acc-o">
+          <span class="ds-d"></span>
+          <span class="ds-n">2</span>
+          <b class="ds-t">Nivelación</b>
+          <p><strong>2 horas</strong> de Fundamentals de IA para hasta 15 personas de las cuatro áreas.</p>
+        </div>
+        <div class="det-stage acc-y hi">
+          <span class="ds-d"></span>
+          <span class="ds-n">3</span>
+          <b class="ds-t">Levantamiento</b>
+          <p>Área por área, con su líder y quien hace el trabajo, presencial en sus oficinas.</p>
+          <p class="ds-h"><strong>18 horas</strong> de levantamiento, repartidas según lo que necesite cada área.</p>
+        </div>
+        <div class="det-stage acc-o">
+          <span class="ds-d"></span>
+          <span class="ds-n">4</span>
+          <b class="ds-t">Priorización</b>
+          <p>Intezia cruza lo levantado y ordena las oportunidades por impacto y esfuerzo.</p>
+        </div>
+        <div class="det-stage acc-w">
+          <span class="ds-d"></span>
+          <span class="ds-n">5</span>
+          <b class="ds-t">Informe Final</b>
+          <p>Diagnóstico, Mapa de Calor y hoja de ruta, presentados a la dirección.</p>
+        </div>
+      </div>
+
+      <div class="route-next det-next">
+        <p class="det-next-label">La ruta completa de Prodimic</p>
+        <div class="det-next-items" style="--n:2">
+          <div class="dn-item now"><span class="dn-when">Ahora</span><b>Detección</b><p>Auditar las cuatro áreas y nivelar al equipo en IA.</p></div>
+          <div class="dn-item"><span class="dn-when">Después</span><b>Habilidades</b><p>Construir en conjunto con el equipo las soluciones de los procesos mapeados.</p></div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Prodimic · DET-059</span>
+      </div>
+    </section>
+
+    <!-- Calendario referencial (opcional): filas de fechas escritas a mano -->
+    <section class="slide s-cal s-cal-ref">
+      <span class="counter">04 / 09</span>
+      <p class="eyebrow">04 · Calendario</p>
+      <h2>Calendario referencial de arranque.</h2>
+      <p class="sub">Si arrancamos ahora, la Detección termina antes de que acabe el año y Habilidades empieza en enero.</p>
+
+      <div class="cal-box">
+        <p class="cal-label">Referencial · arranque a partir del 23 de noviembre</p>
+        <p class="cal-intro">Las fechas son una guía, no un compromiso: se confirman y ajustan en la reunión de arranque.</p>
+        <ul class="cal-lista" style="--cal-rowh:54px">
+          <li class="cal-fila"><span class="cal-d">Desde el 23 nov</span><span class="cal-e">Arranque</span><span class="cal-t">Reunión de arranque: alcance, responsable de cada área y calendario.</span></li>
+          <li class="cal-fila"><span class="cal-d">25 y 26 nov</span><span class="cal-e">Nivelación</span><span class="cal-t">2 horas de Fundamentals de IA para hasta 15 personas.</span></li>
+          <li class="cal-fila"><span class="cal-d">30 nov al 9 dic</span><span class="cal-e">Levantamiento</span><span class="cal-t">18 horas, área por área, con su líder y quien hace el trabajo.</span></li>
+          <li class="cal-fila"><span class="cal-d">10 y 11 dic</span><span class="cal-e">Priorización</span><span class="cal-t">Intezia cruza lo levantado y ordena las oportunidades.</span></li>
+          <li class="cal-fila"><span class="cal-d">14 y 15 dic</span><span class="cal-e">Informe Final</span><span class="cal-t">Diagnóstico, Mapa de Calor y hoja de ruta, presentados a la dirección.</span></li>
+          <li class="cal-fila cal-pausa"><span class="cal-d">16 dic al 13 ene</span><span class="cal-e">Pausa de fin de año</span><span class="cal-t">Sin actividad del proyecto.</span></li>
+          <li class="cal-fila"><span class="cal-d">Desde el 18 ene</span><span class="cal-e">Habilidades</span><span class="cal-t">Se construyen con el equipo las soluciones de los procesos mapeados.</span></li>
+        </ul>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Prodimic · DET-059</span>
+      </div>
+    </section>
+
+    <!-- 4 · Cómo trabajamos: pasos, por qué en ese orden, casos reales, práctica, datos y logística -->
+    <section class="slide s-method roomy">
+      <span class="counter">05 / 09</span>
+      <p class="eyebrow">05 · Cómo trabajamos</p>
+      <h2>Así trabajamos en cada departamento.</h2>
+      <p class="sub">Nos sentamos con quien hace el trabajo, con sus casos reales, y salimos de cada levantamiento con algo concreto.</p>
+
+      <ol class="mt-steps" style="--n:4">
+          <li><b>Entrevistamos</b><span>Al líder de cada departamento y a su mano derecha.</span></li>
+          <li><b>Mapeamos</b><span>Procesos, tiempos, herramientas y cuellos de botella del día a día.</span></li>
+          <li><b>Construimos</b><span>Un logro inmediato en el momento, cuando el proceso lo permite.</span></li>
+          <li><b>Priorizamos</b><span>Cada oportunidad por impacto, esfuerzo y riesgo.</span></li>
+      </ol>
+      <div class="mt-strips">
+        <p class="mt-why"><b>Por qué en este orden</b> Primero nivelamos al equipo, para que todos hablen el mismo idioma sobre IA. Después levantamos cada departamento por separado, para que cada líder hable de sus procesos sin esperar a otros. Al final priorizamos con la foto completa de Prodimic.</p>
+        <p class="mt-who"><b>Quién construye</b> <strong>Intezia guía</strong> y cada área construye sus soluciones con herramientas de IA.</p>
+      </div>
+
+      <div class="mt-info">
+        <div class="mt-card">
+          <p class="mt-card-label">Cómo funciona en la práctica</p>
+          <ul><li><b>Sin tarea previa.</b> Los líderes no preparan nada antes: todo se levanta en la conversación.</li><li><b>Un espacio por departamento.</b> Nadie espera mientras otra área expone sus procesos.</li><li><b>Sin forzar soluciones.</b> Si un proceso exige mucho esfuerzo, no se resuelve en el momento: pasa al Mapa de Calor con su prioridad.</li></ul>
+        </div>
+        <div class="mt-card">
+          <p class="mt-card-label">Cómo cuidamos sus datos</p>
+          <p>Los datos de compras, ventas y cobros son internos: se levantan con autorización de cada líder, sin cargar datos sensibles a una herramienta sin su permiso.</p>
+        </div>
+      </div>
+
+      <div class="mt-logi">
+        <div class="mt-tile"><span>Modalidad</span><b>Presencial en las oficinas de Prodimic, en Maracay; se acuerda en la reunión de arranque.</b></div>
+        <div class="mt-tile"><span>Participantes</span><b>Por área, su líder y su mano derecha; la nivelación, para hasta 15 personas.</b></div>
+        <div class="mt-tile"><span>Ritmo de trabajo</span><b>Las conversaciones se agendan por área para no sacar a mucha gente de su puesto a la vez.</b></div>
+        <div class="mt-tile"><span>Arranque</span><b>Prodimic quiere arrancar este año; el calendario referencial se confirma en la reunión de arranque.</b></div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Prodimic · DET-059</span>
+      </div>
+    </section>
+
+    <!-- 5 · Entregables (Detección): lo que recibe, sin conteos ni áreas; «Lo que se llevan» + «Entregables» ubican los campos -->
+    <section class="slide s-deliv s-det-deliv con-imp imp-g">
+      <span class="counter">06 / 09</span>
+      <p class="eyebrow">06 · Entregables</p>
+      <div class="deliv-head">
+        <h2>Lo que recibe Prodimic.</h2>
+        <p class="deliv-sub"><span class="nw">Lo que se llevan</span>: un diagnóstico para decidir, mejoras que ya funcionan y una hoja de ruta para seguir.</p>
+      </div>
+
+      <div class="deliv-impact grande">
+        <span class="di-label">Impacto</span>
+        <p>El diagnóstico muestra dónde se cargan datos a mano, dónde se cometen errores y qué se puede automatizar. Con él, Prodimic decide qué mejorar primero en compras, despacho y cobranzas, con más control de su operación.</p>
+      </div>
+
+      <div class="det-cards" style="--cols:3; --rows:2">
+        <div class="det-card acc-y">
+          <span class="dk-when">Al arrancar</span>
+          <b>Alcance y calendario</b>
+          <p>Acordados en el arranque: el orden de las áreas y quién participa en cada una.</p>
+        </div>
+        <div class="det-card acc-y">
+          <span class="dk-when">Al arrancar</span>
+          <b>Equipo nivelado en IA</b>
+          <p><strong>2 horas</strong> de fundamentos: qué es y qué no es la IA, cómo pedirle bien y qué información cuidar.</p>
+        </div>
+        <div class="det-card acc-o">
+          <span class="dk-when">En el levantamiento</span>
+          <b>Logros inmediatos</b>
+          <p>Construidos con el equipo de cada área y en uso desde el primer día, <strong>cuando el proceso o el área lo permite</strong>.</p>
+        </div>
+        <div class="det-card acc-w">
+          <span class="dk-when">Al cierre</span>
+          <b>Mapa de Calor</b>
+          <p>Las oportunidades de IA de las cuatro áreas, en un solo mapa, por impacto y esfuerzo.</p>
+        </div>
+        <div class="det-card acc-w">
+          <span class="dk-when">Al cierre</span>
+          <b>Informe Final y hoja de ruta</b>
+          <p>Diagnóstico y prioridades, con lo que se logra con IA conectada a Profit.</p>
+        </div>
+        <div class="det-card acc-w">
+          <span class="dk-when">Al cierre</span>
+          <b>Inversión inteligente en licencias</b>
+          <p>Qué licencias de IA conviene tener y cuántas para el grupo, según lo levantado.</p>
+        </div>
+      </div>
+
+      <div class="deliv-band">
+        <div class="db-card db-1">
+          <span class="db-label">Para todo el proyecto</span>
+        </div>
+        <div class="db-card db-2">
+          <span class="db-label">Valor inmediato</span>
+        </div>
+      </div>
+      <!-- Cajas multiline editables (vacías en HTML: el contenido vive dentro del AcroForm /V, ver acroforms.json). -->
+      <div class="multi-box db-box db-box-1" data-field="Entregables"></div>
+      <div class="multi-box db-box db-box-2" data-field="Acreditacion"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Prodimic · DET-059</span>
+      </div>
+    </section>
+
+    <!-- 7 · Retorno: ¿qué gano? (método de cálculo). Sin estudios ni citas externas. -->
+    <section class="slide s-roi">
+      <span class="counter">07 / 09</span>
+      <p class="eyebrow">07 · Retorno</p>
+      <h2>Retorno esperado: decidir con datos.</h2>
+      <p class="sub">El Informe Final estima, por oportunidad, el tiempo que hoy se invierte y el que se recupera, para evaluar la inversión.</p>
+
+      <div class="roi-body">
+        <div class="roi-panel">
+          <p class="roi-panel-title">Cómo se estima el retorno de cada oportunidad</p>
+          <ol class="roi-steps">
+            <li><b>Horas de hoy</b><span>Cuánto toma hoy cada proceso y cuántas veces se repite al mes, según quien lo hace.</span></li>
+            <li><b>Horas con la solución</b><span>La estimación de Intezia para cada oportunidad del Mapa de Calor.</span></li>
+            <li><b>Horas recuperables</b><span>La diferencia entre ambas: una estimación de referencia, no un compromiso de resultado.</span></li>
+            <li><b>Prioridad</b><span>Impacto, esfuerzo y riesgo de cada oportunidad, para decidir qué abordar primero.</span></li>
+          </ol>
+        </div>
+
+        <div class="roi-right">
+          <p class="roi-right-title">Qué decide Prodimic con el Informe Final</p>
+          <div class="roi-card">
+            <b>Prioridades</b>
+            <p>Qué abordar primero según el impacto y el esfuerzo de cada oportunidad.</p>
+          </div>
+          <div class="roi-card">
+            <b>Licencias</b>
+            <p>Qué licencias de IA conviene tener y para cuántas personas.</p>
+          </div>
+          <div class="roi-card">
+            <b>Control</b>
+            <p>Qué información sale de cada área, quién la maneja y qué decide siempre una persona.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="roi-dest-wrap">
+        <p class="roi-dest-title">Hacia dónde va Prodimic</p>
+        <div class="roi-dest">
+          <div class="rd-item"><b>Datos una sola vez</b><p>Entender cómo lograr que la información entre una vez y llegue a cada área.</p></div>
+          <div class="rd-item"><b>Equipo preparado</b><p>Un equipo que usa la IA con criterio y mejora de forma continua.</p></div>
+          <div class="rd-item"><b>Listos para construir</b><p>Con las prioridades claras, Habilidades arranca por lo que más retorno da.</p></div>
+        </div>
+      </div>
+
+      <div class="roi-hook"><p>Con el Informe Final, Prodimic sabe por dónde empezar y cuánto tiempo recupera, con datos de sus propias áreas.</p></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Prodimic · DET-059</span>
+      </div>
+    </section>
+
+    <!-- 7 · Inversión (hoja de cotización estándar; antepenúltima slide) -->
+    <section class="slide s-price">
+      <span class="counter">08 / 09</span>
+      <h2 class="title">Inversión del proyecto.</h2>
+      <p class="price-intro">Propuesta Económica · Servicio de Detección</p>
+
+      <div class="block">
+        <span class="block-eyebrow">Duración</span>
+        <p class="block-value">Reunión de arranque, <strong>2 horas de nivelación</strong> y <strong>18 horas de levantamiento</strong> en 4 áreas.</p>
+      </div>
+
+      <div class="block block-programa">
+        <span class="block-eyebrow">Programa</span>
+      </div>
+      <div class="multi-box programa-box" data-field="Programa"></div>
+
+      <div class="block block-cotizacion">
+        <span class="block-eyebrow">Cotización</span>
+      </div>
+
+      <span class="cot-label cot-label-base">Propuesta + Inversión</span>
+      <span class="cot-sign cot-sign-base">REF</span>
+      <div class="cot-frame base-frame"></div>
+
+      <span class="cot-label cot-label-discount">Descuento</span>
+      <span class="cot-sign-minus">&minus;REF</span>
+      <div class="cot-frame discount-frame"></div>
+      <span class="cot-urgent-note">Descuento válido por 15 días</span>
+
+      <span class="cot-label cot-label-total">TOTAL</span>
+      <span class="cot-sign cot-sign-total">REF</span>
+      <div class="cot-frame total-frame"></div>
+
+      <p class="cot-moneda">Pago en Divisas o Bolívares a Tasa BCV del Euro</p>
+      <p class="cot-validity">Cotización válida por 30 días.</p>
+      <div class="cot-terms-box">
+        <span class="cot-terms-label">Importante</span>
+        <p class="cot-terms-text">Este servicio se presta bajo nuestros <a href="https://drive.google.com/file/d/1PA-ZSt4KnyY5dpxXzgkIk6-yfGlV2eF8/view?usp=drive_link" target="_blank" rel="noopener">términos y condiciones</a>. Al avanzar con esta propuesta, ambas partes los aceptan.</p>
+      </div>
+
+      <div class="block block-notes-container">
+        <span class="block-eyebrow">Notas</span>
+      </div>
+      <div class="multi-box notas-box" data-field="Notas"></div>
+
+      <div class="lic-wrap">
+        <span class="lic-eyebrow">Estimado de licencias · 15 personas, por cuenta de Prodimic</span>
+        <div class="lic-cards">
+          <div class="lic-card acc-y">
+            <span class="lic-name">ChatGPT Business · plan estándar</span>
+            <p>Mínimo dos puestos: USD 25 por persona al mes, o USD 20 pagando por año. Para 15 personas: USD 375 al mes, o USD 300 con pago anual.</p>
+          </div>
+          <div class="lic-card acc-o">
+            <span class="lic-name">Gemini · Google Workspace Standard</span>
+            <p>Gemini viene incluido: USD 14 por persona al mes con compromiso anual. Para 15 personas: USD 210 al mes. Requiere cuentas de Google Workspace.</p>
+          </div>
+        </div>
+        <p class="lic-note">Estimado referencial, a valores de lista de cada proveedor al 13/11/2026; pueden variar. Lo contrata Prodimic; el Informe Final confirma herramienta y plan.</p>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Prodimic · DET-059</span>
+      </div>
+    </section>
+
+    <!-- 9 · Próximos pasos: qué hacer y a quién escribir (última slide) -->
+    <section class="slide s-next">
+      <span class="counter">09 / 09</span>
+      <p class="eyebrow">09 · Próximos pasos</p>
+      <h2>Tres pasos para arrancar.</h2>
+      <p class="sub">Esto es lo que sigue cuando Prodimic confirme la propuesta.</p>
+
+      <div class="nx-steps">
+        <div class="nx-step acc-y">
+          <span class="nx-num">1</span>
+          <b>Revisión de la propuesta</b>
+          <p>Presentamos la propuesta en vivo, aclaramos dudas y ajustamos el alcance.</p>
+        </div>
+        <div class="nx-step acc-o">
+          <span class="nx-num">2</span>
+          <b>Lista de responsables</b>
+          <p>Nos comparten, por área, su líder y su mano derecha, y quién desarrolla dentro de Profit.</p>
+        </div>
+        <div class="nx-step acc-w">
+          <span class="nx-num">3</span>
+          <b>Reunión de arranque</b>
+          <p>Una hora para cerrar el alcance, el calendario y el orden de las áreas.</p>
+        </div>
+      </div>
+
+      <div class="nx-contact">
+        <div class="nx-card nx-ase">
+          <span class="nx-label">¿Dudas? Escribe a tu asesora comercial</span>
+          <b class="nx-name">Flavia Martínez</b>
+          <span class="nx-role">Asesora comercial</span>
+          <p class="nx-line"><a href="mailto:fmartinez@intezia.com">fmartinez@intezia.com</a></p>
+          <p class="nx-line">+58 414 5756615</p>
+        </div>
+        <div class="nx-card nx-emp">
+          <span class="nx-label">Intezia</span>
+          <p class="nx-line">Intezia C.A J-505657950</p>
+          <p class="nx-line"><a href="mailto:servicio@intezia.com">servicio@intezia.com</a></p>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Prodimic · DET-059</span>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

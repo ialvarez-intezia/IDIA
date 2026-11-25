@@ -1,0 +1,364 @@
+{
+ "version": 3,
+ "formato": "deteccion",
+ "cliente": {
+  "nombre": "Distribuidora Prodimic C.A.",
+  "slug": "prodimic-det059",
+  "codigo": "DET-059",
+  "nombre_pie": "Prodimic"
+ },
+ "division": "educacion",
+ "alianza": false,
+ "sin_horas_trabajo": true,
+ "servicio_rotulo": "Servicio de Detección",
+ "meta_servicio": "deteccion",
+ "meta_tipo": "Detección · 4 áreas (Compras Internacionales, Administración, Almacén y Despacho, y Ventas y Mercadeo) con nivelación de hasta 15 personas · 20 h (18 h de levantamiento y 2 h de nivelación) · Habilidades como siguiente paso, sin valor · presencial en Maracay · formato compacto de Detección v3",
+ "eje": "Detección de oportunidades de IA en las áreas de compras, administración, despacho y ventas de una importadora y distribuidora cuyo sistema vive en Profit, con nivelación del equipo",
+ "origen": "Ficha de Levantamiento de Distribuidora Prodimic (Flavia Martínez, 11/11/2026) y resumen de Flavia con la ruta única: Detección primero y Habilidades después, con lo que se mapee",
+ "fuente_insumo": "Ficha de Levantamiento de Prodimic y resumen de la asesora; sin transcripción de la reunión",
+ "siglas_ok": [
+  "IA",
+  "API"
+ ],
+ "supuestos": [
+  "Cuenta (Ivana, 12/11/2026): Detección compacta (§4.22), Educación y sin alianza (por confirmar), código DET-059 (libre en el registro), asesora Flavia Martínez, impacto con enfoque **operación** (Ivana). Insumo: la Ficha de Levantamiento del 11/11/2026 y el resumen de Flavia; sin transcripción (si la hay y contradice, manda ella, §4.23).",
+  "**Una sola ruta (Flavia):** Detección primero; Habilidades solo como siguiente paso (`ruta_completa`), construido en conjunto con el equipo sobre los procesos mapeados. Flavia pide «rango estimado» de Habilidades pero no lo dio: el deck **no pone valor ni horas** de Habilidades (no se inventan).",
+  "Horas (propuesta mía, a confirmar con Servicio): **20 h** = levantamiento 18 h en global (Compras Internacionales 4, Almacén y Despacho 4, Ventas y Mercadeo 4 y Administración 6, la más cargada por tener cobranzas y finanzas) y nivelación 2 h para hasta 15 personas (un solo grupo). Servicio las cierra para fijar el valor.",
+  "**Expectativa de software (ficha y Flavia):** Erick entendió al inicio «un software completo para toda la empresa» y preguntó dos veces si desarrollamos software. El deck lo dice sin rodeos en el alcance y en «Cómo trabajamos»: no se entrega software a la medida; las soluciones se construyen en conjunto con el equipo, con herramientas de IA.",
+  "**Profit y los bancos:** lo que describe Erick (orden en tránsito desde la proforma, alertas entre áreas, revisión final de despacho, conciliación con las API de los bancos) es en parte desarrollo sobre Profit. El deck no promete nada de eso: dice que se evalúa en el levantamiento qué se logra con IA, qué requiere desarrollo en Profit y qué conexión con los bancos. La API de los bancos es una expectativa del cliente, no una promesa de Intezia. No se afirma ninguna integración (§4.11).",
+  "Los tres procesos de la ficha (compra internacional, despacho y cobranzas) y los logros que el cliente ya nombró (orden de compra desde la proforma, revisión final antes del despacho y conciliación de pagos) guían la conversación del arranque; **no estructuran el deck** ni se prometen como logros inmediatos (§4.22). Los hechos de portada salen de la ficha, sin citas.",
+  "Calendario: el cliente pidió un calendario de fechas (arrancar este año y cuándo terminaríamos) y un documento aparte de viáticos; el deck **no lleva fechas** (§4.23): dice que quiere arrancar este año y que el calendario se acuerda en la reunión de arranque. Las vacaciones del 16-dic al 13-ene y el inicio a finales de noviembre o principios de diciembre quedan en `pendientes`. Los viáticos se mencionan en la inversión como documento aparte (aún no existe).",
+  "Modalidad: presencial en sus oficinas, en Maracay (ficha). Quién decide es Erick Adrián Gil; no va en el deck. Herramientas de IA que usan hoy (Gemini, ChatGPT, un asistente beta) no se nombran ni se critican; el Informe Final recomienda la herramienta.",
+  "Plan de pago estándar de Detección (50 % al aprobar, 50 % con el Informe Final); sin montos. La hoja de inversión sale con REF y la leyenda a tasa BCV (automático).",
+  "Logros inmediatos sin cifra (Ivana, 13/11/2026, regla para toda propuesta): el deck dice que se realizan cuando el proceso o el área lo permite, sin decir cuántos. Los tres logros que el cliente nombró guían la conversación, no se prometen.",
+  "Sin hoja de facilidad de pago (Ivana, 13/11/2026): no se vuelve a poner en esta propuesta a menos que ella lo indique.",
+  "Calendario referencial (Ivana, 13/11/2026): una slide con fechas escritas a mano (`calendario.filas`), excepción a §4.23 pedida por ella; arranque desde el 23/11 (se evitó la palabra «semana», que el verificador bloquea), nivelación 25-26/11, levantamiento 30/11 al 9/12, priorización 10-11/12, Informe Final 14-15/12, pausa 16/12 al 13/01 y Habilidades desde el 18/01. La pausa se rotula «de fin de año», sin decir de quién. Es una guía que puede no cumplirse.",
+  "Estimado de licencias (Ivana, 13/11/2026): para 15 personas, por cuenta del cliente, sin Claude por el acceso desde Venezuela. Se usaron ChatGPT Business (USD 25 al mes, USD 20 por año; fuente: ayuda de OpenAI vía búsqueda, 13/11/2026) y Gemini en Google Workspace Standard (USD 14, página de precios de Google, 13/11/2026). Elección de herramientas mía (las que el cliente ya usa en Mercadeo); excepción a «sin pre-recomendar herramienta» pedida por Ivana, el Informe Final confirma.",
+  "Profit (Ivana, 13/11/2026): se dice en positivo que las herramientas de IA se pueden conectar a Profit y que se evalúa en el levantamiento junto con el consorcio que desarrolla ahí; la conexión con los bancos no se promete y queda como fuera de alcance. Página 2: ya no dice «software a la medida para toda la empresa» sino que no se entrega software a la medida y que cada área construye con IA, guiada por Intezia."
+ ],
+ "pendientes": [
+  "Servicio: estimar las horas de la Detección en las cuatro áreas (se pusieron 18 h de levantamiento y 2 h de nivelación) y un estimado de licencias para el grupo de hasta 15 personas.",
+  "Servicio: definir qué parte de lo que pide Erick se logra con herramientas de IA conectadas a Profit y qué requiere desarrollo en Profit o conexión con los bancos; evaluar si el consorcio externo que desarrolla en Profit debe participar.",
+  "Flavia: crear el documento aparte de viáticos para las visitas a Maracay (el deck lo menciona en la inversión).",
+  "Confirmar con Ivana si el cliente es de Educación y sin alianza, y la ventana de arranque (vacaciones del 16-dic al 13-ene).",
+  "Ventas llena inversión, descuento, total y los montos de las 2 cuotas antes de enviar.",
+  "Flavia: el rango estimado de Habilidades (no se puso ninguno). El calendario referencial ya va en la propuesta (pedido de Ivana).",
+  "Servicio/Flavia: confirmar el valor de las licencias con cada proveedor antes de enviar y si la pausa del 16/12 al 13/01 es del cliente o de Intezia (el deck no lo dice). Confirmar con Keiber o Ivana que el calendario con fechas se queda (excepción a §4.23)."
+ ],
+ "portada": {
+  "titulo_lineas": [
+   "Mapa de prioridades de IA y un",
+   "equipo nivelado"
+  ],
+  "titulo_destacado": "en {n_areas} áreas de {cliente_corto}",
+  "lead": "Auditamos las **{n_areas_txt}** de {cliente_corto}, proceso por proceso, con quien hace el trabajo, y nivelamos al equipo para ver cómo lograr que los **datos entren una sola vez** y cada área reciba lo suyo.",
+  "hechos": [
+   {
+    "num": "A mano",
+    "texto": "es como se carga hoy en Profit cada proforma de proveedor que llega en Excel o PDF."
+   },
+   {
+    "num": "Despacho",
+    "texto": "es donde más errores se cometen: puede salir mercancía sin facturar o con montos equivocados."
+   },
+   {
+    "num": "~400",
+    "texto": "entradas de pago se concilian hoy a mano con Profit, entre cobros por bancos y por Binance."
+   },
+   {
+    "num": "Sin IA",
+    "texto": "propia: se usa de forma suelta y sin criterio común."
+   }
+  ]
+ },
+ "deteccion": {
+  "areas": [
+   "Compras Internacionales",
+   "Administración",
+   "Almacén y Despacho",
+   "Ventas y Mercadeo"
+  ],
+  "etiqueta_departamentos": "Con sus departamentos",
+  "departamentos": [
+   "Cobranzas",
+   "Finanzas",
+   "Ventas",
+   "Mercadeo"
+  ],
+  "horas": {
+   "levantamiento": 18,
+   "arranque": 0,
+   "nivelacion": 2
+  },
+  "foco": "Partimos de lo que ya identificaron: la compra internacional, el despacho y las cobranzas, para saber **por dónde empezar**.",
+  "logros_minimos": 3,
+  "texto_horas": "**{h_levantamiento} horas** de levantamiento, repartidas según lo que necesite cada área.",
+  "para_que": [
+   {
+    "titulo": "Ver la operación real",
+    "texto": "Cómo trabaja hoy cada área y dónde la IA suma más allá de lo evidente."
+   },
+   {
+    "titulo": "Datos que entren una vez",
+    "texto": "Cómo viaja la información entre áreas y dónde se repite la carga a mano."
+   },
+   {
+    "titulo": "Conectar con Profit",
+    "texto": "La IA se puede conectar a Profit: lo evaluamos con el consorcio que desarrolla ahí."
+   },
+   {
+    "titulo": "Cuidar la información",
+    "texto": "Qué datos maneja cada área, quién accede a ellos y cómo se resguardan."
+   }
+  ],
+  "etapas": [
+   {
+    "titulo": "Arranque",
+    "texto": "Reunión de arranque: alcance, responsable de cada área y calendario."
+   },
+   {
+    "titulo": "Nivelación",
+    "texto": "**{h_nivelacion} horas** de Fundamentals de IA para hasta 15 personas de las cuatro áreas."
+   },
+   {
+    "titulo": "Levantamiento",
+    "texto": "Área por área, con su líder y quien hace el trabajo, presencial en sus oficinas.",
+    "horas": true
+   },
+   {
+    "titulo": "Priorización",
+    "texto": "Intezia cruza lo levantado y ordena las oportunidades por impacto y esfuerzo."
+   },
+   {
+    "titulo": "Informe Final",
+    "texto": "Diagnóstico, Mapa de Calor y hoja de ruta, presentados a la dirección."
+   }
+  ],
+  "ruta_completa": [
+   {
+    "cuando": "Ahora",
+    "servicio": "Detección",
+    "texto": "Auditar las cuatro áreas y nivelar al equipo en IA."
+   },
+   {
+    "cuando": "Después",
+    "servicio": "Habilidades",
+    "texto": "Construir en conjunto con el equipo las soluciones de los procesos mapeados."
+   }
+  ],
+  "entregables": [
+   {
+    "cuando": "Al arrancar",
+    "titulo": "Alcance y calendario",
+    "texto": "Acordados en el arranque: el orden de las áreas y quién participa en cada una."
+   },
+   {
+    "cuando": "Al arrancar",
+    "titulo": "Equipo nivelado en IA",
+    "texto": "**{h_nivelacion} horas** de fundamentos: qué es y qué no es la IA, cómo pedirle bien y qué información cuidar."
+   },
+   {
+    "cuando": "En el levantamiento",
+    "titulo": "Logros inmediatos",
+    "texto": "Construidos con el equipo de cada área y en uso desde el primer día, **cuando el proceso o el área lo permite**."
+   },
+   {
+    "cuando": "Al cierre",
+    "titulo": "Mapa de Calor",
+    "texto": "Las oportunidades de IA de las cuatro áreas, en un solo mapa, por impacto y esfuerzo."
+   },
+   {
+    "cuando": "Al cierre",
+    "titulo": "Informe Final y hoja de ruta",
+    "texto": "Diagnóstico y prioridades, con lo que se logra con IA conectada a Profit."
+   },
+   {
+    "cuando": "Al cierre",
+    "titulo": "Inversión inteligente en licencias",
+    "texto": "Qué licencias de IA conviene tener y cuántas para el grupo, según lo levantado."
+   }
+  ]
+ },
+ "alcance": {
+  "subtitulo": "Revisamos proceso por proceso dónde la IA suma más; las soluciones se construyen con el equipo.",
+  "fuera_alcance": [
+   "No entregamos software a la medida: cada área construye sus soluciones con IA, guiada por Intezia.",
+   "Desarrollos dentro de Profit y conexión con los bancos: no están incluidos ni se prometen.",
+   "Licencias de IA: no están en la inversión; el Informe Final dice cuáles hacen falta y cuántas."
+  ]
+ },
+ "metodo": {
+  "quien_construye": "**Intezia guía** y cada área construye sus soluciones con herramientas de IA.",
+  "datos": "Los datos de compras, ventas y cobros son internos: se levantan con autorización de cada líder, sin cargar datos sensibles a una herramienta sin su permiso."
+ },
+ "logistica": {
+  "modalidad": "Presencial en las oficinas de {cliente_corto}, en Maracay; se acuerda en la reunión de arranque.",
+  "participantes": "Por área, su líder y su mano derecha; la nivelación, para hasta 15 personas.",
+  "ritmo": "Las conversaciones se agendan por área para no sacar a mucha gente de su puesto a la vez.",
+  "arranque": "{cliente_corto} quiere arrancar este año; el calendario referencial se confirma en la reunión de arranque."
+ },
+ "entregables": {
+  "impacto": {
+   "enfoque": "operacion",
+   "texto": "El diagnóstico muestra dónde se cargan datos a mano, dónde se cometen errores y qué se puede automatizar. Con él, {cliente_corto} decide qué mejorar primero en compras, despacho y cobranzas, con más control de su operación."
+  },
+  "transversales": [
+   "Ficha de levantamiento de cada área, que valida su líder",
+   "Informe Final presentado a la dirección",
+   "Cómo conectar la IA con Profit, evaluado con su consorcio"
+  ],
+  "valor_inmediato": [
+   "Logros inmediatos en uso, cuando el proceso lo permite",
+   "Claridad sobre la conexión con Profit antes de construir",
+   "Datos para decidir licencias y sistemas"
+  ]
+ },
+ "retorno": {
+  "subtitulo": "El Informe Final estima, por oportunidad, el tiempo que hoy se invierte y el que se recupera, para evaluar la inversión.",
+  "pasos": [
+   {
+    "titulo": "Horas de hoy",
+    "texto": "Cuánto toma hoy cada proceso y cuántas veces se repite al mes, según quien lo hace."
+   },
+   {
+    "titulo": "Horas con la solución",
+    "texto": "La estimación de Intezia para cada oportunidad del Mapa de Calor."
+   },
+   {
+    "titulo": "Horas recuperables",
+    "texto": "La diferencia entre ambas: una estimación de referencia, no un compromiso de resultado."
+   },
+   {
+    "titulo": "Prioridad",
+    "texto": "Impacto, esfuerzo y riesgo de cada oportunidad, para decidir qué abordar primero."
+   }
+  ],
+  "metas": [
+   {
+    "dias": "Prioridades",
+    "texto": "Qué abordar primero según el impacto y el esfuerzo de cada oportunidad."
+   },
+   {
+    "dias": "Licencias",
+    "texto": "Qué licencias de IA conviene tener y para cuántas personas."
+   },
+   {
+    "dias": "Control",
+    "texto": "Qué información sale de cada área, quién la maneja y qué decide siempre una persona."
+   }
+  ],
+  "destino": [
+   {
+    "rotulo": "Datos una sola vez",
+    "texto": "Entender cómo lograr que la información entre una vez y llegue a cada área."
+   },
+   {
+    "rotulo": "Equipo preparado",
+    "texto": "Un equipo que usa la IA con criterio y mejora de forma continua."
+   },
+   {
+    "rotulo": "Listos para construir",
+    "texto": "Con las prioridades claras, Habilidades arranca por lo que más retorno da."
+   }
+  ],
+  "gancho": "Con el Informe Final, {cliente_corto} sabe por dónde empezar y cuánto tiempo recupera, con datos de sus propias áreas."
+ },
+ "inversion": {
+  "duracion": "Reunión de arranque, **{h_nivelacion} horas de nivelación** y **{h_levantamiento} horas de levantamiento** en {n_areas_txt}.",
+  "programa": [
+   "Servicio de Detección para {cliente_corto} ({codigo}).",
+   "Nivelación en IA y levantamiento en {n_areas_txt}.",
+   "Logros inmediatos, Mapa de Calor e Informe Final.",
+   "Habilidades se cotiza aparte, con lo que arroje la Detección."
+  ],
+  "notas": [
+   "Esta inversión no incluye licencias de IA: su estimado va aparte, por cuenta de {cliente_corto}.",
+   "Los viáticos para las visitas a Maracay se detallan en un documento aparte."
+  ],
+  "licencias": {
+   "titulo": "Estimado de licencias · 15 personas, por cuenta de {cliente_corto}",
+   "tarjetas": [
+    {
+     "nombre": "ChatGPT Business · plan estándar",
+     "color": "amarillo",
+     "texto": "Mínimo dos puestos: USD 25 por persona al mes, o USD 20 pagando por año. Para 15 personas: USD 375 al mes, o USD 300 con pago anual."
+    },
+    {
+     "nombre": "Gemini · Google Workspace Standard",
+     "color": "naranja",
+     "texto": "Gemini viene incluido: USD 14 por persona al mes con compromiso anual. Para 15 personas: USD 210 al mes. Requiere cuentas de Google Workspace."
+    }
+   ],
+   "nota": "Estimado referencial, a valores de lista de cada proveedor al 13/11/2026; pueden variar. Lo contrata {cliente_corto}; el Informe Final confirma herramienta y plan."
+  }
+ },
+ "proximos_pasos": {
+  "asesora": {
+   "nombre": "Flavia Martínez",
+   "cargo": "Asesora comercial",
+   "correo": "fmartinez@intezia.com",
+   "telefono": "+58 414 5756615"
+  },
+  "pasos": [
+   {
+    "titulo": "Revisión de la propuesta",
+    "texto": "Presentamos la propuesta en vivo, aclaramos dudas y ajustamos el alcance."
+   },
+   {
+    "titulo": "Lista de responsables",
+    "texto": "Nos comparten, por área, su líder y su mano derecha, y quién desarrolla dentro de Profit."
+   },
+   {
+    "titulo": "Reunión de arranque",
+    "texto": "Una hora para cerrar el alcance, el calendario y el orden de las áreas."
+   }
+  ]
+ },
+ "omitir": [
+  "pago"
+ ],
+ "calendario": {
+  "titulo": "Calendario referencial de arranque.",
+  "subtitulo": "Si arrancamos ahora, la Detección termina antes de que acabe el año y Habilidades empieza en enero.",
+  "etiqueta": "Referencial · arranque a partir del 23 de noviembre",
+  "intro": "Las fechas son una guía, no un compromiso: se confirman y ajustan en la reunión de arranque.",
+  "filas": [
+   {
+    "fecha": "Desde el 23 nov",
+    "etapa": "Arranque",
+    "texto": "Reunión de arranque: alcance, responsable de cada área y calendario."
+   },
+   {
+    "fecha": "25 y 26 nov",
+    "etapa": "Nivelación",
+    "texto": "2 horas de Fundamentals de IA para hasta 15 personas."
+   },
+   {
+    "fecha": "30 nov al 9 dic",
+    "etapa": "Levantamiento",
+    "texto": "18 horas, área por área, con su líder y quien hace el trabajo."
+   },
+   {
+    "fecha": "10 y 11 dic",
+    "etapa": "Priorización",
+    "texto": "Intezia cruza lo levantado y ordena las oportunidades."
+   },
+   {
+    "fecha": "14 y 15 dic",
+    "etapa": "Informe Final",
+    "texto": "Diagnóstico, Mapa de Calor y hoja de ruta, presentados a la dirección."
+   },
+   {
+    "fecha": "16 dic al 13 ene",
+    "etapa": "Pausa de fin de año",
+    "texto": "Sin actividad del proyecto.",
+    "pausa": true
+   },
+   {
+    "fecha": "Desde el 18 ene",
+    "etapa": "Habilidades",
+    "texto": "Se construyen con el equipo las soluciones de los procesos mapeados."
+   }
+  ]
+ }
+}

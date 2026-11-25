@@ -1,0 +1,544 @@
+{
+ "version": 3,
+ "cliente": {
+  "nombre": "Oftalmi",
+  "slug": "oftalmi-cai118",
+  "codigo": "CAI-118",
+  "nombre_pie": "Oftalmi"
+ },
+ "division": "educacion",
+ "alianza": false,
+ "sin_horas_trabajo": true,
+ "meta_tipo": "Capacitación In-Company · Agentes y flujos de IA para el departamento de Mercadeo, 100 h con el equipo en tres fases · formato compacto v3",
+ "eje": "Construir con cada persona del departamento de Mercadeo de Oftalmi agentes y flujos de IA que automaticen campañas, correos, KPIs, datos y dashboards, eventos, material promocional, redes y capacitación, y dejar al equipo en capacidad de replicarlos en otros departamentos",
+ "origen": "Pedido de Ivana (23/11/2026): propuesta de Habilidades para Oftalmi a partir de la Ficha de Levantamiento del 20/11/2026, el resumen de Verónica y la transcripción de su reunión con el gerente de Mercadeo (28 min). Asesora: Verónica Rubio",
+ "fuente_insumo": "Ficha de Levantamiento (20/11/2026), resumen de la asesora y transcripción de la reunión del 20/11/2026",
+ "vocabulario": {
+  "solucion": [
+   "entregable",
+   "entregables"
+  ],
+  "area": [
+   "área",
+   "áreas"
+  ]
+ },
+ "siglas_ok": [
+  "IA",
+  "KPI",
+  "POP",
+  "LMS",
+  "OTC",
+  "BI"
+ ],
+ "portada": {
+  "titulo_lineas": [
+   "Agentes de IA para campañas,",
+   "datos, eventos y contenido"
+  ],
+  "titulo_destacado": "en Mercadeo de Oftalmi",
+  "lead": "Construimos con cada persona de Mercadeo agentes y flujos de IA que **trabajan entre sí** y quedan funcionando en el departamento, y el equipo aprende a replicarlos en otras áreas.",
+  "hechos": [
+   {
+    "num": "Hasta 34",
+    "texto": "marcas maneja cada gerente de producto, con campañas, correos y KPIs a mano.",
+    "resuelto_por": [
+     "GP-1",
+     "GP-3"
+    ]
+   },
+   {
+    "num": "Suelta",
+    "texto": "es la IA que usa el equipo hoy, sin flujos de trabajo construidos ni automatización.",
+    "resuelto_por": [
+     "GP-1",
+     "DT-1"
+    ]
+   },
+   {
+    "num": "Sin match",
+    "texto": "diario entre las ventas reales y los dashboards, que además tienen problemas de presentación.",
+    "resuelto_por": [
+     "DT-1",
+     "DT-2"
+    ]
+   },
+   {
+    "num": "A mano",
+    "texto": "se cuidan los detalles de cada evento: transporte, hospedaje y material POP.",
+    "resuelto_por": [
+     "EV-1"
+    ]
+   }
+  ]
+ },
+ "carriles": [
+  {
+   "id": "ia",
+   "nombre": "Agentes de IA",
+   "nombre_corto": "Agentes",
+   "color": "amarillo"
+  }
+ ],
+ "areas": [
+  {
+   "id": "DT",
+   "nombre": "Datos y dashboards",
+   "carril": "ia",
+   "frente": "A",
+   "para_que": "Que los datos de venta cuadren cada día y los dashboards se vean y se lean bien",
+   "soluciones": [
+    {
+     "id": "DT-1",
+     "entregable": "Match diario de ventas y dashboards",
+     "h": 6,
+     "fase": "F1",
+     "detalle": "Comparación automática y diaria entre los datos de venta real, el CRM, el software de producción y los dashboards, con alertas de diferencias."
+    },
+    {
+     "id": "DT-2",
+     "entregable": "Dashboards de Power BI mejorados",
+     "h": 6,
+     "fase": "F1",
+     "detalle": "Mejora de la presentación gráfica de los dashboards con IA, con el criterio visual del equipo."
+    },
+    {
+     "id": "DT-3",
+     "entregable": "Guía de mantenimiento de los datos",
+     "h": 4,
+     "fase": "F1",
+     "detalle": "Guía de cómo funciona cada flujo de datos y cómo ajustarlo, escrita con quien maneja los dashboards."
+    }
+   ]
+  },
+  {
+   "id": "GP",
+   "nombre": "Gerentes de Producto",
+   "carril": "ia",
+   "frente": "A",
+   "para_que": "Que cada gerente dirija sus agentes y gestione sus marcas sin hacerlo a mano",
+   "soluciones": [
+    {
+     "id": "GP-1",
+     "entregable": "Agentes de cada gerente de producto",
+     "h": 8,
+     "fase": "F1",
+     "detalle": "Cada gerente crea sus agentes, que interactúan entre sí, para investigar su área, buscar moléculas y propuestas nuevas para el portafolio."
+    },
+    {
+     "id": "GP-2",
+     "entregable": "Plan de marca anual con seguimiento",
+     "h": 6,
+     "fase": "F1",
+     "detalle": "Plan de cada marca para el año con su seguimiento, armado con el apoyo de los agentes."
+    },
+    {
+     "id": "GP-3",
+     "entregable": "Correos de campaña con seguimiento",
+     "h": 5,
+     "fase": "F1",
+     "detalle": "Envío de correos de campaña con seguimiento y respuesta, a médicos y farmacias."
+    },
+    {
+     "id": "GP-4",
+     "entregable": "Reporte de unidades y competencia",
+     "h": 5,
+     "fase": "F1",
+     "detalle": "Reportes de las unidades de cada marca y de cómo están los competidores; las acciones las decide cada gerente."
+    }
+   ]
+  },
+  {
+   "id": "EV",
+   "nombre": "Eventos y material",
+   "carril": "ia",
+   "frente": "A",
+   "para_que": "Que ningún detalle de un evento se pase y el material promocional salga más rápido",
+   "soluciones": [
+    {
+     "id": "EV-1",
+     "entregable": "Checklist automático de eventos",
+     "h": 6,
+     "fase": "F2",
+     "detalle": "Jornadas, congresos, encuentros con expertos y donaciones, con aviso de lo que falta: transporte y estadía de los médicos, material POP y el lugar."
+    },
+    {
+     "id": "EV-2",
+     "entregable": "Visual aids y tarjetones",
+     "h": 5,
+     "fase": "F2",
+     "detalle": "Creación de visual aids y tarjetones para médicos y farmacias, con el diseño del equipo."
+    },
+    {
+     "id": "EV-3",
+     "entregable": "Pendones, backing y material POP",
+     "h": 7,
+     "fase": "F2",
+     "detalle": "Pendones, backing y material POP recomendado o creado de cero, incluido el que se imprime en 3D."
+    }
+   ]
+  },
+  {
+   "id": "CD",
+   "nombre": "Contenido digital y redes",
+   "carril": "ia",
+   "frente": "A",
+   "para_que": "Crear, controlar y coordinar los canales con un criterio por tipo de producto",
+   "soluciones": [
+    {
+     "id": "CD-1",
+     "entregable": "Calendario de contenido por red",
+     "h": 5,
+     "fase": "F2",
+     "detalle": "Calendario de contenido para cada red y canal según el público de cada marca."
+    },
+    {
+     "id": "CD-2",
+     "entregable": "Contenido para marcas OTC",
+     "h": 6,
+     "fase": "F2",
+     "detalle": "Contenido y plan para las cuentas de marcas de venta libre y estrategia aparte para las marcas éticas, donde no se puede entregar información del producto."
+    },
+    {
+     "id": "CD-3",
+     "entregable": "Actualización de la página web",
+     "h": 3,
+     "fase": "F2",
+     "detalle": "Contenido y rutina para tener la página web al día."
+    },
+    {
+     "id": "CD-4",
+     "entregable": "Flujo de publicación y control",
+     "h": 4,
+     "fase": "F2",
+     "detalle": "Flujo entre la líder de contenido y los diseñadores, de la idea a la publicación, con control de lo publicado."
+    }
+   ]
+  },
+  {
+   "id": "CA",
+   "nombre": "Capacitación y LMS",
+   "carril": "ia",
+   "frente": "A",
+   "para_que": "Que el LMS de los representantes se arme y se actualice con flujos formales",
+   "soluciones": [
+    {
+     "id": "CA-1",
+     "entregable": "Información técnica de cada marca",
+     "h": 5,
+     "fase": "F3",
+     "detalle": "Ordenar la información técnica de cada marca, incluida la que dan los médicos, para cargarla al LMS."
+    },
+    {
+     "id": "CA-2",
+     "entregable": "Organigrama y asignación de cursos",
+     "h": 4,
+     "fase": "F3",
+     "detalle": "Carga del organigrama y asignación automática de cursos según el rol de cada representante."
+    },
+    {
+     "id": "CA-3",
+     "entregable": "Flujo de actualización del LMS",
+     "h": 3,
+     "fase": "F3",
+     "detalle": "Proceso escrito para mantener y actualizar el LMS."
+    }
+   ]
+  },
+  {
+   "id": "IM",
+   "nombre": "Investigación y plan de marca",
+   "carril": "ia",
+   "frente": "A",
+   "para_que": "Investigar el mercado y decidir con reportes rápidos las propuestas del portafolio",
+   "soluciones": [
+    {
+     "id": "IM-1",
+     "entregable": "Investigación de mercado asistida",
+     "h": 5,
+     "fase": "F3",
+     "detalle": "Flujo de investigación y reportes de mercado, con la fuente y el criterio de quien decide."
+    },
+    {
+     "id": "IM-2",
+     "entregable": "Propuestas de valor del portafolio",
+     "h": 4,
+     "fase": "F3",
+     "detalle": "Propuestas de valor para cada línea del portafolio, a partir de la investigación."
+    },
+    {
+     "id": "IM-3",
+     "entregable": "Plan de la marca Oftalmi",
+     "h": 3,
+     "fase": "F3",
+     "detalle": "Plan de la marca oftálmica, hoy en etapa inicial."
+    }
+   ]
+  }
+ ],
+ "alcance": {
+  "titulo": "Seis frentes de Mercadeo, en tres fases.",
+  "subtitulo": "Cada frente tiene sus flujos y sus agentes; los datos y los gerentes de producto van primero.",
+  "fuera_alcance": [
+   "Cerebro Digital para líderes ejecutivos: propuesta aparte, después de esta.",
+   "Campañas de publicidad pagada: las lleva un externo.",
+   "El sistema administrativo antiguo: se consulta para traer los datos, no se opera."
+  ]
+ },
+ "metodo": {
+  "titulo": "Así construimos con el equipo.",
+  "subtitulo": "Cada agente se construye con quien hace hoy ese trabajo, para que después lo dirija y lo replique.",
+  "pasos": [
+   {
+    "titulo": "Construimos",
+    "texto": "Con cada persona, sobre su trabajo real."
+   },
+   {
+    "titulo": "Probamos",
+    "texto": "Con datos y casos reales del departamento, antes de usarlos solos."
+   },
+   {
+    "titulo": "Adoptamos",
+    "texto": "Cada persona dirige sus agentes en su trabajo diario."
+   },
+   {
+    "titulo": "Medimos",
+    "texto": "El tiempo recuperado por flujo y las diferencias que se evitan."
+   }
+  ],
+  "por_que_orden": "Los datos y las marcas concentran el mayor volumen, así que van primero. Después eventos y contenido, que se apoyan en esos reportes, y al final capacitación e investigación.",
+  "quien_construye": "**Intezia guía** y construye con cada persona del equipo, que aprende para replicarlo y escalarlo a otros departamentos.",
+  "practica": [
+   {
+    "titulo": "Con el trabajo real de cada uno",
+    "texto": "Cada flujo parte de una tarea de su día a día, no de ejercicios de aula."
+   },
+   {
+    "titulo": "La decisión sigue siendo de la persona",
+    "texto": "Los agentes preparan reportes y propuestas; qué acción tomar lo decide cada gerente."
+   },
+   {
+    "titulo": "Cuidado con lo regulado",
+    "texto": "En productos éticos se respeta la regulación: ningún material sale sin la revisión de la persona responsable."
+   }
+  ],
+  "datos": "Los datos de venta, de clientes y de marcas se usan solo con la autorización de Oftalmi."
+ },
+ "logistica": {
+  "modalidad": "Presencial en sus oficinas, según se acuerde en la reunión de arranque.",
+  "participantes": "Las personas de Mercadeo, según su frente.",
+  "arranque": "Las fechas se acuerdan en la reunión de arranque."
+ },
+ "fases": [
+  {
+   "id": "F1",
+   "titulo": "Base",
+   "descripcion": "Datos y gerentes de producto",
+   "destacada": true
+  },
+  {
+   "id": "F2",
+   "titulo": "Campo",
+   "descripcion": "Eventos, material y contenido"
+  },
+  {
+   "id": "F3",
+   "titulo": "Extensión",
+   "descripcion": "Capacitación e investigación"
+  }
+ ],
+ "frentes": [
+  {
+   "id": "A",
+   "carril": "ia",
+   "nombre": "Mercadeo de Oftalmi",
+   "celdas": {
+    "F1": "Los datos cuadran cada día y cada gerente de producto dirige sus agentes.",
+    "F2": "Eventos con checklist, material promocional y contenido para cada canal.",
+    "F3": "El LMS con flujos formales y la investigación de mercado asistida."
+   }
+  }
+ ],
+ "ruta": {
+  "titulo": "De los datos a cada frente.",
+  "hitos": [
+   {
+    "titulo": "Arranque",
+    "texto": "Reunión para conocer al equipo y sus frentes y fijar la línea base de tiempos."
+   },
+   {
+    "titulo": "Datos y gerentes",
+    "texto": "Los datos cuadran y cada gerente de producto ya tiene sus agentes."
+   },
+   {
+    "titulo": "Campo y canales",
+    "texto": "Eventos con checklist y contenido para las redes."
+   },
+   {
+    "titulo": "Cierre",
+    "texto": "Capacitación e investigación; empieza la garantía."
+   }
+  ]
+ },
+ "seguimiento": {
+  "rango": "30, 60 y 90 días",
+  "texto": "Seguimiento desde el cierre de cada área",
+  "items": [
+   {
+    "dias": "30 días",
+    "texto": "Uso real y ajustes"
+   },
+   {
+    "dias": "60 días",
+    "texto": "Ajustes con casos nuevos"
+   },
+   {
+    "dias": "90 días",
+    "texto": "Tablero del tiempo ganado, contra la línea base"
+   }
+  ]
+ },
+ "entregables": {
+  "titulo": "Lo que recibe Mercadeo.",
+  "subtitulo": "Lo que se llevan los equipos: agentes y flujos funcionando en cada frente, más el seguimiento a 30, 60 y 90 días.",
+  "etiqueta_transversales": "Para todo el proyecto",
+  "transversales": [
+   "Línea base del tiempo de cada tarea.",
+   "Documentación de cada flujo, para replicarlo.",
+   "Seguimiento a 30, 60 y 90 días."
+  ],
+  "valor_inmediato": [
+   "Fase 1: los datos cuadran y cada gerente tiene sus agentes.",
+   "Fase 2: eventos con checklist y material con IA.",
+   "Fase 3: el LMS y la investigación de mercado con flujos."
+  ],
+  "impacto": {
+   "enfoque": "operacion",
+   "texto": "Las campañas, los reportes, los eventos y el contenido dejan de armarse a mano: cada persona **dirige sus agentes**, los datos **cuadran cada día** y los flujos quedan listos para **replicarse**."
+  },
+  "compacto": true
+ },
+ "retorno": {
+  "modo": "metodo",
+  "posiciones": false,
+  "titulo": "Retorno esperado: tiempo y control.",
+  "subtitulo": "Se calcula con las tareas de cada frente, partiendo del tiempo que hoy toman.",
+  "etiqueta_pasos": "Cómo se calcula, por frente y por tarea",
+  "pasos": [
+   {
+    "titulo": "Tareas de cada frente",
+    "texto": "Cuántas campañas, correos, reportes, eventos, piezas y publicaciones se hacen y cuántas veces se repiten."
+   },
+   {
+    "titulo": "Tiempo actual por tarea",
+    "texto": "Se mide al arrancar, con quien hace el trabajo, y es la **línea base**."
+   },
+   {
+    "titulo": "Tiempo con el agente",
+    "texto": "Lo que toma la misma tarea con el agente en uso y la revisión de la persona."
+   },
+   {
+    "titulo": "Horas recuperadas",
+    "texto": "Número de tareas por la diferencia entre el tiempo actual y el tiempo con el agente."
+   },
+   {
+    "titulo": "Omisiones y diferencias",
+    "texto": "Los detalles de eventos que se pasaban y las diferencias entre los datos de venta y los dashboards."
+   }
+  ],
+  "etiqueta_metas": "Calendario de garantía, desde el cierre de cada área",
+  "metas": [
+   {
+    "dias": "30 días",
+    "texto": "Los agentes de cada persona funcionan a diario con casos reales."
+   },
+   {
+    "dias": "60 días",
+    "texto": "Ajustes con casos nuevos y menos pasos a mano."
+   },
+   {
+    "dias": "90 días",
+    "texto": "Tablero con el tiempo ganado por flujo y las diferencias evitadas."
+   }
+  ],
+  "destino": [
+   {
+    "rotulo": "Cada gerente con sus agentes",
+    "texto": "Cada gerente dirige sus agentes y **decide con sus reportes** qué acción tomar."
+   },
+   {
+    "rotulo": "Datos que cuadran",
+    "texto": "Las ventas reales y los dashboards se comparan **cada día**, sin esperar al error."
+   },
+   {
+    "rotulo": "Flujos que se replican",
+    "texto": "Lo construido puede llevarse a otros departamentos, según su demanda."
+   }
+  ],
+  "gancho": "A los 90 días del cierre, Oftalmi conocerá el tiempo que ganó en cada flujo y qué otros departamentos conviene sumar."
+ },
+ "inversion": {
+  "duracion": "Proyecto en seis frentes de Mercadeo y tres fases: {h_total} horas con el equipo, con seguimiento y garantía a 30, 60 y 90 días.",
+  "programa": [
+   "Agentes y flujos de IA para seis frentes de Mercadeo ({codigo}).",
+   "Datos, gerentes de producto, eventos, contenido, capacitación e investigación, en tres fases.",
+   "{h_total} horas con el equipo, más la reunión de arranque aparte."
+  ],
+  "notas": [
+   "Garantía 30-60-90: seguimiento a {rango_seguimiento} desde el cierre de cada área.",
+   "Términos y condiciones: los del enlace de «Importante», que ambas partes aceptan al avanzar con esta propuesta.",
+   "Licencias de IA, aparte: se confirman en el arranque."
+  ]
+ },
+ "omitir": [
+  "pago"
+ ],
+ "proximos_pasos": {
+  "titulo": "Tres pasos para arrancar.",
+  "subtitulo": "Esto es lo que sigue cuando Oftalmi confirme la propuesta.",
+  "asesora": {
+   "nombre": "Verónica Rubio",
+   "cargo": "Asesora comercial",
+   "correo": "vrubio01@intezia.com",
+   "telefono": "+58 422 3355505"
+  },
+  "pasos": [
+   {
+    "titulo": "Revisar la propuesta",
+    "texto": "La revisamos con quien lidera Mercadeo y con quienes aprueban la inversión."
+   },
+   {
+    "titulo": "Accesos y participantes",
+    "texto": "Coordinamos el acceso a los datos de venta y a los dashboards, y quién participa de cada frente."
+   },
+   {
+    "titulo": "Reunión de arranque",
+    "texto": "Reunión de unos 30 minutos para conocer al equipo, alinear prioridades y medir la línea base."
+   }
+  ]
+ },
+ "frases_ok": [],
+ "supuestos": [
+  "Pedido de Ivana (23/11/2026): propuesta de Habilidades CAI-118 para Oftalmi (laboratorio farmacéutico, primer contacto), solo el departamento de Mercadeo. Asesora: Verónica Rubio.",
+  "Decisiones de Ivana: Educación y sin alianza, 100 h, impacto «operación», sin nombrar herramienta de IA ni licencias. Sin facilidad de pago (el cliente paga en bolívares a tasa BCV y es agente de retención; la leyenda de la hoja ya lo recoge).",
+  "Reparto de las 100 h mío: Datos y dashboards 16, Gerentes de Producto 24, Eventos y material 18, Contenido digital y redes 18, Capacitación y LMS 12, Investigación y plan de marca 12. Fases: 40, 36 y 24 h.",
+  "Los entregables salen de la descripción de Max a Verónica, de la ficha y de las tareas listadas. Es la propuesta más amplia por persona: seis frentes de nueve personas. No se agregaron frentes que no mencionó.",
+  "Sin nombres de personas del cliente (gerente, gerente de capacitación, líder de contenido, asistente, diseñadores) ni de los sistemas del cliente (CRM, ERP, proveedor de datos de mercado, plataforma de proyectos). Power BI sí, porque es el nombre del entregable.",
+  "Sin nombrar herramienta de IA (el gerente pidió ChatGPT y quiere Claude autorizado; Venezuela no es país soportado). Sin nombrar Monday ni n8n.",
+  "Productos éticos y OTC: el deck dice que en los éticos no se puede entregar información del producto y que ningún material sale sin revisión de la persona responsable. No se afirma que la IA cumpla la regulación.",
+  "El sistema administrativo antiguo (Scala) no se opera: el gerente dijo que solo se establece la consulta para traer los datos. Fuera de alcance.",
+  "Retorno en modo método: la ficha no trae tiempos ni volúmenes. El «90 % de reducción» del proyecto del LMS es declarado por el gerente (hecho con ChatGPT antes de esta propuesta): no va como caso de éxito sin fuente documentada; se puede agregar si Ivana lo pide.",
+  "Fuera de alcance: Cerebro Digital para líderes ejecutivos (el gerente y Verónica lo dejaron para después de esta propuesta), publicidad pagada (la lleva un externo) y el sistema administrativo.",
+  "Sin fechas ni meses (§4.23): el departamento sale de vacaciones el 11 de diciembre y quiere arrancar a principios de enero; eso va al kickoff. La inversión puede pasar a junta directiva según el monto."
+ ],
+ "pendientes": [
+  "Valor, descuento y total: campos vacíos para ventas.",
+  "Confirmar el reparto de las 100 h entre los 20 entregables.",
+  "Quién decide: la gerente general; si la inversión es alta pasa a junta directiva.",
+  "Si se agrega el caso del LMS (reducción de tiempos declarada) con fuente documentada.",
+  "Herramienta de IA y de automatización, y quién contrata las licencias (arranque).",
+  "Propuesta aparte del Cerebro Digital para líderes ejecutivos.",
+  "Pago en bolívares a tasa BCV y agente de retención: lo define Ventas.",
+  "Confirmar el teléfono y el correo de Verónica Rubio (tomados de propuestas anteriores)."
+ ]
+}

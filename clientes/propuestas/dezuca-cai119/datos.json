@@ -1,0 +1,387 @@
+{
+ "version": 3,
+ "cliente": {
+  "nombre": "Dezuca",
+  "slug": "dezuca-cai119",
+  "codigo": "CAI-119",
+  "nombre_pie": "Dezuca"
+ },
+ "division": "educacion",
+ "alianza": false,
+ "sin_horas_trabajo": true,
+ "meta_tipo": "Capacitación In-Company · Proyecto de aplicación sencilla por puesto y Cerebro Digital para producción, 16 h de proyecto en dos fases · formato compacto v3",
+ "eje": "Ordenar la producción de Dezuca con una aplicación sencilla hecha con Codex (pedido, pantalla por puesto, línea de tiempo y dashboard) y un Cerebro Digital para la dirección en ChatGPT",
+ "origen": "Pedido de Ivana (24/11/2026): propuesta CAI-119 de Habilidades para Dezuca a partir del resumen de Ventas de la primera reunión con el dueño (conocido en el IA TechDay) y lo que se le planteó; contacto: María Iribarren, directora comercial. Ajuste 24/11/2026: de 80 h en cinco áreas a 16 h en dos (aplicación 10 h y Cerebro Digital 6 h), tras la duda de Ventas sobre el alcance y el valor anticipado al cliente",
+ "fuente_insumo": "Resumen de Ventas de la primera reunión con el dueño de Dezuca (23/11/2026); sin ficha ni transcripción",
+ "vocabulario": {
+  "solucion": [
+   "entregable",
+   "entregables"
+  ],
+  "area": [
+   "área",
+   "áreas"
+  ]
+ },
+ "siglas_ok": [
+  "IA"
+ ],
+ "portada": {
+  "titulo_lineas": [
+   "Producción bajo control con IA:",
+   "cada puesto, cada pedido"
+  ],
+  "titulo_destacado": "en {cliente_corto}",
+  "lead": "Cada puesto ve solo lo que le toca, cada pedido tiene su **línea de tiempo** y la dirección decide con **datos reales**, todo construido en conjunto con el equipo.",
+  "hechos": [
+   {
+    "num": "2 vías",
+    "texto": "separadas siguen el corte y el diseño, y recién se unen en impresión y sublimación.",
+    "resuelto_por": [
+     "AP-1",
+     "AP-2"
+    ]
+   },
+   {
+    "num": "Sin línea",
+    "texto": "de tiempo del pedido: cuando el cliente pregunta en qué punto va, no hay una respuesta clara.",
+    "resuelto_por": [
+     "AP-3"
+    ]
+   },
+   {
+    "num": "A mano",
+    "texto": "arma hoy la dirección sus tableros en Excel, y cuesta mantenerlos al día.",
+    "resuelto_por": [
+     "AP-3",
+     "CD-1"
+    ]
+   }
+  ]
+ },
+ "carriles": [
+  {
+   "id": "ia",
+   "nombre": "IA para la producción",
+   "nombre_corto": "Producción",
+   "color": "amarillo"
+  }
+ ],
+ "areas": [
+  {
+   "id": "AP",
+   "nombre": "Aplicación de producción",
+   "carril": "ia",
+   "frente": "A",
+   "para_que": "Que cada puesto vea solo lo que le toca y la dirección siga cada pedido hasta la entrega",
+   "soluciones": [
+    {
+     "id": "AP-1",
+     "entregable": "Carga del pedido (orden única)",
+     "h": 2,
+     "fase": "F1",
+     "detalle": "Un formato de orden que recibe cada cliente y cada prenda (diseño, tallas, tela y entrega) y alimenta a corte y a diseño desde el inicio, para que lleguen juntos a impresión y sublimación."
+    },
+    {
+     "id": "AP-2",
+     "entregable": "Pantalla simple por puesto",
+     "h": 5,
+     "fase": "F1",
+     "detalle": "Una pantalla para cada puesto (corte, diseño, sublimación y costura), con el mismo patrón: ver la siguiente orden con lo que toca hacer y marcar el avance en dos toques, sin escribir ni buscar. Cada puesto entra solo a lo suyo. Pensada para una tableta y para personal operativo."
+    },
+    {
+     "id": "AP-3",
+     "entregable": "Línea de tiempo y dashboard",
+     "h": 2,
+     "fase": "F1",
+     "detalle": "Cada marca de un puesto queda registrada con su hora. Con ellas, una línea de tiempo por pedido y un dashboard para la dirección, que reemplaza los tableros en Excel armados a mano."
+    },
+    {
+     "id": "AP-4",
+     "entregable": "Prueba en planta con cada puesto",
+     "h": 1,
+     "fase": "F1",
+     "detalle": "Cada puesto prueba su pantalla con órdenes reales y dice qué ajustar, antes de usarla solo."
+    }
+   ]
+  },
+  {
+   "id": "CD",
+   "nombre": "Cerebro Digital de la dirección",
+   "carril": "ia",
+   "frente": "A",
+   "para_que": "Un asistente con el contexto de la empresa, para decidir con datos",
+   "soluciones": [
+    {
+     "id": "CD-1",
+     "entregable": "Cerebro con contexto y análisis financiero",
+     "h": 4,
+     "fase": "F2",
+     "detalle": "El contexto de la empresa, sus skills (instrucciones guardadas) de órdenes, presupuesto y prioridades, y el análisis de costos y financiero, reunidos en un asistente en ChatGPT para el dueño. La información sensible queda solo para él y para quien él decida."
+    },
+    {
+     "id": "CD-2",
+     "entregable": "Informe semanal de ejemplo",
+     "h": 2,
+     "fase": "F2",
+     "detalle": "Un informe semanal de inventario y compras que el Cerebro prepara con los datos que Dezuca entregue, como modelo para los siguientes informes."
+    }
+   ]
+  }
+ ],
+ "alcance": {
+  "titulo": "Dos áreas, del puesto a la dirección.",
+  "subtitulo": "Una aplicación sencilla con pantallas por puesto y un Cerebro Digital, construidos en conjunto con el equipo.",
+  "fuera_alcance": [
+   "Licencias de IA: no están en la inversión; Dezuca ya tiene ChatGPT Business.",
+   "Un sistema completo de gestión: se construye una aplicación base sencilla, que puede crecer en una siguiente etapa.",
+   "Siguiente etapa: inventario y compras, productividad por costurera, presupuesto contra real, predicción y alertas.",
+   "Cambiar las tabletas que ya usan: la aplicación se apoya en ellas."
+  ]
+ },
+ "metodo": {
+  "titulo": "Se construye en conjunto con el equipo.",
+  "subtitulo": "Cada pieza se arma con quien la va a usar, se prueba en la planta con órdenes reales y se mide.",
+  "pasos": [
+   {
+    "titulo": "Mapeamos",
+    "texto": "Cómo viaja hoy un pedido por cada puesto y qué necesita ver cada uno."
+   },
+   {
+    "titulo": "Construimos",
+    "texto": "En conjunto con el equipo, con Codex y con lo que ya tiene Dezuca."
+   },
+   {
+    "titulo": "Probamos",
+    "texto": "Cada puesto prueba su pantalla con órdenes reales y dice qué ajustar."
+   },
+   {
+    "titulo": "Medimos",
+    "texto": "El tiempo de cada tarea, contra la línea base del arranque."
+   }
+  ],
+  "por_que_orden": "Primero el pedido y los puestos, porque de ahí salen los datos. La línea de tiempo y el dashboard se alimentan de las marcas, y al final el Cerebro Digital reúne el contexto de la dirección.",
+  "quien_construye": "**Intezia guía** y el equipo de Dezuca construye en conjunto, con Codex, la aplicación que cada puesto va a usar.",
+  "practica": [
+   {
+    "titulo": "Una aplicación para todos",
+    "texto": "Pantallas sencillas por puesto, pensadas para personas no técnicas; cada puesto entra solo a lo suyo."
+   },
+   {
+    "titulo": "Dos toques por tarea",
+    "texto": "Cada pantalla se diseña para la planta: ver la orden y marcar el avance, sin escribir ni buscar."
+   },
+   {
+    "titulo": "Una base que puede crecer",
+    "texto": "Es un prototipo funcional que se prueba en la planta; lo que se agregue después se acuerda en una siguiente etapa."
+   }
+  ],
+  "datos": "Los márgenes, los gastos y los datos de la empresa quedan solo para la dirección y para quien ella decida; cada puesto ve únicamente lo suyo."
+ },
+ "logistica": {
+  "modalidad": "Se acuerda en la reunión de arranque: en la planta con los puestos y en línea con la dirección.",
+  "participantes": "La dirección, administración, ventas y una persona por puesto de la planta.",
+  "arranque": "Las fechas se acuerdan en la reunión de arranque."
+ },
+ "fases": [
+  {
+   "id": "F1",
+   "titulo": "Aplicación",
+   "descripcion": "Pedido, puestos y dashboard"
+  },
+  {
+   "id": "F2",
+   "titulo": "Cerebro",
+   "descripcion": "Dirección",
+   "destacada": true
+  }
+ ],
+ "frentes": [
+  {
+   "id": "A",
+   "carril": "ia",
+   "nombre": "Producción de Dezuca",
+   "celdas": {
+    "F1": "Orden única, pantalla por puesto, línea de tiempo y dashboard.",
+    "F2": "Cerebro de la dirección con su contexto y un informe semanal."
+   }
+  }
+ ],
+ "ruta": {
+  "titulo": "Del pedido a la decisión.",
+  "hitos": [
+   {
+    "titulo": "Arranque",
+    "texto": "Reunión para conocer los puestos, ver el recorrido de un pedido y fijar la línea base."
+   },
+   {
+    "titulo": "Puestos",
+    "texto": "Cada puesto usa su pantalla con órdenes reales."
+   },
+   {
+    "titulo": "Dashboard",
+    "texto": "Un pedido se sigue en su línea de tiempo y en el dashboard."
+   },
+   {
+    "titulo": "Cierre",
+    "texto": "La dirección usa su Cerebro Digital; empieza la garantía."
+   }
+  ]
+ },
+ "seguimiento": {
+  "rango": "30, 60 y 90 días",
+  "texto": "Seguimiento desde el cierre de cada área",
+  "items": [
+   {
+    "dias": "30 días",
+    "texto": "Uso real y ajustes"
+   },
+   {
+    "dias": "60 días",
+    "texto": "Ajustes con casos nuevos"
+   },
+   {
+    "dias": "90 días",
+    "texto": "Dashboard del tiempo ganado, contra la línea base"
+   }
+  ]
+ },
+ "entregables": {
+  "titulo": "Lo que recibe Dezuca.",
+  "subtitulo": "Lo que se llevan los equipos: **una aplicación** con una pantalla por puesto y un Cerebro Digital para la dirección.",
+  "etiqueta_transversales": "Para todo el proyecto",
+  "transversales": [
+   "Línea base del tiempo de cada tarea.",
+   "Documentación de la aplicación, para mantenerla.",
+   "Seguimiento a 30, 60 y 90 días."
+  ],
+  "valor_inmediato": [
+   "Fase 1: cada puesto con su pantalla y el dashboard.",
+   "Fase 2: la dirección con su Cerebro Digital."
+  ],
+  "impacto": {
+   "enfoque": "operacion",
+   "texto": "Cada puesto **sabe qué le toca**, el pedido deja de ser una pregunta en planta y la dirección ve **la fábrica con datos**, no con Excel armado a mano."
+  },
+  "compacto": false,
+  "columnas_por_carril": [
+   2
+  ]
+ },
+ "retorno": {
+  "modo": "metodo",
+  "posiciones": false,
+  "titulo": "Retorno esperado: tiempo y control.",
+  "subtitulo": "Se calcula con las tareas de cada puesto, partiendo del tiempo que hoy tienen.",
+  "etiqueta_pasos": "Cómo se calcula, por puesto y por tarea",
+  "pasos": [
+   {
+    "titulo": "Tareas de cada puesto",
+    "texto": "Qué órdenes, marcas de avance y consultas se hacen y cuántas veces se repiten."
+   },
+   {
+    "titulo": "Tiempo actual por tarea",
+    "texto": "Se mide al arrancar, con quien hace el trabajo, y es la **línea base**."
+   },
+   {
+    "titulo": "Tiempo con la pantalla",
+    "texto": "Lo que toma la misma tarea con la pantalla del puesto en uso."
+   },
+   {
+    "titulo": "Horas recuperadas",
+    "texto": "Número de tareas por la diferencia entre el tiempo actual y el tiempo con la pantalla."
+   }
+  ],
+  "etiqueta_metas": "Calendario de garantía, desde el cierre de cada área",
+  "metas": [
+   {
+    "dias": "30 días",
+    "texto": "Los puestos usan su pantalla a diario con órdenes reales."
+   },
+   {
+    "dias": "60 días",
+    "texto": "Ajustes con casos nuevos y menos consultas en planta."
+   },
+   {
+    "dias": "90 días",
+    "texto": "Dashboard con el tiempo ganado en cada puesto."
+   }
+  ],
+  "destino": [
+   {
+    "rotulo": "Respuesta al cliente",
+    "texto": "Ventas responde en qué punto va el pedido **con la realidad**, sin ir a preguntar a planta."
+   },
+   {
+    "rotulo": "Cada puesto, su tarea",
+    "texto": "Corte, diseño y sublimación llegan juntos, sin desencuentros."
+   },
+   {
+    "rotulo": "Decisiones con datos",
+    "texto": "La dirección decide con **datos de la fábrica** y con el contexto de la empresa a la mano."
+   }
+  ],
+  "gancho": "A los 90 días del cierre de cada área, {cliente_corto} conocerá el tiempo que ganó en cada pedido."
+ },
+ "inversion": {
+  "duracion": "Proyecto en dos áreas y dos fases: {h_total} horas de proyecto, con seguimiento y garantía a 30, 60 y 90 días.",
+  "programa": [
+   "Aplicación de producción y Cerebro Digital con Codex y ChatGPT ({codigo}).",
+   "Pedido y pantallas por puesto, línea de tiempo y dashboard, y Cerebro Digital de la dirección.",
+   "{h_total} horas de proyecto, más la reunión de arranque aparte."
+  ],
+  "notas": [
+   "Garantía 30-60-90: seguimiento a {rango_seguimiento} desde el cierre de cada área.",
+   "Términos y condiciones: los del enlace de «Importante», que ambas partes aceptan al avanzar con esta propuesta.",
+   "Licencias de IA, aparte: Dezuca ya cuenta con ChatGPT Business."
+  ]
+ },
+ "omitir": [
+  "pago"
+ ],
+ "proximos_pasos": {
+  "titulo": "Tres pasos para arrancar.",
+  "subtitulo": "Esto es lo que sigue cuando Dezuca confirme la propuesta.",
+  "etiqueta_contacto": "¿Dudas? Escribe a tu directora comercial",
+  "asesora": {
+   "nombre": "María Iribarren",
+   "cargo": "Directora comercial",
+   "correo": "miribarren@intezia.com",
+   "telefono": "+58 414 0570056"
+  },
+  "pasos": [
+   {
+    "titulo": "Revisar la propuesta",
+    "texto": "La revisamos con la dirección y resolvemos sus dudas sobre el alcance y el orden."
+   },
+   {
+    "titulo": "Accesos y puestos",
+    "texto": "Coordinamos el acceso a ChatGPT y a Codex, las tabletas y qué persona participa por puesto."
+   },
+   {
+    "titulo": "Reunión de arranque",
+    "texto": "Reunión de unos 30 minutos para conocer los puestos, alinear prioridades y medir la línea base."
+   }
+  ]
+ },
+ "frases_ok": [],
+ "supuestos": [
+  "Pedido de Ivana (24/11/2026): propuesta CAI-119 de Habilidades para Dezuca, con María Iribarren como directora comercial. Insumo: resumen de Ventas de la primera reunión con el dueño (conocido en el IA TechDay); sin ficha ni transcripción. Propuesta prometida entre el martes 24 y el miércoles 25 de noviembre.",
+  "Decisiones de Ivana (24/11/2026): Educación y sin alianza (confirmado); impacto «operación»; una sola hoja de inversión, sin plan de pago. Ajuste del mismo día tras el correo de María (había anticipado alrededor de 4.000 por un piloto parecido al de Médica Campestre, 10 h de prototipo): de 80 h a **16 h**, con una aplicación hecha con Codex (10 h) y el Cerebro Digital (6 h, el estándar).",
+  "Reparto de horas mío (Ivana fijó 16 h): aplicación 10 h (carga del pedido 2, pantalla por puesto 5 con patrón replicado en cuatro puestos y acceso por usuario, línea de tiempo y dashboard 2, prueba en planta 1); Cerebro Digital 6 h (contexto, skills y análisis financiero 4, informe semanal de ejemplo 2). Fases de 10 y 6 h.",
+  "El alcance sale del pedido del dueño: (1) Cerebro Digital con el contexto, skills, costos y financiero, predicción y alertas, e informe semanal; (2) aplicación simple por puesto con control de accesos que alimente un dashboard en tiempo real y la línea de tiempo del pedido, amigable. La línea de tiempo y el dashboard salen del mismo registro de marcas (pedido, puesto y hora), por eso caben en pocas horas. Quedan para una siguiente etapa, sin horas ni valor: inventario y compras, productividad por costurera, presupuesto contra real, predicción y alertas automáticas.",
+  "La aplicación se presenta como un prototipo funcional hecho en conjunto con el equipo con Codex (como el de Médica Campestre, que no se nombra en el deck); el Cerebro Digital va en ChatGPT. Se nombran Codex y ChatGPT por pedido de Ivana (excepción a «sin nombrar herramienta»). No se nombra «GPT personalizado» porque OpenAI lo retirará.",
+  "Sin nombre de personas del cliente (el deck no nombra al dueño ni al equipo). Se nombra ChatGPT por pedido de Ivana, igual que en el CAI-112 con los sistemas del cliente. No se menciona Claude. Cerebro Digital del dueño con información sensible solo para él y quien él decida (en «Cómo trabajamos»).",
+  "Sin semanas, sesiones ni fechas (§4.23): horas de sesión en vivo, número de sesiones, fechas posibles y consultor asignado (que Ventas pidió a Servicio) viven en la reunión de arranque y en el Brief de Kickoff, que solo se hace si Ivana lo pide.",
+  "Valor: Ventas anticipó alrededor de 4.000 al cliente; no va en el deck (hoja de inversión con valores vacíos, en REF). Retorno en modo método: no hay horas ni volúmenes medidos del cliente. Sin certificado. Seguimiento 30-60-90 incluido por ser estándar de Habilidades."
+ ],
+ "pendientes": [
+  "Valor, descuento y total: campos vacíos para Ventas (anticipó alrededor de 4.000 al cliente; el pago por etapas lo comunica Ventas).",
+  "Confirmar que Codex esté disponible en el plan ChatGPT Business del cliente.",
+  "Dónde corre la aplicación, dónde se guardan las marcas y quién la mantiene después de entregada (la garantía cubre ajustes, no operación continua).",
+  "Cuántos puestos y personas por puesto hay; con 25 costureras la prueba en planta puede pedir más ajustes (10 h es un prototipo justo; si crece, 12 a 14 h).",
+  "El informe semanal de inventario y compras necesita que el cliente entregue sus datos de existencias (el control de inventario no está en el alcance).",
+  "Consultor asignado, horas de sesión en vivo, número de sesiones y fechas posibles: se definen con el consultor y en el arranque, no van en el deck.",
+  "Confirmar el teléfono y el correo de María Iribarren (tomados de la memoria del sistema)."
+ ]
+}

@@ -12,7 +12,7 @@
 - **Tipo de documento**: categoría de catálogo Capacitación In-Company (`CAI-045`), presentada al cliente como **propuesta de proyecto**; formato compacto de 8 slides (con hoja de inversión (campos de monto vacíos para ventas))
 - **Eje temático**: Formación en IA como competencia transversal, no atada a una herramienta: webinar de lanzamiento para toda la organización, Habilidades con Copilot para 70 personas (grupo de TI avanzado y grupo corporativo, con levantamiento de información en cada área) y entrenamiento de Claude para los 10 directivos
 <!--auto:inicio-->
-- **Alcance**: 5 entregables en 5 bloques · 57 h de trabajo · seguimiento a 30, 60 y 90 días
+- **Alcance**: 8 entregables en 5 bloques · 69 h de trabajo · seguimiento a 30, 60 y 90 días
 - **Orden de las slides**: 1 Portada · 2 Alcance · 3 Cómo trabajamos · 4 Ruta · 5 Entregables · 6 Retorno · 7 Inversión · 8 Próximos pasos
 - **Asesora comercial que ve el cliente (última slide)**: María Iribarren, Asesora comercial · miribarren@intezia.com · +58 414 0570056
 <!--auto:fin-->

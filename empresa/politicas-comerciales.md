@@ -98,7 +98,7 @@
 
 - **Anticipo**: 50% a la firma del contrato.
 - **Saldo**: 50% al cierre del programa, factura a 30 días.
-- **Moneda**: _____.
+- **Moneda (2026-11-09, a pedido de Ventas)**: los valores de la hoja de inversión van en **REF**, con la leyenda «Pago en Divisas o Bolívares a Tasa BCV del Euro» bajo el total, para evitar malentendidos en la cobranza (`plantillas/habilidades-compacto.md` §6).
 - **Impuestos**: precios _____ IVA / impuestos.
 
 ---

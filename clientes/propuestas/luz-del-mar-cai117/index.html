@@ -1,0 +1,451 @@
+<!doctype html>
+<!--
+  Propuesta · Luz del Mar · Servicio de Habilidades (CAI-117)
+  División: Educación · Servicio: Habilidades (§4.1a) · Alianza: no
+  GENERADO por scripts/generar-habilidades-compacto.py (plantilla 3.0 (2026-10-08), formato habilidades) desde datos.json.
+  No editar a mano: editar datos.json y regenerar. Estilos propios del deck: overrides.css.
+  Fuente del insumo: Ficha de Levantamiento (20/11/2026), resumen de la asesora y transcripción de la reunión del 20/11/2026
+
+  Formato compacto de 8 slides, en el orden de las preguntas del cliente (Ventas, 2026-10-07), sin semanas, sesiones
+  ni fechas (Keiber, 2026-10-08):
+    1 Portada · 2 Alcance · 3 Ruta · 4 Cómo trabajamos · 5 Entregables · 6 Retorno · 7 Inversión · 8 Próximos pasos
+  Marcadores de detección de AcroForms (agregar-campo-precio.py), por página: «Propuesta Económica» solo en la slide de
+  inversión; «Lo que se llevan» y «Entregables» solo en la de entregables; «Facilidad de pago» solo en la de pago.
+  Campos AcroForm: Programa, Notas, PrecioBase, Descuento, PrecioTotal (inversión) y Entregables, Acreditacion (entregables). Se reposicionan con scripts/customize-habilidades-compacto.py.
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Propuesta · Luz del Mar · Intezia Educación</title>
+  <link rel="stylesheet" href="../_base/styles.css">
+  <link rel="stylesheet" href="habilidades-compacto.css">
+  <link rel="stylesheet" href="overrides.css">
+</head>
+<body>
+
+  <main class="deck">
+
+    <!-- 1 · Portada: ¿cuál es mi problema? -->
+    <section class="slide s-cover">
+      <span class="counter">01 / 08</span>
+      <div class="logo-big">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia Educación">
+      </div>
+      <div class="body">
+        <p class="eyebrow">Propuesta de proyecto · Servicio de Habilidades</p>
+        <h1 style="font-size:46px">
+          Tres agentes de IA conectados<br>
+          para valorar, rastrear y cotizar<br>
+          <span class="hl">en Luz del Mar</span>
+        </h1>
+        <p class="lead">
+          Construimos tres agentes de IA conectados entre sí, que <strong>valoran</strong> los impuestos, <strong>rastrean</strong> la carga en las navieras y <strong>cotizan</strong>, y el equipo los prueba y los adopta en su trabajo diario.
+        </p>
+        <div class="pain-strip">
+          <div class="pain-item">
+            <span class="pain-num">90 %</span>
+            <span class="pain-lbl">de las tareas de Tráfico y Valoración son manuales, entre Excel, correos y portales, según la dueña.</span>
+          </div>
+          <div class="pain-item">
+            <span class="pain-num">10</span>
+            <span class="pain-lbl">navieras se consultan una por una, cada día, en su propio portal.</span>
+          </div>
+          <div class="pain-item">
+            <span class="pain-num">1 externo</span>
+            <span class="pain-lbl">valorador calcula los impuestos a mano, cobra por documento y hay que esperar su turno.</span>
+          </div>
+          <div class="pain-item">
+            <span class="pain-num">70 %</span>
+            <span class="pain-lbl">de la información de cada carga se repite siempre y hoy se rearma a mano cada vez.</span>
+          </div>
+        </div>
+      </div>
+      <div class="id-line">
+        <span class="codigo">Código: CAI-117</span>
+        <span class="cliente">Luz del Mar</span>
+      </div>
+    </section>
+
+    <!-- 2 · Alcance: qué vamos a hacer y para qué -->
+    <section class="slide s-scope roomy">
+      <span class="counter">02 / 08</span>
+      <p class="eyebrow">02 · Alcance</p>
+      <h2>Tres agentes y su conexión, en tres fases.</h2>
+      <p class="sub">Cada agente resuelve un flujo de la agencia: Intezia los construye y el equipo los prueba y adopta.</p>
+
+      <div class="scope-panels one" style="--np:1">
+        <div class="scope-panel acc-y">
+          <div class="scope-head">
+            <span class="scope-tag">Agentes de IA</span>
+            <span class="scope-total"><b>4</b> áreas</span>
+          </div>
+          <ul class="scope-rows">
+              <li><span class="area">Valoración</span><span class="para">Calcular los impuestos de cada carga con la base propia, sin esperar al valorador externo</span></li>
+              <li><span class="area">Tráfico</span><span class="para">Saber dónde está cada carga y qué falta, sin perseguir información portal por portal</span></li>
+              <li><span class="area">Cotización</span><span class="para">Cotizar cada carga a partir de su valoración, con lo que se pagó antes</span></li>
+              <li><span class="area">Conexión y traspaso</span><span class="para">Que los tres agentes funcionen como un solo flujo y el equipo sepa usarlos y probarlos</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="scope-out">
+        <p class="scope-card-label">Fuera de este alcance</p>
+        <ul>
+          <li>Cerebro Digital de la dueña: propuesta aparte.</li>
+          <li>Página web con usuario y clave para que cada cliente vea su estatus: queda para una etapa posterior.</li>
+          <li>Crear un software o un sistema administrativo propio: se construyen agentes, no un sistema.</li>
+        </ul>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Luz del Mar · CAI-117</span>
+      </div>
+    </section>
+
+    <!-- 3 · Ruta: qué pasa en cada fase -->
+    <section class="slide s-route">
+      <span class="counter">03 / 08</span>
+      <p class="eyebrow">03 · Ruta</p>
+      <h2>De la carga a la cotización.</h2>
+      <p class="sub">El calendario se acuerda en la reunión de arranque. La <strong>garantía y el seguimiento</strong> a 30, 60 y 90 días corren desde el cierre de cada área.</p>
+
+      <div class="route-grid n1" style="--cols:3; --rows:1; --rowh:214px">
+
+        <div class="rg-corner"></div>
+        <div class="rg-phase rg-ph-1">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Base</span></span>
+          <span class="rg-phase-name">Valoración y gacetas</span>
+        </div>
+        <div class="rg-phase rg-ph-2">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Estatus</span></span>
+          <span class="rg-phase-name">Tráfico y rastreo</span>
+        </div>
+        <div class="rg-phase rg-ph-3 hi">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Cierre</span></span>
+          <span class="rg-phase-name">Cotización y conexión</span>
+        </div>
+        <div class="rg-phase rg-fu">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Garantía</span></span>
+          <span class="rg-phase-date">30, 60 y 90 días</span>
+          <span class="rg-phase-txt">Seguimiento desde el cierre de cada área</span>
+        </div>
+
+        <div class="rg-front acc-y">
+          <span class="rg-front-h">Tres agentes conectados</span>
+          <span class="rg-front-row"><span class="rg-front-tool">Agentes</span></span>
+          <span class="rg-front-meta"></span>
+        </div>
+        <div class="rg-cell"><p>El agente calcula los impuestos con las gacetas y el historial de la agencia.</p></div>
+        <div class="rg-cell"><p>El agente revisa el correo, rastrea las navieras y arma el estatus.</p></div>
+        <div class="rg-cell hi"><p>Cotización automática y los tres agentes en un solo flujo.</p></div>
+
+        <div class="rg-follow" style="grid-column:5; grid-row:2 / span 1">
+          <ul>
+            <li><b>30 días</b><span>Uso real y ajustes</span></li>
+            <li><b>60 días</b><span>Ajustes con casos nuevos</span></li>
+            <li><b>90 días</b><span>Tablero del tiempo ganado, contra la línea base</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="route-miles" style="grid-template-columns:repeat(4,1fr)">
+        <div class="mile"><span class="mile-d"></span><b>Arranque</b><p>Reunión para conocer al equipo, ver el recorrido de una carga y fijar la línea base de tiempos.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Valoración</b><p>El agente calcula la pre-valoración de una carga real.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Estatus</b><p>El estatus de una carga sale armado, con lo que falta.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Cierre</b><p>Los tres agentes conectados; empieza la garantía.</p></div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Luz del Mar · CAI-117</span>
+      </div>
+    </section>
+
+    <!-- 4 · Cómo trabajamos: pasos, por qué en ese orden, casos reales, práctica, datos y logística -->
+    <section class="slide s-method">
+      <span class="counter">04 / 08</span>
+      <p class="eyebrow">04 · Cómo trabajamos</p>
+      <h2>Intezia construye, el equipo adopta.</h2>
+      <p class="sub">Intezia construye cada agente; el equipo de la agencia lo prueba y lo adopta en su trabajo diario.</p>
+
+      <ol class="mt-steps" style="--n:4">
+          <li><b>Construimos</b><span>Intezia construye cada agente con cargas y correos reales de la agencia.</span></li>
+          <li><b>Probamos</b><span>El equipo los prueba con cargas reales y dice qué ajustar, antes de usarlos solos.</span></li>
+          <li><b>Adoptamos</b><span>El equipo los usa en su trabajo diario y sabe cuándo revisar.</span></li>
+          <li><b>Medimos</b><span>El tiempo recuperado por flujo y el gasto en cada valoración.</span></li>
+      </ol>
+      <div class="mt-strips">
+        <p class="mt-why"><b>Por qué en este orden</b> Primero Valoración, porque su cálculo alimenta a los otros dos. Después Tráfico, que usa esa valoración en el estatus. Al final Cotización y la conexión de los tres, que dependen de lo anterior.</p>
+        <p class="mt-who"><b>Quién construye</b> <strong>Intezia construye</strong> los agentes con la información de la agencia; el equipo los <strong>prueba y adopta</strong>, sin tener que construir nada.</p>
+      </div>
+
+      <div class="mt-info">
+        <div class="mt-card">
+          <p class="mt-card-label">Cómo funciona en la práctica</p>
+          <ul><li><b>Con el trabajo real de cada uno.</b> Cada agente parte de una tarea de su día a día: cargas, correos y cálculos reales, no ejercicios de aula.</li><li><b>Sobre la base propia.</b> Se parte de lo que la agencia ya tiene archivado; no hace falta el software de un proveedor del sector.</li><li><b>Depende de cada portal.</b> El rastreo depende de cómo permita consultar cada naviera: se prueba con cada una antes de fijar el flujo.</li></ul>
+        </div>
+        <div class="mt-card">
+          <p class="mt-card-label">Cómo cuidamos sus datos</p>
+          <p>Los datos de las cargas y de los clientes se usan solo con la autorización de la agencia, y una persona revisa cada estatus y cotización antes de enviarlos.</p>
+        </div>
+      </div>
+
+      <div class="mt-logi">
+        <div class="mt-tile"><span>Modalidad</span><b>Presencial en su sede de Puerto Cabello, según se acuerde en la reunión de arranque.</b></div>
+        <div class="mt-tile"><span>Participantes</span><b>Tráfico, Valoración y la dueña, para probar y adoptar los agentes.</b></div>
+        <div class="mt-tile"><span>Ritmo de trabajo</span><b>Según la disponibilidad de cada área, sin frenar su operación diaria.</b></div>
+        <div class="mt-tile"><span>Arranque</span><b>Las fechas se acuerdan en la reunión de arranque.</b></div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Luz del Mar · CAI-117</span>
+      </div>
+    </section>
+
+    <!-- 5 · Entregables: ¿con qué me quedo? (catálogo + piezas transversales) -->
+    <section class="slide s-deliv roomy con-imp">
+      <span class="counter">05 / 08</span>
+      <p class="eyebrow">05 · Entregables</p>
+      <div class="deliv-head">
+        <h2>Lo que recibe la agencia.</h2>
+        <p class="deliv-sub"><span class="nw">Lo que se llevan</span> los equipos: los tres agentes funcionando y conectados, más el seguimiento a 30, 60 y 90 días.</p>
+      </div>
+
+      <div class="deliv-impact grande">
+        <span class="di-label">Impacto</span>
+        <p>Los tres flujos quedan <strong>conectados</strong>: de la carga que llega al correo a la valoración, el estatus y la cotización, con el equipo <strong>usando y revisando</strong> cada agente.</p>
+      </div>
+
+      <div class="deliv-carriles" style="--ncols:4">
+        <span class="dc acc-y" style="grid-column: span 4">Agentes de IA</span>
+      </div>
+
+      <div class="deliv-cols" style="--ncols:4">
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">Valoración</p>
+            <ul>
+              <li>Base de gacetas y reglas</li>
+              <li>Agente de cálculo de impuestos</li>
+              <li>Pruebas del equipo con cargas reales</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">Tráfico</p>
+            <ul>
+              <li>Lectura del correo y de la carga</li>
+              <li>Rastreo en las 10 navieras</li>
+              <li>Estatus consolidado para enviar</li>
+              <li>Cartas y documentos de cada carga</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">Cotización</p>
+            <ul>
+              <li>Historial de pagos y permisos</li>
+              <li>Agente de cotización</li>
+              <li>Cotización revisada para el cliente</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">Conexión y traspaso</p>
+            <ul>
+              <li>Tres agentes en un solo flujo</li>
+              <li>Alertas y revisión de fallas</li>
+              <li>Guía de uso de cada agente</li>
+              <li>Capacitación de uso de los agentes</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="deliv-band">
+        <div class="db-card db-1">
+          <span class="db-label">Para todo el proyecto</span>
+        </div>
+        <div class="db-card db-2">
+          <span class="db-label">Valor inmediato</span>
+        </div>
+      </div>
+      <!-- Cajas multiline editables (vacías en HTML: el contenido vive dentro del AcroForm /V). -->
+      <div class="multi-box db-box db-box-1" data-field="Entregables"></div>
+      <div class="multi-box db-box db-box-2" data-field="Acreditacion"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Luz del Mar · CAI-117</span>
+      </div>
+    </section>
+
+    <!-- 6 · Retorno: ¿qué gano? (método de cálculo). Sin estudios ni citas externas. -->
+    <section class="slide s-roi">
+      <span class="counter">06 / 08</span>
+      <p class="eyebrow">06 · Retorno</p>
+      <h2>Retorno esperado: tiempo y gasto por carga.</h2>
+      <p class="sub">Se calcula con las tareas de cada flujo, partiendo del tiempo y del gasto que hoy tienen.</p>
+
+      <div class="roi-body">
+        <div class="roi-panel">
+          <p class="roi-panel-title">Cómo se calcula, por flujo y por tarea</p>
+          <ol class="roi-steps">
+            <li><b>Tareas de cada flujo</b><span>Cuántas cargas, consultas a navieras, valoraciones y cotizaciones se hacen y cuántas veces se repiten.</span></li>
+            <li><b>Tiempo actual por tarea</b><span>Se mide al arrancar, con quien hace el trabajo, y es la <strong>línea base</strong>.</span></li>
+            <li><b>Tiempo con el agente</b><span>Lo que toma la misma tarea con el agente en uso y la revisión de la persona.</span></li>
+            <li><b>Horas recuperadas</b><span>Número de tareas por la diferencia entre el tiempo actual y el tiempo con el agente.</span></li>
+            <li><b>Gasto en cada valoración</b><span>Lo que hoy se paga por cada valoración externa, contra lo que toma calcularla con el agente.</span></li>
+          </ol>
+        </div>
+
+        <div class="roi-right">
+          <p class="roi-right-title">Calendario de garantía, desde el cierre de cada área</p>
+          <div class="roi-card">
+            <b>30 días</b>
+            <p>Los agentes funcionan a diario con cargas reales.</p>
+          </div>
+          <div class="roi-card">
+            <b>60 días</b>
+            <p>Ajustes con casos nuevos y menos pasos a mano.</p>
+          </div>
+          <div class="roi-card">
+            <b>90 días</b>
+            <p>Tablero con el tiempo ganado y el gasto en cada valoración.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="roi-dest-wrap">
+        <p class="roi-dest-title">Hacia dónde va el proyecto</p>
+        <div class="roi-dest">
+          <div class="rd-item"><b>Estatus a tiempo real</b><p>El cliente recibe su estatus armado, <strong>sin esperar</strong> a que alguien persiga cada portal.</p></div>
+          <div class="rd-item"><b>Menos espera</b><p>La valoración se calcula con la base propia, con menos espera del valorador externo.</p></div>
+          <div class="rd-item"><b>Equipo que los usa</b><p>El equipo <strong>prueba y usa</strong> los agentes en su trabajo diario, y sabe cuándo revisar o avisar si algo falla.</p></div>
+        </div>
+      </div>
+
+      <div class="roi-hook"><p>La meta de la dueña es liberar la mayor parte del trabajo manual de Tráfico y Valoración; a los 90 días se mide cuánto se logró.</p></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Luz del Mar · CAI-117</span>
+      </div>
+    </section>
+
+    <!-- 7 · Inversión (hoja de cotización estándar; antepenúltima slide) -->
+    <section class="slide s-price">
+      <span class="counter">07 / 08</span>
+      <h2 class="title">Inversión del proyecto.</h2>
+      <p class="price-intro">Propuesta Económica · Servicio de Habilidades</p>
+
+      <div class="block">
+        <span class="block-eyebrow">Duración</span>
+        <p class="block-value">Proyecto en tres agentes conectados y tres fases: 80 horas de proyecto, con seguimiento y garantía a 30, 60 y 90 días.</p>
+      </div>
+
+      <div class="block block-programa">
+        <span class="block-eyebrow">Programa</span>
+      </div>
+      <div class="multi-box programa-box" data-field="Programa"></div>
+
+      <div class="block block-cotizacion">
+        <span class="block-eyebrow">Cotización</span>
+      </div>
+
+      <span class="cot-label cot-label-base">Propuesta + Inversión</span>
+      <span class="cot-sign cot-sign-base">REF</span>
+      <div class="cot-frame base-frame"></div>
+
+      <span class="cot-label cot-label-discount">Descuento</span>
+      <span class="cot-sign-minus">&minus;REF</span>
+      <div class="cot-frame discount-frame"></div>
+      <span class="cot-urgent-note">Descuento válido por 15 días</span>
+
+      <span class="cot-label cot-label-total">TOTAL</span>
+      <span class="cot-sign cot-sign-total">REF</span>
+      <div class="cot-frame total-frame"></div>
+
+      <p class="cot-moneda">Pago en Divisas o Bolívares a Tasa BCV del Euro</p>
+      <p class="cot-validity">Cotización válida por 30 días.</p>
+      <div class="cot-terms-box">
+        <span class="cot-terms-label">Importante</span>
+        <p class="cot-terms-text">Este servicio se presta bajo nuestros <a href="https://drive.google.com/file/d/1PA-ZSt4KnyY5dpxXzgkIk6-yfGlV2eF8/view?usp=drive_link" target="_blank" rel="noopener">términos y condiciones</a>. Al avanzar con esta propuesta, ambas partes los aceptan.</p>
+      </div>
+
+      <div class="cot-garantia-badge">
+        <span class="cot-garantia-tag">Garantía 30-60-90</span>
+        <p class="cot-garantia-text">Estamos contigo hasta que la habilidad quede instalada.</p>
+      </div>
+
+      <div class="block block-notes-container">
+        <span class="block-eyebrow">Notas</span>
+      </div>
+      <div class="multi-box notas-box" data-field="Notas"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Luz del Mar · CAI-117</span>
+      </div>
+    </section>
+
+    <!-- 9 · Próximos pasos: qué hacer y a quién escribir (última slide) -->
+    <section class="slide s-next">
+      <span class="counter">08 / 08</span>
+      <p class="eyebrow">08 · Próximos pasos</p>
+      <h2>Tres pasos para arrancar.</h2>
+      <p class="sub">Esto es lo que sigue cuando Luz del Mar confirme la propuesta.</p>
+
+      <div class="nx-steps">
+        <div class="nx-step acc-y">
+          <span class="nx-num">1</span>
+          <b>Revisar la propuesta</b>
+          <p>La revisamos con la dueña y resolvemos sus dudas sobre el alcance y el orden.</p>
+        </div>
+        <div class="nx-step acc-o">
+          <span class="nx-num">2</span>
+          <b>Accesos y participantes</b>
+          <p>Coordinamos el acceso a las gacetas, el correo y los portales, y quién de Tráfico y Valoración prueba los agentes.</p>
+        </div>
+        <div class="nx-step acc-w">
+          <span class="nx-num">3</span>
+          <b>Reunión de arranque</b>
+          <p>Reunión de unos 30 minutos para conocer al equipo, alinear prioridades y medir la línea base.</p>
+        </div>
+      </div>
+
+      <div class="nx-contact">
+        <div class="nx-card nx-ase">
+          <span class="nx-label">¿Dudas? Escribe a tu asesora comercial</span>
+          <b class="nx-name">Verónica Rubio</b>
+          <span class="nx-role">Asesora comercial</span>
+          <p class="nx-line"><a href="mailto:vrubio01@intezia.com">vrubio01@intezia.com</a></p>
+          <p class="nx-line">+58 422 3355505</p>
+        </div>
+        <div class="nx-card nx-emp">
+          <span class="nx-label">Intezia</span>
+          <p class="nx-line">Intezia C.A J-505657950</p>
+          <p class="nx-line"><a href="mailto:servicio@intezia.com">servicio@intezia.com</a></p>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Luz del Mar · CAI-117</span>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

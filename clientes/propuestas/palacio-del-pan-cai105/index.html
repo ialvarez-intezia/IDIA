@@ -1,0 +1,449 @@
+<!doctype html>
+<!--
+  Propuesta · El Palacio del Pan · Servicio de Habilidades (CAI-105)
+  División: Educación · Servicio: Habilidades (§4.1a) · Alianza: no
+  GENERADO por scripts/generar-habilidades-compacto.py (plantilla 3.0 (2026-10-08), formato habilidades) desde datos.json.
+  No editar a mano: editar datos.json y regenerar. Estilos propios del deck: overrides.css.
+  Fuente del insumo: Informe del sistema v14 (17/11/2026), Esquema del sistema v3, Datos base del sistema v10 y Recetas de referencia v2 del cliente; DET-051 (Ficha y transcripción del 02/11/2026)
+
+  Formato compacto de 8 slides, en el orden de las preguntas del cliente (Ventas, 2026-10-07), sin semanas, sesiones
+  ni fechas (Keiber, 2026-10-08):
+    1 Portada · 2 Alcance · 3 Ruta · 4 Cómo trabajamos · 5 Entregables · 6 Retorno · 7 Inversión · 8 Próximos pasos
+  Marcadores de detección de AcroForms (agregar-campo-precio.py), por página: «Propuesta Económica» solo en la slide de
+  inversión; «Lo que se llevan» y «Entregables» solo en la de entregables; «Facilidad de pago» solo en la de pago.
+  Campos AcroForm: Programa, Notas, PrecioBase, Descuento, PrecioTotal (inversión) y Entregables, Acreditacion (entregables). Se reposicionan con scripts/customize-habilidades-compacto.py.
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Propuesta · El Palacio del Pan · Intezia Educación</title>
+  <link rel="stylesheet" href="../_base/styles.css">
+  <link rel="stylesheet" href="habilidades-compacto.css">
+  <link rel="stylesheet" href="overrides.css">
+</head>
+<body>
+
+  <main class="deck">
+
+    <!-- 1 · Portada: ¿cuál es mi problema? -->
+    <section class="slide s-cover">
+      <span class="counter">01 / 08</span>
+      <div class="logo-big">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia Educación">
+      </div>
+      <div class="body">
+        <p class="eyebrow">Propuesta de proyecto · Servicio de Habilidades</p>
+        <h1 style="font-size:46px">
+          Control de caja, pagos, producción<br>
+          e inventario con IA<br>
+          <span class="hl">en El Palacio del Pan</span>
+        </h1>
+        <p class="lead">
+          Construimos con el equipo de la panadería, con IA, las herramientas para <strong>cerrar la caja una sola vez</strong>, llevar las <strong>cuentas por pagar con abonos</strong>, conocer el costo de cada tanda y controlar el inventario.
+        </p>
+        <div class="pain-strip">
+          <div class="pain-item">
+            <span class="pain-num">2 veces</span>
+            <span class="pain-lbl">se teclea cada cierre de caja: primero en Excel y después en el programa administrativo.</span>
+          </div>
+          <div class="pain-item">
+            <span class="pain-num">Abonos</span>
+            <span class="pain-lbl">muchas facturas se pagan en partes y llevar lo que falta de cada una en Excel es muy laborioso.</span>
+          </div>
+          <div class="pain-item">
+            <span class="pain-num">Margen</span>
+            <span class="pain-lbl">el programa actual no registra el costo de lo vendido: hoy no se conoce el margen de cada producto.</span>
+          </div>
+          <div class="pain-item">
+            <span class="pain-num">775</span>
+            <span class="pain-lbl">productos y 13 recetas ya entregados, con unidades y costos por completar para llevar el inventario.</span>
+          </div>
+        </div>
+      </div>
+      <div class="id-line">
+        <span class="codigo">Código: CAI-105</span>
+        <span class="cliente">Palacio del Pan</span>
+      </div>
+    </section>
+
+    <!-- 2 · Alcance: qué vamos a hacer y para qué -->
+    <section class="slide s-scope roomy">
+      <span class="counter">02 / 08</span>
+      <p class="eyebrow">02 · Alcance</p>
+      <h2>Cuatro áreas, de la caja al inventario.</h2>
+      <p class="sub">Herramientas con IA para el día a día de la panadería, construidas con quien hace cada tarea.</p>
+
+      <div class="scope-panels one" style="--np:1">
+        <div class="scope-panel acc-y">
+          <div class="scope-head">
+            <span class="scope-tag">IA para la administración</span>
+            <span class="scope-total"><b>4</b> áreas</span>
+          </div>
+          <ul class="scope-rows">
+              <li><span class="area">Cierre de caja</span><span class="para">Cerrar cada turno una sola vez y cuadrar lo físico con los bancos</span></li>
+              <li><span class="area">Cuentas por pagar</span><span class="para">Saber cuánto falta por pagar de cada factura, aunque se pague en abonos</span></li>
+              <li><span class="area">Producción y costos</span><span class="para">Conocer el costo y el margen de cada tanda y de cada producto</span></li>
+              <li><span class="area">Inventario y compras</span><span class="para">Contar y reponer con alertas, y recibir las compras sin teclear de más</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="scope-out">
+        <p class="scope-card-label">Fuera de este alcance</p>
+        <ul>
+          <li>Un sistema integral que reemplace a Profit: se construyen las herramientas de cuatro áreas, no el sistema completo.</li>
+          <li>Facturación fiscal e impresora fiscal: siguen en el sistema que la panadería usa hoy.</li>
+          <li>Contabilidad, nómina, impuestos, mercadeo y mantenimiento: los asientos los sigue llevando el servicio contable.</li>
+          <li>Licencias de IA: no están en la inversión; se confirman en el arranque.</li>
+        </ul>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Palacio del Pan · CAI-105</span>
+      </div>
+    </section>
+
+    <!-- 3 · Ruta: qué pasa en cada fase -->
+    <section class="slide s-route">
+      <span class="counter">03 / 08</span>
+      <p class="eyebrow">03 · Ruta</p>
+      <h2>De la caja al inventario.</h2>
+      <p class="sub">Dos fases de dos áreas cada una. La <strong>garantía y el seguimiento</strong> a 30, 60 y 90 días corren desde el cierre de cada área.</p>
+
+      <div class="route-grid n1" style="--cols:2; --rows:1; --rowh:214px">
+
+        <div class="rg-corner"></div>
+        <div class="rg-phase rg-ph-1 hi">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Caja y pagos</span></span>
+          <span class="rg-phase-name"><strong>Cierre de caja y cuentas por pagar</strong></span>
+        </div>
+        <div class="rg-phase rg-ph-2">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Producción e inventario</span></span>
+          <span class="rg-phase-name"><strong>Costos, inventario y compras</strong></span>
+        </div>
+        <div class="rg-phase rg-fu">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Garantía</span></span>
+          <span class="rg-phase-date">30, 60 y 90 días</span>
+          <span class="rg-phase-txt">Seguimiento desde el cierre de cada área</span>
+        </div>
+
+        <div class="rg-front acc-y">
+          <span class="rg-front-h">Administración de la panadería</span>
+          <span class="rg-front-row"><span class="rg-front-tool">Administración</span></span>
+          <span class="rg-front-meta"></span>
+        </div>
+        <div class="rg-cell hi"><p>Cierre de caja y cuentas por pagar, construidos y probados.</p></div>
+        <div class="rg-cell"><p>Recetario, costos, inventario y compras, a partir de los datos base.</p></div>
+
+        <div class="rg-follow" style="grid-column:4; grid-row:2 / span 1">
+          <ul>
+            <li><b>30 días</b><span>Uso diario de cada una</span></li>
+            <li><b>60 días</b><span>Ajustes con casos nuevos</span></li>
+            <li><b>90 días</b><span>Tiempo ganado, medido</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="route-miles" style="grid-template-columns:repeat(4,1fr)">
+        <div class="mile"><span class="mile-d"></span><b>Arranque</b><p>Se confirman los participantes y los accesos, y se verifica la integración con las herramientas.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Caja y pagos</b><p>El cierre de caja y las cuentas por pagar, construidos y probados con ejemplos.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Producción e inventario</b><p>Recetario, costos e inventario, construidos con las 13 recetas entregadas.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Cierre</b><p>Las cuatro áreas en uso diario; empieza la garantía a 30, 60 y 90 días.</p></div>
+      </div>
+      <p class="route-note">Las 48 h son una proyección: 24 h de caja y pagos y 24 h de producción e inventario. La reunión de arranque no suma horas.</p>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Palacio del Pan · CAI-105</span>
+      </div>
+    </section>
+
+    <!-- 4 · Cómo trabajamos: pasos, por qué en ese orden, casos reales, práctica, datos y logística -->
+    <section class="slide s-method">
+      <span class="counter">04 / 08</span>
+      <p class="eyebrow">04 · Cómo trabajamos</p>
+      <h2>Así construimos con el equipo.</h2>
+      <p class="sub">Cada herramienta se construye con quien hace la tarea, se prueba con ejemplos de la panadería y se mide.</p>
+
+      <ol class="mt-steps" style="--n:4">
+          <li><b>Construimos</b><span>Con quien hace la tarea y con sus casos reales.</span></li>
+          <li><b>Probamos</b><span>Con ejemplos de cierres y facturas que la panadería autoriza.</span></li>
+          <li><b>Adoptamos</b><span>Cada equipo usa su herramienta en el día a día.</span></li>
+          <li><b>Medimos</b><span>El tiempo ganado en cada tarea, a 30, 60 y 90 días.</span></li>
+      </ol>
+      <div class="mt-strips">
+        <p class="mt-why"><b>Por qué en este orden</b> Primero la caja y los pagos, que hoy dan más trabajo; después producción e inventario, que parten de los datos base ya entregados.</p>
+        <p class="mt-who"><b>Quién construye</b> <strong>Intezia guía</strong> y el equipo de la panadería construye con la IA sus propias herramientas, sobre lo que ya usa.</p>
+      </div>
+
+      <div class="mt-info">
+        <div class="mt-card">
+          <p class="mt-card-label">Cómo funciona en la práctica</p>
+          <ul><li><b>Con quien hace el trabajo.</b> Cada herramienta se construye con quien cierra la caja, paga las facturas o produce, para que la use desde el primer día.</li><li><b>Con datos ya entregados.</b> Se parte de los productos, recetas y proveedores que la panadería preparó, usados como datos de prueba.</li><li><b>Depende de las herramientas.</b> Lo que se construye depende de las herramientas de IA y de los sistemas que la panadería usa, y de qué tan fácil sea integrarse a ellos: se verifica en el arranque.</li></ul>
+        </div>
+        <div class="mt-card">
+          <p class="mt-card-label">Cómo cuidamos sus datos</p>
+          <p>Las claves, las cuentas bancarias y los datos de nómina no se cargan a la IA: se trabaja con ejemplos que la panadería autoriza.</p>
+        </div>
+      </div>
+
+      <div class="mt-logi">
+        <div class="mt-tile"><span>Modalidad</span><b>Presencial en la panadería o en línea, según se acuerde en la reunión de arranque.</b></div>
+        <div class="mt-tile"><span>Participantes</span><b>Quienes hacen la tarea en caja, administración, compras y producción.</b></div>
+        <div class="mt-tile"><span>Ritmo de trabajo</span><b>Según la disponibilidad de cada área, sin frenar su operación diaria.</b></div>
+        <div class="mt-tile"><span>Arranque</span><b>Las fechas se acuerdan en la reunión de arranque.</b></div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Palacio del Pan · CAI-105</span>
+      </div>
+    </section>
+
+    <!-- 5 · Entregables: ¿con qué me quedo? (catálogo + piezas transversales) -->
+    <section class="slide s-deliv roomy con-imp">
+      <span class="counter">05 / 08</span>
+      <p class="eyebrow">05 · Entregables</p>
+      <div class="deliv-head">
+        <h2>Lo que recibe la panadería.</h2>
+        <p class="deliv-sub"><span class="nw">Lo que se llevan</span> los equipos: <strong>las herramientas de cada área</strong>, funcionando con sus datos y con el seguimiento que mide su efecto.</p>
+      </div>
+
+      <div class="deliv-impact grande">
+        <span class="di-label">Impacto</span>
+        <p>El cierre de caja se hace <strong>una sola vez</strong>, los saldos con los proveedores están al día y la panadería conoce el <strong>costo, el margen y el inventario</strong> de cada producto, con sus propios datos.</p>
+      </div>
+
+      <div class="deliv-carriles" style="--ncols:4">
+        <span class="dc acc-y" style="grid-column: span 4">IA para la administración</span>
+      </div>
+
+      <div class="deliv-cols" style="--ncols:4">
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">Cierre de caja</p>
+            <ul>
+              <li>Cierre de turno en una sola captura</li>
+              <li>Arqueo del día siguiente</li>
+              <li>Cruce de lotes con los bancos</li>
+              <li>Resumen diario por medio de pago</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">Cuentas por pagar</p>
+            <ul>
+              <li>Registro de facturas sin duplicados</li>
+              <li>Saldo de cada factura con abonos</li>
+              <li>Programación de pagos sugerida</li>
+              <li>Antigüedad de saldos de proveedores</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">Producción y costos</p>
+            <ul>
+              <li>Recetario de las 13 recetas</li>
+              <li>Plan de producción del día</li>
+              <li>Costo de cada tanda y producto</li>
+              <li>Margen y alerta bajo el costo</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">Inventario y compras</p>
+            <ul>
+              <li>Fichas de productos con unidades</li>
+              <li>Conteo físico guiado</li>
+              <li>Alertas de mínimo y de merma</li>
+              <li>Orden de compra y recepción</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="deliv-band">
+        <div class="db-card db-1">
+          <span class="db-label">Para todo el proyecto</span>
+        </div>
+        <div class="db-card db-2">
+          <span class="db-label">Valor inmediato</span>
+        </div>
+      </div>
+      <!-- Cajas multiline editables (vacías en HTML: el contenido vive dentro del AcroForm /V). -->
+      <div class="multi-box db-box db-box-1" data-field="Entregables"></div>
+      <div class="multi-box db-box db-box-2" data-field="Acreditacion"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Palacio del Pan · CAI-105</span>
+      </div>
+    </section>
+
+    <!-- 6 · Retorno: ¿qué gano? (método de cálculo). Sin estudios ni citas externas. -->
+    <section class="slide s-roi">
+      <span class="counter">06 / 08</span>
+      <p class="eyebrow">06 · Retorno</p>
+      <h2>Retorno esperado: tiempo y control.</h2>
+      <p class="sub">Se calcula con las tareas de cada área, partiendo del tiempo que hoy toman.</p>
+
+      <div class="roi-body">
+        <div class="roi-panel">
+          <p class="roi-panel-title">Cómo se calcula, por área y por tarea</p>
+          <ol class="roi-steps">
+            <li><b>Tareas del área</b><span>Qué cierres, facturas, tandas y conteos se apoyan en la herramienta y cuántas veces se repiten.</span></li>
+            <li><b>Tiempo actual por tarea</b><span>Se mide al arrancar, con quien hace el trabajo, y es la <strong>línea base</strong>.</span></li>
+            <li><b>Tiempo con la herramienta</b><span>Lo que toma la misma tarea ya con la herramienta en uso.</span></li>
+            <li><b>Horas recuperadas</b><span>Número de tareas por la diferencia entre el tiempo actual y el tiempo con la herramienta.</span></li>
+          </ol>
+        </div>
+
+        <div class="roi-right">
+          <p class="roi-right-title">Calendario de garantía, desde el cierre de cada área</p>
+          <div class="roi-card">
+            <b>30 días</b>
+            <p>Las herramientas de cada área en uso diario, con datos reales.</p>
+          </div>
+          <div class="roi-card">
+            <b>60 días</b>
+            <p>Ajustes con casos nuevos y menos correcciones a mano.</p>
+          </div>
+          <div class="roi-card">
+            <b>90 días</b>
+            <p>Medición del tiempo ganado en cada tarea, contra la línea base.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="roi-dest-wrap">
+        <p class="roi-dest-title">Hacia dónde va el proyecto</p>
+        <div class="roi-dest">
+          <div class="rd-item"><b>Un cierre sin doble registro</b><p>Cada cierre se registra una sola vez y las diferencias se ven a tiempo.</p></div>
+          <div class="rd-item"><b>Saldos a la vista</b><p>Cada factura muestra lo que falta por pagar y los pagos se programan con datos.</p></div>
+          <div class="rd-item"><b>Costo y margen conocidos</b><p>Con el recetario y el inventario, la panadería sabe <strong>cuánto cuesta</strong> cada producto.</p></div>
+        </div>
+      </div>
+
+      <div class="roi-hook"><p>A los 90 días del cierre, la panadería conocerá el tiempo que ganó en cada tarea de sus cuatro áreas.</p></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Palacio del Pan · CAI-105</span>
+      </div>
+    </section>
+
+    <!-- 7 · Inversión (hoja de cotización estándar; antepenúltima slide) -->
+    <section class="slide s-price">
+      <span class="counter">07 / 08</span>
+      <h2 class="title">Inversión del proyecto.</h2>
+      <p class="price-intro">Propuesta Económica · Servicio de Habilidades</p>
+
+      <div class="block">
+        <span class="block-eyebrow">Duración</span>
+        <p class="block-value">Proyecto de 4 áreas: 48 horas en total, 12 para cada una, con seguimiento y garantía a 30, 60 y 90 días.</p>
+      </div>
+
+      <div class="block block-programa">
+        <span class="block-eyebrow">Programa</span>
+      </div>
+      <div class="multi-box programa-box" data-field="Programa"></div>
+
+      <div class="block block-cotizacion">
+        <span class="block-eyebrow">Cotización</span>
+      </div>
+
+      <span class="cot-label cot-label-base">Propuesta + Inversión</span>
+      <span class="cot-sign cot-sign-base">REF</span>
+      <div class="cot-frame base-frame"></div>
+
+      <span class="cot-label cot-label-discount">Descuento</span>
+      <span class="cot-sign-minus">&minus;REF</span>
+      <div class="cot-frame discount-frame"></div>
+      <span class="cot-urgent-note">Descuento válido por 15 días</span>
+
+      <span class="cot-label cot-label-total">TOTAL</span>
+      <span class="cot-sign cot-sign-total">REF</span>
+      <div class="cot-frame total-frame"></div>
+
+      <p class="cot-moneda">Pago en Divisas o Bolívares a Tasa BCV del Euro</p>
+      <p class="cot-validity">Cotización válida por 30 días.</p>
+      <div class="cot-terms-box">
+        <span class="cot-terms-label">Importante</span>
+        <p class="cot-terms-text">Este servicio se presta bajo nuestros <a href="https://drive.google.com/file/d/1PA-ZSt4KnyY5dpxXzgkIk6-yfGlV2eF8/view?usp=drive_link" target="_blank" rel="noopener">términos y condiciones</a>. Al avanzar con esta propuesta, ambas partes los aceptan.</p>
+      </div>
+
+      <div class="cot-garantia-badge">
+        <span class="cot-garantia-tag">Garantía 30-60-90</span>
+        <p class="cot-garantia-text">Estamos contigo hasta que la habilidad quede instalada.</p>
+      </div>
+
+      <div class="block block-notes-container">
+        <span class="block-eyebrow">Notas</span>
+      </div>
+      <div class="multi-box notas-box" data-field="Notas"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Palacio del Pan · CAI-105</span>
+      </div>
+    </section>
+
+    <!-- 9 · Próximos pasos: qué hacer y a quién escribir (última slide) -->
+    <section class="slide s-next">
+      <span class="counter">08 / 08</span>
+      <p class="eyebrow">08 · Próximos pasos</p>
+      <h2>Tres pasos para arrancar.</h2>
+      <p class="sub">Esto es lo que sigue cuando Palacio del Pan confirme la propuesta.</p>
+
+      <div class="nx-steps">
+        <div class="nx-step acc-y">
+          <span class="nx-num">1</span>
+          <b>Confirmar el alcance</b>
+          <p>Resolvemos las dudas de la panadería y validamos las áreas y el orden de las dos fases.</p>
+        </div>
+        <div class="nx-step acc-o">
+          <span class="nx-num">2</span>
+          <b>Accesos y agenda</b>
+          <p>Coordinamos los accesos y la agenda de quien trabaja en cada área.</p>
+        </div>
+        <div class="nx-step acc-w">
+          <span class="nx-num">3</span>
+          <b>Reunión de arranque</b>
+          <p>Reunión de unos 30 minutos para alinear las tareas y los datos de cada área.</p>
+        </div>
+      </div>
+
+      <div class="nx-contact">
+        <div class="nx-card nx-ase">
+          <span class="nx-label">¿Dudas? Escribe a tu asesora comercial</span>
+          <b class="nx-name">Verónica Rubio</b>
+          <span class="nx-role">Asesora comercial</span>
+          <p class="nx-line"><a href="mailto:vrubio01@intezia.com">vrubio01@intezia.com</a></p>
+          <p class="nx-line">+58 422 3355505</p>
+        </div>
+        <div class="nx-card nx-emp">
+          <span class="nx-label">Intezia</span>
+          <p class="nx-line">Intezia C.A J-505657950</p>
+          <p class="nx-line"><a href="mailto:servicio@intezia.com">servicio@intezia.com</a></p>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Palacio del Pan · CAI-105</span>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

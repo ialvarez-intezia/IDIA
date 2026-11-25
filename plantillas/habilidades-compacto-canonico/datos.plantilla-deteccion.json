@@ -1,5 +1,5 @@
 {
- "_ayuda_general": "Plantilla de datos.json para una propuesta de DETECCIÓN (formato compacto v3, plantillas/deteccion-compacto.md). Copiar a clientes/propuestas/<slug>/datos.json y reemplazar TODOS los POR_DEFINIR (el generador no publica mientras quede alguno). Las claves _ayuda se ignoran. Todo lo que no está aquí sale de los valores por defecto del servicio (etapas, entregables, «Cómo trabajamos», retorno, inversión, pago y próximos pasos: ver la spec §5); para cambiar uno, se define la clave completa. Ejemplo real: datos.ejemplo-deteccion.json (G-MAX DET-024). REGLAS (Keiber Quintana, 2026-10-08): sin semanas, sesiones ni fechas; sin frentes ni áreas prioritarias; horas en global, sin reparto por área; al menos N logros inmediatos en el proyecto; entregables nombrados, sin conteos. Fuente: Ficha de Levantamiento + transcripción de la reunión con el cliente (no el resumen de la asesora).",
+ "_ayuda_general": "Plantilla de datos.json para una propuesta de DETECCIÓN (formato compacto v3, plantillas/deteccion-compacto.md). Copiar a clientes/propuestas/<slug>/datos.json y reemplazar TODOS los POR_DEFINIR (el generador no publica mientras quede alguno). Las claves _ayuda se ignoran. Todo lo que no está aquí sale de los valores por defecto del servicio (etapas, entregables, «Cómo trabajamos», retorno, inversión, pago y próximos pasos: ver la spec §5); para cambiar uno, se define la clave completa. Ejemplo real: datos.ejemplo-deteccion.json (G-MAX DET-024). REGLAS (Keiber Quintana, 2026-10-08): sin semanas, sesiones ni fechas; sin frentes ni áreas prioritarias; horas en global, sin reparto por área; logros inmediatos sin cifra (se realizan cuando el proceso o el área lo permite); entregables nombrados, sin conteos. Fuente: Ficha de Levantamiento + transcripción de la reunión con el cliente (no el resumen de la asesora).",
  "version": 3,
  "formato": "deteccion",
  "cliente": {
@@ -12,6 +12,13 @@
  "_ayuda_division": "educacion | fundacion (no se infiere: preguntar y guardar, CLAUDE.md §4.1). Fundación omite inversión y pago (7 slides).",
  "alianza": "POR_DEFINIR",
  "_ayuda_alianza": "true | false: preguntar aparte del servicio (CLAUDE.md §4.1a punto 2).",
+ "entregables": {
+  "impacto": {
+   "enfoque": "POR_DEFINIR",
+   "texto": "POR_DEFINIR",
+   "_ayuda": "Cuadro «Impacto» de «Lo que se llevan» (estándar desde 2026-11-09): lo que cambia en la operación del cliente. En Detección es lo que el diagnóstico permite (saber dónde la IA rinde más, mejoras que ya funcionan, inversión decidida con evidencia), sin prometer lo que se construirá después. 2 o 3 frases (≤ 240 caracteres), sin cifras ni estudios. PREGUNTAR A IVANA en cada propuesta el enfoque: 'reenfoque', 'posiciones' (exige retorno.posiciones y aval_posiciones) u 'operacion'."
+  }
+ },
  "eje": "POR_DEFINIR",
  "origen": "POR_DEFINIR",
  "_ayuda_origen": "origen = de dónde sale la propuesta: transcripción de la reunión con el cliente (fecha, presencial o virtual), Ficha de Levantamiento y lista de personal si la hay. Si se contradicen, manda la transcripción.",
@@ -41,7 +48,7 @@
   "fuente": "POR_DEFINIR"
  },
  "deteccion": {
-  "_ayuda": "2 · ALCANCE y 3 · RUTA. areas: 1 a 8, con el nombre que les da el cliente (no un «resto»); departamentos: los de la lista de personal (≤ 24 píldoras de ≤ ~30 caracteres); foco (opcional): dónde se concentra el levantamiento (p. ej. personal corporativo; lo asistencial, puntual). horas.levantamiento: total en global (lo único que se muestra); arranque y nivelacion: internas, para cotizar. logros_minimos: los que asegura el proyecto (por defecto 3), nunca uno por área. Opcionales con valor por defecto: para_que (4), etapas (5: Arranque, Nivelación, Levantamiento con las horas, Priorización, Informe Final), texto_horas, ruta_completa (Detección, Habilidades, Políticas), entregables (6 tarjetas) y sus etiquetas.",
+  "_ayuda": "2 · ALCANCE y 3 · RUTA. areas: 1 a 8, con el nombre que les da el cliente (no un «resto»); departamentos: los de la lista de personal (≤ 24 píldoras de ≤ ~30 caracteres); foco (opcional): dónde se concentra el levantamiento (p. ej. personal corporativo; lo asistencial, puntual). horas.levantamiento: total en global (lo único que se muestra); arranque y nivelacion: internas, para cotizar. logros_minimos: dato interno, ya no se muestra (los logros no llevan cifra en la propuesta; Ivana, 2026-11-13). Opcionales con valor por defecto: para_que (4), etapas (5: Arranque, Nivelación, Levantamiento con las horas, Priorización, Informe Final), texto_horas, ruta_completa (Detección, Habilidades, Políticas), entregables (6 tarjetas) y sus etiquetas.",
   "areas": [
    "POR_DEFINIR"
   ],

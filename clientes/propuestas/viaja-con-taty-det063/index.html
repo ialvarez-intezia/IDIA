@@ -1,0 +1,439 @@
+<!doctype html>
+<!--
+  Propuesta · Viaja con Taty · Servicio de Detección y Habilidades (DET-063)
+  División: Educación · Servicio: Detección y Habilidades (§4.1a) · Alianza: no
+  GENERADO por scripts/generar-habilidades-compacto.py (plantilla 3.0 (2026-10-08), formato habilidades) desde datos.json.
+  No editar a mano: editar datos.json y regenerar. Estilos propios del deck: overrides.css.
+  Fuente del insumo: Ficha de Levantamiento (18/11/2026) y resumen de la reunión de Flavia Martínez con Viaja con Taty. Sin transcripción
+
+  Formato compacto de 8 slides, en el orden de las preguntas del cliente (Ventas, 2026-10-07), sin semanas, sesiones
+  ni fechas (Keiber, 2026-10-08):
+    1 Portada · 2 Alcance · 3 Ruta · 4 Cómo trabajamos · 5 Entregables · 6 Retorno · 7 Inversión · 8 Próximos pasos
+  Marcadores de detección de AcroForms (agregar-campo-precio.py), por página: «Propuesta Económica» solo en la slide de
+  inversión; «Lo que se llevan» y «Entregables» solo en la de entregables; «Facilidad de pago» solo en la de pago.
+  Campos AcroForm: Programa, Notas, PrecioBase, Descuento, PrecioTotal (inversión) y Entregables, Acreditacion (entregables). Se reposicionan con scripts/customize-habilidades-compacto.py.
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Propuesta · Viaja con Taty · Intezia Educación</title>
+  <link rel="stylesheet" href="../_base/styles.css">
+  <link rel="stylesheet" href="habilidades-compacto.css">
+  <link rel="stylesheet" href="overrides.css">
+</head>
+<body>
+
+  <main class="deck">
+
+    <!-- 1 · Portada: ¿cuál es mi problema? -->
+    <section class="slide s-cover">
+      <span class="counter">01 / 08</span>
+      <div class="logo-big">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia Educación">
+      </div>
+      <div class="body">
+        <p class="eyebrow">Propuesta de proyecto · Servicio de Detección y Habilidades</p>
+        <h1 style="font-size:46px">
+          Mercadeo propio con IA y datos<br>
+          para vender más en cada temporada<br>
+          <span class="hl">de Viaja con Taty</span>
+        </h1>
+        <p class="lead">
+          Un solo <strong>levantamiento</strong> de la operación y luego, a la práctica: las dos personas del equipo aprenden a producir su <strong>mercadeo propio</strong> con IA y a <strong>medir</strong> lo que hoy es empírico.
+        </p>
+        <div class="pain-strip">
+          <div class="pain-item">
+            <span class="pain-num">Empírico</span>
+            <span class="pain-lbl">hoy nada está medido: no hay datos de quién entra a la web ni de dónde llegan los leads.</span>
+          </div>
+          <div class="pain-item">
+            <span class="pain-num">A mano</span>
+            <span class="pain-lbl">la cotización se estima con un programa propio que hay que montar en la IA y decidir a mano.</span>
+          </div>
+          <div class="pain-item">
+            <span class="pain-num">Temporada</span>
+            <span class="pain-lbl">carnaval, Semana Santa y vacaciones exigen contenido nuevo y rápido, sin depender de terceros.</span>
+          </div>
+        </div>
+      </div>
+      <div class="id-line">
+        <span class="codigo">Código: DET-063</span>
+        <span class="cliente">Viaja con Taty</span>
+      </div>
+    </section>
+
+    <!-- 2 · Alcance por fases: qué vamos a hacer, en qué orden y para qué -->
+    <section class="slide s-scope fases roomy">
+      <span class="counter">02 / 08</span>
+      <p class="eyebrow">02 · Alcance</p>
+      <h2>Un levantamiento y luego a la práctica.</h2>
+      <p class="sub">Una sola ruta: un <strong>levantamiento único</strong> de la operación y la práctica para producir y medir por su cuenta.</p>
+
+      <div class="scope-panels one" style="--np:1">
+        <div class="scope-panel acc-y">
+          <div class="scope-head">
+            <span class="scope-tag">IA para su operación</span>
+            <span class="scope-total"><b>3</b> áreas</span>
+          </div>
+          <div class="scope-step">
+            <p class="step-h"><span class="step-n">1</span><b>Levantamiento</b><span class="step-d">Un solo encuentro, sin detección larga</span></p>
+            <ul class="scope-rows">
+              <li class="base"><span class="area">Levantamiento único de la operación</span><span class="para">Mapear sus procesos, medir lo que hoy es empírico y elegir las herramientas</span></li>
+            </ul>
+          </div>
+          <div class="scope-step hi">
+            <p class="step-h"><span class="step-n">2</span><b>Práctica</b><span class="step-d">Construir su mercadeo, cotización y leads</span></p>
+            <ul class="scope-rows">
+              <li><span class="area">Cotización al cliente</span><span class="para">Su programa de cotización montado en la IA, sin decidir todo a mano</span></li>
+              <li><span class="area">Mercadeo propio por temporada</span><span class="para">Contenido y análisis de la competencia para cada temporada, sin depender de nadie</span></li>
+              <li><span class="area">Leads y análisis de su web</span><span class="para">Leads ordenados en una tabla y datos de quién entra a la web</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="scope-out">
+        <p class="scope-card-label">Fuera de este alcance</p>
+        <ul>
+          <li>Implementar un CRM: Intezia optimiza la captación de leads, no implementa CRM; primero, una tabla de datos.</li>
+          <li>Producir el contenido por ellas: el objetivo es que lo produzcan solas, con la IA.</li>
+          <li>Medir el perfil de la web si no hay datos: depende de lo que la web ya registre; se confirma en el levantamiento.</li>
+          <li>Licencias de IA: Intezia recomienda las herramientas en el levantamiento y no están en la inversión.</li>
+        </ul>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Viaja con Taty · DET-063</span>
+      </div>
+    </section>
+
+    <!-- 3 · Ruta: qué pasa en cada fase -->
+    <section class="slide s-route">
+      <span class="counter">03 / 08</span>
+      <p class="eyebrow">03 · Ruta</p>
+      <h2>Del levantamiento a producir por su cuenta.</h2>
+      <p class="sub">El calendario se acuerda en la reunión de arranque. La <strong>garantía y el seguimiento</strong> a 30, 60 y 90 días corren desde el cierre de la práctica.</p>
+
+      <div class="route-grid n1" style="--cols:2; --rows:1; --rowh:214px">
+
+        <div class="rg-corner"></div>
+        <div class="rg-phase rg-ph-1">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Levantamiento</span></span>
+          <span class="rg-phase-name">Un solo encuentro, sin detección larga</span>
+        </div>
+        <div class="rg-phase rg-ph-2 hi">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Práctica</span></span>
+          <span class="rg-phase-name">Construir su mercadeo, cotización y leads</span>
+        </div>
+        <div class="rg-phase rg-fu">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Garantía</span></span>
+          <span class="rg-phase-date">30, 60 y 90 días</span>
+          <span class="rg-phase-txt">Desde el cierre de la práctica</span>
+        </div>
+
+        <div class="rg-front acc-y">
+          <span class="rg-front-h">La operación de la agencia</span>
+          <span class="rg-front-row"><span class="rg-front-tool">IA para su operación</span></span>
+          <span class="rg-front-meta"></span>
+        </div>
+        <div class="rg-cell"><p>Cotización, atención, mercadeo, redes y web, en un solo levantamiento.</p></div>
+        <div class="rg-cell hi"><p>Contenido por temporada, cotización, leads en una tabla y análisis de la web.</p></div>
+
+        <div class="rg-follow" style="grid-column:4; grid-row:2 / span 1">
+          <ul>
+            <li><b>30 días</b><span>Producen su mercadeo con la IA</span></li>
+            <li><b>60 días</b><span>Leads al día en su tabla</span></li>
+            <li><b>90 días</b><span>Tiempo y avance, medidos</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="route-miles" style="grid-template-columns:repeat(5,1fr)">
+        <div class="mile"><span class="mile-d"></span><b>Levantamiento</b><p>Operación mapeada y herramientas elegidas.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Cotización en la IA</b><p>Su programa de cotización montado y en uso.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Mercadeo propio</b><p>Contenido y análisis de la competencia, producidos por ellas.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Leads y web</b><p>Leads en su tabla y la web analizada.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>30 · 60 · 90 días</b><p>Seguimiento: uso, ajustes y tiempo recuperado.</p></div>
+      </div>
+      <p class="route-note">Un solo proyecto de 14 horas: 4 h de levantamiento único y 10 h de práctica.</p>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Viaja con Taty · DET-063</span>
+      </div>
+    </section>
+
+    <!-- 4 · Cómo trabajamos: pasos, por qué en ese orden, casos reales, práctica, datos y logística -->
+    <section class="slide s-method">
+      <span class="counter">04 / 08</span>
+      <p class="eyebrow">04 · Cómo trabajamos</p>
+      <h2>Cómo trabajamos con las dos personas.</h2>
+      <p class="sub">Se construye con ellas, sobre su trabajo real, para que dominen las herramientas y no dependan de nadie.</p>
+
+      <ol class="mt-steps" style="--n:4">
+          <li><b>Levantamos</b><span>Una sola vez, con las dos personas.</span></li>
+          <li><b>Construimos</b><span>Con ellas, sobre su trabajo real.</span></li>
+          <li><b>Adoptamos</b><span>Producen su mercadeo y manejan sus leads solas.</span></li>
+          <li><b>Medimos</b><span>El avance, a 30, 60 y 90 días.</span></li>
+      </ol>
+      <div class="mt-strips">
+        <p class="mt-why"><b>Por qué en este orden</b> Primero se levanta la operación y se eligen las herramientas; después se construye, con el uso de la IA aprendido sobre cada tarea.</p>
+        <p class="mt-who"><b>Quién construye</b> <strong>Intezia guía</strong> y las dos personas construyen con IA, sobre su trabajo real, para que la capacidad quede instalada en ellas.</p>
+      </div>
+
+      <div class="mt-info">
+        <div class="mt-card">
+          <p class="mt-card-label">Cómo funciona en la práctica</p>
+          <ul><li><b>Intezia elige las herramientas.</b> Recomienda en el levantamiento qué herramientas de IA conviene usar; las dos aprenden a usarlas construyendo.</li><li><b>Un solo levantamiento.</b> Las dos personas, en una conversación, sin tarea previa; sin una fase larga de detección.</li><li><b>Datos de la web.</b> El análisis de la web depende de los datos que ya registre; se confirma en el levantamiento.</li></ul>
+        </div>
+        <div class="mt-card">
+          <p class="mt-card-label">Cómo cuidamos sus datos</p>
+          <p>Los datos de clientes y de cotizaciones no se cargan a la IA sin el visto bueno de la agencia: se trabaja con los ejemplos que autoricen.</p>
+        </div>
+      </div>
+
+      <div class="mt-logi">
+        <div class="mt-tile"><span>Modalidad</span><b>Virtual, por videollamada.</b></div>
+        <div class="mt-tile"><span>Participantes</span><b>Las 2 personas que llevan la agencia.</b></div>
+        <div class="mt-tile"><span>Ritmo de trabajo</span><b>Según su agenda, sin frenar la atención a sus clientes ni las temporadas.</b></div>
+        <div class="mt-tile"><span>Arranque</span><b>En cuanto se aprueba, se coordina el levantamiento.</b></div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Viaja con Taty · DET-063</span>
+      </div>
+    </section>
+
+    <!-- 5 · Entregables: ¿con qué me quedo? (catálogo + piezas transversales) -->
+    <section class="slide s-deliv con-imp">
+      <span class="counter">05 / 08</span>
+      <p class="eyebrow">05 · Entregables</p>
+      <div class="deliv-head">
+        <h2>Lo que reciben.</h2>
+        <p class="deliv-sub"><span class="nw">Lo que se llevan</span>: la capacidad de producir su mercadeo y manejar sus leads por su cuenta, con el seguimiento a 30, 60 y 90 días que mide su efecto.</p>
+      </div>
+
+      <div class="deliv-impact grande">
+        <span class="di-label">Impacto</span>
+        <p>Con contenido propio y datos de su página y sus leads, la agencia <strong>reacciona más rápido en cada temporada</strong> y deja de decidir a ciegas, para vender más con las mismas dos personas.</p>
+      </div>
+
+      <div class="deliv-carriles" style="--ncols:2">
+        <span class="dc acc-y fase" style="grid-column: span 1">Levantamiento</span>
+        <span class="dc acc-y fase hi" style="grid-column: span 1">Práctica</span>
+      </div>
+
+      <div class="deliv-cols" style="--ncols:2">
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">Levantamiento único de la operación</p>
+            <ul>
+              <li>Levantamiento de la operación completa<ul class="inc"><li>Cotización, atención, mercadeo, redes y web</li><li>Qué herramientas de IA les convienen</li><li>Qué datos de la web ya existen</li></ul></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">Cotización al cliente</p>
+            <ul>
+              <li>Cotización montada en la IA</li>
+            </ul>
+          </div>
+          <div class="da">
+            <p class="da-name">Mercadeo propio por temporada</p>
+            <ul>
+              <li>Contenido de mercadeo con IA</li>
+              <li>Análisis de la competencia por temporada</li>
+            </ul>
+          </div>
+          <div class="da">
+            <p class="da-name">Leads y análisis de su web</p>
+            <ul>
+              <li>Leads de redes y WhatsApp a una tabla</li>
+              <li>Agente que analiza su web</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="deliv-band">
+        <div class="db-card db-1">
+          <span class="db-label">Para todo el proyecto</span>
+        </div>
+        <div class="db-card db-2">
+          <span class="db-label">Valor inmediato</span>
+        </div>
+      </div>
+      <!-- Cajas multiline editables (vacías en HTML: el contenido vive dentro del AcroForm /V). -->
+      <div class="multi-box db-box db-box-1" data-field="Entregables"></div>
+      <div class="multi-box db-box db-box-2" data-field="Acreditacion"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Viaja con Taty · DET-063</span>
+      </div>
+    </section>
+
+    <!-- 6 · Retorno: ¿qué gano? (método de cálculo). Sin estudios ni citas externas. -->
+    <section class="slide s-roi">
+      <span class="counter">06 / 08</span>
+      <p class="eyebrow">06 · Retorno</p>
+      <h2>Retorno esperado: tiempo y datos.</h2>
+      <p class="sub">Se calcula con las tareas de la agencia, partiendo del tiempo que hoy toman, y se mide a 30, 60 y 90 días.</p>
+
+      <div class="roi-body">
+        <div class="roi-panel">
+          <p class="roi-panel-title">Cómo se calcula</p>
+          <ol class="roi-steps">
+            <li><b>Volumen</b><span>Cuántas cotizaciones, contenidos y leads se atienden por semana.</span></li>
+            <li><b>Tiempo actual</b><span>Lo que toma hoy cada tarea, medido con quien la hace: la <strong>línea base</strong>.</span></li>
+            <li><b>Tiempo con la IA</b><span>Lo que toma la misma tarea ya con la IA en uso.</span></li>
+            <li><b>Horas recuperadas</b><span>Volumen por la diferencia entre el tiempo actual y el tiempo con la IA.</span></li>
+          </ol>
+        </div>
+
+        <div class="roi-right">
+          <p class="roi-right-title">Calendario de garantía, desde el cierre de la práctica</p>
+          <div class="roi-card">
+            <b>30 días</b>
+            <p>Mercadeo y cotización con IA en uso real.</p>
+          </div>
+          <div class="roi-card">
+            <b>60 días</b>
+            <p>Leads al día en su tabla y menos correcciones a mano.</p>
+          </div>
+          <div class="roi-card">
+            <b>90 días</b>
+            <p>Medición del tiempo ganado en cada tarea, contra la línea base.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="roi-dest-wrap">
+        <p class="roi-dest-title">Hacia dónde va el proyecto</p>
+        <div class="roi-dest">
+          <div class="rd-item"><b>De empírico a medido</b><p>Se ve <strong>quién entra a su página</strong> y de dónde llegan los leads.</p></div>
+          <div class="rd-item"><b>Mercadeo sin terceros</b><p>Posts, grillas y campañas de cada temporada, producidos por ellas.</p></div>
+          <div class="rd-item"><b>Leads ordenados</b><p>Los leads viven en una tabla, <strong>antes de pensar en un CRM</strong>.</p></div>
+        </div>
+      </div>
+
+      <div class="roi-hook"><p>A los 90 días del cierre, la agencia conocerá el tiempo que ganó en cada tarea.</p></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Viaja con Taty · DET-063</span>
+      </div>
+    </section>
+
+    <!-- 7 · Inversión (hoja de cotización estándar; antepenúltima slide) -->
+    <section class="slide s-price">
+      <span class="counter">07 / 08</span>
+      <h2 class="title">Inversión del proyecto.</h2>
+      <p class="price-intro">Propuesta Económica · Servicio de Detección y Habilidades</p>
+
+      <div class="block">
+        <span class="block-eyebrow">Duración</span>
+        <p class="block-value"><strong>14 horas</strong> en total: <strong>4 de levantamiento</strong> único y <strong>10 de práctica</strong>. Seguimiento a 30, 60 y 90 días.</p>
+      </div>
+
+      <div class="block block-programa">
+        <span class="block-eyebrow">Programa</span>
+      </div>
+      <div class="multi-box programa-box" data-field="Programa"></div>
+
+      <div class="block block-cotizacion">
+        <span class="block-eyebrow">Cotización</span>
+      </div>
+
+      <span class="cot-label cot-label-base">Propuesta + Inversión</span>
+      <span class="cot-sign cot-sign-base">REF</span>
+      <div class="cot-frame base-frame"></div>
+
+      <span class="cot-label cot-label-discount">Descuento</span>
+      <span class="cot-sign-minus">&minus;REF</span>
+      <div class="cot-frame discount-frame"></div>
+      <span class="cot-urgent-note">Descuento válido por 15 días</span>
+
+      <span class="cot-label cot-label-total">TOTAL</span>
+      <span class="cot-sign cot-sign-total">REF</span>
+      <div class="cot-frame total-frame"></div>
+
+      <p class="cot-moneda">Pago en Divisas o Bolívares a Tasa BCV del Euro</p>
+      <p class="cot-validity">Cotización válida por 30 días.</p>
+      <div class="cot-terms-box">
+        <span class="cot-terms-label">Importante</span>
+        <p class="cot-terms-text">Este servicio se presta bajo nuestros <a href="https://drive.google.com/file/d/1PA-ZSt4KnyY5dpxXzgkIk6-yfGlV2eF8/view?usp=drive_link" target="_blank" rel="noopener">términos y condiciones</a>. Al avanzar con esta propuesta, ambas partes los aceptan.</p>
+      </div>
+
+      <div class="cot-garantia-badge">
+        <span class="cot-garantia-tag">Garantía 30-60-90</span>
+        <p class="cot-garantia-text">Estamos contigo hasta que la habilidad quede instalada.</p>
+      </div>
+
+      <div class="block block-notes-container">
+        <span class="block-eyebrow">Notas</span>
+      </div>
+      <div class="multi-box notas-box" data-field="Notas"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Viaja con Taty · DET-063</span>
+      </div>
+    </section>
+
+    <!-- 9 · Próximos pasos: qué hacer y a quién escribir (última slide) -->
+    <section class="slide s-next">
+      <span class="counter">08 / 08</span>
+      <p class="eyebrow">08 · Próximos pasos</p>
+      <h2>Tres pasos para arrancar.</h2>
+      <p class="sub">Esto es lo que sigue cuando Viaja con Taty confirme la propuesta.</p>
+
+      <div class="nx-steps">
+        <div class="nx-step acc-y">
+          <span class="nx-num">1</span>
+          <b>Revisión de propuesta</b>
+          <p>Revisamos la propuesta con las dos personas en una videollamada y resolvemos sus dudas.</p>
+        </div>
+        <div class="nx-step acc-o">
+          <span class="nx-num">2</span>
+          <b>Accesos y agenda</b>
+          <p>Coordinamos los accesos y la agenda para el levantamiento y la práctica.</p>
+        </div>
+        <div class="nx-step acc-w">
+          <span class="nx-num">3</span>
+          <b>Reunión de arranque</b>
+          <p>Reunión de unos 30 minutos para alinear el levantamiento y el calendario.</p>
+        </div>
+      </div>
+
+      <div class="nx-contact">
+        <div class="nx-card nx-ase">
+          <span class="nx-label">¿Dudas? Escribe a tu asesora comercial</span>
+          <b class="nx-name">Flavia Martínez</b>
+          <span class="nx-role">Asesora comercial</span>
+          <p class="nx-line"><a href="mailto:fmartinez@intezia.com">fmartinez@intezia.com</a></p>
+          <p class="nx-line">+58 414 5756615</p>
+        </div>
+        <div class="nx-card nx-emp">
+          <span class="nx-label">Intezia</span>
+          <p class="nx-line">Intezia C.A J-505657950</p>
+          <p class="nx-line"><a href="mailto:servicio@intezia.com">servicio@intezia.com</a></p>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Viaja con Taty · DET-063</span>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

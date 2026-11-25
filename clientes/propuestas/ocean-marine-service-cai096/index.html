@@ -1,0 +1,452 @@
+<!doctype html>
+<!--
+  Propuesta · Ocean Marine Service International LLC · Servicio de Habilidades (CAI-096)
+  División: Educación · Servicio: Habilidades (§4.1a) · Alianza: no
+  GENERADO por scripts/generar-habilidades-compacto.py (plantilla 3.0 (2026-10-08), formato habilidades) desde datos.json.
+  No editar a mano: editar datos.json y regenerar. Estilos propios del deck: overrides.css.
+  Fuente del insumo: Documento de requerimiento de OMS (alcance de recepción, Odoo, validación, proveedores, comparativos, catálogo y control) sin Ficha Comercial ni transcripción de la reunión
+
+  Formato compacto de 8 slides, en el orden de las preguntas del cliente (Ventas, 2026-10-07), sin semanas, sesiones
+  ni fechas (Keiber, 2026-10-08):
+    1 Portada · 2 Alcance · 3 Ruta · 4 Cómo trabajamos · 5 Entregables · 6 Retorno · 7 Inversión · 8 Próximos pasos
+  Marcadores de detección de AcroForms (agregar-campo-precio.py), por página: «Propuesta Económica» solo en la slide de
+  inversión; «Lo que se llevan» y «Entregables» solo en la de entregables; «Facilidad de pago» solo en la de pago.
+  Campos AcroForm: Programa, Notas, PrecioBase, Descuento, PrecioTotal (inversión) y Entregables, Acreditacion (entregables). Se reposicionan con scripts/customize-habilidades-compacto.py.
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Propuesta · Ocean Marine Service International LLC · Intezia Educación</title>
+  <link rel="stylesheet" href="../_base/styles.css">
+  <link rel="stylesheet" href="habilidades-compacto.css">
+  <link rel="stylesheet" href="overrides.css">
+</head>
+<body>
+
+  <main class="deck">
+
+    <!-- 1 · Portada: ¿cuál es mi problema? -->
+    <section class="slide s-cover">
+      <span class="counter">01 / 08</span>
+      <div class="logo-big">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia Educación">
+      </div>
+      <div class="body">
+        <p class="eyebrow">Propuesta de proyecto · Servicio de Habilidades</p>
+        <h1 style="font-size:46px">
+          Agente de IA que lleva el correo<br>
+          a una compra lista para aprobar<br>
+          <span class="hl">en OMS</span>
+        </h1>
+        <p class="lead">
+          Un <strong>agente de inteligencia artificial</strong> que lee los requerimientos que llegan por correo a <strong>Ocean Marine Service</strong>, consulta el historial de <strong>Odoo</strong> y presenta comparativos con recomendación para que Stores apruebe.
+        </p>
+        <div class="pain-strip">
+          <div class="pain-item">
+            <span class="pain-num">4</span>
+            <span class="pain-lbl">personas de Stores, incluido el Director de Logística, atienden las compras.</span>
+          </div>
+          <div class="pain-item">
+            <span class="pain-num">Correo</span>
+            <span class="pain-lbl">con adjuntos en Excel, PDF e imágenes, en inglés y en español.</span>
+          </div>
+          <div class="pain-item">
+            <span class="pain-num">Catálogo</span>
+            <span class="pain-lbl">con fichas incompletas: encontrar una ficha no valida el producto ni su compatibilidad.</span>
+          </div>
+        </div>
+      </div>
+      <div class="id-line">
+        <span class="codigo">Código: CAI-096</span>
+        <span class="cliente">OMS</span>
+      </div>
+    </section>
+
+    <!-- 2 · Alcance: qué vamos a hacer y para qué -->
+    <section class="slide s-scope roomy">
+      <span class="counter">02 / 08</span>
+      <p class="eyebrow">02 · Alcance</p>
+      <h2>Un agente que prepara la compra para aprobar.</h2>
+      <p class="sub">Dos formas de construirlo, <strong>en casa</strong> o <strong>en conjunto</strong>, de 50 horas cada una; se elige una.</p>
+
+      <div class="scope-panels one" style="--np:1">
+        <div class="scope-panel acc-y">
+          <div class="scope-head">
+            <span class="scope-tag">Agente de compras</span>
+            <span class="scope-total"><b>4</b> bloques</span>
+          </div>
+          <ul class="scope-rows">
+              <li><span class="area">A · Levantamiento con Stores</span><span class="para">Entender cómo llegan hoy los requerimientos y qué se revisa y aprueba.</span></li>
+              <li><span class="area">A · Agente construido en casa</span><span class="para">Intezia construye el agente sin el equipo: lee, valida, cotiza y compara.</span></li>
+              <li><span class="area">A · Testeo y adopción con Stores</span><span class="para">El agente ajustado a Stores, probado con casos reales y en uso.</span></li>
+              <li><span class="area">B · Construido junto a Stores</span><span class="para">El mismo agente, construido en vivo con el equipo de Stores y luego testeado.</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="scope-out">
+        <p class="scope-card-label">Fuera de este alcance</p>
+        <ul>
+          <li>Escribir en Odoo, crear productos, enviar correos, emitir órdenes o aceptar sustituciones: requieren autorización expresa.</li>
+          <li>Licencias y servicios de terceros (Odoo, correo, modelo de IA): los define y contrata OMS.</li>
+          <li>Operación y mantenimiento posteriores al proyecto: se cotizan aparte.</li>
+        </ul>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">OMS · CAI-096</span>
+      </div>
+    </section>
+
+    <!-- 3 · Ruta: qué pasa en cada fase -->
+    <section class="slide s-route">
+      <span class="counter">03 / 08</span>
+      <p class="eyebrow">03 · Ruta</p>
+      <h2>Dos opciones de 50 horas cada una.</h2>
+      <p class="sub">Se elige una. El calendario se acuerda en la reunión de arranque. El seguimiento a 30, 60 y 90 días corre desde el cierre del proyecto.</p>
+
+      <div class="route-grid n2" style="--cols:3; --rows:2; --rowh:130px">
+
+        <div class="rg-corner"></div>
+        <div class="rg-phase rg-ph-1">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Base</span><b class="rg-phase-n">Levantamiento</b></span>
+          <span class="rg-phase-name"><strong>Levantamiento con Stores</strong></span>
+        </div>
+        <div class="rg-phase rg-ph-2">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Agente</span><b class="rg-phase-n">Construcción</b></span>
+          <span class="rg-phase-name"><strong>Desarrollo en casa</strong></span>
+        </div>
+        <div class="rg-phase rg-ph-3 hi">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Uso</span><b class="rg-phase-n">Testeo y uso</b></span>
+          <span class="rg-phase-name"><strong>Adaptación y pruebas</strong></span>
+        </div>
+        <div class="rg-phase rg-fu">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Garantía</span></span>
+          <span class="rg-phase-date">30, 60 y 90 días</span>
+          <span class="rg-phase-txt">Seguimiento desde el cierre del proyecto</span>
+        </div>
+
+        <div class="rg-front acc-y">
+          <span class="rg-front-h">Opción A · En casa</span>
+          <span class="rg-front-row"><span class="rg-front-tool">Agente de compras</span><b class="rg-front-n">50 h</b></span>
+          <span class="rg-front-meta">25 asíncronas y 25 síncronas</span>
+        </div>
+        <div class="rg-cell"><span class="rg-h solo-h"><b>5 h</b></span><p>Levantamiento con Stores de cómo llegan los requerimientos y qué se aprueba.</p></div>
+        <div class="rg-cell"><span class="rg-h solo-h"><b>25 h</b></span><p>Intezia construye el agente sin el equipo, de forma asíncrona.</p></div>
+        <div class="rg-cell hi"><span class="rg-h solo-h"><b>20 h</b></span><p>Adaptación, pruebas con requerimientos reales y adopción por Stores.</p></div>
+        <div class="rg-front acc-y">
+          <span class="rg-front-h">Opción B · En conjunto</span>
+          <span class="rg-front-row"><span class="rg-front-tool">Agente de compras</span><b class="rg-front-n">50 h</b></span>
+          <span class="rg-front-meta">25 de construcción y 25 de adopción</span>
+        </div>
+        <div class="rg-cell"><span class="rg-h solo-h"><b>Incluido</b></span><p>Se levanta dentro de los primeros encuentros de construcción.</p></div>
+        <div class="rg-cell"><span class="rg-h solo-h"><b>25 h</b></span><p>Se construye el agente junto al equipo de Stores, en vivo.</p></div>
+        <div class="rg-cell hi"><span class="rg-h solo-h"><b>25 h</b></span><p>25 h más para testear con requerimientos reales y adoptar.</p></div>
+
+        <div class="rg-follow" style="grid-column:5; grid-row:2 / span 2">
+          <ul>
+            <li><b>30 días</b><span>Uso real del agente en Stores</span></li>
+            <li><b>60 días</b><span>Ajustes y equivalencias aprobadas</span></li>
+            <li><b>90 días</b><span>Tiempo recuperado contra la línea base</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="route-miles" style="grid-template-columns:repeat(5,1fr)">
+        <div class="mile"><span class="mile-d"></span><b>Arranque</b><p>Se acuerdan el calendario, los accesos y los primeros requerimientos reales.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Levantamiento</b><p>Stores explica cómo llegan y se aprueban hoy los requerimientos.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Agente construido</b><p>En casa (A) o junto a Stores (B), listo para probar.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Pruebas reales</b><p>Un requerimiento recorrido del correo a la compra lista para aprobar.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>30 · 60 · 90 días</b><p>Seguimiento: uso, ajustes y tiempo recuperado.</p></div>
+      </div>
+      <p class="route-note">Opción A: 25 horas asíncronas, en las que Intezia construye sin el equipo, y 25 síncronas con OMS. Opción B: 25 horas de construcción con el equipo y 25 más para testear y adoptar.</p>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">OMS · CAI-096</span>
+      </div>
+    </section>
+
+    <!-- 4 · Cómo trabajamos: pasos, por qué en ese orden, casos reales, práctica, datos y logística -->
+    <section class="slide s-method roomy">
+      <span class="counter">04 / 08</span>
+      <p class="eyebrow">04 · Cómo trabajamos</p>
+      <h2>Dos formas de construir el agente de Stores.</h2>
+      <p class="sub">Intezia lo construye en casa o junto al equipo de Stores; en ambas, se prueba con requerimientos reales.</p>
+
+      <ol class="mt-steps" style="--n:4">
+          <li><b>Levantamos</b><span>Con el equipo de Stores.</span></li>
+          <li><b>Construimos</b><span>En casa o en conjunto.</span></li>
+          <li><b>Probamos juntos</b><span>Con requerimientos reales.</span></li>
+          <li><b>Adoptamos</b><span>Stores lo usa y lo administra.</span></li>
+      </ol>
+      <div class="mt-strips">
+        <p class="mt-why"><b>Por qué en este orden</b> Primero se construye el agente, sin el equipo o con él; después se testea y se adopta con Stores, con sus requerimientos reales.</p>
+        <p class="mt-who"><b>Quién construye</b> <strong>Opción A:</strong> Intezia construye sin el equipo. <strong>Opción B:</strong> se construye junto al equipo de Stores.</p>
+      </div>
+
+      <div class="mt-info">
+        <div class="mt-card">
+          <p class="mt-card-label">Cómo funciona en la práctica</p>
+          <ul><li><b>Opción A · en casa.</b> Intezia construye el agente de forma asíncrona (25 h) y luego Stores lo testea y lo adopta en 25 h síncronas.</li><li><b>Opción B · en conjunto.</b> Se construye junto al equipo de Stores (25 h) y se dedican 25 h más a testear y adoptar.</li><li><b>Casos reales.</b> Productos con historial, fichas incompletas, nuevos y posibles equivalencias.</li></ul>
+        </div>
+        <div class="mt-card">
+          <p class="mt-card-label">Cómo cuidamos sus datos</p>
+          <p>Odoo se consulta por su API externa con un usuario de solo lectura que crea OMS: nada se modifica. Enviar correos, emitir órdenes o aceptar sustituciones requiere autorización expresa, y las acciones quedan registradas.</p>
+        </div>
+      </div>
+
+      <div class="mt-logi">
+        <div class="mt-tile"><span>Modalidad</span><b>A: construcción asíncrona y encuentros síncronos. B: todo síncrono. Remota o presencial, por acordar.</b></div>
+        <div class="mt-tile"><span>Participantes</span><b>El equipo de Stores y materiales técnicos de OMS: 4 personas, con el Director de Logística.</b></div>
+        <div class="mt-tile"><span>Ritmo de trabajo</span><b>Según la agenda de Stores, sin frenar su operación diaria.</b></div>
+        <div class="mt-tile"><span>Arranque</span><b>OMS confirma las fechas; la reunión de arranque acuerda el calendario y los accesos.</b></div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">OMS · CAI-096</span>
+      </div>
+    </section>
+
+    <!-- 5 · Entregables: ¿con qué me quedo? (catálogo + piezas transversales) -->
+    <section class="slide s-deliv con-imp">
+      <span class="counter">05 / 08</span>
+      <p class="eyebrow">05 · Entregables</p>
+      <div class="deliv-head">
+        <h2>Todo lo que OMS recibe.</h2>
+        <p class="deliv-sub"><span class="nw">Lo que se llevan</span>: <strong>un agente listo para aprobar compras</strong> y la documentación para operarlo.</p>
+      </div>
+
+      <div class="deliv-impact">
+        <span class="di-label">Impacto</span>
+        <p>Cada requerimiento llega a la aprobación con sus <strong>productos validados</strong>, sus ofertas comparadas sobre una misma base y su total hasta el destino. Compras más rápidas, con trazabilidad y control, y sin que nada se compre sin aprobación.</p>
+      </div>
+
+      <div class="deliv-carriles" style="--ncols:3">
+        <span class="dc acc-y" style="grid-column: span 3">Agente de compras</span>
+      </div>
+
+      <div class="deliv-cols" style="--ncols:3">
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">A · Levantamiento con Stores</p>
+            <ul>
+              <li>Levantamiento de requerimientos y reglas<ul class="inc"><li>Cómo llegan hoy los requerimientos y qué se aprueba</li><li>Reglas de aprobación y quién autoriza cada compra</li></ul></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">A · Agente construido en casa</p>
+            <ul>
+              <li>Lectura de correos y adjuntos<ul class="inc"><li>Correo y adjuntos, en ambos idiomas</li><li>Barco, puerto, fecha, artículos, cantidades y códigos IMPA</li><li>Consultas por los datos que faltan, sin inventar especificaciones</li></ul></li>
+              <li>Conector de solo lectura a Odoo<ul class="inc"><li>Consulta por la API externa de Odoo, solo lectura</li><li>Productos, proveedores, existencias y reservas</li><li>Cotizaciones, órdenes, recepciones y facturas</li></ul></li>
+              <li>Clasificación de productos<ul class="inc"><li>Historial comprobable, registrado sin validar, posible equivalente o nuevo</li><li>Muestra los registros de Odoo que respaldan cada clase</li></ul></li>
+              <li>Solicitudes de cotización a proveedores</li>
+              <li>Comparativo y compra recomendada<ul class="inc"><li>Ofertas lado a lado y total hasta el destino</li><li>La más económica, la más rápida y la recomendada, con su criterio</li><li>En pantalla y en Excel, con vínculos a las cotizaciones</li></ul></li>
+              <li>Fichas nuevas y base de conocimiento</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">A · Testeo y adopción con Stores</p>
+            <ul>
+              <li>Adaptación del agente a Stores</li>
+              <li>Pruebas con requerimientos reales</li>
+              <li>Adopción, documentación y accesos</li>
+            </ul>
+          </div>
+          <div class="da">
+            <p class="da-name">B · Construido junto a Stores</p>
+            <ul>
+              <li>Levantamiento dentro de la construcción</li>
+              <li>Construcción del agente con Stores<ul class="inc"><li>Los mismos módulos del agente, construidos en vivo con Stores</li><li>Levantamiento dentro de los primeros encuentros</li></ul></li>
+              <li>Testeo y adopción con Stores<ul class="inc"><li>Pruebas con requerimientos reales y adaptación</li><li>Adopción, documentación y accesos</li></ul></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="deliv-band">
+        <div class="db-card db-1">
+          <span class="db-label">Para todas las áreas</span>
+        </div>
+        <div class="db-card db-2">
+          <span class="db-label">Valor inmediato</span>
+        </div>
+      </div>
+      <!-- Cajas multiline editables (vacías en HTML: el contenido vive dentro del AcroForm /V). -->
+      <div class="multi-box db-box db-box-1" data-field="Entregables"></div>
+      <div class="multi-box db-box db-box-2" data-field="Acreditacion"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">OMS · CAI-096</span>
+      </div>
+    </section>
+
+    <!-- 6 · Retorno: ¿qué gano? (método de cálculo). Sin estudios ni citas externas. -->
+    <section class="slide s-roi">
+      <span class="counter">06 / 08</span>
+      <p class="eyebrow">06 · Retorno</p>
+      <h2>Retorno esperado: tiempo y dinero.</h2>
+      <p class="sub">Se calcula con los datos de Stores, se confirma con la línea base inicial y se mide a 30, 60 y 90 días.</p>
+
+      <div class="roi-body">
+        <div class="roi-panel">
+          <p class="roi-panel-title">Cómo se calcula, por requerimiento</p>
+          <ol class="roi-steps">
+            <li><b>Requerimientos por mes</b><span>Cuántos requerimientos de compra procesa hoy Stores.</span></li>
+            <li><b>Tiempo actual</b><span>Lo que toma cada uno hasta quedar listo para aprobar: es la <strong>línea base</strong>.</span></li>
+            <li><b>Tiempo con el agente</b><span>Lo que toma el mismo requerimiento con el agente en uso.</span></li>
+            <li><b>Horas recuperadas</b><span>Requerimientos por la diferencia entre el tiempo actual y el tiempo con el agente.</span></li>
+          </ol>
+        </div>
+
+        <div class="roi-right">
+          <p class="roi-right-title">Calendario de garantía y cálculo del retorno</p>
+          <div class="roi-card">
+            <b>30 días</b>
+            <p>El agente en uso real con requerimientos de Stores.</p>
+          </div>
+          <div class="roi-card">
+            <b>60 días</b>
+            <p>Ajustes, equivalencias aprobadas y horas recuperadas medidas.</p>
+          </div>
+          <div class="roi-card">
+            <b>90 días</b>
+            <p>Medición del tiempo recuperado frente a la línea base.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="roi-dest-wrap">
+        <p class="roi-dest-title">Hacia dónde va el proyecto</p>
+        <div class="roi-dest">
+          <div class="rd-item"><b>Compras con control</b><p>Cada compra queda <strong>trazable</strong>: qué se pidió, qué se validó y por qué se recomendó.</p></div>
+          <div class="rd-item"><b>Catálogo que mejora</b><p>Las equivalencias y fichas aprobadas <strong>enriquecen</strong> la base de conocimiento de OMS.</p></div>
+          <div class="rd-item"><b>Siguiente fase</b><p>Con el agente probado, OMS decide si autoriza más acciones, como escribir en Odoo.</p></div>
+        </div>
+      </div>
+
+      <div class="roi-hook"><p>A los 90 días del cierre, Stores contará con el tiempo recuperado por requerimiento medido contra su línea base.</p></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">OMS · CAI-096</span>
+      </div>
+    </section>
+
+    <!-- 7 · Inversión (hoja de cotización estándar; antepenúltima slide) -->
+    <section class="slide s-price">
+      <span class="counter">07 / 08</span>
+      <h2 class="title">Inversión del proyecto.</h2>
+      <p class="price-intro">Propuesta Económica · Servicio de Habilidades</p>
+
+      <div class="block">
+        <span class="block-eyebrow">Duración</span>
+        <p class="block-value"><strong>50 horas</strong>, con la opción que elija OMS: <strong>A</strong> (25 asíncronas y 25 síncronas) o <strong>B</strong> (25 de construcción y 25 de testeo y adopción). Seguimiento a 30, 60 y 90 días.</p>
+      </div>
+
+      <div class="block block-programa">
+        <span class="block-eyebrow">Programa</span>
+      </div>
+      <div class="multi-box programa-box" data-field="Programa"></div>
+
+      <div class="block block-cotizacion">
+        <span class="block-eyebrow">Cotización</span>
+      </div>
+
+      <span class="cot-label cot-label-base">Propuesta + Inversión</span>
+      <span class="cot-sign cot-sign-base">REF</span>
+      <div class="cot-frame base-frame"></div>
+
+      <span class="cot-label cot-label-discount">Descuento</span>
+      <span class="cot-sign-minus">&minus;REF</span>
+      <div class="cot-frame discount-frame"></div>
+      <span class="cot-urgent-note">Descuento válido por 15 días</span>
+
+      <span class="cot-label cot-label-total">TOTAL</span>
+      <span class="cot-sign cot-sign-total">REF</span>
+      <div class="cot-frame total-frame"></div>
+
+      <p class="cot-moneda">Pago en Divisas o Bolívares a Tasa BCV del Euro</p>
+      <p class="cot-validity">Cotización válida por 30 días.</p>
+      <div class="cot-terms-box">
+        <span class="cot-terms-label">Importante</span>
+        <p class="cot-terms-text">Este servicio se presta bajo nuestros <a href="https://drive.google.com/file/d/1PA-ZSt4KnyY5dpxXzgkIk6-yfGlV2eF8/view?usp=drive_link" target="_blank" rel="noopener">términos y condiciones</a>. Al avanzar con esta propuesta, ambas partes los aceptan.</p>
+      </div>
+
+      <div class="cot-garantia-badge">
+        <span class="cot-garantia-tag">Garantía 30-60-90</span>
+        <p class="cot-garantia-text">Acompañamos a Stores hasta que el agente quede en uso.</p>
+      </div>
+
+      <div class="block block-notes-container">
+        <span class="block-eyebrow">Notas</span>
+      </div>
+      <div class="multi-box notas-box" data-field="Notas"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">OMS · CAI-096</span>
+      </div>
+    </section>
+
+    <!-- 9 · Próximos pasos: qué hacer y a quién escribir (última slide) -->
+    <section class="slide s-next">
+      <span class="counter">08 / 08</span>
+      <p class="eyebrow">08 · Próximos pasos</p>
+      <h2>Tres pasos para arrancar.</h2>
+      <p class="sub">Esto es lo que sigue cuando OMS confirme la propuesta.</p>
+
+      <div class="nx-steps">
+        <div class="nx-step acc-y">
+          <span class="nx-num">1</span>
+          <b>Revisión conjunta</b>
+          <p>Presentamos las dos opciones en vivo, aclaramos dudas y elegimos con Stores la que mejor encaje.</p>
+        </div>
+        <div class="nx-step acc-o">
+          <span class="nx-num">2</span>
+          <b>Usuario y clave</b>
+          <p>OMS crea el usuario de solo lectura de Odoo y habilita la clave de API del modelo de IA para el desarrollo.</p>
+        </div>
+        <div class="nx-step acc-w">
+          <span class="nx-num">3</span>
+          <b>Reunión de arranque</b>
+          <p>Una reunión de ~30 min para acordar el calendario y elegir los primeros requerimientos.</p>
+        </div>
+      </div>
+
+      <div class="nx-contact">
+        <div class="nx-card nx-ase">
+          <span class="nx-label">¿Dudas? Escribe a tu asesora comercial</span>
+          <b class="nx-name">Flavia Martínez</b>
+          <span class="nx-role">Asesora comercial</span>
+          <p class="nx-line"><a href="mailto:fmartinez@intezia.com">fmartinez@intezia.com</a></p>
+          <p class="nx-line">+58 414 5756615</p>
+        </div>
+        <div class="nx-card nx-emp">
+          <span class="nx-label">Intezia</span>
+          <p class="nx-line">Intezia C.A J-505657950</p>
+          <p class="nx-line"><a href="mailto:servicio@intezia.com">servicio@intezia.com</a></p>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">OMS · CAI-096</span>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

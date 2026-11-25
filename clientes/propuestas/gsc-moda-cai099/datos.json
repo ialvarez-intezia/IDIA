@@ -1,0 +1,443 @@
+{
+ "version": 3,
+ "cliente": {
+  "nombre": "GSC Moda",
+  "slug": "gsc-moda-cai099",
+  "codigo": "CAI-099",
+  "nombre_pie": "GSC Moda"
+ },
+ "division": "educacion",
+ "alianza": false,
+ "sin_horas_trabajo": true,
+ "omitir": [
+  "pago"
+ ],
+ "meta_servicio": "habilidades",
+ "meta_tipo": "Habilidades · 1 Cerebro Digital para la dueña (inventario, compras y finanzas, con sus criterios de atención) · 4 entregables de 2 h = 8 h con ella · Claude · seguimiento 30-60-90 · sin facilidad de pago · formato compacto v3",
+ "vocabulario": {
+  "solucion": [
+   "entregable",
+   "entregables"
+  ],
+  "area": [
+   "Cerebro Digital",
+   "Cerebros Digitales"
+  ]
+ },
+ "eje": "Construcción guiada de un Cerebro Digital (asistente personal) en Claude para la dueña de GSC Moda: sus criterios de atención, el control de inventario, las compras a proveedores con histórico y el paperwork contable y el control financiero, con seguimiento a 30, 60 y 90 días",
+ "origen": "Ficha de Levantamiento de GSC Moda (Verónica Rubio, 11/11/2026; Carmen Carrero, dueña y CEO, quien decide) y transcripción de la reunión del 11/11/2026 (parcial: llega hasta el minuto 49), más instrucciones de Ivana del 16/11/2026: Cerebro Digital aparte de la CAI-098, de 8 h, herramienta Claude, impacto con enfoque operación, nombrando los 4 procesos de la ficha",
+ "fuente_insumo": "Ficha de Levantamiento (11/11/2026) y transcripción de la reunión de Verónica Rubio con GSC Moda (11/11/2026)",
+ "siglas_ok": [
+  "IA"
+ ],
+ "portada": {
+  "titulo_lineas": [
+   "Un Cerebro Digital con tu criterio",
+   "en inventario, compras y finanzas"
+  ],
+  "titulo_destacado": "de {cliente_corto}",
+  "lead": "Este proyecto acompaña a la dueña de {cliente_corto} a construir su **Cerebro Digital**: un asistente en **Claude** que guarda su criterio y lo aplica al inventario, a las compras y a las finanzas.",
+  "hechos": [
+   {
+    "num": "Memoria",
+    "texto": "es la base de cada compra: sin histórico de inventario ni proyección de la demanda.",
+    "resuelto_por": [
+     "CD-3"
+    ]
+   },
+   {
+    "num": "Cero",
+    "texto": "control de lo que llega: no se verifica la cantidad recibida ni se anotan las mermas.",
+    "resuelto_por": [
+     "CD-2"
+    ]
+   },
+   {
+    "num": "Una",
+    "texto": "sola persona concentra la procura, el mercadeo, las finanzas y la decisión.",
+    "resuelto_por": [
+     "CD-1",
+     "CD-3",
+     "CD-4"
+    ]
+   },
+   {
+    "num": "Excel",
+    "texto": "es donde vive hoy el control financiero, aparte de la contabilidad del contador externo.",
+    "resuelto_por": [
+     "CD-4"
+    ]
+   }
+  ]
+ },
+ "carriles": [
+  {
+   "id": "claude",
+   "nombre": "Claude",
+   "nombre_corto": "Claude",
+   "color": "amarillo"
+  }
+ ],
+ "areas": [
+  {
+   "id": "CD",
+   "nombre": "Cerebro Digital de la dueña",
+   "carril": "claude",
+   "frente": "A",
+   "para_que": "Decidir inventario, compras y finanzas con datos ordenados y el criterio de la dueña",
+   "composicion": "8 horas con la dueña, guiadas por Intezia.",
+   "soluciones": [
+    {
+     "id": "CD-1",
+     "entregable": "Claude explicado y criterios de atención escritos",
+     "h": 2,
+     "fase": "F1",
+     "incluye": [
+      "Qué es Claude y cómo se usa, en palabras simples",
+      "Cómo se responde a clientes y qué nunca se dice",
+      "Las tareas del cerebro, con ejemplos de su día"
+     ],
+     "detalle": "Referencia interna (2 h, con la dueña). Qué es Claude y cómo se usa, sin términos técnicos: conversar, Projects y Skills y para qué sirve cada pieza. Proceso 1 de la ficha, atención y respuesta a clientes: se escriben los criterios con los que la dueña supervisa y corrige las respuestas, para que el cerebro los conozca. Se delimitan las tareas que se trabajarán y se define el propósito del cerebro. Entrega el propósito, los criterios y los primeros pedidos."
+    },
+    {
+     "id": "CD-2",
+     "entregable": "Inventario con entradas y salidas verificadas",
+     "h": 2,
+     "fase": "F2",
+     "incluye": [
+      "Cada llegada, con su cantidad contada y registrada",
+      "Lo que se vende, descontado de lo que hay",
+      "Productos que no rotan y mermas a la vista"
+     ],
+     "detalle": "Referencia interna (2 h, con la dueña). Proceso 2 de la ficha, control de inventario: hoy se opera por flujo de venta, sin verificar lo recibido. Se define con Claude cómo registrar cada llegada con su cantidad verificada, cómo descontar lo que se vende y cómo ver los productos que no rotan y las mermas (por ejemplo, un lote dañado). Se prueba con una llegada de mercancía real. Entrega el control de inventario en uso."
+    },
+    {
+     "id": "CD-3",
+     "entregable": "Compras a proveedores con histórico",
+     "h": 2,
+     "fase": "F3",
+     "incluye": [
+      "Un pedido sugerido por proveedor, con lo vendido",
+      "La temporada que viene, a la vista al comprar",
+      "Lo que avisan los vendedores, en una sola lista"
+     ],
+     "detalle": "Referencia interna (2 h, con la dueña). Proceso 3 de la ficha, procura y compras a proveedores (China, Colombia y EE. UU.): hoy la decisión se toma de memoria. Con el histórico de ventas y de inventario que va quedando, Claude propone el pedido por proveedor y ordena lo que los vendedores avisan que falta. La propuesta de compra mejora a medida que crece el histórico. Entrega una Skill de pedido sugerido en uso."
+    },
+    {
+     "id": "CD-4",
+     "entregable": "Paperwork contable y control financiero",
+     "h": 2,
+     "fase": "F3",
+     "incluye": [
+      "Los documentos del mes, ordenados para el contador",
+      "El control financiero que hoy vive en Excel",
+      "Un resumen para decidir, cada vez que se pide"
+     ],
+     "detalle": "Referencia interna (2 h, con la dueña). Proceso 4 de la ficha, preparación del paperwork contable y control financiero: la parte fiscal la lleva el contador externo y la financiera, la dueña en una hoja de Excel. Con Claude se ordena el paperwork mensual que va al contador y se arma el control financiero con un resumen para decidir. Trabaja con lo que la dueña decide compartir. Entrega una Skill en uso y sus criterios de uso seguro."
+    }
+   ]
+  }
+ ],
+ "alcance": {
+  "compacto": false,
+  "titulo": "Un Cerebro Digital para la dueña.",
+  "subtitulo": "{cliente_corto} construye su **asistente personal en Claude**: inventario, compras y finanzas, en un solo lugar.",
+  "fuera_alcance": [
+   "Agentes de IA: no se desarrollan en esta etapa; el cerebro responde cuando se le pide.",
+   "Conexión automática con Como, Mercasys o el banco: requiere integraciones aparte y se evalúa más adelante.",
+   "Tareas que corren solas, sin pedirlas: son la etapa que sigue.",
+   "Las licencias de Claude, que van aparte (detalle en la inversión)."
+  ],
+  "etiqueta_destacados": "Otras tareas que se pueden explorar al empezar",
+  "destacados": [
+   {
+    "titulo": "Contenido y pauta",
+    "texto": "Creativos para Instagram y Google."
+   },
+   {
+    "titulo": "Despachos nacionales",
+    "texto": "Su coordinación diaria."
+   },
+   {
+    "titulo": "Conexión con Como",
+    "texto": "A evaluar, sin compromiso previo."
+   },
+   {
+    "titulo": "Conexión con Mercasys",
+    "texto": "A evaluar, sin compromiso previo."
+   }
+  ]
+ },
+ "metodo": {
+  "titulo": "Así trabajamos el proyecto.",
+  "subtitulo": "Guiados por Intezia, sobre su inventario, sus compras y sus cuentas reales, hasta que usa su cerebro por sí sola.",
+  "quien_construye": "La dueña de {cliente_corto} construye su cerebro; **Intezia guía** cada paso, con su inventario, sus compras y sus cuentas reales.",
+  "pasos": [
+   {
+    "titulo": "Delimitamos",
+    "texto": "Las tareas del cerebro, elegidas con casos de su propio día."
+   },
+   {
+    "titulo": "Construimos",
+    "texto": "En vivo, sobre una llegada, una compra y un cierre reales."
+   },
+   {
+    "titulo": "Adoptamos",
+    "texto": "Usa su cerebro en cada decisión, sin ayuda."
+   },
+   {
+    "titulo": "Medimos",
+    "texto": "El tiempo recuperado y los errores, a 30, 60 y 90 días."
+   }
+  ],
+  "por_que_orden": "Primero se entiende Claude y se escriben los criterios; después se ordena el inventario, que es la base del histórico; al final se construyen las compras y las finanzas sobre ese orden.",
+  "practica": [
+   {
+    "titulo": "Un cerebro, un criterio",
+    "texto": "Guarda el criterio que hoy vive solo en la cabeza de la dueña, para que no dependa de su memoria."
+   },
+   {
+    "titulo": "Sin términos técnicos",
+    "texto": "Claude se explica desde lo básico: se le pide lo que se necesita en palabras simples."
+   },
+   {
+    "titulo": "Lo que hace y lo que no",
+    "texto": "El cerebro responde cuando se le pide; no corre solo ni se conecta a Como, Mercasys o al banco."
+   }
+  ],
+  "datos": "El inventario, las compras y las finanzas son información confidencial: solo se carga en el cerebro lo que {cliente_corto} decide compartir, y no se suben claves ni datos bancarios. Los criterios de uso seguro se acuerdan al empezar."
+ },
+ "fases": [
+  {
+   "id": "F1",
+   "titulo": "Base",
+   "descripcion": "Claude y criterios"
+  },
+  {
+   "id": "F2",
+   "titulo": "Stock",
+   "descripcion": "inventario ordenado"
+  },
+  {
+   "id": "F3",
+   "titulo": "Uso",
+   "descripcion": "compras y finanzas",
+   "destacada": true
+  }
+ ],
+ "frentes": [
+  {
+   "id": "A",
+   "carril": "claude",
+   "nombre": "El Cerebro Digital de la dueña",
+   "celdas": {
+    "F1": "Claude explicado y los criterios de atención escritos.",
+    "F2": "Inventario con entradas y salidas verificadas.",
+    "F3": "Compras con histórico y paperwork contable y control financiero."
+   }
+  }
+ ],
+ "ruta": {
+  "titulo": "Un cerebro en uso, en tres fases.",
+  "subtitulo": "El calendario se acuerda en la reunión de arranque. El **seguimiento** a 30, 60 y 90 días corre desde el cierre del proyecto.",
+  "nota": "Son **8 horas** con la dueña de {cliente_corto}: 2 de base, 2 de inventario, 2 de compras y 2 de finanzas. La reunión de arranque (30 min) va aparte.",
+  "hitos": [
+   {
+    "titulo": "Arranque · aparte",
+    "texto": "30 min para acordar el calendario y elegir una llegada, una compra y un cierre reales."
+   },
+   {
+    "titulo": "Base",
+    "texto": "Claude explicado y los criterios de atención escritos."
+   },
+   {
+    "titulo": "Inventario",
+    "texto": "Entradas y salidas verificadas; mermas y productos sin rotación a la vista."
+   },
+   {
+    "titulo": "Compras y finanzas",
+    "texto": "Pedido sugerido por proveedor, y paperwork contable y control financiero."
+   },
+   {
+    "titulo": "30 · 60 · 90 días",
+    "texto": "Seguimiento: uso del cerebro, ajustes, tiempo recuperado y errores."
+   }
+  ],
+  "siguiente_etapa": {
+   "titulo": "Etapa siguiente",
+   "texto": "Conexiones con Como y Mercasys y tareas que corren solas, a evaluar con los resultados."
+  }
+ },
+ "logistica": {
+  "modalidad": "Presencial o virtual, a acordar en la reunión de arranque.",
+  "participantes": "La dueña de {cliente_corto}, que decide y concentra hoy estos procesos.",
+  "arranque": "El proyecto arranca en enero; una reunión de arranque de 30 min, aparte, acuerda el calendario."
+ },
+ "seguimiento": {
+  "rango": "30, 60 y 90 días",
+  "texto": "Seguimiento desde el cierre del proyecto",
+  "items": [
+   {
+    "dias": "30 días",
+    "texto": "Uso del cerebro en cada decisión"
+   },
+   {
+    "dias": "60 días",
+    "texto": "Ajustes y nuevas construcciones"
+   },
+   {
+    "dias": "90 días",
+    "texto": "Tiempo recuperado y errores"
+   }
+  ]
+ },
+ "entregables": {
+  "titulo": "Lo que recibe {cliente_corto}.",
+  "subtitulo": "Lo que se llevan: **un cerebro en uso** para el inventario, las compras y las finanzas, más el seguimiento a {rango_seguimiento}.",
+  "etiqueta_transversales": "Para todo el proyecto",
+  "transversales": [
+   "Línea base del tiempo que toman hoy compras y finanzas.",
+   "Criterios de uso seguro de la información.",
+   "Seguimiento a 30, 60 y 90 días con medición."
+  ],
+  "etiqueta_valor": "Valor inmediato",
+  "valor_inmediato": [
+   "Con la base: Claude explicado y los criterios escritos.",
+   "Con el inventario: lo que llega, verificado y registrado.",
+   "Al cerrar: compras y finanzas con el cerebro."
+  ],
+  "columnas_por_carril": [
+   1
+  ],
+  "impacto": {
+   "enfoque": "operacion",
+   "texto": "Las decisiones de **compra, inventario y finanzas** dejan de vivir solo en la memoria de la dueña: el cerebro las trabaja con su criterio y con datos ordenados, para decidir con más control."
+  }
+ },
+ "retorno": {
+  "modo": "metodo",
+  "posiciones": false,
+  "titulo": "Retorno esperado: tiempo recuperado, medido.",
+  "subtitulo": "Se mide contra la línea base que la dueña deja al empezar y se sigue a 30, 60 y 90 días.",
+  "etiqueta_pasos": "Cómo se calcula",
+  "pasos": [
+   {
+    "titulo": "Punto de partida",
+    "texto": "Cuánto toman hoy las compras, el inventario y el cierre financiero. Es la **línea base**."
+   },
+   {
+    "titulo": "Tiempo con el cerebro",
+    "texto": "Lo que toman las mismas tareas con el cerebro en uso."
+   },
+   {
+    "titulo": "Horas recuperadas",
+    "texto": "Diferencia entre ambos tiempos: una estimación referencial, sin compromiso de resultado."
+   },
+   {
+    "titulo": "Faltantes y excesos",
+    "texto": "Cuántos quiebres de stock y sobrecompras hay hoy y cuántos después."
+   },
+   {
+    "titulo": "Gasto de operar",
+    "texto": "Las licencias de Claude, contra el tiempo recuperado."
+   }
+  ],
+  "etiqueta_metas": "Calendario de seguimiento y medición",
+  "metas": [
+   {
+    "dias": "30 días",
+    "texto": "El cerebro en uso real en las decisiones y la línea base validada con la dueña."
+   },
+   {
+    "dias": "60 días",
+    "texto": "Ajustes del cerebro y horas recuperadas medidas contra la línea base."
+   },
+   {
+    "dias": "90 días",
+    "texto": "Medición del tiempo recuperado y de su valor, y de los faltantes y excesos."
+   }
+  ],
+  "etiqueta_destino": "Hacia dónde va el proyecto",
+  "destino": [
+   {
+    "rotulo": "Compras con histórico",
+    "texto": "Cada compra se apoya en lo vendido, **no solo en la memoria**."
+   },
+   {
+    "rotulo": "Inventario a la vista",
+    "texto": "Lo que entra y lo que sale queda **registrado y verificado**."
+   },
+   {
+    "rotulo": "Más tareas al cerebro",
+    "texto": "Con el resultado medido, {cliente_corto} decide qué más lleva a su cerebro."
+   }
+  ],
+  "gancho": "A los 90 días del cierre, {cliente_corto} contará con el tiempo recuperado y los faltantes evitados, medidos contra su línea base."
+ },
+ "inversion": {
+  "duracion": "**{h_total} horas con la dueña** de {cliente_corto}, en cuatro entregables, y seguimiento a {rango_seguimiento}.",
+  "licencias": {
+   "titulo": "Licenciamiento · aparte de esta inversión",
+   "tarjetas": [
+    {
+     "nombre": "Claude Team · puesto estándar",
+     "color": "amarillo",
+     "texto": "**USD 25** por persona al mes (USD 20 pagando por año), con mínimo 2 puestos. Cada persona que consulte el cerebro suma un puesto; el número se define al empezar."
+    }
+   ],
+   "nota": "Valores de lista de Claude Team verificados el 28/10/2026; pueden variar y los confirma {cliente_corto} con el proveedor. No son un valor de Intezia."
+  },
+  "programa": [
+   "Construcción de 1 Cerebro Digital con Claude para {cliente_corto} ({codigo}).",
+   "Cuatro entregables de 2 horas guiados por Intezia: base, inventario, compras y finanzas.",
+   "{h_total} horas con la dueña, más 30 min de reunión de arranque aparte. Licencias aparte."
+  ],
+  "notas": [
+   "Las licencias van aparte: Claude Team exige mínimo 2 puestos.",
+   "Garantía 30-60-90: seguimiento a 30, 60 y 90 días desde el cierre del proyecto, con el cerebro en uso."
+  ],
+  "garantia_texto": "Estamos contigo hasta que el cerebro quede en uso."
+ },
+ "proximos_pasos": {
+  "subtitulo": "Esto es lo que sigue cuando {cliente_corto} confirme la propuesta.",
+  "asesora": {
+   "nombre": "Verónica Rubio",
+   "cargo": "Asesora comercial",
+   "correo": "vrubio01@intezia.com",
+   "telefono": "+58 422 3355505"
+  },
+  "pasos": [
+   {
+    "titulo": "Cuenta y arranque",
+    "texto": "Se deja lista la cuenta de Claude Team (mínimo 2 puestos) y se confirma el arranque en enero."
+   },
+   {
+    "titulo": "Casos reales",
+    "texto": "La dueña elige una llegada de mercancía, una compra y un cierre reales, sin claves ni datos bancarios."
+   },
+   {
+    "titulo": "Reunión de arranque",
+    "texto": "Media hora para acordar el calendario de las 8 horas y elegir los casos reales."
+   }
+  ]
+ },
+ "supuestos": [
+  "**Ajuste de Ivana (16/11/2026):** la reunión de arranque pasa de 1 h a 30 min (también en la CAI-098, que además sube a 26 h).",
+  "Pedido de Ivana (16/11/2026): Cerebro Digital para la dueña de GSC Moda, aparte de la CAI-098, con Verónica Rubio como asesora. Respuestas de Ivana: Educación y sin alianza; impacto con enfoque operación; herramienta Claude; hoja sin partes; 8 h; nombrar en el cerebro los 4 procesos de la ficha; mencionar lo que se propuso (procura con histórico, inventario, contenido de Instagram y Google, finanzas en Excel) y el arranque en enero, y solo eso.",
+  "Los 4 procesos de la ficha están nombrados como entregables: 1 atención y respuesta a clientes (criterios escritos, en CD-1, con la base de Claude), 2 control de inventario (CD-2), 3 procura y compras a proveedores (CD-3) y 4 paperwork contable y control financiero (CD-4). 8 h = 4 entregables de 2 h; el reparto es mío, por confirmar con Ivana. El proceso 1 se solapa con la CAI-098 (AT-1 a AT-4), que lo trabaja con el equipo: aquí solo se escribe el criterio con el que la dueña supervisa.",
+  "Contenido de Instagram y Google, despachos nacionales y la conexión con Como y Mercasys van en «Otras tareas que se pueden explorar al empezar», sin horas ni compromiso. Mercadeo y contenido no es uno de los 4 procesos de la ficha.",
+  "Sin agente de IA (se le aclaró a la cliente en la reunión y lo recibió bien) y sin las palabras «agente» ni «bot» más que en el límite de alcance. Sin referencias a precios internos del Cerebro Digital («a partir de 2.300»): son para la asesora, no para el deck.",
+  "Contexto interno que no va en el deck: Carmen es contadora pública y consultora; rechaza los bots genéricos; sabe qué debería hacer y no lo hace por carga operativa («el único argumento que le mueve la aguja es ejecución acompañada»); su ancho de banda es el riesgo principal, porque cada entregable depende de su presencia. Se le mostró el Cerebro Digital en vivo (cotización y video) y reaccionó con «suena todo soñado». Su proveedor externo de IT (El Linker) podría ser el gancho de expansión: no se menciona.",
+  "Arranque: solo se dice «arranca en enero» (instrucción de Ivana). El 10 de enero, el posible adelanto en diciembre y la disponibilidad después de las 6 p.m. o en sábados quedan en el brief. Sin semanas, sesiones ni fechas (§4.23).",
+  "Claude no está soportado oficialmente en Venezuela: el deck no promete acceso ni VPN. Licencias: valor de lista de Claude Team verificado el 28/10/2026 (CAI-070), no reverificado el 16/11/2026. Mínimo 2 puestos: para un cerebro personal, el segundo puesto puede ser de alguien de confianza; confirmar con Ivana.",
+  "Sin facilidad de pago (omitida), como en las últimas propuestas; hoja de inversión única con campos vacíos para ventas, sin partes. Seguimiento 30-60-90 estándar."
+ ],
+ "pendientes": [
+  "Confirmar con Ivana el reparto de 2 h por entregable y cómo se solapa el proceso 1 (atención) con la CAI-098.",
+  "Reverificar el valor de lista de Claude Team (USD 25 o USD 20 anual, mínimo 2 puestos; verificado el 28/10/2026) y quién ocupa el segundo puesto.",
+  "Confirmar la modalidad (presencial o virtual); Carmen no definió horario ni duración, y su disponibilidad real empieza en enero.",
+  "Transcripción incompleta: llega al minuto 49. Revisar la parte final por si trae algo que cambie el alcance.",
+  "Decidir si se agrega la hoja de facilidad de pago; valor, descuento y total: campos vacíos para ventas.",
+  "Verónica quedó en enviar por WhatsApp ejemplos de videos hechos con IA; la propuesta llega por correo antes de agendar la reunión de presentación."
+ ]
+}

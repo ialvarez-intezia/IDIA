@@ -1,0 +1,501 @@
+{
+ "version": 3,
+ "cliente": {
+  "nombre": "Superfina",
+  "slug": "superfina-cai092",
+  "codigo": "CAI-092",
+  "nombre_pie": "Superfina"
+ },
+ "division": "educacion",
+ "alianza": false,
+ "sin_horas_trabajo": true,
+ "vocabulario": {
+  "area": [
+   "parte del proceso",
+   "partes del proceso"
+  ],
+  "solucion": [
+   "entregable",
+   "entregables"
+  ]
+ },
+ "omitir": [
+  "pago"
+ ],
+ "siglas_ok": [
+  "IA",
+  "TI"
+ ],
+ "meta_tipo": "Capacitación In-Company · Servicio de Habilidades · Compras automatizadas con Claude sobre Estelar y Vilches: 6 entregables, 42 h (construcción 26 h en línea, testeo 8 h y adopción 8 h presenciales) · seguimiento 30-60-90 · sin facilidad de pago · compacto v3",
+ "eje": "Automatizar por completo la compra de Superfina, un solo departamento trabajado a fondo: de los sugeridos con ventas reales (Vilches y Estelar) a la orden de compra generada por Claude, cargada en Estelar con validación humana y enviada por el WhatsApp de compras a los proveedores, como solución lista que el equipo opera",
+ "origen": "Especificación de Ivana del 09/11/2026 (qué pide el cliente, flujo, alcance, modelo de entrega, distribución de 42 horas, requisitos, riesgos, inversión y hoja de ruta) para la propuesta CAI-092 de Superfina, con Verónica Rubio como asesora. Sin ficha ni transcripción en el repositorio",
+ "fuente_insumo": "Especificación de la propuesta (Ivana, 09/11/2026) y tabla de distribución de horas",
+ "portada": {
+  "titulo_lineas": [
+   "Compras automatizadas con IA",
+   "sobre Estelar y Vilches"
+  ],
+  "titulo_destacado": "para {cliente_corto}",
+  "lead": "Este proyecto **automatiza la compra** de {cliente_corto}: de los sugeridos con **ventas reales** a la orden de compra cargada en Estelar con validación humana y enviada a los proveedores por WhatsApp.",
+  "hechos": [
+   {
+    "num": "A mano",
+    "texto": "es como el asistente de compras carga cada producto en Estelar, desde pedidos reportados por WhatsApp.",
+    "resuelto_por": [
+     "PC-3",
+     "CN-2"
+    ]
+   },
+   {
+    "num": "24 y 48",
+    "texto": "es lo que pasa con una orden mal cargada: se piden 24 y llegan 48.",
+    "resuelto_por": [
+     "PC-3",
+     "CN-2"
+    ]
+   },
+   {
+    "num": "70-80 %",
+    "texto": "de las ventas es lo que cubre Estelar, y la compra depende de la venta completa.",
+    "resuelto_por": [
+     "CN-3"
+    ]
+   },
+   {
+    "num": "Atraso",
+    "texto": "en la recepción: hay órdenes que quedan sin cargar por falta de tiempo.",
+    "resuelto_por": [
+     "PC-2",
+     "PC-3"
+    ]
+   }
+  ]
+ },
+ "carriles": [
+  {
+   "id": "ia",
+   "nombre": "Claude con Estelar y Vilches",
+   "nombre_corto": "Claude y Estelar",
+   "color": "amarillo"
+  }
+ ],
+ "areas": [
+  {
+   "id": "CN",
+   "nombre": "Conexiones",
+   "carril": "ia",
+   "frente": "A",
+   "para_que": "Dar a Claude las ventas completas y la lectura de Estelar, con el sistema protegido",
+   "soluciones": [
+    {
+     "id": "CN-1",
+     "entregable": "Conexiones habilitadas con TI",
+     "C": 4,
+     "T": 1,
+     "A": 1,
+     "fase": "F1",
+     "detalle": "Seis horas: cuatro de construcción en línea, una de testeo en sitio y una de adopción. TI de Superfina habilita puertos y usuarios y se prueban las conexiones y la ruta de escritura, guiadas por Intezia. Se parte de solo lectura; la escritura se acuerda con TI y con el proveedor de Estelar. Entrega las conexiones probadas.",
+     "incluye": [
+      "Puertos, usuarios y pruebas de conexión",
+      "Ruta de escritura acordada con TI y con el proveedor de Estelar"
+     ]
+    },
+    {
+     "id": "CN-2",
+     "entregable": "Conexión de Claude con Estelar",
+     "C": 5,
+     "T": 1,
+     "A": 1,
+     "fase": "F1",
+     "detalle": "Siete horas: cinco de construcción en línea, una de testeo y una de adopción. Se adapta a Superfina la lectura de Estelar que ya existe y se agrega una herramienta controlada de carga de orden de compra; se compara contra la carga manual y se registran los errores. Entrega la conexión funcionando, con cada acción registrada.",
+     "incluye": [
+      "Lectura de Estelar adaptada a Superfina",
+      "Herramienta de carga de orden de compra, controlada"
+     ]
+    },
+    {
+     "id": "CN-3",
+     "entregable": "Conexión con Vilches: ventas completas",
+     "C": 7,
+     "T": 1,
+     "A": 1,
+     "fase": "F1",
+     "detalle": "Nueve horas: siete de construcción en línea, una de testeo y una de adopción. Se identifica la base de datos de Vilches, se arman las consultas de ventas completas y se cruzan con Estelar, que cubre entre el 70 y el 80 % de las ventas. Entrega las ventas completas disponibles para la compra.",
+     "incluye": [
+      "Su base de datos, identificada",
+      "Consultas de ventas completas y cruce con Estelar"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "PC",
+   "nombre": "Proceso de compra",
+   "carril": "ia",
+   "frente": "A",
+   "para_que": "Que la compra corra de punta a punta, con una persona que valida",
+   "soluciones": [
+    {
+     "id": "PC-1",
+     "entregable": "Proyecto del comprador y manual de proceso",
+     "C": 4,
+     "T": 1,
+     "A": 2,
+     "fase": "F2",
+     "detalle": "Siete horas: cuatro de construcción en línea, una de ajustes y dos de entrega de la cuenta y del manual en sitio. Se arma en Claude el proyecto del comprador con su manual: cronograma de compras, parámetros por departamento, lead times y reglas, con las ya detectadas en un proyecto anterior del grupo (múltiplos de bulto, existencia igual a piso más almacén y proveedor habitual igual al de la última compra). Entrega el proyecto configurado y el proceso por escrito.",
+     "incluye": [
+      "Cronograma, parámetros por departamento, lead times y reglas",
+      "Con las reglas ya detectadas en el grupo"
+     ]
+    },
+    {
+     "id": "PC-2",
+     "entregable": "Tareas programadas de compra",
+     "C": 2,
+     "T": 1,
+     "A": 1,
+     "fase": "F2",
+     "detalle": "Cuatro horas: dos de construcción en línea, una de testeo y una de adopción. Se programan el reporte semanal y los sugeridos de compra automáticos, y quedan listos antes de la visita. Entrega las tareas funcionando.",
+     "incluye": [
+      "Reporte semanal",
+      "Sugeridos de compra automáticos"
+     ]
+    },
+    {
+     "id": "PC-3",
+     "entregable": "Skills de compra",
+     "C": 4,
+     "T": 3,
+     "A": 2,
+     "fase": "F2",
+     "detalle": "Nueve horas: cuatro de construcción en línea, tres de testeo y dos de adopción en sitio. Se construyen las Skills que convierten el análisis de existencia en orden de compra, validan la carga y la envían por el WhatsApp de compras. Se prueban con un ciclo real de compra con un proveedor y con otros proveedores, y los compradores las ejecutan con acompañamiento. Entrega el ciclo completo en uso.",
+     "incluye": [
+      "Análisis de existencia a orden de compra",
+      "Validación de la carga y envío por el WhatsApp de compras"
+     ]
+    }
+   ]
+  }
+ ],
+ "alcance": {
+  "titulo": "La compra de {cliente_corto}, de punta a punta.",
+  "subtitulo": "Un solo departamento, **Compras**, trabajado a fondo; los demás se abren después, cada uno con su propia propuesta.",
+  "fuera_alcance": [
+   "Los demás departamentos: cada uno se abre después, con su propia propuesta.",
+   "La conexión de Vilches para otras empresas del grupo: presupuesto aparte.",
+   "La depuración de los datos de {cliente_corto}.",
+   "Licencias de Claude: van aparte de esta inversión."
+  ]
+ },
+ "fases": [
+  {
+   "id": "F1",
+   "titulo": "Conexión",
+   "descripcion": "Estelar y Vilches conectados"
+  },
+  {
+   "id": "F2",
+   "titulo": "Compra",
+   "descripcion": "la compra, de punta a punta",
+   "destacada": true
+  }
+ ],
+ "frentes": [
+  {
+   "id": "A",
+   "carril": "ia",
+   "nombre": "Compras de {cliente_corto}",
+   "medida": "42 horas",
+   "medida_meta": "2 compradores y TI",
+   "celdas": {
+    "F1": "Construcción, testeo y adopción: TI, Estelar y Vilches con ventas completas.",
+    "F2": "Construcción, testeo y adopción: proyecto del comprador, tareas programadas y Skills."
+   },
+   "celdas_medida": {
+    "F1": "22 horas con el equipo",
+    "F2": "20 horas con el equipo"
+   }
+  }
+ ],
+ "ruta": {
+  "titulo": "De las conexiones a la compra en uso.",
+  "subtitulo": "El calendario se acuerda en la **reunión de arranque**. El **seguimiento** corre desde el cierre del proyecto.",
+  "hitos": [
+   {
+    "titulo": "Checklist previo",
+    "texto": "Compras entrega el cronograma, los parámetros por departamento, los lead times y los formatos."
+   },
+   {
+    "titulo": "Conexiones",
+    "texto": "En línea, con TI: Estelar con lectura y carga controlada, y Vilches con ventas completas."
+   },
+   {
+    "titulo": "Proyecto y Skills",
+    "texto": "En línea: el proyecto del comprador y su manual, las tareas programadas y las Skills."
+   },
+   {
+    "titulo": "Prueba en sitio",
+    "texto": "Presencial: un ciclo real de compra con proveedores, comparado con la carga manual."
+   },
+   {
+    "titulo": "Adopción en sitio",
+    "texto": "Presencial: los compradores ejecutan con acompañamiento; evaluación del proceso y acta."
+   }
+  ]
+ },
+ "metodo": {
+  "titulo": "Así construimos la compra.",
+  "subtitulo": "Con la metodología de Habilidades: construimos, testeamos y adoptamos, sobre compras reales.",
+  "pasos": [
+   {
+    "titulo": "Conectamos",
+    "texto": "Estelar y Vilches, con TI y en solo lectura al principio."
+   },
+   {
+    "titulo": "Construimos",
+    "texto": "El proyecto del comprador, las tareas programadas y las Skills, en línea."
+   },
+   {
+    "titulo": "Testeamos",
+    "texto": "Un ciclo real de compra en sitio, comparado con la carga manual."
+   },
+   {
+    "titulo": "Adoptamos",
+    "texto": "Los compradores ejecutan; seguimos a 30, 60 y 90 días."
+   }
+  ],
+  "por_que_orden": "Primero las conexiones, porque la compra depende de la venta completa. Después Claude arma la orden con esas ventas, una persona la valida y se carga en Estelar; compras la envía por WhatsApp.",
+  "quien_construye": "Se construye en línea con TI de {cliente_corto}, que habilita puertos y usuarios mientras **Intezia guía** la conexión; el equipo de TI del grupo participa solo cuando su experiencia aporte.",
+  "practica": [
+   {
+    "titulo": "Una persona valida",
+    "texto": "Cada carga en Estelar pasa por validación humana y cada acción queda registrada."
+   },
+   {
+    "titulo": "Solo lectura primero",
+    "texto": "La escritura en Estelar se acuerda con TI y con el proveedor del sistema."
+   },
+   {
+    "titulo": "Solución lista",
+    "texto": "El equipo recibe el proyecto armado y el proceso por escrito; se evalúa si carga bien."
+   }
+  ],
+  "datos": "Se parte de solo lectura y los sistemas no se modifican más allá de la carga controlada. Claude corre en una cuenta con el dominio de la compañía y trabaja con los datos que {cliente_corto} autoriza."
+ },
+ "logistica": {
+  "modalidad": "Construcción en línea; testeo y adopción presenciales, en {cliente_corto}.",
+  "participantes": "2 compradores, el equipo de TI de {cliente_corto} y un responsable dedicado al 100 %.",
+  "ritmo": "Se agenda sin frenar la operación de compra.",
+  "arranque": "Apenas se apruebe la propuesta; el checklist previo y la reunión de arranque acuerdan el calendario."
+ },
+ "seguimiento": {
+  "rango": "30, 60 y 90 días",
+  "texto": "Desde el cierre del proyecto",
+  "items": [
+   {
+    "dias": "30 días",
+    "texto": "Uso real del proceso por los compradores"
+   },
+   {
+    "dias": "60 días",
+    "texto": "Errores y atrasos contra la línea base"
+   },
+   {
+    "dias": "90 días",
+    "texto": "Tiempo recuperado medido"
+   }
+  ]
+ },
+ "entregables": {
+  "titulo": "Lo que recibe {cliente_corto}.",
+  "columnas_por_carril": [
+   2
+  ],
+  "subtitulo": "Lo que se llevan: **la compra conectada, probada y en uso**, con su proceso por escrito, más el seguimiento a {rango_seguimiento}.",
+  "etiqueta_transversales": "Para todo el proyecto",
+  "transversales": [
+   "Línea base de errores, tiempo y atrasos, al arrancar.",
+   "Manual de proceso por escrito.",
+   "Seguimiento a 30, 60 y 90 días con medición del tiempo."
+  ],
+  "etiqueta_valor": "Valor inmediato",
+  "valor_inmediato": [
+   "Conectado: Estelar y Vilches, con las ventas completas.",
+   "Probado: un ciclo real de compra contra la carga manual.",
+   "En uso: los compradores cargan con el proceso."
+  ],
+  "impacto": {
+   "enfoque": "operacion",
+   "texto": "Las órdenes de compra salen bien cargadas y a tiempo: Claude las prepara con las **ventas reales** y una persona las valida antes de cargarlas en Estelar. Menos errores, sin órdenes pendientes y una recepción sin atrasos."
+  }
+ },
+ "retorno": {
+  "modo": "metodo",
+  "posiciones": false,
+  "titulo": "Retorno esperado: menos errores y tiempo.",
+  "subtitulo": "Se calcula con las compras reales de {cliente_corto} y se mide a 30, 60 y 90 días.",
+  "etiqueta_pasos": "Cómo se calcula",
+  "pasos": [
+   {
+    "titulo": "Órdenes de hoy",
+    "texto": "Cuántas órdenes se cargan al mes y cuántas salen mal cargadas o sin cargar: es la **línea base**."
+   },
+   {
+    "titulo": "Tiempo de carga",
+    "texto": "Cuánto toma hoy cargar cada orden, producto por producto."
+   },
+   {
+    "titulo": "Con la solución",
+    "texto": "Lo que toma la misma orden preparada por Claude y validada por una persona."
+   },
+   {
+    "titulo": "Errores y atrasos",
+    "texto": "Órdenes mal cargadas o pendientes y atraso en la recepción, antes y después."
+   },
+   {
+    "titulo": "Horas recuperadas",
+    "texto": "Diferencia de tiempo por orden: una estimación referencial, sin compromiso de resultado."
+   }
+  ],
+  "etiqueta_metas": "Calendario de garantía, desde el cierre del proyecto",
+  "metas": [
+   {
+    "dias": "30 días",
+    "texto": "Uso real del proceso: los compradores cargan las órdenes con el proyecto."
+   },
+   {
+    "dias": "60 días",
+    "texto": "Errores y atrasos medidos contra la línea base."
+   },
+   {
+    "dias": "90 días",
+    "texto": "Tiempo recuperado y cumplimiento del proceso, medidos."
+   }
+  ],
+  "destino": [
+   {
+    "rotulo": "Compra sin errores",
+    "texto": "Cada orden se carga bien, con **validación humana** y cada acción registrada."
+   },
+   {
+    "rotulo": "Ventas completas",
+    "texto": "La compra parte de la venta real, no solo de la parte que hoy ve Estelar."
+   },
+   {
+    "rotulo": "Lo que sigue",
+    "texto": "Con Compras automatizada, Recepción fluye sola: la orden ya está en el sistema."
+   }
+  ],
+  "gancho": "A los 90 días del cierre, {cliente_corto} contará con órdenes bien cargadas, menos atrasos y el tiempo recuperado, medidos contra su punto de partida."
+ },
+ "inversion": {
+  "duracion": "**1 departamento**, Compras, con 6 entregables en dos fases y seguimiento a {rango_seguimiento}. **42 horas** de construcción, testeo y adopción.",
+  "programa": [
+   "Servicio de Habilidades para {cliente_corto} ({codigo}): compra automatizada.",
+   "Conexiones, proyecto del comprador, tareas programadas y Skills.",
+   "Construcción en línea; testeo y adopción presenciales.",
+   "42 horas con el equipo, más seguimiento a {rango_seguimiento}."
+  ],
+  "notas": [
+   "Licencias de Claude, aparte de esta inversión.",
+   "Presupuesto separado del de otros proyectos del grupo.",
+   "Garantía 30-60-90: seguimiento desde el cierre, con lo construido en uso.",
+   "Términos y condiciones: los del enlace de «Importante»."
+  ],
+  "garantia_texto": "Estamos contigo hasta que el proceso quede instalado en tu equipo."
+ },
+ "respuesta_solicitud": {
+  "eyebrow": "Requisitos y hoja de ruta",
+  "despues_de": "retorno",
+  "paginas": [
+   {
+    "titulo": "Lo que necesitamos de {cliente_corto}.",
+    "subtitulo": "Es una **solución lista**: Intezia la construye y la compañía la opera, con estos cuatro requisitos.",
+    "items": [
+     {
+      "num": "1",
+      "titulo": "TI",
+      "texto": "Habilita puertos y usuarios. Se parte de solo lectura; la escritura se acuerda con TI y con el proveedor de Estelar."
+     },
+     {
+      "num": "2",
+      "titulo": "Checklist",
+      "texto": "Cronograma de compras, parámetros por departamento, lead times y formatos, entregados antes de arrancar con Compras."
+     },
+     {
+      "num": "3",
+      "titulo": "Responsable",
+      "texto": "Una persona dedicada al 100 % al proyecto y el patrocinio de la dirección."
+     },
+     {
+      "num": "4",
+      "titulo": "Cuenta y red",
+      "texto": "Una cuenta de Claude con el dominio de la compañía, dentro de su Claude Team (las licencias van aparte), y una VPN estable."
+     }
+    ]
+   },
+   {
+    "titulo": "Después de Compras, la hoja de ruta.",
+    "subtitulo": "Sin valor en esta propuesta: **cada paso se cotiza aparte** y se decide con el resultado de Compras.",
+    "items": [
+     {
+      "num": "1",
+      "titulo": "Recepción",
+      "texto": "Si Compras queda automatizada, Recepción fluye sola porque la orden ya está en el sistema."
+     },
+     {
+      "num": "2",
+      "titulo": "Costeo y márgenes",
+      "texto": "El siguiente cuello de botella: un cerebro de márgenes para el 70 al 80 % de los proveedores (víveres y enlatados), con las proteínas a mano."
+     },
+     {
+      "num": "Meta",
+      "titulo": "Lead time",
+      "texto": "Bajar el tiempo de entrega de 24 a 12 horas."
+     }
+    ]
+   }
+  ]
+ },
+ "proximos_pasos": {
+  "asesora": {
+   "nombre": "Verónica Rubio",
+   "cargo": "Asesora comercial",
+   "correo": "vrubio01@intezia.com",
+   "telefono": "+58 422 3355505"
+  },
+  "pasos": [
+   {
+    "titulo": "Checklist de Compras",
+    "texto": "{cliente_corto} prepara el checklist de Compras en los formatos que pedimos."
+   },
+   {
+    "titulo": "TI y responsable",
+    "texto": "TI habilita puertos y usuarios, y se nombra a la persona que dedica el 100 % al proyecto."
+   },
+   {
+    "titulo": "Reunión de arranque",
+    "texto": "Una hora para acordar el calendario y quién participa en cada etapa."
+   }
+  ]
+ },
+ "supuestos": [
+  "Pedido de Ivana (09/11/2026): propuesta CAI-092 para Superfina, asesora Verónica Rubio, con la especificación completa (qué pide el cliente, flujo, alcance, modelo de entrega, distribución de 42 h, requisitos, riesgos, inversión y hoja de ruta) y la tabla de construcción. Educación y sin alianza: confirmados con Ivana. Sin ficha ni transcripción en el repositorio.",
+  "Horas (de Ivana): 42 h = construcción 26 h en línea (sesiones con TI 4, conexión de Estelar 5, Vilches 7, proyecto del comprador y manual 4, tareas programadas 2, Skills 4), testeo 8 h presencial (conexiones en sitio 1, ciclo real con un proveedor 3, ciclo con otros proveedores 2, comparación contra la carga manual 1, ajustes 1) y adopción 8 h presencial (entrega de la cuenta y del manual 2, ejecución con acompañamiento 4, evaluación y acta 1, plan 30/60/90 y siguiente propuesta 1). El reparto del testeo y la adopción entre las seis piezas es mío: Ivana dio los totales por actividad, no por entregable. Las 16 h presenciales caben en 3 jornadas de 6, 6 y 4 h: dato interno, el deck no cuenta sesiones ni jornadas (§4.23).",
+  "No se nombra a Fasto (decisión de Ivana, 09/11/2026): el deck dice «un proyecto anterior del grupo», «otras empresas del grupo» y «el equipo de TI del grupo». Tampoco se nombra a Polar (proveedor de ejemplo del ciclo real, y cliente de Intezia: «un proveedor») ni a las personas (Alejandro, socio del grupo, patrocinio: «la dirección»).",
+  "VPN: Ivana pidió dejar «VPN estable» como requisito del cliente en el deck (09/11/2026). Va sin explicar el riesgo ni prometer acceso a Claude desde Venezuela (regla de memoria). Riesgo interno: el bloqueo de acceso a Claude no es nuevo pero puede endurecerse el día 12; mitigación: VPN a nivel de red, tareas programadas antes de la visita y sin conexiones nuevas durante ella.",
+  "Supuestos de las 26 h de construcción (internos): Vilches se puede conectar de forma directa y el envío por WhatsApp usa una ruta sencilla. Si no, las alternativas son una exportación programada de Vilches o un archivo de importación para Estelar. Otros riesgos: escrituras erróneas (validación humana y registro de cada acción) y calidad de datos (mínimos desactualizados, códigos duplicados y productos sin proveedor); la depuración de datos está fuera de alcance.",
+  "Licencias de Claude aparte y cuenta con el dominio de la compañía dentro de su Claude Team: requisito del cliente, en el deck. Presupuesto separado del de Fasto (el deck dice «otros proyectos del grupo»). Acompañamiento 30/60/90 como postservicio: seguimiento por defecto de Habilidades.",
+  "Impacto (cuadro de «Lo que se llevan»): enfoque «operación», elegido por Ivana (09/11/2026): errores, tiempo y control, sin hablar de personas ni de nómina.",
+  "Hoja de ruta posterior sin precio (Recepción y Costeo y márgenes, con la meta de bajar el lead time de 24 a 12 horas) y requisitos del cliente: dos páginas «Requisitos y hoja de ruta» después de la ruta (opción respuesta_solicitud). Sin facilidad de pago (omitida): decisión mía por ser lo que se ha pedido en las últimas propuestas; confirmar con Ivana.",
+  "Sin sesiones ni horas de trabajo internas (§4.23): el deck dice «horas con el equipo». Herramienta: Claude (nombrada por Ivana). No se afirma que migren de stack (§4.11)."
+ ],
+ "pendientes": [
+  "Confirmar con Ivana el reparto de testeo y adopción entre las seis piezas (los totales de 8 y 8 son de ella) y que se omite la facilidad de pago.",
+  "Valor, descuento y total: campos vacíos para ventas; moneda en REF con la leyenda de pago.",
+  "Confirmar con Superfina quién es el responsable dedicado al 100 %, quiénes son los 2 compradores y el contacto de TI.",
+  "Validar con el equipo de TI del grupo y con el proveedor de Estelar la ruta de escritura y la conexión directa de Vilches (si no, exportación programada o archivo de importación).",
+  "Vigilar el acceso a Claude desde Venezuela antes de la visita presencial (riesgo del día 12): mitigación interna, no va al deck.",
+  "Nombre completo y cargo de quien decide en Superfina, y fechas de la visita presencial (3 jornadas)."
+ ]
+}

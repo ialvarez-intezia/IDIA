@@ -1,0 +1,422 @@
+{
+ "version": 3,
+ "cliente": {
+  "nombre": "Viaja con Taty",
+  "slug": "viaja-con-taty-det063",
+  "codigo": "DET-063",
+  "nombre_pie": "Viaja con Taty"
+ },
+ "division": "educacion",
+ "alianza": false,
+ "sin_horas_trabajo": true,
+ "servicio_rotulo": "Servicio de Detección y Habilidades",
+ "meta_servicio": "deteccion",
+ "por_fases": true,
+ "omitir": [
+  "pago"
+ ],
+ "meta_tipo": "Detección y Habilidades · levantamiento único de 4 h y práctica de 10 h (mercadeo propio, cotización, leads y análisis de la web), 14 h · formato compacto v3",
+ "eje": "Levantar en un solo encuentro la operación de la agencia (cotización, atención, mercadeo, redes y web) y construir con sus dos personas su mercadeo propio por temporada, la cotización, el registro de leads y el análisis de su web, para vender más sin depender de terceros",
+ "origen": "Ficha de Levantamiento de Viaja con Taty (Flavia Martínez, registrada el 18/11/2026) y resumen de la reunión pegado por Ivana el 20/11/2026. Sin transcripción: pendiente de recibir",
+ "fuente_insumo": "Ficha de Levantamiento (18/11/2026) y resumen de la reunión de Flavia Martínez con Viaja con Taty. Sin transcripción",
+ "siglas_ok": [
+  "IA",
+  "CRM"
+ ],
+ "frases_ok": [
+  "Semana Santa"
+ ],
+ "vocabulario": {
+  "solucion": [
+   "entregable",
+   "entregables"
+  ]
+ },
+ "portada": {
+  "titulo_lineas": [
+   "Mercadeo propio con IA y datos",
+   "para vender más en cada temporada"
+  ],
+  "titulo_destacado": "de Viaja con Taty",
+  "lead": "Un solo **levantamiento** de la operación y luego, a la práctica: las dos personas del equipo aprenden a producir su **mercadeo propio** con IA y a **medir** lo que hoy es empírico.",
+  "hechos": [
+   {
+    "num": "Empírico",
+    "texto": "hoy nada está medido: no hay datos de quién entra a la web ni de dónde llegan los leads.",
+    "resuelto_por": [
+     "LEA-1",
+     "LEA-2"
+    ]
+   },
+   {
+    "num": "A mano",
+    "texto": "la cotización se estima con un programa propio que hay que montar en la IA y decidir a mano.",
+    "resuelto_por": [
+     "COT-1"
+    ]
+   },
+   {
+    "num": "Temporada",
+    "texto": "carnaval, Semana Santa y vacaciones exigen contenido nuevo y rápido, sin depender de terceros.",
+    "resuelto_por": [
+     "MER-1",
+     "MER-2"
+    ]
+   }
+  ]
+ },
+ "carriles": [
+  {
+   "id": "ia",
+   "nombre": "IA para su operación",
+   "nombre_corto": "IA para su operación",
+   "color": "amarillo"
+  }
+ ],
+ "areas": [
+  {
+   "id": "LEV",
+   "nombre": "Levantamiento único de la operación",
+   "carril": "ia",
+   "frente": "A",
+   "proceso_base": true,
+   "para_que": "Mapear sus procesos, medir lo que hoy es empírico y elegir las herramientas",
+   "soluciones": [
+    {
+     "id": "LEV-1",
+     "entregable": "Levantamiento de la operación completa",
+     "h": 4,
+     "fase": "F1",
+     "detalle": "Un solo levantamiento con las dos personas de la cotización, la atención al cliente, el mercadeo, las redes sociales y la página web, para definir qué herramientas conviene usar y por dónde empezar.",
+     "incluye": [
+      "Cotización, atención, mercadeo, redes y web",
+      "Qué herramientas de IA les convienen",
+      "Qué datos de la web ya existen"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "COT",
+   "nombre": "Cotización al cliente",
+   "carril": "ia",
+   "frente": "A",
+   "para_que": "Su programa de cotización montado en la IA, sin decidir todo a mano",
+   "soluciones": [
+    {
+     "id": "COT-1",
+     "entregable": "Cotización montada en la IA",
+     "h": 2,
+     "fase": "F2",
+     "detalle": "El programa propio con el que estiman la cotización, montado en la IA, con las reglas que hoy se deciden a mano."
+    }
+   ]
+  },
+  {
+   "id": "MER",
+   "nombre": "Mercadeo propio por temporada",
+   "carril": "ia",
+   "frente": "A",
+   "para_que": "Contenido y análisis de la competencia para cada temporada, sin depender de nadie",
+   "soluciones": [
+    {
+     "id": "MER-1",
+     "entregable": "Contenido de mercadeo con IA",
+     "h": 3,
+     "fase": "F2",
+     "detalle": "Posts, grillas, edición de video y campañas producidos por las dos personas con IA, para cada temporada."
+    },
+    {
+     "id": "MER-2",
+     "entregable": "Análisis de la competencia por temporada",
+     "h": 1,
+     "fase": "F2",
+     "detalle": "Método para revisar qué hace la competencia en cada temporada y qué conviene responder."
+    }
+   ]
+  },
+  {
+   "id": "LEA",
+   "nombre": "Leads y análisis de su web",
+   "carril": "ia",
+   "frente": "A",
+   "para_que": "Leads ordenados en una tabla y datos de quién entra a la web",
+   "soluciones": [
+    {
+     "id": "LEA-1",
+     "entregable": "Leads de redes y WhatsApp a una tabla",
+     "h": 2,
+     "fase": "F2",
+     "detalle": "Flujo para registrar en una tabla de datos los leads que llegan por redes sociales y WhatsApp, antes de pensar en un CRM."
+    },
+    {
+     "id": "LEA-2",
+     "entregable": "Agente que analiza su web",
+     "h": 2,
+     "fase": "F2",
+     "detalle": "Un agente que muestre qué perfil de visitante entra a la web y dónde hace clic, con los datos que la web ya tenga."
+    }
+   ]
+  }
+ ],
+ "alcance": {
+  "titulo": "Un levantamiento y luego a la práctica.",
+  "subtitulo": "Una sola ruta: un **levantamiento único** de la operación y la práctica para producir y medir por su cuenta.",
+  "etiqueta_fuera": "Fuera de este alcance",
+  "fuera_alcance": [
+   "Implementar un CRM: Intezia optimiza la captación de leads, no implementa CRM; primero, una tabla de datos.",
+   "Producir el contenido por ellas: el objetivo es que lo produzcan solas, con la IA.",
+   "Medir el perfil de la web si no hay datos: depende de lo que la web ya registre; se confirma en el levantamiento.",
+   "Licencias de IA: Intezia recomienda las herramientas en el levantamiento y no están en la inversión."
+  ]
+ },
+ "metodo": {
+  "titulo": "Cómo trabajamos con las dos personas.",
+  "subtitulo": "Se construye con ellas, sobre su trabajo real, para que dominen las herramientas y no dependan de nadie.",
+  "quien_construye": "**Intezia guía** y las dos personas construyen con IA, sobre su trabajo real, para que la capacidad quede instalada en ellas.",
+  "por_que_orden": "Primero se levanta la operación y se eligen las herramientas; después se construye, con el uso de la IA aprendido sobre cada tarea.",
+  "practica": [
+   {
+    "titulo": "Intezia elige las herramientas",
+    "texto": "Recomienda en el levantamiento qué herramientas de IA conviene usar; las dos aprenden a usarlas construyendo."
+   },
+   {
+    "titulo": "Un solo levantamiento",
+    "texto": "Las dos personas, en una conversación, sin tarea previa; sin una fase larga de detección."
+   },
+   {
+    "titulo": "Datos de la web",
+    "texto": "El análisis de la web depende de los datos que ya registre; se confirma en el levantamiento."
+   }
+  ],
+  "datos": "Los datos de clientes y de cotizaciones no se cargan a la IA sin el visto bueno de la agencia: se trabaja con los ejemplos que autoricen.",
+  "pasos": [
+   {
+    "titulo": "Levantamos",
+    "texto": "Una sola vez, con las dos personas."
+   },
+   {
+    "titulo": "Construimos",
+    "texto": "Con ellas, sobre su trabajo real."
+   },
+   {
+    "titulo": "Adoptamos",
+    "texto": "Producen su mercadeo y manejan sus leads solas."
+   },
+   {
+    "titulo": "Medimos",
+    "texto": "El avance, a 30, 60 y 90 días."
+   }
+  ]
+ },
+ "logistica": {
+  "modalidad": "Virtual, por videollamada.",
+  "participantes": "Las 2 personas que llevan la agencia.",
+  "arranque": "En cuanto se aprueba, se coordina el levantamiento.",
+  "ritmo": "Según su agenda, sin frenar la atención a sus clientes ni las temporadas."
+ },
+ "fases": [
+  {
+   "id": "F1",
+   "titulo": "Levantamiento",
+   "descripcion": "un solo encuentro, sin detección larga"
+  },
+  {
+   "id": "F2",
+   "titulo": "Práctica",
+   "descripcion": "construir su mercadeo, cotización y leads",
+   "destacada": true
+  }
+ ],
+ "frentes": [
+  {
+   "id": "A",
+   "carril": "ia",
+   "nombre": "La operación de la agencia",
+   "celdas": {
+    "F1": "Cotización, atención, mercadeo, redes y web, en un solo levantamiento.",
+    "F2": "Contenido por temporada, cotización, leads en una tabla y análisis de la web."
+   }
+  }
+ ],
+ "ruta": {
+  "titulo": "Del levantamiento a producir por su cuenta.",
+  "subtitulo": "El calendario se acuerda en la reunión de arranque. La **garantía y el seguimiento** a 30, 60 y 90 días corren desde el cierre de la práctica.",
+  "nota": "Un solo proyecto de {h_total} horas: {h_f1} h de levantamiento único y {h_f2} h de práctica.",
+  "hitos": [
+   {
+    "titulo": "Levantamiento",
+    "texto": "Operación mapeada y herramientas elegidas."
+   },
+   {
+    "titulo": "Cotización en la IA",
+    "texto": "Su programa de cotización montado y en uso."
+   },
+   {
+    "titulo": "Mercadeo propio",
+    "texto": "Contenido y análisis de la competencia, producidos por ellas."
+   },
+   {
+    "titulo": "Leads y web",
+    "texto": "Leads en su tabla y la web analizada."
+   },
+   {
+    "titulo": "30 · 60 · 90 días",
+    "texto": "Seguimiento: uso, ajustes y tiempo recuperado."
+   }
+  ]
+ },
+ "seguimiento": {
+  "rango": "30, 60 y 90 días",
+  "texto": "Desde el cierre de la práctica",
+  "items": [
+   {
+    "dias": "30 días",
+    "texto": "Producen su mercadeo con la IA"
+   },
+   {
+    "dias": "60 días",
+    "texto": "Leads al día en su tabla"
+   },
+   {
+    "dias": "90 días",
+    "texto": "Tiempo y avance, medidos"
+   }
+  ]
+ },
+ "entregables": {
+  "titulo": "Lo que reciben.",
+  "subtitulo": "Lo que se llevan: la capacidad de producir su mercadeo y manejar sus leads por su cuenta, con el seguimiento a {rango_seguimiento} que mide su efecto.",
+  "etiqueta_transversales": "Para todo el proyecto",
+  "transversales": [
+   "Línea base del tiempo de cada tarea.",
+   "Cuaderno de trabajo digital del proyecto.",
+   "Seguimiento a 30, 60 y 90 días."
+  ],
+  "etiqueta_valor": "Valor inmediato",
+  "valor_inmediato": [
+   "Levantamiento: la operación mapeada, por primera vez.",
+   "Leads de redes y WhatsApp ordenados en una tabla.",
+   "Contenido propio listo para la próxima temporada."
+  ],
+  "impacto": {
+   "enfoque": "operacion",
+   "texto": "Con contenido propio y datos de su página y sus leads, la agencia **reacciona más rápido en cada temporada** y deja de decidir a ciegas, para vender más con las mismas dos personas."
+  }
+ },
+ "retorno": {
+  "modo": "metodo",
+  "posiciones": false,
+  "titulo": "Retorno esperado: tiempo y datos.",
+  "subtitulo": "Se calcula con las tareas de la agencia, partiendo del tiempo que hoy toman, y se mide a 30, 60 y 90 días.",
+  "etiqueta_pasos": "Cómo se calcula",
+  "pasos": [
+   {
+    "titulo": "Volumen",
+    "texto": "Cuántas cotizaciones, contenidos y leads se atienden por semana."
+   },
+   {
+    "titulo": "Tiempo actual",
+    "texto": "Lo que toma hoy cada tarea, medido con quien la hace: la **línea base**."
+   },
+   {
+    "titulo": "Tiempo con la IA",
+    "texto": "Lo que toma la misma tarea ya con la IA en uso."
+   },
+   {
+    "titulo": "Horas recuperadas",
+    "texto": "Volumen por la diferencia entre el tiempo actual y el tiempo con la IA."
+   }
+  ],
+  "etiqueta_metas": "Calendario de garantía, desde el cierre de la práctica",
+  "metas": [
+   {
+    "dias": "30 días",
+    "texto": "Mercadeo y cotización con IA en uso real."
+   },
+   {
+    "dias": "60 días",
+    "texto": "Leads al día en su tabla y menos correcciones a mano."
+   },
+   {
+    "dias": "90 días",
+    "texto": "Medición del tiempo ganado en cada tarea, contra la línea base."
+   }
+  ],
+  "destino": [
+   {
+    "rotulo": "De empírico a medido",
+    "texto": "Se ve **quién entra a su página** y de dónde llegan los leads."
+   },
+   {
+    "rotulo": "Mercadeo sin terceros",
+    "texto": "Posts, grillas y campañas de cada temporada, producidos por ellas."
+   },
+   {
+    "rotulo": "Leads ordenados",
+    "texto": "Los leads viven en una tabla, **antes de pensar en un CRM**."
+   }
+  ],
+  "gancho": "A los 90 días del cierre, la agencia conocerá el tiempo que ganó en cada tarea."
+ },
+ "inversion": {
+  "duracion": "**{h_total} horas** en total: **{h_f1} de levantamiento** único y **{h_f2} de práctica**. Seguimiento a {rango_seguimiento}.",
+  "programa": [
+   "Servicio de Detección y Habilidades para {cliente_corto} ({codigo}).",
+   "Levantamiento único de la operación, virtual.",
+   "Mercadeo propio, cotización, leads y análisis de la web.",
+   "Seguimiento a 30, 60 y 90 días."
+  ],
+  "notas": [
+   "Garantía 30-60-90: seguimiento a {rango_seguimiento} desde el cierre de la práctica.",
+   "Términos y condiciones: los del enlace de «Importante», que ambas partes aceptan al avanzar con esta propuesta.",
+   "Licencias de IA, aparte: se confirman en el levantamiento."
+  ]
+ },
+ "proximos_pasos": {
+  "asesora": {
+   "nombre": "Flavia Martínez",
+   "cargo": "Asesora comercial",
+   "correo": "fmartinez@intezia.com",
+   "telefono": "+58 414 5756615"
+  },
+  "pasos": [
+   {
+    "titulo": "Revisión de propuesta",
+    "texto": "Revisamos la propuesta con las dos personas en una videollamada y resolvemos sus dudas."
+   },
+   {
+    "titulo": "Accesos y agenda",
+    "texto": "Coordinamos los accesos y la agenda para el levantamiento y la práctica."
+   },
+   {
+    "titulo": "Reunión de arranque",
+    "texto": "Reunión de unos 30 minutos para alinear el levantamiento y el calendario."
+   }
+  ]
+ },
+ "supuestos": [
+  "Pedido de Ivana (20/11/2026): propuesta DET-063 para Viaja con Taty con Flavia Martínez como asesora, a partir de la Ficha (18/11/2026) y del resumen que pegó Ivana. No hay transcripción: la Ficha y ese resumen son la fuente (§4.23).",
+  "Decisiones de Ivana (20/11/2026): **4 h de levantamiento** y las horas de Habilidades las fija Claude; impacto **operación**; **sin Fundamentals aparte** (se aprende construyendo, para mantener bajo el valor). División Educación y alianza = no: tomados por mí (primer contacto: nos conocieron en el IA TechDay), no los dio Ivana.",
+  "Combo: Detección y Habilidades en una sola ruta (`servicio_rotulo` combo), con la plantilla de Habilidades y `por_fases`, como CAI-032. `meta.json` queda en `deteccion` (código DET y combo parcial, §4.1a). El levantamiento único de 4 h es el paso previo (`proceso_base`); no hay una Detección completa porque son 2 personas (lo que resonó con la clienta).",
+  "Horas de Habilidades (decisión mía): **10 h** de práctica, para un total de **14 h**. Referencia de `empresa/politicas-comerciales.md`: Habilidades de 8 a 12 h por área, hasta 5 procesos; aquí hay una sola operación con 4 frentes (cotización 2 h, contenido de mercadeo 3 h, análisis de la competencia 1 h, leads a una tabla 2 h, agente de la web 2 h) y la clienta pidió cuidar el valor, así que tomé 10 h en lugar de 12 h. El contenido de mercadeo (posts, grillas, edición de video y campañas) en 3 h es ajustado: con 12 h se suben 2 h ahí.",
+  "Sin Fundamentals aparte (Ivana, 20/11/2026): la Ficha dice que 2 personas recibirían AI Fundamentals y Flavia planteó pasar directo a la práctica tras el levantamiento. Si se quiere un bloque de 2 h, el total pasa a 16 h.",
+  "Herramientas: la clienta delegó la elección en Intezia, así que el deck dice que Intezia las recomienda en el levantamiento (sin nombrar ninguna). Usan hoy una IA que no dijeron cuál. No se menciona VPN ni se garantiza acceso a ninguna herramienta (Claude no está soportado en Venezuela).",
+  "Análisis de la web: la Ficha pide un agente que muestre qué perfil de visitante entra (edad, género, clics, qué le llama la atención). No sabemos qué datos registra hoy la web; el deck dice que depende de los datos que ya registre y se confirma en el levantamiento. Es un riesgo de alcance: sin datos de la web, el agente se reduce.",
+  "CRM: preguntó por un CRM y Flavia aclaró que Intezia no los implementa, solo optimiza la captación de leads; el deck lo dice en «Fuera de este alcance» y propone primero una tabla de datos (Excel o similar) para los leads.",
+  "Sin citas ni dolor dramatizado: los tres datos de la portada salen de la Ficha, parafraseados (todo es empírico, la cotización se estima con un programa propio que hay que montar en la IA, y las temporadas del rubro). No se nombran personas del cliente: el deck dice «las dos personas». Sin certificado.",
+  "Sensibilidad al valor: pidió «tratarlas con cariño económicamente». Sin facilidad de pago (omitir: pago, regla permanente de Ivana); si Ivana quiere ofrecerla, hay que pedirlo. Hoja de inversión con valores vacíos para ventas, en REF.",
+  "Sin semanas, sesiones ni fechas (§4.23). Modalidad virtual (Ficha). Presentación en vivo por videollamada con las dos conectadas, esta semana o la próxima.",
+  "Contacto de la última slide: Flavia Martínez, asesora comercial; correo y teléfono tomados de DET-060 y DET-061, no confirmados."
+ ],
+ "pendientes": [
+  "Valor, descuento y total: campos vacíos para ventas. Moneda REF. Total de horas: 14 h (4 + 10).",
+  "Horas de Habilidades: 10 h son decisión mía (12 h con más margen para el contenido de mercadeo); confirmar con Ivana.",
+  "Qué datos registra hoy la página web (analítica): condiciona el agente de análisis de la web.",
+  "Qué herramienta de IA usan hoy y cuál se recomienda (el levantamiento lo define; licencias a cargo de la clienta).",
+  "Recibir la transcripción de la reunión y contrastarla con la Ficha (si se contradicen, manda la transcripción).",
+  "Presentación en vivo por videollamada (esta o la próxima semana) con las dos personas.",
+  "Confirmar el teléfono y el correo de Flavia Martínez.",
+  "Confirmar con Ivana si el programa lleva certificado."
+ ]
+}

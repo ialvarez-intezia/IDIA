@@ -6,9 +6,9 @@
   No editar a mano: editar datos.json y regenerar. Estilos propios del deck: overrides.css.
   Fuente del insumo: Ficha de Levantamiento (05/11/2026), organigrama de febrero de 2024 y transcripción de la reunión de Verónica Rubio con la clínica (05/11/2026)
 
-  Formato compacto de 11 slides, en el orden de las preguntas del cliente (Ventas, 2026-10-07), sin semanas, sesiones
+  Formato compacto de 10 slides, en el orden de las preguntas del cliente (Ventas, 2026-10-07), sin semanas, sesiones
   ni fechas (Keiber, 2026-10-08):
-    1 Portada · 2 Alcance · 3 Respuesta a la solicitud (1) · 4 Respuesta a la solicitud (2) · 5 Ruta · 6 Cómo trabajamos · 7 Entregables · 8 Retorno · 9 Inversión · 10 Inversión (etapa 2) · 11 Próximos pasos
+    1 Portada · 2 Alcance · 3 Respuesta a la solicitud (1) · 4 Respuesta a la solicitud (2) · 5 Ruta · 6 Cómo trabajamos · 7 Entregables · 8 Retorno · 9 Inversión · 10 Próximos pasos
   Marcadores de detección de AcroForms (agregar-campo-precio.py), por página: «Propuesta Económica» solo en la slide de
   inversión; «Lo que se llevan» y «Entregables» solo en la de entregables; «Facilidad de pago» solo en la de pago.
   Campos AcroForm: Programa, Notas, PrecioBase, Descuento, PrecioTotal (inversión) y Entregables, Acreditacion (entregables). Se reposicionan con scripts/customize-habilidades-compacto.py.
@@ -28,7 +28,7 @@
 
     <!-- 1 · Portada: ¿cuál es mi problema? -->
     <section class="slide s-cover">
-      <span class="counter">01 / 11</span>
+      <span class="counter">01 / 10</span>
       <div class="logo-big">
         <img src="../../../logos/educacion/BLANCO.png" alt="Intezia Educación">
       </div>
@@ -40,7 +40,7 @@
           <span class="hl">en Santiago de León</span>
         </h1>
         <p class="lead">
-          Auditamos en persona las <strong>15 áreas</strong> de la clínica y dejamos <strong>logros inmediatos</strong>, un mapa de oportunidades y las bases de gobernanza para decidir qué herramienta usar en cada área.
+          Auditamos en persona las <strong>16 áreas</strong> de la clínica y dejamos <strong>logros inmediatos</strong>, un mapa de oportunidades y las bases de gobernanza para decidir qué herramienta usar en cada área.
         </p>
         <div class="pain-strip">
           <div class="pain-item">
@@ -69,7 +69,7 @@
 
     <!-- 2 · Alcance (Detección): qué auditamos y para qué, sin conteos ni horas por área -->
     <section class="slide s-scope s-det-scope">
-      <span class="counter">02 / 11</span>
+      <span class="counter">02 / 10</span>
       <p class="eyebrow">02 · Alcance</p>
       <h2>Auditamos cada área y dejamos logros inmediatos.</h2>
       <p class="sub">Revisamos <strong>proceso por proceso</strong> cada gerencia de la clínica, con quien hace el trabajo, y ordenamos el uso de la IA.</p>
@@ -85,6 +85,7 @@
             <span class="det-area">Seguridad Física y Patrimonial</span>
             <span class="det-area">Mantenimiento y Hotelería</span>
             <span class="det-area">Servicios Hospitalarios</span>
+            <span class="det-area">Mercadeo</span>
             <span class="det-area">CEM, Diagnóstico y ATC</span>
             <span class="det-area">Tecnología e Información</span>
             <span class="det-area">Estadística y Planificación</span>
@@ -125,7 +126,7 @@
 
     <!-- Respuesta a la solicitud (opcional): requerimientos del cliente, en su orden -->
     <section class="slide s-rfp">
-      <span class="counter">03 / 11</span>
+      <span class="counter">03 / 10</span>
       <p class="eyebrow">03 · Para la decisión de la Junta</p>
       <h2>Gobernanza: lo que este diagnóstico resuelve.</h2>
       <p class="sub">No es un entrenamiento: es <strong>ordenar el uso de la IA</strong> en la clínica antes de decidir qué herramienta comprar o construir.</p>
@@ -157,10 +158,10 @@
 
     <!-- Respuesta a la solicitud (opcional): requerimientos del cliente, en su orden -->
     <section class="slide s-rfp">
-      <span class="counter">04 / 11</span>
+      <span class="counter">04 / 10</span>
       <p class="eyebrow">04 · Para la decisión de la Junta</p>
-      <h2>Dos formas de avanzar, con el mismo diagnóstico.</h2>
-      <p class="sub">La clínica puede aprobar <strong>el proyecto completo</strong> o <strong>empezar por la primera fase</strong>; la segunda se decide con los resultados de la primera.</p>
+      <h2>El proyecto completo, en dos fases.</h2>
+      <p class="sub">Una <strong>sola hoja de inversión</strong> cubre las 16 gerencias. Para ordenar el trabajo, el levantamiento se hace en dos fases: primero el frente administrativo y después el resto.</p>
 
       <div class="rfp-grid n3">
         <div class="rfp-card">
@@ -168,16 +169,16 @@
           <p class="rfp-p">El frente administrativo: las 6 gerencias de Administración y Planificación Financiera, Talento Humano, Tecnología e Información, y la admisión y ATC.</p>
         </div>
         <div class="rfp-card">
-          <p class="rfp-head"><span class="rfp-n">2</span><span class="rfp-t">Segunda fase</span><span class="rfp-tag">24 horas</span></p>
-          <p class="rfp-p">Las 6 gerencias restantes: farmacia, enfermería, laboratorio, seguridad, mantenimiento y servicios hospitalarios.</p>
+          <p class="rfp-head"><span class="rfp-n">2</span><span class="rfp-t">Segunda fase</span><span class="rfp-tag">28 horas</span></p>
+          <p class="rfp-p">Las 7 gerencias restantes: farmacia, enfermería, laboratorio, seguridad, mantenimiento, servicios hospitalarios y mercadeo.</p>
         </div>
         <div class="rfp-card">
-          <p class="rfp-head"><span class="rfp-n">1+2</span><span class="rfp-t">Proyecto completo</span><span class="rfp-tag">60 horas</span></p>
-          <p class="rfp-p">Las dos fases juntas: 15 gerencias y un solo mapa de oportunidades de toda la clínica.</p>
+          <p class="rfp-head"><span class="rfp-n">1+2</span><span class="rfp-t">Proyecto completo</span><span class="rfp-tag">64 horas</span></p>
+          <p class="rfp-p">Las dos fases juntas: 16 gerencias y un solo mapa de oportunidades de toda la clínica.</p>
         </div>
       </div>
 
-      <p class="rfp-nota">Cada opción tiene su hoja de inversión y se elige una sola. La nivelación de 2 horas está en las dos.</p>
+      <p class="rfp-nota">Todo el proyecto está en una sola hoja de inversión. La nivelación de 2 horas se hace una sola vez, al inicio.</p>
 
       <div class="foot">
         <img src="../../../logos/educacion/NEGRO.png" alt="">
@@ -187,7 +188,7 @@
 
     <!-- 3 · Ruta (Detección): etapas sin semanas ni sesiones (se acuerdan en el arranque) y sin horas por área -->
     <section class="slide s-route s-det-route">
-      <span class="counter">05 / 11</span>
+      <span class="counter">05 / 10</span>
       <p class="eyebrow">05 · Ruta</p>
       <h2>Del arranque al Informe Final, en cinco etapas.</h2>
       <p class="sub">El calendario y el orden de las conversaciones se acuerdan en la <strong>reunión de arranque</strong>.</p>
@@ -211,7 +212,7 @@
           <span class="ds-n">3</span>
           <b class="ds-t">Levantamiento</b>
           <p>Gerencia por gerencia, con su líder y quien hace el trabajo.</p>
-          <p class="ds-h"><strong>60 horas</strong> de levantamiento, repartidas según lo que necesite cada gerencia.</p>
+          <p class="ds-h"><strong>64 horas</strong> de levantamiento, repartidas según lo que necesite cada gerencia.</p>
         </div>
         <div class="det-stage acc-o">
           <span class="ds-d"></span>
@@ -244,7 +245,7 @@
 
     <!-- 4 · Cómo trabajamos: pasos, por qué en ese orden, casos reales, práctica, datos y logística -->
     <section class="slide s-method roomy">
-      <span class="counter">06 / 11</span>
+      <span class="counter">06 / 10</span>
       <p class="eyebrow">06 · Cómo trabajamos</p>
       <h2>Así trabajamos con cada gerencia.</h2>
       <p class="sub">Nos sentamos con cada gerencia y salimos de cada conversación con algo concreto.</p>
@@ -286,7 +287,7 @@
 
     <!-- 5 · Entregables (Detección): lo que recibe, sin conteos ni áreas; «Lo que se llevan» + «Entregables» ubican los campos -->
     <section class="slide s-deliv s-det-deliv">
-      <span class="counter">07 / 11</span>
+      <span class="counter">07 / 10</span>
       <p class="eyebrow">07 · Entregables</p>
       <div class="deliv-head">
         <h2>Lo que recibe la clínica.</h2>
@@ -346,7 +347,7 @@
 
     <!-- 8 · Retorno: ¿qué gano? (método de cálculo). Sin estudios ni citas externas. -->
     <section class="slide s-roi">
-      <span class="counter">08 / 11</span>
+      <span class="counter">08 / 10</span>
       <p class="eyebrow">08 · Retorno</p>
       <h2>Retorno esperado: decidir con datos.</h2>
       <p class="sub">El Informe Final estima el retorno de cada oportunidad con lo que cuenta cada gerencia en su levantamiento.</p>
@@ -399,13 +400,13 @@
 
     <!-- 7 · Inversión (hoja de cotización estándar; antepenúltima slide) -->
     <section class="slide s-price">
-      <span class="counter">09 / 11</span>
-      <h2 class="title">Proyecto completo.</h2>
-      <p class="price-intro">Propuesta Económica · Opción 1 · Proyecto completo</p>
+      <span class="counter">09 / 10</span>
+      <h2 class="title">Inversión del proyecto.</h2>
+      <p class="price-intro">Propuesta Económica · Servicio de Detección</p>
 
       <div class="block">
         <span class="block-eyebrow">Duración</span>
-        <p class="block-value">Reunión de arranque, <strong>2 horas de nivelación</strong> y <strong>60 horas de levantamiento</strong> en las 15 áreas.</p>
+        <p class="block-value">Reunión de arranque, <strong>2 horas de nivelación</strong> y <strong>64 horas de levantamiento</strong> en las 16 áreas.</p>
       </div>
 
       <div class="block block-programa">
@@ -418,64 +419,19 @@
       </div>
 
       <span class="cot-label cot-label-base">Propuesta + Inversión</span>
+      <span class="cot-sign cot-sign-base">REF</span>
       <div class="cot-frame base-frame"></div>
 
       <span class="cot-label cot-label-discount">Descuento</span>
-      <span class="cot-sign-minus">&minus;$</span>
+      <span class="cot-sign-minus">&minus;REF</span>
       <div class="cot-frame discount-frame"></div>
       <span class="cot-urgent-note">Descuento válido por 15 días</span>
 
       <span class="cot-label cot-label-total">TOTAL</span>
+      <span class="cot-sign cot-sign-total">REF</span>
       <div class="cot-frame total-frame"></div>
 
-      <p class="cot-validity">Cotización válida por 30 días.</p>
-      <div class="cot-terms-box">
-        <span class="cot-terms-label">Importante</span>
-        <p class="cot-terms-text">Este servicio se presta bajo nuestros <a href="https://drive.google.com/file/d/1PA-ZSt4KnyY5dpxXzgkIk6-yfGlV2eF8/view?usp=drive_link" target="_blank" rel="noopener">términos y condiciones</a>. Al avanzar con esta propuesta, ambas partes los aceptan.</p>
-      </div>
-
-      <div class="block block-notes-container">
-        <span class="block-eyebrow">Notas</span>
-      </div>
-      <div class="multi-box notas-box" data-field="Notas"></div>
-
-      <div class="foot">
-        <img src="../../../logos/educacion/NEGRO.png" alt="">
-        <span class="meta">Santiago de León · DET-056</span>
-      </div>
-    </section>
-
-    <!-- 7 · Inversión (hoja de cotización estándar; antepenúltima slide) -->
-    <section class="slide s-price">
-      <span class="counter">10 / 11</span>
-      <h2 class="title">Primera fase.</h2>
-      <p class="price-intro">Propuesta Económica · Opción 2 · Primera fase</p>
-
-      <div class="block">
-        <span class="block-eyebrow">Duración</span>
-        <p class="block-value">Reunión de arranque, <strong>2 horas de nivelación</strong> y <strong>36 horas de levantamiento</strong> en 9 áreas del frente administrativo.</p>
-      </div>
-
-      <div class="block block-programa">
-        <span class="block-eyebrow">Programa</span>
-      </div>
-      <div class="multi-box programa-box" data-field="Programa"></div>
-
-      <div class="block block-cotizacion">
-        <span class="block-eyebrow">Cotización</span>
-      </div>
-
-      <span class="cot-label cot-label-base">Propuesta + Inversión</span>
-      <div class="cot-frame base-frame"></div>
-
-      <span class="cot-label cot-label-discount">Descuento</span>
-      <span class="cot-sign-minus">&minus;$</span>
-      <div class="cot-frame discount-frame"></div>
-      <span class="cot-urgent-note">Descuento válido por 15 días</span>
-
-      <span class="cot-label cot-label-total">TOTAL</span>
-      <div class="cot-frame total-frame"></div>
-
+      <p class="cot-moneda">Pago en Divisas o Bolívares a Tasa BCV del Euro</p>
       <p class="cot-validity">Cotización válida por 30 días.</p>
       <div class="cot-terms-box">
         <span class="cot-terms-label">Importante</span>
@@ -495,8 +451,8 @@
 
     <!-- 9 · Próximos pasos: qué hacer y a quién escribir (última slide) -->
     <section class="slide s-next">
-      <span class="counter">11 / 11</span>
-      <p class="eyebrow">11 · Próximos pasos</p>
+      <span class="counter">10 / 10</span>
+      <p class="eyebrow">10 · Próximos pasos</p>
       <h2>Tres pasos para arrancar.</h2>
       <p class="sub">Esto es lo que sigue cuando Santiago de León confirme la propuesta.</p>
 

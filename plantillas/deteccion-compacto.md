@@ -26,7 +26,7 @@ En una Detección **no se sabe todavía qué se hará en cada área**: los núme
 | **Cada departamento por separado** (líder y su mano derecha), nunca varios en la misma mesa | «Un espacio por departamento» en «Cómo trabajamos» |
 | **Horas en global**, sin reparto por área: logística las reparte según lo que necesite cada departamento | Solo se muestran las horas de levantamiento (`deteccion.horas.levantamiento`), en la etapa de levantamiento y en la inversión. Arranque y nivelación son horas internas (`programa.md`) |
 | **Ni semanas ni sesiones**: se cuadran en el kickoff | Ruta por etapas, sin semanas; sin grupos de nivelación ni número de sesiones. El generador bloquea «semana» y «sesión» (`CLAUDE.md` §4.23) |
-| **Logro inmediato: al menos N en el proyecto**, no uno por área (un proceso de mucho esfuerzo pasa al mapa) | `deteccion.logros_minimos` (por defecto 3) en la tarjeta de logros, la inversión y «Cómo trabajamos» |
+| **Logros inmediatos sin cifra** (Ivana, 2026-11-13): no se dice cuántos; se realizan **cuando el proceso o el área lo permite** (un proceso de mucho esfuerzo pasa al mapa). Antes: «al menos N» (Keiber, 2026-10-08) | Tarjeta de logros, inversión y «Cómo trabajamos»; `deteccion.logros_minimos` queda como dato interno y ya no se muestra |
 | **Entregables sin conteos** («7 entregables») y sin volver a nombrar las áreas: una página de lo que recibe | Slide 5 con tarjetas nombradas: alcance y calendario, equipo nivelado, logros inmediatos, Mapa de Calor, Informe Final y hoja de ruta, inversión inteligente en licencias. El generador bloquea «N entregables» |
 | **Alcance = auditar y dejar logros** (lo global) y ahí van las áreas | Slide 2: «Auditamos cada área y dejamos logros inmediatos.», qué auditamos y para qué |
 | **Sin tarea previa** para los líderes antes de su turno | «Sin tarea previa» en «Cómo trabajamos» |
@@ -73,7 +73,7 @@ Raíz: `"version": 3`, `"formato": "deteccion"`, `cliente`, `division`, `alianza
 | `deteccion.foco` | Dónde se concentra el levantamiento (≤ ~190 caracteres) | Opcional |
 | `deteccion.horas` | `{levantamiento, arranque, nivelacion}` en horas enteras. Solo `levantamiento` se muestra (en global) | `levantamiento` obligatorio; los otros, 0 |
 | `deteccion.texto_horas` | Frase de las horas en la etapa de levantamiento | «**{h_levantamiento} horas** de levantamiento, repartidas según lo que necesite cada departamento.» |
-| `deteccion.logros_minimos` | Logros inmediatos que asegura el proyecto | 3 |
+| `deteccion.logros_minimos` | Dato interno (no se muestra): los logros no llevan cifra en la propuesta | 3 |
 | `deteccion.para_que[]` | 3 o 4 objetivos `{titulo, texto}` | Ver la operación real · Mejorar desde ya · Invertir con criterio · Cuidar la información |
 | `deteccion.etapas[]` | 4 a 6 `{titulo, texto, horas}`; exactamente una con `"horas": true` | Arranque · Nivelación · Levantamiento (horas) · Priorización · Informe Final |
 | `deteccion.ruta_completa[]` | 0 a 3 `{cuando, servicio, texto}` | Ahora Detección · Después Habilidades · Más adelante Políticas |
@@ -83,7 +83,7 @@ Raíz: `"version": 3`, `"formato": "deteccion"`, `cliente`, `division`, `alianza
 | `ruta` | `titulo`, `subtitulo` | «Del arranque al Informe Final, en {n_etapas_palabra} etapas.» |
 | `metodo` | Igual que en Habilidades | Pasos, por qué en ese orden, quién construye, las 3 prácticas de Keiber y el cuidado de los datos |
 | `logistica` | `modalidad` (obligatoria), `participantes`, `ritmo`, `arranque` | Participantes, ritmo y arranque genéricos |
-| `entregables` | `titulo`, `subtitulo` (con «Lo que se llevan»), `transversales[]`, `valor_inmediato[]` (cajas editables) | Ficha de levantamiento de cada departamento; presentación del Informe Final · mejoras en uso antes del cierre; datos para decidir licencias |
+| `entregables` | `titulo`, `subtitulo` (con «Lo que se llevan»), `transversales[]`, `valor_inmediato[]` (cajas editables) e `impacto` (`{texto, enfoque}`: cuadro «Impacto» bajo el titular, estándar desde 2026-11-09; en Detección dice lo que el diagnóstico permite, sin prometer lo que se construirá después; `enfoque`: `reenfoque`, `posiciones` u `operacion`, que decide Ivana por propuesta; ver `habilidades-compacto.md` §6) | Ficha de levantamiento de cada departamento; presentación del Informe Final · mejoras en uso antes del cierre; datos para decidir licencias |
 | `retorno` | Igual que en Habilidades (modo método o cifras con `deteccion.areas` como nombres) | Pasos, metas (Licencias, Prioridades, Control), destino y gancho de Detección |
 | `inversion` | `duracion`, `programa[]`, `notas[]` (sin garantía) | Arranque, nivelación y {h_levantamiento} horas de levantamiento |
 | `pago.cuotas[]` | Igual que en Habilidades | 50 % al aprobar · 50 % con el Informe Final |
@@ -93,7 +93,7 @@ Raíz: `"version": 3`, `"formato": "deteccion"`, `cliente`, `division`, `alianza
 
 ## 6. Qué valida el generador (además de lo común de Habilidades)
 
-**Bloquea (✗):** `deteccion` ausente; áreas fuera de 1 a 8 o repetidas; horas de levantamiento ausentes o fuera de 1 a 400; logros mínimos fuera de 1 a 10; etapas fuera de 4 a 6 o sin exactamente una con `horas`; entregables fuera de 3 a 6; más de 24 departamentos o que ocupen más de 6 filas; «frente/área prioritaria», «resto corporativo» y «N entregables» en cualquier slide; «semana» y «sesión» (`CLAUDE.md` §4.23).
+**Bloquea (✗):** `deteccion` ausente; áreas fuera de 1 a 16 o repetidas; horas de levantamiento ausentes o fuera de 1 a 400; logros mínimos fuera de 1 a 10; etapas fuera de 4 a 6 o sin exactamente una con `horas`; entregables fuera de 3 a 6; más de 24 departamentos o que ocupen más de 6 filas; «frente/área prioritaria», «resto corporativo», «N entregables» y «al menos N logros» o «N logros inmediatos» en cualquier slide; «semana» y «sesión» (`CLAUDE.md` §4.23).
 **Avisa (⚠):** valores por defecto que conviene personalizar (pasos del retorno, cuidado de los datos, plan de pago); textos largos por caja; ningún entregable que nombre los logros inmediatos; `resuelto_por`, `carriles`, `areas`, `fases`, `frentes`, `hitos` o `siguiente_etapa` presentes (se ignoran).
 
 ## 7. Campos del PDF
@@ -104,11 +104,12 @@ Los mismos 7 + N de Habilidades (`plantillas/habilidades-compacto.md` §7): `Pre
 
 | Límite | Salida |
 |---|---|
-| Más de 8 áreas o más de 24 departamentos | Agrupar sububicaciones bajo su departamento; si el cliente tiene más áreas, nombrar las grandes |
+| Más de 16 áreas o más de 24 departamentos | Agrupar sububicaciones bajo su departamento; si el cliente tiene más áreas, nombrar las grandes |
 | Una sola área | Una tarjeta ancha |
 | Más de 6 etapas | Fusionar (p. ej. Priorización e Informe Final) |
-| Cotización por fases o por permanencia | No soportada |
+| Cotización por fases o por permanencia | Por permanencia, no soportada. Por fases u opciones, `inversion.etapas` (2 a 4 hojas; DET-056: proyecto completo frente a primera fase) |
 
 ## 9. Historial
 
+- **v3.1 (2026-11-09)**: cuadro «Impacto» en la lámina de entregables, signo REF y leyenda de pago en la hoja de inversión (ver `habilidades-compacto.md` §6 y §14); límite de áreas de 1 a 16 (DET-056, 15 gerencias) y `inversion.etapas` documentado.
 - **v3.0 (2026-10-08)**: primera versión, desde G-MAX DET-024 (armado a mano ese mismo día con las correcciones de Keiber y luego reproducido por el generador con el mismo texto en las 9 slides).

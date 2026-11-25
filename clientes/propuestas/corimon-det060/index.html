@@ -1,0 +1,461 @@
+<!doctype html>
+<!--
+  Propuesta · Corimón · Servicio de Detección y Políticas (DET-060)
+  División: Educación · Servicio: Detección y Políticas (§4.1a) · Alianza: no
+  GENERADO por scripts/generar-habilidades-compacto.py (plantilla 3.0 (2026-10-08), formato deteccion) desde datos.json.
+  No editar a mano: editar datos.json y regenerar. Estilos propios del deck: overrides.css.
+  Fuente del insumo: Ficha de Levantamiento de Corimón. Sin transcripción de la reunión disponible; si aparece y contradice la ficha, manda la transcripción.
+
+  Formato compacto de 8 slides, en el orden de las preguntas del cliente (Ventas, 2026-10-07), sin semanas, sesiones
+  ni fechas (Keiber, 2026-10-08):
+    1 Portada · 2 Alcance · 3 Ruta · 4 Cómo trabajamos · 5 Entregables · 6 Retorno · 7 Inversión · 8 Próximos pasos
+  Marcadores de detección de AcroForms (agregar-campo-precio.py), por página: «Propuesta Económica» solo en la slide de
+  inversión; «Lo que se llevan» y «Entregables» solo en la de entregables; «Facilidad de pago» solo en la de pago.
+  Campos AcroForm: Programa, Notas, PrecioBase, Descuento, PrecioTotal (inversión) y Entregables, Acreditacion (entregables). Se reposicionan con scripts/customize-habilidades-compacto.py.
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Propuesta · Corimón · Intezia Educación</title>
+  <link rel="stylesheet" href="../_base/styles.css">
+  <link rel="stylesheet" href="habilidades-compacto.css">
+  <link rel="stylesheet" href="overrides.css">
+</head>
+<body>
+
+  <main class="deck">
+
+    <!-- 1 · Portada: ¿cuál es mi problema? -->
+    <section class="slide s-cover">
+      <span class="counter">01 / 08</span>
+      <div class="logo-big">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia Educación">
+      </div>
+      <div class="body">
+        <p class="eyebrow">Propuesta de proyecto · Servicio de Detección y Políticas</p>
+        <h1 style="font-size:54px">
+          Diagnóstico de IA<br>
+          con gobernanza<br>
+          <span class="hl">en 12 áreas de Corimón</span>
+        </h1>
+        <p class="lead">
+          Auditamos las 12 áreas corporativas y de planta de Corimón, proceso por proceso, con quien hace el trabajo. Dejamos <strong>logros inmediatos</strong> en el camino y construimos el <strong>marco de gobernanza de IA</strong> que necesitan antes de escalar el uso de IA a toda la organización.
+        </p>
+        <div class="pain-strip">
+          <div class="pain-item">
+            <span class="pain-num">12</span>
+            <span class="pain-lbl">áreas y 51 líderes estratégicos, con un nivel de IA muy desigual entre ellas.</span>
+          </div>
+          <div class="pain-item">
+            <span class="pain-num">3</span>
+            <span class="pain-lbl">herramientas ya en uso, sin un criterio objetivo de cuál conviene en cada área.</span>
+          </div>
+          <div class="pain-item">
+            <span class="pain-num">Millones</span>
+            <span class="pain-lbl">de documentos en Legal y datos de personal en RR. HH., sin política de monitoreo.</span>
+          </div>
+          <div class="pain-item">
+            <span class="pain-num">150</span>
+            <span class="pain-lbl">personas ya capacitadas en uso básico de IA, pero sin gobernanza ni un camino tecnológico común.</span>
+          </div>
+        </div>
+      </div>
+      <div class="id-line">
+        <span class="codigo">Código: DET-060</span>
+        <span class="cliente">Corimón</span>
+      </div>
+    </section>
+
+    <!-- 2 · Alcance (Detección): qué auditamos y para qué, sin conteos ni horas por área -->
+    <section class="slide s-scope s-det-scope">
+      <span class="counter">02 / 08</span>
+      <p class="eyebrow">02 · Alcance</p>
+      <h2>Auditamos cada área y dejamos logros inmediatos.</h2>
+      <p class="sub">Revisamos <strong>proceso por proceso</strong> cada una de las 12 áreas de Corimón, con quien hace el trabajo.</p>
+
+      <div class="scope-panels det-scope">
+        <div class="det-panel det-que">
+          <p class="det-panel-label">Qué auditamos</p>
+          <div class="det-areas many">
+            <span class="det-area">TI</span>
+            <span class="det-area">Finanzas</span>
+            <span class="det-area">Compras</span>
+            <span class="det-area">Negocios, Comercial y BI</span>
+            <span class="det-area">RR. HH.</span>
+            <span class="det-area">Gerencia General</span>
+            <span class="det-area">Logística</span>
+            <span class="det-area">Normalización, Laboratorio y Desarrollo</span>
+            <span class="det-area">Legal</span>
+            <span class="det-area">CEO</span>
+            <span class="det-area">Proyectos, Ingeniería y Mantenimiento</span>
+            <span class="det-area">Producción</span>
+          </div>
+          <p class="det-foco">Levantamiento con los 51 líderes estratégicos de las 12 áreas, con más tiempo dedicado a TI, donde se define el camino tecnológico.</p>
+        </div>
+
+        <div class="det-panel det-para">
+          <p class="det-panel-label">Para qué</p>
+          <ol class="det-goals">
+            <li><b>Ver la operación real</b><span>Cómo trabaja hoy cada una de las 12 áreas, con quien hace el trabajo, no solo con la dirección.</span></li>
+            <li><b>Recomendar con objetividad</b><span>La Brújula dice qué herramienta conviene en cada área, sin inclinarse por ninguna.</span></li>
+            <li><b>Mejorar desde ya</b><span>Logros inmediatos que el equipo usa mientras avanza el levantamiento.</span></li>
+            <li><b>Gobernar y proteger datos</b><span>Políticas de uso de IA y reglas para monitorear el uso indebido de la información más sensible.</span></li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="scope-out">
+        <p class="scope-card-label">Fuera de este alcance</p>
+        <ul>
+          <li>Construir la arquitectura central (la columna vertebral): la recomendamos; la construye el equipo de TI.</li>
+          <li>Las licencias de las herramientas recomendadas: van aparte.</li>
+          <li>Desarrollos a la medida: si el Informe Final los recomienda, se cotizan aparte.</li>
+        </ul>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Corimón · DET-060</span>
+      </div>
+    </section>
+
+    <!-- 3 · Ruta (Detección): etapas sin semanas ni sesiones (se acuerdan en el arranque) y sin horas por área -->
+    <section class="slide s-route s-det-route">
+      <span class="counter">03 / 08</span>
+      <p class="eyebrow">03 · Ruta</p>
+      <h2>Del arranque al Informe Final, en seis etapas.</h2>
+      <p class="sub">El calendario y el orden de las áreas se acuerdan con la dirección en la <strong>reunión de arranque</strong>.</p>
+
+      <div class="det-line"></div>
+      <div class="det-stages" style="--n:6">
+        <div class="det-stage acc-y">
+          <span class="ds-d"></span>
+          <span class="ds-n">1</span>
+          <b class="ds-t">Arranque</b>
+          <p>Reunión con la dirección: alcance, responsable de cada área y calendario.</p>
+        </div>
+        <div class="det-stage acc-o">
+          <span class="ds-d"></span>
+          <span class="ds-n">2</span>
+          <b class="ds-t">Nivelación</b>
+          <p><strong>4 horas</strong> de Fundamentals en 2 grupos, para 46 líderes.</p>
+        </div>
+        <div class="det-stage acc-y hi">
+          <span class="ds-d"></span>
+          <span class="ds-n">3</span>
+          <b class="ds-t">Auditoría</b>
+          <p>Área por área, con el líder y su equipo; más tiempo dedicado a TI.</p>
+          <p class="ds-h"><strong>52 horas</strong> de levantamiento, repartidas según lo que necesite cada departamento.</p>
+        </div>
+        <div class="det-stage acc-o">
+          <span class="ds-d"></span>
+          <span class="ds-n">4</span>
+          <b class="ds-t">Priorización</b>
+          <p>Intezia cruza lo levantado y ordena las oportunidades de las 12 áreas.</p>
+        </div>
+        <div class="det-stage acc-y">
+          <span class="ds-d"></span>
+          <span class="ds-n">5</span>
+          <b class="ds-t">Políticas</b>
+          <p>Diagnóstico de madurez y redacción del marco, con foco en el uso indebido.</p>
+        </div>
+        <div class="det-stage acc-w">
+          <span class="ds-d"></span>
+          <span class="ds-n">6</span>
+          <b class="ds-t">Informe</b>
+          <p>Diagnóstico, camino tecnológico por área y hoja de ruta, presentados a la dirección.</p>
+        </div>
+      </div>
+
+      <div class="route-next det-next">
+        <p class="det-next-label">La ruta completa de Corimón</p>
+        <div class="det-next-items" style="--n:2">
+          <div class="dn-item now"><span class="dn-when">Ahora</span><b>Detección y Políticas</b><p>Esta propuesta: 51 líderes estratégicos en 12 áreas.</p></div>
+          <div class="dn-item"><span class="dn-when">Después</span><b>Habilidades</b><p>Profundización por filial y nivelación del resto del personal.</p></div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Corimón · DET-060</span>
+      </div>
+    </section>
+
+    <!-- 4 · Cómo trabajamos: pasos, por qué en ese orden, casos reales, práctica, datos y logística -->
+    <section class="slide s-method roomy">
+      <span class="counter">04 / 08</span>
+      <p class="eyebrow">04 · Cómo trabajamos</p>
+      <h2>Así trabajamos en cada departamento.</h2>
+      <p class="sub">Nos sentamos con quien hace el trabajo, con sus casos reales, y salimos de cada levantamiento con algo concreto.</p>
+
+      <ol class="mt-steps" style="--n:4">
+          <li><b>Entrevistamos</b><span>Al líder de cada departamento y a su mano derecha.</span></li>
+          <li><b>Mapeamos</b><span>Procesos, tiempos, herramientas y cuellos de botella del día a día.</span></li>
+          <li><b>Construimos</b><span>Un logro inmediato en el momento, cuando el proceso lo permite.</span></li>
+          <li><b>Priorizamos</b><span>Cada oportunidad por impacto, esfuerzo y riesgo.</span></li>
+      </ol>
+      <div class="mt-strips">
+        <p class="mt-why"><b>Por qué en este orden</b> Primero nivelamos al equipo, para que todos hablen el mismo idioma sobre IA. Después levantamos cada departamento por separado, para que cada líder hable de sus procesos sin esperar a otros. Al final priorizamos con la foto completa de Corimón.</p>
+        <p class="mt-who"><b>Quién construye</b> Intezia recomienda la arquitectura central, los criterios de separación de datos y control de tokens, y la ruta. La construcción queda del lado del equipo de TI de Corimón.</p>
+      </div>
+
+      <div class="mt-info">
+        <div class="mt-card">
+          <p class="mt-card-label">Cómo funciona en la práctica</p>
+          <ul><li><b>Un espacio por área.</b> Nunca varias áreas juntas en la misma mesa, salvo las que ya comparten subdepartamento.</li><li><b>Sin tarea previa.</b> Los líderes no preparan nada antes de su turno: llegan con su día a día real.</li><li><b>Herramienta sin favoritismos.</b> El Informe Final recomienda con datos, no con lo que ya usa cada área.</li></ul>
+        </div>
+        <div class="mt-card">
+          <p class="mt-card-label">Cómo cuidamos sus datos</p>
+          <p>Legal maneja millones de documentos y RR. HH. datos de personal: trabajamos con ejemplos reales sin sacarlos de la organización, y las políticas definen cómo monitorear el uso indebido de la información confidencial.</p>
+        </div>
+      </div>
+
+      <div class="mt-logi">
+        <div class="mt-tile"><span>Modalidad</span><b>Presencial, coordinada por área en la reunión de arranque.</b></div>
+        <div class="mt-tile"><span>Participantes</span><b>Todo el equipo en la nivelación; cada líder y su mano derecha en el levantamiento.</b></div>
+        <div class="mt-tile"><span>Ritmo de trabajo</span><b>Jornadas en el horario que acuerde cada responsable.</b></div>
+        <div class="mt-tile"><span>Arranque</span><b>La fecha la fija Corimón al confirmar la propuesta.</b></div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Corimón · DET-060</span>
+      </div>
+    </section>
+
+    <!-- 5 · Entregables (Detección): lo que recibe, sin conteos ni áreas; «Lo que se llevan» + «Entregables» ubican los campos -->
+    <section class="slide s-deliv s-det-deliv con-imp imp-g">
+      <span class="counter">05 / 08</span>
+      <p class="eyebrow">05 · Entregables</p>
+      <div class="deliv-head">
+        <h2>Lo que recibe Corimón.</h2>
+        <p class="deliv-sub"><span class="nw">Lo que se llevan</span>: un diagnóstico para decidir, mejoras que ya funcionan y una hoja de ruta para seguir.</p>
+      </div>
+
+      <div class="deliv-impact grande">
+        <span class="di-label">Impacto</span>
+        <p>Corimón sale con un diagnóstico objetivo de sus 12 áreas, una Brújula que dice qué herramienta conviene en cada una sin favoritismos, y un marco de políticas que protege su información más sensible.</p>
+      </div>
+
+      <div class="det-cards" style="--cols:3; --rows:2">
+        <div class="det-card acc-y">
+          <span class="dk-when">Al arrancar</span>
+          <b>Alcance y calendario</b>
+          <p>Acordados con la dirección: responsable de cada área y orden de las auditorías.</p>
+        </div>
+        <div class="det-card acc-y">
+          <span class="dk-when">Al arrancar</span>
+          <b>Equipo nivelado en IA</b>
+          <p>Los 46 líderes sin nivelación previa, con un lenguaje común sobre IA y su uso responsable.</p>
+        </div>
+        <div class="det-card acc-o">
+          <span class="dk-when">En el levantamiento</span>
+          <b>Logros inmediatos</b>
+          <p>Soluciones construidas con el equipo, cuando el proceso o el área lo permite.</p>
+        </div>
+        <div class="det-card acc-w">
+          <span class="dk-when">Al cierre</span>
+          <b>Mapa de Calor</b>
+          <p>Las oportunidades de las 12 áreas en un solo mapa, con su Índice de Madurez en IA.</p>
+        </div>
+        <div class="det-card acc-w">
+          <span class="dk-when">Al cierre</span>
+          <b>Marco de gobernanza de IA</b>
+          <p>Manual de políticas, Matriz de riesgos y Brújula IA, con roles, permisos y reglas de escalamiento y de monitoreo del uso indebido.</p>
+        </div>
+        <div class="det-card acc-w">
+          <span class="dk-when">Al cierre</span>
+          <b>Informe Final y hoja de ruta</b>
+          <p>Diagnóstico por área, camino tecnológico recomendado y resumen ejecutivo de una página.</p>
+        </div>
+      </div>
+
+      <div class="deliv-band">
+        <div class="db-card db-1">
+          <span class="db-label">Para todo el proyecto</span>
+        </div>
+        <div class="db-card db-2">
+          <span class="db-label">Valor inmediato</span>
+        </div>
+      </div>
+      <!-- Cajas multiline editables (vacías en HTML: el contenido vive dentro del AcroForm /V, ver acroforms.json). -->
+      <div class="multi-box db-box db-box-1" data-field="Entregables"></div>
+      <div class="multi-box db-box db-box-2" data-field="Acreditacion"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Corimón · DET-060</span>
+      </div>
+    </section>
+
+    <!-- 6 · Retorno: ¿qué gano? (método de cálculo). Sin estudios ni citas externas. -->
+    <section class="slide s-roi">
+      <span class="counter">06 / 08</span>
+      <p class="eyebrow">06 · Retorno</p>
+      <h2>Retorno esperado: orden y objetividad.</h2>
+      <p class="sub">Se calcula con los hallazgos del levantamiento y se confirma en el Informe Final.</p>
+
+      <div class="roi-body">
+        <div class="roi-panel">
+          <p class="roi-panel-title">Cómo se estima el retorno de cada oportunidad</p>
+          <ol class="roi-steps">
+            <li><b>Volumen por área</b><span>Cuántos procesos y cuánto tiempo dedica cada área a tareas que la IA podría asumir, por ejemplo armar un contrato tipo en Legal.</span></li>
+            <li><b>Nivel de madurez</b><span>Qué tan avanzada está cada área con IA hoy, medido en el levantamiento.</span></li>
+            <li><b>Oportunidades priorizadas</b><span>Cuáles procesos conviene atacar primero, según impacto y esfuerzo.</span></li>
+            <li><b>Camino tecnológico</b><span>Qué herramienta conviene en cada área, con datos y sin favoritismos.</span></li>
+          </ol>
+        </div>
+
+        <div class="roi-right">
+          <p class="roi-right-title">Qué decide Corimón con el Informe Final</p>
+          <div class="roi-card">
+            <b>Licencias</b>
+            <p>Cuáles adquirir, cuáles no y para qué puestos.</p>
+          </div>
+          <div class="roi-card">
+            <b>Prioridades</b>
+            <p>Qué procesos mejorar primero y con qué tipo de solución.</p>
+          </div>
+          <div class="roi-card">
+            <b>Control</b>
+            <p>Qué herramienta usa cada puesto y qué información puede salir de cada área.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="roi-dest-wrap">
+        <p class="roi-dest-title">Hacia dónde va Corimón</p>
+        <div class="roi-dest">
+          <div class="rd-item"><b>Orden en toda el grupo</b><p>Las 12 áreas con su madurez y sus oportunidades en un solo mapa.</p></div>
+          <div class="rd-item"><b>Decisión con criterio</b><p>Qué herramienta y qué licencias conviene en cada área, con datos.</p></div>
+          <div class="rd-item"><b>Información protegida</b><p>Reglas claras de uso de IA y de monitoreo del uso indebido.</p></div>
+        </div>
+      </div>
+
+      <div class="roi-hook"><p>Al cierre del Informe Final, Corimón cuenta con su mapa de oportunidades, su camino tecnológico y su marco de gobernanza, listos para decidir.</p></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Corimón · DET-060</span>
+      </div>
+    </section>
+
+    <!-- 7 · Inversión (hoja de cotización estándar; antepenúltima slide) -->
+    <section class="slide s-price">
+      <span class="counter">07 / 08</span>
+      <h2 class="title">Inversión del proyecto.</h2>
+      <p class="price-intro">Propuesta Económica · Servicio de Detección y Políticas</p>
+
+      <div class="block">
+        <span class="block-eyebrow">Duración</span>
+        <p class="block-value"><strong>58 horas</strong> en total: 2 de arranque, 4 de Fundamentals y 52 de levantamiento, más el marco de gobernanza de IA.</p>
+      </div>
+
+      <div class="block block-programa">
+        <span class="block-eyebrow">Programa</span>
+      </div>
+      <div class="multi-box programa-box" data-field="Programa"></div>
+
+      <div class="block block-cotizacion">
+        <span class="block-eyebrow">Cotización</span>
+      </div>
+
+      <span class="cot-label cot-label-base">Inversión total del proyecto</span>
+      <span class="cot-sign cot-sign-base">REF</span>
+      <div class="cot-frame base-frame"></div>
+
+      <span class="cot-label cot-label-discount">Descuento</span>
+      <span class="cot-sign-minus">&minus;REF</span>
+      <div class="cot-frame discount-frame"></div>
+      <span class="cot-urgent-note">Descuento válido por 15 días</span>
+
+      <span class="cot-label cot-label-total">TOTAL</span>
+      <span class="cot-sign cot-sign-total">REF</span>
+      <div class="cot-frame total-frame"></div>
+
+      <p class="cot-moneda">Pago en Divisas o Bolívares a Tasa BCV del Euro</p>
+      <p class="cot-validity">Cotización válida por 30 días.</p>
+      <div class="cot-terms-box">
+        <span class="cot-terms-label">Importante</span>
+        <p class="cot-terms-text">Este servicio se presta bajo nuestros <a href="https://drive.google.com/file/d/1PA-ZSt4KnyY5dpxXzgkIk6-yfGlV2eF8/view?usp=drive_link" target="_blank" rel="noopener">términos y condiciones</a>. Al avanzar con esta propuesta, ambas partes los aceptan.</p>
+      </div>
+
+      <div class="block block-notes-container">
+        <span class="block-eyebrow">Notas</span>
+      </div>
+      <div class="multi-box notas-box" data-field="Notas"></div>
+
+      <div class="partes-wrap">
+        <span class="partes-eyebrow">Valor por servicio</span>
+        <div class="partes-cards">
+          <div class="parte-card acc-y">
+            <span class="parte-tag">Parte 1</span>
+            <b class="parte-name">Detección</b>
+            <p class="parte-det">Fundamentals y auditoría · 58 h</p>
+            <div class="parte-frame"></div>
+          </div>
+          <div class="parte-card acc-o">
+            <span class="parte-tag">Parte 2</span>
+            <b class="parte-name">Políticas</b>
+            <p class="parte-det">Marco de gobernanza de IA</p>
+            <div class="parte-frame"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Corimón · DET-060</span>
+      </div>
+    </section>
+
+    <!-- 9 · Próximos pasos: qué hacer y a quién escribir (última slide) -->
+    <section class="slide s-next">
+      <span class="counter">08 / 08</span>
+      <p class="eyebrow">08 · Próximos pasos</p>
+      <h2>Tres pasos para arrancar.</h2>
+      <p class="sub">Esto es lo que sigue cuando Corimón confirme la propuesta.</p>
+
+      <div class="nx-steps">
+        <div class="nx-step acc-y">
+          <span class="nx-num">1</span>
+          <b>Fecha de arranque</b>
+          <p>Acordamos con la dirección la fecha de la reunión de arranque y el horario de las jornadas.</p>
+        </div>
+        <div class="nx-step acc-o">
+          <span class="nx-num">2</span>
+          <b>Lista de responsables</b>
+          <p>Confirmamos los departamentos y quién participa en cada uno; con eso armamos la agenda.</p>
+        </div>
+        <div class="nx-step acc-w">
+          <span class="nx-num">3</span>
+          <b>Reunión de arranque</b>
+          <p>Una hora con la dirección para cerrar el alcance, el orden de las áreas y el calendario.</p>
+        </div>
+      </div>
+
+      <div class="nx-contact">
+        <div class="nx-card nx-ase">
+          <span class="nx-label">¿Dudas? Escribe a tu asesora comercial</span>
+          <b class="nx-name">Flavia Martínez</b>
+          <span class="nx-role">Asesora comercial</span>
+          <p class="nx-line"><a href="mailto:fmartinez@intezia.com">fmartinez@intezia.com</a></p>
+          <p class="nx-line">+58 414 5756615</p>
+        </div>
+        <div class="nx-card nx-emp">
+          <span class="nx-label">Intezia</span>
+          <p class="nx-line">Intezia C.A J-505657950</p>
+          <p class="nx-line"><a href="mailto:servicio@intezia.com">servicio@intezia.com</a></p>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Corimón · DET-060</span>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

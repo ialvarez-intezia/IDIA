@@ -1,0 +1,469 @@
+<!doctype html>
+<!--
+  Propuesta · Oftalmi · Servicio de Habilidades (CAI-118)
+  División: Educación · Servicio: Habilidades (§4.1a) · Alianza: no
+  GENERADO por scripts/generar-habilidades-compacto.py (plantilla 3.0 (2026-10-08), formato habilidades) desde datos.json.
+  No editar a mano: editar datos.json y regenerar. Estilos propios del deck: overrides.css.
+  Fuente del insumo: Ficha de Levantamiento (20/11/2026), resumen de la asesora y transcripción de la reunión del 20/11/2026
+
+  Formato compacto de 8 slides, en el orden de las preguntas del cliente (Ventas, 2026-10-07), sin semanas, sesiones
+  ni fechas (Keiber, 2026-10-08):
+    1 Portada · 2 Alcance · 3 Ruta · 4 Cómo trabajamos · 5 Entregables · 6 Retorno · 7 Inversión · 8 Próximos pasos
+  Marcadores de detección de AcroForms (agregar-campo-precio.py), por página: «Propuesta Económica» solo en la slide de
+  inversión; «Lo que se llevan» y «Entregables» solo en la de entregables; «Facilidad de pago» solo en la de pago.
+  Campos AcroForm: Programa, Notas, PrecioBase, Descuento, PrecioTotal (inversión) y Entregables, Acreditacion (entregables). Se reposicionan con scripts/customize-habilidades-compacto.py.
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Propuesta · Oftalmi · Intezia Educación</title>
+  <link rel="stylesheet" href="../_base/styles.css">
+  <link rel="stylesheet" href="habilidades-compacto.css">
+  <link rel="stylesheet" href="overrides.css">
+</head>
+<body>
+
+  <main class="deck">
+
+    <!-- 1 · Portada: ¿cuál es mi problema? -->
+    <section class="slide s-cover">
+      <span class="counter">01 / 08</span>
+      <div class="logo-big">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia Educación">
+      </div>
+      <div class="body">
+        <p class="eyebrow">Propuesta de proyecto · Servicio de Habilidades</p>
+        <h1 style="font-size:46px">
+          Agentes de IA para campañas,<br>
+          datos, eventos y contenido<br>
+          <span class="hl">en Mercadeo de Oftalmi</span>
+        </h1>
+        <p class="lead">
+          Construimos con cada persona de Mercadeo agentes y flujos de IA que <strong>trabajan entre sí</strong> y quedan funcionando en el departamento, y el equipo aprende a replicarlos en otras áreas.
+        </p>
+        <div class="pain-strip">
+          <div class="pain-item">
+            <span class="pain-num">Hasta 34</span>
+            <span class="pain-lbl">marcas maneja cada gerente de producto, con campañas, correos y KPIs a mano.</span>
+          </div>
+          <div class="pain-item">
+            <span class="pain-num">Suelta</span>
+            <span class="pain-lbl">es la IA que usa el equipo hoy, sin flujos de trabajo construidos ni automatización.</span>
+          </div>
+          <div class="pain-item">
+            <span class="pain-num">Sin match</span>
+            <span class="pain-lbl">diario entre las ventas reales y los dashboards, que además tienen problemas de presentación.</span>
+          </div>
+          <div class="pain-item">
+            <span class="pain-num">A mano</span>
+            <span class="pain-lbl">se cuidan los detalles de cada evento: transporte, hospedaje y material POP.</span>
+          </div>
+        </div>
+      </div>
+      <div class="id-line">
+        <span class="codigo">Código: CAI-118</span>
+        <span class="cliente">Oftalmi</span>
+      </div>
+    </section>
+
+    <!-- 2 · Alcance: qué vamos a hacer y para qué -->
+    <section class="slide s-scope roomy">
+      <span class="counter">02 / 08</span>
+      <p class="eyebrow">02 · Alcance</p>
+      <h2>Seis frentes de Mercadeo, en tres fases.</h2>
+      <p class="sub">Cada frente tiene sus flujos y sus agentes; los datos y los gerentes de producto van primero.</p>
+
+      <div class="scope-panels one" style="--np:1">
+        <div class="scope-panel acc-y">
+          <div class="scope-head">
+            <span class="scope-tag">Agentes de IA</span>
+            <span class="scope-total"><b>6</b> áreas</span>
+          </div>
+          <ul class="scope-rows">
+              <li><span class="area">Datos y dashboards</span><span class="para">Que los datos de venta cuadren cada día y los dashboards se vean y se lean bien</span></li>
+              <li><span class="area">Gerentes de Producto</span><span class="para">Que cada gerente dirija sus agentes y gestione sus marcas sin hacerlo a mano</span></li>
+              <li><span class="area">Eventos y material</span><span class="para">Que ningún detalle de un evento se pase y el material promocional salga más rápido</span></li>
+              <li><span class="area">Contenido digital y redes</span><span class="para">Crear, controlar y coordinar los canales con un criterio por tipo de producto</span></li>
+              <li><span class="area">Capacitación y LMS</span><span class="para">Que el LMS de los representantes se arme y se actualice con flujos formales</span></li>
+              <li><span class="area">Investigación y plan de marca</span><span class="para">Investigar el mercado y decidir con reportes rápidos las propuestas del portafolio</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="scope-out">
+        <p class="scope-card-label">Fuera de este alcance</p>
+        <ul>
+          <li>Cerebro Digital para líderes ejecutivos: propuesta aparte, después de esta.</li>
+          <li>Campañas de publicidad pagada: las lleva un externo.</li>
+          <li>El sistema administrativo antiguo: se consulta para traer los datos, no se opera.</li>
+        </ul>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Oftalmi · CAI-118</span>
+      </div>
+    </section>
+
+    <!-- 3 · Ruta: qué pasa en cada fase -->
+    <section class="slide s-route">
+      <span class="counter">03 / 08</span>
+      <p class="eyebrow">03 · Ruta</p>
+      <h2>De los datos a cada frente.</h2>
+      <p class="sub">El calendario se acuerda en la reunión de arranque. La <strong>garantía y el seguimiento</strong> a 30, 60 y 90 días corren desde el cierre de cada área.</p>
+
+      <div class="route-grid n1" style="--cols:3; --rows:1; --rowh:214px">
+
+        <div class="rg-corner"></div>
+        <div class="rg-phase rg-ph-1 hi">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Base</span></span>
+          <span class="rg-phase-name">Datos y gerentes de producto</span>
+        </div>
+        <div class="rg-phase rg-ph-2">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Campo</span></span>
+          <span class="rg-phase-name">Eventos, material y contenido</span>
+        </div>
+        <div class="rg-phase rg-ph-3">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Extensión</span></span>
+          <span class="rg-phase-name">Capacitación e investigación</span>
+        </div>
+        <div class="rg-phase rg-fu">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Garantía</span></span>
+          <span class="rg-phase-date">30, 60 y 90 días</span>
+          <span class="rg-phase-txt">Seguimiento desde el cierre de cada área</span>
+        </div>
+
+        <div class="rg-front acc-y">
+          <span class="rg-front-h">Mercadeo de Oftalmi</span>
+          <span class="rg-front-row"><span class="rg-front-tool">Agentes</span></span>
+          <span class="rg-front-meta"></span>
+        </div>
+        <div class="rg-cell hi"><p>Los datos cuadran cada día y cada gerente de producto dirige sus agentes.</p></div>
+        <div class="rg-cell"><p>Eventos con checklist, material promocional y contenido para cada canal.</p></div>
+        <div class="rg-cell"><p>El LMS con flujos formales y la investigación de mercado asistida.</p></div>
+
+        <div class="rg-follow" style="grid-column:5; grid-row:2 / span 1">
+          <ul>
+            <li><b>30 días</b><span>Uso real y ajustes</span></li>
+            <li><b>60 días</b><span>Ajustes con casos nuevos</span></li>
+            <li><b>90 días</b><span>Tablero del tiempo ganado, contra la línea base</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="route-miles" style="grid-template-columns:repeat(4,1fr)">
+        <div class="mile"><span class="mile-d"></span><b>Arranque</b><p>Reunión para conocer al equipo y sus frentes y fijar la línea base de tiempos.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Datos y gerentes</b><p>Los datos cuadran y cada gerente de producto ya tiene sus agentes.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Campo y canales</b><p>Eventos con checklist y contenido para las redes.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Cierre</b><p>Capacitación e investigación; empieza la garantía.</p></div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Oftalmi · CAI-118</span>
+      </div>
+    </section>
+
+    <!-- 4 · Cómo trabajamos: pasos, por qué en ese orden, casos reales, práctica, datos y logística -->
+    <section class="slide s-method">
+      <span class="counter">04 / 08</span>
+      <p class="eyebrow">04 · Cómo trabajamos</p>
+      <h2>Así construimos con el equipo.</h2>
+      <p class="sub">Cada agente se construye con quien hace hoy ese trabajo, para que después lo dirija y lo replique.</p>
+
+      <ol class="mt-steps" style="--n:4">
+          <li><b>Construimos</b><span>Con cada persona, sobre su trabajo real.</span></li>
+          <li><b>Probamos</b><span>Con datos y casos reales del departamento, antes de usarlos solos.</span></li>
+          <li><b>Adoptamos</b><span>Cada persona dirige sus agentes en su trabajo diario.</span></li>
+          <li><b>Medimos</b><span>El tiempo recuperado por flujo y las diferencias que se evitan.</span></li>
+      </ol>
+      <div class="mt-strips">
+        <p class="mt-why"><b>Por qué en este orden</b> Los datos y las marcas concentran el mayor volumen, así que van primero. Después eventos y contenido, que se apoyan en esos reportes, y al final capacitación e investigación.</p>
+        <p class="mt-who"><b>Quién construye</b> <strong>Intezia guía</strong> y construye con cada persona del equipo, que aprende para replicarlo y escalarlo a otros departamentos.</p>
+      </div>
+
+      <div class="mt-info">
+        <div class="mt-card">
+          <p class="mt-card-label">Cómo funciona en la práctica</p>
+          <ul><li><b>Con el trabajo real de cada uno.</b> Cada flujo parte de una tarea de su día a día, no de ejercicios de aula.</li><li><b>La decisión sigue siendo de la persona.</b> Los agentes preparan reportes y propuestas; qué acción tomar lo decide cada gerente.</li><li><b>Cuidado con lo regulado.</b> En productos éticos se respeta la regulación: ningún material sale sin la revisión de la persona responsable.</li></ul>
+        </div>
+        <div class="mt-card">
+          <p class="mt-card-label">Cómo cuidamos sus datos</p>
+          <p>Los datos de venta, de clientes y de marcas se usan solo con la autorización de Oftalmi.</p>
+        </div>
+      </div>
+
+      <div class="mt-logi">
+        <div class="mt-tile"><span>Modalidad</span><b>Presencial en sus oficinas, según se acuerde en la reunión de arranque.</b></div>
+        <div class="mt-tile"><span>Participantes</span><b>Las personas de Mercadeo, según su frente.</b></div>
+        <div class="mt-tile"><span>Ritmo de trabajo</span><b>Según la disponibilidad de cada área, sin frenar su operación diaria.</b></div>
+        <div class="mt-tile"><span>Arranque</span><b>Las fechas se acuerdan en la reunión de arranque.</b></div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Oftalmi · CAI-118</span>
+      </div>
+    </section>
+
+    <!-- 5 · Entregables: ¿con qué me quedo? (catálogo + piezas transversales) -->
+    <section class="slide s-deliv compact con-imp">
+      <span class="counter">05 / 08</span>
+      <p class="eyebrow">05 · Entregables</p>
+      <div class="deliv-head">
+        <h2>Lo que recibe Mercadeo.</h2>
+        <p class="deliv-sub"><span class="nw">Lo que se llevan</span> los equipos: agentes y flujos funcionando en cada frente, más el seguimiento a 30, 60 y 90 días.</p>
+      </div>
+
+      <div class="deliv-impact grande">
+        <span class="di-label">Impacto</span>
+        <p>Las campañas, los reportes, los eventos y el contenido dejan de armarse a mano: cada persona <strong>dirige sus agentes</strong>, los datos <strong>cuadran cada día</strong> y los flujos quedan listos para <strong>replicarse</strong>.</p>
+      </div>
+
+      <div class="deliv-carriles" style="--ncols:4">
+        <span class="dc acc-y" style="grid-column: span 4">Agentes de IA</span>
+      </div>
+
+      <div class="deliv-cols" style="--ncols:4">
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">Datos y dashboards</p>
+            <ul>
+              <li>Match diario de ventas y dashboards</li>
+              <li>Dashboards de Power BI mejorados</li>
+              <li>Guía de mantenimiento de los datos</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">Gerentes de Producto</p>
+            <ul>
+              <li>Agentes de cada gerente de producto</li>
+              <li>Plan de marca anual con seguimiento</li>
+              <li>Correos de campaña con seguimiento</li>
+              <li>Reporte de unidades y competencia</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">Eventos y material</p>
+            <ul>
+              <li>Checklist automático de eventos</li>
+              <li>Visual aids y tarjetones</li>
+              <li>Pendones, backing y material POP</li>
+            </ul>
+          </div>
+          <div class="da">
+            <p class="da-name">Contenido digital y redes</p>
+            <ul>
+              <li>Calendario de contenido por red</li>
+              <li>Contenido para marcas OTC</li>
+              <li>Actualización de la página web</li>
+              <li>Flujo de publicación y control</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">Capacitación y LMS</p>
+            <ul>
+              <li>Información técnica de cada marca</li>
+              <li>Organigrama y asignación de cursos</li>
+              <li>Flujo de actualización del LMS</li>
+            </ul>
+          </div>
+          <div class="da">
+            <p class="da-name">Investigación y plan de marca</p>
+            <ul>
+              <li>Investigación de mercado asistida</li>
+              <li>Propuestas de valor del portafolio</li>
+              <li>Plan de la marca Oftalmi</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="deliv-band">
+        <div class="db-card db-1">
+          <span class="db-label">Para todo el proyecto</span>
+        </div>
+        <div class="db-card db-2">
+          <span class="db-label">Valor inmediato</span>
+        </div>
+      </div>
+      <!-- Cajas multiline editables (vacías en HTML: el contenido vive dentro del AcroForm /V). -->
+      <div class="multi-box db-box db-box-1" data-field="Entregables"></div>
+      <div class="multi-box db-box db-box-2" data-field="Acreditacion"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Oftalmi · CAI-118</span>
+      </div>
+    </section>
+
+    <!-- 6 · Retorno: ¿qué gano? (método de cálculo). Sin estudios ni citas externas. -->
+    <section class="slide s-roi">
+      <span class="counter">06 / 08</span>
+      <p class="eyebrow">06 · Retorno</p>
+      <h2>Retorno esperado: tiempo y control.</h2>
+      <p class="sub">Se calcula con las tareas de cada frente, partiendo del tiempo que hoy toman.</p>
+
+      <div class="roi-body">
+        <div class="roi-panel">
+          <p class="roi-panel-title">Cómo se calcula, por frente y por tarea</p>
+          <ol class="roi-steps">
+            <li><b>Tareas de cada frente</b><span>Cuántas campañas, correos, reportes, eventos, piezas y publicaciones se hacen y cuántas veces se repiten.</span></li>
+            <li><b>Tiempo actual por tarea</b><span>Se mide al arrancar, con quien hace el trabajo, y es la <strong>línea base</strong>.</span></li>
+            <li><b>Tiempo con el agente</b><span>Lo que toma la misma tarea con el agente en uso y la revisión de la persona.</span></li>
+            <li><b>Horas recuperadas</b><span>Número de tareas por la diferencia entre el tiempo actual y el tiempo con el agente.</span></li>
+            <li><b>Omisiones y diferencias</b><span>Los detalles de eventos que se pasaban y las diferencias entre los datos de venta y los dashboards.</span></li>
+          </ol>
+        </div>
+
+        <div class="roi-right">
+          <p class="roi-right-title">Calendario de garantía, desde el cierre de cada área</p>
+          <div class="roi-card">
+            <b>30 días</b>
+            <p>Los agentes de cada persona funcionan a diario con casos reales.</p>
+          </div>
+          <div class="roi-card">
+            <b>60 días</b>
+            <p>Ajustes con casos nuevos y menos pasos a mano.</p>
+          </div>
+          <div class="roi-card">
+            <b>90 días</b>
+            <p>Tablero con el tiempo ganado por flujo y las diferencias evitadas.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="roi-dest-wrap">
+        <p class="roi-dest-title">Hacia dónde va el proyecto</p>
+        <div class="roi-dest">
+          <div class="rd-item"><b>Cada gerente con sus agentes</b><p>Cada gerente dirige sus agentes y <strong>decide con sus reportes</strong> qué acción tomar.</p></div>
+          <div class="rd-item"><b>Datos que cuadran</b><p>Las ventas reales y los dashboards se comparan <strong>cada día</strong>, sin esperar al error.</p></div>
+          <div class="rd-item"><b>Flujos que se replican</b><p>Lo construido puede llevarse a otros departamentos, según su demanda.</p></div>
+        </div>
+      </div>
+
+      <div class="roi-hook"><p>A los 90 días del cierre, Oftalmi conocerá el tiempo que ganó en cada flujo y qué otros departamentos conviene sumar.</p></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Oftalmi · CAI-118</span>
+      </div>
+    </section>
+
+    <!-- 7 · Inversión (hoja de cotización estándar; antepenúltima slide) -->
+    <section class="slide s-price">
+      <span class="counter">07 / 08</span>
+      <h2 class="title">Inversión del proyecto.</h2>
+      <p class="price-intro">Propuesta Económica · Servicio de Habilidades</p>
+
+      <div class="block">
+        <span class="block-eyebrow">Duración</span>
+        <p class="block-value">Proyecto en seis frentes de Mercadeo y tres fases: 100 horas con el equipo, con seguimiento y garantía a 30, 60 y 90 días.</p>
+      </div>
+
+      <div class="block block-programa">
+        <span class="block-eyebrow">Programa</span>
+      </div>
+      <div class="multi-box programa-box" data-field="Programa"></div>
+
+      <div class="block block-cotizacion">
+        <span class="block-eyebrow">Cotización</span>
+      </div>
+
+      <span class="cot-label cot-label-base">Propuesta + Inversión</span>
+      <span class="cot-sign cot-sign-base">REF</span>
+      <div class="cot-frame base-frame"></div>
+
+      <span class="cot-label cot-label-discount">Descuento</span>
+      <span class="cot-sign-minus">&minus;REF</span>
+      <div class="cot-frame discount-frame"></div>
+      <span class="cot-urgent-note">Descuento válido por 15 días</span>
+
+      <span class="cot-label cot-label-total">TOTAL</span>
+      <span class="cot-sign cot-sign-total">REF</span>
+      <div class="cot-frame total-frame"></div>
+
+      <p class="cot-moneda">Pago en Divisas o Bolívares a Tasa BCV del Euro</p>
+      <p class="cot-validity">Cotización válida por 30 días.</p>
+      <div class="cot-terms-box">
+        <span class="cot-terms-label">Importante</span>
+        <p class="cot-terms-text">Este servicio se presta bajo nuestros <a href="https://drive.google.com/file/d/1PA-ZSt4KnyY5dpxXzgkIk6-yfGlV2eF8/view?usp=drive_link" target="_blank" rel="noopener">términos y condiciones</a>. Al avanzar con esta propuesta, ambas partes los aceptan.</p>
+      </div>
+
+      <div class="cot-garantia-badge">
+        <span class="cot-garantia-tag">Garantía 30-60-90</span>
+        <p class="cot-garantia-text">Estamos contigo hasta que la habilidad quede instalada.</p>
+      </div>
+
+      <div class="block block-notes-container">
+        <span class="block-eyebrow">Notas</span>
+      </div>
+      <div class="multi-box notas-box" data-field="Notas"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Oftalmi · CAI-118</span>
+      </div>
+    </section>
+
+    <!-- 9 · Próximos pasos: qué hacer y a quién escribir (última slide) -->
+    <section class="slide s-next">
+      <span class="counter">08 / 08</span>
+      <p class="eyebrow">08 · Próximos pasos</p>
+      <h2>Tres pasos para arrancar.</h2>
+      <p class="sub">Esto es lo que sigue cuando Oftalmi confirme la propuesta.</p>
+
+      <div class="nx-steps">
+        <div class="nx-step acc-y">
+          <span class="nx-num">1</span>
+          <b>Revisar la propuesta</b>
+          <p>La revisamos con quien lidera Mercadeo y con quienes aprueban la inversión.</p>
+        </div>
+        <div class="nx-step acc-o">
+          <span class="nx-num">2</span>
+          <b>Accesos y participantes</b>
+          <p>Coordinamos el acceso a los datos de venta y a los dashboards, y quién participa de cada frente.</p>
+        </div>
+        <div class="nx-step acc-w">
+          <span class="nx-num">3</span>
+          <b>Reunión de arranque</b>
+          <p>Reunión de unos 30 minutos para conocer al equipo, alinear prioridades y medir la línea base.</p>
+        </div>
+      </div>
+
+      <div class="nx-contact">
+        <div class="nx-card nx-ase">
+          <span class="nx-label">¿Dudas? Escribe a tu asesora comercial</span>
+          <b class="nx-name">Verónica Rubio</b>
+          <span class="nx-role">Asesora comercial</span>
+          <p class="nx-line"><a href="mailto:vrubio01@intezia.com">vrubio01@intezia.com</a></p>
+          <p class="nx-line">+58 422 3355505</p>
+        </div>
+        <div class="nx-card nx-emp">
+          <span class="nx-label">Intezia</span>
+          <p class="nx-line">Intezia C.A J-505657950</p>
+          <p class="nx-line"><a href="mailto:servicio@intezia.com">servicio@intezia.com</a></p>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Oftalmi · CAI-118</span>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

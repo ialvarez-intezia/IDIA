@@ -25,6 +25,7 @@ Intezia capacita bajo dos divisiones: **Fundación** (social/comunitario) y **Ed
 ## 3. Políticas comerciales
 
 Cotizaciones válidas **30 días** · Anticipo **50%** · Cancelación <7 días = no reembolsable.
+Valores en **REF**, con la leyenda «Pago en Divisas o Bolívares a Tasa BCV del Euro» bajo el total de la hoja de inversión (§4.21).
 
 > Tabla completa: `empresa/politicas-comerciales.md`
 
@@ -73,7 +74,7 @@ Antes de generar cualquier salida (visual o de texto), además de la división:
 
 | Servicio | Patrón de estructura | Estado |
 |---|---|---|
-| Detección | **Plantilla compacta de Detección** `plantillas/deteccion-compacto.md` (§4.22): 9 slides (7 en Fundación), mismo generador con `"formato": "deteccion"`; áreas del cliente con sus departamentos, ruta por etapas, horas en global, al menos 3 logros inmediatos, entregables sin conteos. **No se clona un deck** | **Único formato de Detección** desde 2026-10-08 (correcciones de Keiber). Caso base G-MAX DET-024 (`datos.ejemplo-deteccion.json`). Las Detecciones ya entregadas no se tocan salvo que se pida rehacerlas |
+| Detección | **Plantilla compacta de Detección** `plantillas/deteccion-compacto.md` (§4.22): 9 slides (7 en Fundación), mismo generador con `"formato": "deteccion"`; áreas del cliente con sus departamentos, ruta por etapas, horas en global, logros inmediatos sin cifra (se realizan cuando el proceso o el área lo permite), entregables sin conteos. **No se clona un deck** | **Único formato de Detección** desde 2026-10-08 (correcciones de Keiber). Caso base G-MAX DET-024 (`datos.ejemplo-deteccion.json`). Las Detecciones ya entregadas no se tocan salvo que se pida rehacerlas |
 | Habilidades | **Plantilla compacta** `plantillas/habilidades-compacto.md` (§4.21): 9 slides (7 en Fundación) en el orden de las preguntas del cliente, dirigida por `datos.json`. **Todas las categorías** (charla, taller, capacitación, curso, diplomado) y **cualquier cliente**, sin preguntar el formato: un programa de módulos se reexpresa con las recetas de la spec §1b | **Único formato de Habilidades** (estándar desde 2026-10-05; v2.0 desde 2026-10-07; sin excepciones desde 2026-10-07; v3.0 sin semanas ni sesiones desde 2026-10-08) — caso base DUSA CAI-035 (`datos.ejemplo-dusa.json`). Los decks canónicos y los compactos v1.x ya entregados no se tocan salvo que se pida modificarlos o rehacerlos (spec §13) |
 | Políticas | **Pendiente de decisión de formato** (Ivana + David: ¿deck o informe de consultoría?) | No construir hasta que se resuelva — ver `empresa/tipos-de-documento.md §0` |
 | Innovación | Clonar `clientes/propuestas/zoom-innovacion/` (roadmap `.rmx-linear` adaptado a ciclo recurrente: Kick-off→Ejecución→Medición→se repite + cotización "Inversión por Permanencia" de 3 columnas 3/6/12 meses) | Piloto: `clientes/propuestas/zoom-innovacion/` (INN-001, 2026-08-30) |
@@ -523,6 +524,17 @@ Habilidades (incluido el que llega como «ajusta la propuesta de X al formato nu
      evento, y las cuotas, por hito. **Sin horas de trabajo ni cantidad de consultores** (§4.23
      punto 4): se usa `sin_horas_trabajo: true`. Los conteos de soluciones sí van: en Habilidades se conocen
      (salen del informe de Detección).
+   - **Cuadro «Impacto» en «Lo que se llevan» (Ivana, 2026-11-09, a partir del pedido de Canguro):** la slide de entregables
+     lleva, además de los entregables, un cuadro con la transformación operativa que genera el servicio, como **cuadro grande y protagonista** (`entregables.impacto`:
+     `texto` + `enfoque`), para que el cliente vea que compra un resultado y no solo metodología o documentos. **En cada propuesta
+     se le pregunta a Ivana qué impacto causa el servicio y el enfoque** (no se asume): `reenfoque` (las personas pasan a trabajo
+     de más valor; no se habla de nómina, que es lo que Ventas pide con ciertos clientes), `posiciones` (operar con menos personas;
+     exige `retorno.posiciones` y el aval registrado) u `operacion` (impacto de tiempo, calidad, servicio o ventas). Texto breve,
+     sin cifras, porcentajes ni estudios que el cliente no haya dado; el generador bloquea el lenguaje de personas según el enfoque
+     y avisa (⚠) si falta el cuadro. Aplica también a Detección (§4.22). Detalle: `plantillas/habilidades-compacto.md` §6.
+   - **REF y leyenda de pago (Ivana, 2026-11-09, a pedido de Ventas):** la hoja de inversión lleva el signo **REF** junto a Valor,
+     Descuento y Total y, bajo el total, «Pago en Divisas o Bolívares a Tasa BCV del Euro» en un recuadro rojo (evita malentendidos en la cobranza).
+     Automático en toda propuesta nueva o regenerada; `inversion.sin_ref: true` lo apaga. Las ya entregadas no se tocan.
    - Sin Metodología ABR ni Equipo facilitador (§4.10a): «Cómo trabajamos» explica cómo se
      trabaja (pasos, límites, datos), no la pedagogía. Sin Cierre. Próximos pasos = logística
      y la asesora, sin términos económicos (§4.15).
@@ -585,7 +597,9 @@ por defecto: `plantillas/deteccion-compacto.md`; caso base `clientes/propuestas/
      líderes.
    - **Horas en global**, sin reparto por área (logística las reparte en el kickoff). Solo se
      muestran las de levantamiento; arranque y nivelación son internas (`programa.md`).
-   - **Al menos N logros inmediatos en el proyecto** (por defecto 3), nunca uno por área.
+   - **Logros inmediatos sin cifra (Ivana, 2026-11-13, regla para toda propuesta):** no se dice cuántos
+     son («al menos 3» se bloquea); se dice que se realizan **cuando el proceso o el área lo permite**.
+     Reemplaza el «al menos N» de Keiber (2026-10-08). Un proceso de mucho esfuerzo pasa al mapa.
    - **Entregables nombrados, sin conteos** («7 entregables» se bloquea) y sin volver a nombrar las
      áreas: alcance y calendario, equipo nivelado, logros inmediatos, Mapa de Calor, Informe Final y
      hoja de ruta, inversión inteligente en licencias.
@@ -840,7 +854,7 @@ Detecta: §4.13 guión largo · comillas tipográficas en atributos HTML · plac
 | 3 | §4.12 Acrónimos glosados | Todo acrónimo de jerga (AUP, RCTF, GenAI…) expandido en la primera aparición de CADA slide donde aparece |
 | 4 | §4.14 AcroForms pre-llenados | `Entregables`, `Acreditacion`, `Paso01–03 Titulo` y `Paso01–03 Body` tienen contenido real, no placeholders vacíos |
 | 5 | Par PDF-customize | Si se corrió `generar-pdf.sh`, se corrió `customize-acroforms.py <slug>` (o el `customize-<slug>.py` propio) inmediatamente después |
-| 6 | §4.21/§4.22 Compactos | Titular-objetivo y eyebrow «Propuesta de proyecto»; sin semanas ni sesiones (§4.23); en Detección, sin prioridades ni horas por área, al menos 3 logros y entregables sin conteos; retorno sin estudios ni web; cifras y posiciones solo con datos y aval del cliente registrados; 7 campos más uno por cuota en el PDF (Fundación: 2) y revisión visual de cada página, incluido el texto horneado de las cajas de la slide 5 |
+| 6 | §4.21/§4.22 Compactos | Titular-objetivo y eyebrow «Propuesta de proyecto»; sin semanas ni sesiones (§4.23); en Detección, sin prioridades ni horas por área, logros inmediatos sin cifra y entregables sin conteos; retorno sin estudios ni web; cifras y posiciones solo con datos y aval del cliente registrados; cuadro «Impacto» con enfoque preguntado a Ivana; REF y leyenda de pago en la hoja de inversión; 7 campos más uno por cuota en el PDF (Fundación: 2) y revisión visual de cada página, incluido el texto horneado de las cajas de la slide 5 |
 
 ### Regla del par PDF-customize
 

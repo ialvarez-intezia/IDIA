@@ -1,0 +1,415 @@
+<!doctype html>
+<!--
+  Propuesta · Ecofuel · Servicio de Habilidades (CAI-107)
+  División: Educación · Servicio: Habilidades (§4.1a) · Alianza: no
+  GENERADO por scripts/generar-habilidades-compacto.py (plantilla 3.0 (2026-10-08), formato habilidades) desde datos.json.
+  No editar a mano: editar datos.json y regenerar. Estilos propios del deck: overrides.css.
+  Fuente del insumo: Ficha de Levantamiento de Ecofuel (Verónica Rubio, 16/11/2026): Bloque C (dos procesos), Bloque G (expectativas) y bloque específico de Habilidades. Sin transcripción en esta propuesta
+
+  Formato compacto de 8 slides, en el orden de las preguntas del cliente (Ventas, 2026-10-07), sin semanas, sesiones
+  ni fechas (Keiber, 2026-10-08):
+    1 Portada · 2 Alcance · 3 Ruta · 4 Cómo trabajamos · 5 Entregables · 6 Retorno · 7 Inversión · 8 Próximos pasos
+  Marcadores de detección de AcroForms (agregar-campo-precio.py), por página: «Propuesta Económica» solo en la slide de
+  inversión; «Lo que se llevan» y «Entregables» solo en la de entregables; «Facilidad de pago» solo en la de pago.
+  Campos AcroForm: Programa, Notas, PrecioBase, Descuento, PrecioTotal (inversión) y Entregables, Acreditacion (entregables). Se reposicionan con scripts/customize-habilidades-compacto.py.
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Propuesta · Ecofuel · Intezia Educación</title>
+  <link rel="stylesheet" href="../_base/styles.css">
+  <link rel="stylesheet" href="habilidades-compacto.css">
+  <link rel="stylesheet" href="overrides.css">
+</head>
+<body>
+
+  <main class="deck">
+
+    <!-- 1 · Portada: ¿cuál es mi problema? -->
+    <section class="slide s-cover">
+      <span class="counter">01 / 08</span>
+      <div class="logo-big">
+        <img src="../../../logos/educacion/BLANCO.png" alt="Intezia Educación">
+      </div>
+      <div class="body">
+        <p class="eyebrow">Propuesta de proyecto · Servicio de Habilidades</p>
+        <h1 style="font-size:46px">
+          Automatización con IA de procesos<br>
+          de administración y finanzas<br>
+          <span class="hl">de Ecofuel</span>
+        </h1>
+        <p class="lead">
+          Desarrollamos las habilidades del <strong>equipo de administración y finanzas</strong> para que <strong>automatice con IA</strong> sus propios procesos: la conciliación con PDVSA, la facturación y los reportes.
+        </p>
+        <div class="pain-strip">
+          <div class="pain-item">
+            <span class="pain-num">PDVSA</span>
+            <span class="pain-lbl">factura sin que Ecofuel haya facturado, y cuadrarlo exige revisar cada factura a mano.</span>
+          </div>
+          <div class="pain-item">
+            <span class="pain-num">Boletas</span>
+            <span class="pain-lbl">todo llega a una sola persona y, con mucho volumen, las boletas quedan sin procesar.</span>
+          </div>
+          <div class="pain-item">
+            <span class="pain-num">Atrasos</span>
+            <span class="pain-lbl">se descubre tarde lo que no se facturó o lo que había que pagar, y los reportes se atrasan.</span>
+          </div>
+        </div>
+      </div>
+      <div class="id-line">
+        <span class="codigo">Código: CAI-107</span>
+        <span class="cliente">Ecofuel</span>
+      </div>
+    </section>
+
+    <!-- 2 · Alcance: qué vamos a hacer y para qué -->
+    <section class="slide s-scope roomy">
+      <span class="counter">02 / 08</span>
+      <p class="eyebrow">02 · Alcance</p>
+      <h2>Dos procesos, un equipo que los automatiza.</h2>
+      <p class="sub">Las <strong>tres personas</strong> de administración y finanzas desarrollan, con <strong>Claude</strong>, la automatización de sus procesos.</p>
+
+      <div class="scope-panels one" style="--np:1">
+        <div class="scope-panel acc-y">
+          <div class="scope-head">
+            <span class="scope-tag">Claude</span>
+            <span class="scope-total"><b>2</b> procesos</span>
+          </div>
+          <ul class="scope-rows">
+              <li><span class="area">Órdenes y conciliación con PDVSA</span><span class="para">Cuadrar lo que factura PDVSA con lo que facturó Ecofuel, sin revisar factura por factura</span></li>
+              <li><span class="area">Facturación y reportes mensuales</span><span class="para">Facturar a tiempo, saber qué se debe pagar y entregar la información a quien la necesita</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="scope-out">
+        <p class="scope-card-label">Fuera de este alcance</p>
+        <ul>
+          <li>Un Cerebro Digital para la dirección: es un proyecto aparte.</li>
+          <li>Cambiar los sistemas con los que Ecofuel factura hoy: se trabaja sobre lo que ya usan.</li>
+          <li>Cargar datos bancarios, claves o accesos a la IA.</li>
+          <li>Las licencias de Claude: van aparte (detalle en la inversión).</li>
+        </ul>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Ecofuel · CAI-107</span>
+      </div>
+    </section>
+
+    <!-- 3 · Ruta: qué pasa en cada fase -->
+    <section class="slide s-route">
+      <span class="counter">03 / 08</span>
+      <p class="eyebrow">03 · Ruta</p>
+      <h2>De PDVSA al reporte mensual.</h2>
+      <p class="sub">Dos fases, una por proceso. La <strong>garantía y el seguimiento</strong> a 30, 60 y 90 días corren desde el cierre de cada proceso.</p>
+
+      <div class="route-grid n1" style="--cols:2; --rows:1; --rowh:214px">
+
+        <div class="rg-corner"></div>
+        <div class="rg-phase rg-ph-1 hi">
+          <span class="rg-phase-top"><span class="rg-phase-tag">PDVSA</span></span>
+          <span class="rg-phase-name"><strong>Órdenes de compra y conciliación</strong></span>
+        </div>
+        <div class="rg-phase rg-ph-2">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Facturación y reportes</span></span>
+          <span class="rg-phase-name"><strong>Pendientes y reporte mensual</strong></span>
+        </div>
+        <div class="rg-phase rg-fu">
+          <span class="rg-phase-top"><span class="rg-phase-tag">Garantía</span></span>
+          <span class="rg-phase-date">30, 60 y 90 días</span>
+          <span class="rg-phase-txt">Seguimiento desde el cierre de cada proceso</span>
+        </div>
+
+        <div class="rg-front acc-y">
+          <span class="rg-front-h">Administración y finanzas</span>
+          <span class="rg-front-row"><span class="rg-front-tool">Claude</span></span>
+          <span class="rg-front-meta"></span>
+        </div>
+        <div class="rg-cell hi"><p>Conciliación con PDVSA y órdenes de compra, construidas y probadas.</p></div>
+        <div class="rg-cell"><p>Control de facturas y pagos, y reporte mensual, con casos reales.</p></div>
+
+        <div class="rg-follow" style="grid-column:4; grid-row:2 / span 1">
+          <ul>
+            <li><b>30 días</b><span>Uso diario de cada una</span></li>
+            <li><b>60 días</b><span>Ajustes con casos nuevos</span></li>
+            <li><b>90 días</b><span>Tiempo ganado, medido</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="route-miles" style="grid-template-columns:repeat(4,1fr)">
+        <div class="mile"><span class="mile-d"></span><b>Arranque</b><p>Se confirman participantes y accesos, y se verifica la integración con las herramientas.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>PDVSA</b><p>La conciliación y las órdenes de compra, construidas y probadas con casos reales.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Facturación y reportes</b><p>El control de pendientes y el reporte mensual, construidos con quien los lleva.</p></div>
+        <div class="mile"><span class="mile-d"></span><b>Cierre</b><p>Los dos procesos en uso diario; empieza la garantía a 30, 60 y 90 días.</p></div>
+      </div>
+      <p class="route-note">Las 16 h son una proyección: 8 h de PDVSA y 8 h de facturación y reportes. La reunión de arranque no suma horas.</p>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Ecofuel · CAI-107</span>
+      </div>
+    </section>
+
+    <!-- 4 · Cómo trabajamos: pasos, por qué en ese orden, casos reales, práctica, datos y logística -->
+    <section class="slide s-method">
+      <span class="counter">04 / 08</span>
+      <p class="eyebrow">04 · Cómo trabajamos</p>
+      <h2>Así desarrollamos al equipo.</h2>
+      <p class="sub">Cada persona construye la automatización de su propio proceso, con sus casos reales, y la prueba en su trabajo diario.</p>
+
+      <ol class="mt-steps" style="--n:4">
+          <li><b>Construimos</b><span>Con quien lleva cada proceso y sus casos reales.</span></li>
+          <li><b>Probamos</b><span>Con facturas y reportes que Ecofuel autoriza.</span></li>
+          <li><b>Adoptamos</b><span>Cada persona usa su automatización en el día a día.</span></li>
+          <li><b>Medimos</b><span>El tiempo ganado en cada tarea, a 30, 60 y 90 días.</span></li>
+      </ol>
+      <div class="mt-strips">
+        <p class="mt-why"><b>Por qué en este orden</b> Primero la conciliación con PDVSA, el proceso que más trabajo da; después la facturación y los reportes, que usan lo ya conciliado.</p>
+        <p class="mt-who"><b>Quién construye</b> <strong>Intezia guía</strong> y las tres personas del equipo construyen con IA la automatización de sus procesos, sobre lo que Ecofuel ya usa.</p>
+      </div>
+
+      <div class="mt-info">
+        <div class="mt-card">
+          <p class="mt-card-label">Cómo funciona en la práctica</p>
+          <ul><li><b>Con quien hace el trabajo.</b> Cada automatización se construye con quien lleva el proceso, para que la use desde el primer día.</li><li><b>Con casos reales.</b> Se trabaja con facturas, órdenes y reportes que Ecofuel autoriza, no con ejemplos inventados.</li><li><b>Depende de las herramientas.</b> Lo que se automatiza depende de las herramientas que Ecofuel usa y de qué tan fácil sea integrarse a ellas: se verifica en el arranque.</li></ul>
+        </div>
+        <div class="mt-card">
+          <p class="mt-card-label">Cómo cuidamos sus datos</p>
+          <p>Los datos bancarios, las claves y la información de PDVSA no se cargan sin el visto bueno de Ecofuel: se trabaja con los ejemplos que autoriza.</p>
+        </div>
+      </div>
+
+      <div class="mt-logi">
+        <div class="mt-tile"><span>Modalidad</span><b>Presencial, en las oficinas de Ecofuel en Caracas.</b></div>
+        <div class="mt-tile"><span>Participantes</span><b>Las tres personas del equipo de administración y finanzas, con la dirección para validar el criterio.</b></div>
+        <div class="mt-tile"><span>Ritmo de trabajo</span><b>Según la disponibilidad del equipo, sin frenar la operación diaria.</b></div>
+        <div class="mt-tile"><span>Arranque</span><b>En cuanto se aprueba, se coordina el arranque.</b></div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Ecofuel · CAI-107</span>
+      </div>
+    </section>
+
+    <!-- 5 · Entregables: ¿con qué me quedo? (catálogo + piezas transversales) -->
+    <section class="slide s-deliv roomy con-imp">
+      <span class="counter">05 / 08</span>
+      <p class="eyebrow">05 · Entregables</p>
+      <div class="deliv-head">
+        <h2>Lo que recibe el equipo.</h2>
+        <p class="deliv-sub"><span class="nw">Lo que se llevan</span>: <strong>la automatización de cada proceso</strong>, funcionando con sus casos reales y con el seguimiento que mide su efecto.</p>
+      </div>
+
+      <div class="deliv-impact grande">
+        <span class="di-label">Impacto</span>
+        <p>El equipo de administración y finanzas <strong>automatiza sus propios procesos</strong> y la dirección deja de ser la intermediaria de cada conciliación y cada reporte: pasa a <strong>supervisar y decidir</strong>.</p>
+      </div>
+
+      <div class="deliv-carriles" style="--ncols:2">
+        <span class="dc acc-y" style="grid-column: span 2">Claude</span>
+      </div>
+
+      <div class="deliv-cols" style="--ncols:2">
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">Órdenes y conciliación con PDVSA</p>
+            <ul>
+              <li>Conciliación de facturas con PDVSA</li>
+              <li>Órdenes de compra con sus datos completos</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="deliv-col acc-y">
+          <div class="da">
+            <p class="da-name">Facturación y reportes mensuales</p>
+            <ul>
+              <li>Control de facturas y pagos pendientes</li>
+              <li>Reporte mensual y envío de la información</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="deliv-band">
+        <div class="db-card db-1">
+          <span class="db-label">Para todo el proyecto</span>
+        </div>
+        <div class="db-card db-2">
+          <span class="db-label">Valor inmediato</span>
+        </div>
+      </div>
+      <!-- Cajas multiline editables (vacías en HTML: el contenido vive dentro del AcroForm /V). -->
+      <div class="multi-box db-box db-box-1" data-field="Entregables"></div>
+      <div class="multi-box db-box db-box-2" data-field="Acreditacion"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Ecofuel · CAI-107</span>
+      </div>
+    </section>
+
+    <!-- 6 · Retorno: ¿qué gano? (método de cálculo). Sin estudios ni citas externas. -->
+    <section class="slide s-roi">
+      <span class="counter">06 / 08</span>
+      <p class="eyebrow">06 · Retorno</p>
+      <h2>Retorno esperado: tiempo recuperado.</h2>
+      <p class="sub">Se calcula con las tareas de cada proceso, partiendo del tiempo que hoy toman.</p>
+
+      <div class="roi-body">
+        <div class="roi-panel">
+          <p class="roi-panel-title">Cómo se calcula, por proceso y por tarea</p>
+          <ol class="roi-steps">
+            <li><b>Tareas del proceso</b><span>Qué conciliaciones, órdenes, facturas y reportes se apoyan en la automatización y cuántas veces se repiten.</span></li>
+            <li><b>Tiempo actual por tarea</b><span>Se mide al arrancar, con quien hace el trabajo, y es la <strong>línea base</strong>.</span></li>
+            <li><b>Tiempo con la automatización</b><span>Lo que toma la misma tarea ya con la automatización en uso.</span></li>
+            <li><b>Horas recuperadas</b><span>Número de tareas por la diferencia entre el tiempo actual y el tiempo con la automatización.</span></li>
+          </ol>
+        </div>
+
+        <div class="roi-right">
+          <p class="roi-right-title">Calendario de garantía, desde el cierre de cada proceso</p>
+          <div class="roi-card">
+            <b>30 días</b>
+            <p>Las automatizaciones en uso diario, con casos reales.</p>
+          </div>
+          <div class="roi-card">
+            <b>60 días</b>
+            <p>Ajustes con casos nuevos y menos correcciones a mano.</p>
+          </div>
+          <div class="roi-card">
+            <b>90 días</b>
+            <p>Medición del tiempo ganado en cada tarea, contra la línea base.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="roi-dest-wrap">
+        <p class="roi-dest-title">Hacia dónde va el proyecto</p>
+        <div class="roi-dest">
+          <div class="rd-item"><b>Conciliación sin revisión manual</b><p>Las diferencias con PDVSA se ven de inmediato, sin revisar factura por factura.</p></div>
+          <div class="rd-item"><b>Pendientes con aviso</b><p>Lo que falta facturar o pagar <strong>se avisa a tiempo</strong>, en lugar de descubrirse tarde.</p></div>
+          <div class="rd-item"><b>Un equipo que opera por sí mismo</b><p>Cada persona lleva su proceso y la dirección <strong>supervisa y decide</strong>.</p></div>
+        </div>
+      </div>
+
+      <div class="roi-hook"><p>A los 90 días del cierre, Ecofuel conocerá el tiempo que ganó en cada tarea de sus dos procesos.</p></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Ecofuel · CAI-107</span>
+      </div>
+    </section>
+
+    <!-- 7 · Inversión (hoja de cotización estándar; antepenúltima slide) -->
+    <section class="slide s-price">
+      <span class="counter">07 / 08</span>
+      <h2 class="title">Inversión del proyecto.</h2>
+      <p class="price-intro">Propuesta Económica · Servicio de Habilidades</p>
+
+      <div class="block">
+        <span class="block-eyebrow">Duración</span>
+        <p class="block-value">Proyecto de 2 procesos: 16 horas en total, 8 para cada uno, con seguimiento y garantía a 30, 60 y 90 días.</p>
+      </div>
+
+      <div class="block block-programa">
+        <span class="block-eyebrow">Programa</span>
+      </div>
+      <div class="multi-box programa-box" data-field="Programa"></div>
+
+      <div class="block block-cotizacion">
+        <span class="block-eyebrow">Cotización</span>
+      </div>
+
+      <span class="cot-label cot-label-base">Propuesta + Inversión</span>
+      <span class="cot-sign cot-sign-base">REF</span>
+      <div class="cot-frame base-frame"></div>
+
+      <span class="cot-label cot-label-discount">Descuento</span>
+      <span class="cot-sign-minus">&minus;REF</span>
+      <div class="cot-frame discount-frame"></div>
+      <span class="cot-urgent-note">Descuento válido por 15 días</span>
+
+      <span class="cot-label cot-label-total">TOTAL</span>
+      <span class="cot-sign cot-sign-total">REF</span>
+      <div class="cot-frame total-frame"></div>
+
+      <p class="cot-moneda">Pago en Divisas o Bolívares a Tasa BCV del Euro</p>
+      <p class="cot-validity">Cotización válida por 30 días.</p>
+      <div class="cot-terms-box">
+        <span class="cot-terms-label">Importante</span>
+        <p class="cot-terms-text">Este servicio se presta bajo nuestros <a href="https://drive.google.com/file/d/1PA-ZSt4KnyY5dpxXzgkIk6-yfGlV2eF8/view?usp=drive_link" target="_blank" rel="noopener">términos y condiciones</a>. Al avanzar con esta propuesta, ambas partes los aceptan.</p>
+      </div>
+
+      <div class="cot-garantia-badge">
+        <span class="cot-garantia-tag">Garantía 30-60-90</span>
+        <p class="cot-garantia-text">Estamos contigo hasta que la habilidad quede instalada.</p>
+      </div>
+
+      <div class="block block-notes-container">
+        <span class="block-eyebrow">Notas</span>
+      </div>
+      <div class="multi-box notas-box" data-field="Notas"></div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/NEGRO.png" alt="">
+        <span class="meta">Ecofuel · CAI-107</span>
+      </div>
+    </section>
+
+    <!-- 9 · Próximos pasos: qué hacer y a quién escribir (última slide) -->
+    <section class="slide s-next">
+      <span class="counter">08 / 08</span>
+      <p class="eyebrow">08 · Próximos pasos</p>
+      <h2>Tres pasos para arrancar.</h2>
+      <p class="sub">Esto es lo que sigue cuando Ecofuel confirme la propuesta.</p>
+
+      <div class="nx-steps">
+        <div class="nx-step acc-y">
+          <span class="nx-num">1</span>
+          <b>Confirmar el alcance</b>
+          <p>Resolvemos las dudas de Ecofuel y validamos los dos procesos y quiénes participan.</p>
+        </div>
+        <div class="nx-step acc-o">
+          <span class="nx-num">2</span>
+          <b>Accesos y agenda</b>
+          <p>Coordinamos los accesos y la agenda de cada persona del equipo.</p>
+        </div>
+        <div class="nx-step acc-w">
+          <span class="nx-num">3</span>
+          <b>Reunión de arranque</b>
+          <p>Reunión de unos 30 minutos para alinear las tareas y los casos de cada proceso.</p>
+        </div>
+      </div>
+
+      <div class="nx-contact">
+        <div class="nx-card nx-ase">
+          <span class="nx-label">¿Dudas? Escribe a tu asesora comercial</span>
+          <b class="nx-name">Verónica Rubio</b>
+          <span class="nx-role">Asesora comercial</span>
+          <p class="nx-line"><a href="mailto:vrubio01@intezia.com">vrubio01@intezia.com</a></p>
+          <p class="nx-line">+58 422 3355505</p>
+        </div>
+        <div class="nx-card nx-emp">
+          <span class="nx-label">Intezia</span>
+          <p class="nx-line">Intezia C.A J-505657950</p>
+          <p class="nx-line"><a href="mailto:servicio@intezia.com">servicio@intezia.com</a></p>
+        </div>
+      </div>
+
+      <div class="foot">
+        <img src="../../../logos/educacion/BLANCO.png" alt="">
+        <span class="meta">Ecofuel · CAI-107</span>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

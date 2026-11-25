@@ -11,8 +11,8 @@ Esquema de datos: plantillas/habilidades-compacto-canonico/datos.plantilla.json 
 
 v3 (2026-10-08, correcciones de Keiber Quintana): ninguna propuesta lleva semanas, sesiones ni fechas (el calendario se
 acuerda en el kickoff) y la Detección tiene su propio formato (datos.json → "formato": "deteccion"): alcance con las
-áreas del cliente y sus departamentos, ruta por etapas, horas en global (sin reparto por área), al menos N logros
-inmediatos en el proyecto y entregables sin conteos. Especificación: plantillas/deteccion-compacto.md; ejemplo:
+áreas del cliente y sus departamentos, ruta por etapas, horas en global (sin reparto por área), logros
+inmediatos sin cifra (cuando el proceso lo permite) y entregables sin conteos. Especificación: plantillas/deteccion-compacto.md; ejemplo:
 plantillas/habilidades-compacto-canonico/datos.ejemplo-deteccion.json (G-MAX DET-024).
 
 Qué hace
@@ -77,7 +77,7 @@ DIVISIONES = {
     "fundacion": ("Fundación", "fundacion"),
 }
 COLORES = {"amarillo": "acc-y", "naranja": "acc-o"}
-FASES_VALIDAS = ("F0", "F1", "F2", "F3")
+FASES_VALIDAS = ("F0", "F1", "F2", "F3", "F4")
 
 # Frases que agregar-campo-precio.py usa para ubicar cada grupo de campos AcroForm por página.
 MARCA_PRECIO = "propuesta económica"
@@ -85,7 +85,7 @@ MARCA_BENEF = "lo que se llevan"
 MARCA_PAGO = "facilidad de pago"
 MARCAS_PROHIBIDAS = ("cómo arrancamos", "inversión por fases", "inversión por permanencia")
 
-SIGLAS_OK = {"TOTAL", "IA", "USD", "CV", "RRHH", "TI", "PDF", "SEO", "API", "VPN", "IVA", "ISLR", "CAI", "TA", "CU", "DIP", "CH", "DET", "INN", "ALL"}
+SIGLAS_OK = {"TOTAL", "IA", "USD", "REF", "BCV", "CV", "RRHH", "TI", "PDF", "SEO", "API", "VPN", "IVA", "ISLR", "CAI", "TA", "CU", "DIP", "CH", "DET", "INN", "ALL"}
 RITMO_DEF = "Según la disponibilidad de cada área, sin frenar su operación diaria."
 PALABRAS_FRENTES = {1: "Una línea de trabajo", 2: "Dos líneas de trabajo en paralelo", 3: "Tres líneas de trabajo en paralelo"}
 MESES = r"(enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre)"
@@ -104,7 +104,7 @@ JERGA_ERR = [
     (re.compile(r"\bprocesos? base\b", re.I), "«proceso base» no lo entiende el cliente: decir qué es («paso previo», «punto de partida»)"),
     (re.compile(r"\bFrente\s+[A-Z0-9]\b"), "«Frente A» es un código interno: usar el nombre de la línea de trabajo"),
     (re.compile(r"\bS\d{1,2}\b"), "«S1», «S1-S3» es un código interno (y la propuesta no lleva semanas ni sesiones: el calendario se acuerda en el kickoff)"),
-    (re.compile(r"\bF[0-3]\b"), "«F1» es un código interno de fase: escribir «fase 1»"),
+    (re.compile(r"\bF[0-4]\b"), "«F1» es un código interno de fase: escribir «fase 1»"),
     (re.compile(r"\bcarriles?\b", re.I), "«carril» es jerga interna: nombrar la herramienta (p. ej. «Claude Team»)"),
     (re.compile(r"(?<!\by )(?<!sesión )(?<!sesiones )(?<!módulo )(?<!módulos )\b\d+\s+de\s+\d+\s*h\b", re.I), "«8 de 15 h» no dice de qué: escribir «8 de las 15 horas del programa son ...»"),
     (re.compile(r"\binversi[oó]n por horas?\b", re.I), "cobramos por proyecto, no por hora: «Inversión del proyecto»"),
@@ -123,6 +123,7 @@ CALENDARIO_ERR = [
 # cliente, la duración de un taller o las horas del contenido sí pueden ir; las horas internas de Intezia y el número de
 # facilitadores o consultores, no. `sin_horas_trabajo: true` (por defecto en las plantillas) apaga también los textos automáticos.
 RE_N_CONSULTORES = re.compile(r"\b(?:\d+|un|una|dos|tres|cuatro|cinco|seis|siete|ocho)\s+(?:facilitador(?:es|as?)?|consultor(?:es|as?)?)\b", re.I)
+RE_N_LOGROS = re.compile(r"\b(?:(?:al\s+menos|como\s+m[ií]nimo|m[ií]nimo\s+de)\s+(?:\d+|un|una|dos|tres|cuatro|cinco|seis|siete|ocho|nueve|diez)\s+(?:logros?|soluciones)|(?:\d+|dos|tres|cuatro|cinco|seis|siete|ocho|nueve|diez)\s+logros?\s+inmediatos?)\b", re.I)  # Ivana, 2026-11-13: los logros inmediatos no llevan cifra
 RE_HORAS_TRABAJO = re.compile(r"\b(?:\d+\s*h|horas?)\s+de\s+trabajo\b|\bhoras?\s+de\s+trabajo\b", re.I)
 # Detección (Keiber, 2026-10-08): no se prioriza antes de detectar, no hay «resto» que agrupe el grueso de las áreas y los
 # entregables no se cuentan.
@@ -205,7 +206,7 @@ PAGO_ESTANDAR = [
 VOC_DEF = {"solucion": ("solución", "soluciones"), "area": ("área", "áreas"), "proceso_base": ("paso previo", "pasos previos")}
 VOC = dict(VOC_DEF)
 CONTEO = {"on": False}   # datos.json → conteo_entregables: true muestra «N entregables» en las láminas; por defecto NINGUNA lámina lleva la cantidad de entregables (Ivana, 2026-10-20)
-TOKENS_CONTEO = re.compile(r"^(n_total|n_total_txt|n_entregables_txt|n_sol|n_sol_txt|n_f[0-3]|n_frente_.+|n_carril_.+|n_area_.+)$")
+TOKENS_CONTEO = re.compile(r"^(n_total|n_total_txt|n_entregables_txt|n_sol|n_sol_txt|n_f[0-4]|n_frente_.+|n_carril_.+|n_area_.+)$")
 OMITIBLES = ("metodo", "entregables", "retorno", "proximos", "inversion", "pago")   # slides que datos.json → omitir puede quitar (el resto es el núcleo)
 PALABRA_N = {1: "una", 2: "dos", 3: "tres", 4: "cuatro", 5: "cinco", 6: "seis", 7: "siete", 8: "ocho", 9: "nueve", 10: "diez"}
 NOMBRES_SLIDE = {"portada": "Portada", "alcance": "Alcance", "ruta": "Ruta", "metodo": "Cómo trabajamos", "entregables": "Entregables",
@@ -254,7 +255,7 @@ DET_RUTA_COMPLETA = [
 DET_ENTREGABLES = [
     {"cuando": "Al arrancar", "titulo": "Alcance y calendario", "texto": "Acordados con la dirección: responsables de cada departamento y orden de las áreas."},
     {"cuando": "Al arrancar", "titulo": "Equipo nivelado en IA", "texto": "Todo el personal con un lenguaje común sobre IA y su uso responsable."},
-    {"cuando": "En el levantamiento", "titulo": "Logros inmediatos", "texto": "**Al menos {logros_minimos_palabra}** soluciones construidas con el equipo, en uso desde el primer día."},
+    {"cuando": "En el levantamiento", "titulo": "Logros inmediatos", "texto": "Soluciones construidas con el equipo, en uso desde el primer día, **cuando el proceso o el área lo permite**."},
     {"cuando": "Al cierre", "titulo": "Mapa de Calor", "texto": "Todas las oportunidades de {cliente_corto} en un solo mapa, con su Índice de Madurez en IA, para ver por dónde empezar."},
     {"cuando": "Al cierre", "titulo": "Informe Final y hoja de ruta", "texto": "Diagnóstico por área y ruta de adopción de IA, con un resumen ejecutivo de una página."},
     {"cuando": "Al cierre", "titulo": "Inversión inteligente en licencias", "texto": "Qué ecosistema de IA adquirir y para qué puestos, con la **inversión estimada**."},
@@ -336,7 +337,7 @@ DET_DEFAULTS = {
             "Servicio de Detección · {cliente_corto} ({codigo}).",
             "Arranque con la dirección y nivelación en IA de todo el equipo.",
             "Levantamiento por departamento, con cada líder y su mano derecha.",
-            "Al menos {logros_minimos} logros inmediatos, Mapa de Calor e Informe Final.",
+            "Logros inmediatos, Mapa de Calor e Informe Final.",
             "{h_total} horas de trabajo en total.",
         ],
         "notas": [
@@ -383,7 +384,8 @@ ESQUEMAS = {
     "cambio_fecha": {"cuando": "str", "texto": "str"},
     "cambio_item": {"titulo": "str", "texto": "str"},
     "calendario": {"inicio": "str", "dias": "list:str", "hora": "str", "horas_por_encuentro": "num", "omitir_fechas": "list:str", "titulo": "str",
-                   "subtitulo": "str", "etiqueta": "str", "intro": "str", "encuentro": "str"},
+                   "subtitulo": "str", "etiqueta": "str", "intro": "str", "encuentro": "str", "filas": "list:dict:cal_fila"},
+    "cal_fila": {"fecha": "str", "etapa": "str", "texto": "str", "pausa": "bool"},
     "vocabulario": {"solucion": "list:str", "area": "list:str", "proceso_base": "list:str"},
     "deteccion": {"areas": "list:str", "departamentos": "list:str", "etiqueta_departamentos": "str", "foco": "str",
                   "para_que": "list:dict:paso", "horas": "dict:det_horas", "texto_horas": "str", "logros_minimos": "int",
@@ -400,7 +402,7 @@ ESQUEMAS = {
     "contratacion": {"num": "str", "texto": "str", "fuente": "str"},
     "carril": {"id": "str", "nombre": "str", "nombre_corto": "str", "color": "str"},
     "area": {"id": "str", "nombre": "str", "carril": "str", "frente": "str", "para_que": "str", "nombre_catalogo": "str",
-             "proceso_base": "bool", "composicion": "str", "soluciones": "list:dict:solucion"},
+             "proceso_base": "bool", "composicion": "str", "sin_horas": "bool", "fuera_del_conteo": "bool", "soluciones": "list:dict:solucion"},
     "solucion": {"id": "str", "entregable": "str", "incluye": "list:str", "C": "num", "T": "num", "A": "num", "h": "num", "fase": "str",
                  "detalle": "str", "_revisar": "bool"},
     "alcance": {"titulo": "str", "subtitulo": "str", "fuera_alcance": "list:str", "compacto": "bool",
@@ -422,12 +424,13 @@ ESQUEMAS = {
     "item": {"dias": "str", "texto": "str"},
     "inversion": {"notas": "list:str", "licencias": "dict:licencias", "titulo": "str", "duracion": "str", "programa": "list:str",
                   "garantia_texto": "str", "sin_garantia": "bool", "partes": "list:dict:parte", "etiqueta_partes": "str", "etapas": "list:dict:etapa_inversion",
-                  "etiqueta_suma": "str", "sin_suma": "bool", "hoja_paquetes": "bool", "validez_dias": "int", "validez_hasta": "str", "desglose": "dict:desglose"},
+                  "etiqueta_suma": "str", "etiqueta_valor": "str", "sin_suma": "bool", "hoja_paquetes": "bool", "rotulo_parte": "str", "validez_dias": "int", "validez_hasta": "str", "desglose": "dict:desglose", "sin_ref": "bool"},
     "desglose": {"eyebrow": "str", "titulo": "str", "subtitulo": "str", "encabezados": "list:str", "filas": "list:dict:dsg_fila", "etiquetas_totales": "list:str", "sin_iva": "bool",
                  "descuento_validez_dias": "int", "nota": "str", "condiciones_titulo": "str", "condiciones": "list:str"},
     "dsg_fila": {"fase": "str", "concepto": "str", "area": "str", "horas": "str", "valor": "str"},
     "parte": {"nombre": "str", "detalle": "str"},
-    "etapa_inversion": {"titulo": "str", "rotulo": "str", "duracion": "str", "programa": "list:str", "notas": "list:str", "garantia_texto": "str", "sin_garantia": "bool"},
+    "etapa_inversion": {"titulo": "str", "rotulo": "str", "duracion": "str", "programa": "list:str", "notas": "list:str", "garantia_texto": "str", "sin_garantia": "bool",
+                        "partes": "list:dict:parte", "etiqueta_partes": "str", "hoja_paquetes": "bool", "rotulo_parte": "str"},   # una hoja por paquetes dentro de inversion.etapas (Unilynk CAI-100, 16/11/2026: Fase 1 y Fase 2 en una sola hoja)
     "licencias": {"titulo": "str", "tarjetas": "list:dict:tarjeta", "nota": "str"},
     "tarjeta": {"nombre": "str", "color": "str", "texto": "str"},
     "pago": {"titulo": "str", "subtitulo": "str", "cuotas": "list:dict:cuota", "mensaje": "str", "facturacion": "str", "grupos": "list:dict:grupo_pago"},
@@ -448,7 +451,8 @@ ESQUEMAS = {
     "retorno_area": {"area": "str", "etiqueta": "str", "tipo_dato": "str", "tipo_dato_posiciones": "str", "posiciones_evitables": "num", "horas_actuales": "num", "horas_con_solucion": "num", "retrabajo_usd": "num",
                      "tardios_usd": "num", "posiciones_hoy": "num", "posiciones_reducibles": "num", "costo_anual_usd": "num"},
     "entregables": {"transversales": "list:str", "valor_inmediato": "list:str", "compacto": "bool", "columnas_por_carril": "list:int",
-                    "titulo": "str", "subtitulo": "str", "etiqueta_transversales": "str", "etiqueta_valor": "str"},
+                    "titulo": "str", "subtitulo": "str", "etiqueta_transversales": "str", "etiqueta_valor": "str", "impacto": "dict:impacto_caja"},
+    "impacto_caja": {"titulo": "str", "texto": "str", "enfoque": "str"},
 }
 
 
@@ -705,10 +709,11 @@ def calcular(d, rep):
     fase_ids = [f.get("id") for f in fases]
     for i, f in enumerate(fases):
         if f.get("id") not in FASES_VALIDAS:
-            rep.err("fases[%d].id" % i, "falta o no es válido (debe ser F0, F1, F2 o F3; recibido %r)" % (f.get("id"),))
+            rep.err("fases[%d].id" % i, "falta o no es válido (debe ser F0, F1, F2, F3 o F4; recibido %r)" % (f.get("id"),))
     cols = [f for f in fases if f.get("id") != "F0"]
-    if not (2 <= len(cols) <= 3):
-        rep.err("fases", "se soportan 2 o 3 fases en columna (F1..F3, más F0 opcional para el arranque); hay %d" % len(cols))
+    max_cols = 4 if d.get("por_fases") is True else 3  # la cuarta fase en columna solo existe con por_fases (CAI-112: Cerebros Digitales)
+    if not (2 <= len(cols) <= max_cols):
+        rep.err("fases", "se soportan 2 a %d fases en columna (F1..F%d, más F0 opcional para el arranque; la cuarta solo con por_fases); hay %d" % (max_cols, max_cols, len(cols)))
     for f in cols:
         for k in ("titulo", "descripcion"):
             if not f.get(k):
@@ -784,8 +789,8 @@ def calcular(d, rep):
             else:
                 rep.err(sd, "falta C/T/A (o 'h' total)")
                 malo, h = True, 0
-            if h < 1 and not malo:
-                rep.err(sd, "la solución tiene 0 horas")
+            if h < 1 and not malo and not (area.get("sin_horas") is True and h == 0):
+                rep.err(sd, "la solución tiene 0 horas (si el área se cotiza por entregable y no por horas, marcarla con \"sin_horas\": true)")
             s["_h"] = h
             ff = s.get("fase")
             if ff not in fase_ids:
@@ -805,7 +810,7 @@ def calcular(d, rep):
         ca = agg["carril"].setdefault(area.get("carril"), {"n": 0, "h": 0, "areas": 0, "bases": 0})
         if area.get("proceso_base"):
             ca["bases"] += 1; agg["n_bases"] += 1
-        else:
+        elif not area.get("fuera_del_conteo"):  # fuera_del_conteo: sus horas y entregables suman, pero no cuenta como «área» (p. ej. Cerebros Digitales)
             ca["areas"] += 1; agg["n_areas"] += 1
 
     cl = d.get("cliente") or {}
@@ -1135,7 +1140,7 @@ def validar_semantica(d, ctx, agg, rep, silent):
             if len(fs) > 1:
                 rep.err("areas[%s]" % a.get("id"), "con por_fases todas las soluciones de un área van en la misma fase (hay %s): partir el área" % ", ".join(fs))
             elif fs and fs[0] not in ids_fc:
-                rep.err("areas[%s]" % a.get("id"), "con por_fases cada área va en una fase en columna (F1 a F3), no en %s" % fs[0])
+                rep.err("areas[%s]" % a.get("id"), "con por_fases cada área va en una fase en columna (F1 a F4), no en %s" % fs[0])
         for fid in ids_fc:
             if not any(fase_de_area(a) == fid for a in d.get("areas") or []):
                 rep.err("fases[%s]" % fid, "con por_fases cada fase en columna necesita al menos un área")
@@ -1365,6 +1370,10 @@ def validar_semantica(d, ctx, agg, rep, silent):
                         rep.err("inversion.etapas[%d].%s" % (i, k_), "falta (cada hoja de etapa define su título, su duración y su programa)")
                 if not e_.get("notas"):
                     rep.aviso("inversion.etapas[%d].notas" % i, "sin notas: se usan las de garantía y términos por defecto")
+                if e_.get("partes") is not None and not (2 <= len(e_["partes"]) <= 4):
+                    rep.err("inversion.etapas[%d].partes" % i, "se necesitan de 2 a 4 paquetes; hay %d" % len(e_["partes"]))
+                if e_.get("partes") and not e_.get("hoja_paquetes"):
+                    rep.err("inversion.etapas[%d].partes" % i, "dentro de una etapa las partes solo existen en la hoja por paquetes: agregar hoja_paquetes: true")
                 if len(rs(e_.get("rotulo"))) > 60:
                     rep.aviso("inversion.etapas[%d].rotulo" % i, "%d caracteres: máx. ~60 (una línea junto a «Propuesta Económica»)" % len(rs(e_["rotulo"])))
             if 2 <= len(et_) <= 4 and all(e_.get("sin_garantia") for e_ in et_) and seg_es_seguimiento(d):
@@ -1533,8 +1542,11 @@ def validar_det(d, ctx, rep, rs):
             rep.aviso("deteccion.entregables[%d].texto" % i, "%d caracteres: máx. ~125 (4 líneas)" % len(rs(x["texto"])))
         if len(rs(x["cuando"])) > 22:
             rep.aviso("deteccion.entregables[%d].cuando" % i, "%d caracteres: la etiqueta admite ~22" % len(rs(x["cuando"])))
+    for i, x in enumerate(ents):  # Ivana, 2026-11-13: la tarjeta de logros no dice cuántos (ni «al menos tres» ni un número)
+        if isinstance(x, dict) and re.search(r"logros?", rs(x.get("titulo", "")), re.I) and re.search(r"\bal\s+menos\b|\bcomo\s+m[ií]nimo\b|\bm[ií]nimo\s+de\b|\b(?:\d+|un|una|dos|tres|cuatro|cinco|seis|siete|ocho|nueve|diez)\b", rs(x.get("texto", "")), re.I):
+            rep.err("deteccion.entregables[%d].texto" % i, "los logros inmediatos no llevan cifra: di que se realizan cuando el proceso o el área lo permite (Ivana, 2026-11-13)" % ())
     if ents and not any(re.search(r"logros? inmediatos?", rs(x.get("titulo", "")) + " " + rs(x.get("texto", "")), re.I) for x in ents if isinstance(x, dict)):
-        rep.aviso("deteccion.entregables", "ningún entregable nombra los logros inmediatos: el proyecto asegura al menos {logros_minimos} (Keiber, 2026-10-08)")
+        rep.aviso("deteccion.entregables", "ningún entregable nombra los logros inmediatos: se realizan cuando el proceso o el área lo permite, sin decir cuántos (Ivana, 2026-11-13)")
     if "pago.cuotas" in puestos and "pago" in orden_slides(d):
         rep.aviso("pago", "sin plan de pago propio: se usa el estándar de Detección (50 % al aprobar y 50 % con el Informe Final, empresa/politicas-comerciales.md); confirmarlo con ventas")
     if ("retorno" in puestos or "retorno.pasos" in puestos) and "retorno" in orden_slides(d):
@@ -1813,7 +1825,7 @@ def cupo_catalogo(d, R):
     ancho_sub = max(300.0, min(520.0, 1011 - 28 - h2_ancho))
     lsub = lineas_wrap(sub, ancho_sub / 6.3)
     cab = max(lh2 * 37.8, lsub * 18.0)
-    cols_top = 44 + 23.4 + cab + 10 + 34
+    cols_top = 44 + 23.4 + cab + 10 + 34 + alto_caja_impacto(d, getattr(R, "imp_grande", False))
     # La última área debe terminar >= 14 px antes de la franja (top 610): 596 - cols_top - (borde 4 + relleno 8).
     return 596 - cols_top - 12
 
@@ -2411,7 +2423,7 @@ def s_inversion(d, R, et=None):
     if inv.get("desglose"):
         return html_hoja_desglose(d, R, inv, clave)
     partes = inv.get("partes") or []
-    label_base = "Propuesta + Inversión"
+    label_base = T(inv.get("etiqueta_valor") or "Propuesta + Inversión", "inversion.etiqueta_valor")   # etiqueta_valor: rótulo propio de la caja base sin partes (p. ej. «Valor del proyecto», CAI-091, 2026-11-11)
     if partes:
         label_base = T(inv.get("etiqueta_suma") or ("Total de la opción elegida" if inv.get("sin_suma") else "Suma de las partes"), "inversion.etiqueta_suma")
         tarjetas = ""
@@ -2450,13 +2462,16 @@ def s_inversion(d, R, et=None):
         '        <span class="block-eyebrow">Cotización</span>\n'
         "      </div>\n\n"
         '      <span class="cot-label cot-label-base">%s</span>\n'
+        '      <span class="cot-sign cot-sign-base">REF</span>\n'
         '      <div class="cot-frame base-frame"></div>\n\n'
         '      <span class="cot-label cot-label-discount">Descuento</span>\n'
-        '      <span class="cot-sign-minus">&minus;$</span>\n'
+        '      <span class="cot-sign-minus">&minus;REF</span>\n'
         '      <div class="cot-frame discount-frame"></div>\n'
         '      <span class="cot-urgent-note">Descuento válido por 15 días</span>\n\n'
         '      <span class="cot-label cot-label-total">TOTAL</span>\n'
+        '      <span class="cot-sign cot-sign-total">REF</span>\n'
         '      <div class="cot-frame total-frame"></div>\n\n'
+        '      <p class="cot-moneda">%s</p>\n'
         '      <p class="cot-validity">Cotización válida por 30 días.</p>\n'
         '      <div class="cot-terms-box">\n'
         '        <span class="cot-terms-label">Importante</span>\n'
@@ -2468,13 +2483,18 @@ def s_inversion(d, R, et=None):
         "      </div>\n"
         '      <div class="multi-box notas-box" data-field="Notas"></div>\n\n%s%s'
         "    </section>\n"
-        % (R.contador(clave), T(titulo, "inversion.titulo"), T(inv.get("rotulo") or rotulo_servicio(d), "servicio_rotulo"), M(dur, "inversion.duracion"), label_base, garantia_html, lic_html, foot(R, "claro"))
+        % (R.contador(clave), T(titulo, "inversion.titulo"), T(inv.get("rotulo") or rotulo_servicio(d), "servicio_rotulo"), M(dur, "inversion.duracion"), label_base, LEYENDA_PAGO, garantia_html, lic_html, foot(R, "claro"))
     )
+    if inv.get("sin_ref"):
+        html_precio = re.sub(r'      <span class="cot-sign cot-sign-(?:base|total)">REF</span>\n', "", html_precio)
+        html_precio = html_precio.replace('<span class="cot-sign-minus">&minus;REF</span>', '<span class="cot-sign-minus">&minus;$</span>', 1)
+        html_precio = html_precio.replace('      <p class="cot-moneda">%s</p>\n' % LEYENDA_PAGO, "", 1)
     if partes and inv.get("sin_suma"):
         # Opciones alternativas sin fila de total de la opción: Descuento y Total suben a la posición de esa fila
         # (CSS en overrides.css de la propuesta; los rects del PDF los fija scripts/agregar-campo-precio.py → precio_fields()).
         html_precio = html_precio.replace('class="slide s-price"', 'class="slide s-price sin-base"', 1)
-        html_precio = re.sub(r'      <span class="cot-label cot-label-base">[^\n]*</span>\n      <div class="cot-frame base-frame"></div>\n\n', "", html_precio, count=1)
+        html_precio = re.sub(r'      <span class="cot-label cot-label-base">[^\n]*</span>\n(?:      <span class="cot-sign cot-sign-base">REF</span>\n)?      <div class="cot-frame base-frame"></div>\n\n', "", html_precio, count=1)
+        html_precio = re.sub(r'      <span class="cot-sign cot-sign-total">REF</span>\n', "", html_precio, count=1)   # sin fila de base el total sube: su CSS vive en el overrides.css de la propuesta
     return html_precio
 
 
@@ -2485,7 +2505,8 @@ def html_hoja_desglose(d, R, inv, clave):
     Chrome, sin coordenadas escritas a mano) y los totales se calculan solos con data-calc. CSS en el overrides.css de la propuesta (por canonizar)."""
     T, M = R.T, R.M
     dg = inv["desglose"]
-    enc = dg.get("encabezados") or ["Fase", "Concepto", "Área", "Horas", "Valor (USD)"]
+    mon = "USD" if inv.get("sin_ref") else "REF"
+    enc = dg.get("encabezados") or ["Fase", "Concepto", "Área", "Horas", "Valor (%s)" % mon]
     filas = ""
     nombres = []
     for i, f in enumerate(dg["filas"], 1):
@@ -2494,7 +2515,7 @@ def html_hoja_desglose(d, R, inv, clave):
             celda_v = '<span class="dsg-incl">%s</span>' % T(f["valor"], "inversion.desglose.valor")
         else:
             nombres.append("ValorFila%d" % i)
-            celda_v = '<span class="campo-libre" data-campo="ValorFila%d" data-tip="%s"></span>' % (i, esc("Valor en USD de la fila %d (lo escribe Ventas)." % i))
+            celda_v = '<span class="campo-libre" data-campo="ValorFila%d" data-tip="%s"></span>' % (i, esc("Valor en %s de la fila %d (lo escribe Ventas)." % (mon, i)))
         filas += (
             '          <tr><td class="dsg-f">%s</td><td class="dsg-c">%s</td><td class="dsg-a">%s</td><td class="dsg-h">%s</td>'
             '<td class="dsg-v">%s</td></tr>\n'
@@ -2505,17 +2526,17 @@ def html_hoja_desglose(d, R, inv, clave):
     vd = dg.get("descuento_validez_dias") or 30
     if sin_iva:
         tot_defs = [
-            ("Subtotal", "+".join(nombres), "Subtotal en USD. Se calcula solo al llenar los valores de las filas."),
-            ("DescuentoPrograma", "", "Descuento por contratar el programa completo, en USD (lo escribe Ventas)."),
-            ("TotalPrograma", "Subtotal-DescuentoPrograma", "Total en USD. Se calcula solo (subtotal menos descuento)."),
+            ("Subtotal", "+".join(nombres), "Subtotal en %s. Se calcula solo al llenar los valores de las filas." % mon),
+            ("DescuentoPrograma", "", "Descuento por contratar el programa completo, en %s (lo escribe Ventas)." % mon),
+            ("TotalPrograma", "Subtotal-DescuentoPrograma", "Total en %s. Se calcula solo (subtotal menos descuento)." % mon),
         ]
     else:
         tot_defs = [
-            ("Subtotal", "+".join(nombres), "Subtotal en USD. Se calcula solo al llenar los valores de las filas."),
-            ("DescuentoPrograma", "", "Descuento por contratar el programa completo, en USD (lo escribe Ventas)."),
-            ("TotalAntesImpuestos", "Subtotal-DescuentoPrograma", "Total antes de impuestos en USD. Se calcula solo (subtotal menos descuento)."),
-            ("IVA", "", "IVA en USD (lo escribe Ventas)."),
-            ("TotalConImpuestos", "TotalAntesImpuestos+IVA", "Total con impuestos en USD. Se calcula solo (total antes de impuestos más IVA)."),
+            ("Subtotal", "+".join(nombres), "Subtotal en %s. Se calcula solo al llenar los valores de las filas." % mon),
+            ("DescuentoPrograma", "", "Descuento por contratar el programa completo, en %s (lo escribe Ventas)." % mon),
+            ("TotalAntesImpuestos", "Subtotal-DescuentoPrograma", "Total antes de impuestos en %s. Se calcula solo (subtotal menos descuento)." % mon),
+            ("IVA", "", "IVA en %s (lo escribe Ventas)." % mon),
+            ("TotalConImpuestos", "TotalAntesImpuestos+IVA", "Total con impuestos en %s. Se calcula solo (total antes de impuestos más IVA)." % mon),
         ]
     totales = ""
     for i, (nom, calc, tip) in enumerate(tot_defs):
@@ -2546,13 +2567,13 @@ def html_hoja_desglose(d, R, inv, clave):
         '        <div class="dsg-left">\n%s%s        </div>\n'
         '        <div class="dsg-tot">\n%s        </div>\n'
         "      </div>\n\n"
-        '      <p class="dsg-validez">Cotización válida por %d días. Este servicio se presta bajo nuestros <a href="https://drive.google.com/file/d/1PA-ZSt4KnyY5dpxXzgkIk6-yfGlV2eF8/view?usp=drive_link" target="_blank" rel="noopener">términos y condiciones</a>.</p>\n'
+        '      <p class="dsg-validez">%sCotización válida por %d días. Este servicio se presta bajo nuestros <a href="https://drive.google.com/file/d/1PA-ZSt4KnyY5dpxXzgkIk6-yfGlV2eF8/view?usp=drive_link" target="_blank" rel="noopener">términos y condiciones</a>.</p>\n'
         "%s"
         "    </section>\n"
         % (R.contador(clave), R.idx[clave], T(dg.get("eyebrow") or "Inversión", "inversion.desglose.eyebrow"), T(dg.get("titulo") or inv.get("titulo") or "Inversión del proyecto.", "inversion.titulo"),
            ('      <p class="sub">%s</p>\n\n' % M(sub, "inversion.desglose.subtitulo")) if sub else "\n",
            "".join("<th%s>%s</th>" % (' class="dsg-hv"' if j == len(enc) - 1 else "", T(x, "inversion.desglose.encabezados")) for j, x in enumerate(enc)),
-           filas, nota, cond_html, totales, vdias, foot(R, "claro"))
+           filas, nota, cond_html, totales, "" if inv.get("sin_ref") else "<b>%s.</b> " % LEYENDA_PAGO, vdias, foot(R, "claro"))
     )
 
 
@@ -2597,15 +2618,15 @@ def html_hoja_paquetes(d, R, inv, clave, titulo, dur, partes):
         det = ('          <span class="pq-det">%s</span>\n' % T(p_["detalle"], "inversion.partes.detalle")) if p_.get("detalle") else ""
         tarjetas += (
             '        <div class="pq-card %s">\n'
-            '          <span class="pq-tag">Opción %d</span>\n'
+            '          <span class="pq-tag">%s %d</span>\n'
             '          <b class="pq-name">%s</b>\n%s'
-            '          <span class="pq-lab pq-lab-precio">Valor</span>\n'
+            '          <span class="pq-lab pq-lab-precio">Valor%s</span>\n'
             '          <div class="pq-frame pq-precio"></div>\n'
-            '          <span class="pq-lab pq-lab-desc">Descuento<em class="pq-pill">Válido por 15 días</em></span>\n'
+            '          <span class="pq-lab pq-lab-desc">Descuento%s<em class="pq-pill">Válido por 15 días</em></span>\n'
             '          <div class="pq-frame pq-desc"></div>\n'
-            '          <span class="pq-lab pq-lab-total">Total</span>\n'
+            '          <span class="pq-lab pq-lab-total">Total%s</span>\n'
             '          <div class="pq-frame pq-total"></div>\n'
-            "        </div>\n" % ("acc-y" if i % 2 else "acc-o", i, T(p_["nombre"], "inversion.partes.nombre"), det)
+            "        </div>\n" % ("acc-y" if i % 2 else "acc-o", T(inv.get("rotulo_parte") or "Opción", "inversion.rotulo_parte"), i, T(p_["nombre"], "inversion.partes.nombre"), det, *(("" if inv.get("sin_ref") else " (REF)",) * 3))
         )
     return (
         '    <!-- 7 · Inversión (hoja por opciones: Duración y Programa arriba, Notas, valor por opción abajo e Importante) -->\n'
@@ -2629,15 +2650,96 @@ def html_hoja_paquetes(d, R, inv, clave, titulo, dur, partes):
         '        <span class="pq-eyebrow">%s</span>\n'
         '        <div class="pq-cards">\n%s        </div>\n'
         "      </div>\n\n"
-        '      <p class="cot-validity pq-validity">Cotización válida por 30 días.</p>\n'
+        '      <p class="cot-validity pq-validity">%sCotización válida por 30 días.</p>\n'
         '      <div class="cot-terms-box pq-terms">\n'
         '        <span class="cot-terms-label">Importante</span>\n'
         '        <p class="cot-terms-text">Este servicio se presta bajo nuestros <a href="https://drive.google.com/file/d/1PA-ZSt4KnyY5dpxXzgkIk6-yfGlV2eF8/view?usp=drive_link" target="_blank" rel="noopener">términos y condiciones</a>. Al avanzar con esta propuesta, ambas partes los aceptan.</p>\n'
         "      </div>\n\n%s"
         "    </section>\n"
         % (R.contador(clave), T(titulo, "inversion.titulo"), T(inv.get("rotulo") or rotulo_servicio(d), "servicio_rotulo"), M(dur, "inversion.duracion"),
-           T(inv.get("etiqueta_partes") or "Valor por paquete", "inversion.etiqueta_partes"), tarjetas, foot(R, "claro"))
+           T(inv.get("etiqueta_partes") or "Valor por paquete", "inversion.etiqueta_partes"), tarjetas, "" if inv.get("sin_ref") else "<b>%s.</b> " % LEYENDA_PAGO, foot(R, "claro"))
     )
+
+
+# Cuadro de Impacto en «Lo que se llevan» (Ivana, 2026-11-09, a partir del pedido de Canguro): el cliente compra un resultado operativo, no solo
+# la metodología y los documentos. Texto cualitativo y breve; sin cifras que el cliente no haya dado. El enfoque lo decide Ivana por propuesta.
+ENFOQUES_IMPACTO = ("reenfoque", "posiciones", "operacion")
+RE_IMPACTO_PERSONAS = re.compile(r"\bmenos (?:personas|gente|personal)\b|\breduc\w+ (?:de )?(?:la )?(?:n[oó]mina|plantilla|personal|posiciones|puestos)|\brecorte\w*|\bdespid\w*|\bsin contratar\b|\bcontratar menos\b|\bposici[oó]n(?:es)?\b|\bn[oó]mina\b|\bplantilla\b|\bdotaci[oó]n\b|\bevitar contrat\w+", re.I)
+LEYENDA_PAGO = "Pago en Divisas o Bolívares a Tasa BCV del Euro"
+
+
+def impacto_caja(d):
+    """Datos del cuadro de Impacto (entregables.impacto) o None."""
+    c = (d.get("entregables") or {}).get("impacto")
+    return c if isinstance(c, dict) and str(c.get("texto") or "").strip() else None
+
+
+def alto_caja_impacto(d, grande=False):
+    """Alto estimado (px) que el cuadro de Impacto le quita a la lámina de entregables: líneas + relleno + margen.
+    Grande (16 px, 3 líneas de ~100 caracteres) o franja delgada (12,5 px, 2 líneas de ~122)."""
+    c = impacto_caja(d)
+    if not c:
+        return 0.0
+    txt = sin_marcado(str(c["texto"]))
+    if grande:
+        return 28 + 14 + 21.2 * lineas_wrap(txt, 100.0)
+    return 16 + 8 + 17.5 * lineas_wrap(txt, 122.0)
+
+
+def html_caja_impacto(d, R):
+    """«Impacto»: franja bajo el titular de la lámina de entregables. No lleva campos de formulario ni mueve las cajas editables del pie."""
+    c = impacto_caja(d)
+    if not c:
+        return ""
+    return (
+        '      <div class="deliv-impact%s">\n'
+        '        <span class="di-label">%s</span>\n'
+        "        <p>%s</p>\n"
+        "      </div>\n\n" % (" grande" if getattr(R, "imp_grande", False) else "", R.T(c.get("titulo") or "Impacto", "entregables.impacto.titulo"), R.M(c["texto"], "entregables.impacto.texto"))
+    )
+
+
+def validar_impacto_caja(d, rep):
+    """entregables.impacto: texto breve y cualitativo, con el enfoque decidido por Ivana (reenfoque, posiciones u operación). Un impacto sobre
+    posiciones exige el mismo aval que el retorno (retorno.posiciones + aval_posiciones); los otros dos no pueden hablar de menos personas."""
+    c = (d.get("entregables") or {}).get("impacto")
+    if c is None:
+        return
+    if not isinstance(c, dict):
+        rep.err("entregables.impacto", "debe ser un objeto {texto, enfoque, titulo?}")
+        return
+    texto = sin_marcado(str(c.get("texto") or "")).strip()
+    enfoque = str(c.get("enfoque") or "").strip()
+    if not texto:
+        rep.err("entregables.impacto.texto", "falta el texto del impacto (2 a 3 frases sobre lo que cambia en la operación del cliente)")
+        return
+    if enfoque not in ENFOQUES_IMPACTO:
+        rep.err("entregables.impacto.enfoque", "falta o no es válido: usar %s (lo decide Ivana por propuesta: «reenfoque» = las personas pasan a trabajo de más valor y no se habla de nómina; «posiciones» = se plantea operar con menos personas, con aval del cliente; «operacion» = el impacto es de tiempo, calidad, servicio o ventas y no toca a las personas)" % ", ".join(ENFOQUES_IMPACTO))
+        return
+    if len(texto) > 300:
+        rep.err("entregables.impacto.texto", "%d caracteres: máx. 300 (3 líneas del cuadro)" % len(texto))
+    elif len(texto) > 250:
+        rep.aviso("entregables.impacto.texto", "%d caracteres: puede pasar de 2 líneas; ideal ≤ 240" % len(texto))
+    if len(str(c.get("titulo") or "Impacto")) > 22:
+        rep.err("entregables.impacto.titulo", "máx. 22 caracteres (es la etiqueta de la franja)")
+    if re.search(r"lo que se llevan|entregables", texto, re.I):
+        rep.err("entregables.impacto.texto", "no debe nombrar «Lo que se llevan» ni «entregables»: son los marcadores de las cajas del PDF")
+    m = RE_COMPROMISO.search(texto)
+    if m:
+        rep.err("entregables.impacto.texto", "lenguaje de compromiso o garantía («%s»): el impacto se plantea como lo que cambia, no como promesa" % m.group(0))
+    m = RE_RET_AV.search(texto)
+    if m:
+        rep.err("entregables.impacto.texto", "«%s»: el impacto va sin estudios, porcentajes ni montos; las cifras del cliente van en el retorno, con su fuente" % m.group(0))
+    pos = RE_IMPACTO_PERSONAS.search(texto)
+    if enfoque == "posiciones":
+        r = d.get("retorno") or {}
+        av = r.get("aval_posiciones")
+        if not r.get("posiciones") or not isinstance(av, dict) or not all(isinstance(av.get(k), str) and av.get(k).strip() for k in ("quien", "fecha", "medio")):
+            rep.err("entregables.impacto.enfoque", "«posiciones» exige retorno.posiciones=true y retorno.aval_posiciones {quien, fecha, medio} (el cliente aceptó que se hable de operar con menos personas)")
+        else:
+            rep.aviso("entregables.impacto.enfoque", "el impacto plantea operar con menos personas; aval registrado: %s, %s (%s). Reconfirmar antes de enviar" % (av["quien"], av["fecha"], av["medio"]))
+    elif pos:
+        rep.err("entregables.impacto.texto", "«%s»: con enfoque «%s» el impacto no habla de menos personas, posiciones ni nómina (hablar de reenfocar tareas o del resultado operativo)" % (pos.group(0), enfoque))
 
 
 def s_entregables(d, R, columnas, ncols):
@@ -2700,13 +2802,14 @@ def s_entregables(d, R, columnas, ncols):
         cols_html += '        <div class="deliv-col %s">\n%s        </div>\n\n' % (COLORES[col["carril"]["color"]], areas_html)
     return (
         '    <!-- 5 · Entregables: ¿con qué me quedo? (catálogo + piezas transversales) -->\n'
-        '    <section class="slide s-deliv%s%s">\n'
+        '    <section class="slide s-deliv%s%s%s">\n'
         '      <span class="counter">%s</span>\n'
         '      <p class="eyebrow">%02d · Entregables</p>\n'
         '      <div class="deliv-head">\n'
         "        <h2>%s</h2>\n"
         '        <p class="deliv-sub">%s</p>\n'
         "      </div>\n\n"
+        '%s'
         '      <div class="deliv-carriles" style="--ncols:%d">\n%s      </div>\n\n'
         '      <div class="deliv-cols" style="--ncols:%d">\n\n%s      </div>\n\n'
         '      <div class="deliv-band">\n'
@@ -2721,8 +2824,8 @@ def s_entregables(d, R, columnas, ncols):
         '      <div class="multi-box db-box db-box-1" data-field="Entregables"></div>\n'
         '      <div class="multi-box db-box db-box-2" data-field="Acreditacion"></div>\n\n%s'
         "    </section>\n"
-        % (" compact" if compacto else "", " roomy" if getattr(R, "deliv_roomy", False) else "", R.contador("entregables"), R.idx["entregables"], T(titulo, "entregables.titulo"), sub_html,
-           ncols, barras, ncols, cols_html, T(en.get("etiqueta_transversales") or "Para todas las áreas", "entregables.etiqueta_transversales"),
+        % (" compact" if compacto else "", " roomy" if getattr(R, "deliv_roomy", False) else "", " con-imp" if impacto_caja(d) else "", R.contador("entregables"), R.idx["entregables"], T(titulo, "entregables.titulo"), sub_html,
+           html_caja_impacto(d, R), ncols, barras, ncols, cols_html, T(en.get("etiqueta_transversales") or "Para todas las áreas", "entregables.etiqueta_transversales"),
            T(en.get("etiqueta_valor") or "Valor inmediato", "entregables.etiqueta_valor"), foot(R, "oscuro"))
     )
 
@@ -2867,10 +2970,64 @@ def filas_calendario(d, rep):
     return {"filas": filas, "n": len(textos), "h_enc": h_enc, "dias": sorted(dias)}
 
 
+MAX_FILAS_CAL_REF = 9
+
+
+def validar_calendario_filas(d, rep):
+    """Calendario referencial con filas escritas a mano (calendario.filas): fecha o rango en texto libre, etapa y texto.
+    Sirve donde las fechas no salen de horas por encuentro (Detección: Prodimic DET-059, Ivana, 2026-11-13)."""
+    c = d.get("calendario") or {}
+    filas = c.get("filas")
+    if not isinstance(filas, list) or not (2 <= len(filas) <= MAX_FILAS_CAL_REF):
+        rep.err("calendario.filas", "debe ser una lista de 2 a %d filas {fecha, etapa, texto}" % MAX_FILAS_CAL_REF)
+        return
+    for i, f in enumerate(filas):
+        for k, mx in (("fecha", 22), ("etapa", 26), ("texto", 100)):
+            v = f.get(k) if isinstance(f, dict) else None
+            if not isinstance(v, str) or not v.strip():
+                rep.err("calendario.filas[%d].%s" % (i, k), "falta")
+            elif len(v) > mx:
+                rep.aviso("calendario.filas[%d].%s" % (i, k), "%d caracteres: máx. ~%d; podría romper la fila" % (len(v), mx))
+
+
+def s_calendario_filas(d, R):
+    """Calendario referencial de una página: una fila por etapa (fecha o rango, etapa y texto); una fila puede ser pausa."""
+    T, M = R.T, R.M
+    c = d["calendario"]
+    filas = c["filas"]
+    titulo = c.get("titulo") or "Calendario referencial."
+    sub = c.get("subtitulo") or "Una guía de fechas para arrancar este año; se confirma en la reunión de arranque."
+    etiqueta = c.get("etiqueta") or "Calendario referencial"
+    intro = c.get("intro") or ""
+    alto = min(54, max(34, int(380 / len(filas))))
+    lis = "".join(
+        '          <li class="cal-fila%s"><span class="cal-d">%s</span><span class="cal-e">%s</span><span class="cal-t">%s</span></li>\n'
+        % (" cal-pausa" if f.get("pausa") else "", T(f["fecha"], "calendario.fecha"), T(f["etapa"], "calendario.etapa"), M(f["texto"], "calendario.texto"))
+        for f in filas)
+    return (
+        '    <!-- Calendario referencial (opcional): filas de fechas escritas a mano -->\n'
+        '    <section class="slide s-cal s-cal-ref">\n'
+        '      <span class="counter">%s</span>\n'
+        '      <p class="eyebrow">%02d · Calendario</p>\n'
+        "      <h2>%s</h2>\n"
+        '      <p class="sub">%s</p>\n\n'
+        '      <div class="cal-box">\n'
+        '        <p class="cal-label">%s</p>\n%s'
+        '        <ul class="cal-lista" style="--cal-rowh:%dpx">\n%s        </ul>\n'
+        "      </div>\n\n%s"
+        "    </section>\n"
+        % (R.contador("calendario"), R.idx["calendario"], T(titulo, "calendario.titulo"), M(sub, "calendario.subtitulo"),
+           T(etiqueta, "calendario.etiqueta"), ('        <p class="cal-intro">%s</p>\n' % M(intro, "calendario.intro")) if intro else "",
+           alto, lis, foot(R, "oscuro"))
+    )
+
+
 def s_calendario(d, R):
     """Calendario de inicio (opcional): una fila por encuentro, con fecha y horario, que suman todas las horas del proyecto."""
     T, M = R.T, R.M
     c = d["calendario"]
+    if c.get("filas"):
+        return s_calendario_filas(d, R)
     info = filas_calendario(d, Reporte())
     filas, n, h_enc = info["filas"], info["n"], info["h_enc"]
     dias_txt = " y ".join(DIA_LARGO[k] for k in info["dias"]) if len(info["dias"]) <= 2 else ", ".join(DIA_LARGO[k] for k in info["dias"][:-1]) + " y " + DIA_LARGO[info["dias"][-1]]   # los días de lunes a viernes son invariables en plural
@@ -3710,13 +3867,14 @@ def s_entregables_det(d, R):
     n = len(det["entregables"])
     return (
         '    <!-- 5 · Entregables (Detección): lo que recibe, sin conteos ni áreas; «Lo que se llevan» + «Entregables» ubican los campos -->\n'
-        '    <section class="slide s-deliv s-det-deliv">\n'
+        '    <section class="slide s-deliv s-det-deliv%s">\n'
         '      <span class="counter">%s</span>\n'
         '      <p class="eyebrow">%02d · Entregables</p>\n'
         '      <div class="deliv-head">\n'
         "        <h2>%s</h2>\n"
         '        <p class="deliv-sub">%s</p>\n'
         "      </div>\n\n"
+        '%s'
         '      <div class="det-cards" style="--cols:%d; --rows:%d">\n%s      </div>\n\n'
         '      <div class="deliv-band">\n'
         '        <div class="db-card db-1">\n'
@@ -3730,8 +3888,8 @@ def s_entregables_det(d, R):
         '      <div class="multi-box db-box db-box-1" data-field="Entregables"></div>\n'
         '      <div class="multi-box db-box db-box-2" data-field="Acreditacion"></div>\n\n%s'
         "    </section>\n"
-        % (R.contador("entregables"), R.idx["entregables"], T(en["titulo"], "entregables.titulo"), sub_html,
-           2 if n == 4 else 3, 1 if n <= 3 else 2, tarjetas,
+        % ((" con-imp imp-g" if getattr(R, "imp_grande", False) else " con-imp") if impacto_caja(d) else "", R.contador("entregables"), R.idx["entregables"], T(en["titulo"], "entregables.titulo"), sub_html,
+           html_caja_impacto(d, R), 2 if n == 4 else 3, 1 if n <= 3 else 2, tarjetas,
            T(en.get("etiqueta_transversales") or "Para todo el proyecto", "entregables.etiqueta_transversales"),
            T(en.get("etiqueta_valor") or "Valor inmediato", "entregables.etiqueta_valor"), foot(R, "oscuro"))
     )
@@ -3961,6 +4119,17 @@ def programa_md_comun(d, R, L, n0):
         L.append("")
         L.append("Los montos van vacíos en el PDF (campos `PagoCuota1_2..%d_2`): los escribe ventas. No se anotan en este repositorio." % len(cuotas_pago(d, "pago2")))
         L.append("")
+    if impacto_caja(d) and "entregables" in R.orden:
+        c_ = impacto_caja(d)
+        L.append("## %d. Impacto (cuadro de «Lo que se llevan», slide %d)\n" % (n, R.idx["entregables"]))
+        n += 1
+        L.append("Enfoque decidido con Ivana: **%s**. %s" % (c_.get("enfoque"), {
+            "reenfoque": "Las personas pasan a trabajo de más valor; no se habla de menos personas ni de nómina.",
+            "posiciones": "Se plantea operar con menos personas, con el aval del cliente registrado en `retorno.aval_posiciones`.",
+            "operacion": "El impacto es de tiempo, calidad, servicio o ventas; no toca a las personas."}.get(c_.get("enfoque"), "")))
+        L.append("")
+        L.append("> " + sin_marcado(str(c_["texto"])))
+        L.append("")
     if "proximos" in R.orden:
         a_ = (d.get("proximos_pasos") or {}).get("asesora") or {}
         L.append("## %d. Próximos pasos (slide %d)\n" % (n, R.idx["proximos"]))
@@ -3995,7 +4164,7 @@ def construir_programa_md_det(d, R):
     if det.get("foco"):
         L.append("- **Foco**: %s" % sin_marcado(t(det["foco"], "deteccion.foco")))
     L.append("- **Para qué**: " + "; ".join("%s (%s)" % (sin_marcado(t(x["titulo"], "deteccion.para_que")), sin_marcado(t(x["texto"], "deteccion.para_que"))) for x in det["para_que"]) + ".")
-    L.append("- **Logros inmediatos mínimos del proyecto**: %d (no uno por área: un proceso de mucho esfuerzo pasa al mapa)." % c["logros_minimos"])
+    L.append("- **Logros inmediatos**: se realizan cuando el proceso o el área lo permite; la propuesta no dice cuántos (Ivana, 2026-11-13). Un proceso de mucho esfuerzo pasa al mapa.")
     L.append("")
     L.append("## 3. Ruta por etapas (slide %d)\n" % R.idx["ruta"])
     for i, e in enumerate(det["etapas"], 1):
@@ -4186,11 +4355,11 @@ def construir_brief(d, R):
                 else "%s (`%s`)" % (d.get("meta_tipo") or rotulo_servicio(d), d["cliente"]["codigo"]))
     if es_deteccion(d):
         det = d.get("deteccion") or {}
-        alcance_txt = "%s (%s) · %d h de levantamiento en global, sin reparto por área (internas: arranque %d h, nivelación %d h) · al menos %d logros inmediatos" % (
-            R.ctx["n_areas_txt"], ", ".join(det.get("areas") or []), R.ctx["h_levantamiento"], R.ctx["h_arranque"], R.ctx["h_nivelacion"], R.ctx["logros_minimos"])
+        alcance_txt = "%s (%s) · %d h de levantamiento en global, sin reparto por área (internas: arranque %d h, nivelación %d h) · logros inmediatos cuando el proceso lo permite, sin cifra" % (
+            R.ctx["n_areas_txt"], ", ".join(det.get("areas") or []), R.ctx["h_levantamiento"], R.ctx["h_arranque"], R.ctx["h_nivelacion"])
         reglas_formato = ("**Detección** (`plantillas/deteccion-compacto.md`, Keiber 2026-10-08): sin frentes ni áreas prioritarias antes de detectar (lo que el cliente señaló "
                           "como interés guía la conversación, no la estructura); cada departamento por separado, con su líder y su mano derecha, sin tarea previa; horas en global, "
-                          "sin reparto por área; al menos {logros_minimos} logros inmediatos en el proyecto (no uno por área); entregables nombrados, sin conteos.")
+                          "sin reparto por área; logros inmediatos cuando el proceso o el área lo permite, sin decir cuántos; entregables nombrados, sin conteos.")
         nota_tablas = "Las horas internas (arranque, nivelación y levantamiento) y el detalle de áreas, departamentos y etapas están en `programa.md`, generado desde `datos.json`."
     else:
         alcance_txt = "%s en %s · %d h de trabajo%s" % (R.ctx["n_total_txt"], R.ctx["n_areas_txt"], R.agg["h_total"],
@@ -4295,6 +4464,10 @@ def chequeos_html(html, d, rep):
         if mj:
             rep.err("slide " + cls, "«%s» cerca de «%s»: la propuesta no dice cuántos facilitadores o consultores participan (Ivana, 2026-10-27); si es el nombre propio de algo del cliente, agregarlo a frases_ok" % (
                 mj.group(0), txt_h[max(0, mj.start() - 25):mj.end() + 25]))
+        mj = RE_N_LOGROS.search(txt_h)
+        if mj:
+            rep.err("slide " + cls, "«%s» cerca de «%s»: los logros inmediatos no llevan cifra; se dice que se realizan cuando el proceso o el área lo permite (Ivana, 2026-11-13)" % (
+                mj.group(0), txt_h[max(0, mj.start() - 25):mj.end() + 25]))
         mj = RE_HORAS_TRABAJO.search(txt_h)
         if mj:
             msg = "«%s» cerca de «%s»: la propuesta no muestra las horas de trabajo de Intezia (Ivana, 2026-10-27); decir horas de encuentro, de contenido o del taller, o activar sin_horas_trabajo" % (
@@ -4368,9 +4541,9 @@ def _imprimir(rep, ctx):
         det = d.get("deteccion") or {}
         horas = det.get("horas") or {}
         print("== Propuesta compacta de Detección · %s (%s) ==" % ((d.get("cliente") or {}).get("nombre", "?"), (d.get("cliente") or {}).get("codigo", "?")))
-        print("   %d área(s) · %d departamento(s) · %s h de levantamiento en global (internas: arranque %s h, nivelación %s h) · al menos %s logros inmediatos" % (
+        print("   %d área(s) · %d departamento(s) · %s h de levantamiento en global (internas: arranque %s h, nivelación %s h) · logros inmediatos sin cifra" % (
             len(det.get("areas") or []), len(det.get("departamentos") or []), horas.get("levantamiento", "?"), horas.get("arranque", 0),
-            horas.get("nivelacion", 0), det.get("logros_minimos", 3)))
+            horas.get("nivelacion", 0)))
     elif ctx:
         d, agg = ctx
         print("== Habilidades compacto · %s (%s) ==" % ((d.get("cliente") or {}).get("nombre", "?"), (d.get("cliente") or {}).get("codigo", "?")))
@@ -4474,6 +4647,12 @@ def ejecutar(args):
     else:
         ctx, agg = calcular(d, rep)
     validar_semantica(d, ctx, agg, rep, Tokens(ctx, Reporte()))
+    if "entregables" in orden:
+        validar_impacto_caja(d, rep)
+        if (d.get("entregables") or {}).get("impacto") is None:
+            rep.aviso("entregables.impacto", "falta el cuadro de Impacto de «Lo que se llevan» (estándar desde 2026-11-09): preguntar a Ivana qué impacto causa el servicio en la empresa y su enfoque (reenfoque, posiciones u operacion)")
+    elif (d.get("entregables") or {}).get("impacto") is not None:
+        rep.aviso("entregables.impacto", "la propuesta omite la lámina de entregables: el cuadro de Impacto no se muestra")
     if "impacto" in orden:
         if det:
             rep.err("impacto", "la slide de impacto no existe en el formato de Detección")
@@ -4490,8 +4669,11 @@ def ejecutar(args):
         validar_rfp(d, rep)
         rep.aviso("respuesta_solicitud", "la propuesta lleva páginas «Respuesta a la solicitud» (RFP del cliente): confirmar con el usuario que se quedan")
     if "calendario" in orden:
-        if det:
-            rep.err("calendario", "la slide de calendario no existe en el formato de Detección")
+        if (d.get("calendario") or {}).get("filas"):
+            validar_calendario_filas(d, rep)
+            rep.aviso("calendario", "la propuesta lleva un calendario referencial con fechas: excepción a CLAUDE.md §4.23 (Keiber, 2026-10-08: sin semanas, sesiones ni fechas); confirmar que se queda")
+        elif det:
+            rep.err("calendario", "en el formato de Detección el calendario lleva sus fechas escritas a mano: usar calendario.filas")
         else:
             filas_calendario(d, rep)
             rep.aviso("calendario", "la propuesta lleva calendario con fechas: excepción a CLAUDE.md §4.23 (Keiber, 2026-10-08: sin semanas, sesiones ni fechas); confirmar que se queda")
@@ -4522,7 +4704,12 @@ def ejecutar(args):
     columnas, ncols, alto_max = ([], 0, 0) if (det or "entregables" not in orden) else (columnas_por_fase(d) if por_fases(d) else repartir_columnas(d, rep))
     html = af = None
     R.deliv_roomy = False
+    R.imp_grande = bool(impacto_caja(d)) and not columnas   # Detección: siempre grande; Habilidades: grande si el catálogo deja espacio
     if columnas:
+        if impacto_caja(d):
+            R.imp_grande = True
+            if alto_max > cupo_catalogo(d, R) * 0.95:
+                R.imp_grande = False
         cupo = cupo_catalogo(d, R)
         compacto = bool(d["entregables"].get("compacto"))
         R.deliv_roomy = (not compacto) and alto_max < cupo * 0.55  # pocas áreas: letra más grande para que la slide no quede vacía
@@ -4573,7 +4760,7 @@ def ejecutar(args):
     if (columnas or det or "entregables" not in R.orden) and (not rep.errores or args.borrador):
         html = render_html(d, R, columnas, ncols)
         af = construir_acroforms(d, R)
-        if (d.get("inversion") or {}).get("hoja_paquetes"):   # Programa (480 px) y Notas (996 px de ancho) de la hoja por paquetes
+        if (d.get("inversion") or {}).get("hoja_paquetes") or any(e_.get("hoja_paquetes") for e_ in etapas_inversion(d)):   # Programa (480 px) y Notas (996 px de ancho) de la hoja por paquetes
             CAJAS_PDF["Programa"] = (360.0, 11.0, False, 6)
             CAJAS_PDF["Notas"] = (747.0, 11.0, False, 3)
         validar_acroforms(af, rep)

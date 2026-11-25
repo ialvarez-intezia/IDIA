@@ -1,0 +1,572 @@
+{
+ "version": 3,
+ "cliente": {
+  "nombre": "Unilynk C.A.",
+  "slug": "unilynk-cai100",
+  "codigo": "CAI-100",
+  "nombre_pie": "Unilynk"
+ },
+ "division": "educacion",
+ "alianza": false,
+ "sin_horas_trabajo": true,
+ "por_fases": true,
+ "omitir": ["pago"],
+ "meta_servicio": "habilidades",
+ "meta_tipo": "Habilidades con levantamiento acotado · 4 áreas en dos fases (Fase 1: Operaciones y Mercadeo y Ventas; Fase 2: Administración y Finanzas y Recursos Humanos): 2 h de levantamiento y 8 h de construcción por área = 40 h con los equipos · Claude · dos hojas de inversión (proyecto completo con cuotas, y valor de la Fase 1 y de la Fase 2) · seguimiento 30-60-90 · formato compacto v3",
+ "vocabulario": {
+  "solucion": [
+   "entregable",
+   "entregables"
+  ]
+ },
+ "frases_ok": [
+  "estructuras de costo",
+  "estructura de costo",
+  "Estructuras de costo"
+ ],
+ "eje": "Levantamiento de información y construcción con Claude en cuatro áreas de Unilynk, por fases: Operaciones y Mercadeo y Ventas primero, Administración y Finanzas y Recursos Humanos después, con una herramienta común donde queda la base del trabajo de cada quien y seguimiento a 30, 60 y 90 días",
+ "origen": "Ficha de Levantamiento de Unilynk C.A. (Verónica Rubio, 10/11/2026; Armando, quien decide y aprueba solo) y transcripción de la reunión del 10/11/2026, más instrucciones de Ivana del 16/11/2026: 4 áreas con la prioridad que dijo Armando, Dirección General fuera, herramienta Claude con precios de licencias, enfoque reenfoque, dos escenarios (proyecto completo con cuotas y por fases)",
+ "fuente_insumo": "Ficha de Levantamiento (10/11/2026) y transcripción de la reunión de Verónica Rubio con Unilynk (10/11/2026)",
+ "siglas_ok": [
+  "IA",
+  "RRHH"
+ ],
+ "portada": {
+  "titulo_lineas": [
+   "Operación, ventas y gestión",
+   "con IA, por fases"
+  ],
+  "titulo_destacado": "en {cliente_corto}",
+  "lead": "Este proyecto levanta cómo trabajan hoy **cuatro áreas** de {cliente_corto} y construye con sus equipos las **soluciones** que ese levantamiento prioriza, empezando por **Operaciones y Mercadeo y Ventas**.",
+  "hechos": [
+   {
+    "num": "Manual",
+    "texto": "es hoy todo Operaciones, desde las estructuras de costo hasta las evaluaciones.",
+    "resuelto_por": [
+     "OP-2",
+     "OP-3"
+    ]
+   },
+   {
+    "num": "Cada mes",
+    "texto": "se rehacen a mano las estructuras de costo, aunque el servicio sea idéntico.",
+    "resuelto_por": [
+     "OP-2"
+    ]
+   },
+   {
+    "num": "Perdidos",
+    "texto": "quedan los prospectos que entran al pipeline y reciben propuesta, sin seguimiento.",
+    "resuelto_por": [
+     "MV-2"
+    ]
+   }
+  ]
+ },
+ "carriles": [
+  {
+   "id": "claude",
+   "nombre": "Claude",
+   "nombre_corto": "Claude",
+   "color": "amarillo"
+  }
+ ],
+ "areas": [
+  {
+   "id": "OP",
+   "nombre": "Operaciones",
+   "carril": "claude",
+   "frente": "A",
+   "nombre_catalogo": "Operaciones",
+   "para_que": "Generar cada mes las estructuras de costo y seguir las evaluaciones sin rehacer nada a mano",
+   "soluciones": [
+    {
+     "id": "OP-1",
+     "entregable": "Levantamiento de Operaciones",
+     "h": 2,
+     "fase": "F1",
+     "incluye": [
+      "Cómo se presta cada servicio, de principio a fin",
+      "Línea base del tiempo de cada proceso"
+     ],
+     "detalle": "Trabajo de 2 h con el equipo de Operaciones. Se recorre cómo se presta cada servicio, qué es manual y cuánto tarda, y se acuerda el orden de lo que se construye. Entrega la línea base y el alcance."
+    },
+    {
+     "id": "OP-2",
+     "entregable": "Estructuras de costo regeneradas",
+     "C": 1,
+     "T": 1,
+     "A": 1,
+     "fase": "F1",
+     "incluye": [
+      "Una estructura por servicio, con sus personas y productos",
+      "Solo se actualizan los valores y se regeneran todas"
+     ],
+     "detalle": "Trabajo de 3 h con el equipo de Operaciones. Se construye con Claude la estructura de costo de cada servicio: como cada mes se repiten las mismas personas, uniformes y productos, solo se actualizan los valores y se regeneran todas. Se prueba con un mes real. Entrega las estructuras en uso."
+    },
+    {
+     "id": "OP-3",
+     "entregable": "Evaluaciones con seguimiento",
+     "C": 1,
+     "T": 0,
+     "A": 1,
+     "fase": "F1",
+     "incluye": [
+      "Lista de quién devolvió la evaluación y quién falta",
+      "Recordatorios listos para enviar"
+     ],
+     "detalle": "Trabajo de 2 h con el equipo de Operaciones. Se construye con Claude la forma de enviar las evaluaciones, saber quién las devolvió y redactar los recordatorios de quien falta, con las respuestas ordenadas. Entrega el proceso en uso."
+    },
+    {
+     "id": "OP-4",
+     "entregable": "Necesidades y cronogramas",
+     "C": 1,
+     "T": 1,
+     "A": 1,
+     "fase": "F1",
+     "incluye": [
+      "Lo que el cliente necesita al llegar, en un formato",
+      "El cronograma de actividades del servicio en sitio"
+     ],
+     "detalle": "Trabajo de 3 h con el equipo de Operaciones. Se construye con Claude un formato para capturar lo que el cliente necesita al llegar y el cronograma de actividades de cada servicio. Se prueba con un servicio real. Entrega ambos en uso."
+    }
+   ]
+  },
+  {
+   "id": "MV",
+   "nombre": "Mercadeo y Ventas",
+   "carril": "claude",
+   "frente": "A",
+   "nombre_catalogo": "Mercadeo y Ventas",
+   "para_que": "Dar seguimiento sistemático a cada prospecto, para que ninguno se pierda en el pipeline",
+   "soluciones": [
+    {
+     "id": "MV-1",
+     "entregable": "Levantamiento de Mercadeo y Ventas",
+     "h": 2,
+     "fase": "F1",
+     "incluye": [
+      "Cómo llega y avanza hoy cada prospecto",
+      "Línea base del seguimiento"
+     ],
+     "detalle": "Trabajo de 2 h con el equipo de Mercadeo y Ventas, un departamento que se está armando. Se recorre cómo llega y avanza hoy cada prospecto, qué información necesita un presupuesto y dónde se pierden. Entrega la línea base y el alcance."
+    },
+    {
+     "id": "MV-2",
+     "entregable": "Seguimiento de prospectos",
+     "C": 2,
+     "T": 1,
+     "A": 1,
+     "fase": "F1",
+     "incluye": [
+      "Cada prospecto con su estado y su próximo paso",
+      "Mensajes de seguimiento listos para enviar"
+     ],
+     "detalle": "Trabajo de 4 h con el equipo de Mercadeo y Ventas. Se construye con Claude el seguimiento sistemático de los prospectos que ya contactaron y recibieron propuesta: su estado, el siguiente paso y el mensaje de seguimiento. Se prueba con prospectos reales. Entrega el seguimiento en uso."
+    },
+    {
+     "id": "MV-3",
+     "entregable": "Guion de telemercadeo y presupuestos",
+     "C": 2,
+     "T": 1,
+     "A": 1,
+     "fase": "F1",
+     "incluye": [
+      "El guion de la llamada, con lo que se pregunta",
+      "Los datos para armar un presupuesto"
+     ],
+     "detalle": "Trabajo de 4 h con el equipo de Mercadeo y Ventas. Se construye con Claude el guion de telemercadeo, la lista de datos que se piden al cliente para presupuestar y el registro de cada llamada. Se prueba con llamadas reales. Entrega el guion y el registro en uso."
+    }
+   ]
+  },
+  {
+   "id": "AF",
+   "nombre": "Administración y Finanzas",
+   "carril": "claude",
+   "frente": "A",
+   "nombre_catalogo": "Administración y Finanzas",
+   "para_que": "Trabajar con IA junto al sistema administrativo, con procesos escritos y un criterio común",
+   "soluciones": [
+    {
+     "id": "AF-1",
+     "entregable": "Levantamiento de Administración y Finanzas",
+     "h": 2,
+     "fase": "F2",
+     "incluye": [
+      "Cómo se trabaja hoy con el sistema administrativo",
+      "Línea base del tiempo de cada proceso"
+     ],
+     "detalle": "Trabajo de 2 h con el equipo de Administración y Finanzas. Se recorre cómo se trabaja con el sistema administrativo vigente al empezar la Fase 2 y qué procesos dependen de él. Entrega la línea base y el alcance."
+    },
+    {
+     "id": "AF-2",
+     "entregable": "Criterios de IA junto al sistema",
+     "C": 2,
+     "T": 1,
+     "A": 1,
+     "fase": "F2",
+     "incluye": [
+      "Qué se hace con IA y qué en el sistema administrativo",
+      "Qué datos se comparten y cuáles no"
+     ],
+     "detalle": "Trabajo de 4 h con el equipo de Administración y Finanzas. Se acuerdan por escrito los criterios para usar la IA junto al sistema administrativo: qué se hace en cada uno, qué datos se comparten y cómo se prueba. Entrega los criterios y una primera prueba."
+    },
+    {
+     "id": "AF-3",
+     "entregable": "Procesos del área, escritos",
+     "C": 2,
+     "T": 1,
+     "A": 1,
+     "fase": "F2",
+     "incluye": [
+      "Cada proceso, paso a paso",
+      "Responsables y documentos de cada uno"
+     ],
+     "detalle": "Trabajo de 4 h con el equipo de Administración y Finanzas. Se documentan con Claude los procesos del área, paso a paso, con sus responsables y documentos, para volver a procedimentar. Entrega los procesos escritos."
+    }
+   ]
+  },
+  {
+   "id": "RH",
+   "nombre": "Recursos Humanos",
+   "carril": "claude",
+   "frente": "A",
+   "nombre_catalogo": "Recursos Humanos",
+   "para_que": "Cargar la nómina con su sustento y dejar por escrito los cargos y sus funciones",
+   "soluciones": [
+    {
+     "id": "RH-1",
+     "entregable": "Levantamiento de Recursos Humanos",
+     "h": 2,
+     "fase": "F2",
+     "incluye": [
+      "Cómo se carga hoy la nómina y con qué sustento",
+      "Línea base del tiempo de cada tarea"
+     ],
+     "detalle": "Trabajo de 2 h con el equipo de Recursos Humanos. Se recorre cómo se carga hoy la nómina, qué documentos la sustentan y quién la hace. Entrega la línea base y el alcance."
+    },
+    {
+     "id": "RH-2",
+     "entregable": "Carga de nómina con sustento",
+     "C": 2,
+     "T": 1,
+     "A": 1,
+     "fase": "F2",
+     "incluye": [
+      "Los documentos de cada carga, ordenados",
+      "Una lista de verificación antes de cargar"
+     ],
+     "detalle": "Trabajo de 4 h con el equipo de Recursos Humanos. Se construye con Claude la preparación de la carga de nómina: documentos ordenados, lista de verificación y un respaldo del proceso. Se prueba con una carga real. Entrega el proceso en uso."
+    },
+    {
+     "id": "RH-3",
+     "entregable": "Descripciones de cargo y funciones",
+     "C": 2,
+     "T": 1,
+     "A": 1,
+     "fase": "F2",
+     "incluye": [
+      "La descripción de cada cargo, con sus funciones",
+      "La base para volver a procedimentar"
+     ],
+     "detalle": "Trabajo de 4 h con el equipo de Recursos Humanos. Se construye con Claude la descripción de cada cargo y sus funciones, que es la base para volver a escribir los procesos de la empresa. Entrega las descripciones."
+    }
+   ]
+  }
+ ],
+ "alcance": {
+  "titulo": "Cuatro áreas, en dos fases.",
+  "subtitulo": "Cada área tiene su **levantamiento** y sus **soluciones** con Claude; la Fase 2 puede aprobarse después.",
+  "fuera_alcance": [
+   "Dirección General: queda fuera de este alcance y puede sumarse en otra etapa.",
+   "Implementar o cambiar el sistema administrativo: lo hace {cliente_corto}; la Fase 2 se ajusta al que tenga al empezar.",
+   "Conexiones automáticas con sus sistemas: se evalúan en el levantamiento, sin compromiso previo.",
+   "Las licencias de Claude: las contrata {cliente_corto}, aparte de esta inversión."
+  ]
+ },
+ "metodo": {
+  "titulo": "Así construimos cada solución.",
+  "subtitulo": "Primero se levanta cómo trabaja cada área y después se construye con su equipo, que aprende a sostenerlo.",
+  "quien_construye": "Se construye en conjunto: cada equipo de {cliente_corto} trabaja con **Claude** sobre sus procesos reales, e **Intezia guía** cada paso.",
+  "por_que_orden": "Primero las áreas que más pesan en el servicio y la venta; después las de apoyo, que se ajustan al sistema administrativo vigente y pueden aprobarse más tarde.",
+  "pasos": [
+   {
+    "titulo": "Levantamos",
+    "texto": "Cómo trabaja hoy cada área y cuánto tarda cada proceso."
+   },
+   {
+    "titulo": "Construimos",
+    "texto": "Con Claude, sobre los procesos reales del equipo."
+   },
+   {
+    "titulo": "Adoptamos",
+    "texto": "Pruebas con casos reales; el equipo usa y ajusta."
+   },
+   {
+    "titulo": "Seguimos",
+    "texto": "Uso, ajustes y resultados, a 30, 60 y 90 días."
+   }
+  ],
+  "practica": [
+   {
+    "titulo": "Una herramienta común",
+    "texto": "Claude se elige como herramienta compartida: ahí va quedando la base del trabajo de cada área."
+   },
+   {
+    "titulo": "Con lo que ya tienen",
+    "texto": "Claude se suma al entorno de oficina y al sistema administrativo del cliente: no los reemplaza."
+   },
+   {
+    "titulo": "Por fases, a su ritmo",
+    "texto": "Cada fase tiene su levantamiento y puede aprobarse por separado, según el presupuesto."
+   }
+  ],
+  "datos": "Los datos de nómina, finanzas y clientes son confidenciales: solo se carga en Claude lo que {cliente_corto} decide compartir. Las reglas básicas de uso se acuerdan al empezar."
+ },
+ "fases": [
+  {
+   "id": "F1",
+   "titulo": "Fase 1",
+   "descripcion": "Operaciones y Mercadeo y Ventas",
+   "destacada": true
+  },
+  {
+   "id": "F2",
+   "titulo": "Fase 2",
+   "descripcion": "Administración y Finanzas, y Recursos Humanos"
+  }
+ ],
+ "frentes": [
+  {
+   "id": "A",
+   "carril": "claude",
+   "nombre": "Cuatro áreas de {cliente_corto}",
+   "celdas": {
+    "F1": "Operaciones y Mercadeo y Ventas: levantamiento y soluciones, con sus equipos.",
+    "F2": "Administración y Finanzas y Recursos Humanos: levantamiento y soluciones."
+   }
+  }
+ ],
+ "ruta": {
+  "titulo": "De las áreas que más pesan a las de apoyo.",
+  "subtitulo": "El calendario se acuerda en la **reunión de arranque**. El seguimiento a 30, 60 y 90 días corre desde el cierre de cada área.",
+  "nota": "Son **40 horas** con los equipos, 20 en cada fase: 2 de levantamiento y 8 de construcción, pruebas y adopción por área. La Fase 2 puede aprobarse después de ver los resultados de la Fase 1.",
+  "hitos": [
+   {
+    "titulo": "Arranque · aparte",
+    "texto": "Reunión de 30 min para acordar el calendario y quién coordina el proyecto por {cliente_corto}."
+   },
+   {
+    "titulo": "Levantamientos",
+    "texto": "Operaciones y Mercadeo y Ventas: cómo funciona hoy cada proceso."
+   },
+   {
+    "titulo": "Fase 1 en uso",
+    "texto": "Estructuras de costo, evaluaciones y seguimiento de prospectos, probados."
+   },
+   {
+    "titulo": "Fase 2 en uso",
+    "texto": "Administración y Finanzas y Recursos Humanos, con sus soluciones probadas."
+   },
+   {
+    "titulo": "30 · 60 · 90 días",
+    "texto": "Seguimiento: uso de las soluciones, ajustes e indicadores medidos."
+   }
+  ]
+ },
+ "logistica": {
+  "modalidad": "Presencial en la sede de Caracas o virtual, a acordar en la reunión de arranque.",
+  "participantes": "Los gerentes y equipos de las cuatro áreas, con quien dirige {cliente_corto}.",
+  "arranque": "El proyecto arranca en enero; una reunión de arranque de 30 min, aparte, acuerda el calendario."
+ },
+ "seguimiento": {
+  "rango": "30, 60 y 90 días",
+  "texto": "Desde el cierre de cada área",
+  "items": [
+   {
+    "dias": "30 días",
+    "texto": "Uso de las soluciones en cada área"
+   },
+   {
+    "dias": "60 días",
+    "texto": "Ajustes y nuevas construcciones"
+   },
+   {
+    "dias": "90 días",
+    "texto": "Indicadores y tiempo recuperado medidos"
+   }
+  ]
+ },
+ "entregables": {
+  "compacto": true,
+  "titulo": "Lo que deja cada fase.",
+  "subtitulo": "Lo que se llevan: **soluciones en uso y una base común de trabajo**, más el seguimiento a {rango_seguimiento}.",
+  "etiqueta_transversales": "Para todo el proyecto",
+  "transversales": [
+   "Línea base del tiempo de cada proceso.",
+   "Una herramienta común con la base del trabajo.",
+   "Seguimiento a 30, 60 y 90 días."
+  ],
+  "etiqueta_valor": "Valor inmediato",
+  "valor_inmediato": [
+   "Con cada levantamiento: el proceso claro y priorizado.",
+   "Con la Fase 1: lo manual de Operaciones y Ventas, en uso.",
+   "Con la Fase 2: apoyo con criterio común y procesos escritos."
+  ],
+  "impacto": {
+   "enfoque": "reenfoque",
+   "texto": "Las tareas repetitivas dejan de consumir el día de cada equipo: el tiempo pasa a **elevar la calidad del servicio**, atender a los clientes y vender, con un criterio común y una herramienta compartida."
+  }
+ },
+ "retorno": {
+  "modo": "metodo",
+  "posiciones": false,
+  "titulo": "Retorno esperado: tiempo recuperado, medido.",
+  "subtitulo": "Cada indicador se mide contra el punto de partida que cada levantamiento deja registrado.",
+  "etiqueta_pasos": "Cómo se calcula el retorno",
+  "pasos": [
+   {
+    "titulo": "Volumen",
+    "texto": "Cuántas estructuras, evaluaciones, prospectos y cargas se hacen cada mes."
+   },
+   {
+    "titulo": "Punto de partida",
+    "texto": "Cuánto tarda hoy cada una: es la **línea base**."
+   },
+   {
+    "titulo": "Con la solución",
+    "texto": "Lo que toma el mismo trabajo con la solución en uso."
+   },
+   {
+    "titulo": "Horas recuperadas",
+    "texto": "Volumen por la diferencia de tiempos: una estimación referencial, sin compromiso de resultado."
+   },
+   {
+    "titulo": "Gasto de operar",
+    "texto": "Las licencias de Claude, contra el valor del tiempo recuperado."
+   }
+  ],
+  "etiqueta_metas": "Calendario de seguimiento y medición",
+  "metas": [
+   {
+    "dias": "30 días",
+    "texto": "Desde el cierre de cada área: soluciones en uso real y línea base validada con el equipo."
+   },
+   {
+    "dias": "60 días",
+    "texto": "Horas recuperadas medidas contra el punto de partida."
+   },
+   {
+    "dias": "90 días",
+    "texto": "Medición del retorno: lo recuperado frente al gasto de operar las soluciones."
+   }
+  ],
+  "etiqueta_destino": "Hacia dónde va el proyecto",
+  "destino": [
+   {
+    "rotulo": "Una base común",
+    "texto": "El conocimiento se acumula en la empresa, **no en cada persona** por separado."
+   },
+   {
+    "rotulo": "Procesos escritos",
+    "texto": "Cargos, funciones y procesos vuelven a estar **documentados**."
+   },
+   {
+    "rotulo": "Crecer con control",
+    "texto": "Con el resultado medido, {cliente_corto} decide qué áreas suma."
+   }
+  ],
+  "gancho": "A los 90 días del cierre de cada área, {cliente_corto} contará con sus indicadores medidos contra el punto de partida y el gasto de operar sus soluciones."
+ },
+ "inversion": {
+  "etapas": [
+   {
+    "titulo": "Proyecto completo.",
+    "rotulo": "Proyecto completo de 4 áreas",
+    "duracion": "**Proyecto completo de cuatro áreas** (40 horas con los equipos), en dos fases, con seguimiento a {rango_seguimiento}.",
+    "programa": [
+     "Servicio de Habilidades para {cliente_corto} ({codigo}): proyecto completo.",
+     "4 áreas en dos fases: Operaciones, Mercadeo y Ventas, Administración y Finanzas, y Recursos Humanos, 40 h.",
+     "Levantamiento de 2 h y construcción de 8 h por área.",
+     "Seguimiento a 30, 60 y 90 días. La reunión de arranque va aparte."
+    ],
+    "notas": [
+     "Licencias aparte: Claude Team, USD 25 por persona al mes (USD 20 pagando por año), con mínimo 2 puestos; valor de lista del 28/10/2026 que {cliente_corto} confirma. El número de puestos se define al empezar."
+    ],
+    "garantia_texto": "Estamos contigo hasta que cada área quede con sus soluciones en uso."
+   },
+   {
+    "titulo": "Inversión por fase.",
+    "rotulo": "Fase 1 y Fase 2, cada una con su valor",
+    "hoja_paquetes": true,
+    "etiqueta_partes": "Valor por fase",
+    "partes": [
+     {
+      "nombre": "Operaciones y Mercadeo y Ventas",
+      "detalle": "20 horas con los equipos"
+     },
+     {
+      "nombre": "Administración y Finanzas y Recursos Humanos",
+      "detalle": "20 horas con los equipos"
+     }
+    ],
+    "sin_garantia": true,
+    "duracion": "**Cada fase se aprueba por separado**: la Fase 1 (20 horas con los equipos) trabaja las dos áreas que {cliente_corto} prioriza, y la Fase 2 (20 horas) las áreas de apoyo, con seguimiento a {rango_seguimiento}.",
+    "programa": [
+     "Servicio de Habilidades para {cliente_corto} ({codigo}): valor de cada fase.",
+     "Fase 1: Operaciones, y Mercadeo y Ventas, 20 h.",
+     "Fase 2: Administración y Finanzas, y Recursos Humanos, 20 h.",
+     "Seguimiento a 30, 60 y 90 días desde el cierre de cada área."
+    ],
+    "notas": [
+     "Licencias aparte: Claude Team, USD 25 por persona al mes (USD 20 pagando por año), con mínimo 2 puestos; valor de lista del 28/10/2026 que {cliente_corto} confirma. El número de puestos se define al empezar.",
+     "La Fase 2 se ajusta al sistema administrativo que {cliente_corto} tenga al empezar. La reunión de arranque va aparte."
+    ],
+    "rotulo_parte": "Fase"
+   }
+  ]
+ },
+ "proximos_pasos": {
+  "subtitulo": "Esto es lo que sigue cuando {cliente_corto} confirme la propuesta.",
+  "asesora": {
+   "nombre": "Verónica Rubio",
+   "cargo": "Asesora comercial",
+   "correo": "vrubio01@intezia.com",
+   "telefono": "+58 422 3355505"
+  },
+  "pasos": [
+   {
+    "titulo": "Escenario y arranque",
+    "texto": "Confirmamos con {cliente_corto} el escenario (completo o por fases) y el arranque en enero."
+   },
+   {
+    "titulo": "Accesos y casos",
+    "texto": "Cada área comparte ejemplos reales de sus procesos, sin datos personales."
+   },
+   {
+    "titulo": "Reunión de arranque",
+    "texto": "Media hora para acordar el calendario, el orden del trabajo y los accesos."
+   }
+  ]
+ },
+ "supuestos": [
+  "Pedido de Ivana (16/11/2026): propuesta CAI-100 para Unilynk con Verónica Rubio como asesora. Respuestas de Ivana: 4 áreas respetando la prioridad que dijo Armando (Operaciones, luego Mercadeo y Ventas), Dirección General fuera, herramienta Claude con los precios de las licencias, enfoque reenfoque y los dos escenarios (proyecto completo con cuotas y por fases). Educación y sin alianza (defecto propuesto, sin objeción).",
+  "Áreas: Operaciones y Mercadeo y Ventas (Fase 1); Administración y Finanzas y Recursos Humanos (Fase 2). Las 4 áreas de la ficha sin Dirección General. En la reunión Armando nombró 5 direcciones y Verónica habló de «cuatro». Administración entra condicionada al cambio de sistema, por eso va en la Fase 2 y se dice «el sistema administrativo vigente al empezar» (sin nombrar la migración: §4.11).",
+  "Horas: estructura de la CAI-089: 2 h de levantamiento y 8 h de construcción, pruebas y adopción por área = 10 h por área, 40 h en total y 20 h por fase. Son horas con los equipos (sin_horas_trabajo). El reparto por entregable es mío, por confirmar con Ivana. Armando pidió que empezar con pocas licencias y sumar más (cuatro de pago al comienzo).",
+  "Dos hojas de inversión (inversion.etapas, ajuste de Ivana del 16/11/2026): la primera, el proyecto completo (con la página de Facilidad de pago); la segunda, una sola hoja por paquetes con la Fase 1 y la Fase 2, cada una con su valor, descuento y total para Ventas (antes eran tres hojas). El plan de pago es el estándar (50 % al aprobar y 50 % al cierre) y aplica solo al proyecto completo; el generador lo avisa.",
+  "Soluciones tomadas de la ficha (procesos 1 a 4 y «tareas reales»): estructuras de costo mensuales (Operaciones), evaluaciones, necesidades del cliente y cronogramas (Operaciones), seguimiento de prospectos y telemercadeo (Mercadeo y Ventas), carga de nómina (RRHH) y criterio para usar la IA junto al sistema administrativo (Administración). Presupuestos y licitaciones, que Armando hace él mismo con IA, quedan fuera por ser de Dirección General.",
+  "Encuadre «una persona más al mes» (Armando): el deck habla de capacidad instalada y reenfoque, sin nómina, posiciones ni cifras de salarios. Verónica usó en la llamada la comparación entre una licencia y varios trabajadores: no se repite en el deck.",
+  "Licencias: Claude Team USD 25 al mes (USD 20 anual), mínimo 2 puestos, valor de lista verificado el 28/10/2026 (CAI-070), no reverificado el 16/11/2026. Armando ya paga ChatGPT, Gemini y Claude por su cuenta; el resto del equipo usa versiones gratuitas. Claude no está soportado oficialmente en Venezuela: el deck no promete acceso ni VPN.",
+  "Arranque: solo «arranca en enero» (instrucción de Ivana en las propuestas anteriores). Noviembre y diciembre están tomados por el sistema nuevo y las contrataciones, y la gerente de Operaciones sale de vacaciones en diciembre: quedan en el brief, no en el deck. Sin semanas, sesiones ni fechas (§4.23); reunión de arranque de 30 min.",
+  "Contexto interno que no va en el deck: Armando decide solo y aprueba la inversión; no hay que convencerlo del valor de la IA; el riesgo es la competencia por presupuesto (Odoo, el nuevo departamento de Mercadeo y Ventas y maquinaria); estuvo cerca de la certificación ISO en 2016; empresa en pausa desde 2017-2018. No se nombran sus clientes ni las citas textuales."
+ ],
+ "pendientes": [
+  "Confirmar con Ivana el reparto de 10 h por área y de los entregables propuestos, y si el escenario por fases va en dos hojas (Fase 1 y Fase 2) o en una.",
+  "Cargo de Armando por confirmar (la ficha lo dice así); no se nombra en el deck.",
+  "Plan de pago: se usa el estándar de 50 % al aprobar y 50 % al cierre. Ivana debe confirmar cuotas e hitos.",
+  "Dirección General: Armando la nombró entre las cinco direcciones; Ivana la dejó fuera. Avisar a Verónica para que lo aclare en la reunión.",
+  "Reverificar el valor de lista de Claude Team (verificado el 28/10/2026) y definir el número de puestos (Armando habló de empezar con cuatro).",
+  "Modalidad (presencial en Caracas o virtual): no definida en la reunión.",
+  "Revisión con Armando en videollamada la semana del 16 de noviembre (prefiere lunes o martes); la propuesta debe quedar aprobada este año y ejecutarse en enero."
+ ]
+}
